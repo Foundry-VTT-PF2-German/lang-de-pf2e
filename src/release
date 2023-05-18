@@ -1,0 +1,23 @@
+#!/bin/sh
+#alias jq=~/AppData/Local/jq/jq-win64.exe
+set -o errexit
+echo -n 'version: '
+read VERSION
+BASE_URL='https://gitlab.com/manfred_7168/foundryvtt-pathfinder2e-lang-de'
+MASTER_FILES_URL="$BASE_URL/-/raw/master"
+jq --slurp '.[0] * .[1]' module.json - > module-new.json <<EOF
+{
+    "version": "$VERSION",
+    "url": "$BASE_URL",
+    "manifest": "$MASTER_FILES_URL/module.json",
+    "download": "$BASE_URL/-/jobs/artifacts/v$VERSION/download?job=build",
+    "bugs": "$BASE_URL/-/issues",
+    "readme": "$MASTER_FILES_URL/README.md"
+}
+EOF
+mv module-new.json module.json
+#git add --all
+#git commit
+#git tag --force "v$VERSION"
+#git push --tags --force
+#git push

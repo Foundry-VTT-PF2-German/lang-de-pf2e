@@ -1,0 +1,822 @@
+{
+  "label": "Gefahren",
+  "entries": {
+    "Armageddon Orb": {
+      "name": "Rovagugs Träne/Armageddon Orb",
+      "description": "<p>Eine wirbelnde rote Kugel, welche aus einem Tropfen des Blutes des Gottes Rovagug gefertigt wurde, lässt Feuer vom Himmel regnen, wenn eine bestimmte Bedingung eintritt.</p>",
+      "disable": "<p>@Check[type:thievery|dc:46|name:Ausschalten]{Diebeskunst} (Legende) (um Diebeswerkzeug mit Aspekten zu versehen, welche Asmodeus und Sarenrae repräsentieren, und damit im Verlauf von 10 Minuten die Kraft der Träne abfließen zu lassen; der ausführende Charakter erleidet dabei jede Runde 5 Punkte Feuerschaden)</p>",
+      "stealth": "oder <i>Magie entdecken</i>",
+      "items": {
+        "action->Burn It All": {
+          "name": "Niederbrennen",
+          "description": "<p><strong>Auslöser</strong> Eine bestimmte, vom Erschaffer der Falle festgelegte Bedingung tritt ein; meistens ist dies der Tod des Erschaffers.</p>\n<hr>\n<p><strong>Effekt</strong> Feuer regnet in einem Radius von 100 Meilen/150 Kilometern vom Himmel und fügt allen Kreaturen und Gegenständen im Wirkungsbereich [[/r 10d6[fire]]]{10W6 Punkte Feuerschaden} (@Check[type:reflex|dc:46|basic:true]{einfacher Ref}) zu. Jede dadurch auf 0 TP reduzierte Kreatur stirb augenblicklich. Dieser Schaden genügt nicht, um einen Wald gänzlich niederzubrennen oder einen Berg oder eine Stadt einzuäschern, tötet in der Regel aber die meisten Kreaturen vor Ort.</p>"
+        }
+      }
+    },
+    "Banshee's Symphony": {
+      "name": "Symphonie der Todesfee",
+      "description": "<p>Ein magisches <em>Wehgeschrei der Todesfee</em> der Kategorie Ausgepr&auml;gt ist im Kehlkopf einer unsichtbaren, mumifizierten Elfe eingeschlossen.</p>",
+      "disable": "<p>@Check[type:thievery|dc:42|name:Ausschalten (Magie ablassen)]{Diebeskunst} (Meister) (Anstechen des unsichtbaren Kehlkopfes auf derart präzise Weise, dass die Magie langsam und harmlos abgelassen wird, ehe sich die Falle aktiviert), @Check[type:thievery|dc:44|name:Ausschalten (Zerlegen)]{Diebeskunst} (Legende) (dreimal, um den Kehlkopf zu zerlegen, während die Falle aktiv ist, und dabei den Zauber gegen sich selbst zu richten) oder ein Zauber des 9. Grad (SG 38, um dem <em>Wehgeschrei der Todesfee</em> vor Aktivierung der Falle entgegenzuwirken).</p>",
+      "reset": "<p>Die Wirkungsdauer der Falle endet, wenn es ihr nicht länger möglich ist, eine Kreatur zum Schreien zu zwingen (dies tritt in der Regel ein, wenn alle Kreaturen bei ihren Rettungswürfen in der letzten Runde Erfolg hatten oder wenn alle Kreaturen im Laufe der Wirkungsdauer jeweils einen Kritischen Erfolg erzielt haben). Die Falle benötigt dann 24 Stunden, um sich zurückzusetzen, während sich im mumifizierten Kehlkopf ein neuer Schrei aufbaut.</p>",
+      "routine": "<p>(1 Aktion) Die Falle nutzt ihre Aktion, um eine zufällig ausgewählte Kreatur, der im letzten Zug der Rettungswurf gegen <em>Wehgeschrei der Todesfee</em> gescheitert ist, dazu zu zwingen, selbst ein <em>Wehgeschrei der Todesfee</em> mit denselben Spielwerten wie das erste <em>Wehgeschrei</em> auszustoßen. Die Kreatur schreit selbst dann, wenn sie tot oder unfähig sein sollte zu sprechen, egal wie weit sie von der Falle entfernt ist. Im Gegensatz zum normalen Wirken des Zaubers erhöht dieses <em>Wehgeschreis</em> den Zustandswert von Ausgelaugt bei den Zielen. Eine Kreatur, deren Rettungswurf ein Kritischer Erfolg gewesen ist, kann von der Falle immer noch in künftigen Runden betroffen werden, sie kann aber nicht mehr gezwungen werden, selbst ein <em>Wehgeschrei</em> auszustoßen.</p>",
+      "stealth": "<p>(Legende)</p>",
+      "items": {
+        "action->Scream": {
+          "name": "Schrei der Todesfee",
+          "description": "<p><strong>Auslöser</strong> Drei oder mehr lebende Kreaturen halten sich 6 Sekunden oder länger innerhalb von 100 Fuß/30 m Entfernung zur Falle auf.</p>\n<p><strong>Effekt</strong> Die Falle stößt ein arkanes <em>@UUID[Compendium.pf2e.spells-srd.FEsuyf203wTNE2et]{Wehgeschrei der Todesfee}</em> (SG 40) mit einer Ausstrahlung von 100 Fuß/30 m Radius statt der üblichen 12 m aus, welches alle lebenden Kreaturen im Wirkungsbereich zu Ziel hat; dann würfelt die Falle ihre Initiative aus.</p>"
+        }
+      }
+    },
+    "Bloodthirsty Urge": {
+      "name": "Blutdurst",
+      "description": "<p>Ein Gegenstand, welcher vom Echo eines bösartigen Verstandes heimgesucht wird, versucht jeden zu töten, der ihm nahekommt.</p>",
+      "disable": "<p>@Check[type:religion|dc:29|name:Exorzieren]{Religionskunde} (Meister) (Exorzieren des Geistes) oder @Check[type:diplomacy|dc:31|name:Besänftigen]{Diplomatie} (Experte) (um den Geist zu besänftigen)</p>",
+      "stealth": "<p>(Geübt)</p>",
+      "items": {
+        "action->Quietus": {
+          "name": "Quietus",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur bewegt sich innerhalb von 3 m Entfernung zum heimgesuchten Gegenstand.</p>\n<p><strong>Effekt</strong> Die Spukerscheinung übernimmt die Kontrolle über die auslösende Kreatur und zwingt sie, sich selbst anzugreifen. Das Ziel muss einen @Check[type:will|dc:29] ablegen.</p>\n<hr />\n<p><strong>Kritischer Erfolg</strong> Das Ziel ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Das Ziel führt einen Angriff gegen sich selbst aus und trifft automatisch; das Ziel erhält zudem den Zustand @UUID[Compendium.pf2e.conditionitems.TBSHQspnbcqxsmjL]{Verängstigt 1}.</p>\n<p><strong>Fehlschlag</strong> Das Ziel führt einen Angriff gegen sich selbst aus, trifft automatisch und erzielt einen Kritischen Treffer; das Ziel erhält zudem den Zustand @UUID[Compendium.pf2e.conditionitems.TBSHQspnbcqxsmjL]{Verängstigt 2}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Das Ziel muss einen Zähigkeitswurf ablegen. Bei Erfolg treten die Folgen eines Fehlschlags (s.o.) ein. Bei einem Fehlschlag wird das Ziel auf 0 TP reduziert und stirbt.</p>"
+        }
+      }
+    },
+    "Bottomless Pit": {
+      "name": "Bodenlose Grube",
+      "description": "<p>Eine eiserne Falltür bedeckt eine unendlich tiefe Grube mit 3 m Seitenlänge.</p>",
+      "disable": "<p>@Check[type:thievery|dc:28|name:Ausschalten]{Diebeskunst} (Geübt) (entfernen der Falltür)</p>",
+      "reset": "<p>Die Falle lässt hereinstürzende Kreaturen immer noch auf ewig stürzen, allerdings muss die Falltür manuell zurückgesetzt werden, um die Falle wieder zu verbergen.</p>",
+      "stealth": "<p>(oder 0, falls die Falltür zertrümmert, ausgehängt oder beschädigt ist) oder <em>Magie entdecken</em></p>",
+      "items": {
+        "action->Infinite Pitfall": {
+          "name": "Bodenlose Grube",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur tritt auf die Falltür.</p>\n<p><strong>Effekt</strong> Die auslösende Kreatur stürzt in die Grube und fällt möglicherweise für immer. Die Kreatur kann versuchen, einen @UUID[Compendium.pf2e.actionspf2e.3yoajuKjwHZ9ApUY]{Halt zu ergreifen}, um nicht zu stürzen. Der SG zum @UUID[Compendium.pf2e.actionspf2e.pprgrYQ1QnIDGZiy]{Erklettern} der Wände oder @UUID[Compendium.pf2e.actionspf2e.3yoajuKjwHZ9ApUY]{Ergreifen eines Halts} beträgt 26. Die Grube verfügt über viele Vorsprünge, daher kann eine stürzende Kreatur alle 6 Sekunden versuchen, einen Halt zu ergreifen. Bei Erfolg kann sie beginnen, die Wand hinaufzuklettern – abhängig von der gestürzten Distanz kann dies eine lange @UUID[Compendium.pf2e.actionspf2e.pprgrYQ1QnIDGZiy]{Kletterpartie} werden. Da die Kreatur endlos stürzt, kann sie während des Sturzes sogar ausruhen und Zauber vorbereiten. Gegenstände, die man während des Sturzes loslässt, sind in der Regel für immer verloren.</p>"
+        }
+      }
+    },
+    "Brown Mold": {
+      "name": "Brauner Schimmelpilz",
+      "description": "<p>Dieser unscheinbare Pilz entzieht der Luft Wärme.</p>",
+      "disable": "<p>@Check[type:survival|dc:18|name:Braunen Schimmelpilz entfernen|traits:environmental,fungus] (Geübt), um den Schimmel sicher zu entfernen</p>",
+      "reset": "<p>Nachdem es sich ausgedehnt hat, kann der Braune Schimmelpilz für einen Tag nicht weiterwachsen.</p>",
+      "stealth": "<p>(Geübt)</p>",
+      "items": {
+        "action->Emit Cold": {
+          "name": "Kälte ausstrahlen",
+          "description": "<p>@Template[type:emanation|distance:5]{5 Fuß/1,50 m} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.v61oEQaDdcRpaZ9X]{Aura}</p>\n<hr>\n<p>Brauner Schimmelpilz fügt nahen Kreaturen [[/r 2d6[cold]]]{2W6 Kälteschaden} zu.</p>"
+        },
+        "action->Leech Warmth": {
+          "name": "Wärme Entziehen",
+          "description": "<p><strong>Auslöser</strong> Feuer kommt innerhalb von 5 Fuß/1,50 m in die Nähe des Schimmels</p>\n<hr>\n<p><strong>Effekt</strong> Der Braune Schimmelpilz dehnt sich in jedes Feld aus, das an seine Angriffsfläche angrenzt. Während er wächst, zieht er mehr Wärme aus seiner Umgebung und verursacht [[/r (2d6+6)[cold]]]{2W6+6 Kälteschaden} (@Check[type:fortitude|dc:18|basic:true]{einfacher ZÄH}) bei Kreaturen innerhalb von 10 Fuß/3 m, nachdem es sich ausgedehnt hat."
+        }
+      }
+    },
+    "Confounding Betrayal": {
+      "name": "Verwirrender Verrat",
+      "description": "<p>Verbündete scheinen ihre Verkleidungen abzulegen und sich als bösartige Monster zu entpuppen.</p>",
+      "disable": "<p>@Check[type:deception|dc:28|name:Verwirren]{Täuschung}(Experte), zweimal, um den Spuk mit den eigenen Täuschungen zu verwirren, oder @Check[type:occultism|dc:26|name:Abwehr]{Okkultismus} (Geübt), zweimal, um eine Abwehr gegen den geistigen Einfluss des Spuks zu erschaffen</p>",
+      "reset": "<p>Der Spuk deaktiviert sich 1 Minute nachdem alle Kreaturen das Gebiet verlassen haben, wird jedoch danach sofort zurückgesetzt.</p>",
+      "routine": "<p>(1 Aktion; Illusion, Kampfunfähig, Okkultismus) Der Spuk verwirrt weiterhin die Sinne der Opfer und inspiriert sie, Gewalt gegeneinander auszuüben. Jede Kreatur im Gebiet des Spukes muss einen @Check[type:will|dc:26]{Willenswurf} ablegen.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist unbetroffen und für 1 Minute lang vorübergehend immun.</p>\n<p><strong>Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.yblD8fOR1J8rDwEQ]{Verwirrt}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erhält für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.yblD8fOR1J8rDwEQ]{Verwirrt}.</p>",
+      "stealth": "<p>(Experte)</p>",
+      "items": {
+        "action->Unmask": {
+          "name": "Demaskieren",
+          "description": "<p><strong>Auslöser</strong> Zwei oder mehr Kreaturen betreten das Gebiet des Spukes.</p>\n<p><strong>Effekt</strong> Jede Kreatur sieht, wie sich die Erscheinung der Kreaturen in ihrer Nähe verändert und sich in teuflische oder aberrante Wesen verwandeln, die nach Blut dürsten. Jede Kreatur in dem Gebiet muss einen @Check[type:will|dc:30] bestehen.</p>\n<hr />\n<p><strong>Kritischer Erfolg</strong> Die Kreatur durchschaut die Illusion vollständig und ist 1 Minute lang vorübergehend immun gegen den Spuk.</p>\n<p><strong>Erfolg</strong> Die Kreatur bleibt von den seltsamen Bildern unberührt.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur glaubt, dass die Illusionen wahr sind. Wenn sie durch den Ablauf des Spukes @UUID[Compendium.pf2e.conditionitems.yblD8fOR1J8rDwEQ]{verwirrt} wird, kann sie keine einfachen Würfe durchführen, um den verwirrten Zustand zu beenden, wenn sie Schaden nimmt.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie Fehlschlag, aber die Kreatur ist von Verdacht behaftet und kann 24 Stunden lang nicht von der Reaktion Jemand anderem helfen profitieren.</p>"
+        }
+      }
+    },
+    "Dance Of Death": {
+      "name": "Todestanz",
+      "description": "<p>Ein unheimliches Orchester zwingt alle, die es hören, zum Tanzen, bis sie vor Erschöpfung zusammenbrechen.</p>",
+      "disable": "<p>@Check[type:intimidation|dc:42|name:Abhalten]{Einschüchtern} (Experte), dreimal, um Tänzer und spektrale Musiker gleichermaßen von der Teilnahme an der tödlichen Aufführung abzuhalten, @Check[type:performance|dc:40|name:Ausschalten]{Darbietung} (Meister), zweimal um eine Melodie zu spielen, die diskordant genug ist, um den Zwang zu unterbrechen, oder @Check[type:religion|dc:42|name:Ausschalten]{Religionskunde} (Meister), dreimal, um die Geister mit Gebeten zu verbannen</p>",
+      "reset": "<p>Das unheimliche Orchester verbringt eine Stunde damit, seine Phantommusikinstrumente neu zu stimmen.</p>",
+      "routine": "<p>(1 Aktion; Hörbar, Kampfunfähig, Okkultismus, Verzauberung,) Das Orchester spielt eine laute Melodie und zwingt alle Kreaturen, die es hören können, zum Tanzen. In jeder Runde muss eine Kreatur einen @Check[type:will|dc:37]{Willenswurf} ablegen. Die Ergebnisse dieses Rettungswurfs ändern die Anzahl der Aktionen, welche die Kreatur in jeder Runde zum Tanzen aufwenden muss. Wenn dies dazu führen würde, dass die Kreatur mehr Aktionen tanzen muss, als sie in ihrem Zug ausführen kann, erleidet die Kreatur [[/r {10d6}]]{10W6 Schadenspunkte} (oder den doppelten Schaden bei einem Kritischen Fehlschlag), wenn sie sich schneller bewegt, als es ihr Körper möglich ist.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur verringert die Anzahl der Aktionen, die sie tanzen muss, um 1.</p>\n<p><strong>Erfolg</strong> Kein Effekt.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhöht die Aktionen, die sie tanzen muss, um 1.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erhöht die Aktionen, die sie tanzen muss, um 2.</p>",
+      "stealth": "<p>(Meister)</p>",
+      "items": {
+        "action->Prelude": {
+          "name": "Präludium",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur nähert sich dem Orchester auf 9 m oder weniger.</p>\n<p><strong>Effekt</strong> Das Orchester zwingt alle Kreaturen, die es hören können, zum Tanzen. Jede Kreatur muss einen @Check[type:will|dc:41] ablegen.</p>\n<hr />\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur ist @UUID[Compendium.pf2e.conditionitems.AJh5ex99aV6VTggg]{Auf dem falschen Fuß} und kann keine Reaktionen einsetzen. Zusätzlich muss sie 1 ihrer Aktionen pro Runde zum Tanzen nutzen. Tanzen ist eine Bewegungsaktion, mit der die Kreatur bis zur Hälfte ihrer Geschwindigkeit schrittweise voranschreiten kann.</p>\n<p><strong>Fehlschlag</strong> Wie Erfolg, allerdings muss sie 2 ihrer Aktionen pro Runde tanzen.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie Misserfolg, nur muss die Kreatur 3 ihrer Aktionen pro Runde tanzen.</p>"
+        }
+      }
+    },
+    "Darkside Mirror": {
+      "name": "Dunkler Spiegel",
+      "description": "<p>Ein magischer Spiegel ersetzt Charaktere mit bösen Duplikaten aus einer anderen Dimension.</p>",
+      "disable": "<p>@Check[type:thievery|dc:34|name:Erretten einer Kreatur aus der anderen Dimension|traits:action:disable-a-device]{Diebeskunst} (Legende) (Erretten einer Kreatur aus der anderen Dimension binnen 10 Minuten nach dem Austausch, sofern das Duplikat tot ist), @Check[type:thievery|dc:39|name:Dauerhaftes Ausschalten des Spiegels|traits:action:disable-a-device]{Diebeskunst} (Meister) (dauerhaftes Ausschalten des Spiegels, sobald alle Duplikate tot sind) oder <em>@UUID[Compendium.pf2e.spells-srd.9HpwDN4MYQJnW0LG]{Magie bannen}</em> (7. Grad; Entgegenwirken-SG 32) (um dem Spiegel für 1 Minute @UUID[Compendium.pf2e.journals.S55aqwWIzpQRFhcq.JournalEntryPage.mmfWcV3Iyql5nzTo]{entgegenzuwirken} und für diese Zeit weiteren Austausch zu verhindern)</p>",
+      "reset": "<p>Der Spiegel ist stets bereit, Kreaturen in die andere Dimension zu ziehen. Sollte eine absorbierte Kreatur nicht binnen 10 Minuten mittels Diebeskunst von einem Verbündeten gerettet werden, erreicht sie die andere Dimension, wo sie möglicherweise gefangengenommen oder getötet wird. In der Spiegeldimension zählt sie als Duplikat, so dass die Bewohner der anderen Dimension den Spiegel von ihrer Seite nicht zerstören können, solange sich die absorbierte Kreatur dort befindet.</p>\n<p>Die Spiegeldimension ist eine alternative Realität und keine Ebene des Multiversums, so dass sie mittels Ritualen und Effekten wie @UUID[Compendium.pf2e.spells-srd.5bTt2CvYHPvaR7QQ]{Ebenenwechsel} nicht erreicht werden kann.\n</p>",
+      "routine": "<p>(1 Aktion) Der Spiegel absorbiert eine weitere, in ihm gespiegelte Kreatur und ersetzt sie mit einem bösen Duplikat. Duplikate nutzen die Spielwerte der Originalkreaturen und greifen zu ihren eigenen Initiativewerten an, besitzen aber eine böse Gesinnung (verändere nur jene Fähigkeiten, welche sich mit einem Gesinnungswechsel ändern). Ein Duplikat kann 3 Aktionen am Stück aufwenden, während es zum Spiegel Körperkontakt hat, um in seine Heimatdimension zurückzukehren und die Originalkreatur freizusetzen, allerdings bevorzugen die meisten Duplikate, dies nicht zu tun.</p>",
+      "stealth": "<p>(Meister), um zu bemerken, dass dies kein gewöhnlicher Spiegel ist</p>",
+      "items": {
+        "action->Reflection of Evil": {
+          "name": "Reflexion des Bösen",
+          "description": "<p><strong>Auslöser</strong> Eine nicht-böse Kreatur spiegelt sich im Spiegel.</p>\n<p><strong>Effekt</strong> Der Spiegel absorbiert die Kreatur und ersetzt sie mit einem bösen Duplikat (@Check[type:reflex|dc:34], keine Wirkung); dann würfelt der Spiegel seine Initiative aus.</p>"
+        }
+      }
+    },
+    "Drowning Pit": {
+      "name": "Volllaufende Grube",
+      "description": "<p>Eine Falltür bedeckt eine Grube mit 3 m Seitenlänge und 9 m Tiefe. Am Boden der Grube steht Wasser 1,50 m hoch. Vier Ventile in den Wänden sind mit verborgenen Wassertanks verbunden; jedes Ventil befindet sich in einer anderen Wand 15 cm unterhalb des Grubenrandes.</p>",
+      "disable": "<p>@Check[type:thievery|dc:18|name:Ausschalten (Versiegeln)] (Geübt) (Versiegeln eines Ventils), @Check[type:thievery|dc:22|name:Ausschalten (Öffnen)] (Geübt) (Öffnen der Falltür) oder @Check[type:athletics|dc:22|name:Ausschalten (Öffnen)] (@UUID[Compendium.pf2e.action-macros.yMTKMnaYSGtDz4wk]{Gewaltsames Öffnen der Falltür})</p>",
+      "hpDetails": "Ventil-Härte 8, Ventil-TP 32 (BW 16)",
+      "reset": "<p>Die Falle kann zurückgesetzt werden. Indem die Tür manuell wieder in Position gebracht und die Wassertanks aufgefüllt werden; sie kann zurückgesetzt werden, ohne zuerst das Wasser aus der Grube abzulassen, allerdings raubt ihr dies ihre Effektivität.</p>",
+      "routine": "<p>(4 Aktionen) Die Falle verliert pro Zug 1 Aktion pro ausgeschaltetes Ventil. Als jede Aktion der Falle strömt Wasser aus einem Ventil und der Wasserstand steigt um 1,50 m. Sobald die Grube vollgelaufen ist, nutzt die Falle keine Aktionen mehr. Dafür beginnen Kreaturen in der Grube zu ertrinken (siehe Seite 478).</p>",
+      "stealth": "<p> (Geübt); SG 22 (Experte), um die Ventilöffnungen bei offener Grube zu bemerken</p>",
+      "items": {
+        "action->Pitfall": {
+          "name": "Fallgrube",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur tritt auf die Falltür.</p>\n<hr>\n<p><strong>Effekt</strong> Die auslösende Kreatur stürzt in die Grube und erleidet Sturzschaden (abzüglich 5 Fuß/1,50 m an Wasser; meistens [[/r 12[bludgeoning]]]{12 Punkte Wuchtschaden}). Eine Kreatur kann versuchen, einen @UUID[Compendium.pf2e.actionspf2e.3yoajuKjwHZ9ApUY]{Halt zu ergreifen}, um nicht hineinzustürzen. Im Anschluss schlägt die Falltür wieder zu und die Gefahr würfelt ihre Initiative.</p>"
+        }
+      }
+    },
+    "Electric Latch Rune": {
+      "name": "Elektrische Riegelrune",
+      "description": "<p>Eine unsichtbare Rune auf einem Türriegel gibt eine heftige elektrische Entladung ab.</p>",
+      "disable": "<p>@Check[type:thievery|dc:20|name:Auslöschen der Rune] (Experte) (Auslöschen der Rune, ohne die Elektrizität freizusetzen, oder <em>@UUID[Compendium.pf2e.spells-srd.9HpwDN4MYQJnW0LG]{Magie bannen}</em> als Zauber des 2. Grades; Entgegenwirken-SG 18).</p>",
+      "stealth": "<p>(Geübt)</p>",
+      "items": {
+        "action->Electrocution": {
+          "name": "Stromschlag",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur ergreift den Türriegel direkt oder mit einem Werkzeug.</p>\n<hr>\n<p><strong>Effekt</strong> Die Falle verursacht bei der auslösenden Kreatur [[/r 3d12[electricity]]]{3W12 Punkte Elektrizitätsschaden} (@Check[type:reflex|dc:22|basic:true]{einfacher REF})</p>"
+        }
+      }
+    },
+    "Eternal Flame": {
+      "name": "Ewige Flamme",
+      "description": "<p>Ein tobendes spektrales Inferno entsteht aus dem Nichts und stärkt alle untoten Kreaturen innerhalb seines Gebiets. Dieser Spuk entsteht meistens aus den verkohlten Überresten einer Gruppe von drei Menschen, die bei einem schrecklichen Unfall oder einer absichtlichen Hinrichtung verbrannt wurden und deren ungerächte Seelen vor Wut brennen.</p>",
+      "disable": "<p>@Check[type:diplomacy|dc:27|name:Besänftigen]{Diplomatie}(Experte), um die Wut eines der drei Geister vorübergehend zu besänftigen, oder @Check[type:religion|dc:30|name:Austreiben]{Religionskunde} (Geübt), um einen der Geister auszutreiben. Es sind insgesamt drei Erfolge erforderlich, um den Spuk zu deaktivieren</p>",
+      "reset": "<p>Die Flammen erlöschen nach 1 Minute, nachdem alle Lebewesen das Gebiet verlassen haben, aber nach 1 Stunde lodern Wut und Schmerz wieder auf und der Spuk ist bereit, erneut ausgelöst zu werden.</p>",
+      "routine": "<p>(1 Aktion) Phantomflammen rasen über das heimgesuchte Gebiet und verursachen 4W6 Feuerschaden bei jeder lebenden Kreatur innerhalb des Gebiets (einfacher @Check[type:will|dc:29]{Willenswurf}). Untote Kreaturen in diesem Gebiet werden für die nächste Runde mit Flammen durchsetzt. Sie erhalten die Kategorie Feuer und Immunität gegen Feuer und alle ihre Angriffe verursachen zusätzlich [[/r {1d6}[fire]]]{1W6 Punkte Feuerschaden}. Objekte in der Umgebung sind nicht betroffen.</p>",
+      "stealth": "<p>(Experte)</p>",
+      "items": {
+        "action->Searing Agony": {
+          "name": "Sengende Qual",
+          "description": "<p><strong>Auslöser</strong> Eine lebende Kreatur nähert sich den Überresten eines Opfers des ursprünglichen Feuers auf 3 m oder weniger</p>\n<p><strong>Effekt</strong> Erinnerungen an den Schmerz, den die Opfer des Feuers in der Vergangenheit erlitten haben, greifen den Verstand der auslösenden Kreatur an. Die Kreatur muss einen @Check[type:will|dc:25] ablegen und der Spuk würfelt sodann die Initiative.</p>\n<hr />\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.fesd1n5eVhpCSS18]{Kränkelnd 1}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.fesd1n5eVhpCSS18]{Kränkelnd 2}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.fesd1n5eVhpCSS18]{Kränkelnd 3} und ist @UUID[Compendium.pf2e.conditionitems.AJh5ex99aV6VTggg]{Auf dem falschen Fuß} betroffen, solange sie sich im Gebiet des Spukes befindet und noch 3 Runden danach.</p>"
+        }
+      }
+    },
+    "Fireball Rune": {
+      "name": "Feuerballrune",
+      "description": "<p>Eine unsichtbare Rune erzeugt einen unsichtbaren, kugelförmigen magischen Sensor mit 6 m Radius.</p>",
+      "disable": "<p>@Check[type:thievery|dc:22|name:Rune Auslöschen] (Experte) (Auslöschen der Rune ohne Auslösung des Sensors, oder <em>@UUID[Compendium.pf2e.spells-srd.9HpwDN4MYQJnW0LG]{Magie bannen}</em> als Zauber des 3. Grades; Entgegenwirken-SG 20)</p>",
+      "stealth": "<p>(Experte)</p>",
+      "items": {
+        "action->Fireball": {
+          "name": "Feuerball",
+          "description": "<p><strong>Auslöser</strong> Eine lebende Kreatur betritt den Bereich des Sensors.</p>\n<hr>\n<p><strong>Effekt</strong> Die Rune erzeugt einen <em>@UUID[Compendium.pf2e.spells-srd.sxQZ6yqTn0czJxVd]{Feuerball}</em>, dessen Zentrum das Feld der auslösenden Kreatur ist. Der Feuerball ist ein Zauber des 3. Grades und verursacht [[/r 6d6[fire]]]{6W6 Punkte Feuerschaden} (@Check[type:reflex|dc:22|basic:true]{einfacher Zähigkeitswurf})</p>"
+        }
+      }
+    },
+    "Flensing Blades": {
+      "name": "Häutende Klingen",
+      "description": "<p>Ein wirbelnder Tornado aus spektral angetriebenem Glas und Stahl, zerschneidet alles in kleine Stückchen, was auch immer er berührt.</p>",
+      "disable": "<p>@Check[type:thievery|dc:46|name:Zerstören]{Diebeskunst} (Meister), um die Klingen so präzise anzuordnen, dass sie sich gegenseitig zerstören, oder @Check[type:religion|dc:29|name:Schwächen]{Religionskunde} (Experte), um den Spuk zu schwächen. Zum Deaktivieren sind vier Erfolge erforderlich</p>",
+      "reset": "<p>Der Spuk zieht im Laufe einer Stunde gezackte Scherben zurück in sein Gebiet, wonach er erneut auslösen kann.</p>",
+      "routine": "<p>(3 Aktionen) Der Tornado der Klingen nutzt 3 Aktionen, um sich zu bewegen, legt dabei bis zu 30 Fuß/9 m zurück und verursacht [[/r {2d10+10}[slashing]]]{2W10+10 Hiebschaden}. Jede Kreatur auf seinem Weg muss einen @Check[type:reflex|dc:33|traits:damaging-effect]{Reflexwurf} ablegen.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erleidet den halben Schaden.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet vollen Schaden plus [[/r 1d10[bleed]]]{1W10 Punkte Anhaltenden Blutungsschaden}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erleidet doppelten Schaden und [[/r 1d10[bleed]]]{1W10 Punkte Anhaltenden Blutungsschaden}. Es erhält zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Yl48xTdMh3aeQYL2]{Verwundet 1} (oder erhöht seinen Wert für Verwundet um 1, wenn es bereits Verwundet ist).</p>\n<p>Jeder erfolgreiche Wurf zur Abschaltung dieser Gefahr verringert die Bewegung des Spukes um 30 Fuß/9 m, der vierte erfolgreiche Wurf schaltet ihn vollständig aus.</p>",
+      "stealth": "<p>(Experte)</p>",
+      "items": {
+        "action->Whirling Blades": {
+          "name": "Wirbelnde Klingen",
+          "description": "<p><strong>Auslöser</strong> Drei oder mehr Kreaturen betreten den Bereich des Spukes.</p>\n<p><strong>Effekt</strong> Scharfe Scherben erheben sich vom Boden und beginnen sich in schnellen Kreisen zu drehen, wobei sie ein Feld mit 1,50 m Seitenlänge ausfüllen. Der Spuk würfelt seine Initiative.</p>"
+        }
+      }
+    },
+    "Frozen Moment": {
+      "name": "Eingefrorener Augenblick",
+      "description": "<p>Magische Schutzeffekte versuchen, Eindringlinge oder Möchtegerndiebe in einem unterbrochenen Zeitstrom einzufangen.</p>",
+      "disable": "<p>@Check[type:thievery|dc:38|name:Ausschalten]{Diebeskunst} (Legende) (um in einem Wimpernschlag die zahlreichen Komponenten des Zaubers auszuschalten) oder <em>@UUID[Compendium.pf2e.spells-srd.9HpwDN4MYQJnW0LG]{Magie bannen}</em> (9. Grad; Entgegenwirken-SG 36) (um der Falle vor dem Auslösen entgegenzuwirken oder um nach dem Auslösen ihrem Effekt bei einer Kreatur entgegenzuwirken)</p>",
+      "stealth": "<p>(Meister)</p>",
+      "items": {
+        "action->Adrift in Time": {
+          "name": "In der Zeit verloren",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur berührt den geschützten Gegenstand oder Bereich.</p>\n<p><strong>Effekt</strong> Die auslösende Kreatur und alle Kreaturen innerhalb von 30 Fuß/9 m Entfernung werden in einem unterbrochenen Zeitfluss eingefangen (@Check[type:fortitude|dc:38], keine Wirkung). Der Verstand einer betroffenen Kreatur ist derart beschleunigt, dass jede Runde ein Jahrhundert anzudauern scheint, allerdings bewegt sich ihr Körper und ihre magische Energie derart langsam, dass sie keine Aktionen außer Wissen abrufen nutzen kann. Eine betroffene Kreatur muss augenblicklich einen @Check[type:will|dc:36] gegen den Zauber <em>@UUID[Compendium.pf2e.spells-srd.8kJbiBEjMWG4VUjs]{Verstand verwirren}</em> ablegen; dieser Rettungswurf wird jede Minute erneut fällig, welche die Kreatur in einem Eingefrorenen Augenblick gefangen ist. Dieser Effekt besitzt eine unbegrenzte Wirkungsdauer, ihm kann aber entgegengewirkt werden.</p>"
+        }
+      }
+    },
+    "Ghostly Choir": {
+      "name": "Geisterchor",
+      "description": "<p>Ein Chor verlorener Seelen erhebt sich aus dem Boden und singt einen unheimlichen Gesang, der seine Zuhörer erschreckt und ihre Körper Klangwänden hin- und herwirft.</p>",
+      "disable": "<p>@Check[type:performance|dc:28|name:Stören]{Darbietung} (Geübt), um die Resonanz des Liedes mit einer anderen Melodie zu stören, oder @Check[type:religion|dc:28|name:Schweigen]{Religionskunde} (Geübt), um die Geister rituell zum Schweigen zu bringen.</p>",
+      "stealth": "<p>(Experte)</p>",
+      "items": {
+        "action->Profane Chant": {
+          "name": "Profaner Gesang",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur bewegt sich innerhalb von 10 Fuß/3 m um den Bodenabschnitt, aus dem der Chor hervorsteigen kann.</p>\n<hr>\n<p><strong>Effekt</strong> Der Chor erhebt sich und sein Lied fügt nicht-bösen Kreaturen innerhalb von @Template[type:emanation|distance:30]{30 Fuß/9 m} [[/r (4d8+18)[mental]]]{4W8+18 Punkte Mentalen Schaden} zu. Betroffene Kreaturen müssen jeweils einen @Check[type:will|dc:24|traits:damaging-effect]{Willenswurf} bestehen.</p>\n<hr>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erleidet den halben Schaden und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.TBSHQspnbcqxsmjL]{Verängstigt 1}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet vollen Schaden und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.TBSHQspnbcqxsmjL]{Verängstigt 2}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erleidet doppelten Schaden. Sie erhält zudem den Zustand @UUID[Compendium.pf2e.conditionitems.TBSHQspnbcqxsmjL]{Verängstigt 3} und @UUID[Compendium.pf2e.conditionitems.sDPxOjQ9kx2RZE8D]{flieht} für 1 Runde.</p>"
+        }
+      }
+    },
+    "Grasp Of The Damned": {
+      "name": "Griff der Verdammten",
+      "description": "<p>Diese verzweifelten Geister sind das Echo von Menschen, die im Namen eines bösen Gottes große Gräueltaten begangen haben. Jetzt haben sie nur noch das Wissen, dass ihre Seelen verdammt sind und den unerschütterlichen Glauben, dass sie ihr Schicksal verbessern können, indem sie ihren teuflischen Meistern mächtige Opfer bringen.</p>",
+      "disable": "<p>Religionskunde (Meister), SG 46, um eine Gottheit zum Eingreifen und Gegensteuern des Rituals zu inspirieren</p>",
+      "reset": "<p>1 Tag</p>",
+      "stealth": "<p>(Meister)</p>",
+      "items": {
+        "action->Mark for Damnation": {
+          "name": "Markiert für die Verdammnis",
+          "description": "<p><strong>Auslöser</strong> Drei oder mehr empfindungsfähige Lebewesen der 13. Stufe oder höher betreten das Gebiet des Spukes</p>\n<hr>\n<p><strong>Effekt</strong> Der Spuk fügt jeder Kreatur im Gebiet des Spukes [[/r (6d12+35)[negative]]]{6W12+35 Punkte Negativen Schaden} zu und jede Kreatur muss einen @Check[type:will|dc:40|traits:damaging-effects]{Willenswurf} ablegen.</p>\n<hr>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur erleidet keinen Schaden und ist @UUID[Compendium.pf2e.conditionitems.3uh1r86TzbQvosxv]{Todgeweiht 1}.</p>\n<p><strong>Erfolg</strong> Die Kreatur erleidet den halben Schaden und erhält den Zustand Todgeweiht 1.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet vollen Schaden, erhält den Zustand @UUID[Compendium.pf2e.conditionitems.3uh1r86TzbQvosxv]{Todgeweiht 2} und ist für die Verdammnis markiert.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erleidet doppelten Schaden, den Zustand @UUID[Compendium.pf2e.conditionitems.3uh1r86TzbQvosxv]{Todgeweiht 3} und ist für die Verdammnis markiert.</p>\n<p>Wenn eine Kreatur, die für die Verdammnis markiert ist, innerhalb der nächsten 24 Stunden stirbt (durch den Schaden des Spukes eingeschlossen), wird ihre Seele sofort auf die Ebene der bösen Gottheit gezogen, der die verdammten Geister gedient haben. Dort wird die Seele der Kreatur von einem mächtigen Diener dieser Gottheit gefangen gehalten. Nur <em>@UUID[Compendium.pf2e.spells-srd.6dDtGIUerazSHIOu]{Wunsch}</em> und ähnlich starke Effekte können die verlorene Seele retten. Es ist jedoch auch möglich, die Seele zu retten, indem man zur bösen Ebene reist und den Entführer der Seele besiegt.</p>"
+        }
+      }
+    },
+    "Gravehall Trap": {
+      "name": "Gravehall Trap",
+      "description": "<p>When a living creature crosses the midpoint of the trapped tunnel, necromantic magic partially animates the corpses buried in the walls and ceiling.</p>",
+      "disable": "<p>@Check[type:thievery|dc:24|name:Disrupt Magical Trigger|traits:action:disable-a-device] (expert) to disrupt the magical trigger before the hazard rolls initiative, or @Check[type:religion|dc:18|name:Overwhelm the Area with Positive Energy] (trained) to overwhelm the area with positive energy and prevent the hazard from using its routine for 1 round; on the third successful Religion check, the necromantic energies are disrupted and the hazard is destroyed.</p>",
+      "routine": "<p>(1 action) Undead fists assail all creatures in the hall, dealing [[/r 4d6[bludgeoning]]] damage. Creatures in the hall must attempt a @Check[type:reflex|dc:21].</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes half damage.</p>\n<p><strong>Failure</strong> The target takes full damage, and its Speeds are reduced by 10 feet (to a minimum of 5 feet) for 1 round.</p>\n<p><strong>Critical Failure</strong> The target takes double damage and is @UUID[Compendium.pf2e.conditionitems.eIcWbB5o3pP6OIMe]{Immobilized} for 1 round.</p>",
+      "items": {
+        "action->Lunging Dead": {
+          "name": "Lunging Dead",
+          "description": "<p><strong>Trigger</strong> A living creature crosses the midpoint of the tunnel</p>\n<hr />\n<p><strong>Effect</strong> The dead reach out from the walls and ceiling, moaning and spewing writhing maggots. Creatures in the room must attempt a @Check[type:will|dc:21] save. The trap then rolls initiative.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.TBSHQspnbcqxsmjL]{Frightened}</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.TBSHQspnbcqxsmjL]{Frightened 2}. It can't reduce its frightened condition below 1 while in the trap's area.</p>\n<p><strong>Critical Failure</strong> As failure, and the target is @UUID[Compendium.pf2e.conditionitems.6uEgoh53GbXuHpTF]{Paralyzed} for 1 round.</p>"
+        }
+      }
+    },
+    "Green Slime": {
+      "name": "Grünschleim",
+      "description": "<p>Ein ätzender grüner Film klebt an der Decke und wartet darauf, dass Beute unter ihm vorbeizieht.</p>",
+      "disable": "<p>Überlebenskunst (Experte), SG 33, um den Schleim vorsichtig von der Decke abzuziehen, ohne ihn zu berühren</p>",
+      "reset": "<p>1 Stunde, während der der Schleim schmaust und dann langsam wieder an die Decke zurückkriecht</p>",
+      "stealth": "(Experte)",
+      "items": {
+        "action->Dissolving Ambush": {
+          "name": "Auflösender Hinterhalt",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur geht unter dem Schleim hindurch</p>\n<p><strong>Effekt</strong> Der Grünschleim tropft auf die Kreatur und versucht, sie in eine nahrhafte Gülle aufzulösen. Das Ziel muss einen @Check[type:reflex|dc:28] ablegen.</p>\n<p><strong>Kritischer Erfolg</strong> Das Ziel springt aus dem Weg und ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Eine kleine Menge des Schleims spritzt auf das Ziel. Das Ziel erhält den Zustand @UUID[Compendium.pf2e.conditionitems.4D2KBtexWXa6oUMR]{Ausgelaugt 1}.</p>\n<p><strong>Fehlschlag</strong> Der Schleim landet auf seinem Ziel. Das Ziel erhält den Zustand @UUID[Compendium.pf2e.conditionitems.4D2KBtexWXa6oUMR]{Ausgelaugt 1}; dieser Zustandswert erhöht sich am Ende seiner Runde um 1, bis der Schleim entfernt wird. Wenn das Ziel den Wert 4 erreicht, stirbt es bei der nächsten Erhöhung seines Wertes für den Zustand Ausgelaugt und fällt in eine Nährstoffgülle zusammen. Ein Schleim, der ein Ziel bedeckt, kann nicht länger durch Fertigkeitswürfe für Überlebenskunst entfernt werden; Schaden, der dem Schleim zugefügt wird, wird auch dem Ziel zugefügt (unter Anwendung der Immunitäten, Resistenzen und Schwächen des Zieles anstelle der des Grünschleims).</p>\n<p><strong>Kritischer Fehlschlag</strong> Der Schleim bedeckt sein Ziel vollständig. Dies hat den gleichen Effekt wie ein Fehlschlag, mit der Ausnahme, dass das Ziel sofort den Zustand @UUID[Compendium.pf2e.conditionitems.4D2KBtexWXa6oUMR]{Ausgelaugt 2} erhält, nach ersten Runde Ausgelaugt 4 erhält und nach 2 Runden stirbt.</p>"
+        }
+      }
+    },
+    "Hallucination Powder Trap": {
+      "name": "Halluzinogenstaub",
+      "description": "<p>Ein Behälter mit Halluzinogenstaub und einer kleinen Sprengkapsel ist mit einem Türknauf oder ähnlichem Riegel verbunden.</p>",
+      "disable": "<p>@Check[type:thievery|dc:26|name:Ausschalten]{Diebeskunst} (Experte) (um die Sprengkapsel zu entschärfen)</p>",
+      "stealth": "<p>(Experte)</p>",
+      "items": {
+        "action->Powder Burst": {
+          "name": "Staubexplosion",
+          "description": "<p><strong>Auslöser</strong> Der Riegel wird geöffnet oder der Behälter erhält den Zustand Beschädigt.</p>\n<p><strong>Effekt</strong> Der Behälter explodiert und versprüht in einem @Template[type:cone|distance:30]{30 Fuß/9 m-Kegel} Halluzinogenstaub. Jede Kreatur im Wirkungsbereich muss einen @Check[type:will|dc:24] ablegen; bei einem Fehlschlag erleidet er für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.yblD8fOR1J8rDwEQ]{Verwirrt} und dann für [[/br 1d4 #Stunden]]{1W4 Stunden} einen Zustandsmalus von -2 auf Wahrnehmungswürfe und Rettungswürfe gegen mentale Effekte (bei einem Kritischen Fehlschlag beträgt der Malus -4).</p>"
+        }
+      }
+    },
+    "Hammer Of Forbiddance": {
+      "name": "Zutritt verwehrender Hammer",
+      "description": "<p>Ein gewaltiger Hammer schwingt durch die Türöffnung eines Gebäudes, um einer eintretenden Kreatur Schaden zuzufügen, sie zurückzutreiben und am Weitergehen zu hindern.</p>",
+      "disable": "<p>@Check[type:thievery|dc:28|name:Ausschalten]{Diebeskunst} (Experte) (einmal für den Hammer selbst und einmal auf den Schwungmechanismus)</p>",
+      "hpDetails": "Schwunggelenk-Härte 16, Schwunggelenk-TP 64 (BW 32)",
+      "reset": "<p>Die Falle setzt sich im Laufe der Runde zurück und kann 1 Runde später erneut schwingen.</p>",
+      "stealth": "<p>(Experte)</p>",
+      "items": {
+        "action->Forbid Entry": {
+          "name": "Zutritt verwehren",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur will einen Eingang passieren.</p>\n<p><strong>Effekt</strong> Der Hammer schwingt herab und führt einen Angriff gegen die auslösende Kreatur aus.</p>"
+        },
+        "strike-melee->Hammer": {
+          "name": "Hammer",
+          "description": "<p>Das Ziel wird ferner 3 m zurückgestoßen und muss einen @Check[type:will|dc:30]{Willenswurf} ablegen. Bei einem Fehlschlag kann das Ziel das Gebäude für 24 Stunden nicht betreten, egal welchen Eingang es wählt (landet der Hammer einen Kritischen Treffer, ist der Willenswurf automatisch ein Fehlschlag). Der Hammer unterliegt keinem Malus für Mehrfachangriffe.</p>"
+        }
+      }
+    },
+    "Hampering Web": {
+      "name": "Behinderndes Netz",
+      "description": "<p>Halbtransparente Netzbahnen überspannen den Eingang und können so kleine Insekten einfangen oder größere Kreaturen behindern, die durch ihn hindurchgehen.</p>",
+      "disable": "<p>@Check[type:survival|dc:26|name:Zerstören]{Überlebenskunst} (Geübt), um den Schnee sicher zu entfernen oder um eine beliebige Menge an Feuerschaden zu verursachen, um die Gefahr zu zerstören, ohne sie auszulösen.</p>",
+      "stealth": "<p>(Experte)</p>",
+      "items": {
+        "action->Ensnare": {
+          "name": "Verfangen",
+          "description": "<p><strong>Auslöser</strong> Eine Nichtspinnenkreatur läuft ins Netz.</p>\n<p><strong>Effekt</strong> Das Netz wickelt sich um den Körper der auslösenden Kreatur und klammert sich an ihre Gliedmaßen. Die auslösende Kreatur muss eine @Check[type:reflex|dc:20] bestehen; bei einem Fehlschlag erhält sie einen Situationsmalus auf alle ihre Bewegungsraten von -3 m, bis sie aus dem Netz entkommt (SG 20).</p>\n<p>Bei einem Kritischen Fehlschlag haften die Spinnenweben auch am Gesicht der Kreatur und verleihen ihr den Zustand @UUID[Compendium.pf2e.conditionitems.fesd1n5eVhpCSS18]{Kränkelnd 1}, dieser Zustand lässt sich nicht unter 1 verringern, bis man dem Netz entkommt.</p>"
+        }
+      }
+    },
+    "Hidden Pit": {
+      "name": "Versteckte Grube",
+      "description": "<p>Eine hölzerne Falltür deckt eine Grube mit 3 m Seitenlänge und 6 m Tiefe ab.</p>",
+      "disable": "<p>@Check[type:thievery|dc:12|name:Ausschalten]{Diebeskunst} (Aushängen der Falltür)</p>",
+      "reset": "<p>Kreaturen können immer noch in die Grube fallen, allerdings muss die Falltür manuell zurückgesetzt werden, damit die Falle wieder verborgen ist.</p>",
+      "stealth": "<p> (oder 0, falls die Falltür zertrümmert, ausgehängt oder beschädigt ist)</p>",
+      "items": {
+        "action->Pitfall": {
+          "name": "Fallgrube",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur tritt auf die Falltür.</p>\n<hr>\n<p><strong>Effekt</strong> Die auslösende Kreatur stürzt hinein und erleidet Sturzschaden (meistens [[/r 10[bludgeoning]]]{10 Punkte Wuchtschaden}). Diese Kreatur kann die Reaktion @UUID[Compendium.pf2e.actionspf2e.3yoajuKjwHZ9ApUY]{Halt ergreifen} nutzen, um den Sturz möglicherweise zu vereiteln.</p>"
+        }
+      }
+    },
+    "Insistent Privacy Fence": {
+      "name": "Elektrischer Zaun",
+      "description": "<p>Ein Teil eines Zaunes wird mit einer verborgenen Stasia-Spule elektrifiziert.</p>",
+      "disable": "<p>@Check[type:thievery|dc:28|name:Disconnect the coil from the fence|traits:electricity,hazard,trap,mechanical] (Experte), um die Spule vorsichtig vom Zaun abzunehmen oder @Check[type:crafting|dc:30|name:Jury-rig a grounding device|traits:electricity,hazard,trap,mechanical] (Meister), um ein Erdungsgerät zusammenzuschustern, um den Schock abzuleiten.</p>",
+      "reset": "<p>Die Falle deaktiviert sich und setzt sich nach einer Minute zurück.</p>",
+      "stealth": "<p>(Experte)</p>",
+      "items": {
+        "action->Shock": {
+          "name": "Schock",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur berührt den Zaun direkt oder mittels eines Werkzeugs oder einer Waffe</p>\n<hr>\n<p><strong>Effekt</strong> Der Zaun fügt der auslösenden Kreatur [[/r 7d12[electricity]]]{7W12 Punkte Elektrizitätsschaden} zu (@Check[type:reflex|dc:26|basic:true|traits:electricity,mechanical,trap,hazard]{einfacher REF}).</p>"
+        }
+      }
+    },
+    "Jealous Abjurer": {
+      "name": "Eifersüchtiger Bannwirker",
+      "description": "<p>Ein in Roben gekleideter Geist erhebt sich mit einem anklagend ausgestreckten Finger aus dem Boden.</p>",
+      "disable": "<p>@Check[type:arcana|dc:36|name:Überzeugen]{Arkane Künste}, @Check[type:nature|dc:36|name:Überzeugen]{Natur}, @Check[type:occultism|dc:36|name:Überzeugen]{Okkultismus} oder @Check[type:religion|dc:36|name:Überzeugen]{Religion} (Meister), um den Geist davon zu überzeugen, dass das magische Wissen des Ziels zu groß ist, um damit zu spaßen</p>",
+      "reset": "<p>1 Stunde</p>",
+      "stealth": "<p>(Meister)</p>",
+      "items": {
+        "action->Rend Magic": {
+          "name": "Magie zerreißen",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur, die gegenwärtig von einem vorteilhaften Zauberspruch betroffen ist, nähert sich dem Beschwörer auf 30 Fuß/9 m oder weniger.</p>\n<hr>\n<p><strong>Effekt</strong> Der Eifersüchtige Bannwirker beneidet den Ruhm und magische Kraft anderer und versucht, bei dem höchsten vorteilhaften Zauber, der derzeit auf seinem Ziel wirkt, einen katastrophalen Misserfolg herbeizuführen. Er versucht einen Wurf zum Entgegenwirken mit einem [[/r 1d20+26 #Entgegenwirken]]{+26-Modifikator}. Wenn das Entgegenwirken erfolgreich ist, wird der betreffende Zauber gebannt und die Kreatur, die er beeinflusst hat, erleidet [[/r (4d12+30)[force]]]{4W12+30 Energieschaden), wenn der Zauber heftig implodiert (@Check[type:reflex|dc:32|basic:true]{einfacher REF}).</p>"
+        }
+      }
+    },
+    "Lava Flume Tube": {
+      "name": "Lavaröhre",
+      "description": "<p>Vier mit Toren versehene Kanäle wurden in den Stein gehauen, um Lava in einen 4,50 m hohen Raum fließen zu lassen; der Boden des Raumes kann entfernt werden, um die ausgehärtete Lava in eine Kammer darunter fallen zu lassen.</p>",
+      "disable": "<p>@Check[type:thievery|dc:29|name:Ausschalten (Blockieren)]{Diebeskunst} (Experte) (blockieren eines Kanals) oder @Check[type:thievery|dc:31|name:Ausschalten (Boden lösen)]{Diebeskunst} (Meister) (um den Boden zu lösen und in die Kammer darunter zu entkommen)</p>",
+      "hpDetails": "um eines der Tore zu zerstören (dies vereitelt, dass der Kanal ausgeschaltet wird und verhindert, dass sich die Falle zurücksetzt); Boden-Härte 18; Boden-TP 72 (BW 36)",
+      "reset": "<p>Die Falle deaktiviert und setzt sich nach 1 Stunde zurück, indem sie den Boden öffnet und die gehärtete Lava (und alle darin gefangenen Kreaturen) in die Kammer darunter befördert. Kreaturen stürzen 12 m tief und erleiden Sturzschaden (meistens 17 Punkte Wuchtschaden).</p>",
+      "routine": "<p>(4 Aktionen) Die Falle verliert 1 Aktion pro Zug pro ausgeschaltetem Kanal. Mit jeder Aktion stößt ein anderer Kanal Lava aus; dies fügt jeder Kreatur innerhalb von 3 m zum Kanal 4W6 Punkte Feuerschaden zu (Einfacher REF, SG 27) und lässt die Lava im Raum um 30 cm steigen (1,20 m pro Runde, sollten alle Kanäle aktiv sein).</p>\n<p>Eine Kreatur, die ihren Zug in der Lava beginnt, erleidet 8W6 Punkte Feuerschaden und erhält den Zustand Bewegungsunfähig, bis sie aus der sich verhärtenden Lava entkommt (SG 27). Die Kreatur könnte ersticken, wenn sie von Lava bedeckt wird (siehe Seite 478). Lava aus der vorherigen Runde verhärtet vollständig zu Beginn des Zuges der Falle; dies erhöht effektiv den Boden des Raumes. Sobald der Raum mit Lava gefüllt ist, nutzt die Falle keine Aktionen mehr; Kreaturen sitzen aber im Raum fest, bis der Boden wegklappt und die Lava in den Raum darunter fällt.</p>",
+      "stealth": "<p>(Geübt)</p>",
+      "items": {
+        "action->Flume Activation": {
+          "name": "Lavafluss",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur versucht den Raum zu verlassen.</p>\n<p><strong>Effet</strong> Die Ausgänge versiegeln sich augenblicklich und die Falle würfelt ihre Initiative aus.</p>"
+        }
+      }
+    },
+    "Malevolent Mannequins": {
+      "name": "Gemeine Gliederpuppen",
+      "description": "<p>Eine Reihe aus bösartigen Geister haben Besitz von drei mechanischen Gliederpuppen ergriffen und jede davon schlägt nach Kreaturen, welche es wagen, sich in die Nähe zu bewegen.</p>",
+      "disable": "<p>@Check[type:thievery|dc:37|name:Jam a mannequin's clockwork mechanisms|traits:clockwork,haunt,mechanical,hazard] (Meister), um die mechanischen Teile der Gliederpuppen zu blockieren oder @Check[type:religion|dc:35|name:Exorcise a spirit from a mannequin|traits:clockwork,haunt,mechanical,hazard] (Experte) zwei Mal, um den Geist aus einer Gliederpuppe zu exorzieren.</p>",
+      "reset": "<p>Die Spukerscheinung deaktiviert sich, wenn keine Zielkreaturen mehr vorhanden sind und setzt sich innerhalb von einer Runde zurück, während die Gliederpuppen auf ihre ursprüngliche Position zurückkehren. Wenn eine Gliederpuppe sich mehr als 150 Fuß/45 m von ihrer Ursprungsposition entfernt hat, benötigt die Spukerscheinung länger, um sich zurückzusetzen, während die Gliederpuppe sich jede Runde um 150 Fuß/45 m zurückbewegt.</p>",
+      "routine": "<p>(9 Aktionen) Jede der Gliederpuppen nutzt jede Runde drei der Aktionen der Spukerscheinung und die Spukerscheinung verliert drei Aktionen pro Runde pro ausgeschalteter oder zerstörter Gliederpuppe. Jede Gliederpuppe nutzt die erste Aktion, um sich bis zu 50 Fuß/15 m weit zu Bewegen und die weiteren zwei Aktionen werden genutzt, um zwei Angriffe mit der Mechanischen Faust durchzuführen. Jede Gliederpuppe verfügt über einen eigenen Malus für Mehrfachangriffe.</p>",
+      "items": {
+        "action->Awaken": {
+          "name": "Erwecken",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur bewegt sich innerhalb von 30 Fuß/9 m zu einer der Gliederpuppen</p>\n<p><strong>Effekt</strong> Die Gliederpuppen stürzen alle auf die auslösende Kreatur zu. Sie bewegen sich bis zu 50 Fuß/15 m und würfeln dann Initiative.</p>"
+        },
+        "strike-melee->Clockwork Fist": {
+          "name": "Mechanische Faust"
+        }
+      }
+    },
+    "Perilous Flash Flood": {
+      "name": "Gefährliche Überschwemmung",
+      "description": "<p>Ob es sich um Wasser handelt, das durch die Straßen rauscht und gefährliche Trümmer auf dem Weg aufwirbelt, oder um eine weniger natürliche Substanz, die aus ihrem Behälter herausplatzt: diese unerbittliche Flut überrollt alles, was ihm in den Weg kommt.</p>",
+      "disable": "<p>Drei Fertigkeitswürfe für Athletik, Handwerks- oder Überlebenskunst, SG 35, um Barrikaden zu bewegen oder zu errichten, die stark genug sind, um einen Schutz vor der Flut zu schaffen. Während dies einen sicheren Standplatz schafft, können Lebewesen außerhalb des verbarrikadierten Bereichs abhängig von der Art und der Quelle der Flut immer noch in Gefahr sein.</p>",
+      "routine": "<p>(1 Aktion) Die Flut rückt 60 Fuß/18 m vor und trifft auf alle Kreaturen in ihrem Gebiet. Jede Kreatur muss einen @Check[type:fortitude|dc:30|traits:damaging-effect]{Zähigkeitswurf} ablegen, wenn das Hochwasser sie niederreißt und stromabwärts zieht. Die Höhe und Art des verursachten Schadens richtet sich nach der Art der Überschwemmung und bestimmte Arten von Überschwemmungen verursachen zusätzliche Effekte. Das turbulente Wasser bedeutet, dass Kreaturen im Bereich der Flut einen Fertigkeitswurf für @Check[type:athletics|dc:20|traits:action:swim]{Athletik} zum Schwimmen ablegen müssen, um sich zu bewegen und diejenigen, denen dies nicht gelingt, ertrinken könnten.</p>\n<hr>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur erleidet keinen Schaden.</p>\n<p><strong>Erfolg</strong> Die Kreatur erleidet den halben Schaden.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet vollen Schaden und wird 10 Fuß/3 m vom Wasser mitgezogen.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erleidet doppelten Schaden und wird 20 Fuß/6 m vom Wasser mitgezogen.</p>\n<hr>\n<ul>\n<li><strong>Säurehaltiger Abfluss</strong> Diese ätzende Flut löst Fleisch auf, während es sich bewegt und verursacht [[/r {1d12[bludgeoning],(1d12+8)[acid]}]]{1W12 Wuchtschaden und 1W12+8 Säureschaden}. Zusätzlich fügt es Kreaturen, deren Zähigkeitswurf Kritisch fehlschlägt, zusätzlich [[/r 2d6[persistent,acid]]]{2W6 Punkte anhaltenden Säureschaden} zu.</li>\n<li><strong>Ramponierende Wellen</strong> Diese Wasserflut verursacht [[/r (2d12+10)[bludgeoning]]]{2W12+10 Wuchtschaden}.</li>\n<li><strong>Abstoßende Abfälle</strong> Diese Flut hat verdorbene oder von Krankheiten befallene Gegenstände wie Kanalabwasser oder verrottende Lebensmittel aufgenommen. Sie verursacht [[/r (2d12+8)[bludgeoning]]]{2W12+8 Wuchtschaden}. Jede Kreatur, die der Flut ausgesetzt ist, muss einen @Check[type:fortitude|dc:29]{Zähigkeitswurf} ablegen; bei einem Misserfolg erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.fesd1n5eVhpCSS18]{Kränkelnd 1} (bzw. bei einem Kritischen Misserfolg @UUID[Compendium.pf2e.conditionitems.fesd1n5eVhpCSS18]{Kränkelnd 2}). Zusätzlich sind Kreaturen, die mit dem Hochwasser in Kontakt kommen, Schmutzfieber ausgesetzt (@Check[type:fortitude|dc:20]{Zähigkeitswurf}; MHB, S. 262).</li>\n<li><strong>Scharfkantiges Geröll</strong> Das Wasser hat verschiedene Gegenstände aufgenommen, von denen einige besonders scharfkantig sind. Die Flut verursacht [[/r {1d12[bludgeoning],(1d12+12)[piercing]}]]{1W12 Wuchtschaden und 1W12+12 Stichschaden}.</li>\n<li><strong>Klebrige Schmiere</strong> Die Substanz ist besonders klebrig. Sie verursacht [[/r (2d12+6)[bludgeoning]]]{2W12+6 Wuchtschaden}. Zusätzlich muss jede Kreatur in der Flut zu Beginn ihres Zuges in jeder Runde einen @Check[type:reflex|dc:29]{Reflexwurf} ablegen. Bei einem fehlgeschlagenen Rettungswurf erleidet sie für 1 Runde einen Situationsmalus von 10 Fuß/3 m für alle ihre Bewegungsraten. Bei einem Kritischen Fehlschlag erhält sie stattdessen für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.eIcWbB5o3pP6OIMe]{Bewegungsunfähig}.</li>\n</ul>",
+      "stealth": "<p>(Experte)</p>",
+      "items": {
+        "action->Burst Free": {
+          "name": "Freisprengen",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur oder ein Effekt durchbricht den Schutz der Flut.</p>\n<p><strong>Effekt</strong> Die Gefahr würfelt ihre Initiative, während die Flut weiter strömt.</p>"
+        },
+        "action->Filth Fever": {
+          "name": "Schmutzfieber",
+          "description": "<p>Die durch Schmutzfieber erhaltenen Zustände Kränkelnd und @UUID[Compendium.pf2e.conditionitems.fBnFDH2MTzgFijKf]{Bewusstlos} verbessern sich nicht von allein, solange die Krankheit nicht geheilt wurde.</p>\n<p><strong>RW</strong> @Check[type:fortitude|dc:20]</p>\n<p><strong>Phase 1</strong> Erkrankt ohne Symptome ([[/r 1d4 # Stunden]]{1W4 Stunden})</p>\n<p><strong>Phase 2</strong> @UUID[Compendium.pf2e.conditionitems.fesd1n5eVhpCSS18]{Kränkelnd 1} (1 Tag)</p>\n<p><strong>Phase 3</strong> @UUID[Compendium.pf2e.conditionitems.fesd1n5eVhpCSS18]{Kränkelnd 1} und @UUID[Compendium.pf2e.conditionitems.xYTAsEpcJE1Ccni3]{Verlangsamt 1} (1 Tag)</p>\n<p><strong>Phase 4</strong> @UUID[Compendium.pf2e.conditionitems.fBnFDH2MTzgFijKf]{Bewusstlos} (1 Tag)</p>\n<p><strong>Phase 5</strong> Tot</p>"
+        }
+      }
+    },
+    "Pharaoh's Ward": {
+      "name": "Pharaonenfluch",
+      "description": "<p>In einen Durchgang oder Türrahmen ist ein Fluch eingraviert.</p>",
+      "disable": "<p>@Check[type:thievery|dc:27|name:Ausschalten]{Diebeskunst} (Meister) (um den Türrahmen zu entfernen, ohne die Magie auszulösen, oder <em>@UUID[Compendium.pf2e.spells-srd.9HpwDN4MYQJnW0LG]{Magie bannen}</em> als Zauber des 4. Grades; Entgegenwirken-SG 25)</p>",
+      "reset": "<p>Die Falle setzt sich zurück, wenn die Tür geschlossen wird.</p>",
+      "stealth": "<p>(Experte)</p>",
+      "items": {
+        "action->Curse the Intruders": {
+          "name": "Verfluchen von Eindringlingen",
+          "description": "<p><strong>Auslöser</strong> Das Siegel auf der Gruft wird von außen gebrochen.</p>\n<p><strong>Effekt</strong> Jede lebende Kreatur innerhalb von 60 Fuß/18 m muss einen @Check[type:will|dc:23] ablegen; bei Misslingen ist sie vom Fluch des Pharaos betroffen. Eine verfluchte Kreatur erleidet einen Zustandsmalus von -2 auf Zähigkeitswürfe, zudem wird jede natürliche oder magische Heilung, die sie erhält, halbiert. Der Fluch währt, bis er mittels <em>@UUID[Compendium.pf2e.spells-srd.OyFCwQuw8XRazsNr]{Fluch brechen}</em> oder ähnlicher Magie aufgehoben wird.</p>"
+        }
+      }
+    },
+    "Planar Rift": {
+      "name": "Ebenenriss",
+      "description": "<p>Ein Dimensionsriss versucht, Kreaturen auf eine andere Ebene zu zerren (der SL bestimmt die Ebene).</p>",
+      "disable": "<p>@Check[type:thievery|dc:33|name:Ausschalten]{Diebeskunst} (Meister) (den Riss mittels Gegenständen versiegeln, die fest in dieser Ebene verankert sind) oder <em>@UUID[Compendium.pf2e.spells-srd.9HpwDN4MYQJnW0LG]{Magie bannen}</em> (7. Grad; Entgegenwirken-SG 31) (um dem Riss entgegenzuwirken)</p>",
+      "stealth": "<p>(Geübt)</p>",
+      "items": {
+        "action->Into the Great Beyond": {
+          "name": "Dimensionssog",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur bewegt sich innerhalb von 10 Fuß/3 m zum Riss.</p>\n<p><strong>Effekt</strong> Die auslösende Kreatur und alle Kreaturen innerhalb von 30 Fuß/9 m Entfernung zum Riss werden auf eine andere Ebene gesogen. Jeder Kreatur steht ein @Check[type:reflex|dc:33] zu, um diesem Schicksal zu entgehen.</p>"
+        }
+      }
+    },
+    "Plummeting Doom": {
+      "name": "Sturz ins Verderben",
+      "description": "<p>Vier rachsüchtige Geister greifen nach Eindringlingen und werfen sie vom Rand einer nahe gelegenen, 36 m hohen Klippe.</p>",
+      "disable": "<p>@Check[type:athletics|dc:40|name:Zurückdrängen]{Athletik} (Geübt), um so stark zurückzudrängen, dass die Geister befürchten, selbst von der Klippe geworfen zu werden, oder @Check[type:religion|dc:40|name:Wegsperren]{Religionskunde} (Experte), um die Geister vorübergehend wegzusperren.</p>",
+      "reset": "<p>1 Stunde</p>",
+      "stealth": "<p>(Meister), um das Echo eines weit entfernten Objekts zu hören, das auf den Boden kracht</p>",
+      "items": {
+        "action->Call of the Ground": {
+          "name": "Ruf des Bodens",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur nähert sich dem Rand der Klippe auf 15 Fuß/4,50 m oder weniger.</p>\n<p><strong>Effekt</strong> Jeder Geist versucht, eine Kreatur innerhalb von 60 Fuß/18 m vom Rand der Klippe zu werfen, indem er einen Wurf mit einem +26 Modifikator gegen den Zähigkeits-SG des Ziels durchführt. Wenn dies dem Spuk gelingt, wird das Ziel über den Rand der Klippe geworfen, wo es 120 Fuß/36 Meter in die Tiefe stürzt.</p>\n<p>Bis der Spuk besiegt ist, muss jede Kreatur innerhalb von 60 Fuß/18 m zum Rand der Klippe jedes Mal einen @Check[type:will|dc:40] bestehen, wenn sie eine Aktion oder Reaktion ausführt, um einen @UUID[Compendium.pf2e.actionspf2e.qm7xptMSozAinnPS]{Sturz abfangen}, zu @UUID[Compendium.pf2e.actionspf2e.cS9nfDRGD83bNU1p]{fliegen}, eine Kante zu @UUID[Compendium.pf2e.actionspf2e.3yoajuKjwHZ9ApUY]{ergreifen} oder auf andere Weise einen Sturz zu vermeiden. Schlägt der Rettungswurf fehl, wird die Aktion unterbrochen. Der Spuk versucht automatisch, Zaubersprüchen mit einem Modifikator von +32. entgegenzuwirken, die einen Sturz verlangsamen oder wie @UUID[Compendium.pf2e.spells-srd.TTwOKGqmZeKSyNMH]{Federfall} die Auswirkungen des Sturzes abschwächen würden. </p>"
+        }
+      }
+    },
+    "Poisoned Dart Gallery": {
+      "name": "Giftpfeilbeschuss",
+      "description": "<p>Zahllose Löcher bilden in der Wand eines langen Korridors eine Linie; aus den Löchern schießen kleine Giftpfeile. Am anderen Ende des Ganges befindet sich eine verstecktes Schaltpaneel.</p>",
+      "disable": "<p>@Check[type:thievery|dc:21|name:Abschalten] (Experte) (am Kontrollpaneel zum Abschalten der Falle)</p>",
+      "hpDetails": "um das Kontrollpaneel zu zerstören und die Falle auszuschalten",
+      "reset": "<p>Die Falle deaktiviert und setzt sich nach 1 Minute zurück.</p>",
+      "routine": "<p>(1 Aktion) Die Falle verschießt als 1 Aktion einen Pfeil auf jede Kreatur im Korridor. Da die Falle ständig Pfeile verschießt, kann sie die Freie Aktion Dauerfeuer (siehe unten) nutzen, um Pfeile auf jede Kreatur während des Zuges dieser Kreaturen zu verschießen.</p>",
+      "stealth": "<p>(Experte) oder SG 31 (Meister), um das Kontrollpaneel zu bemerken</p>",
+      "items": {
+        "action->Dart Volley": {
+          "name": "Pfeilbeschuss",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur betritt den Korridor oder beendet im Gang ihren Zug.</p>\n<p><strong>Effekt</strong> Die Falle führt einen Angriff mit einem Giftpfeil gegen die auslösende Kreatur aus, dann würfelt sie ihre Initiative aus.</p>"
+        },
+        "strike-ranged->Poisoned Dart": {
+          "name": "Giftpfeil",
+          "description": "<p>@UUID[Compendium.pf2e.conditionitems.6uEgoh53GbXuHpTF]{Lähmungsgift}; kein Malus für Mehrfachangriffe</p>"
+        },
+        "action->Continuous Barrage": {
+          "name": "Dauerfeuer",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur beendet eine Aktion innerhalb des aktiven Ganges.</p>\n<p><strong>Effekt</strong> Die Falle führt einen Angriff mit einem Giftpfeil gegen die auslösende Kreatur aus.</p>"
+        },
+        "action->Flesset Poison": {
+          "name": "Lähmungsgift",
+          "description": "<p><strong>Rettungswurf</strong> @Check[type:fortitude|dc:22]{Zähigkeitswurf}</p>\n<hr>\n<p><strong>Maximale Wirkungsdauer</strong> 6 Runden;</p>\n<p><strong>Phase 1</strong> [[/r 1d6[poison]]]{1W6 Punkte Giftschaden} and @UUID[Compendium.pf2e.conditionitems.i3OJZU2nk64Df3xm]{Unbeholfen 1} (1 Runde);</p>\n<p><strong>Phase 2</strong> [[/r 2d6[poison]]]{2W6 Punkte Giftschaden} and @UUID[Compendium.pf2e.conditionitems.i3OJZU2nk64Df3xm]{Unbeholfen 2} (1 Runde);</p>\n<p><strong>Phase 3</strong> [[/r 3d6[poison]]]{3W6 Punkte Giftschaden} and @UUID[Compendium.pf2e.conditionitems.i3OJZU2nk64Df3xm]{Unbeholfen 3} (1 Runde)</p>"
+        }
+      }
+    },
+    "Poisoned Lock": {
+      "name": "Vergiftetes Schloss",
+      "description": "<p>In der Nähe des Schlüssellochs eines Schlosses ist eine Giftnadel an einem Sprungfedermechanismus verborgen. Wird die Falle ausgeschaltet oder beschädigt, knackt dies das Schloss nicht und beschädigt es auch nicht.</p>",
+      "disable": "<p>@Check[type:thievery|dc:17|name:Ausschalten]{Diebeskunst} (Geübt) (Federmechanismus entschärfen)</p>",
+      "stealth": "<p>(Geübt)</p>",
+      "items": {
+        "action->Spring": {
+          "name": "Sprungfeder",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur versucht das Schloss zu knacken oder aufzuschließen.</p>\n<p><strong>Effekt</strong> Eine Nadel schießt hervor und greift die auslösende Kreatur an.</p>"
+        },
+        "strike-melee->Spine": {
+          "name": "Nadel"
+        },
+        "action->Cladis Poison": {
+          "name": "Schwächegift",
+          "description": "<p><strong>Rettungswurf</strong> @Check[type:fortitude|dc:19]{Zähigkeitswurf}</p>\n<hr>\n<p><strong>Maximaldauer</strong> 4 Stunden</p>\n<p><strong>Phase 1</strong> [[/r 1d6[poison]]]{1W6 Giftschaden} und @UUID[Compendium.pf2e.conditionitems.4D2KBtexWXa6oUMR]{Ausgelaugt 1} (1 Stunde)</p>\n<p><strong>Phase 2</strong> [[/r 2d6[poison]]]{2W6 Giftschaden} und @UUID[Compendium.pf2e.conditionitems.4D2KBtexWXa6oUMR]{Ausgelaugt 2} (1 Stunde)</p>\n<p><strong>Phase 3</strong> [[/r 3d6[poison]]]{3W6 Giftschaden} und @UUID[Compendium.pf2e.conditionitems.4D2KBtexWXa6oUMR]{Ausgelaugt 2} (1 Stunde)</p>"
+        }
+      }
+    },
+    "Polymorph Trap": {
+      "name": "Verwandlungsfalle",
+      "description": "<p>Eine druidische Glyphe versucht, einen Eindringling in ein Tier zu verwandeln.</p>",
+      "disable": "<p>@Check[type:thievery|dc:32|name:Ausschalten]{Diebeskunst} (Meister) (die Kraft der Glyphe harmlos ableiten), oder <em>@UUID[Compendium.pf2e.spells-srd.9HpwDN4MYQJnW0LG]{Magie bannen}</em> (6. Grad; Entgegenwirken-SG 30) (der Glyphe entgegenwirken)</p>",
+      "stealth": "<p>(Geübt)</p>",
+      "items": {
+        "action->Baleful Polymorph": {
+          "name": "Böswillige Verwandlung",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur bewegt sich innerhalb von 30 Fuß/9 m zur Glyphe, ohne auf Druidisch die zum Passieren nötigen Worte auszusprechen.</p>\n<p><strong>Effekt</strong> Die Kreatur wird das Ziel von <i>Böswillige Verwandlung</i> (@Check[type:will|dc:32]).</p>"
+        }
+      }
+    },
+    "Quicksand": {
+      "name": "Treibsand",
+      "description": "<p>Ein Bereich mit 4,50 m Seitenlänge aus Wasser und Sand zieht Kreaturen nach unten, welche auf die Sandoberfläche treten.</p>",
+      "disable": "<p>@Check[type:survival|dc:18|name:Ausschalten]{Überlebenskunst} (Geübt) (Aufwirbeln der Oberfläche)</p>",
+      "reset": "<p>Die Gefahr zieht immer noch jeden nach unten, der in sie hineintritt, allerdings benötigt die Oberfläche des Treibsandes 24 Stunden, um sich wieder zu glätten und so verborgen zu werden.</p>",
+      "routine": "<p>(1 Aktion) Wenn der Treibsand an der Reihe ist, zieht er alle Kreaturen in seinem Wirkungsbereich nach unten. Eine Kreatur, die bis zur Hüfte eingesunken war, versinkt bis zum Hals, eine bis zum Hals eingesunkene Kreatur versinkt vollständig und muss den Atem anhalten, um nicht zu ersticken (siehe Seite 478).</p>\n<p>Ein Kreatur im Treibsand kann einen Fertigkeitswurf für @Check[type:athletics|dc:20|name:Schwimmen]{Athletik} zum Schwimmen  ablegen, um ihren Zustand um einen Schritt zu verbessern (von untergetaucht zu bis zu den Schultern eingetaucht zu bis zur Hüfte eingetaucht; sollte die Kreatur nur bis zur Hüfte eingetaucht sein, kann sie sich 1,50 m weit bewegen). Bei einem Kritischen Fehlschlag wird die Kreatur stattdessen um einen Schritt nach unten gezogen. Kann eine Kreatur schwimmend dem Treibsand entkommen, entkommt sie auch der Gefahr, landet auf einem Feld angrenzend zum Treibsand und besitzt den Zustand Liegend.</p>\n<p>Andere Kreaturen können die gefangene Kreatur mittels Jemand anderem helfen unterstützen, z.B. indem sie ihr ein Seil zuwerfen oder versuchen, die Kreatur mit einem eigenen Fertigkeitswurf für @Check[type:athletics|dc:20|name:Herauszuziehen]{Athletik} zum herauszuziehen (die Ergebnisse sind dieselben, als hätte die Kreatur den Wurf abgelegt).</p>",
+      "stealth": "<p>(Geübt) (oder –10 und kein Mindestkompetenzgrad, sollte die Oberfläche aufgewühlt sein)</p>",
+      "items": {
+        "action->Submerge": {
+          "name": "Wirkungsweise",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur der Größenkategorie Riesig \noder kleiner tritt auf die Treibsandfläche.</p>\n<p><strong>Effekt</strong> Die auslösende Kreatur versinkt bis zur Hüfte im Treibsand. Sofern der Treibsand bisher seine Initiative nicht ausgewürfelt hat, tut er es nun.</p>"
+        }
+      }
+    },
+    "Scythe Blades": {
+      "name": "Sensenklingen",
+      "description": "<p>Zwei in der Decke verborgenen, einer 4,50 m langen Linien folgenden Klingen, verbunden mit einem Stolperdraht</p>",
+      "disable": "<p>@Check[type:thievery|dc:21|name:Ausschalten]{Diebeskunst} (Geübt) (pro Klinge)</p>",
+      "reset": "<p>Die Falle setzt sich nach 15 Minuten zurück.</p>",
+      "stealth": "<p>(Geübt)</p>",
+      "items": {
+        "action->Falling Scythes": {
+          "name": "Herabsausende Sensenklingen",
+          "description": "<p><strong>Auslöser</strong> Der Stolperdraht wird durchtrennt oder bewegt.</p>\n<p><strong>Effekt</strong> Beide Klingen schwingen herab; jede Klinge greift alle Kreaturen auf ihrer Linie an.</p>"
+        },
+        "strike-melee->Scythe": {
+          "name": "Sense",
+          "description": "<p>Kein Malus für Mehrfachangriffe.</p>"
+        },
+        "action->No MAP": {
+          "name": "Kein MA",
+          "description": "<p>Kein Malus für Mehrfachangriffe (MA).</p>"
+        }
+      }
+    },
+    "Second Chance": {
+      "name": "Zweite Chance",
+      "description": "<p>Mächtige schützende Magie, welche an einen Gegenstand oder einen Ort gebunden ist, versucht, das Alter einer Kreatur und ihrer Verbündeten zu reduzieren.</p>",
+      "disable": "<p>@Check[type:thievery|dc:46|name:Ausschalten]{Diebeskunst} (Legende) (um den Zauber mit geschlossenen Augen Stück für Stück zu zerlegen, während man sich beginnend mit der Kindheit an alle Geschehnisse seines Lebens erinnert).</p>",
+      "stealth": "<p>(Legendär)</p>",
+      "items": {
+        "action->In the Beginning": {
+          "name": "Am Anfang",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur versucht, den Gegenstand zu stehlen oder in die Örtlichkeit einzudringen. Sollte jemand einen Stellvertreter für den Diebstahl oder das Eindringen schicken oder jemanden getäuscht haben, dass dieser es für ihn tut, so hat die Magie den wahren Schuldigen zum Ziel; die Falle funktioniert dann über jede Entfernung und sogar über Ebenengrenzen hinweg.</p>\n<p><strong>Effekt</strong> Die auslösende Kreatur und bis zu fünf Mitverschwörer werden augenblicklich in Kleinkinder zurückverwandelt; sie verlieren alle Erinnerungen, Klassenfähigkeiten und andere Fertigkeiten, die sie im Laufe ihrer Leben erlangt haben (@Check[type:fortitude|dc:44], keine Wirkung. Es ist nahezu unmöglich, diesen Effekt umzukehren, da hierzu mächtige Magie wie z.B. ein <em>@UUID[Compendium.pf2e.spells-srd.6dDtGIUerazSHIOu]{Wunsch}</em> erforderlich ist.</p>"
+        }
+      }
+    },
+    "Shrieker": {
+      "name": "Kreischer",
+      "description": "<p>Dieser menschengroße, lila Pilz stößt bei Störung einen durchdringenden Schrei aus.</p>",
+      "disable": "<p>@Check[type:survival|dc:18|name:Luftsack abschneiden|traits:environmental,fungus]{Überlebenskunst}, um vorsichtig an den Luftsack des Pilzes herantreten und ihn abschneiden, ohne den Schrei auszulösen.</p>",
+      "reset": "<p>1 Minute</p>",
+      "items": {
+        "action->Shriek": {
+          "name": "Schrei",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur oder Lichtquelle nähert sich dem Kreischer auf 10 Fuß/3 m oder weniger oder der Kreischer nimmt Schaden.</p>\n<hr>\n<p><strong>Effekt</strong> Der Kreischer stößt ein ohrenbetäubendes Kreischen aus, das Kreaturen in einem Umkreis von @Template[type:emanation|distance:30]{30 Fuß/9 m} [[/r 1d6[sonic]]]{1W6 Punkte Schallschaden} zufügt (@Check[type:fortitude|dc:16|basic:true|traits:auditory]{einfacher ZÄH}; bei einem Kritischen Fehlschlag erhält eine Kreatur für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.9PR9y0bi4JPKnHPR]{Taub}).</p>"
+        }
+      }
+    },
+    "Slamming Door": {
+      "name": "Herabfallender Steinblock",
+      "description": "<p>In der Nähe des Schlüssellochs eines Schlosses ist eine Giftnadel an einem Sprungfedermechanismus verborgen. Wird die Falle ausgeschaltet oder beschädigt, knackt dies das Schloss nicht und beschädigt es auch nicht.</p>",
+      "disable": "<p>@Check[type:thievery|dc:15|name:Federmechanismus entschärfen] (Geübt) (Federmechanismus entschärfen)</p>",
+      "stealth": "<p>(Geübt)</p>",
+      "items": {
+        "action->Slam Shut": {
+          "name": "Herabstürzen",
+          "description": "<p><strong>Auslöser</strong> Druckplatte wird belastet.</p>\n<hr>\n<p><strong>Effekt</strong> Der Steinblock stürzt herab und versiegelt den Gang. Der Block fügt jeder unter oder angrenzend zu ihm befindlichen Kreatur [[/r 3d8[bludgeoning]]]{3W8 Punkte Wuchtschaden} zu und stößt sie aus seiner Angriffsfläche in eine zufällige Richtung. Betroffenen Kreaturen steht ein @Check[type:reflex|dc:17|traits:damaging-effect]{Reflexwurf} zu, bei Erfolg erleidet eine Kreatur keinen Schaden und rollt sich in eine zufällig bestimmte Richtung weg (bei einem Kritischen Erfolg kann die Kreatur selbst die Richtung bestimmen).</p>\n<p>Zum Anheben des Steinblocks ist ein Fertigkeitswurf für @Check[type:athletics|dc:25|name:Anheben des Steinblocks|showDC:all]{Athletik} erforderlich. Werden die Bodenpaneele getroffen, löst dies die Falle aus.</p>\n<p>Der Steinblock hat dieselbe RK und dieselben Rettungswürfe wie die Falle, aber Härte 12 und 48 TP (BW 24).</p>"
+        }
+      }
+    },
+    "Snowfall": {
+      "name": "Schneefall",
+      "description": "<p>Auf einer hohen Oberfläche wie einem Ast oder einem Dach hat sich loser Schnee und Eis angesammelt. Sein Halt auf der Oberfläche ist prekär und es ist wahrscheinlich, dass der Schnee fällt, wenn sich die Oberfläche bewegt.</p>",
+      "disable": "<p>Überlebenskunst (Geübt), SG 19, um den Schnee sicher zu entfernen oder um eine beliebige Menge an Feuerschaden zu verursachen, um die Gefahr zu zerstören, ohne sie auszulösen</p>",
+      "stealth": "<p>(Geübt)</p>",
+      "items": {
+        "action->Snowdrop": {
+          "name": "Schneefall",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur bewegt sich unter der Stelle, an welcher der Schneefall liegt</p>\n<hr>\n<p><strong>Effekt</strong> Eis und Schnee fallen auf die auslösende Kreatur, verursachen [[/r (2d6+3)[bludgeoning]]]{2W6+3 Wuchtschaden} (@Check[type:reflex|dc:18|basic:true]{einfacher REF}) und durchtränken ihre Kleidung. Bis sie frische Kleidung anzieht oder mindestens eine Stunde in einem Bereich mit normaler oder höherer Temperatur verbringt, behandelt sie kalte Umgebungen als einen Schritt kälter (z. B. milde Kälte als schwere Kälte).</p>"
+        }
+      }
+    },
+    "Spear Launcher": {
+      "name": "Speerfalle",
+      "description": "<p>In der Wand befindet sich ein mit einem Speer geladener Federmechanismus, der mit einer Bodenfliese in einem 1,50 m x 1,50 m-Feld verbunden ist.</p>",
+      "disable": "<p>@Check[type:thievery|dc:18|name:Ausschalten]{Diebeskunst} (Geübt) (Bodenfliese oder Federmechanismus)</p>",
+      "stealth": "<p>(Geübt)</p>",
+      "items": {
+        "action->Spear": {
+          "name": "Speer",
+          "description": "<p><strong>Auslöser</strong> Auf die Bodenfliese wird Druck ausgeübt.</p>\n<hr>\n<p><strong>Effekt</strong> Die Falle verschießt einen Speer und führt mit ihm einen Angriff gegen die Kreatur oder den\nGegenstand auf der Bodenfliese aus.</p>"
+        },
+        "strike-ranged->Spear": {
+          "name": "Speer"
+        }
+      }
+    },
+    "Spectral Reflection": {
+      "name": "Geisterhaftes Spiegelbild",
+      "description": "<p>Das Spiegelbild verdreht und verzerrt sich auf subtile Weise und sein Ausdruck nimmt ein beunruhigendes Grinsen der Bosheit an.</p>",
+      "disable": "<p>Religionskunde (Geübt), SG 23, um den Geist auszutreiben, oder Diebeskunst (Geübt) SG 23, um den Spiegel schnell zu bedecken</p>",
+      "reset": "<p>Der Spuk bildet sich nach 1 Minute neu und manifestiert sich in einem Spiegel innerhalb seines von ihm durchdrungenen Bereich (siehe Speziell).</p>",
+      "stealth": "<p>(Experte)</p>",
+      "items": {
+        "action->Spectral Impale": {
+          "name": "Geisterhaftes Aufspießen",
+          "description": "<p><strong>Auslöser</strong> Eine lebende Kreatur nähert sich dem Spiegel auf 15 Fuß/4,50 m oder weniger und der Spiegel wird mit wenigstens Dämmerlicht beleuchtet.</p>\n<p><strong>Effekt</strong> Schattenhafte Widerhaken durchbohren den Körper der reflektierten Kreatur, während der Spuk einen Angriff mit Schattenstacheln ausführt.</p>"
+        },
+        "strike-melee->Shadow Barbs": {
+          "name": "Schattenstacheln"
+        },
+        "action->Sap Vitality": {
+          "name": "Vitalität aufzehren",
+          "description": "<p>Eine Kreatur, die von den Schattenstacheln des Spiegels getroffen wird, muss einen @Check[type:fortitude|dc:22] ablegen, während der Spuk versucht, einen Teil ihrer vitalen Essenz in den Spiegel zu ziehen. Bei einem fehlgeschlagenen Rettungswurf erhält das Ziel den Zustand Ausgelaugt 1 (bzw. bei einem Kritischen Fehlschlag Ausgelaugt 2).</p>"
+        },
+        "action->Special": {
+          "name": "Speziell",
+          "description": "<p>Geisterhafte Spiegelbilder durchdringen oft ganze Gebäude und manifestieren sich in ausreichend großen Spiegeln. Die angegebenen Beispiele für Trefferpunkte und Härte stellen einen typischen Spiegel dar, der durch den Spuk verstärkt wird. Nach deinem Ermessen kann der Spuk in reflektierenden Oberflächen auftreten, die schwerer zu zerstören sind. Das Besiegen einer Manifestation durch Schaden zerstört die Oberfläche und verhindert, dass der Spuk sie wieder benutzt. Wenn dieser Treffpunkt in einem Bereich mit vielen Spiegeln auftritt, solltest du erwägen, den SC doppelte oder sogar dreifache EP für eine typische einfache Gefahr zu geben.</p>"
+        }
+      }
+    },
+    "Spinning Blade Pillar": {
+      "name": "Klingensäule",
+      "description": "<p>Im Boden ist eine Metallstange mit drei messerscharfen, wirbelnden Klingen verborgen. Sie ist mit Auslösern in bis zu acht Bodenfliesen und einem versteckten Kontrollpaneel innerhalb von 9 m verbunden.</p>",
+      "disable": "<p>@Check[type:thievery|dc:21|name:Ausschalten (Säure)]{Diebeskunst} (Geübt) (zweimal gegen die Säule) oder @Check[type:thievery|dc:19|name:Ausschalten (Deaktivieren)]{Diebeskunst} (Experte) (einmal beim Kontrollpaneel zum Deaktivieren der ganzen Falle). Wird das Kontrollpaneel beschädigt, kann niemand mehr über die Steuerung die Falle ausschalten; ebenso kann die Falle sich nicht mehr automatisch deaktivieren (siehe unten, Rücksetzer).</p>",
+      "hpDetails": "Paneel-Härte 5, Paneel-TP 20 (BW 10)",
+      "reset": "<p>Die Falle deaktiviert und setzt sich zurück nach 1 Minute.</p>",
+      "routine": "<p>3 Aktionen) Die Falle nutzt ihre erste Aktion für einen Klingenwirbelangriff gegen jede angrenzende Kreatur, die zweite Aktion zur Fortbewegung in eine zufällig bestimmte Richtung (würfle 1W4, 1 = Norden, 2 = Osten usw.) und die dritte für einen Klingenwirbelangriff gegen jede angrenzende Kreatur. Die Falle erhält keinen Malus für Mehrfachangriffe.</p>",
+      "stealth": "<p> (Geübt) oder SG 26 (Experte), um die Steuerpaneele zu finden</p>",
+      "items": {
+        "action->Rising Pillar": {
+          "name": "Hochfahrende Säule",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur tritt auf eine der verbundenen Bodenfliesen.</p>\n<p><strong>Effekt</strong> Die Falle fährt in einer Kreuzung des Rasters aus dem Boden und führt einen Klingenwirbelangriff gegen eine angrenzende Kreatur aus (sofern es eine gibt), dann würfelt sie die Initiative aus.</p>"
+        },
+        "action->Speed": {
+          "name": "Bewegungsrate",
+          "description": "<p>10 Fuß/3 m</p>"
+        },
+        "strike-melee->Spinning Blade": {
+          "name": "Klingenwirbel"
+        }
+      }
+    },
+    "Sportlebore": {
+      "name": "Wegzehrer",
+      "description": "<p>Wegzehrer können sich vor allem unter Lebensmitteln verstecken, wie etwa auf einer Essensplatte oder in einem Beutel mit Reiseproviant.</p>",
+      "disable": "<p>Eine Kreatur, die den Wegzehrer inmitten seiner Nahrung oder seines Reiseproviants, in dem er sich versteckt hält, entdeckte, kann diesen automatisch mit einer Aktion zum Interagieren entfernen.</p>",
+      "stealth": "<p>(Experte)</p>",
+      "items": {
+        "action->Mimic Food": {
+          "name": "Wegzehrung nachahmen",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur isst eine Mahlzeit, in der sich der Wegzehrer versteckt.</p>\n<p><strong>Effekt</strong> Der Wegzehrer vermehrt sich rasch im Magen des Wirtes und setzt die Kreatur deshalb der Wegzehrerplage aus.</p>"
+        },
+        "action->Sportlebore Infestation": {
+          "name": "Wegzehrerplage",
+          "description": "<p><strong>Rettungswurf</strong> @Check[type:fortitude|dc:22|basic:true]{einfacher Zähigkeitswurf}</p>\n<hr>\n<p><strong>Phase 1</strong> Krankheitsträger ohne Krankheitssymptome (1 Tag)</p>\n<p><strong>Phase 2</strong> @UUID[Compendium.pf2e.conditionitems.MIRkyAjyBeXivMa7]{Kraftlos 1} (1 Stunde)</p>\n<p><strong>Phase 3</strong> @UUID[Compendium.pf2e.conditionitems.MIRkyAjyBeXivMa7]{Kraftlos 2} (1 Stunde)</p>\n<p><strong>Phase 4</strong> [[/r 4d6[bludgeoning]]]{4W6 Punkte Wuchtschaden} (@Check[type:fortitude|dc:25|basic:true]{einfacher Zähigkeitswurf}) ausgelöst durch das schmerzvolle Erbrechen des Wegzehrerschwarms, anschließend Rückkehr zu Phase 1</p>"
+        }
+      }
+    },
+    "Steam Vents": {
+      "name": "Dampfventile",
+      "description": "<p>Große, unter Druck stehende Röhren sind mit einem Stolperdraht verbunden, welcher die auslösende Kreatur in heißen Dampf einhüllt.</p>",
+      "disable": "<p>@Check[type:thievery|dc:22|name:Disconnect the trip wire|traits:mechanical,trap,hazard]{Diebeskunst (Geübt)}, um den Stolperdraht zu entfernen oder @Check[type:crafting|dc:24|name:Reduce the pressure|traits:mechanical,trap,hazard]{Handwerkskunst (Experte)}, um den Druck vorsichtig abzulassen und so die Dampfexplosion zu verhindern.</p>",
+      "stealth": "<p>(Geübt)</p>",
+      "items": {
+        "action->Steam Blast": {
+          "name": "Dampfstoß",
+          "description": "<p><strong>Auslöser</strong> Am Stolperdraht wird gezogen oder er wird durchtrennt – typischerweise, weil eine Kreatur durch das Feld mit dem Stolperdraht geht</p>\n<hr>\n<p><strong>Effekt</strong> Dampf tritt aus den Rohren aus und fügt allen Kreaturen innerhalb von @Template[type:emanation|distance:15]{15 Fuß/4,50 m} [[/r {3d6[bludegeoning],3d6[fire]}]]{3W6 Punkte Wuchtschaden und 3W6 Punkte Feuerschaden} zu (@Check[type:reflex|dc:24|basic:true|traits:mechanical,trap,hazard]{einfacher REF}). Kreaturen, deren Rettungswurf kritisch fehlschlägt, werden @UUID[Compendium.pf2e.conditionitems.j91X7x0XSomq8d60]{zu Boden} geworfen.</p>"
+        }
+      }
+    },
+    "Summoning Rune": {
+      "name": "Beschwörungsrune",
+      "description": "<p>Eine Wolke unsichtbarer magischer Sensoren umgibt in einem 3 m-Radius eine unsichtbare, auf eine Wand oder den Boden geschriebene Rune. Die Rune besitzt dieselbe Größenkategorie wie die zu beschwörende Kreatur.</p>",
+      "disable": "<p>@Check[type:acrobatics|dc:15|name:Nähern]{Akrobatik} (um sich der Falle zu nähern, ohne sie auszulösen) gefolgt von @Check[type:thievery|dc:17|name:Ausschalten]{Diebeskunst} (Geübt) (zum Auslösen der Rune) oder @UUID[Compendium.pf2e.spells-srd.9HpwDN4MYQJnW0LG]{Magie bannen} (1. Grad; Entgegenwirken-SG 15) (um der Rune entgegenzuwirken).</p>",
+      "reset": "<p>Die Falle setzt sich jeden Tag zum Sonnenaufgang zurück.</p>",
+      "stealth": "<p>(Geübt)</p>",
+      "items": {
+        "action->Summon Monster": {
+          "name": "Monster beschwören",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur tritt in die Wolke aus magischen Sensoren.</p>\n<p><strong>Effekt</strong> Diese Falle beschwört eine bestimmte Kreatur der 1. Stufe. Die Kreatur würfelt ihre Initiative und verbleibt für [[/br 2d6 #Runden]]{2W6 Runden}. Danach endet die Zauberwirkung und verschwindet die Kreatur wieder. Die Kreatur verschwindet vorzeitig, sollte die Falle entschärft werden. Die beschworene Kreatur kann im Gegensatz zu den meisten beschworenen Kreaturen jede Runde 3 Aktionen nutzen und Reaktionen einsetzen.</p>"
+        }
+      }
+    },
+    "Telekinetic Swarm Trap": {
+      "name": "Telekinetischer Schwarm",
+      "description": "<p>Drei harmlos wirkende, mit telekinetischer Magie aufgeladene Dekorationen ziehen Gegenstände und Teile des Raumes an und formen wirbelnde Wolken aus Abfällen, welche alle Kreaturen im Raum angreifen.</p>",
+      "disable": "<p>@Check[type:thievery|dc:27|name:Ausschalten (Zerlegen)]{Diebeskunst} (Experte) (um eine der telekinetischen Wolken zu zerlegen), @Check[type:thievery|dc:32|name:Ausschalten]{Diebeskunst} (Meister) (um eine der telekinetischen Dekorationen auszuschalten) oder <em>@UUID[Compendium.pf2e.spells-srd.9HpwDN4MYQJnW0LG]{Magie bannen}</em> (6. Stufe; Entgegenwirken-SG 30) (um einer der telekinetischen Dekorationen entgegenzuwirken)</p>",
+      "hpDetails": "pro Telekinetischer Wolke",
+      "reset": "<p>Die Falle deaktiviert und setzt sich zurück, wenn sie 10 Minuten lang keine Ziele hatte (weil ihre Zielkreaturen entweder gestorben sind oder sich weiter als 1,5 km entfernt haben).</p>",
+      "routine": "<p>(9 Aktionen) Jede Dekoration nutzt jeden Zug 3 Aktionen der Falle; sollte eine Dekoration ausgeschaltet werden, verliert die Falle entsprechend 3 Aktionen pro Zug. Eine Dekoration nutzt ihre erste Aktion, um ihre Gegenstandswolke bis zu 60 m weit zu bewegen. Mit der zweiten Aktion lässt sie die Wolke zuschlagen und mit der dritten Aktion sammelt sie weitere Gegenstände in der Wolke; dies erhöht ihren Schaden um 1W12 (maximal 4W12+10). Sollte der Maximalschaden bereits erreicht sein, lässt die Dekoration ihre dritte Aktion verfallen.</p>\n<p>Wird die Wolke einer Dekoration zerstört, wendet die Dekoration stattdessen ihre erste Aktion auf, um eine neue Wolke aus Gegenständen im Raum zu erschaffen (diese Wolke verursacht den Anfangsschadenswert), und die zweite und dritte dann, um die Wolke zu bewegen und angreifen zu lassen.\n</p>",
+      "stealth": "<p>(Experte)</p>",
+      "items": {
+        "action->Agitate": {
+          "name": "Aufwirbeln",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur verweilt wenigstens 6 Sekunden lang im Raum.</p>\n<p><strong>Effekt</strong> Jede telekinetische Dekoration bildet eine Wolke aus Gegenständen im Raum aus (insgesamt drei Wolken), dann würfelt die Falle ihre Initiative aus. Jene Kreaturen, die sich bei der Auslösung im Raum befunden haben, werden zu den Zielen der Falle, egal ob sie den Raum verlassen oder andere Kreaturen später den Raum betreten. Nach Möglichkeit wählt jede Dekoration eine andere Kreatur als Ziel. Eine Kreatur muss sich wenigstens 1,5 km weit von der Falle entfernen, um nicht mehr als Ziel zu zählen; in diesem Fall wählt sich die Dekoration ein neues Ziel.</p>"
+        },
+        "strike-melee->Objects": {
+          "name": "Objekte"
+        }
+      }
+    },
+    "Titanic Flytrap": {
+      "name": "Titanische Fliegenfalle",
+      "description": "<p>An der Oberfläche scheint eine Titanische Fliegenfalle ein Beet der häufigeren Fliegenfalle zu sein, aber unter trüben Gewässern verbirgt sie einen weit größeren Satz aus Kiefern, die einen Durchmesser von 3 m haben und mit holzigen Zweigen verstärkt sowie mit lähmenden Haaren ausgekleidet sind.</p>",
+      "disable": "<p>@Check[type:survival|dc:22|name:In die Irre führen]{Überlebenskunst} (Geübt), um den Spürsinn für Gewicht und Druck der Fliegenfalle in die Irre zu führen.</p>",
+      "reset": "<p>1 Stunde (oder länger nach einer großen Mahlzeit)</p>",
+      "stealth": "<p>(Geübt)</p>",
+      "items": {
+        "action->Snap Shut": {
+          "name": "Zuschnappen",
+          "description": "<p><strong>Auslöser</strong> Eine Kleine oder Mittelgroße Kreatur bewegt sich auf ein Feld, das sich in Reichweite der versteckten Kiefer der Fliegenfalle befindet.</p>\n<p><strong>Effekt</strong> Die Kiefer der Fliegenfalle schnappen zu und greifen die auslösende Kreatur an.</p>"
+        },
+        "strike-melee->Jaws": {
+          "name": "Kiefer"
+        },
+        "action->Devour": {
+          "name": "Verschlingen",
+          "description": "<p>Das Ziel wird von den Kiefern der Fliegenfalle gefangen und erhält den Zustand @UUID[Compendium.pf2e.actionspf2e.PMbdMWc2QroouFGD]{Ergreifen}, bis es Entkommt (SG 21). Zusätzlich ist es dem Gift der Titanfliegenfalle aus den Hunderten winziger Härchen ausgesetzt, welche die Innenseite seiner Blätter auskleiden. Wenn der Bissangriff der Fliegenfalle ein Kritischer Erfolg war, erhält das Ziel einen Situationsmalus von –2 auf seine Rettungswürfe gegen dieses Gift. Am Ende jeder Runde erleidet ein Gegriffenes Ziel [[/r {3d6}[acid]]]{3W6 Säureschaden}.</p>"
+        },
+        "action->Titanic Flytrap Toxin": {
+          "name": "Gift der Titanischen Fliegenfalle",
+          "description": "<p><strong>Rettungswurf</strong> @Check[type:fortitude|dc:21]{Zähigkeitswurf}; <strong>Maximale Dauer</strong> 4 Runden</p>\n<p><strong>Phase 1</strong> [[/r {2d6}[poison]]]{2W6 Giftschaden} und @UUID[Compendium.pf2e.conditionitems.dfCMdR4wnpbYNTix]{Betäubt 1} (1 Runde)</p>\n<p><strong>Phase 2</strong> [[/r {3d6}[poison]]]{3W6 Giftschaden} und @UUID[Compendium.pf2e.conditionitems.dfCMdR4wnpbYNTix]{Betäubt 2} (1 Runde)</p>\n<p><strong>Phase 3</strong> [[/r {4d6}[poison]]]{4W6 Giftschaden} und @UUID[Compendium.pf2e.conditionitems.6uEgoh53GbXuHpTF]{Gelähmt} (1 Runde)</p>"
+        }
+      }
+    },
+    "Treacherous Scree": {
+      "name": "Tückisches Geröll",
+      "description": "<p>Der Stand auf diesem abschüssigen Untergrund scheint auf den ersten Blick stabil zu sein, aber die winzigen Felsen, die ihn bedecken, sind lose und rutschgefährdet.</p>",
+      "disable": "<p>@Check[type:survival|dc:20|name:Sicherer Weg]{Überlebenskunst} (Geübt), um einen sicheren Weg zu begehen.</p>",
+      "stealth": "<p>(Geübt)</p>",
+      "items": {
+        "action->Rockslide": {
+          "name": "Steinschlag",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur betritt den instabilen Boden</p>\n<hr>\n<p><strong>Effekt</strong> Felsen fallen und rutschen unter ihren Füßen. Die auslösende Kreatur muss einen @Check[type:reflex|dc:21|traits:damaging-effect]{Reflexwurf} ablegen, während sie gegen die Felsen stürzt, was [[/r (2d10+13)[bludgeoning]]]{2W10+13 Wuchtschaden} verursacht.</p>\n<hr>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur erleidet keinen Schaden.</p>\n<p><strong>Erfolg</strong> Die Kreatur erleidet den halben Schaden, stürzt in ihrem Feld zu Boden und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.j91X7x0XSomq8d60]{Liegend}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet vollen Schaden, stürzt in ihrem Feld zu Boden und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.j91X7x0XSomq8d60]{Liegend} und fällt dann den Abhang hinunter.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie Misserfolg, aber doppelter Schaden.</p>"
+        }
+      }
+    },
+    "Vorpal Executioner": {
+      "name": "Henkersklinge",
+      "description": "<p>Eine unglaublich scharfes Sägeblatt fährt aus der Wand und bewegt sich in einem komplexen Muster entlang der Wände, um jeden im Raum zu enthaupten.</p>",
+      "disable": "<p>@Check[type:thievery|dc:41|name:Ausschalten]{Diebeskunst} (Experte) (an vier Wegpunkten der Klinge im Raum, um jeden möglichen Weg der Klinge zu blockieren, so dass sie sich nicht weiterbewegen kann)</p>",
+      "hpDetails": "pro Wegpunkt",
+      "reset": "<p>Die Falle setzt im Laufe der Runde zurück und kann 1 Runde später erneut ausgelöst werden.</p>",
+      "stealth": "<p>(Experte)</p>",
+      "items": {
+        "action->Total Decapitation": {
+          "name": "Enthauptung",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur versucht den Raum zu verlassen.</p>\n<p><strong>Effekt</strong> Die Klinge bewegt sich auf ihrer Bahn, führt einen Angriff gegen jede Kreatur im Raum aus und dreht sich dabei und fährt auf und nieder, um wirklich jeden zu erwischen.</p>"
+        },
+        "strike-melee->Saw Blade": {
+          "name": "Henkersklinge",
+          "description": "<p>Kein Malus für Mehrfachangriffe.</p>"
+        },
+        "action->Decapitation": {
+          "name": "Enthauptung",
+          "description": "<p>Bei einem Kritischen Treffer muss ein Ziel einen @Check[type:fortitude|dc:39|traits:damaging-effect]{Zähigkeitswurf} ablegen; bei einem Fehlschlag wird es enthauptet und stirbt augenblicklich, sofern es nicht ohne Kopf überleben kann.</p>"
+        }
+      }
+    },
+    "Web Lurker Deadfall": {
+      "name": "Netzlaurer-Totschlagfalle",
+      "description": "<p>Ein Stolperdraht aus dem Spinnennetz eines Netzlauers lässt einen Haufen von Stämmen auf ein Ziel innerhalb eines Radius von 3 Metern fallen.</p>",
+      "disable": "<p>@Check[type:survival|dc:20|name:Ausschalten] (Geübt) oder @Check[type:thievery|dc:20|name:Ausschalten]{Diebeskunst} (Experte), um das Netz neu zu arrangieren.</p>",
+      "stealth": "<p>SG 23</p>",
+      "items": {
+        "action->Deadfall": {
+          "name": "Todeslawine",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur bewegt sich in das Feld mit dem Netzstolperdraht.</p>\n<hr>\n<p><strong>Effekt</strong> Alle Kreaturen innerhalb des 3-Meter-Radius der Falle erleiden [[/r 2d6[bludgeoning]]]{2W6 Wuchtschaden} (@Check[type:reflex|dc:20|basic:true]{einfacher REF}).</p>"
+        }
+      }
+    },
+    "Web Lurker Noose": {
+      "name": "Netzlaurer-Schlinge",
+      "description": "<p>Dezente Netze auf Höhe der Kehle umschlingen eine Kreatur, die in sie hineinläuft.</p>",
+      "disable": "<p>@Check[type:survival|dc:18|name:Rearrange the Webbing|traits:mechanical,trap]{Überlebenskunst} (Geübt) oder @Check[type:thievery|dc:18|name:Rearrange the Webbing|traits:mechanical,trap]{Diebeskunde} (Experte), um das Netz neu zu arrangieren.</p>",
+      "items": {
+        "action->Web Noose": {
+          "name": "Netzschlinge",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur läuft in das Feld mit dem Netzstolperdraht.</p>\n<hr>\n<p><strong>Effekt</strong> Die Netzlaurer-Schlinge führt einen Schlingenangriff gegen die auslösende Kreatur durch.</p>"
+        },
+        "strike-melee->Noose": {
+          "name": "Schlinge",
+          "description": "<p>Bei einem erfolgreichen Angriff wird das Ziel @UUID[Compendium.pf2e.conditionitems.kWc1fhmv9LBiTuei]{ergriffen} und vom Boden hochgerissen (SG 22 zum @UUID[Compendium.pf2e.actionspf2e.SkZAQRkLLkmBQNB9]{Entkommen}). Solange das Ziel in der Schlinge gefangen ist, erleidet es weitere [[/r 1d6[bludgeoning]]]{1W6 Wuchtschaden} am Ende jeder seiner Runden.</p>"
+        }
+      }
+    },
+    "Wheel Of Misery": {
+      "name": "Rad des Unglücks",
+      "description": "<p>Ein verziertes Rad ist in die Wand eingelassen; es ist in sechs Segmente mit jeweils farbigen Runen unterteilt und wird von einem magischen Sensor kontrolliert, welcher jede Kreatur innerhalb von 30 m vor ihm wahrnimmt.</p>",
+      "disable": "<p>@Check[type:thievery|dc:26|name:Ausschalten (Rad anhalten)]{Diebeskunst} (Experte) (das Rad anhalten), @Check[type:thievery|dc:22|name:Ausschalten (Auslösen)]{Diebeskunst} (Meister) (einmal pro Rune, um sie auszulöschen) oder <em>@UUID[Compendium.pf2e.spells-srd.9HpwDN4MYQJnW0LG]{Magie bannen}</em> (4. Grad; Entgegenwirken-SG 22), um jeder Rune entgegenzuwirken.</p>",
+      "reset": "<p>Die Falle deaktiviert und setzt sich zurück, sofern 1 Minute verstreicht, ohne dass sich eine Kreatur innerhalb der Reichweite des Sensors bewegt.</p>",
+      "routine": "<p>(2 Aktionen) Wenn das Rad an der Reihe ist, nutzt es seine erste Aktion, um sich zu drehen und dann anzuhalten. Würfle mit [[/br 1d6 #Rad des Unglücks]]{1W6}, um zu bestimmen, welches Segment am Ende nach oben weist. Das Rad nutzt seine zweite Aktion, um den mit der Rune des Segments verbundenen Zauber nachzuahmen (3. Grad, SG 24, Zauberangriffswurf +14). Der Zauber ist entweder auf die nächste Kreatur zentriert oder enthält diese in ihrem Wirkungsbereich. Dies erhöht wenn nötig die Reichweite des Zaubers auf 100 Fuß/30 m. Jeder von dieser Falle gewirkte Zauber gehört der arkanen Tradition an.</p>\n<p><strong>1 </strong><em>@UUID[Compendium.pf2e.spells-srd.o4lRVTwSxnOOn5vl]{Schlaf}</em></p>\n<p><strong>2 </strong><em>@UUID[Compendium.pf2e.spells-srd.DCQHaLrYXMI37dvW]{Kreatur Lähmen}</em></p>\n<p><strong>3 </strong><em>@UUID[Compendium.pf2e.spells-srd.9AAkVUCwF6WVNNY2]{Blitzstrahl}</em> (@Template[type:line|distance:100]{100 Fuß/30 m-Linie}) </p>\n<p><strong>4 </strong><em>@UUID[Compendium.pf2e.spells-srd.VosLNn2M8S7JH67D]{Blindheit verursachen}</em></p>\n<p><strong>5 </strong><em>@UUID[Compendium.pf2e.spells-srd.f8hRqLJaxBVhF1u0]{Säurepfeil}</em></p>\n<p><strong>6 </strong><em>@UUID[Compendium.pf2e.spells-srd.J7Y7tl0bbdz7TcCc]{Schwächestrahl}</em></p>",
+      "stealth": "<p>(Experte), zum Wahrnehmen des magischen Sensors; das Bemerken des Rades hat SG 0</p>",
+      "items": {
+        "action->Wheel Spin": {
+          "name": "Drehendes Rad",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur betritt den Wirkungsbereich des Sensors.</p>\n<p><strong>Effekt</strong> Das Rad beginnt sich zu drehen und würfelt seine Initiative.</p>"
+        }
+      }
+    },
+    "Yellow Mold": {
+      "name": "Gelber Schimmelpilz",
+      "description": "<p>Giftige Schimmelsporen greifen nahe Kreaturen an.</p>",
+      "disable": "<p>@Check[type:survival|dc:26|name:Ausschalten] (Experte) (Entfernen des Schimmels, ohne die Sporen freizusetzen)</p>",
+      "stealth": "<p>(Geübt)</p>",
+      "items": {
+        "action->Spore Explosion": {
+          "name": "Sporenexplosion",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur bewegt sich auf ein Feld mit dem Schimmel oder fügt ihm Schaden zu. Der Schimmel kann diese Reaktion nicht nutzen, wenn er sich in direktem Sonnenlicht befindet oder es sich um Feuerschaden gehandelt hat.</p>\n<p><strong>Effekt</strong> Die auslösende Kreatur und alle Kreaturen innerhalb von @Template[type:emanation|distance:10]{10 Fuß/3 m} werden Gelbschimmelsporen ausgesetzt.</p>"
+        },
+        "action->Yellow Mold Spores": {
+          "name": "Gelbschimmelsporen",
+          "description": "<p>Verleihen die Sporen den Zustand Ausgelaugt, so währt dieser über die Wirkungsdauer des Gifts hinaus</p>\n<p><strong>RW</strong> @Check[type:fortitude|dc:26]{Zähigkeitswurf}</p>\n<hr>\n<p><strong>Maximale Wirkungsdauer</strong> 6 Runden</p>\n<p><strong>Phase 1</strong> [[/r 1d8[poison]]]{1W8 Giftschaden} und @UUID[Compendium.pf2e.conditionitems.4D2KBtexWXa6oUMR]{Ausgelaugt 1} (1 Runde)</p>\n<p><strong>Phase 2</strong> [[/r 2d8[poison]]]{2W8 Giftschaden} und @UUID[Compendium.pf2e.conditionitems.4D2KBtexWXa6oUMR]{Ausgelaugt 2} (1 Runde)</p>\n<p><strong>Phase 3</strong> [[/r 3d8[poison]]]{3W8 Giftschaden} und @UUID[Compendium.pf2e.conditionitems.4D2KBtexWXa6oUMR]{Ausgelaugt 3} (1 Runde)</p>"
+        }
+      }
+    }
+  },
+  "mapping": {
+    "description": {
+      "path": "system.details.description",
+      "converter": "translateActorDescription"
+    },
+    "disable": "system.details.disable",
+    "hpDetails": "system.attributes.hp.details",
+    "items": {
+      "path": "items",
+      "converter": "translateActorItems"
+    },
+    "name": {
+      "path": "name",
+      "converter": "translateDualLanguage"
+    },
+    "portrait": {
+      "path": "img",
+      "converter": "updateActorImage"
+    },
+    "reset": "system.details.reset",
+    "routine": "system.details.routine",
+    "source": {
+      "path": "system.details.source.value",
+      "converter": "translateSource"
+    },
+    "stealth": "system.attributes.stealth.details",
+    "tokenImage": {
+      "path": "prototypeToken.texture.src",
+      "converter": "updateTokenImage"
+    },
+    "tokenName": {
+      "path": "prototypeToken.name",
+      "converter": "translateTokenName"
+    }
+  }
+}

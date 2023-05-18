@@ -1,0 +1,307 @@
+{
+    "filePaths": {
+        "actor": "./translation/en/actors",
+        "crowdin": "./translation/en/compendium",
+        "db": "./packs",
+        "dictionary": "./translation/en/dictionary.json",
+        "i18n": "./translation/en",
+        "zipDb": "packs",
+        "zipI18n": "lang",
+        "zipURL": "https://github.com/foundryvtt/pf2e/releases/latest/download/pf2e.zip"
+    },
+    "mappings": {
+        "actor": {
+            "name": {
+                "path": "name",
+                "converter": "translateDualLanguage"
+            },
+            "acDetails": { "path": "system.attributes.ac.details" },
+            "appearance": {
+                "path": "system.details.biography.appearance",
+                "converter": "translateActorDescription"
+            },
+            "blurb": { "path": "system.details.blurb" },
+            "crew": { "path": "system.details.crew" },
+            "description": {
+                "path": "system.details.description",
+                "converter": "translateActorDescription"
+            },
+            "disable": { "path": "system.details.disable" },
+            "ethnicity": { "path": "system.details.ethnicity.value" },
+            "familiarType": { "path": "system.details.creature.value" },
+            "gender": { "path": "system.details.gender.value" },
+            "hpDetails": { "path": "system.attributes.hp.details" },
+            "languages": { "path": "system.traits.languages.custom" },
+            "pilotingCheck": { "path": "system.details.pilotingCheck" },
+            "portrait": {
+                "path": "img",
+                "converter": "updateActorImage",
+                "extractOptions": { "extractValue": false }
+            },
+            "publicNotes": {
+                "path": "system.details.publicNotes",
+                "converter": "translateActorDescription"
+            },
+            "reset": { "path": "system.details.reset" },
+            "routine": { "path": "system.details.routine" },
+            "saveDetails": { "path": "system.attributes.allSaves.value" },
+            "senses": { "path": "system.traits.senses.value" },
+            "source": {
+                "path": "system.details.source.value",
+                "converter": "translateSource",
+                "extractOptions": { "addToDictionary": true, "dictionaryName": "source", "extractValue": false }
+            },
+            "source2": {
+                "path": "system.source.value",
+                "converter": "translateSource",
+                "extractOptions": { "addToDictionary": true, "dictionaryName": "source", "extractValue": false }
+            },
+            "speed": { "path": ["system.details.speed", "system.attributes.speed.details"] },
+            "stealth": { "path": "system.attributes.stealth.details" },
+            "tokenImage": {
+                "path": "prototypeToken.texture.src",
+                "converter": "updateTokenImage",
+                "extractOptions": { "alwaysAddMapping": true, "extractValue": false }
+            },
+            "tokenName": {
+                "path": "prototypeToken.name",
+                "converter": "translateTokenName",
+                "extractOptions": { "alwaysAddMapping": true }
+            },
+            "items": {
+                "path": "items",
+                "converter": "translateActorItems",
+                "extractOptions": { "subMapping": "item", "specialExtraction": "actorItem" }
+            }
+        },
+        "heightening": {
+            "duration": {
+                "path": "duration.value",
+                "converter": "translateDuration",
+                "extractOptions": { "addToDictionary": true, "addToMapping": false, "extractValue": false }
+            },
+            "range": {
+                "path": "range.value",
+                "converter": "translateRange",
+                "extractOptions": { "addToDictionary": true, "addToMapping": false, "extractValue": false }
+            },
+            "target": { "path": "target.value", "extractoptions": { "addToMapping": false } },
+            "time": {
+                "path": "time.value",
+                "converter": "translateTime",
+                "extractOptions": { "addToDictionary": true, "addToMapping": false, "extractValue": false }
+            }
+        },
+        "item": {
+            "name": {
+                "path": "name",
+                "converter": "translateDualLanguage"
+            },
+            "cost": { "path": "system.cost.value" },
+            "description": { "path": "system.description.value" },
+            "duration": {
+                "path": "system.duration.value",
+                "converter": "translateDuration",
+                "extractOptions": { "addToDictionary": true, "extractValue": false }
+            },
+            "gmNote": { "path": "system.description.gm" },
+            "heightening": {
+                "path": "system.heightening.levels",
+                "converter": "translateHeightening",
+                "extractOptions": { "actorItemExtraction": false, "subMapping": "heightening" }
+            },
+            "materials": { "path": "system.materials.value" },
+            "prerequisites": {
+                "path": "system.prerequisites.value",
+                "extractOptions": { "actorItemExtraction": false, "noArrayConvert": true }
+            },
+            "primarycheck": { "path": "system.primarycheck.value" },
+            "range": {
+                "path": "system.range.value",
+                "converter": "translateRange",
+                "extractOptions": { "addToDictionary": true, "extractValue": false }
+            },
+            "rules": {
+                "path": "system.rules",
+                "converter": "translateRules",
+                "extractOptions": { "subMapping": "rule" }
+            },
+            "secondarycaster": { "path": "system.secondarycasters.value" },
+            "secondarycheck": { "path": "system.secondarycheck.value" },
+            "skillVariants": {
+                "path": "system.variants",
+                "extractOptions": {
+                    "subMapping": {
+                        "label": { "path": "label", "extractOptions": { "addToMapping": false } }
+                    }
+                }
+            },
+            "source": {
+                "path": "system.source.value",
+                "converter": "translateSource",
+                "extractOptions": { "addToDictionary": true, "extractValue": false }
+            },
+            "spellVariants": {
+                "path": "system.overlays",
+                "converter": "translateSpellVariant",
+                "extractOptions": { "actorItemExtraction": false, "subMapping": "item" }
+            },
+            "target": { "path": "system.target.value" },
+            "time": {
+                "path": "system.time.value",
+                "converter": "translateTime",
+                "extractOptions": { "addToDictionary": true, "extractValue": false }
+            },
+            "trainedLore": { "path": "system.trainedLore", "extractOptions": { "actorItemExtraction": false } }
+        },
+        "journal": {
+            "name": { "path": "name" },
+            "pages": {
+                "path": "pages",
+                "converter": "pages",
+                "extractOptions": {
+                    "idType": "dynamic",
+                    "idName": "name",
+                    "subMapping": {
+                        "name": { "path": "name", "extractOptions": { "addToMapping": false } },
+                        "text": { "path": "text.content", "extractOptions": { "addToMapping": false } }
+                    }
+                }
+            }
+        },
+        "rollableTable": {
+            "name": { "path": "name" },
+            "description": { "path": "description" },
+            "results": {
+                "path": "results",
+                "converter": "tableResults",
+                "extractOptions": {
+                    "subMapping": { "text": { "path": "text", "extractOptions": { "addToMapping": false } } },
+                    "specialExtraction": "tableResult"
+                }
+            }
+        },
+        "rule": {
+            "choices": {
+                "path": "choices",
+                "extractOptions": {
+                    "addToMapping": false,
+                    "subMapping": {
+                        "label": { "path": "label", "extractOptions": { "addToMapping": false } }
+                    }
+                }
+            },
+            "label": { "path": "label", "extractOptions": { "addToMapping": false } },
+            "prompt": { "path": "prompt", "extractOptions": { "addToMapping": false } },
+            "text": { "path": "text", "extractOptions": { "addToMapping": false } }
+        }
+    },
+    "packs": {
+        "ItemPacks": {
+            "packNames": [
+                "action-macros",
+                "actions",
+                "adventure-specific-actions",
+                "ancestries",
+                "ancestryfeatures",
+                "backgrounds",
+                "bestiary-ability-glossary-srd",
+                "bestiary-effects",
+                "bestiary-family-ability-glossary",
+                "boons-and-curses",
+                "campaign-effects",
+                "classes",
+                "classfeatures",
+                "conditions",
+                "deities",
+                "equipment-effects",
+                "equipment",
+                "familiar-abilities",
+                "feat-effects",
+                "feats",
+                "heritages",
+                "macros",
+                "other-effects",
+                "spell-effects",
+                "spells"
+            ],
+            "mapping": "item",
+            "packCompendiumMapping": {
+                "actions": "pf2e.actionspf2e",
+                "adventure-specific-actions": "pf2e.adventure-specific-actions",
+                "ancestries": "pf2e.ancestries",
+                "ancestryfeatures": "pf2e.ancestryfeatures",
+                "backgrounds": "pf2e.backgrounds",
+                "bestiary-ability-glossary-srd": "pf2e.bestiary-ability-glossary-srd",
+                "bestiary-effects": "pf2e.bestiary-effects",
+                "bestiary-family-ability-glossary": "pf2e.bestiary-family-ability-glossary",
+                "boons-and-curses": "pf2e.boons-and-curses",
+                "campaign-effects": "pf2e.campaign-effects",
+                "classes": "pf2e.classes",
+                "classfeatures": "pf2e.classfeatures",
+                "conditions": "pf2e.conditionitems",
+                "deities": "pf2e.deities",
+                "equipment-effects": "pf2e.equipment-effects",
+                "equipment": "pf2e.equipment-srd",
+                "familiar-abilities": "pf2e.familiar-abilities",
+                "feat-effects": "pf2e.feat-effects",
+                "feats": "pf2e.feats-srd",
+                "heritages": "pf2e.heritages",
+                "other-effects": "pf2e.other-effects",
+                "spell-effects": "pf2e.spell-effects",
+                "spells": "pf2e.spells-srd"
+            },
+            "savePath": "crowdin"
+        },
+        "OtherPacks": {
+            "BasicActorPacks": {
+                "packNames": ["hazards", "iconics", "paizo-pregens", "vehicles"],
+                "mapping": "actor",
+                "savePath": "crowdin"
+            },
+            "Journals": {
+                "packNames": ["criticaldeck", "journals"],
+                "mapping": "journal",
+                "savePath": "crowdin"
+            },
+            "OtherActors": {
+                "packNames": [
+                    "age-of-ashes-bestiary",
+                    "book-of-the-dead-bestiary",
+                    "agents-of-edgewatch-bestiary",
+                    "menace-under-otari-bestiary",
+                    "mwangi-expanse-bestiary",
+                    "pathfinder-bestiary",
+                    "pathfinder-bestiary-2",
+                    "pathfinder-bestiary-3"
+                ],
+                "mapping": "actor",
+                "savePath": "actor"
+            },
+            "RollableTables": {
+                "packNames": ["rollable-tables"],
+                "mapping": "rollableTable",
+                "savePath": "crowdin"
+            }
+        }
+    },
+    "i18nFiles": ["action-en.json", "en.json", "re-en.json"],
+    "skillList": [
+        "Acrobatics",
+        "Arcana",
+        "Athletics",
+        "Crafting",
+        "Deception",
+        "Diplomacy",
+        "Intimidation",
+        "Medicine",
+        "Nature",
+        "Occultism",
+        "Performance",
+        "Religion",
+        "Society",
+        "Stealth",
+        "Survival",
+        "Thievery"
+    ]
+}
