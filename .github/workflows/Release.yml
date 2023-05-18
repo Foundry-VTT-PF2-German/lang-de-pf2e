@@ -1,0 +1,69 @@
+name: Relese
+
+on:
+  workflow_dispatch:
+    inputs:
+      checks:
+        description: 'Versionsnummern in module.json und CURRENT-RELEASE.md aktualisiert?'
+        required: false
+        type: boolean
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Check prerequisites
+        if: inputs.checks == false
+        uses: actions/github-script@v6
+        with:
+          script: |
+            core.setFailed('Kein Release erstellt, bitte Modulversionen und CURRENT-RELEASE.md aktualisieren')
+      
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Get module version
+        run: |
+          MODULE_VERSION=$(grep -oP '(?<="version": ")[^"]+' ./module.json | tr -d '\n')
+          echo "moduleVersion=$MODULE_VERSION" >> $GITHUB_ENV
+      
+      - name: Update CHANGELOG
+        run: echo -e "$(cat CURRENT-RELEASE.md)\n\n$(cat CHANGELOG.md)" > CHANGELOG.md
+
+      - name: Commit updated CHANGELOG
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: 'CHANGELOG.md'
+          committer_name: GitHub Actions
+          committer_email: actions@github.com
+
+      - name: Build release version
+        run: |
+          npm ci
+          npm run build
+
+      - name: Zip files
+        working-directory: ./lang-de-pf2e
+        run: zip -r ./lang-de-pf2e.zip ./*
+          
+      - name: Create release
+        id: create_version_release
+        uses: ncipollo/release-action@v1
+        with:
+          name: v${{ env.moduleVersion }}
+          bodyFile: "CURRENT-RELEASE.md"
+          allowUpdates: false
+          draft: false
+          prerelease: false
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifacts: './lang-de-pf2e/module.json,./lang-de-pf2e/lang-de-pf2e.zip'
+          tag: v${{ env.moduleVersion }}
