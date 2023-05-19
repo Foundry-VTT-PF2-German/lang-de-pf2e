@@ -29,6 +29,7 @@ jobs:
           git commit -m "Sync packs"
 
       - name: Create Pull Request
+        id: cpr
         uses: peter-evans/create-pull-request@v5
         with:
           title: 'Sync packs'
@@ -37,15 +38,8 @@ jobs:
           body: |
             Sync PF2 pack updates into main
             
-     # - name: Merge Pull Request
-     #   uses: peter-evans/merge-pull-request@v3
-      #  with:
-      #    pull-number: ${{ steps.create_pr.outputs.pull-request-number }}
-      #    merge-method: 'merge'
-      #    commit-message: 'Merge pull request'
-      #    delete-branch: true
-       # env:
-        #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Merge Pull Request
+        run: gh pr merge --merge --auto ${{ steps.cpr.outputs.pull-request-number }}
 
       # - name: Commit updated packs
       #  uses: EndBug/add-and-commit@v9
