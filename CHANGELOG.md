@@ -1,3 +1,7 @@
+## v4.11.2.0
+* Anpassungen für PF2e v4.11.2
+* Ergänzung Übersetzungen für Die Dunklen Archive
+
 ## v4.10.0.0
 * Anpassungen für PF2e v4.10.0
 * Umfassende Übersetzungen für Regelelement-Texte
