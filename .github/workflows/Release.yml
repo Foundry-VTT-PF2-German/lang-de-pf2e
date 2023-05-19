@@ -36,13 +36,28 @@ jobs:
           MODULE_VERSION=$(grep -oP '(?<="version": ")[^"]+' ./module.json | tr -d '\n')
           echo "moduleVersion=$MODULE_VERSION" >> $GITHUB_ENV
       
-      - name: Update CHANGELOG
-        run: echo -e "$(cat CURRENT-RELEASE.md)\n\n$(cat CHANGELOG.md)" > CHANGELOG.md
+      - name: Update CHANGELOG and Commit Changes
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "Github Action"
+          echo -e "$(cat CURRENT-RELEASE.md)\n\n$(cat CHANGELOG.md)" > CHANGELOG.md
+          git add CHANGELOG.md
+          git commit -m "Update Changelog"
 
-      - name: Commit updated CHANGELOG
-        uses: EndBug/add-and-commit@v9
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v5
         with:
-          add: 'CHANGELOG.md'
+          title: 'Update Changelog'
+          commit-message: 'Update Changelog with current release info'
+          branch: update-changelog
+          body: |
+            Update Changelog with current release info
+            
+      - name: Merge Pull Request
+        run: gh pr merge --merge --auto ${{ steps.cpr.outputs.pull-request-number }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build release version
         run: |
