@@ -22,6 +22,8 @@ jobs:
       - name: Sync packs and Commit Changes
         run: |
           npm ci
+          git config --global user.email "action@github.com"
+          git config --global user.name "Github Action"
           git checkout -b sync-packs
           npm run db-extractor
           git add translation/en
