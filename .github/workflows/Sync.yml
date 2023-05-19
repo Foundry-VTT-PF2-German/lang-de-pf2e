@@ -24,7 +24,7 @@ jobs:
           npm ci
           git config user.email "action@github.com"
           git config user.name "Github Action"
-          git checkout -b sync-packs
+     #     git checkout -b sync-packs
           npm run db-extractor
           git add translation/en
           git commit -m "Sync packs"
@@ -34,7 +34,7 @@ jobs:
         with:
           title: 'Sync packs'
           commit-message: 'Sync PF2 pack updates into main'
-          branch: main
+          branch: sync-packs
           body: |
             Sync PF2 pack updates into main
             
