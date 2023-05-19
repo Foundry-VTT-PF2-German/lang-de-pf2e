@@ -19,12 +19,35 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Sync packs
+      - name: Sync packs and Commit Changes
         run: |
           npm ci
+          git checkout -b sync-packs
           npm run db-extractor
-      
-      - name: Commit updated packs
-        uses: EndBug/add-and-commit@v9
+          git add translation/en
+          git commit -m "Sync packs"
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
         with:
-          add: 'translation/en'
+          title: 'Sync packs'
+          commit-message: 'Sync PF2 pack updates into main'
+          branch: main
+          base: sync-packs
+          body: |
+            Sync PF2 pack updates into main
+            
+     # - name: Merge Pull Request
+     #   uses: peter-evans/merge-pull-request@v3
+      #  with:
+      #    pull-number: ${{ steps.create_pr.outputs.pull-request-number }}
+      #    merge-method: 'merge'
+      #    commit-message: 'Merge pull request'
+      #    delete-branch: true
+       # env:
+        #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # - name: Commit updated packs
+      #  uses: EndBug/add-and-commit@v9
+      #  with:
+      #    add: 'translation/en'
