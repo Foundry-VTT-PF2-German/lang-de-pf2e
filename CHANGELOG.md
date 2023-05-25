@@ -1,3 +1,6 @@
+## v4.12.3.2
+* Korrektur Download URL
+
 ## v4.12.3.1
 * Korrektur Manifest URL
 
