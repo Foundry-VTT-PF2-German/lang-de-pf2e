@@ -133,21 +133,11 @@
         "MeleeLabel": "Nahkampfangriff: {weapon}",
         "OutOfRange": "Das Ziel ist außer Reichweite.",
         "RangedLabel": "Fernkampfangriff: {weapon}"
-      },
-      "Type": {
-        "Activity": "Aktivität",
-        "Free": "Freie Aktion",
-        "Single": "Einfache Aktion",
-        "Reaction": "Reaktion"
       }
     },
     "ActionActionTypeLabel": "Aktionsart",
     "ActionActionsLabel": "Aktionen",
     "ActionBrowserSearchHint": "Sie können nach Namen oder benutzerdefinierten Attributen suchen. Mögliche Suchattribute sind:<br>source, spellType, level, school, components, materials, target, range, time, duration, damage, damageType, save, concentration, ritual, ability and classes. <br>Beispiel:  'fire, damage:d6' um alle Zauber zu finden, die Feuer in ihrem Namen und einen W6 im Schaden haben",
-    "ActionCategoryDefensive": "Defensiv",
-    "ActionCategoryInteraction": "Interaktion",
-    "ActionCategoryLabel": "Aktionskategorie",
-    "ActionCategoryOffensive": "Offensiv",
     "ActionDeathNoteLabel": "Todeshinweis",
     "ActionNumber1": "Eine",
     "ActionNumber2": "Zwei",
@@ -254,6 +244,7 @@
             "Scent": "Geruchssinn",
             "SeeInvisibility": "Unsichtbares sehen",
             "Spiritsense": "Geistergespür",
+            "Thoughtsense": "Gedankengespür",
             "Tremorsense": "Erschütterungssinn",
             "Wavesense": "Wellengespür"
           },
@@ -278,6 +269,14 @@
         }
       },
       "Dead": "Tot",
+      "Familiar": {
+        "Master": {
+          "Perception": "Wahrnehmung des Meisters"
+        }
+      },
+      "Hardness": {
+        "ShortLabel": "H"
+      },
       "Hazard": {
         "EmitsSound": {
           "Encounter": "Während Begegnungen",
@@ -335,7 +334,8 @@
         "NoSpecialSenses": "Keine besonderen Sinne",
         "Tabs": {
           "Overview": "Übersicht",
-          "Inventory": "Inventar"
+          "Inventory": "Inventar",
+          "Orphaned": "Verwaiste Gegenstände"
         },
         "Total": "Gruppe Gesamt",
         "Wealth": "Vermögen"
@@ -586,6 +586,7 @@
     "BrowserFilterWeaponFilters": "Waffenfilter",
     "BrowserSearchPlaceholder": "Suchtext",
     "BrowserSearchTitle": "Anleitung mit Rechtsklick",
+    "BrowserSettingsSaved": "Eingaben wurden gespeichert",
     "BrowserSortyByLabel": "Sortieren nach",
     "BrowserSortyByLevelLabel": "Stufe",
     "BrowserSortyByNameLabel": "Name",
@@ -891,7 +892,8 @@
           "immunity": "Immunität gg. {type}: {adjustment}",
           "resistance": "Resistenz gg. {type}: {adjustment}",
           "unaffected": "Nicht betroffen von {type}: {adjustment}",
-          "weakness": "Schwäche gg. {type}: {adjustment}"
+          "weakness": "Schwäche gg. {type}: {adjustment}",
+          "reduction": "Reduziert durch {type}: {adjustment}"
         },
         "CompositeLabel": {
           "Exceptions0DoubleVs0": "{type} {value}",
@@ -958,6 +960,7 @@
           "fleeing": "Fliehend",
           "frightened": "Verängstigt",
           "ghost-touch": "Geisterhafte Berührung",
+          "glass": "Glas",
           "grabbed": "Gegriffen",
           "healing": "Heilung",
           "hidden": "Versteckt",
@@ -1014,6 +1017,10 @@
           "weapons": "Waffen",
           "weapons-shedding-bright-light": "Helles Licht verströmende Waffen"
         }
+      },
+      "Hardness": {
+        "Full": "Härte",
+        "Half": "Halbe Härte"
       },
       "IncreasedFrom": "Erhöht von {original} auf mindestens 1",
       "NoDamageFormulaLabel": "Kein Schaden",
@@ -1093,12 +1100,16 @@
     "DetailsHeading": "Details",
     "DragDropFeats": "Drag & Drop Talente zum hinzufügen",
     "Duration": {
+      "P1M": "Monat",
       "P1W": "Woche",
+      "P1Y": "Jahr",
       "PT10M": "10 Minuten",
       "PT1H": "Stunde",
       "PT1M": "Minute",
       "PT24H": "24 Stunden",
-      "day": "Tag"
+      "day": "Tag",
+      "round": "Runde",
+      "turn": "Zug"
     },
     "Edit": "Ändern",
     "EditHazardLabel": "Gefahr ändern",
@@ -1241,10 +1252,7 @@
     "FeatBrowserSearchHint": "Sie können nach Namen oder benutzerdefinierten Attributen suchen. Mögliche suchbare Attribute sind:<br>Quelle, Zauberart, Stufe, Schule, Komponenten, Materialien, Ziele, Reichweite, Zeit, Dauer, Schaden, Schadensart, Rettungswurf, Konzentration, Ritual, Fertigkeit and Klassen. <br>Beispiel: 'fire, damage:d6' um alle Zauber zu finden, die Feuer in ihrem Namen und einen W6 im Schaden haben",
     "FeatCampaignHeader": "Kampagnentalente",
     "FeatClassHeader": "Klassentalente",
-    "FeatCurseHeader": "Flüche",
     "FeatDeityBoonCursesHeader": "Göttliche Segen/Flüche",
-    "FeatDeityBoonHeader": "Göttliche Segen",
-    "FeatDualClassHeader": "Zwei-Klassen-Talente",
     "FeatGeneralHeader": "Allgemeine Talente",
     "FeatLevelLabel": "Stufe",
     "FeatPFSBoonHeader": "Gesellschaftssegen",
@@ -1255,7 +1263,7 @@
     "FeatTypeBonus": "Bonustalent",
     "FeatTypeClass": "Klassentalent",
     "FeatTypeClassfeature": "Klassenmerkmal",
-    "FeatTypeCurse": "Fluch",
+    "FeatTypeCurse": "Göttlicher Fluch",
     "FeatTypeDeityboon": "Göttlicher Segen",
     "FeatTypeGeneral": "Allgemeines Talent",
     "FeatTypePfsboon": "Gesellschaftssegen",
@@ -1356,6 +1364,21 @@
     "Item": {
       "ABC": {
         "InvalidDrop": "{badType} kann hier nicht platziert werden (es muss {goodType} sein)."
+      },
+      "Action": {
+        "CategoryLabel": "Kategorie",
+        "Category": {
+          "None": "Keine",
+          "Defensive": "Defensiv",
+          "Interaction": "Interaktion",
+          "Offensive": "Offensiv"
+        },
+        "Type": {
+          "Activity": "Aktivität",
+          "Free": "Freie Aktion",
+          "Single": "Einfache Aktion",
+          "Reaction": "Reaktion"
+        }
       },
       "Activation": {
         "Add": "Aktivierung hinzuf.",
@@ -1810,6 +1833,10 @@
       "Feat": {
         "Info": {
           "Added": "{item} wurde {category} hinzugefügt."
+        },
+        "KeyAbilityOptions": {
+          "Label": "Schlüsselattribut-Optionen",
+          "Hint": "Zusätzliche Schlüsselattribut-Optionen"
         },
         "LevelLabel": "Talent",
         "LevelN": "Talent {level}",
@@ -2611,6 +2638,11 @@
     "ResolvePointsShortLabel": "Reserve",
     "ResolveTitle": "Die Anzahl Reservepunkte, welche du aktuell besitzt",
     "RestoreSpellTitle": "Zauber wiederherstellen",
+    "RevertDamage": {
+      "ButtonTooltip": "Rückgängig",
+      "DamageMessage": "Schaden an {actor} wurde zurückgesetzt.",
+      "HealingMessage": "Heilung an {actor} wurde zurückgesetzt."
+    },
     "Roll": {
       "Add": "Hinzuf.",
       "CriticalHit": "Kritischer Treffer",
@@ -2678,6 +2710,17 @@
       "CompendiumBrowserPacks": {
         "Hint": "Einstellungen um Pakete beim Laden auszuschließen",
         "Name": "Kompendien Browser Pakete"
+      },
+      "CompendiumBrowserSources": {
+        "DeleteAllInfo": "Alle Kompendiumeinträge werden anzeigbar, inklusive Einträge ohne Angabe einer Quelle.",
+        "DeleteAllQuestion": "Bist du sicher, dass du alle Einstellungen zu berücksichtigten Quellen zurücksetzen möchtest?",
+        "DeleteAllTitle": "Einstellungen zurücksetzen",
+        "Hint": "Einstellungen zur Filterung der Anzeige im Kompendienbrowser auf spezifische Quellen.",
+        "IgnoreAsGM": "Der SL sieht alle Einträge unabhängig der gesetzten Filter",
+        "Name": "Berücksichtigte Quellen",
+        "ShowEmptySources": "Einträge mit leerer Quelle anzeigen",
+        "ShowUnknownSources": "Einträge mit unbekannter Quelle anzeigen",
+        "SourcesListHeader": "Auswahl Quellen"
       },
       "CritRule": {
         "Choices": {
@@ -3638,7 +3681,7 @@
     "TraitDescriptionInvested": "Ein Charakter kann nur 10 magische Gegenstände tragen, die die Eigenschaft 'Resonanz aufgebaut' haben. Keiner der magischen Effekte des Gegenstands gilt, wenn keine Resonanz aufgebaut wurde, noch kann er aktiviert werden, obwohl der Charakter immer noch alle normalen Vorteile durch das Tragen des physischen Gegenstands erhält (wie ein Hut, der Regen von seinem Kopf abhält).",
     "TraitDescriptionInvestigator": "Eine Fähigkeit der Ermittlerklasse.",
     "TraitDescriptionJousting": "Diese Waffe ist für den berittenen Kampf geeignet, mit einem Geschirr oder ähnlichen Vorrichtungen. Wenn du beritten bist und dich mit deiner Aktion vor dem Angriff mindestens 10 Fuß/3 m bewegt hast, fügst du mit deinem Schadenswurf für diesen Angriff einen Situationsbonus in Höhe der Anzahl der Schadenswürfel der Waffe hinzu. Außerdem kannst du diese Waffe einhändig führen, während du beritten bist, der Schadenswürfel ändert sich zu dem aufgeführten Wert.",
-    "TraitDescriptionKashrishi": "A stout ancestry bearing distinctive crystal horns and inherent psychic abilities.",
+    "TraitDescriptionKashrishi": "Eine beleibte Abstammung, die bezeichnende Kristallhörner tragen und innewohnende psychische Fähigkeiten besitzen.",
     "TraitDescriptionKickback": "Eine Waffe mit dieser Eigenschaft ist besonders machtvoll und aufgrund ihres Rückstoßes schwierig zu nutzen. Sie verursacht bei allen Angriffen 1 zusätzlichen Schadenspunkt. Der Angriffswurf unterliegt einem Malus von -2, sofern der Charakter einen Stärkewert von 13 oder niedriger hat. Die Verwendung eines Zweibeins, Dreibeins oder anderen Stabilisatoren kann diesen Malus ganz oder teilweise reduzieren.",
     "TraitDescriptionKitsune": "Kitsune sind fuchsartige Humanoide, die wahlweise Fuchsgestalt oder humanoide Gestalt annehmen können. Sie sind neugierig und erfinderisch und haben einen Ruf als Schwindler.",
     "TraitDescriptionKobold": "Eine Kreatur dieser Kategorie besitzt die Koboldabstammung. Kobolde sind reptilische Humanoide, die normalerweise Klein sind und über Dunkelsicht verfügen. Eine Fähigkeit dieser Kategorie kann nur von Kobolden gewählt oder genutzt werden.",
@@ -3672,7 +3715,7 @@
     "TraitDescriptionMove": "Eine Aktion dieser Kategorie enthält die Bewegung von einem Feld in ein anderes.",
     "TraitDescriptionMulticlass": "Archetypen der Kategorie Klasse repräsentieren eine Verzweigung deiner Ausbildung in die Spezialisierung einer anderen Klasse. Du kannst das Zugangstalent eines Klassenarchetypen nicht wählen, wenn du der fraglichen Klasse bereits angehörst.",
     "TraitDescriptionMutagen": "Ein Elixier dieser Kategorie verwandelt und verändert vorübergehend Körper und Geist des Konsumenten; es hat stets einen oder mehrere positive und einen oder mehrere negative Effekte. Mutagene sind Gestaltwandeleffekte, d.h. du kannst stets nur von maximal einem zugleich profitieren.",
-    "TraitDescriptionNagaji": "A traditionalist ancestry with reptilian features and serpentine heads.",
+    "TraitDescriptionNagaji": "Eine traditionalistische Abstammung mit reptilienartigen Zügen und Schlangenköpfen.",
     "TraitDescriptionNecromancy": "Effekte und magische Gegenstände dieser Kategorie werden mit der Schule der Nekromantie assoziiert und betreffen in der Regel die Kräfte von Leben und Tod.",
     "TraitDescriptionNegative": "Effekte dieser Kategorie heilen untote Kreaturen mit Negativer Energie, fügen lebenden Kreaturen Negativen Energieschaden zu oder manipulieren Negative Energie.",
     "TraitDescriptionNoisy": "Die Rüstung macht Lärm und wird wahrscheinlich deine Anwesenheit verraten, wenn du versuchst Unbemerkt zu bleiben. Der Rüstungsmalus gilt für Fertigkeitswürfe für Heimlichkeit, selbst wenn du die erforderliche Stärke besitzt.",
@@ -3778,11 +3821,11 @@
     "TraitDescriptionUndine": "Eine Unterart der Qariniabkömmlinge, die von Wesen der Ebene des Wasser abstammen.",
     "TraitDescriptionUnique": "Ein Regelelement dieser Kategorie ist einmalig. Der SG für Wissen abrufen bezogen auf Kreaturen dieser Kategorie ist um 10 erhöht.",
     "TraitDescriptionUnstable": "Diese Handlungen nutzen experimentelle Funktionen deiner Erfindung, die selbst du nicht völlig vorhersagen kannst. Nachdem du eine Instabile Handlung bei einer Erfindung genutzt hast, kann eine weitere gefährlich werden.",
-    "TraitDescriptionVanara": "An inquisitive ancestry with primate-like features and prehensile tails.",
+    "TraitDescriptionVanara": "Eine neugierige Abstammung mit affenähnlichen Zügen und greifenden Schwänzen.",
     "TraitDescriptionVehicular": "A vehicular weapon is attached to a vehicle or worn by a mount and can typically only be wielded by the driver of the vehicle or the mount's primary rider. The driver or rider can control a vehicular weapon with the same hands they use to steer the vehicle or guide the mount. A vehicular weapon can be Disarmed by knocking the controls (typically reins for a mount or a steering device for a vehicle) out of the wielder's hands.",
     "TraitDescriptionVersatile": "Eine Vielseitige Waffe kann andere Schadensarten verursachen als jene, welche im Schadenseintrag der Waffe genannt sind. Die Waffeneigenschaft nennt die alternative Schadensart. Eine Waffe, welche normalerweise Stichschaden verursacht und welche die Waffeneigenschaft Vielseitig H besitzt kann also entweder Stichschaden oder Hiebschaden verursachen. Du kannst die Schadensart bei jedem Angriff auswählen.",
     "TraitDescriptionVirulent": "Ein Leiden dieser Kategorie ist schwerer zu überwinden. Dir müssen zwei Rettungswürfe in Folge gelingen, um ein virulentes Leiden um 1 Phase zu senken. Ein Kritischer Erfolg reduziert die Phase eines virulenten Leidens nur um 1 statt um 2.",
-    "TraitDescriptionVishkanya": "An ancestry with snake-like features and powerful venom.",
+    "TraitDescriptionVishkanya": "Eine Abstammung mit schlangenähnlichen Zügen und starkem Gift.",
     "TraitDescriptionVisual": "Ein sichtbarer Effekt kann nur Kreaturen betreffen, die ihn sehen können. Dies betrifft nur die sichtbaren Teile des Effektes nach Maßgabe des SL.",
     "TraitDescriptionVolley": "Diese Fernkampfwaffe ist auf geringe Distanzen weniger effektiv. Wenn du ein Ziel angreifst, welches sich innerhalb der bei der Waffeneigenschaft genannten Distanz zu dir befindet, unterliegen deine Angriffe einem Malus von -2.",
     "TraitDescriptionWand": "Ein Zauberstab enthält einen einzelnen Zauber, den du einmal am Tag wirken kannst.",
@@ -3824,10 +3867,12 @@
     "TraitEntrenchRanged": "Entrench Ranged",
     "TraitEnvironmental": "Umgebung",
     "TraitEsoterica": "Esoterica",
+    "TraitEtchedOntoABludgeoningWeapon": "Graviert in eine Wuchtschaden zufügende Waffe",
     "TraitEtchedOntoAClanDagger": "Graviert in einen Sippendolch",
     "TraitEtchedOntoAMeleeWeapon": "Graviert in eine Nahkampfwaffe",
     "TraitEtchedOntoAMeleeWeaponMonk": "Graviert in eine Nahkampfwaffe mit der Kategorie Mönch",
     "TraitEtchedOntoAPiercingOrSlashingMeleeWeapon": "Graviert in eine Stich- oder Hiebschaden zufügende Nahkampfwaffe",
+    "TraitEtchedOntoAPiercingOrSlashingWeapon": "Graviert in eine Stich- oder Hiebschaden zufügende Waffe",
     "TraitEtchedOntoASlashingMeleeWeapon": "Graviert in eine Hiebschaden zufügende Nahkampfwaffe",
     "TraitEtchedOntoAThrownWeapon": "Graviert in eine Wurfwaffe",
     "TraitEtchedOntoAWeapon": "Graviert in eine Waffe",
@@ -4124,6 +4169,7 @@
     "TraitReach1000": "Angriffsradius 1.000 Fuß/300 m",
     "TraitReach15": "Angriffsradius 15 Fuß/4,50 m",
     "TraitReach20": "Angriffsradius 20 Fuß/6 m",
+    "TraitReach200": "Angriffsradius 200 Fuß/60 m",
     "TraitReach25": "Angriffsradius 25 Fuß/7,50 m",
     "TraitReach30": "Angriffsradius 30 Fuß/9 m",
     "TraitReach40": "Angriffsradius 40 Fuß/12 m",
@@ -4132,6 +4178,7 @@
     "TraitReckless": "Waghalsig",
     "TraitRecovery": "Recovery",
     "TraitReflection": "Reflektion",
+    "TraitRelic": "Relikt",
     "TraitReload": "Nachladen",
     "TraitReload0": "Nachladen 0",
     "TraitReload1": "Nachladen 1",
@@ -4868,7 +4915,7 @@
       "greaterFlaming": {
         "Name": "Stark Flammend",
         "Note": {
-          "criticalSuccess": "Mit dieser Waffe zugefügter Feuerschaden (einschließlich des Anhaltenden Feuerschadens) ignoriert die Feuerresistenz des Ziels. Sie verursacht bei einem Kritischen Treffer zusätzlich [[/r {2d10}[persistent,fire] # Stark Flammend-Rune]]{2W10 Punkte} @UUID[Compendium.pf2e.conditionitems.lDVqvLKA6eF3Df60]{anhaltenden Feuerschaden}.",
+          "criticalSuccess": "Mit dieser Waffe zugefügter Feuerschaden (einschließlich des Anhaltenden Feuerschadens) ignoriert die Feuerresistenz des Ziels.",
           "success": "Mit dieser Waffe zugefügter Feuerschaden ignoriert die Feuerresistenz des Ziels."
         }
       },
