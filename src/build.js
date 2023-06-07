@@ -54,6 +54,11 @@ const recursiveCopy = (path) => {
     else {
         if (path.substr(path.length - 5) == '.json') {
             const jsonContent = readJSONFile(path);
+            switch (path) {
+                case 'translation/de/compendium/pf2e.journals.json':
+                    convertJournals(jsonContent);
+                    break;
+            }
 
             // Minify JSON
             writeFileSync(targetFolder + '/' + path, JSON.stringify(jsonContent));//, null, 0));
