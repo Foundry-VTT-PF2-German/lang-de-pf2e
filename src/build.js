@@ -1,6 +1,7 @@
 
-import { mkdirSync, accessSync, readdirSync, rmSync, cpSync, statSync, existsSync } from 'fs';
+import { mkdirSync, accessSync, readdirSync, rmSync, cpSync, statSync, existsSync, writeFileSync } from 'fs';
 import { CONFIG_FILE, readJSONFile } from './config_helper.js';
+import { convertJournals } from './translator/build-converter.js';
 
 const PATHS = [
     'module.json',
@@ -45,16 +46,21 @@ for (const path of readdirSync(targetFolder)) {
 const recursiveCopy = (path) => {
     const stats = statSync(path);
     if (stats.isDirectory()) {
+        mkdirSync(targetFolder + '/' + path, { recursive: true });
         for (const child of readdirSync(path)) {
             recursiveCopy(path + '/' + child);
         }
     }
     else {
         if (path.substr(path.length - 5) == '.json') {
-            // We don't care about the content here, we just want to validate that it's proper JSON
-            readJSONFile(path);
+            const jsonContent = readJSONFile(path);
+
+            // Minify JSON
+            writeFileSync(targetFolder + '/' + path, JSON.stringify(jsonContent));//, null, 0));
         }
-        cpSync(path, targetFolder + '/' + path);
+        else {
+            cpSync(path, targetFolder + '/' + path);
+        }
     }
 }
 
