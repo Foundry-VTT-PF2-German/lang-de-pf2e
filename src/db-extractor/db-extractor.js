@@ -8,14 +8,14 @@ const CONFIG = JSON.parse(readFileSync("./src/db-extractor/db-extractor-config.j
 // Set skill list
 const SKILLS = CONFIG.skillList ?? [];
 
-// Create list of all db packs for extraction
-let DBPACKS = [];
+// Create list of all packs for extraction
+let PACKS = [];
 Object.keys(CONFIG.packs).forEach((packGroup) => {
     if (resolvePath(CONFIG.packs[packGroup], "packNames").exists) {
-        DBPACKS = DBPACKS.concat(CONFIG.packs[packGroup].packNames);
+        PACKS = PACKS.concat(CONFIG.packs[packGroup].packNames);
     } else {
         Object.keys(CONFIG.packs[packGroup]).forEach((packSubGroup) => {
-            DBPACKS = DBPACKS.concat(CONFIG.packs[packGroup][packSubGroup].packNames);
+            PACKS = PACKS.concat(CONFIG.packs[packGroup][packSubGroup].packNames);
         });
     }
 });
@@ -27,8 +27,8 @@ const dictionaryData = {};
 let actorItemComparison = {};
 
 // Pull current pf2 release and extract db files
-if (!existsSync(CONFIG.filePaths.db)) {
-    mkdirSync(CONFIG.filePaths.db);
+if (!existsSync(CONFIG.filePaths.packs)) {
+    mkdirSync(CONFIG.filePaths.packs);
 }
 
 // Fetch the file from the URL
@@ -41,15 +41,17 @@ fetch(CONFIG.filePaths.zipURL).then((res) => {
                 res.map((zipEntry) => {
                     let saveFileName = "";
                     let fileFound = false;
-                    // Get the db data files
+                    // Get the pack files
                     if (
-                        zipEntry.filename.startsWith(CONFIG.filePaths.zipDb) &&
-                        DBPACKS.includes(zipEntry.filename.replace(`${CONFIG.filePaths.zipDb}/`, "").replace(".db", ""))
+                        zipEntry.filename.startsWith(CONFIG.filePaths.zipPacks) &&
+                        PACKS.includes(
+                            zipEntry.filename.replace(`${CONFIG.filePaths.zipPacks}/`, "").replace(".json", "")
+                        )
                     ) {
                         fileFound = true;
                         saveFileName = zipEntry.filename.replace(
-                            `${CONFIG.filePaths.zipDb}/`,
-                            `${CONFIG.filePaths.db}/`
+                            `${CONFIG.filePaths.zipPacks}/`,
+                            `${CONFIG.filePaths.packs}/`
                         );
                         // Get the I18N files (en.json and re-en.json)
                     } else if (
@@ -76,13 +78,13 @@ fetch(CONFIG.filePaths.zipURL).then((res) => {
                     }
                 })
             ).then(() => {
-                //Read available data pack files
-                const dbFiles = readdirSync(CONFIG.filePaths.db);
+                //Read available pack files
+                const packFiles = readdirSync(CONFIG.filePaths.packs);
 
                 formatI18nFiles();
                 if (resolvePath(CONFIG, "packs.ItemPacks").exists) {
-                    extractPackGroup("ItemPacks", CONFIG.packs.ItemPacks, dbFiles);
-                    extractPackGroupList(CONFIG.packs.OtherPacks, dbFiles);
+                    extractPackGroup("ItemPacks", CONFIG.packs.ItemPacks, packFiles);
+                    extractPackGroupList(CONFIG.packs.OtherPacks, packFiles);
                 } else console.error(`Mandatory Pack Group "ItemPacks" missing in config.`);
 
                 // Build the dictionary
@@ -102,7 +104,7 @@ fetch(CONFIG.filePaths.zipURL).then((res) => {
 });
 
 // Extract data from a single pack
-function extractPack(packName, packConfig, dbFiles) {
+function extractPack(packName, packConfig, packFiles) {
     // Create basic json structure
     const extractedPack = {
         label: packName,
@@ -113,13 +115,9 @@ function extractPack(packName, packConfig, dbFiles) {
     // Unsorted extracted entries
     const entries = {};
 
-    // Open source DB file if available
-    if (dbFiles.includes(`${packName}.db`)) {
-        const dbData = readFileSync(`${CONFIG.filePaths.db}/${packName}.db`, "utf-8")
-            .toString()
-            .trim()
-            .split("\n")
-            .map(JSON.parse);
+    // Open source json file if available
+    if (packFiles.includes(`${packName}.json`)) {
+        const packData = JSON.parse(readFileSync(`${CONFIG.filePaths.packs}/${packName}.json`, "utf-8"));
 
         // Build comparison database?
         const createComparisonData = resolvePath(packConfig, `packCompendiumMapping.${packName}`).exists ? true : false;
@@ -131,14 +129,14 @@ function extractPack(packName, packConfig, dbFiles) {
         }
 
         // Loop through source data and look for keys included in the mappings
-        Object.values(dbData).forEach((dbDataEntry) => {
+        Object.values(packData).forEach((packDataEntry) => {
             // Add entry to comparison database
             if (createComparisonData) {
-                actorItemComparison[compendiumName][dbDataEntry._id] = dbDataEntry;
+                actorItemComparison[compendiumName][packDataEntry._id] = packDataEntry;
             }
 
             // Extract entries based on mapping in config file
-            const extractedEntry = extractEntry(CONFIG.mappings[packConfig.mapping], dbDataEntry);
+            const extractedEntry = extractEntry(CONFIG.mappings[packConfig.mapping], packDataEntry);
             if (extractedEntry[0] !== undefined) {
                 Object.assign(entries, extractedEntry[0]);
             }
@@ -171,18 +169,18 @@ function extractPack(packName, packConfig, dbFiles) {
 }
 
 // Extract pack data from a list of pack groups
-function extractPackGroupList(packGroupList, dbFiles) {
+function extractPackGroupList(packGroupList, packFiles) {
     for (const [packGroup, packConfig] of Object.entries(packGroupList)) {
-        extractPackGroup(packGroup, packConfig, dbFiles);
+        extractPackGroup(packGroup, packConfig, packFiles);
     }
 }
 
 // Extract data from a pack group
-function extractPackGroup(packGroup, packConfig, dbFiles) {
+function extractPackGroup(packGroup, packConfig, packFiles) {
     // Loop through packs and extract data defined in mappings
     console.log(`\n--------------------------\nExtracting: ${packGroup}\n--------------------------`);
     packConfig.packNames.forEach((packName) => {
-        extractPack(packName, packConfig, dbFiles);
+        extractPack(packName, packConfig, packFiles);
     });
 }
 
@@ -252,7 +250,7 @@ function sortObject(sourceObject) {
 // Extract an entry
 function extractEntry(
     baseMapping,
-    dbDataEntry,
+    packDataEntry,
     idType = "dynamic",
     idName = "name",
     specialExtraction = false,
@@ -265,14 +263,14 @@ function extractEntry(
     if (specialExtraction !== false) {
         if (specialExtraction === "actorItem") {
             idType = "static";
-            idName = `${dbDataEntry.type}->`;
-            if (dbDataEntry.type === "melee") {
-                idName = `strike-${dbDataEntry.system.weaponType.value}->`;
+            idName = `${packDataEntry.type}->`;
+            if (packDataEntry.type === "melee") {
+                idName = `strike-${packDataEntry.system.weaponType.value}->`;
             }
-            idName = idName.concat(`${dbDataEntry.name}`);
+            idName = idName.concat(`${packDataEntry.name}`);
         } else if (specialExtraction === "tableResult") {
             idType = "static";
-            idName = `${dbDataEntry.range[0]}-${dbDataEntry.range[1]}`;
+            idName = `${packDataEntry.range[0]}-${packDataEntry.range[1]}`;
         }
     }
 
@@ -327,7 +325,9 @@ function extractEntry(
             let dataFound = false;
 
             // Check if the current field exists in the db entry
-            let extractedData = resolvePath(dbDataEntry, dataPath).exists ? resolveValue(dbDataEntry, dataPath) : false;
+            let extractedData = resolvePath(packDataEntry, dataPath).exists
+                ? resolveValue(packDataEntry, dataPath)
+                : false;
             // Add mappings that should always be included
             if (addToMapping && option_alwaysAddMapping) {
                 addMapping(currentMapping, { [mappingKey]: dataPath }, hasConverter);
@@ -384,25 +384,25 @@ function extractEntry(
 
                                 // ...Don't extract names for skills
                                 if (
-                                    dbDataEntry.type === "lore" &&
+                                    packDataEntry.type === "lore" &&
                                     mappingKey === "name" &&
-                                    SKILLS.includes(dbDataEntry.name)
+                                    SKILLS.includes(packDataEntry.name)
                                 ) {
                                     extracted = true;
 
                                     // ... for weapons, include runes into the name
                                 } else if (
-                                    dbDataEntry.type === "weapon" &&
+                                    packDataEntry.type === "weapon" &&
                                     mappingKey === "name" &&
-                                    !resolvePath(dbDataEntry, "system.specific.value").exists
+                                    !resolvePath(packDataEntry, "system.specific.value").exists
                                 ) {
                                     const nameAdditions = [];
                                     // Potency rune
                                     if (
-                                        resolvePath(dbDataEntry, "system.potencyRune.value").exists &&
-                                        dbDataEntry.system.potencyRune.value > 0
+                                        resolvePath(packDataEntry, "system.potencyRune.value").exists &&
+                                        packDataEntry.system.potencyRune.value > 0
                                     ) {
-                                        nameAdditions.push("+".concat(dbDataEntry.system.potencyRune.value));
+                                        nameAdditions.push("+".concat(packDataEntry.system.potencyRune.value));
                                     }
 
                                     // Other runes and material
@@ -415,11 +415,11 @@ function extractEntry(
                                         "system.propertyRune4.value",
                                     ].forEach((property) => {
                                         if (
-                                            resolvePath(dbDataEntry, property).exists &&
-                                            resolveValue(dbDataEntry, property) !== null &&
-                                            resolveValue(dbDataEntry, property) !== ""
+                                            resolvePath(packDataEntry, property).exists &&
+                                            resolveValue(packDataEntry, property) !== null &&
+                                            resolveValue(packDataEntry, property) !== ""
                                         ) {
-                                            nameAdditions.push(resolveValue(dbDataEntry, property));
+                                            nameAdditions.push(resolveValue(packDataEntry, property));
                                         }
                                     });
                                     if (nameAdditions.length > 0) {
@@ -430,10 +430,10 @@ function extractEntry(
                                 // Check for source ID
                                 if (
                                     !extracted &&
-                                    resolvePath(dbDataEntry, "flags.core.sourceId").exists &&
-                                    dbDataEntry.flags.core.sourceId.includes("Compendium.pf2e")
+                                    resolvePath(packDataEntry, "flags.core.sourceId").exists &&
+                                    packDataEntry.flags.core.sourceId.includes("Compendium.pf2e")
                                 ) {
-                                    const compendiumLink = dbDataEntry.flags.core.sourceId.split(".");
+                                    const compendiumLink = packDataEntry.flags.core.sourceId.split(".");
                                     const compendiumEntry = resolvePath(actorItemComparison, [
                                         `${compendiumLink[1]}.${compendiumLink[2]}`,
                                         compendiumLink[3],
@@ -445,12 +445,12 @@ function extractEntry(
                                         : undefined;
                                     if (typeof compendiumEntry === "undefined") {
                                         // Data quality check currently not active, because embedded documents don't get checked for broken links in pf2e system
-                                        // console.warn("Broken Link: ".concat(dbDataEntry.flags.core.sourceId));
+                                        // console.warn("Broken Link: ".concat(packDataEntry.flags.core.sourceId));
                                         // Don't extract descriptions for defined item types. Those always use the description from the compendium entry
                                     } else if (
                                         mappingKey === "description" &&
                                         ["ancestry", "background", "class", "feat", "heritage", "spell"].includes(
-                                            dbDataEntry.type
+                                            packDataEntry.type
                                         )
                                     ) {
                                         extracted = true;
@@ -469,7 +469,7 @@ function extractEntry(
                                     ) {
                                         currentEntry[
                                             mappingKey
-                                        ] = `<Compendium> tag will get replaced with text from compendium entry @UUID[${dbDataEntry.flags.core.sourceId}]\n${extractedData}`;
+                                        ] = `<Compendium> tag will get replaced with text from compendium entry @UUID[${packDataEntry.flags.core.sourceId}]\n${extractedData}`;
                                         extracted = true;
                                     }
                                 }
@@ -514,7 +514,7 @@ function extractEntry(
     }
     // create the return value, consisting of the data and the mapping
     const returnValue = [];
-    const entryId = idType === "dynamic" ? dbDataEntry[idName] : idName;
+    const entryId = idType === "dynamic" ? packDataEntry[idName] : idName;
     returnValue.push(Object.keys(currentEntry).length > 0 ? Object.assign({}, { [entryId]: currentEntry }) : undefined);
     returnValue.push(Object.keys(currentMapping).length > 0 ? currentMapping : undefined);
     return returnValue;
