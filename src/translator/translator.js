@@ -287,7 +287,7 @@ class Translator {
                     entry.name = originalName;
 
                     // Since Foundry V11 compendium links also include the item type - needs to get stripped
-                    arr[index] = game.babele.packs.get(itemCompendium.replace(".Item","")).translate(entry);
+                    arr[index] = game.babele.packs.get(itemCompendium.replace(".Item", "")).translate(entry);
 
                     // Remove dual language translations
                     if (arr[index].name.search("/") != -1) {
