@@ -57,6 +57,7 @@
     "AttackEffects": {
       "DropWeapon": "The creature drops the wielded weapon.",
       "IgnoreConcealed": "The attack ignores the @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} condition.",
+      "ReduceHiddenCheck": "The DC of the flat check to target a @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} creature is only @Check[type:flat|dc:5].",
       "IgnoreCover": "The target doesn't benefit from lesser cover, and it reduces the AC bonus from standard cover by 2 against the attack.",
       "IncreasedCriticalChance": "If the attack hits and the creature rolls a 19 on the d20 roll, the attack is a critical hit. This has no effect if the 19 would be a failure.",
       "IncreasedReach5": "Reach increased by 5 feet",
@@ -431,6 +432,7 @@
         }
       },
       "TallowBomb": {
+        "criticalSuccess": "On a critical hit, a living creature taking persistent fire damage from a tallow bomb is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} from the stench of burning fat and can't reduce its sickened value below 1 while the persistent fire damage lasts.",
         "Greater": {
           "criticalSuccess": "<strong>Effect</strong> The bomb also deals [[/r (2*3d4)[persistent,fire]]], [[/r (3[splash])[fire]]]{3 fire splash damage}, and the target is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} from the stench of burning fat. The creature can't reduce its sickened value below 1 while the persistent fire damage lasts.",
           "success": "<strong>Effect</strong> The bomb also deals [[/r 3d4[persistent,fire]]] and [[/r (3[splash])[fire]]]{3 fire splash damage}."
@@ -541,6 +543,10 @@
         "PinpointLight": "Pinpoint Light"
       },
       "BarghestFeed": "How many times has the Barghest fed?",
+      "Bunyip": {
+        "CrocodileLegs": "Crocodile Legs",
+        "SnakeTail": "Snake Tail"
+      },
       "Calikang": {
         "SixfoldFlurry": "Strikes not taken?",
         "SuspendedAnimationEnter": "Enter Suspended Animation",
@@ -560,7 +566,18 @@
         "BrokenArmor": "Broken Custom Armor",
         "CriticalHit": "Custom Armor Broken by a Critical Hit"
       },
+      "CyclopsBully": {
+        "TerrorizingSwing": "If the creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} and takes damage, it takes an additional 2d10 damage and is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}."
+      },
       "DemonInfuseWeapons": "Deal chaotic instead of evil damage",
+      "DisplacedRobot": {
+        "DivertPower": {
+          "Fists": "Divert Power to Fists",
+          "LaserBeam": "Divert Power to Laser Beam"
+        },
+        "Fists": "Fists",
+        "LaserBeam": "Laser Beam"
+      },
       "Dramofir": {
         "BittersweetDreamsCriticalFailure": "Critical Failure",
         "BittersweetDreamsSuccessFailure": "Success or Failure"
@@ -594,9 +611,9 @@
         "FlameOfJustice": "Flame of Justice - Critical Hit"
       },
       "LemureSubservience": {
-        "Defend": "Subservience - Defend",
-        "Fetch": "Subservience - Fetch",
-        "Kill": "Subservience - Kill"
+        "Defend": "Defend",
+        "Fetch": "Fetch",
+        "Kill": "Kill"
       },
       "MarilithFocusedAssault": {
         "Five": "5 Longswords",
@@ -620,8 +637,10 @@
       },
       "PoltergeistTelekineticStorm": {
         "MultiAttackLabel": "Telekinetic Storm - Multiple Targets",
+        "MultipleTargets": "Multiple Targets",
         "SingleAttackEffect": "The attack deals [[/r {1d12}]]{1d12 damage} on a failure.",
-        "SingleAttackLabel": "Telekinetic Storm - Single Target"
+        "SingleAttackLabel": "Telekinetic Storm - Single Target",
+        "SingleTarget": "Single Target"
       },
       "PunishingStrike": {
         "Note": "The reckless attack makes the user @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Flat-Footed} until the start of their next turn. If they hit, they can add @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.t6cx9FOODmeZQNYl]{Push} to the strike"
@@ -652,6 +671,9 @@
       "Vampire": {
         "JiangShi": {
           "StanceOfDeath": {
+            "BoneCorpse": {
+              "Label": "Bone Corpse Stance"
+            },
             "CloudlessVoid": {
               "Label": "Cloudless Void Stance"
             },
@@ -1205,11 +1227,9 @@
         }
       },
       "AdoptedAncestry": {
-        "AllowedDrops": "ancestry other than your own",
         "Prompt": "Select a common ancestry."
       },
       "AdvancedGeneralTraining": {
-        "AllowedDrops": "7th-level or lower general feat",
         "Prompt": "Select a 7th-level or lower general feat."
       },
       "AerialPiledriver": {
@@ -1232,18 +1252,13 @@
           "Prompt": "Select a research field."
         }
       },
-      "AllowedDrops": {
-        "DeityOrPantheon": "deity or pantheon"
-      },
       "Anadi": {
         "SpiderOrHybridForm": "In Spider or Hybrid Form"
       },
       "AncestralParagon": {
-        "AllowedDrops": "1st-level ancestry feat",
         "Prompt": "Select a 1st-level ancestry feat."
       },
       "AncientElf": {
-        "AllowedDrops": "multiclass dedication feat",
         "Prompt": "Select a multiclass dedication feat."
       },
       "AnimalSkin": {
@@ -1254,6 +1269,9 @@
       "AquaticCombat": {
         "FireNote": "You can't cast fire spells or use actions with the fire trait underwater.",
         "RangedNote": "Ranged attacks that deal bludgeoning or slashing damage automatically miss if the attacker or target is underwater, and piercing ranged attacks made by an underwater creature or against an underwater target have their range increments halved."
+      },
+      "ArtokussFire": {
+        "Note": "Your Alchemist's Fire deals an additional 1d4 persistent fire damage, and creatures must make two succesful flat checks to end the condition (or one check, if they had assisted recovery that reduces the flat check to DC 10). Your enhanced fire burns underwater, and water does not help to end the persistent damage."
       },
       "Automaton": {
         "ArcaneLocomotion": {
@@ -1410,7 +1428,10 @@
         "BladeAllyRune": "Select a property rune for your blade ally.",
         "DivineSmite": {
           "Label": "Divine Smite"
-        }
+        },
+        "EvilDamage": "Evil Damage",
+        "NegativeDamage": "Negative Damage",
+        "TargetReaction": "Target triggered your champion reaction"
       },
       "ChromaticArmor": {
         "Acid": "Orange (Acid)",
@@ -1600,7 +1621,6 @@
       },
       "Elf": {
         "Atavism": {
-          "AllowedDrops": "elf heritage",
           "Prompt": "Select an elf heritage."
         },
         "BrightnessSeeker": {
@@ -1637,6 +1657,10 @@
             "FearLabel": "Moderate Bravo's Brew (Vs. Fear)"
           }
         },
+        "DeckOfDestiny": {
+          "MatchingSuitPrompt": "Is the drawn card's suit related the check?",
+          "WealOrWoePrompt": "Select Weal or Woe"
+        },
         "EagleEyeElixir": {
           "Greater": {
             "SecretLabel": "Greater Eagle Eye Elixir (To Find Secret Doors or Traps)"
@@ -1657,7 +1681,18 @@
         },
         "PhantomShroud": {
           "StrikeLabel": "Ghostly Hand"
+        },
+        "ScapularOfShields": {
+          "CriticalImmunityLabel": "Activate Scapular of Shields to gain critical immunity.",
+          "ResistAllLabel": "Activate Scapular of Shields to gain resistance to all damage."
         }
+      },
+      "ExemplaryFinisher": {
+        "Battledancer": "You can Step as a free action immediately after the finisher.",
+        "Braggart": "If the foe was temporarily immune to your @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize}, their temporary immunity ends.",
+        "Fencer": "The foe is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Flat-Footed} until your next turn.",
+        "Name": "Exemplary Finisher",
+        "Wit": "The foe takes a -2 circumstance penalty to attack rolls against you until the start of your next turn."
       },
       "FanesFourberie": {
         "Prompt": "Treat Cards as darts or daggers?"
@@ -1736,7 +1771,6 @@
         }
       },
       "GeneralTraining": {
-        "AllowedDrops": "1st-level general feat",
         "Prompt": "Select a 1st-level general feat."
       },
       "Ghoul": {
@@ -1754,7 +1788,6 @@
       },
       "Goblin": {
         "ChosenOfLamashtu": {
-          "AllowedDrops": "goblin heritage",
           "Prompt": "Select a goblin heritage."
         },
         "ExtraSquishy": {
@@ -1769,6 +1802,11 @@
         "ScaldingSpit": {
           "BoilingSpit": "Boiling Spit"
         }
+      },
+      "GoldenBladeOfMzali": {
+        "ElementalFormLabel": "You have cast elemental form using the Golden Blade of Mzali",
+        "LitLabel": "Golden Blade of Mzali is lit",
+        "PersistentDamageNote": "Unlike normal when taking two types of persistent damage, a creature needs only a single successful flat check to remove both the fire and bleed damage."
       },
       "Gunslinger": {
         "Way": {
@@ -1792,6 +1830,13 @@
           "BalanceNote": "If you roll a success on an Acrobatics check to Balance, you get a critical success instead. You're not flat-footed when you attempt to Balance.",
           "ClimbNote": "If you roll a success on an Athletics check to Climb, you get a critical success instead. You're not flat-footed when you attempt to Climb."
         }
+      },
+      "HarrowChosen": {
+        "Misaligned": "Misaligned",
+        "PartialMatch": "Partial Match",
+        "Prompt": "Does your card match your alignment?",
+        "TrueMatch": "True Match",
+        "Unmatched": "Unmatched"
       },
       "HarrowCourt": {
         "Fiend": {
@@ -1864,7 +1909,6 @@
           },
           "Prompt": "Select an innovation.",
           "Weapon": {
-            "AllowedDrops": "level 0 or 1 simple or martial weapon",
             "Prompt": "Select a weapon innovation."
           }
         },
@@ -2068,7 +2112,6 @@
         "MageArmor": "Mountain Stance w/ Mage Armor"
       },
       "Multitalented": {
-        "AllowedDrops": "2nd-level multiclass dedication feat",
         "Prompt": "Select a multiclass dedication feat."
       },
       "Mummy": {
@@ -2092,6 +2135,13 @@
           "CriticalNote": "The target takes [[/r (1+@weapon.system.runes.striking)[persistent,poison]]]{persistent poison damage} equal to the number of weapon damage dice",
           "HoodedNote": "The target is also @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} until the start of your next turn.",
           "StrikeLabel": "Venomous Spit"
+        }
+      },
+      "Obcisidaemon": {
+        "ConsumeSoul": {
+          "EmpowerSpell": "Empower Spell",
+          "EmpowerWeapon": "Empower Weapon",
+          "Prompt": "Empower a Spell or Weapon?"
         }
       },
       "Oracle": {
@@ -2154,6 +2204,7 @@
         "LevelOneOrTwoClassFeat": "Select a 1st or 2nd-level class feat.",
         "Material": "Select a material.",
         "PathToPerfection": "Select a path to perfection.",
+        "Rune": "Select a Rune.",
         "SecondImplement": "Select your second Implement.",
         "Shillelagh": "Select a club or staff.",
         "Skill": "Select a skill.",
@@ -2231,7 +2282,6 @@
         }
       },
       "SkillMastery": {
-        "AllowedDrops": "Skill Feats",
         "ExpertPrompt": "Select a skill to become expert in.",
         "MasterPrompt": "Select a skill to become master in."
       },
@@ -2471,7 +2521,7 @@
         "CriticalSuccess": "You temporarily recover an expended spell slot of any level of your choice. The temporary spell slot lasts for 1 minute, and if you don't use it by then, you experience an immediate @UUID[Compendium.pf2e.rollable-tables.RollTable.N0pDFNCffTe2Du39]{Wellspring Surge}.",
         "Failure": "You generate a @UUID[Compendium.pf2e.rollable-tables.RollTable.N0pDFNCffTe2Du39]{Wellspring Surge}, with a spell level chosen randomly among your top three levels of spell slots (or all your levels if you have fewer than three)",
         "Initiative": "When you roll initiative for a non-trivial combat encounter, as well as in other high-stress situations of the GM's choice, magic wells up within you. Attempt a @Check[type:flat|dc:6|traits:wellspring-magic].",
-        "Success": "You temporarily recover an expended spell slot of a spell level chosen randomly among your top three levels of spell slots (or all your levels if you have fewer than three). The temporary spell slot lasts for 1 minute, and if you don't use it by then, you experience an immediate @UUID[Compendium.pf2e.rollable-tables.RollTable.N0pDFNCffTe2Du39]{Wellspring Surge}."
+        "Success": "You temporarily recover an expended spell slot of a spell level chosen randomly among your top three levels of spell slots (or all your levels of spell slots if you have fewer than three). The slot lasts 3 rounds instead of 1 minute, otherwise you experience a @UUID[Compendium.pf2e.rollable-tables.RollTable.N0pDFNCffTe2Du39]{Wellspring Surge}."
       },
       "WildMorph": {
         "ElementalMatter": "Elemental Matter",
