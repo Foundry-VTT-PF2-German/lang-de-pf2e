@@ -1,15 +1,4 @@
 {
-  "ACTOR": {
-    "TypeAnimalCompanion": "Tiergefährte",
-    "TypeCharacter": "Spielercharakter",
-    "TypeEidolon": "Eidolon",
-    "TypeFamiliar": "Vertrauter",
-    "TypeHazard": "Gefahr",
-    "TypeLoot": "Beute",
-    "TypeNpc": "NSC",
-    "TypeParty": "Gruppe",
-    "TypeVehicle": "Fahrzeug"
-  },
   "COMBAT": {
     "Begin": "Begegnung starten",
     "CombatantNotInScene": "Der Teilnehmer {name} ist in der aktuell angezeigten Szene nicht vorhanden.",
@@ -32,8 +21,7 @@
     "UnknownCombatant": "Unbekanter Teilnehmer"
   },
   "COMPENDIUM": {
-    "Migrate": "Kompendium migrieren",
-    "Search": "Kompendien durchsuchen"
+    "Migrate": "Kompendium migrieren"
   },
   "CONTROLS": {
     "AdjustSceneDarkness": "Korrigiere Szenendunkelheit",
@@ -43,30 +31,6 @@
   "DOCUMENT": {
     "Combat": "Begegnung",
     "Combats": "Begegnungen"
-  },
-  "ITEM": {
-    "TypeAction": "Aktion",
-    "TypeAffliction": "Leiden",
-    "TypeAncestry": "Abstammung",
-    "TypeArmor": "Rüstung",
-    "TypeBackground": "Hintergrund",
-    "TypeBackpack": "Behälter",
-    "TypeBook": "Buch",
-    "TypeClass": "Klasse",
-    "TypeCondition": "Zustand",
-    "TypeConsumable": "Verbrauchsgegenstand",
-    "TypeDeity": "Gottheit",
-    "TypeEffect": "Effekt",
-    "TypeEquipment": "Ausrüstung",
-    "TypeFeat": "Talent/Fähigkeit",
-    "TypeHeritage": "Herkunft",
-    "TypeKit": "Satz",
-    "TypeLore": "Kenntnis-Fertigkeit",
-    "TypeMelee": "NSC Angriff",
-    "TypeSpell": "Zauber",
-    "TypeSpellcastingentry": "Zaubereintrag",
-    "TypeTreasure": "Schatz",
-    "TypeWeapon": "Waffe"
   },
   "PF2E": {
     "AbilityBoost": "Verbesserung",
@@ -174,6 +138,7 @@
             "UseCustomLabel": "Benutzerdefiniert"
           },
           "AncestryMissingHelp": "Wähle eine Abstammung für Attributsverbesserungen.",
+          "AlternateBoostsLabel": "Alternate Boosts",
           "BackgroundBoostDescription": "Wähle zwei Attributsverbesserungen: Eine muss für {a} oder {b} genutzt werden.",
           "BackgroundMissingHelp": "Wähle einen Hintergrund für Attributsverbesserungen.",
           "Boost": "Verbesserung",
@@ -238,6 +203,7 @@
             "Echolocation": "Echoortung",
             "GreaterDarkvision": "Mächtige Dunkelsicht",
             "Hearing": "Gehör",
+            "Heatsight": "Heatsight",
             "Lifesense": "Lebensgespür",
             "LowLightVision": "Dämmersicht",
             "Motionsense": "Bewegungsgespür",
@@ -289,6 +255,20 @@
         "Simple": "Einfach",
         "TitleEdit": "{name} (Änderungsmodus)"
       },
+      "Inventory": {
+        "ItemQuantity": {
+          "Decrease": {
+            "Click": "[Click] Decrease by 1",
+            "ShiftClick": "[Shift-Click] Decrease by 5",
+            "ControlClick": "[Control-Click] Decrease by 10"
+          },
+          "Increase": {
+            "Click": "[Click] Increase by 1",
+            "ShiftClick": "[Shift-Click] Increase by 5",
+            "ControlClick": "[Control-Click] Increase by 10"
+          }
+        }
+      },
       "IWREditor": {
         "DoubleVs": "Doppelter Schaden gg.",
         "Exceptions": "Ausnahmen",
@@ -324,9 +304,18 @@
             "Label": "Passendes Wissen: SG {dc1} ({adjustment1}) oder SG {dc2} ({adjustment2})",
             "Tooltip": "\"Würfe für die passende Kenntnis haben in der Regel einen Einfachen oder Sehr einfachen SG (ehe Anpassungen wegen der Seltenheit erfolgen).\" - GRW S. 506"
           }
-        }
+        },
+        "SimpleSheet": "Simple NPC Sheet"
       },
       "Party": {
+        "InvalidCampaign": {
+          "Hint": "The campaign data is invalid",
+          "Title": "Invalid Campaign ({party})",
+          "Message": {
+            "mismatch": "This party has campaign data of type {current}, but the configured type is {campaignType}. Do you want to delete existing campaign data?",
+            "error": "This party's campaign data ({current}) is corrupt and failed data preparation. Do you want to delete existing campaign data?"
+          }
+        },
         "BlankSlate": "Diese Gruppe besitzt keine Mitglieder. Ziehe eine Kreatur aus der Akteurs-Leiste hierhin um zu beginnen.",
         "Coin": "Münzen",
         "Languages": "Sprachen der Gruppe",
@@ -640,7 +629,7 @@
           "WithTarget": "<target>Ziel: {target}</target> <dc>({dcType} {dc})</dc>"
         },
         "Specific": {
-          "ac": "RK",
+          "armor": "AC",
           "athletics": "Athletik-SG",
           "deception": "Täuschung-SG",
           "fortitude": "Zähigkeit-SG",
@@ -698,9 +687,17 @@
       "FailedToBuyItemWithCharacter": "{item} konnte nicht von {character} gekauft werden.",
       "FailedToBuyItemWithSomeCharacters": "{item} konnte von einigen der ausgewählten Akteuren nicht gekauft werden.",
       "Hint": "Nutze die Tabs oben um ein Kompendium auszuwählen",
-      "ProgressBar": {
-        "LoadingComplete": "Einlesen abgeschlossen",
-        "LoadingPack": "Lese {pack} ein"
+      "RollTable": {
+        "AddDialogText": "Add {count} result(s) to Roll Table?",
+        "AddLabel": "Add to Roll Table",
+        "CreateDialogText": "Create Roll Table with {count} result(s)?",
+        "CreateLabel": "Create Roll Table",
+        "SelectTableTitle": "Select Roll Table",
+        "WeightLabel": "Weight"
+      },
+      "Settings": {
+        "PacksLabel": "Packs",
+        "SourcesLabel": "Sources"
       },
       "TabAction": "Aktionen",
       "TabBestiary": "Monster",
@@ -1227,6 +1224,7 @@
     "ExpendSpellTitle": "Zauber gewirkt",
     "Failure": "<strong>Fehlschlag</strong>",
     "Familiar": {
+      "AbilitiesLabel": "Abilities",
       "ArmorClass": "Rüstungsklasse",
       "AttackRoll": "Angriffswurf",
       "Creature": "Kreatur",
@@ -1253,6 +1251,7 @@
     "FeatCampaignHeader": "Kampagnentalente",
     "FeatClassHeader": "Klassentalente",
     "FeatDeityBoonCursesHeader": "Göttliche Segen/Flüche",
+    "FeatDualClassHeader": "Dual Class Feats",
     "FeatGeneralHeader": "Allgemeine Talente",
     "FeatLevelLabel": "Stufe",
     "FeatPFSBoonHeader": "Gesellschaftssegen",
@@ -1343,7 +1342,9 @@
       "BasicWithSave": "Einfache(r) {save}",
       "DCWithName": "{name} SG",
       "Errors": {
-        "TypeMissing": "Fehler in @Check: type Parameter ist Pflicht"
+        "TypeMissing": "Fehler in @Check: type Parameter ist Pflicht",
+        "AdjustmentLengthMismatch": "Error in @Check: mismatch between number of type: and adjustment: params",
+        "NonIntegerAdjustment": "Error in @Check: adjustments must be integers"
       }
     },
     "InlineTemplateErrors": {
@@ -1371,7 +1372,8 @@
           "None": "Keine",
           "Defensive": "Defensiv",
           "Interaction": "Interaktion",
-          "Offensive": "Offensiv"
+          "Offensive": "Offensiv",
+          "Familiar": "Familiar Ability"
         },
         "Type": {
           "Activity": "Aktivität",
@@ -2273,6 +2275,7 @@
       "Finished": "PF2e Systemmigrations zu Version {version} abgeschlossen!",
       "OnlyGMCanUse": "Nur ein Spielleiter kann dieses Tool benutzen.",
       "OutsideSchemaRange": "Der angegebene Bereich liegt außerhalb des Schema-Bereichs des Systems (zwischen {minimum} und {maximum}).",
+      "Running": "Running system migration ...",
       "Starting": "Systemmigration PF2e auf Version {version} wird ausgeführt. Bitte hab' Geduld und schließe das Spielfenster nicht und beendet den Server nicht.",
       "Summary": {
         "Documents": "Dokumente",
@@ -2575,6 +2578,10 @@
     "ProficiencyLevel3": "Meister",
     "ProficiencyLevel4": "Legende",
     "ProficiencyRankLabel": "Komp",
+    "ProgressBar": {
+      "LoadingComplete": "Loading complete",
+      "LoadingPack": "Loading {pack}"
+    },
     "PropertyRuneLabel1": "Eigenschaftsrune (1.)",
     "PropertyRuneLabel2": "Eigenschaftsrune (2.)",
     "PropertyRuneLabel3": "Eigenschaftsrune (3.)",
@@ -2706,6 +2713,14 @@
       "CampaignFeats": {
         "Hint": "Fügt auf den Charakterbögen der Spieler einen Abschnitt für Kampagnentalente hinzu.",
         "Name": "Kampagnentalente"
+      },
+      "CampaignType": {
+        "Hint": "Extended campaign rule type for parties",
+        "Name": "Campaign Type",
+        "Choices": {
+          "none": "None",
+          "kingmaker": "Kingmaker"
+        }
       },
       "CompendiumBrowserPacks": {
         "Hint": "Einstellungen um Pakete beim Laden auszuschließen",
@@ -4238,6 +4253,7 @@
     "TraitStheno": "Stheno",
     "TraitStrix": "Strix",
     "TraitStructure": "Bauwerk",
+    "TraitSubjectiveGravity": "Subjective Gravity",
     "TraitSuli": "Suli",
     "TraitSummon": "Beschwörung",
     "TraitSummoned": "Herbeigezaubert",
@@ -5441,6 +5457,7 @@
       "MoveLoot": "Verschiebe Gegenstände",
       "MoveLootMessage": "Wieviele Gegenstände möchtest du verschieben?",
       "MoveLootPopupTitle": "Anzahl Gegenstände",
+      "PartyStash": "the party stash",
       "PermissionError": "Ein SL muss online sein um Beute aufzuheben oder zu verstauen.",
       "PlantMessage": "{planter} platziert {quantity}x {item} auf {corpse}s Überresten.",
       "PlantSubtitle": "Platziere Ggst.",
@@ -5495,5 +5512,41 @@
   },
   "SIDEBAR": {
     "TabCombat": "Begegnungs-Tracker"
+  },
+  "TYPES": {
+    "Actor": {
+      "character": "Player Character",
+      "eidolon": "Eidolon",
+      "familiar": "Familiar",
+      "hazard": "Hazard",
+      "loot": "Loot",
+      "npc": "NPC",
+      "party": "Party",
+      "vehicle": "Vehicle"
+    },
+    "Item": {
+      "action": "Action",
+      "affliction": "Affliction",
+      "ancestry": "Ancestry",
+      "armor": "Armor",
+      "background": "Background",
+      "backpack": "Container",
+      "book": "Book",
+      "class": "Class",
+      "condition": "Condition",
+      "consumable": "Consumable",
+      "deity": "Deity",
+      "effect": "Effect",
+      "equipment": "Equipment",
+      "feat": "Feat/Feature",
+      "heritage": "Heritage",
+      "kit": "Kit",
+      "lore": "Lore Skill",
+      "melee": "NPC Attack",
+      "spell": "Spell",
+      "spellcastingEntry": "Spellcasting Entry",
+      "treasure": "Treasure",
+      "weapon": "Weapon"
+    }
   }
 }
