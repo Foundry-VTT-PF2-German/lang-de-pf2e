@@ -278,16 +278,17 @@ class Translator {
 
             // For compendium items, get the data from the compendium
             if (entry.flags?.core?.sourceId && entry.flags.core.sourceId.startsWith("Compendium")) {
+                // Get the actual compendium name
                 const itemCompendium = entry.flags.core.sourceId.slice(
                     entry.flags.core.sourceId.indexOf(".") + 1,
-                    entry.flags.core.sourceId.lastIndexOf(".")
+                    entry.flags.core.sourceId.lastIndexOf(".", entry.flags.core.sourceId.lastIndexOf(".") - 1)
                 );
+
                 const originalName = fromUuidSync(entry.flags.core.sourceId)?.flags?.babele?.originalName;
                 if (originalName) {
                     entry.name = originalName;
 
-                    // Since Foundry V11 compendium links also include the item type - needs to get stripped
-                    arr[index] = game.babele.packs.get(itemCompendium.replace(".Item", "")).translate(entry);
+                    arr[index] = game.babele.packs.get(itemCompendium).translate(entry);
 
                     // Remove dual language translations
                     if (arr[index].name.search("/") != -1) {

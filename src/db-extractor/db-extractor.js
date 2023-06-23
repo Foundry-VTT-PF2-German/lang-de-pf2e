@@ -436,11 +436,11 @@ function extractEntry(
                                     const compendiumLink = packDataEntry.flags.core.sourceId.split(".");
                                     const compendiumEntry = resolvePath(actorItemComparison, [
                                         `${compendiumLink[1]}.${compendiumLink[2]}`,
-                                        compendiumLink[3],
+                                        compendiumLink[4],
                                     ]).exists
                                         ? resolveValue(actorItemComparison, [
                                               `${compendiumLink[1]}.${compendiumLink[2]}`,
-                                              compendiumLink[3],
+                                              compendiumLink[4],
                                           ])
                                         : undefined;
                                     if (typeof compendiumEntry === "undefined") {
