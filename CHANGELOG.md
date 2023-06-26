@@ -1,3 +1,6 @@
+## v5.0.2.0
+* Initialrelease für Foundry V11 und PF2 V5
+
 ## v4.12.9.0
 * Finaler Release für PF2 Version 4 unter Foundry 10
 
