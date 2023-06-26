@@ -57,6 +57,7 @@
     "AttackEffects": {
       "DropWeapon": "Die Kreatur lässt die geschwungene Waffe fallen.",
       "IgnoreConcealed": "Der Angriff ignoriert den Zustand @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Verborgen}.",
+      "ReduceHiddenCheck": "Der SG des einfachen Wurfes um eine @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Versteckte} Kreatur anzuvisieren ist nur @Check[type:flat|dc:5]{5}.",
       "IgnoreCover": "Das Ziel profitiert nicht von geringer Deckung, und der RK-Bonus von Stundarddeckung wird gegen den Angriff um 2 reduziert.",
       "IncreasedCriticalChance": "Wenn der Angriff trifft und die Kreatur eine 19 auf 1W20 würfelt, ist dies ein kritischer Treffer. Dies hat keinen Effekt, wenn die 19 ein Fehlschlag wäre.",
       "IncreasedReach5": "Angriffsradius erhöht sich um 5 Fuß/1,50 m",
@@ -431,6 +432,7 @@
         }
       },
       "TallowBomb": {
+        "criticalSuccess": "On a critical hit, a living creature taking persistent fire damage from a tallow bomb is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} from the stench of burning fat and can't reduce its sickened value below 1 while the persistent fire damage lasts.",
         "Greater": {
           "criticalSuccess": "<strong>Effekt</strong> Die Bombe fügt zusätzlich [[/r (2*3d4)[persistent,fire]]]{2*3W4 Punkte Anhaltenden Feuerschaden} und [[/r (3[splash])[fire]]]{3 Punkte Feuerflächenschaden} zu, und das Ziel ist vom Gestank des verbrannten Fetts @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1}. Die Kreatur kann ihren Kränkelnd-Wert nicht unter 1 senken, solange der anhaltende Feuerschaden andauert.",
           "success": "<strong>Effekt</strong> Die Bombe fügt zusätzlich [[/r 3d4[persistent,fire]]]{3W4 Punkte Anhaltenden Feuerschaden} und [[/r (3[splash])[fire]]]{3 Punkte Feuerflächenschaden} zu."
@@ -541,6 +543,10 @@
         "PinpointLight": "Pinpoint Light"
       },
       "BarghestFeed": "Wie oft hat der Barghest verzehrt?",
+      "Bunyip": {
+        "CrocodileLegs": "Krokodilbeine",
+        "SnakeTail": "Schlangenschwanz"
+      },
       "Calikang": {
         "SixfoldFlurry": "Nicht ausgeführte Angriffe?",
         "SuspendedAnimationEnter": "Scheintod-Zustand begonnen",
@@ -560,7 +566,18 @@
         "BrokenArmor": "Spezielle Rüstung beschädigt",
         "CriticalHit": "Spezielle Rüstung durch einen kritischen Treffer beschädigt"
       },
+      "CyclopsBully": {
+        "TerrorizingSwing": "If the creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} and takes damage, it takes an additional 2d10 damage and is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}."
+      },
       "DemonInfuseWeapons": "Füge Chaotischen statt Bösen Schaden zu",
+      "DisplacedRobot": {
+        "DivertPower": {
+          "Fists": "Divert Power to Fists",
+          "LaserBeam": "Divert Power to Laser Beam"
+        },
+        "Fists": "Fists",
+        "LaserBeam": "Laser Beam"
+      },
       "Dramofir": {
         "BittersweetDreamsCriticalFailure": "Kritischer Fehlschlag",
         "BittersweetDreamsSuccessFailure": "Erfolg oder Fehlschlag"
@@ -594,9 +611,9 @@
         "FlameOfJustice": "Flamme der Gerechtigkeit - Kritischer Treffer"
       },
       "LemureSubservience": {
-        "Defend": "Unterwürfig - Verteidigen",
-        "Fetch": "Unterwürfig - Holen",
-        "Kill": "Unterwürfig - Töten"
+        "Defend": "Verteidigen",
+        "Fetch": "Holen",
+        "Kill": "Töten"
       },
       "MarilithFocusedAssault": {
         "Five": "5 Langschwerter",
@@ -620,8 +637,10 @@
       },
       "PoltergeistTelekineticStorm": {
         "MultiAttackLabel": "Telekinetischer Sturm - Mehrere Ziele",
+        "MultipleTargets": "Mehrere Ziele",
         "SingleAttackEffect": "Der Angriff fügt [[/r {1d12}]]{1W12 Schaden} bei einem Fehlschlag zu.",
-        "SingleAttackLabel": "Telekinetischer Sturm - Ein Ziel"
+        "SingleAttackLabel": "Telekinetischer Sturm - Ein Ziel",
+        "SingleTarget": "Ein Ziel"
       },
       "PunishingStrike": {
         "Note": "Der Skelm entfesselt seine ständige Wut in einem waghalsigen Angriff, der ihm selbst den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} bis zum Beginn seines nächsten Zuges verschafft. Er führt einen Angriff; trifft dieser, steigt die Zahl der Schadenswürfel um 1 und der Effekt erhält zusätzlich die Eigenschaft @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.t6cx9FOODmeZQNYl]{Fortstoßen}"
@@ -652,6 +671,9 @@
       "Vampire": {
         "JiangShi": {
           "StanceOfDeath": {
+            "BoneCorpse": {
+              "Label": "Haltung der Knochenleiche"
+            },
             "CloudlessVoid": {
               "Label": "Haltung der Wolkenlosen Leere"
             },
@@ -1205,11 +1227,9 @@
         }
       },
       "AdoptedAncestry": {
-        "AllowedDrops": "Abstammung (nicht die eigene)",
         "Prompt": "Wähle eine gewöhnliche Abstammung."
       },
       "AdvancedGeneralTraining": {
-        "AllowedDrops": "Allgemeines Talent der maximal 7. Stufe",
         "Prompt": "Wähle ein Allgemeines Talent der max. 7. Stufe."
       },
       "AerialPiledriver": {
@@ -1232,18 +1252,13 @@
           "Prompt": "Wähle ein Forschungsgebiet."
         }
       },
-      "AllowedDrops": {
-        "DeityOrPantheon": "Gottheit oder Pantheon"
-      },
       "Anadi": {
         "SpiderOrHybridForm": "In Spinnen- oder Mischgestalt"
       },
       "AncestralParagon": {
-        "AllowedDrops": "Abstammungstalent der 1. Stufe",
         "Prompt": "Wähle ein Abstammungstalent der 1. Stufe."
       },
       "AncientElf": {
-        "AllowedDrops": "Zugangstalent",
         "Prompt": "Wähle Zugangsklassentalent."
       },
       "AnimalSkin": {
@@ -1254,6 +1269,9 @@
       "AquaticCombat": {
         "FireNote": "Unter Wasser kannst du keine Feuerzauber einsetzen und keine Aktionen mit der Kategorie Feuer benutzen.",
         "RangedNote": "Fernkampfangriffe, die Hieb- oder Wuchtschaden zufügen, schlagen automatisch fehl, wenn sich der Angreifer oder das Ziel unter Wasser befindet. Für Fernkampfangriffe, die Stichschaden verursachen, durch oder gegen eine Kreatur, die sich unter Wasser befindet, wird die Entfernungseinheit der Waffe halbiert."
+      },
+      "ArtokussFire": {
+        "Note": "Das Alchemistenfeuer verursacht 1W4 Punkte anhaltenden Feuerschaden zusätzlich zu dem, was das Alchemistenfeuer normalerweise verursachen würde. Eine Kreatur, die durch das Alchemistenfeuer anhaltenden Feuerschaden erleidet, benötigt zwei erfolgreiche Einfache Würfe, um den anhaltenden Schaden zu beenden, oder einen Wurf, wenn die Kreatur Unterstützung bei der Bekämpfung hatte, die den SG des Wurfes auf 10 reduziert."
       },
       "Automaton": {
         "ArcaneLocomotion": {
@@ -1410,7 +1428,10 @@
         "BladeAllyRune": "Wähle eine Eigenschaftsrune für deinen Waffenverbündeten.",
         "DivineSmite": {
           "Label": "Göttliches Niederstrecken"
-        }
+        },
+        "EvilDamage": "Böser Schaden",
+        "NegativeDamage": "Negativer Energieschaden",
+        "TargetReaction": "Ziel hat deine Streiterreaktion ausgelöst"
       },
       "ChromaticArmor": {
         "Acid": "Orange (Säure)",
@@ -1600,7 +1621,6 @@
       },
       "Elf": {
         "Atavism": {
-          "AllowedDrops": "Elfische Herkunft",
           "Prompt": "Wähle eine elfische Herkunft."
         },
         "BrightnessSeeker": {
@@ -1637,6 +1657,10 @@
             "FearLabel": "Durchschnittliches Draufgängerbräu (gg. Furcht)"
           }
         },
+        "DeckOfDestiny": {
+          "MatchingSuitPrompt": "Is the drawn card's suit related the check?",
+          "WealOrWoePrompt": "Select Weal or Woe"
+        },
         "EagleEyeElixir": {
           "Greater": {
             "SecretLabel": "Starkes Adleraugenelixier (zum Aufspüren von Geheimtüren und Fallen)"
@@ -1657,7 +1681,18 @@
         },
         "PhantomShroud": {
           "StrikeLabel": "Geisterhand"
+        },
+        "ScapularOfShields": {
+          "CriticalImmunityLabel": "Activate Scapular of Shields to gain critical immunity.",
+          "ResistAllLabel": "Activate Scapular of Shields to gain resistance to all damage."
         }
+      },
+      "ExemplaryFinisher": {
+        "Battledancer": "Du kannst als freie Aktion direkt nach dem Abschluss einen Schritt ausführen.",
+        "Braggart": "War dein Gegner gegen dein @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralisieren} temporär immun, endet diese temporäre Immunität.",
+        "Fencer": "Der Gegner ist bis zu deinem nächsten Zug @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem falschen Fuß} betroffen.",
+        "Name": "Vorbildlicher Abschluss",
+        "Wit": "Der Gegner erleidet bis zum Beginn deines nächsten Zuges einen Situationsmalus von -2 auf Angriffswürfe gegen dich."
       },
       "FanesFourberie": {
         "Prompt": "Spielkarten als Dolche oder Wurfpfeile behandeln?"
@@ -1736,7 +1771,6 @@
         }
       },
       "GeneralTraining": {
-        "AllowedDrops": "Allgemeines Talent der 1. Stufe",
         "Prompt": "Wähle ein Allgemeines Talent der 1. Stufe."
       },
       "Ghoul": {
@@ -1754,7 +1788,6 @@
       },
       "Goblin": {
         "ChosenOfLamashtu": {
-          "AllowedDrops": "Goblinische Herkunft",
           "Prompt": "Wähle eine goblinische Herkunft."
         },
         "ExtraSquishy": {
@@ -1769,6 +1802,11 @@
         "ScaldingSpit": {
           "BoilingSpit": "Brennende Spucke"
         }
+      },
+      "GoldenBladeOfMzali": {
+        "ElementalFormLabel": "You have cast elemental form using the Golden Blade of Mzali",
+        "LitLabel": "Golden Blade of Mzali is lit",
+        "PersistentDamageNote": "Unlike normal when taking two types of persistent damage, a creature needs only a single successful flat check to remove both the fire and bleed damage."
       },
       "Gunslinger": {
         "Way": {
@@ -1792,6 +1830,13 @@
           "BalanceNote": "Solltest du bei einem Fertigkeitswurf für Akrobatik zum Balancieren einen Erfolg erzielen, zählt dieser als Kritischer Erfolg. Du bist beim Balancieren oder Klettern nicht Auf dem Falschen Fuß betroffen.",
           "ClimbNote": "Solltest du bei einem Fertigkeitswurf für Athletik zum Klettern einen Erfolg erzielen, zählt dieser als Kritischer Erfolg. Du bist beim Balancieren oder Klettern nicht Auf dem Falschen Fuß betroffen."
         }
+      },
+      "HarrowChosen": {
+        "Misaligned": "Misaligned",
+        "PartialMatch": "Partial Match",
+        "Prompt": "Does your card match your alignment?",
+        "TrueMatch": "True Match",
+        "Unmatched": "Unmatched"
       },
       "HarrowCourt": {
         "Fiend": {
@@ -1864,7 +1909,6 @@
           },
           "Prompt": "Wähle eine Innovation.",
           "Weapon": {
-            "AllowedDrops": "Stufe 0 oder 1 Einfache oder Kriegswaffe",
             "Prompt": "Wähle eine Waffeninnovation."
           }
         },
@@ -2068,7 +2112,6 @@
         "MageArmor": "Berghaltung mit Magierrüstung"
       },
       "Multitalented": {
-        "AllowedDrops": "Wähle ein Zugangstalent der 2. Stufe",
         "Prompt": "Wähle ein Zugangstalent."
       },
       "Mummy": {
@@ -2092,6 +2135,13 @@
           "CriticalNote": "Bei einem Kritischen Treffer erleidet das Ziel [[/r (1+@weapon.system.runes.striking)[persistent,poison]]]{Anhaltenden Giftschaden} in Höhe der Anzahl der Waffenschadenswürfel.",
           "HoodedNote": "Das Ziel erhält bis zum Beginn deines nächsten Zuges den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet}.",
           "StrikeLabel": "Gift speien"
+        }
+      },
+      "Obcisidaemon": {
+        "ConsumeSoul": {
+          "EmpowerSpell": "Empower Spell",
+          "EmpowerWeapon": "Empower Weapon",
+          "Prompt": "Empower a Spell or Weapon?"
         }
       },
       "Oracle": {
@@ -2154,6 +2204,7 @@
         "LevelOneOrTwoClassFeat": "Wähle ein Klassentalent der 1. oder 2. Stufe.",
         "Material": "Wähle ein Material.",
         "PathToPerfection": "Wähle einen Weg zur Perfektion.",
+        "Rune": "Wähle eine Rune.",
         "SecondImplement": "Wähle dein zweites Paraphernum.",
         "Shillelagh": "Wähle eine Keule oder einen Stecken.",
         "Skill": "Wähle eine Fertigkeit.",
@@ -2231,7 +2282,6 @@
         }
       },
       "SkillMastery": {
-        "AllowedDrops": "Fertigkeitstalente",
         "ExpertPrompt": "Wähle eine Fertigkeit in der du Experte wirst.",
         "MasterPrompt": "Wähle eine Fertigkeit in der du Meister wirst."
       },
@@ -2471,7 +2521,7 @@
         "CriticalSuccess": "Du erlangst vorübergehend einen von dir an diesem Tag bereits genutzten Zauberplatz eines Grades deiner Wahl zurück. Solltest du den Zauberplatz nicht binnen 1 Minute nutzen, kommt es zu einem @UUID[Compendium.pf2e.rollable-tables.RollTable.N0pDFNCffTe2Du39]{Urquellschub}.",
         "Failure": "Es kommt zu einem @UUID[Compendium.pf2e.rollable-tables.RollTable.N0pDFNCffTe2Du39]{Urquellschub}. Der davon betroffene Zaubergrad wird zufällig aus den drei höchsten Graden ausgewählt, die du wirken kannst (bzw. aus all deinen Zaubergraden, falls du zu weniger als drei Graden Zugang hast).",
         "Initiative": "Wenn du bei einer nicht-trivialen Kampfbegegnung oder in anderen ungewöhnlich stressigen Situationen deine Initiative auswürfelst, droht der Urquell überzuschäumen – wann dies geschieht und wann nicht, entscheidet der SL nach eigenem Ermessen. Lege in diesem Fall einen @Check[type:flat|dc:6|traits:wellspring-magic]{einfachen Wurf} ab.",
-        "Success": "Du erlangst vorübergehend einen von dir an diesem Tag bereits genutzten Zauberplatz zurück, der Zaubergrad wird\naber zufällig aus den drei höchsten Graden ausgewählt, die du wirken kannst (bzw. aus all deinen Zaubergraden, falls du\nzu weniger als drei Graden Zugang hast). Der Zauberplatz muss zudem binnen 3 Runden eingesetzt werden, sonst kommt es zu einem @UUID[Compendium.pf2e.rollable-tables.RollTable.N0pDFNCffTe2Du39]{Urquellschub]."
+        "Success": "Du erlangst vorübergehend einen von dir an diesem Tag bereits genutzten Zauberplatz zurück, der Zaubergrad wird aber zufällig aus den drei höchsten Graden ausgewählt, die du wirken kannst (bzw. aus all deinen Zaubergraden, falls du zu weniger als drei Graden Zugang hast). Der Zauberplatz muss zudem binnen 3 Runden eingesetzt werden, sonst kommt es zu einem @UUID[Compendium.pf2e.rollable-tables.RollTable.N0pDFNCffTe2Du39]{Urquellschub}."
       },
       "WildMorph": {
         "ElementalMatter": "Elementare Materie",
