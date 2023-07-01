@@ -1,2 +1,2 @@
-## v5.0.2.0
-* Initialrelease für Foundry V11 und PF2 V5
+## v5.0.2.1
+* Übersetzung Texte für dynamische Effekte, z.B. Schutzaura
