@@ -124,11 +124,11 @@ export const convertJournals = (journalObject) => {
                             result +=
                                 "<p><em>Die folgenden Talente sind bisher nicht in einer deutschen Veröffentlichung erschienen</em></p><hr>";
                         }
-                        result += `<${feat.translated ? "h2" : "h3"}>@UUID[Compendium.pf2e.feats-srd.${feat._id}]{${
-                            feat.translation.name
-                        }} <span style='float: right'>${feat.translated ? "TALENT" : "FEAT"} ${
-                            feat.system.level.value
-                        }</span></${feat.translated ? "h2" : "h3"}>`;
+                        result += `<${feat.translated ? "h2" : "h3"}>@UUID[Compendium.pf2e.feats-srd.Item.${
+                            feat._id
+                        }]{${feat.translation.name}} <span style='float: right'>${
+                            feat.translated ? "TALENT" : "FEAT"
+                        } ${feat.system.level.value}</span></${feat.translated ? "h2" : "h3"}>`;
                         // Some Dedications have no prerequisites, i.e., Demolitionist
                         if (feat.system.prerequisites && feat.system.prerequisites.value.length > 0) {
                             result += `<p><strong>${
@@ -138,7 +138,7 @@ export const convertJournals = (journalObject) => {
                                     // If a prerequisite is a class feature, link it
                                     const displayName = feat.translation.prerequisites[index].value;
                                     if (featureMap.has(prerequisite.value)) {
-                                        return `@UUID[Compendium.pf2e.classfeatures.${
+                                        return `@UUID[Compendium.pf2e.classfeatures.Item.${
                                             featureMap.get(prerequisite.value)._id
                                         }]{${displayName}}`;
                                     } else {
