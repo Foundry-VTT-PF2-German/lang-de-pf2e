@@ -1,32 +1,20 @@
-import { readFileSync, readdirSync } from "fs";
+import { readdirSync } from "fs";
 import { getConfigParameter, readJSONFile } from "../config_helper.js";
 
 export const convertJournals = (journalObject) => {
     const readSystemMap = (filename) => {
         const result = new Map();
-        let systemFolder = getConfigParameter("systemPath", "../../systems/pf2e/");
+        let systemFolder = getConfigParameter("systemPath", null);
+        if (systemFolder == null) {
+            throw "systemPath must be set for build";
+        }
         if (systemFolder.slice(-1) !== "/") {
             systemFolder += "/";
         }
-        if (getConfigParameter("systemIsBuilt", true)) {
-            const featsOriginalContentLines = readFileSync(systemFolder + "packs/" + filename, "utf-8").split("\n");
-            for (const line of featsOriginalContentLines) {
-                if (!line.trim()) {
-                    continue;
-                }
-                try {
-                    const lineObject = JSON.parse(line);
-                    result.set(lineObject.name.toLowerCase().trim(), lineObject);
-                } catch {
-                    console.error("Could not parse line: " + line);
-                }
-            }
-        } else {
-            const folderPath = systemFolder + "packs/data/" + filename;
-            for (const child of readdirSync(folderPath)) {
-                const featData = readJSONFile(folderPath + "/" + child);
-                result.set(featData.name.toLowerCase().trim(), featData);
-            }
+        const folderPath = systemFolder + "packs/data/" + filename;
+        for (const child of readdirSync(folderPath)) {
+            const featData = readJSONFile(folderPath + "/" + child);
+            result.set(featData.name.toLowerCase().trim(), featData);
         }
         return result;
     };
