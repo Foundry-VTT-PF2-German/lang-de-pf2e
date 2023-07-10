@@ -11,15 +11,15 @@ export const convertJournals = (journalObject) => {
         if (systemFolder.slice(-1) !== "/") {
             systemFolder += "/";
         }
-        const folderPath = systemFolder + "packs/data/" + filename;
+        const folderPath = systemFolder + "packs/" + filename;
         for (const child of readdirSync(folderPath)) {
             const featData = readJSONFile(folderPath + "/" + child);
             result.set(featData.name.toLowerCase().trim(), featData);
         }
         return result;
     };
-    const featNameToOriginalDataMap = readSystemMap("feats.db");
-    const featureMap = readSystemMap("classfeatures.db");
+    const featNameToOriginalDataMap = readSystemMap("feats");
+    const featureMap = readSystemMap("classfeatures");
 
     const featsTranslated = readJSONFile("./translation/de/compendium/pf2e.feats-srd.json");
 
