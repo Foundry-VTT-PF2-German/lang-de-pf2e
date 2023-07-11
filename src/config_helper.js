@@ -1,16 +1,15 @@
-import { readFileSync, existsSync } from 'fs';
+import { readFileSync, existsSync } from "fs";
 
-export const CONFIG_FILE = './buildconfig.json';
+export const CONFIG_FILE = "./buildconfig.json";
 
 export const readJSONFile = (path) => {
     const content = readFileSync(path).toString();
     try {
         return JSON.parse(content);
-    }
-    catch (error) {
+    } catch (error) {
         throw `Detected invalid JSON in ${path}: ${error.toString()}`;
     }
-}
+};
 
 export const getConfigParameter = (parameterName, defaultValue) => {
     if (!existsSync(CONFIG_FILE)) {
@@ -22,4 +21,4 @@ export const getConfigParameter = (parameterName, defaultValue) => {
     }
 
     return defaultValue;
-}
+};

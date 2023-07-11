@@ -74,9 +74,6 @@ Hooks.once("init", () => {
                     game.langDePf2e.getMapping("heightening", true)
                 );
             },
-            translateJournal: (pages, translation) => {
-                return game.langDePf2e.translateJournal(pages, translation);
-            },
             translateRange: (data) => {
                 return game.langDePf2e.translateValue("range", data);
             },
@@ -107,21 +104,6 @@ Hooks.once("init", () => {
             },
         });
     }
-});
-
-Hooks.once("ready", () => {
-    const pack = game.packs.get("pf2e.feats-srd");
-    // Alle Felder die für das Filtern gebraucht werden
-    const fields = [
-        "system.prerequisites.value",
-        "system.source.value",
-        "system.level.value",
-        "system.description.value",
-        "name",
-        "originalName",
-    ];
-    // Erstellt einen neuen Index oder ruft einen bestehenden Index ab wenn alle Felder bereits indiziert sind
-    pack.getIndex({ fields });
 });
 
 Hooks.once("i18nInit", () => {
