@@ -60,6 +60,19 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Get current PF2 system from master branch
+        run: |
+          mkdir pf2e
+          curl -L -o pf2e/archive.tar.gz https://api.github.com/repos/foundryvtt/pf2e/tarball/master
+          tar -xf pf2e/archive.tar.gz --strip-components=1 --directory pf2e
+
+      - name: Create buildconfig.json for build script
+        id: create-json
+        uses: jsdaniell/create-json@v1.2.2
+        with:
+          name: "buildconfig.json"
+          json: '{"buildPath": "./lang-de-pf2e", "systemPath": "./pf2e"}'
+
       - name: Build release version
         run: |
           npm ci
