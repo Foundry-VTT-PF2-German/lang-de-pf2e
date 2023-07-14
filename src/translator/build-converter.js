@@ -80,8 +80,8 @@ export const convertJournals = (journalObject) => {
                     for (const feat of feats) {
                         feat.translation = featsTranslated.entries[feat.name];
                         feat.translated =
-                            feat.system.description.value.replaceAll(/@UUID[^\]]*]/g, "") !==
-                            feat.translation.description.replaceAll(/@UUID[^\]]*]/g, "");
+                            feat.system.description.value.replaceAll(/@UUID[^\]]*]({[^}]*})?/g, "") !==
+                            feat.translation.description.replaceAll(/@UUID[^\]]*]({[^}]*})?/g, "");
                     }
 
                     feats.sort((feat1, feat2) => {
