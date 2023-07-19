@@ -1,6 +1,6 @@
 
 import { readFileSync, readdirSync } from 'fs';
-import { getConfigParameter, readJSONFile } from './config_helper.js';
+import { getConfigParameter, readJSONFile } from './helper/build/config_helper.js';
 
 const startingPoint = process.argv[2];
 if (startingPoint === undefined) {
