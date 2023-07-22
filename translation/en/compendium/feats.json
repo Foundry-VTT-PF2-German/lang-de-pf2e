@@ -1744,7 +1744,7 @@
     },
     "Arrow of Death": {
       "name": "Arrow of Death",
-      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You modify an arrow or bolt to bring death to your target in a single potent hit. Make a bow Strike. On a hit, you deal an additional [[/r 10d10]] precision damage. On a critical hit, the target must also succeed at a Fortitude saving throw against your class DC or spell DC, whichever is higher, or be immediately slain; this save has the death and incapacitation traits.</p>",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You modify an arrow or bolt to bring death to your target in a single potent hit. Make a bow Strike. On a hit, you deal an additional 10d10 precision damage. On a critical hit, the target must also succeed at a @Check[type:fortitude|dc:resolve(@actor.attributes.classOrSpellDC.value)|traits:death,incapacitation] saving throw against your class DC or spell DC, whichever is higher, or be immediately slain; this save has the death and incapacitation traits.</p>",
       "prerequisites": [
         {
           "value": "Eldritch Archer Dedication"
@@ -4659,7 +4659,7 @@
     },
     "Cindersoul": {
       "name": "Cindersoul",
-      "description": "<p>The fire of your elemental ancestor manifests like dying embers of a blaze, and your inner charcoal helps staunch bleeding, purify simple poisons, and absorb acid. The DC for you to recover from persistent acid, bleed, and poison damage is @Check[type:flat|dc:10]{10} instead of 15 (or @Check[type:flat|dc:5]{5} if you have particularly effective assistance).</p>"
+      "description": "<p>The fire of your elemental ancestor manifests like dying embers of a blaze, and your inner charcoal helps staunch bleeding, purify simple poisons, and absorb acid. The DC for you to recover from persistent acid, bleed, and poison damage is 10 instead of 15 (or @Check[type:flat|dc:5] if you have particularly effective assistance).</p>"
     },
     "City Scavenger": {
       "name": "City Scavenger",
@@ -7065,7 +7065,7 @@
     },
     "Disrupting Strikes": {
       "name": "Disrupting Strikes",
-      "description": "<p>You call forth positive energy from within to help you destroy undead. Your weapon and unarmed Strikes gain the effects of a disrupting property rune until the start of your next turn.</p>\n<p>If you're 14th level or higher, your Strikes instead gain the effects of a greater disrupting property rune. The DC for the rune's effect is equal to your class DC or spell DC, whichever is higher.</p>",
+      "description": "<p>You call forth positive energy from within to help you destroy undead. Your weapon and unarmed Strikes gain the effects of a <em>disrupting</em> property rune until the start of your next turn.</p>\n<p>If you're 14th level or higher, your Strikes instead gain the effects of a <em>greater disrupting property rune</em>. The DC for the rune's effect is equal to your class DC or spell DC, whichever is higher.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.ewfHVi6NWBGM8B6f]{Effect: Disrupting Strikes}</p>",
       "prerequisites": [
         {
           "value": "Ghost Eater Dedication"
@@ -8889,7 +8889,7 @@
     },
     "Enchanting Arrow": {
       "name": "Enchanting Arrow",
-      "description": "<p>With a single whisper carried on the wind, you enchant your ammunition to make a foe more vulnerable to your attacks.</p>\n<p>Make a bow Strike. On a hit, the target takes an additional [[/r 2d6[mental]]] damage. On a critical hit, the target also becomes @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}. The mental damage increases to [[/r 3d6[mental]]] if your bow has a <em>greater striking</em> rune, or to [[/r 4d6[mental]]] if your bow has a <em>major striking</em> rune.</p>",
+      "description": "<p>With a single whisper carried on the wind, you enchant your ammunition to make a foe more vulnerable to your attacks.</p>\n<p>Make a bow Strike. On a hit, the target takes an additional 2d6 mental damage. On a critical hit, the target also becomes @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}. The mental damage increases to 3d6 if your bow has a <em>greater striking</em> rune, or to 4d6 if your bow has a <em>major striking</em> rune.</p>",
       "prerequisites": [
         {
           "value": "Eldritch Archer Dedication"
@@ -10878,7 +10878,7 @@
     },
     "Fire Lung": {
       "name": "Fire Lung",
-      "description": "<p>A lifetime of proximity to flames has inured your lungs and eyes to smoke. You can breathe normally in areas of ash and smoke without risk of suffocation, and you ignore the @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} condition from smoke.</p>\n<p>You need only a successful @Check[type:flat|dc:10] to recover from @UUID[Compendium.pf2e.conditionitems.Item.lDVqvLKA6eF3Df60]{Persistent Fire Damage}, rather than DC 15 (and the DC when receiving particularly effective assistance is @Check[type:flat|dc:5] instead of 10).</p>",
+      "description": "<p>A lifetime of proximity to flames has inured your lungs and eyes to smoke. You can breathe normally in areas of ash and smoke without risk of suffocation, and you ignore the @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} condition from smoke.</p>\n<p>You need only a successful DC 10 flat check to recover from persistent fire damage, rather than DC 15 (and the DC when receiving particularly effective assistance is @Check[type:flat|dc:5] instead of 10).</p>",
       "prerequisites": [
         {
           "value": "flame order"
@@ -10896,7 +10896,7 @@
     },
     "Fire Savvy": {
       "name": "Fire Savvy",
-      "description": "<p><strong>Access</strong> You are from Dongun Hold or Alkenstar.</p>\n<hr />\n<p>You've grown up around a forge and are well-suited to dealing with smoke and flame. Your flat check to remove persistent fire damage is @Check[type:flat|dc:10] instead of DC 15, which is reduced to @Check[type:flat|dc:5] with appropriate assistance. In addition, if you roll a success on a saving throw against suffocation or choking due to smoke or ash, you get a critical success instead.</p>"
+      "description": "<p><strong>Access</strong> You are from Dongun Hold or Alkenstar.</p>\n<hr />\n<p>You've grown up around a forge and are well-suited to dealing with smoke and flame. Your flat check to remove persistent fire damage is DC 10 instead of DC 15, which is reduced to @Check[type:flat|dc:5] with appropriate assistance. In addition, if you roll a success on a saving throw against suffocation or choking due to smoke or ash, you get a critical success instead.</p>"
     },
     "Firearm Expert": {
       "name": "Firearm Expert",
@@ -19926,7 +19926,7 @@
     },
     "Peculiar Anatomy": {
       "name": "Peculiar Anatomy",
-      "description": "<p>Your circulatory system contains viscous protoplasmic fluid instead of ordinary blood. You gain a +2 circumstance bonus to saving throws against disease and poison, and resistance to poison damage equal to half your level.</p>\n<p>In addition, your resistance to precision damage from Disturbing Defense increases to an amount equal to 7 + your number of class feats from the oozemorph archetype, and the DC of your flat checks to recover from @UUID[Compendium.pf2e.conditionitems.Item.lDVqvLKA6eF3Df60]{Persistent Bleed Damage} is 8 rather than 13.</p>",
+      "description": "<p>Your circulatory system contains viscous protoplasmic fluid instead of ordinary blood. You gain a +2 circumstance bonus to saving throws against disease and poison, and resistance to poison damage equal to half your level.</p>\n<p>In addition, your resistance to precision damage from Disturbing Defense increases to an amount equal to 7 + your number of class feats from the oozemorph archetype, and the DC of your flat checks to recover from persistent bleed damage is 8 rather than 13.</p>",
       "prerequisites": [
         {
           "value": "Disturbing Defense"
@@ -20777,7 +20777,7 @@
     },
     "Precious Arrow": {
       "name": "Precious Arrow",
-      "description": "<p>You enchant a piece of ammunition with the magical essence of a precious material, allowing you to leverage certain creatures' weaknesses.</p>\n<p>Choose cold iron or silver; if you shoot the arrow before the end of your turn, it counts as that material. At 14th level, add adamantine to the list of materials you can choose from.</p>",
+      "description": "<p>You enchant a piece of ammunition with the magical essence of a precious material, allowing you to leverage certain creatures' weaknesses.</p>\n<p>Choose cold iron or silver; if you shoot the arrow before the end of your turn, it counts as that material. At 14th level, add adamantine to the list of materials you can choose from.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.KpEtIFwjj0ZrSVbD]{Effect: Precious Arrow}</p>",
       "prerequisites": [
         {
           "value": "Eldritch Archer Dedication"
@@ -23374,7 +23374,7 @@
     },
     "Scar-Thick Skin": {
       "name": "Scar-Thick Skin",
-      "description": "<p>Glorious, storied scars cover and protect much of your body. Your DC on flat checks to end @UUID[Compendium.pf2e.conditionitems.Item.lDVqvLKA6eF3Df60]{Persistent Bleed Damage} is reduced from 15 to @Check[type:flat|dc:10]{10}, or from 10 to @Check[type:flat|dc:5]{5} after receiving especially appropriate assistance.</p>"
+      "description": "<p>Glorious, storied scars cover and protect much of your body. Your DC on flat checks to end persistent bleed damage is reduced from 15 to 10, or from 10 to @Check[type:flat|dc:5] after receiving especially appropriate assistance.</p>"
     },
     "Scare to Death": {
       "name": "Scare to Death",
@@ -26343,7 +26343,7 @@
     },
     "Stalwart Defender Dedication": {
       "name": "Stalwart Defender Dedication",
-      "description": "<p><strong>Access</strong> You are a dwarf or have undergone defender training in a dwarven settlement such as Highhelm.</p>\n<hr />\n<p>You have completed your initial training in the ways of a stalwart defender. You gain the Tenacious Stance action.</p>\n<hr />\n<p><strong>Special</strong> You cannot select another dedication feat until you take two other feats from the stalwart defender archetype.</p>",
+      "description": "<p><strong>Access</strong> You are a dwarf or have undergone defender training in a dwarven settlement such as Highhelm.</p>\n<hr />\n<p>You have completed your initial training in the ways of a stalwart defender. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.5HZ4cYDowUw2oUbZ]{Tenacious Stance} action.</p>\n<hr />\n<p><strong>Special</strong> You cannot select another dedication feat until you take two other feats from the stalwart defender archetype.</p>",
       "prerequisites": [
         {
           "value": "trained in light armor"
@@ -26670,7 +26670,7 @@
     },
     "Stone Blood": {
       "name": "Stone Blood",
-      "description": "<p>You can selectively stop your bleeding with ease. Reduce the DC of flat checks to stop @UUID[Compendium.pf2e.conditionitems.Item.lDVqvLKA6eF3Df60]{Persistent Bleed Damage} you have from 15 to 10, and you can use a single action that has the concentrate trait to gain an early flat check without physically binding the wounds. You recover naturally from the @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained} condition twice as quickly as normal.</p>",
+      "description": "<p>You can selectively stop your bleeding with ease. Reduce the DC of flat checks to stop persistent bleed damage you have from 15 to 10, and you can use a single action that has the concentrate trait to gain an early flat check without physically binding the wounds. You recover naturally from the @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained} condition twice as quickly as normal.</p>",
       "prerequisites": [
         {
           "value": "Ka Stone Ritual"
@@ -28032,7 +28032,7 @@
     },
     "Terrain Stalker": {
       "name": "Terrain Stalker",
-      "description": "<p>Select one type of difficult terrain from the following list: rubble, snow, or underbrush. While undetected by all non-allies in that type of terrain, you can Sneak without attempting a Stealth check as long as you move no more than 5 feet and do not move within 10 feet of an enemy at any point during your movement. This also allows you to automatically approach creatures to within 15 feet while Avoiding Notice during exploration as long as they aren't actively Searching or on guard.</p>\n<p><strong>Special</strong> You can select this feat multiple times. Each time, choose a different type of terrain.</p>",
+      "description": "<p>Select one type of difficult terrain from the following list: rubble, snow, or underbrush. While undetected by all non-allies in that type of terrain, you can @UUID[Compendium.pf2e.actionspf2e.Item.VMozDqMMuK5kpoX4]{Sneak} without attempting a Stealth check as long as you move no more than 5 feet and do not move within 10 feet of an enemy at any point during your movement. This also allows you to automatically approach creatures to within 15 feet while @UUID[Compendium.pf2e.actionspf2e.Item.IE2nThCmoyhQA0Jn]{Avoiding Notice} during exploration as long as they aren't actively Searching or on guard.</p>\n<p><strong>Special</strong> You can select this feat multiple times. Each time, choose a different type of terrain.</p>",
       "prerequisites": [
         {
           "value": "trained in Stealth"
