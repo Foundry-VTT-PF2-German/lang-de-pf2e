@@ -259,6 +259,9 @@
         "Simple": "Einfach",
         "TitleEdit": "{name} (Änderungsmodus)"
       },
+      "HitPoints": {
+        "Unrecoverable": "{value} hit points are currently unrecoverable."
+      },
       "Inventory": {
         "ItemQuantity": {
           "Decrease": {
@@ -438,6 +441,7 @@
     "ArmorPotencyRune4": "Rüstungsverbesserung (+4)",
     "ArmorPropertyRuneAcidResistant": "Säureresistent",
     "ArmorPropertyRuneAntimagic": "Antimagisch",
+    "ArmorPropertyRuneAssisting": "Assisting",
     "ArmorPropertyRuneBitter": "Bitter",
     "ArmorPropertyRuneColdResistant": "Kälteresistent",
     "ArmorPropertyRuneDeathless": "Todlos",
@@ -476,8 +480,7 @@
     "ArmorPropertyRuneWinged": "Geflügelt",
     "ArmorResilientRune": "Widerstand",
     "ArmorSpeedLabel": "Rüstungsbewegungsmalus",
-    "ArmorStrengthLabel": "Stärkeanforderung",
-    "ArmorStrengthRequiredLabel": "Benötigte Stärke",
+    "ArmorStrengthLabel": "Strength Requirement",
     "ArmorStrikingRune": "des Schadens",
     "ArmorTypeHeavy": "Schwere Rüstung",
     "ArmorTypeLight": "Leichte Rüstung",
@@ -631,6 +634,7 @@
     "CharacterTraitsHeader": "Kategorien & andere Details",
     "ChatRollDetails": {
       "ModifiersEmpty": "Keine Modifikatoren",
+      "FlatCheckNoModifiers": "Flat checks never include any modifiers, bonuses, or penalties.",
       "RollOptions": "Wurfoptionen",
       "Select": "Wurf untersuchen",
       "Title": "Wurf untersuchen"
@@ -675,6 +679,7 @@
         "Label": "Ergebnis: <unadjusted>{unadjusted}</unadjusted> <offset>um {offset}</offset>"
       },
       "Specific": {
+        "Counteract": "Counteract Check",
         "Perception": {
           "Label": "Wahrnehmungswurf",
           "Secret": "Wahrnehmungswurf (Geheim)"
@@ -808,14 +813,6 @@
     "ConsumableTypeWand": "Zauberstab",
     "ConsumableUseLabel": "Verwenden",
     "CoreSkillsHeader": "Grundfertigkeiten",
-    "Counteract": "Entgegenwirken",
-    "CounteractDescription": {
-      "CritFailure": "Du schaffst es nicht, dem Ziel entgegenzuwirken.",
-      "CritSuccess": "Wirke dem Ziel entgegen wenn der Entgegenwirken-SG {level} oder weniger beträgt.",
-      "Failure": "Wirke dem Ziel entgegen wenn der Entgegenwirken-SG weniger als {level} beträgt.",
-      "Hint": "Wenn du versuchst einem Gebrechen entgegenzuwirken, finded sich der SG in dem Werteeintrag des Gebrechens. Falls es sich um einen Zauber handelt, verwende den Zauber-SG des Anwenders. Der SL kann auch einen SG abhängig von der Auswirkung des Gebrechens bestimmen.",
-      "Success": "Wirke dem Ziel entgegen wenn der Entgegenwirken-SG {level} oder weniger beträgt."
-    },
     "Counteractable": "Gegensteuerbar",
     "CraftDCTitle": "SG",
     "CraftItemTitle": "Herstellen",
@@ -1356,10 +1353,12 @@
     "InlineCheck": {
       "BasicWithSave": "Einfache(r) {save}",
       "DCWithName": "{name} SG",
+      "Invalid": "Invalid @Check expression: {message}",
       "Errors": {
-        "TypeMissing": "Fehler in @Check: type Parameter ist Pflicht",
-        "AdjustmentLengthMismatch": "Fehler in @Check: Inkonsistenz zwischen den Parametern \"type\" und \"adjustments\"",
-        "NonIntegerAdjustment": "Fehler in @Check: \"adjustments\" müssen vom Typ Integer sein"
+        "AdjustmentLengthMismatch": "mismatch between number of type and adjustment parameters",
+        "DCAndDefense": "cannot have both dc and defense arguments",
+        "NonIntegerAdjustment": "adjustments must be integers",
+        "TypeMissing": "type argment is mandatory"
       }
     },
     "InlineTemplateErrors": {
@@ -1470,6 +1469,9 @@
       },
       "Backpack": {
         "StowingLabel": "Ist Stau-Container?"
+      },
+      "CampaignFeature": {
+        "CampaignLabel": "Campaign"
       },
       "CannotAddType": "Gegenstände vom Typ {tyoe} können diesem Akteur nicht hinzugefügt werden.",
       "Condition": {
@@ -1827,22 +1829,26 @@
         "FollowerAlignments": "Gesinnungen der Anhänger"
       },
       "Effect": {
-        "AddBadge": "Zähler hinzuf.",
-        "AddLabel": "Bezeichnung hinzufügen",
-        "BadgeType": {
-          "counter": "Zähler",
-          "formula": "Formel",
-          "value": "Fester Wert"
-        },
         "Expiry": {
           "EndOfTurn": "Rundenende",
           "ExpiresOn": "Läuft ab",
           "StartOfTurn": "Start der Runde"
         },
-        "ExtraSelections": {
-          "Labels": "Zähler (beschriftet)"
+        "Badge": {
+          "Add": "Add Badge",
+          "Labels": {
+            "Add": "Add Label",
+            "Label": "Labels",
+            "Hint": "The values of a badge can be given descriptive labels. They should be short enough to fit in the effects panel. Labels also serve as a natural maximum value for a badge.",
+            "Placeholder": "New Label"
+          },
+          "ReevaluateFormula": "Reevaluate every turn?",
+          "Type": {
+            "counter": "Counter",
+            "formula": "Formula",
+            "value": "Fixed Value"
+          }
         },
-        "LabelPlaceholder": "Bezeichnung Phase",
         "ShowTokenIcon": "Tokenbild anzeigen?",
         "Sustained": "Aufrechterhaltbar",
         "Unidentified": "Unidentifiziert?"
@@ -1957,10 +1963,19 @@
         },
         "New": "Neues Regelelement",
         "RegenerateSlug": "Slug erzeugen/erneuern",
+        "Remove": "Remove Rule Element",
         "Tab": "Regeln"
       },
       "SidebarSummary": "{type} Zusammenfassung",
       "Spell": {
+        "Counteract": {
+          "Hint": "If you're counteracting an affliction, the DC is in the affliction's stat block. If it's a spell, use the caster's DC. The GM can also calculate a DC based on the target effect's level.",
+          "Label": "Counteract",
+          "criticalFailure": "You fail to counteract the target.",
+          "criticalSuccess": "Counteract the target if its counteract rank is {rank} or less.",
+          "failure": "Counteract the target if its counteract rank is less than {rank}.",
+          "success": "Counteract the target if its counteract rank is {rank} or less."
+        },
         "LevelN": "Zauber {level}",
         "PlaceMeasuredTemplate": "Platziere {size}-{unit} {shape}",
         "Variants": {
@@ -1977,6 +1992,10 @@
         }
       },
       "Weapon": {
+        "CanBeAmmo": {
+          "Label": "Usable as Ammo",
+          "Hint": "Indicate that this weapon can be loaded into another weapon as ammunition."
+        },
         "CriticalSpecialization": {
           "axe": "Wähle eine Kreatur angrenzend zu deinem ursprünglichen Ziel aus, die sich innerhalb deines Angriffsradius befindet. Wenn die RK dieser Kreatur niedriger ist als dein Angriffswurf für den Kritischen Treffer, verursachst du bei dieser Kreatur Schaden entsprechend dem Resultat des Schadenswurfes deiner Waffe, den du zuvor gewürfelt hast (inklusive des Schadens durch Verbesserungsrunen, so vorhanden). Dieser Schaden wird nicht verdoppelt und nicht durch Boni oder andere zusätzliche Würfel erhöht.",
           "bomb": "Erhöhe den Radius des Flächenschadens der Bombe (so vorhanden) auf 10 Fuß/3 m.",
@@ -2163,6 +2182,7 @@
     "LanguageMinaten": "Minatan",
     "LanguageMinkaian": "Minkaiisch",
     "LanguageMunavri": "Munavrisch",
+    "LanguageMuan": "Muan",
     "LanguageMwangi": "Polyglott",
     "LanguageMzunu": "Mzunu",
     "LanguageNagaji": "Nagaji",
@@ -2171,12 +2191,15 @@
     "LanguageOkaiyan": "Okaiyisch",
     "LanguageOrcish": "Orkisch",
     "LanguageOsiriani": "Osirisch",
+    "LanguagePetran": "Petran",
     "LanguageProtean": "Proteanisch",
+    "LanguagePyric": "Pyric",
     "LanguageRasu": "Rasu",
     "LanguageRatajin": "Ratajin",
     "LanguageRazatlani": "Razatlanisch",
     "LanguageRequian": "Requial",
     "LanguageRussian": "Russisch",
+    "LanguageSakvroth": "Sakvroth",
     "LanguageSamsaran": "Samsarisch",
     "LanguageSasquatch": "Sasquatch",
     "LanguageSenzar": "Senzar",
@@ -2189,11 +2212,14 @@
     "LanguageSkald": "Skald",
     "LanguageSphinx": "Sphinx",
     "LanguageStrix": "Strix",
+    "LanguageSusurran": "Susurran",
     "LanguageSylvan": "Sylvanisch",
     "LanguageTaldane": "Taldanisch",
+    "LanguageTalican": "Talican",
     "LanguageTekritanin": "Tekritanisch",
     "LanguageTengu": "Tengu",
     "LanguageTerran": "Terral",
+    "LanguageThalassic": "Thalassic",
     "LanguageThassilonian": "Thassilonisch",
     "LanguageTien": "Tien",
     "LanguageUndercommon": "Finsterländisch",
@@ -2252,7 +2278,13 @@
     "LoreProficiencyDisclaimer": "Nur zur Information, Fertigkeitsmodifikator wird nicht geändert.",
     "LoreSkillsHeader": "Kenntnisfertigkeiten",
     "MAPAbbreviationLabel": "MA {penalty}",
+    "MAPAbbreviationValueLabel": "{value} (MAP {penalty})",
     "Macro": {
+      "OptionToggle": {
+        "Notification": "{toggle} has been toggled {state}.",
+        "Off": "OFF",
+        "On": "ON"
+      },
       "Plural": "Makros"
     },
     "MacroActionNoActionError": "Diese Aktion existiert nicht mehr!",
@@ -2284,14 +2316,10 @@
       "reflex": "Meister-Reflex",
       "will": "Meister-Willen"
     },
-    "MaxHPTitle": "Deine maximalen Trefferpunkte. Dieses Feld wird automatisch berechnet.",
-    "MaxHPTitleNPC": "Maximale Trefferpunkte.",
     "MaxHitPointsBaseLabel": "Basis Max TP {base}",
-    "MaxHitPointsHeader": "Maximale Trefferpunkte",
     "MaxHitPointsShortLabel": "Max TP",
     "MaxStaminaPointsShortLabel": "Max AP",
     "MaxStaminaTitle": "Deine maximalen Ausdauerpunkte",
-    "MetalStrikes": "Metallene Schläge",
     "Migrations": {
       "Finished": "PF2e Systemmigrations zu Version {version} abgeschlossen!",
       "OnlyGMCanUse": "Nur ein Spielleiter kann dieses Tool benutzen.",
@@ -2634,7 +2662,7 @@
       "critFailure": "Erhöhe deinen Wert für Sterbend um 2.",
       "critSuccess": "Vermindere deinen Wert für Sterbend um 2.",
       "failure": "Erhöhe deinen Wert für Sterbend um 1.",
-      "rollingDescription": "Erhohlungswurf gegen SG {dc} (Sterbend {dying})",
+      "rollingDescription": "DC {dc} (Dying {dying})",
       "success": "Vermindere deinen Wert für Sterbend um 1."
     },
     "RemoveCoinsByValueLabel": "Entferne Wert in Münzen",
@@ -2704,6 +2732,10 @@
           "Name": "NSC's sind mit 0 TP tot",
           "Neither": "Nein",
           "PCsOnly": "nur SC's"
+        },
+        "Encumbrance": {
+          "Hint": "Automatically apply the Encumbered condition to creatures carrying more than their respective limits.",
+          "Name": "Encumbrance"
         },
         "EffectExpiration": {
           "Hint": "Effekte deaktivieren angehängte Regelelemente automatisch, wenn die Dauer abgelaufen ist.",
@@ -3442,8 +3474,8 @@
     "TraitArcane": "Arkan",
     "TraitArchetype": "Archetyp",
     "TraitArchon": "Archon",
+    "TraitArdande": "Ardande",
     "TraitAreaDamage": "Flächenschaden",
-    "TraitArmy": "Army",
     "TraitArtifact": "Artefakt",
     "TraitAstral": "Astral",
     "TraitAsura": "Asura",
@@ -3487,14 +3519,12 @@
     "TraitCarried": "Carried",
     "TraitCatalyst": "Katalysator",
     "TraitCatfolk": "Amurrun",
-    "TraitCavalry": "Cavalry",
     "TraitCelestial": "Celestisch",
     "TraitChampion": "Streiter",
     "TraitChangeling": "Wechselbalg",
     "TraitChaotic": "Chaotisch",
     "TraitCharauKa": "Charau-ka",
     "TraitCircus": "Zirkus",
-    "TraitCivic": "Civic",
     "TraitCleric": "Kleriker",
     "TraitClimbing": "Klettern",
     "TraitClockwork": "Mechanismus",
@@ -3504,10 +3534,10 @@
     "TraitColdiron": "Kaltes Eisen",
     "TraitCombination": "Kombination",
     "TraitComfort": "Bequem",
-    "TraitCommerce": "Commerce",
     "TraitCommon": "Gewöhnlich",
     "TraitCompanion": "Gefährte",
     "TraitComplex": "Komplex",
+    "TraitComposite": "Composite",
     "TraitComposition": "Komposition",
     "TraitConcealable": "Verdeckbar",
     "TraitConcentrate": "Konzentration",
@@ -3574,6 +3604,7 @@
     "TraitDescriptionAphorite": "Aphoriten sind Ebenenabkömmlinge, deren Herkunft auf die rechtschaffene Stadt der Ebene von Axis zurückgeht.",
     "TraitDescriptionAquadynamic": "This armor is designed for use underwater, with streamlined design and buoyant materials used in strategic places. You don't apply the armor's check penalty to Acrobatics or Athletics checks in water or similar liquids.",
     "TraitDescriptionArcane": "Diese Magie entstammt der Arkanen Tradition, die auf Logik und Rationalität basiert. Alles mit dieser Kategoriezugehörigkeit ist magisch.",
+    "TraitDescriptionArdande": "Ardandes are planar scions descended from kizidhars and other beings of elemental wood.",
     "TraitDescriptionArchetype": "Dieses Talent gehört zu einem Archetypen.",
     "TraitDescriptionArtifact": "Gegenstände dieser Kategorie sind Artefakte, magische Gegenstände, die nicht mit normalen Methoden hergestellt werden können. Sie können auch nicht durch normale Methoden beschädigt werden. Artefakte sind stets selten oder einzigartig.",
     "TraitDescriptionAttached": "Eine befestigte Waffe muss mit einem anderen Ausrüstungsstück verbunden sein, um benutzt werden zu können. Die Eigenschaft nennt die Art von Ausrüstungsgegenstand, mit der die Waffe verbunden werden kann. Du musst den Gegenstand, mit dem die Waffe verbunden ist, führen oder bei dir tragen, um mit ihr angreifen zu können. Schildstacheln sind beispielsweise mit einem Schild verbunden, dies erlaubt dir mit den Stacheln statt mit einem Schildstoß anzugreifen, aber nur, wenn du den Schild führst. Eine befestigte Waffe ist für gewöhnlich durch Schrauben oder ähnliches mit dem Gegenstand verbunden, an dem sie befestigt ist, oder direkt in ihn eingebaut. Für gewöhnlich kann an einem Gegenstand nur eine Waffe befestigt werden. Eine befestigte Waffe kann mit 10 Minuten Arbeitsaufwand und einem erfolgreichen Fertigkeitswurf für Handwerkskunst gegen SG 10 an einem Gegenstand angebracht werden. Dies schließt die Zeit mit ein, die benötigt wird, um die Waffe von einem anderen Gegenstand, an dem sie befestigt war, zu lösen, falls nötig. Wenn ein Gegenstand zerstört wird, kann eine an ihm befestigte Waffe für gewöhnlich wiederverwendet werden.",
@@ -3611,6 +3642,7 @@
     "TraitDescriptionCommon": "Alles, das keiner anderen Seltenheitskategorie (Ungewöhnlich, Selten oder Einzigartig) angehört, besitzt automatisch die Kategorie Gewöhnlich. Diese Seltenheit bedeutet, dass eine Fähigkeit, ein\n Gegenstand oder ein Zauber für alle Charaktere verfügbar ist, welche die jeweiligen Voraussetzungen erfüllen.",
     "TraitDescriptionCompanion": "Ein Gegenstand dieser Kategorie kann von einem Tiergefährten oder ähnlichen Kreatur getragen werden. Ein Gefährte kann bis zu zwei mit Resonanz aufgeladene Gegenstände tragen.",
     "TraitDescriptionComplex": "Eine Gefahr dieser Kategorie führt während einer Begegnung eigene Züge aus.",
+    "TraitDescriptionComposite": "A composite impulse combines multiple elements. You can gain an impulse with the composite trait only if your kinetic elements include all the elements listed in the impulse’s traits.",
     "TraitDescriptionComposition": "Um einen Zaubertrick oder Fokuszauber dieser Kategorie zu wirken, nutzt du in der Regel eine Art von Darbietung. Sollte der Zauber eine Verbale Komponente enthalten, musst du eine Hörbare Darbietung nutze; sollte der Zauber als Komponente Gesten enthalten, musst du eine Sichtbare Darbietung einsetzen. Der Zauber erlangt alle Kategorien der genutzten Darbietung. Du kannst pro Zug maximal einen Kompositionszauber wirken und kannst stets nur einen aktiv haben. Solltest du einen neuen Kompositionszauber wirken, enden alle anhaltenden Effekte deines vorangegangenen Kompositionszaubers.",
     "TraitDescriptionConcealable": "Diese Waffe ist so entworfen, dass sie unauffällig ist oder leicht verdeckt werden kann. Du erhältst einen Situationsbonus von +2 auf Fertigkeitswürfe für Heimlichkeit und deinen Heimlichkeit-SG, wenn du eine Waffe mit dieser Waffeneigenschaft verbergen möchtest.",
     "TraitDescriptionConcentrate": "Ein Handlung dieser Kategorie erfordert Konzentration und mentale Disziplin.",
@@ -3713,10 +3745,12 @@
     "TraitDescriptionHumanoid": "Humanoide Kreaturen denken und verhalten sich weitestgehend wie Menschen. In der Regel stehen sie aufrecht und besitzen zwei Arme und zwei Beine.",
     "TraitDescriptionIfrit": "Eine Unterart der Qariniabkömmlinge; stammen von Wesen der Ebene des Feuers ab.",
     "TraitDescriptionIllusion": "Effekte und magische Gegenstände dieser Kategorie sind mit der Schule der Illusionsmagie assoziiert und umfassen in der Regel die Täuschung sensorischer Wahrnehmung.",
+    "TraitDescriptionImpulse": "The primary magical actions kineticists use are called impulses. You can use an impulse only if your kinetic aura is active and channeling that element, and only if you have a hand free to shape the elemental flow. The impulse trait means the action has the concentrate trait unless another ability changes this. If an impulse allows you to choose an element, you can choose any element you're channeling, and the impulse gains that element's trait.",
     "TraitDescriptionIncapacitation": "Eine Fähigkeit dieser Kategorie kann einen Charakter vollständig aus dem Kampf nehmen oder ihn sogar töten, ist aber schwieriger gegen mächtigere Charaktere anzuwenden. Sollte ein Zauber dieser Kategorie angehören, behandelt jede Kreatur, deren Stufe über dem doppelten Grad des Zaubers liegt, das Ergebnis ihres Wurfes gegen Kampfunfähigkeit durch den Zauber als um einen Schritt besser oder das Ergebnis des Wurfes des Zauberwirkers, um sie Kampfunfähig zu machen, als um einen Schritt schlechter. Sollte ein anderer Effekt dieser KategorieGrundregelwerk angehören, so erhält eine Kreatur dieselben Vorteile, sofern ihre Stufe über der Stufe des Gegenstandes, der Gefahr oder Kreatur liegt, von der der Effekt ausgeht.",
     "TraitDescriptionIncarnate": "Ein Zauber mit der Kategorie Inkarnation ist in seiner Art ähnlich wie ein Zauber, der eine Kreatur beschwört, allerdings beschwört er keinen Schergen, mit der Kategorie Herbeigezaubert. Stattdessen nutzt die Kreatur, wenn beschworen, ihre Aktion Auftritt, sobald du den Zauber gewirkt hast. Am Ende deines nächsten Zuges kann die Inkarnation dann entweder einen Schritt machen, Laufen oder eine andere Aktion für eine Bewegungsart, die sie hat (wie Klettern oder Graben), nutzen und nutzt dann seine Aktion Abgang. Der Zauber endet dann. Der Name der spezifischen Auftritts- und Abgangsaktion sind in Kursiv nach dem entsprechenden Wort „Auftritt“ oder „Abgang“ zusammen mit anderen Kategorien aufgelistet. Eine Kreatur, die von einer Inkarnation beschworen wird, agiert in deinem Sinne, lenkt seine Effekte von dir und deinen Verbündeten weg so gut es geht und hört möglicherweise auf deine Wünsche, handelt aber letztendlich nach seinem eigenen Willen. Wenn der Zauber angibt, dass die Inkarnation eine Entscheidung trifft, wird diese vom SL bestimmt. Es ist möglich, dass die Inkarnation eher auf dich hört, wenn du sie häufiger beschwörst. Die Inkarnation ist keine vollständige Kreatur. Sie kann weder Aktionen ausführen, noch kann sie das Ziel eines Angriffs, Zaubers oder anderer Effekte sein, außer sie sind in der Lage einen Effekt als Ziel zu haben oder diesen zu beenden (wie Magie bannen). Es hat eine Größenkategorie, damit seine Position für Effekte bestimmt werden kann, blockiert aber keine Bewegungen. Wenn nötig, nutzen seine Effekte deinen Zauber-SG und deinen Zauberangriffsmodifikator.",
     "TraitDescriptionIncorporeal": "Körperlose Kreaturen oder Objekte haben keine körperliche Gestalt. Sie können sich durch feste Objekte, wie z.B. Wände, hindurch bewegen. Eine körperlose Kreatur, die sich innerhalb eines festen Objekts aufhält, kann nichts außerhalb des Objekts wahrnehmen oder angreifen und es auch nicht auf andere Art beeinflussen. Beginnt eine körperlose Kreatur ihren Zug innerhalb eines Objekts, erhält sie den Zustand Verlangsamt 1. Körperliche Kreaturen können sich durch körperlose Kreaturen hindurch bewegen, dürfen aber ihre Bewegung nicht im Feld einer solchen Kreatur beenden.<br />\nKörperlose Kreaturen können keine stärkebasierenden Würfe gegen körperliche Kreaturen oder Objekte ablegen, nur gegen andere körperlose Kreaturen oder Objekte, es sei denn, diese Objekte verfügen über die Eigenschaftsrune Geister berührend. Gleichermaßen können körperliche Kreaturen keine stärkebasierenden Würfe gegen körperlose Kreaturen oder Objekte ablegen.<br />\nKörperlose Kreaturen haben üblicherweise Immunität gegen Effekte oder Zustände, die einen materiellen Körper erfordern, wie beispielsweise Gift, Krankheit oder Präzisionsschaden. Ebenso haben sie zumeist Resistenz gegen jede Schadensart (außer Kraftschaden und Schaden von Angriffen mit einer Eigenschaftsrune Geister berührend). Gegen nichtmagischen Schaden wird diese Resistenz verdoppelt.",
     "TraitDescriptionInfused": "Du erschaffst einen alchemistischen Gegenstand der Kategorie Aufgeladen, wenn du deine aufgeladenen Reagenzien nutzt. Ein solcher Gegenstand verliert nach einiger Zeit seine Wirkung. Alle nichtpermanenten Effekte deiner aufgeladenen alchemistischen Gegenstände enden, wenn du deine nächsten täglichen Vorbereitungen triffst; hiervon ausgenommen sind Leiden wie langsam wirkende Gifte.",
+    "TraitDescriptionInfusion": "Actions with the infusion trait tweak your kineticist impulses. You must use an infusion action directly before the impulse action you want to alter. If you use any action (including free actions and reactions) other than an impulse action directly after, you waste the benefits of the infusion action. Any additional effects added by an infusion action are part of the impulse's effect,not of the infusion action itself.",
     "TraitDescriptionIngested": "Dieses Gift wird in Essen oder Trinken o.ä. gemischt.",
     "TraitDescriptionInhaled": "Dieses Gift wird eingeatmet.",
     "TraitDescriptionInjection": "Diese Waffe kann mit einem Verwundungsgift befüllt werden. Bei einem erfolgreichen Angriff mit der Waffe kannst du dem Ziel mit einer Aktion der Kategorie Interagieren das fragliche Gift injizieren. Das Nachfüllen der Waffe erfordert drei Aktionen der Kategorie Interagieren und beide Hände.",
@@ -3730,6 +3764,7 @@
     "TraitDescriptionJousting": "Diese Waffe ist für den berittenen Kampf geeignet, mit einem Geschirr oder ähnlichen Vorrichtungen. Wenn du beritten bist und dich mit deiner Aktion vor dem Angriff mindestens 10 Fuß/3 m bewegt hast, fügst du mit deinem Schadenswurf für diesen Angriff einen Situationsbonus in Höhe der Anzahl der Schadenswürfel der Waffe hinzu. Außerdem kannst du diese Waffe einhändig führen, während du beritten bist, der Schadenswürfel ändert sich zu dem aufgeführten Wert.",
     "TraitDescriptionKashrishi": "Eine beleibte Abstammung, die bezeichnende Kristallhörner tragen und innewohnende psychische Fähigkeiten besitzen.",
     "TraitDescriptionKickback": "Eine Waffe mit dieser Eigenschaft ist besonders machtvoll und aufgrund ihres Rückstoßes schwierig zu nutzen. Sie verursacht bei allen Angriffen 1 zusätzlichen Schadenspunkt. Der Angriffswurf unterliegt einem Malus von -2, sofern der Charakter einen Stärkewert von 13 oder niedriger hat. Die Verwendung eines Zweibeins, Dreibeins oder anderen Stabilisatoren kann diesen Malus ganz oder teilweise reduzieren.",
+    "TraitDescriptionKineticist": "This indicates abilities from the kineticist class.",
     "TraitDescriptionKitsune": "Kitsune sind fuchsartige Humanoide, die wahlweise Fuchsgestalt oder humanoide Gestalt annehmen können. Sie sind neugierig und erfinderisch und haben einen Ruf als Schwindler.",
     "TraitDescriptionKobold": "Eine Kreatur dieser Kategorie besitzt die Koboldabstammung. Kobolde sind reptilische Humanoide, die normalerweise Klein sind und über Dunkelsicht verfügen. Eine Fähigkeit dieser Kategorie kann nur von Kobolden gewählt oder genutzt werden.",
     "TraitDescriptionLaminar": "The armor is made up of layered sections, so when it breaks, it isn't as much of a problem. The status penalty to AC if this armor is broken is –1 for broken medium armor, –2 for broken heavy armor, or no penalty for broken light armor.",
@@ -3776,6 +3811,7 @@
     "TraitDescriptionOracle": "Eine Fähigkeit der Mystikerklasse.",
     "TraitDescriptionOrc": "Eine Kreatur dieser Kategorie ist ein Angehöriger der Abstammung Ork. Diese grünhäutigen Leute haben oft Dunkelsicht. Eine Fähigkeit dieser Kategorie kann nur von Orks gewählt und/oder verwendet werden. Ein Gegenstand dieser Kategorie wird von Orks erschaffen und/ oder verwendet.",
     "TraitDescriptionOread": "Eine Unterart der Qariniabkömmlinge, die von Wesen der Ebene der Erde abstammen.",
+    "TraitDescriptionOverflow": "Powerful impulses temporarily overdraw the energy of your kinetic gate. When you use an impulse that has the overflow trait, your kinetic aura deactivates until you revitalize it (typically with Channel Elements). Extinguishing your element this severely is taxing, and consequently, you can use only one overflow impulse per round, even if you reactivate your kinetic gate.",
     "TraitDescriptionParry": "Diese Waffe kann defensiv genutzt werden, um Angriffe zu parieren. Während du diese Waffe führst und im Umgang mit ihr wenigstens den Kompetenzgrad Geübt besitzt, kannst du eine einzelne Aktion benutzen, um deine Waffe in eine Abwehrstellung zu bringen und bis zu Beginn deines nächsten Zuges einen Situationsbonus von +1 auf deine RK zu erhalten.",
     "TraitDescriptionPeachwood": "Pfirsichholzwaffen besitzen einen besonderen rötlichen Farbton im direkten Sonnenlicht. Es wird hinsichtlich der Resistenzen oder Schwächen von Untoten als Schwarzholz behandelt (eine Pfirsichholzwaffe kann z.B. die Resistenz eines Jiang-Shi umgehen). Pfirsichholzwaffen umgehen zudem einen Bruchteil der Resistenzen aller Untoten: Angriffe mit einer solchen Waffe behandeln die Resistenzen eines Untoten gegen Körperlichen Schaden als 2 niedriger im Fall gewöhnlichen Pfirsichholzes und als 4 niedriger bei hochwertigem Pfirsichholz.",
     "TraitDescriptionPlant": "Pflanzenkreaturen gehören der Kategorie Pflanze an. Sie unterscheiden sich von normalen Pflanzen. Magische Effekte dieser Kategorie manipulieren Pflanzen oder pflanzliche Masse oder zaubern sie herbei. Pflanzenmanipulierende Effekte haben keinen Effekt in einem Bereich ohne Pflanzen.",
@@ -3806,6 +3842,7 @@
     "TraitDescriptionReckless": "Handlungen dieser Kategorie riskieren, dass der Fahrzeuglenker die Kontrolle über sein Fahrzeug verliert; es wird ein passender Steuerungswurf fällig, um die Kontrolle zu behalten.",
     "TraitDescriptionRecovery": "Recovery weapons are thrown weapons designed to return to the thrower when they miss the target. When you make an unsuccessful thrown Strike with this weapon, it flies back to your hand after the Strike is complete, allowing you to try again. If your hands are full when the weapon returns, it falls to the ground in your space.",
     "TraitDescriptionReflection": "Eine Kreatur dieser Kategorie besitzt die Vielseitige Herkunft Reflektion. Reflektionen sind Kopien lebender Leute und entstehen durch Klonen, planare Duplikation oder andere Mechanismen. Eine Fähigkeit dieser Kategorie kann nur von Reflektionen gewählt oder genutzt werden.",
+    "TraitDescriptionRelic": "An item with the relic trait grows in power with its wielder.",
     "TraitDescriptionReload": "Alle Waffen benötigen einige Zeit, um in Position gebracht zu werden. Viele Fernkampfwaffen müssen jedoch zusätzlich auch noch geladen und nachgeladen werden. Dieser Eintrag zeigt, wie viele Interagieren-Aktionen du aufwenden musst, um eine solche Waffe nachzuladen. Dies können auch 0 Aktionen sein, wenn das Nachladen und Schießen mit der Waffe Teil derselben Aktion sind. Wenn ein Gegenstand zum Nachladen 2 oder mehr Aktionen benötigt, entscheidet der SL, ob diese Aktionen zusammenhängend als eine Aktivität stattfinden müssen oder ob du einige der Aktionen während eines Zuges und die restlichen während deines nächsten Zuges durchführen kannst.",
     "TraitDescriptionRepeating": "Eine Repetier-Waffe ist typischerweise eine Armbrust mit einer kürzeren Nachladezeit.",
     "TraitDescriptionResonant": "Diese Waffe kann Energieschaden übertragen. Wenn du eine solche Waffe führst, besitzt du die Freie Aktion Energie leiten.",
@@ -3846,6 +3883,7 @@
     "TraitDescriptionSweep": "Mit dieser Waffe kannst du durchschlagende Angriffe ausführen, was es einfacher macht, mehrere Gegner auf einmal anzugreifen. Wenn du mit dieser Waffe angreifst und während dieses Zuges bereits versucht hast, ein anderes Ziel mit derselben Waffe anzugreifen, erhältst du einen Situationsbonus von +1 auf deinen Angriffswurf.",
     "TraitDescriptionSylph": "Eine Unterart der Qariniabkömmlinge, welche von Wesen der Ebene der Luft abstammen.",
     "TraitDescriptionTalisman": "Ein Talisman ist ein kleiner Gegenstand, der an einer Rüstung, einem Schild oder einer Waffe befestigt wird. Um einen an einem Gegenstand befestigten Talisman zu aktivieren, musst du den Gegenstand am Leib oder in Händen tragen. Die Aktivierung brennt einen Talisman permanent aus.",
+    "TraitDescriptionTalos": "Taloses are planar scions descended from zuhras.",
     "TraitDescriptionTandem": "Bei Handlungen mit dieser Kategorie agieren dein Eidolon und du gemeinsam. Du kannst keine Handlung der Kategorie Gemeinsam nutzen, wenn du oder dein Eidolon nicht zum Handeln imstande ist, wenn du dein Eidolon nicht manifestiert hast oder wenn du dein Eidolon auf eine Weise manifestiert hast, bei der es kein eigenständiges Wesen ist (beispielsweise mit dem Talent Mit Eidolon verschmelzen). Handlungen der Kategorie Gemeinsam lassen dein Eidolon und dich oft separate Handlungen ausführen. Du kannst keine Handlung der Kategorie Gemeinsam ausführen, um eine weitere Handlung der Kategorie Gemeinsam zu nutzen.",
     "TraitDescriptionTattoo": "Eine Tätowierung ist eine Art von Gegenstand, der in die Haut eines Lebewesens gezeichnet oder geschnitten wird und normalerweise die Form von Bildern oder Symbolen annimmt.",
     "TraitDescriptionTech": "Items with this trait are associated with the technology of Numeria.",
@@ -3874,12 +3912,15 @@
     "TraitDescriptionVirulent": "Ein Leiden dieser Kategorie ist schwerer zu überwinden. Dir müssen zwei Rettungswürfe in Folge gelingen, um ein virulentes Leiden um 1 Phase zu senken. Ein Kritischer Erfolg reduziert die Phase eines virulenten Leidens nur um 1 statt um 2.",
     "TraitDescriptionVishkanya": "Eine Abstammung mit schlangenähnlichen Zügen und starkem Gift.",
     "TraitDescriptionVisual": "Ein sichtbarer Effekt kann nur Kreaturen betreffen, die ihn sehen können. Dies betrifft nur die sichtbaren Teile des Effektes nach Maßgabe des SL.",
+    "TraitDescriptionVitality": "Effects with this trait heal living creatures with energy from the Forge of Creation, deal vitality energy damage to undead, or manipulate vitality energy.",
+    "TraitDescriptionVoid": "Effects with this trait heal undead creatures with void energy, deal void damage to living creatures, or manipulate void energy.",
     "TraitDescriptionVolley": "Diese Fernkampfwaffe ist auf geringe Distanzen weniger effektiv. Wenn du ein Ziel angreifst, welches sich innerhalb der bei der Waffeneigenschaft genannten Distanz zu dir befindet, unterliegen deine Angriffe einem Malus von -2.",
     "TraitDescriptionWand": "Ein Zauberstab enthält einen einzelnen Zauber, den du einmal am Tag wirken kannst.",
     "TraitDescriptionWater": "Effekte dieser Kategorie manipulieren oder zaubern Wasser herbei. Manipulierende Effekt wirken nicht in Regionen ohne Wasser. Kreaturen dieser Kategorie bestehen hauptsächlich aus Wasser oder besitzen eine magische Verbindung zu dem Element.",
     "TraitDescriptionWildHunt": "Creatures with the wild hunt trait are never below 14th level. They possess greater darkvision, greensight, planar acclimation, wild gaze, instinctive cooperation, weakness to cold iron, the ability to speak with plants and animals, and their own specific wild hunt link.",
     "TraitDescriptionWitch": "Eine Fähigkeit der Hexenklasse.",
     "TraitDescriptionWizard": "Eine Fähigkeit der Klasse des Magiers.",
+    "TraitDescriptionWood": " Effects with the metal trait conjure or manipulate wood. Those that manipulate wood have no effectin an area without wood. Creatures with this trait consist primarily of wood or have a connection to magical wood.",
     "TraitDetection": "Entdeckung",
     "TraitDeviant": "Abweichend",
     "TraitDevil": "Teufel",
@@ -4015,12 +4056,13 @@
     "TraitIfrit": "Pyrier",
     "TraitIkeshti": "Ikeschti",
     "TraitIllusion": "Illusion",
+    "TraitImpulse": "Impulse",
     "TraitIncapacitation": "Kampfunfähig",
     "TraitIncarnate": "Inkarnation",
     "TraitIncorporeal": "Körperlos",
     "TraitInevitable": "Unvermeidbarer",
-    "TraitInfantry": "Infantry",
     "TraitInfused": "Aufgeladen",
+    "TraitInfusion": "Infusion",
     "TraitIngested": "Eingenommen",
     "TraitInhaled": "Eingeatmet",
     "TraitInjection": "Injiziert",
@@ -4041,14 +4083,13 @@
     "TraitKami": "Kami",
     "TraitKashrishi": "Kaschrischi",
     "TraitKickback": "Rückstoß",
-    "TraitKingdom": "Kingdom",
+    "TraitKineticist": "Kineticist",
     "TraitKitsune": "Kitsune",
     "TraitKobold": "Kobold",
     "TraitKovintus": "Kovintus",
     "TraitLaminar": "Laminar",
     "TraitLaunching": "Launching",
     "TraitLawful": "Rechtschaffen",
-    "TraitLeadership": "Leadership",
     "TraitLeshy": "Lesnik",
     "TraitLight": "Licht",
     "TraitLilu": "Lilu",
@@ -4103,6 +4144,7 @@
     "TraitOracle": "Mystiker",
     "TraitOrc": "Ork",
     "TraitOread": "Oreade",
+    "TraitOverflow": "Overflow",
     "TraitPaaridar": "Paaridar",
     "TraitParry": "Parade",
     "TraitPervasiveMagic": "Allgegenwärtig",
@@ -4216,6 +4258,7 @@
     "TraitReach0": "Angriffsradius 0 Fuß/0 m",
     "TraitReach10": "Angriffsradius 10 Fuß/3 m",
     "TraitReach100": "Angriffsradius 100 Fuß/30 m",
+    "TraitReach120": "Reach 120 ft",
     "TraitReach1000": "Angriffsradius 1.000 Fuß/300 m",
     "TraitReach15": "Angriffsradius 15 Fuß/4,50 m",
     "TraitReach20": "Angriffsradius 20 Fuß/6 m",
@@ -4228,7 +4271,6 @@
     "TraitReckless": "Waghalsig",
     "TraitRecovery": "Recovery",
     "TraitReflection": "Reflektion",
-    "TraitRegion": "Region",
     "TraitRelic": "Relikt",
     "TraitReload": "Nachladen",
     "TraitReload0": "Nachladen 0",
@@ -4300,6 +4342,7 @@
     "TraitSweep": "Durchschlagend",
     "TraitSylph": "Sylphe",
     "TraitTalisman": "Talisman",
+    "TraitTalos": "Talos",
     "TraitTandem": "Gemeinsam",
     "TraitTane": "Thane",
     "TraitTanggal": "Tanggal",
@@ -4346,7 +4389,6 @@
     "TraitUnique": "Einzigartig",
     "TraitUnstable": "Instabil",
     "TraitUntyped": "Kategorielos",
-    "TraitUpkeep": "Upkeep",
     "TraitUrdefhan": "Urdefhan",
     "TraitVampire": "Vampir",
     "TraitVanara": "Vanara",
@@ -4373,6 +4415,8 @@
     "TraitVirulent": "Ausgeprägt",
     "TraitVishkanya": "Vischkanya",
     "TraitVisual": "Sichtbar",
+    "TraitVitality": "Vitality",
+    "TraitVoid": "Void",
     "TraitVolley": "Ballistisch",
     "TraitVolley20": "Ballistisch 20 Fuß/6 m",
     "TraitVolley30": "Ballistisch 30 Fuß/9 m",
@@ -4387,6 +4431,7 @@
     "TraitWildHunt": "Wild Hunt",
     "TraitWitch": "Hexe",
     "TraitWizard": "Magier",
+    "TraitWood": "Wood",
     "TraitWorn": "Getragen",
     "TraitWornAmulet": "Getrag. Amulett",
     "TraitWornAndAttachedToTwoWeapons": "Getragen und an zwei Waffen befestigt",
@@ -5605,6 +5650,7 @@
       "background": "Hintergrund",
       "backpack": "Behälter",
       "book": "Buch",
+      "campaignFeature": "Campaign Feature",
       "class": "Klasse",
       "condition": "Zustand",
       "consumable": "Verbrauchsgegenstand",
