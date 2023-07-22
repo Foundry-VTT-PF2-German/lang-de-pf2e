@@ -188,7 +188,7 @@
         }
       },
       "BioluminescenceBomb": {
-        "success": "<p>Each creature within @Template[type:emanation|distance:10]{10 feet} of where the bomb exploded must succeed at a @Check[type:reflex|dc:17] save or be marked with dye that continues to glow for 24 hours. An affected creature must also attempt a @Check[type:fortitude|dc:17] saving throw against the overwhelming burst of light.</p><p><strong>Success</strong> The creature is unaffected.</p><p><strong>Failure</strong> The creature is @Compendium[pf2e.conditionitems.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round.</p><p><strong>Critical Failure</strong> The creature is @Compendium[pf2e.conditionitems.XgEqL1kFApUbl5Z2]{Blinded} for 1 round, then dazzled for 1 round.</p>"
+        "success": "<p>Each creature within @Template[type:emanation|distance:10]{10 feet} of where the bomb exploded must succeed at a @Check[type:reflex|dc:17] save or be marked with dye that continues to glow for 24 hours. An affected creature must also attempt a @Check[type:fortitude|dc:17] saving throw against the overwhelming burst of light.</p><p><strong>Success</strong> The creature is unaffected.</p><p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round.</p><p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for 1 round, then dazzled for 1 round.</p>"
       },
       "BlightBomb": {
         "Greater": {
@@ -696,6 +696,7 @@
     },
     "OracleCurses": {
       "Ancestor": {
+        "AncestralInfluence": "Ancestral Influence",
         "Label": {
           "ExtremeBattle": "Extremer Schlachtfluch",
           "ExtremeSkillful": "Extrem Fähig",
@@ -703,14 +704,18 @@
           "MajorBattle": "Mächtiger Schlachtfluch",
           "MajorSkillful": "Mächtig Fähig",
           "MajorSpellcasting": "Mächtige Zauberei",
+          "Martial": "Martial",
           "MinorBattle": "Schwacher Schlachtfluch",
           "MinorSkillful": "Schwach Fähig",
           "MinorSpellcasting": "Schwache Zauberei",
           "ModerateBattle": "Durchschnittlicher Schlachtfluch",
           "ModerateSkillful": "Durchschnittlich Fähig",
-          "ModerateSpellcasting": "Durchschnittliche Zauberei"
+          "ModerateSpellcasting": "Durchschnittliche Zauberei",
+          "Skillful": "Skillful",
+          "Spellcasting": "Spellcasting"
         },
         "MajorFailure": "Dein Fluch beeinträchtigt diese Aktion und du musst einen @Check[type:flat|dc:8|showDC:owner]{einfachen Wurf} machen.",
+        "MeddlingAncestor": "Meddling Ancestor",
         "MinorFailure": "Dein Fluch beeinträchtigt diese Aktion und du musst einen @Check[type:flat|dc:4|showDC:owner]{einfachen Wurf} machen.",
         "ModerateFailure": "Dein Fluch beeinträchtigt diese Aktion und du musst einen @Check[type:flat|dc:6|showDC:owner]{einfachen Wurf} machen."
       },
@@ -1041,6 +1046,7 @@
       "FlatModifier": "Einf. Modifikator",
       "GrantItem": "Gewähre Gegenstand",
       "Immunity": "Immunität",
+      "ItemAlteration": "Item Alteration",
       "LoseHitPoints": "Verliere Trefferpunkte",
       "MarkToken": "Markiere Token",
       "MartialProficiency": "Kompetenzgrad Kriegswaffen",
@@ -1115,6 +1121,7 @@
       "ForestsOrSwamps": "In Wäldern oder Sümpfen",
       "ForestsOrUnderground": "In Forests or Underground Areas",
       "FortuneTelling": "Wahrsagen",
+      "FullMoon": "Full Moon",
       "GatherInformation": "zum Informationen sammeln",
       "Grapple": "Zum Ergreifen",
       "GrappleShove": "Zum Ergreifen oder Stossen",
@@ -1266,6 +1273,21 @@
       "AncientElf": {
         "Prompt": "Wähle Zugangsklassentalent."
       },
+      "AnimalForm": {
+        "Ape": "Ape",
+        "Bat": "Bat",
+        "Bear": "Bear",
+        "Bull": "Bull",
+        "Canine": "Canine",
+        "Cat": "Cat",
+        "Centipede": "Centipede",
+        "Deer": "Deer",
+        "Frog": "Frog",
+        "Shark": "Shark",
+        "Snake": "Snake",
+        "Toad": "Toad",
+        "Wolf": "Wolf"
+      },
       "AnimalSkin": {
         "BracersOfArmor": "Tierhaut mit Rüstungsarmschienen",
         "ExplorersClothing": "Tierhaut mit Entdeckerkleidung",
@@ -1317,9 +1339,9 @@
           "ArcaneLocomotionClimbSpeed": "Erhalte eine Kletterbewegungsrate",
           "ArcaneLocomotionIncreaseSpeed": "Erhöhe Bewegungsrate",
           "ArcaneLocomotionSwimSpeed": "Erhalte eine Schwimmbewegungsrate",
-          "AugmentationPrompt": "Wähle ein Talent für die Verbesserung",
-          "EnhancementPrompt": "Wähle eine Verbesserung",
-          "MagicalResistanceAll": "Erhalte weitere Resistenzen",
+          "AugmentationPrompt": "Select a feat to augment.",
+          "EnhancementPrompt": "Select an enhancement.",
+          "MagicalResistanceAll": "Gain additional resistances",
           "MagicalResistanceIncrease": "Erhöhe bestehende Resistenz"
         },
         "HunterAutomaton": {
@@ -1415,12 +1437,12 @@
         "Lodovka": "Lodovka",
         "Medvyed": "Medvyed",
         "Orlovsky": "Orlovsky",
-        "Prompt": "Select your Brevic lineage",
+        "Prompt": "Select a Brevic lineage.",
         "Surtova": "Surtova"
       },
       "CatharticMage": {
         "EmotionalState": {
-          "Prompt": "Wähle deine Katharsis-Emotion"
+          "Prompt": "Select a catharsis emotion."
         },
         "Love": {
           "Toggle": "Du wirkst einen Zauber, von dem dein Emotionaler Fokus profitiert"
@@ -1514,7 +1536,7 @@
       },
       "DeityAndCause": {
         "AllowedDrops": "1. Stufe Streiter-Klassentalent",
-        "Prompt": "Wähle eine Streiterberufung"
+        "Prompt": "Select a champion's cause."
       },
       "DeviantAbilities": {
         "AwakenedPower": {
@@ -1550,7 +1572,7 @@
           "StrikeLabel": "Knochensporne"
         },
         "Dragon": {
-          "EnergyPrompt": "Wähle eine Schadensart passend zu deinen Drachen-Fähigkeiten"
+          "EnergyPrompt": "Select an energy associated with your dragon abilities."
         },
         "TitanSwing": {
           "NoteFifteenFeet": "Das Ziel wird 15 Fuß/4,50 m zurückgestoßen.",
@@ -1594,7 +1616,7 @@
           "Underworld": "Unterweltdrache",
           "White": "Weisser Drache"
         },
-        "Prompt": "Wähle einen Drachen",
+        "Prompt": "Select a dragon.",
         "ScalesOfTheDragon": {
           "BracersOfArmor": "Drachenschuppen mit Rüstungsarmschienen",
           "ExplorersClothing": "Drachenschuppen mit Abenteurerkleidung",
@@ -1619,7 +1641,7 @@
           "Ironfist": "Clan Ironfist",
           "Molgrade": "Clan Molgrade",
           "Oriddus": "Clan Oriddus",
-          "Prompt": "Select a Dwarven Clan",
+          "Prompt": "Select a dwarven clan.",
           "Runebinder": "Clan Runebinder",
           "Stonefist": "Clan Stonefist",
           "Tolorr": "Clan Tolorr",
@@ -1645,6 +1667,14 @@
         },
         "VengefulHatred": {
           "Prompt": "Wähle einen zwergischen Blutfeind."
+        }
+      },
+      "EldritchArcher": {
+        "ArrowOfDeath": {
+          "Note": "On a critical hit, the target must also succeed at a @Check[type:fortitude|dc:resolve(@actor.attributes.classOrSpellDC.value)|traits:death,incapacitation] saving throw, or be immediately slain."
+        },
+        "EnchantingArrow": {
+          "Note": "On a critical hit, the target also becomes @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}."
         }
       },
       "Elf": {
@@ -1687,7 +1717,7 @@
         },
         "DeckOfDestiny": {
           "MatchingSuitPrompt": "Is the drawn card's suit related the check?",
-          "WealOrWoePrompt": "Select Weal or Woe"
+          "WealOrWoePrompt": "Select Weal or Woe."
         },
         "EagleEyeElixir": {
           "Greater": {
@@ -1782,7 +1812,7 @@
         },
         "MutateWeapon": {
           "Accuracy": "Zustandsbonus von +1 auf Angriffswürfe",
-          "Bonus": "Wähle einen Bonus",
+          "Bonus": "Select a bonus.",
           "Reach": "Angriffsradius 10 Fuß/3 m",
           "Target": "Wähle eine deiner lebenden Waffen."
         }
@@ -1817,6 +1847,9 @@
       "Goblin": {
         "ChosenOfLamashtu": {
           "Prompt": "Wähle eine goblinische Herkunft."
+        },
+        "CityScavenger": {
+          "EarnIncome": "City Scavenger - Earn Income"
         },
         "ExtraSquishy": {
           "Note": "Du behandelst Erfolge bei Würfen zum Hindurchzwängen stets, als hättest du einen Kritischen Erfolg erzielt."
@@ -1881,7 +1914,7 @@
           "Shields": "Schilde",
           "Stars": "Sterne"
         },
-        "Prompt": "Wähle ein Turmkartendeck"
+        "Prompt": "Select a harrow suit."
       },
       "Hobgoblin": {
         "AgonizingRebuke": {
@@ -1961,6 +1994,32 @@
         },
         "PursueALead": {
           "Label": "Untersucht ein Thema von Hinweis nachgehen"
+        }
+      },
+      "Kineticist": {
+        "Impulse": {
+          "Prompt": "Select an Impulse."
+        },
+        "KineticGate": {
+          "DualGate": "Dual Gate",
+          "ExpandThePortal": "Expand the Portal",
+          "ForkThePath": "Fork the Path",
+          "Junction": {
+            "AuraJunction": "Aura Junction",
+            "CriticalBlast": "Critical Blast",
+            "ElementalResistance": "Elemental Resistance",
+            "ImpulseJunction": "Impulse Junction",
+            "SkillJunction": "Skill Junction"
+          },
+          "Prompt": {
+            "Element": "Select an element.",
+            "ExpandElement": "Select an element to expand.",
+            "Gate": "Select a kinetic gate.",
+            "Impulse": "Select an impulse feat.",
+            "Junction": "Select a gate junction.",
+            "Threshold": "Select a gate's threshold."
+          },
+          "SingleGate": "Single Gate"
         }
       },
       "Kobold": {
@@ -2162,7 +2221,7 @@
           "Arctic": "Arktisch",
           "Desert": "Wüste",
           "Mountain": "Gebirge",
-          "Prompt": "Wähle dein gebundenes Gelände",
+          "Prompt": "Select a bound terrain.",
           "Swamp": "Sumpf"
         }
       },
@@ -2220,33 +2279,33 @@
       },
       "Prompt": {
         "AdvancedMulticlassFeat": "Wähle ein Klassentalent bis zur Hälfte deiner Charakterstufe.",
-        "Alignment": "Wähle eine Gesinnung",
+        "Alignment": "Select an alignment.",
         "CantripOrNonCantrip": "Wähle Zaubertrick oder Zauber.",
         "ClassDCAbilityScore": "Wähle das Attribut deines Klassen-SG.",
-        "ConsciousMind": "Wähle einen Bewussten Verstand.",
+        "ConsciousMind": "Select a conscious mind.",
         "CreatureSize": "Wähle eine Kreaturengröße.",
         "DamageType": "Wähle Schadensart.",
-        "DegreeOfSuccess": "Wähle einen Erfolgsgrad",
+        "DegreeOfSuccess": "Select the degree of success.",
         "Deity": "Wähle eine Gottheit.",
         "DeitysDomain": "Wähle eine Domäne der Gottheit.",
-        "DragonBreathWeapon": "Wähle die Odemwaffe eines Drachen.",
+        "DragonBreathWeapon": "Select a dragon's breath weapon.",
         "Element": "Wähle ein Element.",
         "EnergyType": "Wähle einen Energietyp.",
-        "EvolutionFeat": "Wähle dein erstes Evolutionstalent.",
+        "EvolutionFeat": "Select a first evolution feat.",
         "Feat": "Wähle ein Talent.",
-        "FirstImplement": "Wähle dein erstes Paraphernum.",
+        "FirstImplement": "Select a first implement.",
         "Lesson": "Wähle eine Lektion.",
         "LevelOneClassFeat": "Wähle ein Klassentalent der 1. Stufe.",
         "LevelOneOrTwoClassFeat": "Wähle ein Klassentalent der 1. oder 2. Stufe.",
         "Material": "Wähle ein Material.",
         "PathToPerfection": "Wähle einen Weg zur Perfektion.",
         "Rune": "Wähle eine Rune.",
-        "SecondImplement": "Wähle dein zweites Paraphernum.",
+        "SecondImplement": "Select a second implement.",
         "Shillelagh": "Wähle eine Keule oder einen Stecken.",
         "Skill": "Wähle eine Fertigkeit.",
         "SkillFeat": "Wähle ein Fertigkeitstalent",
-        "SubconsciousMind": "Wähle einen Unterbewussten Verstand.",
-        "ThirdImplement": "Wähle dein drittes Paraphernum.",
+        "SubconsciousMind": "Select a subconscious mind.",
+        "ThirdImplement": "Select a third implement.",
         "VersatileTrait": "Wähle die vielseitige Schadensart.",
         "UnarmedAttack": "Wähle einen unbewaffneten Angriff.",
         "Weapon": "Wähle eine Waffe.",
@@ -2277,6 +2336,12 @@
           "Note": "Beim Nutzen deines Richtungssinnes behandelst du das Ergebnis als wäre es um einen Grad besser, als es tatsächlich ist."
         }
       },
+      "RelicGift": {
+        "DivineRetribution": {
+          "CriticalSuccess": "If the target is evil, it is also @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} until the start of your next turn on a critical hit.",
+          "Success": "If the target is evil, it is also @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} until the start of your next turn on a hit."
+        }
+      },
       "Rogue": {
         "DistractingFeint": {
           "Text": "Erhält eine Kreatur aufgrund deiner Finte den Zustand Auf dem falschen Fuß, so erleidet sie zudem auch einen Situationsmalus von -2 auf Wahrnehmung- und Reflexwürfe. @UUID[Compendium.pf2e.feat-effects.Item.7hRgBo0fRQBxMK7g]{Effekt: Ablenkende Finte}"
@@ -2301,7 +2366,7 @@
           "PhysicalAttackLabel": "Guarding Against a Physical Attack",
           "ProtectionLabel": "Gain Resistance to Physical Attack"
         },
-        "SpiritualFlurryNote": "Targets become @Compendium[pf2e.conditionitems.Flat-Footed]{Flat-Footed} until the end of your current turn."
+        "SpiritualFlurryNote": "Targets become @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Flat-Footed} until the end of your current turn."
       },
       "Shisk": {
         "PiercingQuills": {
@@ -2361,7 +2426,7 @@
         "Woodworking": "Holzarbeit"
       },
       "SpellEffectEvolutionSurge": {
-        "Prompt": "Wähle eine Evolution",
+        "Prompt": "Select an evolution.",
         "Sight": "Dämmersicht und Dunkelsicht",
         "Amphibious": "Bewegungsrate für Schwimmen",
         "Speed": "Zustandsbonus von +20 Fuß/6 m auf die Bewegungsrate",
@@ -2469,7 +2534,12 @@
         }
       },
       "TerrainExpertise": {
-        "Prompt": "Wähle ein Gelände."
+        "Prompt": "Select a terrain."
+      },
+      "TerrainStalker": {
+        "Rubble": "Rubble",
+        "Snow": "Snow",
+        "Underbrush": "Underbrush"
       },
       "Thaumaturge": {
         "Implement": {
@@ -2530,7 +2600,7 @@
         "Keyboards": "Tasteninstrumente",
         "Oratory": "Redekunst",
         "Percussion": "Schlaginstrumente",
-        "Prompt": "Wähle einen Darbietungstyp",
+        "Prompt": "Select a type of performance.",
         "Singing": "Gesang",
         "Strings": "Saiteninstrumente",
         "Winds": "Blasinstrumente"
@@ -2551,7 +2621,7 @@
         "MediumArmor": "Geübt in mittelschwerer Rüstung"
       },
       "WardingRune": {
-        "Prompt": "Wähle eine Magieschule außer Erkenntnismagie"
+        "Prompt": "Select a school of magic other than divination."
       },
       "WellspringMage": {
         "CriticalSuccess": "Du erlangst vorübergehend einen von dir an diesem Tag bereits genutzten Zauberplatz eines Grades deiner Wahl zurück. Solltest du den Zauberplatz nicht binnen 1 Minute nutzen, kommt es zu einem @UUID[Compendium.pf2e.rollable-tables.RollTable.N0pDFNCffTe2Du39]{Urquellschub}.",
