@@ -1,5 +1,5 @@
 ## v5.2.3.0
-* Wir gegrüßen Vendergast als neuen Contributor für das DE-Modul
+* Wir begrüßen Vendergast als neuen Contributor für das DE-Modul
 * Update für PF2-Version 5.2.3
 * Verschiedene Übersetzungskorrekturen
 * Übersetzung der Inhalte zum Abenteuerpfad "Die Gesetzlose von Alkenstern"
