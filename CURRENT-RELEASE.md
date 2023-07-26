@@ -1,4 +1,6 @@
-## v5.1.2.0
-* Update für PF2-Version 5.1.2
+## v5.2.3.0
+* Wir gegrüßen Vendergast als neuen Contributor für das DE-Modul
+* Update für PF2-Version 5.2.3
 * Verschiedene Übersetzungskorrekturen
-* Einbauen neues Basis-Coding für zukünftige Archetyp-Übersetzung
+* Übersetzung der Inhalte zum Abenteuerpfad "Die Gesetzlose von Alkenstern"
+* Übersetzung der Inhalte zu den Abenteuern "Für eine Handvoll Blumen" und "Hort des Wissens"
