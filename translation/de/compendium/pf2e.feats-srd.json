@@ -943,8 +943,8 @@
       ]
     },
     "Alkenstar Agent Dedication": {
-      "name": "Alkenstar Agent Dedication",
-      "description": "<p><strong>Access</strong> You have been initiated by the grand duchess of Alkenstar or one of her agents.</p>\n<hr />\n<p>You put on the persona of a rough and tumble outlaw, but your real goals are to report threats to Alkenstar back to the grand duchess. You become an expert in Deception and trained in your choice of Underworld Lore or Legal Lore; if you were already trained, you become an expert instead. You gain the @UUID[Compendium.pf2e.feats-srd.Item.Dvz54d6aPhjsmUux]{Lie To Me} skill feat.</p>\n<p><strong>Special</strong> You can't select another dedication feat until you've gained two other feats from the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.ttkG4geKXTao5pku]{Alkenstar Agent} archetype.</p>",
+      "name": "Alkenstern-Beauftragter-Zugang",
+      "description": "<p><strong>Zugang</strong> Du wurdest von der Großherzogin von Alkenstern oder einer ihrer Beauftragten rekrutiert.</p>\n<hr />\n<p>Du gibst dich nach außen als grober und manierenloser Gesetzloser, verfolgst in Wahrheit aber das Ziel, der Großherzogin über Bedrohungen für Alkenstern zu berichten. Du erhältst die Kompetenzgrade Experte in Täuschung und Geübt in Kenntnis (Gesetz oder Unterwelt); solltest du bereits in der fraglichen Kenntnis Geübt sein, so erlangst du stattdessen den Kompetenzgrad Experte. Du erlangst das Fertigkeitstalent @UUID[Compendium.pf2e.feats-srd.Item.Dvz54d6aPhjsmUux]{Lügen durchschauen}.</p>\n<p><strong>Speziell</strong> Du kannst kein weiteres Zugangstalent wählen, bis du wenigstens zwei weitere Talente des Archetyps @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.ttkG4geKXTao5pku]{Alkenstar Beauftragter} erhalten hast.</p>",
       "prerequisites": [
         {
           "value": "trained in Deception and at least one firearm"
@@ -3037,7 +3037,7 @@
       "description": "<p><strong>Requirements</strong> You're in Powder Punch Stance.</p>\n<hr />\n<p>You ignite a pinch of black powder in a foe's face. Choose an adjacent creature. It must attempt a @Check[type:fortitude|dc:resolve(@actor.attributes.classDC.value)] save against your class DC.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for 1 round and dazzled for 1 minute. The creature can rub its eyes as an Interact action to end this blinded condition.</p>\n<p><strong>Critical Failure</strong> The creature is blinded for 1 round and dazzled for 1 hour.</p>",
       "prerequisites": [
         {
-          "value": "Powder Punch Stance"
+          "value": "Schwarzpulverhaltung"
         }
       ]
     },
@@ -11005,14 +11005,14 @@
       ]
     },
     "Flash Your Badge": {
-      "name": "Flash Your Badge",
-      "description": "<p>You make a fearsome show of your authority. Roll Intimidation checks to @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} each creature in a @Template[type:cone|distance:30]. When you do so, Demoralize gains the visual trait, and creatures are affected if they can see you. If a target creature hasn't broken a law in the past week (as determined by the GM), the result of your check against that creature is one degree of success worse than the result you rolled.</p>",
+      "name": "Einschüchternder Gesetzeshüter",
+      "description": "<p>Du stellst deine Autorität auf furchterregende Weise zur Schau. Lege einen Fertigkeitswurf für Einschüchtern zum @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralisieren} aller Kreaturen in einem @Template[type:cone|distance:30]{30 Fuß/9 m-Kegel} ab. In diesem Fall erhält das Demoralisieren die Kategorie Sichtbar und Kreaturen sind betroffen, wenn sie dich sehen können. Sollte eine Kreatur im Lauf der letzten Woche nach Maßgabe des SL kein Gesetz gebrochen haben, gilt das Ergebnis deines Wurfes bei dieser Kreatur als um einen Erfolgsgrad schlechter als erwürfelt.</p>",
       "prerequisites": [
         {
-          "value": "Alkenstar Agent Dedication"
+          "value": "Alkenstern-Beauftragter-Zugang"
         },
         {
-          "value": "master in Intimidation"
+          "value": "Kompetenzgrad Meister in Einschüchtern"
         }
       ]
     },
@@ -16776,11 +16776,11 @@
       "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<hr />\n<p>Viele Blumen sind schön anzusehen, aber giftig, wenn man sie berührt - und du bist eine von ihnen. 1 Minute lang erleidet jede Kreatur, die dich berührt oder dich mit einer Nahkampfwaffe ohne die Eigenschaft Reichweite bzw. mit einem Waffenlosen Nahkampfangriff verletzt, [[/r 3d6[poison]]]{3W6 Punkte Giftschaden}.</p>"
     },
     "Loose Cannon": {
-      "name": "Loose Cannon",
-      "description": "<p>Your unpredictable gunfire often catches enemies off guard or hits unprotected areas. Make a ranged Strike with a firearm against a creature that you haven't already attacked on this turn. You gain a circumstance bonus to damage on this Strike equal to the number of weapon damage dice. The Strike gains the following failure effect.</p>\n<hr />\n<p><strong>Failure</strong> The firearm misfires, but it doesn't cause the other critical failure effects listed below.</p>\n<p><strong>Critical Failure</strong> The firearm misfires and also explodes. It becomes broken, and it deals its normal weapon damage to all creatures in a @Template[type:burst|distance:20] centered on the firearm, with a @Check[type:reflex|dc:resolve(@actor.attributes.classDC.value)|basic:true] against your class DC. This damage includes any from the weapon's fundamental and property runes.</p>",
+      "name": "Unberechenbarer Schütze",
+      "description": "<p>Dein unvorhersehbarer Beschuss überrascht häufig deine Gegner oder trifft ungeschützte Bereiche. Führe einen Fernkampfangriff mit einer Feuerwaffe gegen eine Kreatur, die du während dieses Zuges noch nicht angegriffen hast. Du erhältst einen Situationsbonus auf den Schaden dieses Angriffs in Höhe der Anzahl der Waffenschadenswürfel. Der Angriff erhält zudem den folgenden Fehlschlagseffekt.</p>\n<p><strong>Fehlschlag</strong> Es kommt zu einer Fehlzündung, aber nicht den folgenden Kritischen Fehlschlagseffekten.</p>\n<p><strong>Kritischer Fehlschlag</strong> Es gibt eine Fehlzündung und die Feuerwaffe explodiert. Sie erhält den Zustand Beschädigt und fügt allen Kreaturen innerhalb eines @Template[type:burst|distance:20]{20 Fuß/6 m} Explosionsradius ihren normalen Schaden zu @Check[type:reflex|dc:resolve(@actor.attributes.classDC.value)|basic:true]{einfacher Reflexwurf} (gegen deinen Klassen-SG). Basis- und Eigenschaftsrunen kommen dabei zur Anwendung.</p>",
       "prerequisites": [
         {
-          "value": "Alkenstar Agent Dedication"
+          "value": "Alkenstern-Beauftragter-Zugang"
         }
       ]
     },
@@ -20651,11 +20651,11 @@
       ]
     },
     "Powder Punch Stance": {
-      "name": "Powder Punch Stance",
-      "description": "<p><strong>Access</strong> You're from Alkenstar or the Mana Wastes.</p>\n<hr />\n<p>You infuse your handwraps with black powder. On your first melee Strike each round with an unarmed attack, @UUID[Compendium.pf2e.equipment-srd.Item.dgXjUcaoQDAY6ZpO]{Knuckle Duster}, or @UUID[Compendium.pf2e.equipment-srd.Item.8eGV6fXbmt2v74uB]{Black Powder Knuckle Dusters}, you deal an additional 1 fire Damage. If you critically succeed at an attempt to @UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Shove} while in this stance, the target is pushed back an additional 5 feet.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.kDTiRg9vVOYNnTyr]{Stance: Powder Punch Stance}</p>",
+      "name": "Schwarzpulverhaltung",
+      "description": "<p><strong>Zugang</strong> Du stammst aus Alkenstern oder der Manaöde.</p>\n<hr />\n<p>Du bestreichst deine Handwickel mit Schwarzpulver. Bei deinem ersten Waffenlosen Nahkampfangriff oder ersten Nahkampfangriff mit einem @UUID[Compendium.pf2e.equipment-srd.Item.dgXjUcaoQDAY6ZpO]{Schlagring} oder @UUID[Compendium.pf2e.equipment-srd.Item.8eGV6fXbmt2v74uB]{Schwarzpulverschlagring} in jeder Runde verursachst du 1 zusätzlichen Punkt Feuerschaden.</p>\n<p>Sollte dir während der Nutzung dieser Haltung bei einem Wurf zum @UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Fortstoßen} ein Kritischer Erfolg gelingen, so wird das Ziel um zusätzliche 5 Fuß/1,50 m fortgestoßen.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.kDTiRg9vVOYNnTyr]{Haltung: Schwarzpulverhaltung}</p>",
       "prerequisites": [
         {
-          "value": "Martial Artist Dedication"
+          "value": "Kampfkünstler-Zugang"
         }
       ]
     },
@@ -20884,14 +20884,14 @@
       "description": "<p>Du überschaust das Schlachtfeld und berechnest die Möglichkeiten. Du erlangst eine zusätzliche Reaktion, welche du bis zum Beginn deines nächsten Zuges für eine Reaktion der Kategorie Schurke verwenden kannst.</p>"
     },
     "Prepare Papers": {
-      "name": "Prepare Papers",
-      "description": "<p>You're practiced at creating forgeries that establish your outlaw credentials or augment your legal authority. You can @UUID[Compendium.pf2e.actionspf2e.Item.ftG89SjTSa9DYDOD]{Create Forgery} as an exploration activity. It takes you about 1 hour per page of the document that you're forging. This time is reduced to 10 minutes per page if you're legendary in Society.</p>",
+      "name": "Unterlagen fälschen",
+      "description": "<p>Du bist geübt im Erschaffen von Fälschungen, um deine Autorität als Ordnungshüter zu stärken oder deinen Ruf als Gesetzloser zu untermalen. Du kannst @UUID[Compendium.pf2e.actionspf2e.Item.ftG89SjTSa9DYDOD]{Fälschung erstellen} als Erkundungsaktivität nutzen und brauchst etwa 1 Stunde pro zu fälschender Dokumentseite. Der Zeitaufwand sinkt auf 10 Minuten pro Seite, solltest du den Kompetenzgrad Legende in Gesellschaftskunde besitzen.</p>",
       "prerequisites": [
         {
-          "value": "Alkenstar Agent Dedication"
+          "value": "Alkenstern-Beauftragter-Zugang"
         },
         {
-          "value": "master in Society"
+          "value": "Kompetenzgrad Meister in Gesellschaftskunde"
         }
       ]
     },
@@ -28284,7 +28284,7 @@
       "description": "<p>You slam your hands together to unleash a deafening blast. Creatures in a @Template[type:cone|distance:15] cone take [[/r 3d6[sonic]]] damage, with a @Check[type:fortitude|dc:resolve(@actor.attributes.classDC.value)|basic:true] against your class DC. Creatures that critically fail their save are also @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} for 1 minute. You can't use this ability again for [[/r 1d4 #Thunder Clap Cooldown]]{1d4 rounds} as your hands recover from the thunderous vibrations.</p>\n<p>At 8th level, and every 2 levels thereafter, the damage from Thunder Clap increases by [[/r 1d6]]{1d6}. (<span style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">[[/r floor(@actor.level/2)d6[sonic]]]{leveled sonic damage})<br /></span></p>",
       "prerequisites": [
         {
-          "value": "Powder Punch Stance"
+          "value": "Schwarzpulverhaltung"
         }
       ]
     },
