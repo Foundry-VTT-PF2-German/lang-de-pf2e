@@ -1,5 +1,5 @@
-import { convertJournals } from "./translator/build-converter.js";
-import { build } from "./helper/build/build.js";
+import { convertJournals } from "./build-converter.js";
+import { build } from "../helper/build/build.js";
 
 const PATHS = [
     "module.json",
