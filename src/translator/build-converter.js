@@ -1,5 +1,5 @@
 import { readdirSync } from "fs";
-import { getConfigParameter, readJSONFile } from "../config_helper.js";
+import { getConfigParameter, readJSONFile } from "../helper/build/config_helper.js";
 
 export const convertJournals = (journalObject) => {
     const readSystemMap = (filename) => {
