@@ -41,7 +41,7 @@
     },
     "(Blackfrost Dead) Blackfrost": {
       "name": "(Blackfrost Dead) Blackfrost",
-      "description": "<p>This affliction can't be reduced below stage 1, nor the damage from it healed, until successfully treated with <em>@UUID[Compendium.pf2e.spells-srd.Item.OyFCwQuw8XRazsNr]{Remove Curse}</em> or a similar effect; the affliction can then be removed as a normal disease. A creature that dies from cold damage while cursed with blackfrost rises as a blackfrost dead after 24 hours. Blackfrost has a counteract level of 10.</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:27]</p>\n<p><strong>Stage 1</strong> [[/r 4d6[cold]]] (1 minute)</p>\n<p><strong>Stage 2</strong> weakness to cold 5 and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (1 day)</p>\n<p><strong>Stage 3</strong> weakness to cold 10 and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} (1 day)</p>"
+      "description": "<p>This affliction can't be reduced below stage 1, nor the damage from it healed, until successfully treated with <em>@UUID[Compendium.pf2e.spells-srd.Item.OyFCwQuw8XRazsNr]{Remove Curse}</em> or a similar effect; the affliction can then be removed as a normal disease. A creature that dies from cold damage while cursed with blackfrost rises as a blackfrost dead after 24 hours. Blackfrost has a counteract level of 10.</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:27]</p>\n<p><strong>Stage 1</strong> @Damage[4d6[cold]] (1 minute)</p>\n<p><strong>Stage 2</strong> weakness to cold 5 and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (1 day)</p>\n<p><strong>Stage 3</strong> weakness to cold 10 and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} (1 day)</p>"
     },
     "(Blackfrost Dead) Blackfrost Breath": {
       "name": "(Blackfrost Dead) Blackfrost Breath",
@@ -53,11 +53,11 @@
     },
     "(Blackfrost Dead) Mindburning Gaze": {
       "name": "(Blackfrost Dead) Mindburning Gaze",
-      "description": "<p>The blackfrost dead fixes its terrifying gaze on a creature within 60 feet. The creature takes [[/r 1d4[mental]]] per level of the blackfrost dead (minimum 2d4), with a @Check[type:will|dc:|basic:true] save. On a critical failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>"
+      "description": "<p>The blackfrost dead fixes its terrifying gaze on a creature within 60 feet. The creature takes @Damage[1d4[mental]] per level of the blackfrost dead (minimum 2d4), with a @Check[type:will|dc:|basic:true] save. On a critical failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>"
     },
     "(Blackfrost Dead) Shattering Death": {
       "name": "(Blackfrost Dead) Shattering Death",
-      "description": "<p>When the blackfrost dead is destroyed, its body shatters like brittle ice, filling the air around it with a cloud of frigid, razor-sharp ice shards. Creatures in a @Template[type:emanation|distance:10] take [[/r 1d8[cold]]] per level of the blackfrost dead (minimum 3d8), with a @Check[type:reflex|dc:|basic:true] save. Creatures that critically fail this save also take [[/r 1d6[bleed]]].</p>"
+      "description": "<p>When the blackfrost dead is destroyed, its body shatters like brittle ice, filling the air around it with a cloud of frigid, razor-sharp ice shards. Creatures in a @Template[type:emanation|distance:10] take @Damage[1d8[cold]] per level of the blackfrost dead (minimum 3d8), with a @Check[type:reflex|dc:|basic:true] save. Creatures that critically fail this save also take @Damage[1d6[bleed]].</p>"
     },
     "(Castrovelian) Extra Large": {
       "name": "(Castrovelian) Extra Large",
@@ -69,7 +69,7 @@
     },
     "(Clockwork Creature) Malfunction - Backfire": {
       "name": "(Clockwork Creature) Malfunction - Backfire",
-      "description": "<p>The clockwork rolls a @Check[type:flat|dc:5] at the start of each of its turns. On a failure, it backfires, dealing [[/r 2d6[fire]]] damage in a @Template[type:cone|distance:15], including to itself (@Check[type:reflex|basic:true|dc:0] save at the standard DC for its level), and is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} this turn.</p>"
+      "description": "<p>The clockwork rolls a @Check[type:flat|dc:5] at the start of each of its turns. On a failure, it backfires, dealing @Damage[2d6[fire]] damage in a @Template[type:cone|distance:15], including to itself (@Check[type:reflex|basic:true|dc:0] save at the standard DC for its level), and is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} this turn.</p>"
     },
     "(Clockwork Creature) Malfunction - Damaged Propulsion": {
       "name": "(Clockwork Creature) Malfunction - Damaged Propulsion",
@@ -105,7 +105,7 @@
     },
     "(Cryptid, Experimental) Energy Wave": {
       "name": "(Cryptid, Experimental) Energy Wave",
-      "description": "<p>The experimental cryptid unleashes a @Template[type:line|distance:30] of energy of a type specific to the experimental cryptid (typically electricity or fire). Creatures in the area take [[/r 1d6[damagetype]]]{1d6 damage per level of the cryptid} with a @Check[type:reflex|dc:|basic:true] save. The experimental cryptid can use this ability once every [[/r 1d4 #Energy Wave Recharge]]{1d4 rounds}. This action has the damage type's trait. If the experiments that reshaped the creature were magical, this action also has the evocation trait and the trait matching the magical tradition of the experiments (arcane, divine, occult, or primal).</p>"
+      "description": "<p>The experimental cryptid unleashes a @Template[type:line|distance:30] of energy of a type specific to the experimental cryptid (typically electricity or fire). Creatures in the area take @Damage[1d6[damagetype]]{1d6 damage per level of the cryptid} with a @Check[type:reflex|dc:|basic:true] save. The experimental cryptid can use this ability once every [[/r 1d4 #Recharge Energy Wave]]{1d4 rounds}. This action has the damage type's trait. If the experiments that reshaped the creature were magical, this action also has the evocation trait and the trait matching the magical tradition of the experiments (arcane, divine, occult, or primal).</p>"
     },
     "(Cryptid, Experimental) Operational Flaw": {
       "name": "(Cryptid, Experimental) Operational Flaw",
@@ -117,7 +117,7 @@
     },
     "(Cryptid, Mutant) Explosive End": {
       "name": "(Cryptid, Mutant) Explosive End",
-      "description": "<p>The mutant cryptid's death reveals one last surprise as it explodes into flame, acid, a pile of toxic goop, or something stranger still. Choose a damage type appropriate for the mutant cryptid. When it dies, it explodes, dealing [[/r 1d6[damagetype]]]{1d6 damage of the chosen type} to each creature in a @Template[type:emanation|distance:10], with a @Check[type:reflex|dc:|basic:true] save against a standard DC of the creature's level. The damage increases by 1d6 at 3rd level and every odd level thereafter.</p>"
+      "description": "<p>The mutant cryptid's death reveals one last surprise as it explodes into flame, acid, a pile of toxic goop, or something stranger still. Choose a damage type appropriate for the mutant cryptid. When it dies, it explodes, dealing @Damage[1d6[damagetype]]{1d6 damage of the chosen type} to each creature in a @Template[type:emanation|distance:10], with a @Check[type:reflex|dc:|basic:true] save against a standard DC of the creature's level. The damage increases by 1d6 at 3rd level and every odd level thereafter.</p>"
     },
     "(Cryptid, Mutant) Marrowlance": {
       "name": "(Cryptid, Mutant) Marrowlance",
@@ -141,7 +141,7 @@
     },
     "(Cryptid, Primeval) Shockwave": {
       "name": "(Cryptid, Primeval) Shockwave",
-      "description": "<p>The primeval cryptid creates a shockwave by stomping on the ground, beating its tail on the ground, or making another similarly violent, percussive slam. Creatures on the ground within 30 feet of the primeval cryptid take [[/r 1d6[bludgeoning]]] damage per level of the primeval cryptid (minimum 2d6 damage), with a @Check[type:reflex|dc:|basic:true]. On a critical failure, a creature is also knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>"
+      "description": "<p>The primeval cryptid creates a shockwave by stomping on the ground, beating its tail on the ground, or making another similarly violent, percussive slam. Creatures on the ground within 30 feet of the primeval cryptid take @Damage[1d6[bludgeoning]] damage per level of the primeval cryptid (minimum 2d6 damage), with a @Check[type:reflex|dc:|basic:true]. On a critical failure, a creature is also knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>"
     },
     "(Cryptid, Primeval) Stench": {
       "name": "(Cryptid, Primeval) Stench",
@@ -181,7 +181,7 @@
     },
     "(Divine Warden) Divine Destruction": {
       "name": "(Divine Warden) Divine Destruction",
-      "description": "<p>When the divine warden is reduced to 0 HP, it erupts with divine energy in a @Template[type:emanation|distance:30], dealing [[/r 1d6[damage]]] damage per level. This damage is either positive or negative, determined by the patron deity's divine font (chosen at the divine warden's creation if the deity offers a choice), and this ability gains the corresponding trait. Each creature in the area must attempt a @Check[type:will|dc:|traits:damaging-effect] save with the following outcomes.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature takes half damage.</p>\n<p><strong>Success</strong> The creature takes full damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and becomes temporarily cursed by the patron deity. The creature becomes @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 day; this is a curse effect that uses the Will save DC as the counteract DC.</p>\n<p><strong>Critical Failure</strong> As failure, except the creature becomes @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2}.</p>"
+      "description": "<p>When the divine warden is reduced to 0 HP, it erupts with divine energy in a @Template[type:emanation|distance:30], dealing @Damage[1d6[damage]] damage per level. This damage is either positive or negative, determined by the patron deity's divine font (chosen at the divine warden's creation if the deity offers a choice), and this ability gains the corresponding trait. Each creature in the area must attempt a @Check[type:will|dc:|traits:damaging-effect] save with the following outcomes.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature takes half damage.</p>\n<p><strong>Success</strong> The creature takes full damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and becomes temporarily cursed by the patron deity. The creature becomes @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 day; this is a curse effect that uses the Will save DC as the counteract DC.</p>\n<p><strong>Critical Failure</strong> As failure, except the creature becomes @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2}.</p>"
     },
     "(Divine Warden) Divine Domain Spells": {
       "name": "(Divine Warden) Divine Domain Spells",
@@ -209,11 +209,11 @@
     },
     "(Ghast) Consume Flesh": {
       "name": "(Ghast) Consume Flesh",
-      "description": "<p><strong>Requirements</strong> The ghast is adjacent to the corpse of a creature that died within the last hour.</p>\n<hr />\n<p><strong>Effect</strong> The ghast devours a chunk of the corpse and regains [[/r 2d6[healing]]]{2d6 Hit Points} plus 1d6 for every 2 levels it has.</p>\n<p>It can regain Hit Points from any given corpse only once.</p>"
+      "description": "<p><strong>Requirements</strong> The ghast is adjacent to the corpse of a creature that died within the last hour.</p>\n<hr />\n<p><strong>Effect</strong> The ghast devours a chunk of the corpse and regains [[/r 2d6[healing]]] Hit Points plus 1d6 for every 2 levels it has.</p>\n<p>It can regain Hit Points from any given corpse only once.</p>"
     },
     "(Ghast) Ghast Fever": {
       "name": "(Ghast) Ghast Fever",
-      "description": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:]</p>\n<hr />\n<p><strong>Stage 1</strong> carrier with no ill effect (1 day)</p>\n<p><strong>Stage 2</strong> [[/r 3d8[negative]]] damage and regains half as many Hit Points from all healing (1 day)</p>\n<p><strong>Stage 3</strong> as stage 2 (1 day)</p>\n<p><strong>Stage 4</strong> [[/r 3d8[negative]]] damage and gains no benefit from healing (1 day)</p>\n<p><strong>Stage 5</strong> as stage 4 (1 day)</p>\n<p><strong>Stage 6</strong> dead, and rises as a @UUID[Compendium.pf2e.pathfinder-bestiary.Actor.VC7rtYR4hLxwg7WZ]{Ghast} the next midnight</p>"
+      "description": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:]</p>\n<hr />\n<p><strong>Stage 1</strong> carrier with no ill effect (1 day)</p>\n<p><strong>Stage 2</strong> @Damage[3d8[negative]] damage and regains half as many Hit Points from all healing (1 day)</p>\n<p><strong>Stage 3</strong> as stage 2 (1 day)</p>\n<p><strong>Stage 4</strong> @Damage[3d8[negative]] damage and gains no benefit from healing (1 day)</p>\n<p><strong>Stage 5</strong> as stage 4 (1 day)</p>\n<p><strong>Stage 6</strong> dead, and rises as a @UUID[Compendium.pf2e.pathfinder-bestiary.Actor.VC7rtYR4hLxwg7WZ]{Ghast} the next midnight</p>"
     },
     "(Ghast) Paralysis": {
       "name": "(Ghast) Paralysis",
@@ -229,7 +229,7 @@
     },
     "(Ghost) Cold Spot": {
       "name": "(Ghost) Cold Spot",
-      "description": "<p>@Template[type:emanation|distance:5|damaging:yes]{5 feet} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}</p>\n<hr />\n<p>The air within 5 feet of the ghost is supernaturally cold. Characters that enter or begin their turn in the ghost's aura take [[/r 1d6[cold]]] damage per 3 levels the ghost has (@Check[type:fortitude|dc:|basic:true] save).</p>"
+      "description": "<p>@Template[type:emanation|distance:5|damaging:yes]{5 feet} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}</p>\n<hr />\n<p>The air within 5 feet of the ghost is supernaturally cold. Characters that enter or begin their turn in the ghost's aura take @Damage[1d6[cold]] damage per 3 levels the ghost has (@Check[type:fortitude|dc:|basic:true] save).</p>"
     },
     "(Ghost) Corporeal Manifestation": {
       "name": "(Ghost) Corporeal Manifestation",
@@ -237,7 +237,7 @@
     },
     "(Ghost) Corrupting Gaze": {
       "name": "(Ghost) Corrupting Gaze",
-      "description": "<p>The ghost stares at a creature it can see within 30 feet. The target takes [[/r 1d6[negative]]] damage + 1d6 per 2 levels with a @Check[type:will|dc:]{basic Will} save.</p>\n<p>A creature that fails its save is also @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 minute.</p>"
+      "description": "<p>The ghost stares at a creature it can see within 30 feet. The target takes @Damage[1d6[negative]] damage + 1d6 per 2 levels with a @Check[type:will|dc:]{basic Will} save.</p>\n<p>A creature that fails its save is also @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 minute.</p>"
     },
     "(Ghost) Draining Touch": {
       "name": "(Ghost) Draining Touch",
@@ -269,7 +269,7 @@
     },
     "(Ghost) Inhabit Object": {
       "name": "(Ghost) Inhabit Object",
-      "description": "<p>The ghost possesses an object of size Large or smaller within 20 feet, making it an animated object. This animated object's level can be no higher than the ghost's level -2. If the target object is being held by a creature, the bearer can attempt a @Check[type:will|dc:] save to prevent the possession.</p>\n<p>This possession ends when the object is destroyed or the ghost leaves it. At this point, the ghost reappears in the object's square and can't Inhabit an Object again for [[/br 1d4 #Inhabit Object Recharge]]{1d4 rounds}.</p>"
+      "description": "<p>The ghost possesses an object of size Large or smaller within 20 feet, making it an animated object. This animated object's level can be no higher than the ghost's level -2. If the target object is being held by a creature, the bearer can attempt a @Check[type:will|dc:] save to prevent the possession.</p>\n<p>This possession ends when the object is destroyed or the ghost leaves it. At this point, the ghost reappears in the object's square and can't Inhabit an Object again for [[/br 1d4 #Recharge Inhabit Object]]{1d4 rounds}.</p>"
     },
     "(Ghost) Lynchpin": {
       "name": "(Ghost) Lynchpin",
@@ -281,7 +281,7 @@
     },
     "(Ghost) Memento Mori": {
       "name": "(Ghost) Memento Mori",
-      "description": "<p>The ghost causes one creature within 30 feet to relive the ghost's death.</p>\n<p>The target must succeed at a @Check[type:will|dc:] save or see and feel what the ghost did, taking [[/r 1d4[persistent,mental]]] per 2 levels the ghost has.</p>\n<p>All other creatures are @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} to the target until the persistent damage ends.</p>"
+      "description": "<p>The ghost causes one creature within 30 feet to relive the ghost's death.</p>\n<p>The target must succeed at a @Check[type:will|dc:] save or see and feel what the ghost did, taking @Damage[1d4[persistent,mental]] per 2 levels the ghost has.</p>\n<p>All other creatures are @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} to the target until the persistent damage ends.</p>"
     },
     "(Ghost) Phantasmagoria": {
       "name": "(Ghost) Phantasmagoria",
@@ -289,7 +289,7 @@
     },
     "(Ghost) Pyre's Memory": {
       "name": "(Ghost) Pyre's Memory",
-      "description": "<p>The ghost causes great gouts of flame to erupt without warning.</p>\n<p>The ghost picks three 5-foot squares within 30 feet. Creatures that start in or enter one of these squares take [[/r 1d6[fire]]] damage per 2 levels the ghost has, subject to a @Check[type:reflex|dc:|basic:true] save.</p>\n<p>The flames last for 1 minute and don't set other things alight unless the ghost wishes. If the ghost uses this ability again, it dismisses any existing flames.</p>"
+      "description": "<p>The ghost causes great gouts of flame to erupt without warning.</p>\n<p>The ghost picks three 5-foot squares within 30 feet. Creatures that start in or enter one of these squares take @Damage[1d6[fire]] damage per 2 levels the ghost has, subject to a @Check[type:reflex|dc:|basic:true] save.</p>\n<p>The flames last for 1 minute and don't set other things alight unless the ghost wishes. If the ghost uses this ability again, it dismisses any existing flames.</p>"
     },
     "(Ghost) Rejuvenation": {
       "name": "(Ghost) Rejuvenation",
@@ -305,15 +305,15 @@
     },
     "(Ghost) Telekinetic Assault": {
       "name": "(Ghost) Telekinetic Assault",
-      "description": "<p>The ghost cries out in pain and anguish as small objects and debris fly about in a @Template[type:emanation|distance:30]. Creatures in this area take [[/r 1d6[bludgeoning]]] damage + 1d6 per 2 levels, subject to a @Check[type:reflex|dc:|basic:true] save.</p>"
+      "description": "<p>The ghost cries out in pain and anguish as small objects and debris fly about in a @Template[type:emanation|distance:30]. Creatures in this area take @Damage[1d6[bludgeoning]] damage + 1d6 per 2 levels, subject to a @Check[type:reflex|dc:|basic:true] save.</p>"
     },
     "(Ghoul) Consume Flesh": {
       "name": "(Ghoul) Consume Flesh",
-      "description": "<p><strong>Requirements</strong> The ghoul is adjacent to the corpse of a creature that died within the last hour.</p>\n<hr />\n<p><strong>Effect</strong> The ghoul devours a chunk of the corpse and regains [[/r 1d6[healing]]]{1d6 Hit Points} plus 1d6 for every 2 levels it has.</p>\n<p>It can regain Hit Points from any given corpse only once.</p>"
+      "description": "<p><strong>Requirements</strong> The ghoul is adjacent to the corpse of a creature that died within the last hour.</p>\n<hr />\n<p><strong>Effect</strong> The ghoul devours a chunk of the corpse and regains [[/r 1d6[healing]]] Hit Points plus 1d6 for every 2 levels it has.</p>\n<p>It can regain Hit Points from any given corpse only once.</p>"
     },
     "(Ghoul) Ghoul Fever": {
       "name": "(Ghoul) Ghoul Fever",
-      "description": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:]</p>\n<hr />\n<p><strong>Stage 1</strong> carrier with no ill effect (1 day)</p>\n<p><strong>Stage 2</strong> [[/r 2d6[negative]]] damage and regains half as many Hit Points from all healing (1 day)</p>\n<p><strong>Stage 3</strong> as stage 2 (1 day)</p>\n<p><strong>Stage 4</strong> [[/r 2d6[negative]]] damage and gains no benefit from healing (1 day)</p>\n<p><strong>Stage 5</strong> as stage 4 (1 day)</p>\n<p><strong>Stage 6</strong> dead, and rises as a @UUID[Compendium.pf2e.pathfinder-bestiary.Actor.LHHgGSs0ELCR4CYK]{Ghoul} the next midnight.</p>"
+      "description": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:]</p>\n<hr />\n<p><strong>Stage 1</strong> carrier with no ill effect (1 day)</p>\n<p><strong>Stage 2</strong> @Damage[2d6[negative]] damage and regains half as many Hit Points from all healing (1 day)</p>\n<p><strong>Stage 3</strong> as stage 2 (1 day)</p>\n<p><strong>Stage 4</strong> @Damage[2d6[negative]] damage and gains no benefit from healing (1 day)</p>\n<p><strong>Stage 5</strong> as stage 4 (1 day)</p>\n<p><strong>Stage 6</strong> dead, and rises as a @UUID[Compendium.pf2e.pathfinder-bestiary.Actor.LHHgGSs0ELCR4CYK]{Ghoul} the next midnight.</p>"
     },
     "(Ghoul) Paralysis": {
       "name": "(Ghoul) Paralysis",
@@ -325,7 +325,7 @@
     },
     "(Golem) Golem Antimagic": {
       "name": "(Golem) Golem Antimagic",
-      "description": "<p>harmed by [damageType] ([[/r {0d8}]]{0d8 damage}, [[/r {0d4}]]{0d4 damage} from areas or persistent damage); healed by [damageType] (area [[/r 0d4[healing]]]{0d4 Hit Points}); slowed by [damageType]</p>\n<hr />\n<p>A golem is immune to spells and magical abilities other than its own, but each type of golem is affected by a few types of magic in special ways. These exceptions are listed in shortened form in the golem's stat block, with the full rules appearing here. If an entry lists multiple types (such as \"cold and water\"), either type of spell can affect the golem.</p>\n<ul>\n<li><strong>Harmed By</strong> Any magic of this type that targets the golem causes it to take the listed amount of damage (this damage has no type) instead of the usual effect. If the golem starts its turn in an area of magic of this type or is affected by a persistent effect of the appropriate type, it takes the damage listed in the parenthetical.</li>\n<li><strong>Healed By</strong> Any magic of this type that targets the golem makes the golem lose the slowed condition and gain HP equal to half the damage the spell would have dealt. If the golem starts its turn in an area of this type of magic, it gains the HP listed in the parenthetical.</li>\n<li><strong>Slowed By</strong> Any magic of this type that targets the golem causes it to be @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for [[/br 2d6 #rounds]]{2d6 rounds} instead of the usual effect. If the golem starts its turn in an area of this type of magic, it's slowed 1 for that round.</li>\n<li><strong>Vulnerable To</strong> Each golem is vulnerable to one or more specific spells, with the effects described in its stat block.</li>\n</ul>"
+      "description": "<p>harmed by [damageType] ([[/r {0d8}]]{0d8 damage}, [[/r {0d4}]]{0d4 damage} from areas or persistent damage); healed by [damageType] (area [[/r 0d4[healing]]] Hit Points); slowed by [damageType]</p>\n<hr />\n<p>A golem is immune to spells and magical abilities other than its own, but each type of golem is affected by a few types of magic in special ways. These exceptions are listed in shortened form in the golem's stat block, with the full rules appearing here. If an entry lists multiple types (such as \"cold and water\"), either type of spell can affect the golem.</p>\n<ul>\n<li><strong>Harmed By</strong> Any magic of this type that targets the golem causes it to take the listed amount of damage (this damage has no type) instead of the usual effect. If the golem starts its turn in an area of magic of this type or is affected by a persistent effect of the appropriate type, it takes the damage listed in the parenthetical.</li>\n<li><strong>Healed By</strong> Any magic of this type that targets the golem makes the golem lose the slowed condition and gain HP equal to half the damage the spell would have dealt. If the golem starts its turn in an area of this type of magic, it gains the HP listed in the parenthetical.</li>\n<li><strong>Slowed By</strong> Any magic of this type that targets the golem causes it to be @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for [[/br 2d6 #rounds]]{2d6 rounds} instead of the usual effect. If the golem starts its turn in an area of this type of magic, it's slowed 1 for that round.</li>\n<li><strong>Vulnerable To</strong> Each golem is vulnerable to one or more specific spells, with the effects described in its stat block.</li>\n</ul>"
     },
     "(Golem) Inexorable March": {
       "name": "(Golem) Inexorable March",
@@ -333,11 +333,11 @@
     },
     "(Graveknight) Betrayed Revivification": {
       "name": "(Graveknight) Betrayed Revivification",
-      "description": "<p>The graveknight died after being deeply betrayed.</p>\n<p>Instead of being immune to a type of energy damage, it is immune to mental damage, its weapons deal [[/r 1d6[mental]]] damage, and its Devastating Blast deals mental damage with a Will saving throw instead of Reflex.</p>"
+      "description": "<p>The graveknight died after being deeply betrayed.</p>\n<p>Instead of being immune to a type of energy damage, it is immune to mental damage, its weapons deal @Damage[1d6[mental]] damage, and its Devastating Blast deals mental damage with a Will saving throw instead of Reflex.</p>"
     },
     "(Graveknight) Channel Magic": {
       "name": "(Graveknight) Channel Magic",
-      "description": "<p>The graveknight redirects magical energies through its armor, allowing it to deliver magic through an attack.</p>\n<p>The graveknight Casts a Spell that takes 1 or 2 actions to cast and requires a spell attack roll. The effects of the spell don't occur immediately but are imbued into an attack instead. The graveknight then makes a melee Strike with a weapon or unarmed attack. The spell is coupled with the attack, using the attack roll result to determine the effects of both the Strike and the spell.</p>\n<p>This counts as two attacks for the graveknight's multiple attack penalty but doesn't apply the penalty until after it's completed Channeling Magic.</p>\n<p>The graveknight can't use Channel Magic again for [[/br 1d4 #rounds]]{1d4 rounds}.</p>"
+      "description": "<p>The graveknight redirects magical energies through its armor, allowing it to deliver magic through an attack.</p>\n<p>The graveknight Casts a Spell that takes 1 or 2 actions to cast and requires a spell attack roll. The effects of the spell don't occur immediately but are imbued into an attack instead. The graveknight then makes a melee Strike with a weapon or unarmed attack. The spell is coupled with the attack, using the attack roll result to determine the effects of both the Strike and the spell.</p>\n<p>This counts as two attacks for the graveknight's multiple attack penalty but doesn't apply the penalty until after it's completed Channeling Magic.</p>\n<p>The graveknight can't use Channel Magic again for [[/br 1d4 #Recharge Channel Magic]]{1d4 rounds}.</p>"
     },
     "(Graveknight) Clutching Armor": {
       "name": "(Graveknight) Clutching Armor",
@@ -353,7 +353,7 @@
     },
     "(Graveknight) Devastating Blast": {
       "name": "(Graveknight) Devastating Blast",
-      "description": "<p>The graveknight unleashes a @Template[type:cone|distance:30] of energy. Creatures in the area take [[/r 1d12[damagetype]]] damage, plus an additional 1d12 damage for every two levels the graveknight has (@Check[type:reflex|dc:|basic:true] save).</p>\n<p>The graveknight can use this ability once every [[/br 1d4 #Recharge Devastating Blast]]{1d4 rounds}.</p>\n<p>This energy damage is of the same type as that of its ruinous weapons; <em>Devastating Blast gains the associated energy trait</em>.</p>"
+      "description": "<p>The graveknight unleashes a @Template[type:cone|distance:30] of energy. Creatures in the area take @Damage[1d12[damagetype]] damage, plus an additional 1d12 damage for every two levels the graveknight has (@Check[type:reflex|dc:|basic:true] save).</p>\n<p>The graveknight can use this ability once every [[/br 1d4 #Recharge Devastating Blast]]{1d4 rounds}.</p>\n<p>This energy damage is of the same type as that of its ruinous weapons; <em>Devastating Blast gains the associated energy trait</em>.</p>"
     },
     "(Graveknight) Eager for Battle": {
       "name": "(Graveknight) Eager for Battle",
@@ -401,7 +401,7 @@
     },
     "(Greater Barghest) Mutation - Toxic Breath": {
       "name": "(Greater Barghest) Mutation - Toxic Breath",
-      "description": "<p>The barghest breathes a cloud of toxic gas that deals [[/r 8d6[poison]]] damage to all creatures in a @Template[type:cone|distance:30] (@Check[type:fortitude|dc:25|basic:true] save).</p>\n<p>It can't use Toxic Breath again for [[/br 1d4 #Recharge Toxic Breath]]{1d4 rounds}.</p>"
+      "description": "<p>The barghest breathes a cloud of toxic gas that deals @Damage[8d6[poison]] damage to all creatures in a @Template[type:cone|distance:30] (@Check[type:fortitude|dc:25|basic:true] save).</p>\n<p>It can't use Toxic Breath again for [[/br 1d4 #Recharge Toxic Breath]]{1d4 rounds}.</p>"
     },
     "(Greater Barghest) Mutation - Vestigial Arm Strike": {
       "name": "(Greater Barghest) Mutation - Vestigial Arm Strike",
@@ -437,7 +437,7 @@
     },
     "(Kallas Devil) Freezing Touch": {
       "name": "(Kallas Devil) Freezing Touch",
-      "description": "<p>When winter comes to Riverton, the Kallas Devil sharpens her claws with chunks of ice. When the Kallas Devil makes a jaws or claw attack, she deals an additional [[/r 1d6[cold]]] damage.</p>"
+      "description": "<p>When winter comes to Riverton, the Kallas Devil sharpens her claws with chunks of ice. When the Kallas Devil makes a jaws or claw attack, she deals an additional @Damage[1d6[cold]] damage.</p>"
     },
     "(Kallas Devil) Infectious Water": {
       "name": "(Kallas Devil) Infectious Water",
@@ -537,7 +537,7 @@
     },
     "(Mana Wastes Mutant) Caustic Pustules": {
       "name": "(Mana Wastes Mutant) Caustic Pustules",
-      "description": "<p>Whenever the mutant takes piercing or slashing damage, creatures adjacent to the mutant take [[/r 1d6[acid]]] damage ( @Check[type:reflex|dc:|basic:true]). The damage increases to 2d6 if the mutant is at least 8th level and 3d6 if the mutant is at least 15th level.</p>"
+      "description": "<p>Whenever the mutant takes piercing or slashing damage, creatures adjacent to the mutant take @Damage[1d6[acid]] damage ( @Check[type:reflex|dc:|basic:true]). The damage increases to 2d6 if the mutant is at least 8th level and 3d6 if the mutant is at least 15th level.</p>"
     },
     "(Mana Wastes Mutant) Chameleon Skin": {
       "name": "(Mana Wastes Mutant) Chameleon Skin",
@@ -549,7 +549,7 @@
     },
     "(Mana Wastes Mutant) Energy Blast": {
       "name": "(Mana Wastes Mutant) Energy Blast",
-      "description": "<p>Choose an energy type; this ability gains that energy type as a trait. The mutant gains some sort of physical alteration to their shape that suggests how they trigger their energy blast, be it numerous pustules on their body, an extra limb, or an additional opening in their throat to exhale the blast as a breath weapon. Choose whether the mutant creates a @Template[type:line|distance:60] of energy or a @Template[type:cone|distance:30] of energy when they activate this ability. The energy deals [[/r ((@actor.level)d6)[energy]]]{1d6 damage per level} with a @Check[type:reflex|dc:|basic:true] save. The mutant can't use Energy Blast again for [[/r 1d4 #Energy Blast Recharge]]{1d4 rounds}.</p>"
+      "description": "<p>Choose an energy type; this ability gains that energy type as a trait. The mutant gains some sort of physical alteration to their shape that suggests how they trigger their energy blast, be it numerous pustules on their body, an extra limb, or an additional opening in their throat to exhale the blast as a breath weapon. Choose whether the mutant creates a @Template[type:line|distance:60] of energy or a @Template[type:cone|distance:30] of energy when they activate this ability. The energy deals [[/r ((@actor.level)d6)[energy]]]{1d6 damage per level} with a @Check[type:reflex|dc:|basic:true] save. The mutant can't use Energy Blast again for [[/r 1d4 #Recharge Energy Blast]]{1d4 rounds}.</p>"
     },
     "(Mana Wastes Mutant) Energy Resistance": {
       "name": "(Mana Wastes Mutant) Energy Resistance",
@@ -613,7 +613,7 @@
     },
     "(Melfesh Monster) Flame Lash": {
       "name": "(Melfesh Monster) Flame Lash",
-      "description": "<p>The Melfesh Monster sprays flaming gas in a @Template[type:cone|distance:15] or a @Template[type:line|distance:30]. Creatures in the area take [[/r 4d6[fire]]] damage (@Check[type:reflex|dc:21|basic:true|name:Flame Lash] save). This ability replaces the firelance ranged Strike.</p>"
+      "description": "<p>The Melfesh Monster sprays flaming gas in a @Template[type:cone|distance:15] or a @Template[type:line|distance:30]. Creatures in the area take @Damage[4d6[fire]] damage (@Check[type:reflex|dc:21|basic:true|name:Flame Lash] save). This ability replaces the firelance ranged Strike.</p>"
     },
     "(Melfesh Monster) Mycelial Tomb": {
       "name": "(Melfesh Monster) Mycelial Tomb",
@@ -621,7 +621,7 @@
     },
     "(Melfesh Monster) Smolderstench": {
       "name": "(Melfesh Monster) Smolderstench",
-      "description": "<p>@Template[type:emanation|distance:60] @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}</p>\n<hr />\n<p>The Melfesh Monster emits the overwhelming stink of burning, rotting matter. A creature that enters or begins its turn in the area inhales spores and must attempt a @Check[type:fortitude|dc:21|name:Smolderstench] save. On a failure, the creature takes [[/r 2d4[poison]]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}; on a critical failure, the creature also takes [[/r 4[persistent,poison]]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}. A creature that succeeds at its save is temporarily immune to smolderstench for 1 minute. This ability replaces terrorspores.</p>"
+      "description": "<p>@Template[type:emanation|distance:60] @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}</p>\n<hr />\n<p>The Melfesh Monster emits the overwhelming stink of burning, rotting matter. A creature that enters or begins its turn in the area inhales spores and must attempt a @Check[type:fortitude|dc:21|name:Smolderstench] save. On a failure, the creature takes @Damage[2d4[poison]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}; on a critical failure, the creature also takes @Damage[4[persistent,poison]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}. A creature that succeeds at its save is temporarily immune to smolderstench for 1 minute. This ability replaces terrorspores.</p>"
     },
     "(Melfesh Monster) Swell": {
       "name": "(Melfesh Monster) Swell",
@@ -633,7 +633,7 @@
     },
     "(Melfesh Monster) Vent Flames": {
       "name": "(Melfesh Monster) Vent Flames",
-      "description": "<p><strong>Trigger</strong> The Melfesh Monster ends its movement next to or takes damage from an adjacent creature</p>\n<hr />\n<p><strong>Effect</strong> Rifts in the Melfesh Monster's body spew burning gas. The triggering creature must succeed at a @Check[type:reflex|dc:21|name:Vent Flames|traits:damaging-effect] save or inhale spores which remain in its body for 1 minute, take [[/r 2d6[fire]]] damage, and become @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (on a critical failure, double damage and @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}). This ability replaces Reactive Growth.</p>"
+      "description": "<p><strong>Trigger</strong> The Melfesh Monster ends its movement next to or takes damage from an adjacent creature</p>\n<hr />\n<p><strong>Effect</strong> Rifts in the Melfesh Monster's body spew burning gas. The triggering creature must succeed at a @Check[type:reflex|dc:21|name:Vent Flames|traits:damaging-effect] save or inhale spores which remain in its body for 1 minute, take @Damage[2d6[fire]] damage, and become @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (on a critical failure, double damage and @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}). This ability replaces Reactive Growth.</p>"
     },
     "(Nymph Queen) Change Shape": {
       "name": "(Nymph Queen) Change Shape",
@@ -677,7 +677,7 @@
     },
     "(Ravener) Soul Ward": {
       "name": "(Ravener) Soul Ward",
-      "description": "<p>An intangible field of necromantic energy protects a ravener from total destruction. A soul ward has 150 maximum Hit Points, or 200 if the ravener is level 21 or higher.</p>\n<p>Whenever a ravener would be reduced below 1 Hit Point, all damage in excess of what would reduce them to 1 Hit Point is instead dealt to their soul ward. If this damage reduces the soul ward to fewer than 0 Hit Points, the ravener is destroyed.</p>\n<p>A soul ward's Hit Points can be restored only via specific ravener abilities such as Consume Soul, ravenous breath, or vicious criticals. A ravener who goes more than a week without successfully using Consume Soul to feed on a dying creature starves, and their soul ward loses [[/r {1d4} #Soul Ward Decay]]{1d4 Hit Points} each day until they feed. If the ravener's soul ward loses all its Hit Points while the ravener still has more than 1 HP, they become a @UUID[Compendium.pf2e.pathfinder-bestiary-2.Actor.Yv0005Vym1peVKHq]{Ravener Husk}.</p>"
+      "description": "<p>An intangible field of necromantic energy protects a ravener from total destruction. A soul ward has 150 maximum Hit Points, or 200 if the ravener is level 21 or higher.</p>\n<p>Whenever a ravener would be reduced below 1 Hit Point, all damage in excess of what would reduce them to 1 Hit Point is instead dealt to their soul ward. If this damage reduces the soul ward to fewer than 0 Hit Points, the ravener is destroyed.</p>\n<p>A soul ward's Hit Points can be restored only via specific ravener abilities such as Consume Soul, ravenous breath, or vicious criticals. A ravener who goes more than a week without successfully using Consume Soul to feed on a dying creature starves, and their soul ward loses [[/r {1d4} #Soul Ward Decay]] Hit Points each day until they feed. If the ravener's soul ward loses all its Hit Points while the ravener still has more than 1 HP, they become a @UUID[Compendium.pf2e.pathfinder-bestiary-2.Actor.Yv0005Vym1peVKHq]{Ravener Husk}.</p>"
     },
     "(Ravener) Soulsense": {
       "name": "(Ravener) Soulsense",
@@ -737,7 +737,7 @@
     },
     "(Siabrae) Stone Antlers": {
       "name": "(Siabrae) Stone Antlers",
-      "description": "<p>The siabrae grows a pair of stony antlers or horns from its head, which give it an antler attack that deals [[/r (1d6+2)[bludgeoning]]] damage for every 3 levels and inflicts stony shards. If the siabrae wishes, they can keep these antlers while polymorphed, using the normal statistics of the stone antler attack.</p>"
+      "description": "<p>The siabrae grows a pair of stony antlers or horns from its head, which give it an antler attack that deals @Damage[(1d6+2)[bludgeoning]] damage for every 3 levels and inflicts stony shards. If the siabrae wishes, they can keep these antlers while polymorphed, using the normal statistics of the stone antler attack.</p>"
     },
     "(Siabrae) Stony Shards": {
       "name": "(Siabrae) Stony Shards",
@@ -761,11 +761,11 @@
     },
     "(Skeleton) Bone Powder": {
       "name": "(Skeleton) Bone Powder",
-      "description": "<p>When the skeleton takes physical damage from a critical hit, one of its bones is pulverized into a fine powder.</p>\n<p>All creatures in a @Template[type:emanation|distance:5] that breathe take [[/r 1d6[persistent,poison]]] damage (plus an additional 1d6 for every 6 levels the skeleton has).</p>"
+      "description": "<p>When the skeleton takes physical damage from a critical hit, one of its bones is pulverized into a fine powder.</p>\n<p>All creatures in a @Template[type:emanation|distance:5] that breathe take @Damage[1d6[persistent,poison]] damage (plus an additional 1d6 for every 6 levels the skeleton has).</p>"
     },
     "(Skeleton) Bone Storm": {
       "name": "(Skeleton) Bone Storm",
-      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p><strong>Effect</strong> The skeleton transforms into a cyclone of bones, taking up the same space, but twice as tall. It then Strides up to double its Speed. It can move through spaces occupied by other creatures, and this movement doesn't trigger reactions. Creatures the bone storm moves through take [[/r 1d6[slashing]]] damage for every 2 levels of the skeleton, with a @Check[type:reflex|dc:|basic:true] save against the hard DC for the creature's level. A level 1 or lower skeleton only moves; it doesn't deal damage. A creature attempts this save only once even if the bone storm moved through its space multiple times. At the end of the movement, the skeleton reforms.</p>"
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p><strong>Effect</strong> The skeleton transforms into a cyclone of bones, taking up the same space, but twice as tall. It then Strides up to double its Speed. It can move through spaces occupied by other creatures, and this movement doesn't trigger reactions. Creatures the bone storm moves through take @Damage[1d6[slashing]] damage for every 2 levels of the skeleton, with a @Check[type:reflex|dc:|basic:true] save against the hard DC for the creature's level. A level 1 or lower skeleton only moves; it doesn't deal damage. A creature attempts this save only once even if the bone storm moved through its space multiple times. At the end of the movement, the skeleton reforms.</p>"
     },
     "(Skeleton) Collapse": {
       "name": "(Skeleton) Collapse",
@@ -777,7 +777,7 @@
     },
     "(Skeleton) Explosive Death": {
       "name": "(Skeleton) Explosive Death",
-      "description": "<p>When the skeleton is destroyed, its bones shatter and explode as the necromantic energy holding it together is released.</p>\n<p>Adjacent creatures take [[/r 1d6[slashing]]] damage per 2 levels (minimum 1d6) with a @Check[type:reflex|dc:|basic:true|name:Explosive Death] save.</p>"
+      "description": "<p>When the skeleton is destroyed, its bones shatter and explode as the necromantic energy holding it together is released.</p>\n<p>Adjacent creatures take @Damage[1d6[slashing]] damage per 2 levels (minimum 1d6) with a @Check[type:reflex|dc:|basic:true|name:Explosive Death] save.</p>"
     },
     "(Skeleton) Frozen": {
       "name": "(Skeleton) Frozen",
@@ -818,7 +818,7 @@
     },
     "(Sporeborn) Contagious Spores": {
       "name": "(Sporeborn) Contagious Spores",
-      "description": "<p>The sporeborn continues to infect creatures with sporeborn infestation, creating more of its own kind.</p>"
+      "description": "<p>The sporeborn continues to infect creatures with @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.EosAqVmnYlxMEGdT]{Sporeborn Infestation}, creating more of its own kind.</p>"
     },
     "(Sporeborn) Fungal Armor": {
       "name": "(Sporeborn) Fungal Armor",
@@ -834,11 +834,11 @@
     },
     "(Sporeborn) Spore Explosion": {
       "name": "(Sporeborn) Spore Explosion",
-      "description": "<p>When the sporeborn is destroyed, its body explodes, releasing toxic fumes and spores. Adjacent creatures take [[/r 1d6[poison]]] damage per 2 levels (minimum 1d6) with a @Check[type:fortitude|dc:|basic:true] save.</p>"
+      "description": "<p>When the sporeborn is destroyed, its body explodes, releasing toxic fumes and spores. Adjacent creatures take @Damage[1d6[poison]] damage per 2 levels (minimum 1d6) with a @Check[type:fortitude|dc:|basic:true] save.</p>"
     },
     "(Sporeborn) Sporeborn Infestation": {
       "name": "(Sporeborn) Sporeborn Infestation",
-      "description": "<p>An infected creature can't heal damage it takes from sporeborn infestation until it has been cured of the disease.</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:]</p>\n<p><strong>Stage 1</strong> carrier with no ill effect (1 day)</p>\n<p><strong>Stage 2</strong> [[/r 1d6[poison]]] damage (1 day)</p>\n<p><strong>Stage 3</strong> [[/r 2d6[poison]]] damage (1 day)</p>\n<p><strong>Stage 4</strong> [[/r 3d6[poison]]] damage (1 day)</p>\n<p><strong>Stage 5</strong> dead, rising as an uncontrolled sporeborn immediately</p>"
+      "description": "<p>An infected creature can't heal damage it takes from sporeborn infestation until it has been cured of the disease.</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:]</p>\n<p><strong>Stage 1</strong> carrier with no ill effect (1 day)</p>\n<p><strong>Stage 2</strong> @Damage[1d6[poison]] damage (1 day)</p>\n<p><strong>Stage 3</strong> @Damage[2d6[poison]] damage (1 day)</p>\n<p><strong>Stage 4</strong> @Damage[3d6[poison]] damage (1 day)</p>\n<p><strong>Stage 5</strong> dead, rising as an uncontrolled sporeborn immediately</p>"
     },
     "(Spring-Heeled Jack) Change Shape": {
       "name": "(Spring-Heeled Jack) Change Shape",
@@ -867,11 +867,11 @@
     },
     "(Ulgrem-Axaan) Crushing Weight": {
       "name": "(Ulgrem-Axaan) Crushing Weight",
-      "description": "<p><strong>Requirements</strong> Ulgrem-Axaan has a creature grabbed with its tail</p>\n<hr />\n<p><strong>Effect</strong> Ulgrem-Axaan's tail clamps down around the creature, dealing [[/r (2d4+8)[bludgeoning]]] damage (@Check[type:fortitude|dc:25|basic:true|name:Crushing Weight] save).</p>"
+      "description": "<p><strong>Requirements</strong> Ulgrem-Axaan has a creature grabbed with its tail</p>\n<hr />\n<p><strong>Effect</strong> Ulgrem-Axaan's tail clamps down around the creature, dealing @Damage[(2d4+8)[bludgeoning]] damage (@Check[type:fortitude|dc:25|basic:true|name:Crushing Weight] save).</p>"
     },
     "(Ulgrem-Axaan) Fallen Victim": {
       "name": "(Ulgrem-Axaan) Fallen Victim",
-      "description": "<p><strong>Requirements</strong> A creature in Ulgrem-Axaan's reach is prone, and Ulgrem-Axaan isn't currently grabbing another creature</p>\n<hr />\n<p><strong>Effect</strong> Ulgrem-Axaan attempts a jaws Strike against the creature. If successful, Ulgrem-Axaan immediately @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabs} the creature, and the creature takes an additional [[/r 2d10[bludgeoning]]] damage.</p>"
+      "description": "<p><strong>Requirements</strong> A creature in Ulgrem-Axaan's reach is prone, and Ulgrem-Axaan isn't currently grabbing another creature</p>\n<hr />\n<p><strong>Effect</strong> Ulgrem-Axaan attempts a jaws Strike against the creature. If successful, Ulgrem-Axaan immediately @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabs} the creature, and the creature takes an additional @Damage[2d10[bludgeoning]] damage.</p>"
     },
     "(Ulgrem-Axaan) Ichor Coating": {
       "name": "(Ulgrem-Axaan) Ichor Coating",
@@ -959,7 +959,7 @@
     },
     "(Vampire, Nosferatu) Change Shape": {
       "name": "(Vampire, Nosferatu) Change Shape",
-      "description": "<p>The nosferatu transforms into a swarm of pale-gray rats. They gain a land Speed of 30 feet and a climb Speed of 10 feet, and they become Large. Each enemy in the swarm's space takes [[/r 2d10[piercing]]] damage and must attempt a @Check[type:reflex|dc:|basic:true] save with a high DC for the creature's level. A creature that fails its save is exposed to plague of ancients.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.ChangeShape]</p>"
+      "description": "<p>The nosferatu transforms into a swarm of pale-gray rats. They gain a land Speed of 30 feet and a climb Speed of 10 feet, and they become Large. Each enemy in the swarm's space takes @Damage[2d10[piercing]] damage and must attempt a @Check[type:reflex|dc:|basic:true] save with a high DC for the creature's level. A creature that fails its save is exposed to plague of ancients.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.ChangeShape]</p>"
     },
     "(Vampire, Nosferatu) Command Thrall": {
       "name": "(Vampire, Nosferatu) Command Thrall",
@@ -1003,7 +1003,7 @@
     },
     "(Vampire, Strigoi) Domain of Dusk": {
       "name": "(Vampire, Strigoi) Domain of Dusk",
-      "description": "<p>With a wave of its hand, the strigoi calls fourth vile ruination from the surrounding shadows, causing coils of darkness and shadowy bats, rats, and wolves to lash out at living targets in a @Template[type:emanation|distance:30]. Living creatures in this area take [[/r 1d6[negative]]] damage +1d6 per 2 levels possessed by the strigoi (@Check[type:fortitude|dc:|basic:true] save against the DC of the strigoi's level). A creature that fails this save is also @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round (or @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for 1 round and then dazzled for 1 round)</p>"
+      "description": "<p>With a wave of its hand, the strigoi calls fourth vile ruination from the surrounding shadows, causing coils of darkness and shadowy bats, rats, and wolves to lash out at living targets in a @Template[type:emanation|distance:30]. Living creatures in this area take @Damage[1d6[negative]] damage +1d6 per 2 levels possessed by the strigoi (@Check[type:fortitude|dc:|basic:true] save against the DC of the strigoi's level). A creature that fails this save is also @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round (or @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for 1 round and then dazzled for 1 round)</p>"
     },
     "(Vampire, Strigoi) Drink Essence": {
       "name": "(Vampire, Strigoi) Drink Essence",
@@ -1047,7 +1047,7 @@
     },
     "(Vampire, True) Turn to Mist": {
       "name": "(Vampire, True) Turn to Mist",
-      "description": "<p>The vampire turns into a cloud of vapor, as the <em>@UUID[Compendium.pf2e.spells-srd.Item.V8wXOsoejQhe6CyG]{Gaseous Form}</em> spell, or back to its normal form. The vampire loses fast healing while in gaseous form.</p>\n<p>The vampire can remain in this form indefinitely.</p>"
+      "description": "<p>The vampire turns into a cloud of vapor, as the <em>@UUID[Compendium.pf2e.spells-srd.Item.V8wXOsoejQhe6CyG]{Vapor Form}</em> spell, or back to its normal form. The vampire loses fast healing while in gaseous form.</p>\n<p>The vampire can remain in this form indefinitely.</p>"
     },
     "(Vampire, Vetalarana, Basic) Drain Thoughts": {
       "name": "(Vampire, Vetalarana, Basic) Drain Thoughts",
@@ -1079,7 +1079,7 @@
     },
     "(Vampire, Vrykolakas Master) Bubonic Plague": {
       "name": "(Vampire, Vrykolakas Master) Bubonic Plague",
-      "description": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:|name:Bubonic Plague|traits:disease] (use a high DC for the vrykolakas's level)</p>\n<p><strong>Onset</strong> 1 day</p>\n<hr />\n<p><strong>Stage 1</strong> @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued} (1 day)</p>\n<p><strong>Stage 2</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} and fatigued (1 day)</p>\n<p><strong>Stage 3</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 3}, fatigued, and takes [[/r 1d6[bleed]]] every [[/br {1d20} #minutes]]{1d20 minutes} (1 day)</p>"
+      "description": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:|name:Bubonic Plague|traits:disease] (use a high DC for the vrykolakas's level)</p>\n<p><strong>Onset</strong> 1 day</p>\n<hr />\n<p><strong>Stage 1</strong> @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued} (1 day)</p>\n<p><strong>Stage 2</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} and fatigued (1 day)</p>\n<p><strong>Stage 3</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 3}, fatigued, and takes @Damage[1d6[bleed]] every [[/br {1d20} #minutes]]{1d20 minutes} (1 day)</p>"
     },
     "(Vampire, Vrykolakas Master) Change Shape": {
       "name": "(Vampire, Vrykolakas Master) Change Shape",
@@ -1132,7 +1132,7 @@
     },
     "(Visitant) Vengeful Presence": {
       "name": "(Visitant) Vengeful Presence",
-      "description": "<p>@Template[type:emanation|distance:20]{20 feet} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}</p>\n<hr />\n<p>A creature that starts its turn within the visitant's aura must succeed at a @Check[type:will|dc:|name:Vengeful Presence] save or be overcome with a thirst for vengeance.</p>\n<p>For [[/r 1d4 #rounds]]{1d4 rounds} (1 minute on a critical failure), if the affected creature was attacked within the last round (whether or not the attack hit), the creature must use at least 1 action per round to Strike or use a hostile action toward its last attacker as long as the attacker is still alive. Failure to do so deals the affected creature [[/r 1d6[mental]]] damage, plus 1d6 for every 5 levels the visitant has.</p>"
+      "description": "<p>@Template[type:emanation|distance:20]{20 feet} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}</p>\n<hr />\n<p>A creature that starts its turn within the visitant's aura must succeed at a @Check[type:will|dc:|name:Vengeful Presence] save or be overcome with a thirst for vengeance.</p>\n<p>For [[/r 1d4 #rounds]]{1d4 rounds} (1 minute on a critical failure), if the affected creature was attacked within the last round (whether or not the attack hit), the creature must use at least 1 action per round to Strike or use a hostile action toward its last attacker as long as the attacker is still alive. Failure to do so deals the affected creature @Damage[1d6[mental]] damage, plus 1d6 for every 5 levels the visitant has.</p>"
     },
     "(Visitant) Visitant Spells": {
       "name": "(Visitant) Visitant Spells",
@@ -1164,7 +1164,7 @@
     },
     "(Worm That Walks) Squirming Embrace": {
       "name": "(Worm That Walks) Squirming Embrace",
-      "description": "<p>The worm that walks Strides, ending its movement sharing a space with a creature, and deals piercing damage to the creature equal to [[/r 1d8[piercing]]] plus an additional 1d8 for every 3 levels the worm that walks has. The creature can attempt a @Check[type:reflex|dc:|basic:true|name:Squirming Embrace] save with a DC of the worm that walks's spell DC - 2.</p>"
+      "description": "<p>The worm that walks Strides, ending its movement sharing a space with a creature, and deals piercing damage to the creature equal to @Damage[1d8[piercing]] plus an additional 1d8 for every 3 levels the worm that walks has. The creature can attempt a @Check[type:reflex|dc:|basic:true|name:Squirming Embrace] save with a DC of the worm that walks's spell DC - 2.</p>"
     },
     "(Worm That Walks) Swarm Shape": {
       "name": "(Worm That Walks) Swarm Shape",
@@ -1192,7 +1192,7 @@
     },
     "(Zombie) Plague-Ridden": {
       "name": "(Zombie) Plague-Ridden",
-      "description": "<p>The zombie carries a plague that can create more of its own kind.</p>\n<p>This functions as the @UUID[Compendium.pf2e.pathfinder-bestiary.Actor.KxN9aGFGPxl6oLGF]{Plague Zombie's} zombie rot, except at stage 5, the victim rises as another of the zombie's type, rather than a plague zombie.</p>\n<hr />\n<p><strong>Zombie Rot</strong></p>\n<p>An infected creature can't heal damage it takes from zombie rot until it has been cured of the disease.</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:|name:Zombie Rot]</p>\n<p><strong>Stage 1</strong> carrier with no ill effect (1 day)</p>\n<p><strong>Stage 2</strong> [[/r 1d6[negative]]] damage (1 day)</p>\n<p><strong>Stage 3</strong> [[/r 1d6[negative]]] damage (1 day)</p>\n<p><strong>Stage 4</strong> [[/r 1d6[negative]]] damage (1 day)</p>\n<p><strong>Stage 5</strong> dead, rising as another of the zombie's type immediately</p>"
+      "description": "<p>The zombie carries a plague that can create more of its own kind.</p>\n<p>This functions as the @UUID[Compendium.pf2e.pathfinder-bestiary.Actor.KxN9aGFGPxl6oLGF]{Plague Zombie's} zombie rot, except at stage 5, the victim rises as another of the zombie's type, rather than a plague zombie.</p>\n<hr />\n<p><strong>Zombie Rot</strong></p>\n<p>An infected creature can't heal damage it takes from zombie rot until it has been cured of the disease.</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:|name:Zombie Rot]</p>\n<p><strong>Stage 1</strong> carrier with no ill effect (1 day)</p>\n<p><strong>Stage 2</strong> @Damage[1d6[negative]] damage (1 day)</p>\n<p><strong>Stage 3</strong> @Damage[1d6[negative]] damage (1 day)</p>\n<p><strong>Stage 4</strong> @Damage[1d6[negative]] damage (1 day)</p>\n<p><strong>Stage 5</strong> dead, rising as another of the zombie's type immediately</p>"
     },
     "(Zombie) Putrid Stench": {
       "name": "(Zombie) Putrid Stench",
@@ -1204,7 +1204,7 @@
     },
     "(Zombie) Spitting Zombie": {
       "name": "(Zombie) Spitting Zombie",
-      "description": "<p>The zombie spits acid as a ranged Strike with a range of 30 feet. This uses the highest attack bonus among the zombie's Strikes and deals [[/r 1d12[acid]]] damage per 3 levels of the zombie (or [[/r 1d6[acid]]] damage below level 3). On a critical hit, the target also takes [[/r 1d4[persistent,acid]]] damage per 3 levels of the zombie. Once used, the zombie must spend 1 action to cough up enough acid to use this ability again.</p>"
+      "description": "<p>The zombie spits acid as a ranged Strike with a range of 30 feet. This uses the highest attack bonus among the zombie's Strikes and deals @Damage[1d12[acid]] damage per 3 levels of the zombie (or @Damage[1d6[acid]] damage below level 3). On a critical hit, the target also takes @Damage[1d4[persistent,acid]] damage per 3 levels of the zombie. Once used, the zombie must spend 1 action to cough up enough acid to use this ability again.</p>"
     },
     "(Zombie) Tearing Grapple": {
       "name": "(Zombie) Tearing Grapple",
@@ -1220,11 +1220,11 @@
     },
     "(Zombie, Shock) Arcing Strikes": {
       "name": "(Zombie, Shock) Arcing Strikes",
-      "description": "<p>When a shock zombie hits a creature with a melee attack, an arc of lighting leaps to a second creature, dealing [[/r 1d12[electricity]]] damage. This secondary target must be within 10 feet of the shock zombie's original target and must be the creature closest to the original target (if multiple creatures are equidistant, the shock zombie chooses which to affect).</p>"
+      "description": "<p>When a shock zombie hits a creature with a melee attack, an arc of lighting leaps to a second creature, dealing @Damage[1d12[electricity]] damage. This secondary target must be within 10 feet of the shock zombie's original target and must be the creature closest to the original target (if multiple creatures are equidistant, the shock zombie chooses which to affect).</p>"
     },
     "(Zombie, Shock) Breath Weapon": {
       "name": "(Zombie, Shock) Breath Weapon",
-      "description": "<p>The shock zombie breathes lightning, dealing [[/r 4d12[electricity]]] damage in a @Template[type:line|distance:40] (@Check[type:reflex|dc:24|basic:true]). It can't use its Breath Weapon again for 1 minute.</p>"
+      "description": "<p>The shock zombie breathes lightning, dealing @Damage[4d12[electricity]] damage in a @Template[type:line|distance:40] (@Check[type:reflex|dc:24|basic:true]). It can't use its Breath Weapon again for 1 minute.</p>"
     },
     "(Zombie, Shock) Electromechanical Phasing": {
       "name": "(Zombie, Shock) Electromechanical Phasing",
