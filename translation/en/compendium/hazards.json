@@ -9,7 +9,7 @@
       "items": {
         "action->Burn It All": {
           "name": "Burn It All",
-          "description": "<p><strong>Trigger</strong> A special condition set by the trap's creator occurs; this is typically the event of their death.</p>\n<hr />\n<p><strong>Effect</strong> Fire rains from the sky in a 100-mile radius, dealing [[/r 10d6[fire]]] damage to creatures and objects in the area. Each creature or object can attempt a @Check[type:reflex|dc:46|basic:true] save. Any creature reduced to 0 Hit Points by this damage dies instantly. This is not enough damage to completely burn away a forest or level an entire mountain or city, but it typically kills most creatures in the area.</p>"
+          "description": "<p><strong>Trigger</strong> A special condition set by the trap's creator occurs; this is typically the event of their death.</p>\n<hr />\n<p><strong>Effect</strong> Fire rains from the sky in a 100-mile radius, dealing @Damage[10d6[fire]] damage to creatures and objects in the area. Each creature or object can attempt a @Check[type:reflex|dc:46|basic:true] save. Any creature reduced to 0 Hit Points by this damage dies instantly. This is not enough damage to completely burn away a forest or level an entire mountain or city, but it typically kills most creatures in the area.</p>"
         }
       }
     },
@@ -61,11 +61,11 @@
       "items": {
         "action->Emit Cold": {
           "name": "Emit Cold",
-          "description": "<p>@Template[type:emanation|distance:5]{5 feet} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}</p>\n<hr />\n<p>Brown mold deals [[/r 2d6[cold]]] damage to nearby creatures.</p>"
+          "description": "<p>@Template[type:emanation|distance:5]{5 feet} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}</p>\n<hr />\n<p>Brown mold deals @Damage[2d6[cold]] damage to nearby creatures.</p>"
         },
         "action->Leech Warmth": {
           "name": "Leech Warmth",
-          "description": "<p><strong>Trigger</strong> Fire comes within 5 feet of the brown mold.</p>\n<hr />\n<p><strong>Effect</strong> The brown mold expands into every square adjacent to its space. As it grows, it pulls more heat from its surroundings, dealing [[/r (2d6+6)[cold]]] damage (@Check[type:fortitude|dc:18|basic:true] save) to creatures within 10 feet after it expands.</p>"
+          "description": "<p><strong>Trigger</strong> Fire comes within 5 feet of the brown mold.</p>\n<hr />\n<p><strong>Effect</strong> The brown mold expands into every square adjacent to its space. As it grows, it pulls more heat from its surroundings, dealing @Damage[(2d6+6)[cold]] damage (@Check[type:fortitude|dc:18|basic:true] save) to creatures within 10 feet after it expands.</p>"
         }
       }
     },
@@ -122,7 +122,7 @@
       "items": {
         "action->Pitfall": {
           "name": "Pitfall",
-          "description": "<p><strong>Trigger</strong> A creature walks onto the trapdoor.</p>\n<hr />\n<p><strong>Effect</strong> The triggering creature falls in and takes damage from the fall, reduced by 5 feet for falling into the water (typically [[/r 12[bludgeoning]]] damage). A creature can @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge} to avoid falling. The trapdoor then slams shut, and the hazard rolls initiative.</p>"
+          "description": "<p><strong>Trigger</strong> A creature walks onto the trapdoor.</p>\n<hr />\n<p><strong>Effect</strong> The triggering creature falls in and takes damage from the fall, reduced by 5 feet for falling into the water (typically @Damage[12[bludgeoning]] damage). A creature can @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge} to avoid falling. The trapdoor then slams shut, and the hazard rolls initiative.</p>"
         }
       }
     },
@@ -134,7 +134,7 @@
       "items": {
         "action->Electrocution": {
           "name": "Electrocution",
-          "description": "<p><strong>Trigger</strong> A creature grasps the door latch directly or with a tool.</p>\n<hr />\n<p><strong>Effect</strong> The trap deals [[/r 3d12[electricity]]] damage to the triggering creature (@Check[type:reflex|dc:22|basic:true] save).</p>"
+          "description": "<p><strong>Trigger</strong> A creature grasps the door latch directly or with a tool.</p>\n<hr />\n<p><strong>Effect</strong> The trap deals @Damage[3d12[electricity]] damage to the triggering creature (@Check[type:reflex|dc:22|basic:true] save).</p>"
         }
       }
     },
@@ -160,7 +160,7 @@
       "items": {
         "action->Fireball": {
           "name": "Fireball",
-          "description": "<p><strong>Trigger</strong> A living creature enters the sensor area.</p>\n<hr />\n<p><strong>Effect</strong> The rune detonates a <em>@UUID[Compendium.pf2e.spells-srd.Item.sxQZ6yqTn0czJxVd]{Fireball}</em> centered on the triggering creature's square. This is a 3rd-level fireball spell that deals [[/r 6d6[fire]]] damage (@Check[type:reflex|dc:22|basic:true] save).</p>"
+          "description": "<p><strong>Trigger</strong> A living creature enters the sensor area.</p>\n<hr />\n<p><strong>Effect</strong> The rune detonates a <em>@UUID[Compendium.pf2e.spells-srd.Item.sxQZ6yqTn0czJxVd]{Fireball}</em> centered on the triggering creature's square. This is a 3rd-level fireball spell that deals @Damage[6d6[fire]] damage (@Check[type:reflex|dc:22|basic:true] save).</p>"
         }
       }
     },
@@ -169,7 +169,7 @@
       "description": "<p>A whirling tornado of spectrally propelled glass and steel slices whatever it touches to ribbons.</p>",
       "disable": "<p>@Check[type:thievery|dc:35|name:Adjust Blades|traits:action:disable-a-device] (master) to precisely adjust the blades so that they destroy each other, or @Check[type:religion|dc:38|name:Weaken the Haunt] (expert) to weaken the haunt; four successes are required to disable it</p>",
       "reset": "<p>The haunt draws jagged shards back into its area over the course of an hour, after which it can trigger again.</p>",
-      "routine": "<p>(3 actions) The tornado of blades uses 3 actions to move, traveling up to 30 feet with each action and dealing 2d10+10 slashing damage. Each creature in its path must attempt a @Check[type:reflex|dc:33].</p>\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage plus [[/r 1d10[bleed]]].</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and [[/r 1d10[bleed]]]. It also becomes wounded 1 (or increases its wounded value by 1, if it is already wounded).</p>\n<p>Each successful check to disable this hazard reduces the haunt's movement by 30 feet, and the fourth success disables it completely.</p>",
+      "routine": "<p>(3 actions) The tornado of blades uses 3 actions to move, traveling up to 30 feet with each action and dealing 2d10+10 slashing damage. Each creature in its path must attempt a @Check[type:reflex|dc:33].</p>\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage plus @Damage[1d10[bleed]].</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and @Damage[1d10[bleed]]. It also becomes wounded 1 (or increases its wounded value by 1, if it is already wounded).</p>\n<p>Each successful check to disable this hazard reduces the haunt's movement by 30 feet, and the fourth success disables it completely.</p>",
       "stealth": "<p>(expert)</p>",
       "items": {
         "action->Whirling Blades": {
@@ -198,7 +198,7 @@
       "items": {
         "action->Profane Chant": {
           "name": "Profane Chant",
-          "description": "<p><strong>Trigger</strong> A creature moves within 10 feet of the section of floor from which the choir can arise.</p>\n<hr />\n<p><strong>Effect</strong> The choir rises, and its song deals [[/r (4d8+18)[mental]]] damage to non-evil creatures within 30 feet of the souls' spectral forms. Affected creatures must each attempt a @Check[type:will|dc:24|traits:damaging-effect] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Failure</strong> The creature takes full damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage. It also becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3} and @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} for 1 round.</p>"
+          "description": "<p><strong>Trigger</strong> A creature moves within 10 feet of the section of floor from which the choir can arise.</p>\n<hr />\n<p><strong>Effect</strong> The choir rises, and its song deals @Damage[(4d8+18)[mental]] damage to non-evil creatures within 30 feet of the souls' spectral forms. Affected creatures must each attempt a @Check[type:will|dc:24|traits:damaging-effect] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Failure</strong> The creature takes full damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage. It also becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3} and @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} for 1 round.</p>"
         }
       }
     },
@@ -211,7 +211,7 @@
       "items": {
         "action->Mark for Damnation": {
           "name": "Mark for Damnation",
-          "description": "<p><strong>Trigger</strong> Three or more sentient living creatures of 13th level or higher enter the haunt's area.</p>\n<hr />\n<p><strong>Effect</strong> The haunt deals [[/r (6d12+35)[negative]]] damage to each creature in the haunt's area, and each creature must attempt a @Check[type:will|dc:40|traits:damaging-effects] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature takes no damage and is doomed 1.</p>\n<p><strong>Success</strong> The creature takes half damage and is doomed 1.</p>\n<p><strong>Failure</strong> The creature takes full damage, becomes doomed 2, and is marked for damnation.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage, becomes doomed 3, and is marked for damnation.If a creature that is marked for damnation dies within the next 24 hours, including from the haunt's damage, its soul is immediately dragged away to the plane of the evil deity that the damned spirits served, where the creature's soul is held captive by one of that deity's powerful servitors. Only <i>wish</i> and similarly potent effects are able to recover the lost soul directly; however, it is also possible to recover the soul by journeying to the evil plane and defeating the soul's captor.</p>"
+          "description": "<p><strong>Trigger</strong> Three or more sentient living creatures of 13th level or higher enter the haunt's area.</p>\n<hr />\n<p><strong>Effect</strong> The haunt deals @Damage[(6d12+35)[negative]] damage to each creature in the haunt's area, and each creature must attempt a @Check[type:will|dc:40|traits:damaging-effects] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature takes no damage and is doomed 1.</p>\n<p><strong>Success</strong> The creature takes half damage and is doomed 1.</p>\n<p><strong>Failure</strong> The creature takes full damage, becomes doomed 2, and is marked for damnation.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage, becomes doomed 3, and is marked for damnation.If a creature that is marked for damnation dies within the next 24 hours, including from the haunt's damage, its soul is immediately dragged away to the plane of the evil deity that the damned spirits served, where the creature's soul is held captive by one of that deity's powerful servitors. Only <i>wish</i> and similarly potent effects are able to recover the lost soul directly; however, it is also possible to recover the soul by journeying to the evil plane and defeating the soul's captor.</p>"
         }
       }
     },
@@ -219,7 +219,7 @@
       "name": "Gravehall Trap",
       "description": "<p>When a living creature crosses the midpoint of the trapped tunnel, necromantic magic partially animates the corpses buried in the walls and ceiling.</p>",
       "disable": "<p>@Check[type:thievery|dc:24|name:Disrupt Magical Trigger|traits:action:disable-a-device] (expert) to disrupt the magical trigger before the hazard rolls initiative, or @Check[type:religion|dc:18|name:Overwhelm the Area with Positive Energy] (trained) to overwhelm the area with positive energy and prevent the hazard from using its routine for 1 round; on the third successful Religion check, the necromantic energies are disrupted and the hazard is destroyed.</p>",
-      "routine": "<p>(1 action) Undead fists assail all creatures in the hall, dealing [[/r 4d6[bludgeoning]]] damage. Creatures in the hall must attempt a @Check[type:reflex|dc:21].</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes half damage.</p>\n<p><strong>Failure</strong> The target takes full damage, and its Speeds are reduced by 10 feet (to a minimum of 5 feet) for 1 round.</p>\n<p><strong>Critical Failure</strong> The target takes double damage and is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} for 1 round.</p>",
+      "routine": "<p>(1 action) Undead fists assail all creatures in the hall, dealing @Damage[4d6[bludgeoning]] damage. Creatures in the hall must attempt a @Check[type:reflex|dc:21].</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes half damage.</p>\n<p><strong>Failure</strong> The target takes full damage, and its Speeds are reduced by 10 feet (to a minimum of 5 feet) for 1 round.</p>\n<p><strong>Critical Failure</strong> The target takes double damage and is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} for 1 round.</p>",
       "items": {
         "action->Lunging Dead": {
           "name": "Lunging Dead",
@@ -291,7 +291,7 @@
       "items": {
         "action->Pitfall": {
           "name": "Pitfall",
-          "description": "<p><strong>Trigger</strong> A creature walks onto the trapdoor.</p>\n<hr />\n<p><strong>Effect</strong> The triggering creature falls in and takes falling damage (typically [[/r 10[bludgeoning]]] damage). That creature can use the @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge} reaction to avoid falling.</p>"
+          "description": "<p><strong>Trigger</strong> A creature walks onto the trapdoor.</p>\n<hr />\n<p><strong>Effect</strong> The triggering creature falls in and takes falling damage (typically @Damage[10[bludgeoning]] damage). That creature can use the @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge} reaction to avoid falling.</p>"
         }
       }
     },
@@ -304,7 +304,7 @@
       "items": {
         "action->Shock": {
           "name": "Shock",
-          "description": "<p><strong>Trigger</strong> A creature touches the fence directly or with a tool or weapon</p>\n<hr />\n<p><strong>Effect</strong> The fence deals [[/r 7d12[electricity]]] damage to the triggering creature (@Check[type:reflex|dc:26|basic:true|traits:electricity,mechanical,trap,hazard] save).</p>"
+          "description": "<p><strong>Trigger</strong> A creature touches the fence directly or with a tool or weapon</p>\n<hr />\n<p><strong>Effect</strong> The fence deals @Damage[7d12[electricity]] damage to the triggering creature (@Check[type:reflex|dc:26|basic:true|traits:electricity,mechanical,trap,hazard] save).</p>"
         }
       }
     },
@@ -317,7 +317,7 @@
       "items": {
         "action->Rend Magic": {
           "name": "Rend Magic",
-          "description": "<p><strong>Trigger</strong> A creature that is currently affected by a beneficial spell approaches within 30 feet of the abjurer.</p>\n<hr />\n<p><strong>Effect</strong> Envying the fame and magical prowess of others, the jealous abjurer attempts to engineer a catastrophic failure in the highest-level beneficial spell currently affecting its target. It attempts a counteract check with a +26 modifier. If the counteract check succeeds, the spell is dispelled, and the creature it had been affecting takes [[/r (4d12+30)[force]]] damage as the spell violently implodes (@Check[type:reflex|dc:32|basic:true] save).</p>"
+          "description": "<p><strong>Trigger</strong> A creature that is currently affected by a beneficial spell approaches within 30 feet of the abjurer.</p>\n<hr />\n<p><strong>Effect</strong> Envying the fame and magical prowess of others, the jealous abjurer attempts to engineer a catastrophic failure in the highest-level beneficial spell currently affecting its target. It attempts a counteract check with a +26 modifier. If the counteract check succeeds, the spell is dispelled, and the creature it had been affecting takes @Damage[(4d12+30)[force]] damage as the spell violently implodes (@Check[type:reflex|dc:32|basic:true] save).</p>"
         }
       }
     },
@@ -356,7 +356,7 @@
       "name": "Perilous Flash Flood",
       "description": "<p>Whether made up of water rushing through the streets that sweeps up dangerous debris along the way or a less natural substance bursting free of its container, this relentless flood batters everything in its path.</p>",
       "disable": "<p>Three @Check[type:athletics|dc:35|name:Move Barricade], @Check[type:crafting|dc:35|name:Construct Barricade], or @Check[type:survival|dc:35|name:Construct Barricade] checks to move or construct barricades strong enough to create a shelter from the flood. While this creates a safe place to stand, creatures outside of the barricaded area may still be in danger depending on the nature and the source of the flood.</p>",
-      "routine": "<p>(1 action) The flood advances forward 60 feet, crashing into all creatures within its area. Each creature must attempt a @Check[type:fortitude|dc:30] save as the floodwaters pummel them and pull them downstream. The amount and type of damage dealt are based on the nature of the flood, and certain types of floods impose additional effects. The turbulent waters mean creatures within the area of the flood must attempt a @Check[type:athletics|dc:20|name:Swim|traits:action:swim] check to Swim in order to move, and those who do not succeed at a check to Swim each round may drown.</p>\n<hr>\n<p><strong>Critical Success</strong> The creature takes no damage.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is moved 10 feet along with the water.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is moved 20 feet along with the water.</p>\n<hr>\n<ul>\n<li><strong>Acidic Runoff</strong> This caustic flood dissolves flesh as it moves, dealing [[/r {1d12[bludgeoning],(1d12+8)[acid]}]]{1d12 bludgeoning damage and 1d12+8 acid damage}. Additionally, it deals [[/r 2d6[persistent,acid]]] damage to creatures who critically fail their Fortitude saves.</li>\n<li><strong>Battering Waves</strong> This flood of rushing water deals [[/r (2d12+10)[bludgeoning]]] damage.</li>\n<li><strong>Repulsive Refuse</strong> This flood has picked up tainted or disease-ridden objects like sewer runoff or rotting food. It deals [[/r (2d12+8)[bludgeoning]]] damage. Each creature exposed to the flood must attempt a @Check[type:fortitude|dc:29] save, becoming @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} on a failure or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure. Additionally, creatures who come into contact with the flood waters are exposed to filth fever (@Check[type:fortitude|dc:20]).</li>\n<li><strong>Sharp Debris</strong> The waters have picked up various objects, some of which are particularly sharp. The flood deals [[/r 1d12[bludgeoning]]] damage and [[/r (1d12+12)[piercing]]] damage.</li>\n<li><strong>Sticky Goo</strong> The substance is particularly sticky. It deals [[/r (2d12+6)[bludgeoning]]] damage. Additionally, each creature in the flood must attempt a @Check[type:reflex|dc:29] save at the beginning of their turn each round. On a failed saving throw, they take a -10-foot circumstance penalty to all their Speeds for 1 round. On a critical failure, they are instead @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} for 1 round.</li>\n</ul>",
+      "routine": "<p>(1 action) The flood advances forward 60 feet, crashing into all creatures within its area. Each creature must attempt a @Check[type:fortitude|dc:30] save as the floodwaters pummel them and pull them downstream. The amount and type of damage dealt are based on the nature of the flood, and certain types of floods impose additional effects. The turbulent waters mean creatures within the area of the flood must attempt a @Check[type:athletics|dc:20|name:Swim|traits:action:swim] check to Swim in order to move, and those who do not succeed at a check to Swim each round may drown.</p>\n<hr>\n<p><strong>Critical Success</strong> The creature takes no damage.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is moved 10 feet along with the water.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is moved 20 feet along with the water.</p>\n<hr>\n<ul>\n<li><strong>Acidic Runoff</strong> This caustic flood dissolves flesh as it moves, dealing [[/r {1d12[bludgeoning],(1d12+8)[acid]}]]{1d12 bludgeoning damage and 1d12+8 acid damage}. Additionally, it deals @Damage[2d6[persistent,acid]] damage to creatures who critically fail their Fortitude saves.</li>\n<li><strong>Battering Waves</strong> This flood of rushing water deals @Damage[(2d12+10)[bludgeoning]] damage.</li>\n<li><strong>Repulsive Refuse</strong> This flood has picked up tainted or disease-ridden objects like sewer runoff or rotting food. It deals @Damage[(2d12+8)[bludgeoning]] damage. Each creature exposed to the flood must attempt a @Check[type:fortitude|dc:29] save, becoming @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} on a failure or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure. Additionally, creatures who come into contact with the flood waters are exposed to filth fever (@Check[type:fortitude|dc:20]).</li>\n<li><strong>Sharp Debris</strong> The waters have picked up various objects, some of which are particularly sharp. The flood deals @Damage[1d12[bludgeoning]] damage and @Damage[(1d12+12)[piercing]] damage.</li>\n<li><strong>Sticky Goo</strong> The substance is particularly sticky. It deals @Damage[(2d12+6)[bludgeoning]] damage. Additionally, each creature in the flood must attempt a @Check[type:reflex|dc:29] save at the beginning of their turn each round. On a failed saving throw, they take a -10-foot circumstance penalty to all their Speeds for 1 round. On a critical failure, they are instead @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} for 1 round.</li>\n</ul>",
       "stealth": "<p>(expert)</p>",
       "items": {
         "action->Burst Free": {
@@ -430,7 +430,7 @@
         },
         "action->Flesset Poison": {
           "name": "Flesset Poison",
-          "description": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:22]</p>\n<hr />\n<p><strong>Maximum Duration</strong> 6 rounds</p>\n<p><strong>Stage 1</strong> [[/r 1d6[poison]]] damage and @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} (1 round)</p>\n<p><strong>Stage 2</strong> [[/r 2d6[poison]]] damage and @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2} (1 round)</p>\n<p><strong>Stage 3</strong> [[/r 3d6[poison]]] damage and @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 3} (1 round)</p>"
+          "description": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:22]</p>\n<hr />\n<p><strong>Maximum Duration</strong> 6 rounds</p>\n<p><strong>Stage 1</strong> @Damage[1d6[poison]] damage and @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} (1 round)</p>\n<p><strong>Stage 2</strong> @Damage[2d6[poison]] damage and @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2} (1 round)</p>\n<p><strong>Stage 3</strong> @Damage[3d6[poison]] damage and @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 3} (1 round)</p>"
         }
       }
     },
@@ -449,7 +449,7 @@
         },
         "action->Cladis Poison": {
           "name": "Cladis Poison",
-          "description": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:19]</p>\n<p><strong>Maximum Duration</strong> 4 hours</p>\n<p><strong>Stage 1</strong> [[/r 1d6[poison]]] damage and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (1 hour)</p>\n<p><strong>Stage 2</strong> [[/r 2d6[poison]]] damage and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} (1 hour)</p>\n<p><strong>Stage 3</strong> [[/r 3d6[poison]]] damage and drained 2 (1 hour)</p>"
+          "description": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:19]</p>\n<p><strong>Maximum Duration</strong> 4 hours</p>\n<p><strong>Stage 1</strong> @Damage[1d6[poison]] damage and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (1 hour)</p>\n<p><strong>Stage 2</strong> @Damage[2d6[poison]] damage and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} (1 hour)</p>\n<p><strong>Stage 3</strong> @Damage[3d6[poison]] damage and drained 2 (1 hour)</p>"
         }
       }
     },
@@ -520,7 +520,7 @@
       "items": {
         "action->Shriek": {
           "name": "Shriek",
-          "description": "<p><strong>Trigger</strong> A creature or light source approaches within 10 feet of the shrieker or the shrieker takes damage.</p>\n<hr />\n<p><strong>Effect</strong> The shrieker emits a deafening screech that deals [[/r 1d6[sonic]]] damage to creatures within @Template[type:emanation|distance:30]{30 feet} (@Check[type:fortitude|dc:16|basic:true|traits:auditory] save; creatures that critically fail this saving throw are @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} for 1 minute).</p>"
+          "description": "<p><strong>Trigger</strong> A creature or light source approaches within 10 feet of the shrieker or the shrieker takes damage.</p>\n<hr />\n<p><strong>Effect</strong> The shrieker emits a deafening screech that deals @Damage[1d6[sonic]] damage to creatures within @Template[type:emanation|distance:30]{30 feet} (@Check[type:fortitude|dc:16|basic:true|traits:auditory] save; creatures that critically fail this saving throw are @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} for 1 minute).</p>"
         }
       }
     },
@@ -532,7 +532,7 @@
       "items": {
         "action->Slam Shut": {
           "name": "Slam Shut",
-          "description": "<p><strong>Trigger</strong> Pressure is placed on any floor tile.</p>\n<hr />\n<p><strong>Effect</strong> The door falls, closing off the hallway. The stone slab deals [[/r 3d8[bludgeoning]]] damage to anyone beneath or adjacent to the slab when it drops and pushes them out of its space in a random direction. A creature that succeeds at a @Check[type:reflex|dc:17|traits:damaging-effect] save takes no damage and rolls out of the way in a random direction. On a critical success, they can choose the direction.</p>\n<p>Lifting the fallen slab requires a successful @Check[type:athletics|dc:25|name:Lift a Slab Athletics|showDC:all] check.</p>\n<p>Hitting the floor panels triggers the trap. The slab uses the same AC and saves as the trap, but it has Hardness 12, HP 48 (BT 24).</p>"
+          "description": "<p><strong>Trigger</strong> Pressure is placed on any floor tile.</p>\n<hr />\n<p><strong>Effect</strong> The door falls, closing off the hallway. The stone slab deals @Damage[3d8[bludgeoning]] damage to anyone beneath or adjacent to the slab when it drops and pushes them out of its space in a random direction. A creature that succeeds at a @Check[type:reflex|dc:17|traits:damaging-effect] save takes no damage and rolls out of the way in a random direction. On a critical success, they can choose the direction.</p>\n<p>Lifting the fallen slab requires a successful @Check[type:athletics|dc:25|name:Lift a Slab Athletics|showDC:all] check.</p>\n<p>Hitting the floor panels triggers the trap. The slab uses the same AC and saves as the trap, but it has Hardness 12, HP 48 (BT 24).</p>"
         }
       }
     },
@@ -544,7 +544,7 @@
       "items": {
         "action->Snowdrop": {
           "name": "Snowdrop",
-          "description": "<p><strong>Trigger</strong> A creature moves beneath where the snowfall is resting.</p>\n<hr />\n<p><strong>Effect</strong> Ice and snow fall on the triggering creature, dealing [[/r (2d6+3)[bludgeoning]]] damage (@Check[type:reflex|dc:18|basic:true] save) and soaking their clothing. Until they change into fresh clothing or spend at least an hour in an area of normal or higher temperature, they treat cold environments as one step colder (for example, mild cold as severe cold).</p>"
+          "description": "<p><strong>Trigger</strong> A creature moves beneath where the snowfall is resting.</p>\n<hr />\n<p><strong>Effect</strong> Ice and snow fall on the triggering creature, dealing @Damage[(2d6+3)[bludgeoning]] damage (@Check[type:reflex|dc:18|basic:true] save) and soaking their clothing. Until they change into fresh clothing or spend at least an hour in an area of normal or higher temperature, they treat cold environments as one step colder (for example, mild cold as severe cold).</p>"
         }
       }
     },
@@ -621,7 +621,7 @@
         },
         "action->Sportlebore Infestation": {
           "name": "Sportlebore Infestation",
-          "description": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:22|basic:true]</p>\n<p><strong>Stage 1</strong> carrier with no ill effect (1 day)</p>\n<p><strong>Stage 2</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} (1 hour)</p>\n<p><strong>Stage 3</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} (1 hour)</p>\n<p><strong>Stage 4</strong> [[/r 4d6[bludgeoning]]] damage (@Check[type:fortitude|dc:25|basic:true] save) as the host painfully vomits out a sportlebore swarm and returns to stage 1</p>"
+          "description": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:22|basic:true]</p>\n<p><strong>Stage 1</strong> carrier with no ill effect (1 day)</p>\n<p><strong>Stage 2</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} (1 hour)</p>\n<p><strong>Stage 3</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} (1 hour)</p>\n<p><strong>Stage 4</strong> @Damage[4d6[bludgeoning]] damage (@Check[type:fortitude|dc:25|basic:true] save) as the host painfully vomits out a sportlebore swarm and returns to stage 1</p>"
         }
       }
     },
@@ -633,7 +633,7 @@
       "items": {
         "action->Steam Blast": {
           "name": "Steam Blast",
-          "description": "<p><strong>Trigger</strong> The trip wire is pulled or severed, typically because a creature walked through the square with the trip wire</p>\n<hr />\n<p><strong>Effect</strong> Steam erupts from the pipes, dealing [[/r 3d6[bludegeoning]]] damage and [[/r 3d6[fire]]] damage (@Check[type:reflex|dc:24|basic:true|name:Avoid the erupting steam|traits:mechanical,trap,hazard]) to all creatures within 15 feet. Creatures that critically fail their save are knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>"
+          "description": "<p><strong>Trigger</strong> The trip wire is pulled or severed, typically because a creature walked through the square with the trip wire</p>\n<hr />\n<p><strong>Effect</strong> Steam erupts from the pipes, dealing @Damage[3d6[bludegeoning]] damage and @Damage[3d6[fire]] damage (@Check[type:reflex|dc:24|basic:true|name:Avoid the erupting steam|traits:mechanical,trap,hazard]) to all creatures within 15 feet. Creatures that critically fail their save are knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>"
         }
       }
     },
@@ -700,7 +700,7 @@
       "items": {
         "action->Rockslide": {
           "name": "Rockslide",
-          "description": "<p><strong>Trigger</strong> A creature steps on the unstable ground.</p>\n<hr />\n<p><strong>Effect</strong> Rocks tumble and slip beneath its feet. The triggering creature must attempt a @Check[type:reflex|dc:21|traits:damaging-effect] save as they tumble against the rocks, which deal [[/r (2d10+13)[bludgeoning]]] damage.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature takes no damage.</p>\n<p><strong>Success</strong> The creature takes half damage and falls prone in its space.</p>\n<p><strong>Failure</strong> The creature takes full damage, falls prone in its space, and tumbles down to the bottom of the slope.</p>\n<p><strong>Critical Failure</strong> As failure, but double damage.</p>"
+          "description": "<p><strong>Trigger</strong> A creature steps on the unstable ground.</p>\n<hr />\n<p><strong>Effect</strong> Rocks tumble and slip beneath its feet. The triggering creature must attempt a @Check[type:reflex|dc:21|traits:damaging-effect] save as they tumble against the rocks, which deal @Damage[(2d10+13)[bludgeoning]] damage.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature takes no damage.</p>\n<p><strong>Success</strong> The creature takes half damage and falls prone in its space.</p>\n<p><strong>Failure</strong> The creature takes full damage, falls prone in its space, and tumbles down to the bottom of the slope.</p>\n<p><strong>Critical Failure</strong> As failure, but double damage.</p>"
         }
       }
     },
@@ -734,7 +734,7 @@
       "items": {
         "action->Deadfall": {
           "name": "Deadfall",
-          "description": "<p><strong>Trigger</strong> A creature steps into the square with the web tripwire.</p>\n<hr />\n<p><strong>Effect</strong> All creatures in the trap's 10-foot square take [[/r 2d6[bludgeoning]]] damage (@Check[type:reflex|dc:20|basic:true] save).</p>"
+          "description": "<p><strong>Trigger</strong> A creature steps into the square with the web tripwire.</p>\n<hr />\n<p><strong>Effect</strong> All creatures in the trap's 10-foot square take @Damage[2d6[bludgeoning]] damage (@Check[type:reflex|dc:20|basic:true] save).</p>"
         }
       }
     },
@@ -749,7 +749,7 @@
         },
         "strike-melee->Noose": {
           "name": "Noose",
-          "description": "<p>On a successful strike, the target is @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} and pulled off the ground (@UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} DC 22).</p>\n<p>The target takes [[/r 1d6[bludgeoning]]] damage at the end of each of its turns as long as it's caught in the noose.</p>"
+          "description": "<p>On a successful strike, the target is @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} and pulled off the ground (@UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} DC 22).</p>\n<p>The target takes @Damage[1d6[bludgeoning]] damage at the end of each of its turns as long as it's caught in the noose.</p>"
         }
       }
     },
@@ -779,7 +779,7 @@
         },
         "action->Yellow Mold Spores": {
           "name": "Yellow Mold Spores",
-          "description": "<p>Any drained condition from the spores persists after the poison's duration ends.</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:26]</p>\n<hr />\n<p><strong>Maximum Duration</strong> 6 rounds</p>\n<p><strong>Stage 1</strong> [[/r 1d8[poison]]] damage and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (1 round)</p>\n<p><strong>Stage 2</strong> [[/r 2d8[poison]]] damage and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} (1 round)</p>\n<p><strong>Stage 3</strong> [[/r 3d8[poison]]] damage and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 3} (1 round)</p>"
+          "description": "<p>Any drained condition from the spores persists after the poison's duration ends.</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:26]</p>\n<hr />\n<p><strong>Maximum Duration</strong> 6 rounds</p>\n<p><strong>Stage 1</strong> @Damage[1d8[poison]] damage and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (1 round)</p>\n<p><strong>Stage 2</strong> @Damage[2d8[poison]] damage and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} (1 round)</p>\n<p><strong>Stage 3</strong> @Damage[3d8[poison]] damage and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 3} (1 round)</p>"
         }
       }
     }
