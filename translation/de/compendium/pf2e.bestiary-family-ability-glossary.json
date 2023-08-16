@@ -41,7 +41,7 @@
     },
     "(Blackfrost Dead) Blackfrost": {
       "name": "(Blackfrost Dead) Blackfrost",
-      "description": "<p>This affliction can't be reduced below stage 1, nor the damage from it healed, until successfully treated with <em>@UUID[Compendium.pf2e.spells-srd.Item.OyFCwQuw8XRazsNr]{Remove Curse}</em> or a similar effect; the affliction can then be removed as a normal disease. A creature that dies from cold damage while cursed with blackfrost rises as a blackfrost dead after 24 hours. Blackfrost has a counteract level of 10.</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:27]</p>\n<p><strong>Stage 1</strong> [[/r 4d6[cold]]] (1 minute)</p>\n<p><strong>Stage 2</strong> weakness to cold 5 and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (1 day)</p>\n<p><strong>Stage 3</strong> weakness to cold 10 and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} (1 day)</p>"
+      "description": "<p>This affliction can't be reduced below stage 1, nor the damage from it healed, until successfully treated with <em>@UUID[Compendium.pf2e.spells-srd.Item.OyFCwQuw8XRazsNr]{Remove Curse}</em> or a similar effect; the affliction can then be removed as a normal disease. A creature that dies from cold damage while cursed with blackfrost rises as a blackfrost dead after 24 hours. Blackfrost has a counteract level of 10.</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:27]</p>\n<p><strong>Stage 1</strong> @Damage[4d6[cold]] (1 minute)</p>\n<p><strong>Stage 2</strong> weakness to cold 5 and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (1 day)</p>\n<p><strong>Stage 3</strong> weakness to cold 10 and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} (1 day)</p>"
     },
     "(Blackfrost Dead) Blackfrost Breath": {
       "name": "(Blackfrost Dead) Blackfrost Breath",
@@ -53,11 +53,11 @@
     },
     "(Blackfrost Dead) Mindburning Gaze": {
       "name": "(Blackfrost Dead) Mindburning Gaze",
-      "description": "<p>The blackfrost dead fixes its terrifying gaze on a creature within 60 feet. The creature takes [[/r 1d4[mental]]] per level of the blackfrost dead (minimum 2d4), with a @Check[type:will|dc:|basic:true] save. On a critical failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>"
+      "description": "<p>The blackfrost dead fixes its terrifying gaze on a creature within 60 feet. The creature takes @Damage[1d4[mental]] per level of the blackfrost dead (minimum 2d4), with a @Check[type:will|dc:|basic:true] save. On a critical failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>"
     },
     "(Blackfrost Dead) Shattering Death": {
       "name": "(Blackfrost Dead) Shattering Death",
-      "description": "<p>When the blackfrost dead is destroyed, its body shatters like brittle ice, filling the air around it with a cloud of frigid, razor-sharp ice shards. Creatures in a @Template[type:emanation|distance:10] take [[/r 1d8[cold]]] per level of the blackfrost dead (minimum 3d8), with a @Check[type:reflex|dc:|basic:true] save. Creatures that critically fail this save also take [[/r 1d6[bleed]]].</p>"
+      "description": "<p>When the blackfrost dead is destroyed, its body shatters like brittle ice, filling the air around it with a cloud of frigid, razor-sharp ice shards. Creatures in a @Template[type:emanation|distance:10] take @Damage[1d8[cold]] per level of the blackfrost dead (minimum 3d8), with a @Check[type:reflex|dc:|basic:true] save. Creatures that critically fail this save also take @Damage[1d6[bleed]].</p>"
     },
     "(Castrovelian) Extra Large": {
       "name": "(Castrovelian) Extra Large",
@@ -69,7 +69,7 @@
     },
     "(Clockwork Creature) Malfunction - Backfire": {
       "name": "(Mechanische Kreatur) Fehlfunktion - Rückschlag",
-      "description": "<p>Die Mechanische Kreatur würfelt zu Beginn jedes ihrer Züge einen @Check[type:flat|dc:5]{Einfachen Wurf}. Bei einem Fehlschlag geht sie in Flammen auf und verursacht [[/r 2d6[fire]]]{2W6 Feuerschaden} in einem @Template[type:cone|distance:15]{15 Fuß/4,50-Meter-Kegel}, der sie selbst einschließt (@Check[type:reflex|basic:true|dc:0]{einfacher Reflexwurf} mit dem Standard-DC seiner Stufe), und wird in diesem Zug @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}.</p>"
+      "description": "<p>Die Mechanische Kreatur würfelt zu Beginn jedes ihrer Züge einen @Check[type:flat|dc:5]{Einfachen Wurf}. Bei einem Fehlschlag geht sie in Flammen auf und verursacht @Damage[2d6[fire]]{2W6 Feuerschaden} in einem @Template[type:cone|distance:15]{15 Fuß/4,50-Meter-Kegel}, der sie selbst einschließt (@Check[type:reflex|basic:true|dc:0]{einfacher Reflexwurf} mit dem Standard-DC seiner Stufe), und wird in diesem Zug @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}.</p>"
     },
     "(Clockwork Creature) Malfunction - Damaged Propulsion": {
       "name": "(Mechanische Kreatur) Fehlfunktion - Beschädigter Antrieb",
@@ -105,7 +105,7 @@
     },
     "(Cryptid, Experimental) Energy Wave": {
       "name": "(Kryptid, Experimentell) Energiewelle",
-      "description": "<p>Der Experimentelle Kryptid entfesselt eine @Template[type:line|distance:30]{30 Fuß/9 m-Linie} aus Energie, die für ihn spezifisch ist (meistens Elektrizität oder Feuer). Kreaturen im Wirkungsbereich erleiden [[/r 1d6[damagetype]]]{1W6 Schadenspunkte pro Stufe des Kryptiden} (@Check[type:reflex|dc:|basic:true]{einfacher Reflexwurf}). Der Experimentelle Kryptid kann diese Fähigkeit einmal alle [[/r 1d4 #Runden]]{1W4 Runden} einsetzen. Diese Handlung erhält die zur Schadensart passende Kategorie. Sollten die Experimente, welche die Kreatur verändert haben, magischer Natur gewesen sein, erhält diese Handlung auch die Kategorie Hervorrufung und die Kategorie passend zur magischen Tradition der Experimente (Arkan, Göttlich, Natur oder Okkult).</p>"
+      "description": "<p>Der Experimentelle Kryptid entfesselt eine @Template[type:line|distance:30]{30 Fuß/9 m-Linie} aus Energie, die für ihn spezifisch ist (meistens Elektrizität oder Feuer). Kreaturen im Wirkungsbereich erleiden @Damage[1d6[damagetype]]{1W6 Schadenspunkte pro Stufe des Kryptiden} (@Check[type:reflex|dc:|basic:true]{einfacher Reflexwurf}). Der Experimentelle Kryptid kann diese Fähigkeit einmal alle [[/r 1d4 #Runden]]{1W4 Runden} einsetzen. Diese Handlung erhält die zur Schadensart passende Kategorie. Sollten die Experimente, welche die Kreatur verändert haben, magischer Natur gewesen sein, erhält diese Handlung auch die Kategorie Hervorrufung und die Kategorie passend zur magischen Tradition der Experimente (Arkan, Göttlich, Natur oder Okkult).</p>"
     },
     "(Cryptid, Experimental) Operational Flaw": {
       "name": "(Kryptid, Experimentell) Funktionsfehler",
@@ -117,7 +117,7 @@
     },
     "(Cryptid, Mutant) Explosive End": {
       "name": "(Krytid, Mutant) Explosives Ende",
-      "description": "<p>Der Mutierte Kryptid überrascht selbst im Tod noch – er explodiert in einem Feuerball, in Säurespritzern, zerfällt zu einem Haufen giftigen Schleims oder beendet seine Existenz auf noch seltsamere Weise. Wähle eine für den Mutierten Kryptiden angemessene Schadensart. Wenn er stirbt, explodiert er und fügt jeder Kreatur innerhalb einer @Template[type:emanation|distance:10]{10 Fuß/3 m-Ausstrahlung} [[/r 1d6[damagetype]]]{1W6 Schadenspunkte der gewählten Art} zu (@Check[type:reflex|dc:|basic:true]{einfacher Reflexwurf} gegen den Standard-SG für die Stufe der Kreatur). Mit der 3. Stufe und jeder weiteren ungeraden Stufe der Kreatur steigt der Schaden jeweils um [[/r 1d6[damagetype]]]{1W6}.</p>"
+      "description": "<p>Der Mutierte Kryptid überrascht selbst im Tod noch – er explodiert in einem Feuerball, in Säurespritzern, zerfällt zu einem Haufen giftigen Schleims oder beendet seine Existenz auf noch seltsamere Weise. Wähle eine für den Mutierten Kryptiden angemessene Schadensart. Wenn er stirbt, explodiert er und fügt jeder Kreatur innerhalb einer @Template[type:emanation|distance:10]{10 Fuß/3 m-Ausstrahlung} @Damage[1d6[damagetype]]{1W6 Schadenspunkte der gewählten Art} zu (@Check[type:reflex|dc:|basic:true]{einfacher Reflexwurf} gegen den Standard-SG für die Stufe der Kreatur). Mit der 3. Stufe und jeder weiteren ungeraden Stufe der Kreatur steigt der Schaden jeweils um @Damage[1d6[damagetype]]{1W6}.</p>"
     },
     "(Cryptid, Mutant) Marrowlance": {
       "name": "(Krytid, Mutant) Marklanze",
@@ -141,7 +141,7 @@
     },
     "(Cryptid, Primeval) Shockwave": {
       "name": "(Kryptid, Urzeitlich) Schockwelle",
-      "description": "<p>Der Urzeitliche Kryptid stampft auf den Boden, hämmert den Schwanz auf den Boden oder führt einen ähnlich brutalen Schlag aus und erzeugt eine Schockwelle. Kreaturen am Boden innerhalb von 30 Fuß/9 m Entfernung zu ihm erleiden [[/r 1d6[bludgeoning]]]{1W6 Punkte Wuchtschaden} pro Stufe des Urzeitlichen Kryptiden (Minimum 2W6 Schadenspunkte; @Check[type:reflex|dc:|basic:true]{einfacher Reflexwurf}; bei einem Kritischen Fehlschlag erhält eine Kreatur zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}).</p>"
+      "description": "<p>Der Urzeitliche Kryptid stampft auf den Boden, hämmert den Schwanz auf den Boden oder führt einen ähnlich brutalen Schlag aus und erzeugt eine Schockwelle. Kreaturen am Boden innerhalb von 30 Fuß/9 m Entfernung zu ihm erleiden @Damage[1d6[bludgeoning]]{1W6 Punkte Wuchtschaden} pro Stufe des Urzeitlichen Kryptiden (Minimum 2W6 Schadenspunkte; @Check[type:reflex|dc:|basic:true]{einfacher Reflexwurf}; bei einem Kritischen Fehlschlag erhält eine Kreatur zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}).</p>"
     },
     "(Cryptid, Primeval) Stench": {
       "name": "(Kryptid, Urzeitlich) Gestank",
@@ -213,7 +213,7 @@
     },
     "(Ghast) Ghast Fever": {
       "name": "(Grul) Grulfieber",
-      "description": "<p><strong>RW</strong> @Check[type:fortitude|dc:]{Zähigkeitswurf}</p>\n<hr>\n<p><strong>Phase 1</strong> Überträger ohne nachteilige Nebenwirkungen (1 Tag)</p>\n<p><strong>Phase 2</strong> [[/r 3d8[negative]]]{3W6 Negative Schadenspunkte} und erlangt durch Heilung nur die Hälfte an Trefferpunkten (1 Tag)</p>\n<p><strong>Phase 3</strong> Wie Phase 2 (1 Tag)</p>\n<p><strong>Phase 4</strong> [[/r 3d8[negative]]]{3W6 Negative Schadenspunkte} und erlangt keine Vorteile mehr durch Heilung (1 Tag)</p>\n<p><strong>Phase 5</strong> Wie Phase 4 (1 Tag)</p>\n<p><strong>Phase 6</strong> Tot, erhebt sich zur nächsten Mitternacht als @UUID[Compendium.pf2e.pathfinder-bestiary.Actor.VC7rtYR4hLxwg7WZ]{Grul}</p>"
+      "description": "<p><strong>RW</strong> @Check[type:fortitude|dc:]{Zähigkeitswurf}</p>\n<hr>\n<p><strong>Phase 1</strong> Überträger ohne nachteilige Nebenwirkungen (1 Tag)</p>\n<p><strong>Phase 2</strong> @Damage[3d8[negative]]{3W6 Negative Schadenspunkte} und erlangt durch Heilung nur die Hälfte an Trefferpunkten (1 Tag)</p>\n<p><strong>Phase 3</strong> Wie Phase 2 (1 Tag)</p>\n<p><strong>Phase 4</strong> @Damage[3d8[negative]]{3W6 Negative Schadenspunkte} und erlangt keine Vorteile mehr durch Heilung (1 Tag)</p>\n<p><strong>Phase 5</strong> Wie Phase 4 (1 Tag)</p>\n<p><strong>Phase 6</strong> Tot, erhebt sich zur nächsten Mitternacht als @UUID[Compendium.pf2e.pathfinder-bestiary.Actor.VC7rtYR4hLxwg7WZ]{Grul}</p>"
     },
     "(Ghast) Paralysis": {
       "name": "(Grul) Lähmung",
@@ -229,7 +229,7 @@
     },
     "(Ghost) Cold Spot": {
       "name": "(Geist) Kalter Fleck",
-      "description": "<p>Die Luft in einem @Template[type:emanation|distance:5|damaging:yes]{Umkreis von 5 Fuß/1,50 m} um den Geist herum wird unnatürlich kalt. Charaktere, welche die Aura betreten oder ihren Zug darin beginnen, nehmen [[/r 1d6[cold]]]{1W6 Schaden} pro 3 Stufen, die der Geist besitzt (@Check[type:fortitude|dc:|basic:true]{einfacher Zähigkeitswurf}).</p>"
+      "description": "<p>Die Luft in einem @Template[type:emanation|distance:5|damaging:yes]{Umkreis von 5 Fuß/1,50 m} um den Geist herum wird unnatürlich kalt. Charaktere, welche die Aura betreten oder ihren Zug darin beginnen, nehmen @Damage[1d6[cold]]{1W6 Schaden} pro 3 Stufen, die der Geist besitzt (@Check[type:fortitude|dc:|basic:true]{einfacher Zähigkeitswurf}).</p>"
     },
     "(Ghost) Corporeal Manifestation": {
       "name": "(Geist) Körperliche Manifestation",
@@ -237,7 +237,7 @@
     },
     "(Ghost) Corrupting Gaze": {
       "name": "(Geist) Verderbender Blick",
-      "description": "<p>Der Geist starrt eine Kreatur innerhalb von 30 Fuß/9 m intensiv an (er muss sie dazu sehen können). Das Ziel erleidet [[/r 1d6[negative]]]{1W6 Punkte Negativen Schaden} + 1W6 pro 2 Stufen des Geistes (@Check[type:will|dc:]{einfacher Willenswurf}).</p>\n<p>Bei einem Fehlschlag erhält die Kreatur für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 1}.</p>"
+      "description": "<p>Der Geist starrt eine Kreatur innerhalb von 30 Fuß/9 m intensiv an (er muss sie dazu sehen können). Das Ziel erleidet @Damage[1d6[negative]]{1W6 Punkte Negativen Schaden} + 1W6 pro 2 Stufen des Geistes (@Check[type:will|dc:]{einfacher Willenswurf}).</p>\n<p>Bei einem Fehlschlag erhält die Kreatur für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 1}.</p>"
     },
     "(Ghost) Draining Touch": {
       "name": "(Geist) Auslaugende Berührung",
@@ -281,7 +281,7 @@
     },
     "(Ghost) Memento Mori": {
       "name": "(Geist) Memento Mori",
-      "description": "<p>Der Geist lässt eine Kreatur, die sich innerhalb von 30 Fuß/10 m zu ihm befindet, seinen Tod erfahren und erleben. Das Ziel muss einen @Check[type:will|dc:]{Willenswurf} schaffen oder es sieht und fühlt alles, was der Geist im Moment seines Todes erfahren hat. Dabei nimmt das Ziel [[/r 1d4[persistent,mental]]]{1W4 Punkte anhaltenden mentalen Schaden} für je zwei Stufen, die der Geist besitzt. Alle anderen Kreaturen gelten so lange gegenüber dem Ziel als @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Verborgen}, bis der Andauernde Schaden endet.</p>"
+      "description": "<p>Der Geist lässt eine Kreatur, die sich innerhalb von 30 Fuß/10 m zu ihm befindet, seinen Tod erfahren und erleben. Das Ziel muss einen @Check[type:will|dc:]{Willenswurf} schaffen oder es sieht und fühlt alles, was der Geist im Moment seines Todes erfahren hat. Dabei nimmt das Ziel @Damage[1d4[persistent,mental]]{1W4 Punkte anhaltenden mentalen Schaden} für je zwei Stufen, die der Geist besitzt. Alle anderen Kreaturen gelten so lange gegenüber dem Ziel als @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Verborgen}, bis der Andauernde Schaden endet.</p>"
     },
     "(Ghost) Phantasmagoria": {
       "name": "(Geist) Phantasmagorie",
@@ -289,7 +289,7 @@
     },
     "(Ghost) Pyre's Memory": {
       "name": "(Geist) Gedenken des Scheiterhaufens",
-      "description": "<p>Der Geist lässt ohne Vorwarnung große Flammen entspringen. Der Geist wählt drei Felder mit 5 Fuß/1,50 m Kantenlänge innerhalb von 30 Fuß/9m aus. Jede Kreatur die ihren Zug in solch einem Feld beginnt oder es betritt, nimmt [[/r 1d6[fire]]]{1W6 Feuerschaden} für je zwei Stufen, die der Geist besitzt. Ein @Check[type:reflex|dc:|basic:true]{einfacher Reflexwurf} ist der Kreatur gestattet.</p>\n<p>Die Flammen bestehen für 1 Minute, setzen dabei aber keine anderen Dinge in Brand, außer der Geist wünscht dies. Wenn der Geist diese Fähigkeit nochmals benutzt, hebt er damit alle anderen Flammen auf.</p>"
+      "description": "<p>Der Geist lässt ohne Vorwarnung große Flammen entspringen. Der Geist wählt drei Felder mit 5 Fuß/1,50 m Kantenlänge innerhalb von 30 Fuß/9m aus. Jede Kreatur die ihren Zug in solch einem Feld beginnt oder es betritt, nimmt @Damage[1d6[fire]]{1W6 Feuerschaden} für je zwei Stufen, die der Geist besitzt. Ein @Check[type:reflex|dc:|basic:true]{einfacher Reflexwurf} ist der Kreatur gestattet.</p>\n<p>Die Flammen bestehen für 1 Minute, setzen dabei aber keine anderen Dinge in Brand, außer der Geist wünscht dies. Wenn der Geist diese Fähigkeit nochmals benutzt, hebt er damit alle anderen Flammen auf.</p>"
     },
     "(Ghost) Rejuvenation": {
       "name": "(Geist) Wiederkehr",
@@ -305,7 +305,7 @@
     },
     "(Ghost) Telekinetic Assault": {
       "name": "(Geist) Telekinetischer Angriff",
-      "description": "<p>Der Geist brüllt seinen Schmerz und seine Qual heraus und lässt kleine Gegenstände und Trümmer innerhalb einer @Template[type:emanation|distance:30]{30 Fuß/9 m-Ausstrahlung} umherfliegen. Kreaturen im Wirkungsbereich erleiden [[/r 1d6[bludgeoning]]]{1W6 Punkte Wuchtschaden} +1W6 pro 2 Stufen des Geistes (@Check[type:reflex|dc:|basic:true]{einfacher Reflexwurf}).</p>"
+      "description": "<p>Der Geist brüllt seinen Schmerz und seine Qual heraus und lässt kleine Gegenstände und Trümmer innerhalb einer @Template[type:emanation|distance:30]{30 Fuß/9 m-Ausstrahlung} umherfliegen. Kreaturen im Wirkungsbereich erleiden @Damage[1d6[bludgeoning]]{1W6 Punkte Wuchtschaden} +1W6 pro 2 Stufen des Geistes (@Check[type:reflex|dc:|basic:true]{einfacher Reflexwurf}).</p>"
     },
     "(Ghoul) Consume Flesh": {
       "name": "(Ghul) Fleisch verzehren",
@@ -313,7 +313,7 @@
     },
     "(Ghoul) Ghoul Fever": {
       "name": "(Ghul) Ghulfieber",
-      "description": "<p><strong>RW</strong> @Check[type:fortitude|dc:]{Zähigkeitswurf}</p>\n<hr>\n<p><strong>Phase 1</strong> Überträger ohne nachteilige Nebenwirkungen (1 Tag)</p>\n<p><strong>Phase 2</strong> [[/r 2d6[negative]]]{2W6 Negative Schadenspunkte} und erlangt durch Heilung nur die Hälfte an Trefferpunkten (1 Tag)</p>\n<p><strong>Phase 3</strong> Wie Phase 2 (1 Tag)</p>\n<p><strong>Phase 4</strong> [[/r 2d6[negative]]]{2W6 Negative Schadenspunkte} und erlangt keine Vorteile mehr durch Heilung (1 Tag)</p>\n<p><strong>Phase 5</strong> Wie Phase 4 (1 Tag)</p>\n<p><strong>Phase 6 Tot, erhebt sich zur nächsten Mitternacht als @UUID[Compendium.pf2e.pathfinder-bestiary.Actor.LHHgGSs0ELCR4CYK]{Ghul}</p>"
+      "description": "<p><strong>RW</strong> @Check[type:fortitude|dc:]{Zähigkeitswurf}</p>\n<hr>\n<p><strong>Phase 1</strong> Überträger ohne nachteilige Nebenwirkungen (1 Tag)</p>\n<p><strong>Phase 2</strong> @Damage[2d6[negative]]{2W6 Negative Schadenspunkte} und erlangt durch Heilung nur die Hälfte an Trefferpunkten (1 Tag)</p>\n<p><strong>Phase 3</strong> Wie Phase 2 (1 Tag)</p>\n<p><strong>Phase 4</strong> @Damage[2d6[negative]]{2W6 Negative Schadenspunkte} und erlangt keine Vorteile mehr durch Heilung (1 Tag)</p>\n<p><strong>Phase 5</strong> Wie Phase 4 (1 Tag)</p>\n<p><strong>Phase 6 Tot, erhebt sich zur nächsten Mitternacht als @UUID[Compendium.pf2e.pathfinder-bestiary.Actor.LHHgGSs0ELCR4CYK]{Ghul}</p>"
     },
     "(Ghoul) Paralysis": {
       "name": "(Ghul) Lähmung",
@@ -333,7 +333,7 @@
     },
     "(Graveknight) Betrayed Revivification": {
       "name": "(Grabesritter) Macht des Verrats",
-      "description": "<p>Der Grabesritter starb nach einem tiefgreifenden Verrat.</p>\n<p>Er ist nicht gegen eine Art von Energieschaden immun sondern gegen Mentalen Schaden; seine Waffen verursachen zusätzliche [[/r 1d6[mental]]]{1W6 Punkte Mentalen Schaden} und seine Verheerende Explosion verursacht Mentalen Schaden (WIL statt REF).</p>"
+      "description": "<p>Der Grabesritter starb nach einem tiefgreifenden Verrat.</p>\n<p>Er ist nicht gegen eine Art von Energieschaden immun sondern gegen Mentalen Schaden; seine Waffen verursachen zusätzliche @Damage[1d6[mental]]{1W6 Punkte Mentalen Schaden} und seine Verheerende Explosion verursacht Mentalen Schaden (WIL statt REF).</p>"
     },
     "(Graveknight) Channel Magic": {
       "name": "(Graveknight) Channel Magic",
@@ -353,7 +353,7 @@
     },
     "(Graveknight) Devastating Blast": {
       "name": "(Grabesritter) Verheerende Explosion",
-      "description": "<p>Der Grabesritter entfesselt einen @Template[type:cone|distance:30]{30 Fuß/9 m-Kegel} aus Energie. Kreaturen im Wirkungsbereich erleiden [[/r 1d12[Schadensart]]]{1W12 Schadenspunkte} plus weitere 1W12 Punkte pro zwei Stufen des Grabesritters (@Check[type:reflex|dc:|basic:true]{einfacher Reflexwurf}).</p>\n<p>Der Grabesritter kann diese Fähigkeit alle [[/br 1d4 #Verfügbarkeit Verheerende Explosion]]{1W4 Runden} nutzen.</p>\n<p>Der Energieschaden entspricht der Schadensart seiner Zerstörerischen Waffen. Diese Fähigkeit erhält die zur Energieart passende Kategorie.</p>"
+      "description": "<p>Der Grabesritter entfesselt einen @Template[type:cone|distance:30]{30 Fuß/9 m-Kegel} aus Energie. Kreaturen im Wirkungsbereich erleiden @Damage[1d12[Schadensart]]{1W12 Schadenspunkte} plus weitere 1W12 Punkte pro zwei Stufen des Grabesritters (@Check[type:reflex|dc:|basic:true]{einfacher Reflexwurf}).</p>\n<p>Der Grabesritter kann diese Fähigkeit alle [[/br 1d4 #Verfügbarkeit Verheerende Explosion]]{1W4 Runden} nutzen.</p>\n<p>Der Energieschaden entspricht der Schadensart seiner Zerstörerischen Waffen. Diese Fähigkeit erhält die zur Energieart passende Kategorie.</p>"
     },
     "(Graveknight) Eager for Battle": {
       "name": "(Grabesritter) Kampfbereitschaft",
@@ -401,7 +401,7 @@
     },
     "(Greater Barghest) Mutation - Toxic Breath": {
       "name": "(Höherer Barghest) Mutationen - Giftiger Atem",
-      "description": "<p>Der Barghest atmet eine Giftgaswolke aus, welche allen Kreaturen in einem @Template[type:cone|distance:30]{30 Fuß/9 m-Kegel} [[/r 8d6[poison]]]{8W6 Punkte Giftschaden} zufügt (@Check[type:fortitude|dc:25|basic:true]{einfacher Zähigkeitswurf}).</p>\n<p>Dies ist ihm alle [[/br 1d4 #Verfügbarkeit Giftiger Atem]]{1W4 Runden} möglich.</p>"
+      "description": "<p>Der Barghest atmet eine Giftgaswolke aus, welche allen Kreaturen in einem @Template[type:cone|distance:30]{30 Fuß/9 m-Kegel} @Damage[8d6[poison]]{8W6 Punkte Giftschaden} zufügt (@Check[type:fortitude|dc:25|basic:true]{einfacher Zähigkeitswurf}).</p>\n<p>Dies ist ihm alle [[/br 1d4 #Verfügbarkeit Giftiger Atem]]{1W4 Runden} möglich.</p>"
     },
     "(Greater Barghest) Mutation - Vestigial Arm Strike": {
       "name": "(Höherer Barghest) Mutationen - Verkümmerter Armangriff",
@@ -437,7 +437,7 @@
     },
     "(Kallas Devil) Freezing Touch": {
       "name": "(Kallasteufel) Eisige Berührung",
-      "description": "<p>Wenn der Winter nach Flussheim kommt, schärft der Kallasteufel seine Klauen mit Eisscherben. Führt der Kallasteufel einen Angriff mit seinem Biss- oder Klauenangriff aus, verursacht er zusätzliche [[/r 1d6[cold]]]{1W6 Punkte Kälteschaden}.</p>"
+      "description": "<p>Wenn der Winter nach Flussheim kommt, schärft der Kallasteufel seine Klauen mit Eisscherben. Führt der Kallasteufel einen Angriff mit seinem Biss- oder Klauenangriff aus, verursacht er zusätzliche @Damage[1d6[cold]]{1W6 Punkte Kälteschaden}.</p>"
     },
     "(Kallas Devil) Infectious Water": {
       "name": "(Kallasteufel) Ansteckendes Wasser",
@@ -537,7 +537,7 @@
     },
     "(Mana Wastes Mutant) Caustic Pustules": {
       "name": "(Manaödenmutant) Kaustische Pusteln",
-      "description": "<p>Wenn der Mutant Hieb- oder Stichschaden erleidet, nehmen an ihn angrenzende Kreaturen [[/r 1d6[acid]]]{1W6 Punkte Säureschaden} (@Check[type:reflex|dc:|basic:true]{einfacher Reflexwurf}). Der Schaden erhöht sich auf [[/r 2d6[acid]]]{2W6}, wenn der Mutant mindestens Stufe 8 ist, und auf [[/r 3d6[acid]]]{3W6}, wenn der Mutant mindestens Stufe 15 ist.</p>"
+      "description": "<p>Wenn der Mutant Hieb- oder Stichschaden erleidet, nehmen an ihn angrenzende Kreaturen @Damage[1d6[acid]]{1W6 Punkte Säureschaden} (@Check[type:reflex|dc:|basic:true]{einfacher Reflexwurf}). Der Schaden erhöht sich auf @Damage[2d6[acid]]{2W6}, wenn der Mutant mindestens Stufe 8 ist, und auf @Damage[3d6[acid]]{3W6}, wenn der Mutant mindestens Stufe 15 ist.</p>"
     },
     "(Mana Wastes Mutant) Chameleon Skin": {
       "name": "(Manaödenmutant) Chamäleonhaut",
@@ -613,7 +613,7 @@
     },
     "(Melfesh Monster) Flame Lash": {
       "name": "(Melfeschmonster) Flammenpeitsche",
-      "description": "<p>Das Melfeschmonster versprüht ein flammendes Gas in einem @Template[type:cone|distance:15]{15 Fuß/4,50 m-Kegel} oder in einer @Template[type:line|distance:30]{30 Fuß/9 m-Linie}. Kreaturen in dem Bereich nehmen [[/r 4d6[fire]]]{4W6 Punkte Feuerschaden} (@Check[type:reflex|dc:21|basic:true]{einfacher Reflexwurf}). Diese Fähigkeit ersetzt den Fernkampfangriff Feuerlanze.</p>"
+      "description": "<p>Das Melfeschmonster versprüht ein flammendes Gas in einem @Template[type:cone|distance:15]{15 Fuß/4,50 m-Kegel} oder in einer @Template[type:line|distance:30]{30 Fuß/9 m-Linie}. Kreaturen in dem Bereich nehmen @Damage[4d6[fire]]{4W6 Punkte Feuerschaden} (@Check[type:reflex|dc:21|basic:true]{einfacher Reflexwurf}). Diese Fähigkeit ersetzt den Fernkampfangriff Feuerlanze.</p>"
     },
     "(Melfesh Monster) Mycelial Tomb": {
       "name": "(Melfeschmonster) Myzelgrab",
@@ -621,7 +621,7 @@
     },
     "(Melfesh Monster) Smolderstench": {
       "name": "(Melfeschmonster) Schwelbrandwolke",
-      "description": "<p>@Template[type:emanation|distance:60]{60 Fuß/18 m} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}.</p>\n<hr>\n<p>Das Melfeschmonster stößt einen überwältigenden Gestank von verbrannter und verrotteter Materie aus. Kreaturen, welche den Wirkungsbereich der Aura betreten oder ihren Zug darin beginnen, atmen die Sporen des Melfeschmonsters ein und müssen einen @Check[type:fortitude|dc:21|traits:damaging-effect]{Zähigkeitswurf} ablegen. Bei einem Fehlschlag erleidet die Kreatur [[/r 2d4[poison]]]{2W4 Giftschaden} sowie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1}; bei einem Kritischen Fehlschlag erleidet die Kreatur den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 2} und zusätzlich [[/r 4[persistent,poison]]]{4 Punkte Anhaltenden Giftschaden}. Kreaturen mit einem erfolgreichen Rettungswurf sind vorübergehend für 1 Minute gegen den Effekt der Aura immun. Diese Fähigkeit ersetzt die Fähigkeit Schreckenssporen.</p>"
+      "description": "<p>@Template[type:emanation|distance:60]{60 Fuß/18 m} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}.</p>\n<hr>\n<p>Das Melfeschmonster stößt einen überwältigenden Gestank von verbrannter und verrotteter Materie aus. Kreaturen, welche den Wirkungsbereich der Aura betreten oder ihren Zug darin beginnen, atmen die Sporen des Melfeschmonsters ein und müssen einen @Check[type:fortitude|dc:21|traits:damaging-effect]{Zähigkeitswurf} ablegen. Bei einem Fehlschlag erleidet die Kreatur @Damage[2d4[poison]]{2W4 Giftschaden} sowie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1}; bei einem Kritischen Fehlschlag erleidet die Kreatur den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 2} und zusätzlich @Damage[4[persistent,poison]]{4 Punkte Anhaltenden Giftschaden}. Kreaturen mit einem erfolgreichen Rettungswurf sind vorübergehend für 1 Minute gegen den Effekt der Aura immun. Diese Fähigkeit ersetzt die Fähigkeit Schreckenssporen.</p>"
     },
     "(Melfesh Monster) Swell": {
       "name": "(Melfeschmonster) Anschwellen",
@@ -633,7 +633,7 @@
     },
     "(Melfesh Monster) Vent Flames": {
       "name": "(Melfeschmonster) Stichflammen",
-      "description": "<p><strong>Auslöser</strong> Das Melfeschmonster beendet seinen Zug oder erleidet Schaden neben einer angrenzenden Kreatur</p>\n<hr>\n<p><strong>Effekt</strong> Die Hohlräume im Körper des Melfeschmonsters verströmen ein brennendes Gas. Die auslösende Kreatur muss einen @Check[type:reflex|dc:21|traits:damaging-effect]{Reflexwurf} ablegen; bei einem Fehlschlag erleidet sie [[/r 2d6[fire]]]{2W6 Feuerschaden}, den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1} und atmet die Sporen des Melfeschmonsters ein (bei einem Kritischen Fehlschlag erleidet die Kreatur den doppelten Schaden sowie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 2}). Diese Fähigkeit ersetzt die Fähigkeit Reaktives Wachstum.</p>"
+      "description": "<p><strong>Auslöser</strong> Das Melfeschmonster beendet seinen Zug oder erleidet Schaden neben einer angrenzenden Kreatur</p>\n<hr>\n<p><strong>Effekt</strong> Die Hohlräume im Körper des Melfeschmonsters verströmen ein brennendes Gas. Die auslösende Kreatur muss einen @Check[type:reflex|dc:21|traits:damaging-effect]{Reflexwurf} ablegen; bei einem Fehlschlag erleidet sie @Damage[2d6[fire]]{2W6 Feuerschaden}, den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1} und atmet die Sporen des Melfeschmonsters ein (bei einem Kritischen Fehlschlag erleidet die Kreatur den doppelten Schaden sowie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 2}). Diese Fähigkeit ersetzt die Fähigkeit Reaktives Wachstum.</p>"
     },
     "(Nymph Queen) Change Shape": {
       "name": "(Nymphenkönigin) Gestalt wechseln",
@@ -737,7 +737,7 @@
     },
     "(Siabrae) Stone Antlers": {
       "name": "(Siabur) Steinernes Geweih",
-      "description": "<p>Dem Siabur wächst ein Paar steinerner Geweihe oder Hörner aus seinem Kopf, die ihm einen Geweihangriff verleihen, der für alle 3 Stufen [[/r (1d6+2)[bludgeoning]]]{1W6+2 Punkte Hiebschaden} verursacht und @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.WUXY9F8SLVQSC2b8]{steinerne Splitter} hinterlässt. Wenn der Siabur es wünscht, kann er dieses Geweih auch während seiner Verwandlung behalten und die normalen Spielwerte des Angriffs mit seinem Steinernen Geweih übernehmen.</p>"
+      "description": "<p>Dem Siabur wächst ein Paar steinerner Geweihe oder Hörner aus seinem Kopf, die ihm einen Geweihangriff verleihen, der für alle 3 Stufen @Damage[(1d6+2)[bludgeoning]]{1W6+2 Punkte Hiebschaden} verursacht und @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.WUXY9F8SLVQSC2b8]{steinerne Splitter} hinterlässt. Wenn der Siabur es wünscht, kann er dieses Geweih auch während seiner Verwandlung behalten und die normalen Spielwerte des Angriffs mit seinem Steinernen Geweih übernehmen.</p>"
     },
     "(Siabrae) Stony Shards": {
       "name": "(Siabur) Steinscherben",
@@ -761,11 +761,11 @@
     },
     "(Skeleton) Bone Powder": {
       "name": "(Skelett) Knochenpulver",
-      "description": "<p>Erleidet das Skelett körperlichen Schaden durch einen Kritischen Treffer, wird einer seiner Knochen pulverisiert.</p>\n<p>Alle atmenden Kreaturen in einer @Template[type:emanation|distance:5]{5 Fuß/1,50 m-Ausstrahlung} erleiden [[/r 1d6[persistent,poison]]]{1W6 Punkte anhaltenden Giftschaden} plus zusätzliche 1W6 Punkte pro 6 Kreaturenstufen des Skeletts.</p>"
+      "description": "<p>Erleidet das Skelett körperlichen Schaden durch einen Kritischen Treffer, wird einer seiner Knochen pulverisiert.</p>\n<p>Alle atmenden Kreaturen in einer @Template[type:emanation|distance:5]{5 Fuß/1,50 m-Ausstrahlung} erleiden @Damage[1d6[persistent,poison]]{1W6 Punkte anhaltenden Giftschaden} plus zusätzliche 1W6 Punkte pro 6 Kreaturenstufen des Skeletts.</p>"
     },
     "(Skeleton) Bone Storm": {
       "name": "(Skelett) Knochenwirbel",
-      "description": "<p><strong>Häufigkeit</strong> Einmal pro Tag<p>\n<hr>\n<p><strong>Effekt</strong> Das Skelett verwandelt sich in einen Wirbelsturm aus Knochen, der dieselbe Angriffsfläche einnimmt, aber doppelt so groß ist. Anschließend nutzt das Skelett die Aktion Laufen, um sich bis zur doppelten Bewegungsrate fortzubewegen. Es kann sich durch Felder bewegen, die von anderen Kreaturen besetzt sind, und diese Bewegung löst keine Reaktionen aus. Kreaturen, durch die sich der Knochenwirbel bewegt, erleiden [[/r 1d6[slashing]]]{1W6 Punkte Hiebschaden} für je 2 Stufen des Skeletts, mit einem @Check[type:reflex|dc:|basic:true]{Einfachen Reflexwurf} gegen den Schweren SG der Stufe der Kreatur. Ein Skelett der Stufe 1 oder niedriger bewegt sich nur, es fügt aber keinen Schaden zu. Eine Kreatur legt diesen Rettungswurf nur einmal ab, auch wenn der Knochenwirbel sich mehrmals durch sein Feld bewegt. Am Ende der Bewegung formiert sich das Skelett wieder als solches.</p>"
+      "description": "<p><strong>Häufigkeit</strong> Einmal pro Tag<p>\n<hr>\n<p><strong>Effekt</strong> Das Skelett verwandelt sich in einen Wirbelsturm aus Knochen, der dieselbe Angriffsfläche einnimmt, aber doppelt so groß ist. Anschließend nutzt das Skelett die Aktion Laufen, um sich bis zur doppelten Bewegungsrate fortzubewegen. Es kann sich durch Felder bewegen, die von anderen Kreaturen besetzt sind, und diese Bewegung löst keine Reaktionen aus. Kreaturen, durch die sich der Knochenwirbel bewegt, erleiden @Damage[1d6[slashing]]{1W6 Punkte Hiebschaden} für je 2 Stufen des Skeletts, mit einem @Check[type:reflex|dc:|basic:true]{Einfachen Reflexwurf} gegen den Schweren SG der Stufe der Kreatur. Ein Skelett der Stufe 1 oder niedriger bewegt sich nur, es fügt aber keinen Schaden zu. Eine Kreatur legt diesen Rettungswurf nur einmal ab, auch wenn der Knochenwirbel sich mehrmals durch sein Feld bewegt. Am Ende der Bewegung formiert sich das Skelett wieder als solches.</p>"
     },
     "(Skeleton) Collapse": {
       "name": "(Skelett) Zusammenfallen",
@@ -777,7 +777,7 @@
     },
     "(Skeleton) Explosive Death": {
       "name": "(Skelett) Knochenexplosion",
-      "description": "<p>Wird das Skelett zerstört, zerbersten seine Knochen und explodieren, da die es zusammenhaltende nekromantische Energie freigesetzt wird.</p>\n<p>Angrenzende Kreaturen erleiden [[/r 1d6[slashing]]]{1W6 Punkte Hiebschaden} pro 2 Stufen (Minimum 1W6); (@Check[type:reflex|dc:|basic:true]{einfacher Reflexwurf}).</p>"
+      "description": "<p>Wird das Skelett zerstört, zerbersten seine Knochen und explodieren, da die es zusammenhaltende nekromantische Energie freigesetzt wird.</p>\n<p>Angrenzende Kreaturen erleiden @Damage[1d6[slashing]]{1W6 Punkte Hiebschaden} pro 2 Stufen (Minimum 1W6); (@Check[type:reflex|dc:|basic:true]{einfacher Reflexwurf}).</p>"
     },
     "(Skeleton) Frozen": {
       "name": "(Skelett) Gefroren",
@@ -834,11 +834,11 @@
     },
     "(Sporeborn) Spore Explosion": {
       "name": "(Sporeborn) Spore Explosion",
-      "description": "<p>When the sporeborn is destroyed, its body explodes, releasing toxic fumes and spores. Adjacent creatures take [[/r 1d6[poison]]] damage per 2 levels (minimum 1d6) with a @Check[type:fortitude|dc:|basic:true] save.</p>"
+      "description": "<p>When the sporeborn is destroyed, its body explodes, releasing toxic fumes and spores. Adjacent creatures take @Damage[1d6[poison]] damage per 2 levels (minimum 1d6) with a @Check[type:fortitude|dc:|basic:true] save.</p>"
     },
     "(Sporeborn) Sporeborn Infestation": {
       "name": "(Sporeborn) Sporeborn Infestation",
-      "description": "<p>An infected creature can't heal damage it takes from sporeborn infestation until it has been cured of the disease.</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:]</p>\n<p><strong>Stage 1</strong> carrier with no ill effect (1 day)</p>\n<p><strong>Stage 2</strong> [[/r 1d6[poison]]] damage (1 day)</p>\n<p><strong>Stage 3</strong> [[/r 2d6[poison]]] damage (1 day)</p>\n<p><strong>Stage 4</strong> [[/r 3d6[poison]]] damage (1 day)</p>\n<p><strong>Stage 5</strong> dead, rising as an uncontrolled sporeborn immediately</p>"
+      "description": "<p>An infected creature can't heal damage it takes from sporeborn infestation until it has been cured of the disease.</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:]</p>\n<p><strong>Stage 1</strong> carrier with no ill effect (1 day)</p>\n<p><strong>Stage 2</strong> @Damage[1d6[poison]] damage (1 day)</p>\n<p><strong>Stage 3</strong> @Damage[2d6[poison]] damage (1 day)</p>\n<p><strong>Stage 4</strong> @Damage[3d6[poison]] damage (1 day)</p>\n<p><strong>Stage 5</strong> dead, rising as an uncontrolled sporeborn immediately</p>"
     },
     "(Spring-Heeled Jack) Change Shape": {
       "name": "(Springender Hans) Gestalt wechseln",
@@ -867,11 +867,11 @@
     },
     "(Ulgrem-Axaan) Crushing Weight": {
       "name": "(Ulgrem-Axaan) Erdrückendes Gewicht",
-      "description": "<p><strong>Anforderungen</strong> Ulgrem-Axaan hat eine Kreatur mit seinem Schwanz @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen}</p>\n<hr>\n<p><strong>Effekt</strong> Ulgrem-Axaans Schwanz verschließt sich eng um den Körper der Gegriffenen Kreatur und verursacht dabei [[/r (2d4+8)[bludgeoning]]]{2W4+8 Wuchtschaden} (@Check[type:fortitude|dc:25|basic:true]{einfacher Zähigkeitswurf}).</p>"
+      "description": "<p><strong>Anforderungen</strong> Ulgrem-Axaan hat eine Kreatur mit seinem Schwanz @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen}</p>\n<hr>\n<p><strong>Effekt</strong> Ulgrem-Axaans Schwanz verschließt sich eng um den Körper der Gegriffenen Kreatur und verursacht dabei @Damage[(2d4+8)[bludgeoning]]{2W4+8 Wuchtschaden} (@Check[type:fortitude|dc:25|basic:true]{einfacher Zähigkeitswurf}).</p>"
     },
     "(Ulgrem-Axaan) Fallen Victim": {
       "name": "(Ulgrem-Axaan) Liegenden packen",
-      "description": "<p><strong>Anforderungen</strong> Eine Kreatur innerhalb Ulgrem-Axaans Angriffsradius hat den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend} und die Bestie hat gerade keine andere Kreatur @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen}</p>\n<hr>\n<p><strong>Effekt</strong> Ulgrem-Axaan führt einen Bissangriff gegen die Kreatur aus. Bei einem Erfolg @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Ergreift} Ulgrem-Axaan die Kreatur augenblicklich und sie erleidet zusätzlich [[/r 2d10[bludgeoning]]]{2W10 Wuchtschaden}.</p>"
+      "description": "<p><strong>Anforderungen</strong> Eine Kreatur innerhalb Ulgrem-Axaans Angriffsradius hat den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend} und die Bestie hat gerade keine andere Kreatur @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen}</p>\n<hr>\n<p><strong>Effekt</strong> Ulgrem-Axaan führt einen Bissangriff gegen die Kreatur aus. Bei einem Erfolg @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Ergreift} Ulgrem-Axaan die Kreatur augenblicklich und sie erleidet zusätzlich @Damage[2d10[bludgeoning]]{2W10 Wuchtschaden}.</p>"
     },
     "(Ulgrem-Axaan) Ichor Coating": {
       "name": "(Ulgrem-Axaan) Eitermantel",
@@ -959,7 +959,7 @@
     },
     "(Vampire, Nosferatu) Change Shape": {
       "name": "(Vampir, Nosferatu) Gestalt wechseln",
-      "description": "<p>Der Nosferatu verwandelt sich in einen Schwarm fahler, grauer Ratten. Er erhält eine Bewegungsrate von 30 Fuß/9 m sowie eine Bewegungsrate für Klettern von 10 Fuß/3 m und nimmt die Größenkategorie Groß an. Jede Kreatur in der Angriffsfläche des Schwarms nimmt [[/r 2d10[piercing]]]{2W10 Stichschaden} und muss einen @Check[type:reflex|dc:|basic:true]{einfachen Reflexwurf} gegen einen hohen SG entsprechend der Stufe der Kreaturen ablegen. Eine Kreatur, die ihren Rettungswurf nicht schafft, wird der Plage der Alten ausgesetzt.</p>\n<hr>\n<p>@Localize[PF2E.NPC.Abilities.Glossary.ChangeShape]</p>"
+      "description": "<p>Der Nosferatu verwandelt sich in einen Schwarm fahler, grauer Ratten. Er erhält eine Bewegungsrate von 30 Fuß/9 m sowie eine Bewegungsrate für Klettern von 10 Fuß/3 m und nimmt die Größenkategorie Groß an. Jede Kreatur in der Angriffsfläche des Schwarms nimmt @Damage[2d10[piercing]]{2W10 Stichschaden} und muss einen @Check[type:reflex|dc:|basic:true]{einfachen Reflexwurf} gegen einen hohen SG entsprechend der Stufe der Kreaturen ablegen. Eine Kreatur, die ihren Rettungswurf nicht schafft, wird der Plage der Alten ausgesetzt.</p>\n<hr>\n<p>@Localize[PF2E.NPC.Abilities.Glossary.ChangeShape]</p>"
     },
     "(Vampire, Nosferatu) Command Thrall": {
       "name": "(Vampir, Nosferatu) Knecht befehligen",
@@ -1003,7 +1003,7 @@
     },
     "(Vampire, Strigoi) Domain of Dusk": {
       "name": "(Vampir, Strigoiahn) Domäne der Dämmerung",
-      "description": "<p>Mit einer Handbewegung beschwört der Strigoi aus den Schatten der Umgebung eine abscheuliche Verderbnis herauf, die Spulen der Dunkelheit und schattenhafte Fledermäuse, Ratten und Wölfe in einem @Template[type:emanation|distance:30]{Umkreis von 30 Fuß/9 Meter} auf lebende Ziele losgehen lässt. Lebende Kreaturen in diesem Bereich erleiden [[/r 1d6[negative]]]{1W6 Negativen Energieschaden} +1W6 pro 2 Stufen, die der Strigoi besitzt (@Check[type:fortitude|dc:|basic:true]{einfacher Zähigkeitswurf} gegen den SG der Stufe des Strigoi). Eine Kreatur, der dieser Rettungswurf misslingt, erhält außerdem 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet} durch die Dunkelheit (bzw. 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind} und dann 1 Runde lang den Zustand Geblendet). Der Strigoi-Ahne kann die Domäne der Dämmerung anschließend 1 Minute lang nicht einsetzen.</p>"
+      "description": "<p>Mit einer Handbewegung beschwört der Strigoi aus den Schatten der Umgebung eine abscheuliche Verderbnis herauf, die Spulen der Dunkelheit und schattenhafte Fledermäuse, Ratten und Wölfe in einem @Template[type:emanation|distance:30]{Umkreis von 30 Fuß/9 Meter} auf lebende Ziele losgehen lässt. Lebende Kreaturen in diesem Bereich erleiden @Damage[1d6[negative]]{1W6 Negativen Energieschaden} +1W6 pro 2 Stufen, die der Strigoi besitzt (@Check[type:fortitude|dc:|basic:true]{einfacher Zähigkeitswurf} gegen den SG der Stufe des Strigoi). Eine Kreatur, der dieser Rettungswurf misslingt, erhält außerdem 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet} durch die Dunkelheit (bzw. 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind} und dann 1 Runde lang den Zustand Geblendet). Der Strigoi-Ahne kann die Domäne der Dämmerung anschließend 1 Minute lang nicht einsetzen.</p>"
     },
     "(Vampire, Strigoi) Drink Essence": {
       "name": "(Vampir, Strigoi) Lebenskraft trinken",
@@ -1079,7 +1079,7 @@
     },
     "(Vampire, Vrykolakas Master) Bubonic Plague": {
       "name": "(Vampir, Vrykolakasmeister) Beulenpest",
-      "description": "<p><strong>Rettungswurf</strong> @Check[type:fortitude|dc:|name:Beulenpest|traits:disease] (nutze einen hohen SG entsprechend der Stufe des Vrykolakas)</p>\n<p><strong>Inkubationszeit</strong> 1 Tag;</p>\n<hr />\n<p><strong>Phase 1</strong> @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Erschöpft};</p>\n<p><strong>Phase 2</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 2} und Erschöpft (1 Tag);</p>\n<p><strong>Phase 3</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 3}, Erschöpft und [[/r 1d6[bleed]]]{1W6 Blutungsschaden} alle [[/br 1d20 #Minuten]]{1W20 Minuten} (1 Tag)</p>"
+      "description": "<p><strong>Rettungswurf</strong> @Check[type:fortitude|dc:|name:Beulenpest|traits:disease] (nutze einen hohen SG entsprechend der Stufe des Vrykolakas)</p>\n<p><strong>Inkubationszeit</strong> 1 Tag;</p>\n<hr />\n<p><strong>Phase 1</strong> @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Erschöpft};</p>\n<p><strong>Phase 2</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 2} und Erschöpft (1 Tag);</p>\n<p><strong>Phase 3</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 3}, Erschöpft und @Damage[1d6[bleed]]{1W6 Blutungsschaden} alle [[/br 1d20 #Minuten]]{1W20 Minuten} (1 Tag)</p>"
     },
     "(Vampire, Vrykolakas Master) Change Shape": {
       "name": "(Vampir, Vrykolakasmeister) Gestalt wechseln",
@@ -1132,7 +1132,7 @@
     },
     "(Visitant) Vengeful Presence": {
       "name": "(Visitant) Vengeful Presence",
-      "description": "<p>@Template[type:emanation|distance:20]{20 feet} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}</p>\n<hr />\n<p>A creature that starts its turn within the visitant's aura must succeed at a @Check[type:will|dc:|name:Vengeful Presence] save or be overcome with a thirst for vengeance.</p>\n<p>For [[/r 1d4 #rounds]]{1d4 rounds} (1 minute on a critical failure), if the affected creature was attacked within the last round (whether or not the attack hit), the creature must use at least 1 action per round to Strike or use a hostile action toward its last attacker as long as the attacker is still alive. Failure to do so deals the affected creature [[/r 1d6[mental]]] damage, plus 1d6 for every 5 levels the visitant has.</p>"
+      "description": "<p>@Template[type:emanation|distance:20]{20 feet} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}</p>\n<hr />\n<p>A creature that starts its turn within the visitant's aura must succeed at a @Check[type:will|dc:|name:Vengeful Presence] save or be overcome with a thirst for vengeance.</p>\n<p>For [[/r 1d4 #rounds]]{1d4 rounds} (1 minute on a critical failure), if the affected creature was attacked within the last round (whether or not the attack hit), the creature must use at least 1 action per round to Strike or use a hostile action toward its last attacker as long as the attacker is still alive. Failure to do so deals the affected creature @Damage[1d6[mental]] damage, plus 1d6 for every 5 levels the visitant has.</p>"
     },
     "(Visitant) Visitant Spells": {
       "name": "(Visitant) Visitant Spells",
@@ -1164,7 +1164,7 @@
     },
     "(Worm That Walks) Squirming Embrace": {
       "name": "(Wandelnder-Wurm) Zuckende Umarmung",
-      "description": "<p>Der Wandelnde Wurm nutzt eine Aktion zum Laufen und beendet seine Bewegung auf demselben Feld wie eine Kreatur, der er [[/r 1d8[piercing]]]{1W8 Stichschaden} plus zusätzlich 1W8 pro 3 Stufen des Wandelnden Wurms zufügt. Die Zielkreatur kann einen @Check[type:reflex|dc:|basic:true]{einfachen Reflexwurf} gegen einen SG entsprechend des Zauber-SGs des Wandelnden Wurms -2 ablegen.</p>"
+      "description": "<p>Der Wandelnde Wurm nutzt eine Aktion zum Laufen und beendet seine Bewegung auf demselben Feld wie eine Kreatur, der er @Damage[1d8[piercing]]{1W8 Stichschaden} plus zusätzlich 1W8 pro 3 Stufen des Wandelnden Wurms zufügt. Die Zielkreatur kann einen @Check[type:reflex|dc:|basic:true]{einfachen Reflexwurf} gegen einen SG entsprechend des Zauber-SGs des Wandelnden Wurms -2 ablegen.</p>"
     },
     "(Worm That Walks) Swarm Shape": {
       "name": "(Wandelnder-Wurm) Schwarmgestalt",
@@ -1192,7 +1192,7 @@
     },
     "(Zombie) Plague-Ridden": {
       "name": "(Zombie) Verseucht",
-      "description": "<p>Der Zombie ist Überträger einer Krankheit, die andere ebenfalls zu Untoten macht.</p>\n<p>Die Krankheit verläuft wie die @UUID[Compendium.pf2e.pathfinder-bestiary.Actor.KxN9aGFGPxl6oLGF]{Zombiefäule}, mit Ausnahme der Phase 5. Das Opfer erhebt sich vielmehr als ein weiteres Exemplar dieses Zombies und nicht als Verseuchter Zombie.</p>\n<hr>\n<p><strong>Zombiefäule</strong></p>\n<p>Eine infizierte Kreatur kann den durch Zombiefäule erlittenen Schaden nicht regenerieren, bevor sie nicht von der Krankheit geheilt wurde.</p>\n<p><strong>RW</strong> @Check[type:fortitude|dc:]{Zähigkeitswurf}</p>\n<hr>\n<p><strong>Phase 1</strong> Überträger ohne Nebenwirkungen (1 Tag);</p>\n<p><strong>Phase 2</strong> [[/r 1d6[negative]]]{1W6 Negativer Energieschaden} (1 Tag)</p>\n<p><strong>Phase 3</strong> [[/r 1d6[negative]]]{1W6 Negativer Energieschaden} (1 Tag)</p>\n<p><strong>Phase 4</strong> [[/r 1d6[negative]]]{1W6 Negativer Energieschaden} (1 Tag)</p>\n<p><strong>Phase 5</strong> Tot, erhebt sich augenblicklich als Verseuchter Zombie wieder</p>"
+      "description": "<p>Der Zombie ist Überträger einer Krankheit, die andere ebenfalls zu Untoten macht.</p>\n<p>Die Krankheit verläuft wie die @UUID[Compendium.pf2e.pathfinder-bestiary.Actor.KxN9aGFGPxl6oLGF]{Zombiefäule}, mit Ausnahme der Phase 5. Das Opfer erhebt sich vielmehr als ein weiteres Exemplar dieses Zombies und nicht als Verseuchter Zombie.</p>\n<hr>\n<p><strong>Zombiefäule</strong></p>\n<p>Eine infizierte Kreatur kann den durch Zombiefäule erlittenen Schaden nicht regenerieren, bevor sie nicht von der Krankheit geheilt wurde.</p>\n<p><strong>RW</strong> @Check[type:fortitude|dc:]{Zähigkeitswurf}</p>\n<hr>\n<p><strong>Phase 1</strong> Überträger ohne Nebenwirkungen (1 Tag);</p>\n<p><strong>Phase 2</strong> @Damage[1d6[negative]]{1W6 Negativer Energieschaden} (1 Tag)</p>\n<p><strong>Phase 3</strong> @Damage[1d6[negative]]{1W6 Negativer Energieschaden} (1 Tag)</p>\n<p><strong>Phase 4</strong> @Damage[1d6[negative]]{1W6 Negativer Energieschaden} (1 Tag)</p>\n<p><strong>Phase 5</strong> Tot, erhebt sich augenblicklich als Verseuchter Zombie wieder</p>"
     },
     "(Zombie) Putrid Stench": {
       "name": "(Zombie) Fauliger Gestank",
@@ -1204,7 +1204,7 @@
     },
     "(Zombie) Spitting Zombie": {
       "name": "(Zombie) Spuckender Zombie",
-      "description": "<p>Der Zombie spuckt Säure als Fernkampfangriff mit einer Reichweite von 30 Fuß/9 m. Er verwendet dafür den höchsten Angriffsbonus unter den Angriffen des Zombies und verursacht [[/r 1d12[acid]]]{1W12 Punkte Säureschaden} pro 3 Stufen des Zombies (oder [[/r 1d6[acid]]]{1W6 Punkte Säureschaden} unter Stufe 3). Bei einem Kritischen Treffer erleidet das Ziel außerdem [[/r 1d4[persistent,acid]]]{1W4 Punkte anhaltenden Säureschaden} pro 3 Stufen des Zombies. Nach dem Einsatz muss der Zombie 1 Aktion aufwenden, um genug Säure für einen weiteren Einsatz dieser Fähigkeit zu produzieren.</p>"
+      "description": "<p>Der Zombie spuckt Säure als Fernkampfangriff mit einer Reichweite von 30 Fuß/9 m. Er verwendet dafür den höchsten Angriffsbonus unter den Angriffen des Zombies und verursacht @Damage[1d12[acid]]{1W12 Punkte Säureschaden} pro 3 Stufen des Zombies (oder @Damage[1d6[acid]]{1W6 Punkte Säureschaden} unter Stufe 3). Bei einem Kritischen Treffer erleidet das Ziel außerdem @Damage[1d4[persistent,acid]]{1W4 Punkte anhaltenden Säureschaden} pro 3 Stufen des Zombies. Nach dem Einsatz muss der Zombie 1 Aktion aufwenden, um genug Säure für einen weiteren Einsatz dieser Fähigkeit zu produzieren.</p>"
     },
     "(Zombie) Tearing Grapple": {
       "name": "(Zombie) Zerrendes Ergreifen",
@@ -1220,11 +1220,11 @@
     },
     "(Zombie, Shock) Arcing Strikes": {
       "name": "(Zombie, Schock) Lichtbogenangriff",
-      "description": "<p>Sollte ein Schockzombie eine Kreatur im Nahkampfangriff treffen, so springt ein Lichtbogen zu einer zweiten Kreatur über und verursacht [[/r 1d12[electricity]]]{1W12 Elektrizitätsschaden}. Dieses zweite Ziel muss sich innerhalb von 10 Fuß/3 m zum ursprünglichen Ziel des Schockzombies befinden und die nächstgelegene Kreatur zum ursprünglichen Ziel sein (falls mehrere Ziele gleich weit entfernt sind, entscheidet der Schockzombie, welches betroffen ist).</p>"
+      "description": "<p>Sollte ein Schockzombie eine Kreatur im Nahkampfangriff treffen, so springt ein Lichtbogen zu einer zweiten Kreatur über und verursacht @Damage[1d12[electricity]]{1W12 Elektrizitätsschaden}. Dieses zweite Ziel muss sich innerhalb von 10 Fuß/3 m zum ursprünglichen Ziel des Schockzombies befinden und die nächstgelegene Kreatur zum ursprünglichen Ziel sein (falls mehrere Ziele gleich weit entfernt sind, entscheidet der Schockzombie, welches betroffen ist).</p>"
     },
     "(Zombie, Shock) Breath Weapon": {
       "name": "(Zombie, Schock) Odemwaffe",
-      "description": "<p>Der Schockzombie spuckt einen Blitz aus und verursacht in einer @Template[type:line|distance:40]{40 Fuß/12 m-Linie} [[/r 4d12[electricity]]]{4W12 Elektrizitätsschaden} (@Check[type:reflex|dc:24|basic:true]{einfacher Reflexwurf}). Er kann die Odemwaffe danach 1 Minute lang nicht anwenden.</p>"
+      "description": "<p>Der Schockzombie spuckt einen Blitz aus und verursacht in einer @Template[type:line|distance:40]{40 Fuß/12 m-Linie} @Damage[4d12[electricity]]{4W12 Elektrizitätsschaden} (@Check[type:reflex|dc:24|basic:true]{einfacher Reflexwurf}). Er kann die Odemwaffe danach 1 Minute lang nicht anwenden.</p>"
     },
     "(Zombie, Shock) Electromechanical Phasing": {
       "name": "(Zombie, Schock) Elektromechanische Phasenverschiebung",
