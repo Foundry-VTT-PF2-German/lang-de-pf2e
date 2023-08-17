@@ -18,7 +18,7 @@
           "description": "<p>The abdomen of a beetle carapace can be fitted with a simple hinge, allowing it to open and be used as storage. The abdomen can hold up to one Medium or smaller creature, a Large or smaller swarm, or a similar amount of cargo. The beetle or a creature stored in it can Interact to open the hatch. If the beetle carapace takes a critical hit by a bludgeoning weapon, roll a @Check[type:flat|dc:10]. If the check fails, the cache is breached, and its contents spill out of the beetle. The hatch can also be Forced Open (@Check[type:athletics|dc:22]).</p>"
         },
         "action->Constrict": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.g26YiEIfSHCpLocV]\n<p>[[/r (2d8+2)[piercing]]], @Check[type:fortitude|dc:24|basic:true]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.g26YiEIfSHCpLocV]\n<p>@Damage[(2d8+2)[piercing]], @Check[type:fortitude|dc:24|basic:true]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
         }
       }
     },
@@ -43,6 +43,9 @@
         },
         "spell->Command (Animals Only)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.aIHY2DArKFweIrpf]\nCommand (Animals Only)"
+        },
+        "spell->Tanglefoot": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.uZK2BYzPnxUBnDjr]\nTanglefoot"
         },
         "strike-melee->Fangs": {
           "name": "Fangs"
@@ -80,7 +83,7 @@
       "items": {
         "action->Weep Blood": {
           "name": "Weep Blood",
-          "description": "<p><strong>Trigger</strong> A creature approaches within 15 feet</p>\n<hr />\n<p><strong>Effect</strong> Blood seeps from the eyes of all creatures within @Template[type:emanation|distance:30]{30 feet}, dealing persistent bleed damage. Each creature in the area must attempt a @Check[type:fortitude|dc:33] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes [[/r (2d8+3)[bleed]]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round.</p>\n<p><strong>Failure</strong> The creature takes [[/r (4d8+6)[bleed]]] damage and is dazzled for as long as the persistent damage lasts.</p>\n<p><strong>Critical Failure</strong> The creature takes [[/r (8d8+12)[bleed]]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for as long as the persistent damage lasts.</p>"
+          "description": "<p><strong>Trigger</strong> A creature approaches within 15 feet</p>\n<hr />\n<p><strong>Effect</strong> Blood seeps from the eyes of all creatures within @Template[type:emanation|distance:30]{30 feet}, dealing persistent bleed damage. Each creature in the area must attempt a @Check[type:fortitude|dc:33] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes @Damage[(2d8+3)[bleed]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round.</p>\n<p><strong>Failure</strong> The creature takes @Damage[(4d8+6)[bleed]] damage and is dazzled for as long as the persistent damage lasts.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[(8d8+12)[bleed]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for as long as the persistent damage lasts.</p>"
         }
       }
     },
@@ -131,7 +134,7 @@
         },
         "action->Roll the Bones": {
           "name": "Roll the Bones",
-          "description": "<p>The bone croupier designates an adjacent living creature to roll the bones. The chosen creature finds a pair of dice in its hand and is compelled by fate to roll them; it can and must roll the dice even if its hands are full or it is unable to act. The creature rolls [[/r 2d6 #Roll the Bones]], adding them together to determine the effect.</p>\n<ul>\n<li><strong>7 or 11</strong> (healing, positive) The target regains [[/r 15[healing]]]{15 HP}.</li>\n<li><strong>2, 3, or 12</strong> (negative) The target takes [[/r 30[negative]]] damage. If the target is @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{Dying}, this damage increases its dying condition by 2 instead of 1.</li>\n<li><strong>Any Other Roll</strong> (negative) The target takes [[/r 15[negative]]] damage.</li>\n</ul>"
+          "description": "<p>The bone croupier designates an adjacent living creature to roll the bones. The chosen creature finds a pair of dice in its hand and is compelled by fate to roll them; it can and must roll the dice even if its hands are full or it is unable to act. The creature rolls [[/r 2d6 #Roll the Bones]], adding them together to determine the effect.</p>\n<ul>\n<li><strong>7 or 11</strong> (healing, positive) The target regains [[/r 15[healing]]]{15 HP}.</li>\n<li><strong>2, 3, or 12</strong> (negative) The target takes @Damage[30[negative]] damage. If the target is @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{Dying}, this damage increases its dying condition by 2 instead of 1.</li>\n<li><strong>Any Other Roll</strong> (negative) The target takes @Damage[15[negative]] damage.</li>\n</ul>"
         },
         "lore->Games Lore": {
           "name": "Games Lore"
@@ -188,7 +191,7 @@
       "items": {
         "action->Feast": {
           "name": "Feast",
-          "description": "<p><strong>Trigger</strong> A living creature approaches within 10 feet</p>\n<hr />\n<p><strong>Effect</strong> The spirits bite and chew, dealing [[/r (6d12+35)[piercing]]] damage to each creature within @Template[type:emanation|distance:30]{30 feet}. Affected creatures must each attempt a @Check[type:reflex|dc:41] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage, [[/r 2d8[bleed]]], and is @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage, [[/r 4d8[bleed]]], and is @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2}.</p>"
+          "description": "<p><strong>Trigger</strong> A living creature approaches within 10 feet</p>\n<hr />\n<p><strong>Effect</strong> The spirits bite and chew, dealing @Damage[(6d12+35)[piercing]] damage to each creature within @Template[type:emanation|distance:30]{30 feet}. Affected creatures must each attempt a @Check[type:reflex|dc:41] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage, @Damage[2d8[bleed]], and is @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage, @Damage[4d8[bleed]], and is @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2}.</p>"
         }
       }
     },
@@ -213,7 +216,7 @@
         },
         "action->Pallid Plague": {
           "name": "Pallid Plague",
-          "description": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:26]</p>\n<hr />\n<p><strong>Stage 1</strong> carrier (3 days)</p>\n<p><strong>Stage 2</strong> [[/r 3d8[negative]]] damage and @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 1} (1 day)</p>\n<p><strong>Stage 3</strong> [[/r 3d8[negative]]] damage, doomed 1, and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (1 day)</p>\n<p><strong>Stage 4</strong> [[/r 4d8[negative]]] damage, @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 2}, and drained 1 (1 day)</p>\n<p><strong>Stage 5</strong> [[/r 4d8[negative]]] damage, @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 3}, and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} (1 day)</p>\n<p><strong>Stage 6</strong> dead. A creature that dies while infected with pallid plague rises as a @UUID[Compendium.pf2e.book-of-the-dead-bestiary.Actor.8o27tdIZFp0eTs5N]{Zombie Lord}.</p>"
+          "description": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:26]</p>\n<hr />\n<p><strong>Stage 1</strong> carrier (3 days)</p>\n<p><strong>Stage 2</strong> @Damage[3d8[negative]] damage and @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 1} (1 day)</p>\n<p><strong>Stage 3</strong> @Damage[3d8[negative]] damage, doomed 1, and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (1 day)</p>\n<p><strong>Stage 4</strong> @Damage[4d8[negative]] damage, @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 2}, and drained 1 (1 day)</p>\n<p><strong>Stage 5</strong> @Damage[4d8[negative]] damage, @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 3}, and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} (1 day)</p>\n<p><strong>Stage 6</strong> dead. A creature that dies while infected with pallid plague rises as a @UUID[Compendium.pf2e.book-of-the-dead-bestiary.Actor.8o27tdIZFp0eTs5N]{Zombie Lord}.</p>"
         },
         "action->Reap": {
           "name": "Reap",
@@ -234,7 +237,7 @@
       "items": {
         "action->Sudden Chill": {
           "name": "Sudden Chill",
-          "description": "<p><strong>Trigger</strong> A living creature enters the area</p>\n<hr />\n<p><strong>Effect</strong> The temperature drops as @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Invisible} spirits gather around the living. Living creatures within 15 feet take [[/r (2d4+5)[cold]]] damage (@Check[type:fortitude|dc:17|basic:true]). Creatures that critically fail their save are additionally @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}.</p>"
+          "description": "<p><strong>Trigger</strong> A living creature enters the area</p>\n<hr />\n<p><strong>Effect</strong> The temperature drops as @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Invisible} spirits gather around the living. Living creatures within 15 feet take @Damage[(2d4+5)[cold]] damage (@Check[type:fortitude|dc:17|basic:true]). Creatures that critically fail their save are additionally @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}.</p>"
         }
       }
     },
@@ -253,7 +256,7 @@
         },
         "action->Intense Heat": {
           "name": "Intense Heat",
-          "description": "<p>@Template[type:emanation|distance:5]{5 feet} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}</p>\n<p>[[/r 2d6[fire]]], @Check[type:reflex|dc:17|basic:true]</p>"
+          "description": "<p>@Template[type:emanation|distance:5]{5 feet} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}</p>\n<p>@Damage[2d6[fire]], @Check[type:reflex|dc:17|basic:true]</p>"
         },
         "action->Water Vulnerability": {
           "name": "Water Vulnerability",
@@ -261,7 +264,7 @@
         },
         "action->Blazing Howl": {
           "name": "Blazing Howl",
-          "description": "<p>The combusted screams in agony, causing creatures in a @Template[type:emanation|distance:15] to burst into flame, which deals [[/r 4d6[fire]]] damage to each creature in the area (@Check[type:will|dc:17|basic:true]). A creature that critically fails its save is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}; this frightened condition is an emotion, fear, and mental effect.</p>\n<p>The combusted can't use Blazing Howl for [[/r 1d4 #Recharge]]{1d4 rounds}.</p>"
+          "description": "<p>The combusted screams in agony, causing creatures in a @Template[type:emanation|distance:15] to burst into flame, which deals @Damage[4d6[fire]] damage to each creature in the area (@Check[type:will|dc:17|basic:true]). A creature that critically fails its save is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}; this frightened condition is an emotion, fear, and mental effect.</p>\n<p>The combusted can't use Blazing Howl for [[/r 1d4 #Recharge]]{1d4 rounds}.</p>"
         }
       }
     },
@@ -295,7 +298,7 @@
         },
         "action->Take Root": {
           "name": "Take Root",
-          "description": "<p><strong>Frequency</strong> once per round</p>\n<p><strong>Requirements</strong> The corpseroot has a creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}</p>\n<hr />\n<p><strong>Effect</strong> The corpseroot buries its roots into the creature, dealing [[/r (1d6+11)[piercing]]] damage and draining the target's life force (@Check[type:fortitude|dc:30|basic:true]). On a failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (or increases the value by 1 if already drained), and the corpseroot regains [[/r 10[healing]]]{10 HP}. If this would make a creature drained 5, the creature dies.</p>"
+          "description": "<p><strong>Frequency</strong> once per round</p>\n<p><strong>Requirements</strong> The corpseroot has a creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}</p>\n<hr />\n<p><strong>Effect</strong> The corpseroot buries its roots into the creature, dealing [[/r (1d6+11)[piercing]] damage and draining the target's life force (@Check[type:fortitude|dc:30|basic:true]). On a failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (or increases the value by 1 if already drained), and the corpseroot regains @Damage[10[healing]]]{10 HP}. If this would make a creature drained 5, the creature dies.</p>"
         }
       }
     },
@@ -321,7 +324,7 @@
           "description": "<p>A daqqanoenyent can Fly at half Speed while they have a Medium or smaller creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} in their talons, carrying that creature along with them.</p>"
         },
         "action->Swallow Whole": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.uJSseLa57HZYSMUu]\n<p>Medium, [[/r (2d8+9)[bludgeoning]]], Rupture 24</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.uJSseLa57HZYSMUu]\n<p>Medium, @Damage[(2d8+9)[bludgeoning]], Rupture 24</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
         },
         "lore->Acrobatics": {
           "skillVariants": {
@@ -427,7 +430,7 @@
         },
         "action->Chastise Heretic": {
           "name": "Chastise Heretic",
-          "description": "<p><strong>Trigger</strong> A creature within 60 feet who the deathless hierophant can see and who doesn't worship Urgathoa casts a divine spell</p>\n<hr />\n<p><strong>Effect</strong> The deathless hierophant attempts to counteract the triggering spell using their spell attack modifier and a counteract level of 4. If the spell is counteracted, the caster takes [[/r 1d10[persistent,negative]]] damage. If the deathless hierophant fails to counteract the spell, the caster is temporarily immune to further uses of this ability for 24 hours.</p>"
+          "description": "<p><strong>Trigger</strong> A creature within 60 feet who the deathless hierophant can see and who doesn't worship Urgathoa casts a divine spell</p>\n<hr />\n<p><strong>Effect</strong> The deathless hierophant attempts to counteract the triggering spell using their spell attack modifier and a counteract level of 4. If the spell is counteracted, the caster takes @Damage[1d10[persistent,negative]] damage. If the deathless hierophant fails to counteract the spell, the caster is temporarily immune to further uses of this ability for 24 hours.</p>"
         },
         "action->Field of Undeath": {
           "name": "Field of Undeath",
@@ -457,7 +460,7 @@
         },
         "action->Lesser Mummy Rot": {
           "name": "Lesser Mummy Rot",
-          "description": "<p>The damage from this disease can't be healed while a creature still has the disease. A creature killed by lesser mummy rot turns to dust and can't be resurrected except by a 7th-level <em>@UUID[Compendium.pf2e.spells-srd.Item.kqhPt9344UkcGVYO]{Resurrect}</em> ritual or similar magic</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:16]</p>\n<hr />\n<p><strong>Stage 1</strong> carrier with no ill effect (1 minute)</p>\n<p><strong>Stage 2</strong> [[/r 2d6[negative]]] damage and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} (1 day)</p>"
+          "description": "<p>The damage from this disease can't be healed while a creature still has the disease. A creature killed by lesser mummy rot turns to dust and can't be resurrected except by a 7th-level <em>@UUID[Compendium.pf2e.spells-srd.Item.kqhPt9344UkcGVYO]{Resurrect}</em> ritual or similar magic</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:16]</p>\n<hr />\n<p><strong>Stage 1</strong> carrier with no ill effect (1 minute)</p>\n<p><strong>Stage 2</strong> @Damage[2d6[negative]] damage and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} (1 day)</p>"
         }
       }
     },
@@ -470,7 +473,7 @@
       "items": {
         "action->Desperate Meal": {
           "name": "Desperate Meal",
-          "description": "<p><strong>Trigger</strong> A creature approaches within 10 feet</p>\n<hr />\n<p><strong>Effect</strong> Creatures within @Template[type:emanation|distance:30]{30 feet} are filled with painful hunger and must succeed at a @Check[type:fortitude|dc:32] save or feel their stomachs fill with rocks, dirt, and worse, dealing [[/r (6d10+20)[piercing]]] damage.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage and is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage, is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 4}, and takes a -10-foot status penalty to its Speeds for as long as it's sickened.</p>"
+          "description": "<p><strong>Trigger</strong> A creature approaches within 10 feet</p>\n<hr />\n<p><strong>Effect</strong> Creatures within @Template[type:emanation|distance:30]{30 feet} are filled with painful hunger and must succeed at a @Check[type:fortitude|dc:32] save or feel their stomachs fill with rocks, dirt, and worse, dealing @Damage[(6d10+20)[piercing]] damage.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage and is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage, is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 4}, and takes a -10-foot status penalty to its Speeds for as long as it's sickened.</p>"
         }
       }
     },
@@ -482,7 +485,7 @@
       "items": {
         "action->Whisper": {
           "name": "Whisper",
-          "description": "<p><strong>Trigger</strong> A creature enters the haunt's area</p>\n<hr />\n<p><strong>Effect</strong> The haunt deals [[/r (1d6+4)[mental]]] damage to creatures in the area (@Check[type:will|dc:19|basic:true]). On a failure, the creature is also @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>"
+          "description": "<p><strong>Trigger</strong> A creature enters the haunt's area</p>\n<hr />\n<p><strong>Effect</strong> The haunt deals @Damage[(1d6+4)[mental]] damage to creatures in the area (@Check[type:will|dc:19|basic:true]). On a failure, the creature is also @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>"
         }
       }
     },
@@ -518,7 +521,7 @@
         },
         "action->Flaying Flurry": {
           "name": "Flaying Flurry",
-          "description": "<p>The ecorche attempts two claw Strikes against the same target. If both hit and deal damage, it attempts to pull the skin off its target. It attempts an @Check[type:athletics] check against the enemy's Fortitude DC.</p>\n<hr />\n<p><strong>Critical Success</strong> The ecorche fully pulls the target's skin off its body. The creature takes [[/r 4d8[bleed]]], and it's @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 4} and @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 4}. The bleed damage can't end naturally, only ending if the creature regains at least 75 HP or regains at least 10 HP from regeneration.</p>\n<p><strong>Success</strong> The target takes [[/r 2d8[bleed]]] and is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>"
+          "description": "<p>The ecorche attempts two claw Strikes against the same target. If both hit and deal damage, it attempts to pull the skin off its target. It attempts an @Check[type:athletics] check against the enemy's Fortitude DC.</p>\n<hr />\n<p><strong>Critical Success</strong> The ecorche fully pulls the target's skin off its body. The creature takes @Damage[4d8[bleed]], and it's @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 4} and @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 4}. The bleed damage can't end naturally, only ending if the creature regains at least 75 HP or regains at least 10 HP from regeneration.</p>\n<p><strong>Success</strong> The target takes @Damage[2d8[bleed]] and is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>"
         },
         "action->Muscular Leap": {
           "name": "Muscular Leap",
@@ -530,7 +533,7 @@
         },
         "action->Wear Skin": {
           "name": "Wear Skin",
-          "description": "<p><strong>Requirements</strong> The ecorche is holding the stolen skin of a Small, Medium, or Large creature and isn't already wearing a skin</p>\n<hr />\n<p><strong>Effect</strong> The ecorche wears the skin as a disguise. It assumes the creature's size, appearance, and voice. Wearing Skin counts as creating a disguise for the @UUID[Compendium.pf2e.actionspf2e.Item.AJstokjdG6iDjVjE]{Impersonate} use of Deception. The ecorche's transformation automatically defeats Perception DCs to determine whether it's a member of the ancestry or creature type into which it transformed, and the ecorche gains a +4 status bonus to its Deception DC to prevent others from seeing through its disguise.</p>\n<p>Wearing a skin gives the ecorche a +2 item bonus to AC and 75 temporary Hit Points. If the ecorche takes more than [[/r 50[slashing]]] damage from a single source, the skin becomes broken. When broken, the skin no longer provides any of these benefits (any remaining temporary HP are immediately lost) but can still be used for Tear Skin.</p>",
+          "description": "<p><strong>Requirements</strong> The ecorche is holding the stolen skin of a Small, Medium, or Large creature and isn't already wearing a skin</p>\n<hr />\n<p><strong>Effect</strong> The ecorche wears the skin as a disguise. It assumes the creature's size, appearance, and voice. Wearing Skin counts as creating a disguise for the @UUID[Compendium.pf2e.actionspf2e.Item.AJstokjdG6iDjVjE]{Impersonate} use of Deception. The ecorche's transformation automatically defeats Perception DCs to determine whether it's a member of the ancestry or creature type into which it transformed, and the ecorche gains a +4 status bonus to its Deception DC to prevent others from seeing through its disguise.</p>\n<p>Wearing a skin gives the ecorche a +2 item bonus to AC and 75 temporary Hit Points. If the ecorche takes more than @Damage[50[slashing]] damage from a single source, the skin becomes broken. When broken, the skin no longer provides any of these benefits (any remaining temporary HP are immediately lost) but can still be used for Tear Skin.</p>",
           "rules": {
             "0": {
               "label": "Wearing Skin"
@@ -555,7 +558,7 @@
       "items": {
         "action->Squeeze": {
           "name": "Squeeze",
-          "description": "<p><strong>Trigger</strong> A creature moves over the haunt's area</p>\n<hr />\n<p><strong>Effect</strong> The hand forms out of ectoplasm and squeezes the triggering creature, dealing [[/r (3d8+14)[bludgeoning]]] damage (@Check[type:fortitude|dc:22|basic:true]). On a failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} (@UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} DC 22).</p>"
+          "description": "<p><strong>Trigger</strong> A creature moves over the haunt's area</p>\n<hr />\n<p><strong>Effect</strong> The hand forms out of ectoplasm and squeezes the triggering creature, dealing @Damage[(3d8+14)[bludgeoning]] damage (@Check[type:fortitude|dc:22|basic:true]). On a failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} (@UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} DC 22).</p>"
         }
       }
     },
@@ -564,7 +567,7 @@
       "description": "<p>The wall bulges out in the shape of a howling humanoid face as it twists and forms tendrils reaching for nearby creatures. This haunt is formed when a murder victim is entombed within a wall before or after their death.</p>",
       "disable": "<p>@Check[type:occultism|dc:17] (trained) to weaken the spirit, @Check[type:athletics|dc:18] (trained) to force the spirit's face back inside the wall, or @Check[type:diplomacy|dc:19] (trained) to talk down the spirit; two total successes across all skills are required to disable the haunt</p>",
       "reset": "<p>The haunt deactivates 1 minute after all creatures leave the area and resets immediately thereafter. If disabled, the haunt resets after 1 day. The haunt is permanently destroyed if the remains of the deceased are removed from the wall.</p>",
-      "routine": "<p>(3 actions) The spirit attempts to @UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]{Grapple} up to two creatures within 10 feet with a [[/r 1d20+14 #Athletics]]{+14 Athletics modifier}, then squeezes each creature it has @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}, dealing [[/r (1d10+4)[damage]]] damage. The haunt doesn't apply a multiple attack penalty to the second attempt to Grapple.</p>",
+      "routine": "<p>(3 actions) The spirit attempts to @UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]{Grapple} up to two creatures within 10 feet with a [[/r 1d20+14 #Athletics]]{+14 Athletics modifier}, then squeezes each creature it has @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}, dealing @Damage[(1d10+4)[damage]] damage. The haunt doesn't apply a multiple attack penalty to the second attempt to Grapple.</p>",
       "stealth": "<p>(trained)</p>",
       "items": {
         "action->Gasp": {
@@ -635,7 +638,7 @@
         },
         "action->Heretic's Smite": {
           "name": "Heretic's Smite",
-          "description": "<p>While wielding the favored weapon of its former deity (such as a staff for an ex-Nethys herexen), the herexen's Strikes deal an additional [[/r 2d6[evil]]] damage against creatures that can cast divine spells. This damages divine spellcasters who follow the herexen's former faith regardless of their alignment.</p>"
+          "description": "<p>While wielding the favored weapon of its former deity (such as a staff for an ex-Nethys herexen), the herexen's Strikes deal an additional @Damage[2d6[evil]] damage against creatures that can cast divine spells. This damages divine spellcasters who follow the herexen's former faith regardless of their alignment.</p>"
         },
         "action->Siphon Faith": {
           "name": "Siphon Faith",
@@ -684,11 +687,11 @@
         },
         "action->Heretic's Smite": {
           "name": "Heretic's Smite",
-          "description": "<p>While wielding the favored weapon of its former deity (such as a machete for an ex-Kazutal herexen), the herexen's Strikes deal an additional [[/r 2d6[evil]]] damage against creatures that can cast divine spells. This damages divine spellcasters who follow the herexen's former faith regardless of their alignment.</p>"
+          "description": "<p>While wielding the favored weapon of its former deity (such as a machete for an ex-Kazutal herexen), the herexen's Strikes deal an additional @Damage[2d6[evil]] damage against creatures that can cast divine spells. This damages divine spellcasters who follow the herexen's former faith regardless of their alignment.</p>"
         },
         "action->Reap Faith": {
           "name": "Reap Faith",
-          "description": "<p><strong>Requirements</strong> The fallen champion's last action was a Strike that dealt damage to a living creature</p>\n<hr />\n<p><strong>Effect</strong> The fallen champion saps the hope and faith from that creature. It takes [[/r 3d6[negative]]] damage with a @Check[type:will|dc:25|basic:true]. Regardless of the result of the save, the creature becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} or increases the value of its frightened condition by 1.</p>"
+          "description": "<p><strong>Requirements</strong> The fallen champion's last action was a Strike that dealt damage to a living creature</p>\n<hr />\n<p><strong>Effect</strong> The fallen champion saps the hope and faith from that creature. It takes @Damage[3d6[negative]] damage with a @Check[type:will|dc:25|basic:true]. Regardless of the result of the save, the creature becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} or increases the value of its frightened condition by 1.</p>"
         },
         "lore->Kazutal Lore": {
           "name": "Kazutal Lore"
@@ -740,7 +743,7 @@
         },
         "action->Rhapsodic Flourish": {
           "name": "Rhapsodic Flourish",
-          "description": "<p><strong>Trigger</strong> The fiddling bones would roll a saving throw against an auditory or sonic effect</p>\n<hr />\n<p><strong>Effect</strong> The fiddling bones performs a refrain that deflects sonic vibrations. They roll a @Check[type:performance] check in place of the triggering saving throw. Sonic feedback rebounds from the effect, dealing [[/r 1d6[sonic]]] damage to the source of the triggering effect if the Performance check succeeded or [[/r 2d6[sonic]]] damage to the fiddling bones on a failure.</p>"
+          "description": "<p><strong>Trigger</strong> The fiddling bones would roll a saving throw against an auditory or sonic effect</p>\n<hr />\n<p><strong>Effect</strong> The fiddling bones performs a refrain that deflects sonic vibrations. They roll a @Check[type:performance] check in place of the triggering saving throw. Sonic feedback rebounds from the effect, dealing @Damage[1d6[sonic]] damage to the source of the triggering effect if the Performance check succeeded or @Damage[2d6[sonic]] damage to the fiddling bones on a failure.</p>"
         },
         "action->Dance with Death": {
           "name": "Dance with Death",
@@ -748,7 +751,7 @@
         },
         "action->Destructive Finale": {
           "name": "Destructive Finale",
-          "description": "<p><strong>Requirements</strong> Dance with Death is in effect</p>\n<hr />\n<p><strong>Effect</strong> The fiddling bones performs a boisterous finale. They choose a @Template[type:cone|distance:30] or @Template[type:emanation|distance:15], and they deal [[/r 4d6[sonic]]] damage to all creatures in that area (@Check[type:reflex|dc:21|basic:true]).</p>\n<p>Dance with Death immediately ends, and the fiddling bones can't use Dance with Death or Destructive Finale for [[/r 1d4 #Recharge]]{1d4 rounds}</p>"
+          "description": "<p><strong>Requirements</strong> Dance with Death is in effect</p>\n<hr />\n<p><strong>Effect</strong> The fiddling bones performs a boisterous finale. They choose a @Template[type:cone|distance:30] or @Template[type:emanation|distance:15], and they deal @Damage[4d6[sonic]] damage to all creatures in that area (@Check[type:reflex|dc:21|basic:true]).</p>\n<p>Dance with Death immediately ends, and the fiddling bones can't use Dance with Death or Destructive Finale for [[/r 1d4 #Recharge]]{1d4 rounds}</p>"
         },
         "lore->Theater Lore": {
           "name": "Theater Lore"
@@ -764,7 +767,7 @@
       "items": {
         "action->Carve in Flesh": {
           "name": "Carve in Flesh",
-          "description": "<p><strong>Trigger</strong> A creature reads the letter</p>\n<hr />\n<p><strong>Effect</strong> The haunt deals [[/r (2d8+11)[slashing]]] damage to the triggering creature as the words are carved into its flesh (@Check[type:will|dc:21|basic:true]). On a failure, the creature takes [[/r 2d8[bleed]]].</p>"
+          "description": "<p><strong>Trigger</strong> A creature reads the letter</p>\n<hr />\n<p><strong>Effect</strong> The haunt deals @Damage[(2d8+11)[slashing]] damage to the triggering creature as the words are carved into its flesh (@Check[type:will|dc:21|basic:true]). On a failure, the creature takes @Damage[2d8[bleed]].</p>"
         }
       }
     },
@@ -777,7 +780,7 @@
       "items": {
         "action->Surge Through": {
           "name": "Surge Through",
-          "description": "<p><strong>Trigger</strong> A creature passes through the area</p>\n<hr />\n<p><strong>Effect</strong> The haunt deals [[/r (3d12+20)[negative]]] damage and [[/r (3d12+20)[cold]]] damage to creatures in the area (@Check[type:reflex|dc:40|basic:true]). On a failure, a creature is @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2} for 1 minute, and on a critical failure, it's also @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} for 1 minute.</p>"
+          "description": "<p><strong>Trigger</strong> A creature passes through the area</p>\n<hr />\n<p><strong>Effect</strong> The haunt deals @Damage[(3d12+20)[negative]] damage and @Damage[(3d12+20)[cold]] damage to creatures in the area (@Check[type:reflex|dc:40|basic:true]). On a failure, a creature is @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2} for 1 minute, and on a critical failure, it's also @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} for 1 minute.</p>"
         }
       }
     },
@@ -829,7 +832,7 @@
       "items": {
         "action->Musical Assault": {
           "name": "Musical Assault",
-          "description": "<p><strong>Trigger</strong> A creature touches the instrument</p>\n<hr />\n<p><strong>Effect</strong> The musician's bone-shaking musical performance deals [[/r (4d10+22)[sonic]]] damage to creatures within @Template[type:emanation|distance:30]{30 feet} (@Check[type:will|dc:30|basic:true]).</p>"
+          "description": "<p><strong>Trigger</strong> A creature touches the instrument</p>\n<hr />\n<p><strong>Effect</strong> The musician's bone-shaking musical performance deals @Damage[(4d10+22)[sonic]] damage to creatures within @Template[type:emanation|distance:30]{30 feet} (@Check[type:will|dc:30|basic:true]).</p>"
         }
       }
     },
@@ -872,7 +875,7 @@
         },
         "action->Charge Chain": {
           "name": "Charge Chain",
-          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The gallowdead imbues their chain with necromantic power. The gallowdead chooses to make their next Strike with the chain this turn either deal an additional [[/r 4d6[negative]]] damage or have 120-foot reach.</p>"
+          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The gallowdead imbues their chain with necromantic power. The gallowdead chooses to make their next Strike with the chain this turn either deal an additional @Damage[4d6[negative]] damage or have 120-foot reach.</p>"
         }
       }
     },
@@ -895,14 +898,14 @@
         },
         "action->Breath Weapon": {
           "name": "Breath Weapon",
-          "description": "<p>The gashadokuro breathes a spray of bone shards in a @Template[type:cone|distance:30]. Each creature in the area takes [[/r 8d12[piercing]]] damage (@Check[type:reflex|dc:34|basic:true]).</p>\n<p>It can't use Breath Weapon again for [[/r 1d4 #Recharge]]{1d4 rounds}.</p>"
+          "description": "<p>The gashadokuro breathes a spray of bone shards in a @Template[type:cone|distance:30]. Each creature in the area takes @Damage[8d12[piercing]] damage (@Check[type:reflex|dc:34|basic:true]).</p>\n<p>It can't use Breath Weapon again for [[/r 1d4 #Recharge]]{1d4 rounds}.</p>"
         },
         "action->Corpse Consumption": {
           "name": "Corpse Consumption",
           "description": "<p>If the gashadokuro kills a creature with Swallow Whole, it immediately regains Hit Points equal to the swallowed creature's level. As long as the gashadokuro still exists, creatures consumed in this way can't be resurrected except by <em>@UUID[Compendium.pf2e.spells-srd.Item.6dDtGIUerazSHIOu]{Wish}</em> or a similarly powerful effect.</p>"
         },
         "action->Swallow Whole": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.uJSseLa57HZYSMUu]\n<p>Large, [[/r (3d6+8)[bludgeoning]]], Rupture 24</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.uJSseLa57HZYSMUu]\n<p>Large, @Damage[(3d6+8)[bludgeoning]], Rupture 24</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
         }
       }
     },
@@ -921,7 +924,7 @@
         },
         "action->Power of the Haunt": {
           "name": "Power of the Haunt",
-          "description": "<p>If a geist is within 100 feet of a haunt that isn't disabled or destroyed, they gain a +2 status bonus to AC and saving throws and deal an additional [[/r 1d6[negative]]] damage with bite Strikes. A creature that succeeds at a @Check[type:perception|dc:20|traits:action:seek] check to Seek or Recall Knowledge about the geist sees that the tendrils from the geist's cloak grow thicker and more agitated the closer it gets to the haunt.</p>"
+          "description": "<p>If a geist is within 100 feet of a haunt that isn't disabled or destroyed, they gain a +2 status bonus to AC and saving throws and deal an additional @Damage[1d6[negative]] damage with bite Strikes. A creature that succeeds at a @Check[type:perception|dc:20|traits:action:seek] check to Seek or Recall Knowledge about the geist sees that the tendrils from the geist's cloak grow thicker and more agitated the closer it gets to the haunt.</p>"
         },
         "action->Terrifying Laugh": {
           "name": "Terrifying Laugh",
@@ -929,7 +932,7 @@
         },
         "action->Wrath of the Haunt": {
           "name": "Wrath of the Haunt",
-          "description": "<p><strong>Frequency</strong> once per round</p>\n<p><strong>Requirements</strong> The geist is within 100 feet of an active haunt</p>\n<hr />\n<p><strong>Effect</strong> The haunt feeds necromantic power into the geist, becoming inactive until the end of the geist's next turn and deactivating the power of the haunt aura until the haunt becomes active again. The edges of the geist's cloak transform into whip-like tendrils that lash out at nearby creatures. Any living creature within 10 feet of the geist takes [[/r 4d10[slashing]]] damage plus [[/r 4d6[negative]]] damage (@Check[type:reflex|dc:28|basic:true]).</p>"
+          "description": "<p><strong>Frequency</strong> once per round</p>\n<p><strong>Requirements</strong> The geist is within 100 feet of an active haunt</p>\n<hr />\n<p><strong>Effect</strong> The haunt feeds necromantic power into the geist, becoming inactive until the end of the geist's next turn and deactivating the power of the haunt aura until the haunt becomes active again. The edges of the geist's cloak transform into whip-like tendrils that lash out at nearby creatures. Any living creature within 10 feet of the geist takes @Damage[4d10[slashing]] damage plus @Damage[4d6[negative]] damage (@Check[type:reflex|dc:28|basic:true]).</p>"
         }
       }
     },
@@ -954,7 +957,7 @@
         },
         "action->Blinding Breath": {
           "name": "Blinding Breath",
-          "description": "<p>The gholdako exhales a @Template[type:cone|distance:60] of noxious breath that deals [[/r 7d8[negative]]] damage (@Check[type:reflex|dc:29|basic:true]). A creature that fails its save is also @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} until the end of its next turn (or for 1 minute on a critical failure) as a milky film coats its eyes.</p>\n<p>The gholdako can't use Blinding Breath again for [[/r 1d4 #Recharge]]{1d4 rounds}.</p>"
+          "description": "<p>The gholdako exhales a @Template[type:cone|distance:60] of noxious breath that deals @Damage[7d8[negative]] damage (@Check[type:reflex|dc:29|basic:true]). A creature that fails its save is also @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} until the end of its next turn (or for 1 minute on a critical failure) as a milky film coats its eyes.</p>\n<p>The gholdako can't use Blinding Breath again for [[/r 1d4 #Recharge]]{1d4 rounds}.</p>"
         },
         "action->Infectious Visions": {
           "name": "Infectious Visions",
@@ -1008,12 +1011,12 @@
       "disable": "<p>@Check[type:nature|dc:36] (master) to calm one of the four aurochs or @Check[type:religion|dc:40] (trained) to exorcise them</p>",
       "hpDetails": "per aurochs skull",
       "reset": "<p>The haunt deactivates 1 minute after all living creatures leave the area or after all four aurochs skulls are destroyed. After 1 hour, if at least one aurochs skull remains, the haunt reactivates.</p>",
-      "routine": "<p>(4 actions) For each aurochs skull disabled or destroyed, the haunt has 1 fewer action. On each action, a different aurochs moves up to 60 feet and attempts a horn Strike against a different living creature. A creature critically hit by a horn Strike also takes [[/r 2d6[bleed]]] and is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>",
+      "routine": "<p>(4 actions) For each aurochs skull disabled or destroyed, the haunt has 1 fewer action. On each action, a different aurochs moves up to 60 feet and attempts a horn Strike against a different living creature. A creature critically hit by a horn Strike also takes @Damage[2d6[bleed]] and is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>",
       "stealth": "<p>(master)</p>",
       "items": {
         "action->Defend Territory": {
           "name": "Defend Territory",
-          "description": "<p><strong>Trigger</strong> A creature approaches within 10 feet of an aurochs skull</p>\n<hr />\n<p><strong>Effect</strong> The skulls rise into the air, form ghostly bodies, and bellow in rage. Each creature within @Template[type:emanation|distance:60]{60 feet} of an aurochs skull must attempt a @Check[type:will|dc:36] saving throw. The haunt then rolls initiative.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Failure</strong> The creature takes [[/r (1d12+6)[mental]]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}.</p>\n<p><strong>Critical Failure</strong> The creature takes [[/r (2d12+12)[mental]]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 4}.</p>"
+          "description": "<p><strong>Trigger</strong> A creature approaches within 10 feet of an aurochs skull</p>\n<hr />\n<p><strong>Effect</strong> The skulls rise into the air, form ghostly bodies, and bellow in rage. Each creature within @Template[type:emanation|distance:60]{60 feet} of an aurochs skull must attempt a @Check[type:will|dc:36] saving throw. The haunt then rolls initiative.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Failure</strong> The creature takes @Damage[(1d12+6)[mental]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[(2d12+12)[mental]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 4}.</p>"
         },
         "strike-melee->Horn": {
           "name": "Horn",
@@ -1042,7 +1045,7 @@
         },
         "action->Devour Flesh": {
           "name": "Devour Flesh",
-          "description": "<p><strong>Requirements</strong> The ghul has a creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}</p>\n<hr />\n<p><strong>Effect</strong> The ghul attempts to eat a portion of the grabbed creature's flesh. It makes a jaws Strike against the grabbed creature. On a success, the ghul successfully devours some of the flesh and regains [[/r 3d6[healing]]]{3d6 Hit Points}. The grabbed creature becomes @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (or @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} if the jaws Strike was a critical success). The violent consumption requires the ghul to release the creature as it feasts. A ghul can regain Hit Points from consuming the flesh of a given creature only once per hour; it must consume the flesh of a different creature to gain additional Hit Points during this time.</p>"
+          "description": "<p><strong>Requirements</strong> The ghul has a creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}</p>\n<hr />\n<p><strong>Effect</strong> The ghul attempts to eat a portion of the grabbed creature's flesh. It makes a jaws Strike against the grabbed creature. On a success, the ghul successfully devours some of the flesh and regains [[/r 3d6[healing]]] Hit Points. The grabbed creature becomes @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (or @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} if the jaws Strike was a critical success). The violent consumption requires the ghul to release the creature as it feasts. A ghul can regain Hit Points from consuming the flesh of a given creature only once per hour; it must consume the flesh of a different creature to gain additional Hit Points during this time.</p>"
         },
         "action->Luring Laugh": {
           "name": "Luring Laugh",
@@ -1059,7 +1062,7 @@
       "items": {
         "action->Stop Heart": {
           "name": "Stop Heart",
-          "description": "<p><strong>Trigger</strong> A creature reads or touches the tombstone</p>\n<hr />\n<p><strong>Effect</strong> The haunt deals [[/r (8d10+44)[negative]]] damage (@Check[type:will|dc:47|basic:true]) to all creatures within @Template[type:emanation|distance:60]{60 feet} who can see the tombstone and can read any language. On a critical failure, a creature dies.</p>"
+          "description": "<p><strong>Trigger</strong> A creature reads or touches the tombstone</p>\n<hr />\n<p><strong>Effect</strong> The haunt deals @Damage[(8d10+44)[negative]] damage (@Check[type:will|dc:47|basic:true]) to all creatures within @Template[type:emanation|distance:60]{60 feet} who can see the tombstone and can read any language. On a critical failure, a creature dies.</p>"
         }
       }
     },
@@ -1096,11 +1099,11 @@
         },
         "action->Submission Lock": {
           "name": "Submission Lock",
-          "description": "<p><strong>Requirements</strong> The grappling spirit has a creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}</p>\n<hr />\n<p><strong>Effect</strong> The spirit saps their opponent's strength with a supernatural grip. The grappling spirit attempts an Athletics check to @UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]{Grapple} a creature they have grabbed or restrained, also adding [[/r (4d10+12)[negative]]] damage, depending on the result.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature takes double damage. If it's already enfeebled, it falls @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}. If not, it is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} until the end of its next turn and @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} for 1 minute.</p>\n<p><strong>Success</strong> The creature takes full damage and is enfeebled 1 until the end of its next turn.</p>"
+          "description": "<p><strong>Requirements</strong> The grappling spirit has a creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}</p>\n<hr />\n<p><strong>Effect</strong> The spirit saps their opponent's strength with a supernatural grip. The grappling spirit attempts an Athletics check to @UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]{Grapple} a creature they have grabbed or restrained, also adding @Damage[(4d10+12)[negative]] damage, depending on the result.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature takes double damage. If it's already enfeebled, it falls @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}. If not, it is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} until the end of its next turn and @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} for 1 minute.</p>\n<p><strong>Success</strong> The creature takes full damage and is enfeebled 1 until the end of its next turn.</p>"
         },
         "action->Teleporting Clothesline": {
           "name": "Teleporting Clothesline",
-          "description": "<p><strong>Requirements</strong> The grappling spirit has a creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}</p>\n<hr />\n<p><strong>Effect</strong> The grappling spirit pushes the creature 15 feet in a straight line. The spirit immediately teleports 20 feet to intercept. They make a ghostly hand Strike against the creature. On a hit, the creature is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}, and on a critical hit, it also takes an additional [[/r 2d6[bludgeoning]]] damage as it's driven to the ground.</p>"
+          "description": "<p><strong>Requirements</strong> The grappling spirit has a creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}</p>\n<hr />\n<p><strong>Effect</strong> The grappling spirit pushes the creature 15 feet in a straight line. The spirit immediately teleports 20 feet to intercept. They make a ghostly hand Strike against the creature. On a hit, the creature is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}, and on a critical hit, it also takes an additional @Damage[2d6[bludgeoning]] damage as it's driven to the ground.</p>"
         },
         "action->Victory Celebration": {
           "name": "Victory Celebration",
@@ -1116,7 +1119,7 @@
       "description": "<p>Hands of the buried dead rise from the ground, grabbing and tearing at creatures in the area to drag them underground.</p>",
       "disable": "<p>@Check[type:religion|dc:22] (trained) to ritually pray for the dead or @Check[type:occultism|dc:24] (trained) to exorcise the spirits' anger; two total successes are required to disable the haunt</p>",
       "reset": "<p>The haunt deactivates 1 minute after all living creatures leave the area. After 1 hour, the haunt reactivates.</p>",
-      "routine": "<p>(1 action) The grasping hands batter all creatures in the area, dealing [[/r (2d6+7)[bludgeoning]]] damage (@Check[type:reflex|dc:26|basic:true] save). On a critical failure, a creature is dragged partially into the earth, becoming @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} until it @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escapes} (DC 26). If already immobilized, it's fully submerged and must hold its breath to avoid suffocation.</p>",
+      "routine": "<p>(1 action) The grasping hands batter all creatures in the area, dealing @Damage[(2d6+7)[bludgeoning]] damage (@Check[type:reflex|dc:26|basic:true] save). On a critical failure, a creature is dragged partially into the earth, becoming @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} until it @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escapes} (DC 26). If already immobilized, it's fully submerged and must hold its breath to avoid suffocation.</p>",
       "stealth": "<p>(trained)</p>",
       "items": {
         "action->Shifting Earth": {
@@ -1155,7 +1158,7 @@
         },
         "action->Devastating Blast": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.IxJbFJ8dG5RbZWBD]\nDevastating Blast",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.IxJbFJ8dG5RbZWBD]\n<p>The graveknight unleashes a @Template[type:cone|distance:30] of energy. Creatures in the area take [[/r 8d12[electricity]]] damage (@Check[type:reflex|dc:34|basic:true] save).</p>\n<p>The graveknight can use this ability once every [[/br 1d4 #Recharge Devastating Blast]]{1d4 rounds}.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.IxJbFJ8dG5RbZWBD]\n<p>The graveknight unleashes a @Template[type:cone|distance:30] of energy. Creatures in the area take @Damage[8d12[electricity]] damage (@Check[type:reflex|dc:34|basic:true] save).</p>\n<p>The graveknight can use this ability once every [[/br 1d4 #Recharge Devastating Blast]]{1d4 rounds}.</p>"
         },
         "action->Exemplar of Violence": {
           "name": "Exemplar of Violence",
@@ -1213,7 +1216,7 @@
         },
         "action->Whispering Scythe": {
           "name": "Whispering Scythe",
-          "description": "<p><strong>Trigger</strong> An undead controlled by Krant and within 20 feet of him is destroyed</p>\n<p><strong>Requirements</strong> Krant is holding his scythe</p>\n<hr />\n<p><strong>Effect</strong> Krant draws the creature's soul into his scythe. The next time he makes a scythe Strike, the soul is released and the Strike deals an extra [[/r 1d6[negative]]] damage. The scythe can hold only one soul at a time.</p>"
+          "description": "<p><strong>Trigger</strong> An undead controlled by Krant and within 20 feet of him is destroyed</p>\n<p><strong>Requirements</strong> Krant is holding his scythe</p>\n<hr />\n<p><strong>Effect</strong> Krant draws the creature's soul into his scythe. The next time he makes a scythe Strike, the soul is released and the Strike deals an extra @Damage[1d6[negative]] damage. The scythe can hold only one soul at a time.</p>"
         },
         "lore->Mercantile Lore": {
           "name": "Mercantile Lore"
@@ -1257,14 +1260,14 @@
           "description": "<p><strong>Trigger</strong> An ally within the hollow serpent's reach is attacked</p>\n<hr />\n<p><strong>Effect</strong> The hollow serpent interposes a coil of its body or tail between the ally and attacker. The triggering attack targets the hollow serpent instead of the original target.</p>"
         },
         "action->Constrict": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.g26YiEIfSHCpLocV]\n<p>[[/r (1d10+7)[bludgeoning]]] plus @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}, @Check[type:fortitude|dc:36|basic:true]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.g26YiEIfSHCpLocV]\n<p>@Damage[(1d10+7)[bludgeoning]] plus @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}, @Check[type:fortitude|dc:36|basic:true]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
         },
         "action->Slithering Strike": {
           "name": "Slithering Strike",
           "description": "<p>The hollow serpent Strides or Climbs and makes a jaws Strike at the end of that movement. If the hollow serpent began this action @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden}, it remains hidden until after this ability's Strike.</p>"
         },
         "action->Swallow Whole": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.uJSseLa57HZYSMUu]\n<p>Medium, [[/r 4d6[negative]]] plus @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}, Rupture 32</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.uJSseLa57HZYSMUu]\n<p>Medium, @Damage[4d6[negative]] plus @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}, Rupture 32</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
         }
       }
     },
@@ -1277,6 +1280,9 @@
       "items": {
         "spellcastingEntry->Arcane Prepared Spells": {
           "name": "Arcane Prepared Spells"
+        },
+        "spell->Mage Hand": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.pwzdSlJgYqN7bs2w]\nMage Hand"
         },
         "consumable->Scroll of Teleport (Level 6)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.4sGIy77COooxhQuC]\nScroll of Teleport (Level 6)",
@@ -1344,7 +1350,7 @@
         },
         "action->Feed on the Living": {
           "name": "Feed on the Living",
-          "description": "<p>The hungry ghost touches a creature in reach. If the target is a living creature, it takes damage from the ghost's ghostly touch with a @Check[type:fortitude|dc:24] save. If the ghost is in their living visage, they can disguise Feed on the Living as a benign touch and delay the effects for 1 minute while keeping the target unaware of the effect. A creature can be affected by only one delayed Feed on the Living at a time, and if the ghost loses their living visage during that minute, the Feed on the Living is lost.</p>\n<hr />\n<p><strong>Critical Success</strong> The target's life energy overpowers the ghost. The hungry ghost takes [[/r 5[positive]]] damage, and the target is unaffected.</p>\n<p><strong>Success</strong> The target takes half damage, and the hungry ghost regains HP equal to the damage dealt.</p>\n<p><strong>Failure</strong> The target takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} for 1 minute, and the hungry ghost regains HP equal to the damage dealt.</p>\n<p><strong>Critical Failure</strong> The target takes double damage and is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} for 1 minute, and the hungry ghost regains HP equal to the damage dealt.</p>"
+          "description": "<p>The hungry ghost touches a creature in reach. If the target is a living creature, it takes damage from the ghost's ghostly touch with a @Check[type:fortitude|dc:24] save. If the ghost is in their living visage, they can disguise Feed on the Living as a benign touch and delay the effects for 1 minute while keeping the target unaware of the effect. A creature can be affected by only one delayed Feed on the Living at a time, and if the ghost loses their living visage during that minute, the Feed on the Living is lost.</p>\n<hr />\n<p><strong>Critical Success</strong> The target's life energy overpowers the ghost. The hungry ghost takes @Damage[5[positive]] damage, and the target is unaffected.</p>\n<p><strong>Success</strong> The target takes half damage, and the hungry ghost regains HP equal to the damage dealt.</p>\n<p><strong>Failure</strong> The target takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} for 1 minute, and the hungry ghost regains HP equal to the damage dealt.</p>\n<p><strong>Critical Failure</strong> The target takes double damage and is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} for 1 minute, and the hungry ghost regains HP equal to the damage dealt.</p>"
         },
         "action->Ravenous Undoing": {
           "name": "Ravenous Undoing",
@@ -1376,7 +1382,7 @@
         },
         "action->Final Snare": {
           "name": "Final Snare",
-          "description": "<p><strong>Trigger</strong> The hunter wight is reduced to 0 Hit Points</p>\n<hr />\n<p><strong>Effect</strong> The hunter wight has rigged their own body with a snare, which they trigger before being destroyed. Slivers of bone launch at an adjacent creature, dealing [[/r 4d8[piercing]]] damage (@Check[type:reflex|dc:25|basic:true]).</p>"
+          "description": "<p><strong>Trigger</strong> The hunter wight is reduced to 0 Hit Points</p>\n<hr />\n<p><strong>Effect</strong> The hunter wight has rigged their own body with a snare, which they trigger before being destroyed. Slivers of bone launch at an adjacent creature, dealing @Damage[4d8[piercing]] damage (@Check[type:reflex|dc:25|basic:true]).</p>"
         },
         "action->Drain Life": {
           "name": "Drain Life",
@@ -1447,7 +1453,7 @@
         },
         "action->Frozen Breath": {
           "name": "Frozen Breath",
-          "description": "<p>The ice mummy exhales a @Template[type:cone|distance:60] of razor-sharp ice that deals [[/r {5d6[cold],4d6[slashing]}]]{5d6 cold and 4d6 slashing damage} (@Check[type:reflex|dc:26|basic:true]).</p>\n<p>The ice mummy can't use Frozen Breath again for [[/br 1d4 #rounds]]{1d4 rounds}.</p>"
+          "description": "<p>The ice mummy exhales a @Template[type:cone|distance:60] of razor-sharp ice that deals [[/r {5d6[cold],4d6[slashing]}]]{5d6 cold and 4d6 slashing damage} (@Check[type:reflex|dc:26|basic:true]).</p>\n<p>The ice mummy can't use Frozen Breath again for [[/br 1d4 #Recharge Frozen Breath]]{1d4 rounds}.</p>"
         }
       }
     },
@@ -1545,7 +1551,7 @@
         },
         "action->Fossil Fury": {
           "name": "Fossil Fury",
-          "description": "<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p><strong>Effect</strong> s The iruxi ossature beckons with glowing hands, commanding the earth to trip up opponents and marshaling the bone walls of its protectorate to lash out at intruders. The floor in a @Template[type:cone|distance:30] in front of the ossature becomes difficult terrain for 1 minute. Any square of a wall built by iruxis that's in the cone lashes out, with fossilized claws damaging any enemy within 5 feet of the wall. This deals [[/r 6d6[piercing]]] damage with a @Check[type:reflex|dc:22|basic:true]. A creature attempts the save only once, even if adjacent to more than one affected square of the wall. Fossil Fury has no effect on the ossature's allies and never damages iruxi eggs.</p>"
+          "description": "<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p><strong>Effect</strong> s The iruxi ossature beckons with glowing hands, commanding the earth to trip up opponents and marshaling the bone walls of its protectorate to lash out at intruders. The floor in a @Template[type:cone|distance:30] in front of the ossature becomes difficult terrain for 1 minute. Any square of a wall built by iruxis that's in the cone lashes out, with fossilized claws damaging any enemy within 5 feet of the wall. This deals @Damage[6d6[piercing]] damage with a @Check[type:reflex|dc:22|basic:true]. A creature attempts the save only once, even if adjacent to more than one affected square of the wall. Fossil Fury has no effect on the ossature's allies and never damages iruxi eggs.</p>"
         },
         "action->Terrain Advantage": {
           "name": "Terrain Advantage",
@@ -1581,7 +1587,7 @@
         },
         "action->Osseous Defense": {
           "name": "Osseous Defense",
-          "description": "<p>The jitterbone elongates their bones, causing jagged bone spikes to protrude from their skin. While Osseous Defense is active, the jitterbone can make bone spike and bone dart Strikes and gains resistance 5 to piercing damage and slashing damage. The jitterbone loses Compression while their Osseous Defense is active. The jitterbone can end Osseous Defense as a single action, retracting their bones back into their body.</p>\n<p><strong>Melee</strong> <span class=\"pf2-icon\">1</span> bone spike [[/r 1d20+14 #Bone Spike Attack]]{+14}/[[/r 1d20+14 #Bone Spike Attack]]{+9}/[[/r 1d20+14 #Bone Spike Attack]]{+4} (finesse), <strong>Damage</strong> [[/r (2d8+2)[piercing]]] plus [[/r 1d6[bleed]]]</p>\n<p><strong>Ranged</strong> <span class=\"pf2-icon\">1</span> bone dart [[/r 1d20+14 #Bone Dart Attack]]{+14}/[[/r 1d20+14 #Bone Dart Attack]]{+10}/[[/r 1d20+14 #Bone Dart Attack]]{+6} (agile, thrown 20 feet), <strong>Damage</strong> [[/r (2d6+2)[piercing]]]</p>"
+          "description": "<p>The jitterbone elongates their bones, causing jagged bone spikes to protrude from their skin. While Osseous Defense is active, the jitterbone can make bone spike and bone dart Strikes and gains resistance 5 to piercing damage and slashing damage. The jitterbone loses Compression while their Osseous Defense is active. The jitterbone can end Osseous Defense as a single action, retracting their bones back into their body.</p>\n<p><strong>Melee</strong> <span class=\"pf2-icon\">1</span> bone spike [[/r 1d20+14 #Bone Spike Attack]]{+14}/[[/r 1d20+14 #Bone Spike Attack]]{+9}/[[/r 1d20+14 #Bone Spike Attack]]{+4} (finesse), <strong>Damage</strong> @Damage[(2d8+2)[piercing]] plus @Damage[1d6[bleed]]</p>\n<p><strong>Ranged</strong> <span class=\"pf2-icon\">1</span> bone dart [[/r 1d20+14 #Bone Dart Attack]]{+14}/[[/r 1d20+14 #Bone Dart Attack]]{+10}/[[/r 1d20+14 #Bone Dart Attack]]{+6} (agile, thrown 20 feet), <strong>Damage</strong> @Damage[(2d6+2)[piercing]]</p>"
         }
       }
     },
@@ -1606,15 +1612,15 @@
         },
         "action->Consume Flesh": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.ixPqVlqLaYTB1b23]\nConsume Flesh",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.ixPqVlqLaYTB1b23]\n<p><strong>Requirements</strong> The lacedon is adjacent to the corpse of a creature that died within the last hour.</p>\n<hr />\n<p><strong>Effect</strong> The lacedon devours a chunk of the corpse and regains [[/r 2d6[healing]]]{2d6 Hit Points}.</p>\n<p>It can regain Hit Points from any given corpse only once.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.ixPqVlqLaYTB1b23]\n<p><strong>Requirements</strong> The lacedon is adjacent to the corpse of a creature that died within the last hour.</p>\n<hr />\n<p><strong>Effect</strong> The lacedon devours a chunk of the corpse and regains [[/r 2d6[healing]]] Hit Points.</p>\n<p>It can regain Hit Points from any given corpse only once.</p>"
         },
         "action->Ghoul Fever": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.N7UV5CZXtcoxDxCF]\nGhoul Fever",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.N7UV5CZXtcoxDxCF]\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:16]</p>\n<hr />\n<p><strong>Stage 1</strong> carrier with no ill effect (1 day)</p>\n<p><strong>Stage 2</strong> [[/r 2d6[negative]]] damage and regains half as many Hit Points from all healing (1 day)</p>\n<p><strong>Stage 3</strong> as stage 2 (1 day)</p>\n<p><strong>Stage 4</strong> [[/r 2d6[negative]]] damage and gains no benefit from healing (1 day)</p>\n<p><strong>Stage 5</strong> as stage 4 (1 day)</p>\n<p><strong>Stage 6</strong> dead, and rises as a @UUID[Compendium.pf2e.pathfinder-bestiary.Actor.LHHgGSs0ELCR4CYK]{Ghoul} the next midnight.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.N7UV5CZXtcoxDxCF]\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:16]</p>\n<hr />\n<p><strong>Stage 1</strong> carrier with no ill effect (1 day)</p>\n<p><strong>Stage 2</strong> @Damage[2d6[negative]] damage and regains half as many Hit Points from all healing (1 day)</p>\n<p><strong>Stage 3</strong> as stage 2 (1 day)</p>\n<p><strong>Stage 4</strong> @Damage[2d6[negative]] damage and gains no benefit from healing (1 day)</p>\n<p><strong>Stage 5</strong> as stage 4 (1 day)</p>\n<p><strong>Stage 6</strong> dead, and rises as a @UUID[Compendium.pf2e.pathfinder-bestiary.Actor.LHHgGSs0ELCR4CYK]{Ghoul} the next midnight.</p>"
         },
         "action->Paralyzing Spew": {
           "name": "Paralyzing Spew",
-          "description": "<p>The lacedon discharges a spray of carrion vomit at a creature within 20 feet, dealing [[/r 1d6[poison]]] damage with a @Check[type:fortitude|dc:17|basic:true]. A non-elf creature that fails its save is also @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}. It can attempt a new save to end the paralysis at the end of each of its turns, and the DC cumulatively decreases by 1 on each such save.</p>\n<p>The lacedon can't use Paralyzing Spew again for [[/r 1d4 #Recharge]]{1d4 rounds}.</p>"
+          "description": "<p>The lacedon discharges a spray of carrion vomit at a creature within 20 feet, dealing @Damage[1d6[poison]] damage with a @Check[type:fortitude|dc:17|basic:true]. A non-elf creature that fails its save is also @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}. It can attempt a new save to end the paralysis at the end of each of its turns, and the DC cumulatively decreases by 1 on each such save.</p>\n<p>The lacedon can't use Paralyzing Spew again for [[/r 1d4 #Recharge]]{1d4 rounds}.</p>"
         },
         "lore->Athletics": {
           "skillVariants": {
@@ -1647,7 +1653,7 @@
         },
         "action->Frightful Battle Cry": {
           "name": "Frightful Battle Cry",
-          "description": "<p>The last guards unleash a soul-shaking bellow in unison. All creatures in a @Template[type:cone|distance:60] take [[/r 7d6[sonic]]] damage (@Check[type:will|dc:42|basic:true]). Any creature that fails its save is also @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3} (or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 4} on a critical failure).</p>\n<p>If the troop occupies 8 or fewer squares, this area decreases to a @Template[type:cone|distance:30].</p>"
+          "description": "<p>The last guards unleash a soul-shaking bellow in unison. All creatures in a @Template[type:cone|distance:60] take @Damage[7d6[sonic]] damage (@Check[type:will|dc:42|basic:true]). Any creature that fails its save is also @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3} (or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 4} on a critical failure).</p>\n<p>If the troop occupies 8 or fewer squares, this area decreases to a @Template[type:cone|distance:30].</p>"
         },
         "action->Ghostly Blades": {
           "name": "Ghostly Blades",
@@ -1655,7 +1661,7 @@
         },
         "action->Spectral Charge": {
           "name": "Spectral Charge",
-          "description": "<p>The last guards charge, swarming through their foes. The troop Flies up to double its Speed, dealing [[/r 4d8[negative]]] damage to each creature whose space it moves through (@Check[type:reflex|dc:40|basic:true]). Any creature that fails its save is also @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (or @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} on a critical failure). The troop can affect each creature only once in a single use of Spectral Charge.</p>"
+          "description": "<p>The last guards charge, swarming through their foes. The troop Flies up to double its Speed, dealing @Damage[4d8[negative]] damage to each creature whose space it moves through (@Check[type:reflex|dc:40|basic:true]). Any creature that fails its save is also @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (or @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} on a critical failure). The troop can affect each creature only once in a single use of Spectral Charge.</p>"
         },
         "action->Troop Movement": {
           "name": "Troop Movement",
@@ -1692,7 +1698,7 @@
         },
         "action->Strangle": {
           "name": "Strangle",
-          "description": "<p><strong>Requirements</strong> The little man in the woods has a creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}</p>\n<hr />\n<p><strong>Effect</strong> The little man in the woods tightens his grip around the creature's neck, extending the Grab, dealing [[/r (2d6+3)[bludgeoning]]] damage with a @Check[type:fortitude|dc:24|basic:true], and strangling the creature for as long as it remains grabbed or restrained. A strangled creature can't speak, which prevents it from casting spells with a verbal component or activating items with a command component. The strangled creature must hold its breath or start suffocating.</p>"
+          "description": "<p><strong>Requirements</strong> The little man in the woods has a creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}</p>\n<hr />\n<p><strong>Effect</strong> The little man in the woods tightens his grip around the creature's neck, extending the Grab, dealing @Damage[(2d6+3)[bludgeoning]] damage with a @Check[type:fortitude|dc:24|basic:true], and strangling the creature for as long as it remains grabbed or restrained. A strangled creature can't speak, which prevents it from casting spells with a verbal component or activating items with a command component. The strangled creature must hold its breath or start suffocating.</p>"
         },
         "lore->Athletics": {
           "skillVariants": {
@@ -1717,7 +1723,7 @@
           "description": "<p>When a llorona is destroyed, they re-form after [[/br 1d6 #days]]{1d6 days} at the site of their death. Resolving the injustice that led to a llorona's death puts them to rest permanently. Alternatively, successfully performing a <em>@UUID[Compendium.pf2e.spells-srd.Item.Dbd5W6G8U2vzWolN]{Consecrate}</em> ritual at the site prevents them from re-forming.</p>"
         },
         "action->Constrict": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.g26YiEIfSHCpLocV]\n<p>[[/r (2d6+12)[negative]]] @Check[type:fortitude|dc:31|basic:true]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.g26YiEIfSHCpLocV]\n<p>@Damage[(2d6+12)[negative]] @Check[type:fortitude|dc:31|basic:true]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
         },
         "action->Funereal Touch": {
           "name": "Funereal Touch",
@@ -1834,6 +1840,9 @@
         "spellcastingEntry->Divine Prepared Spells": {
           "name": "Divine Prepared Spells"
         },
+        "spell->See Invisibility": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.jwK43yKsHTkJQvQ9]\nSee Invisibility"
+        },
         "weapon->Spear": {
           "name": "Spear (+1,striking)"
         },
@@ -1871,7 +1880,7 @@
         },
         "action->Sand Rot": {
           "name": "Sand Rot",
-          "description": "<p>This affliction can't be reduced below stage 1, nor can damage from it be healed, until successfully treated with <em>@UUID[Compendium.pf2e.spells-srd.Item.OyFCwQuw8XRazsNr]{Remove Curse}</em> or a similar effect; the affliction can then be removed as normal for a disease. A creature killed by sand rot turns to sand and can't be resurrected except by a 7th-level <em>@UUID[Compendium.pf2e.spells-srd.Item.kqhPt9344UkcGVYO]{Resurrect}</em> ritual or similar magic</p>\n<p><strong>Saving Throw</strong>@Check[type:fortitude|dc:31]</p>\n<hr />\n<p><strong>Stage 1</strong> carrier with no ill effect (1 minute)</p>\n<p><strong>Stage 2</strong> [[/r 12d6[negative]]] damage, @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}, and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2} (1 day)</p>"
+          "description": "<p>This affliction can't be reduced below stage 1, nor can damage from it be healed, until successfully treated with <em>@UUID[Compendium.pf2e.spells-srd.Item.OyFCwQuw8XRazsNr]{Remove Curse}</em> or a similar effect; the affliction can then be removed as normal for a disease. A creature killed by sand rot turns to sand and can't be resurrected except by a 7th-level <em>@UUID[Compendium.pf2e.spells-srd.Item.kqhPt9344UkcGVYO]{Resurrect}</em> ritual or similar magic</p>\n<p><strong>Saving Throw</strong>@Check[type:fortitude|dc:31]</p>\n<hr />\n<p><strong>Stage 1</strong> carrier with no ill effect (1 minute)</p>\n<p><strong>Stage 2</strong> @Damage[12d6[negative]] damage, @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}, and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2} (1 day)</p>"
         },
         "action->Sandstorm": {
           "name": "Sandstorm",
@@ -1903,11 +1912,11 @@
         },
         "action->Midnight Depths": {
           "name": "Midnight Depths",
-          "description": "<p>@Template[type:emanation|distance:60]{60 feet} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}</p>\n<p>A nasurgeth's entropy grows even stronger underwater. All water within the aura is completely dark (as 4th-level <em>@UUID[Compendium.pf2e.spells-srd.Item.4GE2ZdODgIQtg51c]{Darkness}</em>). Magical light with a counteract level of 4th level or lower, along with magical light cantrips, are suppressed. A living creature entering or starting its turn in the aura takes [[/r 4d6[negative]]] damage, and the creature also takes an additional [[/r 2d10[cold]]] damage if it's in water (@Check[type:fortitude|dc:39|basic:true]). If it fails, it's also @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} for 1 minute and pulled 10 feet toward the nasurgeth.</p>"
+          "description": "<p>@Template[type:emanation|distance:60]{60 feet} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}</p>\n<p>A nasurgeth's entropy grows even stronger underwater. All water within the aura is completely dark (as 4th-level <em>@UUID[Compendium.pf2e.spells-srd.Item.4GE2ZdODgIQtg51c]{Darkness}</em>). Magical light with a counteract level of 4th level or lower, along with magical light cantrips, are suppressed. A living creature entering or starting its turn in the aura takes @Damage[4d6[negative]] damage, and the creature also takes an additional @Damage[2d10[cold]] damage if it's in water (@Check[type:fortitude|dc:39|basic:true]). If it fails, it's also @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} for 1 minute and pulled 10 feet toward the nasurgeth.</p>"
         },
         "action->Spray Black Bile": {
           "name": "Spray Black Bile",
-          "description": "<p><strong>Trigger</strong> The nasurgeth takes slashing or piercing damage from a critical hit, or a swallowed creature cuts itself free</p>\n<hr />\n<p><strong>Effect</strong> Darkness and negative energy spill out from the nasurgeth's wound, dealing [[/r 8d8[negative]]] damage to creatures within 20 feet (@Check[type:fortitude|dc:40|basic:true]).</p>"
+          "description": "<p><strong>Trigger</strong> The nasurgeth takes slashing or piercing damage from a critical hit, or a swallowed creature cuts itself free</p>\n<hr />\n<p><strong>Effect</strong> Darkness and negative energy spill out from the nasurgeth's wound, dealing @Damage[8d8[negative]] damage to creatures within 20 feet (@Check[type:fortitude|dc:40|basic:true]).</p>"
         },
         "action->Sunlight Powerlessness": {
           "name": "Sunlight Powerlessness",
@@ -1915,14 +1924,14 @@
         },
         "action->Broken Barb": {
           "name": "Broken Barb",
-          "description": "<p><strong>Requirements</strong> A creature is @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} in the nasurgeth's jaws</p>\n<hr />\n<p><strong>Effect</strong> The nasurgeth breaks a tooth off in the target, who takes [[/r 3d10[bleed]]] and is no longer grabbed or restrained. If the target is adjacent to a surface, the tooth also pins it in place, making it @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} (@UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} DC 45).</p>"
+          "description": "<p><strong>Requirements</strong> A creature is @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} in the nasurgeth's jaws</p>\n<hr />\n<p><strong>Effect</strong> The nasurgeth breaks a tooth off in the target, who takes @Damage[3d10[bleed]] and is no longer grabbed or restrained. If the target is adjacent to a surface, the tooth also pins it in place, making it @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} (@UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} DC 45).</p>"
         },
         "action->Ravenous Void": {
           "name": "Ravenous Void",
           "description": "<p>The nasurgeth barrels forward with their mouth open, Swimming twice in a straight line and moving through the spaces of Huge or smaller creatures. The nasurgeth deals the damage of their jaws Strike to each creature whose space they enter (@Check[type:reflex|dc:45|basic:true]). Any creature that critically fails is automatically Swallowed Whole.</p>"
         },
         "action->Swallow Whole": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.uJSseLa57HZYSMUu]\n<p>Huge, [[/r (2d10+9)[bludgeoning]]], Rupture 40</p>\n<p>A living creature that ends its turn swallowed whole by a nasurgeth becomes @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} or increases its drained condition by 1, and the nasurgeth gains 20 temporary Hit Points. A creature whose drained condition increases to 5 in this way dies.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.uJSseLa57HZYSMUu]\n<p>Huge, @Damage[(2d10+9)[bludgeoning]], Rupture 40</p>\n<p>A living creature that ends its turn swallowed whole by a nasurgeth becomes @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} or increases its drained condition by 1, and the nasurgeth gains 20 temporary Hit Points. A creature whose drained condition increases to 5 in this way dies.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
         },
         "lore->Negative Energy Plane Lore": {
           "name": "Negative Energy Plane Lore"
@@ -2038,7 +2047,7 @@
         },
         "action->Siphon Vitality": {
           "name": "Siphon Vitality",
-          "description": "<p>The pale sovereign siphons the life force from creatures around them. All living creatures in a @Template[type:emanation|distance:30] take [[/r 6d8[negative]]] damage (@Check[type:fortitude|dc:39|basic:true]). The pale sovereign regains HP equal to the highest damage a single creature took from this effect.</p>"
+          "description": "<p>The pale sovereign siphons the life force from creatures around them. All living creatures in a @Template[type:emanation|distance:30] take @Damage[6d8[negative]] damage (@Check[type:fortitude|dc:39|basic:true]). The pale sovereign regains HP equal to the highest damage a single creature took from this effect.</p>"
         }
       }
     },
@@ -2203,7 +2212,7 @@
         },
         "action->Ghoul Fever": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.N7UV5CZXtcoxDxCF]\nGhoul Fever",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.N7UV5CZXtcoxDxCF]\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:20]</p>\n<hr />\n<p><strong>Stage 1</strong> carrier with no ill effect (1 day)</p>\n<p><strong>Stage 2</strong> [[/r 2d6[negative]]] damage and regains half as many Hit Points from all healing (1 day)</p>\n<p><strong>Stage 3</strong> as stage 2 (1 day)</p>\n<p><strong>Stage 4</strong> [[/r 2d6[negative]]] damage and gains no benefit from healing (1 day)</p>\n<p><strong>Stage 5</strong> as stage 4 (1 day)</p>\n<p><strong>Stage 6</strong> dead, and rises as a @UUID[Compendium.pf2e.pathfinder-bestiary.Actor.LHHgGSs0ELCR4CYK]{Ghoul} the next midnight.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.N7UV5CZXtcoxDxCF]\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:20]</p>\n<hr />\n<p><strong>Stage 1</strong> carrier with no ill effect (1 day)</p>\n<p><strong>Stage 2</strong> @Damage[2d6[negative]] damage and regains half as many Hit Points from all healing (1 day)</p>\n<p><strong>Stage 3</strong> as stage 2 (1 day)</p>\n<p><strong>Stage 4</strong> @Damage[2d6[negative]] damage and gains no benefit from healing (1 day)</p>\n<p><strong>Stage 5</strong> as stage 4 (1 day)</p>\n<p><strong>Stage 6</strong> dead, and rises as a @UUID[Compendium.pf2e.pathfinder-bestiary.Actor.LHHgGSs0ELCR4CYK]{Ghoul} the next midnight.</p>"
         },
         "action->Paralysis": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.FW4KAUHb7r8WkxUc]\nParalysis",
@@ -2344,7 +2353,7 @@
         },
         "action->Soul Theft": {
           "name": "Soul Theft",
-          "description": "<p><strong>Requirements</strong> The queen has a creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} with her proboscis</p>\n<hr />\n<p><strong>Effect</strong> The queen devours a portion of the creature's soul and steals some of its ability. The creature takes [[/r 5d8[negative]]] damage (@Check[type:fortitude|dc:41] save). The queen gains temporary HP equal to the total amount of HP the target loses, including any HP lost from being drained.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage and is @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}.</p>\n<p><strong>Failure</strong> The creature takes full damage and is drained 1 and @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 1}. The queen steals a spell slot or training. If she steals a spell from a prepared caster, she transfers the spell to herself; if she steals from a spontaneous caster, she gains a prepared spell of the appropriate level and expends one of the creature's spell slots of that level. If she steals training, she chooses Perception, attack modifier, or any skill. For 24 hours, she gains a +2 status bonus to that statistic and the creature takes a -2 status penalty. The queen can have any number of stolen abilities, but only one from each creature.</p>\n<p><strong>Critical Failure</strong> As failure, but double damage.</p>"
+          "description": "<p><strong>Requirements</strong> The queen has a creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} with her proboscis</p>\n<hr />\n<p><strong>Effect</strong> The queen devours a portion of the creature's soul and steals some of its ability. The creature takes @Damage[5d8[negative]] damage (@Check[type:fortitude|dc:41] save). The queen gains temporary HP equal to the total amount of HP the target loses, including any HP lost from being drained.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage and is @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}.</p>\n<p><strong>Failure</strong> The creature takes full damage and is drained 1 and @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 1}. The queen steals a spell slot or training. If she steals a spell from a prepared caster, she transfers the spell to herself; if she steals from a spontaneous caster, she gains a prepared spell of the appropriate level and expends one of the creature's spell slots of that level. If she steals training, she chooses Perception, attack modifier, or any skill. For 24 hours, she gains a +2 status bonus to that statistic and the creature takes a -2 status penalty. The queen can have any number of stolen abilities, but only one from each creature.</p>\n<p><strong>Critical Failure</strong> As failure, but double damage.</p>"
         }
       }
     },
@@ -2380,7 +2389,7 @@
         },
         "action->Synaptic Overload": {
           "name": "Synaptic Overload",
-          "description": "<p>The raw nerve releases a burst of mental energy in a @Template[type:cone|distance:30], dealing [[/r 4d12[mental]]] damage to each creature in the cone (@Check[type:will|dc:23] save).</p>\n<hr />\n<p><strong>Critical Success</strong> The creature takes no damage.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 2}</p>"
+          "description": "<p>The raw nerve releases a burst of mental energy in a @Template[type:cone|distance:30], dealing @Damage[4d12[mental]] damage to each creature in the cone (@Check[type:will|dc:23] save).</p>\n<hr />\n<p><strong>Critical Success</strong> The creature takes no damage.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 2}</p>"
         },
         "lore->Lore": {
           "name": "Lore"
@@ -2419,7 +2428,7 @@
         },
         "action->Crumble": {
           "name": "Crumble",
-          "description": "<p>The relictner erodes an object within 30 feet, dealing [[/r 3d10[bludgeoning]]] damage to it, with a @Check[type:reflex|dc:31|basic:true] if the object is attended.</p>"
+          "description": "<p>The relictner erodes an object within 30 feet, dealing @Damage[3d10[bludgeoning]] damage to it, with a @Check[type:reflex|dc:31|basic:true] if the object is attended.</p>"
         },
         "action->Death Gasp": {
           "name": "Death Gasp",
@@ -2427,7 +2436,7 @@
         },
         "action->Demolition": {
           "name": "Demolition",
-          "description": "<p>The relictner bellows in fury, causing the surrounding structure to collapse. All creatures in a @Template[type:emanation|distance:30] take [[/r 8d10[bludgeoning]]] damage from falling debris (@Check[type:reflex|dc:31|basic:true]). A creature that fails its save is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}. The area becomes difficult terrain.</p>\n<p>The relictner can't use Demolition again for [[/br 1d4 #rounds]]{1d4 rounds}.</p>"
+          "description": "<p>The relictner bellows in fury, causing the surrounding structure to collapse. All creatures in a @Template[type:emanation|distance:30] take @Damage[8d10[bludgeoning]] damage from falling debris (@Check[type:reflex|dc:31|basic:true]). A creature that fails its save is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}. The area becomes difficult terrain.</p>\n<p>The relictner can't use Demolition again for [[/br 1d4 #Recharge Demolition]]{1d4 rounds}.</p>"
         }
       }
     },
@@ -2440,6 +2449,15 @@
       "items": {
         "spellcastingEntry->Occult Spontaneous Spells": {
           "name": "Occult Spontaneous Spells"
+        },
+        "spell->Dimension Door": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.VlNcjmYyu95vOUe8]\nDimension Door"
+        },
+        "spell->See Invisibility": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.jwK43yKsHTkJQvQ9]\nSee Invisibility"
+        },
+        "spell->Mage Hand": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.pwzdSlJgYqN7bs2w]\nMage Hand"
         },
         "weapon->Battle Axe": {
           "name": "Battle Axe (+2,greaterStriking,grievous)"
@@ -2502,7 +2520,7 @@
       "disable": "<p>@Check[type:perfomance|dc:18] to perform so well the conductor releases you from your instrument, banishing it voluntarily; @Check[type:occultism|dc:22] (trained) or @Check[type:religion|dc:22] (trained) to banish one instrument; or @Check[type:thievery|dc:25] (trained) to sabotage one instrument; each instrument must be banished, sabotaged, or destroyed to disable the haunt</p>",
       "hpDetails": "per instrument",
       "reset": "<p>The haunt deactivates when all conjured instruments are destroyed or there has been silence for 1 minute. It resets after 1 hour.</p>",
-      "routine": "<p>(1 action; enchantment, mental, occult) The conductor urges each creature within 30 feet to play the hazardous instrument it holds. Each creature that is compelled to play its instrument does so, and those who succeeded on their save can choose to do so. Playing the instrument, either from the haunt's routine or of a creature's own volition during an attempt to disable the haunt, deals [[/r (1d6+3)[slashing]]] damage (@Check[type:reflex|dc:21|basic:true|traits:enchantment,mental,occult] save), and the creature must attempt a @Check[type:performance|dc:18|traits:enchantment,mental,occult,damaging-effect] check. On a success, the conductor accepts the performance and dismisses that creature's instrument, and on a critical failure, the discordant sound and conductor's jeers deal an additional [[/r (1d6+3)[sonic]]] damage.</p>",
+      "routine": "<p>(1 action; enchantment, mental, occult) The conductor urges each creature within 30 feet to play the hazardous instrument it holds. Each creature that is compelled to play its instrument does so, and those who succeeded on their save can choose to do so. Playing the instrument, either from the haunt's routine or of a creature's own volition during an attempt to disable the haunt, deals @Damage[(1d6+3)[slashing]] damage (@Check[type:reflex|dc:21|basic:true|traits:enchantment,mental,occult] save), and the creature must attempt a @Check[type:performance|dc:18|traits:enchantment,mental,occult,damaging-effect] check. On a success, the conductor accepts the performance and dismisses that creature's instrument, and on a critical failure, the discordant sound and conductor's jeers deal an additional @Damage[(1d6+3)[sonic]] damage.</p>",
       "stealth": "<p>(trained)</p>",
       "items": {
         "action->Conjure Instruments": {
@@ -2552,7 +2570,7 @@
         },
         "action->Putrid Assault": {
           "name": "Putrid Assault",
-          "description": "<p>Each enemy in the seetangeist's space takes [[/r {3d6[slashing],3d6[poison]}]]{3d6 slashing and 3d6 poison damage} (@Check[type:reflex|dc:32|basic:true]). A creature that fails this save also takes [[/r 1d12[persistent,poison]]].</p>"
+          "description": "<p>Each enemy in the seetangeist's space takes [[/r {3d6[slashing],3d6[poison]}]]{3d6 slashing and 3d6 poison damage} (@Check[type:reflex|dc:32|basic:true]). A creature that fails this save also takes @Damage[1d12[persistent,poison]].</p>"
         }
       }
     },
@@ -2595,7 +2613,7 @@
       "items": {
         "action->Shatter": {
           "name": "Shatter",
-          "description": "<p><strong>Trigger</strong> A creature moves adjacent to the window</p>\n<hr />\n<p><strong>Effect</strong> The window shatters, dealing [[/r (2d6+5)[slashing]]] damage to creatures within 5 feet (@Check[type:reflex|dc:17|basic:true]).</p>"
+          "description": "<p><strong>Trigger</strong> A creature moves adjacent to the window</p>\n<hr />\n<p><strong>Effect</strong> The window shatters, dealing @Damage[(2d6+5)[slashing]] damage to creatures within 5 feet (@Check[type:reflex|dc:17|basic:true]).</p>"
         }
       }
     },
@@ -2617,7 +2635,7 @@
           "description": "<p>When a shredskin successfully @UUID[Compendium.pf2e.actionspf2e.Item.kMcV8e5EZUxa6evt]{Squeezes}, it moves through the tight space at full speed. Narrow confines are not difficult terrain for a shredskin.</p>"
         },
         "action->Constrict": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.g26YiEIfSHCpLocV]\n<p>[[/r (1d6+2)[bludgeoning]]], @Check[type:fortitude|dc:16|basic:true]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.g26YiEIfSHCpLocV]\n<p>@Damage[(1d6+2)[bludgeoning]], @Check[type:fortitude|dc:16|basic:true]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
         },
         "action->Control Body": {
           "name": "Control Body",
@@ -2641,6 +2659,19 @@
         },
         "spellcastingEntry->Primal Focus Spells": {
           "name": "Primal Focus Spells"
+        },
+        "spell->Flesh to Stone": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.znv4ECL7ZtuiagtA]\nFlesh to Stone",
+          "target": "1 creature made of flesh"
+        },
+        "spell->Tree Stride": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.F1qxaqsEItmBura2]\nTree Stride"
+        },
+        "spell->Longstrider": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.KcLVELhCUcKXxiKE]\nLongstrider"
+        },
+        "spell->Tanglefoot": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.uZK2BYzPnxUBnDjr]\nTanglefoot"
         },
         "consumable->Scroll of True Seeing (Level 6)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.4sGIy77COooxhQuC]\nScroll of True Seeing (Level 6)",
@@ -2696,7 +2727,7 @@
           "description": "<p>If the silent stalker's murderer dies, the pale stranger is immediately destroyed. A pale stranger that can't sense their murderer must attempt a @Check[type:flat|dc:11] once every 24 hours to avoid becoming @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} and @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}; they immediately rise again once they can sense their murderer. A murderer who becomes undead does not trigger the silent stalker's destruction until the murderer is finally destroyed. The silent stalker gains a +2 status bonus to checks and DCs against their murderer.</p>"
         },
         "action->Constrict": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.g26YiEIfSHCpLocV]\n<p>[[/r (3d8+7)[bludgeoning]]], @Check[type:fortitude|dc:33|basic:true]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.g26YiEIfSHCpLocV]\n<p>@Damage[(3d8+7)[bludgeoning]], @Check[type:fortitude|dc:33|basic:true]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
         },
         "action->Implacable Advance": {
           "name": "Implacable Advance",
@@ -2709,12 +2740,12 @@
       "description": "<p>A formless spirit drains life from the living, becoming progressively visible as its victims weaken.</p>",
       "disable": "<p>@Check[type:occultism|dc:48] (expert) or @Check[type:religion|dc:48] (expert) to weaken the spirit; four total successes are required to disable the haunt</p>",
       "reset": "<p>After 1 minute, the spirit is satiated, and the haunt deactivates as it returns to a resting state. Over the course of 1 hour, the spirit's siphoned life energy disperses and the haunt resets.</p>",
-      "routine": "<p>(1 action; death, divine, necromancy, negative) The spirit inhales, siphoning the souls of the living and becoming more visible. Each creature within @Template[type:burst|distnace:60]{60 feet} takes [[/r (4d10+20)[negative]]] damage, with a @Check[type:fortitude|dc:41|traits:death,divine,necromancy,negative,damaging-effect] save. If no creatures are within the area, the haunt moves up to 120 feet into the largest concentration of living creatures and then inhales.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and increases its @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained} value by 1, to a maximum of drained 4.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and increases its drained value by 2, to a maximum of drained 4. If the creature was already drained 4, it dies.</p>",
+      "routine": "<p>(1 action; death, divine, necromancy, negative) The spirit inhales, siphoning the souls of the living and becoming more visible. Each creature within @Template[type:burst|distnace:60]{60 feet} takes @Damage[(4d10+20)[negative]] damage, with a @Check[type:fortitude|dc:41|traits:death,divine,necromancy,negative,damaging-effect] save. If no creatures are within the area, the haunt moves up to 120 feet into the largest concentration of living creatures and then inhales.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and increases its @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained} value by 1, to a maximum of drained 4.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and increases its drained value by 2, to a maximum of drained 4. If the creature was already drained 4, it dies.</p>",
       "stealth": "<p>(trained)</p>",
       "items": {
         "action->Sudden Siphon": {
           "name": "Sudden Siphon",
-          "description": "<p><strong>Trigger</strong> A living creature passes within 15 feet of the spirit</p>\n<hr />\n<p><strong>Effect</strong> The invisible spirit latches onto the life essence of the living, dealing [[/r (4d10+20)[negative]]] damage to all living creatures within @Template[type:burst|distance:60]{60 feet} (@Check[type:fortitude|dc:41|basic:true] save). The haunt then rolls initiative.</p>"
+          "description": "<p><strong>Trigger</strong> A living creature passes within 15 feet of the spirit</p>\n<hr />\n<p><strong>Effect</strong> The invisible spirit latches onto the life essence of the living, dealing @Damage[(4d10+20)[negative]] damage to all living creatures within @Template[type:burst|distance:60]{60 feet} (@Check[type:fortitude|dc:41|basic:true] save). The haunt then rolls initiative.</p>"
         }
       }
     },
@@ -2726,6 +2757,9 @@
       "items": {
         "spellcastingEntry->Arcane Innate Spells": {
           "name": "Arcane Innate Spells"
+        },
+        "spell->Burning Hands": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.y6rAdMK6EFlV6U0t]\nBurning Hands"
         },
         "strike-melee->Claw": {
           "name": "Claw"
@@ -2825,7 +2859,7 @@
       "description": "<p>A cyclone of angry spirits surges around the area.</p>",
       "disable": "<p>@Check[type:occultism|dc:30] (trained) or @Check[type:religion|dc:30] (trained) to weaken the haunt; three total successes in any combination are required to disable the haunt</p>",
       "reset": "<p>The spirit cyclone disperses after 1 minute and resets after 1 day.</p>",
-      "routine": "<p>(3 actions) The spirit cyclone uses 3 actions to move, traveling up to 30 feet with each action and dealing [[/r (2d10+13)[negative]]] damage to each creature in its path (@Check[type:reflex|dc:32|basic:true] save). A creature needs to attempt only one save during the cyclone's movement, even if the cyclone moves over its space more than once. On a critical failure, a creature is swept up into the cyclone, becoming @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} (@UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} DC 32). A creature grabbed by the cyclone moves along with the cyclone and takes [[/r (1d10+6)[negative]]] damage at their beginning of its turn, and it must attempt a Reflex save against the cyclone on the cyclone's turn, no matter where the cyclone moves. A creature that successfully Escapes from the cyclone falls from a height of [[/r {1d12*5} #Falling Distance]]{1d12 x 5 feet}.</p>",
+      "routine": "<p>(3 actions) The spirit cyclone uses 3 actions to move, traveling up to 30 feet with each action and dealing @Damage[(2d10+13)[negative]] damage to each creature in its path (@Check[type:reflex|dc:32|basic:true] save). A creature needs to attempt only one save during the cyclone's movement, even if the cyclone moves over its space more than once. On a critical failure, a creature is swept up into the cyclone, becoming @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} (@UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} DC 32). A creature grabbed by the cyclone moves along with the cyclone and takes @Damage[(1d10+6)[negative]] damage at their beginning of its turn, and it must attempt a Reflex save against the cyclone on the cyclone's turn, no matter where the cyclone moves. A creature that successfully Escapes from the cyclone falls from a height of [[/r {1d12*5} #Falling Distance]]{1d12 x 5 feet}.</p>",
       "stealth": "<p>(expert)</p>",
       "items": {
         "action->Gather Spirit": {
@@ -2868,7 +2902,7 @@
         },
         "action->Entropy's Shadow": {
           "name": "Entropy's Shadow",
-          "description": "<p>@Template[type:emanation|distance:40]{40 feet} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}</p>\n<p>Sykevers leak entropy and corruption from their very being. A living creature entering or starting its turn in the aura takes [[/r 4d6[negative]]] damage with a @Check[type:fortitude|dc:33|basic:true]. If it fails, it's also @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} for 1 minute and pulled 10 feet toward the sykever.</p>"
+          "description": "<p>@Template[type:emanation|distance:40]{40 feet} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}</p>\n<p>Sykevers leak entropy and corruption from their very being. A living creature entering or starting its turn in the aura takes @Damage[4d6[negative]] damage with a @Check[type:fortitude|dc:33|basic:true]. If it fails, it's also @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} for 1 minute and pulled 10 feet toward the sykever.</p>"
         },
         "action->Sunlight Powerlessness": {
           "name": "Sunlight Powerlessness",
@@ -2944,7 +2978,7 @@
       "items": {
         "action->Topple Furniture": {
           "name": "Topple Furniture",
-          "description": "<p><strong>Trigger</strong> A creature moves adjacent to the furniture</p>\n<hr />\n<p><strong>Effect</strong> The spirit shoves the furniture over in an attempt to crush the triggering creature. The triggering creature takes [[/r (2d10+7)[bludgeoning]]] damage (@Check[type:reflex|dc:22|basic:true]). On a failure, the creature is additionally knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>"
+          "description": "<p><strong>Trigger</strong> A creature moves adjacent to the furniture</p>\n<hr />\n<p><strong>Effect</strong> The spirit shoves the furniture over in an attempt to crush the triggering creature. The triggering creature takes @Damage[(2d10+7)[bludgeoning]] damage (@Check[type:reflex|dc:22|basic:true]). On a failure, the creature is additionally knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>"
         }
       }
     },
@@ -2970,11 +3004,11 @@
         },
         "action->Tortured Gaze": {
           "name": "Tortured Gaze",
-          "description": "<p>@Template[type:emanation|distance:30] @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura} or @Template[type:emanation|distance:60] if the tormented is at 125 HP or lower.</p>\n<p>The psychic agony of a tormented spills into the world around them, inflicting murderous hallucinations replicating the tormented's last moments. A non-undead creature that ends its turn in the aura must succeed at a @Check[type:will|dc:32] save or take [[/r 6d6[fire]]] damage and be wreathed in ghostly flames for 1 minute, negating its @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} condition and rendering it concealed if it would be @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Invisible}. While it has a condition from Tortured Gaze, a creature can't gain a new condition from the aura but can take damage from it again.</p>"
+          "description": "<p>@Template[type:emanation|distance:30] @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura} or @Template[type:emanation|distance:60] if the tormented is at 125 HP or lower.</p>\n<p>The psychic agony of a tormented spills into the world around them, inflicting murderous hallucinations replicating the tormented's last moments. A non-undead creature that ends its turn in the aura must succeed at a @Check[type:will|dc:32] save or take @Damage[6d6[fire]] damage and be wreathed in ghostly flames for 1 minute, negating its @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} condition and rendering it concealed if it would be @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Invisible}. While it has a condition from Tortured Gaze, a creature can't gain a new condition from the aura but can take damage from it again.</p>"
         },
         "action->Scream in Agony": {
           "name": "Scream in Agony",
-          "description": "<p>Each creature in the tormented's Tortured Gaze aura takes [[/r 14d6[mental]]] damage (@Check[type:will|dc:34|basic:true]). A creature that fails is also @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure).</p>\n<p>The tormented can't Scream in Agony again for [[/br 1d4 #Scream in Agony Recharge]]{1d4 rounds}, but recharges the ability whenever they take damage from an attacker's critical hit or their own critical failure on a saving throw.</p>"
+          "description": "<p>Each creature in the tormented's Tortured Gaze aura takes @Damage[14d6[mental]] damage (@Check[type:will|dc:34|basic:true]). A creature that fails is also @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure).</p>\n<p>The tormented can't Scream in Agony again for [[/br 1d4 #Recharge Scream in Agony]]{1d4 rounds}, but recharges the ability whenever they take damage from an attacker's critical hit or their own critical failure on a saving throw.</p>"
         }
       }
     },
@@ -3000,11 +3034,11 @@
         },
         "action->Tortured Gaze": {
           "name": "Tortured Gaze",
-          "description": "<p>@Template[type:emanation|distance:30] @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura} or @Template[type:emanation|distance:60] if the tormented is at 125 HP or lower.</p>\n<p>The psychic agony of a tormented spills into the world around them, inflicting murderous hallucinations replicating the tormented's last moments. A non-undead creature that ends its turn in the aura must succeed at a @Check[type:will|dc:32] save or take [[/r 4d8[bludgeoning]]] damage and be knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}. While it has a condition from Tortured Gaze, a creature can't gain a new condition from the aura but can take damage from it again.</p>"
+          "description": "<p>@Template[type:emanation|distance:30] @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura} or @Template[type:emanation|distance:60] if the tormented is at 125 HP or lower.</p>\n<p>The psychic agony of a tormented spills into the world around them, inflicting murderous hallucinations replicating the tormented's last moments. A non-undead creature that ends its turn in the aura must succeed at a @Check[type:will|dc:32] save or take @Damage[4d8[bludgeoning]] damage and be knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}. While it has a condition from Tortured Gaze, a creature can't gain a new condition from the aura but can take damage from it again.</p>"
         },
         "action->Scream in Agony": {
           "name": "Scream in Agony",
-          "description": "<p>Each creature in the tormented's Tortured Gaze aura takes [[/r 14d6[mental]]] damage (@Check[type:will|dc:34|basic:true]). A creature that fails is also @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure).</p>\n<p>The tormented can't Scream in Agony again for [[/br 1d4 #Scream in Agony Recharge]]{1d4 rounds}, but recharges the ability whenever they take damage from an attacker's critical hit or their own critical failure on a saving throw.</p>"
+          "description": "<p>Each creature in the tormented's Tortured Gaze aura takes @Damage[14d6[mental]] damage (@Check[type:will|dc:34|basic:true]). A creature that fails is also @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure).</p>\n<p>The tormented can't Scream in Agony again for [[/br 1d4 #Recharge Scream in Agony]]{1d4 rounds}, but recharges the ability whenever they take damage from an attacker's critical hit or their own critical failure on a saving throw.</p>"
         }
       }
     },
@@ -3034,7 +3068,7 @@
         },
         "action->Scream in Agony": {
           "name": "Scream in Agony",
-          "description": "<p>Each creature in the tormented's Tortured Gaze aura takes [[/r 14d6[mental]]] damage (@Check[type:will|dc:34|basic:true]). A creature that fails is also @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure).</p>\n<p>The tormented can't Scream in Agony again for [[/br 1d4 #Scream in Agony Recharge]]{1d4 rounds}, but recharges the ability whenever they take damage from an attacker's critical hit or their own critical failure on a saving throw.</p>"
+          "description": "<p>Each creature in the tormented's Tortured Gaze aura takes @Damage[14d6[mental]] damage (@Check[type:will|dc:34|basic:true]). A creature that fails is also @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure).</p>\n<p>The tormented can't Scream in Agony again for [[/br 1d4 #Recharge Scream in Agony]]{1d4 rounds}, but recharges the ability whenever they take damage from an attacker's critical hit or their own critical failure on a saving throw.</p>"
         }
       }
     },
@@ -3060,11 +3094,11 @@
         },
         "action->Tortured Gaze": {
           "name": "Tortured Gaze",
-          "description": "<p>@Template[type:emanation|distance:30] @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura} or @Template[type:emanation|distance:60] if the tormented is at 125 HP or lower.</p>\n<p>The psychic agony of a tormented spills into the world around them, inflicting murderous hallucinations replicating the tormented's last moments. A non-undead creature that ends its turn in the aura must succeed at a @Check[type:will|dc:32] save or take [[/r 4d6[cold]]] damage and be @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}. While it has a condition from Tortured Gaze, a creature can't gain a new condition from the aura but can take damage from it again.</p>"
+          "description": "<p>@Template[type:emanation|distance:30] @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura} or @Template[type:emanation|distance:60] if the tormented is at 125 HP or lower.</p>\n<p>The psychic agony of a tormented spills into the world around them, inflicting murderous hallucinations replicating the tormented's last moments. A non-undead creature that ends its turn in the aura must succeed at a @Check[type:will|dc:32] save or take @Damage[4d6[cold]] damage and be @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}. While it has a condition from Tortured Gaze, a creature can't gain a new condition from the aura but can take damage from it again.</p>"
         },
         "action->Scream in Agony": {
           "name": "Scream in Agony",
-          "description": "<p>Each creature in the tormented's Tortured Gaze aura takes [[/r 14d6[mental]]] damage (@Check[type:will|dc:34|basic:true]). A creature that fails is also @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure).</p>\n<p>The tormented can't Scream in Agony again for [[/br 1d4 #Scream in Agony Recharge]]{1d4 rounds}, but recharges the ability whenever they take damage from an attacker's critical hit or their own critical failure on a saving throw.</p>"
+          "description": "<p>Each creature in the tormented's Tortured Gaze aura takes @Damage[14d6[mental]] damage (@Check[type:will|dc:34|basic:true]). A creature that fails is also @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure).</p>\n<p>The tormented can't Scream in Agony again for [[/br 1d4 #Recharge Scream in Agony]]{1d4 rounds}, but recharges the ability whenever they take damage from an attacker's critical hit or their own critical failure on a saving throw.</p>"
         }
       }
     },
@@ -3090,11 +3124,11 @@
         },
         "action->Tortured Gaze": {
           "name": "Tortured Gaze",
-          "description": "<p>@Template[type:emanation|distance:30] @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura} or @Template[type:emanation|distance:60] if the tormented is at 125 HP or lower.</p>\n<p>The psychic agony of a tormented spills into the world around them, inflicting murderous hallucinations replicating the tormented's last moments. A non-undead creature that ends its turn in the aura must succeed at a @Check[type:will|dc:32] save or take [[/r 8d4[bleed]]]. The creature doesn't take the persistent damage this turn, nor does it get its flat check to end the damage. While it has a condition from Tortured Gaze, a creature can't gain a new condition from the aura but can take damage from it again.</p>"
+          "description": "<p>@Template[type:emanation|distance:30] @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura} or @Template[type:emanation|distance:60] if the tormented is at 125 HP or lower.</p>\n<p>The psychic agony of a tormented spills into the world around them, inflicting murderous hallucinations replicating the tormented's last moments. A non-undead creature that ends its turn in the aura must succeed at a @Check[type:will|dc:32] save or take @Damage[8d4[bleed]]. The creature doesn't take the persistent damage this turn, nor does it get its flat check to end the damage. While it has a condition from Tortured Gaze, a creature can't gain a new condition from the aura but can take damage from it again.</p>"
         },
         "action->Scream in Agony": {
           "name": "Scream in Agony",
-          "description": "<p>Each creature in the tormented's Tortured Gaze aura takes [[/r 14d6[mental]]] damage (@Check[type:will|dc:34|basic:true]). A creature that fails is also @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure).</p>\n<p>The tormented can't Scream in Agony again for [[/br 1d4 #Scream in Agony Recharge]]{1d4 rounds}, but recharges the ability whenever they take damage from an attacker's critical hit or their own critical failure on a saving throw.</p>"
+          "description": "<p>Each creature in the tormented's Tortured Gaze aura takes @Damage[14d6[mental]] damage (@Check[type:will|dc:34|basic:true]). A creature that fails is also @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure).</p>\n<p>The tormented can't Scream in Agony again for [[/br 1d4 #Recharge Scream in Agony]]{1d4 rounds}, but recharges the ability whenever they take damage from an attacker's critical hit or their own critical failure on a saving throw.</p>"
         }
       }
     },
@@ -3124,7 +3158,7 @@
         },
         "action->Scream in Agony": {
           "name": "Scream in Agony",
-          "description": "<p>Each creature in the tormented's Tortured Gaze aura takes [[/r 14d6[mental]]] damage (@Check[type:will|dc:34|basic:true]). A creature that fails is also @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure).</p>\n<p>The tormented can't Scream in Agony again for [[/br 1d4 #Scream in Agony Recharge]]{1d4 rounds}, but recharges the ability whenever they take damage from an attacker's critical hit or their own critical failure on a saving throw.</p>"
+          "description": "<p>Each creature in the tormented's Tortured Gaze aura takes @Damage[14d6[mental]] damage (@Check[type:will|dc:34|basic:true]). A creature that fails is also @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure).</p>\n<p>The tormented can't Scream in Agony again for [[/br 1d4 #Recharge Scream in Agony]]{1d4 rounds}, but recharges the ability whenever they take damage from an attacker's critical hit or their own critical failure on a saving throw.</p>"
         }
       }
     },
@@ -3158,11 +3192,11 @@
         },
         "action->Agonized Howl": {
           "name": "Agonized Howl",
-          "description": "<p>The unrisen howls in pain at its cursed existence. Creatures within a @Template[type:emanation|distance:30] take [[/r 9d8[mental]]] damage (@Check[type:will|dc:30|basic:true]). The unrisen can't use Agonized Howl again for [[/br 1d4 #Agonized Howl Recharge]]{1d4 rounds}.</p>"
+          "description": "<p>The unrisen howls in pain at its cursed existence. Creatures within a @Template[type:emanation|distance:30] take @Damage[9d8[mental]] damage (@Check[type:will|dc:30|basic:true]). The unrisen can't use Agonized Howl again for [[/br 1d4 #Recharge Agonized Howl]]{1d4 rounds}.</p>"
         },
         "action->Awful Approach": {
           "name": "Awful Approach",
-          "description": "<p>The unrisen reshapes its grotesque form to move swiftly. It Strides twice. Any living creature that can see the unrisen during this movement must succeed at a @Check[type:fortitude|dc:28] save or be @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure). This is a mental and visual effect. The unrisen can't use Awful Approach again for [[/br 1d4 #Awful Approach Recharge]]{1d4 rounds}.</p>"
+          "description": "<p>The unrisen reshapes its grotesque form to move swiftly. It Strides twice. Any living creature that can see the unrisen during this movement must succeed at a @Check[type:fortitude|dc:28] save or be @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure). This is a mental and visual effect. The unrisen can't use Awful Approach again for [[/br 1d4 #Recharge Awful Approach]]{1d4 rounds}.</p>"
         },
         "action->Death Grip": {
           "name": "Death Grip",
@@ -3211,7 +3245,7 @@
         },
         "action->Entropy's Shadow": {
           "name": "Entropy's Shadow",
-          "description": "<p>@Template[type:emanation|distance:60]{60 feet} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}</p>\n<p>Urveths leak entropy and corruption from their very being. A living creature entering or starting its turn in the aura takes [[/r 5d6[negative]]] damage with a @Check[type:fortitude|dc:38|basic:true]. If it fails, it's also @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} for 1 minute and pulled 10 feet toward the urveth.</p>"
+          "description": "<p>@Template[type:emanation|distance:60]{60 feet} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}</p>\n<p>Urveths leak entropy and corruption from their very being. A living creature entering or starting its turn in the aura takes @Damage[5d6[negative]] damage with a @Check[type:fortitude|dc:38|basic:true]. If it fails, it's also @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} for 1 minute and pulled 10 feet toward the urveth.</p>"
         },
         "action->Sunlight Powerlessness": {
           "name": "Sunlight Powerlessness",
@@ -3222,7 +3256,7 @@
           "description": "<p>The urveth makes two claw Strikes and one stinger Strike in any order.</p>"
         },
         "action->Swallow Whole": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.uJSseLa57HZYSMUu]\n<p>Huge, [[/r (2d10+5)[bludgeoning]]], Rupture 35</p>\n<p>A living creature that ends its turn swallowed whole by an urveth becomes @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} or increases its drained condition by 1, and the urveth gains 10 temporary Hit Points. A creature whose drained condition increases to 5 in this way dies.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.uJSseLa57HZYSMUu]\n<p>Huge, @Damage[(2d10+5)[bludgeoning]], Rupture 35</p>\n<p>A living creature that ends its turn swallowed whole by an urveth becomes @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} or increases its drained condition by 1, and the urveth gains 10 temporary Hit Points. A creature whose drained condition increases to 5 in this way dies.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
         },
         "action->Urveth Venom": {
           "name": "Urveth Venom",
@@ -3252,6 +3286,9 @@
         "spell->Dispel Magic (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]\nDispel Magic (At Will)"
         },
+        "spell->See Invisibility": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.jwK43yKsHTkJQvQ9]\nSee Invisibility"
+        },
         "strike-melee->Talon": {
           "name": "Talon"
         },
@@ -3277,7 +3314,7 @@
         },
         "action->Entropy's Shadow": {
           "name": "Entropy's Shadow",
-          "description": "<p>@Template[type:emanation|distance:40]{40 feet} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}</p>\n<p>Vanyvers leak entropy and corruption from their very being. A living creature entering or starting its turn in the aura takes [[/r 3d6[negative]]] damage with a @Check[type:fortitude|dc:30|basic:true]. If it fails, it's also @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} for 1 minute and pulled 10 feet toward the vanyver.</p>"
+          "description": "<p>@Template[type:emanation|distance:40]{40 feet} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}</p>\n<p>Vanyvers leak entropy and corruption from their very being. A living creature entering or starting its turn in the aura takes @Damage[3d6[negative]] damage with a @Check[type:fortitude|dc:30|basic:true]. If it fails, it's also @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} for 1 minute and pulled 10 feet toward the vanyver.</p>"
         },
         "action->Snatch": {
           "name": "Snatch",
@@ -3288,7 +3325,7 @@
           "description": "<p>A vanyver caught in sunlight is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 2} and @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2}.</p>"
         },
         "action->Constrict": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.g26YiEIfSHCpLocV]\n<p>[[/r (3d10+5)[piercing]]] @Check[type:fortitude|dc:33|basic:true]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.g26YiEIfSHCpLocV]\n<p>@Damage[(3d10+5)[piercing]] @Check[type:fortitude|dc:33|basic:true]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
         },
         "lore->Negative Energy Plane Lore": {
           "name": "Negative Energy Plane Lore"
@@ -3351,6 +3388,9 @@
         "spell->Tongues (Constant)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.SwUiVavHKMWG7t5K]\nTongues (Constant)"
         },
+        "spell->Mage Hand": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.pwzdSlJgYqN7bs2w]\nMage Hand"
+        },
         "strike-melee->Claw": {
           "name": "Claw"
         },
@@ -3368,7 +3408,7 @@
         },
         "action->Psychic Superiority": {
           "name": "Psychic Superiority",
-          "description": "<p><strong>Trigger</strong> A creature targets the vetalarana manipulator with a mental effect or spell</p><hr />\n<p><strong>Effect</strong> The manipulator psychically lashes out at the triggering creature, dealing [[/r 3d8[mental]]] damage (@Check[type:will|dc:24|basic:true]).</p>"
+          "description": "<p><strong>Trigger</strong> A creature targets the vetalarana manipulator with a mental effect or spell</p><hr />\n<p><strong>Effect</strong> The manipulator psychically lashes out at the triggering creature, dealing @Damage[3d8[mental]] damage (@Check[type:will|dc:24|basic:true]).</p>"
         },
         "action->Vetalarana Vulnerabilities": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.rwEFqSLw4yIscGrO]\nVetalarana Vulnerabilities"
@@ -3395,7 +3435,7 @@
       "items": {
         "action->Shove": {
           "name": "Shove",
-          "description": "<p><strong>Trigger</strong> A creature moves adjacent to the haunted wall</p>\n<hr />\n<p><strong>Effect</strong> A powerful force sweeps across the room, shoving all creatures in the room toward the wall. Each creature in the area must attempt a @Check[type:fortitude|dc:20] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is pushed 5 feet toward the wall. If the creature would collide with the wall, they take [[/r (1d10+5)[bludgeoning]]] damage.</p>\n<p><strong>Failure</strong> The creature is pushed 10 feet toward the wall. If the creature would collide with the wall, they take [[/r (2d10+10)[bludgeoning]]] damage.</p>\n<p><strong>Critical Failure</strong> The creature is pushed 15 feet toward the wall. If the creature would collide with the wall, they take [[/r (3d10+15)[bludgeoning]]] damage and are knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>"
+          "description": "<p><strong>Trigger</strong> A creature moves adjacent to the haunted wall</p>\n<hr />\n<p><strong>Effect</strong> A powerful force sweeps across the room, shoving all creatures in the room toward the wall. Each creature in the area must attempt a @Check[type:fortitude|dc:20] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is pushed 5 feet toward the wall. If the creature would collide with the wall, they take @Damage[(1d10+5)[bludgeoning]] damage.</p>\n<p><strong>Failure</strong> The creature is pushed 10 feet toward the wall. If the creature would collide with the wall, they take @Damage[(2d10+10)[bludgeoning]] damage.</p>\n<p><strong>Critical Failure</strong> The creature is pushed 15 feet toward the wall. If the creature would collide with the wall, they take @Damage[(3d10+15)[bludgeoning]] damage and are knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>"
         }
       }
     },
@@ -3409,11 +3449,17 @@
         "spellcastingEntry->Primal Innate Spells": {
           "name": "Primal Innate Spells"
         },
+        "spell->Tree Stride": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.F1qxaqsEItmBura2]\nTree Stride"
+        },
         "spell->Speak with Plants (Constant)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.qvwIwJ9QBihy8R0t]\nSpeak with Plants (Constant)"
         },
         "spell->Entangle (At-Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.J6vNvrUT3b1hx2iA]\nEntangle (At-Will)"
+        },
+        "spell->Tanglefoot": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.uZK2BYzPnxUBnDjr]\nTanglefoot"
         },
         "strike-melee->Lignifying Hand": {
           "name": "Lignifying Hand"
@@ -3432,7 +3478,7 @@
         },
         "action->Possess Tree": {
           "name": "Possess Tree",
-          "description": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<hr />\n<p><strong>Effect</strong> The waldgeist touches a tree to merge with it, possessing it for up to 1 minute. They can end this possession early as a free action at the start of their turn. While the waldgeist possesses a tree, they lose the incorporeal trait, fly Speed, all resistances, their non-constant spells, and their lignifying hand Strike. Additionally, their size increases to Huge, they gain resistance 5 to bludgeoning and piercing damage, weakness 10 to fire, Speed 20 feet, and the following branch Strike.</p>\n<p><strong>Melee</strong> <span class=\"pf2-icon\">1</span> branch (reach 15 feet) [[/r 1d20+20 #Branch Strike]]{+20}, <strong>Damage</strong> [[/r (2d12+9)[bludgeoning]]].</p>\n<p>While a waldgeist possesses a tree, any damage that would be dealt to the waldgeist is instead dealt to the tree. The tree has 60 Hit Points. When the tree is reduced to 0 Hit Points, the waldgeist is immediately ejected, and the tree is destroyed.</p>"
+          "description": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<hr />\n<p><strong>Effect</strong> The waldgeist touches a tree to merge with it, possessing it for up to 1 minute. They can end this possession early as a free action at the start of their turn. While the waldgeist possesses a tree, they lose the incorporeal trait, fly Speed, all resistances, their non-constant spells, and their lignifying hand Strike. Additionally, their size increases to Huge, they gain resistance 5 to bludgeoning and piercing damage, weakness 10 to fire, Speed 20 feet, and the following branch Strike.</p>\n<p><strong>Melee</strong> <span class=\"pf2-icon\">1</span> branch (reach 15 feet) [[/r 1d20+20 #Branch Strike]]{+20}, <strong>Damage</strong> @Damage[(2d12+9)[bludgeoning]].</p>\n<p>While a waldgeist possesses a tree, any damage that would be dealt to the waldgeist is instead dealt to the tree. The tree has 60 Hit Points. When the tree is reduced to 0 Hit Points, the waldgeist is immediately ejected, and the tree is destroyed.</p>"
         },
         "lore->Woodland Lore (Applies Only to the Woodland the Waldgeist is Bonded To)": {
           "name": "Woodland Lore (Applies Only to the Woodland the Waldgeist is Bonded To)"
@@ -3603,7 +3649,7 @@
           "description": "<p>A zombie mammoth is permanently @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} and can't use reactions.</p>"
         },
         "action->Greater Constrict": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.OmV6E3aELvq9CkK1]\n<p>[[/r (2d10+7)[bludgeoning]]], @Check[type:fortitude|dc:30|basic:true]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.GreaterConstrict]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.OmV6E3aELvq9CkK1]\n<p>@Damage[(2d10+7)[bludgeoning]], @Check[type:fortitude|dc:30|basic:true]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.GreaterConstrict]</p>"
         },
         "action->Shambling Trample": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.UNah0bxXxkcZjxO3]\nShambling Trample",
@@ -3629,7 +3675,7 @@
         },
         "action->Ground Slam": {
           "name": "Ground Slam",
-          "description": "<p><strong>Requirements</strong> The zombie owlbear has a creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} with its talons</p>\n<hr />\n<p><strong>Effect</strong> The zombie owlbear repeatedly slams the creature into the ground. This deals [[/r (1d10+7)[bludgeoning]]] damage (@Check[type:fortitude|dc:20|basic:true]). On a critical failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}, and on a critical success the creature is no longer grabbed or restrained.</p>"
+          "description": "<p><strong>Requirements</strong> The zombie owlbear has a creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} with its talons</p>\n<hr />\n<p><strong>Effect</strong> The zombie owlbear repeatedly slams the creature into the ground. This deals @Damage[(1d10+7)[bludgeoning]] damage (@Check[type:fortitude|dc:20|basic:true]). On a critical failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}, and on a critical success the creature is no longer grabbed or restrained.</p>"
         },
         "action->Horrifying Screech": {
           "name": "Horrifying Screech",
