@@ -53,7 +53,7 @@ sourceFilesApi
                     .then((sourceStringData) => {
                         if (sourceStringData.data.length > 0) {
                             sourceStrings = sourceStrings.concat(
-                                sourceStringData.data.map(selectProps("id", "fileId", "identifier"))
+                                sourceStringData.data.map(selectProps("id", "fileId", "identifier", "labelIds"))
                             );
                         } else {
                             arrayHasData = false;
