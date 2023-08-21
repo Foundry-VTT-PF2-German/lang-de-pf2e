@@ -274,7 +274,11 @@ class Translator {
             const itemNameSlug = this.sluggify(entry.name);
 
             // For compendium items, get the data from the compendium
-            if (entry.flags?.core?.sourceId && entry.flags.core.sourceId.startsWith("Compendium")) {
+            if (
+                entry.flags?.core?.sourceId &&
+                entry.flags.core.sourceId.startsWith("Compendium") &&
+                !entry.flags.core.sourceId.includes(".Actor.")
+            ) {
                 // Get the actual compendium name
                 const itemCompendium = entry.flags.core.sourceId.slice(
                     entry.flags.core.sourceId.indexOf(".") + 1,
