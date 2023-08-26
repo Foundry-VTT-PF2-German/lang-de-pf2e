@@ -1,6 +1,6 @@
-import { existsSync, mkdirSync, readdirSync, readFileSync, writeFile, writeFileSync } from "fs";
+import { readdirSync, readFileSync, writeFileSync } from "fs";
 import { resolvePath, resolveValue } from "path-value";
-import { BlobReader, BlobWriter, ZipReader } from "@zip.js/zip.js";
+import { getZipContentFromURL } from "../helper/util/fileHandler.js";
 
 // Read config file
 const CONFIG = JSON.parse(readFileSync("./src/db-extractor/db-extractor-config.json", "utf-8"));
@@ -8,103 +8,50 @@ const CONFIG = JSON.parse(readFileSync("./src/db-extractor/db-extractor-config.j
 // Set skill list
 const SKILLS = CONFIG.skillList ?? [];
 
-// Create list of all packs for extraction
-let PACKS = [];
-Object.keys(CONFIG.packs).forEach((packGroup) => {
-    if (resolvePath(CONFIG.packs[packGroup], "packNames").exists) {
-        PACKS = PACKS.concat(CONFIG.packs[packGroup].packNames);
-    } else {
-        Object.keys(CONFIG.packs[packGroup]).forEach((packSubGroup) => {
-            PACKS = PACKS.concat(CONFIG.packs[packGroup][packSubGroup].packNames);
-        });
-    }
-});
-
 // Dictionary
 const dictionaryData = {};
 
 // Actor item comparison database
 let actorItemComparison = {};
 
-// Pull current pf2 release and extract db files
-if (!existsSync(CONFIG.filePaths.packs)) {
-    mkdirSync(CONFIG.filePaths.packs);
+// Pull current pf2 release and extract compendium files
+
+// Fetch assets zip from the URL
+const packs = await getZipContentFromURL(CONFIG.filePaths.zipURL);
+
+// Extract data for mandatory ItemPacks and all other packs
+if (resolvePath(CONFIG, "packs.ItemPacks").exists) {
+    extractPackGroup(
+        "ItemPacks",
+        CONFIG.packs.ItemPacks,
+        packs.filter((pack) => CONFIG.packs.ItemPacks.packNames.includes(pack.fileName))
+    );
+    extractPackGroupList(CONFIG.packs.OtherPacks, packs);
+
+    // Extract and write i18n files
+    console.log(`\n--------------------------\nExtracting: i18n files\n--------------------------`);
+    packs
+        .filter((pack) => CONFIG.i18nFiles.includes(`${pack.fileName}.${pack.fileType}`))
+        .forEach((entry) => {
+            const filePath = `${CONFIG.filePaths.i18n}/${entry.fileName}.${entry.fileType}`;
+            writeFileSync(filePath, JSON.stringify(JSON.parse(entry.content), null, 2));
+            console.log(`Extracted file: ${entry.fileName}`);
+        });
+
+} else console.error(`Mandatory Pack Group "ItemPacks" missing in config.`);
+
+// Build the dictionary
+if (Object.keys(dictionaryData).length > 0) {
+    const dictionary = sortObject(dictionaryData);
+    Object.keys(dictionary).forEach((dictionaryEntry) => {
+        Object.assign(dictionary, { [dictionaryEntry]: sortObject(dictionary[dictionaryEntry]) });
+    });
+
+    writeFileSync(CONFIG.filePaths.dictionary, JSON.stringify(dictionary, null, 2));
 }
 
-// Fetch the file from the URL
-fetch(CONFIG.filePaths.zipURL).then((res) => {
-    res.blob().then((blobRes) => {
-        // Read the zip archive
-        const zipReader = new ZipReader(new BlobReader(blobRes));
-        zipReader.getEntries().then((res) => {
-            return Promise.all(
-                res.map((zipEntry) => {
-                    let saveFileName = "";
-                    let fileFound = false;
-                    // Get the pack files
-                    if (
-                        zipEntry.filename.startsWith(CONFIG.filePaths.zipPacks) &&
-                        PACKS.includes(
-                            zipEntry.filename.replace(`${CONFIG.filePaths.zipPacks}/`, "").replace(".json", "")
-                        )
-                    ) {
-                        fileFound = true;
-                        saveFileName = zipEntry.filename.replace(
-                            `${CONFIG.filePaths.zipPacks}/`,
-                            `${CONFIG.filePaths.packs}/`
-                        );
-                        // Get the I18N files (en.json and re-en.json)
-                    } else if (
-                        zipEntry.filename.startsWith(CONFIG.filePaths.zipI18n) &&
-                        CONFIG.i18nFiles.includes(zipEntry.filename.replace(`${CONFIG.filePaths.zipI18n}/`, ""))
-                    ) {
-                        fileFound = true;
-                        saveFileName = zipEntry.filename.replace(
-                            `${CONFIG.filePaths.zipI18n}/`,
-                            `${CONFIG.filePaths.i18n}/`
-                        );
-                    }
-                    // Get the file from the zip archive and write it to the target directory
-                    if (fileFound) {
-                        return zipEntry.getData(new BlobWriter()).then((blobRes) => {
-                            return blobRes.arrayBuffer().then((data) => {
-                                writeFileSync(saveFileName, Buffer.from(data));
-                            });
-                        });
-                    } else {
-                        // Signalize that everything is done,
-                        // as there was nothing to do with no file found
-                        return Promise.resolve();
-                    }
-                })
-            ).then(() => {
-                //Read available pack files
-                const packFiles = readdirSync(CONFIG.filePaths.packs);
-
-                formatI18nFiles();
-                if (resolvePath(CONFIG, "packs.ItemPacks").exists) {
-                    extractPackGroup("ItemPacks", CONFIG.packs.ItemPacks, packFiles);
-                    extractPackGroupList(CONFIG.packs.OtherPacks, packFiles);
-                } else console.error(`Mandatory Pack Group "ItemPacks" missing in config.`);
-
-                // Build the dictionary
-                if (Object.keys(dictionaryData).length > 0) {
-                    const dictionary = sortObject(dictionaryData);
-                    Object.keys(dictionary).forEach((dictionaryEntry) => {
-                        Object.assign(dictionary, { [dictionaryEntry]: sortObject(dictionary[dictionaryEntry]) });
-                    });
-
-                    writeFile(CONFIG.filePaths.dictionary, JSON.stringify(dictionary, null, 2), (error) => {
-                        if (error) throw error;
-                    });
-                }
-            });
-        });
-    });
-});
-
 // Extract data from a single pack
-function extractPack(packName, packConfig, packFiles) {
+function extractPack(packName, packData, packConfig) {
     // Create basic json structure
     const extractedPack = {
         label: packName,
@@ -115,84 +62,65 @@ function extractPack(packName, packConfig, packFiles) {
     // Unsorted extracted entries
     const entries = {};
 
-    // Open source json file if available
-    if (packFiles.includes(`${packName}.json`)) {
-        const packData = JSON.parse(readFileSync(`${CONFIG.filePaths.packs}/${packName}.json`, "utf-8"));
+    // Build comparison database?
+    const createComparisonData = resolvePath(packConfig, `packCompendiumMapping.${packName}`).exists ? true : false;
+    const compendiumName = createComparisonData ? packConfig.packCompendiumMapping[packName] : "";
 
-        // Build comparison database?
-        const createComparisonData = resolvePath(packConfig, `packCompendiumMapping.${packName}`).exists ? true : false;
-        const compendiumName = createComparisonData ? packConfig.packCompendiumMapping[packName] : "";
+    // Initialize structure if neccessary
+    if (createComparisonData) {
+        actorItemComparison[compendiumName] = actorItemComparison[compendiumName] || {};
+    }
 
-        // Initialize structure of neccessary
+    // Loop through source data and look for keys included in the mappings
+    Object.values(packData).forEach((packDataEntry) => {
+        // Add entry to comparison database
         if (createComparisonData) {
-            actorItemComparison[compendiumName] = actorItemComparison[compendiumName] || {};
+            actorItemComparison[compendiumName][packDataEntry._id] = packDataEntry;
         }
 
-        // Loop through source data and look for keys included in the mappings
-        Object.values(packData).forEach((packDataEntry) => {
-            // Add entry to comparison database
-            if (createComparisonData) {
-                actorItemComparison[compendiumName][packDataEntry._id] = packDataEntry;
-            }
+        // Extract entries based on mapping in config file
+        const extractedEntry = extractEntry(CONFIG.mappings[packConfig.mapping], packDataEntry);
+        if (extractedEntry[0] !== undefined) {
+            Object.assign(entries, extractedEntry[0]);
+        }
+        if (extractedEntry[1] !== undefined) {
+            addMapping(extractedPack.mapping, extractedEntry[1]);
+        }
+    });
 
-            // Extract entries based on mapping in config file
-            const extractedEntry = extractEntry(CONFIG.mappings[packConfig.mapping], packDataEntry);
-            if (extractedEntry[0] !== undefined) {
-                Object.assign(entries, extractedEntry[0]);
-            }
-            if (extractedEntry[1] !== undefined) {
-                addMapping(extractedPack.mapping, extractedEntry[1]);
-            }
+    // Sort entries and assign them to final export object
+    Object.keys(entries)
+        .sort()
+        .forEach(function (mappingKey) {
+            extractedPack.entries[mappingKey] = entries[mappingKey];
         });
 
-        // Sort entries and assign them to final export object
-        Object.keys(entries)
-            .sort()
-            .forEach(function (mappingKey) {
-                extractedPack.entries[mappingKey] = entries[mappingKey];
-            });
+    // Mapping sortieren
+    extractedPack.mapping = sortObject(extractedPack.mapping);
 
-        // Mapping sortieren
-        extractedPack.mapping = sortObject(extractedPack.mapping);
+    // Save file to directory
+    writeFileSync(`${CONFIG.filePaths[packConfig.savePath]}/${packName}.json`, JSON.stringify(extractedPack, null, 2));
 
-        // Save file to directory
-        writeFile(
-            `${CONFIG.filePaths[packConfig.savePath]}/${packName}.json`,
-            JSON.stringify(extractedPack, null, 2),
-            (error) => {
-                if (error) throw error;
-            }
-        );
-
-        console.log(`Extracted pack: ${packName}`);
-    }
+    console.log(`Extracted pack: ${packName}`);
 }
 
 // Extract pack data from a list of pack groups
-function extractPackGroupList(packGroupList, packFiles) {
+function extractPackGroupList(packGroupList, packs) {
     for (const [packGroup, packConfig] of Object.entries(packGroupList)) {
-        extractPackGroup(packGroup, packConfig, packFiles);
+        extractPackGroup(
+            packGroup,
+            packConfig,
+            packs.filter((pack) => packConfig.packNames.includes(pack.fileName))
+        );
     }
 }
 
 // Extract data from a pack group
-function extractPackGroup(packGroup, packConfig, packFiles) {
+function extractPackGroup(packGroup, packConfig, packs) {
     // Loop through packs and extract data defined in mappings
     console.log(`\n--------------------------\nExtracting: ${packGroup}\n--------------------------`);
-    packConfig.packNames.forEach((packName) => {
-        extractPack(packName, packConfig, packFiles);
-    });
-}
-
-function formatI18nFiles() {
-    const i18nFiles = readdirSync(CONFIG.filePaths.i18n);
-    CONFIG.i18nFiles.forEach((i18nFile) => {
-        if (i18nFiles.includes(i18nFile)) {
-            const fileData = JSON.parse(readFileSync(`${CONFIG.filePaths.i18n}/${i18nFile}`, "utf-8"));
-            writeFile(`${CONFIG.filePaths.i18n}/${i18nFile}`, JSON.stringify(fileData, null, 2), (error) => {
-                if (error) throw error;
-            });
-        }
+    packs.forEach((pack) => {
+        extractPack(pack.fileName, JSON.parse(pack.content), packConfig);
     });
 }
 
