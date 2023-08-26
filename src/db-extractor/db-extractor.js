@@ -1,6 +1,7 @@
-import { readdirSync, readFileSync, writeFileSync } from "fs";
+import { readFileSync, writeFileSync } from "fs";
 import { resolvePath, resolveValue } from "path-value";
-import { getZipContentFromURL } from "../helper/util/fileHandler.js";
+import { getZipContentFromURL } from "../helper/src/util/fileHandler.js";
+import { convertArray, sortObject } from "../helper/src/util/utilities.js";
 
 // Read config file
 const CONFIG = JSON.parse(readFileSync("./src/db-extractor/db-extractor-config.json", "utf-8"));
@@ -37,7 +38,6 @@ if (resolvePath(CONFIG, "packs.ItemPacks").exists) {
             writeFileSync(filePath, JSON.stringify(JSON.parse(entry.content), null, 2));
             console.log(`Extracted file: ${entry.fileName}`);
         });
-
 } else console.error(`Mandatory Pack Group "ItemPacks" missing in config.`);
 
 // Build the dictionary
@@ -142,14 +142,6 @@ function addMapping(mapping, mappingData, converter = false) {
     });
 }
 
-// Convert array to object list
-function convertArray(sourceArray) {
-    if (Array.isArray(sourceArray)) {
-        return Object.assign({}, sourceArray);
-    }
-    return sourceArray;
-}
-
 // Extend dictionary entries
 function extendDictionary(mappingKey, extractedData) {
     if (Array.isArray(extractedData)) {
@@ -163,16 +155,6 @@ function extendDictionary(mappingKey, extractedData) {
         }
         Object.assign(dictionaryData[mappingKey], { [convertedValue]: extractedData });
     }
-}
-
-// Sort an object by key
-function sortObject(sourceObject) {
-    return Object.keys(sourceObject)
-        .sort()
-        .reduce((obj, key) => {
-            obj[key] = sourceObject[key];
-            return obj;
-        }, {});
 }
 
 // Extract an entry
