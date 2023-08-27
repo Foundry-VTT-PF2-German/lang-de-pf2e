@@ -49,5 +49,8 @@ if (resolvePath(CONFIG, "packs.ItemPacks").exists) {
 
 // Build the dictionary
 if (Object.keys(database.dictionary).length > 0) {
-    writeFileSync(CONFIG.filePaths.dictionary, JSON.stringify(sortObject(database.dictionary), null, 2));
+    writeFileSync(
+        CONFIG.filePaths.dictionary,
+        JSON.stringify(sortObject(database.dictionary, { recursiveSort: true }), null, 2)
+    );
 }
