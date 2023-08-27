@@ -49,10 +49,8 @@ if (resolvePath(CONFIG, "packs.ItemPacks").exists) {
 
 // Build the dictionary
 if (Object.keys(database.dictionary).length > 0) {
-    const dictionary = sortObject(database.dictionary);
-    Object.keys(dictionary).forEach((dictionaryEntry) => {
-        Object.assign(dictionary, { [dictionaryEntry]: sortObject(dictionary[dictionaryEntry]) });
-    });
-
-    writeFileSync(CONFIG.filePaths.dictionary, JSON.stringify(dictionary, null, 2));
+    writeFileSync(
+        CONFIG.filePaths.dictionary,
+        JSON.stringify(sortObject(database.dictionary, { recursiveSort: true }), null, 2)
+    );
 }
