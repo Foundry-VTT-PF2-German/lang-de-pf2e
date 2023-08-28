@@ -134,9 +134,7 @@
             "skillVariants": {
                 "path": "system.variants",
                 "extractOptions": {
-                    "subMapping": {
-                        "label": { "path": "label", "extractOptions": { "addToMapping": false } }
-                    }
+                    "subMapping": "label"
                 }
             },
             "source": {
@@ -165,12 +163,16 @@
                 "extractOptions": {
                     "idType": "dynamic",
                     "idName": "name",
-                    "subMapping": {
-                        "name": { "path": "name", "extractOptions": { "addToMapping": false } },
-                        "text": { "path": "text.content", "extractOptions": { "addToMapping": false } }
-                    }
+                    "subMapping": "journalPages"
                 }
             }
+        },
+        "journalPages": {
+            "name": { "path": "name", "extractOptions": { "addToMapping": false } },
+            "text": { "path": "text.content", "extractOptions": { "addToMapping": false } }
+        },
+        "label": {
+            "label": { "path": "label", "extractOptions": { "addToMapping": false } }
         },
         "rollableTable": {
             "name": { "path": "name" },
@@ -179,7 +181,7 @@
                 "path": "results",
                 "converter": "tableResults",
                 "extractOptions": {
-                    "subMapping": { "text": { "path": "text", "extractOptions": { "addToMapping": false } } },
+                    "subMapping": "tableResults",
                     "specialExtraction": "tableResult"
                 }
             }
@@ -189,13 +191,14 @@
                 "path": "choices",
                 "extractOptions": {
                     "addToMapping": false,
-                    "subMapping": {
-                        "label": { "path": "label", "extractOptions": { "addToMapping": false } }
-                    }
+                    "subMapping": "label"
                 }
             },
             "label": { "path": "label", "extractOptions": { "addToMapping": false } },
             "prompt": { "path": "prompt", "extractOptions": { "addToMapping": false } },
+            "text": { "path": "text", "extractOptions": { "addToMapping": false } }
+        },
+        "tableResults": {
             "text": { "path": "text", "extractOptions": { "addToMapping": false } }
         }
     },
