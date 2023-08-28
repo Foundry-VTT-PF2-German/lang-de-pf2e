@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from "fs";
 import { resolvePath } from "path-value";
 import { getZipContentFromURL } from "../helper/src/util/fileHandler.js";
-import { extractPackGroup, extractPackGroupList } from "../helper/src/pack-extractor/pack-extractor.js";
+import { extractFiles, extractPackGroup, extractPackGroupList } from "../helper/src/pack-extractor/pack-extractor.js";
 import { sortObject } from "../helper/src/util/utilities.js";
 
 // Read config file
@@ -37,14 +37,10 @@ if (resolvePath(CONFIG, "packs.ItemPacks").exists) {
     extractPackGroupList(packs, database, packGroupListConfig);
 
     // Extract and write i18n files
-    console.log(`\n--------------------------\nExtracting: i18n files\n--------------------------`);
-    packs
-        .filter((pack) => CONFIG.i18nFiles.includes(`${pack.fileName}.${pack.fileType}`))
-        .forEach((entry) => {
-            const filePath = `${CONFIG.filePaths.i18n}/${entry.fileName}.${entry.fileType}`;
-            writeFileSync(filePath, JSON.stringify(JSON.parse(entry.content), null, 2));
-            console.log(`Extracted file: ${entry.fileName}`);
-        });
+    extractFiles(
+        packs.filter((pack) => CONFIG.i18nFiles.includes(`${pack.fileName}.${pack.fileType}`)),
+        CONFIG.filePaths.i18n
+    );
 } else console.error(`Mandatory Pack Group "ItemPacks" missing in config.`);
 
 // Build the dictionary
