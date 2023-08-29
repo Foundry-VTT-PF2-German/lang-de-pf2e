@@ -1062,6 +1062,7 @@
       "RollOption": "Roll Option",
       "RollTwice": "Roll Twice",
       "Sense": "Sense",
+      "SpecialStatistic": "Special Statistic",
       "Strike": "Strike",
       "Striking": "Striking",
       "SubstituteRoll": "Substitute Roll",
@@ -1242,8 +1243,18 @@
         "TwoActions": "Two Actions"
       },
       "AdjustDegreeOfSuccess": {
+        "Athletics": {
+          "Climb": {
+            "SuccessBetter": "If you roll a success on an Athletics check to Climb you get a critical success instead."
+          }
+        },
         "Squeeze": {
           "CriticalFailureSuccessBetter": "When you roll a critical failure on a check to Squeeze, you get a failure instead, and when you roll a success, you get a critical success instead."
+        },
+        "Survival": {
+          "SenseDirection": {
+            "SuccessBetter": "If you roll a success on an Survival check to Sense Direction you get a critical success instead."
+          }
         }
       },
       "AdoptedAncestry": {
@@ -1371,6 +1382,9 @@
           "Shark": "Shark",
           "Snake": "Snake",
           "Wolf": "Wolf"
+        },
+        "Elemental": {
+          "ElementalEvolutionLabel": "Elemental Rage Damage"
         },
         "Dragon": {
           "NormalRageDamage": "Deal normal rage damage",
@@ -1588,6 +1602,7 @@
         "Dragon": {
           "EnergyPrompt": "Select an energy associated with your dragon abilities."
         },
+        "Label": "Deviant Ability",
         "TitanSwing": {
           "NoteFifteenFeet": "The target is pushed back 15 feet.",
           "NoteFiveFeet": "The target is pushed back 5 feet.",
@@ -1775,6 +1790,9 @@
         }
       },
       "Fighter": {
+        "DazingBlow": {
+          "Note": "If the Strike hits, the creature must attempt a @Check[type:fortitude|dc:resolve(@actor.attributes.classDC.value)|traits:incapacitation] save against your class DC; this is an incapacitation effect.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 2}.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 3}."
+        },
         "DoubleSlice": {
           "SecondAttackLabel": "Double Slice Second Attack"
         }
@@ -1841,6 +1859,14 @@
         "Irrepressible": {
           "SaveNote": "When you roll a success on a save against an emotion or fear effect, you get a critical success instead."
         }
+      },
+      "Genie": {
+        "Faydhaan": "Faydhaan",
+        "Ifrit": "Ifrit",
+        "Jaathoom": "Jaathoom",
+        "Jabali": "Jabali",
+        "Janni": "Janni",
+        "Prompt": "Select a Genie."
       },
       "GeneralTraining": {
         "Prompt": "Select a 1st-level general feat."
@@ -1914,6 +1940,10 @@
         "Unmatched": "Unmatched"
       },
       "HarrowCourt": {
+        "BrassDwarf": {
+          "ResistanceLabel": "Brass Dwarf Resistance",
+          "WeaknessLabel": "Brass Dwarf Weakness"
+        },
         "Fiend": {
           "ToggleLabel": "Repeating a non-strike action"
         },
@@ -2000,6 +2030,16 @@
           "NonlethalBluntShot": "Nonlethal Blunt Shot",
           "NonlethalModularHead": "Nonlethal Modular Head",
           "NonlethalPacificationTools": "Nonlethal Pacification Tools"
+        },
+        "OffensiveBoost": {
+          "Chill": "Chill (Cold)",
+          "Ignition": "Ignition (Fire)",
+          "Jolt": "Jolt (Electricity)",
+          "Momentum": "Momentum (Bludgeoning)",
+          "Prompt": "Select an offensive boost.",
+          "Saws": "Saws (Slashing)",
+          "Spike": "Spike (Piercing)",
+          "Vitriol": "Vitriol (Acid)"
         }
       },
       "Investigator": {
@@ -2012,9 +2052,32 @@
       },
       "Kineticist": {
         "Impulse": {
+          "ElementalBlast": {
+            "Label": {
+              "Air": "Elemental Blast (Air)",
+              "Earth": "Elemental Blast (Earth)",
+              "Fire": "Elemental Blast (Fire)",
+              "Metal": "Elemental Blast (Metal)",
+              "Water": "Elemental Blast (Water)",
+              "Wood": "Elemental Blast (Wood)"
+            },
+            "OneAction": "One Action",
+            "ShortLabel": "Blast",
+            "TwoActions": "Two Actions",
+            "TwoActionBonus": "Two-Action Blast"
+          },
+          "ImpulseJunction": {
+            "Air": "Before or after the other effects of the impulse, you can either Stride up to half your Speed or Step. If you have a fly Speed, you can Fly up to half your fly Speed instead.",
+            "Earth": "Fragments of stone float around you, granting you a +1 circumstance bonus to AC until the start of your next turn. @UUID[Compendium.pf2e.feat-effects.Item.09oP0FBBAhXOS4JW]{Effect: Earth Impulse Junction}",
+            "Metal": "Choose acid, electricity, or piercing. Until the start of your next turn, each time a creature touches you or damages you with an unarmed melee attack or nonreach melee weapon, it takes damage of the chosen type equal to half your level (minimum 1 damage).",
+            "Title": "Impulse Junction",
+            "Water": "After the impulse's other effects, you can move one creature targeted by the impulse or in its area 5 feet in any direction, or 10 feet if it's in a body of water. This can't move the creature into the air. You can choose only a creature that's willing to be moved, that failed its save against the impulse, or that you succeeded at an impulse attack roll against.",
+            "Wood": "You gain temporary Hit Points equal to your level that last until the start of your next turn. @UUID[Compendium.pf2e.feat-effects.Item.rCsmv66TzQhte4Gp]{Effect: Wood Impulse Junction}"
+          },
           "Prompt": "Select an Impulse."
         },
         "KineticGate": {
+          "AllowedDropsLabel": "Kineticist class feat",
           "DualGate": "Dual Gate",
           "ExpandThePortal": "Expand the Portal",
           "ForkThePath": "Fork the Path",
@@ -2026,6 +2089,7 @@
             "SkillJunction": "Skill Junction"
           },
           "Prompt": {
+            "AuraSize": "Select a radius for your kinetic aura.",
             "Element": "Select an element.",
             "ExpandElement": "Select an element to expand.",
             "Gate": "Select a kinetic gate.",
@@ -2516,6 +2580,20 @@
         }
       },
       "Swashbuckler": {
+        "Finisher": {
+          "Basic": "Basic",
+          "Bleeding": "Bleeding",
+          "Confident": "Confident",
+          "Dual": "Dual",
+          "Impaling": "Impaling",
+          "Label": "Finisher",
+          "Lethal": "Lethal",
+          "Mobile": "Mobile",
+          "Perfect": "Perfect",
+          "Stunning": "Stunning",
+          "Targeting": "Targeting",
+          "Unbalancing": "Unbalancing"
+        },
         "Panache": "You gain @UUID[Compendium.pf2e.feat-effects.Item.uBJsxCzNhje8m8jj]{Panache}.",
         "Style": {
           "Prompt": "Select a style."
@@ -2545,6 +2623,12 @@
           "Normal": {
             "InForestLabel": "Wildwood Ink (In Forest)"
           }
+        }
+      },
+      "Tengu": {
+        "WeaponFamiliarity": {
+          "Prompt1": "Select a weapon from the sword group.",
+          "Prompt2": "Select a second weapon from the sword group."
         }
       },
       "TerrainExpertise": {
@@ -2636,6 +2720,10 @@
       },
       "WardingRune": {
         "Prompt": "Select a school of magic other than divination."
+      },
+      "WeaponInfusion": {
+        "Melee": "Melee Infusion",
+        "Ranged": "Ranged Infusion"
       },
       "WellspringMage": {
         "CriticalSuccess": "You temporarily recover an expended spell slot of any level of your choice. The temporary spell slot lasts for 1 minute, and if you don't use it by then, you experience an immediate @UUID[Compendium.pf2e.rollable-tables.RollTable.N0pDFNCffTe2Du39]{Wellspring Surge}.",
