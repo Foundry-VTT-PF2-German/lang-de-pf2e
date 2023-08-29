@@ -59,7 +59,7 @@
     "AbilityInt": "Intelligenz",
     "AbilityModifierLabel": "Attributsmodifikator",
     "AbilityStr": "Stärke",
-    "AbilityTitle": "Attribut",
+    "AbilityTitle": "Attribute",
     "AbilityWis": "Weisheit",
     "AccessoryPropertyRuneCalled": "Gerufen",
     "AccessoryPropertyRuneDragonsBreath": "Drachenodem",
@@ -129,7 +129,13 @@
         "TakesNoDamage": "<actor>{actor}</actor> nimmt keinen Schaden.",
         "TheTarget": "Das Ziel"
       },
+      "Attacks": "Attacks",
       "Character": {
+        "Attribute": {
+          "Apex": "Apex Attribute",
+          "Boosts": "Attribute Boosts",
+          "Key": "Key Attribute"
+        },
         "AttributeBuilder": {
           "InputMethod": {
             "Description": "Der Wechsel der Methode setzt die Verteilung der Attributsmodifikatoren zurück.",
@@ -146,7 +152,7 @@
           "Complete": "Fertig",
           "Flaw": "Schwäche",
           "Flaws": "Schwächen",
-          "HasPartial": "Hat Teil-Verbesserung",
+          "Increase": "Increase",
           "KeyIcon": "Schlüsselattribut",
           "LegacyFlaws": "Schwächen (alt)",
           "Partial": "Teil-Verb.",
@@ -242,6 +248,7 @@
       "Dead": "Tot",
       "Familiar": {
         "Master": {
+          "ArmorClass": "Master Armor Class",
           "Perception": "Wahrnehmung des Meisters"
         }
       },
@@ -317,14 +324,6 @@
         "SimpleSheet": "Einfacher NSC-Bogen"
       },
       "Party": {
-        "InvalidCampaign": {
-          "Hint": "Die Kampagnendaten sind ungültig",
-          "Title": "Ungültige Kampagne ({party})",
-          "Message": {
-            "mismatch": "Diese Gruppe hat Kampagnendaten des Typs {current}, aber der konfigurierte Typ ist {campaignType}. Möchten Sie die vorhandenen Kampagnendaten löschen?",
-            "error": "Die Kampagnendaten ({current}) dieser Gruppe sind beschädigt und die Datenaufbereitung ist fehlgeschlagen. Möchten Sie die vorhandenen Kampagnendaten löschen?"
-          }
-        },
         "BlankSlate": "Diese Gruppe besitzt keine Mitglieder. Ziehe eine Kreatur aus der Akteurs-Leiste hierhin um zu beginnen.",
         "Coin": "Münzen",
         "ClearActivities": {
@@ -335,6 +334,15 @@
           "Deposit": "SC-Tokens einsammeln",
           "Retrieve": "PC-Tokens herausholen"
         },
+        "DefaultName": "The Party",
+        "InvalidCampaign": {
+          "Hint": "Die Kampagnendaten sind ungültig",
+          "Title": "Ungültige Kampagne ({party})",
+          "Message": {
+            "mismatch": "Diese Gruppe hat Kampagnendaten des Typs {current}, aber der konfigurierte Typ ist {campaignType}. Möchten Sie die vorhandenen Kampagnendaten löschen?",
+            "error": "Die Kampagnendaten ({current}) dieser Gruppe sind beschädigt und die Datenaufbereitung ist fehlgeschlagen. Möchten Sie die vorhandenen Kampagnendaten löschen?"
+          }
+        },
         "Languages": "Sprachen der Gruppe",
         "MembersLabel": "Mitglieder: ",
         "NoSpecialSenses": "Keine besonderen Sinne",
@@ -343,13 +351,21 @@
           "Content": "Gruppenmitglied entfernen?"
         },
         "Rest": "Rasten",
+        "Sidebar": {
+          "ActivateParty": "Activate Party",
+          "CreateMember": "Create New Member",
+          "CreateParty": "Create New Party",
+          "RemoveMember": "Remove Member",
+          "OpenSheet": "Open Sheet",
+          "OtherParties": "Other Parties"
+        },
         "Skills": "Fertigkeiten der Gruppe",
         "SlotAvailable": "Platz verfügbar",
         "Tabs": {
           "Overview": "Übersicht",
-          "Inventory": "Inventar",
           "Exploration": "Erkundung",
-          "Orphaned": "Verwaiste Gegenstände"
+          "Orphaned": "Verwaiste Gegenstände",
+          "Stash": "Stash"
         },
         "Total": "Gruppe Gesamt",
         "Wealth": "Vermögen"
@@ -1073,6 +1089,7 @@
         "precision": "Präzision",
         "slashing": "Hieb",
         "sonic": "Schall",
+        "spirit": "spirit",
         "splash": "Alchemistischer Flächenschaden",
         "untyped": "Unspezif."
       },
@@ -1168,6 +1185,7 @@
     "EffectsLabel": "Effekte",
     "EmptySlot": "Leerer Slot",
     "Encounter": {
+      "AlreadyRolled": "{actor} has already rolled initiative.",
       "Broadcast": {
         "FastHealing": {
           "DeactivatedBy": "Deaktiviert durch {types}",
@@ -1234,6 +1252,7 @@
       "CantImportTooHighVersion": "{sourceName} kann nicht importiert werden: die Schema-Version ({sourceSchemaVersion}) ist höher als die Version ({worldSchemaVersion}) der Welt.",
       "CantMoveItemDestination": "Sie sind nicht berechtigt Gegenstände zu diesem Charakter zu verschieben.",
       "CantMoveItemSource": "Sie sind nicht berechtigt Gegenstände von diesem Charakter weg zu verschieben.",
+      "ItemNotFoundByUUID": "Item with UUID of \"{uuid}\" not found.",
       "MinimumProfLevelSetByFeatures": "Die gewählte Kompetenz liegt unter der durch die Fähigkeiten festgelegten Kompetenz.",
       "NoCreatureTokenSelected": "Wähle mindestens ein Token, das mit einer Kreatur verbunden ist.",
       "NoPCTokenSelected": "Wähle mind. ein mit einem SC verbundenes Token.",
@@ -1395,6 +1414,13 @@
         "InvalidDrop": "{badType} kann hier nicht platziert werden (es muss {goodType} sein)."
       },
       "Action": {
+        "SelfAppliedEffect": {
+          "Applied": "{effect} was applied.",
+          "Delete": "Delete Reference",
+          "Drop": "Drop Effect",
+          "Label": "Self-Applied Effect",
+          "Hint": "A single effect item to be applied to the actor that uses this action"
+        },
         "CategoryLabel": "Kategorie",
         "Category": {
           "None": "Keine",
@@ -1530,8 +1556,8 @@
           "Label": "Klerikerzauber"
         },
         "DivineAbility": {
-          "Hint": "Die beiden Attributsverbesserungen, welche die Gottheit als Optionen für Charaktere mit dem Hintergrund Fromme Kindheit bietet.",
-          "Label": "Göttliche Fähigkeiten"
+          "Hint": "If choosing the Raised by Belief background, its attribute boost options come from a deity.",
+          "Label": "Divine Attribute"
         },
         "DivineFont": {
           "Harm": "Leid",
@@ -1856,7 +1882,12 @@
             "Hint": "Die verschiedenen Ränge können mit Beschreibungstexten versehen werden. Sie sollten kurz genug sein, damit sie im Effekt angezeigt werden können. Die Texte legen gleichzeitig den maximalen Rang fest.",
             "Placeholder": "Neue Beschriftung"
           },
-          "ReevaluateFormula": "Pro Zug neu bewerten?",
+          "ReevaluateFormula": {
+            "Label": "Reevaluate?",
+            "Never": "Never",
+            "TurnEnd": "On Turn End",
+            "TurnStart": "On Turn Start"
+          },
           "Type": {
             "counter": "Zähler",
             "formula": "Formel",
@@ -1872,8 +1903,8 @@
           "Added": "{item} wurde {category} hinzugefügt."
         },
         "KeyAbilityOptions": {
-          "Label": "Schlüsselattribut-Optionen",
-          "Hint": "Zusätzliche Schlüsselattribut-Optionen"
+          "Label": "Key Attribute Options",
+          "Hint": "Key attribute options in addition to this provided by a class"
         },
         "LevelLabel": "Talent",
         "LevelN": "Talent {level}",
@@ -2090,6 +2121,9 @@
           "LabelN": "Nachladen {value}",
           "OneMinute": "1 Min."
         },
+        "Rune": {
+          "Potency": "Weapon Potency"
+        },
         "SpecificMagicWeapon": {
           "Hint": "Die Markierung dieser Waffe als <i>spezielle magische Waffe</i> zeigt an, dass sie mehr kann, als ihre Materialzusammensetzung und Runen erlauben. Der Name, die Stufe, die Seltenheit und der Preis werden zum Zeitpunkt der Markierung nicht mehr von einem wertvollen Material oder Runen überschrieben. Diese Materialien und Runen dienen jedoch als Basis für die Anpassung von Stufe, Seltenheit und Preis bei späteren Upgrades.",
           "Label": "Spezielle Magische Waffe"
@@ -2119,8 +2153,6 @@
     "ItemRemoveRuleElement": "Regelement löschen",
     "ItemTitle": "Ggstd.",
     "ItemsLabel": "Gegenstände",
-    "KeyAbility": "Schlüsselattribut",
-    "KeyAbilityLabel": "Schlüsselattribut",
     "Keybinding": {
       "CycleTokenStack": {
         "Hint": "Durchlaufen Sie die Z-Indizes eines mit der Maus verschobenen Stapels von Token und schieben Sie den obersten nach unten.",
@@ -2129,6 +2161,10 @@
       "GMVision": {
         "Hint": "Erhellt dunkle Szenen für bessere Sicht",
         "Label": "SL-Sicht"
+      },
+      "TogglePartySheet": {
+        "Hint": "Open or close the sheet of the active or (if a player) assigned party.",
+        "Label": "Toggle Party Sheet"
       }
     },
     "KitItems": "Gegenstände",
@@ -2572,7 +2608,7 @@
       }
     },
     "PenaltyLabel": {
-      "ability": "Attributsmalus",
+      "ability": "Attribute Penalty",
       "circumstance": "Situationsmalus",
       "item": "Gegenstandsmalus",
       "proficiency": "Kompetenzmalus",
@@ -2939,6 +2975,7 @@
       "Sidebar": {
         "Changelog": "Änderungsprotokoll",
         "Discord": "Discord",
+        "Remaster": "Remaster Changes",
         "Wiki": "Wiki"
       },
       "TOTMToggles": {
@@ -3892,6 +3929,7 @@
     "TraitDescriptionSpellheart": "Zauberherzen sind permanente Gegenstände, die ähnlich wie Talismane funktionieren. Du befestigst ein Zauberherz mit der Aktivität Zauberherz befestigen (diese entspricht ansonsten der Aktivität Talisman befestigen). Die Begrenzung auf einen Talisman pro Gegenstand gilt weiterhin, wobei hier die Begriffe Talisman und Zauberherz austauschbar sind – ein Gegenstand kann einen Talisman oder ein Zauberherz erhalten, nicht beides. Die Regeln zu Talismanen und ihrer Befestigung findest du im Grundregelwerk auf Seite 596. Wirkst du mittels eines Zauberherzens einen Zaubertrick, kannst du deinen eigenen Zauberangriffswurf oder Zauber-SG nutzen, sollte dieser höher sein. Zur Herstellung eines Zauberherzens sind die Zauber erforderlich, welche das fragliche Zauberherz wirken kann. So erfordert z.B. ein Mächtiger Kranz der Fünf Federn die Zauber Luftwandeln, Sturmböe und Windwand.",
     "TraitDescriptionSplash": "Wenn du eine Wurfwaffe dieser Kategorie verwendet, addierst du nicht deinen Stärkemodifikator auf den Schadenswurf. Scheitert der Angriff, gelingt er oder erzielst du gar einen Kritischen Erfolg, so erleiden alle Kreaturen innerhalb von 1,50 m Entfernung zum Ziel (das Ziel eingeschlossen) den aufgeführten Flächenschaden (alchemistisch). Das Ziel des Angriffes erleidet den Flächenschaden (alchemistisch) auch bei einem Fehlschlag, nicht aber bei einem Kritischen Fehlschlag. Addiere den Ausgangsschaden und den Flächenschaden (alchemistisch) zusammen, ehe die Schwächen oder Resistenzen des Zieles zur Anwendung kommen. Bei einem Kritischen Treffer wird der Flächenschaden (alchemistisch) nicht multipliziert.",
     "TraitDescriptionSplash10": "Wenn du eine Wurfwaffe mit der Eigenschaft \"Spritzschaden\" benutzt, addierst du deinen Stärke-Modifikator nicht zum Schadenswurf. Wenn ein Angriff mit einer Flächenschaden-Waffe fehlschlägt, erfolgreich ist oder kritisch erfolgreich ist, erleiden alle Kreaturen im Umkreis von 10 Fuß um das Ziel (einschließlich des Ziels) den aufgeführten Flächenschaden (alchemistisch). Bei einem Fehlschlag (aber nicht bei einem kritischen Fehlschlag) erleidet das Ziel des Angriffs trotzdem den Flächenschaden (alchemistisch). Addieren Sie den Flächenschaden (alchemistisch) zusammen mit dem ursprünglichen Schaden gegen das Ziel, bevor Sie die Schwächen oder Resistenzen des Ziels anwenden. Bei einem kritischen Treffer wird der Flächenschaden (alchemistisch) nicht multipliziert.",
+    "TraitDescriptionSpirit": "Effects with this trait can affect creatures with spiritual essence and might deal spirit damage. A creature with this trait is defined by its spiritual essence. Spirit creatures often lack a material form.",
     "TraitDescriptionSprite": "Eine Familie sehr kleiner geflügelter Feen mit einer starken Verbindung zu Naturmagie.",
     "TraitDescriptionStaff": "Dieser magische Gegenstand enthält Zauber eines gemeinsamen Themas und gestattet einem Zauberkundigen, weitere Zauber zu wirken, indem er den Stecken vorbereitet.",
     "TraitDescriptionStance": "Eine Haltung ist eine allgemeine Kampfstrategie, die du verfolgst, indem zu eine Handlung der Kategorie Haltung nutzt, bis du bewusstlos wirst, ihre Voraussetzungen nicht länger erfüllst, die Begegnung endet oder du eine neue Haltung nutzt. Hast du eine Haltungshandlung genutzt, kannst du für 1 Runde keine weitere Haltungshandlung einsetzen. Du kannst eine Haltung nur im Begegnungsmodus einnehmen und nutzen.",
@@ -4576,7 +4614,6 @@
       "Title": "Announcement: United Paizo Workers"
     },
     "UnprepareItemTitle": "Vorbereitung aufheben",
-    "UpdateActorLabel": "Akteur aktualisieren",
     "UpdateLabelUniversal": "Aktualisieren",
     "Usage": "Nutz.",
     "UserSettings": {
@@ -5199,6 +5236,9 @@
           "criticalSuccess": "Bei einem Kritischen Treffer muss das Ziel einen @Check[type:fortitude|name:Donnernd-Rune|dc:24] ablegen; bei einem Fehlschlag erhält es für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Taub} (oder für 1 Stunde im Falle eines Kritischen Fehlschlags)."
         }
       },
+      "underwater": {
+        "Name": "Underwater"
+      },
       "unholy": {
         "Name": "Unheilig",
         "Note": {
@@ -5672,7 +5712,7 @@
       "vehicle": "Fahrzeug"
     },
     "Item": {
-      "action": "Aktion",
+      "action": "Ability",
       "affliction": "Leiden",
       "ancestry": "Abstammung",
       "armor": "Rüstung",
