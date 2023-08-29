@@ -139,6 +139,37 @@
       "description": "<p>Deine Darbietung beschleunigt sich und damit deinen Verbündeten. Der Verbündete wird @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Beschleunigt} und kann die zusätzliche Aktion zum Laufen, für einen Angriff oder einen Schritt verwenden.</p>",
       "target": "1 Verbündeter"
     },
+    "Allfood": {
+      "name": "Allfood",
+      "description": "<p>You transform one object into an edible substance that any living creature can chew, swallow, and safely digest. This allfood always has a bland taste and slightly gooey consistency, regardless of its original nature. One bulk of allfood provides enough sustenance to feed one Medium creature for a day.</p>\n<p>After 1 day, if no one has eaten the allfood, it reverts to its original form. Most Small creatures eat one-quarter as much as a Medium creature and most Tiny creatures eat one-sixteenth as much, while most Large creatures eat 10 times as much, Huge creatures need 100 times as much, and so on.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> Double the maximum bulk (to a maximum of 256 bulk at 10th level).</p>",
+      "heightening": {
+        "3": {
+          "target": "1 unattended non-magical object of 2 Bulk or less"
+        },
+        "4": {
+          "target": "1 unattended non-magical object of 4 Bulk or less"
+        },
+        "5": {
+          "target": "1 unattended non-magical object of 8 Bulk or less"
+        },
+        "6": {
+          "target": "1 unattended non-magical object of 16 Bulk or less"
+        },
+        "7": {
+          "target": "1 unattended non-magical object of 32 Bulk or less"
+        },
+        "8": {
+          "target": "1 unattended non-magical object of 64 Bulk or less"
+        },
+        "9": {
+          "target": "1 unattended non-magical object of 128 Bulk or less"
+        },
+        "10": {
+          "target": "1 unattended non-magical object of 256 Bulk or less"
+        }
+      },
+      "target": "1 unattended non-magical object of 1 Bulk or less"
+    },
     "Alter Reality": {
       "name": "Realität verändern",
       "description": "<p>Du verwendest dein okkultes Wissen und die Macht deines Geistes, um das spirituelle Multiversum zu manipulieren. Dies kann einen der folgenden Effekte haben:</p>\n<ul>\n<li>Duplikation eines Zaubers des 9. Grades oder niedriger aus der Okkulten Zauberliste, auf den du Zugriff hast</li>\n<li>Duplikation eines nichtokkulten Zaubers des 7. Grades oder niedriger. Es muss sich um einen gewöhnlichen Zauber handeln oder du musst Zugriff auf ihn haben</li>\n<li>Erzeugung eines Effekts, dessen Macht der der oben genannten entspricht</li>\n<li>Mache bestimmte Effekte, die sich auf den Zauber <em>@UUID[Compendium.pf2e.spells-srd.Item.6dDtGIUerazSHIOu]{Wunsch} beziehen, rückgängig</li>\n</ul>\n<p>Nach Entscheidung des SL kannst du versuchen, mächtigere Effekte zu erzeugen. Dies ist jedoch gefährlich und der Zauber könnte nur teilweise erfolgreich sein.</p>"
@@ -175,7 +206,7 @@
     },
     "Ancient Dust": {
       "name": "Ancient Dust",
-      "description": "<p>You cough up a cloud of gray soil, echoing the dust in the graves of Kemnebi's many victims. Each creature in the area takes negative damage equal to your spellcasting modifier and 1 persistent negative damage depending on its Fortitude save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage and no persistent damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and persistent damage.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and double the persistent damage.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The initial negative damage increases by 1d6, and the persistent damage increases by 1.</p>\n<p>[[/r (ceil(@item.level/2))[persistent,negative]]]{Leveled Persistent Negative Damage}</p>"
+      "description": "<p>You cough up a cloud of gray soil, echoing the dust in the graves of Kemnebi's many victims. Each creature in the area takes negative damage equal to your spellcasting modifier and 1 persistent negative damage depending on its Fortitude save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage and no persistent damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and persistent damage.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and double the persistent damage.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The initial negative damage increases by 1d6, and the persistent damage increases by 1.</p>"
     },
     "Angel Form": {
       "name": "Engelsform",
@@ -183,7 +214,7 @@
     },
     "Angelic Halo": {
       "name": "Heiligenschein",
-      "description": "<p>Du erhältst einen engelhaften Heiligenschein mit einer Aura, welche die vom Zauber @UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heilung} ausgeteilte heilende Energie verstärkt. Verbündete innerhalb der Ausstrahlung, welche mittels <em>Heilung</em> geheilt werden, erhalten einen Zustandsbonus auf die zurückerlangten Trefferpunkte in Höhe des doppelten Grades des <em>Heilungszaubers</em>.</p>"
+      "description": "<p>You gain an angelic halo with an aura that increases allies' healing from the <em>@UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal}</em> spell. Allies in your halo's emanation who are healed by a heal spell gain a status bonus to Hit Points regained equal to double the heal spell's level.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.jPZXZjetdauqYuEH]{Aura: Angelic Halo}</p>"
     },
     "Angelic Messenger": {
       "name": "Himmelsbote",
@@ -310,10 +341,6 @@
     },
     "Arrow Salvo": {
       "name": "Arrow Salvo",
-      "description": "<p>You conjure an immense wooden bow that launches a salvo of massive arrows at all nearby enemies. All creatures in the affected area take @Damage[8d10[piercing]] damage, with a basic Reflex save. On a critical failure, the target is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} from the force of the impact.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> Increase the damage by [[/r 1d10]].</p>"
-    },
-    "Arrow Slavo": {
-      "name": "Arrow Slavo",
       "description": "<p>You conjure an immense wooden bow that launches a salvo of massive arrows at all nearby enemies. All creatures in the affected area take @Damage[8d10[piercing]] damage, with a basic Reflex save. On a critical failure, the target is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} from the force of the impact.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> Increase the damage by [[/r 1d10]].</p>"
     },
     "Artistic Flourish": {
@@ -599,7 +626,7 @@
     },
     "Blazing Bolt": {
       "name": "Feuerbolzen",
-      "description": "<p>Du feuerst einen Strahl aus Hitze und Flammen ab. Führe einen Zauberangriffswurf gegen eine einzige Kreatur aus. Bei einem Treffer nimmt das Ziel 2W6 Punkte Feuerschaden, bei einem Kritischen Treffer nimmt die Kreatur den doppelten Schaden.</p>\n<p>Für jede weitere Aktion, die du zum Wirken nutzt, kannst du einen zusätzlichen Feuerstrahl auf einen anderen Gegner verschießen, bis zu einem Maximum von 3 Strahlen, die 3 verschieden Ziele treffen. Diese Angriffe zählen gegen deinen Mehrfachangriffsmalus, aber du erhöhst deinen Mehrfachangriffsmalus erst nachdem du alle Angriffswürfe für Feuerbolzen gemacht hast. Wenn du zwei oder mehr Runden nutzt, um den Zauber zu wirken, erhöht sich der Schaden auf 4W6 Feuerschaden bei einem Treffer und er verdoppelt sich ebenfalls bei einem kritischen Treffer.</p>\n<hr />\n<p><strong>Erhöhung (+1)</strong> Der Schaden an jedem Ziel erhöht sich um 1W6 bei der 1 Aktion Version, oder um 2W6 bei der 2 Aktionen oder 3 Aktionen Version.</p>",
+      "description": "<p>You fire a ray of heat and flame. Make a spell attack roll against a single creature. On a hit, the target takes 2d6 fire damage, and on a critical hit, the target takes double damage.</p>\n<p>For each additional action you use when Casting the Spell, you can fire an additional ray at a different target, to a maximum of three rays targeting three different targets for 3 actions. These attacks each increase your multiple attack penalty, but you don't increase your multiple attack penalty until after you make all the spell attack rolls for <em>blazing bolt</em>. If you spend 2 or more actions Casting the Spell, the damage increases to 4d6 fire damage on a hit, and it still deals double damage on a critical hit.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage to each target increases by 1d6 for the 1-action version, or by 2d6 for the 2-action and 3-action versions.</p>",
       "spellVariants": {
         "hqiwae0wgehycnex": {
           "target": "2 oder mehr Kreaturen"
@@ -908,7 +935,7 @@
     },
     "Cataclysm": {
       "name": "Kataklysmische Macht",
-      "description": "<p>Du rufst die unermessliche Macht von apokalyptischen Kataklysmen herbei, wobei du einen kleinen Teil jeder Katastrophe an dich reißt und sie in einem schreckenerregend mächtigen Angriff kombinierst. Die folgenden Effekte treffen alle Kreaturen im Wirkungsbereich. Resistenzen von Kreaturen im Wirkungsbereich gelten hinsichtlich des durch den Zauber verursachten Schaden als um 10 geringer als gewohnt. Jeder Kreatur steht ein einfacher Reflexwurf zu, der auf alle sieben Schadensarten angewendet wird.</p>\n<ul>\n<li>Fleisch zersetzender Säureregen verursacht 3W10 Punkte Säureschaden</li>\n<li>Ein tosendes Erdbeben wirft auf dem Boden befindliche Kreaturen heftig hin und her, wodurch sie 3W10 Punkte Wuchtschaden erleiden</li>\n<li>Eine eiskalte Windbö verursacht 3W10 Punkte Kälteschaden</li>\n<li>Unglaublich starke Blitze schlagen im Wirkungsbereich ein und verursachen 3W10 Punkte Elektrizitätsschaden</li>\n<li>Peitschender Wind wühlt den Himmel auf und verursacht 3W10 Punkte Wuchtschaden bei fliegenden Kreaturen im Wirkungsbereich</li>\n<li>Ein Tsunami überrascht die Kreaturen im Wirkungsbereich und verursacht bei ihnen 3W10 Punkte Schaden der Kategorie Wasser (doppelter Schaden bei im Wirkungsbereich schwimmende Kreaturen)</li>\n<li>Ein gewaltiger Flächenbrand fegt durch den Wirkungsbereich und verursacht 3W10 Punkte Feuerschaden</li>\n</ul>\n<p>[[/r {3d10[acid],3d10[bludgeoning],3d10[cold],3d10[electricity],3d10[bludgeoning],3d10[fire]]]{kombinierter Schaden}</p>"
+      "description": "<p>You call upon the unimaginable power of world-ending cataclysms, ripping a small piece of each cataclysm and combining them together into one horrifically powerful attack. The following effects come down upon all creatures in the area. Treat the resistances of creatures in the area as if they were 10 lower for the purpose of determining the cataclysm's damage. Each creature attempts one basic Reflex save that applies to all five types of damage.</p>\n<ul>\n<li>Flesh-dissolving acid rain deals 3d10 acid damage.</li>\n<li>A roaring earthquake shakes and bludgeons creatures on the ground, dealing 3d10 bludgeoning damage.</li>\n<li>A blast of freezing wind deals 3d10 cold damage.</li>\n<li>Incredible lightning lashes the area, dealing 3d10 electricity damage.</li>\n<li>Beating winds churn across the sky, dealing 3d10 bludgeoning damage to creatures flying in the area.</li>\n<li>An instant tsunami sweeps over creatures in the area, dealing 3d10 bludgeoning damage with the water trait (doubled for creatures swimming in the area).</li>\n<li>A massive wildfire burns in a sudden inferno, dealing 3d10 fire damage.</li>\n</ul>\n<p>@Damage[3d10[acid],3d10[bludgeoning],3d10[cold],3d10[electricity],3d10[bludgeoning],3d10[fire]]{Damage}</p>"
     },
     "Catch Your Name": {
       "name": "Namen aufschnappen",
@@ -1017,7 +1044,7 @@
     },
     "Cinder Gaze": {
       "name": "Funkenblick",
-      "description": "<p>Du weißt, wie du die Zukunft in Flammen und Rauch lesen kannst. Diese Deutungen sind ungenau und oft symbolisch, helfen dir aber dennoch, dich auf kommende Dinge vorzubereiten. Wenn du diesen Zauber wirkst, musst du dich dabei nahe eines beliebig großen Feuers aufhalten. Hast du den Zauber vollendet, so würfle deine Vorhersage mit [[/r 1d4]]{1W4} aus. Der Vorteil währt 10 Minuten lang, sofern du ihn nicht vorher verbrauchst. Du kannst diesen Zauber frühestens nach 10 Minuten erneut wirken.</p>\n<ol>\n<li><strong>Furchtbare Gefahr</strong> Du erlangst einen Zustandsbonus von +2 auf deinen nächsten Initiativewurf.</li>\n<li><strong>Neues Leben</strong> Wenn du das nächste Mal Schaden erleiden würdest, erlangst du zuerst Temporäre TP in Höhe deines magischen Schlüsselattributs +1 (und erleidest dann den Schaden).</li>\n<li><strong>Tiefes Verständnis</strong> (Glück) Wenn du das nächste Mal einen Wurf zum Wissen abrufen ablegst, würfelst du zweimal und behältst das höhere Ergebnis.</li>\n<li><strong>Glück</strong> (Glück) Bei deinem nächsten Rettungswurf würfelst du zweimal und nimmst das besser Ergebnis.</li>\n</ol>\n<hr />\n<p><strong>Erhöht (+1)</strong> Das Ergebnis Neues Leben verschafft dir 2 zusätzliche Temporäre TP.</p>"
+      "description": "<p>You've learned to read the future in the patterns of flames and smoke. Though inexact and often symbolic, these readings help prepare you for upcoming events. When Casting this Spell, you must be near a fire (of any size) for the duration. Upon completion, roll 1d4 for your prediction. The benefit lasts for 10 minutes or until expended, whichever comes first. After casting cinder gaze, you can't cast it again for 10 minutes.</p>\n<ol>\n<li><strong>Terrible Danger</strong> You gain a +2 status bonus to your next initiative roll.</li>\n<li><strong>New Life</strong> The next time you take damage, just before taking the damage, you gain temporary Hit Points equal to 1 plus your spellcasting ability modifier.</li>\n<li><strong>Vivid Insight</strong> (fortune) The next time you attempt a check to Recall Knowledge, roll twice and take the higher result.</li>\n<li><strong>Good Fortune</strong> (fortune) The next time you attempt a saving throw, roll twice and take the better result.</li>\n</ol>\n<hr />\n<p><strong>Heightened (+1)</strong> The number of temporary Hit Points from new life increases by 2.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.myWvjlGLvbzkSCNO]{Effect: Cinder Gaze}</p>"
     },
     "Cinder Swarm": {
       "name": "Cinder Swarm",
@@ -1132,6 +1159,13 @@
       "name": "Fluch des Spassmachers",
       "description": "<p>Du verfluchst das Ziel, auf dass es beim Bewegen künftig lächerliche Geräusche von sich gibt. Ferner werden Hände und Füße der Kreatur unbeholfen und unkoordiniert, als trüge sie übergroße Handschuhe und Schuhe.</p>\n<p><strong>Kritischer Erfolg</strong> Das Ziel ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Für 1 Runde muss das Ziel bei Fertigkeitswürfen für Akrobatik, Diebeskunst und Heimlichkeit zweimal würfeln und das schlechtere Ergebnis behalten; Fehlschläge werden dabei als Kritische Fehlschläge behandelt.</p>\n<p><strong>Fehlschlag</strong> Wie bei Erfolg, der Effekt währt aber 1 Stunde.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie bei Erfolg, der Effekt ist aber permanent.</p>",
       "target": "1 Kreatur"
+    },
+    "Collective Memories": {
+      "name": "Collective Memories",
+      "cost": "rare incense worth a total value of 300 gp",
+      "description": "<p>You tap into other mortals' memories, knowledge, legends, tales, and lore about a subject. The subject must be an important person, place, or thing. If the subject is present, increase the degree of success of your primary skill check by one step. If you have only vague information about the subject before attempting the ritual, decrease the degree of success of your primary skill check by one step. These modifiers cancel each other out if you have a subject present with little to no baseline information.</p>\n<hr />\n<p><strong>Critical Success</strong> For 1 hour after the ritual ends, you sort through memories that are mostly coherent, emphasizing more accurate or useful information over misremembered knowledge or exaggerated tales.</p>\n<p><strong>Success</strong> For 1 hour after the ritual ends, you learn useful information for further inquiry that remains generally incomplete or enigmatic. As is the nature of mortal memory and stories, you are likely to learn multiple contradictory versions.</p>\n<p><strong>Failure</strong> You fail to learn any useful legends.</p>\n<p><strong>Critical Failure</strong> Your mind becomes overwhelmed with the vast array of knowledge at your disposal. You can't sense or respond to anything in the present for 1 week except to perform necessities like breathing and sleeping. When you recover, however, you can retrain one of your skills into a Lore based on the knowledge of a subject you were accessing, as if you had spent 1 week retraining.</p>",
+      "primarycheck": "Occultism (master)",
+      "secondarycheck": "Performance, Society"
     },
     "Collective Transposition": {
       "name": "Kreaturen versetzen",
@@ -1533,7 +1567,7 @@
     },
     "Death Knell": {
       "name": "Totenglocke",
-      "description": "<p>Du löschst das Leben einer Kreatur aus, die kurz davor ist zu sterben. Das Ziel muss einen Willenswurf ausführen. Tötest du das Ziel mit diesem Zauber, erhältst du 10 temporäre TP sowie 10 Minuten lang einen Zustandsbonus von +1 auf Angriffs- und Schadenswürfe.</p>\n<p><strong>Kritischer Erfolg</strong> Das Ziel ist nicht betroffen.</p>\n<p><strong>Erfolg </strong>Der Zustand @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{Sterbend} der Kreatur erhöht sich um 1 Grad.</p>\n<p><strong>Fehlschlag </strong>Das Ziel stirbt.</p>",
+      "description": "<p>You snuff the life out of a creature on the brink of death. The target must attempt a Will save. If this kills it, you gain 10 temporary HP and a +1 status bonus to attack and damage rolls for 10 minutes.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target's @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{Dying} value increases by 1.</p>\n<p><strong>Failure</strong> The target dies.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.98XT2QUk6wvXIqf7]{Spell Effect: Death Knell}</p>",
       "target": "1 lebendige Kreatur, die 0 TP hat"
     },
     "Death Ward": {
@@ -1557,6 +1591,10 @@
     "Deep Breath": {
       "name": "Deep Breath",
       "description": "<p>You take an incredibly deep breath and can hold it for the spell's duration. You don't lose breath when hit, but you do lose all the air you inhaled if you speak (including to Cast a Spell). This spell doesn't create air; if you don't have air to breathe when you cast it, you get no benefit.</p>\n<hr />\n<p><strong>Heightened (2nd)</strong> The duration increases to 1 hour, and you lose only 10 minutes of breath if you speak.</p>\n<p><strong>Heightened (4th)</strong> The duration increases to 8 hours, and you lose only 10 minutes of breath if you speak.</p>"
+    },
+    "Deep Sight": {
+      "name": "Deep Sight",
+      "description": "<p>Your eyes darken until they become entirely pitch black. You grant yourself the ability to see in the darkness. You gain darkvision. If you already have darkvision, you gain greater darkvision.</p>\n<hr />\n<p><strong>Heightened (7th)</strong> The duration is until the next time you make daily preparations.</p>"
     },
     "Dehydrate": {
       "name": "Dehydrate",
@@ -1769,7 +1807,7 @@
     },
     "Divine Armageddon": {
       "name": "Heiliges Armageddon",
-      "description": "<p>Du rufst die heilige Kraft deiner Gottheit an, die sowohl lebende und untote Kreaturen im Bereich zerstört. Kreaturen im Wirkungsbereich nehmen 10W6 negativen Schaden und 10W6 Gesinnungsschaden (Gut, Böse, Rechtschaffend oder Chaotisch), gewählt entsprechend der Gesinnungen, die deine Gottheit hat. Wenn deine Gottheit Wahrhaft Neutral ist, erhöhe den Negativen Schaden um 4W6 anstelle des Gesinnungsschaden. Eine Kreatur, die durch Positive Energie Schaden nimmt, wie Kreaturen, die durch Negative Energie geheilt werden, nehmen Positiven Schaden anstelle des Negativen Schaden durch den Zauber.</p>\n<p>Du kannst diesen Zauber nicht wirken, wenn du keine Gottheit hast. Dieser Zauber erhält die Kategorien basierend auf dem Gesinnungsschaden.</p>\n<hr />\n<p><strong>Erhöhung (+1)</strong> Der Schaden erhöht sich um 1W6 Negativen Schaden, 1W6 Gesinnungsschaden und 1W6 zusätzlichen Negativen oder Positiven Schaden bei einer Wahrhaft Neutralen Gottheit.</p>\n<hr />\n<p>[[/r {(@item.level+2)d6[negative],(@item.level+2)d6[good]}]]{Stufenabhängiger Negativer und Guter Schaden}</p>\n<p>[[/r {(@item.level+2)d6[negative],(@item.level+2)d6[evil]}]]{Stufenabhängiger Negativer und Böser Schaden}</p>\n<p>[[/r {(@item.level+2)d6[negative],(@item.level+2)d6[lawful]}]]{Stufenabhängiger Negativer und Rechtschaffener Schaden}</p>\n<p>[[/r {(@item.level+2)d6[negative],(@item.level+2)d6[chaotic]}]]{Stufenabhängiger Negativer und Chaotischer Schaden}</p>\n<hr />\n<p>[[/r {(@item.level+2)d6[positive],(@item.level+2)d6[good]}]]{Stufenabhängiger Positiver und Guter Schaden}</p>\n<p>[[/r {(@item.level+2)d6[positive],(@item.level+2)d6[evil]}]]{Stufenabhängiger Positiver und Böser Schaden}</p>\n<p>[[/r {(@item.level+2)d6[positive],(@item.level+2)d6[lawful]}]]{Stufenabhängiger Positiver und Rechtschaffener Schaden}</p>\n<p>[[/r {(@item.level+2)d6[positive],(@item.level+2)d6[chaotic]}]]{Stufenabhängiger Positiver und Chaotischer Schaden}</p>\n<hr />\n<p>[[/r ((@item.level*2)-2)d6[negative]]]{Stufenabhängiger Wahrhaft Neutraler Negativer Schaden}</p>\n<p>[[/r ((@item.level*2)-2)d6[positive]]]{Stufenabhängiger Wahrhaft Neutraler Positiver Schaden}</p>"
+      "description": "<p>You call forth a divine cataclysm from your deity, destroying living and undead creatures in the area alike. Creatures in the area take 10d6 negative damage and 10d6 alignment damage (good, evil, lawful, or chaotic), chosen from among the alignments your deity has. If your deity is true neutral, increase the negative damage by 4d6 instead of dealing alignment damage. A creature harmed by positive damage, such as one with negative healing, takes positive damage instead of negative damage from this spell.</p>\n<p>You can't cast this spell if you don't have a deity. This spell gains the trait corresponding to the alignment damage dealt.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1d6 negative damage, 1d6 alignment damage, and 1d6 additional negative and positive damage for a true neutral deity.</p>\n<hr />\n<p>@Damage[(@item.level+2)d6[negative],(@item.level+2)d6[good]|traits:good]{Leveled Negative + Good Damage}</p>\n<p>@Damage[(@item.level+2)d6[negative],(@item.level+2)d6[evil]|traits:evil]{Leveled Negative + Evil Damage}</p>\n<p>@Damage[(@item.level+2)d6[negative],(@item.level+2)d6[lawful]|traits:lawful]{Leveled Negative + Lawful Damage}</p>\n<p>@Damage[(@item.level+2)d6[negative],(@item.level+2)d6[chaotic]|traits:chaotic]{Leveled Negative + Chaotic Damage}</p>\n<hr />\n<p>@Damage[(@item.level+2)d6[positive],(@item.level+2)d6[good]|traits:good]{Leveled Positive + Good Damage}</p>\n<p>@Damage[(@item.level+2)d6[positive],(@item.level+2)d6[evil]|traits:evil]{Leveled Positive + Evil Damage}</p>\n<p>@Damage[(@item.level+2)d6[positive],(@item.level+2)d6[lawful]|traits:lawful]{Leveled Positive + Lawful Damage}</p>\n<p>@Damage[(@item.level+2)d6[positive],(@item.level+2)d6[chaotic]|traits:chaotic]{Leveled Positive + Chaotic Damage}</p>\n<hr />\n<p>@Damage[((@item.level*2)-2)d6[negative]]{Leveled True Neutral Negative Damage}</p>\n<p>@Damage[((@item.level*2)-2)d6[positive]]{Leveled True Neutral Positive Damage}</p>"
     },
     "Divine Aura": {
       "name": "Göttliche Aura",
@@ -2313,7 +2351,7 @@
     },
     "Entangling Flora": {
       "name": "Verstrickende Pflanzen",
-      "description": "<p>Pflanzen und Pilze im Wirkungsbereich verstricken Kreaturen. Der Wirkungsbereich gilt als Schwieriges Gelände. In jeder Runde, in der eine Kreatur ihren Zug im Wirkungsbereich beginnt, muss sie einen Reflexwurf ausführen. Bei einem Fehlschlag erhält sie einen Situationsmalus von -10 Fuß/3 Meter auf ihre Bewegungsraten, bis sie den Bereich verlässt. Bei einem Kritischen Fehlschlag erhält sie außerdem für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.eIcWbB5o3pP6OIMe]{Bewegungsunfähig}. Kreaturen versuchen, diesen Zustand vorzeitig zu beenden, indem sie einen Fertigkeitswurf zum @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Entkommen} gegen deinen Zauber-SG ablegen.</p>"
+      "description": "<p>Plants and fungi burst out or quickly grow, entangling creatures. All surfaces in the area are difficult terrain. Each round that a creature starts its turn in the area, it must attempt a Reflex save. On a failure, it takes a –10-foot circumstance penalty to its Speeds until it leaves the area, and on a critical failure, it's also @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} for 1 round. Creatures can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} to remove these effects.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.rjM25qfw5BKj9h97]{Spell Effect: Entangling Flora}</p>"
     },
     "Enthrall": {
       "name": "Faszinierende Vorstellung",
@@ -2556,6 +2594,11 @@
       "name": "Verhängnisvolle Musik",
       "description": "<p>Du spielst Musik, die so perfekt ist, dass das Ziel vor Freude oder Trauer sterben könnte. War eine Kreatur einmal Ziel von <em>Verhängnisvolle Musik</em>, wird sie 1 Minute lang immun. Der Effekt des Zaubers hängt von der Stufe des Zieles und seiner derzeitigen Trefferpunkte ab.</p>\n<p><strong>16 oder niedriger</strong> Das Ziel stirbt augenblicklich.</p>\n<p><strong>17</strong> Besitzt das Ziel 50 oder weniger Trefferpunkte, stirbt es augenblicklich. Ansonsten fallen seine Trefferpunkte auf 0 und es erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{Sterbend 1}.</p>\n<p><strong>18 oder höher</strong> Das Ziel erleidet 50 Punkte Schaden. Fallen seine Trefferpunkte dadurch auf 0, stirbt es augenblicklich.</p>",
       "target": "1 Kreatur"
+    },
+    "Fate's Travels": {
+      "name": "Fate's Travels",
+      "description": "<p>You get a vision of the creature when it was alive, and its last 10 minutes of travel. This vision gives you a clear impression of the route it took and locations it visited, if any, but not any creatures or hazards in those areas. This information is enough to automatically succeed at Tracking the creature over that distance.</p>\n<hr />\n<p><strong>Heightened (6th)</strong> Your vision covers the creature's last hour of travel, and you gain an impression of the hazards, creature types, and number of creatures it encountered along the way, as well as a clear impression of how it died.</p>",
+      "target": "1 corpse"
     },
     "Fated Confrontation": {
       "name": "Schicksalshafte Begegnung",
@@ -2908,6 +2951,11 @@
       "description": "<p>Deine <em>Eiskalte Scherbe</em> saugt die Umgebungswärme auf in einem sinnlosen Versuch, sich selbst zu sättigen und einen Grad an Eiseskälte zu erreichen, wie ihn auf der Materiellen Ebene noch nicht gegeben hat. Dies ermöglicht dir, ein Getränk zu kühlen, mit einem heißen Topf zu hantieren oder ähnliche mindere Effekte zu erzeugen. Ein abgekühlter Gegenstand unterliegt wie üblich seiner Umgebung. Du kannst ferner Luftfeuchtigkeit zu einem soliden Gegenstand verfestigen; dieser temporäre Gegenstand besitzt einen vernachlässigbaren Lastwert und besteht aus nichtmagischem Eis. Er wirkt grob und künstlich und ist äußerst zerbrechlich – er kannst nicht als Werkzeug, Waffe oder Zauberkomponente genutzt werden. Einmal erschaffen schmilzt er wie normales Eis bei den Umgebungsbedingungen.</p>\n<hr />\n<p><strong>Erhöht (3.)</strong> Du kannst einfache Gegenstände aus Eis von maximal 1 Lasteinheit erschaffen. Solche Gegenstände können keine beweglichen Teile enthalten. Du kannst stets nur über einen so erschaffenen Gegenstand verfügen; erzeugst du einen weiteren, schmilzt der vorherige augenblicklich.</p>\n<p><strong>Erhöht (5.</strong>) Von dir erschaffene Gegenstände können maximal 4 Last und die 4. Stufe besitzen.</p>\n<p><strong>Erhöht (7.)</strong> Von dir erschaffene Gegenstände können maximal 8 Last und die 8. Stufe besitzen.</p>\n<p><strong>Erhöht (9.)</strong> Von dir erschaffene Gegenstände können maximal 20 Last und die 12. Stufe besitzen.</p>",
       "target": "1 Gegenstand"
     },
+    "Frostbite": {
+      "name": "Frostbite",
+      "description": "<p>An orb of biting cold coalesces around your target, freezing its body. The target takes 2d4 cold damage with a basic Fortitude save. On a critical failure, the target also gains weakness 1 to bludgeoning until the start of your next turn.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.DdqWMj7cuf4S1bgr]{Spell Effect: Frostbite}</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1d4 and the weakness on a critical failure increases by 1.</p>",
+      "target": "1 creature"
+    },
     "Fungal Hyphae": {
       "name": "Pilzhyphen",
       "description": "<p>Aus deinen Füßen sprießen dünne Hyphen, die sich in die Erde einpflanzen und ein symbiotisches mykotisches Netzwerk mit Pflanzenwurzeln im Umkreis von 30 Fuß/9 m bilden. Du erhältst einen ungenauen Erschütterungssinn, durch den du jegliche Berührung von Pflanzen in diesem Umkreis wahrnimmst. Sobald du dich bewegst, reißen die Hyphen und der Zauber endet.</p>\n<hr />\n<p><strong>Erhöhung (4.)</strong> Du kannst Pflanzen in deiner Umgebung zu einem geringen Grad kontrollieren, wodurch du mit ästen, freiliegenden Wurzeln oder ähnlichen festen Pflanzenteilen einen Angriff ausführen kannst. Um dies zu tun, musst du eine Aktion der Kategorie Offensiv ausführen und kannst damit jegliche Kreaturen angreifen, die du mithilfe deines Erschütterungssinns aufspüren kannst. Dies sind Zauberangriffe im Nahkampf, die 2W8 Wuchtschaden plus den Modifikator deines magischen Schlüsselattributs verursachen. Ungewöhnliche Pflanzen wie Dornenranken könnten nach Absprache mit deinem SL eine andere Schadensart verursachen. Du kannst mit diesen Pflanzen keine anderen Angriffe oder Aktionen ausführen.</p>\n<p><strong>Erhöhung (6.)</strong> Wie auf dem 4. Grad. Zusätzlich kannst du weitere einfache Aktionen der Kategorie Handhaben mit den Pflanzen ausüben, wie beispielsweise einen Ast ein Objekt aufheben oder eine Tür öffnen lassen. Komplexere Aktionen, wie beispielsweise ein Schloss knacken oder eine Falle entschärfen, sind jedoch nicht möglich.</p>"
@@ -3029,6 +3077,10 @@
     "Globe of Invulnerability": {
       "name": "Kugel der Unverwundbarkeit",
       "description": "<p>Du erschaffst eine unbewegliche Kugel um dich herum, die versucht, jedem Zauber entgegenzuwirken, der von außen einen Wirkungsbereich oder ein Ziel innerhalb der Kugel hat. Dies funktioniert, als sei die Kugel der Zauber Magie bannen, der 1 Grad unter seinem eigentlichen Zaubergrad liegt.</p>\n<p>Hat das Entgegenwirken Erfolg, dann hält es nur den Teil des Zaubers ab, in Kraft zu treten, der in die Kugel eingedrungen wäre. (Wenn der Zauber Ziele hat oder ein Teil seines Wirkungsbereichs außerhalb der Kugel liegt, werden diese wie gewohnt betroffen.)</p>\n<p>Damit der Zauber nicht verloren geht, musst du die Kugel in einem offenen Feld erzeugen, sodass ihr Rand nicht durch Kreaturen oder Objekte verläuft (Kreaturen können die Kugel nach ihrem Entstehen allerdings betreten).</p>"
+    },
+    "Glowing Trail": {
+      "name": "Glowing Trail",
+      "description": "<p>Your movements leave a vague glowing path behind you, like a misty echo of your presence. While your form is not discernible, your size is. This path hangs in space and is not anchored to any surface, so it tracks your movement through the air. The path fades after 10 minutes. You can Dismiss this spell at any time, but the path fades normally. The path can be visible or @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Invisible}. While visible, it appears as a faintly glowing mist in a color of your choosing but sheds no light beyond its area. While invisible, you can still detect the path, but it gives off no light.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> The glowing trail fades after 1 day.</p>\n<p><strong>Heightened (5th)</strong> The glowing trail fades after 1 week.</p>\n<p><strong>Heightened (7th)</strong> The glowing trail fades after 1 month.</p>\n<p><strong>Heightened (9th)</strong> The glowing trail fades after 1 year.</p>"
     },
     "Glutton's Jaw": {
       "name": "Kiefer des Vielfrasses",
@@ -3215,7 +3267,7 @@
     },
     "Haste": {
       "name": "Hast",
-      "description": "<p>Die Magie ermöglicht es dem Ziel, sich schneller zu bewegen. Es erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Beschleunigt} und kann in jeder Runde eine zusätzliche Aktion für die Aktionen Schreiten und Zuschlagen anwenden.</p>\n<hr />\n<p><strong>Erhöhung (7.)</strong> Du kannst bis zu 6 Kreaturen als Ziele auswählen.</p>",
+      "description": "<p>Magic empowers the target to act faster. It gains the @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened} condition and can use the extra action each round only for Strike and Stride actions.</p>\n<hr />\n<p><strong>Heightened (7th)</strong> You can target up to 6 creatures.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.ElkXovNrHB0Doi6O]{Spell Effect: Haste}</p>",
       "heightening": {
         "7": {
           "target": "6 Kreaturen"
@@ -3833,6 +3885,10 @@
       "description": "<p>Du bewirkst, dass das Ziel sich einfacher öffnen lässt. <em>Klopfen</em> gewährt jeder Kreatur einen Zustandsbonus von +4, die versucht, mit einem Fertigkeitswurf für Athletik- oder Diebeskunst einen als Ziel ausgewählten Behälter, ein Schloss oder eine Tür zu öffnen. Du kannst als Teil des Wirkens des Zaubers einen Fertigkeitswurf für Diebeskunst ausführen, um das Ziel zu öffnen, und addierst deine Stufe hinzu, sogar wenn du ungeübt sein solltest.</p>\n<p><em>Klopfen</em> wirkt @UUID[Compendium.pf2e.spells-srd.Item.Azoh0BSoCASrA1lr]{Verschliessen} entgegen.</p>",
       "target": "1 Behälter, Schloss oder Tür"
     },
+    "Know Location": {
+      "name": "Know Location",
+      "description": "<p>You create an invisible anchor at a location within range (even if it's outside your line of sight or line of effect), as long as you can identify the location by its appearance (or other identifying features). You innately know the direction towards that location, including relative depth, but not the distance. Incorrect knowledge of the location's appearance usually causes the spell to fail, but it could instead lead to an unwanted location or some other unusual mishap determined by the GM. This spell doesn't help you find a suitable route to the location nor assist you in overcoming obstacles on the way there.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> The range is 10 miles.</p>\n<p><strong>Heightened (5th)</strong> The range is 100 miles.</p>\n<p><strong>Heightened (7th)</strong> The range is planetary and you can create an anchor at a location you've viewed with scrying or similar effects.</p>"
+    },
     "Know the Enemy": {
       "name": "Wissen über den Feind",
       "description": "<p><strong>Auslöser</strong> Du würfelst Initiative und kannst eine Kreatur sehen, dein Angriffswurf gegen eine Kreatur ist erfolgreich oder der Rettungswurf einer Kreatur gegen einen deiner Zauber schlägt fehl.</p>\n<hr />\n<p>Verwende eine Aktion zum Wissen abrufen und führst einen passende Fertigkeitswurf aus, um die auslösende Kreatur zu identifizieren. Du darfst zweimal würfeln und das bessere Resultat anwenden.</p>"
@@ -4136,7 +4192,7 @@
     },
     "Magnetic Dominion": {
       "name": "Magnetic Dominion",
-      "description": "<p>The roiling magnetic fields of the Plane of Metal radiate from you as you channel and reshape them at your merest thought. When you Cast this Spell, you can relocate each affected target to any other unoccupied space within the emanation. You can't move yourself in this way. An unwilling target can resist being moved with a successful Reflex save.</p>\n<p>The creatures move all at once—after you know the results of all the saves, you determine which target occupies each space in whatever order you choose. You can move a creature into a space that was previously occupied by another creature so long as you also relocate the first creature elsewhere as part of the movement. If you move a target into the air, it descends to the ground harmlessly after being moved unless it chooses not to.</p>\n<p>You can choose to be affected by an 8th-rank @UUID[Compendium.pf2e.spells-srd.Item.24U1b9K4Lj94cgaj]{Magnetic Repulsion} spell that lasts for the duration of <em>magnetic dominion</em>. Each time you Sustain the spell, you can move one creature in the emanation, with the same targeting restrictions and stipulations as above.</p>",
+      "description": "<p>The roiling magnetic fields of the Plane of Metal radiate from you as you channel and reshape them at your merest thought. When you Cast this Spell, you can relocate each affected target to any other unoccupied space within the emanation. You can't move yourself in this way. An unwilling target can resist being moved with a successful Reflex save.</p>\n<p>The creatures move all at once—after you know the results of all the saves, you determine which target occupies each space in whatever order you choose. You can move a creature into a space that was previously occupied by another creature so long as you also relocate the first creature elsewhere as part of the movement. If you move a target into the air, it descends to the ground harmlessly after being moved unless it chooses not to.</p>\n<p>You can choose to be affected by an 8th-rank <em>@UUID[Compendium.pf2e.spells-srd.Item.24U1b9K4Lj94cgaj]{Magnetic Repulsion}</em> spell that lasts for the duration of <em>magnetic dominion</em>. Each time you Sustain the spell, you can move one creature in the emanation, with the same targeting restrictions and stipulations as above.</p>",
       "target": "any number of creatures wearing metal armor, creatures made of metal, creatures that have the metal trait, and unattended metal objects"
     },
     "Magnetic Repulsion": {
@@ -4498,7 +4554,21 @@
     },
     "Needle Darts": {
       "name": "Needle Darts",
-      "description": "<p>You shape three needles out of a piece of metal in your possession and send them flying in a tight group toward one target. Make a spell attack roll against your target's AC. The needles deal @Damage[3d4[piercing]] damage and might cause bleeding.</p>\n<p>The needles impart any special properties of the metal that forms them; for instance, cold iron needles deal additional damage to creatures with weakness to cold iron. All the needles are made of the same metal, and the metal returns to you after the attack.</p>\n<hr />\n<p><strong>Critical Success</strong> The target takes double damage and 1 persistent bleed damage.</p>\n<p><strong>Success</strong> The target takes full damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> You send one additional needle, increasing the regular damage by 1d4 and increasing the persistent bleed damage on a critical hit by 1.</p>",
+      "description": "<p>You shape three needles out of a piece of metal in your possession and send them flying in a tight group toward one target. Make a spell attack roll against your target's AC. The needles deal @Damage[3d4[piercing]] damage and might cause bleeding.</p>\n<p>The needles impart any special properties of the metal that forms them; for instance, cold iron needles deal additional damage to creatures with weakness to cold iron. All the needles are made of the same metal, and the metal returns to you after the attack.</p>\n<hr />\n<p><strong>Critical Success</strong> The target takes double damage and 1 persistent bleed damage.</p>\n<p><strong>Success</strong> The target takes full damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> You send one additional needle, increasing the regular damage by 1d4 and increasing the persistent bleed damage on a critical hit by 1.</p>\n<p>[[/r (@item.level)[bleed]]]{Leveled Bleed Damage}</p>",
+      "spellVariants": {
+        "1gZuxDZYlG9YSzyW": {
+          "name": "Needle Darts (Adamantine)"
+        },
+        "E2DbTTDjNlTp0ztA": {
+          "name": "Needle Darts (Silver)"
+        },
+        "ZbRcMkLoWzgq5XvU": {
+          "name": "Needle Darts (Cold Iron)"
+        },
+        "hk5Z57VxDZI5WAgq": {
+          "name": "Needle Darts"
+        }
+      },
       "target": "1 creature"
     },
     "Needle of Vengeance": {
@@ -6387,6 +6457,10 @@
       "name": "Stein zu Fleisch",
       "description": "<p>Du manipulierst die fundamentalen Partikel der Materie und verwandelst Gestein in Fleisch und Blut. Du stellst eine versteinerte Kreatur wieder zu ihrem Normalzustand her oder transformierst ein Steinobjekt in eine Masse unbeweglichen Fleisches (ohne die Härte von Stein) der ungefähr selben Gestalt.</p>",
       "target": "Versteinerte Kreatur oder menschengroßes Steinobjekt"
+    },
+    "Stonesense": {
+      "name": "Stonesense",
+      "description": "<p>You gain tremorsense as an imprecise sense to a range of 100 feet, but you can only sense vibrations through natural stone (not masonry, adobe, or any other manufactured edifice).</p>"
     },
     "Storm Lord": {
       "name": "Beherrscher des Sturms",
