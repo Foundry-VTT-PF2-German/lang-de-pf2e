@@ -4,7 +4,7 @@ import { replaceProperties } from "../helper/src/util/utilities.js";
 import { extractPackGroupList } from "../helper/src/pack-extractor/pack-extractor.js";
 
 // Read config file
-const CONFIG = JSON.parse(readFileSync("./src/db-extractor/db-extractor-config.json", "utf-8"));
+const CONFIG = JSON.parse(readFileSync("./src/pack-extractor/pack-extractor-config.json", "utf-8"));
 
 // Replace linked mappings and savePaths with actual data
 replaceProperties(CONFIG.mappings, ["subMapping"], CONFIG.mappings);
