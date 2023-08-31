@@ -48,15 +48,18 @@
             "source": {
                 "path": "system.details.source.value",
                 "converter": "translateSource",
-                "extractOptions": { "addToDictionary": true, "dictionaryName": "source", "extractValue": false }
+                "extractOptions": { "addToDictionary": true, "extractValue": false }
             },
             "source2": {
                 "path": "system.source.value",
                 "converter": "translateSource",
-                "extractOptions": { "addToDictionary": true, "dictionaryName": "source", "extractValue": false }
+                "extractOptions": { "addToDictionary": true, "alternateMappingKey": "source", "extractValue": false }
             },
             "speed": { "path": "system.details.speed" },
-            "speed2": { "path": "system.attributes.speed.details", "extractOptions": {"setMappingKey": "speed"} },
+            "speed2": {
+                "path": "system.attributes.speed.details",
+                "extractOptions": { "alternateMappingKey": "speed" }
+            },
             "stealth": { "path": "system.attributes.stealth.details" },
             "tokenImage": {
                 "path": "prototypeToken.texture.src",
@@ -71,7 +74,7 @@
             "items": {
                 "path": "items",
                 "converter": "translateActorItems",
-                "extractOptions": { "subMapping": "item", "specialExtraction": "actorItem" }
+                "extractOptions": { "subMapping": "item", "specialExtraction": "actorItems" }
             }
         },
         "heightening": {
@@ -99,7 +102,7 @@
             },
             "badges": {
                 "path": "system.badge.labels",
-                "extractOptions": { "actorItemExtraction": false, "noArrayConvert": true }
+                "extractOptions": { "extractForActorItem": false, "convertArray": false }
             },
             "cost": { "path": "system.cost.value" },
             "description": { "path": "system.description.value" },
@@ -112,12 +115,12 @@
             "heightening": {
                 "path": "system.heightening.levels",
                 "converter": "translateHeightening",
-                "extractOptions": { "actorItemExtraction": false, "subMapping": "heightening" }
+                "extractOptions": { "extractForActorItem": false, "subMapping": "heightening" }
             },
             "materials": { "path": "system.materials.value" },
             "prerequisites": {
                 "path": "system.prerequisites.value",
-                "extractOptions": { "actorItemExtraction": false, "noArrayConvert": true }
+                "extractOptions": { "extractForActorItem": false, "convertArray": false }
             },
             "primarycheck": { "path": "system.primarycheck.value" },
             "range": {
@@ -146,7 +149,7 @@
             "spellVariants": {
                 "path": "system.overlays",
                 "converter": "translateSpellVariant",
-                "extractOptions": { "actorItemExtraction": false, "subMapping": "item" }
+                "extractOptions": { "extractForActorItem": false, "subMapping": "spellVariant" }
             },
             "target": { "path": "system.target.value" },
             "time": {
@@ -154,7 +157,7 @@
                 "converter": "translateTime",
                 "extractOptions": { "addToDictionary": true, "extractValue": false }
             },
-            "trainedLore": { "path": "system.trainedLore", "extractOptions": { "actorItemExtraction": false } }
+            "trainedLore": { "path": "system.trainedLore", "extractOptions": { "extractForActorItem": false } }
         },
         "journal": {
             "name": { "path": "name" },
@@ -162,9 +165,8 @@
                 "path": "pages",
                 "converter": "pages",
                 "extractOptions": {
-                    "idType": "dynamic",
-                    "idName": "name",
-                    "subMapping": "journalPages"
+                    "subMapping": "journalPages",
+                    "specialExtraction": "journalPages"
                 }
             }
         },
@@ -183,7 +185,7 @@
                 "converter": "tableResults",
                 "extractOptions": {
                     "subMapping": "tableResults",
-                    "specialExtraction": "tableResult"
+                    "specialExtraction": "tableResults"
                 }
             }
         },
@@ -198,6 +200,39 @@
             "label": { "path": "label", "extractOptions": { "addToMapping": false } },
             "prompt": { "path": "prompt", "extractOptions": { "addToMapping": false } },
             "text": { "path": "text", "extractOptions": { "addToMapping": false } }
+        },
+        "spellVariant": {
+            "name": {
+                "path": "name",
+                "converter": "translateDualLanguage"
+            },
+            "cost": { "path": "system.cost.value" },
+            "description": { "path": "system.description.value" },
+            "duration": {
+                "path": "system.duration.value",
+                "converter": "translateDuration",
+                "extractOptions": { "addToDictionary": true, "extractValue": false }
+            },
+            "heightening": {
+                "path": "system.heightening.levels",
+                "converter": "translateHeightening",
+                "extractOptions": { "extractForActorItem": false, "subMapping": "heightening" }
+            },
+            "materials": { "path": "system.materials.value" },
+            "primarycheck": { "path": "system.primarycheck.value" },
+            "range": {
+                "path": "system.range.value",
+                "converter": "translateRange",
+                "extractOptions": { "addToDictionary": true, "extractValue": false }
+            },
+            "secondarycaster": { "path": "system.secondarycasters.value" },
+            "secondarycheck": { "path": "system.secondarycheck.value" },
+            "target": { "path": "system.target.value" },
+            "time": {
+                "path": "system.time.value",
+                "converter": "translateTime",
+                "extractOptions": { "addToDictionary": true, "extractValue": false }
+            }
         },
         "tableResults": {
             "text": { "path": "text", "extractOptions": { "addToMapping": false } }
@@ -234,65 +269,37 @@
                 "spells"
             ],
             "mapping": "item",
-            "packCompendiumMapping": {
-                "actions": "pf2e.actionspf2e",
-                "adventure-specific-actions": "pf2e.adventure-specific-actions",
-                "ancestries": "pf2e.ancestries",
-                "ancestryfeatures": "pf2e.ancestryfeatures",
-                "backgrounds": "pf2e.backgrounds",
-                "bestiary-ability-glossary-srd": "pf2e.bestiary-ability-glossary-srd",
-                "bestiary-effects": "pf2e.bestiary-effects",
-                "bestiary-family-ability-glossary": "pf2e.bestiary-family-ability-glossary",
-                "boons-and-curses": "pf2e.boons-and-curses",
-                "campaign-effects": "pf2e.campaign-effects",
-                "classes": "pf2e.classes",
-                "classfeatures": "pf2e.classfeatures",
-                "conditions": "pf2e.conditionitems",
-                "deities": "pf2e.deities",
-                "equipment-effects": "pf2e.equipment-effects",
-                "equipment": "pf2e.equipment-srd",
-                "familiar-abilities": "pf2e.familiar-abilities",
-                "feat-effects": "pf2e.feat-effects",
-                "feats": "pf2e.feats-srd",
-                "heritages": "pf2e.heritages",
-                "kingmaker-features": "pf2e.kingmaker-features",
-                "other-effects": "pf2e.other-effects",
-                "spell-effects": "pf2e.spell-effects",
-                "spells": "pf2e.spells-srd"
-            },
             "savePath": "crowdin"
         },
-        "OtherPacks": {
-            "BasicActorPacks": {
-                "packNames": ["hazards", "iconics", "paizo-pregens", "vehicles"],
-                "mapping": "actor",
-                "savePath": "crowdin"
-            },
-            "Journals": {
-                "packNames": ["criticaldeck", "journals"],
-                "mapping": "journal",
-                "savePath": "crowdin"
-            },
-            "OtherActors": {
-                "packNames": [
-                    "age-of-ashes-bestiary",
-                    "book-of-the-dead-bestiary",
-                    "agents-of-edgewatch-bestiary",
-                    "menace-under-otari-bestiary",
-                    "mwangi-expanse-bestiary",
-                    "outlaws-of-alkenstar-bestiary",
-                    "pathfinder-bestiary",
-                    "pathfinder-bestiary-2",
-                    "pathfinder-bestiary-3"
-                ],
-                "mapping": "actor",
-                "savePath": "actor"
-            },
-            "RollableTables": {
-                "packNames": ["rollable-tables"],
-                "mapping": "rollableTable",
-                "savePath": "crowdin"
-            }
+        "BasicActorPacks": {
+            "packNames": ["hazards", "iconics", "paizo-pregens", "vehicles"],
+            "mapping": "actor",
+            "savePath": "crowdin"
+        },
+        "Journals": {
+            "packNames": ["criticaldeck", "journals"],
+            "mapping": "journal",
+            "savePath": "crowdin"
+        },
+        "OtherActors": {
+            "packNames": [
+                "age-of-ashes-bestiary",
+                "book-of-the-dead-bestiary",
+                "agents-of-edgewatch-bestiary",
+                "menace-under-otari-bestiary",
+                "mwangi-expanse-bestiary",
+                "outlaws-of-alkenstar-bestiary",
+                "pathfinder-bestiary",
+                "pathfinder-bestiary-2",
+                "pathfinder-bestiary-3"
+            ],
+            "mapping": "actor",
+            "savePath": "actor"
+        },
+        "RollableTables": {
+            "packNames": ["rollable-tables"],
+            "mapping": "rollableTable",
+            "savePath": "crowdin"
         }
     },
     "i18nFiles": ["action-en.json", "en.json", "re-en.json", "kingmaker-en.json"]
