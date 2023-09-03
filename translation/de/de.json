@@ -59,7 +59,7 @@
     "AbilityInt": "Intelligenz",
     "AbilityModifierLabel": "Attributsmodifikator",
     "AbilityStr": "Stärke",
-    "AbilityTitle": "Attribute",
+    "AbilityTitle": "Attribut",
     "AbilityWis": "Weisheit",
     "AccessoryPropertyRuneCalled": "Gerufen",
     "AccessoryPropertyRuneDragonsBreath": "Drachenodem",
@@ -129,12 +129,12 @@
         "TakesNoDamage": "<actor>{actor}</actor> nimmt keinen Schaden.",
         "TheTarget": "Das Ziel"
       },
-      "Attacks": "Attacks",
+      "Attacks": "Angriffe",
       "Character": {
         "Attribute": {
-          "Apex": "Apex Attribute",
-          "Boosts": "Attribute Boosts",
-          "Key": "Key Attribute"
+          "Apex": "Apex-Attribut",
+          "Boosts": "Attributsverbesserungen",
+          "Key": "Schlüsselattribute"
         },
         "AttributeBuilder": {
           "InputMethod": {
@@ -152,8 +152,8 @@
           "Complete": "Fertig",
           "Flaw": "Schwäche",
           "Flaws": "Schwächen",
-          "Increase": "Increase",
-          "KeyIcon": "Schlüsselattribut",
+          "Increase": "Erhöhung",
+          "KeyIcon": "Attr.",
           "LegacyFlaws": "Schwächen (alt)",
           "Partial": "Teil-Verb.",
           "NotSelected": "Nicht gewählt",
@@ -191,7 +191,7 @@
           "Opposition": "Opposition",
           "Party": "Gruppe"
         },
-        "AttributeModifiers": "Attribute Modifiers",
+        "AttributeModifiers": "Attributsmodifikatoren",
         "Configure": {
           "Alliance": {
             "Hint": "Eine Kreatur kann in Opposition zur Gruppe stehen, mit ihr verbündet oder neutral sein. Dies wirkt sich auf einige Mechanismen während einer Begegnung aus, wie zum Beispiel das Flankieren.",
@@ -248,7 +248,7 @@
       "Dead": "Tot",
       "Familiar": {
         "Master": {
-          "ArmorClass": "Master Armor Class",
+          "ArmorClass": "RK des Meisters",
           "Perception": "Wahrnehmung des Meisters"
         }
       },
@@ -334,7 +334,7 @@
           "Deposit": "SC-Tokens einsammeln",
           "Retrieve": "PC-Tokens herausholen"
         },
-        "DefaultName": "The Party",
+        "DefaultName": "Die Gruppe",
         "InvalidCampaign": {
           "Hint": "Die Kampagnendaten sind ungültig",
           "Title": "Ungültige Kampagne ({party})",
@@ -345,6 +345,7 @@
         },
         "Languages": "Sprachen der Gruppe",
         "MembersLabel": "Mitglieder: ",
+        "NoMembers": "No Members",
         "NoSpecialSenses": "Keine besonderen Sinne",
         "RemoveMember": {
           "Title": "Mitglied entfernen",
@@ -352,12 +353,12 @@
         },
         "Rest": "Rasten",
         "Sidebar": {
-          "ActivateParty": "Activate Party",
-          "CreateMember": "Create New Member",
-          "CreateParty": "Create New Party",
-          "RemoveMember": "Remove Member",
-          "OpenSheet": "Open Sheet",
-          "OtherParties": "Other Parties"
+          "ActivateParty": "Aktive Gruppe",
+          "CreateMember": "Neues Mitglied erstellen",
+          "CreateParty": "Neue Gruppe erstellen",
+          "RemoveMember": "Mitglied entfernen",
+          "OpenSheet": "Gruppenbogen öffnen",
+          "OtherParties": "Andere Gruppen"
         },
         "Skills": "Fertigkeiten der Gruppe",
         "SlotAvailable": "Platz verfügbar",
@@ -365,9 +366,13 @@
           "Overview": "Übersicht",
           "Exploration": "Erkundung",
           "Orphaned": "Verwaiste Gegenstände",
-          "Stash": "Stash"
+          "Stash": "Inventar"
         },
         "Total": "Gruppe Gesamt",
+        "Visibility": {
+          "Restricted": "Restricted",
+          "Unrestricted": "Unrestricted"
+        },
         "Wealth": "Vermögen"
       },
       "Plural": "Akteure"
@@ -1185,7 +1190,7 @@
     "EffectsLabel": "Effekte",
     "EmptySlot": "Leerer Slot",
     "Encounter": {
-      "AlreadyRolled": "{actor} has already rolled initiative.",
+      "AlreadyRolled": "{actor} hat bereits Initiative gewürfelt.",
       "Broadcast": {
         "FastHealing": {
           "DeactivatedBy": "Deaktiviert durch {types}",
@@ -1391,7 +1396,8 @@
         "AdjustmentLengthMismatch": "Inkonsistenz zwischen den Parametern \"type\" und \"adjustments\"",
         "DCAndDefense": "Gleichzeitige Verwendung von SG- und Verteidigungs-Parametern unzulässig",
         "NonIntegerAdjustment": "\"adjustments\" müssen vom Typ Integer sein",
-        "TypeMissing": "\"type\" Parameter ist Pflicht"
+        "TypeMissing": "type argument is mandatory",
+        "InvalidDomains": "{type} domains must be sluggified and end with -damage"
       }
     },
     "InlineTemplateErrors": {
@@ -1415,11 +1421,11 @@
       },
       "Action": {
         "SelfAppliedEffect": {
-          "Applied": "{effect} was applied.",
-          "Delete": "Delete Reference",
-          "Drop": "Drop Effect",
-          "Label": "Self-Applied Effect",
-          "Hint": "A single effect item to be applied to the actor that uses this action"
+          "Applied": "{effect} wurde angewandt.",
+          "Delete": "Referenz löschen",
+          "Drop": "Effekt einfügen",
+          "Label": "Autom. angewandter Effekt",
+          "Hint": "Ein einzelner Effekt, der auf den Akteur angewandt wird, der diese Aktion nutzt."
         },
         "CategoryLabel": "Kategorie",
         "Category": {
@@ -1556,8 +1562,8 @@
           "Label": "Klerikerzauber"
         },
         "DivineAbility": {
-          "Hint": "If choosing the Raised by Belief background, its attribute boost options come from a deity.",
-          "Label": "Divine Attribute"
+          "Hint": "Die beiden Attributsverbesserungen, welche die Gottheit als Optionen für Charaktere mit dem Hintergrund Fromme Kindheit bietet.",
+          "Label": "Göttliches Attribut"
         },
         "DivineFont": {
           "Harm": "Leid",
@@ -1883,10 +1889,10 @@
             "Placeholder": "Neue Beschriftung"
           },
           "ReevaluateFormula": {
-            "Label": "Reevaluate?",
-            "Never": "Never",
-            "TurnEnd": "On Turn End",
-            "TurnStart": "On Turn Start"
+            "Label": "Neu bewerten?",
+            "Never": "Nie",
+            "TurnEnd": "Beginn des Zugs",
+            "TurnStart": "Ende des Zugs"
           },
           "Type": {
             "counter": "Zähler",
@@ -1903,8 +1909,8 @@
           "Added": "{item} wurde {category} hinzugefügt."
         },
         "KeyAbilityOptions": {
-          "Label": "Key Attribute Options",
-          "Hint": "Key attribute options in addition to this provided by a class"
+          "Label": "Schlüsselattribut-Optionen",
+          "Hint": "Zusätzliche Schlüsselattribut-Optionen"
         },
         "LevelLabel": "Talent",
         "LevelN": "Talent {level}",
@@ -2122,7 +2128,7 @@
           "OneMinute": "1 Min."
         },
         "Rune": {
-          "Potency": "Weapon Potency"
+          "Potency": "Waffenverbesserung"
         },
         "SpecificMagicWeapon": {
           "Hint": "Die Markierung dieser Waffe als <i>spezielle magische Waffe</i> zeigt an, dass sie mehr kann, als ihre Materialzusammensetzung und Runen erlauben. Der Name, die Stufe, die Seltenheit und der Preis werden zum Zeitpunkt der Markierung nicht mehr von einem wertvollen Material oder Runen überschrieben. Diese Materialien und Runen dienen jedoch als Basis für die Anpassung von Stufe, Seltenheit und Preis bei späteren Upgrades.",
@@ -2163,8 +2169,8 @@
         "Label": "SL-Sicht"
       },
       "TogglePartySheet": {
-        "Hint": "Open or close the sheet of the active or (if a player) assigned party.",
-        "Label": "Toggle Party Sheet"
+        "Hint": "Öffne oder Schließe den Gruppbenbogen der aktiven oder (falls ein Spieler) der zugewiesenen Gruppe.",
+        "Label": "Gruppenbogen umschalten"
       }
     },
     "KitItems": "Gegenstände",
@@ -2608,7 +2614,7 @@
       }
     },
     "PenaltyLabel": {
-      "ability": "Attribute Penalty",
+      "ability": "Attributsmalus",
       "circumstance": "Situationsmalus",
       "item": "Gegenstandsmalus",
       "proficiency": "Kompetenzmalus",
@@ -2954,7 +2960,7 @@
         },
         "ShowPartyStats": {
           "Hint": "Wenn aktiviert, können die Spieler die Werte der anderen Gruppenmitglieder in der Gruppenübersicht sehen",
-          "Name": "Werte für Gruppenmitglieder anzeigen"
+          "Name": "Show party-member stats"
         },
         "TokenSetsNameVisibility": {
           "Hint": "Wenn diese Option aktiviert ist, wird der Name jedes NSC-Tokens, dessen Namensschild für die Spieler nicht sichtbar ist, auch in der Begegnungsübersicht und in den Chatnachrichten verborgen.",
@@ -2975,7 +2981,7 @@
       "Sidebar": {
         "Changelog": "Änderungsprotokoll",
         "Discord": "Discord",
-        "Remaster": "Remaster Changes",
+        "Remaster": "Remaster-Änderungen",
         "Wiki": "Wiki"
       },
       "TOTMToggles": {
@@ -4597,8 +4603,7 @@
         "shieldActive": "und sein/ihr {shield} erhalten ",
         "shieldInActive": "erhält"
       },
-      "errorTargetToken": "Du hast kein Zieltoken ausgewählt.",
-      "warnNoActor": "Dieser Wurf benötigt einen Akteur.",
+      "errorTargetToken": "Select at least one valid token.",
       "noDamageInfoForOutcome": "Keine Schadensinformation für Resultat {outcome}.",
       "shiftModifyDamageLabel": "Modifikator:",
       "shiftModifyDamageTitle": "Modifiziert den/die erhaltene/n Heilung/Schaden"
@@ -5712,7 +5717,7 @@
       "vehicle": "Fahrzeug"
     },
     "Item": {
-      "action": "Ability",
+      "action": "Fähigkeit",
       "affliction": "Leiden",
       "ancestry": "Abstammung",
       "armor": "Rüstung",
