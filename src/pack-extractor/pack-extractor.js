@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from "fs";
 import { getZipContentFromURL, writeFiles } from "../helper/src/util/fileHandler.js";
 import { replaceProperties } from "../helper/src/util/utilities.js";
-import { extractPackGroupList } from "../helper/src/pack-extractor/pack-extractor.js";
+import { buildItemDatabase, extractPackGroupList } from "../helper/src/pack-extractor/pack-extractor.js";
 
 // Read config file
 const CONFIG = JSON.parse(readFileSync("./src/pack-extractor/pack-extractor-config.json", "utf-8"));
@@ -14,8 +14,11 @@ replaceProperties(CONFIG.packs, ["savePath"], CONFIG.filePaths.packs);
 // Fetch assets from current pf2 release and get zip contents
 const packs = await getZipContentFromURL(CONFIG.filePaths.zipURL);
 
+// Build item database in order to compare actor items with their comdendium entries
+const itemDatabase = buildItemDatabase(packs, CONFIG.itemDatabase);
+
 // Extract data for all configured packs
-const extractedPackGroupList = extractPackGroupList(packs, CONFIG.packs);
+const extractedPackGroupList = extractPackGroupList(packs, CONFIG.packs, itemDatabase);
 
 // Write extracted packs to target directories
 Object.keys(extractedPackGroupList.extractedPackGroups).forEach((packGroup) => {
