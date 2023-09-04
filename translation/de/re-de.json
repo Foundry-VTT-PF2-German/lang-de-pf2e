@@ -552,6 +552,14 @@
         "SuspendedAnimationEnter": "Scheintod-Zustand begonnen",
         "SuspendedAnimationExit": "Scheintod-Zustand beendet"
       },
+      "Capritellix": {
+        "ShiftMood": {
+          "Angry": "Angry",
+          "Gregarious": "Gregarious",
+          "Serene": "Serene",
+          "Sly": "Sly"
+        }
+      },
       "Charge": {
         "AtLeastTen": "Mind. 10 Fuß/3 m bewegt"
       },
@@ -1062,6 +1070,7 @@
       "RollOption": "Wurf-Option",
       "RollTwice": "Würfle zweimal",
       "Sense": "Sinn",
+      "SpecialStatistic": "Spezieller Wert",
       "Strike": "Angriff",
       "Striking": "Schadensrune",
       "SubstituteRoll": "Ersetze Wurf",
@@ -1242,8 +1251,18 @@
         "TwoActions": "Zwei Aktionen"
       },
       "AdjustDegreeOfSuccess": {
+        "Athletics": {
+          "Climb": {
+            "SuccessBetter": "Deine erfolgreichen Fertigkeitswürfe für Athletik zum Klettern gelten als Kritische Erfolge."
+          }
+        },
         "Squeeze": {
           "CriticalFailureSuccessBetter": "Unterläuft dir bei einem Wurf zum Hindurchzwängen ein Kritischer Fehlschlag, so wird dieser als normaler Fehlschlag behandelt; unterläuft dir bei einem solchen Wurf ein Erfolg, so wird er als Kritischer Erfolg behandelt."
+        },
+        "Survival": {
+          "SenseDirection": {
+            "SuccessBetter": "Deine erfolgreichen Fertigkeitswürfe für Überlebenskunst zum Richtung wissen gelten als Kritische Erfolge."
+          }
         }
       },
       "AdoptedAncestry": {
@@ -1371,6 +1390,9 @@
           "Shark": "Hai",
           "Snake": "Schlange",
           "Wolf": "Wolf"
+        },
+        "Elemental": {
+          "ElementalEvolutionLabel": "Elemental Rage Damage"
         },
         "Dragon": {
           "NormalRageDamage": "Verursache normalen Kampfrausch-Schaden",
@@ -1588,6 +1610,7 @@
         "Dragon": {
           "EnergyPrompt": "Wähle eine Schadensart passend zu deinen Drachen-Fähigkeiten"
         },
+        "Label": "Abweichende Fähigkeit",
         "TitanSwing": {
           "NoteFifteenFeet": "Das Ziel wird 15 Fuß/4,50 m zurückgestoßen.",
           "NoteFiveFeet": "Das Ziel wird 5 Fuß/1,50 m zurückgestoßen.",
@@ -1775,6 +1798,9 @@
         }
       },
       "Fighter": {
+        "DazingBlow": {
+          "Note": "Bei einem Treffer muss die Kreatur einen @Check[type:fortitude|dc:resolve(@actor.attributes.classDC.value)|traits:incapacitation]{Zähigkeitswurf} gegen deinen Klassen-SG ablegen; dieser Effekt hat die Kategorie Kampfunfähig.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 2}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 3}."
+        },
         "DoubleSlice": {
           "SecondAttackLabel": "Zweiter Angriff von Doppelschnitt"
         }
@@ -1841,6 +1867,14 @@
         "Irrepressible": {
           "SaveNote": "Erzielst du bei einem Rettungswurf gegen einen Effekt der Kategorie Furcht oder Gefühl einen Erfolg, erlangst du stattdessen einen Kritischen Erfolg."
         }
+      },
+      "Genie": {
+        "Faydhaan": "Faydhaan",
+        "Ifrit": "Ifrit",
+        "Jaathoom": "Jaathum",
+        "Jabali": "Jabil",
+        "Janni": "Dschann",
+        "Prompt": "Wähle einen Quarin."
       },
       "GeneralTraining": {
         "Prompt": "Wähle ein Allgemeines Talent der 1. Stufe."
@@ -1914,6 +1948,10 @@
         "Unmatched": "Unmatched"
       },
       "HarrowCourt": {
+        "BrassDwarf": {
+          "ResistanceLabel": "Brass Dwarf Resistance",
+          "WeaknessLabel": "Brass Dwarf Weakness"
+        },
         "Fiend": {
           "ToggleLabel": "Repeating a non-strike action"
         },
@@ -2000,6 +2038,16 @@
           "NonlethalBluntShot": "Nichttödlicher Stumpfer Schuss",
           "NonlethalModularHead": "Nichttödlicher Modularer Kopf",
           "NonlethalPacificationTools": "Nichttödliche Befriedende Werkzeuge"
+        },
+        "OffensiveBoost": {
+          "Chill": "Frost (Kälte)",
+          "Ignition": "Zündung (Feuer)",
+          "Jolt": "Blitz (Elektrizität)",
+          "Momentum": "Schwung (Wucht)",
+          "Prompt": "Wähle eine Offensive Verbesserung.",
+          "Saws": "Säge (Hieb)",
+          "Spike": "Stachel (Stich)",
+          "Vitriol": "Vitriol (Säure)"
         }
       },
       "Investigator": {
@@ -2011,10 +2059,34 @@
         }
       },
       "Kineticist": {
+        "GateAttenuator": "Gate Attenuator",
         "Impulse": {
+          "ElementalBlast": {
+            "Label": {
+              "Air": "Elemental Blast (Air)",
+              "Earth": "Elemental Blast (Earth)",
+              "Fire": "Elemental Blast (Fire)",
+              "Metal": "Elemental Blast (Metal)",
+              "Water": "Elemental Blast (Water)",
+              "Wood": "Elemental Blast (Wood)"
+            },
+            "OneAction": "One Action",
+            "ShortLabel": "Blast",
+            "TwoActions": "Two Actions",
+            "TwoActionBonus": "Two-Action Blast"
+          },
+          "ImpulseJunction": {
+            "Air": "Before or after the other effects of the impulse, you can either Stride up to half your Speed or Step. If you have a fly Speed, you can Fly up to half your fly Speed instead.",
+            "Earth": "Fragments of stone float around you, granting you a +1 circumstance bonus to AC until the start of your next turn. @UUID[Compendium.pf2e.feat-effects.Item.09oP0FBBAhXOS4JW]{Effect: Earth Impulse Junction}",
+            "Metal": "Choose acid, electricity, or piercing. Until the start of your next turn, each time a creature touches you or damages you with an unarmed melee attack or nonreach melee weapon, it takes damage of the chosen type equal to half your level (minimum 1 damage).",
+            "Title": "Impulse Junction",
+            "Water": "After the impulse's other effects, you can move one creature targeted by the impulse or in its area 5 feet in any direction, or 10 feet if it's in a body of water. This can't move the creature into the air. You can choose only a creature that's willing to be moved, that failed its save against the impulse, or that you succeeded at an impulse attack roll against.",
+            "Wood": "You gain temporary Hit Points equal to your level that last until the start of your next turn. @UUID[Compendium.pf2e.feat-effects.Item.rCsmv66TzQhte4Gp]{Effect: Wood Impulse Junction}"
+          },
           "Prompt": "Select an Impulse."
         },
         "KineticGate": {
+          "AllowedDropsLabel": "Kineticist class feat",
           "DualGate": "Dual Gate",
           "ExpandThePortal": "Expand the Portal",
           "ForkThePath": "Fork the Path",
@@ -2026,6 +2098,7 @@
             "SkillJunction": "Skill Junction"
           },
           "Prompt": {
+            "AuraSize": "Select a radius for your kinetic aura.",
             "Element": "Select an element.",
             "ExpandElement": "Select an element to expand.",
             "Gate": "Select a kinetic gate.",
@@ -2053,7 +2126,8 @@
         "Exit": "Verlassen",
         "ResistanceType": "Art der Resistenz",
         "SecondAttempt": "2. Versuch",
-        "ThirdAttempt": "3. Versuch"
+        "ThirdAttempt": "3. Versuch",
+        "WeaknessType": "Art der Schwäche"
       },
       "Leshy": {
         "Seedpod": {
@@ -2209,7 +2283,7 @@
           "Prompt": "Wähle deinen Gesinnungsschaden."
         },
         "StunningFist": {
-          "Note": "Das Ziel muss einen @Check[type:fortitude|dc:resolve(@actor.system.proficiencies.classDCs.monk.value)|traits:incapacitation|overrideTraits:true]{Zähigkeitswurf} gegen deinen Klassen-SG ablegen; bei einem Fehlschlag erhält es den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1} (bei einem Kritischen Fehlschlag @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 3})."
+          "Note": "Das Ziel muss einen @Check[type:fortitude|dc:resolve(@actor.system.proficiencies.classDCs.monk.value)|name:Mönch|traits:incapacitation|overrideTraits:true]{Zähigkeitswurf} gegen deinen Klassen-SG ablegen; bei einem Fehlschlag erhält es den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1} (bei einem Kritischen Fehlschlag @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 3})."
         },
         "WolfDrag": {
           "Note": "Bei einem erfolgreichen Angriff verleihst du dem Ziel den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}."
@@ -2516,6 +2590,20 @@
         }
       },
       "Swashbuckler": {
+        "Finisher": {
+          "Basic": "Grundlegend",
+          "Bleeding": "Blutend",
+          "Confident": "Zuversichtlich",
+          "Dual": "Doppel",
+          "Impaling": "Durchbohrend",
+          "Label": "Abschluss",
+          "Lethal": "Tödlich",
+          "Mobile": "Mobil",
+          "Perfect": "Perfekt",
+          "Stunning": "Betäubend",
+          "Targeting": "Gezielt",
+          "Unbalancing": "Gleichgew. raubend"
+        },
         "Panache": "Du erhältst @UUID[Compendium.pf2e.feat-effects.Item.uBJsxCzNhje8m8jj]{Elan}.",
         "Style": {
           "Prompt": "Wähle eine Fasson."
@@ -2545,6 +2633,12 @@
           "Normal": {
             "InForestLabel": "Wildwaldtinte (Im Wald)"
           }
+        }
+      },
+      "Tengu": {
+        "WeaponFamiliarity": {
+          "Prompt1": "Wähle eine Waffe aus der Schwerter-Gruppe.",
+          "Prompt2": "Wähle eine zweite Waffe aus der Schwerter-Gruppe."
         }
       },
       "TerrainExpertise": {
@@ -2636,6 +2730,10 @@
       },
       "WardingRune": {
         "Prompt": "Wähle eine Magieschule außer Erkenntnismagie"
+      },
+      "WeaponInfusion": {
+        "Melee": "Melee Infusion",
+        "Ranged": "Ranged Infusion"
       },
       "WellspringMage": {
         "CriticalSuccess": "Du erlangst vorübergehend einen von dir an diesem Tag bereits genutzten Zauberplatz eines Grades deiner Wahl zurück. Solltest du den Zauberplatz nicht binnen 1 Minute nutzen, kommt es zu einem @UUID[Compendium.pf2e.rollable-tables.RollTable.N0pDFNCffTe2Du39]{Urquellschub}.",
