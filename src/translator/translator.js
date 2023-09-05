@@ -270,7 +270,7 @@ class Translator {
                 entry.type != "melee"
                     ? `${entry.type}->${entry.name}`
                     : `strike-${entry.system.weaponType.value}->${entry.name}`;
-            const itemTranslation = translation ? translation[itemKey] ?? undefined : undefined;
+            let itemTranslation = translation ? translation[itemKey] ?? undefined : undefined;
             const itemNameSlug = this.sluggify(entry.name);
 
             // For compendium items, get the data from the compendium
@@ -296,6 +296,12 @@ class Translator {
                         arr[index].name = arr[index].name.substring(0, arr[index].name.search("/"));
                     }
                 }
+            }
+
+            // Check if the item translation is an array (in case of duplicate items such as a magical and a regular shortsword)
+            // Take the itemTranslation that matches the current item's id
+            if (Array.isArray(itemTranslation)) {
+                itemTranslation = itemTranslation.find((itm) => itm.id === entry._id) ?? false;
             }
 
             // Merge the available translation
