@@ -39,6 +39,7 @@ sourceFilesApi
         });
         await sourceFiles.forEach(async (sourceFile) => {
             let sourceStrings = [];
+            let sourceStringInfos = [];
             let offsetCounter = 0;
             let limit = 500;
             let arrayHasData = true;
@@ -52,15 +53,25 @@ sourceFilesApi
                     })
                     .then((sourceStringData) => {
                         if (sourceStringData.data.length > 0) {
-                            sourceStrings = sourceStrings.concat(
+                            sourceStrings = sourceStrings.concat(sourceStringData.data);
+                            sourceStringInfos = sourceStringInfos.concat(
                                 sourceStringData.data.map(selectProps("id", "fileId", "identifier", "labelIds"))
                             );
                         } else {
                             arrayHasData = false;
                             if (sourceStrings.length > 0) {
                                 writeFile(
+                                    databasePath.concat("/compendium/", sourceFile.name),
+                                    JSON.stringify(sourceStrings),
+                                    (error) => {
+                                        if (error) throw error;
+                                    }
+                                );
+                            }
+                            if (sourceStringInfos.length > 0) {
+                                writeFile(
                                     databasePath.concat("/compendium/", sourceFile.name.replace(".json", ".csv")),
-                                    convertToCSV(sourceStrings),
+                                    convertToCSV(sourceStringInfos),
                                     (error) => {
                                         if (error) throw error;
                                     }
