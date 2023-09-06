@@ -6,7 +6,7 @@ const CONFIG = JSON.parse(readFileSync("./src/crowdin-manager/crowdin-config.jso
 
 const sourceFiles = readdirSync(`${CONFIG.databasePath}/crowdin-backup/compendium`);
 
-let unlabeledStrings = "";
+let unlabeledStrings = [];
 sourceFiles.forEach((sourceFile) => {
     const fileData = JSON.parse(
         readFileSync(`${CONFIG.databasePath}/crowdin-backup/compendium/${sourceFile}`, "utf-8")
@@ -14,7 +14,7 @@ sourceFiles.forEach((sourceFile) => {
 
     const unlabeledFileStrings = fileData.filter((entry) => entry.labelIds.length === 0);
     if (unlabeledFileStrings.length > 0) {
-        unlabeledStrings = unlabeledStrings.concat(convertData(unlabeledFileStrings, "csv", ["fileId", "identifier"]));
+        unlabeledStrings = unlabeledStrings.concat(unlabeledFileStrings);
     }
 });
-writeFileSync(`${CONFIG.databasePath}/csv-overviews/unlabeledStrings.csv`, unlabeledStrings);
+writeFileSync(`${CONFIG.databasePath}/csv-overviews/unlabeledStrings.csv`, convertData(unlabeledStrings, "csv", ["fileId", "identifier"]));
