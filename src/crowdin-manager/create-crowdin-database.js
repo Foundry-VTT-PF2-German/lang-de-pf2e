@@ -3,7 +3,7 @@ import { convertData } from "../helper/src/util/utilities.js";
 import { getLabels, getSourceFiles, getSourceStrings } from "../helper/src/util/crowdin-manager.js";
 
 // Read config file
-const CONFIG = JSON.parse(readFileSync("./src/crowdin-updater/crowdin-config.json", "utf-8"));
+const CONFIG = JSON.parse(readFileSync("./src/crowdin-manager/crowdin-config.json", "utf-8"));
 
 // Create database directory if not already existing
 if (!existsSync(CONFIG.databasePath)) {
