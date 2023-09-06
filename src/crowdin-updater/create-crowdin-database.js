@@ -1,6 +1,6 @@
-import crowdin from "@crowdin/crowdin-api-client";
 import { rmSync, readdirSync, existsSync, mkdirSync, readFileSync, writeFile } from "fs";
 import { convertData } from "../helper/src/util/utilities.js";
+import { getLabels, getSourceFiles, getSourceStrings } from "../helper/src/util/crowdin-manager.js";
 
 // Read config file
 const CONFIG = JSON.parse(readFileSync("./src/crowdin-updater/crowdin-config.json", "utf-8"));
@@ -50,9 +50,8 @@ writeFile(
     }
 );
 
-sourceFiles.forEach(async (sourceFile, index, arr) => {
+sourceFiles.forEach(async (sourceFile) => {
     const sourceStrings = await getSourceStrings(CONFIG.projectId, CONFIG.personalToken, sourceFile.data.id);
-    arr[index].sourceStrings = sourceStrings;
 
     writeFile(
         `${CONFIG.databasePath}/crowdin-backup/compendium/${sourceFile.data.name}`,
@@ -69,58 +68,3 @@ sourceFiles.forEach(async (sourceFile, index, arr) => {
         }
     );
 });
-
-/**
- * Get the project labels for a specified Crowdin project
- *
- * @param {string} projectId            Crowdin project id
- * @param {string} token                Crowdin API access token
- */
-function getLabels(projectId, token) {
-    const { labelsApi } = new crowdin.default({ token: token });
-
-    return labelsApi.listLabels(projectId, { limit: 500 }).then((labels) => {
-        return labels.data;
-    });
-}
-
-/**
- * Get the source files for a specified crowdin project
- *
- * @param {string} projectId    Crowdin project id
- * @param {string} token        Crowdin API access token
- */
-function getSourceFiles(projectId, token) {
-    const { sourceFilesApi } = new crowdin.default({ token: token });
-
-    return sourceFilesApi.listProjectFiles(projectId, { limit: 500 }).then(async (files) => {
-        return files.data;
-    });
-}
-
-function getSourceStrings(projectId, token, sourceFile) {
-    const { sourceStringsApi } = new crowdin.default({ token: token });
-    return new Promise(async (resolve) => {
-        let sourceStrings = [];
-        let offsetCounter = 0;
-        let limit = 500;
-        let arrayHasData = true;
-        do {
-            await sourceStringsApi
-                .listProjectStrings(projectId, {
-                    fileId: sourceFile,
-                    limit: limit,
-                    offset: offsetCounter * limit,
-                })
-                .then((sourceStringData) => {
-                    if (sourceStringData.data.length > 0) {
-                        sourceStrings = sourceStrings.concat(sourceStringData.data);
-                    } else {
-                        arrayHasData = false;
-                    }
-                });
-            offsetCounter = offsetCounter + 1;
-        } while (arrayHasData);
-        resolve(sourceStrings);
-    });
-}
