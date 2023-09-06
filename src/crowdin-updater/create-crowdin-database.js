@@ -1,5 +1,6 @@
 import crowdin from "@crowdin/crowdin-api-client";
-import { rmSync, readdirSync, existsSync, mkdirSync, readFileSync, writeFile, writeFileSync } from "fs";
+import { rmSync, readdirSync, existsSync, mkdirSync, readFileSync, writeFile } from "fs";
+import { convertData } from "../helper/src/util/utilities.js";
 
 // Read config file
 const CONFIG = JSON.parse(readFileSync("./src/crowdin-updater/crowdin-config.json", "utf-8"));
@@ -25,11 +26,6 @@ mkdirSync(`${CONFIG.databasePath}/crowdin-backup`);
 mkdirSync(`${CONFIG.databasePath}/crowdin-backup/compendium`);
 mkdirSync(`${CONFIG.databasePath}/csv-overviews`);
 mkdirSync(`${CONFIG.databasePath}/csv-overviews/compendium`);
-
-// initialization of crowdin client
-const { sourceStringsApi } = new crowdin.default({
-    token: CONFIG.personalToken,
-});
 
 // Get the project labels
 const labels = await getLabels(CONFIG.projectId, CONFIG.personalToken);
@@ -73,29 +69,6 @@ sourceFiles.forEach(async (sourceFile, index, arr) => {
         }
     );
 });
-
-// Get specified properties from an object
-function selectProps(props) {
-    return function (obj) {
-        const newObj = {};
-        props.forEach((name) => {
-            newObj[name] = obj.data[name];
-        });
-
-        return newObj;
-    };
-}
-
-// Convert array of objects to csv
-function convertToCSV(arr) {
-    const array = [Object.keys(arr[0])].concat(arr);
-
-    return array
-        .map((it) => {
-            return Object.values(it).join("|");
-        })
-        .join("\n");
-}
 
 /**
  * Get the project labels for a specified Crowdin project
@@ -150,28 +123,4 @@ function getSourceStrings(projectId, token, sourceFile) {
         } while (arrayHasData);
         resolve(sourceStrings);
     });
-}
-
-/**
- * Converts an Object array in various ways
- *
- * @param {Array<Object>} data              An array of ojects that should get converted
- * @param {boolean|string} conversionType   Convert data to a csv or json string (allowed values: csv, json)?
- * @param {Array<string>} properties        Defines if only specified properties should get extracted
- * @returns {*}                             Converted data
- */
-function convertData(data, conversionType = false, properties = []) {
-    let convertedData;
-    if (properties.length > 0) {
-        convertedData = data.map(selectProps(properties));
-    } else {
-        convertedData = data;
-    }
-
-    if (conversionType === "csv") {
-        return convertToCSV(convertedData);
-    } else if (conversionType === "json") {
-        return JSON.stringify(convertedData, null, 2);
-    }
-    return convertedData;
 }
