@@ -51,17 +51,17 @@ writeFile(
 );
 
 sourceFiles.forEach(async (sourceFile) => {
-    const sourceStrings = await getSourceStrings(CONFIG.projectId, CONFIG.personalToken, sourceFile.data.id);
+    const sourceStrings = await getSourceStrings(CONFIG.projectId, CONFIG.personalToken, sourceFile.id);
 
     writeFile(
-        `${CONFIG.databasePath}/crowdin-backup/compendium/${sourceFile.data.name}`,
+        `${CONFIG.databasePath}/crowdin-backup/compendium/${sourceFile.name}`,
         convertData(sourceStrings, "json"),
         (error) => {
             if (error) console.error(error);
         }
     );
     writeFile(
-        `${CONFIG.databasePath}/csv-overviews/compendium/${sourceFile.data.name.replace(".json", ".csv")}`,
+        `${CONFIG.databasePath}/csv-overviews/compendium/${sourceFile.name.replace(".json", ".csv")}`,
         convertData(sourceStrings, "csv", ["id", "fileId", "identifier", "labelIds"]),
         (error) => {
             if (error) console.error(error);
