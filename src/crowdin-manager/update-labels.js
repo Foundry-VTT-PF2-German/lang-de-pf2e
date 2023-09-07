@@ -1,5 +1,5 @@
 import crowdin from "@crowdin/crowdin-api-client";
-import { rmSync, readdirSync, existsSync, mkdirSync, readFileSync, writeFile } from "fs";
+import { readFileSync } from "fs";
 
 // Read config file
 const CONFIG = JSON.parse(readFileSync("crowdin-config.json", "utf-8"));
