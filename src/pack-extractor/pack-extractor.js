@@ -2,9 +2,12 @@ import { readFileSync, writeFileSync } from "fs";
 import { getZipContentFromURL, writeFiles } from "../helper/src/util/fileHandler.js";
 import { replaceProperties } from "../helper/src/util/utilities.js";
 import { buildItemDatabase, extractPackGroupList } from "../helper/src/pack-extractor/pack-extractor.js";
+import { PF2_DEFAULT_MAPPING } from "../helper/src/pack-extractor/constants.js";
 
 // Read config file
-const CONFIG = JSON.parse(readFileSync("./src/pack-extractor/pack-extractor-config.json", "utf-8"));
+const configFile = JSON.parse(readFileSync("./src/pack-extractor/pack-extractor-config.json", "utf-8"));
+
+const CONFIG = {...configFile, mappings: PF2_DEFAULT_MAPPING}
 
 // Replace linked mappings and savePaths with actual data
 replaceProperties(CONFIG.mappings, ["subMapping"], CONFIG.mappings);
