@@ -1,5 +1,5 @@
 import { readFileSync, writeFileSync } from "fs";
-import { getZipContentFromURL, writeFiles } from "../helper/src/util/fileHandler.js";
+import { getZipContentFromURL, writeFiles, writeFilesFromBlob } from "../helper/src/util/fileHandler.js";
 import { replaceProperties } from "../helper/src/util/utilities.js";
 import { buildItemDatabase, extractPackGroupList } from "../helper/src/pack-extractor/pack-extractor.js";
 import { PF2_DEFAULT_MAPPING } from "../helper/src/pack-extractor/constants.js";
@@ -38,7 +38,7 @@ Object.keys(extractedPackGroupList.extractedPackGroups).forEach((packGroup) => {
 writeFileSync(CONFIG.filePaths.dictionary, JSON.stringify(extractedPackGroupList.packGroupListDictionary, null, 2));
 
 // Extract and write i18n files
-writeFiles(
+writeFilesFromBlob(
     packs.filter((pack) => CONFIG.i18nFiles.includes(`${pack.fileName}.${pack.fileType}`)),
     CONFIG.filePaths.i18n,
     "i8n files"
