@@ -49,16 +49,20 @@ Hooks.once("init", () => {
             normalizeName: (_data, translation) => {
                 return game.langDePf2e.normalizeName(translation);
             },
-            translateActorDescription: (data, translation) => {
-                return game.langDePf2e.translateActorDescription(data, translation);
-            },
-            translateActorItems: (data, translation, dataObject, translatedCompendium, translationObject) => {
+            translateAdventureActorItems: (data, translation) => {
                 return game.langDePf2e.translateActorItems(
                     data,
                     translation,
-                    dataObject,
-                    translatedCompendium,
-                    translationObject
+                    false
+                );
+            },
+            translateActorDescription: (data, translation) => {
+                return game.langDePf2e.translateActorDescription(data, translation);
+            },
+            translateActorItems: (data, translation) => {
+                return game.langDePf2e.translateActorItems(
+                    data,
+                    translation
                 );
             },
             translateDualLanguage: (data, translation) => {

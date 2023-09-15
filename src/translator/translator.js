@@ -263,7 +263,7 @@ class Translator {
         return data;
     }
 
-    translateActorItems(data, translation) {
+    translateActorItems(data, translation, mergeFromCompendium = true) {
         data.forEach((entry, index, arr) => {
             // Get the available translation for the item and the sluggified item name
             const itemKey =
@@ -289,7 +289,15 @@ class Translator {
                 if (originalName) {
                     entry.name = originalName;
 
-                    arr[index] = game.babele.packs.get(itemCompendium).translate(entry);
+                    // Get the item from the compendium
+                    const itemData = game.babele.packs.get(itemCompendium).translate(entry);
+
+                    if (mergeFromCompendium) {
+                        arr[index] = itemData;
+                    } else {
+                        arr[index].system.description.value = itemData.system.description.value;
+                        arr[index].name = itemData.name;
+                    }
 
                     // Remove dual language translations
                     if (arr[index].name.search("/") != -1) {
