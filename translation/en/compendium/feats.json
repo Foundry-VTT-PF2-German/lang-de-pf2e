@@ -220,6 +220,15 @@
       "name": "Acute Vision",
       "description": "<p>When you are raging, your visual senses improve, granting you darkvision.</p>"
     },
+    "Adamantine Fists": {
+      "name": "Adamantine Fists",
+      "description": "<p>You imbue your unarmed strikes with one of the strongest metals. Your stonestrike attacks are treated as adamantine.</p>",
+      "prerequisites": [
+        {
+          "value": "Ore Fists"
+        }
+      ]
+    },
     "Adapted Cantrip": {
       "name": "Adapted Cantrip",
       "description": "<p>Through study of multiple magical traditions, you've altered a spell to suit your spellcasting style. Choose one cantrip from a magical tradition other than your own. If you have a spell repertoire or a spellbook, replace one of the cantrips you know or have in your spellbook with the chosen spell. If you prepare spells without a spellbook (if you're a cleric or druid, for example), one of your cantrips must always be the chosen spell, and you prepare the rest normally. You can cast this cantrip as a spell of your class's tradition. If you swap or retrain this cantrip later, you can choose its replacement from the same alternate tradition or a different one</p>",
@@ -1012,7 +1021,7 @@
     },
     "Alloy Flesh and Steel": {
       "name": "Alloy Flesh and Steel",
-      "description": "<p>Elemental energy replaces every cell of your body with raw metal. You gain the benefits of the ferrous form spell (except you can't cast needle darts) until the end of your next turn. You can Sustain the impulse up to 1 minute, and when you do, you can Raise a metal Shield if you're wielding one. Your metal Elemental Blasts deal an additional die of damage. If you suspend any conditions with Alloy Flesh and Steel, when it ends, you're temporarily immune to Alloy Flesh and Steel for 1 hour.</p>\n<hr />\n<p><strong>Level (16th)</strong> The resistance is 15.</p>"
+      "description": "<p>Elemental energy replaces every cell of your body with raw metal. You gain the benefits of the <em>@UUID[Compendium.pf2e.spells-srd.Item.89Hj5QuqvcwVXcqj]{Ferrous Form}</em> spell (except you can't cast <em>needle darts</em>) until the end of your next turn. You can Sustain the impulse up to 1 minute, and when you do, you can Raise a metal Shield if you're wielding one. Your metal Elemental Blasts deal an additional die of damage. If you suspend any conditions with Alloy Flesh and Steel, when it ends, you're temporarily immune to Alloy Flesh and Steel for 1 hour.</p>\n<hr />\n<p><strong>Level (16th)</strong> The resistance is 15.</p>"
     },
     "Alluring Performance": {
       "name": "Alluring Performance",
@@ -4047,7 +4056,7 @@
     },
     "Call Worm Spirit": {
       "name": "Call Worm Spirit",
-      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You call forth a ghostly manifestation of the worm spirit. Choose an intersection on the ground within 60 feet; the ghostly maw of a worm emerges from the ground, attacking all creatures in a @Template[type:burst|distance:10]. Each creature in the area must attempt a @Check[type:reflex|resolve(@actor.system.attributes.classOrSpellDC.value)] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes @Damage[(1d10+13)[bludgeoning]] damage as it is battered by the worm's body.</p>\n<p><strong>Failure</strong> The target takes @Damage[(3d10+15)[piercing]] damage as it is bitten by the worm. The target is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} until the end of its next turn.</p>\n<p><strong>Critical Failure</strong> As failure, but the damage increases to @Damage[(6d10+30)[bludgeoning]] and the target is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>\n<hr />\n<p><em>Note: A DC was not provided for this ability by Paizo. The button above uses the better of your class or spell DC.</em></p>",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You call forth a ghostly manifestation of the worm spirit. Choose an intersection on the ground within 60 feet; the ghostly maw of a worm emerges from the ground, attacking all creatures in a @Template[type:burst|distance:10]. Each creature in the area must attempt a @Check[type:reflex|dc:resolve(@actor.system.attributes.classOrSpellDC.value)] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes @Damage[(1d10+13)[bludgeoning]] damage as it is battered by the worm's body.</p>\n<p><strong>Failure</strong> The target takes @Damage[(3d10+15)[piercing]] damage as it is bitten by the worm. The target is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} until the end of its next turn.</p>\n<p><strong>Critical Failure</strong> As failure, but the damage increases to @Damage[(6d10+30)[bludgeoning]] and the target is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>\n<hr />\n<p><em>Note: A DC was not provided for this ability by Paizo. The button above uses the better of your class or spell DC.</em></p>",
       "prerequisites": [
         {
           "value": "Worm Caller Dedication"
@@ -5909,7 +5918,7 @@
     },
     "Crimson Breath": {
       "name": "Crimson Breath",
-      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You gain a fire breath weapon similar to that of a crimson worm. You breathe a blast of flame in a @Template[type:cone|distance:30] that deals @Damage[((ceil(max(0,((@actor.level - 13)/2)))*2)+12)d6[fire]] damage to all creatures in the area (@Check[type:reflex|resolve(@actor.system.attributes.classOrSpellDC.value)|basic:true] save). This damage increases by 2d6 at 14th level and every 2 levels thereafter.</p>\n<hr />\n<p><em>Note: A DC was not provided for this ability by Paizo. The button above uses the better of your class or spell DC.</em></p>",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You gain a fire breath weapon similar to that of a crimson worm. You breathe a blast of flame in a @Template[type:cone|distance:30] that deals @Damage[((ceil(max(0,((@actor.level - 13)/2)))*2)+12)d6[fire]] damage to all creatures in the area (@Check[type:reflex|dc:resolve(@actor.system.attributes.classOrSpellDC.value)|basic:true] save). This damage increases by 2d6 at 14th level and every 2 levels thereafter.</p>\n<hr />\n<p><em>Note: A DC was not provided for this ability by Paizo. The button above uses the better of your class or spell DC.</em></p>",
       "prerequisites": [
         {
           "value": "Worm Caller Dedication"
@@ -6444,7 +6453,7 @@
     },
     "Deadly Poison Weapon": {
       "name": "Deadly Poison Weapon",
-      "description": "<p>Your poisons are devastatingly potent. When you apply a simple poison with @UUID[Compendium.pf2e.feats-srd.Item.ALbosSUygdq4T1Yk]{Poison Weapon}, the poison deals @Damage[4d4[poison]] damage instead of 1d4 poison damage.</p>\n<p>When you apply an injury poison to your weapon, the DC to resist that poison increases by 2, to a maximum of your class DC.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.ed9iJxdHuft6bDFF]{Effect: Deadly Poison Weapon}</p>",
+      "description": "<p>Your poisons are devastatingly potent. When you apply a simple poison with @UUID[Compendium.pf2e.feats-srd.Item.ALbosSUygdq4T1Yk]{Poison Weapon}, the poison deals @Damage[4d4[poison]] damage instead of 1d4 poison damage.</p>\n<p>When you apply an injury poison to your weapon, the DC to resist that poison increases by 2, to a maximum of your class DC.</p>",
       "prerequisites": [
         {
           "value": "Improved Poison Weapon"
@@ -6561,7 +6570,7 @@
     },
     "Deep Freeze": {
       "name": "Deep Freeze",
-      "description": "<p>You vent a jet of supercooled fluid from your innovation, damaging a foe and slowing it down. Target one creature within 60 feet. That creature takes [[/r @actor.level[cold]]]{cold damage equal to your level}, with effects depending on its @Check[type:reflex|dc:resolve(@actor.attributes.classDC.value)] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes half damage and takes a -5-foot status penalty to its Speeds for 1 round.</p>\n<p><strong>Failure</strong> The target takes full damage and takes a -10-foot status penalty to its Speeds for 1 round.</p>\n<p><strong>Critical Failure</strong> The target takes double damage, is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 round, and takes a -15-foot status penalty to its Speeds for 1 round.</p>\n<p><strong>Unstable Function</strong> Your innovation discharges an enormous cone of supercooled fluid, potentially causing cascading failures. Add the unstable trait to Deep Freeze. The ability affects all creatures within a @Template[type:cone|distance:60] instead of a single target, and it deals [[/r 2*@actor.level[cold]]]{cold damage equal to double your level} instead of equal to your level.</p>\n<p>If you have the revolutionary innovation class feature, you can choose a @Template[type:cone|distance:60] or a @Template[type:cone|distance:90] when you use an unstable Deep Freeze.</p>\n<p>@Check[type:flat|dc:17|name:Unstable Flat Check]{Unstable Check}</p>\n<p><strong>Special</strong> If your innovation is a minion, it can take this action rather than you.</p>"
+      "description": "<p>You vent a jet of supercooled fluid from your innovation, damaging a foe and slowing it down. Target one creature within 60 feet. That creature takes [[/r @actor.level[cold]]]{cold damage equal to your level}, with effects depending on its @Check[type:reflex|dc:resolve(@actor.attributes.classDC.value)] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes half damage and takes a -5-foot status penalty to its Speeds for 1 round.</p>\n<p><strong>Failure</strong> The target takes full damage and takes a -10-foot status penalty to its Speeds for 1 round.</p>\n<p><strong>Critical Failure</strong> The target takes double damage, is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 round, and takes a -15-foot status penalty to its Speeds for 1 round.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.BBGg5gpMmuBSo7Mi]{Effect: Deep Freeze}</p>\n<p><strong>Unstable Function</strong> Your innovation discharges an enormous cone of supercooled fluid, potentially causing cascading failures. Add the unstable trait to Deep Freeze. The ability affects all creatures within a @Template[type:cone|distance:60] instead of a single target, and it deals [[/r 2*@actor.level[cold]]]{cold damage equal to double your level} instead of equal to your level.</p>\n<p>If you have the revolutionary innovation class feature, you can choose a @Template[type:cone|distance:60] or a @Template[type:cone|distance:90] when you use an unstable Deep Freeze.</p>\n<p>@Check[type:flat|dc:17|name:Unstable Flat Check]{Unstable Check}</p>\n<p><strong>Special</strong> If your innovation is a minion, it can take this action rather than you.</p>"
     },
     "Deep Lore": {
       "name": "Deep Lore",
@@ -7383,7 +7392,7 @@
     },
     "Disturbing Knowledge": {
       "name": "Disturbing Knowledge",
-      "description": "<p>You utter a litany of dreadful names, prophecies, and descriptions of realms beyond mortal comprehension, drawn from your study of forbidden tomes and scrolls. Even those who don't understand your language are unsettled by these dire secrets.</p>\n<p>Attempt an Occultism check and compare the result to the Will DC of an enemy within 30 feet, or to the Will DCs of any number of enemies within 30 feet if you are legendary in Occultism. Those creatures are temporarily immune for 24 hours.</p>\n<hr />\n<p><strong>Critical Success</strong> The target becomes @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} for 1 round and @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Success</strong> The target becomes frightened 1.</p>\n<p><strong>Failure</strong> The target is unaffected.</p>\n<p><strong>Critical Failure</strong> You get overly caught up in your own words and become frightened 1.</p>",
+      "description": "<p>You utter a litany of dreadful names, prophecies, and descriptions of realms beyond mortal comprehension, drawn from your study of forbidden tomes and scrolls. Even those who don't understand your language are unsettled by these dire secrets.</p>\n<p>Attempt an @Check[type:occultism|defense:will] check and compare the result to the Will DC of an enemy within 30 feet, or to the Will DCs of any number of enemies within 30 feet if you are legendary in Occultism. Those creatures are temporarily immune for 24 hours.</p>\n<hr />\n<p><strong>Critical Success</strong> The target becomes @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} for 1 round and @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Success</strong> The target becomes frightened 1.</p>\n<p><strong>Failure</strong> The target is unaffected.</p>\n<p><strong>Critical Failure</strong> You get overly caught up in your own words and become frightened 1.</p>",
       "prerequisites": [
         {
           "value": "master in Occultism"
@@ -8746,6 +8755,15 @@
         }
       ]
     },
+    "Elemental Existence": {
+      "name": "Elemental Existence",
+      "description": "<p>Your body becomes infused with elemental earth. You gain the @UUID[Compendium.pf2e.feats-srd.Item.ihN8gkHSdPG9Trte]{Adopted Ancestry} feat and gain a 1st level oread ancestry feat as a bonus feat, ignoring the limitations of the lineage trait. When you gain new ancestry feats, you can select oread feats in addition to feats allowed by your ancestry and heritage.</p>",
+      "prerequisites": [
+        {
+          "value": "Stonebound Dedication"
+        }
+      ]
+    },
     "Elemental Explosion": {
       "name": "Elemental Explosion",
       "description": "<p><strong>Requirements</strong> You're raging, and you haven't used this ability since you last Raged.</p>\n<hr />\n<p>You unleash the energy roiling within you, exploding elemental matter in a @Template[type:emanation|distance:15]. Each creature in the area takes [[/r max(1, floor(@actor.level/2))d8]]{leveled damage}, with the same type you chose for elemental rage. Each creature in the area must attempt a @Check[type:reflex|dc:resolve(@actor.attributes.classDC.value)|basic:true]. Elemental Explosion gains the trait of your element.</p>",
@@ -8982,7 +9000,7 @@
     },
     "Emblazon Armament": {
       "name": "Emblazon Armament",
-      "description": "<p>Carefully etching a sacred image into a physical object, you steel yourself for battle. You can spend 10 minutes emblazoning a symbol of your deity upon a weapon or shield. The symbol doesn't fade until 1 year has passed, but if you Emblazon an Armament, any symbol you previously emblazoned and any symbol already emblazoned on that item instantly disappears. The item becomes a religious symbol of your deity and can be used as a divine focus while emblazoned, and it gains another benefit determined by the type of item. This benefit applies only to followers of the deity the symbol represents.</p>\n<ul>\n<li><strong>Shield</strong> The shield gains a +1 status bonus to its Hardness. (This causes it to reduce more damage with the Shield Block reaction.)</li>\n<li><strong>@UUID[Compendium.pf2e.feat-effects.Item.U1MpMtRnFqEDBJwd]{Weapon}</strong> The wielder gains a +1 status bonus to damage rolls.</li>\n</ul>"
+      "description": "<p>Carefully etching a sacred image into a physical object, you steel yourself for battle. You can spend 10 minutes emblazoning a symbol of your deity upon a weapon or shield. The symbol doesn't fade until 1 year has passed, but if you Emblazon an Armament, any symbol you previously emblazoned and any symbol already emblazoned on that item instantly disappears. The item becomes a religious symbol of your deity and can be used as a divine focus while emblazoned, and it gains another benefit determined by the type of item. This benefit applies only to followers of the deity the symbol represents.</p>\n<ul>\n<li><strong>@UUID[Compendium.pf2e.feat-effects.Item.o04gwnrVtzWyIEs8]{Shield}</strong> The shield gains a +1 status bonus to its Hardness. (This causes it to reduce more damage with the Shield Block reaction.)</li>\n<li><strong>@UUID[Compendium.pf2e.feat-effects.Item.U1MpMtRnFqEDBJwd]{Weapon}</strong> The wielder gains a +1 status bonus to damage rolls.</li>\n</ul>"
     },
     "Emblazon Divinity": {
       "name": "Emblazon Divinity",
@@ -10675,7 +10693,7 @@
     },
     "Fangs": {
       "name": "Fangs",
-      "description": "<p>Your incisors have grown into true fangs: long, sharp, and well-suited to drawing blood.</p>\n<p>You gain a fangs unarmed attack that deals @Damage[1d6[piercing]] damage. Your fangs are in the brawling group and have the grapple and unarmed traits.</p>"
+      "description": "<p>Your incisors have grown into true fangs: long, sharp, and well-suited to drawing blood.</p>\n<p>You gain a fangs unarmed attack that deals 1d6 piercing damage. Your fangs are in the brawling group and have the grapple and unarmed traits.</p>"
     },
     "Fantastic Leap": {
       "name": "Fantastic Leap",
@@ -13684,7 +13702,7 @@
     },
     "Haphazard Repair": {
       "name": "Haphazard Repair",
-      "description": "<p>You quickly fix your innovation, at the cost of its stability. You Repair your innovation almost immediately. You don't have to place the innovation on a flat surface, but you do need to be adjacent to it (including holding or wearing it), as well as having a repair kit as normal.</p>\n<p>@Check[type:flat|dc:17|name:Unstable Flat Check|showDC:all|traits:unstable]{Unstable Check}</p>\n<p>On a failure, the innovation malfunctions in a spectacular (though harmless) fashion, such as a belch of smoke or shower of sparks, and it becomes incapable of being used for further unstable actions.</p>\n<p>On a critical failure, you also take [[/r @actor.level[fire]]]{fire damage equal to your level}.</p>"
+      "description": "<p>You quickly fix your innovation, at the cost of its stability. You @UUID[Compendium.pf2e.actionspf2e.Item.bT3skovyLUtP22ME]{Repair} your innovation almost immediately. You don't have to place the innovation on a flat surface, but you do need to be adjacent to it (including holding or wearing it), as well as having a repair kit as normal.</p>\n<p>@Check[type:flat|dc:17|name:Unstable Flat Check|showDC:all|traits:unstable]{Unstable Check}</p>\n<p>On a failure, the innovation malfunctions in a spectacular (though harmless) fashion, such as a belch of smoke or shower of sparks, and it becomes incapable of being used for further unstable actions.</p>\n<p>On a critical failure, you also take [[/r @actor.level[fire]]]{fire damage equal to your level}.</p>"
     },
     "Harbinger's Caw": {
       "name": "Harbinger's Caw",
@@ -14908,7 +14926,7 @@
     },
     "Improved Poison Weapon": {
       "name": "Improved Poison Weapon",
-      "description": "<p>You deliver poisons in ways that maximize their harmful effects. When you apply a simple poison with @UUID[Compendium.pf2e.feats-srd.Item.ALbosSUygdq4T1Yk]{Poison Weapon}, the poison deals @Damage[2d4[poison]] damage instead of @Damage[1d4[poison]] damage. You don't waste a poison you apply with Poison Weapon on a critically failed attack roll.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.C6H3gF5HTdsIKpOC]{Effect: Improved Poison Weapon}</p>",
+      "description": "<p>You deliver poisons in ways that maximize their harmful effects. When you apply a simple poison with @UUID[Compendium.pf2e.feats-srd.Item.ALbosSUygdq4T1Yk]{Poison Weapon}, the poison deals @Damage[2d4[poison]] damage instead of @Damage[1d4[poison]] damage. You don't waste a poison you apply with Poison Weapon on a critically failed attack roll.</p>",
       "prerequisites": [
         {
           "value": "Poison Weapon"
@@ -15732,7 +15750,7 @@
     },
     "Invoke The Elements (Brine May)": {
       "name": "Invoke The Elements (Brine May)",
-      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You summon an aura of crashing waves.</p>\n<p>For 1 minute, you gain @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealment} against creatures more than 5 feet away, and any creature that ends its turn within 5 feet of you suffers @Damage[1d12[bludgeoning]] damage damage (basic Reflex save using your class DC or spell DC, whichever is higher).</p>\n<p>At @Damage[2d12[bludgeoning]]{13th} and @Damage[3d12[bludgeoning]]{17th} level, this damage increases by 1d12.</p>",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You summon an aura of crashing waves.</p>\n<p>For 1 minute, you gain @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealment} against creatures more than 5 feet away, and any creature that ends its turn within 5 feet of you suffers @Damage[1d12[bludgeoning]] damage (@Check[type:reflex|dc:resolve(@actor.system.attributes.classOrSpellDC.value)|basic:true] save using your class DC or spell DC, whichever is higher).</p>\n<p>At @Damage[2d12[bludgeoning]]{13th} and @Damage[3d12[bludgeoning]]{17th} level, this damage increases by 1d12.</p>",
       "prerequisites": [
         {
           "value": "Brine May"
@@ -15741,7 +15759,7 @@
     },
     "Invoke The Elements (Snow May)": {
       "name": "Invoke The Elements (Snow May)",
-      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You summon an aura of flurrying snow.</p>\n<p>For 1 minute, you gain @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealment} against creatures more than 5 feet away, and any creature that ends its turn within 5 feet of you suffers @Damage[1d12[cold]] damage damage (basic Reflex save using your class DC or spell DC, whichever is higher).</p>\n<p>At @Damage[2d12[cold]]{13th} and @Damage[3d12[cold]]{17th} level, this damage increases by 1d12.</p>",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You summon an aura of flurrying snow.</p>\n<p>For 1 minute, you gain @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealment} against creatures more than 5 feet away, and any creature that ends its turn within 5 feet of you suffers @Damage[1d12[cold]] damage (@Check[type:reflex|dc:resolve(@actor.system.attributes.classOrSpellDC.value)|basic:true] save using your class DC or spell DC, whichever is higher).</p>\n<p>At @Damage[2d12[cold]]{13th} and @Damage[3d12[cold]]{17th} level, this damage increases by 1d12.</p>",
       "prerequisites": [
         {
           "value": "Snow May"
@@ -15750,7 +15768,7 @@
     },
     "Invoke The Elements (Veil May)": {
       "name": "Invoke The Elements (Veil May)",
-      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You summon an aura of shimmering heat.</p>\n<p>For 1 minute, you gain @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealment} against creatures more than 5 feet away, and any creature that ends its turn within 5 feet of you suffers @Damage[1d12[fire]] damage damage (basic Reflex save using your class DC or spell DC, whichever is higher).</p>\n<p>At @Damage[2d12[fire]]{13th} and @Damage[3d12[fire]]{17th} level, this damage increases by 1d12.</p>",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You summon an aura of shimmering heat.</p>\n<p>For 1 minute, you gain @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealment} against creatures more than 5 feet away, and any creature that ends its turn within 5 feet of you suffers @Damage[1d12[fire]] damage (@Check[type:reflex|dc:resolve(@actor.system.attributes.classOrSpellDC.value)|basic:true] save using your class DC or spell DC, whichever is higher).</p>\n<p>At @Damage[2d12[fire]]{13th} and @Damage[3d12[fire]]{17th} level, this damage increases by 1d12.</p>",
       "prerequisites": [
         {
           "value": "Veil May"
@@ -15759,7 +15777,7 @@
     },
     "Invoke The Elements (Virga May)": {
       "name": "Invoke The Elements (Virga May)",
-      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You summon an aura of swirling wind and lightning.</p>\n<p>For 1 minute, you gain @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealment} against creatures more than 5 feet away, and any creature that ends its turn within 5 feet of you suffers @Damage[1d12[electricity]] damage damage (basic Reflex save using your class DC or spell DC, whichever is higher).</p>\n<p>At @Damage[2d12[electricity]]{13th} and @Damage[3d12[electricity]]{17th} level, this damage increases by 1d12.</p>",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You summon an aura of swirling wind and lightning.</p>\n<p>For 1 minute, you gain @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealment} against creatures more than 5 feet away, and any creature that ends its turn within 5 feet of you suffers @Damage[1d12[electricity]] damage (@Check[type:reflex|dc:resolve(@actor.system.attributes.classOrSpellDC.value)|basic:true] save using your class DC or spell DC, whichever is higher).</p>\n<p>At @Damage[2d12[electricity]]{13th} and @Damage[3d12[electricity]]{17th} level, this damage increases by 1d12.</p>",
       "prerequisites": [
         {
           "value": "Virga May"
@@ -17167,6 +17185,15 @@
       "prerequisites": [
         {
           "value": "Runescarred Dedication"
+        }
+      ]
+    },
+    "Living Stone": {
+      "name": "Living Stone",
+      "description": "<p>Your body becomes living stone. You don't need to eat or drink and need only 6 hours of rest to feel well rested. You must still rest at least 8 hours and spend 1 hour of preparation to regain resources usable only a limited number of times per day, such as spell slots. You gain a +2 circumstance bonus to saving throws against diseases, poisons, and effects that would cause the @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} or @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned} conditions. When you roll a successful saving throw against a disease or poison, you get a critical success instead.</p>",
+      "prerequisites": [
+        {
+          "value": "Stonebound Dedication"
         }
       ]
     },
@@ -19008,7 +19035,7 @@
     },
     "Mountain Stance": {
       "name": "Mountain Stance",
-      "description": "<p><strong>Requirements</strong> You are unarmored and touching the ground</p>\n<hr />\n<p>You enter the stance of an implacable mountain-a technique first created by dwarven monks-allowing you to strike with the weight of an avalanche and block blows with your garments.</p>\n<p>The only Strikes you can make are falling stone unarmed attacks. These deal 1d8 bludgeoning damage; are in the brawling group; and have the forceful, nonlethal, and unarmed traits.</p>\n<p>While in Mountain Stance, you gain a +4 item bonus to AC and a +2 circumstance bonus to any defenses against being Shoved or Tripped. You have a Dexterity modifier cap to your AC of +0, meaning you don't add your Dexterity to your AC, and your Speeds are all reduced by 5 feet. The item bonus to AC from Mountain Stance is cumulative with armor potency runes on your @UUID[Compendium.pf2e.equipment-srd.Item.dDIPA1WE9ESF67EB]{Clothing (Explorer's)}, <em>@UUID[Compendium.pf2e.spells-srd.Item.aAbfKn8maGjJjk2W]{Mystic Armor}</em>, and bracers of armor.</p>"
+      "description": "<p><strong>Requirements</strong> You are unarmored and touching the ground</p>\n<hr />\n<p>You enter the stance of an implacable mountain-a technique first created by dwarven monks-allowing you to strike with the weight of an avalanche and block blows with your garments.</p>\n<p>The only Strikes you can make are falling stone unarmed attacks. These deal 1d8 bludgeoning damage; are in the brawling group; and have the forceful, nonlethal, and unarmed traits.</p>\n<p>While in Mountain Stance, you gain a +4 item bonus to AC and a +2 circumstance bonus to any defenses against being Shoved or Tripped. You have a Dexterity modifier cap to your AC of +0, meaning you don't add your Dexterity to your AC, and your Speeds are all reduced by 5 feet. The item bonus to AC from Mountain Stance is cumulative with armor potency runes on your @UUID[Compendium.pf2e.equipment-srd.Item.dDIPA1WE9ESF67EB]{Explorer's Clothing}, <em>@UUID[Compendium.pf2e.spells-srd.Item.aAbfKn8maGjJjk2W]{Mystic Armor}</em>, and bracers of armor.</p>"
     },
     "Mountain Stronghold": {
       "name": "Mountain Stronghold",
@@ -20036,6 +20063,15 @@
         }
       ]
     },
+    "Ore Fists": {
+      "name": "Ore Fists",
+      "description": "<p>When you enter the Stonestrike Stance, your fists appear to be covered with veins of unrefined ore. Your stonestrike attacks count as cold iron and silver when determining weaknesses and bypassing resistances.</p>",
+      "prerequisites": [
+        {
+          "value": "Stone Brawler Dedication"
+        }
+      ]
+    },
     "Ornate Tattoo": {
       "name": "Ornate Tattoo",
       "description": "<p>You expand your tattoos to encompass greater magic. Choose a 1st-level arcane spell from the same school as your Arcane Tattoos, either a common spell or another to which you have access. You can cast that spell once per day as an innate arcane spell.</p>",
@@ -21052,7 +21088,7 @@
     },
     "Plate in Treasure": {
       "name": "Plate in Treasure",
-      "description": "<p>Precious metal flows from your fingers to plate an object. This has the effects of a clad in metal spell with a rank equal to half your level rounded up. While you're wearing or holding an item of light Bulk or greater that's Plated in Treasure, any metal created by one of your impulses is plated with the metal. If you use Plate in Treasure again, any previous one ends.</p>"
+      "description": "<p>Precious metal flows from your fingers to plate an object. This has the effects of a <em>@UUID[Compendium.pf2e.spells-srd.Item.7dBxguCNWCoPYxIi]{Clad In Metal}</em> spell with a rank equal to half your level rounded up. While you're wearing or holding an item of light Bulk or greater that's Plated in Treasure, any metal created by one of your impulses is plated with the metal. If you use Plate in Treasure again, any previous one ends.</p>"
     },
     "Play Dead": {
       "name": "Play Dead",
@@ -23590,6 +23626,15 @@
         },
         {
           "value": "earth is in your elemental philosophy"
+        }
+      ]
+    },
+    "Rocky Flesh": {
+      "name": "Rocky Flesh",
+      "description": "<p>Your flesh takes on the hardness of stone. You gain resistance to physical damage (except adamantine) equal to your number of class feats from the Stonebound archetype.</p>",
+      "prerequisites": [
+        {
+          "value": "Stonebound Dedication"
         }
       ]
     },
@@ -27135,6 +27180,15 @@
         }
       ]
     },
+    "Statue": {
+      "name": "Statue",
+      "description": "<p>Your body and equipment appear to be made of stone as you hold perfectly still. Until the next time you act, you appear to be a statue and do not need to eat, drink, or breathe, but you are @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}. Your Deception DC to pass as a statue is equal to 10 + your proficiency bonus (do not apply any other bonuses, penalties, or modifiers).</p>",
+      "prerequisites": [
+        {
+          "value": "Stonebound Dedication"
+        }
+      ]
+    },
     "Stave off Catastrophe": {
       "name": "Stave off Catastrophe",
       "description": "<p>You fully protect your allies from the worst blows. When you use the Shoulder Catastrophe reaction, you can choose to take the full critical damage and effects from the attack, including effects that apply on a critical hit, and have your ally take no damage and avoid the attack's effects.</p>",
@@ -27351,6 +27405,15 @@
         }
       ]
     },
+    "Stone Blood (Stonebound)": {
+      "name": "Stone Blood (Stonebound)",
+      "description": "<p>Your blood becomes thick and sluggish, but no less effective at oxygenating your cells. You can selectively stop your bleeding with ease. Reduce the DC of flat checks to stop persistent bleed damage from 15 to 10, and you can use a single action that has the concentrate trait to gain an early flat check without physically binding the wounds. You recover from the drained condition twice as quickly as normal.</p>",
+      "prerequisites": [
+        {
+          "value": "Stonebound Dedication"
+        }
+      ]
+    },
     "Stone Body": {
       "name": "Stone Body",
       "description": "<p><strong>Requirements</strong> You are in Tenacious Stance.</p>\n<hr />\n<p>Emulating the great defenders throughout dwarven history, you close your mind to the sensation of pain, becoming as resolute as stone itself. You gain resistance 10 to all damage. This effect lasts until the end of your next turn or immediately upon being critically hit.</p>",
@@ -27363,6 +27426,15 @@
     "Stone Bones": {
       "name": "Stone Bones",
       "description": "<p><strong>Trigger</strong> You are struck by a critical hit that deals physical damage.</p>\n<hr />\n<p>Your intractable nature can help you shrug off even the most grievous injuries. Attempt a @Check[type:flat|dc:17]. If you are successful, the attack becomes a normal hit.</p>"
+    },
+    "Stone Brawler Dedication": {
+      "name": "Stone Brawler Dedication",
+      "description": "<p>You've learned to call the primal power of elemental stone to your aid. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.k5S2a2a6o2GS5l01]{Stonestrike Stance} action.</p>\n<hr />\n<p><strong>Special</strong> You cannot select another dedication feat until you have gained two other feats from the stone brawler archetype.</p>",
+      "prerequisites": [
+        {
+          "value": "Constitution 14"
+        }
+      ]
     },
     "Stone Communion": {
       "name": "Stone Communion",
@@ -27380,6 +27452,42 @@
     "Stone Form": {
       "name": "Stone Form",
       "description": "<p>You can transform your body into a pure primal manifestation of earth, an elemental. Once per day, you can cast <em>@UUID[Compendium.pf2e.spells-srd.Item.1K6AYGisvo9gqdhs]{Elemental Form}</em> as a 7th-level primal innate spell, but you can only choose the earth elemental form.</p>"
+    },
+    "Stone Guardian": {
+      "name": "Stone Guardian",
+      "description": "<p>You learn to call a powerful guardian of earth and stone to your side. You can cast <em>@UUID[Compendium.pf2e.spells-srd.Item.lpT6LotUaQPfinjj]{Summon Elemental}</em> as an innate primal spell once per day, and can only summon elementals with the earth trait. This spell is automatically heightened to half your level rounded up.</p>",
+      "prerequisites": [
+        {
+          "value": "Stonebound Dedication"
+        }
+      ]
+    },
+    "Stonebane": {
+      "name": "Stonebane",
+      "description": "<p>Your stonestrike attacks deal 1d6 additional damage against constructs, creatures with the earth trait, and earthen objects, such as a stone door.</p>",
+      "prerequisites": [
+        {
+          "value": "Stone Brawler Dedication"
+        }
+      ]
+    },
+    "Stonebound Dedication": {
+      "name": "Stonebound Dedication",
+      "description": "<p>You bind yourself to the very essence of stone. You become trained in Plane of Earth Lore and learn the Terran language. If you are already trained in Plane of Earth Lore, you become trained in a skill of your choice. If you already speak Terran, you learn a common language of your choice. Increase your maximum Hit Points by your level.</p>\n<hr />\n<p><strong>Special</strong> You cannot select another dedication feat until you have gained two other feats from the stonebound archetype.</p>",
+      "prerequisites": [
+        {
+          "value": "Constitution 14"
+        }
+      ]
+    },
+    "Stonebound Magic": {
+      "name": "Stonebound Magic",
+      "description": "<p>You've learned to manifest your connection to stone by conjuring it to your side. You gain <em>@UUID[Compendium.pf2e.spells-srd.Item.zA0jNIBRgLsyTpbm]{Scatter Scree}</em> as a primal innate cantrip. At 8th level, you gain <em>@UUID[Compendium.pf2e.spells-srd.Item.vh1RpbWfqdNC4L3P]{One with Stone}</em> as a primal innate spell once per day. At 10th level, you gain <em>@UUID[Compendium.pf2e.spells-srd.Item.McnPlLFvKtQVXNcG]{Shape Stone}</em> as a primal innate spell once per day. At 12th level, you gain <em>@UUID[Compendium.pf2e.spells-srd.Item.kOa055FIrO9Smnya]{Wall of Stone}</em> as a primal innate spell once per day.</p>",
+      "prerequisites": [
+        {
+          "value": "Stonebound Dedication"
+        }
+      ]
     },
     "Stonecunning": {
       "name": "Stonecunning",
@@ -27409,6 +27517,24 @@
     "Stonewall": {
       "name": "Stonewall",
       "description": "<p><strong>Trigger</strong> An enemy or hazard's effect hits you or you fail a Fortitude save against one.</p>\n<p>The strength of stone overcomes you so strongly that it replaces your stout body. You become @UUID[Compendium.pf2e.conditionitems.Item.dTwPJuKgBQCMxixg]{Petrified} until the end of the current turn. You don't take any damage from the triggering effect or any other ill effects that couldn't affect stone.</p>"
+    },
+    "Stoney Deflection": {
+      "name": "Stoney Deflection",
+      "description": "<p><strong>Requirements</strong> You are in Stonestrike Stance.</p>\n<hr />\n<p>You gather the resiliency of stone to block attacks against you. You gain a +2 circumstance bonus to AC and to any defenses against being Shoved or Tripped until the beginning of your next turn.</p>",
+      "prerequisites": [
+        {
+          "value": "Stone Brawler Dedication"
+        }
+      ]
+    },
+    "Stoney Skin": {
+      "name": "Stoney Skin",
+      "description": "<p>Your skin takes on the hardness of stone. You gain resistance to physical damage (except adamantine) equal to your number of class feats from the Stone Brawler archetype.</p>",
+      "prerequisites": [
+        {
+          "value": "Stone Brawler Dedication"
+        }
+      ]
     },
     "Storm Born": {
       "name": "Storm Born",
@@ -32256,7 +32382,7 @@
     },
     "Worm's Feast": {
       "name": "Worm's Feast",
-      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You call forth a brood of infantile cave worms to feast on your enemy's flesh. Choose a creature within 30 feet; the creature must attempt a @Check[type:fortitude|resolve(@actor.system.attributes.classOrSpellDC.value)] save. At 8th level and every 2 levels above that, the persistent piercing damage taken on a failure increases by 1d6.</p>\n<hr />\n<p><strong>Critical Success</strong> The worms writhe away harmlessly.</p>\n<p><strong>Success</strong> The target takes @Damage[2d6[piercing]] damage and @Damage[2d6[persistent, piercing]] damage.</p>\n<p><strong>Failure</strong> The target takes @Damage[6d6[piercing]] damage and @Damage[2d6[persistent, piercing]] damage.</p>\n<p><strong>Critical Failure</strong> As failure, plus the target is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} as long as it takes persistent piercing damage.</p>\n<hr />\n<p><em>Note: A DC was not provided for this ability by Paizo. The button above uses the better of your class or spell DC.</em></p>",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You call forth a brood of infantile cave worms to feast on your enemy's flesh. Choose a creature within 30 feet; the creature must attempt a @Check[type:fortitude|dc:resolve(@actor.system.attributes.classOrSpellDC.value)] save. At 8th level and every 2 levels above that, the persistent piercing damage taken on a failure increases by 1d6.</p>\n<hr />\n<p><strong>Critical Success</strong> The worms writhe away harmlessly.</p>\n<p><strong>Success</strong> The target takes @Damage[2d6[piercing]] damage and @Damage[2d6[persistent, piercing]] damage.</p>\n<p><strong>Failure</strong> The target takes @Damage[6d6[piercing]] damage and @Damage[2d6[persistent, piercing]] damage.</p>\n<p><strong>Critical Failure</strong> As failure, plus the target is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} as long as it takes persistent piercing damage.</p>\n<hr />\n<p><em>Note: A DC was not provided for this ability by Paizo. The button above uses the better of your class or spell DC.</em></p>",
       "prerequisites": [
         {
           "value": "Worm Caller Dedication"
