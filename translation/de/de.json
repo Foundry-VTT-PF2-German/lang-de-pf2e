@@ -166,7 +166,10 @@
         },
         "Active": "Aktiv",
         "ActiveHeader": "Aktive Aktivitäten",
-        "AncestryClass": "{ancestry} {class}",
+        "Biography": {
+          "ToggleVisibility": "Sichtbarkeit für andere Spieler umschalten"
+        },
+        "Blurb": "Stufe {level} {ancestry} {class}",
         "ClassDC": {
           "Label": "Klassen-SG",
           "LabelSpecific": "Klassen-SG ({class})",
@@ -247,6 +250,7 @@
       },
       "Dead": "Tot",
       "Familiar": {
+        "Blurb": "Vertrauter von {master}",
         "Master": {
           "ArmorClass": "RK des Meisters",
           "Perception": "Wahrnehmung des Meisters"
@@ -454,7 +458,6 @@
     "ArmorClassShortLabel": "RK",
     "ArmorDexLabel": "GE-Limit",
     "ArmorGreaterResilientRune": "Widerstand, Starker",
-    "ArmorGreaterStrikingRune": "des starken Schadens",
     "ArmorGroupChain": "Kette",
     "ArmorGroupCloth": "Kleidung",
     "ArmorGroupComposite": "Mehrschichtig",
@@ -464,7 +467,6 @@
     "ArmorGroupSkeletal": "Knöchern",
     "ArmorGroupWood": "Holz",
     "ArmorMajorResilientRune": "Widerstand, Mächtiger",
-    "ArmorMajorStrikingRune": "des mächtigen Schadens",
     "ArmorPotencyRune1": "Rüstungsverbesserung (+1)",
     "ArmorPotencyRune2": "Rüstungsverbesserung (+2)",
     "ArmorPotencyRune3": "Rüstungsverbesserung (+3)",
@@ -477,7 +479,6 @@
     "ArmorPropertyRuneBitter": "Bitter",
     "ArmorPropertyRuneColdResistant": "Kälteresistent",
     "ArmorPropertyRuneDeathless": "Todlos",
-    "ArmorPropertyRuneDread": "Schwach Schrecklich",
     "ArmorPropertyRuneElectricityResistant": "Elektrizitätsresistent",
     "ArmorPropertyRuneEnergyAdaptive": "Energieanpassend",
     "ArmorPropertyRuneEthereal": "Ätherisch",
@@ -503,12 +504,14 @@
     "ArmorPropertyRuneImmovable": "Unbeweglich",
     "ArmorPropertyRuneImplacable": "Unnachgiebig",
     "ArmorPropertyRuneInvisibility": "Unsichtbarkeit",
+    "ArmorPropertyRuneLesserDread": "Schwach Schrecklich",
     "ArmorPropertyRuneMagnetizing": "Magnetisierend",
     "ArmorPropertyRuneMajorQuenching": "Löschend, Mächtig",
     "ArmorPropertyRuneMajorShadow": "Schattenwandeln, Mächtiges",
     "ArmorPropertyRuneMajorSlick": "Schmierig, Mächtig",
     "ArmorPropertyRuneMajorStanching": "Gerinnend, Mächtig",
     "ArmorPropertyRuneMajorSwallowSpike": "Stacheln ausbildend, Mächtig",
+    "ArmorPropertyRuneMalleable": "Malleable",
     "ArmorPropertyRuneMisleading": "Irreführend",
     "ArmorPropertyRuneModerateDread": "Durchschnittlich Schrecklich",
     "ArmorPropertyRunePortable": "Zusammenfaltbar",
@@ -527,7 +530,6 @@
     "ArmorResilientRune": "Widerstand",
     "ArmorSpeedLabel": "Rüstungsbewegungsmalus",
     "ArmorStrengthLabel": "Stärkeanforderung",
-    "ArmorStrikingRune": "des Schadens",
     "ArmorTypeHeavy": "Schwere Rüstung",
     "ArmorTypeLight": "Leichte Rüstung",
     "ArmorTypeMedium": "Mittelschwere Rüstung",
@@ -566,30 +568,18 @@
     "BestiaryBrowserSearchHint": "Sie können nach Namen oder benutzerdefinierten Attributen suchen. Mögliche suchbare Attribute sind:<br> source, spellType, level, school, components, materials, target, range, time, duration, damage, damageType, save, concentration, ritual, ability and classes.<br>Beispiel: 'fire, damage:d6' um alle Zauber zu zeigen, die feuer in ihrem Namen und einen W6 im Schaden haben",
     "Biography": "Biografie",
     "BiographyAllies": "Verbündete",
-    "BiographyAlliesTitle": "Verbündete deines Charakters",
     "BiographyAppearance": "Erscheinungsbild",
-    "BiographyAppearanceTitle": "Wie sieht dein Charakter aus",
     "BiographyAttitude": "Einstellung",
-    "BiographyAttitudeTitle": "Wie sich Ihr Charakter verhält",
     "BiographyBackStory": "Hintergrundgeschichte",
-    "BiographyBackStoryTitle": "Die Geschichte deines Charakters",
     "BiographyBeliefs": "Glaube",
-    "BiographyBeliefsTitle": "An was dein Charakter glaubt",
     "BiographyBirthPlace": "Geburtsort",
-    "BiographyBirthPlaceTitle": "Wo dein Charakter geboren wurde",
     "BiographyCampaignNotes": "Notizen",
-    "BiographyCampaignNotesHeader": "Notizen zur Kampagne",
-    "BiographyCampaignNotesTitle": "Alles was du notieren möchtest",
+    "BiographyCampaignNotesHeader": "Kampagne",
     "BiographyCatchphrases": "Schlagwörter",
-    "BiographyCatchphrasesTitle": "Schlagwörter zu deinem Charakter",
     "BiographyDislikes": "Abneigungen",
-    "BiographyDislikesTitle": "Was dein Charakter nicht mag",
     "BiographyEnemies": "Feinde",
-    "BiographyEnemiesTitle": "Die Feinde deines Charakters",
     "BiographyLikes": "Vorlieben",
-    "BiographyLikesTitle": "Was dein Charakter mag",
     "BiographyOrganizations": "Organizationen",
-    "BiographyOrganizationsTitle": "Organisationen deines Charakters",
     "BiographyPersonalityHeader": "Persönlichkeit",
     "Bonus": "Bonus",
     "BonusBulk": "Bonus Last Maximum",
@@ -767,6 +757,7 @@
       },
       "TabAction": "Aktionen",
       "TabBestiary": "Monster",
+      "TabCampaign": "Campaign",
       "TabEquipment": "Ausrüstung",
       "TabFeat": "Merkmale/Talente",
       "TabHazard": "Gefahren",
@@ -1260,9 +1251,22 @@
       "HasNoInitiativeScore": "{actor} hat keinen Initiative-Wert.",
       "HideName": "Name verbergen",
       "InitiativeSet": "Inititative von {actor} wurde auf {initiative} gesetzt.",
+      "Metrics": {
+        "Award": {
+          "Label": "Belohnung: {xp} EP",
+          "Tooltip": {
+            "Four": "4 Gruppenmitglieder",
+            "Plural": "{xpPerFour} x 4 / {recipients} Gruppenmitglieder",
+            "Singular": "1 Gruppenmitglied"
+          }
+        },
+        "Budget": "Budget: {spent}/{max} EP (Gruppenstufe {partyLevel})",
+        "Threat": "Bedrohung: <threat>{threat}</threat>"
+      },
       "NoActiveEncounter": "Es gibt keine aktive Begegnung.",
       "NoTokenInScene": "{actor} hat kein Token in der Szene.",
-      "RevealName": "Name anzeigen"
+      "RevealName": "Name anzeigen",
+      "XP": "EP"
     },
     "EquipmentEquippedLabel": "Ausgerüstet",
     "EquippedBulkLabel": "Getrag. Last",
@@ -1515,17 +1519,23 @@
           "niyahaat": "Niyaháat",
           "o-yoroi": "O-Yoroi",
           "padded-armor": "Waffenrock",
+          "power-suit": "Power Suit",
           "quilted-armor": "Gesteppte Rüstung",
           "sankeit": "Sankeit",
           "scale-mail": "Schuppenpanzer",
           "scroll-robes": "Schriftrollenrobe",
           "splint-mail": "Schienenpanzer",
           "studded-leather-armor": "Beschlagene Lederrüstung",
+          "subterfuge-suit": "Trickrüstung",
           "wooden-breastplate": "Hölzerne Brustplatte"
         },
         "Category": {
           "heavy-barding": "Schwerer Harnisch",
           "light-barding": "Leichter Harnisch"
+        },
+        "Specific": {
+          "Hint": "Die Markierung dieser Rüstung als <i>spezielle magische Rüstung</i> zeigt an, dass sie mehr kann, als ihre Materialzusammensetzung und Runen erlauben. Der Name, die Stufe, die Seltenheit und der Preis werden zum Zeitpunkt der Markierung nicht mehr von einem wertvollen Material oder Runen überschrieben. Diese Materialien und Runen dienen jedoch als Basis für die Anpassung von Stufe, Seltenheit und Preis bei späteren Upgrades.",
+          "Label": "Spezielle Magische Rüstung"
         }
       },
       "Backpack": {
@@ -1971,6 +1981,40 @@
           "Scroll": "Schriftrolle: {name} ({level}. Grad)",
           "Wand": "Zauberstab: {name} ({level}. Grad)"
         },
+        "GeneratedName": {
+          "FourProperties": "{base} ({property1}, {property2}, {property3}, {property4})",
+          "FourPropertiesMaterial": "{material}-{base} ({property1}, {property2}, {property3}, {property4})",
+          "Hint": "Dies ist der Name der Basiswaffe. Für die meisten Waffen wird die Basis verwendet, um einen vollständigeren Namen zu generieren, der die Materialzusammensetzung und/oder Runen berücksichtigt. Wenn Sie dieser Waffe einen eigenen Namen geben oder sie als \"spezifisch\" markieren, wird der generierte Name nicht angezeigt.",
+          "Material": "{material}-{base}",
+          "OneProperty": "{base} ({property1})",
+          "OnePropertyMaterial": "{material}-{base} ({property1})",
+          "Potency": "+{potency} {base}",
+          "PotencyFourProperties": "+{potency} {base} ({property1}, {property2}, {property3}, {property4})",
+          "PotencyFourPropertiesMaterial": "+{potency} {material}-{base} ({property1}, {property2}, {property3}, {property4})",
+          "PotencyMaterial": "+{potency} {material}-{base}",
+          "PotencyOneProperty": "+{potency} {base} ({property1})",
+          "PotencyOnePropertyMaterial": "+{potency} {material}-{base} {property1}",
+          "PotencyFundamental2": "+{potency} {fundamental2} {base}",
+          "PotencyFundamental2FourProperties": "+{potency} {fundamental2} {property1} {property2} {property3} {property4} {base}",
+          "PotencyFundamental2FourPropertiesMaterial": "+{potency} {fundamental2} {property1} {property2} {property3} {property4} {material} {base}",
+          "PotencyFundamental2Material": "+{potency} {fundamental2} {material} {base}",
+          "PotencyFundamental2OneProperty": "+{potency} {fundamental2} {property1} {base}",
+          "PotencyFundamental2OnePropertyMaterial": "+{potency} {fundamental2} {property1} {material} {base}",
+          "PotencyFundamental2ThreeProperties": "+{potency} {fundamental2} {property1} {property2} {property3} {base}",
+          "PotencyFundamental2ThreePropertiesMaterial": "+{potency} {fundamental2} {property1} {property2} {property3} {material} {base}",
+          "PotencyFundamental2TwoProperties": "+{potency} {fundamental2} {property1} {property2} {base}",
+          "PotencyFundamental2TwoPropertiesMaterial": "+{potency} {fundamental2} {property1} {property2} {material} {base}",
+          "PotencyThreeProperties": "+{potency} {property1} {property2} {property3} {base}",
+          "PotencyThreePropertiesMaterial": "+{potency} {property1} {property2} {property3} {material} {base}",
+          "PotencyTwoProperties": "+{potency} {property1} {property2} {base}",
+          "PotencyTwoPropertiesMaterial": "+{potency} {property1} {property2} {material} {base}",
+          "Fundamental2": "{fundamental2} {base}",
+          "Fundamental2Material": "{fundamental2} {material} {base}",
+          "ThreeProperties": "{property1} {property2} {property3} {base}",
+          "ThreePropertiesMaterial": "{property1} {property2} {property3} {material} {base}",
+          "TwoProperties": "{property1} {property2} {base}",
+          "TwoPropertiesMaterial": "{property1} {property2} {material} {base}"
+        },
         "LevelLabel": "Gegenstand {level}",
         "OtherTag": {
           "Herbal": "Kräuter",
@@ -2088,40 +2132,6 @@
         },
         "FromABP": "Die Automatische Bonusprogression hat für diese Waffe folgende Anpassung vorgenommen: {property} auf {value}",
         "FromMaterialAndRunes": "Wertvolle Materialien und Runen auf diesem Gegenstand haben seine {property} auf {value} eingestellt.",
-        "GeneratedName": {
-          "FourProperties": "{base} ({property1}, {property2}, {property3}, {property4})",
-          "FourPropertiesMaterial": "{material}-{base} ({property1}, {property2}, {property3}, {property4})",
-          "Hint": "Dies ist der Name der Basiswaffe. Für die meisten Waffen wird die Basis verwendet, um einen vollständigeren Namen zu generieren, der die Materialzusammensetzung und/oder Runen berücksichtigt. Wenn Sie dieser Waffe einen eigenen Namen geben oder sie als \"spezifisch\" markieren, wird der generierte Name nicht angezeigt.",
-          "Material": "{material}-{base}",
-          "OneProperty": "{base} ({property1})",
-          "OnePropertyMaterial": "{material}-{base} ({property1})",
-          "Potency": "+{potency} {base}",
-          "PotencyFourProperties": "+{potency} {base} ({property1}, {property2}, {property3}, {property4})",
-          "PotencyFourPropertiesMaterial": "+{potency} {material}-{base} ({property1}, {property2}, {property3}, {property4})",
-          "PotencyMaterial": "+{potency} {material}-{base}",
-          "PotencyOneProperty": "+{potency} {base} ({property1})",
-          "PotencyOnePropertyMaterial": "+{potency} {material}-{base} {property1}",
-          "PotencyStriking": "+{potency} {base} {striking}",
-          "PotencyStrikingFourProperties": "+{potency} {base} {striking} ({property1}, {property2}, {property3}, {property4})",
-          "PotencyStrikingFourPropertiesMaterial": "+{potency} {material}-{base} {striking} ({property1}, {property2}, {property3}, {property4})",
-          "PotencyStrikingMaterial": "+{potency} {material}-{base} {striking}",
-          "PotencyStrikingOneProperty": "+{potency} {base} {striking} ({property1})",
-          "PotencyStrikingOnePropertyMaterial": "+{potency} {material}-{base} {striking} ({property1})",
-          "PotencyStrikingThreeProperties": "+{potency} {base} {striking} ({property1}, {property2}, {property3})",
-          "PotencyStrikingThreePropertiesMaterial": "+{potency} {material}-{base} {striking} ({property1}, {property2}, {property3})",
-          "PotencyStrikingTwoProperties": "+{potency} {base} {striking} ({property1}, {property2})",
-          "PotencyStrikingTwoPropertiesMaterial": "+{potency} {material}-{base} {striking} ({property1}, {property2})",
-          "PotencyThreeProperties": "+{potency} {base} ({property1}, {property2}, {property3})",
-          "PotencyThreePropertiesMaterial": "+{potency} {material}-{base} ({property1}, {property2}, {property3})",
-          "PotencyTwoProperties": "+{potency} {base} ({property1}, {property2})",
-          "PotencyTwoPropertiesMaterial": "+{potency} {material}-{base} ({property1}, {property2})",
-          "Striking": "{striking} {base}",
-          "StrikingMaterial": "{striking} {material} {base}",
-          "ThreeProperties": "{base} ({property1}, {property2}, {property3})",
-          "ThreePropertiesMaterial": "{material}-{base} ({property1}, {property2}, {property3})",
-          "TwoProperties": "{base} ({property1}, {property2})",
-          "TwoPropertiesMaterial": "{material}-{base} ({property1}, {property2})"
-        },
         "HandsLabel": "Hände",
         "MandatoryMelee": "Diese Waffe hat eine Kategorie für ausschließliche Nutzung mit Nahkampfwaffen.",
         "MaterialAndRunes": {
@@ -2143,7 +2153,12 @@
           "OneMinute": "1 Min."
         },
         "Rune": {
-          "Potency": "Waffenverbesserung"
+          "Potency": "Waffenverbesserung",
+          "Striking": {
+            "Greater": "Schadensrune, Starke",
+            "Major": "Schadensrune, Mächtige",
+            "Striking": "Schadensrune"
+          }
         },
         "SpecificMagicWeapon": {
           "Hint": "Die Markierung dieser Waffe als <i>spezielle magische Waffe</i> zeigt an, dass sie mehr kann, als ihre Materialzusammensetzung und Runen erlauben. Der Name, die Stufe, die Seltenheit und der Preis werden zum Zeitpunkt der Markierung nicht mehr von einem wertvollen Material oder Runen überschrieben. Diese Materialien und Runen dienen jedoch als Basis für die Anpassung von Stufe, Seltenheit und Preis bei späteren Upgrades.",
@@ -2218,7 +2233,7 @@
     "LanguageDwarven": "Zwergisch",
     "LanguageDziriak": "D'ziriakisch",
     "LanguageEkujae": "Ekujae Formwandel-Skript",
-    "LanguageElderThing": "Elder Thing",
+    "LanguageElderThing": "Älteres Wesen",
     "LanguageElven": "Elfisch",
     "LanguageEmpyrean": "Empyrean",
     "LanguageErutaki": "Erutakisch",
@@ -2607,6 +2622,7 @@
     },
     "OrphanedSpellsHeader": "Verwaiste Zauber (bewege sie in eine Zauberklasse darüber)",
     "OverridesTitle": "Übersteuert",
+    "Pathfinder": "Pfadfinder",
     "PFS": {
       "CharacterNumber": "Charakter #",
       "CurrentFaction": "Aktuelle Fraktion",
@@ -2677,6 +2693,7 @@
     "PreciousMaterialSiccatiteDescription": "In seiner rohen Form ist dieses silbrige Erz entweder kochend heiß oder eiskalt. Metallurgen streiten sich darüber, ob Siccatit im Grunde zwei miteinander verwandte Materialien oder ein und dieselbe Substanz sind, deren Temperatur durch einen unbekannten Prozess bestimmt wird. Aus welchem Grund auch immer die hohe Temperatur zustande kommt, es bedeutet, dass das Material mit extremer Vorsicht behandelt werden muss. Heißes Siccatit kann leicht brennbare Gegenstände wie Papier oder trockene Büsche rasch entzünden. Kaltes Siccatit kann sich in feuchten Umgebungen schnell mit einer dicken Schicht Eis umgeben. Eine Kreatur, die in physischen Kontakt mit einer großen Menge an Siccatit kommt, erleidet einen Punkt Energieschaden für jede Runde, die der Kontakt fortbesteht (Feueroder Kälteschaden, je nachdem, ob es heißes oder kaltes Siccatit ist).",
     "PreciousMaterialSilver": "Silber",
     "PreciousMaterialSilverDescription": "Silberwaffen sind ein Fluch für bestimmte üble Kreaturen wie z.B. Teufel und Werwölfe. Silbergegenstände sind weniger haltbar als Stahlgegenstände. Geringwertige Silbergegenstände sind in der Regel sogar nur versilbert.",
+    "PreciousMaterialSisterstone": "Sisterstone",
     "PreciousMaterialSisterstoneDescription": "Sisterstone is a term used for two closely related ores infused by the spiritual runoff in the Field of Maidens, dusk sisterstone and scarlet sisterstone. They have the same physical properties except for color-dusk sisterstone is a pale orange while scarlet sisterstone is orange-red. When near an object made of the other type of sisterstone, they both begin exuding spiritual energy that repels undead.",
     "PreciousMaterialSisterstoneDusk": "Sisterstone (Dusk)",
     "PreciousMaterialSisterstoneScarlet": "Sisterstone (Scarlet)",
@@ -2801,7 +2818,7 @@
           "Both": "SC's und NSC's",
           "Hint": "Wenn sie keine Trefferpunkte mehr haben, werden NSCs als tot markiert.",
           "NPCsOnly": "Ja",
-          "Name": "NSC's sind mit 0 TP tot",
+          "Name": "NSCs sind mit 0 TP tot",
           "Neither": "Nein",
           "PCsOnly": "nur SC's"
         },
@@ -2825,7 +2842,7 @@
         "Label": "Automatik verwalten",
         "LootableNPCs": {
           "Hint": "Nach ihrem Ableben können NSC's von Spielern geplündert werden.",
-          "Name": "NSC's sind plünderbar"
+          "Name": "NSCs sind plünderbar"
         },
         "Name": "Automatik",
         "RemoveExpiredEffects": {
@@ -2833,9 +2850,10 @@
           "Name": "Abgelaufene Effekte entfernen"
         },
         "RulesBasedVision": {
-          "Hint": "Wenden Sie die Sichtmechanik in Übereinstimmung mit den Pathfinder 2e-Regeln an. Wenn Sie diese Einstellung aktivieren, werden die Konfigurationen \"Unrestricted Global Vision\" und \"Token Vision\" deaktiviert. WARNUNG: Diese Funktion ist experimentell und nicht kompatibel mit dem Perfect Vision-Modul.",
+          "Hint": "Wende die Sichtmechanik in Übereinstimmung mit den Pathfinder 2e-Regeln an. Ist diese Einstellung aktiviert, werden die Konfigurationen \"Unbegrenzte Globale Sicht\" und \"Figur-Sicht\" deaktiviert.",
           "ManagedBy": "Verwaltet durch <rbv>regelbasierte Sicht</rbv>.",
-          "Name": "Regelbasierte Sicht"
+          "Name": "Regelbasierte Sicht",
+          "ViewWorldSetting": "Welteinstellung anzeigen"
         }
       },
       "CampaignFeats": {
@@ -2847,7 +2865,7 @@
         "Name": "Kampagnentyp",
         "Choices": {
           "none": "Kein",
-          "kingmaker": "Kingmaker"
+          "kingmaker": "Königsmacher"
         }
       },
       "CompendiumBrowserPacks": {
@@ -2876,6 +2894,11 @@
       "DeathIcon": {
         "Hint": "Setze das Symbol zum Markieren toter Gegner.",
         "Name": "Todessymbol"
+      },
+      "EnabledDisabled": {
+        "Enabled": "Aktiviert",
+        "Default": "Welt-Standard ({worldDefault})",
+        "Disabled": "Deaktiviert"
       },
       "EnabledRulesUI": {
         "Hint": "Wenn aktiviert, können Spieler die erweiterte Regelelement-UI für Elemente sehen und nutzen.",
@@ -2967,7 +2990,7 @@
         },
         "ShowDC": {
           "Hint": "Ist diese Funktion aktiviert, dann können Spieler die SGs bei Würfen gegen NSCs und anderen Quellen sehen, die nicht zu Spielern gehören.",
-          "Name": "SGs für Angriffe und RW anzeigen"
+          "Name": "SGs für Angriffe und Rettungswürfe anzeigen"
         },
         "ShowResults": {
           "Hint": "Ist diese Funktion aktiviert, dann können Spieler die Erfolgsgrade bei Würfen gegen NSCs und anderen Quellen sehen, die nicht zu Spielern gehören.",
@@ -2979,7 +3002,7 @@
         },
         "TokenSetsNameVisibility": {
           "Hint": "Wenn diese Option aktiviert ist, wird der Name jedes NSC-Tokens, dessen Namensschild für die Spieler nicht sichtbar ist, auch in der Begegnungsübersicht und in den Chatnachrichten verborgen.",
-          "Name": "Token bestimmen die Sichtbarkeit von NPC-Namen"
+          "Name": "Tokens bestimmen die Sichtbarkeit von NSC-Namen"
         }
       },
       "NathMode": {
@@ -3006,7 +3029,7 @@
       "Tokens": {
         "Autoscale": {
           "Hint": "Wenn diese Option aktiviert ist, werden die Token auf 1,0 oder (wenn sie zu einem kleinen Lebewesen gehören) auf 0,8 skaliert",
-          "Name": "Skalieren der Token entsprechend der Größe"
+          "Name": "Skalieren der Tokens entsprechend der Größe"
         }
       },
       "User": {
@@ -3123,16 +3146,13 @@
         },
         "ShowClockButton": {
           "Hint": "Legen Sie fest, ob die Uhr-Schaltfläche überhaupt angezeigt werden soll (erfordert Aktualisierung).",
-          "Name": "Schaltfläche Uhr anzeigen"
+          "Name": "Uhr-Schaltfläche anzeigen"
         },
         "SyncDarkness": {
           "Hint": "Legen Sie fest, ob der Dunkelheitsgrad einer Szene die Tageszeit widerspiegeln soll.",
           "Name": "Synchronisiere Dunkelheit (wie Welt)"
         },
         "SyncDarknessScene": {
-          "Default": "Wie Welt ({worldDefault})",
-          "Disabled": "Deaktiviert",
-          "Enabled": "Aktiviert",
           "Hint": "Stellen Sie ein, ob der Dunkelheitsgrad dieser Szene die Tageszeit widerspiegeln soll.",
           "ManagedBy": "Synchronisiert mit der <wt>Weltzeit</wt>.",
           "Name": "Dunkelheit synchronisieren (aktuelle Szene)"
@@ -3168,8 +3188,8 @@
         "name": "Zustands-Symbolsatz"
       }
     },
-    "SaveDCLabel": "RW SG {dc} {type}",
-    "SaveDCLabelBasic": "RW SG {dc} einfacher {type}",
+    "SaveDCLabel": "RW <dc>SG {dc}</dc> {type}",
+    "SaveDCLabelBasic": "RW <dc>SG {dc}</dc> einfacher {type}",
     "SavesFortitude": "Zähigkeit",
     "SavesFortitudeShort": "ZÄH",
     "SavesHeader": "Rettungswürfe",
@@ -3179,7 +3199,12 @@
     "SavesWillShort": "WIL",
     "SavingThrowWithName": "Rettungswurf: {saveName}",
     "Scene": {
-      "Plural": "Szenen"
+      "HearingRange": {
+        "Caveat": "*Aus Performancegründen ist der Radius ein reales Maß und nicht gitterbasiert.",
+        "Hint": "Begrenzt die Hör-Reichweite* von Kreaturen in dieser Szene als Darstellung \"einer Umgebung, die den Sinn stört, z.B. in einem lauten Raum (GRW, S. 465)\". Benötigt eine aktivierte regelbasierte Sicht.",
+        "Name": "Hörweite (Fuß)",
+        "Unlimited": "Unbegrenzt"
+      }
     },
     "ScoreTitle": "Punkte",
     "SelectLabel": "Wähle",
@@ -4136,6 +4161,7 @@
     "TraitHex": "Hexerei",
     "TraitHindering": "Behindernd",
     "TraitHobgoblin": "Hobgoblin",
+    "TraitHryngar": "Hryngar",
     "TraitHuman": "Mensch",
     "TraitHumanoid": "Humanoider",
     "TraitIfrit": "Pyrier",
@@ -4504,7 +4530,7 @@
     "TraitVishkanya": "Vischkanya",
     "TraitVisual": "Sichtbar",
     "TraitVitality": "Vitality",
-    "TraitVoid": "Void",
+    "TraitVoid": "Leere",
     "TraitVolley": "Ballistisch",
     "TraitVolley20": "Ballistisch 20 Fuß/6 m",
     "TraitVolley30": "Ballistisch 30 Fuß/9 m",
@@ -5076,11 +5102,17 @@
         "Name": "Geister berührend",
         "Note": "Diese Waffe kann Kreaturen ohne physische Form Schaden zufügen. Eine Geister berührende Waffe ist gegen körperlose Kreaturen besonders effektiv, da deren Schadensresistenz meistens von Waffen mit dieser Rune umgangen wird. Körperlose Kreaturen können Geister berührende Waffen anfassen, halten und führen (anders als die meisten anderen physischen Objekte)."
       },
+      "giantKilling": {
+        "Name": "Giant-Killing",
+        "Note": {
+          "criticalSuccess": "On a critical hit with this weapon, the giant is also @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} until the end of your next turn."
+        }
+      },
       "greaterAnchoring": {
         "Name": "Stark Verankernd",
         "Note": {
           "criticalSuccess": "Wenn du bei einem Gegner mit einer Waffe des Starken Verankerns einen Kritischen Treffer erzielst, wirkt die Waffe <em>@UUID[Compendium.pf2e.spells-srd.Item.ksLCg62cLOojw3gN]{Dimensionsanker}</em> auf dem 8. Grad auf das Ziel (@Check[type:will|name:Greater Anchoring Rune DC|dc:38], Entgegenwirken-Modifikator [[/r 1d20+28 #Stark Verankernd-Rune Entgegenwirkenwurf]]{+28}). Gelingt dem Ziel gegen diesen Zauber ein Kritischer Erfolg bei seinem Willenswurf, wirkt der <em>Dimensionsanker</em> dennoch für 1 Runde, statt gar keine Wirkung zu zeigen.",
-          "success": "Wenn du den Gegner mit der Waffe triffst, aber keinen Kritischen Treffer erzielst, wird das Ziel dennoch für 1 Runde von einem <em>@UUID[Compendium.pf2e.spells-srd.Item.ksLCg62cLOojw3gN]{Dimensionsanker}</em> des 4. Grades betroffen, ohne das ihm ein Rettungswurf zusteht (dabei gilt der Entgegenwirken-Modifikator [[/r 1d20+28 #Stark Verankernd-Rune Entgegenwirkenwurf]]{+28})."
+          "success": "Wenn du den Gegner mit der Waffe triffst, aber keinen Kritischen Treffer erzielst, wird das Ziel dennoch für 1 Runde von einem <em>@UUID[Compendium.pf2e.spells-srd.Item.ksLCg62cLOojw3gN]{Dimensionsanker}</em> des 4. Grades betroffen, ohne dass ihm ein Rettungswurf zusteht (dabei gilt der Entgegenwirken-Modifikator [[/r 1d20+28 #Entgegenwirken]]{+28})."
         }
       },
       "greaterAshen": {
@@ -5096,14 +5128,14 @@
         "Name": "Stark Gleißend",
         "Note": {
           "criticalSuccess": "Der Schaden der Waffe ignoriert Resistenz gegen Feuer, Gutes oder Positive Energie. Im Fall eines Kritischen Treffers muss das Ziel einen @Check[type:fortitude|name:Stark GLeißend-Rune DC|dc:41|showDC:all] ablegen; bei Misslingen erleidet es für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind}.",
-          "success": "<strong>Stark Gleißend-Rune</strong> Der Schaden der Waffe ignoriert Resistenz gegen Feuer, Gutes oder Positive Energie."
+          "success": "Der Schaden der Waffe ignoriert Resistenz gegen Feuer, Gutes oder Positive Energie."
         }
       },
       "greaterCorrosive": {
         "Name": "Stark Ätzend",
         "Note": {
           "criticalSuccess": "Der von dieser Waffe zugefügte Säureschaden ignoriert die Säureresistenz des Ziels. Zusätzlich nimmt bei einem Kritischen Treffer die Rüstung des Ziels (soweit es eine trägt) [[/r {6d6}[acid] # Ätzend Rune]]{6W6 Säureschaden} (vor Einberechnung von Härte); falls das Ziel einen Schild erhoben hat, ist er es, der stattdessen diesen Schaden erleidet..",
-          "success": "<strong>Stark Ätzend-Rune</strong> Der von dieser Waffe zugefügte Säureschaden ignoriert die Säureresistenz des Ziels."
+          "success": "Der von dieser Waffe zugefügte Säureschaden ignoriert die Säureresistenz des Ziels."
         }
       },
       "greaterCrushing": {
@@ -5141,7 +5173,14 @@
         "Name": "Starker Frost",
         "Note": {
           "criticalSuccess": "Mit dieser Waffe zugefügter Kälteschaden ignoriert die Kälteresistenz des Ziels. Im Falle eines Kritischen Treffers muss das Ziel einen @Check[type:fortitude|name:Starke Frost-Rune|dc:34]{Zähigkeitswurf} ablegen; bei einem Fehlschlag erhält das Ziel zudem bis zum Ende deines nächsten Zuges den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}.",
-          "success": "<strong>Starke Frost-Rune</strong> Mit dieser Waffe zugefügter Kälteschaden ignoriert die Kälteresistenz des Ziels."
+          "success": "Mit dieser Waffe zugefügter Kälteschaden ignoriert die Kälteresistenz des Ziels."
+        }
+      },
+      "greaterGiantKilling": {
+        "Name": "Greater Giant-Killing",
+        "Note": {
+          "success": "Mental damage dealt by this weapon ignores the target's mental resistance.",
+          "criticalSuccess": "On a critical hit with this weapon, the giant must attempt a @Check[type:fortitude|dc:34] with the following effects.<br /><strong>Critical Success</strong> The giant is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} until the end of your next turn.<br /><strong>Success</strong> The giant is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} until the end of your next turn and takes @Damage[1d10[mental]].<br /><strong>Failure</strong> The giant is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} for the next minute and takes @Damage[2d10[mental]].<br/><strong>Critical Failure</strong> The giant is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 4} for the next minute and takes @Damage[4d10[mental]]."
         }
       },
       "greaterHauling": {
@@ -5151,6 +5190,12 @@
         "Name": "Starke Einschlagend",
         "Note": {
           "criticalSuccess": "Bei einem Kritischen Treffer kannst du ferner entscheiden, dass Ziel zu einem @Check[type:fortitude|name:Starke Einschlagend-Rune SG|dc:37|showDC:all]{Zähigkeitswurf} zu zwingen, bei dessen Misslingen es um 1,50 m von dir fortgestoßen wird."
+        }
+      },
+      "greaterRooting": {
+        "Name": "Greater Rooting",
+        "Note": {
+          "criticalSuccess": "When you critically hit a target with this weapon, roots grow from the target. It's @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{immobilized} for 1 round (<span data-pf2-action=\"escape\" data-pf2-glyph=\"A\" data-pf2-dc=\"28\">Escape DC 28</span>) and @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} for as long as the immobilization lasts."
         }
       },
       "greaterShock": {
@@ -5201,6 +5246,12 @@
           "criticalSuccess": "Bei einem Kritischen Treffer mit dieser Waffe inspirierst du deine Kameraden und drängst sie quasi dazu, härter zu kämpfen und für eure gemeinsamen Überzeugungen einzutreten. Verbündete innerhalb von 9 m, die mindestens eine Gesinnungskomponente mit dir teilen, erhalten bis zum Ende deines nächsten Zuges einen Zustandsbonus von +1 auf ihre Angriffswürfe."
         }
       },
+      "hooked": {
+        "Name": "Hooked",
+        "Note": {
+          "criticalSuccess": "If a hooked weapon normally has the trip trait, you can attempt to Trip a foe as a reaction when you critically hit it with the hooked weapon."
+        }
+      },
       "impactful": {
         "Name": "Einschlagend",
         "Note": {
@@ -5217,6 +5268,12 @@
       "kinWarding": {
         "Name": "Familienschutz"
       },
+      "majorRooting": {
+        "Name": "Major Rooting",
+        "Note": {
+          "criticalSuccess": "When you critically hit a target with this weapon, roots grow from the target. It's @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{immobilized} for 1 round (<span data-pf2-action=\"escape\" data-pf2-glyph=\"A\" data-pf2-dc=\"34\">Escape DC 34</span>) and @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} for as long as the immobilization lasts."
+        }
+      },
       "merciful": {
         "Name": "Gnädig"
       },
@@ -5228,7 +5285,13 @@
       },
       "returning": {
         "Name": "Zurückkehrend",
-        "Note": "<strong>Zurückkehrend-Rune</strong> Wenn du mit dieser Waffe eine Angriffsaktion im Fernkampf ausführst, fliegt sie nach Ende der Aktion in deine Hand zurück. Hast du keine Hand frei, fällt sie in deinem Feld zu Boden."
+        "Note": "Wenn du mit dieser Waffe eine Angriffsaktion im Fernkampf ausführst, fliegt sie nach Ende der Aktion in deine Hand zurück. Hast du keine Hand frei, fällt sie in deinem Feld zu Boden."
+      },
+      "rooting": {
+        "Name": "Rooting",
+        "Note": {
+          "criticalSuccess": "When you critically hit a target with this weapon, roots grow from the target. It's @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{immobilized} for 1 round (<span data-pf2-action=\"escape\" data-pf2-glyph=\"A\" data-pf2-dc=\"23\">Escape DC 23</span>) and @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} for as long as the immobilization lasts."
+        }
       },
       "serrating": {
         "Name": "Gezahnt"
@@ -5255,6 +5318,12 @@
         "Name": "Donnernd",
         "Note": {
           "criticalSuccess": "Bei einem Kritischen Treffer muss das Ziel einen @Check[type:fortitude|name:Donnernd-Rune|dc:24] ablegen; bei einem Fehlschlag erhält es für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Taub} (oder für 1 Stunde im Falle eines Kritischen Fehlschlags)."
+        }
+      },
+      "trueRooting": {
+        "Name": "True Rooting",
+        "Note": {
+          "criticalSuccess": "When you critically hit a target with this weapon, roots grow from the target. It's @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{immobilized} for 1 round (<span data-pf2-action=\"escape\" data-pf2-glyph=\"A\" data-pf2-dc=\"41\">Escape DC 41</span>) and @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} for as long as the immobilization lasts."
         }
       },
       "underwater": {
