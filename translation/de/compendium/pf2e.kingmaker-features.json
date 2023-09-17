@@ -54,7 +54,8 @@
       "description": "<p>During the Civic Activities step of the Activities phase of a Kingdom turn, one settlement of the party’s choice can attempt two Civic activities rather than one. The second Civic activity occurs after all other settlements have taken their individual Civic activities.</p>"
     },
     "Civil Service": {
-      "name": "Civil Service"
+      "name": "Civil Service",
+      "description": "<p>Everyone has a place and a role, and as long as those roles are filled, the government functions. When you select this feat, choose one leadership role; that role is now supported by your efficient civil servants, so its vacancy penalty is no longer applicable. If you wish to change the leadership role to which Civil Service applies, you can do so using the New Leadership activity at the start of a Kingdom turn.</p>\n<p>You gain a +2 status bonus to New Leadership checks.</p>"
     },
     "Claim Hex": {
       "name": "Claim Hex",
@@ -77,7 +78,8 @@
       "description": "<p>A concealed army is tougher to target, and gains a +2 circumstance bonus on its Maneuver checks. Attacks against it take a –2 circumstance penalty. This condition lasts as long as the event granting the concealment persists.</p>"
     },
     "Cooperative Leadership": {
-      "name": "Cooperative Leadership"
+      "name": "Cooperative Leadership",
+      "description": "<p>Your leaders are skilled at working with one another. When a leader uses the Focused Attention kingdom activity to aid another leader’s kingdom check, the circumstance bonus granted by a success is increased to +3.</p>\n<p>At 11th level, your leaders’ collaborative style leads them to ever greater successes when they work together. When a leader uses the Focused Attention kingdom activity to aid another leader’s check, treat a critical failure on the aided check as a failure. If your kingdom has at least the expert rank in the skill used in the aided check, treat a failure on the check as a success. (This does not allow you to ever improve a critical failure to a success.)</p>"
     },
     "Counterattack": {
       "name": "Counterattack",
@@ -93,14 +95,20 @@
     },
     "Create a Masterpiece": {
       "name": "Create a Masterpiece",
-      "description": "<p>You encourage your kingdom's artists to create and display a masterful work of art to bolster your kingdom's reputation. Attempt a basic <br />@Check[arts|dc:resolve(@kingdom.control.dc)] check; the result affects either Fame or Infamy (depending on the type of kingdom you're running). Create a Masterpiece may be attempted only once per Kingdom turn regardless of the number of leaders pursuing activities.</p>\n<hr />\n<p><strong>Critical Success</strong> Gain 1 Fame or Infamy point immediately, and at the start of your next Kingdom turn, gain 1 additional Fame or Infamy point. Immediately roll 2 Resource Dice. Gain RP equal to the result.</p>\n<p><strong>Success</strong> Gain 1 Fame or Infamy point immediately.</p>\n<p><strong>Failure</strong> Your attempt to create a masterpiece fails.</p>\n<p><strong>Critical Failure</strong> Not only does your attempt to create a masterpiece fail, it does so in a dramatic and humiliating way. Lose 1 Fame or Infamy point; if you have no Fame or Infamy points to lose, instead gain [[/r 1d4 #Unrest]]{1d4 Unrest}.</p>"
+      "description": "<p>You encourage your kingdom's artists to create and display a masterful work of art to bolster your kingdom's reputation. Attempt a basic @Check[arts|dc:resolve(@kingdom.control.dc)] check; the result affects either Fame or Infamy (depending on the type of kingdom you're running). Create a Masterpiece may be attempted only once per Kingdom turn regardless of the number of leaders pursuing activities.</p>\n<hr />\n<p><strong>Critical Success</strong> Gain 1 Fame or Infamy point immediately, and at the start of your next Kingdom turn, gain 1 additional Fame or Infamy point. Immediately roll 2 Resource Dice. Gain RP equal to the result.</p>\n<p><strong>Success</strong> Gain 1 Fame or Infamy point immediately.</p>\n<p><strong>Failure</strong> Your attempt to create a masterpiece fails.</p>\n<p><strong>Critical Failure</strong> Not only does your attempt to create a masterpiece fail, it does so in a dramatic and humiliating way. Lose 1 Fame or Infamy point; if you have no Fame or Infamy points to lose, instead gain [[/r 1d4 #Unrest]]{1d4 Unrest}.</p>"
     },
     "Creative Solution": {
       "name": "Creative Solution",
       "description": "<p>You work with your kingdom's scholars, thinkers, and practitioners of magical and mundane experimentation to come up with new ways to resolve issues when business as usual is just not working. Attempt a basic @Check[scholarship|dc:resolve(@kingdom.control.dc)] check.</p>\n<hr />\n<p><strong>Critical Success</strong> You can call upon the solution to aid in resolving any Kingdom skill check made during the remainder of this Kingdom turn. Do so when a Kingdom skill check is rolled, but before you learn the result. Immediately reroll that check with a +2 circumstance bonus; you must take the new result. If you don't use your Creative Solution by the end of this turn, you lose this benefit and gain 10 kingdom XP instead.</p>\n<p><strong>Success</strong> As critical success, but the Creative Solution costs the kingdom 1d4 RP to research. This cost is paid now, whether or not you use your Creative Solution.</p>\n<p><strong>Failure</strong> Your attempt at researching a Creative Solution costs the kingdom 2d6 RP but is ultimately a failure. It provides no advantage.</p>\n<p><strong>Critical Failure</strong> As failure, but your scholars and thinkers are so frustrated that you take a –1 circumstance penalty to Culture-based checks until the end of the next Kingdom turn.</p>\n<p><strong>Special</strong> You cannot influence a check with Supernatural Solution and Creative Solution simultaneously.</p>"
     },
     "Crush Dissent": {
-      "name": "Crush Dissent"
+      "name": "Crush Dissent",
+      "description": "<p>Your rule brooks no dissent and stamps out traitors, making harsh examples of them. Once per Kingdom turn when you gain Unrest, you can attempt to crush the dissent by attempting a basic @Check[warfare|dc:resolve(@kingdom.control.dc)] check. On a success, the Unrest increase is canceled, but on a critical failure, the Unrest increase is doubled. In addition, you gain a +1 status bonus to checks to resolve dangerous kingdom events that involve internal bickering, such as Feud.</p>",
+      "prerequisites": [
+        {
+          "value": "trained in Warfare"
+        }
+      ]
     },
     "Darkvision": {
       "name": "Darkvision",
@@ -151,7 +159,13 @@
       "description": "<p>The army has performed an Army activity with such speed that it can be used to attempt a second Army activity immediately, but doing so causes it to lose the efficient condition. The second Army activity suffers a –5 penalty on its check, and the result of this second Army activity check cannot grant the efficient condition. If the army doesn’t attempt a second Army activity, it instead loses the efficient condition and reduces the value of one condition of its choice by 1.</p>"
     },
     "Endure Anarchy": {
-      "name": "Endure Anarchy"
+      "name": "Endure Anarchy",
+      "description": "<p>Your kingdom holds together even in the midst of extreme peril. If your kingdom’s Unrest is 6 or higher and you use a kingdom activity that decreases Unrest, decrease the Unrest by an additional 1. You do not fall into anarchy unless your kingdom’s Unrest reaches 24 (see last paragraph of Step 2: Adjust Unrest on page 538).</p>",
+      "prerequisites": [
+        {
+          "value": "Loyalty 14"
+        }
+      ]
     },
     "Engaged": {
       "name": "Engaged",
@@ -194,7 +208,8 @@
       "description": "<p>Requirement Flexible Tactics Trigger Your army succeeds at a morale check. Your army feigns defeat to trick an enemy army. Attempt a Morale check against a target army. Critical Success The target army is caught off guard by your army’s deception. It becomes outflanked and is unable to take reactions until the start of your next turn. Success The target army is caught off guard by your army’s deception and is outflanked until the start of its next turn. Critical Failure The enemy anticipated your tactic and moves to take advantage of the situation. Your army becomes outflanked until the start of your next turn.</p>"
     },
     "Fame and Fortune": {
-      "name": "Fame and Fortune"
+      "name": "Fame and Fortune",
+      "description": "<p>Your kingdom’s reputation has spread far and wide, bringing in visitors to behold the spectacle of your greatness and pay their respects. Whenever you achieve a critical success on any Kingdom skill check during the Activity phase of a Kingdom turn, gain 1 bonus Resource Die at the start of your next Kingdom turn.</p>"
     },
     "Favored Land": {
       "name": "Favored Land",
@@ -233,14 +248,21 @@
       "description": "<p>The army is in a defensive position as the result of a Garrison Army activity. While fortified, enemy armies cannot engage the army and the army cannot engage enemy armies. A fortified army gains a +4 item bonus to its AC and to Morale checks made to rally. A fortified army that uses a maneuver war action immediately loses its fortified condition.</p>"
     },
     "Fortified Fiefs": {
-      "name": "Fortified Fiefs"
+      "name": "Fortified Fiefs",
+      "description": "<p>Your vassals take their duty to protect those under their stewardship seriously, and your engineers emphasize the value of a strong defense when it comes to building settlements and fortifications. You gain a +2 circumstance bonus to checks attempted as part of the Fortify Hex activity and on activities to build or repair a Barracks, Castle, Garrison, Keep, Stone Wall, or Wooden Wall. In addition, you gain a +1 status bonus to all kingdom checks attempted during dangerous events that directly impact your settlements’ defenses.</p>",
+      "prerequisites": [
+        {
+          "value": "trained in Defense"
+        }
+      ]
     },
     "Fortify Hex": {
       "name": "Fortify Hex",
       "description": "<p>Your command your engineers to construct a protected encampment, such as a fort or barbican, to serve as a defensive post in the hex. Spend RP as determined by the hex's most inhospitable terrain (see the Building on Rough Terrain sidebar on page 519). Then attempt a basic @Check[defense|dc:resolve(@kingdom.control.dc)] check. A fortified hex grants an additional bonus in warfare (see Appendix 3), but also gives traveling PCs a place to rest that prevents wandering monsters from interrupting their rest.</p>\n<hr />\n<p><strong>Critical Success</strong> You find a defensible position for your fortification and finish construction efficiently. Gain a refund of half the RP you spent to build in the hex, then reduce Unrest by 1.</p>\n<p><strong>Success</strong> You establish your fortification in the hex. Reduce Unrest by 1.</p>\n<p><strong>Failure</strong> You fail to fortify the hex.</p>\n<p><strong>Critical Failure</strong> Your attempt ends in disaster. Not only do you fail to build a structure, but you lose several workers to an accident, banditry, a vicious monster, or some other unforeseen occurrence. Gain 1 Unrest.</p>"
     },
     "Free and Fair": {
-      "name": "Free and Fair"
+      "name": "Free and Fair",
+      "description": "<p>Your reputation for transparency and fairness in conducting elections, appointments, and other changes in government inspires tremendous public trust. You gain a +2 circumstance bonus to Loyalty-based checks attempted as part of the New Leadership and Pledge of Fealty activities. If you fail or critically fail such a check, you can spend 2 RP to reroll the check (but without the +2 circumstance bonus); attempting this adds the Fortune trait. You must take the result of the second roll, even if it is worse than the original roll.</p>"
     },
     "Garrison Army": {
       "name": "Garrison Army",
@@ -283,10 +305,17 @@
       "description": "<p>You send spies out to gather intelligence on a neighboring nation, a cult or thieves' guild within your borders, an unclaimed Freehold, or even an unexplored adventure site. Alternately, you can simply send your spies out to investigate the current health of your kingdom. Attempt a basic @Check[intrigue|dc:resolve(@kingdom.control.dc)] check.</p>\n<hr />\n<p><strong>Critical Success</strong> You learn something valuable or helpful. If you were infiltrating a specific target, the GM decides what is learned, but the information is exact and precise. For example, if you were infiltrating an unexplored ruin, you might learn that the site is infested with web lurkers and spider swarms. If you were investigating your kingdom's health, your spies reveal easy methods to address citizen dissatisfaction, allowing you to choose one of the following: reduce Unrest by 1d4 or reduce a Ruin of your choice by 1.</p>\n<p><strong>Success</strong> You learn something helpful about the target, but the information is vague and imprecise. For example, if you were infiltrating the same ruin mentioned in the critical success above, you might learn that some sort of aberration uses the ruins as its lair. If you were investigating your kingdom's health, your spies learn enough that you can take action. Reduce your kingdom's Unrest by 1.</p>\n<p><strong>Failure</strong> Your spies fail to learn anything of import, but they are not themselves compromised.</p>\n<p><strong>Critical Failure</strong> You never hear from your spies again, but someone certainly does! You take a –2 circumstance penalty on all kingdom checks until the end of the next Kingdom turn as counter-infiltration from an unknown enemy tampers with your kingdom's inner workings.</p>"
     },
     "Insider Trading": {
-      "name": "Insider Trading"
+      "name": "Insider Trading",
+      "description": "<p>Your leading citizens share valuable business information with one another and with associates in other lands, and they hire one another’s workers to supply the labor they need to fuel their production. You gain a +1 status bonus to Establish Work Site, Establish Trade Agreement, and Trade Commodities activities. In addition, gain 1 bonus Resource Die at the start of each Kingdom turn.</p>",
+      "prerequisites": [
+        {
+          "value": "trained in Industry"
+        }
+      ]
     },
     "Inspiring Entertainment": {
-      "name": "Inspiring Entertainment"
+      "name": "Inspiring Entertainment",
+      "description": "<p>Your kingdom’s artists and entertainers are talented and prolific, and there’s never a shortage of new plays, operas, novels, music, sculptures, paintings, or other forms of distraction to entertain the citizens, even during times of upheaval. When you check for Unrest during the Upkeep phase of a Kingdom turn, you may roll a Culture-based check rather than a Loyalty-based check to determine the outcome. Your kingdom also gains a +2 status bonus to all Culture-based skill checks whenever your kingdom has at least 1 Unrest.</p>"
     },
     "Irrigation": {
       "name": "Irrigation",
@@ -301,14 +330,26 @@
       "description": "<p>The commander's swift, decisive directions help the army attack more accurately. If an army attacks the same target a second time in a round, its multiple attack penalty is –4 rather than –5, and if they attack that same army a third time in a round, its multiple attack penalty is –8 rather than –10.</p>"
     },
     "Kingdom Assurance": {
-      "name": "Kingdom Assurance"
+      "name": "Kingdom Assurance",
+      "description": "<p>Even when things go poorly in other areas, you can count on consistency in carrying out kingdom activities with a chosen skill. Choose one Kingdom skill in which your kingdom is trained. Once per Kingdom turn, when you would attempt a skill check for that skill, you can forgo rolling and instead take a result equal to 10 + your proficiency bonus; do not apply any other bonuses, penalties, or modifiers to this result.</p>\n<p><strong>Special</strong> You can select this feat multiple times. Each time, choose a different skill and gain the benefits of this feat for that skill.</p>",
+      "prerequisites": [
+        {
+          "value": "trained in at least three skills"
+        }
+      ]
     },
     "Life Of Luxury": {
       "name": "Life Of Luxury",
       "description": "<p>Your people lavish you with every creature comfort. This is identical to Fine Living, but all PC leaders enjoy an Extravagant standard of living (Core Rulebook294) at no cost whenever they’re in the kingdom.</p>\n<p>You gain a +2 circumstance bonus to all checks made to Craft or Earn Income while in your kingdom.</p>"
     },
     "Liquidate Resources": {
-      "name": "Liquidate Resources"
+      "name": "Liquidate Resources",
+      "description": "<p>Your kingdom’s economy can liquidate resources in an emergency when funding runs out. The first time during a Kingdom turn in which you are forced to spend RP as the result of a failed skill check or a dangerous event, and that expense reduces you to 0 RP, you may instead reduce your RP to 1 and treat the expense as if it were paid in full. At the start of your next Kingdom turn, roll 4 fewer Resource Dice than normal.</p>",
+      "prerequisites": [
+        {
+          "value": "Economy 14"
+        }
+      ]
     },
     "Live off the Land": {
       "name": "Live off the Land",
@@ -335,7 +376,13 @@
       "description": "<p>The army’s movement is severely impaired. It may be bogged down in mud, snow, underbrush, rubble, or similar terrain, encumbered by carrying heavy burdens, or any other reason. Mired always has a value. A mired army takes a circumstance penalty on all maneuvers equal to its mired value and to Deploy Army checks. If an army ever becomes mired 4, it becomes pinned.</p>"
     },
     "Muddle Through": {
-      "name": "Muddle Through"
+      "name": "Muddle Through",
+      "description": "<p>Your people are independent-minded and take care of the small things around the kingdom, not letting them pile up into bigger problems. Increase two of your Ruin thresholds by 1 and one of them by 2.</p>",
+      "prerequisites": [
+        {
+          "value": "trained in Wilderness"
+        }
+      ]
     },
     "New Leadership": {
       "name": "New Leadership",
@@ -374,7 +421,13 @@
       "description": "<p>When your representatives encounter freeholders, refugees, independent groups, or other bands of individuals gathered in the wilderness who aren't already part of a nation, you can offer them a place in your kingdom, granting them the benefits of protection, security, and prosperity in exchange for their fealty. The benefits granted to your kingdom can vary wildly, but often manifest as one-time boons to your commodities or unique bonuses against certain types of events. The adventure text in this campaign offers numerous examples of groups who could accept a Pledge of Fealty. You can attempt this skill check with Intrigue, Statecraft, or Warfare; however, certain groups will respond better (or worse) to specific skills. The DC is the group's Negotiation DC (see the sidebar on page 519).</p>\n<hr />\n<p><strong>Critical Success</strong> The group becomes part of your kingdom, granting the specific boon or advantage listed in that group's entry. If you haven't already claimed the hex in which the group dwells, you immediately do so, gaining 10 kingdom XP and increasing your kingdom's Size by 1 (this affects all statistics determined by Size; see page 532). If the hex doesn't share a border with your kingdom, it becomes a secondary territory and checks involving this location take a Control penalty.</p>\n<p><strong>Success</strong> As success, but you don't claim the hex the group is in. Immediately roll 1 Resource Die. You must spend RP equal to the result to integrate the group into your kingdom.</p>\n<p><strong>Failure</strong> The group refuses to pledge to you at this time. You can attempt to get them to Pledge Fealty next turn. Increase Unrest by 1.</p>\n<p><strong>Critical Failure</strong> The group refuses to pledge to you— furthermore, it will never Pledge Fealty to your kingdom, barring significant in-play changes or actions by the PCs (subject to the GM's approval). The group's potentially violent rebuff of your offer increases Unrest by 2 and increases a Ruin of your choice by 1</p>"
     },
     "Practical Magic": {
-      "name": "Practical Magic"
+      "name": "Practical Magic",
+      "description": "<p>Magic has an honored place in your society, and your people incorporate it into their everyday work to make life easier. You gain a +1 status bonus to Magic checks, and you can use Magic checks in place of Engineering checks. In addition, as magic-wielding NPCs find your nation a comfortable place to live and work, you reduce the cost of using the Hire Adventurers activity to 1 RP.</p>",
+      "prerequisites": [
+        {
+          "value": "trained in Magic"
+        }
+      ]
     },
     "Prognostication": {
       "name": "Prognostication",
@@ -385,21 +438,34 @@
       "description": "<p>Attempt a basic @Check[defense|dc:resolve(@kingdom.control.dc)] check to organize and encourage your settlements' healers, apothecaries, medics, and other caregivers to provide care and support for citizens in need.</p>\n<hr />\n<p><strong>Critical Success</strong> You provide unexpectedly compassionate support for the people. Reduce Unrest by 1 and reduce one Ruin of your choice by 1.</p>\n<p><strong>Success</strong> Your care soothes the worries and fears of the populace; reduce Unrest by 1.</p>\n<p><strong>Failure</strong> You don't provide any notable care for the citizens, but at least you don't make things worse.</p>\n<p><strong>Critical Failure</strong> Your attempt to provide care backfires. Increase your Unrest or a Ruin of your choice by 1.</p>"
     },
     "Pull Together": {
-      "name": "Pull Together"
+      "name": "Pull Together",
+      "description": "<p>Your people are very reliable, and their swift decision-making keeps most projects from getting too far off track. Once per Kingdom turn when you roll a critical failure on a Kingdom skill check, attempt a DC 11 flat check. If this succeeds, your citizens heed the call to put in extra work to mitigate the disaster; treat the Kingdom skill check result as failure instead. The DC of this flat check increases by 5 each time you subsequently use it, but it decreases by 1 (to a minimum of 11) for each Kingdom turn that passes when you do not use it.</p>",
+      "prerequisites": [
+        {
+          "value": "trained in Politics"
+        }
+      ]
     },
     "Purchase Commodities": {
       "name": "Purchase Commodities",
       "description": "<p>You can spend RP to Purchase Commodities, but doing so is more expensive than gathering them or relying upon trade agreements. When you Purchase Commodities, select the Commodity you wish to purchase (Food, Lumber, Luxuries, Ore, or Stone). Expend 8 RP if you're purchasing Luxuries or 4 RP if you're purchasing any other Commodity. Then attempt a basic @Check[trade|dc:resolve(@kingdom.control.dc)] check.</p>\n<hr />\n<p><strong>Critical Success</strong> You immediately gain 4 Commodities of the chosen type and 2 Commodities of any other type (except Luxuries).</p>\n<p><strong>Success</strong> You gain 2 Commodities of the chosen type.</p>\n<p><strong>Failure</strong> You gain 1 Commodity of the chosen type.</p>\n<p><strong>Critical Failure</strong> You gain no Commodities.</p>"
     },
     "Quality of Life": {
-      "name": "Quality of Life"
+      "name": "Quality of Life",
+      "description": "<p>Your kingdom’s robust economy makes the creature comforts of civilization more readily available to all, and even finer luxuries are more easily had. The first time you gain Luxury Commodities in a Kingdom turn, increase the total gained by 1. All of your settlements are treated as 1 level higher than their actual level for the purposes of determining what sorts of magic items might be offered for sale at their markets and shops.</p>"
     },
     "Quell Unrest": {
       "name": "Quell Unrest",
       "description": "<p>You send your agents among the citizenry with the charge of suppressing dissent and calming unrest. You can attempt a basic @Check[arts|dc:resolve(@kingdom.control.dc)], @Check[folklore|dc:resolve(@kingdom.control.dc)], @Check[intrigue|dc:resolve(@kingdom.control.dc)], @Check[magic|dc:resolve(@kingdom.control.dc)], @Check[politics|dc:resolve(@kingdom.control.dc)], or @Check[warfare|dc:resolve(@kingdom.control.dc)] check to Quell Unrest, but you can never use the same skill for this activity in consecutive Kingdom turns. This activity cannot be attempted more than once per Kingdom turn.</p>\n<hr />\n<p><strong>Critical Success</strong> Reduce Unrest by [[/r 1d6]].</p>\n<p><strong>Success</strong> Reduce Unrest by 1.</p>\n<p><strong>Failure</strong> You fail to reduce Unrest.</p>\n<p><strong>Critical Failure</strong> You not only fail to reduce Unrest, but actually incite further anger among the citizenry. Choose one of the following: increase Unrest by 1d4 or increase two Ruins of your choice by 1.</p>"
     },
     "Quick Recovery": {
-      "name": "Quick Recovery"
+      "name": "Quick Recovery",
+      "description": "<p>Your kingdom recovers more quickly from danger and disaster. Whenever you attempt a skill check to end an ongoing harmful kingdom event, you gain a +4 status bonus to the check.</p>",
+      "prerequisites": [
+        {
+          "value": "Stability 14"
+        }
+      ]
     },
     "Rally": {
       "name": "Rally",
@@ -462,7 +528,8 @@
       "description": "<p>The commander drills the army in precision ranged attacks. You gain a +1 status bonus on attacks with ranged Strikes, but suffer a –2 status bonus on attacks with melee Strikes. At 9th level, the penalty to melee Strikes is reduced to –1, and at 15th level the penalty to melee Strikes is removed. The army can use the Covering Fire tactical war action.</p>"
     },
     "Skill Training": {
-      "name": "Skill Training"
+      "name": "Skill Training",
+      "description": "<p>Your kingdom receives the trained proficiency rank in a Kingdom skill of your choice. You can select this feat multiple times, choosing a new skill each time.</p>"
     },
     "Supernatural Solution": {
       "name": "Supernatural Solution",
@@ -499,6 +566,7 @@
       "converter": "translateDualLanguage",
       "path": "name"
     },
+    "prerequisites": "system.prerequisites.value",
     "rules": {
       "converter": "translateRules",
       "path": "system.rules"
