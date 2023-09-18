@@ -19,7 +19,7 @@
       "description": "<p>Dein Verstand arbeitet in ähnlich unergründlichen Prozessen wie bei nichtmenschlichen Aberrationen. Du kannst einmal am Tag als immanenten okkulten Zauber <em>@UUID[Compendium.pf2e.spells-srd.Item.D442XMADp01qJ7Cs]{Gedankenverbindung}</em> wirken, dabei aber nur Aberrationen als Ziel wählen.</p>"
     },
     "Able Ritualist": {
-      "name": "Fähiger Ritualist",
+      "name": "Fähiger Ritualist (Mystischer Forscher)",
       "description": "<p>Dein Wissen über Rituale macht dich zu einem fähigen Teilnehmer. Wenn du Fertigkeitswürfe als Teil deiner Beteiligung an einem Ritual ablegst, so erlangst du einen Situationsbonus von +2 auf Primär- und Sekundärwürfe.</p>",
       "prerequisites": [
         {
@@ -219,6 +219,15 @@
     "Acute Vision": {
       "name": "Scharfe Sicht",
       "description": "<p>Im Kampfrausch siehst du schärfer – du erlangst dann @UUID[Compendium.pf2e.ancestryfeatures.Item.HHVQDp61ehcpdiU8]{Dunkelsicht}.</p>"
+    },
+    "Adamantine Fists": {
+      "name": "Adamantine Fists",
+      "description": "<p>You imbue your unarmed strikes with one of the strongest metals. Your stonestrike attacks are treated as adamantine.</p>",
+      "prerequisites": [
+        {
+          "value": "Ore Fists"
+        }
+      ]
     },
     "Adapted Cantrip": {
       "name": "Adaptierter Zaubertrick",
@@ -1012,7 +1021,7 @@
     },
     "Alloy Flesh and Steel": {
       "name": "Alloy Flesh and Steel",
-      "description": "<p>Elemental energy replaces every cell of your body with raw metal. You gain the benefits of the ferrous form spell (except you can't cast needle darts) until the end of your next turn. You can Sustain the impulse up to 1 minute, and when you do, you can Raise a metal Shield if you're wielding one. Your metal Elemental Blasts deal an additional die of damage. If you suspend any conditions with Alloy Flesh and Steel, when it ends, you're temporarily immune to Alloy Flesh and Steel for 1 hour.</p>\n<hr />\n<p><strong>Level (16th)</strong> The resistance is 15.</p>"
+      "description": "<p>Elemental energy replaces every cell of your body with raw metal. You gain the benefits of the <em>@UUID[Compendium.pf2e.spells-srd.Item.89Hj5QuqvcwVXcqj]{Ferrous Form}</em> spell (except you can't cast <em>needle darts</em>) until the end of your next turn. You can Sustain the impulse up to 1 minute, and when you do, you can Raise a metal Shield if you're wielding one. Your metal Elemental Blasts deal an additional die of damage. If you suspend any conditions with Alloy Flesh and Steel, when it ends, you're temporarily immune to Alloy Flesh and Steel for 1 hour.</p>\n<hr />\n<p><strong>Level (16th)</strong> The resistance is 15.</p>"
     },
     "Alluring Performance": {
       "name": "Blendende Darbietung",
@@ -4047,7 +4056,7 @@
     },
     "Call Worm Spirit": {
       "name": "Call Worm Spirit",
-      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You call forth a ghostly manifestation of the worm spirit. Choose an intersection on the ground within 60 feet; the ghostly maw of a worm emerges from the ground, attacking all creatures in a @Template[type:burst|distance:10]. Each creature in the area must attempt a @Check[type:reflex|resolve(@actor.system.attributes.classOrSpellDC.value)] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes @Damage[(1d10+13)[bludgeoning]] damage as it is battered by the worm's body.</p>\n<p><strong>Failure</strong> The target takes @Damage[(3d10+15)[piercing]] damage as it is bitten by the worm. The target is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} until the end of its next turn.</p>\n<p><strong>Critical Failure</strong> As failure, but the damage increases to @Damage[(6d10+30)[bludgeoning]] and the target is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>\n<hr />\n<p><em>Note: A DC was not provided for this ability by Paizo. The button above uses the better of your class or spell DC.</em></p>",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You call forth a ghostly manifestation of the worm spirit. Choose an intersection on the ground within 60 feet; the ghostly maw of a worm emerges from the ground, attacking all creatures in a @Template[type:burst|distance:10]. Each creature in the area must attempt a @Check[type:reflex|dc:resolve(@actor.system.attributes.classOrSpellDC.value)] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes @Damage[(1d10+13)[bludgeoning]] damage as it is battered by the worm's body.</p>\n<p><strong>Failure</strong> The target takes @Damage[(3d10+15)[piercing]] damage as it is bitten by the worm. The target is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} until the end of its next turn.</p>\n<p><strong>Critical Failure</strong> As failure, but the damage increases to @Damage[(6d10+30)[bludgeoning]] and the target is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>\n<hr />\n<p><em>Note: A DC was not provided for this ability by Paizo. The button above uses the better of your class or spell DC.</em></p>",
       "prerequisites": [
         {
           "value": "Worm Caller Dedication"
@@ -5909,7 +5918,7 @@
     },
     "Crimson Breath": {
       "name": "Crimson Breath",
-      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You gain a fire breath weapon similar to that of a crimson worm. You breathe a blast of flame in a @Template[type:cone|distance:30] that deals @Damage[((ceil(max(0,((@actor.level - 13)/2)))*2)+12)d6[fire]] damage to all creatures in the area (@Check[type:reflex|resolve(@actor.system.attributes.classOrSpellDC.value)|basic:true] save). This damage increases by 2d6 at 14th level and every 2 levels thereafter.</p>\n<hr />\n<p><em>Note: A DC was not provided for this ability by Paizo. The button above uses the better of your class or spell DC.</em></p>",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You gain a fire breath weapon similar to that of a crimson worm. You breathe a blast of flame in a @Template[type:cone|distance:30] that deals @Damage[((ceil(max(0,((@actor.level - 13)/2)))*2)+12)d6[fire]] damage to all creatures in the area (@Check[type:reflex|dc:resolve(@actor.system.attributes.classOrSpellDC.value)|basic:true] save). This damage increases by 2d6 at 14th level and every 2 levels thereafter.</p>\n<hr />\n<p><em>Note: A DC was not provided for this ability by Paizo. The button above uses the better of your class or spell DC.</em></p>",
       "prerequisites": [
         {
           "value": "Worm Caller Dedication"
@@ -6444,7 +6453,7 @@
     },
     "Deadly Poison Weapon": {
       "name": "Tödliches Waffe vergiften",
-      "description": "<p>Deine Gifte sind verheerend wirksam. Trägst du mittels @UUID[Compendium.pf2e.feats-srd.Item.ALbosSUygdq4T1Yk]{Waffe vergiften} ein einfaches Gift auf, verursacht es @Damage[4d4[poison]]{4W4 Punkte Giftschaden} statt 1W4. Wenn du auf deine Waffe ein Verwundungsgift aufträgst, steigt der SG des Rettungswurfes gegen das Gift um 2 (maximal bis zu deinem Klassen-SG).</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.ed9iJxdHuft6bDFF]{Effekt: Tödliches Waffe vergiften}</p>",
+      "description": "<p>Deine Gifte sind verheerend wirksam. Trägst du mittels @UUID[Compendium.pf2e.feats-srd.Item.ALbosSUygdq4T1Yk]{Waffe vergiften} ein einfaches Gift auf, verursacht es @Damage[4d4[poison]]{4W4 Punkte Giftschaden} statt 1W4. Wenn du auf deine Waffe ein Verwundungsgift aufträgst, steigt der SG des Rettungswurfes gegen das Gift um 2 (maximal bis zu deinem Klassen-SG).</p>",
       "prerequisites": [
         {
           "value": "Verbessertes Waffe vergiften"
@@ -6561,7 +6570,7 @@
     },
     "Deep Freeze": {
       "name": "Tiefkühlung",
-      "description": "<p>Du lässt einen Strahl unterkühlter Flüssigkeit aus deiner Innovation ab und fügst einem Gegner damit Schaden zu und verlangsamst ihn. Wähle eine Kreatur innerhalb von 60 Fuß/18 m. Diese Kreatur erleidet [[/r @actor.level[cold]]]{Kälteschaden in Höhe deiner Stufe}, sowie zusätzliche Auswirkungen abhängig vom Ergebnis seines @Check[type:reflex|dc:resolve(@actor.attributes.classDC.value)].</p>\n<p><strong>Kritischer Erfolg</strong> Das Ziel ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Das Ziel erleidet die Hälfte des Schadens, sowie 1 Runde lang einen Zustandsabzug von -1,50 m auf seine Bewegungsrate.</p>\n<p><strong>Fehlschlag</strong> Das Ziel erleidet vollen Schaden, sowie 1 Runde lang einen Zustandsabzug von -3 m auf seine Bewegungsrate.</p>\n<p><strong>Kritischer Fehlschlag</strong> Das Ziel erleidet doppelten Schaden und erhält 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1} sowie 1 Runde lang einen Zustandsabzug von -4,50 m auf seine Bewegungsrate.</p>\n<p><strong>Instabile Funktion</strong> Deine Innovation stößt einen riesigen Kegel aus unterkühlter Flüssigkeit aus, was zu kaskadenartigen Misserfolgen führen kann. Füge der Tiefkühlung die Eigenschaft Instabil hinzu. Die Fähigkeit betrifft alle Kreaturen innerhalb eines @Template[type:cone|distance:60]{60 Fuß/18 m-Kegels} statt nur ein einzelnes Ziel und verursacht [[/r 2*@actor.level[cold]]]{Kälteschaden in Höhe des doppelten deiner Stufe} statt gleich deiner Stufe.</p>\n<p>Wenn du das Klassenmerkmal Revolutionäre Innovation besitzt, kannst du zwischen einem 60 Fuß/18 m-Kegel oder einem @Template[type:cone|distance:90]{90 Fuß/27 m-Kegel} wählen, wenn du instabile Tiefkühlung einsetzt.</p>\n<p>@Check[type:flat|dc:17|name:Unstable Flat Check]{Instabil-Prüfung}</p>\n<p><strong>Speziell</strong> Wenn deine Innovation ein Konstrukt ist, kann es diese Aktion an deiner Stelle ausführen.</p>"
+      "description": "<p>Du lässt einen Strahl unterkühlter Flüssigkeit aus deiner Innovation ab und fügst einem Gegner damit Schaden zu und verlangsamst ihn. Wähle eine Kreatur innerhalb von 60 Fuß/18 m. Diese Kreatur erleidet [[/r @actor.level[cold]]]{Kälteschaden in Höhe deiner Stufe}, sowie zusätzliche Auswirkungen abhängig vom Ergebnis seines @Check[type:reflex|dc:resolve(@actor.attributes.classDC.value)].</p>\n<p><strong>Kritischer Erfolg</strong> Das Ziel ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Das Ziel erleidet die Hälfte des Schadens, sowie 1 Runde lang einen Zustandsmalus von -5 Fuß/1,50 m auf seine Bewegungsrate.</p>\n<p><strong>Fehlschlag</strong> Das Ziel erleidet vollen Schaden, sowie 1 Runde lang einen Zustandsmalus von -10 Fuß/3 m auf seine Bewegungsrate.</p>\n<p><strong>Kritischer Fehlschlag</strong> Das Ziel erleidet doppelten Schaden und erhält 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1} sowie 1 Runde lang einen Zustandsmalus von -15 Fuß/4,50 m auf seine Bewegungsrate.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.BBGg5gpMmuBSo7Mi]{Effekt: Tiefkühlung}</p>\n<p><strong>Instabile Funktion</strong> Deine Innovation stößt einen riesigen Kegel aus unterkühlter Flüssigkeit aus, was zu kaskadenartigen Misserfolgen führen kann. Füge der Tiefkühlung die Eigenschaft Instabil hinzu. Die Fähigkeit betrifft alle Kreaturen innerhalb eines @Template[type:cone|distance:60]{60 Fuß/18 m-Kegels} statt nur ein einzelnes Ziel und verursacht [[/r 2*@actor.level[cold]]]{Kälteschaden in Höhe des doppelten deiner Stufe} statt gleich deiner Stufe.</p>\n<p>Wenn du das Klassenmerkmal Revolutionäre Innovation besitzt, kannst du zwischen einem 60 Fuß/18 m-Kegel oder einem @Template[type:cone|distance:90]{90 Fuß/27 m-Kegel} wählen, wenn du instabile Tiefkühlung einsetzt.</p>\n<p>@Check[type:flat|dc:17|name:Unstable Flat Check]{Instabil-Prüfung}</p>\n<p><strong>Speziell</strong> Wenn deine Innovation ein Konstrukt ist, kann es diese Aktion an deiner Stelle ausführen.</p>"
     },
     "Deep Lore": {
       "name": "Tiefgreifendes Wissen",
@@ -7383,7 +7392,7 @@
     },
     "Disturbing Knowledge": {
       "name": "Verstörendes Wissen",
-      "description": "<p><strong>Voraussetzungen</strong> Meister in Okkultismus</p>\n<hr />\n<p>Du stößt eine Litanei schrecklicher Namen, Prophezeiungen und Beschreibungen von Reichen jenseits sterblicher Vorstellungskraft aus, die du bei deinen Studien verbotener Bücher und Schriften gelernt hast. Selbst diejenigen, die deine Sprache nicht verstehen, werden durch diese schlimmen Geheimnisse beunruhigt. Lege einen Fertigkeitswurf für Okkultismus ab und vergleiche das Ergebnis mit dem Willens-RW eines Gegners im Umkreis von 9 m. Wenn du den Kompetenzgrad Legende in Okkultismus erlangt hast, kannst du deinen Fertigkeitswurf in Okkultismus mit dem Willens-RW einer beliebigen Anzahl von Gegnern im Umkreis von 9 m vergleichen. Diese Kreaturen sind 24 Stunden lang zeitweise immun gegen den Effekt.</p>\n<p><strong>Kritischer Erfolg</strong> Das Ziel ist 1 Runde lang @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Verwirrt} und erleidet den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}.</p>\n<p><strong>Erfolg</strong> Das Ziel erleidet den Zustand Verängstigt 1.</p>\n<p><strong>Fehlschlag</strong> Das Ziel erleidet keinen Effekt.</p>\n<p><strong>Kritischer Fehlschlag</strong> Du wirst von deinen eigenen Worten über die Maßen eingenommen und erleidest selbst den Zustand Verängstigt 1.</p>",
+      "description": "<p>Du stößt eine Litanei schrecklicher Namen, Prophezeiungen und Beschreibungen von Reichen jenseits sterblicher Vorstellungskraft aus, die du bei deinen Studien verbotener Bücher und Schriften gelernt hast. Selbst diejenigen, die deine Sprache nicht verstehen, werden durch diese schlimmen Geheimnisse beunruhigt. Lege einen Fertigkeitswurf für @Check[type:occultism|defense:will]{Okkultismus} ab und vergleiche das Ergebnis mit dem Willens-RW eines Gegners im Umkreis von 30 Fuß/9 m. Wenn du den Kompetenzgrad Legende in Okkultismus erlangt hast, kannst du deinen Fertigkeitswurf in Okkultismus mit dem Willens-RW einer beliebigen Anzahl von Gegnern im Umkreis von @Template[type:emanation|distance:30]{30 Fuß/9 m} vergleichen. Diese Kreaturen sind 24 Stunden lang zeitweise immun gegen den Effekt.</p>\n<p><strong>Kritischer Erfolg</strong> Das Ziel ist 1 Runde lang @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Verwirrt} und erleidet den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}.</p>\n<p><strong>Erfolg</strong> Das Ziel erleidet den Zustand Verängstigt 1.</p>\n<p><strong>Fehlschlag</strong> Das Ziel erleidet keinen Effekt.</p>\n<p><strong>Kritischer Fehlschlag</strong> Du wirst von deinen eigenen Worten über die Maßen eingenommen und erleidest selbst den Zustand Verängstigt 1.</p>",
       "prerequisites": [
         {
           "value": "Kompetenzgrad Meister in Okkultismus"
@@ -8085,7 +8094,7 @@
     },
     "Drow Shootist Dedication": {
       "name": "Dunkelelfischer-Handarmbrustschützen-Zugang",
-      "description": "<p>Du übst mit der Handarmbrust, wann immer du kannst, um schneller ziehen und genauer schießen zu können. Wenn du ein Klassenmerkmal erlangst, welches dir im Umgang mit einer beliebigen Waffe den Kompetenzgrad Experte oder besser verleiht, so erlangst du diesen Kompetenzgrad auch im Umgang mit der Handarmbrust. Solltest du wenigstens Experte im Umgang mit einer genutzten Handarmbrust sein, erlangst du Zugang zu ihrem Kritischen Spezialisierungseffekt. Du erlangst ferner die Aktion @UUID[Compendium.pf2e.adventure-specific-actions.Item.Bh1Qnh8JP4CMysRK]{Ziehen und Schießen}.</p>\n<p><strong>Speziell</strong> Du kannst kein weiteres Zugangstalent wählen, bis du nicht wenigstens zwei weitere Talente dieses Archetyps erhalten hast.</p>",
+      "description": "<p>Du übst mit der Handarmbrust, wann immer du kannst, um schneller ziehen und genauer schießen zu können. Wenn du ein Klassenmerkmal erlangst, welches dir im Umgang mit einer beliebigen Waffe den Kompetenzgrad Experte oder besser verleiht, so erlangst du diesen Kompetenzgrad auch im Umgang mit der Handarmbrust. Solltest du wenigstens Experte im Umgang mit einer genutzten Handarmbrust sein, erlangst du Zugang zu ihrem Kritischen Spezialisierungseffekt. Du erlangst ferner die Aktion @UUID[Compendium.pf2e.adventure-specific-actions.Item.Bh1Qnh8JP4CMysRK]{Ziehen und Schießen}.</p>\n<p><strong>Speziell</strong> Du kannst kein weiteres Zugangstalent wählen, bis du nicht wenigstens zwei weitere Talente des Archetyps @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.JzUDumJ3Dlyame4z]{Dunkelelfischer Handarmbrustschütze} erhalten hast.</p>",
       "prerequisites": [
         {
           "value": "Geübt im Umgang mit der Handarmbrust"
@@ -8681,7 +8690,7 @@
     },
     "Eldritch Researcher Dedication": {
       "name": "Mystischer-Forscher-Zugang",
-      "description": "<p>Du erlangst die Fähigkeit, einen einzelnen arkanen oder okkulten Zaubertrick deiner Wahl zu wirken (welcher wie üblich auf einen Zaubergrad in Höhe deiner halben Stufe [aufgerundet] erhöht wird). Solltest du noch nicht im Zauber-SG und Zauberangriffswurf dieser Tradition den Kompetenzgrad Geübt besitzen, so bist du nun Geübt darin; dein magisches Schlüsselattribut ist Intelligenz.</p>\n<p>Unabhängig von deiner Wahl des Zaubertricks erlangst du zudem den Kompetenzgrad Experte in Arkane Künste oder Okkultismus. Du erhältst einen Situationsbonus von +1 auf Würfe für deine gewählte Fertigkeit zum Magie identifizieren und Umsehen.</p>\n<p><strong>Speziell</strong> Du kannst kein weiteres Zugangstalent wählen, bis du nicht wenigstens zwei weitere Talente dieses Archetyps erhalten hast.</p>",
+      "description": "<p>Du erlangst die Fähigkeit, einen einzelnen arkanen oder okkulten Zaubertrick deiner Wahl zu wirken (welcher wie üblich auf einen Zaubergrad in Höhe deiner halben Stufe [aufgerundet] erhöht wird). Solltest du noch nicht im Zauber-SG und Zauberangriffswurf dieser Tradition den Kompetenzgrad Geübt besitzen, so bist du nun Geübt darin; dein magisches Schlüsselattribut ist Intelligenz.</p>\n<p>Unabhängig von deiner Wahl des Zaubertricks erlangst du zudem den Kompetenzgrad Experte in Arkane Künste oder Okkultismus. Du erhältst einen Situationsbonus von +1 auf Würfe für deine gewählte Fertigkeit zum Magie identifizieren und Umsehen.</p>\n<p><strong>Speziell</strong> Du kannst kein weiteres Zugangstalent wählen, bis du nicht wenigstens zwei weitere Talente des Archetyps @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.JBPXisA4IdXI9gVn]{Mystischer Forscher} erhalten hast.</p>",
       "prerequisites": [
         {
           "value": "Geübt in Arkane Künste"
@@ -8743,6 +8752,15 @@
       "prerequisites": [
         {
           "value": "elemental instinct"
+        }
+      ]
+    },
+    "Elemental Existence": {
+      "name": "Elemental Existence",
+      "description": "<p>Your body becomes infused with elemental earth. You gain the @UUID[Compendium.pf2e.feats-srd.Item.ihN8gkHSdPG9Trte]{Adopted Ancestry} feat and gain a 1st level oread ancestry feat as a bonus feat, ignoring the limitations of the lineage trait. When you gain new ancestry feats, you can select oread feats in addition to feats allowed by your ancestry and heritage.</p>",
+      "prerequisites": [
+        {
+          "value": "Stonebound Dedication"
         }
       ]
     },
@@ -8982,7 +9000,7 @@
     },
     "Emblazon Armament": {
       "name": "Heiliges Zeichen",
-      "description": "<p>Du gravierst sorgfältig ein Heiliges Zeichen in die Oberfläche eines körperlichen Gegenstandes und stählst dich für den Kampf. Du kannst 10 Minuten aufwenden, um ein Zeichen deiner Gottheit auf einer Waffe oder einem Schild anzubringen. Das Zeichen verblasst erst nach einem Jahr, sofern du nicht vorher ein Heiliges Zeichen auf einem anderen Gegenstand anbringst. Du kannst stets nur ein solches Heiliges Zeichen besitzen. Ebenfalls kann ein Gegenstand nur ein Heiliges Zeichen tragen, solltest du ein Heiliges Zeichen auf einem bereits derart gezeichneten Gegenstand anbringen, so verschwindet das ältere Zeichen. Der Gegenstand wird zu einem religiösen Zeichen deiner Gottheit und kann als Göttlicher Fokus genutzt, während er das Heilige Zeichen trägt. Nach Art des Gegenstandes erlangt er weitere Vorteile. Er verschafft diese Vorteile aber nur Anhängern jener Gottheit, welcher das Heilige Zeichen zuordnet ist.</p>\n<ul>\n<li><strong>Schild</strong> Der Schild erhält einen Zustandsbonus von +1 auf seine Härte, so dass er bei Nutzung der Reaktion Schildblock den Schaden stärker reduzieren kann.</li>\n<li><strong>Waffe</strong> Der Träger erhält einen Zustandsbonus von +1 auf Schadenswürfe.</li>\n</ul>"
+      "description": "<p>Du gravierst sorgfältig ein Heiliges Zeichen in die Oberfläche eines körperlichen Gegenstandes und stählst dich für den Kampf. Du kannst 10 Minuten aufwenden, um ein Zeichen deiner Gottheit auf einer Waffe oder einem Schild anzubringen. Das Zeichen verblasst erst nach einem Jahr, sofern du nicht vorher ein Heiliges Zeichen auf einem anderen Gegenstand anbringst. Du kannst stets nur ein solches Heiliges Zeichen besitzen. Ebenfalls kann ein Gegenstand nur ein Heiliges Zeichen tragen, solltest du ein Heiliges Zeichen auf einem bereits derart gezeichneten Gegenstand anbringen, so verschwindet das ältere Zeichen. Der Gegenstand wird zu einem religiösen Zeichen deiner Gottheit und kann als Göttlicher Fokus genutzt, während er das Heilige Zeichen trägt. Nach Art des Gegenstandes erlangt er weitere Vorteile. Er verschafft diese Vorteile aber nur Anhängern jener Gottheit, welcher das Heilige Zeichen zuordnet ist.</p>\n<ul>\n<li><strong>Schild</strong> Der Schild erhält einen Zustandsbonus von +1 auf seine Härte, so dass er bei Nutzung der Reaktion Schildblock den Schaden stärker reduzieren kann. @UUID[Compendium.pf2e.feat-effects.Item.o04gwnrVtzWyIEs8]{Effekt: Heiliges Zeichen (Schild)}</li>\n<li><strong>Waffe</strong> Der Träger erhält einen Zustandsbonus von +1 auf Schadenswürfe. @UUID[Compendium.pf2e.feat-effects.Item.U1MpMtRnFqEDBJwd]{Effekt: Heiliges Zeichen (Waffe)}</li>\n</ul>"
     },
     "Emblazon Divinity": {
       "name": "Machtvolle heilige Zeichen",
@@ -10675,7 +10693,7 @@
     },
     "Fangs": {
       "name": "Reisszähne",
-      "description": "<p>Deine Eckzähne sind wahrhafte Reißzähne - lang, spitz und bestens dazu geeignet, blutende Wunden in das Fleisch deiner Feinde zu reißen. Du erlangst einen Waffenlosen Reißzahnangriff, der @Damage[1d6[piercing]]{1W6 Stichschaden} verursacht. Deine Reißzähne gehören dabei der Raufwaffengruppe an und haben die Eigenschaften Ergreifen und Waffenlos.</p>"
+      "description": "<p>Deine Eckzähne sind wahrhafte Reißzähne - lang, spitz und bestens dazu geeignet, blutende Wunden in das Fleisch deiner Feinde zu reißen. Du erlangst einen Waffenlosen Reißzahnangriff, der 1W6 Stichschaden verursacht. Deine Reißzähne gehören dabei der Raufwaffengruppe an und haben die Eigenschaften Ergreifen und Waffenlos.</p>"
     },
     "Fantastic Leap": {
       "name": "Fantastischer Sprung",
@@ -13684,7 +13702,7 @@
     },
     "Haphazard Repair": {
       "name": "Planlose Reparatur",
-      "description": "<p>Du stellst deine Innovation schnell wieder her, aber auf Kosten ihrer Stabilität. Du reparierst deine Innovation fast sofort. Du musst deine Innovation nicht auf eine Oberfläche stellen, aber du musst an sie angrenzend sein (oder sie in der Hand halten oder tragen) und wie üblich über eine Reparaturausrüstung verfügen.</p>\n<p>@Check[type:flat|dc:17|name:Unstable Flat Check|showDC:all|traits:unstable]{Instabil-Prüfung}</p>\n<p>Bei einem Fehlschlag schlägt die Innovation auf spektakuläre (wenn auch harmlose) Weise fehl, wie z.B. ein Rauchstoß oder ein Funkenregen, und kann nicht mehr für weitere instabile Aktionen verwendet werden.</p>\n<p>Bei einem Kritischen Fehlschlag erleidest du außerdem [[/r @actor.level[fire]]]{Feuerschaden in Höhe deiner Stufe}.</p>"
+      "description": "<p>Du stellst deine Innovation schnell wieder her, aber auf Kosten ihrer Stabilität. Du @UUID[Compendium.pf2e.actionspf2e.Item.bT3skovyLUtP22ME]{reparierst} deine Innovation fast sofort. Du musst deine Innovation nicht auf eine Oberfläche stellen, aber du musst an sie angrenzend sein (oder sie in der Hand halten oder tragen) und wie üblich über eine Reparaturausrüstung verfügen.</p>\n<p>@Check[type:flat|dc:17|name:Unstable Flat Check|showDC:all|traits:unstable]{Instabil-Prüfung}</p>\n<p>Bei einem Fehlschlag schlägt die Innovation auf spektakuläre (wenn auch harmlose) Weise fehl, wie z.B. ein Rauchstoß oder ein Funkenregen, und kann nicht mehr für weitere instabile Aktionen verwendet werden.</p>\n<p>Bei einem Kritischen Fehlschlag erleidest du außerdem [[/r @actor.level[fire]]]{Feuerschaden in Höhe deiner Stufe}.</p>"
     },
     "Harbinger's Caw": {
       "name": "Krächzen des Unglücksboten",
@@ -14908,7 +14926,7 @@
     },
     "Improved Poison Weapon": {
       "name": "Verbessertes Waffe vergiften",
-      "description": "<p>Du trägst Gifte so auf, dass ihre schädlichen Effekte maximiert werden. Wenn du eine einzelne Dosis Gift mittels @UUID[Compendium.pf2e.feats-srd.Item.ALbosSUygdq4T1Yk]{Waffe vergiften} aufträgst, verursacht das Gift @Damage[2d4[poison]]{2W4 Punkte Giftschaden} statt @Damage[1d4[poison]]{1W4}. Im Falle eines Kritischen Fehlschlages bei einem Angriffswurf verschwendest du das mittels Waffe vergiften aufgetragene Gift nicht.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.C6H3gF5HTdsIKpOC]{Effekt: Verbessertes Waffe vergiften}</p>",
+      "description": "<p>Du trägst Gifte so auf, dass ihre schädlichen Effekte maximiert werden. Wenn du eine einzelne Dosis Gift mittels @UUID[Compendium.pf2e.feats-srd.Item.ALbosSUygdq4T1Yk]{Waffe vergiften} aufträgst, verursacht das Gift @Damage[2d4[poison]]{2W4 Punkte Giftschaden} statt 1W4. Im Falle eines Kritischen Fehlschlages bei einem Angriffswurf verschwendest du das mittels Waffe vergiften aufgetragene Gift nicht.</p>",
       "prerequisites": [
         {
           "value": "Waffe vergiften"
@@ -15732,7 +15750,7 @@
     },
     "Invoke The Elements (Brine May)": {
       "name": "Anrufung der Elemente (Salzmaid)",
-      "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<hr />\n<p>Du beschwörst eine Aura aus brechenden Wellen. Du erhältst für 1 Minute @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Tarnung} gegen Kreaturen die mehr als 1,50 m von dir entfernt sind und jede Kreatur, die ihren Zug im Umkreis von 1,50 m zu dir beendet, erleidet @Damage[1d12[bludgeoning]]{1W12 Wuchtschaden} (einfacher Reflexwurf gegen deinen Klassen-SG oder Zauber-SG, je nachdem welcher Wert der höhere ist). Auf der 13. erhöht sich der Schaden auf @Damage[2d12[bludgeoning]]{2W12} und auf der 17. Stufe auf @Damage[3d12[bludgeoning]]{3W12}.</p>",
+      "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<hr />\n<p>Du beschwörst eine Aura aus brechenden Wellen. Du erhältst für 1 Minute @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Tarnung} gegen Kreaturen die mehr als 5 Fuß/1,50 m von dir entfernt sind und jede Kreatur, die ihren Zug im Umkreis von 5 Fuß/1,50 m zu dir beendet, erleidet @Damage[1d12[bludgeoning]]{1W12 Wuchtschaden} (@Check[type:reflex|dc:resolve(@actor.system.attributes.classOrSpellDC.value)|basic:true]{einfacher Reflexwurf} gegen deinen Klassen-SG oder Zauber-SG, je nachdem welcher Wert der höhere ist). Auf der 13. erhöht sich der Schaden auf @Damage[2d12[bludgeoning]]{2W12} und auf der 17. Stufe auf @Damage[3d12[bludgeoning]]{3W12}.</p>",
       "prerequisites": [
         {
           "value": "Salzmaid"
@@ -15741,7 +15759,7 @@
     },
     "Invoke The Elements (Snow May)": {
       "name": "Anrufung der Elemente (Schneemaid)",
-      "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<hr>\n<p>Du beschwörst eine Aura aus flirrender Hitze, Schneegestöber, brechenden Wellen oder wirbelnden Winden und Blitzen. Du erhältst für 1 Minute @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Tarnung} gegen Kreaturen die mehr als 5 Fuß/1,50 m von dir entfernt sind und jede Kreatur, die ihren Zug im Umkreis von 5 Fuß/1,50 m zu dir beendet, erleidet @Damage[1d12[cold]]{1W12 Kälteschaden} (einfacher Reflexwurf gegen deinen Klassen-SG oder Zauber-SG, je nachdem welcher Wert der höhere ist). Auf der 13. (@Damage[2d12[cold]]{2W12}) und 17. Stufe (@Damage[3d12[cold]]{3W12}) erhöht sich der Schaden jeweils um 1W12.</p>",
+      "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<hr>\n<p>Du beschwörst eine Aura aus flirrender Hitze, Schneegestöber, brechenden Wellen oder wirbelnden Winden und Blitzen. Du erhältst für 1 Minute @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Tarnung} gegen Kreaturen die mehr als 5 Fuß/1,50 m von dir entfernt sind und jede Kreatur, die ihren Zug im Umkreis von 5 Fuß/1,50 m zu dir beendet, erleidet @Damage[1d12[cold]]{1W12 Kälteschaden} (@Check[type:reflex|dc:resolve(@actor.system.attributes.classOrSpellDC.value)|basic:true]{einfacher Reflexwurf} gegen deinen Klassen-SG oder Zauber-SG, je nachdem welcher Wert der höhere ist). Auf der 13. (@Damage[2d12[cold]]{2W12}) und 17. Stufe (@Damage[3d12[cold]]{3W12}) erhöht sich der Schaden jeweils um 1W12.</p>",
       "prerequisites": [
         {
           "value": "Schneemaid"
@@ -15750,7 +15768,7 @@
     },
     "Invoke The Elements (Veil May)": {
       "name": "Anrufung der Elemente (Schleiermaid)",
-      "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<hr />\n<p>Du beschwörst eine Aura aus flirrender Hitze. Du erhältst für 1 Minute @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Tarnung} gegen Kreaturen die mehr als 1,50 m von dir entfernt sind und jede Kreatur, die ihren Zug im Umkreis von 1,50 m zu dir beendet, erleidet @Damage[1d12[fire]]{1W12 Feuerschaden} (einfacher Reflexwurf gegen deinen Klassen-SG oder Zauber-SG, je nachdem welcher Wert der höhere ist). Auf der 13. erhöht sich der Schaden auf @Damage[2d12[fire]]{2W12} und auf der 17. Stufe auf @Damage[1d12[fire]]{3W12}.</p>",
+      "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<hr />\n<p>Du beschwörst eine Aura aus flirrender Hitze. Du erhältst für 1 Minute @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Tarnung} gegen Kreaturen die mehr als 5 Fuß/1,50 m von dir entfernt sind und jede Kreatur, die ihren Zug im Umkreis von 5 Fuß/1,50 m zu dir beendet, erleidet @Damage[1d12[fire]]{1W12 Feuerschaden} (@Check[type:reflex|dc:resolve(@actor.system.attributes.classOrSpellDC.value)|basic:true]{einfacher Reflexwurf} gegen deinen Klassen-SG oder Zauber-SG, je nachdem welcher Wert der höhere ist). Auf der 13. erhöht sich der Schaden auf @Damage[2d12[fire]]{2W12} und auf der 17. Stufe auf @Damage[1d12[fire]]{3W12}.</p>",
       "prerequisites": [
         {
           "value": "Schleiermaid"
@@ -15759,7 +15777,7 @@
     },
     "Invoke The Elements (Virga May)": {
       "name": "Anrufung der Elemente (Regenmaid)",
-      "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<hr />\n<p>Du beschwörst eine Aura aus wirbelnden Winden und Blitzen. Du erhältst für 1 Minute @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Tarnung} gegen Kreaturen die mehr als 1,50 m von dir entfernt sind und jede Kreatur, die ihren Zug im Umkreis von 1,50 m zu dir beendet, erleidet @Damage[1d12[elektricity]]{1W12 Elektrizitätsschaden} (einfacher Reflexwurf gegen deinen Klassen-SG oder Zauber-SG, je nachdem welcher Wert der höhere ist). Auf der 13. erhöht sich der Schaden auf @Damage[2d12[electricity]]{2W12} und auf der 17. Stufe auf @Damage[3d12[electricity]]{3W12}.</p>",
+      "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<hr />\n<p>Du beschwörst eine Aura aus wirbelnden Winden und Blitzen. Du erhältst für 1 Minute @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Tarnung} gegen Kreaturen die mehr als 5 Fuß/1,50 m von dir entfernt sind und jede Kreatur, die ihren Zug im Umkreis von 5 Fuß/1,50 m zu dir beendet, erleidet @Damage[1d12[elektricity]]{1W12 Elektrizitätsschaden} (@Check[type:reflex|dc:resolve(@actor.system.attributes.classOrSpellDC.value)|basic:true]{einfacher Reflexwurf} gegen deinen Klassen-SG oder Zauber-SG, je nachdem welcher Wert der höhere ist). Auf der 13. erhöht sich der Schaden auf @Damage[2d12[electricity]]{2W12} und auf der 17. Stufe auf @Damage[3d12[electricity]]{3W12}.</p>",
       "prerequisites": [
         {
           "value": "Regenmaid"
@@ -17167,6 +17185,15 @@
       "prerequisites": [
         {
           "value": "Runennarbenträger-Zugang"
+        }
+      ]
+    },
+    "Living Stone": {
+      "name": "Living Stone",
+      "description": "<p>Your body becomes living stone. You don't need to eat or drink and need only 6 hours of rest to feel well rested. You must still rest at least 8 hours and spend 1 hour of preparation to regain resources usable only a limited number of times per day, such as spell slots. You gain a +2 circumstance bonus to saving throws against diseases, poisons, and effects that would cause the @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} or @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned} conditions. When you roll a successful saving throw against a disease or poison, you get a critical success instead.</p>",
+      "prerequisites": [
+        {
+          "value": "Stonebound Dedication"
         }
       ]
     },
@@ -20036,6 +20063,15 @@
         }
       ]
     },
+    "Ore Fists": {
+      "name": "Ore Fists",
+      "description": "<p>When you enter the Stonestrike Stance, your fists appear to be covered with veins of unrefined ore. Your stonestrike attacks count as cold iron and silver when determining weaknesses and bypassing resistances.</p>",
+      "prerequisites": [
+        {
+          "value": "Stone Brawler Dedication"
+        }
+      ]
+    },
     "Ornate Tattoo": {
       "name": "Verzierte Tätowierungen",
       "description": "<p><strong>Voraussetzung</strong> @UUID[Compendium.pf2e.feats-srd.Item.Dq4JSejEdCzGNeTc]{Arkane Tätowierungen}</p>\n<hr />\n<p>Du hast deine Tätowierungen erweitert, damit sie mächtigere Magie beherbergen. Wähle einen arkanen Zauber des 1. Grades, der der gleichen Schule angehört wie deine Arkanen Tätowierungen, dies kann ein gewöhnlicher Zauber sein oder einer, auf den du Zugriff hast. Du kannst diesen Zauber einmal am Tag als innewohnenden arkanen Zauber wirken.</p>",
@@ -21052,7 +21088,7 @@
     },
     "Plate in Treasure": {
       "name": "Plate in Treasure",
-      "description": "<p>Precious metal flows from your fingers to plate an object. This has the effects of a clad in metal spell with a rank equal to half your level rounded up. While you're wearing or holding an item of light Bulk or greater that's Plated in Treasure, any metal created by one of your impulses is plated with the metal. If you use Plate in Treasure again, any previous one ends.</p>"
+      "description": "<p>Precious metal flows from your fingers to plate an object. This has the effects of a <em>@UUID[Compendium.pf2e.spells-srd.Item.7dBxguCNWCoPYxIi]{Clad In Metal}</em> spell with a rank equal to half your level rounded up. While you're wearing or holding an item of light Bulk or greater that's Plated in Treasure, any metal created by one of your impulses is plated with the metal. If you use Plate in Treasure again, any previous one ends.</p>"
     },
     "Play Dead": {
       "name": "Totstellen",
@@ -23189,7 +23225,7 @@
       ]
     },
     "Resourceful Ritualist": {
-      "name": "Fähiger Ritualist",
+      "name": "Fähiger Ritualist (Ritualist)",
       "description": "<p><strong>Voraussetzungen</strong> @UUID[Compendium.pf2e.feats-srd.Item.kU4K9jj9qnktoAaQ]{Ritualisten-Zugang}</p>\n<hr />\n<p>Du kannst schwierige Rituale wirken, welche sonst weit jenseits deiner Möglichkeiten wären. Wenn du über den Kompetenzgrad Geübt verfügst, kannst du einen Fertigkeitswurf für Rituale ablegen, welche den Kompetenzgrad Experte erfordern. Entsprechend verhält es sich bei höheren Kompetenzgraden. Als Experte kannst du Würfe ablegen, welche Meister erfordern und als Meister kannst du Würfe ablegen, welche Legende erfordern.</p>",
       "prerequisites": [
         {
@@ -23590,6 +23626,15 @@
         },
         {
           "value": "earth is in your elemental philosophy"
+        }
+      ]
+    },
+    "Rocky Flesh": {
+      "name": "Rocky Flesh",
+      "description": "<p>Your flesh takes on the hardness of stone. You gain resistance to physical damage (except adamantine) equal to your number of class feats from the Stonebound archetype.</p>",
+      "prerequisites": [
+        {
+          "value": "Stonebound Dedication"
         }
       ]
     },
@@ -27135,6 +27180,15 @@
         }
       ]
     },
+    "Statue": {
+      "name": "Statue",
+      "description": "<p>Your body and equipment appear to be made of stone as you hold perfectly still. Until the next time you act, you appear to be a statue and do not need to eat, drink, or breathe, but you are @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}. Your Deception DC to pass as a statue is equal to 10 + your proficiency bonus (do not apply any other bonuses, penalties, or modifiers).</p>",
+      "prerequisites": [
+        {
+          "value": "Stonebound Dedication"
+        }
+      ]
+    },
     "Stave off Catastrophe": {
       "name": "Katastrophe abwenden",
       "description": "<p>Du kannst deine Verbündeten vor den schwersten Angriffen schützen. Wenn du die Reaktion Geteiltes Leid einsetzt, kannst du dich dafür entscheiden, den vollen Kritischen Schaden und alle Effekte des Angriffs, eingeschlossen jener, welche bei einem Kritischen Treffer eintreten, zu erleiden, so dass dein Verbündeter keinen Schaden und keine Effekte durch den Angriff erleidet.</p>",
@@ -27351,6 +27405,15 @@
         }
       ]
     },
+    "Stone Blood (Stonebound)": {
+      "name": "Stone Blood (Stonebound)",
+      "description": "<p>Your blood becomes thick and sluggish, but no less effective at oxygenating your cells. You can selectively stop your bleeding with ease. Reduce the DC of flat checks to stop persistent bleed damage from 15 to 10, and you can use a single action that has the concentrate trait to gain an early flat check without physically binding the wounds. You recover from the drained condition twice as quickly as normal.</p>",
+      "prerequisites": [
+        {
+          "value": "Stonebound Dedication"
+        }
+      ]
+    },
     "Stone Body": {
       "name": "Stone Body",
       "description": "<p><strong>Requirements</strong> You are in Tenacious Stance.</p>\n<hr />\n<p>Emulating the great defenders throughout dwarven history, you close your mind to the sensation of pain, becoming as resolute as stone itself. You gain resistance 10 to all damage. This effect lasts until the end of your next turn or immediately upon being critically hit.</p>",
@@ -27363,6 +27426,15 @@
     "Stone Bones": {
       "name": "Steinerne Knochen",
       "description": "<p><strong>Auslöser</strong> Du erleidest einen Kritischen Treffer, der physischen Schaden verursacht.</p>\n<hr />\n<p>Du bist derart widerstandsfähig, dass du selbst die heftigsten Angriffe erstaunlich gut wegsteckst. Lege einen Einfachen Wurf gegen SG 17 ab; bei einem Erfolg behandelst du den auslösenden Angriff nur als normalen Treffer.</p>"
+    },
+    "Stone Brawler Dedication": {
+      "name": "Stone Brawler Dedication",
+      "description": "<p>You've learned to call the primal power of elemental stone to your aid. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.k5S2a2a6o2GS5l01]{Stonestrike Stance} action.</p>\n<hr />\n<p><strong>Special</strong> You cannot select another dedication feat until you have gained two other feats from the stone brawler archetype.</p>",
+      "prerequisites": [
+        {
+          "value": "Constitution 14"
+        }
+      ]
     },
     "Stone Communion": {
       "name": "Einheit mit dem Stein",
@@ -27380,6 +27452,42 @@
     "Stone Form": {
       "name": "Steingestalt",
       "description": "<p>Du kannst deinen Körper in eine reine Manifestation der Erde verwandeln – in einen Elementar. Du kannst einmal am Tag @UUID[Compendium.pf2e.spells-srd.Item.1K6AYGisvo9gqdhs]{Elementargestalt} als immanenten Naturzauber des 7. Grades wirken, bist aber auf die Form eines Erdelementars beschränkt.</p>"
+    },
+    "Stone Guardian": {
+      "name": "Stone Guardian",
+      "description": "<p>You learn to call a powerful guardian of earth and stone to your side. You can cast <em>@UUID[Compendium.pf2e.spells-srd.Item.lpT6LotUaQPfinjj]{Summon Elemental}</em> as an innate primal spell once per day, and can only summon elementals with the earth trait. This spell is automatically heightened to half your level rounded up.</p>",
+      "prerequisites": [
+        {
+          "value": "Stonebound Dedication"
+        }
+      ]
+    },
+    "Stonebane": {
+      "name": "Stonebane",
+      "description": "<p>Your stonestrike attacks deal 1d6 additional damage against constructs, creatures with the earth trait, and earthen objects, such as a stone door.</p>",
+      "prerequisites": [
+        {
+          "value": "Stone Brawler Dedication"
+        }
+      ]
+    },
+    "Stonebound Dedication": {
+      "name": "Stonebound Dedication",
+      "description": "<p>You bind yourself to the very essence of stone. You become trained in Plane of Earth Lore and learn the Terran language. If you are already trained in Plane of Earth Lore, you become trained in a skill of your choice. If you already speak Terran, you learn a common language of your choice. Increase your maximum Hit Points by your level.</p>\n<hr />\n<p><strong>Special</strong> You cannot select another dedication feat until you have gained two other feats from the stonebound archetype.</p>",
+      "prerequisites": [
+        {
+          "value": "Constitution 14"
+        }
+      ]
+    },
+    "Stonebound Magic": {
+      "name": "Stonebound Magic",
+      "description": "<p>You've learned to manifest your connection to stone by conjuring it to your side. You gain <em>@UUID[Compendium.pf2e.spells-srd.Item.zA0jNIBRgLsyTpbm]{Scatter Scree}</em> as a primal innate cantrip. At 8th level, you gain <em>@UUID[Compendium.pf2e.spells-srd.Item.vh1RpbWfqdNC4L3P]{One with Stone}</em> as a primal innate spell once per day. At 10th level, you gain <em>@UUID[Compendium.pf2e.spells-srd.Item.McnPlLFvKtQVXNcG]{Shape Stone}</em> as a primal innate spell once per day. At 12th level, you gain <em>@UUID[Compendium.pf2e.spells-srd.Item.kOa055FIrO9Smnya]{Wall of Stone}</em> as a primal innate spell once per day.</p>",
+      "prerequisites": [
+        {
+          "value": "Stonebound Dedication"
+        }
+      ]
     },
     "Stonecunning": {
       "name": "Steingespür",
@@ -27409,6 +27517,24 @@
     "Stonewall": {
       "name": "Stonewall",
       "description": "<p><strong>Trigger</strong> An enemy or hazard's effect hits you or you fail a Fortitude save against one.</p>\n<p>The strength of stone overcomes you so strongly that it replaces your stout body. You become @UUID[Compendium.pf2e.conditionitems.Item.dTwPJuKgBQCMxixg]{Petrified} until the end of the current turn. You don't take any damage from the triggering effect or any other ill effects that couldn't affect stone.</p>"
+    },
+    "Stoney Deflection": {
+      "name": "Stoney Deflection",
+      "description": "<p><strong>Requirements</strong> You are in Stonestrike Stance.</p>\n<hr />\n<p>You gather the resiliency of stone to block attacks against you. You gain a +2 circumstance bonus to AC and to any defenses against being Shoved or Tripped until the beginning of your next turn.</p>",
+      "prerequisites": [
+        {
+          "value": "Stone Brawler Dedication"
+        }
+      ]
+    },
+    "Stoney Skin": {
+      "name": "Stoney Skin",
+      "description": "<p>Your skin takes on the hardness of stone. You gain resistance to physical damage (except adamantine) equal to your number of class feats from the Stone Brawler archetype.</p>",
+      "prerequisites": [
+        {
+          "value": "Stone Brawler Dedication"
+        }
+      ]
     },
     "Storm Born": {
       "name": "Sturmkind",
@@ -32256,7 +32382,7 @@
     },
     "Worm's Feast": {
       "name": "Worm's Feast",
-      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You call forth a brood of infantile cave worms to feast on your enemy's flesh. Choose a creature within 30 feet; the creature must attempt a @Check[type:fortitude|resolve(@actor.system.attributes.classOrSpellDC.value)] save. At 8th level and every 2 levels above that, the persistent piercing damage taken on a failure increases by 1d6.</p>\n<hr />\n<p><strong>Critical Success</strong> The worms writhe away harmlessly.</p>\n<p><strong>Success</strong> The target takes @Damage[2d6[piercing]] damage and @Damage[2d6[persistent, piercing]] damage.</p>\n<p><strong>Failure</strong> The target takes @Damage[6d6[piercing]] damage and @Damage[2d6[persistent, piercing]] damage.</p>\n<p><strong>Critical Failure</strong> As failure, plus the target is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} as long as it takes persistent piercing damage.</p>\n<hr />\n<p><em>Note: A DC was not provided for this ability by Paizo. The button above uses the better of your class or spell DC.</em></p>",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You call forth a brood of infantile cave worms to feast on your enemy's flesh. Choose a creature within 30 feet; the creature must attempt a @Check[type:fortitude|dc:resolve(@actor.system.attributes.classOrSpellDC.value)] save. At 8th level and every 2 levels above that, the persistent piercing damage taken on a failure increases by 1d6.</p>\n<hr />\n<p><strong>Critical Success</strong> The worms writhe away harmlessly.</p>\n<p><strong>Success</strong> The target takes @Damage[2d6[piercing]] damage and @Damage[2d6[persistent, piercing]] damage.</p>\n<p><strong>Failure</strong> The target takes @Damage[6d6[piercing]] damage and @Damage[2d6[persistent, piercing]] damage.</p>\n<p><strong>Critical Failure</strong> As failure, plus the target is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} as long as it takes persistent piercing damage.</p>\n<hr />\n<p><em>Note: A DC was not provided for this ability by Paizo. The button above uses the better of your class or spell DC.</em></p>",
       "prerequisites": [
         {
           "value": "Worm Caller Dedication"
