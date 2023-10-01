@@ -147,7 +147,7 @@
     },
     "Accursed Touch": {
       "name": "Verfluchte Berührung",
-      "description": "<p>Du lernst, den übernatürlichen Fluch zu nutzen, der dich animiert, um mit deinen mächtigsten Angriffen einen furchtbaren Fluch zu übertragen. Landest du einen Kritischen Treffer mit deinem Faustangriff, überträgst du Negative Energie und erhält der Angriff die Kategorien Fluch und Krankheit. Die getroffene Kreatur erleidet @Damage[2d6[persistent,negative]]{2W6 Punkte} @UUID[Compendium.pf2e.conditionitems.Item.lDVqvLKA6eF3Df60]{Anhaltenden Negativen Schaden} und den Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 1}. Mit der 14. Stufe steigt der Anhaltende Schaden auf 3W6 Punkte und mit der 20. Stufe auf 4W6 Punkte. Dies ist ein Kritischer Spezialisierungseffekt.</p>",
+      "description": "<p>Du lernst, den übernatürlichen Fluch zu nutzen, der dich animiert, um mit deinen mächtigsten Angriffen einen furchtbaren Fluch zu übertragen. Landest du einen Kritischen Treffer mit deinem Faustangriff, überträgst du Negative Energie und erhält der Angriff die Kategorien Fluch und Krankheit. Die getroffene Kreatur erleidet @Damage[2d6[persistent,void]]{2W6 Punkte Anhaltenden Leerenschaden} und den Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 1}. Mit der 14. Stufe steigt der Anhaltende Schaden auf 3W6 Punkte und mit der 20. Stufe auf 4W6 Punkte. Dies ist ein Kritischer Spezialisierungseffekt.</p>",
       "prerequisites": [
         {
           "value": "Mumien-Zugang"
@@ -3762,7 +3762,7 @@
     },
     "Breath of Hungry Death": {
       "name": "Breath of Hungry Death",
-      "description": "<p><strong>Frequency</strong> Once per hour</p>\n<hr />\n<p>You have uncovered occult mysteries that allow you to unleash the devastating hunger of Kabriri upon your foes with a single exhalation, releasing a massive cloud of flesh-eating gas that glows with a sickly green light. You deal @Damage[7d6[acid],7d6[negative]]{7d6 acid and 7d6 negative damage} to all creatures within a @Template[type:cone|distance:30] (@Check[type:reflex|dc:resolve(@actor.attributes.classOrSpellDC.value)|basic:true] save with a DC equal to your class DC or spell DC, whichever is higher). A creature that gets a critical failure on this Reflex save is also @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} for 1 round. A creature that succeeds at this save becomes temporarily immune to Breath of Hungry Death for 24 hours.</p>\n<p>When a creature is killed using Breath of Hungry Death, its body is reduced to a smoldering pile of ash wafting with necrotic fumes. You can use a reaction to immediately inhale these fumes and become satiated or fully satiated as if you had used Consume Flesh.</p>",
+      "description": "<p><strong>Frequency</strong> Once per hour</p>\n<hr />\n<p>You have uncovered occult mysteries that allow you to unleash the devastating hunger of Kabriri upon your foes with a single exhalation, releasing a massive cloud of flesh-eating gas that glows with a sickly green light. You deal @Damage[7d6[acid],7d6[void]]{7d6 acid and 7d6 negative damage} to all creatures within a @Template[type:cone|distance:30] (@Check[type:reflex|dc:resolve(@actor.attributes.classOrSpellDC.value)|basic:true] save with a DC equal to your class DC or spell DC, whichever is higher). A creature that gets a critical failure on this Reflex save is also @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} for 1 round. A creature that succeeds at this save becomes temporarily immune to Breath of Hungry Death for 24 hours.</p>\n<p>When a creature is killed using Breath of Hungry Death, its body is reduced to a smoldering pile of ash wafting with necrotic fumes. You can use a reaction to immediately inhale these fumes and become satiated or fully satiated as if you had used Consume Flesh.</p>",
       "prerequisites": [
         {
           "value": "Secret Eater"
@@ -4699,6 +4699,10 @@
         }
       ]
     },
+    "Chaotic Spell": {
+      "name": "Chaotic Spell",
+      "description": "<p>This is the secret of chaotic magic–your foe can hardly predict and counter your moves if you yourself have no idea what will happen. If the next action you use is to Cast a Spell that deals acid, cold, electricity, fire, or sonic damage, roll a [[/r 1d6]]{d6}. The spell's damage type changes to the type below associated with the result of the roll, and each creature who is damaged by the spell takes the listed additional effect.</p>\n<p><strong>1 (Acid):</strong> @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}</p>\n<p><strong>2 (Cold):</strong> –10 ft. penalty to all Speeds until the end of your next turn</p>\n<p><strong>3 (Electricity):</strong> @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} until the end of your next turn</p>\n<p><strong>4 (Fire):</strong> Persistent fire damage equal to the spell's level</p>\n<p><strong>5 (Force):</strong> No added efect</p>\n<p><strong>6 (Sonic):</strong>@UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} for 2 rounds</p>"
+    },
     "Charged Creation": {
       "name": "Aufgeladene Erschaffung",
       "description": "<p>Deine Magie wird von deinen Beständigen Erschaffungen angezogen. Während du dich in einer Entfernung von 30 Fuß/9 m zu deiner Beständigen Erschaffung befindet und Sichtlinie dazu hast, kannst du diese als den Ursprung deiner Linien- oder Kegelzauber verwenden. Du kannst beispielsweise einen <em>@UUID[Compendium.pf2e.spells-srd.Item.9AAkVUCwF6WVNNY2]{Blitzstrahl}</em> von deiner Beständigen Erschaffung anstatt von dir ausgehen lassen.</p>",
@@ -4758,7 +4762,7 @@
     },
     "Chemical Purification": {
       "name": "Chemistische Weihe",
-      "description": "<p><strong>Häufigkeit</strong> Einmal pro Runde</p>\n<p><strong>Auslöser</strong> Du nutzt Schnelle Alchemie, um ein Alchemistenfeuer oder eine Geistermine herzustellen und die Bombe ist mindestens 2 Stufen niedriger als deine Stufe für Fortschrittliche Alchemie.</p>\n<hr>\n<p>Du hast eine Methode entwickelt, um deine Bomben im Handumdrehen chemisch zu reinigen und zu weihen. Du fügst deinem hergestellten Alchemistenfeuer oder Geistermine die Mixtur hinzu. Die entstandene Bombe verursacht zusätzlich zum normalen Schaden der Bombe [[/r {1d4}[persistent,positive]]]{1W4 Punkte} @UUID[Compendium.pf2e.conditionitems.Item.lDVqvLKA6eF3Df60]{Anhaltenden Positiven Schaden}. Wie üblich verletzt der Positive Schaden nur Untote und Kreaturen mit Heilung durch Negative Energie.</p>"
+      "description": "<p><strong>Häufigkeit</strong> Einmal pro Runde</p>\n<p><strong>Auslöser</strong> Du nutzt Schnelle Alchemie, um ein Alchemistenfeuer oder eine Geistermine herzustellen und die Bombe ist mindestens 2 Stufen niedriger als deine Stufe für Fortschrittliche Alchemie.</p>\n<hr>\n<p>Du hast eine Methode entwickelt, um deine Bomben im Handumdrehen chemisch zu reinigen und zu weihen. Du fügst deinem hergestellten Alchemistenfeuer oder Geistermine die Mixtur hinzu. Die entstandene Bombe verursacht zusätzlich zum normalen Schaden der Bombe @Damage[1d4[persistent,vitality]]{1W4 Punkte Anhaltenden Lebensschaden}. Wie üblich verletzt der Positive Schaden nur Untote und Kreaturen mit Heilung durch Negative Energie.</p>"
     },
     "Choking Smoke": {
       "name": "Stinkender Feuerball",
@@ -6856,7 +6860,7 @@
     },
     "Desiccating Inhalation": {
       "name": "Austrocknendes Einatmen",
-      "description": "<p><strong>Häufigkeit</strong> Einmal pro Stunde</p>\n<hr />\n<p>Du entziehst nahen Kreaturen die Feuchtigkeit und trocknest sie aus, um deine Wunden zu heilen. Kreaturen innerhalb eines @Template[type:cone|distance:30]{30 Fuß/9 m-Kegels} erleiden @Damage[6d8[negative]]{6W8 Punkte Negativen Schaden} (@Check[type:reflex|dc:resolve(@actor.attributes.classDC.value)|basic:true]{einfacher Reflexwurf} gegen deinen Klassen-SG). Im Fall eines Kritischen Fehlschlages erhält eine Kreatur zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 1}. Solange du mit dieser Fähigkeit wenigstens einer Kreatur Schaden zufügst, erlangst du TP in Höhe deiner Stufe zurück.</p>\n<p>Mit der 14. Stufe und dann jeder weiteren geraden Stufe steigt der Schaden jeweils um 1W8 Punkte. [[/r floor(@actor.level/2)d8[negative]]]{Schaden auf Basis der Stufe}</p>",
+      "description": "<p><strong>Häufigkeit</strong> Einmal pro Stunde</p>\n<hr />\n<p>Du entziehst nahen Kreaturen die Feuchtigkeit und trocknest sie aus, um deine Wunden zu heilen. Kreaturen innerhalb eines @Template[type:cone|distance:30]{30 Fuß/9 m-Kegels} erleiden @Damage[6d8[void]]{6W8 Punkte Leerenschaden} (@Check[type:reflex|dc:resolve(@actor.attributes.classDC.value)|basic:true]{einfacher Reflexwurf} gegen deinen Klassen-SG). Im Fall eines Kritischen Fehlschlages erhält eine Kreatur zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 1}. Solange du mit dieser Fähigkeit wenigstens einer Kreatur Schaden zufügst, erlangst du TP in Höhe deiner Stufe zurück.</p>\n<p>Mit der 14. Stufe und dann jeder weiteren geraden Stufe steigt der Schaden jeweils um 1W8 Punkte. @Damage[floor(@actor.level/2)d8[void]]{Stufenabhängiger Schaden}</p>",
       "prerequisites": [
         {
           "value": "Mumien-Zugang"
@@ -7286,7 +7290,7 @@
     },
     "Disrupt Ki": {
       "name": "Ki unterbrechen",
-      "description": "<p>Führe einen Waffenlosen Angriff aus. Solltest du damit einer lebenden Kreatur Schaden zufügen, blockierst du den Fluss ihrer Lebenskraft. Die Kreatur erleidet @Damage[2d6[persistent,negative]]{2W6 Punkte} anhaltenden Negativen Energieschaden und den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 1} bis der anhaltende Schaden endet. Mit der 18. Stufe steigt dieser anhaltende Negative Energieschaden auf @Damage[3d6[persistent,negative]]{3W6 Punkte}.</p>"
+      "description": "<p>Führe einen Waffenlosen Angriff aus. Solltest du damit einer lebenden Kreatur Schaden zufügen, blockierst du den Fluss ihrer Lebenskraft. Die Kreatur erleidet @Damage[2d6[persistent,void]]{2W6 Punkte anhaltenden Leerenschaden} und den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 1} bis der anhaltende Schaden endet. Mit der 18. Stufe steigt dieser anhaltende Negative Energieschaden auf @Damage[3d6[persistent,void]]{3W6 Punkte}.</p>"
     },
     "Disrupt Prey": {
       "name": "Jagdbeute unterbrechen",
@@ -11183,7 +11187,7 @@
     },
     "Final Rest": {
       "name": "Letzte Ruhe",
-      "description": "<p>Du bist im Tod so stur wie im Leben und schwörst deinen verhassten Feinden niemals zu helfen. Du kannst nicht in einen Untoten verwandelt werden, außer durch Effekte von Artefakten oder durch Gottheiten. Untote Kreaturen erhalten jedes Mal @Damage[1[positive]]{1 Punkt Positiven Schaden}, wenn sie deine Leiche berühren oder @Damage[1d6[positive]]{1W6 Punkte Positiven Schaden}, wenn sie sich deiner Leiche auf eine umfassendere Art und Weise aussetzen, z.B. wenn sie dich beißen oder deine Leiche tragen.</p>",
+      "description": "<p>Du bist im Tod so stur wie im Leben und schwörst deinen verhassten Feinden niemals zu helfen. Du kannst nicht in einen Untoten verwandelt werden, außer durch Effekte von Artefakten oder durch Gottheiten. Untote Kreaturen erhalten jedes Mal @Damage[1[vitality]]{1 Punkt Lebensschaden}, wenn sie deine Leiche berühren oder @Damage[1d6[vitality]]{1W6 Punkte Lebensschaden}, wenn sie sich deiner Leiche auf eine umfassendere Art und Weise aussetzen, z.B. wenn sie dich beißen oder deine Leiche tragen.</p>",
       "prerequisites": [
         {
           "value": "Finismurwächter-Zugang"
@@ -16147,6 +16151,15 @@
         },
         {
           "value": "Meister vieler Stile"
+        }
+      ]
+    },
+    "Ki Cutting Sight": {
+      "name": "Ki Cutting Sight",
+      "description": "<p>Everything is connected—all is part of the whole, and the whole is distributed throughout the infinite parts. Find where to add your ki and you can break the whole. You gain the <em>@UUID[Compendium.pf2e.spells-srd.Item.jrlCEw9rqBi4qU6g]{Ki Cutting Sight}</em> ki spell. Increase the number of Focus Points in your focus pool by 1.</p>",
+      "prerequisites": [
+        {
+          "value": "ki strike"
         }
       ]
     },
@@ -21348,7 +21361,7 @@
     },
     "Prayer-Touched Weapon": {
       "name": "Gebetsberührte Waffe",
-      "description": "<p><strong>Häufigkeit</strong> Einmal pro Zug</p>\n<p><strong>Anforderung</strong> Deine letzte Aktion war es, einen Göttlichen Zauber zu wirken, der kein Zaubertrick ist.</p>\n<hr>\n<p>Du umhüllst eine Waffe durch Gebete und mit der göttlichen Macht deiner Gottheit. Bis zum Ende deines Zuges verursacht die Waffe zusätzlich @Damage[1d6[positive]]{1W6 Punkte Positiven Schaden}. Wie üblich verletzt der Positive Schaden nur Untote und Kreaturen mit Heilung durch Negative Energie.</p>",
+      "description": "<p><strong>Häufigkeit</strong> Einmal pro Zug</p>\n<p><strong>Anforderung</strong> Deine letzte Aktion war es, einen Göttlichen Zauber zu wirken, der kein Zaubertrick ist.</p>\n<hr>\n<p>Du umhüllst eine Waffe durch Gebete und mit der göttlichen Macht deiner Gottheit. Bis zum Ende deines Zuges verursacht die Waffe zusätzlich @Damage[1d6[vitality]]{1W6 Punkte Lebensschaden}. Wie üblich verletzt der Positive Schaden nur Untote und Kreaturen mit Heilung durch Negative Energie.</p>",
       "prerequisites": [
         {
           "value": "Göttliches Zauberwirken"
@@ -22499,7 +22512,7 @@
     },
     "Razor Claws": {
       "name": "Scharfe Klauen",
-      "description": "<p>Du hast deine Klauen tödlich scharf geschliffen. Deine Klauenangriffe verursachen @Damage[1d6[slashing]]{1W6 Punkte Hiebschaden} statt 1W4 und erhalten die Eigenschaft Vielseitig (Stich)</p>"
+      "description": "<p>Du hast deine Klauen tödlich scharf geschliffen. Deine Klauenangriffe verursachen 1W6 Punkte Hiebschaden statt 1W4 und erhalten die Eigenschaft Vielseitig (Stich)</p>"
     },
     "Razzle-Dazzle": {
       "name": "Glitzerklinge",
@@ -25614,7 +25627,7 @@
     },
     "Siphon Life": {
       "name": "Lebenskraft rauben",
-      "description": "<p>Deine Erfahrungen mit nekromantischen Energien haben bei dir dauerhafte Spuren hinterlassen – du bist totenbleich, dein Körper fühlt sich eiskalt an, dein Blut verfärbt sich schwarz und du besitzt die Fähigkeit, anderen die Lebenskraft zu entreißen. Führe einen Waffenlosen Angriff gegen eine lebende Kreatur; triffst du, erleidet das Ziel zusätzlich @Damage[4d6[negative]]{4W6 Punkte Negativen Schaden} (abhängig von seinem Zähigkeitswurf, siehe unten). Erleidet das Ziel Negativen Schaden, erlangst du dieselbe Anzahl an Temporären TP; diese währen 1 Minute lang.</p>\n<p><strong>Kritischer Erfolg</strong> Das Ziel erleidet keinen zusätzlichen Negativen Schaden und wird für 1 Minute temporär immun gegen diese Fähigkeit.</p>\n<p><strong>Erfolg</strong> Das Ziel erleidet den halben zusätzlichen Schaden.</p>\n<p><strong>Fehlschlag</strong> Das Ziel erleidet vollen zusätzlichen Negativen Schaden.</p>\n<p><strong>Kritischer Fehlschlag</strong> Das Ziel erleidet doppelten zusätzlichen Negativen Schaden.</p>",
+      "description": "<p>Deine Erfahrungen mit nekromantischen Energien haben bei dir dauerhafte Spuren hinterlassen – du bist totenbleich, dein Körper fühlt sich eiskalt an, dein Blut verfärbt sich schwarz und du besitzt die Fähigkeit, anderen die Lebenskraft zu entreißen. Führe einen Waffenlosen Angriff gegen eine lebende Kreatur; triffst du, erleidet das Ziel zusätzlich @Damage[4d6[void]]{4W6 Punkte Leerenschaden} (abhängig von seinem Zähigkeitswurf, siehe unten). Erleidet das Ziel Leerenschaden, erlangst du dieselbe Anzahl an Temporären TP; diese währen 1 Minute lang.</p>\n<p><strong>Kritischer Erfolg</strong> Das Ziel erleidet keinen zusätzlichen Leerenschaden und wird für 1 Minute temporär immun gegen diese Fähigkeit.</p>\n<p><strong>Erfolg</strong> Das Ziel erleidet den halben zusätzlichen Schaden.</p>\n<p><strong>Fehlschlag</strong> Das Ziel erleidet vollen zusätzlichen Leerenschaden.</p>\n<p><strong>Kritischer Fehlschlag</strong> Das Ziel erleidet doppelten zusätzlichen Leerenschaden.</p>",
       "prerequisites": [
         {
           "value": "Ein Gegner der Kategorie Negativ reduziert dich auf 0 TP."
@@ -26282,7 +26295,7 @@
     },
     "Solar Detonation": {
       "name": "Solar Detonation",
-      "description": "<p>Blinding flames explode in a swirling sphere! The detonation fills a @Template[type:burst|distance:20] within 60 feet of you. Each creature in the area takes @Damage[(floor((@actor.level -8)/2)+6)d6[fire],(floor((@actor.level -8)/2)+2)d6[positive]] damage, and can become @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} or @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} depending on the result of its @Check[type:reflex|dc:resolve(@actor.system.proficiencies.classDCs.kineticist.dc)] save. The light from Solar Detonation is sunlight for creatures with a particular vulnerability to sunlight. Each creature that attempts a save becomes temporarily immune to being dazzled or blinded by Solar Detonation for 10 minutes, but not the impulse's other effects.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage and is dazzled until the start of your next turn.</p>\n<p><strong>Failure</strong> The creature takes full damage and is blinded until the start of your next turn.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is blinded for 1 minute.</p>\n<hr />\n<p><strong>Level (+2)</strong> Increase the fire damage by 1d6 and the vitality damage by 1d6.</p>"
+      "description": "<p>Blinding flames explode in a swirling sphere! The detonation fills a @Template[type:burst|distance:20] within 60 feet of you. Each creature in the area takes @Damage[(floor((@actor.level -8)/2)+6)d6[fire],(floor((@actor.level -8)/2)+2)d6[vitality]] damage, and can become @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} or @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} depending on the result of its @Check[type:reflex|dc:resolve(@actor.system.proficiencies.classDCs.kineticist.dc)] save. The light from Solar Detonation is sunlight for creatures with a particular vulnerability to sunlight. Each creature that attempts a save becomes temporarily immune to being dazzled or blinded by Solar Detonation for 10 minutes, but not the impulse's other effects.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage and is dazzled until the start of your next turn.</p>\n<p><strong>Failure</strong> The creature takes full damage and is blinded until the start of your next turn.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is blinded for 1 minute.</p>\n<hr />\n<p><strong>Level (+2)</strong> Increase the fire damage by 1d6 and the vitality damage by 1d6.</p>"
     },
     "Solar Rejuvenation": {
       "name": "Photosynthese",
@@ -26815,7 +26828,7 @@
     },
     "Spirit's Wrath": {
       "name": "Geisterhafter Zorn",
-      "description": "<p>Du rufst eine Geistererscheinung herbei, welche als Lichtfunken erscheint. Dabei handelt es sich meistens um einen Ahnen oder einen Naturgeist. Der Geisterfunken führt einen Waffenlosen Funkensturmangriff im Nahkampf gegen einen maximal 120 Fuß/36 m entfernten Gegner aus. Sein Angriffsmodifikator entspricht dabei deinem Kompetenzbonus für Kriegswaffen plus deinem Stärkemodifikator plus einem Gegenstandsbonus von +2, hinzu kommen alle Situations- und Zustandsmodifikatoren, unter denen du selbst stehst. Bei einem Treffer verursacht der Lichtfunke Schaden in Höhe deines Konstitutionsmodifikators + 4W8. Du bestimmst, ob es sich um [[/r (4d8+@actor.abilities.con.mod)[positive]]]{Positiven} oder [[/r (4d8+@actor.abilities.con.mod)[negative]]]{Negativen Energieschaden} handelt; addiere nicht deinen Kampfrauschschaden und auch nicht deinen Waffenspezialisierungsschaden. Situations- und Zustandsmodifikatoren, welche zur Wirkung kämen, gelten auch für den Schaden des Lichtfunkens. Sollte der Lichtfunken einen Kritischen Treffer landen, erhält das Ziel den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}. Dieser Angriff unterliegt deinem Malus für Mehrfachangriffe und zählt diesbezüglich, als hättest du ihn ausgeführt.</p>",
+      "description": "<p>Du rufst eine Geistererscheinung herbei, welche als Lichtfunken erscheint. Dabei handelt es sich meistens um einen Ahnen oder einen Naturgeist. Der Geisterfunken führt einen Waffenlosen Funkensturmangriff im Nahkampf gegen einen maximal 120 Fuß/36 m entfernten Gegner aus. Sein Angriffsmodifikator entspricht dabei deinem Kompetenzbonus für Kriegswaffen plus deinem Stärkemodifikator plus einem Gegenstandsbonus von +2, hinzu kommen alle Situations- und Zustandsmodifikatoren, unter denen du selbst stehst. Bei einem Treffer verursacht der Lichtfunke Schaden in Höhe deines Konstitutionsmodifikators + 4W8. Du bestimmst, ob es sich um @Damage[(4d8+@actor.abilities.con.mod)[vitality]]{Lebens-} oder @Damage[(4d8+@actor.abilities.con.mod)[void]]{Leerenschaden} handelt; addiere nicht deinen Kampfrauschschaden und auch nicht deinen Waffenspezialisierungsschaden. Situations- und Zustandsmodifikatoren, welche zur Wirkung kämen, gelten auch für den Schaden des Lichtfunkens. Sollte der Lichtfunken einen Kritischen Treffer landen, erhält das Ziel den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}. Dieser Angriff unterliegt deinem Malus für Mehrfachangriffe und zählt diesbezüglich, als hättest du ihn ausgeführt.</p>",
       "prerequisites": [
         {
           "value": "Geisterhafter Instinkt"
@@ -29406,7 +29419,7 @@
     },
     "Torrential Backlash": {
       "name": "Zerstörerischer Wirbel",
-      "description": "<p><strong>Anforderungen</strong> Du befindest dich im Zustand Fluchwirbel.</p>\n<p>Du nutzt verbotene Praktiken, um deinen Fluch freizusetzen und ihn ungehindert wüten zu lassen. Alle Kreaturen innerhalb der Ausstrahlung deines Wirbels (du ausgenommen) erleiden [[/r (@actor.level)d6[negative]]]{1W6 Punkte Negativen Schaden für jede deiner Stufen} (@Check[type:fortitude|dc:resolve(@actor.system.attributes.classOrSpellDC.value)|basic:true]{einfacher Zähigkeitswurf}). Dein Zustand Fluchwirbel endet dann.</p>",
+      "description": "<p><strong>Anforderungen</strong> Du befindest dich im Zustand Fluchwirbel.</p>\n<hr />\n<p>Du nutzt verbotene Praktiken, um deinen Fluch freizusetzen und ihn ungehindert wüten zu lassen. Alle Kreaturen innerhalb der Ausstrahlung deines Wirbels (du ausgenommen) erleiden @Damage[(@actor.level)d6[void]]{1W6 Punkte Leerenschaden} für jede deiner Stufen (@Check[type:fortitude|dc:resolve(@actor.system.attributes.classOrSpellDC.value)|basic:true]{einfacher Zähigkeitswurf}). Dein Zustand Fluchwirbel endet dann.</p>",
       "prerequisites": [
         {
           "value": "Fluchwirbel-Zugang"
@@ -31262,7 +31275,7 @@
     },
     "Vitality-Manipulating Stance": {
       "name": "Vitality-Manipulating Stance",
-      "description": "<p>You have learned to attack meridians and pressure points like your rival Shino Hakusa. You gain a vitality blast ranged unarmed Strike that deals @Damage[1d4[negative]] damage, has a range of 30 feet, and has the unarmed and versatile positive traits.</p>\n<p>Additionally, when you use Stunning Fist, instead of saving against being stunned, you can choose to have the target make a Fortitude save against your class DC with the following results. You must choose to do this before the target rolls its save.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.h45sUZFs5jhuQdCE]{Stance: Vitality-Manipulation Stance}</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target's muscles become temporarily weaker. For 1 round, the target is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2}, and any time it attempts to take an action with the manipulate trait, the action is disrupted unless it succeeds at a flat check with a DC equal to 5 + its enfeebled value.</p>\n<p><strong>Failure</strong> As success, but the duration is 1 minute.</p>\n<p><strong>Critical Failure</strong> As success, but the duration is 1 minute, the flat check is DC 11, and the target takes -10-foot status penalty to all Speeds for the duration.</p>",
+      "description": "<p>You have learned to attack meridians and pressure points like your rival Shino Hakusa. You gain a vitality blast ranged unarmed Strike that deals @Damage[1d4[void]] damage, has a range of 30 feet, and has the unarmed and versatile positive traits.</p>\n<p>Additionally, when you use Stunning Fist, instead of saving against being stunned, you can choose to have the target make a Fortitude save against your class DC with the following results. You must choose to do this before the target rolls its save.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.h45sUZFs5jhuQdCE]{Stance: Vitality-Manipulation Stance}</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target's muscles become temporarily weaker. For 1 round, the target is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2}, and any time it attempts to take an action with the manipulate trait, the action is disrupted unless it succeeds at a flat check with a DC equal to 5 + its enfeebled value.</p>\n<p><strong>Failure</strong> As success, but the duration is 1 minute.</p>\n<p><strong>Critical Failure</strong> As success, but the duration is 1 minute, the flat check is DC 11, and the target takes -10-foot status penalty to all Speeds for the duration.</p>",
       "prerequisites": [
         {
           "value": "Betäubende Fäuste"

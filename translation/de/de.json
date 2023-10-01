@@ -276,6 +276,7 @@
       },
       "Inventory": {
         "DistributeCoins": "Verteile Münzen",
+        "Encumbrance": "Belastung",
         "ItemQuantity": {
           "Decrease": {
             "Click": "[Klick] Um 1 verringern",
@@ -287,7 +288,8 @@
             "ShiftClick": "[Shift-Klick] Um 5 erhöhen",
             "ControlClick": "[Strg-Klick] Um 10 erhöhen"
           }
-        }
+        },
+        "TotalBulk": "Gesamte Last: {bulk}"
       },
       "IWREditor": {
         "DoubleVs": "Doppelter Schaden gg.",
@@ -325,11 +327,14 @@
             "Tooltip": "\"Würfe für die passende Kenntnis haben in der Regel einen Einfachen oder Sehr einfachen SG (ehe Anpassungen wegen der Seltenheit erfolgen).\" - GRW S. 506"
           }
         },
-        "SimpleSheet": "Einfacher NSC-Bogen"
+        "SimpleSheet": "Einfacher NSC-Bogen",
+        "SkillsEditor": {
+          "LorePlaceholder": "Kenntnis (Dummy)",
+          "Title": "Fertigkeiten-Editor ({actor})"
+        }
       },
       "Party": {
         "BlankSlate": "Diese Gruppe besitzt keine Mitglieder. Ziehe eine Kreatur aus der Akteurs-Leiste hierhin um zu beginnen.",
-        "Bulk": "Gesamtlast: {bulk}",
         "Coin": "Münzen",
         "ClearActivities": {
           "Label": "Leeren",
@@ -395,7 +400,6 @@
       "Message": "Wähle Waffengruppe oder Basiswaffe",
       "Title": "Kampfkompetenz hinzuf."
     },
-    "AddLoreSkill": "Kenntnisfertigkeit hinzuf.",
     "AddModifierTitle": "Modifikator hinzuf.",
     "AddShortLabel": "Hinzuf.",
     "AddSpellTitle": "Zauber hinzuf.",
@@ -924,9 +928,10 @@
       "Base": "Basis",
       "Dialog": {
         "Bonus": "Bonus {dice}",
-        "BonusDice": "Bonus-Würfel",
+        "BonusDice": "{dice} Würfel",
         "CriticalDamageRoll": "Krit. Schadenswurf",
         "DamageRoll": "Schadenswurf",
+        "DiceHeader": "Schadenswürfel",
         "Label": "Bezeichnung",
         "None": "Kein",
         "Splash": "{damageType} Alchemistischer Flächenschaden"
@@ -1092,16 +1097,16 @@
         "lawful": "Rechtschaffen",
         "mental": "Mental",
         "metal": "Metall",
-        "negative": "Negativ",
         "persistent": "{damageType} (Anhaltend)",
         "piercing": "Stich",
         "poison": "Gift",
-        "positive": "Positiv",
         "precision": "Präzision",
         "slashing": "Hieb",
         "sonic": "Schall",
         "spirit": "Seele",
         "splash": "Alchemistischer Flächenschaden",
+        "vitality": "Leben",
+        "void": "Leere",
         "untyped": "Unspezif."
       },
       "Scatter": "Streuschaden"
@@ -1139,9 +1144,8 @@
     "DefensesLabel": "Verteidigungen",
     "Deity": "Gottheit",
     "DeityTitle": "Deine Gottheit",
-    "DeleteConditionQuestion": "Sind sie sicher mit Löschen des Zustands {condition}?",
+    "DeleteQuestion": "Möchten Sie {name} wirklich löschen?",
     "DeleteConditionTitle": "Zustand entfernen",
-    "DeleteItemQuestion": "Bist du sicher, dass du folgendes löschen möchtest:",
     "DeleteItemTitle": "Gegenstand löschen",
     "DeleteShortLabel": "Entf.",
     "DeleteSpellcastEntryQuestion": "Bist du sicher, dass du diesen Zaubereintrag löschen möchtest?",
@@ -1303,7 +1307,7 @@
       "Master": "Meister",
       "MasterActor": "Spieler des Meisters",
       "MasterLevel": "Meisterstufe",
-      "MasterSpellcastingAbility": "Zauberart des Meisters",
+      "MasterSpellcastingAbility": "Attribut des Meisters",
       "Offenses": "Angriffe",
       "Perception": "Wahrnehmung",
       "SelectMaster": "Wähle einen Meister...",
@@ -2066,6 +2070,7 @@
       "Rules": {
         "Apply": "Anwenden",
         "Close": "Schließen",
+        "Edit": "JSON bearbeiten",
         "Hint": {
           "Slug": "Ein fixer, lesbarer Bezeichner: Einmal gesetzt bleibt er auch nach Umbenennung des Gegenstands gleich.",
           "SourceId": "Die UUID des originären Kompendium-Gegenstands",
@@ -2135,7 +2140,6 @@
         "HandsLabel": "Hände",
         "MandatoryMelee": "Diese Waffe hat eine Kategorie für ausschließliche Nutzung mit Nahkampfwaffen.",
         "MaterialAndRunes": {
-          "Hint": "Wertvolle Materialien und Runen ermöglichen eine tiefgreifende Anpassung einer Waffe. Sie verbessern nicht nur die Fähigkeit, Feinden zu schaden, sondern beeinflussen auch die Stufe, die Seltenheit, den Preis und den Namen der Waffe. Um die Umbenennung einer Waffe zu unterdrücken, geben Sie ihr einen beliebigen benutzerdefinierten Namen oder markieren Sie sie als <i>spezielle magische Waffe</i>.",
           "MaterialOption": "{type} ({grade})",
           "Title": "Materialzusammensetzung und Runen"
         },
@@ -2556,12 +2560,6 @@
       "SendToChat": "Im Chat anzeigen",
       "SensesLabel": "Sinne",
       "SkillRollFlavor": "{skillName} Fertigkeitswurf ({rank})",
-      "SkillsEditor": {
-        "BonusLabel": "Bonus",
-        "NameLabel": "Fertigkeitsname",
-        "SpecialCaseLabel": "Speziell",
-        "TitleLabel": "NSC Fertigkeiten bearbeiten"
-      },
       "SpeedExtraInfoLabelPlaceholder": "Bewegungsdetails...",
       "SpeedLabel": "Bewegungsrate",
       "Spells": {
@@ -3486,6 +3484,7 @@
     "TogglesLabel": "Schalter",
     "Token": {
       "Appearance": "Aussehen",
+      "Flanking": "Flankieren",
       "Size": {
         "Dimensions": "Abmessungen",
         "Label": "Größe",
@@ -3904,7 +3903,6 @@
     "TraitDescriptionMutagen": "Ein Elixier dieser Kategorie verwandelt und verändert vorübergehend Körper und Geist des Konsumenten; es hat stets einen oder mehrere positive und einen oder mehrere negative Effekte. Mutagene sind Gestaltwandeleffekte, d.h. du kannst stets nur von maximal einem zugleich profitieren.",
     "TraitDescriptionNagaji": "Eine traditionalistische Abstammung mit reptilienartigen Zügen und Schlangenköpfen.",
     "TraitDescriptionNecromancy": "Effekte und magische Gegenstände dieser Kategorie werden mit der Schule der Nekromantie assoziiert und betreffen in der Regel die Kräfte von Leben und Tod.",
-    "TraitDescriptionNegative": "Effekte dieser Kategorie heilen untote Kreaturen mit Negativer Energie, fügen lebenden Kreaturen Negativen Energieschaden zu oder manipulieren Negative Energie.",
     "TraitDescriptionNoisy": "Die Rüstung macht Lärm und wird wahrscheinlich deine Anwesenheit verraten, wenn du versuchst Unbemerkt zu bleiben. Der Rüstungsmalus gilt für Fertigkeitswürfe für Heimlichkeit, selbst wenn du die erforderliche Stärke besitzt.",
     "TraitDescriptionNone": "Diese Kategorie hat keine Beschreibung.",
     "TraitDescriptionNonlethal": "Angriffe mit dieser Waffe sind Nichttödlich (siehe Seite 453) und werden benutzt, um Kreaturen in den Zustand Bewusstlos zu versetzen, statt sie zu töten. Du kannst eine Nichttödliche Waffe auch für einen tödlichen Angriff verwenden, dieser unterliegt dann jedoch einem Situationsmalus von -2.",
@@ -3925,7 +3923,6 @@
     "TraitDescriptionPonderous": "Die Rüstung verfügt über bewegliche Teile oder andere Komplikationen, welche die Reaktionszeit des Trägers beeinflussen. Wenn du diese Rüstung trägst, erleidest du einen Malus von ‑1 auf Initiativewürfe. Solltest du nicht den erforderlichen Stärkewert besitzen, entspricht dieser Malus dem Rüstungsmalus, sofern dieser schlechter ist.",
     "TraitDescriptionPoppet": "Kleine Konstrukte, die ursprünglich als Gefährten und Diener entworfen wurden.",
     "TraitDescriptionPortable": "Tragbare Belagerungswaffen wie z.B. Rammböcke, können leichter getragen werden und erfüllen Funktionen bei Schlachten, aber auch kleineren Konflikten und während der Erkundung.",
-    "TraitDescriptionPositive": "Effekte dieser Kategorie heilen lebende Kreaturen mit Positiver Energie, fügen Untoten Positiven Energieschaden zu oder manipulieren Positive Energie.",
     "TraitDescriptionPossession": "Effekte dieser Kategorie gestatten einer Kreatur, ihren Geist und Verstand in ein Ziel zu projizieren. Eine gegen mentale Effekte immune Kreatur kann keine Besessenheitseffekte einsetzen. Während jemand von einem Ziel Besitz ergriffen hat, ist sein eigener Körper bewusstlos und kann nicht normal erwachen, außer der Besessenheitseffekt gestattet ihm, auch körperlich in das Ziel einzufahren. Wenn das Ziel Schaden erleidet, erleidet der Besitzergreifende die Hälfte dieses Schadens als mentalen Schaden. Ein Besitzergreifender verliert die Vorteile aller aktiven Zauber oder Fähigkeiten, welche seinen Körper betreffen, erlangt aber die Vorteile solcher aktiven Effekte, welche das Ziel betreffen. Er kann die rein körperlichen Fähigkeiten des Zieles nutzen, aber nicht seine eigenen, sofern es sich nicht um Zauber und/oder rein mentale Fähigkeiten handelt. Der SL bestimmt, ob eine Fähigkeit rein körperlich oder rein mental ist. Ein Besitzergreifender nutzt den Angriffsmodifikator, die RK, den Reflex- und Zähigkeitswurf, die Wahrnehmung und körperlichen Fertigkeiten des Zieles, aber seinen eigenen Willenswurf, seine mentalen Fertigkeiten, einen Zauberangriffswurf und Zauber-SG; er profitiert von Resonanzgegenständen, wo es relevant wird (seine eigenen Resonanzgegenstände greifen, wenn er seine eigenen Werte nutzt, während die Resonanzgegenstände des Zieles greifen, wenn er dessen Werte nutzt). Ein Besitzergreifender erhält keine Vorteile durch das Wirken von Zaubern, welche normalerweise nur den Zauberwirker selbst betreffen, da er sich nicht in seinem eigenen Körper befindet. Er muss seine eigenen Aktionen nutzen, um die besessene Kreatur zum Handeln zu bringen. Sollte ein Besitzergreifender durch eine Kombination aus Schaden an seinem wahren Körper und mentalen Schaden auf 0 Trefferpunkte reduziert werden, geht er K.O. und endet die Besessenheit augenblicklich. Sollte das Ziel zuerst auf 0 TP reduziert werden, kann der Besitzergreifende entweder mit dem Körper bewusstlos werden und die Besessenheit weiterführen oder den Effekt als Freie Aktion beenden und in seinen Körper zurückkehren. Sollte das Ziel sterben, so endet die Besessenheit augenblicklich und erhält der Besitzergreifende für 1 Minute den Zustand Betäubt.",
     "TraitDescriptionPotion": "Ein Trank ist eine magische Flüssigkeit, welche durch Trinken aktiviert (und meistens verbraucht) wird.",
     "TraitDescriptionPrecious": "Wertvolle Materialien mit besonderen Eigenschaften gehören der Kategorie Wertvoll an. Sie können beim Herstellen von Gegenständen als Grundmaterialien verwendet werden.",
@@ -4242,7 +4239,6 @@
     "TraitMutant": "Mutant",
     "TraitNagaji": "Nagaji",
     "TraitNecromancy": "Nekromantie",
-    "TraitNegative": "Negativ",
     "TraitNoisy": "Laut",
     "TraitNonlethal": "Nicht-tödlich",
     "TraitNymph": "Nymphe",
@@ -4270,7 +4266,6 @@
     "TraitPonderous": "Schwerfällig",
     "TraitPoppet": "Puppenkonstrukt",
     "TraitPortable": "Portabel",
-    "TraitPositive": "Positiv",
     "TraitPossession": "Besessenheit",
     "TraitPotion": "Trank",
     "TraitPrecious": "Wertvoll",
@@ -4357,7 +4352,7 @@
     "TraitRangeIncrement50": "Entfernungseinheit 50 Fuß/15 m",
     "TraitRangeIncrement60": "Entfernungseinheit 60 Fuß/18 m",
     "TraitRangeIncrement70": "Entfernungseinheit 70 Fuß/21 m",
-    "TraitRangeIncrement75": "Entfernungseinheit 75 Fuß/15 m",
+    "TraitRangeIncrement75": "Entfernungseinheit 75 Fuß/22,50 m",
     "TraitRangeIncrement80": "Entfernungseinheit 80 Fuß/24 m",
     "TraitRangeIncrement90": "Entfernungseinheit 90 Fuß/27 m",
     "TraitRangedTrip": "Zu Fall bringender Fernkampf",
@@ -4519,12 +4514,12 @@
     "TraitVersatileGood": "Vielseitig Gutes",
     "TraitVersatileHeritage": "Vielseitige Herkunft",
     "TraitVersatileLawful": "Vielseitig Rechtschaffen",
-    "TraitVersatileNegative": "Vielseitig Negativ",
     "TraitVersatileP": "Vielseitig S",
     "TraitVersatilePoison": "Vielseitig Gift",
-    "TraitVersatilePositive": "Vielseitig positiv",
     "TraitVersatileS": "Vielseitig H",
     "TraitVersatileSonic": "Vielseitig Schall",
+    "TraitVersatileVitality": "Vielseitig Leben",
+    "TraitVersatileVoid": "Vielseitig Leere",
     "TraitVigilante": "Vigilant",
     "TraitVirulent": "Ausgeprägt",
     "TraitVishkanya": "Vischkanya",
@@ -5127,8 +5122,8 @@
       "greaterBrilliant": {
         "Name": "Stark Gleißend",
         "Note": {
-          "criticalSuccess": "Der Schaden der Waffe ignoriert Resistenz gegen Feuer, Gutes oder Positive Energie. Im Fall eines Kritischen Treffers muss das Ziel einen @Check[type:fortitude|name:Stark GLeißend-Rune DC|dc:41|showDC:all] ablegen; bei Misslingen erleidet es für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind}.",
-          "success": "Der Schaden der Waffe ignoriert Resistenz gegen Feuer, Gutes oder Positive Energie."
+          "criticalSuccess": "Der Schaden der Waffe ignoriert Resistenz gegen Feuer, Gutes oder Leben. Im Fall eines Kritischen Treffers muss das Ziel einen @Check[type:fortitude|dc:41|showDC:all]{Zähigkeitswurf} ablegen; bei Misslingen erleidet es für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind}.",
+          "success": "Der Schaden der Waffe ignoriert Resistenz gegen Feuer, Gutes oder Leben."
         }
       },
       "greaterCorrosive": {
@@ -5237,7 +5232,7 @@
       "holy": {
         "Name": "Heilig",
         "Note": {
-          "criticalSuccess": "(<span class='pf2-icon'>R</span> Befehl; einmal pro Tag)<br /><strong>Auslöser</strong> Dir gelingt mit der Waffe bei einem Angriffswurf gegen eine Kreatur von Böser Gesinnung ein Kritischer Erfolg;<br /><strong>Effekt</strong> Du erhältst TP in Höhe des Doppelten der Stufe dieser Kreatur von Böser Gesinnung zurück. Dies ist ein guter, positiver und heilender Effekt."
+          "criticalSuccess": "(<span class='pf2-icon'>R</span> Befehl; einmal pro Tag)<br /><strong>Auslöser</strong> Dir gelingt mit der Waffe bei einem Angriffswurf gegen eine Kreatur von Böser Gesinnung ein Kritischer Erfolg;<br /><strong>Effekt</strong> Du erhältst TP in Höhe des Doppelten der Stufe dieser Kreatur von Böser Gesinnung zurück. Dies ist ein Guter, Leben und Heilender Effekt."
         }
       },
       "hopeful": {
@@ -5364,7 +5359,6 @@
     "WeaponRange70": "70 Fuß/21 m",
     "WeaponRange80": "80 Fuß/24 m",
     "WeaponRange90": "90 Fuß/27 m",
-    "WeaponRangeLabel": "Waffenreichweite",
     "WeaponRangeMelee": "Nahkampf",
     "WeaponRangeN": "{range} Fuß",
     "WeaponRangeReach": "Angriffsradius",
