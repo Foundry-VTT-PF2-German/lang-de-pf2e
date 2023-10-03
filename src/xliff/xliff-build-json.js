@@ -16,6 +16,6 @@ if (!existsSync(CFG_FILE)) {
         const source = unflattenObject(xliffToJson(readFileSync(entry.xliffPath, "utf-8")));
 
         // Save JSON to destination path
-        saveFileWithDirectories(entry.jsonDestinationPath, JSON.stringify(source, null, 2));
+        saveFileWithDirectories(entry.jsonDestinationPath, JSON.stringify(source, null, 4));
     });
 }
