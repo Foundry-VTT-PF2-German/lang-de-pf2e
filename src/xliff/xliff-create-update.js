@@ -17,8 +17,8 @@ if (!existsSync(CFG_FILE)) {
         // If target xliff already exists, make a backup and update the file. Otherwise create new xliff
         let target = "";
         if (existsSync(entry.xliffPath)) {
+            const xliff = readFileSync(entry.xliffPath, "utf-8");
             if (entry.xliffBackup) {
-                const xliff = readFileSync(entry.xliffPath, "utf-8");
                 saveFileWithDirectories(entry.xliffPath.replace(".xliff", "-backup.xliff"), xliff);
             }
             target = updateXliff(xliff, source);
