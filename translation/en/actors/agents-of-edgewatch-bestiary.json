@@ -152,6 +152,9 @@
     "Alchemist Aspirant": {
       "name": "Alchemist Aspirant",
       "items": {
+        "weapon->Tanglefoot Bag (Moderate)": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.evBPzM1VsuYcoenn]\n<p>A tanglefoot bag is filled with sticky substances. When you hit a creature with a tanglefoot bag, that creature takes a -15-foot status penalty to its Speeds for 1 minute. You gain a +1 item bonus to attack rolls, and the Escape DC is 19.</p>\n<p>On a critical hit, a creature in contact with a solid surface becomes stuck to the surface and @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} for 1 round, and a creature flying via wings has its wings tangled, causing it to fall safely to the ground and become unable to Fly again for 1 round. Tanglefoot bags are not effective when used on a creature that is in water.</p>\n<p>The target can end any effects by Escaping or spending a total of 3 actions to carefully remove the sticky substances. These Interact actions don't have to be consecutive, and other creatures can provide the actions as well.</p>"
+        },
         "armor->+1 Studded Leather Armor": {
           "name": "+1 Studded Leather Armor",
           "description": "<p>This leather armor is reinforced with metal studs and sometimes small metal plates, providing most of the flexibility of leather armor with more robust protection.</p>"
@@ -964,7 +967,7 @@
       "items": {
         "action->Overflowing Boiling Water": {
           "name": "Overflowing Boiling Water",
-          "description": "<p><strong>Trigger</strong> The trip wire is pulled or severed</p>\n<hr />\n<p><strong>Effect</strong> An acid flask detonates, spraying acid at nearby creatures and causing the tub of boiling water to burst in the same direction.</p>\n<p>All creatures in a @Template[type:cone|distance:5] east of the triggered boiling tub trap take @Damage[3d6[persistent,acid]] damage, [[/r (3[splash])[acid]]]{3 acid splash damage}, and @Damage[(8d6+20)[fire]] damage (@Check[type:reflex|dc:31|basic:true|traits:acid,fire] save).</p>"
+          "description": "<p><strong>Trigger</strong> The trip wire is pulled or severed</p>\n<hr />\n<p><strong>Effect</strong> An acid flask detonates, spraying acid at nearby creatures and causing the tub of boiling water to burst in the same direction.</p>\n<p>All creatures in a @Template[type:cone|distance:5] east of the triggered boiling tub trap take @Damage[3d6[persistent,acid],(3[splash])[acid],(8d6+20)[fire]]{3d6 persistent acid damage, 3 acid splash damage, and 8d6+20 fire damage} (@Check[type:reflex|dc:31|basic:true|traits:acid,fire] save).</p>"
         }
       }
     },
@@ -1233,7 +1236,7 @@
         },
         "action->Alchemical Chambers": {
           "name": "Alchemical Chambers",
-          "description": "<p>An alchemical golem's body contains six alchemical chambers filled with different substances. When an alchemical golem ability calls upon a randomly determined alchemical effect, roll 1d6 and consult the following :</p>\n<table class=\"pf2-table\">\n<thead>\n<tr>\n<th>[[/r {1d6} #Alchemical Effect]]{1d6}</th>\n<th>Alchemical Effect</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td>\n<p>@UUID[Compendium.pf2e.equipment-srd.Item.TZUskLT7yvP7N2co]{Elixir of Life (Lesser)}</p>\n</td>\n</tr>\n<tr>\n<td>2</td>\n<td>@UUID[Compendium.pf2e.equipment-srd.Item.T4ouD4mVFHA3EHs6]{Bomber's Eye Elixir (Lesser)} </td>\n</tr>\n<tr>\n<td>3</td>\n<td>@UUID[Compendium.pf2e.equipment-srd.Item.oCuwJ9IUDAuzsUwa]{Bravo's Brew (Moderate)}</td>\n</tr>\n<tr>\n<td>4</td>\n<td>@UUID[Compendium.pf2e.equipment-srd.Item.bQPRKEpnLakJBAAh]{Cat's Eye Elixir}</td>\n</tr>\n<tr>\n<td>5</td>\n<td>@UUID[Compendium.pf2e.equipment-srd.Item.AqLxu3ir4UGzdOaz]{Cheetah's Elixir (Moderate)}</td>\n</tr>\n<tr>\n<td>6</td>\n<td>@UUID[Compendium.pf2e.equipment-srd.Item.TMtQnY6yvIRCpK9v]{Juggernaut Mutagen (Greater)}</td>\n</tr>\n</tbody>\n</table>"
+          "description": "<p>An alchemical golem's body contains six alchemical chambers filled with different substances. When an alchemical golem ability calls upon a randomly determined alchemical effect, roll 1d6 and consult the following :</p>\n<table class=\"pf2-table\">\n<thead>\n<tr>\n<th>[[/br 1d6 #Alchemical Effect]]</th>\n<th>Alchemical Effect</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td>\n<p>@UUID[Compendium.pf2e.equipment-srd.Item.TZUskLT7yvP7N2co]{Elixir of Life (Lesser)}</p>\n</td>\n</tr>\n<tr>\n<td>2</td>\n<td>@UUID[Compendium.pf2e.equipment-srd.Item.T4ouD4mVFHA3EHs6]{Bomber's Eye Elixir (Lesser)}</td>\n</tr>\n<tr>\n<td>3</td>\n<td>@UUID[Compendium.pf2e.equipment-srd.Item.oCuwJ9IUDAuzsUwa]{Bravo's Brew (Moderate)}</td>\n</tr>\n<tr>\n<td>4</td>\n<td>@UUID[Compendium.pf2e.equipment-srd.Item.bQPRKEpnLakJBAAh]{Cat's Eye Elixir}</td>\n</tr>\n<tr>\n<td>5</td>\n<td>@UUID[Compendium.pf2e.equipment-srd.Item.AqLxu3ir4UGzdOaz]{Cheetah's Elixir (Moderate)}</td>\n</tr>\n<tr>\n<td>6</td>\n<td>@UUID[Compendium.pf2e.equipment-srd.Item.TMtQnY6yvIRCpK9v]{Juggernaut Mutagen (Greater)}</td>\n</tr>\n</tbody>\n</table>"
         },
         "action->Alchemical Rupture": {
           "name": "Alchemical Rupture",
@@ -1249,7 +1252,7 @@
         },
         "action->Alchemical Injection": {
           "name": "Alchemical Injection",
-          "description": "<p>When an alchemical golem hits a creature with a syringe Strike, roll 1d6 on the alchemical chambers list to determine the additional effect of the attack. The syringe deals an additional [[/r 2d6]] damage of the appropriate type.</p>"
+          "description": "<p>When an alchemical golem hits a creature with a syringe Strike, roll 1d6 on the alchemical chambers list to determine the additional effect of the attack.</p>\n<p>Chalky's alchemical chambers are filled with helpful potions and elixirs rather than harmful substances. When Chalky targets an ally with its syringe Strike, the ally takes no damage and doesn't need to make a save against the rolled effect.</p>"
         }
       }
     },
@@ -1271,7 +1274,7 @@
         },
         "action->Adamantine Strikes": {
           "name": "Adamantine Strikes",
-          "description": "<p>Chaos Gulgamodh's body— including the appendages it uses to make melee Strikes—is made of adamantine.</p>"
+          "description": "<p>Chaos Gulgamodh's body—including the appendages it uses to make melee Strikes—is made of adamantine.</p>"
         },
         "action->Cannon Fusillade": {
           "name": "Cannon Fusillade",
@@ -2041,7 +2044,7 @@
       "items": {
         "action->Explosion": {
           "name": "Explosion",
-          "description": "<p><strong>Trigger</strong> A creature opens the northern door without first disabling the trip wire</p>\n<hr />\n<p><strong>Effect</strong> The statue explodes, spraying shrapnel to the west in a @Template[type:cone|distance:5] and dealing @Damage[(1d10+7)[piercing]] and @Damage[1d10[fire]] damage to all creatures in the affected area (@Check[type:reflex|dc:18|basic:true] save).</p>"
+          "description": "<p><strong>Trigger</strong> A creature opens the northern door without first disabling the trip wire</p>\n<hr />\n<p><strong>Effect</strong> The statue explodes, spraying shrapnel to the west in a @Template[type:cone|distance:5] and dealing @Damage[(1d10+7)[piercing],1d10[fire]]{1d10+7 piercing and 1d10 fire} damage to all creatures in the affected area (@Check[type:reflex|dc:18|basic:true] save).</p>"
         }
       }
     },
@@ -3731,12 +3734,7 @@
         },
         "action->Upward Stab": {
           "name": "Upward Stab",
-          "description": "<p>Kolo's melee Strikes deal an extra 1d6 precision damage to Medium or larger creatures.</p>",
-          "rules": {
-            "1": {
-              "label": "Target is Medium or larger"
-            }
-          }
+          "description": "<p>Kolo's melee Strikes deal an extra 1d6 precision damage to Medium or larger creatures.</p>"
         }
       }
     },
@@ -4988,8 +4986,7 @@
       "senses": "darkvision",
       "items": {
         "weapon->+1 Longsword (Huge)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.LJdbVTOZog39EEbi]\n+1 Longsword (Huge)",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.LJdbVTOZog39EEbi]\n<p>Longswords can be one-edged or two-edged swords. Their blades are heavy and they're between 3 and 4 feet in length.</p>"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.LJdbVTOZog39EEbi]\n+1 Longsword (Huge)"
         },
         "strike-melee->Stone Fist": {
           "name": "Stone Fist"
