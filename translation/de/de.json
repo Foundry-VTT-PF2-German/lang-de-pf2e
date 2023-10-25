@@ -21,7 +21,7 @@
     "UnknownCombatant": "Unbekanter Teilnehmer"
   },
   "COMPENDIUM": {
-    "Migrate": "Kompendium migrieren"
+    "MigrationStatus": "Migrations-Status"
   },
   "CONTROLS": {
     "AdjustSceneDarkness": "Korrigiere Szenendunkelheit",
@@ -183,6 +183,24 @@
           },
           "Title": "Charakter konfigurieren"
         },
+        "Proficiency": {
+          "Attack": {
+            "Advanced": "Spezialwaffen",
+            "Martial": "Kriegswaffen",
+            "Simple": "Einfache Waffen",
+            "Title": "Angriffe",
+            "Unarmed": "Waffenlose Angriffe"
+          },
+          "Defense": {
+            "Heavy": "Schwere Rüstung",
+            "HeavyBarding": "Schwerer Harnisch",
+            "Light": "Leichte Rüstung",
+            "LightBarding": "Leichter Harnisch",
+            "Medium": "Mittelschwere Rüstung",
+            "Title": "Verteidigungen",
+            "Unarmored": "Ungerüstete Verteidigung"
+          }
+        },
         "Rest": {
           "Label": "Rast für die Nacht"
         }
@@ -335,6 +353,21 @@
       },
       "Party": {
         "BlankSlate": "Diese Gruppe besitzt keine Mitglieder. Ziehe eine Kreatur aus der Akteurs-Leiste hierhin um zu beginnen.",
+        "CheckPrompt": {
+          "AdjustDifficulty": "Schwierigkeit anpassen",
+          "ChooseLores": "Kenntnisse auswählen",
+          "ChooseSaves": "Rettungswürfe auswählen",
+          "ChooseSkills": "Fertigkeiten/Wahrnehmung auswählen",
+          "LevelDC": "Stufenabh. SG",
+          "Post": "Würfe anfordern",
+          "PromptTitle": "Titel",
+          "SecretCheck": "Verdeckter Wurf",
+          "SetDC": "SG festlegen",
+          "SimpleDC": "Einfacher SG",
+          "SkillsPerception": "Fertigkeiten/Wahrnehmung",
+          "Title": "Wurf anfordern",
+          "TitleShort": "Wurf anfordern"
+        },
         "Coin": "Münzen",
         "ClearActivities": {
           "Label": "Leeren",
@@ -588,7 +621,6 @@
     "Bonus": "Bonus",
     "BonusBulk": "Bonus Last Maximum",
     "BonusBulkTitle": "Hinzufügen oder abziehen von deinem Lastlimit",
-    "BonusEncumbranceBulkLabel": "Füge Belastungslimit hinzu",
     "BonusHPLabel": "Bonus TP",
     "BonusHPperLevel": "Bonus TP/Stufe",
     "BonusHPperLevelTitle": "Wirkt einmal für jede Stufe (KO-Mod. wird separat addiert)",
@@ -600,7 +632,6 @@
       "status": "Zustandsbonus",
       "untyped": "Unspezif. Bonus"
     },
-    "BonusLimitBulkLabel": "Füge Lastlimit hinzu",
     "BonusSPLabel": "Bonus AP",
     "BonusSPperLevel": "Bonus AP pro Stufe",
     "BonusSPperLevelTitle": "Wird einmal für jede Stufe angewendet (KO-Mod. wird separat hinzugefügt)",
@@ -724,7 +755,7 @@
           "Label": "Wahrnehmungswurf",
           "Secret": "Wahrnehmungswurf (Geheim)"
         },
-        "Recovery": "Erhohlungswurf"
+        "Recovery": "Erholungswurf"
       }
     },
     "CircumstanceBonusShortLabel": "Situation",
@@ -770,6 +801,18 @@
       "TakeLabel": "Gegenstand nehmen",
       "Title": "Kompendienbrowser"
     },
+    "CompendiumMigrationStatus": {
+      "Document": "Document",
+      "Foundry": "Foundry",
+      "FoundryOld": "0.7 oder älter",
+      "Invalid": "Ungültig",
+      "LockedTooltip": "Migration nicht möglich - Kompendium ist gesperrt",
+      "MigrateCompendium": "Kompendium migrieren",
+      "Schema": "Schema",
+      "Size": "Größe",
+      "Title": "Migrations-Status",
+      "UpToDate": "Aktuell"
+    },
     "Condition": {
       "ActiveLabel": "Aktiv",
       "DurationNumberLabel": "Runden",
@@ -807,6 +850,7 @@
     "ConditionTypeImmobilized": "Bewegungsunfähig",
     "ConditionTypeIndifferent": "Gleichgültig",
     "ConditionTypeInvisible": "Unsichtbar",
+    "ConditionTypeMalevolence": "Bosheit",
     "ConditionTypeObserved": "Beobachtet",
     "ConditionTypeOffGuard": "Auf dem falschen Fuß",
     "ConditionTypeParalyzed": "Gelähmt",
@@ -927,6 +971,7 @@
     "Damage": {
       "Base": "Basis",
       "Dialog": {
+        "BaseDamage": "Basisschaden",
         "Bonus": "Bonus {dice}",
         "BonusDice": "{dice} Würfel",
         "CriticalDamageRoll": "Krit. Schadenswurf",
@@ -976,6 +1021,7 @@
         },
         "Type": {
           "abjuration": "Bannmagie",
+          "abysium": "Abysium",
           "adamantine": "Adamant",
           "all-damage": "jede Schadensart",
           "area-damage": "Flächenschaden",
@@ -998,6 +1044,7 @@
           "death-effects": "Todeseffekte",
           "disease": "Krankheit",
           "divination": "Erkenntnismagie",
+          "djezet": "Djezet",
           "doomed": "Todgeweiht",
           "drained": "Ausgelaugt",
           "emotion": "Gefühl",
@@ -1018,6 +1065,7 @@
           "illusion": "Illusion",
           "immobilized": "Bewegungsunfähig",
           "inhaled": "Eingeatmet",
+          "inubrix": "Inubrix",
           "light": "Licht",
           "magic": "Magie",
           "magical": "Magisch",
@@ -1028,11 +1076,13 @@
           "non-magical": "Nichtmagisch",
           "nonlethal": "Nichttödlich",
           "nonlethal-attacks": "Nichttödliche Angriffe",
+          "noqual": "Noqual",
           "object-immunities": "Immunitäten eines Gegenstandes",
           "off-guard": "Auf dem falschen Fuß",
           "olfactory": "Riechbar",
           "orichalcum": "Orichalcum",
           "paralyzed": "Gelähmt",
+          "persistent-damage": "Anhaltender Schaden",
           "petrified": "Versteinert",
           "physical": "Körperlich",
           "plant": "Pflanze",
@@ -1045,6 +1095,7 @@
           "salt": "Salz",
           "salt-water": "Salzwasser",
           "scrying": "Ausspähung",
+          "siccatite": "Siccatit",
           "sickened": "Kränkelnd",
           "silver": "Silber",
           "sleep": "Schlaf",
@@ -1066,11 +1117,11 @@
           "vorpal-adamantine": "Adamantene Enthauptende Waffen",
           "vorpal-fear": "Furcht vor enthauptenden Waffen",
           "vulnerable-to-sunlight": "Empfindlichkeit gegen Sonnenlicht",
-          "warpglass": "Zerrglas",
           "water": "Wasser",
           "weapons": "Waffen",
           "weapons-shedding-bright-light": "Helles Licht verströmende Waffen",
-          "wood": "wood"
+          "wood": "wood",
+          "wounded": "Verwundet"
         }
       },
       "Hardness": {
@@ -1423,6 +1474,9 @@
         "InvalidDomains": "{type} Domänen müssen als Slugs formatiert sein und mit -damage enden."
       }
     },
+    "InlineDamage": {
+      "Base": "Basis: {formula}"
+    },
     "InlineTemplateErrors": {
       "DistanceMissing": "Fehler in @Template: distance Parameter ist Pflicht",
       "DistanceNoNumber": "Fehler in @Template: dimension {distance} ist keine Zahl",
@@ -1554,7 +1608,7 @@
         "PersistentDamage": {
           "AssistedRecovery": "Unterstützter Erholungswurf",
           "Chat": {
-            "Recover": "Würfle Erhohlungswurf",
+            "Recover": "Würfle Erholungswurf",
             "RecoverLabel": "Erholung: {name}"
           },
           "Dialog": {
@@ -1753,6 +1807,10 @@
             "Description": "Du vollbringst das Unerwartete und Unerklärliche.",
             "Label": "Magie"
           },
+          "Metal": {
+            "Description": "You manipulate flexible, mutable metal.",
+            "Label": "Metal"
+          },
           "Might": {
             "Description": "Deine körperliche Kraft wird durch göttliche Macht verstärkt.",
             "Label": "Kraft"
@@ -1881,6 +1939,10 @@
             "Description": "Du hast Macht über Reichtum, Handel und Schätze.",
             "Label": "Reichtum"
           },
+          "Wood": {
+            "Description": "You command the indomitable power of wood.",
+            "Label": "Wood"
+          },
           "Wyrmkin": {
             "Description": "Du erlangst deine Kraft von Drachen, Lindwürmern und anderen mächtigen Reptilien.",
             "Label": "Drachenartige"
@@ -1917,6 +1979,7 @@
             "Hint": "Die verschiedenen Ränge können mit Beschreibungstexten versehen werden. Sie sollten kurz genug sein, damit sie im Effekt angezeigt werden können. Die Texte legen gleichzeitig den maximalen Rang fest.",
             "Placeholder": "Neue Beschriftung"
           },
+          "Range": "Reichweite",
           "ReevaluateFormula": {
             "Label": "Neu bewerten?",
             "Never": "Nie",
@@ -1955,7 +2018,7 @@
         "Warning": {
           "InvalidCategory": "Kann Talent \" {item}\" nicht zu {category} hinzufügen: Talenttyp ist ungültig.",
           "TakenAfterLevel1": "{item} muss auf der 1. Stufe genommen werden, aber {actor} ist auf Stufe {actorLevel}.",
-          "TakenMoreThanMax": "{item} kann nur {maxTaken} mal genommen werden, aber {actor} hat es {timesTaken} mal gewählt.",
+          "TakenMoreThanMax": "{item} kann nur {maxTakable} mal genommen werden, aber {actor} hat es {timesTaken} mal gewählt.",
           "TakenMoreThanOnce": "{item} kann nur einmal genommen werden, aber {actor} hat es ein weiteres mal gewählt."
         }
       },
@@ -1971,6 +2034,10 @@
       },
       "IconLabel": "Icon",
       "NameLabel": "Name",
+      "OtherTags": {
+        "Label": "Andere Tags",
+        "Hint": "Zusätzliche Tags unabhängig von Kategorien, die bei der Klassifizierung von Gegenständen helfen"
+      },
       "Physical": {
         "Broken": "Beschäd.",
         "Bulk": {
@@ -2383,15 +2450,6 @@
     "MacroActionNoActorError": "Dieser Charakter existiert nicht mehr!",
     "MagicTraditionLabel": "Magische Tradition",
     "MagicTraditionUseSpellLabel": "Magische Tradition nutzen",
-    "MartialAdvanced": "Spezialwaffen",
-    "MartialHeavy": "Schwere Rüstung",
-    "MartialLight": "Leichte Rüstung",
-    "MartialMartial": "Kriegswaffen",
-    "MartialMedium": "Mittelschwere Rüstung",
-    "MartialSimple": "Einfache Waffen",
-    "MartialSkillsHeader": "Umgang mit Waffen und Rüstungen",
-    "MartialUnarmed": "Waffenlos",
-    "MartialUnarmored": "Ungerüstet",
     "MasterAbility": {
       "cha": "Meister-Charisma",
       "con": "Meister-Konstitution",
@@ -3041,17 +3099,13 @@
         }
       },
       "Variant": {
-        "AbilityScore": {
-          "GradualBoosts": {
-            "Hint": "Verteilt die Attributsverbesserungen auf niedrigere Stufen und sorgt dafür, dass Charaktere ihre wichtigsten Attributsmodifikatoren früher erhöhen können.",
-            "Name": "Stufenweise Attributsverbesserungen"
-          },
-          "Title": "Varianten für Attribute"
+        "GradualBoosts": {
+          "Hint": "Verteilt die Attributsverbesserungen auf mehrere Stufen. Spieler erhalten auf jeder Stufe mit Ausnahme der Stufen 6, 11 und 16 eine Verbesserung.",
+          "Name": "Stufenweise Attributsverbesserungen"
         },
         "AncestryParagon": {
           "Hint": "Gewähre zusätzlichen Talentplatz für die Typische Abstammungsvertreter Regelvariante aus dem Spielleiterhandbuch S. 194",
-          "Name": "Regelvariante: Typische Abstammungsvertreter",
-          "Title": "Typische Abstammungsvertreter"
+          "Name": "Typische Abstammungsvertreter"
         },
         "AutomaticBonus": {
           "Choices": {
@@ -3060,61 +3114,29 @@
             "noABP": "Standard-Regeln verwenden"
           },
           "Hint": "Nachladen erforderlich: Unterstützung für die Regeln der Variante \"Automatische Bonusprogression\", ausgenommen Fähigkeiten/Apex-Fähigkeit.",
-          "Name": "Regeln für die automatische Bonusvariante",
-          "Title": "Automatische Bonus-Progression"
+          "Name": "Automatische Bonusprogression"
         },
         "DualClass": {
           "Hint": "Gewähre zusätzliche Talentplätze für die Zweiklassenvariante aus dem Spielleiterhandbuch S. 192. Diese Variante fügt nur Talentplätze hinzu, und zwar immer einen Talentplatz der Stufe 1.",
-          "Name": "Regelvariante Zwei Klassen",
-          "Title": "Zwei Klassen"
-        },
-        "ExpertModifier": {
-          "Hint": "Passen Sie den Wert nach Ihrem Geschmack an, um die Regelvariante \"Kompetenzen ohne Stufe\" zu ergänzen. Erfordert Neuberechnung durch Nachladen oder Ändern eines Wertes pro Akteur.",
-          "Name": "Kompetenzmodifikator für Experte"
+          "Name": "Zwei Klassen"
         },
         "FreeArchetype": {
           "Hint": "Gewähre zusätzlichen Talentplatz für die Freie Archetypen Regelvariante aus dem Spielleiterhandbuch S. 193",
-          "Name": "Freie Archetypen Regelvariante",
-          "Title": "Freie Archetypen"
+          "Name": "Freie Archetypen"
         },
         "Hint": "Aktivieren und konfigurieren Sie Regelvarianten wie Kompetenz ohne Stufe oder das Ausdauersystem.",
         "Label": "Einstellungen von Regelvarianten",
-        "LegendaryModifier": {
-          "Hint": "Passen Sie den Wert nach Ihrem Geschmack an, um die Regelvariante \"Kompetenzen ohne Stufe\" zu ergänzen. Erfordert Neuberechnung durch Nachladen oder Ändern eines Wertes pro Akteur.",
-          "Name": "Kompetenzmodifikator für Legende"
-        },
-        "MasterModifier": {
-          "Hint": "Passen Sie den Wert nach Ihrem Geschmack an, um die Regelvariante \"Kompetenzen ohne Stufe\" zu ergänzen. Erfordert Neuberechnung durch Nachladen oder Ändern eines Wertes pro Akteur.",
-          "Name": "Kompetenzmodifikator für Meister"
-        },
         "Name": "Regelvarianten",
         "Proficiency": {
-          "Choices": {
-            "ProficiencyWithLevel": "Nutze Standardregeln",
-            "ProficiencyWithoutLevel": "Nutze Regelvariante"
-          },
           "Hint": "Spiele mit der Variante Kompetenzen ohne Stufe aus dem Spielleiterhandbuch Seite 198.",
-          "Name": "Kompetenz ohne Stufe Regelvariante",
-          "Title": "Kompetenz ohne Stufe"
+          "ModifiersHint": "Modifikatorbonus pro Kompetenzgrad festlegen.",
+          "Name": "Kompetenz ohne Stufe"
         },
         "Stamina": {
-          "Choices": {
-            "0": "Nutze keine Ausdauer",
-            "1": "Nutze Ausdauer"
-          },
           "Hint": "Spiele mit der Ausdauervariante aus dem Spielleiterhandbuch Seite 200",
-          "Name": "Ausdauer Regelvariante",
-          "Title": "Ausdauer"
+          "Name": "Ausdauer"
         },
-        "Title": "Einstellungen für Variantenregeln",
-        "TrainedModifier": {
-          "Hint": "Passen Sie den Wert nach Ihrem Geschmack an, um die Regelvariante \"Kompetenzen ohne Stufe\" zu ergänzen. Erfordert Neuberechnung durch Nachladen oder Ändern eines Wertes pro Akteur.",
-          "Name": "Kompetenzmodifikator für Geübt"
-        },
-        "UntrainedModifier": {
-          "Hint": "Passen Sie den Wert nach Ihrem Geschmack an, um die Regelvariante \"Kompetenzen ohne Stufe\" zu ergänzen; mit Variantenregeln wird ein Wert von -2 empfohlen. Erfordert Neuberechnung durch Nachladen oder Ändern eines Wertes pro Akteur.",
-          "Name": "Kompetenzmodifikator für Ungeübt"
-        }
+        "Title": "Regelvarianten"
       },
       "WorldClock": {
         "DateTheme": {
@@ -3411,7 +3433,7 @@
     "StaminaPointsShortLabel": "Ausdauer",
     "StatusBonusShortLabel": "Zustand",
     "StatusBonusTitle": "Zustandsbonus",
-    "StatusEffects": "Statuseffekte von {name}:",
+    "StatusEffects": "Zustände von {name}",
     "StealthLabel": "Heimlichkeit",
     "Strike": {
       "Combined": {
@@ -3485,6 +3507,10 @@
     "Token": {
       "Appearance": "Aussehen",
       "Flanking": "Flankieren",
+      "SecretDisposition": {
+        "Label": "Geheime Zugehörigkeit",
+        "Hint": "Die \"geheime\" Zugehörigkeit entfernt den farbigen Rahmen um den Token. Der Eigentümer sieht einen violetten Rahmen, ansonsten wird weder ein Rahmen angezeigt noch verändert sich der Cursor."
+      },
       "Size": {
         "Dimensions": "Abmessungen",
         "Label": "Größe",
@@ -4674,6 +4700,7 @@
         "alchemical-bomb": "Alchemistische Bombe",
         "alchemical-crossbow": "Alchemistische Armbrust",
         "aldori-dueling-sword": "Aldori Duellschwert",
+        "arbalest": "Arbalest",
         "arquebus": "Hakenbüchse",
         "asp-coil": "Aspis-Klinge",
         "atlatl": "Atlatl",
@@ -5232,7 +5259,7 @@
       "holy": {
         "Name": "Heilig",
         "Note": {
-          "criticalSuccess": "(<span class='pf2-icon'>R</span> Befehl; einmal pro Tag)<br /><strong>Auslöser</strong> Dir gelingt mit der Waffe bei einem Angriffswurf gegen eine Kreatur von Böser Gesinnung ein Kritischer Erfolg;<br /><strong>Effekt</strong> Du erhältst TP in Höhe des Doppelten der Stufe dieser Kreatur von Böser Gesinnung zurück. Dies ist ein Guter, Leben und Heilender Effekt."
+          "criticalSuccess": "(<span class=\"pf2-icon\">R</span> Befehl; einmal pro Tag)<br /><strong>Auslöser</strong> Dir gelingt mit der Waffe bei einem Angriffswurf gegen eine Kreatur von Böser Gesinnung ein Kritischer Erfolg;<br /><strong>Effekt</strong> Du erhältst TP in Höhe des Doppelten der Stufe dieser Kreatur von Böser Gesinnung zurück. Dies ist ein Guter, Leben und Heilender Effekt."
         }
       },
       "hopeful": {
@@ -5327,13 +5354,13 @@
       "unholy": {
         "Name": "Unheilig",
         "Note": {
-          "criticalSuccess": "(<span class='pf2-icon'>R</span> Befehl; einmal am Tag)<br /><strong>Auslöser</strong> Dir gelingt mit der Waffe ein Kritischer Erfolg bei einem Angriffswurf gegen eine Kreatur von Böser Gesinnung<br /><strong>Effekt</strong> Das Ziel erleidet @UUID[Compendium.pf2e.conditionitems.Item.lDVqvLKA6eF3Df60]{Anhaltenden Blutungsschaden} in Höhe von 1W8 pro Waffenschadenswürfel der gravierten Waffe."
+          "criticalSuccess": "(<span class=\"pf2-icon\">R</span> Befehl; einmal am Tag)<br /><strong>Auslöser</strong> Dir gelingt mit der Waffe ein Kritischer Erfolg bei einem Angriffswurf gegen eine Kreatur von Böser Gesinnung<br /><strong>Effekt</strong> Das Ziel erleidet Anhaltenden Blutungsschaden in Höhe von 1W8 pro Waffenschadenswürfel der gravierten Waffe."
         }
       },
       "vorpal": {
         "Name": "Enthauptend",
         "Note": {
-          "criticalSuccess": "(<span class='pf2-icon'>R</span> Vorstellung (Kampfunfähigkeit, Tod)<br /><strong>Auslöser</strong> Du erzielst bei einem Angriff mit der Waffe eine Natürliche 20, hast einen Kritischen Erfolg und fügst Hiebschaden zu. Das Ziel muss einen Kopf haben<br /><strong>Effekt</strong> Das Ziel muss einen @Check[type:fortitude|traits:death,incapacitation|dc:37|name:Enthauptend-Rune] ablegen; bei einem Fehlschlag wird es enthauptet. Dies tötet jede Kreatur außer solchen, die keinen Kopf zum Leben brauchen. Bei Kreaturen mit mehreren Köpfen wird die Kreatur dadurch normalerweise nur getötet, wenn man ihr den letzten Kopf abschlägt."
+          "criticalSuccess": "(<span class=\"pf2-icon\">R</span> Vorstellung (Kampfunfähigkeit, Tod)<br /><strong>Auslöser</strong> Du erzielst bei einem Angriff mit der Waffe eine Natürliche 20, hast einen Kritischen Erfolg und fügst Hiebschaden zu. Das Ziel muss einen Kopf haben<br /><strong>Effekt</strong> Das Ziel muss einen @Check[type:fortitude|traits:death,incapacitation|dc:37|name:Enthauptend-Rune]{Zähigkeitswurf} ablegen; bei einem Fehlschlag wird es enthauptet. Dies tötet jede Kreatur außer solchen, die keinen Kopf zum Leben brauchen. Bei Kreaturen mit mehreren Köpfen wird die Kreatur dadurch normalerweise nur getötet, wenn man ihr den letzten Kopf abschlägt."
         }
       },
       "wounding": {
