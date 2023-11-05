@@ -121,6 +121,12 @@
         "DamagedForN": "<actor>{actor}</actor> nimmt {hpDamage} Punkte Schaden.",
         "DamagedForNShield": "Der Schild von <actor>{actor}</actor> absorbiert {absorbedDamage} Punkte Schaden, wobei {hpDamage} Punkte durchkommen.",
         "HealedForN": "<actor>{actor}</actor> wird um {hpDamage} Punkte geheilt.",
+        "InstantDeath": {
+          "DeathEffect": "The death effect immediately kills them.",
+          "Destroyed": "They are destroyed.",
+          "FinePowder": "They are reduced to a fine powder; their gear remains.",
+          "MassiveDamage": "The massive damage immediately kills them."
+        },
         "ShieldAbsorbsAll": "<actor>{actor}</actor> ist unversehrt, da sein Schild {absorbedDamage} Punkte Schaden vollständig absorbiert.",
         "ShieldDamagedForN": "Der Schild nimmt dazu {shieldDamage} Punkte Schaden.",
         "ShieldDamagedForNBroken": "Der Schild nimmt dazu {shieldDamage} Punkte Schaden, wodurch es beschädigt wird.",
@@ -183,6 +189,7 @@
           },
           "Title": "Charakter konfigurieren"
         },
+        "HandsOccupied": "Hands Occupied",
         "Proficiency": {
           "Attack": {
             "Advanced": "Spezialwaffen",
@@ -203,6 +210,18 @@
         },
         "Rest": {
           "Label": "Rast für die Nacht"
+        },
+        "Shield": {
+          "ACBonus": "Shield AC Bonus (When Raised)",
+          "BrokenThreshold": "Shield Broken Threshold",
+          "Hardness": {
+            "Hint": "Shield Hardness",
+            "Label": "H"
+          },
+          "HitPoints": {
+            "Value": "Shield HP",
+            "Max": "Shield Max HP"
+          }
         }
       },
       "Creature": {
@@ -251,7 +270,7 @@
         },
         "SpellPreparation": {
           "Hint": "Um einen Zauber vorzubereiten, ziehe einen Zauber aus dieser Liste auf einen Platz auf dem Akteur-Charakterbogen.",
-          "HintFlexible": "Um einen Zauberspruch vorzubereiten, aktiviere ihn hier. Um einen Cantrip vorzubereiten, ziehe einen aus dieser Liste auf einen Platz auf dem Charakterbogen. ",
+          "HintFlexible": "To prepare a spell, enable it here. To prepare a cantrip, drag one from this list to a slot on the actor sheet.",
           "Search": "Zauber durchsuchen",
           "Title": "{actor}: Zaubervorbereitung"
         },
@@ -441,7 +460,6 @@
     "AdditionalLanguagePlusInt": "(plus Intelligenz)",
     "AdditionalSkills": "Zusätzliche Fertigkeiten",
     "Age": "Alter",
-    "AgeTitle": "Das Alter deines Charakters",
     "Alignment": "Gesinnung",
     "AlignmentCE": "Chaotisch Böse",
     "AlignmentCG": "Chaotisch Gut",
@@ -452,12 +470,10 @@
     "AlignmentN": "Neutral",
     "AlignmentNE": "Neutral Böse",
     "AlignmentNG": "Neutral Gut",
-    "AlignmentTitle": "Deine Gesinnung",
     "AllSavesLabel": "Alle Rettungswürfe",
     "AncestryFeatLevels": "Abstammungstalentstufen",
     "AncestryFeatures": "Abstammungsmerkmale",
     "AncestryHP": "Abstammungs-TP",
-    "AncestryTitle": "Die Abstammung deines Charakters",
     "AreaLabel": "Bereich",
     "AreaSize10": "10 Fuß/3 m",
     "AreaSize100": "100 Fuß/30 m",
@@ -600,7 +616,6 @@
     },
     "Background": "Hintergrund",
     "BackgroundSkillFeats": "Fertigkeitstalente",
-    "BackgroundTitle": "Der Hintergrund deines Charakters",
     "BaseModifier": "Basismodifikator",
     "BaseWeapons": "Basiswaffen",
     "BestiaryBrowserSearchHint": "Sie können nach Namen oder benutzerdefinierten Attributen suchen. Mögliche suchbare Attribute sind:<br> source, spellType, level, school, components, materials, target, range, time, duration, damage, damageType, save, concentration, ritual, ability and classes.<br>Beispiel: 'fire, damage:d6' um alle Zauber zu zeigen, die feuer in ihrem Namen und einen W6 im Schaden haben",
@@ -620,13 +635,8 @@
     "BiographyOrganizations": "Organizationen",
     "BiographyPersonalityHeader": "Persönlichkeit",
     "Bonus": "Bonus",
-    "BonusBulk": "Bonus Last Maximum",
-    "BonusBulkTitle": "Hinzufügen oder abziehen von deinem Lastlimit",
-    "BonusHPLabel": "Bonus TP",
-    "BonusHPperLevel": "Bonus TP/Stufe",
-    "BonusHPperLevelTitle": "Wirkt einmal für jede Stufe (KO-Mod. wird separat addiert)",
     "BonusLabel": {
-      "ability": "Attributsbonus",
+      "ability": "Attribute Bonus",
       "circumstance": "Situationsbonus",
       "item": "Ggst. Bonus",
       "proficiency": "Kompetenzbonus",
@@ -635,7 +645,6 @@
     },
     "BonusSPLabel": "Bonus AP",
     "BonusSPperLevel": "Bonus AP pro Stufe",
-    "BonusSPperLevelTitle": "Wird einmal für jede Stufe angewendet (KO-Mod. wird separat hinzugefügt)",
     "BrowseLabel": "Auflisten",
     "BrowserClearFilter": "Filter löschen",
     "BrowserClearFilters": "Alle Filter löschen",
@@ -765,7 +774,6 @@
     "ClassFeatLevels": "Klassentalentstufen",
     "ClassFeatures": "Klassenmerkmale",
     "ClassHP": "Klassen-TP",
-    "ClassTitle": "Die Klasse deines Charakters",
     "ClickToSetInitiative": "Klicke um Initiative bei gewählten Token(s) zu setzen.",
     "ClickToSetInitiativeContext": "Nutze für Initiative",
     "ClipboardNotification": "\"{clipText}\" in die Zwischenablage kopiert.",
@@ -955,10 +963,8 @@
     "CurrencyGP": "Gold",
     "CurrencyPP": "Platin",
     "CurrencySP": "Silber",
-    "CurrentHPTitle": "Deine aktuellen Trefferpunkte",
     "CurrentHitPointsShortLabel": "Aktuelle TP",
     "CurrentStaminaPointsShortLabel": "Aktuelle AP",
-    "CurrentStaminaTitle": "Deine aktuellen Ausdauerpunkte",
     "DCAdjustmentEasy": "einfach",
     "DCAdjustmentHard": "schwierig",
     "DCAdjustmentIncrediblyEasy": "unglaublich einfach",
@@ -971,17 +977,6 @@
     "DCWithValueAndVisibility": "<span data-visibility=\"{role}\">SG {dc}</span> {text}",
     "Damage": {
       "Base": "Basis",
-      "Dialog": {
-        "BaseDamage": "Basisschaden",
-        "Bonus": "Bonus {dice}",
-        "BonusDice": "{dice} Würfel",
-        "CriticalDamageRoll": "Krit. Schadenswurf",
-        "DamageRoll": "Schadenswurf",
-        "DiceHeader": "Schadenswürfel",
-        "Label": "Bezeichnung",
-        "None": "Kein",
-        "Splash": "{damageType} Alchemistischer Flächenschaden"
-      },
       "IWR": {
         "ActorIsImmune": "{actor} ist immun gg. {effect}.",
         "ActorIsUnaffected": "{actor} ist von {effect} nicht betroffen.",
@@ -1130,6 +1125,29 @@
         "Half": "Halbe Härte"
       },
       "IncreasedFrom": "Erhöht von {original} auf mindestens 1",
+      "Kind": {
+        "Both": {
+          "Roll": {
+            "Noun": "Damage/Healing Roll",
+            "Verb": "Roll Damage/Healing"
+          }
+        },
+        "Damage": {
+          "Roll": {
+            "Noun": "Damage Roll",
+            "Verb": "Roll Damage"
+          }
+        },
+        "Healing": {
+          "Apply": {
+            "Label": "Apply Healing"
+          },
+          "Roll": {
+            "Noun": "Healing Roll",
+            "Verb": "Roll Healing"
+          }
+        }
+      },
       "NoDamageFormulaLabel": "Kein Schaden",
       "PersistentTooltip": "{damageType} (Anhaltend)",
       "Precision": "Präzision",
@@ -1195,7 +1213,6 @@
     "DecrementEffectTitle": "Vermindere Effektgrad",
     "DefensesLabel": "Verteidigungen",
     "Deity": "Gottheit",
-    "DeityTitle": "Deine Gottheit",
     "DeleteQuestion": "Möchten Sie {name} wirklich löschen?",
     "DeleteConditionTitle": "Zustand entfernen",
     "DeleteItemTitle": "Gegenstand löschen",
@@ -1395,12 +1412,6 @@
     "FeaturesAncestryHeader": "Abstammungsmerkmale",
     "FeaturesClassHeader": "Klassenmerkmale",
     "Feet": "Fuß",
-    "FlatBonusHP": "Pauschalbonus TP",
-    "FlatBonusHPTitle": "Addiert einen festen Wert zu deinen TP",
-    "FlatBonusHPperLevel": "Bonus TP / Stufe",
-    "FlatBonusSP": "Pauschalbonus AP",
-    "FlatBonusSPTitle": "Addiert einen festen Wert zu deinen AP",
-    "FlatBonusSPperLevel": "Bonus AP / Stufe",
     "FlatCheck": "Einfacher Wurf",
     "Focus": {
       "NotEnoughFocusPointsError": "Sie haben nicht genug Fokuspunkte um diesen Zauber zu wirken.",
@@ -1409,9 +1420,7 @@
       "Previous": "Vorherig",
       "Spells": "Fokuszauber",
       "label": "Fokuspunkte",
-      "pointLabel": "Punkte",
-      "pointTitle": "Deine verbleibenden Fokuspunkte",
-      "poolTitle": "Die Größe deines Fokusvorrats"
+      "pointLabel": "Punkte"
     },
     "Foot": "Fuß",
     "FormulaKnownTitle": "Bekannte Formeln",
@@ -1429,24 +1438,16 @@
       "per": "je"
     },
     "GenderPronoun": "Geschlecht/Pronomen",
-    "GenderPronounTitle": "Dein Geschlecht/Pronomen",
     "GeneralFeatLevels": "Allgemeine Talentstufen",
-    "GreaterWeaponSpecialization": " Mächtige Waffenspezialisierung",
+    "GreaterWeaponSpecialization": "Greater Weapon Specialization",
     "HardnessLabel": "Härte",
     "HazardDescriptionLabel": "Beschreibung",
-    "HazardDescriptionTitle": "Dies erklärt, wie die Gefahr aussieht und kann besondere Regeln beinhalten",
     "HazardDisableLabel": "Entschärfen",
-    "HazardHardnessLabel": "Härte",
-    "HazardHardnessTitle": "Die Gefahr reduziert den erlittenen Schaden um diese Härte",
     "HazardResetLabel": "Rücksetzer",
-    "HazardResetTitle": "Manche Gefahren besitzen einen Rücksetzer, diese Information befindet sich hier",
     "HazardRoutineLabel": "Ablauf",
-    "HazardRoutineTitle": "In diesem Abschnitt wird beschrieben, was eine komplexe Gefahr in jedem seiner Spielzüge während einer Begegnung tut; die Zahl in Klammern nach dem Wort \"Routine\" gibt an, wie viele Aktionen die Gefahr pro Spielzug verwenden kann. Einfache Gefahren haben diesen Eintrag nicht",
     "HealingTypeTemporaryHealing": "Healung (Temporär)",
     "Height": "Größe",
-    "HeightTitle": "Deine Größe",
     "Heritage": "Herkunft",
-    "HeritageTitle": "Die Herkunft deines Charakters",
     "HeroPointRatio": {
       "Many": "{value}/{max} Heldenpunkte",
       "One": "1/{max} Heldenpunkt"
@@ -1661,7 +1662,7 @@
             "Label": "Abscheulichkeiten"
           },
           "Air": {
-            "Description": "Du kannst Wind und Wetter kontrollieren. ",
+            "Description": "You can control winds and the weather.",
             "Label": "Luft"
           },
           "AirApocryphal": {
@@ -2043,6 +2044,10 @@
       },
       "Physical": {
         "Broken": "Beschäd.",
+        "BrokenThreshold": {
+          "Label": "Broken Threshold",
+          "ShortLabel": "BT"
+        },
         "Bulk": {
           "Light": "L",
           "Negligible": "—",
@@ -2473,7 +2478,6 @@
     "MaxHitPointsBaseLabel": "Basis Max TP {base}",
     "MaxHitPointsShortLabel": "Max TP",
     "MaxStaminaPointsShortLabel": "Max AP",
-    "MaxStaminaTitle": "Deine maximalen Ausdauerpunkte",
     "Migrations": {
       "Finished": "PF2e Systemmigrations zu Version {version} abgeschlossen!",
       "OnlyGMCanUse": "Nur ein Spielleiter kann dieses Tool benutzen.",
@@ -2519,7 +2523,7 @@
           "AttackOfOpportunity": "<p><strong>Auslöser</strong> Eine Kreatur innerhalb des Angriffsradius des Monsters benutzt eine Bewegungsaktion oder eine Handhabenaktion, macht einen Fernkampfangriff oder verlässt ein Feld während einer Bewegungsaktion.</p>\n<p><strong>Effekt</strong> Das Monster führt einen Angriff im Nahkampf gegen die auslösende Kreatur aus. Wenn der Angriff ein Kritischer Treffer ist und der Auslöser eine Handhabenaktion war, so unterbricht das Monster diese Aktion. Dieser Angriff zählt nicht zur Berechnung des Malus für Mehrfachangriffe des Monsters und sein Malus für Mehrfachangriffe wird auf diesen Angriff nicht angewendet.</p>",
           "Aura": "<p>Die Aura eines Monsters betrifft automatisch alle und alles innerhalb einer Ausstrahlung mit dem angegebenen Radius um das Monster herum. Das Monster muss für die Aura keine Aktionen aufwenden; die Auswirkungen der Aura werden zu bestimmten Zeitpunkten angewendet, z.B. wenn eine Kreatur ihren Zug innerhalb der Aura beendet oder wenn Kreaturen die Aura betreten.</p>\n<p>Wenn es die einzige Auswirkung einer Aura ist, dass sie Schaden zufügt, werden in ihrem Eintrag nur Radius, Schaden und Rettungswurf angegeben. Solche Auren fügen ihren Schaden immer dann zu, wenn eine Kreatur ihren Zug innerhalb der Aura beginnt oder wenn eine Kreatur die Aura betritt. Kreaturen können von der Aura nur einmal pro Runde Schaden nehmen.</p>\n<p>Der SL kann festlegen, dass die Aura eines Monsters seine Verbündeten nicht betrifft. So könnte z.B. eine Kreatur gegen die Unheimliche Ausstrahlung eines Monsters immun sein, wenn diese beiden Kreaturen schon lange zusammen sind.</p>",
           "Buck": "<p>Die meisten Monster, die als Reittier dienen können, haben die Möglichkeit durch Buckeln einen unliebsamen Reiter abzuwerfen. Reittiere setzen diese Reaktion aber nicht gegen eine vertraute Kreatur ein, es sei denn, sie werden erschreckt oder schlecht behandelt.</p>\n<p><strong>Auslöser</strong> Eine Kreatur benutzt die Aktion @UUID[Compendium.pf2e.actionspf2e.Item.PM5jvValFkbFH3TV]{Aufsitzen} oder, wenn sie bereits auf dem Monster reitet, die Aktion @UUID[Compendium.pf2e.actionspf2e.Item.q9nbyIF0PEBqMtYe]{Tier anweisen}.</p>\n<p><strong>Effekt</strong> Die auslösende Kreatur muss einen Reflexwurf gegen den angegebenen SG anlegen. Bei einem Fehlschlag wird sie abgeworfen und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}. Bei einem kritischen Fehlschlag nimmt die auslösende Kreatur zusätzlich zu dem normalen Schaden für den Sturz [[/r {1d6}[bludgeoning]]]{1W6 Punkte Wuchtschaden}.</p>",
-          "CatchRock": "<p><strong>Anforderungen</strong> Das Monster muss eine freie Hand haben, kann aber alles, was es in der Hand hält, als Teil dieser Reaktion @UUID[Compendium.pf2e.actionspf2e.Item.wQYmDStjdjn0I26t]{Loslassen}.</p>\n<p><strong>Auslöser</strong> Das Monster wird Ziel eines Angriffs mit einem geworfenen Felsen oder ein Felsen stürzt auf das Monster.</p>\n<p><strong>Effekt</strong> Das Monster erhält einen Situationsbonus von +4 gegen den auslösenden Angriff bzw. auf einen Wurf zur Verteidigung gegen den stürzenden Felsen. Verfehlt der Angriff das Monster oder verteidigt es sich erfolgreich gegen den stürzenden Felsen, fängt das Monster den Felsen, nimmt keinen Schaden und hält dann den Felsen in der Hand.</p>",
+          "CatchRock": "<p><strong>Requirements</strong> The monster must have a free hand but can @UUID[Compendium.pf2e.actionspf2e.Item.wQYmDStjdjn0I26t]{Release} anything it's holding as part of this reaction.</p>\n<p><strong>Trigger</strong> The monster is targeted with a thrown rock Strike or a rock would fall on the monster.</p>\n<hr />\n<p><strong>Effect</strong> The monster gains a +4 circumstance bonus to its AC against the triggering attack or to any defense against the falling rock. If the attack misses or the monster successfully defends against the falling rock, the monster catches the rock, takes no damage, and is now holding the rock.</p>",
           "ChangeShape": "<p>Das Monster verändert auf unbegrenzte Zeit seine Gestalt. Es kann diese Aktion benutzen, um zu seiner natürlichen Gestalt zurückzukehren oder um in eine neue Gestalt zu wechseln. Sofern nichts anderes angegeben ist, kann Gestalt wechseln nicht eingesetzt werden, um das Aussehen eines bestimmten Individuums anzunehmen. Der Einsatz von Gestalt wechseln zählt als Verkleidung im Sinne der Anwendung @UUID[Compendium.pf2e.actionspf2e.Item.AJstokjdG6iDjVjE]{Verkleiden} der Fertigkeit Täuschung. Die Verwandlung des Monsters schlägt automatisch jeden Wahrnehmungs-SG zum Festzustellen, ob die Kreatur der Abstammung oder dem Kreaturenart angehört, dessen Gestalt sie angenommen hat. Weiterhin erhält sie einen Zustandsbonus von +4 auf ihren Täuschungs-SG gegen das Durchschauen der Verkleidung. Bei der Fähigkeit Gestalt wechseln wird angegeben, welche Gestalten das Monster annehmen kann. Es erhält keinerlei Sonderfähigkeiten der neuen Gestalt, nur deren körperliche Erscheinung. So werden z.B. in jeder Gestalt seine normalen Bewegungsraten und Angriffe durch die der neuen Gestalt ersetzt, sowie möglicherweise auch Sinne und Größe. Alle Änderungen werden im Spielwerteblock aufgeführt.</p>",
           "ConstantSpells": "<p>Ein ständig wirkender Zauber wirkt unbegrenzt lange auf das Monster, ohne dass es diesen wirken muss. Sollte einem ständig wirkenden Zauber entgegengewirkt werden, kann das Monster ihn wieder aktivieren, indem es die zum normalen Wirken des Zaubers notwendigen Aktionen aufwendet.</p>",
           "Constrict": "<p>Das Monster fügt einer beliebigen Anzahl an Kreaturen, die es @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{ergriffen} oder @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{gebunden} hat, den angegebenen Schaden zu. Jede dieser Kreaturen kann einen einfachen Zähigkeitswurf gegen den angegebenen SG ablegen.</p>",
@@ -2788,6 +2792,17 @@
     "PropertyRuneLabel2": "Eigenschaftsrune (2.)",
     "PropertyRuneLabel3": "Eigenschaftsrune (3.)",
     "PropertyRuneLabel4": "Eigenschaftsrune (4.)",
+    "Publication": {
+      "Authors": "Author(s)",
+      "Label": "Publication",
+      "License": {
+        "Label": "License",
+        "OGL": "OGL",
+        "ORC": "ORC"
+      },
+      "Remaster": "Remaster?",
+      "Title": "Title"
+    },
     "QuantityLabel": "Anzahl",
     "QuantityShortLabel": "Anz.",
     "RangePenalty": "Reichweiten-Malus",
@@ -2845,16 +2860,36 @@
     "ResistancesExceptionPlaceholder": "z.B. außer Silber",
     "ResistancesLabel": "Resistenzen",
     "ResolvePointsShortLabel": "Reserve",
-    "ResolveTitle": "Die Anzahl Reservepunkte, welche du aktuell besitzt",
     "RestoreSpellTitle": "Zauber wiederherstellen",
     "RevertDamage": {
       "ButtonTooltip": "Rückgängig",
-      "DamageMessage": "Schaden an {actor} wurde zurückgesetzt.",
-      "HealingMessage": "Heilung an {actor} wurde zurückgesetzt."
+      "DamageMessage": "Damage applied to {actor} was reverted.",
+      "HealingMessage": "Healing applied to {actor} was reverted."
     },
     "Roll": {
       "Add": "Hinzuf.",
       "CriticalHit": "Kritischer Treffer",
+      "Dialog": {
+        "Check": {
+          "Substitution": "Substitution",
+          "Utilize": "Utilize?"
+        },
+        "Damage": {
+          "BaseDamage": "Base Damage",
+          "Dice": "{dice} Dice",
+          "DiceHeader": "Dice",
+          "DieSizeUpgrade": "Upgrade Die Size",
+          "ExtraDice": "Extra {dice}",
+          "Label": "Label",
+          "None": "None",
+          "Override": "Override {value}",
+          "Splash": "{damageType} Splash",
+          "TitleCritical": "Critical Damage Roll",
+          "Title": "Damage Roll"
+        },
+        "ShowDefault": "Always Show Dialog",
+        "ShowDefaultHint": "If enabled, this dialog is always shown unless you hold Shift. If disabled, you can open this dialog by holding Shift."
+      },
       "Fortune": "Glück",
       "FortuneTitle": "{title}glück",
       "KeepHigher": "Den Höheren behalten",
@@ -2876,12 +2911,11 @@
     "SETTINGS": {
       "Automation": {
         "ActorsDeadAtZero": {
-          "Both": "SC's und NSC's",
-          "Hint": "Wenn sie keine Trefferpunkte mehr haben, werden NSCs als tot markiert.",
-          "NPCsOnly": "Ja",
-          "Name": "NSCs sind mit 0 TP tot",
-          "Neither": "Nein",
-          "PCsOnly": "nur SC's"
+          "Both": "Yes",
+          "Hint": "Upon reaching zero hit points, actors are marked as dead. For PCs, this only applies to damage that would immediately kill them.",
+          "NPCsOnly": "NPCS only",
+          "Name": "Actors Dead at 0 HP",
+          "Neither": "Nein"
         },
         "Encumbrance": {
           "Hint": "Setze automatisch den Zustand Belastet bei Kreaturen, die mehr als ihre zulässigen Lastwerte tragen.",
@@ -3003,7 +3037,7 @@
         },
         "Name": "Hausregeln",
         "SpellTraits": {
-          "Hint": " Eigenschaften, die auf jeden Zauber angewendet werden können (z. B. \"Fluchgebunden\", \"Heilung\")",
+          "Hint": "Traits that can be applied to any spell (e.g., Cursebound, Healing)",
           "Name": "Zaubermerkmale"
         },
         "Tabs": {
@@ -3070,11 +3104,6 @@
         "Hint": "Nutze bessere Standard Token-Icons",
         "Name": "Nath Modus"
       },
-      "Player": {
-        "QuickRolls": {
-          "DialogHint": "Zeige dieses Fenster immer bevor gewürfelt wird."
-        }
-      },
       "ResetChanges": "Änderungen zurücksetzen",
       "Settings": "Optionen",
       "Sidebar": {
@@ -3115,7 +3144,7 @@
         "AutomaticBonus": {
           "Choices": {
             "ABPFundamentalPotency": "ABP: Eigenschaftsrunen erlauben",
-            "ABPRulesAsWritten": "ABP: Eigenschaftsrunen verbieten",
+            "ABPRulesAsWritten": "ABP: Disallow Property Runes",
             "noABP": "Standard-Regeln verwenden"
           },
           "Hint": "Nachladen erforderlich: Unterstützung für die Regeln der Variante \"Automatische Bonusprogression\", ausgenommen Fähigkeiten/Apex-Fähigkeit.",
@@ -3238,32 +3267,10 @@
     "SellItemConfirmHeader": "Bestätigung Verkauf",
     "SellItemQuestion": "Bist du sicher, dass du den Gegenstand {item} verkaufen willst?",
     "Senses": "Sinne",
-    "SettingsColorBlue": "Blaugrau",
-    "SettingsColorFoundry-UI": "In Arbeit",
-    "SettingsColorLabel": "Farbschema",
-    "SettingsColorNotes": "Hier kannst du das Farbeschema des Systems setzen. Dieses wird hautpsächlich in Bögen verwendet.",
-    "SettingsColorOriginal": "Original",
-    "SettingsColorRed": "Dunkelrot",
-    "SettingsDataUriHighlightLabel": "Bilder hervorheben, die Daten verwenden: URI",
-    "SettingsDataUriHighlightNotes": "Bilder die Daten verwenden: URI werden in das Zeichenblatt eingebettet. Dies hat einen negativen Einfluss auf die Leistung des Charakterbogens. Wenn aktiviert, werden solche Bilder mit einem roten Rahmen hervorgehoben, damit sie leicht gefunden und entfernt werden können.<br>Diese Einstellung ist nur für die aktuelle Sitzung aktiv.",
     "SettingsQuickRollsLabel": "Zeige Würfeldialog",
     "SettingsQuickRollsNotes": "Wenn ausgeschaltet bekommst du nur beim Shift-Würfelklick ein Fenster zur Modifikation des Wurfes angezeigt.",
     "SheetLabel": "{type}bogen",
-    "SheetLabelDataEntry": "{type}bogen (Dateneintrag)",
-    "SheetLabelNew": "{type}bogen (Vorschau)",
-    "SheetLabelOld": "{type}bogen (ursprüngl.)",
-    "ShieldACBonusTitle": "Der RK Bonus deines Schildes (wenn die die Aktion Schild heben verwendest)",
-    "ShieldBTShortLabel": "BW",
-    "ShieldBTTitle": "Der Beschädigungswert deines Schildes",
-    "ShieldBrokenThresholdLabel": "Beschädigungswert",
-    "ShieldCurrentLabel": "Schild TP",
-    "ShieldCurrentTitle": "Die aktuellen Trefferpunkte deines Schildes",
-    "ShieldHardnessLabel": "Härte",
-    "ShieldHardnessShortLabel": "H",
-    "ShieldHardnessTitle": "Wenn dein Schild Schaden nimmt, wird dieser um den Härtewert reduziert",
     "ShieldLabel": "Schild",
-    "ShieldMaxLabel": "Max",
-    "ShieldMaxTitle": "Die maximalen Trefferpunkte denes Schildes",
     "SidebarAppearanceLabel": "Aussehen",
     "Size": "Größe",
     "SizeLabel": "Größe",
@@ -3319,14 +3326,12 @@
     "SpeedBaseLabel": "Basisbewegungsrate {type}",
     "SpeedFeet": "Bewegungsrate (Fuß)",
     "SpeedLabel": "{type} Bewegungsrate",
-    "SpeedTitle": "Die Bewegungsraten deines Charakters",
     "SpeedTypes": "Bewegungsarten",
     "SpeedTypesBurrow": "Graben",
     "SpeedTypesClimb": "Klettern",
     "SpeedTypesFly": "Fliegen",
     "SpeedTypesLand": "Boden",
     "SpeedTypesSwim": "Schwimmen",
-    "SpeedTypesTitle": "Alternative Bewegungsarten",
     "SpellAbilityLabel": "Schlüsselattribut",
     "SpellAbilityModLabel": "+ Mod.",
     "SpellArea": "Bereich: {areaSize} {areaUnit} {areaType}",
@@ -3485,7 +3490,6 @@
     "TabPathfinderSociety": "Pathfinder Society",
     "TabSkillsLabel": "Fertigkeiten",
     "TabSpellbookLabel": "Zauberei",
-    "TempHPTitle": "Deine aktuellen temporären Trefferpunkte",
     "TempHitPointsShortLabel": "Temp. TP",
     "TemplateLabel": "{size}-{unit} {shape}",
     "TemporaryItemToolTip": "Dieser Gegenstand ist zeitlich begrenzt und verfällt nach einer bestimmten Zeit oder während der täglichen Vorbereitungen. Er hat keinen Wert und kann nicht verkauft werden.",
@@ -3836,7 +3840,7 @@
     "TraitDescriptionFighter": "Eine Fähigkeit der Klasse des Kämpfers.",
     "TraitDescriptionFigurehead": "While many ships are adorned with decorative carvings, daring crews sometimes procure magical figureheads for their vessels.",
     "TraitDescriptionFinesse": "Du kannst statt deines Stärkemodifikators deinen Geschicklichkeitsmodifikator für Angriffswürfe mit dieser Waffe nutzen. Du benutzt deinen Stärkemodifikator weiterhin, wenn es darum geht den Schaden zu berechnen.",
-    "TraitDescriptionFinisher": " Diese sind spektakuläre Kampfhandlungen, bei denen du deinen Elan nutzt. Du kannst diese Handlungen nur nutzen, wenn du über Elan verfügst, und verlierst sofort im Anschluss an die Nutzung der Handlung deinen Elan. Ferner kannst du dann bis zum Ende deines Zuges keine Handlungen der Kategorie Offensiv nutzen. Manche Abschlusshandlungen verleihen zudem einen Effekt bei Fehlschlägen (diese Effekte kommen nicht bei Kritischen Fehlschlägen zur Anwendung). Im Erfolgsfall kannst du dennoch wählen, den Fehlschlageffekt zu nutzen, z.B. weil ein Angriff aufgrund von Resistenz keinen Schaden verursacht.",
+    "TraitDescriptionFinisher": "Finishers are spectacular finishing moves. You can use a finisher only if you have panache, and you lose your panache immediately after performing a finisher. Once you use a finisher, you can't use actions that have the attack trait for the rest of your turn. Some finisher actions also grant an effect on a failure. If your finisher succeeds, you can choose to apply the failure effect instead.",
     "TraitDescriptionFinite": "Ebenen dieser Kategorie bestehen aus einem beschränkten Raum.",
     "TraitDescriptionFire": "Effekte der Kategorie Feuer verursachen Feuerschaden oder manipulieren Feuer oder zaubern es herbei. Manipulierende Effekte haben keine Effekte in Regionen ohne Feuer. Kreaturen dieser Kategorie bestehen hauptsächlich aus Feuer oder besitzen eine magische Verbindung zu diesem Element.",
     "TraitDescriptionFleshwarp": "Humanoide, welche durch äußere Kräfte derart verwandelt wurden, dass sie nun eine eigene Abstammung darstellen.",
@@ -3934,6 +3938,7 @@
     "TraitDescriptionMutagen": "Ein Elixier dieser Kategorie verwandelt und verändert vorübergehend Körper und Geist des Konsumenten; es hat stets einen oder mehrere positive und einen oder mehrere negative Effekte. Mutagene sind Gestaltwandeleffekte, d.h. du kannst stets nur von maximal einem zugleich profitieren.",
     "TraitDescriptionNagaji": "Eine traditionalistische Abstammung mit reptilienartigen Zügen und Schlangenköpfen.",
     "TraitDescriptionNecromancy": "Effekte und magische Gegenstände dieser Kategorie werden mit der Schule der Nekromantie assoziiert und betreffen in der Regel die Kräfte von Leben und Tod.",
+    "TraitDescriptionNindoru": "Nindorus are chaotic evil fiends that rise from corruptions to the cycle of reincarnating souls and live on the Material Plane. Although they often have elements in their appearance that make them seem undead, they're actually living beings. Most nindorus have darkvision, are immune to death effects, have weakness to silver, and possess the power to manifest objects or creatures from their thoughts.",
     "TraitDescriptionNoisy": "Die Rüstung macht Lärm und wird wahrscheinlich deine Anwesenheit verraten, wenn du versuchst Unbemerkt zu bleiben. Der Rüstungsmalus gilt für Fertigkeitswürfe für Heimlichkeit, selbst wenn du die erforderliche Stärke besitzt.",
     "TraitDescriptionNone": "Diese Kategorie hat keine Beschreibung.",
     "TraitDescriptionNonlethal": "Angriffe mit dieser Waffe sind Nichttödlich (siehe Seite 453) und werden benutzt, um Kreaturen in den Zustand Bewusstlos zu versetzen, statt sie zu töten. Du kannst eine Nichttödliche Waffe auch für einen tödlichen Angriff verwenden, dieser unterliegt dann jedoch einem Situationsmalus von -2.",
@@ -4021,6 +4026,7 @@
     "TraitDescriptionTalos": "Taloses are planar scions descended from zuhras.",
     "TraitDescriptionTandem": "Bei Handlungen mit dieser Kategorie agieren dein Eidolon und du gemeinsam. Du kannst keine Handlung der Kategorie Gemeinsam nutzen, wenn du oder dein Eidolon nicht zum Handeln imstande ist, wenn du dein Eidolon nicht manifestiert hast oder wenn du dein Eidolon auf eine Weise manifestiert hast, bei der es kein eigenständiges Wesen ist (beispielsweise mit dem Talent Mit Eidolon verschmelzen). Handlungen der Kategorie Gemeinsam lassen dein Eidolon und dich oft separate Handlungen ausführen. Du kannst keine Handlung der Kategorie Gemeinsam ausführen, um eine weitere Handlung der Kategorie Gemeinsam zu nutzen.",
     "TraitDescriptionTattoo": "Eine Tätowierung ist eine Art von Gegenstand, der in die Haut eines Lebewesens gezeichnet oder geschnitten wird und normalerweise die Form von Bildern oder Symbolen annimmt.",
+    "TraitDescriptionTea": "<p>Magic tea is a type of potion. It activates when you drink it, which uses it up. Magic tea has the potion and tea traits. When you craft a dose of magic tea, the raw materials you supply are in the form of unusual and costly tea leaves. The process of crafting magic tea includes infusing the leaves with magical reagents, purifying the water, and steeping the tea in the water, resulting in what's essentially a particularly delicious-tasting potion. You can activate magic tea with an Interact action as you drink it or feed it to another creature, as if it were a potion. You can also activate magic tea with a 10-minute activity that requires sterling tea ware (these artisan's tools can be shared by up to four people who take this activity simultaneously) to prepare the tea and then consume it or present it to someone during a short tea ceremony, after which the magic tea's effects begin; activating magic tea in this way enhances its effect, as detailed in each entry's Tea Ceremony.</p><p>Once you drink a dose of magic tea, you're temporarily immune to that particular type of magic tea for 24 hours.</p>",
     "TraitDescriptionTech": "Items with this trait are associated with the technology of Numeria.",
     "TraitDescriptionTelepathy": "Ein Monster mit Telepathie kann auf mentale Weise mit jeder Kreatur innerhalb des angegebenen Radius kommunizieren, solange es mit dieser über eine gemeinsame Sprache verfügt. Dies gibt dem Monster keinen besonderen Zugriff auf die Gedanken der Kreatur. Diese Kommunikation übermittelt dabei nicht mehr Information als normale Sprache.",
     "TraitDescriptionTeleportation": "Teleportationseffekte gestatten dir, dich ohne Zeitverlust von einem Punkt zu einem anderen zu bewegen. Teleportationen lösen normalerweise keine Reaktionen aus, die durch Fortbewegung ausgelöst werden.",
@@ -4270,6 +4276,7 @@
     "TraitMutant": "Mutant",
     "TraitNagaji": "Nagaji",
     "TraitNecromancy": "Nekromantie",
+    "TraitNindoru": "Nindoru",
     "TraitNoisy": "Laut",
     "TraitNonlethal": "Nicht-tödlich",
     "TraitNymph": "Nymphe",
@@ -4487,6 +4494,7 @@
     "TraitTanggal": "Tanggal",
     "TraitTattoo": "Tätowierung",
     "TraitTattooedOnTheBody": "Auf dem Körper tätowiert",
+    "TraitTea": "Tea",
     "TraitTech": "Tech",
     "TraitTechnological": "Technologisch",
     "TraitTelepathy": "Telepathie",
@@ -4673,8 +4681,8 @@
       },
       "errorTargetToken": "Du hast kein Zieltoken ausgewählt.",
       "noDamageInfoForOutcome": "Keine Schadensinformation für Resultat {outcome}.",
-      "shiftModifyDamageLabel": "Modifikator:",
-      "shiftModifyDamageTitle": "Modifiziert den/die erhaltene/n Heilung/Schaden"
+      "shiftModifyDamageLabel": "Amount",
+      "shiftModifyDamageTitle": "Adjust Damage/Healing"
     },
     "UUID": {
       "Label": "UUID",
@@ -5289,8 +5297,7 @@
         "Name": "Unmöglich"
       },
       "keen": {
-        "Name": "Scharf",
-        "Note": "Angriffe mit dieser Waffe gelten schon beim Wurf einer 19 als Kritischer Treffer, solange das Ergebnis selbst ein Erfolg ist. Diese Eigenschaft hat keine Auswirkungen auf eine 19, sollte das Ergebnis ein Fehlschlag sein."
+        "Name": "Scharf"
       },
       "kinWarding": {
         "Name": "Familienschutz"
@@ -5405,7 +5412,6 @@
     "WeaponTypeSpecial": "Andere Waffe",
     "WeaponTypeUnarmed": "Waffenloser Angriff",
     "Weight": "Gewicht",
-    "WeightTitle": "Dein Gewicht",
     "WorldClock": {
       "AD": {
         "Era": "AD"
@@ -5780,7 +5786,7 @@
     },
     "ui": {
       "armorEquipped": "Ausrüstung Tragen umschalten",
-      "equipmentInvested": "Resonanz umschalten",
+      "equipmentInvested": "Toggle Investment",
       "sell": "Verkaufen",
       "weaponEquipped": "Umschalter zum halten der Waffe"
     },
