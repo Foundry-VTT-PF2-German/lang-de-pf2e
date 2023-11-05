@@ -4118,6 +4118,15 @@
       "name": "Callow May",
       "description": "<p>You are among the most common of changelings-those born to green hags-and a vibrant green eye signifies that parentage. Your mother's manipulative nature and versatile voice gives you an edge when deceiving others.</p>\n<p>You gain the @UUID[Compendium.pf2e.feats-srd.Item.B6HbYsLBWb1RR6Fx]{Charming Liar} skill feat. If you roll Deception for initiative, foes in that combat encounter that haven't acted yet are @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against you.</p>"
     },
+    "Calm and Centered": {
+      "name": "Calm and Centered",
+      "description": "<p>Your occult connection to the world helps you deal with being @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} or @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied}. When your frightened or stupefied condition values would decrease, decrease the value by 2.</p>",
+      "prerequisites": [
+        {
+          "value": "master in Occultism"
+        }
+      ]
+    },
     "Camouflage": {
       "name": "Camouflage",
       "description": "<p>You alter your appearance to blend in to the wilderness. In natural terrain, you can @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa]{Hide} and @UUID[Compendium.pf2e.actionspf2e.Item.VMozDqMMuK5kpoX4]{Sneak} even without cover or being @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed}.</p>",
@@ -5175,6 +5184,15 @@
       "prerequisites": [
         {
           "value": "Pistolero's Challenge"
+        }
+      ]
+    },
+    "Comforting Presence": {
+      "name": "Comforting Presence",
+      "description": "<p><strong>Trigger</strong> An adjacent ally becomes frightened or stupefied.</p>\n<hr />\n<p>You use your occult connection to your allies to take on the fear and confusion they feel. Focus on your own calmness and pull in your nearby allies' emotions. Reduce the @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied} condition values of adjacent allies by 1, and increase your frightened and stupefied condition values by the same amount.</p>",
+      "prerequisites": [
+        {
+          "value": "master in Occultism"
         }
       ]
     },
@@ -6855,7 +6873,7 @@
     },
     "Desiccating Inhalation": {
       "name": "Desiccating Inhalation",
-      "description": "<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p>You draw in the moisture from nearby creatures, draining them dry to heal your wounds. Creatures in a @Template[type:cone|distance:30] take @Damage[6d8[void]] negative damage, with a @Check[type:reflex|dc:resolve(@actor.attributes.classDC.value)|basic:true] save against your class DC. A creature that critically fails this saving throw is also @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}. As long as at least one creature was damaged by your Desiccating Inhalation, you regain HP equal to your level.</p>\n<p>At 14th level and every 2 levels thereafter, the damage increases by 1d8. [[/r floor(@actor.level/2)d8[void]]]{level based damage}</p>",
+      "description": "<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p>You draw in the moisture from nearby creatures, draining them dry to heal your wounds. Creatures in a @Template[type:cone|distance:30] take @Damage[floor(@actor.level/2)d8[void]] damage, with a @Check[type:reflex|dc:resolve(@actor.attributes.classDC.value)|basic:true] save against your class DC. A creature that critically fails this saving throw is also @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}. As long as at least one creature was damaged by your Desiccating Inhalation, you regain [[/r @actor.level[healing]]]{HP equal to your level}.</p>\n<p>At 14th level and every 2 levels thereafter, the damage increases by 1d8.</p>",
       "prerequisites": [
         {
           "value": "Mummy Dedication"
@@ -11940,7 +11958,7 @@
     },
     "Fresh Produce": {
       "name": "Fresh Produce",
-      "description": "<p>You grow a nourishing nut, vegetable, seed, or fruit. Choose a creature in your kinetic aura. The produce grows in their open hand, or at their feet if they have no open hands. The produce has light Bulk. A creature can eat it with an Interact action to regain 1d4+1 HP; this is a healing vitality effect. The creature feels full for 10 minutes, during which it has resistance 2 to void damage and can't eat another piece of produce. Produce not consumed by the start of your next turn withers away.</p>\n<hr />\n<p><strong>Level (+2)</strong> The healing increases by 1d4+5, and the resistance increases by 2.</p>\n<p>[[/r ((floor((max(1,@actor.level)-1)/2)+1)d4+(floor((max(1,@actor.level)-1)/2)*5+1))[healing]]]{Leveled HP}</p>"
+      "description": "<p>You grow a nourishing nut, vegetable, seed, or fruit. Choose a creature in your kinetic aura. The produce grows in their open hand, or at their feet if they have no open hands. The produce has light Bulk. A creature can eat it with an Interact action to regain 1d4+1 HP; this is a healing vitality effect. The creature feels full for 10 minutes, during which it has resistance 2 to void damage and can't eat another piece of produce. Produce not consumed by the start of your next turn withers away.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.2GWZgsvMJF9DN0DO]{Effect: Fresh Produce}</p>\n<hr />\n<p><strong>Level (+2)</strong> The healing increases by 1d4+5, and the resistance increases by 2.</p>\n<p>[[/r ((floor((max(1,@actor.level)-1)/2)+1)d4+(floor((max(1,@actor.level)-1)/2)*5+1))[healing]]]{Leveled HP}</p>"
     },
     "Friendform": {
       "name": "Friendform",
@@ -12698,6 +12716,15 @@
       "prerequisites": [
         {
           "value": "Gnome Weapon Familiarity"
+        }
+      ]
+    },
+    "Go with the Flow": {
+      "name": "Go with the Flow",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> A creature detects your attempt to @UUID[Compendium.pf2e.actionspf2e.Item.AJstokjdG6iDjVjE]{Impersonate}, and you're within 30 feet of at least one other creature.</p>\n<hr />\n<p>You have an occult connection to the world that helps you blend in with the cacophony of life around you. Attempt an @Check[type:occultism|defense:perception] check against the creature's Perception DC. On a success, the creature mistakenly identifies another creature within 30 feet of you as you instead.</p>",
+      "prerequisites": [
+        {
+          "value": "master in Occultism"
         }
       ]
     },
@@ -23298,7 +23325,7 @@
     },
     "Retch Rust": {
       "name": "Retch Rust",
-      "description": "<p>You exhale tendrils formed from flakes of rusted metal. All creatures in a @Template[type:cone|distance:30] take @Damage[(floor((@actor.level -8)/2)+4)d10[slashing]] damage with a @Check[type:fortitude|dc:resolve(@actor.system.proficiencies.classDCs.kineticist.dc)|basic:true] save against your class DC. A metal creature that fails its save also takes @Damage[(floor((@actor.level -8)/2)+2)d4[persistent,slashing]] persistent damage.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The cloud's slashing damage increases by 1d10 and the persistent damage increases by 1d4.</p>"
+      "description": "<p>You exhale tendrils formed from flakes of rusted metal. All creatures in a @Template[type:cone|distance:30] take @Damage[(floor((@actor.level -8)/2)+4)d10[slashing]] damage with a @Check[type:fortitude|dc:resolve(@actor.system.proficiencies.classDCs.kineticist.dc)|basic:true] save against your class DC. A metal creature that fails its save also takes @Damage[(floor((@actor.level -8)/2)+2)d4[persistent,slashing]] damage.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The cloud's slashing damage increases by 1d10 and the persistent damage increases by 1d4.</p>"
     },
     "Retractable Claws": {
       "name": "Retractable Claws",
@@ -25032,12 +25059,7 @@
     },
     "Shared Stratagem": {
       "name": "Shared Stratagem",
-      "description": "<p>The plans you make include your allies as well as yourself. When you hit a creature with an attack on which you substituted your attack roll due to @UUID[Compendium.pf2e.actionspf2e.Item.m0f2B7G9eaaTmhFL]{Devise a Strategem}, designate one ally.</p>\n<p>The creature you hit is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} to that ally on the next attack the designated ally makes against that creature before the start of your next turn.</p>",
-      "rules": {
-        "0": {
-          "text": "The creature you hit is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} to a designated ally on the next attack the ally makes against the creature before the start of your next turn."
-        }
-      }
+      "description": "<p>The plans you make include your allies as well as yourself. When you hit a creature with an attack on which you substituted your attack roll due to @UUID[Compendium.pf2e.actionspf2e.Item.m0f2B7G9eaaTmhFL]{Devise a Strategem}, designate one ally.</p>\n<p>The creature you hit is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} to that ally on the next attack the designated ally makes against that creature before the start of your next turn.</p>"
     },
     "Shared Synergy": {
       "name": "Shared Synergy",
