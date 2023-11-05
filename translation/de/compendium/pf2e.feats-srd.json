@@ -4118,6 +4118,15 @@
       "name": "Frühlingsmaid",
       "description": "<p>Du gehörst der häufigsten Unterart der Wechselbälger an, da du von einer Grünvettel abstammst. Dein strahlend hellgrünes Auge zeugt von dieser Verwandtschaft. Das manipulative Wesen und die gewandte Sprache, die du von deiner Mutter geerbt hast, verleihen dir Vorteile, wenn du andere täuschen möchtest. Du erhältst daher das Fertigkeitstalent @UUID[Compendium.pf2e.feats-srd.Item.B6HbYsLBWb1RR6Fx]{Charmanter Lügner}. Solltest du Täuschung für deine Initiative nutzen, erleiden sämtliche Gegner in dieser Kampfbegegnung, die noch nicht vor dir gehandelt haben, dir gegenüber den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem falschen Fuß}.</p>"
     },
+    "Calm and Centered": {
+      "name": "Calm and Centered",
+      "description": "<p>Your occult connection to the world helps you deal with being @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} or @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied}. When your frightened or stupefied condition values would decrease, decrease the value by 2.</p>",
+      "prerequisites": [
+        {
+          "value": "master in Occultism"
+        }
+      ]
+    },
     "Camouflage": {
       "name": "Tarnung",
       "description": "<p><strong>Voraussetzungen</strong> Kompetenzgrad Meister in Heimlichkeit.</p>\n<hr />\n<p>Du veränderst dein Aussehen, um mit der Wildnis zu verschmelzen. In natürlichem Gelände kannst du @UUID[Compendium.pf2e.actionspf2e.Item.VMozDqMMuK5kpoX4]{Schleichen}, selbst wenn du beobachtet wirst.</p>",
@@ -5175,6 +5184,15 @@
       "prerequisites": [
         {
           "value": "Herausforderung des Pistoleros"
+        }
+      ]
+    },
+    "Comforting Presence": {
+      "name": "Comforting Presence",
+      "description": "<p><strong>Trigger</strong> An adjacent ally becomes frightened or stupefied.</p>\n<hr />\n<p>You use your occult connection to your allies to take on the fear and confusion they feel. Focus on your own calmness and pull in your nearby allies' emotions. Reduce the @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied} condition values of adjacent allies by 1, and increase your frightened and stupefied condition values by the same amount.</p>",
+      "prerequisites": [
+        {
+          "value": "master in Occultism"
         }
       ]
     },
@@ -6855,7 +6873,7 @@
     },
     "Desiccating Inhalation": {
       "name": "Austrocknendes Einatmen",
-      "description": "<p><strong>Häufigkeit</strong> Einmal pro Stunde</p>\n<hr />\n<p>Du entziehst nahen Kreaturen die Feuchtigkeit und trocknest sie aus, um deine Wunden zu heilen. Kreaturen innerhalb eines @Template[type:cone|distance:30]{30 Fuß/9 m-Kegels} erleiden @Damage[6d8[void]]{6W8 Punkte Leerenschaden} (@Check[type:reflex|dc:resolve(@actor.attributes.classDC.value)|basic:true]{einfacher Reflexwurf} gegen deinen Klassen-SG). Im Fall eines Kritischen Fehlschlages erhält eine Kreatur zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 1}. Solange du mit dieser Fähigkeit wenigstens einer Kreatur Schaden zufügst, erlangst du TP in Höhe deiner Stufe zurück.</p>\n<p>Mit der 14. Stufe und dann jeder weiteren geraden Stufe steigt der Schaden jeweils um 1W8 Punkte. @Damage[floor(@actor.level/2)d8[void]]{Stufenabhängiger Schaden}</p>",
+      "description": "<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p>You draw in the moisture from nearby creatures, draining them dry to heal your wounds. Creatures in a @Template[type:cone|distance:30] take @Damage[floor(@actor.level/2)d8[void]] damage, with a @Check[type:reflex|dc:resolve(@actor.attributes.classDC.value)|basic:true] save against your class DC. A creature that critically fails this saving throw is also @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}. As long as at least one creature was damaged by your Desiccating Inhalation, you regain [[/r @actor.level[healing]]]{HP equal to your level}.</p>\n<p>At 14th level and every 2 levels thereafter, the damage increases by 1d8.</p>",
       "prerequisites": [
         {
           "value": "Mumien-Zugang"
@@ -11940,7 +11958,7 @@
     },
     "Fresh Produce": {
       "name": "Fresh Produce",
-      "description": "<p>You grow a nourishing nut, vegetable, seed, or fruit. Choose a creature in your kinetic aura. The produce grows in their open hand, or at their feet if they have no open hands. The produce has light Bulk. A creature can eat it with an Interact action to regain 1d4+1 HP; this is a healing vitality effect. The creature feels full for 10 minutes, during which it has resistance 2 to void damage and can't eat another piece of produce. Produce not consumed by the start of your next turn withers away.</p>\n<hr />\n<p><strong>Level (+2)</strong> The healing increases by 1d4+5, and the resistance increases by 2.</p>\n<p>[[/r ((floor((max(1,@actor.level)-1)/2)+1)d4+(floor((max(1,@actor.level)-1)/2)*5+1))[healing]]]{Leveled HP}</p>"
+      "description": "<p>You grow a nourishing nut, vegetable, seed, or fruit. Choose a creature in your kinetic aura. The produce grows in their open hand, or at their feet if they have no open hands. The produce has light Bulk. A creature can eat it with an Interact action to regain 1d4+1 HP; this is a healing vitality effect. The creature feels full for 10 minutes, during which it has resistance 2 to void damage and can't eat another piece of produce. Produce not consumed by the start of your next turn withers away.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.2GWZgsvMJF9DN0DO]{Effect: Fresh Produce}</p>\n<hr />\n<p><strong>Level (+2)</strong> The healing increases by 1d4+5, and the resistance increases by 2.</p>\n<p>[[/r ((floor((max(1,@actor.level)-1)/2)+1)d4+(floor((max(1,@actor.level)-1)/2)*5+1))[healing]]]{Leveled HP}</p>"
     },
     "Friendform": {
       "name": "Freundesgestalt",
@@ -12698,6 +12716,15 @@
       "prerequisites": [
         {
           "value": "Gnomische Waffenvertrautheit"
+        }
+      ]
+    },
+    "Go with the Flow": {
+      "name": "Go with the Flow",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> A creature detects your attempt to @UUID[Compendium.pf2e.actionspf2e.Item.AJstokjdG6iDjVjE]{Impersonate}, and you're within 30 feet of at least one other creature.</p>\n<hr />\n<p>You have an occult connection to the world that helps you blend in with the cacophony of life around you. Attempt an @Check[type:occultism|defense:perception] check against the creature's Perception DC. On a success, the creature mistakenly identifies another creature within 30 feet of you as you instead.</p>",
+      "prerequisites": [
+        {
+          "value": "master in Occultism"
         }
       ]
     },
@@ -23298,7 +23325,7 @@
     },
     "Retch Rust": {
       "name": "Retch Rust",
-      "description": "<p>You exhale tendrils formed from flakes of rusted metal. All creatures in a @Template[type:cone|distance:30] take @Damage[(floor((@actor.level -8)/2)+4)d10[slashing]] damage with a @Check[type:fortitude|dc:resolve(@actor.system.proficiencies.classDCs.kineticist.dc)|basic:true] save against your class DC. A metal creature that fails its save also takes @Damage[(floor((@actor.level -8)/2)+2)d4[persistent,slashing]] persistent damage.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The cloud's slashing damage increases by 1d10 and the persistent damage increases by 1d4.</p>"
+      "description": "<p>You exhale tendrils formed from flakes of rusted metal. All creatures in a @Template[type:cone|distance:30] take @Damage[(floor((@actor.level -8)/2)+4)d10[slashing]] damage with a @Check[type:fortitude|dc:resolve(@actor.system.proficiencies.classDCs.kineticist.dc)|basic:true] save against your class DC. A metal creature that fails its save also takes @Damage[(floor((@actor.level -8)/2)+2)d4[persistent,slashing]] damage.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The cloud's slashing damage increases by 1d10 and the persistent damage increases by 1d4.</p>"
     },
     "Retractable Claws": {
       "name": "Einziehbare Krallen",
@@ -25032,12 +25059,7 @@
     },
     "Shared Stratagem": {
       "name": "Gemeinsame Angriffsstrategie",
-      "description": "<p>Pläne, die du formulierst, beinhalten deine Verbündeten als auch dich selbst. Wenn du eine Kreatur mit einem Angriff triffst, den du mit @UUID[Compendium.pf2e.actionspf2e.Item.m0f2B7G9eaaTmhFL]{Angriffsstrategie} ersetzt hast, bestimme einen Verbündeten. Die von dir getroffene Kreatur zählt für den nächsten Angriff deines Verbündeten @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem falschen Fuß} bis zum Beginn deiner nächsten Runde.</p>",
-      "rules": {
-        "0": {
-          "text": "Die von dir getroffene Kreatur zählt für den nächsten Angriff deines Verbündeten @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem falschen Fuß} bis zum Beginn deiner nächsten Runde."
-        }
-      }
+      "description": "<p>Pläne, die du formulierst, beinhalten deine Verbündeten als auch dich selbst. Wenn du eine Kreatur mit einem Angriff triffst, den du mit @UUID[Compendium.pf2e.actionspf2e.Item.m0f2B7G9eaaTmhFL]{Angriffsstrategie} ersetzt hast, bestimme einen Verbündeten. Die von dir getroffene Kreatur zählt für den nächsten Angriff deines Verbündeten @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem falschen Fuß} bis zum Beginn deiner nächsten Runde.</p>"
     },
     "Shared Synergy": {
       "name": "Geteilte Synergie",
