@@ -352,6 +352,32 @@ class Translator {
         return data;
     }
 
+    // Translate adventure journals. This is primarily used in order to access a custom converter for pages translation
+    translateAdventureJournals(data, translation) {
+        data.forEach((entry, index, arr) => {
+            let journalTranslation = translation ? translation[entry.name] ?? undefined : undefined;
+            this.dynamicMerge(arr[index], journalTranslation, this.getMapping("adventureJournal", true));
+        });
+        return data;
+    }
+
+    // Translate adventure journal pages. This supports duplicate page names within the same journal
+    translateAdventureJournalPages(data, translation) {
+        data.forEach((entry, index, arr) => {
+            let pageTranslation = translation ? translation[entry.name] ?? undefined : undefined;
+
+            // Check if the page translation is an array (in case of duplicate page names)
+            // Take the pageTranslation that matches the current pages' id
+            if (Array.isArray(pageTranslation)) {
+                pageTranslation = pageTranslation.find((page) => page.id === entry._id) ?? false;
+            }
+            if (pageTranslation) {
+                this.dynamicMerge(arr[index], pageTranslation, this.getMapping("adventureJournalPage", true));
+            }
+        });
+        return data;
+    }
+
     // Return either localized or both localized and english text, based on module setting
     translateDualLanguage(data, translation) {
         if (!translation || data === translation) {
