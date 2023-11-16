@@ -64,7 +64,7 @@
       "items": {
         "action->Manipulate Hands": {
           "name": "Manipulate Hands",
-          "description": "<p>A crew member operates a lever set up like a joystick, allowing that crew member to extend and manipulate the apparatus's hands. While the hands can't attack and can't perform fine actions such as @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable Device}, @UUID[Compendium.pf2e.actionspf2e.Item.RDXXE7wMrSPCLv5k]{Steal} something, or opening the stopper on a potion bottle, but they can grasp and hold up to 50 Bulk.</p>"
+          "description": "<p>A crew member operates a lever set up like a joystick, allowing that crew member to extend and manipulate the apparatus's hands. While the hands can't attack and can't perform fine actions such as @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device}, @UUID[Compendium.pf2e.actionspf2e.Item.RDXXE7wMrSPCLv5k]{Steal} something, or opening the stopper on a potion bottle, but they can grasp and hold up to 50 Bulk.</p>"
         },
         "action->Open Eyes": {
           "name": "Open Eyes",
@@ -171,7 +171,7 @@
       "items": {
         "action->Activate": {
           "name": "Activate",
-          "description": "<p><strong>Activate</strong><span class=\"action-glyph\">T </span>command, envision, Interact</p>\n<p><strong>Requirements</strong> You are piloting Bunta</p>\n<p><strong>Effect</strong> A silver river flows from your heart, traveling forward in a line that flows around obstacles as if it were water. If <em>Bunta</em> travels at least its speed along the river each round for 10 minutes, you arrive at another plane as if you cast <em>@UUID[Compendium.pf2e.spells-srd.Item.5bTt2CvYHPvaR7QQ]{Plane Shift}</em>. You arrive in a destination you specify, or a random location if you don't have a choice. If <em>Bunta</em> ever does not travel at least its Speed in a round, you can disrupt this activation. If you continue, you have a 1% cumulative chance of ending up in a random extraplanar location for each round that <em>Bunt</em>a did not travel at least its Speed, to a maximum of a 60% chance if <em>Bunta</em> didn't travel at least its Speed for the full 10 minutes. As long as you remain on <em>Bunta</em>, you are protected from any harmful effects of the plane's environment.</p>"
+          "description": "<p><strong>Activate</strong><span class=\"action-glyph\">T </span>command, envision, Interact</p>\n<p><strong>Requirements</strong> You are piloting Bunta</p>\n<p><strong>Effect</strong> A silver river flows from your heart, traveling forward in a line that flows around obstacles as if it were water. If <em>Bunta</em> travels at least its speed along the river each round for 10 minutes, you arrive at another plane as if you cast <em>@UUID[Compendium.pf2e.spells-srd.Item.5bTt2CvYHPvaR7QQ]{Interplanar Teleport}</em>. You arrive in a destination you specify, or a random location if you don't have a choice. If <em>Bunta</em> ever does not travel at least its Speed in a round, you can disrupt this activation. If you continue, you have a 1% cumulative chance of ending up in a random extraplanar location for each round that <em>Bunt</em>a did not travel at least its Speed, to a maximum of a 60% chance if <em>Bunta</em> didn't travel at least its Speed for the full 10 minutes. As long as you remain on <em>Bunta</em>, you are protected from any harmful effects of the plane's environment.</p>"
         },
         "action->Secret of Souls": {
           "name": "Secret of Souls",
@@ -479,12 +479,47 @@
         }
       }
     },
+    "Hot Air Balloon": {
+      "name": "Hot Air Balloon",
+      "crew": "1 pilot",
+      "pilotingCheck": "Piloting Lore (DC 16) or Nature (DC 18)",
+      "speed": "fly 20 feet (wind)",
+      "items": {
+        "action->Drifter": {
+          "name": "Drifter",
+          "description": "<p>The hot air balloon lacks steering and relies on favorable wind currents to carry it in the right direction. If the pilot fails to maintain control of the hot air balloon, the balloon drifts whichever way the wind carries it, moving up to four times its Speed each round as determined by the GM.</p>"
+        }
+      }
+    },
+    "Longship": {
+      "name": "Longship",
+      "crew": "1 pilot",
+      "pilotingCheck": "Sailing Lore (DC 26), Diplomacy (DC 28), or Intimidation (DC 28)",
+      "speed": "swim 40 feet (rowed, wind)",
+      "items": {
+        "action->Maneuverable": {
+          "name": "Maneuverable",
+          "description": "<p>With a full complement of skilled rowers, a rowed longship can turn swiftly, turn in place, and even row backwards. Each 90-degree turn made in less than a vehicle length costs 5 extra feet of movement. It can row backwards no faster than half its speed, and it can't turn while rowing backwards.</p>"
+        }
+      }
+    },
     "Mobile Inn": {
       "name": "Mobile Inn",
       "crew": "1 pilot",
       "description": "<p>A mobile inn is the next step up from an armored carriage, bringing the limited comforts of a simple (and cramped) inn stay to make long distance journeys more bearable for wealthy travelers. Essentially a tiny inn on wheels, powered by alchemical catalysts and a steam engine, the vehicle is equipped with a stove, storage cupboard, washbasin, table, two benches, and a compact sleeping loft large enough to accommodate four. It can be modified to accommodate a single passenger in significantly more comfort or to easily hold 5 passengers by stripping the accommodations.</p>",
       "pilotingCheck": "Driving Lore (DC 24) or Crafting (DC 26)",
       "speed": "Speed 30 feet (alchemical)"
+    },
+    "Raft": {
+      "name": "Raft",
+      "crew": "1 pilot",
+      "pilotingCheck": "Athletics (DC 14) or Sailing Lore (DC 12)",
+      "items": {
+        "action->Portaged": {
+          "name": "Portaged",
+          "description": "<p>The raft can be carried overland by 2 Medium creatures or 1 Large creature. Those creatures are encumbered.</p>"
+        }
+      }
     },
     "Rowboat": {
       "name": "Rowboat",
@@ -586,7 +621,7 @@
       "items": {
         "action->Electrify": {
           "name": "Electrify",
-          "description": "<p><strong>Frequency</strong> once per minute</p>\n<hr />\n<p><strong>Effect</strong> Two crew members each perform a 2-action activity on their turn to emit an electrical pulse, dealing @Damage[6d6[electricity]]{6d6 electricity damage} to all creatures within @Template[type:emanation|distance:10]{10 feet} of the shark diver. Crew and passengers of the shark diver are unaffected. Affected creatures must attempt a @Check[type:fortitude|dc:28|basic:true] save.</p>"
+          "description": "<p><strong>Frequency</strong> once per minute</p>\n<hr />\n<p><strong>Effect</strong> Two crew members each perform a 2-action activity on their turn to emit an electrical pulse, dealing @Damage[6d6[electricity]] damage to all creatures within @Template[type:emanation|distance:10]{10 feet} of the shark diver. Crew and passengers of the shark diver are unaffected. Affected creatures must attempt a @Check[type:fortitude|dc:28|basic:true] save.</p>"
         },
         "action->Submersible": {
           "name": "Submersible",
