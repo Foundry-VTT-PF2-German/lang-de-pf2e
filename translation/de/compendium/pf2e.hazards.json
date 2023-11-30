@@ -4,12 +4,12 @@
     "Armageddon Orb": {
       "name": "Rovagugs Träne/Armageddon Orb",
       "description": "<p>Eine wirbelnde rote Kugel, welche aus einem Tropfen des Blutes des Gottes Rovagug gefertigt wurde, lässt Feuer vom Himmel regnen, wenn eine bestimmte Bedingung eintritt.</p>",
-      "disable": "<p>@Check[type:thievery|dc:48|name:Imbue Thieves' Tools|traits:action:disable-a-device] (legendary) to imbue a thieves' toolkit with aspects representing Asmodeus and Sarenrae and use them to drain away the orb's power over 10 minutes; the character attempting this check takes @Damage[5[fire]] damage each round until the orb is depleted</p>",
+      "disable": "<p>@Check[type:thievery|dc:48|name:Diebeswerkzeug mit Aspekten versehen|traits:action:disable-a-device]{Diebeskunst} (Legende) (um Diebeswerkzeug mit Aspekten zu versehen, welche Asmodeus und Sarenrae repräsentieren, und damit im Verlauf von 10 Minuten die Kraft der Träne abfließen zu lassen; der ausführende Charakter erleidet dabei jede Runde @Damage[5[fire]]{5 Punkte Feuerschaden})</p>",
       "stealth": "oder <i>Magie entdecken</i>",
       "items": {
         "action->Burn It All": {
           "name": "Niederbrennen",
-          "description": "<p><strong>Trigger</strong> A special condition set by the trap's creator occurs, typically the event of their death.</p>\n<hr />\n<p><strong>Effect</strong> Fire rains from the sky in a 100-mile radius, dealing @Damage[10d6[fire]] damage to creatures and objects in the area. Each creature or object can attempt a @Check[type:reflex|dc:46|basic:true] save. Any creature reduced to 0 Hit Points by this damage dies instantly. This is not enough damage to completely burn away a forest or level an entire mountain or city, but it typically kills most creatures in the area.</p>"
+          "description": "<p><strong>Auslöser</strong> Eine bestimmte, vom Erschaffer der Falle festgelegte Bedingung tritt ein; meistens ist dies der Tod des Erschaffers.</p>\n<hr>\n<p><strong>Effekt</strong> Feuer regnet in einem Radius von 100 Meilen/150 Kilometern vom Himmel und fügt allen Kreaturen und Gegenständen im Wirkungsbereich @Damage[10d6[fire]]{10W6 Punkte Feuerschaden} (@Check[type:reflex|dc:46|basic:true]{einfacher Reflexwurf}) zu. Jede dadurch auf 0 TP reduzierte Kreatur stirb augenblicklich. Dieser Schaden genügt nicht, um einen Wald gänzlich niederzubrennen oder einen Berg oder eine Stadt einzuäschern, tötet in der Regel aber die meisten Kreaturen vor Ort.</p>"
         }
       }
     },
@@ -35,7 +35,7 @@
       "items": {
         "action->Quietus": {
           "name": "Quietus",
-          "description": "<p><strong>Trigger</strong> A creature moves within 10 feet of the haunted object</p>\n<hr />\n<p><strong>Effect</strong> The haunt takes control of the triggering creature, forcing it to attack itself. The creature must attempt a @Check[type:will|dc:29] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target makes a Strike against itself and automatically hits; the target also becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Failure</strong> The target makes a Strike against itself and automatically scores a critical hit; the target also becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}.</p>\n<p><strong>Critical Failure</strong> The target attempts a Fortitude save. If the target succeeds, it is subject to the effects of a failure instead. If the target fails, it is reduced to 0 HP and dies</p>"
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur bewegt sich innerhalb von 3 m Entfernung zum heimgesuchten Gegenstand.</p>\n<p><strong>Effekt</strong> Die Spukerscheinung übernimmt die Kontrolle über die auslösende Kreatur und zwingt sie, sich selbst anzugreifen. Das Ziel muss einen @Check[type:will|dc:29]{Willenswurf} ablegen.</p>\n<hr />\n<p><strong>Kritischer Erfolg</strong> Das Ziel ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Das Ziel führt einen Angriff gegen sich selbst aus und trifft automatisch; das Ziel erhält zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}.</p>\n<p><strong>Fehlschlag</strong> Das Ziel führt einen Angriff gegen sich selbst aus, trifft automatisch und erzielt einen Kritischen Treffer; das Ziel erhält zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Das Ziel muss einen Zähigkeitswurf ablegen. Bei Erfolg treten die Folgen eines Fehlschlags (s.o.) ein. Bei einem Fehlschlag wird das Ziel auf 0 TP reduziert und stirbt.</p>"
         }
       }
     },
@@ -43,12 +43,12 @@
       "name": "Bodenlose Grube",
       "description": "<p>Eine eiserne Falltür bedeckt eine unendlich tiefe Grube mit 3 m Seitenlänge.</p>",
       "disable": "<p>@Check[type:thievery|dc:28|name:Ausschalten]{Diebeskunst} (Geübt) (entfernen der Falltür)</p>",
-      "reset": "<p>The trap still causes creatures to fall forever if they fall in, but the trapdoor must be reset manually for the trap to become Hidden again.</p>",
+      "reset": "<p>Die Falle lässt hereinstürzende Kreaturen immer noch auf ewig stürzen, allerdings muss die Falltür manuell zurückgesetzt werden, um die Falle wieder zu Verbergen.</p>",
       "stealth": "<p>(oder 0, falls die Falltür zertrümmert, ausgehängt oder beschädigt ist) oder <em>Magie entdecken</em></p>",
       "items": {
         "action->Infinite Pitfall": {
           "name": "Bodenlose Grube",
-          "description": "<p><strong>Trigger</strong> A creature walks onto the trapdoor</p>\n<hr />\n<p><strong>Effect</strong> The triggering creature falls in and continues to fall, potentially forever. That creature can try to @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge} to avoid falling. The DC to Climb the walls or Grab an Edge is 26. The pit contains many handholds, so the falling creature can try to Grab an Edge again every 6 seconds. If the creature succeeds, it can start to Climb out from that point (though it might be a very long climb, depending on how far the creature fell). Since the creature falls endlessly, it can rest and even prepare spells while falling, though items dropped while falling are usually lost forever.</p>"
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur tritt auf die Falltür.</p>\n<hr />\n<p><strong>Effekt</strong> Die auslösende Kreatur stürzt in die Grube und fällt möglicherweise für immer. Die Kreatur kann versuchen, einen @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Halt zu ergreifen}, um nicht zu stürzen. Der SG zum @UUID[Compendium.pf2e.actionspf2e.Item.pprgrYQ1QnIDGZiy]{Erklettern} der Wände oder Ergreifen eines Halts beträgt 26. Die Grube verfügt über viele Vorsprünge, daher kann eine stürzende Kreatur alle 6 Sekunden versuchen, einen Halt zu ergreifen. Bei Erfolg kann sie beginnen, die Wand hinaufzuklettern – abhängig von der gestürzten Distanz kann dies eine lange Kletterpartie werden. Da die Kreatur endlos stürzt, kann sie während des Sturzes sogar ausruhen und Zauber vorbereiten. Gegenstände, die man während des Sturzes loslässt, sind in der Regel für immer verloren.</p>"
         }
       }
     },
@@ -74,12 +74,12 @@
       "description": "<p>Verbündete scheinen ihre Verkleidungen abzulegen und sich als bösartige Monster zu entpuppen.</p>",
       "disable": "<p>@Check[type:deception|dc:28|name:Verwirren]{Täuschung}(Experte), zweimal, um den Spuk mit den eigenen Täuschungen zu verwirren, oder @Check[type:occultism|dc:26|name:Abwehr]{Okkultismus} (Geübt), zweimal, um eine Abwehr gegen den geistigen Einfluss des Spuks zu erschaffen</p>",
       "reset": "<p>Der Spuk deaktiviert sich 1 Minute nachdem alle Kreaturen das Gebiet verlassen haben, wird jedoch danach sofort zurückgesetzt.</p>",
-      "routine": "<p>(1 action; illusion, incapacitation, occult) The haunt continues to confound victims' senses and inspire them to commit violence against each other. Each creature in the haunt's area must attempt a @Check[type:will|dc:26] save.</p>\n<hr>\n<p><strong>Critical Success</strong> The creature is unaffected and temporarily immune for 1 minute.</p>\n<p><strong>Success</strong> The creature is unaffected.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} for 1 round.</p>\n<p><strong>Critical Failure</strong> The creature is confused for 1 minute.</p>",
+      "routine": "<p>(1 Aktion; Illusion, Kampfunfähig, Okkultismus) Der Spuk verwirrt weiterhin die Sinne der Opfer und inspiriert sie, Gewalt gegeneinander auszuüben. Jede Kreatur im Gebiet des Spukes muss einen @Check[type:will|dc:26]{Willenswurf} ablegen. Der Spuk würfelt dann Initiative.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist unbetroffen und für 1 Minute lang vorübergehend immun.</p>\n<p><strong>Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Verwirrt}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erhält für 1 Minute den Zustand Verwirrt.</p>",
       "stealth": "<p>(Experte)</p>",
       "items": {
         "action->Unmask": {
           "name": "Demaskieren",
-          "description": "<p><strong>Trigger</strong> Two or more creatures enter the haunt's area</p>\n<hr />\n<p><strong>Effect</strong> Each creature sees the forms of nearby creatures shift and change, appearing to transform into fiendish or aberrant beings with a thirst for blood. Each creature in the area must attempt a @Check[type:will|dc:30] save. The haunt then rolls initiative.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature sees through the illusions entirely and is temporarily immune to the haunt's routine for 1 minute.</p>\n<p><strong>Success</strong> The creature is unaffected by the strange images.</p>\n<p><strong>Failure</strong> The creature believes the illusions to be true; if they become @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} by the haunt's routine, they can't attempt flat checks to end the confused condition when they take damage.</p>\n<p><strong>Critical Failure</strong> As failure, but the creature is left with a lingering suspicion of others and can't benefit from Aid reactions for 24 hours.</p>"
+          "description": "<p><strong>Auslöser</strong> Zwei oder mehr Kreaturen betreten das Gebiet des Spukes.</p>\n<hr />\n<p><strong>Effekt</strong> Jede Kreatur sieht, wie sich die Erscheinung der Kreaturen in ihrer Nähe verändert und sich in teuflische oder aberrante Wesen verwandeln, die nach Blut dürsten. Jede Kreatur in dem Gebiet muss einen @Check[type:will|dc:30]{Willenswurf} bestehen. Der Spuk würfelt dann Initiative.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur durchschaut die Illusion vollständig und ist 1 Minute lang vorübergehend immun gegen den Spuk.</p>\n<p><strong>Erfolg</strong> Die Kreatur bleibt von den seltsamen Bildern unberührt.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur glaubt, dass die Illusionen wahr sind. Wenn sie durch den Ablauf des Spukes @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Verwirrt} wird, kann sie keine einfachen Würfe durchführen, um den verwirrten Zustand zu beenden, wenn sie Schaden nimmt.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie Fehlschlag, aber die Kreatur ist von Verdacht behaftet und kann 24 Stunden lang nicht von der Reaktion Jemand anderem helfen profitieren.</p>"
         }
       }
     },
@@ -88,12 +88,12 @@
       "description": "<p>Ein unheimliches Orchester zwingt alle, die es hören, zum Tanzen, bis sie vor Erschöpfung zusammenbrechen.</p>",
       "disable": "<p>@Check[type:intimidation|dc:42|name:Abhalten]{Einschüchtern} (Experte), dreimal, um Tänzer und spektrale Musiker gleichermaßen von der Teilnahme an der tödlichen Aufführung abzuhalten, @Check[type:performance|dc:40|name:Ausschalten]{Darbietung} (Meister), zweimal um eine Melodie zu spielen, die diskordant genug ist, um den Zwang zu unterbrechen, oder @Check[type:religion|dc:42|name:Ausschalten]{Religionskunde} (Meister), dreimal, um die Geister mit Gebeten zu verbannen</p>",
       "reset": "<p>Das unheimliche Orchester verbringt eine Stunde damit, seine Phantommusikinstrumente neu zu stimmen.</p>",
-      "routine": "<p>(1 action; auditory, incapacitation, mental, occult) The orchestra performs a raucous tune, compelling all creatures that can hear it to spend actions dancing. Each round, creature must attempt a @Check[type:will|dc:37] save; the results of this save modify the number of actions that the creature must spend dancing each round. If this would cause the creature to spend more actions dancing than it can use on its turn, the creature takes @Damage[10d6] damage (or double that on a critical failure) from moving faster than its body can manage.</p>\n<hr>\n<p><strong>Critical Success</strong> The creature decreases the number of actions it must spend dancing by 1.</p>\n<p><strong>Success</strong> No effect.</p>\n<p><strong>Failure</strong> The creature increases the actions it must spend dancing by 1.</p>\n<p><strong>Critical Failure</strong> The creature increases the actions it must spend dancing by 2.</p>",
+      "routine": "<p>(1 Aktion; Hörbar, Kampfunfähig, Mental, Okkult) Das Orchester spielt eine laute Melodie und zwingt alle Kreaturen, die es hören können, zum Tanzen. In jeder Runde muss eine Kreatur einen @Check[type:will|dc:37]{Willenswurf} ablegen. Die Ergebnisse dieses Rettungswurfs ändern die Anzahl der Aktionen, welche die Kreatur in jeder Runde zum Tanzen aufwenden muss. Wenn dies dazu führen würde, dass die Kreatur mehr Aktionen tanzen muss, als sie in ihrem Zug ausführen kann, erleidet die Kreatur @Damage[10d6]{10W6 Schadenspunkte} (oder den doppelten Schaden bei einem Kritischen Fehlschlag), wenn sie sich schneller bewegt, als es ihr Körper möglich ist.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur verringert die Anzahl der Aktionen, die sie tanzen muss, um 1.</p>\n<p><strong>Erfolg</strong> Kein Effekt.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhöht die Aktionen, die sie tanzen muss, um 1.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erhöht die Aktionen, die sie tanzen muss, um 2.</p>",
       "stealth": "<p>(Meister)</p>",
       "items": {
         "action->Prelude": {
           "name": "Präludium",
-          "description": "<p><strong>Trigger</strong> A creature approaches within 30 feet of the orchestra</p>\n<hr />\n<p><strong>Effect</strong> The orchestra compels all creatures that can hear it to begin dancing. Each creature must attempt a @Check[type:will|dc:41] save, with the following effects. The haunt then rolls initiative.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} and cannot use reactions. Additionally, it must spend 1 of its actions each round dancing. Dancing is a move action that allows the creature to Stride up to half its Speed.</p>\n<p><strong>Failure</strong> As success, except the creature must spend 2 of its actions each round dancing.</p>\n<p><strong>Critical Failure</strong> As failure, except the creature must spend 3 of its actions each round dancing.</p>"
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur nähert sich dem Orchester auf 30 Fuß/9 m oder weniger.</p>\n<hr />\n<p><strong>Effekt</strong> Das Orchester zwingt alle Kreaturen, die es hören können, zum Tanzen. Jede Kreatur muss einen @Check[type:will|dc:41]{Willenswurf} ablegen. Der Spuk würfelt dann Initiative.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur ist @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem falschen Fuß} und kann keine Reaktionen einsetzen. Zusätzlich muss sie 1 ihrer Aktionen pro Runde zum Tanzen nutzen. Tanzen ist eine Bewegungsaktion, mit der die Kreatur bis zur Hälfte ihrer Geschwindigkeit schrittweise voranschreiten kann.</p>\n<p><strong>Fehlschlag</strong> Wie Erfolg, allerdings muss sie 2 ihrer Aktionen pro Runde tanzen.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie Misserfolg, nur muss die Kreatur 3 ihrer Aktionen pro Runde tanzen.</p>"
         }
       }
     },
@@ -116,25 +116,25 @@
       "description": "<p>Eine Falltür bedeckt eine Grube mit 3 m Seitenlänge und 9 m Tiefe. Am Boden der Grube steht Wasser 1,50 m hoch. Vier Ventile in den Wänden sind mit verborgenen Wassertanks verbunden; jedes Ventil befindet sich in einer anderen Wand 15 cm unterhalb des Grubenrandes.</p>",
       "disable": "<p>@Check[type:thievery|dc:18|name:Ausschalten (Versiegeln)] (Geübt) (Versiegeln eines Ventils), @Check[type:thievery|dc:22|name:Ausschalten (Öffnen)] (Geübt) (Öffnen der Falltür) oder @Check[type:athletics|dc:22|name:Ausschalten (Öffnen)] (@UUID[Compendium.pf2e.action-macros.Macro.yMTKMnaYSGtDz4wk]{Gewaltsames Öffnen der Falltür})</p>",
       "hpDetails": "Ventil-Härte 8, Ventil-TP 32 (BW 16)",
-      "reset": "<p>The trap can be reset if the door is manually reengaged and the water tanks are refilled; it can be reset without draining the pit, but doing so renders the pit less effective.</p>",
+      "reset": "<p>Die Falle kann zurückgesetzt werden, indem die Tür manuell wieder in Position gebracht und die Wassertanks aufgefüllt werden; sie kann zurückgesetzt werden, ohne zuerst das Wasser aus der Grube abzulassen, allerdings raubt ihr dies ihre Effektivität.</p>",
       "routine": "<p>(4 Aktionen) Die Falle verliert pro Zug 1 Aktion pro ausgeschaltetes Ventil. Als jede Aktion der Falle strömt Wasser aus einem Ventil und der Wasserstand steigt um 1,50 m. Sobald die Grube vollgelaufen ist, nutzt die Falle keine Aktionen mehr. Dafür beginnen Kreaturen in der Grube zu ertrinken (siehe Seite 478).</p>",
       "stealth": "<p> (Geübt); SG 22 (Experte), um die Ventilöffnungen bei offener Grube zu bemerken</p>",
       "items": {
         "action->Pitfall": {
           "name": "Fallgrube",
-          "description": "<p><strong>Trigger</strong> A creature walks onto the trapdoor</p>\n<hr />\n<p><strong>Effect</strong> The triggering creature falls in and takes damage from the fall, reduced by 5 feet for falling into the water (typically @Damage[12[bludgeoning]] damage). A creature can @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge} to avoid falling. The trapdoor then slams shut, and the hazard rolls initiative.</p>"
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur tritt auf die Falltür.</p>\n<hr>\n<p><strong>Effekt</strong> Die auslösende Kreatur stürzt in die Grube und erleidet Sturzschaden (abzüglich 5 Fuß/1,50 m an Wasser; meistens @Damage[12[bludgeoning]]{12 Punkte Wuchtschaden}). Eine Kreatur kann versuchen, einen @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Halt zu ergreifen}, um nicht hineinzustürzen. Im Anschluss schlägt die Falltür wieder zu und die Gefahr würfelt ihre Initiative.</p>"
         }
       }
     },
     "Electric Latch Rune": {
       "name": "Elektrische Riegelrune",
       "description": "<p>Eine unsichtbare Rune auf einem Türriegel gibt eine heftige elektrische Entladung ab.</p>",
-      "disable": "<p>@Check[type:thievery|dc:20|name:Scratch Out the Rune|traits:action:disable-a-device] (expert) to scratch out the rune without allowing electricity to flow, or <em>@UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic}</em> (2nd rank; counteract DC 18) to counteract the rune</p>",
+      "disable": "<p>@Check[type:thievery|dc:20|name:Auslöschen der Rune|traits:action:disable-a-device]{Diebeskunst} (Experte) (Auslöschen der Rune, ohne die Elektrizität freizusetzen, oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} als Zauber des 2. Grades; @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.mmfWcV3Iyql5nzTo]{Entgegenwirken} SG 18).</p>",
       "stealth": "<p>(Geübt)</p>",
       "items": {
         "action->Electrocution": {
           "name": "Stromschlag",
-          "description": "<p><strong>Trigger</strong> A creature grasps the door latch directly or with a tool</p>\n<hr />\n<p><strong>Effect</strong> The trap deals @Damage[3d12[electricity]] damage to the triggering creature (@Check[type:reflex|dc:22|basic:true] save).</p>"
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur ergreift den Türriegel direkt oder mit einem Werkzeug.</p>\n<hr>\n<p><strong>Effekt</strong> Die Falle verursacht bei der auslösenden Kreatur @Damage[3d12[electricity]]{3W12 Punkte Elektrizitätsschaden} (@Check[type:reflex|dc:22|basic:true]{einfacher Reflexwurf})</p>"
         }
       }
     },
@@ -143,24 +143,24 @@
       "description": "<p>Ein tobendes spektrales Inferno entsteht aus dem Nichts und stärkt alle untoten Kreaturen innerhalb seines Gebiets. Dieser Spuk entsteht meistens aus den verkohlten Überresten einer Gruppe von drei Menschen, die bei einem schrecklichen Unfall oder einer absichtlichen Hinrichtung verbrannt wurden und deren ungerächte Seelen vor Wut brennen.</p>",
       "disable": "<p>@Check[type:diplomacy|dc:27|name:Besänftigen]{Diplomatie}(Experte), um die Wut eines der drei Geister vorübergehend zu besänftigen, oder @Check[type:religion|dc:30|name:Austreiben]{Religionskunde} (Geübt), um einen der Geister auszutreiben. Es sind insgesamt drei Erfolge erforderlich, um den Spuk zu deaktivieren</p>",
       "reset": "<p>Die Flammen erlöschen nach 1 Minute, nachdem alle Lebewesen das Gebiet verlassen haben, aber nach 1 Stunde lodern Wut und Schmerz wieder auf und der Spuk ist bereit, erneut ausgelöst zu werden.</p>",
-      "routine": "<p>(1 action) Phantom flames rage across the haunted area, dealing @Damage[4d6[fire]] damage to each living creature within the area (@Check[type:will|dc:23|basic:true] save). Undead creatures in the area are infused with flames for the following round. They gain the fire trait and immunity to fire, and all their attacks deal an additional @Damage[1d6[fire]] damage. Objects in the area are unaffected.</p>",
+      "routine": "<p>(1 Aktion) Phantomflammen rasen über das heimgesuchte Gebiet und verursachen @Damage[4d6[fire]]{4W6 Feuerschaden} bei jeder lebenden Kreatur innerhalb des Gebiets (@Check[type:will|dc:29]{einfacher Willenswurf}). Untote Kreaturen in diesem Gebiet werden für die nächste Runde mit Flammen durchsetzt. Sie erhalten die Kategorie Feuer und Immunität gegen Feuer und alle ihre Angriffe verursachen zusätzlich @Damage[1d6[fire]]{1W6 Punkte Feuerschaden}. Objekte in der Umgebung sind nicht betroffen.</p>",
       "stealth": "<p>(Experte)</p>",
       "items": {
         "action->Searing Agony": {
           "name": "Sengende Qual",
-          "description": "<p><strong>Trigger</strong> A living creature approaches within 10 feet of the remains of a victim of the original fire</p>\n<hr />\n<p><strong>Effect</strong> Memories of the pain suffered by the fire's past victims assault the triggering creature's mind. The creature must attempt a @Check[type:will|dc:25] save, and the haunt then rolls initiative.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 3}, and it is offguard for as long as it remains within the haunt's area and for 3 rounds thereafter</p>"
+          "description": "<p><strong>Auslöser</strong> Eine lebende Kreatur nähert sich den Überresten eines Opfers des ursprünglichen Feuers auf 10 Fuß/3 m oder weniger</p>\n<hr />\n<p><strong>Effekt</strong> Erinnerungen an den Schmerz, den die Opfer des Feuers in der Vergangenheit erlitten haben, greifen den Verstand der auslösenden Kreatur an. Die Kreatur muss einen @Check[type:will|dc:25]{Willenswurf} ablegen und der Spuk würfelt sodann die Initiative.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 2}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 3} und ist @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem falschen Fuß} betroffen, solange sie sich im Gebiet des Spukes befindet und noch 3 Runden danach.</p>"
         }
       }
     },
     "Fireball Rune": {
       "name": "Feuerballrune",
       "description": "<p>Eine unsichtbare Rune erzeugt einen unsichtbaren, kugelförmigen magischen Sensor mit 6 m Radius.</p>",
-      "disable": "<p>@Check[type:thievery|dc:22|name:Erase the Rune] (expert) to erase the rune without triggering the sensor, or <em>@UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic}</em> (3rd rank; counteract DC 20) to counteract the rune</p>",
+      "disable": "<p>@Check[type:thievery|dc:22|name:Rune Auslöschen|traits:action:disable-a-device]{Diebeskunst} (Experte) (Auslöschen der Rune ohne Auslösung des Sensors, oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} als Zauber des 3. Grades; @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.mmfWcV3Iyql5nzTo]{Entgegenwirken} SG 20)</p>",
       "stealth": "<p>(Experte)</p>",
       "items": {
         "action->Fireball": {
           "name": "Feuerball",
-          "description": "<p><strong>Trigger</strong> A living creature enters the sensor area</p>\n<hr />\n<p><strong>Effect</strong> The rune detonates a <em>@UUID[Compendium.pf2e.spells-srd.Item.sxQZ6yqTn0czJxVd]{Fireball}</em> centered on the triggering creature's square. This is a 3rd-rank fireball spell that deals @Damage[6d6[fire]] damage (@Check[type:reflex|dc:22|basic:true] save).</p>"
+          "description": "<p><strong>Auslöser</strong> Eine lebende Kreatur betritt den Bereich des Sensors.</p>\n<hr>\n<p><strong>Effekt</strong> Die Rune erzeugt einen @UUID[Compendium.pf2e.spells-srd.Item.sxQZ6yqTn0czJxVd]{Feuerball}, dessen Zentrum das Feld der auslösenden Kreatur ist. Der Feuerball ist ein Zauber des 3. Grades und verursacht @Damage[6d6[fire]]{6W6 Punkte Feuerschaden} (@Check[type:reflex|dc:22|basic:true]{einfacher Reflexwurf})</p>"
         }
       }
     },
@@ -169,12 +169,12 @@
       "description": "<p>Ein wirbelnder Tornado aus spektral angetriebenem Glas und Stahl, zerschneidet alles in kleine Stückchen, was auch immer er berührt.</p>",
       "disable": "<p>@Check[type:thievery|dc:46|name:Zerstören]{Diebeskunst} (Meister), um die Klingen so präzise anzuordnen, dass sie sich gegenseitig zerstören, oder @Check[type:religion|dc:29|name:Schwächen]{Religionskunde} (Experte), um den Spuk zu schwächen. Zum Deaktivieren sind vier Erfolge erforderlich</p>",
       "reset": "<p>Der Spuk zieht im Laufe einer Stunde gezackte Scherben zurück in sein Gebiet, wonach er erneut auslösen kann.</p>",
-      "routine": "<p>(3 actions) The tornado of blades uses 3 actions to move, traveling up to 30 feet with each action and dealing 2d10+10 slashing damage. Each creature in its path must attempt a @Check[type:reflex|dc:33].</p>\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage plus @Damage[1d10[bleed]].</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and @Damage[1d10[bleed]]. It also becomes @UUID[Compendium.pf2e.conditionitems.Item.Yl48xTdMh3aeQYL2]{Wounded 1} (or increases its wounded value by 1, if it is already wounded).</p>\n<p>Each successful check to disable this hazard reduces the haunt's movement by 30 feet, and the fourth success disables it completely.</p>",
+      "routine": "<p>(3 Aktionen) Der Tornado der Klingen nutzt 3 Aktionen, um sich zu bewegen, legt dabei bis zu 30 Fuß/9 m zurück und verursacht @Damage[(2d10+10)[slashing]]{2W10+10 Hiebschaden}. Jede Kreatur auf seinem Weg muss einen @Check[type:reflex|dc:33|traits:damaging-effect]{Reflexwurf} ablegen.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erleidet den halben Schaden.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet vollen Schaden plus @Damage[1d10[bleed]]{1W10 Punkte Anhaltenden Blutungsschaden}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erleidet doppelten Schaden und @Damage[1d10[bleed]]{1W10 Punkte Anhaltenden Blutungsschaden}. Es erhält zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.Yl48xTdMh3aeQYL2]{Verwundet 1} (oder erhöht seinen Wert für Verwundet um 1, wenn es bereits Verwundet ist).</p>\n<p>Jeder erfolgreiche Wurf zur Abschaltung dieser Gefahr verringert die Bewegung des Spukes um 30 Fuß/9 m, der vierte erfolgreiche Wurf schaltet ihn vollständig aus.</p>",
       "stealth": "<p>(Experte)</p>",
       "items": {
         "action->Whirling Blades": {
           "name": "Wirbelnde Klingen",
-          "description": "<p><strong>Trigger</strong> Three or more creatures enter the area of the haunt</p>\n<hr />\n<p><strong>Effect</strong> Sharp fragments lift up from the ground and begin to spin in rapid circles taking up one 5-foot square. The haunt rolls initiative.</p>"
+          "description": "<p><strong>Auslöser</strong> Drei oder mehr Kreaturen betreten den Bereich des Spukes.</p>\n<hr />\n<p><strong>Effekt</strong> Scharfe Scherben erheben sich vom Boden und beginnen sich in schnellen Kreisen zu drehen, wobei sie ein Feld mit 5 Fuß/1,50 m Seitenlänge ausfüllen. Der Spuk würfelt seine Initiative.</p>"
         }
       }
     },
@@ -198,7 +198,7 @@
       "items": {
         "action->Profane Chant": {
           "name": "Profaner Gesang",
-          "description": "<p><strong>Trigger</strong> A creature moves within 10 feet of the section of floor from which the choir can arise</p>\n<hr />\n<p><strong>Effect</strong> The choir rises, and its song deals @Damage[(4d8+18)[mental]] damage to non-evil creatures within 30 feet of the souls' spectral forms. Affected creatures must each attempt a @Check[type:will|dc:24|traits:damaging-effect] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Failure</strong> The creature takes full damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage. It also becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3} and @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} for 1 round.</p>"
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur bewegt sich innerhalb von 10 Fuß/3 m um den Bodenabschnitt, aus dem der Chor hervorsteigen kann.</p>\n<hr>\n<p><strong>Effekt</strong> Der Chor erhebt sich und sein Lied fügt nicht-bösen Kreaturen innerhalb von @Template[type:emanation|distance:30]{30 Fuß/9 m} @Damage[(4d8+18)[mental]]{4W8+18 Punkte Mentalen Schaden} zu. Betroffene Kreaturen müssen jeweils einen @Check[type:will|dc:24|traits:damaging-effect]{Willenswurf} bestehen.</p>\n<hr>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erleidet den halben Schaden und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet vollen Schaden und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erleidet doppelten Schaden. Sie erhält zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 3} und @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{flieht} für 1 Runde.</p>"
         }
       }
     },
@@ -248,7 +248,7 @@
       "items": {
         "action->Powder Burst": {
           "name": "Staubexplosion",
-          "description": "<p><strong>Trigger</strong> The latch is opened or the tube is broken.</p>\n<hr />\n<p><strong>Effect</strong> The tube explodes, spraying hallucinogenic powder in a @Template[type:cone|distance:30]. Any creature in the cone must succeed at a @Check[type:will|dc:24] save or be confused for 1 round and take a -2 status penalty to Perception checks and saves against mental effects for [[/br 1d4 #hours]]{1d4 hours}. On a critical failure, the penalty is instead -4.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.6OpwHz0f55wPawHI]{Effect: Powder Burst}</p>"
+          "description": "<p><strong>Auslöser</strong> Der Riegel wird geöffnet oder der Behälter erhält den Zustand Beschädigt.</p>\n<hr />\n<p><strong>Effekt</strong> Der Behälter explodiert und versprüht in einem @Template[type:cone|distance:30]{30 Fuß/9 m-Kegel} Halluzinogenstaub. Jede Kreatur im Wirkungsbereich muss einen @Check[type:will|dc:24]{Willenswurf} ablegen; bei einem Fehlschlag erleidet er für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Verwirrt} und dann für [[/br 1d4 #Stunden]]{1W4 Stunden} einen Zustandsmalus von -2 auf Wahrnehmungswürfe und Rettungswürfe gegen mentale Effekte (bei einem Kritischen Fehlschlag beträgt der Malus -4).</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.6OpwHz0f55wPawHI]{Effekt: Staubexplosion}</p>"
         }
       }
     },
@@ -256,13 +256,13 @@
       "name": "Zutritt verwehrender Hammer",
       "description": "<p>Ein gewaltiger Hammer schwingt durch die Türöffnung eines Gebäudes, um einer eintretenden Kreatur Schaden zuzufügen, sie zurückzutreiben und am Weitergehen zu hindern.</p>",
       "disable": "<p>@Check[type:thievery|dc:28|name:Ausschalten]{Diebeskunst} (Experte) (einmal für den Hammer selbst und einmal auf den Schwungmechanismus)</p>",
-      "hpDetails": "Joint Hardness:16, Joint HP: 64 (BT 32)",
+      "hpDetails": "Schwunggelenk-Härte 16, Schwunggelenk-TP 64 (BW 32)",
       "reset": "<p>Die Falle setzt sich im Laufe der Runde zurück und kann 1 Runde später erneut schwingen.</p>",
       "stealth": "<p>(Experte)</p>",
       "items": {
         "action->Forbid Entry": {
           "name": "Zutritt verwehren",
-          "description": "<p><strong>Trigger</strong> A creature attempts to enter through the entrance.</p>\n<hr />\n<p><strong>Effect</strong> The hammer swings down, making a Strike against the triggering creature.</p>"
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur will einen Eingang passieren.</p>\n<hr />\n<p><strong>Effekt</strong> Der Hammer schwingt herab und führt einen Angriff gegen die auslösende Kreatur aus.</p>"
         },
         "strike-melee->Hammer": {
           "name": "Hammer",
@@ -278,7 +278,7 @@
       "items": {
         "action->Ensnare": {
           "name": "Verfangen",
-          "description": "<p><strong>Trigger</strong> A creature that isn't a spider walks into the web</p>\n<hr />\n<p><strong>Effect</strong> The web wraps around the triggering creature's body, clinging to their limbs. The triggering creature must succeed at a @Check[type:reflex|dc:20] save or take a –10-foot circumstance penalty to all their Speeds until they @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} the web (DC 20). On a critical failure, the webbing also clings to the creature's face, making them @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, and they can't attempt to reduce this condition until they Escape the web.</p>"
+          "description": "<p><strong>Auslöser</strong> Eine Nichtspinnenkreatur läuft ins Netz.</p>\n<hr />\n<p><strong>Effekt</strong> Das Netz wickelt sich um den Körper der auslösenden Kreatur und klammert sich an ihre Gliedmaßen. Die auslösende Kreatur muss eine @Check[type:reflex|dc:20]{Reflexwurf} bestehen; bei einem Fehlschlag erhält sie einen Situationsmalus auf alle ihre Bewegungsraten von -10 Fuß/3 m, bis sie aus dem Netz @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Entkommt} (SG 20).</p>\n<p>Bei einem Kritischen Fehlschlag haften die Spinnenweben auch am Gesicht der Kreatur und verleihen ihr den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1}, dieser Zustand lässt sich nicht unter 1 verringern, bis man dem Netz entkommt.</p>"
         }
       }
     },
@@ -372,20 +372,20 @@
     "Pharaoh's Ward": {
       "name": "Pharaonenfluch",
       "description": "<p>In einen Durchgang oder Türrahmen ist ein Fluch eingraviert.</p>",
-      "disable": "<p>@Check[type:thievery|dc:27|name:Remove the Lintel] (master) to painstakingly remove the lintel without triggering the magic, or <em>@UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic}</em> (4th rank; counteract DC 25) to counteract the rune</p>",
+      "disable": "<p>@Check[type:thievery|dc:27|name:Türrahmen entfernen|traits:action:disable-a-device]{Diebeskunst} (Meister) (um den Türrahmen zu entfernen, ohne die Magie auszulösen, oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} als Zauber des 4. Grades; @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.mmfWcV3Iyql5nzTo]{Entgegenwirken} SG 25)</p>",
       "reset": "<p>Die Falle setzt sich zurück, wenn die Tür geschlossen wird.</p>",
       "stealth": "<p>(Experte)</p>",
       "items": {
         "action->Curse the Intruders": {
           "name": "Verfluchen von Eindringlingen",
-          "description": "<p><strong>Trigger</strong> The seal on the tomb is broken from the outside.</p>\n<hr />\n<p><strong>Effect</strong> Each living creature within 60 feet must succeed at a @Check[type:will|dc:23] save or be subjected to the pharaoh's curse. A cursed creature takes a -2 status penalty to Fortitude saves, and any natural or magical healing it receives is halved. The curse remains until removed by <em>@UUID[Compendium.pf2e.spells-srd.Item.SUKaxVZW2TlM8lu0]{Cleanse Affliction}</em> or similar magic.</p>"
+          "description": "<p><strong>Auslöser</strong> Das Siegel auf der Gruft wird von außen gebrochen.</p>\n<hr />\n<p><strong>Effekt</strong> Jede lebende Kreatur innerhalb von 60 Fuß/18 m muss einen @Check[type:will|dc:23]{Willenswurf} ablegen; bei Misslingen ist sie vom Fluch des Pharaos betroffen. Eine verfluchte Kreatur erleidet einen Zustandsmalus von -2 auf Zähigkeitswürfe, zudem wird jede natürliche oder magische Heilung, die sie erhält, halbiert. Der Fluch währt, bis er mittels @UUID[Compendium.pf2e.spells-srd.Item.SUKaxVZW2TlM8lu0]{Leiden kurieren} oder ähnlicher Magie aufgehoben wird.</p>"
         }
       }
     },
     "Planar Rift": {
       "name": "Ebenenriss",
       "description": "<p>Ein Dimensionsriss versucht, Kreaturen auf eine andere Ebene zu zerren (der SL bestimmt die Ebene).</p>",
-      "disable": "<p>@Check[type:thievery|dc:33|name:Assemble a Rift Seal|traits:action:disable-a-device] (master) to assemble a rift seal using objects strongly grounded to your plane, or <em>@UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic}</em> (7th rank; counteract DC 31) to counteract the rift</p>",
+      "disable": "<p>@Check[type:thievery|dc:33|name:Riss versiegeln|traits:action:disable-a-device]{Diebeskunst} (Meister) (den Riss mittels Gegenständen versiegeln, die fest in dieser Ebene verankert sind) oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (7. Grad; @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.mmfWcV3Iyql5nzTo]{Entgegenwirken} SG 31) (um dem Riss entgegenzuwirken)</p>",
       "stealth": "<p>(Geübt)</p>",
       "items": {
         "action->Into the Great Beyond": {
@@ -418,18 +418,18 @@
       "items": {
         "action->Dart Volley": {
           "name": "Pfeilbeschuss",
-          "description": "<p><strong>Trigger</strong> A creature enters the hallway or ends its turn in the hallway</p>\n<hr />\n<p><strong>Effect</strong> The trap makes a poisoned dart Strike against the triggering creature, then rolls initiative.</p>"
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur betritt den Korridor oder beendet im Gang ihren Zug.</p>\n<hr />\n<p><strong>Effekt</strong> Die Falle führt einen Angriff mit einem Giftpfeil gegen die auslösende Kreatur aus, dann würfelt sie ihre Initiative aus.</p>"
         },
         "strike-ranged->Poisoned Dart": {
           "name": "Giftpfeil"
         },
         "action->Continuous Barrage": {
           "name": "Dauerfeuer",
-          "description": "<p><strong>Trigger</strong> A creature within the active gallery finishes an action</p>\n<hr />\n<p><strong>Effect</strong> The trap makes a poisoned dart Strike against the triggering creature.</p>"
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur beendet eine Aktion innerhalb des aktiven Ganges.</p>\n<hr />\n<p><strong>Effekt</strong> Die Falle führt einen Angriff mit einem Giftpfeil gegen die auslösende Kreatur aus.</p>"
         },
         "action->Flesset Poison": {
           "name": "Lähmungsgift",
-          "description": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:22]</p>\n<p><strong>Maximum Duration</strong> 6 rounds</p>\n<p><strong>Stage 1</strong> @Damage[1d6[poison]] damage and @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} (1 round)</p>\n<p><strong>Stage 2</strong> @Damage[2d6[poison]] damage and @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2} (1 round)</p>\n<p><strong>Stage 3</strong> @Damage[3d6[poison]] damage and @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 3} (1 round)</p>"
+          "description": "<p><strong>Rettungswurf</strong> @Check[type:fortitude|dc:22]{Zähigkeitswurf}</p>\n<p><strong>Maximale Wirkungsdauer</strong> 6 Runden</p>\n<p><strong>Phase 1</strong> @Damage[1d6[poison]]{1W6 Punkte Giftschaden} und @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 1} (1 Runde)</p>\n<p><strong>Phase 2</strong> @Damage[2d6[poison]]{2W6 Punkte Giftschaden} und @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 2} (1 Runde)</p>\n<p><strong>Phase 3</strong> @Damage[3d6[poison]]{3W6 Punkte Giftschaden} und @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 3} (1 Runde)</p>"
         },
         "action->No MAP": {
           "name": "No MAP",
@@ -445,7 +445,7 @@
       "items": {
         "action->Spring": {
           "name": "Sprungfeder",
-          "description": "<p><strong>Trigger</strong> A creature tries to unlock or Pick the Lock.</p>\n<hr />\n<p><strong>Effect</strong> A spine extends to Strike the triggering creature.</p>"
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur versucht das Schloss zu knacken oder aufzuschließen.</p>\n<hr />\n<p><strong>Effekt</strong> Eine Nadel schießt hervor und greift die auslösende Kreatur an.</p>"
         },
         "strike-melee->Spine": {
           "name": "Nadel"
@@ -480,7 +480,7 @@
     "Polymorph Trap": {
       "name": "Verwandlungsfalle",
       "description": "<p>Eine druidische Glyphe versucht, einen Eindringling in ein Tier zu verwandeln.</p>",
-      "disable": "<p>@Check[type:thievery|dc:32|name:Drain Glyph's Power|traits:action:disable-a-device] (master) to drain the glyph's power harmlessly, or <em>@UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic}</em> (6th rank; counteract DC 30) to counteract the glyph</p>",
+      "disable": "<p>@Check[type:thievery|dc:32|name:Kraft der Glyphe ableiten|traits:action:disable-a-device]{Diebeskunst} (Meister) (die Kraft der Glyphe harmlos ableiten), oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (6. Grad; @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.mmfWcV3Iyql5nzTo]{Entgegenwirken} SG 30) (der Glyphe entgegenwirken)</p>",
       "stealth": "<p>(Geübt)</p>",
       "items": {
         "action->Cursed Metamorphosis": {
@@ -494,12 +494,12 @@
       "description": "<p>Ein Bereich mit 4,50 m Seitenlänge aus Wasser und Sand zieht Kreaturen nach unten, welche auf die Sandoberfläche treten.</p>",
       "disable": "<p>@Check[type:survival|dc:18|name:Ausschalten]{Überlebenskunst} (Geübt) (Aufwirbeln der Oberfläche)</p>",
       "reset": "<p>Die Gefahr zieht immer noch jeden nach unten, der in sie hineintritt, allerdings benötigt die Oberfläche des Treibsandes 24 Stunden, um sich wieder zu glätten und so verborgen zu werden.</p>",
-      "routine": "<p>(1 action) On its initiative, the quicksand pulls down each creature within it. A creature that was submerged up to its waist becomes submerged up to its neck, and a creature that was submerged up to its neck is pulled under and has to hold its breath to avoid suffocation. A creature in the quicksand can attempt a @Check[type:athletics|dc:20|traits:action:swim] check to Swim to either raise itself by one step if it's submerged to its neck or worse, or to move 5 feet if it's submerged only up to its waist. On a critical failure, the creature is pulled down one step. A creature that Swims out of the quicksand escapes the hazard and is @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} in a space adjacent to the quicksand patch. Other creatures can Aid the creature, typically by using a rope or similar aid, or attempt to pull the creature out with their own @Check[type:athletics|dc:20|name:Aid Another Creature in Quicksand] check, with the same results as if the creature attempted the check.</p>",
+      "routine": "<p>(1 Aktion) Wenn der Treibsand an der Reihe ist, zieht er alle Kreaturen in seinem Wirkungsbereich nach unten. Eine Kreatur, die bis zur Hüfte eingesunken war, versinkt bis zum Hals, eine bis zum Hals eingesunkene Kreatur versinkt vollständig und muss den Atem anhalten, um nicht zu ersticken (siehe Seite 478).</p>\n<p>Ein Kreatur im Treibsand kann einen Fertigkeitswurf für @Check[type:athletics|dc:20|traits:action:swim]{Athletik} zum Schwimmen ablegen, um ihren Zustand um einen Schritt zu verbessern (von untergetaucht zu bis zu den Schultern eingetaucht zu bis zur Hüfte eingetaucht; sollte die Kreatur nur bis zur Hüfte eingetaucht sein, kann sie sich 5 Fuß/1,50 m weit bewegen). Bei einem Kritischen Fehlschlag wird die Kreatur stattdessen um einen Schritt nach unten gezogen. Kann eine Kreatur schwimmend dem Treibsand entkommen, entkommt sie auch der Gefahr, landet auf einem Feld angrenzend zum Treibsand und besitzt den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}. Andere Kreaturen können die gefangene Kreatur mittels Jemand anderem helfen unterstützen, z.B. indem sie ihr ein Seil zuwerfen oder versuchen, die Kreatur mit einem eigenen Fertigkeitswurf für @Check[type:athletics|dc:20|name:Herauszuziehen]{Athletik} zum herauszuziehen (die Ergebnisse sind dieselben, als hätte die Kreatur den Wurf abgelegt).</p>",
       "stealth": "<p>(Geübt) (oder –10 und kein Mindestkompetenzgrad, sollte die Oberfläche aufgewühlt sein)</p>",
       "items": {
         "action->Submerge": {
           "name": "Wirkungsweise",
-          "description": "<p><strong>Trigger</strong> A Huge or smaller creature walks onto the quicksand</p>\n<hr />\n<p><strong>Effect</strong> The triggering creature sinks into the quicksand up to its waist. The quicksand rolls initiative if it hasn't already.</p>"
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur der Größenkategorie Riesig oder kleiner tritt auf die Treibsandfläche.</p>\n<hr />\n<p><strong>Effekt</strong> Die auslösende Kreatur versinkt bis zur Hüfte im Treibsand. Sofern der Treibsand bisher seine Initiative nicht ausgewürfelt hat, tut er es nun.</p>"
         }
       }
     },
@@ -512,7 +512,7 @@
       "items": {
         "action->Falling Scythes": {
           "name": "Herabsausende Sensenklingen",
-          "description": "<p><strong>Trigger</strong> The trip wire is pulled or severed.</p>\n<hr />\n<p><strong>Effect</strong> Both blades swing down, each one Striking all creatures under the ceiling grooves.</p>"
+          "description": "<p><strong>Auslöser</strong> Der Stolperdraht wird durchtrennt oder bewegt.</p>\n<hr />\n<p><strong>Effekt</strong> Beide Klingen schwingen herab; jede Klinge greift alle Kreaturen auf ihrer Linie an.</p>"
         },
         "strike-melee->Scythe": {
           "name": "Sense"
@@ -579,7 +579,7 @@
       "items": {
         "action->Spear": {
           "name": "Speer",
-          "description": "<p><strong>Trigger</strong> Pressure is applied to the floor tile.</p>\n<hr />\n<p><strong>Effect</strong> The trap shoots a spear, making a Strike against the creature or object on the floor tile.</p>"
+          "description": "<p><strong>Auslöser</strong> Auf die Bodenfliese wird Druck ausgeübt.</p>\n<hr>\n<p><strong>Effekt</strong> Die Falle verschießt einen Speer und führt mit ihm einen Angriff gegen die Kreatur oder den Gegenstand auf der Bodenfliese aus.</p>"
         },
         "strike-ranged->Spear": {
           "name": "Speer"
@@ -602,7 +602,7 @@
         },
         "action->Sap Vitality": {
           "name": "Vitalität aufzehren",
-          "description": "<p>A creature hit by the reflection's shadow barbs must attempt a @Check[type:fortitude|dc:22] save as the haunt tries to draw a portion of its vital essence into the mirror. The target is @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} on a failed saving throw, or @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} on a critical failure.</p>"
+          "description": "<p>Eine Kreatur, die von den Schattenstacheln des Spiegels getroffen wird, muss einen @Check[type:fortitude|dc:22]{Zähigkeitswurf} ablegen, während der Spuk versucht, einen Teil ihrer vitalen Essenz in den Spiegel zu ziehen. Bei einem fehlgeschlagenen Rettungswurf erhält das Ziel den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 1} (bzw. bei einem Kritischen Fehlschlag @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 2}).</p>"
         },
         "action->Special": {
           "name": "Speziell",
@@ -614,14 +614,14 @@
       "name": "Klingensäule",
       "description": "<p>Im Boden ist eine Metallstange mit drei messerscharfen, wirbelnden Klingen verborgen. Sie ist mit Auslösern in bis zu acht Bodenfliesen und einem versteckten Kontrollpaneel innerhalb von 9 m verbunden.</p>",
       "disable": "<p>@Check[type:thievery|dc:21|name:Ausschalten (Säure)]{Diebeskunst} (Geübt) (zweimal gegen die Säule) oder @Check[type:thievery|dc:19|name:Ausschalten (Deaktivieren)]{Diebeskunst} (Experte) (einmal beim Kontrollpaneel zum Deaktivieren der ganzen Falle). Wird das Kontrollpaneel beschädigt, kann niemand mehr über die Steuerung die Falle ausschalten; ebenso kann die Falle sich nicht mehr automatisch deaktivieren (siehe unten, Rücksetzer).</p>",
-      "hpDetails": "Panel Hardness: 5, Panel HP: 20 (BT 10)",
+      "hpDetails": "Paneel-Härte 5, Paneel-TP 20 (BW 10)",
       "reset": "<p>Die Falle deaktiviert und setzt sich zurück nach 1 Minute.</p>",
-      "routine": "<p>(3 actions) The trap uses its first action to make a spinning blade Strike against each adjacent creature, its second action to move straight in a random direction (roll 1d4 to determine the direction), and its third to make a spinning blade Strike against each adjacent creature. This trap doesn't take a multiple attack penalty.</p>",
+      "routine": "<p>(3 Aktionen) Die Falle nutzt ihre erste Aktion für einen Klingenwirbelangriff gegen jede angrenzende Kreatur, die zweite Aktion zur Fortbewegung in eine zufällig bestimmte Richtung (würfle [[/br 1d4]]{1W4}, 1 = Norden, 2 = Osten usw.) und die dritte für einen Klingenwirbelangriff gegen jede angrenzende Kreatur. Die Falle erhält keinen Malus für Mehrfachangriffe.</p>",
       "stealth": "<p> (Geübt) oder SG 26 (Experte), um die Steuerpaneele zu finden</p>",
       "items": {
         "action->Rising Pillar": {
           "name": "Hochfahrende Säule",
-          "description": "<p><strong>Trigger</strong> A creature steps on one of the trapped floor tiles</p>\n<hr />\n<p><strong>Effect</strong> The trap pops up in a grid intersection and makes a spinning blade Strike against one adjacent creature (if any), then rolls initiative.</p>"
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur tritt auf eine der verbundenen Bodenfliesen.</p>\n<hr />\n<p><strong>Effekt</strong> Die Falle fährt in einer Kreuzung des Rasters aus dem Boden und führt einen Klingenwirbelangriff gegen eine angrenzende Kreatur aus (sofern es eine gibt), dann würfelt sie die Initiative aus.</p>"
         },
         "action->Speed": {
           "name": "Bewegungsrate",
@@ -656,20 +656,20 @@
       "items": {
         "action->Steam Blast": {
           "name": "Dampfstoß",
-          "description": "<p><strong>Trigger</strong> The trip wire is pulled or severed, typically because a creature walked through the square with the trip wire</p>\n<hr />\n<p><strong>Effect</strong> Steam erupts from the pipes, dealing @Damage[3d6[bludgeoning],3d6[fire]]{3d6 bludgeoning damage and 3d6 fire damage} (@Check[type:reflex|dc:24|basic:true|name:Avoid the erupting steam|traits:mechanical,trap,hazard]) to all creatures within 15 feet. Creatures that critically fail their save are knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>"
+          "description": "<p><strong>Auslöser</strong> Am Stolperdraht wird gezogen oder er wird durchtrennt – typischerweise, weil eine Kreatur durch das Feld mit dem Stolperdraht geht</p>\n<hr>\n<p><strong>Effekt</strong> Dampf tritt aus den Rohren aus und fügt allen Kreaturen innerhalb von @Template[type:emanation|distance:15]{15 Fuß/4,50 m} @Damage[3d6[bludgeoning],3d6[fire]]{3W6 Punkte Wuchtschaden und 3W6 Punkte Feuerschaden} zu (@Check[type:reflex|dc:24|basic:true|traits:mechanical,trap,hazard]{einfacher REF}). Kreaturen, deren Rettungswurf kritisch fehlschlägt, werden @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{zu Boden geworfen}.</p>"
         }
       }
     },
     "Summoning Rune": {
       "name": "Beschwörungsrune",
       "description": "<p>Eine Wolke unsichtbarer magischer Sensoren umgibt in einem 3 m-Radius eine unsichtbare, auf eine Wand oder den Boden geschriebene Rune. Die Rune besitzt dieselbe Größenkategorie wie die zu beschwörende Kreatur.</p>",
-      "disable": "<p>@Check[type:acrobatics|dc:15|name:Approach Rune] to approach without triggering the trap followed by @Check[type:thievery|dc:17|name:Erase Rune|traits:action:disable-a-device] (trained) to erase the rune, or <em>@UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic}</em> (1st rank; counteract DC 15) to counteract the rune</p>",
+      "disable": "<p>@Check[type:acrobatics|dc:15|name:Nähern]{Akrobatik} (um sich der Falle zu nähern, ohne sie auszulösen) gefolgt von @Check[type:thievery|dc:17|name:Ausschalten|traits:action:disable-a-device]{Diebeskunst} (Geübt) (zum Auslösen der Rune) oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (1. Grad; @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.mmfWcV3Iyql5nzTo]{Entgegenwirken} SG 15) (um der Rune entgegenzuwirken).</p>",
       "reset": "<p>Die Falle setzt sich jeden Tag zum Sonnenaufgang zurück.</p>",
       "stealth": "<p>(Geübt)</p>",
       "items": {
         "action->Summon Monster": {
           "name": "Monster beschwören",
-          "description": "<p><strong>Trigger</strong> A creature enters the cloud of magical sensors</p>\n<hr />\n<p><strong>Effect</strong> This trap summons a specific 1st-level creature, determined when the trap is created. The creature rolls initiative and remains for [[/br 2d6 #rounds]]{2d6 rounds}, after which the spell ends and the creature disappears. The creature also disappears if someone disables the trap before the duration expires. The summoned creature can use 3 actions each round and can use reactions, unlike most summoned creatures.</p>"
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur tritt in die Wolke aus magischen Sensoren.</p>\n<hr />\n<p><strong>Effekt</strong> Diese Falle beschwört eine bestimmte Kreatur der 1. Stufe. Die Kreatur würfelt ihre Initiative und verbleibt für [[/br 2d6 #Runden]]{2W6 Runden}. Danach endet die Zauberwirkung und verschwindet die Kreatur wieder. Die Kreatur verschwindet vorzeitig, sollte die Falle entschärft werden. Die beschworene Kreatur kann im Gegensatz zu den meisten beschworenen Kreaturen jede Runde 3 Aktionen nutzen und Reaktionen einsetzen.</p>"
         }
       }
     },
@@ -693,25 +693,25 @@
     },
     "Titanic Flytrap": {
       "name": "Titanische Fliegenfalle",
-      "description": "<p>On the surface, a titanic flytrap appears to be a patch of the more common flytrap plant, but beneath murky waters it hides a far larger set of jaws, reaching 10 feet across, reinforced with woody branches and lined with paralytic hairs.</p>",
+      "description": "<p>An der Oberfläche scheint eine Titanische Fliegenfalle ein Beet der häufigeren Fliegenfalle zu sein, aber unter trüben Gewässern verbirgt sie einen weit größeren Satz aus Kiefern, die einen Durchmesser von 10 Fuß/3 m haben und mit holzigen Zweigen verstärkt sowie mit lähmenden Haaren ausgekleidet sind.</p>",
       "disable": "<p>@Check[type:survival|dc:22|name:In die Irre führen]{Überlebenskunst} (Geübt), um den Spürsinn für Gewicht und Druck der Fliegenfalle in die Irre zu führen.</p>",
       "reset": "<p>1 Stunde (oder länger nach einer großen Mahlzeit)</p>",
       "stealth": "<p>(Geübt)</p>",
       "items": {
         "action->Snap Shut": {
           "name": "Zuschnappen",
-          "description": "<p><strong>Trigger</strong> A Small or Medium creature moves into a square that is within reach of the flytrap's hidden jaws</p>\n<hr />\n<p><strong>Effect</strong> The flytrap's jaws snap shut, making a jaws Strike against the triggering creature.</p>"
+          "description": "<p><strong>Auslöser</strong> Eine Kleine oder Mittelgroße Kreatur bewegt sich auf ein Feld, das sich in Reichweite der versteckten Kiefer der Fliegenfalle befindet.</p>\n<hr />\n<p><strong>Effekt</strong> Die Kiefer der Fliegenfalle schnappen zu und greifen die auslösende Kreatur an.</p>"
         },
         "strike-melee->Jaws": {
           "name": "Kiefer"
         },
         "action->Devour": {
           "name": "Verschlingen",
-          "description": "<p>The target is trapped by the flytrap's jaws, gaining the @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} condition until it Escapes (DC 21). Additionally, it is exposed to the titanic flytrap toxin from the hundreds of tiny hairs that line the inside of its leaves. If the flytrap's jaws Strike was a critical success, the target takes a –2 circumstance penalty to its saving throws against this poison. At the end of each of the target's turns that it remains grabbed, the target takes @Damage[3d6[acid]] damage.</p>"
+          "description": "<p>Das Ziel wird von den Kiefern der Fliegenfalle gefangen und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen}, bis es @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Entkommt} (SG 21). Zusätzlich ist es dem Gift der Titanfliegenfalle aus den Hunderten winziger Härchen ausgesetzt, welche die Innenseite seiner Blätter auskleiden. Wenn der Bissangriff der Fliegenfalle ein Kritischer Erfolg war, erhält das Ziel einen Situationsmalus von –2 auf seine Rettungswürfe gegen dieses Gift. Am Ende jeder Runde erleidet ein Gegriffenes Ziel @Damage[3d6[acid]]{3W6 Säureschaden}.</p>"
         },
         "action->Titanic Flytrap Toxin": {
           "name": "Gift der Titanischen Fliegenfalle",
-          "description": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:21]</p>\n<p><strong>Maximum Duration</strong> 4 rounds</p>\n<p><strong>Stage 1</strong> @Damage[2d6[poison]] damage and @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1} (1 round)</p>\n<p><strong>Stage 2</strong> @Damage[3d6[poison]] damage and @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 2} (1 round)</p>\n<p><strong>Stage 3</strong> @Damage[4d6[poison]] damage and @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} (1 round)</p>"
+          "description": "<p><strong>Rettungswurf</strong> @Check[type:fortitude|dc:21]{Zähigkeitswurf}</p>\n<p><strong>Maximale Wirkungsdauer</strong> 4 Runden</p>\n<p><strong>Phase 1</strong> @Damage[2d6[poison]]{2W6 Giftschaden} und @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1} (1 Runde)</p>\n<p><strong>Phase 2</strong> @Damage[3d6[poison]]{3W6 Giftschaden} und @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 2} (1 Runde)</p>\n<p><strong>Phase 3</strong> @Damage[4d6[poison]]{4W6 Giftschaden} und @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt} (1 Runde)</p>"
         }
       }
     },
@@ -782,9 +782,9 @@
     "Wheel Of Misery": {
       "name": "Rad des Unglücks",
       "description": "<p>Ein verziertes Rad ist in die Wand eingelassen; es ist in sechs Segmente mit jeweils farbigen Runen unterteilt und wird von einem magischen Sensor kontrolliert, welcher jede Kreatur innerhalb von 30 m vor ihm wahrnimmt.</p>",
-      "disable": "<p>@Check[type:thievery|dc:26|name:Stop Wheel from Spinning|traits:action:disable-a-device] (expert) on the wheel to stop it from spinning, @Check[type:thievery|dc:22|name:Erase Rune|traits:action:disable-a-device] (master) to erase each rune, or <em>@UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic}</em> (4th rank; counteract DC 22) to counteract each rune</p>",
+      "disable": "<p>@Check[type:thievery|dc:26|name:Ausschalten (Rad anhalten)|traits:action:disable-a-device]{Diebeskunst} (Experte) (das Rad anhalten), @Check[type:thievery|dc:22|name:Ausschalten (Auslösen)|traits:action:disable-a-device]{Diebeskunst} (Meister) (einmal pro Rune, um sie auszulöschen) oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (4. Grad; @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.mmfWcV3Iyql5nzTo]{Entgegenwirken} SG 22), um jeder Rune entgegenzuwirken.</p>",
       "reset": "<p>Die Falle deaktiviert und setzt sich zurück, sofern 1 Minute verstreicht, ohne dass sich eine Kreatur innerhalb der Reichweite des Sensors bewegt.</p>",
-      "routine": "<p>(2 actions) On its initiative, the trap uses its first action to spin, then stops. Roll 1d6 to determine which segment is topmost when the wheel stops spinning. The wheel uses its second action to replicate the spell listed for that segment (3rd rank, DC 24, spell attack modifier +14). This spell's target is centered on or otherwise includes the nearest creature in the area. This increases the spell's range to 100 feet if necessary. Any spell cast by this trap is arcane.</p>\n<p><strong>1</strong><em>@UUID[Compendium.pf2e.spells-srd.Item.o4lRVTwSxnOOn5vl]{Sleep}</em></p>\n<p><strong>2</strong><em>@UUID[Compendium.pf2e.spells-srd.Item.DCQHaLrYXMI37dvW]{Paralyze}</em></p>\n<p><strong>3</strong><em>@UUID[Compendium.pf2e.spells-srd.Item.9AAkVUCwF6WVNNY2]{Lightning Bolt}</em> (100-foot line)</p>\n<p><strong>4</strong><em>@UUID[Compendium.pf2e.spells-srd.Item.VosLNn2M8S7JH67D]{Blindness}</em></p>\n<p><strong>5</strong><em>@UUID[Compendium.pf2e.spells-srd.Item.thAHF1zxNplLCJPO]{Caustic Blast}</em></p>\n<p><strong>6</strong><em>@UUID[Compendium.pf2e.spells-srd.Item.J7Y7tl0bbdz7TcCc]{Enfeeble}</em></p>",
+      "routine": "<p>(2 Aktionen) Wenn das Rad an der Reihe ist, nutzt es seine erste Aktion, um sich zu drehen und dann anzuhalten. Würfle mit [[/br 1d6 #Rad des Unglücks]]{1W6}, um zu bestimmen, welches Segment am Ende nach oben weist. Das Rad nutzt seine zweite Aktion, um den mit der Rune des Segments verbundenen Zauber nachzuahmen (3. Grad, SG 24, Zauberangriffsbonus +14). Der Zauber ist entweder auf die nächste Kreatur zentriert oder enthält diese in ihrem Wirkungsbereich. Dies erhöht wenn nötig die Reichweite des Zaubers auf 100 Fuß/30 m. Jeder von dieser Falle gewirkte Zauber gehört der arkanen Tradition an.</p>\n<p><strong>1 </strong>@UUID[Compendium.pf2e.spells-srd.Item.o4lRVTwSxnOOn5vl]{Schlaf}</p>\n<p><strong>2 </strong>@UUID[Compendium.pf2e.spells-srd.Item.DCQHaLrYXMI37dvW]{Kreatur Lähmen}</p>\n<p><strong>3 </strong>@UUID[Compendium.pf2e.spells-srd.Item.9AAkVUCwF6WVNNY2]{Blitzstrahl} (@Template[type:line|distance:100]{100 Fuß/30 m-Linie}) </p>\n<p><strong>4 </strong>@UUID[Compendium.pf2e.spells-srd.Item.VosLNn2M8S7JH67D]{Blindheit verursachen}</p>\n<p><strong>5 </strong>@UUID[Compendium.pf2e.spells-srd.Item.thAHF1zxNplLCJPO]{Säureexplosion}</p>\n<p><strong>6 </strong>@UUID[Compendium.pf2e.spells-srd.Item.J7Y7tl0bbdz7TcCc]{Schwächen}</p>",
       "stealth": "<p>(Experte), zum Wahrnehmen des magischen Sensors; das Bemerken des Rades hat SG 0</p>",
       "items": {
         "action->Wheel Spin": {
