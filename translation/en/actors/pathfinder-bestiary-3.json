@@ -6,7 +6,7 @@
       "hpDetails": "void healing",
       "languages": "One Regional Language",
       "publicNotes": "<p>Once devout followers whose faith proved false, abandoned zealots return from the doorstep of the afterlife after being denied the eternal reward they expected. Consumed by self-loathing for the lives they squandered to false faiths and empty creeds, these lost souls serve as terrifying and implacable-yet ultimately pathetic-foes. A shapeless mass of smoke and shadow coils behind their broken masks. As abandoned zealots move, they spit and shriek a hateful cacophony of bitter lamentations and anguished weeping.</p>\n<p>Abandoned zealots are most commonly associated with the church of Razmir, which upholds a mortal wizard as a god-a truth unknown to most worshippers. However, abandoned zealots might arise from a true religion if they've been misled about that faith's true tenets or aims. This situation could easily result from the cruel schemes and predations of sinister beings, such as shrine skelms and the blasphemous devils known as deimaviggas.</p>",
-      "saveDetails": "+1 status to all saves vs. divine and positive",
+      "saveDetails": "+1 status to all saves vs. divine and vitality",
       "senses": "darkvision, lifesense 60 feet, sense apostate",
       "items": {
         "spellcastingEntry->Divine Innate Spells": {
@@ -53,6 +53,9 @@
       "items": {
         "spellcastingEntry->Divine Innate Spells": {
           "name": "Divine Innate Spells"
+        },
+        "spell->Abyssal Pact": {
+          "primarycheck": "Religion (expert; you must be a demon)"
         },
         "strike-melee->Claw": {
           "name": "Claw"
@@ -294,7 +297,9 @@
         "spell->Commune with Nature": {
           "name": "Commune with Nature",
           "cost": "rare incense worth a total value of 60 gp",
-          "description": "<p>As <em>@UUID[Compendium.pf2e.spells-srd.Item.7DN13ILADW2N9Z1t]{Commune}</em>, except you contact the primal spirits of nature, which know about animals, beasts, fey, plants, topography, and natural resources within a 3-mile radius of the ritual's location.</p>"
+          "description": "<p>As <em>@UUID[Compendium.pf2e.spells-srd.Item.7DN13ILADW2N9Z1t]{Commune}</em>, except you contact the primal spirits of nature, which know about animals, beasts, fey, plants, topography, and natural resources within a 3-mile radius of the ritual's location.</p>",
+          "primarycheck": "Nature (master)",
+          "secondarycheck": "Nature"
         },
         "spell->Cloudkill": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.MlpbeZ61Euhl0d60]\nCloudkill"
@@ -307,6 +312,10 @@
         },
         "spell->Hallucinatory Terrain": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.HBJPsonQnWcC3qdX]\nHallucinatory Terrain"
+        },
+        "spell->Plant Growth": {
+          "primarycheck": "Nature (expert)",
+          "secondarycheck": "Farming Lore or Survival"
         },
         "spell->Entangle": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.J6vNvrUT3b1hx2iA]\nEntangle"
@@ -386,7 +395,9 @@
           "name": "Arcane Innate Spells"
         },
         "spell->Control Weather (No Secondary Caster Required)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.XkDCzMIyc0YOjw05]\nControl Weather (No Secondary Caster Required)"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.XkDCzMIyc0YOjw05]\nControl Weather (No Secondary Caster Required)",
+          "primarycheck": "Nature (master)",
+          "secondarycheck": "Survival"
         },
         "spell->Endure Elements (Self Only)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.5esP2GVzvxWsMgaX]\nEndure Elements (Self Only)",
@@ -466,12 +477,16 @@
           "name": "Arcane Innate Spells"
         },
         "spell->Control Weather (No Secondary Caster Required)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.XkDCzMIyc0YOjw05]\nControl Weather (No Secondary Caster Required)"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.XkDCzMIyc0YOjw05]\nControl Weather (No Secondary Caster Required)",
+          "primarycheck": "Nature (master)",
+          "secondarycheck": "Survival"
         },
         "spell->Commune with Nature": {
           "name": "Commune with Nature",
           "cost": "rare incense worth a total value of 60 gp",
-          "description": "<p>As <em>@UUID[Compendium.pf2e.spells-srd.Item.7DN13ILADW2N9Z1t]{Commune}</em>, except you contact the primal spirits of nature, which know about animals, beasts, fey, plants, topography, and natural resources within a 3-mile radius of the ritual's location.</p>"
+          "description": "<p>As <em>@UUID[Compendium.pf2e.spells-srd.Item.7DN13ILADW2N9Z1t]{Commune}</em>, except you contact the primal spirits of nature, which know about animals, beasts, fey, plants, topography, and natural resources within a 3-mile radius of the ritual's location.</p>",
+          "primarycheck": "Nature (master)",
+          "secondarycheck": "Nature"
         },
         "spell->Tongues": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.SwUiVavHKMWG7t5K]\nTongues"
@@ -629,6 +644,10 @@
         "spell->Tongues": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.SwUiVavHKMWG7t5K]\nTongues"
         },
+        "spell->Atone": {
+          "primarycheck": "Nature or Religion (expert)",
+          "secondarycheck": "Nature or Religion (whichever is used for the primary check)"
+        },
         "spell->Gaseous Form": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.V8wXOsoejQhe6CyG]\nGaseous Form"
         },
@@ -636,7 +655,9 @@
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.vTQvfYu2llKQedmY]\nComprehend Language"
         },
         "spell->Consecrate": {
-          "cost": "rare incense and offerings worth a total value of 20 gp × the spell level"
+          "cost": "rare incense and offerings worth a total value of 20 gp × the spell level",
+          "primarycheck": "Religion",
+          "secondarycheck": "Crafting, Performance"
         },
         "spell->Detect Alignment (At Will) (Evil Only)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.QnTtGCAvdWRU4spv]\nDetect Alignment (At Will) (Evil Only)"
@@ -998,6 +1019,9 @@
         "spell->Touch of Idiocy (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.CQb8HtQ1BPeZmu9h]\nTouch of Idiocy (At Will)"
         },
+        "spell->Div Pact": {
+          "primarycheck": "Religion (expert; you must be a div)"
+        },
         "spell->Illusory Object (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.2oH5IufzdESuYxat]\nIllusory Object (At Will)"
         },
@@ -1228,7 +1252,9 @@
         "spell->Commune with Nature": {
           "name": "Commune with Nature",
           "cost": "rare incense worth a total value of 60 gp",
-          "description": "<p>As <em>@UUID[Compendium.pf2e.spells-srd.Item.7DN13ILADW2N9Z1t]{Commune}</em>, except you contact the primal spirits of nature, which know about animals, beasts, fey, plants, topography, and natural resources within a 3-mile radius of the ritual's location.</p>"
+          "description": "<p>As <em>@UUID[Compendium.pf2e.spells-srd.Item.7DN13ILADW2N9Z1t]{Commune}</em>, except you contact the primal spirits of nature, which know about animals, beasts, fey, plants, topography, and natural resources within a 3-mile radius of the ritual's location.</p>",
+          "primarycheck": "Nature (master)",
+          "secondarycheck": "Nature"
         },
         "spell->Cloudkill": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.MlpbeZ61Euhl0d60]\nCloudkill"
@@ -1241,6 +1267,10 @@
         },
         "spell->Hallucinatory Terrain": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.HBJPsonQnWcC3qdX]\nHallucinatory Terrain"
+        },
+        "spell->Plant Growth": {
+          "primarycheck": "Nature (expert)",
+          "secondarycheck": "Farming Lore or Survival"
         },
         "spell->Speak with Plants (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.qvwIwJ9QBihy8R0t]\nSpeak with Plants (At Will)"
@@ -1327,7 +1357,9 @@
           "name": "Arcane Innate Spells"
         },
         "spell->Control Weather (No Secondary Caster Required)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.XkDCzMIyc0YOjw05]\nControl Weather (No Secondary Caster Required)"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.XkDCzMIyc0YOjw05]\nControl Weather (No Secondary Caster Required)",
+          "primarycheck": "Nature (master)",
+          "secondarycheck": "Survival"
         },
         "spell->Endure Elements (Self Only)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.5esP2GVzvxWsMgaX]\nEndure Elements (Self Only)",
@@ -1411,7 +1443,9 @@
           "name": "Arcane Innate Spells"
         },
         "spell->Control Weather (No Secondary Caster Required)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.XkDCzMIyc0YOjw05]\nControl Weather (No Secondary Caster Required)"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.XkDCzMIyc0YOjw05]\nControl Weather (No Secondary Caster Required)",
+          "primarycheck": "Nature (master)",
+          "secondarycheck": "Survival"
         },
         "spell->Discern Location": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.CeSh8QcVnqP5OlLj]\nDiscern Location"
@@ -1422,7 +1456,9 @@
         "spell->Commune with Nature": {
           "name": "Commune with Nature",
           "cost": "rare incense worth a total value of 60 gp",
-          "description": "<p>As <em>@UUID[Compendium.pf2e.spells-srd.Item.7DN13ILADW2N9Z1t]{Commune}</em>, except you contact the primal spirits of nature, which know about animals, beasts, fey, plants, topography, and natural resources within a 3-mile radius of the ritual's location.</p>"
+          "description": "<p>As <em>@UUID[Compendium.pf2e.spells-srd.Item.7DN13ILADW2N9Z1t]{Commune}</em>, except you contact the primal spirits of nature, which know about animals, beasts, fey, plants, topography, and natural resources within a 3-mile radius of the ritual's location.</p>",
+          "primarycheck": "Nature (master)",
+          "secondarycheck": "Nature"
         },
         "spell->True Seeing": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.uqlxMQQeSGWEVjki]\nTrue Seeing"
@@ -1586,7 +1622,9 @@
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.CeSh8QcVnqP5OlLj]\nDiscern Location"
         },
         "spell->Legend Lore": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.hp6Q64dl7xbdn4gQ]\nLegend Lore"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.hp6Q64dl7xbdn4gQ]\nLegend Lore",
+          "primarycheck": "Occultism (master)",
+          "secondarycheck": "Performance, Society"
         },
         "spell->True Seeing": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.uqlxMQQeSGWEVjki]\nTrue Seeing"
@@ -1597,6 +1635,10 @@
         "spell->Tongues": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.SwUiVavHKMWG7t5K]\nTongues"
         },
+        "spell->Atone": {
+          "primarycheck": "Nature or Religion (expert)",
+          "secondarycheck": "Nature or Religion (whichever is used for the primary check)"
+        },
         "spell->Gaseous Form": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.V8wXOsoejQhe6CyG]\nGaseous Form"
         },
@@ -1604,7 +1646,9 @@
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.vTQvfYu2llKQedmY]\nComprehend Language"
         },
         "spell->Consecrate": {
-          "cost": "rare incense and offerings worth a total value of 20 gp × the spell level"
+          "cost": "rare incense and offerings worth a total value of 20 gp × the spell level",
+          "primarycheck": "Religion",
+          "secondarycheck": "Crafting, Performance"
         },
         "spell->Detect Alignment (At Will) (Evil Only)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.QnTtGCAvdWRU4spv]\nDetect Alignment (At Will) (Evil Only)"
@@ -2054,7 +2098,7 @@
     "Angheuvore Flesh-Gnawer": {
       "name": "Angheuvore Flesh-Gnawer",
       "hpDetails": "void healing",
-      "publicNotes": "<p>Angheuvores, or mortic elves, have an insatiable hunger for raw humanoid flesh-though they're reluctant to feed on other elves. Most stalk the streets of human nations, such as Druma, Razmiran, and the River Kingdoms. Impatient and impulsive, they're opportunistic hunters, preying on the wounded and isolated.</p>\n<hr />\n<p>Mortics are humanoids overwhelmed by void energy who still cling to life, surviving as twisted amalgams of living and undead. Though they feel unnatural cravings and resemble corpses, mortics live, breathe, eat, sleep, and procreate. However, a mortic can suspend their living functions simply by holding their breath, becoming more like a true undead.</p>\n<p>Mortics are largely new to Golarion, with most created in droves when the Whispering Tyrant destroyed entire cities with his Radiant Fire, a magical explosion fueled by the collision of negative and vitality energy. From among the corpses of these tragedies rose mortics, living survivors mistaken for corpses and left behind as a result. They found themselves in a twilight state-neither fully alive or undead. The necrotic pollutants of the Gravelands and the Isle of Terror continue to create mortics, seeping into neighboring lands through the air, earth, and water to infect the populace. Though most of the living in these lands fear becoming transformed, some believe becoming a mortic is their best chance of survival in the face of the encroaching hordes of the dead.</p>\n<p>A mortic's powers differ by ancestry, though they do have a few commonalities. Reading or hearing scripture induces headaches, and they experience great discomfort when treading upon sacred ground. For those who were religious in life, these new changes can be devastating.</p>",
+      "publicNotes": "<p>Angheuvores, or mortic elves, have an insatiable hunger for raw humanoid flesh-though they're reluctant to feed on other elves. Most stalk the streets of human nations, such as Druma, Razmiran, and the River Kingdoms. Impatient and impulsive, they're opportunistic hunters, preying on the wounded and isolated.</p>\n<hr />\n<p>Mortics are humanoids overwhelmed by void energy who still cling to life, surviving as twisted amalgams of living and undead. Though they feel unnatural cravings and resemble corpses, mortics live, breathe, eat, sleep, and procreate. However, a mortic can suspend their living functions simply by holding their breath, becoming more like a true undead.</p>\n<p>Mortics are largely new to Golarion, with most created in droves when the Whispering Tyrant destroyed entire cities with his Radiant Fire, a magical explosion fueled by the collision of void and vitality energy. From among the corpses of these tragedies rose mortics, living survivors mistaken for corpses and left behind as a result. They found themselves in a twilight state-neither fully alive or undead. The necrotic pollutants of the Gravelands and the Isle of Terror continue to create mortics, seeping into neighboring lands through the air, earth, and water to infect the populace. Though most of the living in these lands fear becoming transformed, some believe becoming a mortic is their best chance of survival in the face of the encroaching hordes of the dead.</p>\n<p>A mortic's powers differ by ancestry, though they do have a few commonalities. Reading or hearing scripture induces headaches, and they experience great discomfort when treading upon sacred ground. For those who were religious in life, these new changes can be devastating.</p>",
       "senses": "darkvision, carrion scent (imprecise) 30 feet",
       "items": {
         "strike-melee->Jaws": {
@@ -2524,6 +2568,10 @@
         "spellcastingEntry->Coven Spells": {
           "name": "Coven Spells"
         },
+        "spell->Control Weather": {
+          "primarycheck": "Nature (master)",
+          "secondarycheck": "Survival"
+        },
         "spell->Baleful Polymorph": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.dN8QBNuTiaBHCKUe]\nBaleful Polymorph"
         },
@@ -2714,6 +2762,9 @@
         "spell->Dimension Door": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.VlNcjmYyu95vOUe8]\nDimension Door"
         },
+        "spell->Abyssal Pact": {
+          "primarycheck": "Religion (expert; you must be a demon)"
+        },
         "strike-melee->Flaming Sword": {
           "name": "Flaming Sword"
         },
@@ -2820,6 +2871,9 @@
         "spell->Shadow Walk": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.rxvS7EMJ7qmexAyA]\nShadow Walk",
           "target": "you and up to 9 willing creatures touched"
+        },
+        "spell->Owb Pact": {
+          "primarycheck": "Occultism (expert)"
         },
         "spell->Darkness (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.4GE2ZdODgIQtg51c]\nDarkness (At Will)"
@@ -3447,7 +3501,7 @@
         },
         "action->Death Gaze": {
           "name": "Death Gaze",
-          "description": "<p>The spirit targets a creature it can see within 30 feet, dealing to it @Damage[4d6[void]] damage (@Check[type:fortitude|dc:20|basic:true] save).</p>\n<p>A creature with @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.TTCw5NusiSSkJU1x]{Negative Healing} instead regains [[/r 4d6[healing]]] Hit Points and is then temporarily immune for 10 minutes.</p>"
+          "description": "<p>The spirit targets a creature it can see within 30 feet, dealing to it @Damage[4d6[void]] damage (@Check[type:fortitude|dc:20|basic:true] save).</p>\n<p>A creature with @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.TTCw5NusiSSkJU1x]{Void Healing} instead regains [[/r 4d6[healing]]] Hit Points and is then temporarily immune for 10 minutes.</p>"
         },
         "action->Manifest": {
           "name": "Manifest",
@@ -3474,6 +3528,8 @@
         },
         "spell->Geas (Doesn't Require Secondary Casters And Can Target a Willing Creature of Any Level)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.Q690d3mw3TUrKX7E]\nGeas (Doesn't Require Secondary Casters And Can Target a Willing Creature of Any Level)",
+          "primarycheck": "Arcana (expert), Occultism (expert), or Religion (expert)",
+          "secondarycheck": "Society or Legal Lore",
           "target": "1 creature of a level no greater than double the geas ritual's level"
         },
         "spell->Obscuring Mist (At Will)": {
@@ -3496,7 +3552,7 @@
         },
         "action->Rituals": {
           "name": "Rituals",
-          "description": "<p>DC 25; <i>geas</i> (doesn't require secondary casters and can target a willing creature of any level)</p>"
+          "description": "<p>DC 25; <em>geas</em> (doesn't require secondary casters and can target a willing creature of any level)</p>"
         },
         "lore->Lore (Associated with the Guardian's Need)": {
           "name": "Lore (Associated with the Guardian's Need)"
@@ -3547,11 +3603,13 @@
           "name": "Divine Innate Spells"
         },
         "spell->Control Weather (Doesn't Require Secondary Casters)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.XkDCzMIyc0YOjw05]\nControl Weather (Doesn't Require Secondary Casters)"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.XkDCzMIyc0YOjw05]\nControl Weather (Doesn't Require Secondary Casters)",
+          "primarycheck": "Nature (master)"
         },
         "spell->Planar Binding (Doesn't Require Secondary Casters)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.2ykmAVKrsAWcazcC]\nPlanar Binding (Doesn't Require Secondary Casters)",
-          "cost": "warding diagram ingredients worth a total value of 2 gp × the spell level × the target's level"
+          "cost": "warding diagram ingredients worth a total value of 2 gp × the spell level × the target's level",
+          "primarycheck": "Arcana (master) or Occultism (master)"
         },
         "spell->True Seeing (Constant)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.uqlxMQQeSGWEVjki]\nTrue Seeing (Constant)"
@@ -3561,7 +3619,8 @@
         },
         "spell->Resurrect (Doesn't Require Secondary Casters)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.kqhPt9344UkcGVYO]\nResurrect (Doesn't Require Secondary Casters)",
-          "cost": "diamonds worth a total value of 75 gp × the target's level"
+          "cost": "diamonds worth a total value of 75 gp × the target's level",
+          "primarycheck": "Religion (expert)"
         },
         "spell->Air Walk (Constant)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.b5sGjGlBf58f8jn0]\nAir Walk (Constant)"
@@ -3642,9 +3701,8 @@
         "spell->Touch of Idiocy (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.CQb8HtQ1BPeZmu9h]\nTouch of Idiocy (At Will)"
         },
-        "armor->+2 Resilient Glamered Full Plate": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.Gq1cZWSKOtJhKd2p]\n+2 Resilient Glamered Full Plate",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.Gq1cZWSKOtJhKd2p]\n<p>Plate mail consists of interlocking plates that encase nearly the entire body in a carapace of steel. It is costly and heavy, and the wearer often requires help to don it correctly, but it provides some of the best defense armor can supply. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.</p>"
+        "spell->Infernal Pact": {
+          "primarycheck": "Religion (expert; you must be a devil)"
         },
         "strike-melee->Claw": {
           "name": "Claw"
@@ -4173,6 +4231,9 @@
         "spellcastingEntry->Divine Innate Spells": {
           "name": "Divine Innate Spells"
         },
+        "spell->Abyssal Pact": {
+          "primarycheck": "Religion (expert; you must be a demon)"
+        },
         "strike-melee->Jaws": {
           "name": "Jaws"
         },
@@ -4368,10 +4429,6 @@
         "weapon->Longsword": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.LJdbVTOZog39EEbi]\n<p>Longswords can be one-edged or two-edged swords. Their blades are heavy and they're between 3 and 4 feet in length.</p>"
         },
-        "armor->Darkwood Shield (Standard-Grade)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.UdvSJPCtBr2Y1e22]\nDarkwood Shield (Standard-Grade)",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.UdvSJPCtBr2Y1e22]\n<p>Darkwood shields are 1 Bulk lighter than normal (or light Bulk if their normal Bulk is 1, with no effect on a shield that normally has light Bulk).</p>\n<p>The shield has Hardness 5, HP 20, and BT 10.</p>\n<hr />\n<p><strong>Craft Requirements</strong> darkwood worth at least 55 gp</p>"
-        },
         "strike-melee->Longsword": {
           "name": "Longsword"
         },
@@ -4411,7 +4468,13 @@
           "name": "Occult Innate Spells"
         },
         "spell->Legend Lore": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.hp6Q64dl7xbdn4gQ]\nLegend Lore"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.hp6Q64dl7xbdn4gQ]\nLegend Lore",
+          "primarycheck": "Occultism (master)",
+          "secondarycheck": "Performance, Society"
+        },
+        "spell->Commune": {
+          "primarycheck": "Occultism (master) or Religion (master)",
+          "secondarycheck": "Occultism or Religion (whichever is used for the primary check)"
         },
         "spell->True Seeing": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.uqlxMQQeSGWEVjki]\nTrue Seeing"
@@ -4454,7 +4517,7 @@
         },
         "action->Guardian Monolith": {
           "name": "Guardian Monolith",
-          "description": "<p>The elder sphinx transforms their body into stone or back to flesh.</p>\n<p>In stone form, the sphinx is @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} but has Hardness 14 and gains immunity to bleed, clumsy, disease, drained, enfeebled, fatigued, void damage, petrified, poison, sickened, and wounded. They don't age or require food, water, or sleep. They can perceive their surroundings and cast their innate spells.</p>\n<p><em>@UUID[Compendium.pf2e.spells-srd.Item.Pr1ruNTbzGn3H9w5]{Stone to Flesh}</em> turns the elder sphinx from stone form back to flesh, and <em>@UUID[Compendium.pf2e.spells-srd.Item.znv4ECL7ZtuiagtA]{Petrify}</em> turns it from flesh form to stone form.</p>"
+          "description": "<p>The elder sphinx transforms their body into stone or back to flesh.</p>\n<p>In stone form, the sphinx is @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} but has Hardness 14 and gains immunity to bleed, clumsy, disease, drained, enfeebled, fatigued, petrified, poison, sickened, void damage, and wounded. They don't age or require food, water, or sleep. They can perceive their surroundings and cast their innate spells.</p>\n<p>@UUID[Compendium.pf2e.spells-srd.Item.Pr1ruNTbzGn3H9w5]{Stone to Flesh} turns the elder sphinx from stone form back to flesh, and @UUID[Compendium.pf2e.spells-srd.Item.znv4ECL7ZtuiagtA]{Petrify} turns it from flesh form to stone form.</p>"
         },
         "action->Idols of Stone": {
           "name": "Idols of Stone",
@@ -4487,7 +4550,13 @@
           "name": "Divine Innate Spells"
         },
         "spell->Create Undead": {
-          "cost": "black onyx, see Table 7-1"
+          "cost": "black onyx, see Table 7-1",
+          "primarycheck": "Arcana (expert), Occultism (expert), or Religion (expert)",
+          "secondarycheck": "Religion"
+        },
+        "spell->Imprisonment": {
+          "primarycheck": "Arcana (legendary) or Occultism (legendary)",
+          "secondarycheck": "Crafting, Society"
         },
         "spell->Finger of Death": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.Z9OrRXKgAPv6Hn5l]\nFinger of Death",
@@ -4570,6 +4639,10 @@
         "spell->Meteor Swarm": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.jrBa9deU2ULFWvSl]\nMeteor Swarm"
         },
+        "spell->Freedom": {
+          "primarycheck": "Arcana (legendary) or Occultism (legendary)",
+          "secondarycheck": "Society"
+        },
         "spell->Plane Shift (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.5bTt2CvYHPvaR7QQ]\nPlane Shift (At Will)",
           "target": "1 willing creature, or up to 8 willing creatures joining hands"
@@ -4585,10 +4658,6 @@
         },
         "spell->Dispel Magic (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]\nDispel Magic (At Will)"
-        },
-        "armor->+2 Greater Resilient Breastplate": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.r0ifJfoz8aqf0mwk]\n+2 Greater Resilient Breastplate",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.r0ifJfoz8aqf0mwk]\n<p>Though referred to as a breastplate, this type of armor consists of several pieces of plate or half-plate armor that protect the torso, chest, neck, and sometimes the hips and lower legs. It strategically grants some of the protection of plate while allowing greater flexibility and speed.</p>"
         },
         "strike-melee->Greatpick": {
           "name": "Greatpick"
@@ -4805,7 +4874,7 @@
     "Etioling Blightmage": {
       "name": "Etioling Blightmage",
       "hpDetails": "void healing",
-      "publicNotes": "<p>When the primal spark of the First World nestled in a gnome's heart is engulfed in <em>Radiant Fire</em>, it fights back, pushing against death with riotous life and creating an etioling. Within their small frames, churning vitality and void energy fiercely battle for dominance, occasionally causing convulsions and babbling speech. This intense inner conflict warps an etioling's primal magic, transmogrifying it into an occult hybrid singular to these unfortunate mortics.</p>\n<p>Nearly devoid of color, etiolings have vibrant eyes and pulsing green veins. Their bodies force the corrupting void energy out through their pores, where it distills on their skin, covering them in a thin layer of ectoplasm and concentrated death. Around them, the world withers.</p>\n<p>Incapable of focusing for long, etiolings are impulsive and moody, rapidly alternating between kindness, malice, and trickery. They forget themselves, their friends, and the things they once loved.</p>\n<hr />\n<p>Mortics are humanoids overwhelmed by void energy who still cling to life, surviving as twisted amalgams of living and undead. Though they feel unnatural cravings and resemble corpses, mortics live, breathe, eat, sleep, and procreate. However, a mortic can suspend their living functions simply by holding their breath, becoming more like a true undead.</p>\n<p>Mortics are largely new to Golarion, with most created in droves when the Whispering Tyrant destroyed entire cities with his Radiant Fire, a magical explosion fueled by the collision of negative and vitality energy. From among the corpses of these tragedies rose mortics, living survivors mistaken for corpses and left behind as a result. They found themselves in a twilight state-neither fully alive or undead. The necrotic pollutants of the Gravelands and the Isle of Terror continue to create mortics, seeping into neighboring lands through the air, earth, and water to infect the populace. Though most of the living in these lands fear becoming transformed, some believe becoming a mortic is their best chance of survival in the face of the encroaching hordes of the dead.</p>\n<p>A mortic's powers differ by ancestry, though they do have a few commonalities. Reading or hearing scripture induces headaches, and they experience great discomfort when treading upon sacred ground. For those who were religious in life, these new changes can be devastating.</p>",
+      "publicNotes": "<p>When the primal spark of the First World nestled in a gnome's heart is engulfed in <em>Radiant Fire</em>, it fights back, pushing against death with riotous life and creating an etioling. Within their small frames, churning vitality and void energy fiercely battle for dominance, occasionally causing convulsions and babbling speech. This intense inner conflict warps an etioling's primal magic, transmogrifying it into an occult hybrid singular to these unfortunate mortics.</p>\n<p>Nearly devoid of color, etiolings have vibrant eyes and pulsing green veins. Their bodies force the corrupting void energy out through their pores, where it distills on their skin, covering them in a thin layer of ectoplasm and concentrated death. Around them, the world withers.</p>\n<p>Incapable of focusing for long, etiolings are impulsive and moody, rapidly alternating between kindness, malice, and trickery. They forget themselves, their friends, and the things they once loved.</p>\n<hr />\n<p>Mortics are humanoids overwhelmed by void energy who still cling to life, surviving as twisted amalgams of living and undead. Though they feel unnatural cravings and resemble corpses, mortics live, breathe, eat, sleep, and procreate. However, a mortic can suspend their living functions simply by holding their breath, becoming more like a true undead.</p>\n<p>Mortics are largely new to Golarion, with most created in droves when the Whispering Tyrant destroyed entire cities with his Radiant Fire, a magical explosion fueled by the collision of void and vitality energy. From among the corpses of these tragedies rose mortics, living survivors mistaken for corpses and left behind as a result. They found themselves in a twilight state-neither fully alive or undead. The necrotic pollutants of the Gravelands and the Isle of Terror continue to create mortics, seeping into neighboring lands through the air, earth, and water to infect the populace. Though most of the living in these lands fear becoming transformed, some believe becoming a mortic is their best chance of survival in the face of the encroaching hordes of the dead.</p>\n<p>A mortic's powers differ by ancestry, though they do have a few commonalities. Reading or hearing scripture induces headaches, and they experience great discomfort when treading upon sacred ground. For those who were religious in life, these new changes can be devastating.</p>",
       "senses": "darkvision",
       "items": {
         "spellcastingEntry->Occult Spontaneous Spells": {
@@ -4857,7 +4926,7 @@
         },
         "action->Death Gasp": {
           "name": "Death Gasp",
-          "description": "<p>The etioling draws in a deep breath and holds it, temporarily suspending their biological processes and becoming undead.</p>\n<p>The etioling gains the undead and incorporeal traits and becomes immune to bleed, death effects, disease, @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}, poison, and sleep. Any such effects the etioling is currently suffering from are suspended, but take effect again once they take a breath. They gain a fly Speed of 25 feet, resistance 10 to all damage (except force, ghost touch, or positive; double this resistance vs. non-magical) while they hold their breath.They can't cast spells during this time.</p>\n<p>Death Gasp lasts as long as the etioling blightmage holds their breath (up to 8 rounds).</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.5x0XpNftvx9uGbXt]{Effect: Death Gasp (Etioling)}</p>"
+          "description": "<p>The etioling draws in a deep breath and holds it, temporarily suspending their biological processes and becoming undead.</p>\n<p>The etioling gains the undead and incorporeal traits and becomes immune to bleed, death effects, disease, @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}, poison, and sleep. Any such effects the etioling is currently suffering from are suspended, but take effect again once they take a breath. They gain a fly Speed of 25 feet, resistance 10 to all damage (except force, ghost touch, or vitality; double this resistance vs. non-magical) while they hold their breath.They can't cast spells during this time.</p>\n<p>Death Gasp lasts as long as the etioling blightmage holds their breath (up to 8 rounds).</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.5x0XpNftvx9uGbXt]{Effect: Death Gasp (Etioling)}</p>"
         }
       }
     },
@@ -4882,11 +4951,11 @@
         },
         "strike-melee->Fist": {
           "name": "Fist",
-          "description": "<p>The Strike deals damage that's either bludgeoning or positive - whichever deals more damage to the target creature.</p>"
+          "description": "<p>The Strike deals damage that's either bludgeoning or vitality - whichever deals more damage to the target creature.</p>"
         },
         "strike-melee->Foot": {
           "name": "Foot",
-          "description": "<p>The Strike deals damage that's either bludgeoning or positive - whichever deals more damage to the target creature.</p>"
+          "description": "<p>The Strike deals damage that's either bludgeoning or vitality - whichever deals more damage to the target creature.</p>"
         },
         "action->Retributive Suplex": {
           "name": "Retributive Suplex",
@@ -4894,7 +4963,7 @@
         },
         "action->Blessed Strikes": {
           "name": "Blessed Strikes",
-          "description": "<p>The eunemvro's Strikes deal damage that's either bludgeoning or positive - whichever deals more damage to the target creature.</p>"
+          "description": "<p>The eunemvro's Strikes deal damage that's either bludgeoning or vitality - whichever deals more damage to the target creature.</p>"
         },
         "action->Tide of Creation": {
           "name": "Tide of Creation",
@@ -5702,9 +5771,6 @@
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.qXTB7Ec9yYh5JPPV]\nPurify Food and Drink",
           "target": "1 cubic foot of contaminated food or water"
         },
-        "armor->+1 Resilient Hide Armor": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.AnwzlOs0njF9Jqnr]\n+1 Resilient Hide Armor"
-        },
         "strike-melee->Pincer": {
           "name": "Pincer"
         },
@@ -5793,7 +5859,7 @@
         },
         "action->Positive Nature": {
           "name": "Positive Nature",
-          "description": "<p>A gliminal doesn't gain the automatic or temporary Hit Points from being on a plane with the positive planar essence.</p>"
+          "description": "<p>A gliminal doesn't gain the automatic or temporary Hit Points from being on a plane with the vitality planar essence.</p>"
         },
         "action->Radiant Mantle": {
           "name": "Radiant Mantle",
@@ -5805,7 +5871,7 @@
         },
         "action->Overpowering Healing": {
           "name": "Overpowering Healing",
-          "description": "<p>When a gliminal grants positive healing that would heal a living creature above their maximum Hit Points, including the fast healing HP from their Bond in Light ability, the excess is granted as temporary Hit Points.</p>\n<p>Unlike normal, these temporary HP combine with each other, and they last for 1 hour. If a creature's temporary HP from a gliminal ever exceeds its maximum HP, it becomes overloaded and explodes in a burst of vitality energy.</p>\n<p>A creature with temporary HP from overpowering healing becomes @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} if the temporary HP equal half their maximum HP or more. The creature can't reduce this sickened condition unless it has 0 temporary HP.</p>\n<p>Overpowering healing doesn't apply to creatures with the positive trait.</p>"
+          "description": "<p>When a gliminal grants vitality healing that would heal a living creature above their maximum Hit Points, including the fast healing HP from their Bond in Light ability, the excess is granted as temporary Hit Points.</p>\n<p>Unlike normal, these temporary HP combine with each other, and they last for 1 hour. If a creature's temporary HP from a gliminal ever exceeds its maximum HP, it becomes overloaded and explodes in a burst of vitality energy.</p>\n<p>A creature with temporary HP from overpowering healing becomes @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} if the temporary HP equal half their maximum HP or more. The creature can't reduce this sickened condition unless it has 0 temporary HP.</p>\n<p>Overpowering healing doesn't apply to creatures with the vitality trait.</p>"
         },
         "lore->Forge of Creation Lore": {
           "name": "Forge of Creation Lore"
@@ -5845,17 +5911,27 @@
         "spellcastingEntry->Primal Innate Spells": {
           "name": "Primal Innate Spells"
         },
+        "spell->Control Weather": {
+          "primarycheck": "Nature (master)",
+          "secondarycheck": "Survival"
+        },
         "spell->Awaken Animal": {
           "cost": "herbs, 1/5 the value on Table 7-1",
+          "primarycheck": "Nature (master)",
+          "secondarycheck": "Lore (any), Society, Survival",
           "target": "1 animal up to the level on Table 7-1"
         },
         "spell->Commune with Nature": {
           "name": "Commune with Nature",
           "cost": "rare incense worth a total value of 60 gp",
-          "description": "<p>As <em>@UUID[Compendium.pf2e.spells-srd.Item.7DN13ILADW2N9Z1t]{Commune}</em>, except you contact the primal spirits of nature, which know about animals, beasts, fey, plants, topography, and natural resources within a 3-mile radius of the ritual's location.</p>"
+          "description": "<p>As <em>@UUID[Compendium.pf2e.spells-srd.Item.7DN13ILADW2N9Z1t]{Commune}</em>, except you contact the primal spirits of nature, which know about animals, beasts, fey, plants, topography, and natural resources within a 3-mile radius of the ritual's location.</p>",
+          "primarycheck": "Nature (master)",
+          "secondarycheck": "Nature"
         },
         "spell->Primal Call": {
-          "cost": "faerie circle ingredients worth a total value of 1 gp × the spell level × the target's level"
+          "cost": "faerie circle ingredients worth a total value of 1 gp × the spell level × the target's level",
+          "primarycheck": "Nature (master)",
+          "secondarycheck": "Crafting, Diplomacy, Survival"
         },
         "spell->True Seeing": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.uqlxMQQeSGWEVjki]\nTrue Seeing"
@@ -5865,6 +5941,10 @@
         },
         "spell->Freedom of Movement": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.aqRYNoSvxsVfqglH]\nFreedom of Movement"
+        },
+        "spell->Plant Growth": {
+          "primarycheck": "Nature (expert)",
+          "secondarycheck": "Farming Lore or Survival"
         },
         "strike-melee->Vine": {
           "name": "Vine"
@@ -5898,11 +5978,11 @@
         },
         "action->Embed": {
           "name": "Embed",
-          "description": "<p>The green man's thorns embed themselves into any creature they damage, taking root into the ground. A target damaged by a thorn has its Speeds halved, and it can't Step, @UUID[Compendium.pf2e.actionspf2e.Item.cS9nfDRGD83bNU1p]{Fly}, <em>@UUID[Compendium.pf2e.spells-srd.Item.b5sGjGlBf58f8jn0]{Air Walk}</em><em>,</em> or otherwise leave the ground until the thorn is removed.</p>\n<p>Removing a thorn requires 3 Interact actions, which don't have to be consecutive. If the creature performing the final action doesn't succeed at a @Check[type:medicine|dc:45] check as part of that action, the target takes @Damage[10d6[damage]] damage upon the thorn's removal.</p>"
+          "description": "<p>The green man's thorns embed themselves into any creature they damage, taking root into the ground. A target damaged by a thorn has its Speeds halved, and it can't Step, @UUID[Compendium.pf2e.actionspf2e.Item.cS9nfDRGD83bNU1p]{Fly}, <em>@UUID[Compendium.pf2e.spells-srd.Item.b5sGjGlBf58f8jn0]{Air Walk}</em><em>,</em> or otherwise leave the ground until the thorn is removed.</p>\n<p>Removing a thorn requires 3 Interact actions, which don't have to be consecutive. If the creature performing the final action doesn't succeed at a @Check[type:medicine|dc:45] check as part of that action, the target takes @Damage[10d6[untyped]] damage upon the thorn's removal.</p>"
         },
         "action->Focus Vines": {
           "name": "Focus Vines",
-          "description": "<p>The green man focuses all their vines against a single vexing foe, making a single vine Strike.</p>\n<p>On a success, the target takes @Damage[5d10[damage]] damage and is affected by Absorb Magic three times. Even on a failure, the target takes the normal effects of a hit with a vine Strike, but on a critical failure, the vines miss completely.</p>"
+          "description": "<p>The green man focuses all their vines against a single vexing foe, making a single vine Strike.</p>\n<p>On a success, the target takes 5d10 additional damage and is affected by Absorb Magic three times. Even on a failure, the target takes the normal effects of a hit with a vine Strike, but on a critical failure, the vines miss completely.</p>"
         },
         "action->Green Grab": {
           "name": "Green Grab",
@@ -6106,7 +6186,7 @@
     "Gurgist Mauler": {
       "name": "Gurgist Mauler",
       "hpDetails": "void healing",
-      "publicNotes": "<p>Humans that become mortics are known as gurgists. They retain their personalities and intelligence, but their bodies rot with every beat of their heart. Gurgists ceaselessly crave raw meat; consuming large quantities can slow, or even reverse, their body's putrefaction for a short time. A gurgist that refuses to consume raw meat rots to death.</p>\n<p>Unlike other mortics, gurgists are capable of sating their hunger without resorting to depravity, making them more likely to be nonevil compared to other mortics. Most gurgists hunt and raise livestock for food-including animals many consider too dangerous to tame. To battle their constant hunger, many take up a single craft, hobby, or performing art to obsess over until the drive to create overcomes the urge to consume. Many study magic or medicine, researching methods to reverse their condition or suspend their putrescence. Others cling to religion, uttering prayers despite the pain and begging the gods to cleanse them of evil.</p>\n<p>Nearly all gurgists are disgusted by their clumsy, rotting bodies. They shroud themselves in fine clothes and cover their faces with elaborate masks. Most consider their mask their true face.</p>\n<hr />\n<p>Mortics are humanoids overwhelmed by void energy who still cling to life, surviving as twisted amalgams of living and undead. Though they feel unnatural cravings and resemble corpses, mortics live, breathe, eat, sleep, and procreate. However, a mortic can suspend their living functions simply by holding their breath, becoming more like a true undead.</p>\n<p>Mortics are largely new to Golarion, with most created in droves when the Whispering Tyrant destroyed entire cities with his Radiant Fire, a magical explosion fueled by the collision of negative and vitality energy. From among the corpses of these tragedies rose mortics, living survivors mistaken for corpses and left behind as a result. They found themselves in a twilight state-neither fully alive or undead. The necrotic pollutants of the Gravelands and the Isle of Terror continue to create mortics, seeping into neighboring lands through the air, earth, and water to infect the populace. Though most of the living in these lands fear becoming transformed, some believe becoming a mortic is their best chance of survival in the face of the encroaching hordes of the dead.</p>\n<p>A mortic's powers differ by ancestry, though they do have a few commonalities. Reading or hearing scripture induces headaches, and they experience great discomfort when treading upon sacred ground. For those who were religious in life, these new changes can be devastating.</p>",
+      "publicNotes": "<p>Humans that become mortics are known as gurgists. They retain their personalities and intelligence, but their bodies rot with every beat of their heart. Gurgists ceaselessly crave raw meat; consuming large quantities can slow, or even reverse, their body's putrefaction for a short time. A gurgist that refuses to consume raw meat rots to death.</p>\n<p>Unlike other mortics, gurgists are capable of sating their hunger without resorting to depravity, making them more likely to be nonevil compared to other mortics. Most gurgists hunt and raise livestock for food-including animals many consider too dangerous to tame. To battle their constant hunger, many take up a single craft, hobby, or performing art to obsess over until the drive to create overcomes the urge to consume. Many study magic or medicine, researching methods to reverse their condition or suspend their putrescence. Others cling to religion, uttering prayers despite the pain and begging the gods to cleanse them of evil.</p>\n<p>Nearly all gurgists are disgusted by their clumsy, rotting bodies. They shroud themselves in fine clothes and cover their faces with elaborate masks. Most consider their mask their true face.</p>\n<hr />\n<p>Mortics are humanoids overwhelmed by void energy who still cling to life, surviving as twisted amalgams of living and undead. Though they feel unnatural cravings and resemble corpses, mortics live, breathe, eat, sleep, and procreate. However, a mortic can suspend their living functions simply by holding their breath, becoming more like a true undead.</p>\n<p>Mortics are largely new to Golarion, with most created in droves when the Whispering Tyrant destroyed entire cities with his Radiant Fire, a magical explosion fueled by the collision of void and vitality energy. From among the corpses of these tragedies rose mortics, living survivors mistaken for corpses and left behind as a result. They found themselves in a twilight state-neither fully alive or undead. The necrotic pollutants of the Gravelands and the Isle of Terror continue to create mortics, seeping into neighboring lands through the air, earth, and water to infect the populace. Though most of the living in these lands fear becoming transformed, some believe becoming a mortic is their best chance of survival in the face of the encroaching hordes of the dead.</p>\n<p>A mortic's powers differ by ancestry, though they do have a few commonalities. Reading or hearing scripture induces headaches, and they experience great discomfort when treading upon sacred ground. For those who were religious in life, these new changes can be devastating.</p>",
       "senses": "darkvision",
       "items": {
         "strike-melee->Maul": {
@@ -7824,7 +7904,7 @@
       "name": "Leng Ghoul",
       "hpDetails": "void healing",
       "publicNotes": "<p>In the icy nightmare dimension of Leng, ghouls with hoofed feet gather in morbid groups to worship and research, forming societies that mockingly mimic (and in their opinion, surpass) those of the living. Most worship the malevolent gods of the Elder Mythos and see the living as little more than fodder who will eventually die and provide memories for Leng ghouls to consume and absorb. Not all Leng ghouls are evil, but most are, and even those who aren't possess sardonic senses of humor and grisly appetites that make them disturbing allies at best.</p>",
-      "saveDetails": "+1 status to all saves vs. positive",
+      "saveDetails": "+1 status to all saves vs. vitality",
       "senses": "darkvision",
       "items": {
         "consumable->Scroll of Confusion (Level 4)": {
@@ -7872,6 +7952,9 @@
       "saveDetails": "+1 status to all saves vs. magic",
       "senses": "greater darkvision",
       "items": {
+        "spell->Infernal Pact": {
+          "primarycheck": "Religion (expert; you must be a devil)"
+        },
         "strike-melee->Trident": {
           "name": "Trident"
         },
@@ -7913,7 +7996,7 @@
     "Lifeleecher Brawler": {
       "name": "Lifeleecher Brawler",
       "hpDetails": "void healing",
-      "publicNotes": "<p>Lifeleechers are mortic orcs with gray flesh, sharp claws, and protruding tusks. Resilient and strong, they devour the vital essence of their enemies, which heals their wounds and shackles those souls to the lifeleecher.</p>\n<p>Many orcs believe lifeleechers are possessed by the spirits of fallen orc warriors too stubborn to die. Feared and revered, lifeleechers often rise to positions of power in their holds and battle on the front lines against the undead armies of the Whispering Tyrant.</p>\n<hr />\n<p>Mortics are humanoids overwhelmed by void energy who still cling to life, surviving as twisted amalgams of living and undead. Though they feel unnatural cravings and resemble corpses, mortics live, breathe, eat, sleep, and procreate. However, a mortic can suspend their living functions simply by holding their breath, becoming more like a true undead.</p>\n<p>Mortics are largely new to Golarion, with most created in droves when the Whispering Tyrant destroyed entire cities with his Radiant Fire, a magical explosion fueled by the collision of negative and vitality energy. From among the corpses of these tragedies rose mortics, living survivors mistaken for corpses and left behind as a result. They found themselves in a twilight state-neither fully alive or undead. The necrotic pollutants of the Gravelands and the Isle of Terror continue to create mortics, seeping into neighboring lands through the air, earth, and water to infect the populace. Though most of the living in these lands fear becoming transformed, some believe becoming a mortic is their best chance of survival in the face of the encroaching hordes of the dead.</p>\n<p>A mortic's powers differ by ancestry, though they do have a few commonalities. Reading or hearing scripture induces headaches, and they experience great discomfort when treading upon sacred ground. For those who were religious in life, these new changes can be devastating.</p>",
+      "publicNotes": "<p>Lifeleechers are mortic orcs with gray flesh, sharp claws, and protruding tusks. Resilient and strong, they devour the vital essence of their enemies, which heals their wounds and shackles those souls to the lifeleecher.</p>\n<p>Many orcs believe lifeleechers are possessed by the spirits of fallen orc warriors too stubborn to die. Feared and revered, lifeleechers often rise to positions of power in their holds and battle on the front lines against the undead armies of the Whispering Tyrant.</p>\n<hr />\n<p>Mortics are humanoids overwhelmed by void energy who still cling to life, surviving as twisted amalgams of living and undead. Though they feel unnatural cravings and resemble corpses, mortics live, breathe, eat, sleep, and procreate. However, a mortic can suspend their living functions simply by holding their breath, becoming more like a true undead.</p>\n<p>Mortics are largely new to Golarion, with most created in droves when the Whispering Tyrant destroyed entire cities with his Radiant Fire, a magical explosion fueled by the collision of void and vitality energy. From among the corpses of these tragedies rose mortics, living survivors mistaken for corpses and left behind as a result. They found themselves in a twilight state-neither fully alive or undead. The necrotic pollutants of the Gravelands and the Isle of Terror continue to create mortics, seeping into neighboring lands through the air, earth, and water to infect the populace. Though most of the living in these lands fear becoming transformed, some believe becoming a mortic is their best chance of survival in the face of the encroaching hordes of the dead.</p>\n<p>A mortic's powers differ by ancestry, though they do have a few commonalities. Reading or hearing scripture induces headaches, and they experience great discomfort when treading upon sacred ground. For those who were religious in life, these new changes can be devastating.</p>",
       "senses": "darkvision",
       "items": {
         "armor->Breastplate": {
@@ -8370,7 +8453,8 @@
         },
         "spell->Create Undead (Doesn't Require Secondary Casters)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.c3b6LdLlQDPngNIb]\nCreate Undead (Doesn't Require Secondary Casters)",
-          "cost": "black onyx, see Table 7-1"
+          "cost": "black onyx, see Table 7-1",
+          "primarycheck": "Arcana (expert), Occultism (expert), or Religion (expert)"
         },
         "spell->Illusory Creature (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.f8SBoXiXQjlCKqly]\nIllusory Creature (At Will)"
@@ -8431,7 +8515,7 @@
         },
         "action->Powerful Scimitars": {
           "name": "Powerful Scimitars",
-          "description": "<p>Any non-magical scimitar becomes a <i>+1 striking scimitar</i> while a maftet wields it.</p>"
+          "description": "<p>Any non-magical scimitar becomes a <em>+1 striking scimitar</em> while a maftet wields it.</p>"
         },
         "action->Raptor Dive": {
           "name": "Raptor Dive",
@@ -8864,7 +8948,7 @@
     },
     "Mithral Golem": {
       "name": "Mithral Golem",
-      "publicNotes": "<p>Mithral golems are gorgeously crafted, silvery humanoids made from colossal amounts of the purest mithral. While massive in construction, they possess amazing speed and grace through literal fluidity. Unpredictable and flexible, they can melt into liquid form and reform into a solid shape in mere seconds, allowing them to shape their limbs into sharp spikes or heavy fists as needed.</p>\n<hr />\n<p>Powerful constructs that blend magic and raw material, golems make ideal guardians and bodyguards, with forms and functions as varied as the needs of those who employ them. As their crafters experiment with more exotic components and create new formulas, golems with surprising abilities emerge.</p>",
+      "publicNotes": "<p>Mithral golems are gorgeously crafted, silvery humanoids made from colossal amounts of the purest dawnsilver. While massive in construction, they possess amazing speed and grace through literal fluidity. Unpredictable and flexible, they can melt into liquid form and reform into a solid shape in mere seconds, allowing them to shape their limbs into sharp spikes or heavy fists as needed.</p>\n<hr />\n<p>Powerful constructs that blend magic and raw material, golems make ideal guardians and bodyguards, with forms and functions as varied as the needs of those who employ them. As their crafters experiment with more exotic components and create new formulas, golems with surprising abilities emerge.</p>",
       "senses": "darkvision",
       "items": {
         "strike-melee->Fist": {
@@ -8962,6 +9046,10 @@
       "items": {
         "spellcastingEntry->Primal Innate Spells": {
           "name": "Primal Innate Spells"
+        },
+        "spell->Plant Growth": {
+          "primarycheck": "Nature (expert)",
+          "secondarycheck": "Farming Lore or Survival"
         },
         "spell->Entangle": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.J6vNvrUT3b1hx2iA]\nEntangle"
@@ -9085,6 +9173,10 @@
         },
         "spellcastingEntry->Coven Spells": {
           "name": "Coven Spells"
+        },
+        "spell->Control Weather": {
+          "primarycheck": "Nature (master)",
+          "secondarycheck": "Survival"
         },
         "spell->Plane Shift": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.5bTt2CvYHPvaR7QQ]\nPlane Shift",
@@ -9215,12 +9307,11 @@
         "spell->Dimension Door (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.VlNcjmYyu95vOUe8]\nDimension Door (At Will)"
         },
+        "spell->Infernal Pact": {
+          "primarycheck": "Religion (expert; you must be a devil)"
+        },
         "weapon->Greataxe": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.8COlYvHe6hKCXY8x]\n<p>This large battle axe is too heavy to wield with only one hand. Many greataxes incorporate two blades, and they are often \"bearded\", having a hook at the bottom to increase the strength of their chopping power.</p>"
-        },
-        "armor->+1 Breastplate": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.r0ifJfoz8aqf0mwk]\n+1 Breastplate",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.r0ifJfoz8aqf0mwk]\n<p>Though referred to as a breastplate, this type of armor consists of several pieces of plate or half-plate armor that protect the torso, chest, neck, and sometimes the hips and lower legs. It strategically grants some of the protection of plate while allowing greater flexibility and speed.</p>"
         },
         "strike-melee->Flaming Greataxe": {
           "name": "Flaming Greataxe"
@@ -9863,6 +9954,9 @@
         "spell->Dimension Door (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.VlNcjmYyu95vOUe8]\nDimension Door (At Will)"
         },
+        "spell->Abyssal Pact": {
+          "primarycheck": "Religion (expert; you must be a demon)"
+        },
         "spell->Create Water (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.WzLKjSw6hsBhuklC]\nCreate Water (At Will)"
         },
@@ -10149,6 +10243,9 @@
         "spell->Charm (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.vLA0q0WOK2YPuJs6]\nCharm (At Will)"
         },
+        "spell->Div Pact": {
+          "primarycheck": "Religion (expert; you must be a div)"
+        },
         "strike-melee->Claw": {
           "name": "Claw"
         },
@@ -10242,6 +10339,9 @@
         },
         "spell->Private Sanctum": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.onjZCEHs3JJJRTD0]\nPrivate Sanctum"
+        },
+        "spell->Inveigle": {
+          "primarycheck": "Arcana (expert), Occultism (expert), or Religion (expert)"
         },
         "spell->Paranoia (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.Mkbq9xlAUxHUHyR2]\nParanoia (At Will)"
@@ -10784,7 +10884,8 @@
           "name": "Divine Spontaneous Spells"
         },
         "spell->Blight (Doesn't Require Secondary Casters)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.7yWXx3qC4eFNHhxD]\nBlight (Doesn't Require Secondary Casters)"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.7yWXx3qC4eFNHhxD]\nBlight (Doesn't Require Secondary Casters)",
+          "primarycheck": "Nature (expert)"
         },
         "spell->Burning Hands": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.y6rAdMK6EFlV6U0t]\nBurning Hands"
@@ -11274,7 +11375,9 @@
         },
         "spell->Create Undead (No Secondary Caster Required)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.c3b6LdLlQDPngNIb]\nCreate Undead (No Secondary Caster Required)",
-          "cost": "black onyx, see Table 7-1"
+          "cost": "black onyx, see Table 7-1",
+          "primarycheck": "Arcana (expert), Occultism (expert), or Religion (expert)",
+          "secondarycheck": "Religion"
         },
         "spell->Darkness (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.4GE2ZdODgIQtg51c]\nDarkness (At Will)"
@@ -11283,6 +11386,9 @@
           "name": "Misdirection (At Will) (Self Only)",
           "description": "<p>You reshape the magic aura of one creature or object to resemble that of another. You designate one target as the primary target and the other as the secondary target. Effects that would detect auras on the primary target instead detect the same types of auras from the secondary target. A creature reading the aura can attempt to disbelieve the illusion. You can Dismiss the spell from up to a mile away.</p>",
           "target": "self"
+        },
+        "spell->Div Pact": {
+          "primarycheck": "Religion (expert; you must be a div)"
         },
         "strike-melee->Falchion": {
           "name": "Falchion"
@@ -11609,7 +11715,7 @@
         "spell->Floating Disk (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.LvezN4a3kYf1OHMg]\nFloating Disk (At Will)"
         },
-        "armor->Floating Disk (see Disk Rider)": {
+        "shield->Floating Disk (see Disk Rider)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.Yr9yCuJiAlFh3QEB]\nFloating Disk (see Disk Rider)"
         },
         "strike-melee->Halberd": {
@@ -12188,6 +12294,10 @@
         "spellcastingEntry->Coven Spells": {
           "name": "Coven Spells"
         },
+        "spell->Control Weather": {
+          "primarycheck": "Nature (master)",
+          "secondarycheck": "Survival"
+        },
         "spell->Baleful Polymorph": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.dN8QBNuTiaBHCKUe]\nBaleful Polymorph"
         },
@@ -12578,10 +12688,14 @@
         },
         "spell->Planar Ally": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.vgy00hnqxN9VoeoF]\nPlanar Ally",
-          "cost": "rare incense and offerings worth a total value of 2 gp × the spell level × the target's level"
+          "cost": "rare incense and offerings worth a total value of 2 gp × the spell level × the target's level",
+          "primarycheck": "Religion (expert)",
+          "secondarycheck": "Diplomacy"
         },
         "spell->Resurrect": {
-          "cost": "diamonds worth a total value of 75 gp × the target's level"
+          "cost": "diamonds worth a total value of 75 gp × the target's level",
+          "primarycheck": "Religion (expert)",
+          "secondarycheck": "Medicine, Society"
         },
         "spell->Air Walk (Constant)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.b5sGjGlBf58f8jn0]\nAir Walk (Constant)"
@@ -12591,10 +12705,6 @@
         },
         "spell->Dispel Magic (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]\nDispel Magic (At Will)"
-        },
-        "armor->+2 Greater Resilient Full Plate": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.Gq1cZWSKOtJhKd2p]\n+2 Greater Resilient Full Plate",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.Gq1cZWSKOtJhKd2p]\n<p>Plate mail consists of interlocking plates that encase nearly the entire body in a carapace of steel. It is costly and heavy, and the wearer often requires help to don it correctly, but it provides some of the best defense armor can supply. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.</p>"
         },
         "strike-melee->Halberd": {
           "name": "Halberd"
@@ -12861,7 +12971,9 @@
           "name": "Divine Innate Spells"
         },
         "spell->Create Undead": {
-          "cost": "black onyx, see Table 7-1"
+          "cost": "black onyx, see Table 7-1",
+          "primarycheck": "Arcana (expert), Occultism (expert), or Religion (expert)",
+          "secondarycheck": "Religion"
         },
         "treasure->Black Onyx Gems": {
           "name": "Black Onyx Gems"
@@ -13195,7 +13307,13 @@
           "name": "Occult Innate Spells"
         },
         "spell->Create Undead": {
-          "cost": "black onyx, see Table 7-1"
+          "cost": "black onyx, see Table 7-1",
+          "primarycheck": "Arcana (expert), Occultism (expert), or Religion (expert)",
+          "secondarycheck": "Religion"
+        },
+        "spell->Imprisonment": {
+          "primarycheck": "Arcana (legendary) or Occultism (legendary)",
+          "secondarycheck": "Crafting, Society"
         },
         "spell->Wail of the Banshee": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.FEsuyf203wTNE2et]\nWail of the Banshee"
@@ -13214,7 +13332,7 @@
         },
         "action->Light to Dark": {
           "name": "Light to Dark",
-          "description": "<p><strong>Trigger</strong> A creature uses an ability or spell with the positive trait within 120 feet of the tzitzimitl</p>\n<hr />\n<p><strong>Effect</strong> The tzitzimitl inverts the energy used in the triggering ability or spell, causing it to lose the positive trait and gain the negative trait, and changing all instances of vitality energy or healing in the ability's description to void energy.</p>"
+          "description": "<p><strong>Trigger</strong> A creature uses an ability or spell with the vitality trait within 120 feet of the tzitzimitl</p>\n<hr />\n<p><strong>Effect</strong> The tzitzimitl inverts the energy used in the triggering ability or spell, causing it to lose the vitality trait and gain the void trait, and changing all instances of vitality energy or healing in the ability's description to void energy.</p>"
         },
         "action->Drain Life": {
           "name": "Drain Life",
@@ -13286,10 +13404,6 @@
         "spell->Disrupting Weapons": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.2iQKhCQBijhj5Rf3]\nDisrupting Weapons",
           "target": "up to two weapons, each of which must be wielded by you or a willing ally, or else unattended"
-        },
-        "armor->+1 Resilient Breastplate": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.r0ifJfoz8aqf0mwk]\n+1 Resilient Breastplate",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.r0ifJfoz8aqf0mwk]\n<p>Though referred to as a breastplate, this type of armor consists of several pieces of plate or half-plate armor that protect the torso, chest, neck, and sometimes the hips and lower legs. It strategically grants some of the protection of plate while allowing greater flexibility and speed.</p>"
         },
         "strike-melee->Spear": {
           "name": "Spear"
@@ -13787,6 +13901,10 @@
         "spellcastingEntry->Coven Spells": {
           "name": "Coven Spells"
         },
+        "spell->Control Weather": {
+          "primarycheck": "Nature (master)",
+          "secondarycheck": "Survival"
+        },
         "spell->Baleful Polymorph": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.dN8QBNuTiaBHCKUe]\nBaleful Polymorph"
         },
@@ -14078,7 +14196,9 @@
           "name": "Divine Innate Spells"
         },
         "spell->Create Undead": {
-          "cost": "black onyx, see Table 7-1"
+          "cost": "black onyx, see Table 7-1",
+          "primarycheck": "Arcana (expert), Occultism (expert), or Religion (expert)",
+          "secondarycheck": "Religion"
         },
         "spell->Finger of Death": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.Z9OrRXKgAPv6Hn5l]\nFinger of Death",
@@ -14149,7 +14269,7 @@
       "publicNotes": "<p>Wyrwood sneaks specialize in moving unseen behind enemy lines, performing reconnaissance and quietly eliminating threats.</p>\n<hr />\n<p>Originally created as sapient magical servants, wyrwoods reclaimed the means to make more of their kind from their oppressive originators; now, they fiercely defend their freedom and autonomy. These small, nimble living machines rely on their wits and speed to evade foes and gather information. Most wyrwoods are precise and calculating, to the point that many outsiders perceive them as unfeeling, but they're also highly curious and passionate about matters that pique their interest. Regardless of personal agenda, wyrwoods prioritize the survival of their people above all else, even to the detriment of others when necessary.</p>\n<p>Despite gaining their freedom, wyrwoods struggle to establish a home in Avistan. Some Avistani still view wyrwoods as tools of a secretive cabal, while others consider them traitorous servants who turned on their creators. Fearing for their safety, many wyrwoods fled the Inner Sea region to create a new home in Arcadia. In the coastal city of Segada, wyrwoods live in relative peace and safety, but they still prefer insular lifestyles.</p>\n<p>Given their extreme self-reliance, wyrwoods have learned a degree of adaptability that far surpasses that of other cultures. When a wyrwood community finds itself in need of a specific skill or function, a member of the community-either a volunteer or one selected communally-takes it upon themself to learn the required abilities. They don't view any task as lesser or demeaning, as hubris is foreign to a wyrwood's construct nature.</p>\n<p>A wyrwood's soul is tied to the magical stone that serves as their heart, which sometimes survives even when their construct body perishes. Another wyrwood might take the surviving heart from a close companion and incorporate it into their own body. In some cases, multiple wyrwoods might live on in a single body.</p>",
       "senses": "darkvision",
       "items": {
-        "armor->Buckler": {
+        "shield->Buckler": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.1k3AsSW7lpU0kEpY]\n<p>This very small shield is a favorite of duelists and quick, lightly armored warriors. It's typically made of steel and strapped to your forearm. You can Raise a Shield with your buckler as long as you have that hand free or are holding a light object that's not a weapon in that hand.</p>\n<table class=\"pf2-table\">\n<thead>\n<tr>\n<th>Hardness</th>\n<th>HP</th>\n<th>BT</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>3</td>\n<td>6</td>\n<td>3</td>\n</tr>\n</tbody>\n</table>"
         },
         "strike-melee->Shortsword": {
@@ -14242,6 +14362,10 @@
         },
         "spell->Crushing Despair": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.GaRQlC9Yw1BGKHfN]\nCrushing Despair"
+        },
+        "spell->Atone": {
+          "primarycheck": "Nature or Religion (expert)",
+          "secondarycheck": "Nature or Religion (whichever is used for the primary check)"
         },
         "spell->Mind Reading (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.KHnhPHL4x1AQHfbC]\nMind Reading (At Will)"
@@ -14419,6 +14543,10 @@
         },
         "spell->Hallucinatory Terrain": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.HBJPsonQnWcC3qdX]\nHallucinatory Terrain"
+        },
+        "spell->Plant Growth": {
+          "primarycheck": "Nature (expert)",
+          "secondarycheck": "Farming Lore or Survival"
         },
         "spell->Entangle": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.J6vNvrUT3b1hx2iA]\nEntangle"
@@ -14689,7 +14817,9 @@
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.vTQvfYu2llKQedmY]\nComprehend Language"
         },
         "spell->Consecrate": {
-          "cost": "rare incense and offerings worth a total value of 20 gp × the spell level"
+          "cost": "rare incense and offerings worth a total value of 20 gp × the spell level",
+          "primarycheck": "Religion",
+          "secondarycheck": "Crafting, Performance"
         },
         "spell->Detect Alignment (At Will) (Evil Only)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.QnTtGCAvdWRU4spv]\nDetect Alignment (At Will) (Evil Only)"
@@ -15091,10 +15221,6 @@
         },
         "spell->Detect Alignment (At Will) (Evil Only)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.QnTtGCAvdWRU4spv]\nDetect Alignment (At Will) (Evil Only)"
-        },
-        "armor->+1 Breastplate": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.r0ifJfoz8aqf0mwk]\n+1 Breastplate",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.r0ifJfoz8aqf0mwk]\n<p>Though referred to as a breastplate, this type of armor consists of several pieces of plate or half-plate armor that protect the torso, chest, neck, and sometimes the hips and lower legs. It strategically grants some of the protection of plate while allowing greater flexibility and speed.</p>"
         },
         "strike-melee->Katana": {
           "name": "Katana"
