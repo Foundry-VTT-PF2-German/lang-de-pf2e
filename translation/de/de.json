@@ -173,7 +173,15 @@
         "Active": "Aktiv",
         "ActiveHeader": "Aktive Aktivitäten",
         "Biography": {
-          "ToggleVisibility": "Sichtbarkeit für andere Spieler umschalten"
+          "Anathema": {
+            "Add": "Anathema hinzufügen",
+            "Delete": "Anathema entfernen"
+          },
+          "ToggleVisibility": "Sichtbarkeit für andere Spieler umschalten",
+          "Edicts": {
+            "Add": "Gebot hinzufügen",
+            "Delete": "Gebot entfernen"
+          }
         },
         "Blurb": "Stufe {level} {ancestry} {class}",
         "ClassDC": {
@@ -209,7 +217,8 @@
             "Medium": "Mittelschwere Rüstung",
             "Title": "Verteidigungen",
             "Unarmored": "Ungerüstete Verteidigung"
-          }
+          },
+          "HigherUpgrade": "Dieser Kompetenzgrad wurde durch {ability} auf {rank} erhöht."
         },
         "Rest": {
           "Label": "Rast für die Nacht"
@@ -863,6 +872,7 @@
         },
         "Label": "Ergebnis: <unadjusted>{unadjusted}</unadjusted> <offset>um {offset}</offset>"
       },
+      "SetAsInitiative": "Initiative für {actor} setzen",
       "Specific": {
         "Counteract": "Wurf zum Entgegenwirken",
         "Perception": {
@@ -877,8 +887,6 @@
     "ClassFeatLevels": "Klassentalentstufen",
     "ClassFeatures": "Klassenmerkmale",
     "ClassHP": "Klassen-TP",
-    "ClickToSetInitiative": "Klicke um Initiative bei gewählten Token(s) zu setzen.",
-    "ClickToSetInitiativeContext": "Nutze für Initiative",
     "ClipboardNotification": "\"{clipText}\" in die Zwischenablage kopiert.",
     "CompendiumBrowser": {
       "AddedItem": "{item} dem selektierten Akteur hinzugefügt.",
@@ -983,19 +991,6 @@
       "UseMulti": "Nutzt {name}, {current} verbleiben",
       "UseSingle": "Nutzt {name}"
     },
-    "ConsumableTypeAmmo": "Munition",
-    "ConsumableTypeDrug": "Droge",
-    "ConsumableTypeElixir": "Elixier",
-    "ConsumableTypeMutagen": "Mutagen",
-    "ConsumableTypeOil": "Öl",
-    "ConsumableTypeOther": "Sonstiges",
-    "ConsumableTypePoison": "Gift",
-    "ConsumableTypePotion": "Trank",
-    "ConsumableTypeScroll": "Schriftrolle",
-    "ConsumableTypeSnare": "Vorrichtung",
-    "ConsumableTypeTalisman": "Talisman",
-    "ConsumableTypeTool": "Werkzeug",
-    "ConsumableTypeWand": "Zauberstab",
     "CoreSkillsHeader": "Grundfertigkeiten",
     "Counteractable": "Gegensteuerbar",
     "CraftDCTitle": "SG",
@@ -1211,6 +1206,7 @@
       "IncreasedFrom": "Erhöht von {original} auf mindestens 1",
       "Kind": {
         "Both": {
+          "Label": "Beides",
           "Roll": {
             "Noun": "Schadens-/Heilungswurf",
             "Verb": "Schaden/Heilung würfeln"
@@ -1664,6 +1660,11 @@
           "heavy-barding": "Schwerer Harnisch",
           "light-barding": "Leichter Harnisch"
         },
+        "Rune": {
+          "Resilient": {
+            "Label": "Resilient Rune"
+          }
+        },
         "Specific": {
           "Hint": "Die Markierung dieser Rüstung als <i>spezielle magische Rüstung</i> zeigt an, dass sie mehr kann, als ihre Materialzusammensetzung und Runen erlauben. Der Name, die Stufe, die Seltenheit und der Preis werden zum Zeitpunkt der Markierung nicht mehr von einem wertvollen Material oder Runen überschrieben. Diese Materialien und Runen dienen jedoch als Basis für die Anpassung von Stufe, Seltenheit und Preis bei späteren Upgrades.",
           "Label": "Spezielle Magische Rüstung"
@@ -1697,9 +1698,32 @@
         }
       },
       "Consumable": {
+        "Damage": {
+          "Add": "Heilung/Schaden hinzufügen",
+          "Label": "Schaden/Heilung",
+          "Remove": "Schaden/Heilung entfernen"
+        },
+        "Category": {
+          "ammo": "Munition",
+          "catalyst": "Katalysator",
+          "drug": "Droge",
+          "elixir": "Elixier",
+          "fulu": "Fulu",
+          "gadget": "Gimmick",
+          "mutagen": "Mutagen",
+          "oil": "Öl",
+          "other": "Andere",
+          "poison": "Gift",
+          "potion": "Trank",
+          "scroll": "Schriftrolle",
+          "snare": "Vorrichtung",
+          "talisman": "Talisman",
+          "toolkit": "Werkzeug",
+          "wand": "Zauberstab"
+        },
         "Plural": "Verbrauchsgegenstände",
         "Uses": {
-          "AutoDestroy": "Autom. Zerstörung",
+          "AutoDestroy": "Nach Benutzung zerstören",
           "Label": "Nutzung(en)",
           "None": "Keine Nutzung übrig",
           "Use": "Nutzen"
@@ -2093,6 +2117,10 @@
             "formula": "Formel",
             "value": "Fester Wert"
           }
+        },
+        "Disintegrated": {
+          "Description": "Maybe it's a treatable condition.",
+          "Name": "Disintegrated"
         },
         "Plural": "Effekte",
         "ShowTokenIcon": "Tokenbild anzeigen?",
@@ -2911,9 +2939,6 @@
       },
       "WarnNoHeroPoint": "{name} besitzt keinen Heldenpunkt"
     },
-    "ResiliencyRuneLabel": "Widerstandsrune",
-    "ResistancesExceptionLabel": "Außer:",
-    "ResistancesExceptionPlaceholder": "z.B. außer Silber",
     "ResistancesLabel": "Resistenzen",
     "ResolvePointsShortLabel": "Reserve",
     "RestoreSpellTitle": "Zauber wiederherstellen",
@@ -3199,7 +3224,7 @@
             "ABPRulesAsWritten": "ABP: Eigenschaftsrunen verbieten",
             "noABP": "Standard-Regeln verwenden"
           },
-          "Hint": "Nachladen erforderlich: Unterstützung für die Regeln der Variante \"Automatische Bonusprogression\", ausgenommen Fähigkeiten/Apex-Fähigkeit.",
+          "Hint": "Aktiviert die Regelvariante \"Automatische Bonusprogression\". Verbesserte Fertigkeit muss derzeit manuell ergänzt werden.",
           "Name": "Automatische Bonusprogression"
         },
         "FreeArchetype": {
@@ -3426,10 +3451,8 @@
     "StackGroupCoins": "Münzen",
     "StackGroupGems": "Edelsteine",
     "StackGroupLabel": "Gruppe stapeln",
-    "StackGroupRations": "Rationen",
     "StackGroupRounds10": "Runden (10)",
     "StackGroupRounds5": "Runden (5)",
-    "StackGroupSacks": "Säcke",
     "StackGroupSlingBullets": "Schleuderkugeln",
     "StackGroupSprayPellets": "Streukugeln",
     "StackGroupWoodenTaws": "Holzmurmeln",
@@ -5686,6 +5709,7 @@
       }
     },
     "identification": {
+      "DisplayDetails": "Details anzeigen",
       "Identified": "Identifiziert",
       "Identify": "Gegenstand identifizieren",
       "IdentifyAlchemyDCs": "Alchemie identifizieren SGs",
@@ -5701,7 +5725,7 @@
       "TraitGMNote": "Hinweis: Diese Kategorie ist vor den Spielern verborgen.",
       "Unidentified": "Nicht identifiziert",
       "UnidentifiedDescription": "Die Natur dieses {item} ist unklar.",
-      "UnidentifiedHint": "Ändern Sie die grundlegenden Anzeigedetails dieses Elements, wenn es nicht identifiziert ist.",
+      "UnidentifiedHint": "Ändere die von Spielern einsehbaren grundlegenden Details dieses Elements, wenn es nicht identifiziert ist.",
       "UnidentifiedItem": "Ungewöhnliche(r/s) {item}",
       "UnidentifiedType": {
         "Amulet": "Amulett",

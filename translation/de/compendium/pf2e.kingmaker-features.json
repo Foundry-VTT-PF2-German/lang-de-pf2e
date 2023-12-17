@@ -7,11 +7,19 @@
     },
     "Advance": {
       "name": "Advance",
-      "description": "<p>Your army attempts to close the distance with a target enemy army it is not engaged with by attempting a Maneuver check.</p>\n<p><strong>Critical Success</strong> The enemy army becomes @UUID[Compendium.pf2e.kingmaker-features.Item.2IqM1XHELKwARAx1]{Engaged} with your army, even if it previously had the @UUID[Compendium.pf2e.kingmaker-features.Item.8upne4E6Q7Da5T5w]{Distant} condition (in which case it loses that condition and becomes engaged).</p>\n<p><strong>Success</strong> If the target army is distant, it loses that condition; otherwise, it becomes engaged.</p>\n<p><strong>Failure</strong> Your army's attempt to advance fails.</p>\n<p><strong>Critical Failure</strong> Your army's attempt to advance fails, and it becomes disorganized, becoming @UUID[Compendium.pf2e.kingmaker-features.Item.oVhkdym3D6TiTbrN]{Mired 1} until the start of its next turn.</p>"
+      "description": "<p>Your army attempts to close the distance with a target enemy army it is not engaged with by attempting a @Check[type:maneuver|defense:maneuver|roller:self|options:action:advance] check.</p>\n<p><strong>Critical Success</strong> The enemy army becomes @UUID[Compendium.pf2e.kingmaker-features.Item.2IqM1XHELKwARAx1]{Engaged} with your army, even if it previously had the @UUID[Compendium.pf2e.kingmaker-features.Item.8upne4E6Q7Da5T5w]{Distant} condition (in which case it loses that condition and becomes engaged).</p>\n<p><strong>Success</strong> If the target army is distant, it loses that condition; otherwise, it becomes engaged.</p>\n<p><strong>Failure</strong> Your army's attempt to advance fails.</p>\n<p><strong>Critical Failure</strong> Your army's attempt to advance fails, and it becomes disorganized, becoming @UUID[Compendium.pf2e.kingmaker-features.Item.oVhkdym3D6TiTbrN]{Mired 1} until the start of its next turn.</p>"
     },
     "All-Out Assault": {
       "name": "All-Out Assault",
-      "description": "<p><strong>Requirement</strong> @UUID[Compendium.pf2e.kingmaker-features.Item.QRwIcmCEHpDQm9DO]{Merciless}</p>\n<p>Your army attacks with frightening vigor. Attempt a melee Strike against an enemy army's AC. Critical Success Your army inflicts 3 points of damage to the target army. If your army's next war action this turn is an attack war action against a different target army, you gain a +1 circumstance bonus to the Strike as your fury continues to the new target. Success Your army deals 2 points of damage to the target army. Failure Your army falters, but still deals 1 point of damage to the target army. Critical Failure Your army deals no damage to the target army and becomes outflanked until the start of its next turn.</p>"
+      "description": "<p><strong>Requirement</strong> @UUID[Compendium.pf2e.kingmaker-features.Item.QRwIcmCEHpDQm9DO]{Merciless}</p>\n<hr />\n<p>Your army attacks with frightening vigor. Attempt a melee Strike against an enemy army's AC.</p>\n<p><strong>Critical Success</strong> Your army inflicts @Damage[3|domains:melee-damage,strike-damage] points of damage to the target army. If your army's next war action this turn is an attack war action against a different target army, you gain a +1 circumstance bonus to the Strike as your fury continues to the new target.</p>\n<p><strong>Success</strong> Your army deals @Damage[2|domains:melee-damage,strike-damage] points of damage to the target army.</p>\n<p><strong>Failure</strong> Your army falters, but still deals @Damage[1|domains:melee-damage,strike-damage] point of damage to the target army.</p>\n<p><strong>Critical Failure</strong> Your army deals no damage to the target army and becomes @UUID[Compendium.pf2e.kingmaker-features.Item.ibcMcEGRbPRtk9Pu]{Outflanked} until the start of its next turn.</p>",
+      "rules": {
+        "0": {
+          "label": "All-Out Assault Followup Attack (Crit Success)"
+        },
+        "1": {
+          "label": "All-Out Assault Followup (Crit Success)"
+        }
+      }
     },
     "Ambush": {
       "name": "Ambush",
@@ -28,7 +36,7 @@
     },
     "Battlefield Medicine": {
       "name": "Battlefield Medicine",
-      "description": "<p><strong>Requirement</strong> Field Triage</p>\n<hr />\n<p>Your army attempts to patch up an allied army's wounds during battle. Once you attempt this war action on an army, that army is temporarily immune to Battlefield Medicine for the remainder of the war encounter. Attempt a @Check[scouting|dc:25] check to successfully sort the army's wounded and provide swift aid.</p>\n<hr />\n<p><strong>Critical Success</strong> You restore 2 HP to the target army.</p>\n<p><strong>Success</strong> You restore 1 HP to the target army</p>\n<p><strong>Critical Failure</strong> Your attempt to heal the army fails, and that army's weary condition value increases by 1.</p>"
+      "description": "<p><strong>Requirement</strong> Field Triage</p>\n<hr />\n<p>Your army attempts to patch up an allied army's wounds during battle. Once you attempt this war action on an army, that army is temporarily immune to Battlefield Medicine for the remainder of the war encounter. Attempt a @Check[scouting|dc:25] check to successfully sort the army's wounded and provide swift aid.</p>\n<hr />\n<p><strong>Critical Success</strong> You restore 2 HP to the target army.</p>\n<p><strong>Success</strong> You restore 1 HP to the target army</p>\n<p><strong>Critical Failure</strong> Your attempt to heal the army fails, and that army's @UUID[Compendium.pf2e.kingmaker-features.Item.dmzpRlOrorEFUETl]{Weary} condition value increases by 1.</p>"
     },
     "Bloodied but Unbroken": {
       "name": "Bloodied but Unbroken",
@@ -88,11 +96,11 @@
     },
     "Counterattack": {
       "name": "Counterattack",
-      "description": "<p>Requirement Flexible Tactics Trigger An army you are engaged with attempts a maneuver war action. Your army lashes out at the foe as they attempt to perform a maneuver. Attempt a melee Strike against the triggering army's AC. Counterattack doesn't count toward your multiple attack penalty, and your multiple attack penalty doesn't apply to this Strike. Critical Success You inflict 1 point of damage on the army and increase its shaken condition value by 1. Success You inflict 1 point of damage on the army.</p>"
+      "description": "<p><strong>Requirement</strong> @UUID[Compendium.pf2e.kingmaker-features.Item.mHWF5XwUi8RK2lET]{Flexible Tactics}</p>\n<p><strong>Trigger</strong> An army you are engaged with attempts a maneuver war action.</p>\n<hr />\n<p>Your army lashes out at the foe as they attempt to perform a maneuver. Attempt a melee Strike against the triggering army's AC. Counterattack doesn't count toward your multiple attack penalty, and your multiple attack penalty doesn't apply to this Strike.</p>\n<p><strong>Critical Success</strong> You inflict 1 point of damage on the army and increase its @UUID[Compendium.pf2e.kingmaker-features.Item.7LMDwpVijK7x5Jst]{Shaken} condition value by 1.</p>\n<p><strong>Success</strong> You inflict 1 point of damage on the army.</p>"
     },
     "Covering Fire": {
       "name": "Covering Fire",
-      "description": "<p>Requirement Sharpshooter Your army's ranged fire provides cover and protection for an allied army to maneuver. Attempt a ranged Strike against a target army's AC. Critical Success You inflict 2 points of damage to the target army, and it cannot take reactions triggered by maneuver war actions from any army until the start of your next turn. Success You inflict 1 point of damage to the target army, and it can't take reactions triggered by maneuver war actions from any army until the start of your next turn. Failure Your attack fails to provide covering fire, but you inflict 1 point of damage to the target army. Critical Failure Your attempt fails.</p>"
+      "description": "<p><strong>Requirement</strong> @UUID[Compendium.pf2e.kingmaker-features.Item.lcNZMlMNPUrnMgQ2]{Sharpshooter}</p>\n<hr />\n<p>Your army's ranged fire provides cover and protection for an allied army to maneuver. Attempt a ranged Strike against a target army's AC.</p>\n<p><strong>Critical Success</strong> You inflict 2 points of damage to the target army, and it cannot take reactions triggered by maneuver war actions from any army until the start of your next turn.</p>\n<p><strong>Success</strong> You inflict 1 point of damage to the target army, and it can't take reactions triggered by maneuver war actions from any army until the start of your next turn.</p>\n<p><strong>Failure</strong> Your attack fails to provide covering fire, but you inflict 1 point of damage to the target army.</p>\n<p><strong>Critical Failure</strong> Your attempt fails.</p>"
     },
     "Craft Luxuries": {
       "name": "Craft Luxuries",
@@ -150,7 +158,7 @@
     },
     "Dirty Fighting": {
       "name": "Dirty Fighting",
-      "description": "<p>Requirement Flexible Tactics Your army uses trickery, deception, and unfair tactics to attempt a devastating attack against an outflanked army. Attempt a melee Strike or a ranged Strike against the AC of a target outflanked army that is not distant. Critical Success The target army becomes weary 2 until the start of your next turn. Success The target army becomes weary 1 until the start of your next turn. Critical Failure Your attack deals no damage to the target army, which is emboldened by your failed attempt at dirty fighting. This reduces the target army's weary value by 1.</p>"
+      "description": "<p><strong>Requirement</strong> @UUID[Compendium.pf2e.kingmaker-features.Item.mHWF5XwUi8RK2lET]{Flexible Tactics}</p>\n<hr />\n<p>Your army uses trickery, deception, and unfair tactics to attempt a devastating attack against an outflanked army. Attempt a melee Strike or a ranged Strike against the AC of a target outflanked army that is not distant.</p>\n<p><strong>Critical Success</strong> The target army becomes @UUID[Compendium.pf2e.kingmaker-features.Item.dmzpRlOrorEFUETl]{Weary 2} until the start of your next turn.</p>\n<p><strong>Success</strong> The target army becomes weary 1 until the start of your next turn.</p>\n<p><strong>Critical Failure</strong> Your attack deals no damage to the target army, which is emboldened by your failed attempt at dirty fighting. This reduces the target army's weary value by 1.</p>"
     },
     "Disband Army": {
       "name": "Disband Army",
@@ -158,11 +166,29 @@
     },
     "Disengage": {
       "name": "Disengage",
-      "description": "<p>Your army attempts to disengage from enemy armies to put some distance between itself and the enemy.</p>\n<p>Attempt a Maneuver check against each army your army is @UUID[Compendium.pf2e.kingmaker-features.Item.2IqM1XHELKwARAx1]{Engaged} with.</p>\n<p><strong>Critical Success</strong> Your army is no longer engaged with the target army. In addition, your army is automatically no longer engaged with any armies you haven't yet rolled a Maneuver check against during this war action.</p>\n<p><strong>Success</strong> Your army breaks free and is no longer engaged with the target army.</p>\n<p><strong>Failure</strong> Your army remains engaged with the target army.</p>\n<p><strong>Critical Failure</strong> Your army remains engaged with the target army and, for the remainder of this turn, your army cannot attempt to disengage from any army with which it is still engaged.</p>"
+      "description": "<p>Your army attempts to disengage from enemy armies to put some distance between itself and the enemy.</p>\n<p>Attempt a @Check[type:maneuver|defense:maneuver|roller:self|options:action:disengage] check against each army your army is @UUID[Compendium.pf2e.kingmaker-features.Item.2IqM1XHELKwARAx1]{Engaged} with.</p>\n<p><strong>Critical Success</strong> Your army is no longer engaged with the target army. In addition, your army is automatically no longer engaged with any armies you haven't yet rolled a Maneuver check against during this war action.</p>\n<p><strong>Success</strong> Your army breaks free and is no longer engaged with the target army.</p>\n<p><strong>Failure</strong> Your army remains engaged with the target army.</p>\n<p><strong>Critical Failure</strong> Your army remains engaged with the target army and, for the remainder of this turn, your army cannot attempt to disengage from any army with which it is still engaged.</p>"
     },
     "Distant": {
       "name": "Distant",
       "description": "<p>An army that has the distant condition has managed to retreat a fair range away from enemy armies, and is potentially poised to make an escape from the field of battle. Armies can attempt ranged Strikes against distant armies, but they take a –5 penalty on that Strike.</p>"
+    },
+    "Effect: Guard (Critical Success)": {
+      "name": "Effect: Guard (Critical Success)",
+      "description": "<p>This army gains a +2 item bonus to its AC until the start of its next turn; this bonus applies to all attacks.</p>",
+      "rules": {
+        "0": {
+          "label": "Guarded"
+        }
+      }
+    },
+    "Effect: Guard (Success)": {
+      "name": "Effect: Guard (Success)",
+      "description": "<p>This army gains a +2 item bonus to its AC until the start of your next turn against attacks from the targeted army.</p>",
+      "rules": {
+        "1": {
+          "label": "Guarded"
+        }
+      }
     },
     "Efficient": {
       "name": "Efficient",
@@ -219,7 +245,7 @@
     },
     "False Retreat": {
       "name": "False Retreat",
-      "description": "<p>Requirement Flexible Tactics Trigger Your army succeeds at a morale check. Your army feigns defeat to trick an enemy army. Attempt a Morale check against a target army. Critical Success The target army is caught off guard by your army's deception. It becomes outflanked and is unable to take reactions until the start of your next turn. Success The target army is caught off guard by your army's deception and is outflanked until the start of its next turn. Critical Failure The enemy anticipated your tactic and moves to take advantage of the situation. Your army becomes outflanked until the start of your next turn.</p>"
+      "description": "<p><strong>Requirement</strong> Flexible Tactics</p>\n<p><strong>Trigger</strong> Your army succeeds at a morale check.</p>\n<hr />\n<p>Your army feigns defeat to trick an enemy army. Attempt a @Check[morale|defense:morale|roller:self] check against a target army.</p>\n<p><strong>Critical Success</strong> The target army is caught off guard by your army's deception. It becomes @UUID[Compendium.pf2e.kingmaker-features.Item.ibcMcEGRbPRtk9Pu]{Outflanked} and is unable to take reactions until the start of your next turn.</p>\n<p><strong>Success</strong> The target army is caught off guard by your army's deception and is outflanked until the start of its next turn.</p>\n<p><strong>Critical Failure</strong> The enemy anticipated your tactic and moves to take advantage of the situation. Your army becomes outflanked until the start of your next turn.</p>"
     },
     "Fame and Fortune": {
       "name": "Fame and Fortune",
@@ -297,25 +323,7 @@
     },
     "Guard": {
       "name": "Guard",
-      "description": "<p>Your army spends a war action to adopt a defensive pose—raising shields, focusing on parrying attacks, or seeking cover. Attempt a Maneuver check against a target army.</p>\n<p><strong>Critical Success</strong> Your army gains a +2 item bonus to its AC until the start of your next turn; this bonus applies to all attacks against this army, not just from the targeted army.</p>\n<p>Effect: @UUID[Compendium.pf2e.kingmaker-features.Item.EmfxjNH1uxtDDqZu]{Guarded (Critical Success)}</p>\n<p><strong>Success</strong> Your army gains a +2 item bonus to its AC until the start of your next turn against attacks from the target army.</p>\n<p>Effect: @UUID[Compendium.pf2e.kingmaker-features.Item.rF8Nsas5KrrBEeqr]{Guarded (Success)}</p>\n<p><strong>Failure</strong> Your army fails to guard against the target army.</p>\n<p><strong>Critical Failure</strong> Your army fails spectacularly to guard against the target army and becomes @UUID[Compendium.pf2e.kingmaker-features.Item.oVhkdym3D6TiTbrN]{Mired 1}.</p>"
-    },
-    "Guarded (Critical Success)": {
-      "name": "Guarded (Critical Success)",
-      "description": "<p><em><strong>Note</strong>: This effect does not represent an army condition itself but is instead used for automating the bonuses applied by the @UUID[Compendium.pf2e.kingmaker-features.Item.phtwOol1wETryF7b]{Guard} action.</em></p>",
-      "rules": {
-        "0": {
-          "label": "Guarded"
-        }
-      }
-    },
-    "Guarded (Success)": {
-      "name": "Guarded (Success)",
-      "description": "<p><em><strong>Note</strong>: This effect does not represent an army condition itself but is instead used for automating the bonuses applied by the @UUID[Compendium.pf2e.kingmaker-features.Item.phtwOol1wETryF7b]{Guard} action.</em></p>",
-      "rules": {
-        "0": {
-          "label": "Guarded"
-        }
-      }
+      "description": "<p>Your army spends a war action to adopt a defensive pose—raising shields, focusing on parrying attacks, or seeking cover. Attempt a @Check[type:maneuver|defense:maneuver|roller:self|options:action:guard] check against a target army.</p>\n<p><strong>Critical Success</strong> Your army gains a +2 item bonus to its AC until the start of your next turn; this bonus applies to all attacks against this army, not just from the targeted army.</p>\n<p>@UUID[Compendium.pf2e.kingmaker-features.Item.EmfxjNH1uxtDDqZu]{Effect: Guard (Critical Success)}</p>\n<p><strong>Success</strong> Your army gains a +2 item bonus to its AC until the start of your next turn against attacks from the target army.</p>\n<p>@UUID[Compendium.pf2e.kingmaker-features.Item.rF8Nsas5KrrBEeqr]{Effect: Guard (Success)}</p>\n<p><strong>Failure</strong> Your army fails to guard against the target army.</p>\n<p><strong>Critical Failure</strong> Your army fails spectacularly to guard against the target army and becomes @UUID[Compendium.pf2e.kingmaker-features.Item.oVhkdym3D6TiTbrN]{Mired 1}.</p>"
     },
     "Harvest Crops": {
       "name": "Harvest Crops",
@@ -464,7 +472,7 @@
     },
     "Overwhelming Bombardment": {
       "name": "Overwhelming Bombardment",
-      "description": "<p>Requirement Explosive Shot</p>\n<p>Your siege engines focus all their fire on a fortification. This war action counts as using two ranged Strikes for the purposes of depleting an army's shots. Attempt a ranged Strike against the target fortification's AC.</p>\n<p><strong>Critical Success</strong> You deal 2 points of damage to the fortification. You also deal 1 point of damage to up to two armies of your choice that are within the fortification.</p>\n<p><strong>Success</strong> You deal 1 point of damage to the fortification, and an additional 1 point of damage either to the fortification or to an army within the fortification (your choice of which).</p>\n<p><strong>Failure</strong> You deal 1 damage to the fortification.</p>\n<p><strong>Critical Failure</strong> You deal no damage, and your army becomes outflanked until the start of its next turn.</p>"
+      "description": "<p><strong>Requirement</strong>@UUID[Compendium.pf2e.kingmaker-features.Item.ZSUPsqeMBDTaX2H4]{Explosive Shot}</p>\n<hr />\n<p>Your siege engines focus all their fire on a fortification. This war action counts as using two ranged Strikes for the purposes of depleting an army's shots. Attempt a ranged Strike against the target fortification's AC.</p>\n<p><strong>Critical Success</strong> You deal 2 points of damage to the fortification. You also deal 1 point of damage to up to two armies of your choice that are within the fortification.</p>\n<p><strong>Success</strong> You deal 1 point of damage to the fortification, and an additional 1 point of damage either to the fortification or to an army within the fortification (your choice of which).</p>\n<p><strong>Failure</strong> You deal 1 damage to the fortification.</p>\n<p><strong>Critical Failure</strong> You deal no damage, and your army becomes @UUID[Compendium.pf2e.kingmaker-features.Item.ibcMcEGRbPRtk9Pu]{Outflanked} until the start of its next turn.</p>"
     },
     "Pinned": {
       "name": "Pinned",
@@ -523,7 +531,7 @@
     },
     "Rally": {
       "name": "Rally",
-      "description": "<p>Your army's leaders attempt to bolster the soldiers' morale and fight back the effects of fear and panic. Attempt a Morale check against a target enemy army of your choice.</p>\n<p><strong>Critical Success</strong> If your army is @UUID[Compendium.pf2e.kingmaker-features.Item.aZImSBBmTHff2POP]{Routed}, it loses the routed condition. Reduce your army's @UUID[Compendium.pf2e.kingmaker-features.Item.7LMDwpVijK7x5Jst]{Shaken} condition by 2.</p>\n<p><strong>Success</strong> Reduce your army's shaken condition by 1.</p>\n<p><strong>Critical Failure</strong> Your attempt to rally backfires—increase your army's shaken condition by 1.</p>"
+      "description": "<p>Your army's leaders attempt to bolster the soldiers' morale and fight back the effects of fear and panic. Attempt a @Check[type:morale|defense:morale|roller:self|options:action:rally] check against a target enemy army of your choice.</p>\n<p><strong>Critical Success</strong> If your army is @UUID[Compendium.pf2e.kingmaker-features.Item.aZImSBBmTHff2POP]{Routed}, it loses the routed condition. Reduce your army's @UUID[Compendium.pf2e.kingmaker-features.Item.7LMDwpVijK7x5Jst]{Shaken} condition by 2.</p>\n<p><strong>Success</strong> Reduce your army's shaken condition by 1.</p>\n<p><strong>Critical Failure</strong> Your attempt to rally backfires—increase your army's shaken condition by 1.</p>"
     },
     "Reckless Flankers": {
       "name": "Reckless Flankers",
@@ -564,7 +572,7 @@
     },
     "Retreat": {
       "name": "Retreat",
-      "description": "<p>Prerequisite Your army is not engaged. Your army tries to escape from the battlefield. If your army is already @UUID[Compendium.pf2e.kingmaker-features.Item.8upne4E6Q7Da5T5w]{Distant}, it flees the battlefield, is no longer part of the war encounter, and becomes routed. Otherwise, your army gains the distant condition.</p>"
+      "description": "<p><strong>Prerequisite</strong> Your army is not @UUID[Compendium.pf2e.kingmaker-features.Item.2IqM1XHELKwARAx1]{Engaged}.</p>\n<hr />\n<p>Your army tries to escape from the battlefield. If your army is already @UUID[Compendium.pf2e.kingmaker-features.Item.8upne4E6Q7Da5T5w]{Distant}, it flees the battlefield, is no longer part of the war encounter, and becomes @UUID[Compendium.pf2e.kingmaker-features.Item.aZImSBBmTHff2POP]{Routed}. Otherwise, your army gains the @UUID[Compendium.pf2e.kingmaker-features.Item.8upne4E6Q7Da5T5w]{Distant} condition.</p>"
     },
     "Routed": {
       "name": "Routed",
@@ -604,7 +612,7 @@
     },
     "Taunt": {
       "name": "Taunt",
-      "description": "<p><strong>Requirement</strong>@UUID[Compendium.pf2e.kingmaker-features.Item.DxZRVOsPVnQvI0fe]{Focused Devotion}</p>\n<hr />\n<p>Your army attempts to frighten and cow an enemy army. Attempt a Morale check against the target army.</p>\n<p><strong>Critical Success</strong> The target army becomes shaken 2 until the start of your next turn.</p>\n<p><strong>Success</strong> The target army becomes shaken 1 until the start of your next turn.</p>\n<p><strong>Critical Failure</strong> Your failed attempt bolsters the enemy's spirits. This reduces the target army's shaken value by 1.</p>"
+      "description": "<p><strong>Requirement</strong>@UUID[Compendium.pf2e.kingmaker-features.Item.DxZRVOsPVnQvI0fe]{Focused Devotion}</p>\n<hr />\n<p>Your army attempts to frighten and cow an enemy army. Attempt a @Check[morale|defense:morale|roller:self] check against the target army.</p>\n<p><strong>Critical Success</strong> The target army becomes @UUID[Compendium.pf2e.kingmaker-features.Item.7LMDwpVijK7x5Jst]{Shaken 2} until the start of your next turn.</p>\n<p><strong>Success</strong> The target army becomes shaken 1 until the start of your next turn.</p>\n<p><strong>Critical Failure</strong> Your failed attempt bolsters the enemy's spirits. This reduces the target army's shaken value by 1.</p>"
     },
     "Toughened Soldiers": {
       "name": "Toughened Soldiers",
