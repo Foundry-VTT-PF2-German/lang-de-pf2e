@@ -1,4 +1,6 @@
-## v5.8.3.0
-* Update auf Foundry-Version 11.315 und PF2-Version 5.8.3
-* WICHTIG: Die PF2-Version 5.8.3 ist die letzte Systemversion, bevor die umfangreichen Änderungen durch Pathfinder Player Core und Pathfinder GM Core Einzug ins System halten.
-* Solltet ihr veraltete Einträge, falsche Formatierungen oder ähnliche Fehler finden, dann meldet sie gerne hier: https://github.com/Foundry-VTT-PF2-German/lang-de-pf2e/issues
+## v5.11.4.0
+* Update auf PF2-Version 5.11.4
+* WICHTIG: Die Version 5.11.4.0 enthält die umfangreichen Regeländerungen der Bücher Player Core und GM Core.
+* Bei Spielelementen, die umfangreiche Textänderungen erfahren haben, wurde die Deutsche Übersetzung entfernt. Diese wird nachgepflegt, wenn die Bücher auf Deutsch veröffentlicht wurden.
+* Eine ausführliche Übersicht wesentlicher Änderungen im Spielsystem findet ihr im PF2-Journal "Remaster-Änderungen"
+* Solltet ihr veraltete Einträge, falsche Formatierungen oder ähnliche Fehler finden, dann meldet sie gerne als Issue auf unserer GitHub-Projektseite.
