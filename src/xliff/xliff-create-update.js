@@ -12,7 +12,7 @@ if (!existsSync(CFG_FILE)) {
 } else {
     const CONFIG = JSON.parse(readFileSync(CFG_FILE, "utf-8"));
     CONFIG.forEach((entry) => {
-        console.warn(`Creating/Updating xliff: ${entry.xliffPath} `)
+        console.warn(`Creating/Updating xliff: ${entry.xliffPath} `);
         // Read and flatten source JSON
         const source = flattenObject(JSON.parse(readFileSync(entry.jsonSourcePath, "utf-8")));
         // If target xliff already exists, make a backup and update the file. Otherwise create new xliff
