@@ -93,6 +93,9 @@ Hooks.once("init", () => {
                     game.langDePf2e.getMapping("item", true)
                 );
             },
+            translateTiles: (data, translation) => {
+                return game.langDePf2e.dynamicArrayMerge(data, translation, game.langDePf2e.getMapping("tile", true));
+            },
             translateTime: (data) => {
                 return game.langDePf2e.translateValue("time", data);
             },
