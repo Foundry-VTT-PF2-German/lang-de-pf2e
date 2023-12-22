@@ -76,6 +76,9 @@ class Translator {
         // Create list of icons
         this.icons = config[0]?.iconList ?? {};
 
+        // Create item blacklist for items. Actor items with compendium sources on this list won't get synchronized with the compendium data
+        this.itemBlacklist = config[0]?.itemBlacklist ?? [];
+
         // Create list of mappings
         this.mappings = config[0]?.mappings ?? {};
 
@@ -277,7 +280,8 @@ class Translator {
             if (
                 entry.flags?.core?.sourceId &&
                 entry.flags.core.sourceId.startsWith("Compendium") &&
-                !entry.flags.core.sourceId.includes(".Actor.")
+                !entry.flags.core.sourceId.includes(".Actor.") &&
+                !this.itemBlacklist.includes(entry.flags.core.sourceId)
             ) {
                 // Get the actual compendium name
                 const itemCompendium = entry.flags.core.sourceId.slice(
