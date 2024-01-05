@@ -1,6 +1,8 @@
 import { readdirSync } from "fs";
 import { getConfigParameter, readJSONFile } from "../helper/src/build/config_helper.js";
 
+const BLACKLIST_PREFIX = 'block:';
+
 export const convertJournals = (journalObject) => {
     const readSystemMap = (filename) => {
         const result = new Map();
@@ -33,14 +35,18 @@ export const convertJournals = (journalObject) => {
                 object.text = object.text.replaceAll(/<([^<>]*)>/g, (match, featsString) => {
                     const startingPoints = featsString.split(";");
                     const feats = [];
+                    const blockedFeatNames = [];
                     for (const startingPoint of startingPoints) {
+                        if (startingPoint.startsWith(BLACKLIST_PREFIX)) {
+                            blockedFeatNames.push(startingPoint.substring(BLACKLIST_PREFIX.length).toLowerCase());
+                        }
                         if (featNameToOriginalDataMap.has(startingPoint.toLowerCase())) {
                             feats.push(featNameToOriginalDataMap.get(startingPoint.toLowerCase()));
                         }
                     }
 
                     // If some required feats were not found, something is wrong, possibly a false positive. Just return the original match
-                    if (feats.length !== startingPoints.length) {
+                    if (feats.length !== (startingPoints.length - blockedFeatNames.length)) {
                         return match;
                     }
 
@@ -53,6 +59,11 @@ export const convertJournals = (journalObject) => {
                         for (const featData of featNameToOriginalDataMap) {
                             // No need to check for already added feats
                             if (includedFeatNames.includes(featData[0])) {
+                                continue;
+                            }
+
+                            // If a feat was blacklisted, do not continue
+                            if (blockedFeatNames.includes(featData[0])) {
                                 continue;
                             }
 
