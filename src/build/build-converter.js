@@ -1,7 +1,7 @@
 import { readdirSync } from "fs";
 import { getConfigParameter, readJSONFile } from "../helper/src/build/config_helper.js";
 
-const BLACKLIST_PREFIX = 'block:';
+const BLACKLIST_PREFIX = "block:";
 
 export const convertJournals = (journalObject) => {
     const readSystemMap = (filename) => {
@@ -46,7 +46,7 @@ export const convertJournals = (journalObject) => {
                     }
 
                     // If some required feats were not found, something is wrong, possibly a false positive. Just return the original match
-                    if (feats.length !== (startingPoints.length - blockedFeatNames.length)) {
+                    if (feats.length !== startingPoints.length - blockedFeatNames.length) {
                         return match;
                     }
 
