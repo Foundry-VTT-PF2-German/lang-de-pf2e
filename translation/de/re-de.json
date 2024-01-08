@@ -585,6 +585,7 @@
     "IWR": {
       "Custom": {
         "AdamantineBludgeoning": "Wuchtschaden mit Adamant",
+        "AllDamageFromSpells": "all damage from spells",
         "AllDamageFromUndead": "Schaden von untoten Kreaturen",
         "AllMagicalDamage": "Magischer Schaden",
         "AllNonMagicalDamage": "Nichtmagischer Schaden",
@@ -689,6 +690,12 @@
         "TwoAllies": "Two allies are within reach of the target"
       },
       "GiantAnimatedStatueBrazier": "Feuerschale brennt",
+      "Hadrinnex": {
+        "RapidEvolution": {
+          "EnergyGland": "Rapid Evolution - Energy Gland",
+          "Husk": "Rapid Evolution - Husk"
+        }
+      },
       "HellboundAttorney": {
         "OpeningStatementCriticalSuccess": "Eröffnunsplädoyer (Kritischer Erfolg)"
       },
@@ -1192,6 +1199,7 @@
         "HideIfDisabled": "Ausblenden (wenn deaktiviert)"
       },
       "General": {
+        "Add": "Add",
         "Brackets": "Klammern",
         "CriticalBehavior": {
           "false": "1x Schaden bei Krit.",
@@ -1205,6 +1213,7 @@
         "Primitive": "Einfach",
         "PriorityHint": "Die Priorität legt die Reihenfolge fest, in der Regelelemente ausgeführt werden. Je niedriger der Wert, desto höher die Priorität.",
         "Range": "Reichweite",
+        "Remove": "Remove",
         "Selector": "Selektor",
         "Slug": "Slug",
         "Value": "Wert"
@@ -1713,6 +1722,9 @@
         "Prompt": "Wähle eine Sippenwaffe."
       },
       "Cleric": {
+        "CremateUndead": {
+          "Note": "When you use a <em>heal</em> spell to damage undead, each undead that takes damage also takes @Damage[(@item.rank)[persistent,fire]]."
+        },
         "DivineRebuttal": {
           "Note": "If your Strike hits, all your allies gain a +2 circumstance bonus to the triggering saving throw (or a +3 circumstance bonus on a critical hit). @UUID[Compendium.pf2e.feat-effects.Item.jMQi2kDirzGgddti]{Effect: Divine Rebuttal}"
         },
@@ -2179,6 +2191,12 @@
         "LitLabel": "Golden Blade of Mzali is lit",
         "PersistentDamageNote": "Unlike normal when taking two types of persistent damage, a creature needs only a single successful flat check to remove both the fire and bleed damage."
       },
+      "GolemGrafter": {
+        "ClayFist": {
+          "Label": "Clay Fist",
+          "Note": "When you make an unarmed Strike with your clay fist and hit, your target takes a -2 status penalty to saving throws against curse effects for 1 hour. @UUID[Compendium.pf2e.feat-effects.Item.bvk5rwYSoTtz8QGf]{Effect: Accursed Clay Fist}"
+        }
+      },
       "Gunslinger": {
         "Way": {
           "Prompt": "Wähle deinen Pfad.",
@@ -2333,6 +2351,7 @@
           "Note": "Die von dir getroffene Kreatur zählt für den nächsten Angriff deines Verbündeten @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem falschen Fuß} bis zum Beginn deiner nächsten Runde."
         }
       },
+      "ItemStrike": "{item} Strike",
       "Kineticist": {
         "GateAttenuator": "Portalstärker",
         "Impulse": {
@@ -2396,7 +2415,10 @@
       "Kobold": {
         "DragonbloodParagon": {
           "Dracomancer": "Drakomant",
-          "KoboldBreath": "Koboldodem",
+          "KoboldBreath": {
+            "Label": "Kobold Breath",
+            "Note": "Creatures that critically fail their save against your Kobold Breath take @Damage[3d4[@actor.flags.pf2e.draconicExemplar.damageType,persistent]]."
+          },
           "StrongjawKobold": "Schnappzahnkobold",
           "VenomtailKobold": "Giftschwanzkobold"
         },
@@ -2687,6 +2709,7 @@
         "LevelOneOrTwoClassFeat": "Wähle ein Klassentalent der 1. oder 2. Stufe.",
         "Material": "Wähle ein Material.",
         "PathToPerfection": "Wähle einen Weg zur Perfektion.",
+        "Resistance": "Select a resistance.",
         "Rune": "Wähle eine Rune.",
         "Sanctification": "Select a sanctification.",
         "SecondImplement": "Wähle dein zweites Paraphernum.",
@@ -2941,6 +2964,19 @@
       "SpellmastersResilience": {
         "Prompt": "Wähle eine magische Tradition in der du Resistenz erlangst."
       },
+      "SpellRank": {
+        "Eighth": "8th-Rank",
+        "Fifth": "5th-Rank",
+        "First": "1st-Rank",
+        "Fourth": "4th-Rank",
+        "Ninth": "9th-Rank",
+        "Prompt": "Select a spell rank.",
+        "Second": "2nd-Rank",
+        "Seventh": "7th-Rank",
+        "Sixth": "6th-Rank",
+        "Tenth": "10th-Rank",
+        "Third": "3rd-Rank"
+      },
       "SpiritPower": {
         "Love": {
           "Label": "A trusted or loved ally is within 30 feet",
@@ -3175,9 +3211,9 @@
       },
       "WellspringMage": {
         "CriticalSuccess": "Du erlangst vorübergehend einen von dir an diesem Tag bereits genutzten Zauberplatz eines Grades deiner Wahl zurück. Solltest du den Zauberplatz nicht binnen 1 Minute nutzen, kommt es zu einem @UUID[Compendium.pf2e.rollable-tables.RollTable.N0pDFNCffTe2Du39]{Urquellschub}.",
-        "Failure": "Es kommt zu einem @UUID[Compendium.pf2e.rollable-tables.RollTable.N0pDFNCffTe2Du39]{Urquellschub}. Der davon betroffene Zaubergrad wird zufällig aus den drei höchsten Graden ausgewählt, die du wirken kannst (bzw. aus all deinen Zaubergraden, falls du zu weniger als drei Graden Zugang hast).",
+        "Failure": "You generate a @UUID[Compendium.pf2e.rollable-tables.RollTable.N0pDFNCffTe2Du39]{Wellspring Surge}, with a spell level chosen randomly among your top three levels of spell slots (or all your levels if you have fewer than three)",
         "Initiative": "Wenn du bei einer nicht-trivialen Kampfbegegnung oder in anderen ungewöhnlich stressigen Situationen deine Initiative auswürfelst, droht der Urquell überzuschäumen – wann dies geschieht und wann nicht, entscheidet der SL nach eigenem Ermessen. Lege in diesem Fall einen @Check[type:flat|dc:6|traits:wellspring-magic]{einfachen Wurf} ab.",
-        "Success": "Du erlangst vorübergehend einen von dir an diesem Tag bereits genutzten Zauberplatz zurück, der Zaubergrad wird aber zufällig aus den drei höchsten Graden ausgewählt, die du wirken kannst (bzw. aus all deinen Zaubergraden, falls du zu weniger als drei Graden Zugang hast). Der Zauberplatz muss zudem binnen 3 Runden eingesetzt werden, sonst kommt es zu einem @UUID[Compendium.pf2e.rollable-tables.RollTable.N0pDFNCffTe2Du39]{Urquellschub}."
+        "Success": "You temporarily recover an expended spell slot of a spell level chosen randomly among your top three levels of spell slots (or all your levels of spell slots if you have fewer than three). The slot lasts 3 rounds instead of 1 minute, otherwise you experience a @UUID[Compendium.pf2e.rollable-tables.RollTable.N0pDFNCffTe2Du39]{Wellspring Surge}."
       },
       "Witch": {
         "Patron": {
