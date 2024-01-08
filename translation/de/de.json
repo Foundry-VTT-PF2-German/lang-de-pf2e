@@ -200,8 +200,19 @@
         "Crafting": {
           "Cost": "Kosten"
         },
+        "CreateFeat": "Create Feat",
         "HandsOccupied": "Hänge belegt",
+        "Language": {
+          "OverLimit": "This language is in excess of the number of languages this character can know.",
+          "Unallocated": {
+            "Label": "Unallocated",
+            "Tooltip": "Select a language for this character to know."
+          }
+        },
         "Proficiency": {
+          "SavingThrow": {
+            "Title": "Saving Throws"
+          },
           "Attack": {
             "Advanced": "Spezialwaffen",
             "Martial": "Kriegswaffen",
@@ -240,6 +251,9 @@
         },
         "CriticalSpecialization": "Kritische Spezialisierung",
         "Language": {
+          "CommonLanguage": "Common ({language})",
+          "DetailsPlaceholder": "Caveats, other unusual specifics",
+          "Plural": "Languages",
           "adlet": "Adlet",
           "akitonian": "Akitonisch",
           "aklo": "Aklo",
@@ -361,27 +375,32 @@
             "Precise": "Präzise",
             "Vague": "Vage"
           },
-          "Label": "Sinne",
+          "Label": "Sense",
           "NoRangeLimit": "Unbegrenzt",
+          "NoVision": "No Vision",
+          "Plural": "Senses",
           "RangeLabel": "Reichweite",
           "Type": {
             "Darkvision": "Dunkelsicht",
             "Echolocation": "Echoortung",
             "GreaterDarkvision": "Mächtige Dunkelsicht",
             "Hearing": "Gehör",
-            "Heatsight": "Wärmesicht",
+            "InfraredVision": "Infrared Vision",
             "Lifesense": "Lebensgespür",
             "LowLightVision": "Dämmersicht",
-            "Motionsense": "Bewegungsgespür",
+            "MotionSense": "Motion Sense",
             "Scent": "Geruchssinn",
             "SeeInvisibility": "Unsichtbares sehen",
             "Spiritsense": "Geistergespür",
             "Thoughtsense": "Gedankengespür",
             "Tremorsense": "Erschütterungssinn",
+            "Truesight": "Truesight",
+            "Vision": "Vision",
             "Wavesense": "Wellengespür"
           },
           "WithAcuity": "{sense} ({acuity})",
-          "WithAcuityAndRange": "{sense} ({acuity} {range} Fuß)"
+          "WithAcuityAndRange": "{sense} ({acuity}) {range} Feet",
+          "WithRange": "{sense} {range} Feet"
         },
         "Shield": {
           "ACBonus": "Schild RK-Bonus (wenn gehoben)",
@@ -408,6 +427,7 @@
           "Label": "Zauberangriffsmod. & SGs",
           "MagicItemTypesLabel": "Art des mag. Ggst.",
           "Rituals": "Rituale",
+          "ShortLabel": "Spellcasting",
           "TraditionSpellcasting": "Zauberei ({tradition})",
           "ValidItemTypes": {
             "All": "Alle mag. Ggst.",
@@ -460,13 +480,31 @@
         "Section": {
           "WeaponsAndShields": "Waffen & Schilde"
         },
-        "TotalBulk": "Gesamte Last: {bulk}"
+        "TotalBulk": "Gesamte Last: {bulk}",
+        "UnitTitle": {
+          "Bulk": "Unit Bulk",
+          "Price": "Unit Price"
+        }
       },
       "IWREditor": {
         "DoubleVs": "Doppelter Schaden gg.",
         "Exceptions": "Ausnahmen",
         "Title": "{actor}: {category}",
         "Type": "Art"
+      },
+      "Speed": {
+        "BaseLabel": "Base {type} Speed",
+        "Plural": "Speeds",
+        "Label": "Speed",
+        "LabelFeet": "Speed (Feet)",
+        "Type": {
+          "Burrow": "Burrow",
+          "Climb": "Climb",
+          "Fly": "Fly",
+          "Label": "{type} Speed",
+          "Land": "Land",
+          "Swim": "Swim"
+        }
       },
       "NPC": {
         "Configure": {
@@ -1297,7 +1335,7 @@
     "DeleteSpellcastEntryTitle": "Lösche Zaubereintrag",
     "DeleteSpellcastEntryWarning": "WARNUNG: Alle Zauber in diesem Zaubereintrag werden ebenfalls gelöscht.",
     "DenominationLabel": "Stückelung",
-    "DetailsHeading": "Details",
+    "Details": "Details",
     "DragDropFeats": "Drag & Drop Talente zum hinzufügen",
     "Duration": {
       "P1M": "Monat",
@@ -1337,7 +1375,6 @@
       },
       "RemoveToolTip": "[Rechts-Klick] Entferne Effekt",
       "RollDamageToolTip": "[Linksklick] Schadenswurf",
-      "Sustained": "Aufrechterhaltbar?",
       "Unidentified": "Nicht identifiziert",
       "UnlimitedDuration": "Unbegrenzte Dauer",
       "UntilEncounterEnds": "Bis zum Ende der Begegnung"
@@ -2124,21 +2161,37 @@
         },
         "Plural": "Effekte",
         "ShowTokenIcon": "Tokenbild anzeigen?",
-        "Sustained": "Aufrechterhaltbar",
         "Unidentified": "Unidentifiziert?"
       },
       "Feat": {
         "Info": {
           "Added": "{item} wurde {category} hinzugefügt."
         },
-        "KeyAbilityOptions": {
-          "Label": "Schlüsselattribut-Optionen",
-          "Hint": "Zusätzliche Schlüsselattribut-Optionen"
-        },
         "LevelLabel": "Talent",
         "LevelN": "Talent {level}",
         "OnlyLevel1": "Muss auf der 1. Stufe genommen werden",
         "Plural": "Talente",
+        "Subfeatures": {
+          "KeyAbilityOptions": {
+            "Label": "Key Attribute Options",
+            "Hint": "Key attribute options in addition to those provided by a class"
+          },
+          "Label": "Subfeatures",
+          "Languages": {
+            "OpenSlots": "Open Slots"
+          },
+          "Proficiencies": {
+            "Label": "Proficiencies",
+            "NoOptionSelected": "Select a statistic to which the increase will be applied."
+          },
+          "Senses": {
+            "Darkvision": {
+              "Ancestry": "Grant if the character's ancestry has low-light vision.",
+              "LLV": "Grant if the character has low-light vision from any prior source.",
+              "Second": "Grant if this feat is taken a second time."
+            }
+          }
+        },
         "TakeMultiple": {
           "Five": "Bis zu 5x",
           "Four": "Bis zu 4×",
@@ -2379,8 +2432,12 @@
           "SecondaryChecks": "Sekundäre Würfe",
           "SecondaryCasters": "Ritualteilnehmer"
         },
+        "Sustained": {
+          "Duration": "Sustained for up to {maximum}",
+          "Label": "Sustained"
+        },
         "Variants": {
-          "DeleteDialogText": "Sind Sie sicher, dass Sie '{variantName}' löschen wollen?",
+          "DeleteDialogText": "Are you sure you want to delete {variantName}?",
           "DeleteDialogTitle": "Zaubervariante entfernen",
           "LabelPlural": "Zaubervarianten",
           "SelectOtherVariantLabel": "Wähle andere Variante",
@@ -2388,8 +2445,10 @@
           "SheetTitle": "{originalName} (Variante)"
         },
         "Warning": {
-          "InvalidLevel": "Es wurde versucht, Zauber {name} auf {targetLevel}. Grad hinzuzufügen, aber der Zauber ist {baseLevel}. Grades.",
-          "WrongSpellType": "Zauber der Kategorie {spellType} können diesem Zaubereintrag nicht hinzugefügt werden."
+          "CantripToRankedSlots": "{spell} is a cantrip and must be added to a cantrips list.",
+          "InvalidRank": "{spell} is {spellRank}, but these slots are for {targetRank}.",
+          "NonCantripToCantrips": "{spell} is not a cantrip and cannot be added to a cantrips list.",
+          "WrongSpellType": "Cannot add {type} spell to this casting entry."
         }
       },
       "Weapon": {
@@ -2461,9 +2520,6 @@
     "ItemBonusLabel": "Gegenstandsbonus",
     "ItemBonusMinus2": "Minderwertig (-2)",
     "ItemBonusShortLabel": "Ggst.",
-    "ItemDescription": "Beschreibung",
-    "ItemDescriptionHeader": "Beschreibung",
-    "ItemDetails": "Details",
     "ItemLevel": "{type} {level}",
     "ItemMystification": "Verschleierung",
     "ItemMystified": "Verschleiert",
@@ -2490,7 +2546,6 @@
     "KitItems": "Gegenstände",
     "KitWorldItem": "Dieser Gegenstand ist nicht in einem Kompendium enthalten und funktioniert nicht in anderen Welten",
     "LackCastConsumableCapability": "{Actor} fehlt die Kompetenz um {spell} zu benutzen und hat nicht das Talent Magischen Gegenstand austricksen.",
-    "Languages": "Sprachen",
     "LanguagesAdditional": "Zusätzliche Sprachen",
     "Level1": "Stufe 1",
     "Level10": "Stufe 10",
@@ -2687,7 +2742,6 @@
       "Attacks": "Angriffe",
       "Creature": "Kreatur",
       "Dead": "Tot",
-      "Edit": "Bearbeiten",
       "EditImmunities": "Immunitäten bearbeiten",
       "EditLanguages": "Sprachen bearbeiten",
       "EditResistances": "Resistenzen bearbeiten",
@@ -2711,13 +2765,11 @@
       "PassivesLabel": "Passiv",
       "PrivateNotes": "Private Notizen",
       "PublicNotes": "Beschreibung",
-      "Remove": "Entfernen",
       "SavesExtraInfoLabelPlaceholder": "Bonus auf alle RW...",
-      "SendToChat": "Im Chat anzeigen",
+      "SendToChat": "Send to Chat",
       "SensesLabel": "Sinne",
       "SkillRollFlavor": "{skillName} Fertigkeitswurf ({rank})",
       "SpeedExtraInfoLabelPlaceholder": "Bewegungsdetails...",
-      "SpeedLabel": "Bewegungsrate",
       "Spells": {
         "AttackLabel": "Angriff",
         "DCLabel": "SG",
@@ -3037,8 +3089,8 @@
         "Name": "Kampagnentalente"
       },
       "CampaignType": {
-        "Hint": "Erweiterte Kampagnenregeln für Gruppen",
-        "Name": "Kampagnentyp",
+        "Hint": "Extended campaign support for campaigns such as Kingmaker",
+        "Name": "Campaign-Specific Features",
         "Choices": {
           "none": "Kein",
           "kingmaker": "Königsmacher"
@@ -3108,12 +3160,22 @@
           "Hint": "Kategorien für Talente (z. B. Blutlinie, Mönch) oder Aktionen",
           "Name": "Talentkategorien"
         },
-        "Hint": "Verwalten Sie benutzerdefinierte Kategorien, Sprachen und andere Elemente der Hausregeln.",
+        "Hint": "Add custom traits, weapon types, and other elements of a homebrew world.",
         "Instructions": "Mit diesen Einstellungen können die Spielleiter Eigenschaften, Sprachen und andere Elemente zu einer Hausregel-Welt hinzufügen. Um solche Elemente hinzuzufügen, geben Sie einfach die gewünschten Begriffe in die entsprechenden Felder ein, getrennt durch Kommas oder Tabulator-Tastenanschläge. Sie erscheinen dann an den entsprechenden Stellen auf den Akteurs- und Gegenstandsblättern. Um einen Begriff zu aktualisieren, klicken Sie auf ihn, um die gewünschten Änderungen vorzunehmen.",
         "Label": "Hausregel-Einstellungen verwalten",
         "Languages": {
+          "CommonLanguage": {
+            "Hint": "Select the language to be referred to as \"Common\" in this game world.",
+            "Label": "The \"Common\" Language"
+          },
           "Hint": "Sprachen die Charaktere kennen oder gelernt haben (z.B. Drakonisch, Gnomisch)",
-          "Name": "Sprachen"
+          "Rarities": {
+            "CommonLanguages": "<rarity>Common</rarity> Languages",
+            "Name": "Language Rarities",
+            "RareLanguages": "<rarity>Rare</rarity> Languages",
+            "SecretLanguages": "<rarity>Secret</rarity> Languages",
+            "UncommonLanguages": "<rarity>Uncommon</rarity> Languages"
+          }
         },
         "Name": "Hausregeln",
         "ReservedTerm": "\"{term}\" ist ein reservierter Begriff.",
@@ -3122,6 +3184,7 @@
           "Name": "Zaubermerkmale"
         },
         "Tabs": {
+          "Campaign": "Campaign",
           "Damage": "Schadensarten",
           "Traits": "Merkmale und Kategorien"
         },
@@ -3152,28 +3215,32 @@
         "Hint": "Schränken Sie ein, zu welchen Metaspiel-Informationen Ihre Spieler Zugang haben.",
         "Label": "Spielinformationen begrenzen",
         "Name": "Spielinformationen",
-        "PartyVision": {
-          "Hint": "Wenn diese Funktion aktiviert ist, teilen sich alle Spieler gegenseitig die Sicht auf die Token, unabhängig von den Berechtigungen oder der Tokenauswahl.",
-          "Name": "Gemeinsame Gruppensicht"
+        "ShowDC": {
+          "Hint": "Players can see DCs of checks made against NPCs and other non-player-owned sources.",
+          "Name": "Show Check DCs"
+        },
+        "ShowResults": {
+          "Hint": "Players can see the degree of success of checks made against NPCs and other non-player-owned sources.",
+          "Name": "Show Check Outcomes"
+        },
+        "ShowBreakdowns": {
+          "Hint": "Players can see the constituent and total modifiers of rolls made by NPCs and other non-player-owned actors.",
+          "Name": "Show Roll Breakdowns"
         },
         "SecretCondition": {
-          "Hint": "Wenn diese Option aktiviert ist, sieht nur der Spielleiter die Zustandsaktualisierungs- und Erinnerungsmeldungen, die für Token generiert werden, die nicht im Besitz eines Spielers sind.",
+          "Hint": "Only the GM can see the condition update and reminder messages for NPCs and other non-player-owned actors.",
           "Name": "Meldung zur Zustandsaktualisierung ausblenden"
         },
         "SecretDamage": {
-          "Hint": "Wenn diese Option aktiviert ist, sieht nur der SL die Nachrichten über erlittenen Schaden/Heilung, die von den Schadens-Chat-Meldungen für Token erzeugt werden, die nicht im Besitz eines Spielers sind.",
+          "Hint": "Only the GM can see the damage/healing taken messages that are generated by the damage chat cards for tokens not owned by a player.",
           "Name": "Meldung über erlittenen Schaden ausblenden"
         },
-        "ShowDC": {
-          "Hint": "Ist diese Funktion aktiviert, dann können Spieler die SGs bei Würfen gegen NSCs und anderen Quellen sehen, die nicht zu Spielern gehören.",
-          "Name": "SGs für Angriffe und Rettungswürfe anzeigen"
-        },
-        "ShowResults": {
-          "Hint": "Ist diese Funktion aktiviert, dann können Spieler die Erfolgsgrade bei Würfen gegen NSCs und anderen Quellen sehen, die nicht zu Spielern gehören.",
-          "Name": "Zeige Ergebnisse von Angriffen und Rettungswürfen"
+        "PartyVision": {
+          "Hint": "Players mutually share token vision, regardless of permissions or token selection.",
+          "Name": "Gemeinsame Gruppensicht"
         },
         "ShowPartyStats": {
-          "Hint": "Wenn aktiviert, können die Spieler die Werte der anderen Gruppenmitglieder in der Gruppenübersicht sehen",
+          "Hint": "Players can see stats for their fellow party members in the party actor sheet",
           "Name": "Werte für Gruppenmitglieder anzeigen"
         },
         "TokenSetsNameVisibility": {
@@ -3390,18 +3457,7 @@
     "SkillThievery": "Diebeskunst",
     "SkillsLabel": "Fertigkeiten",
     "Slug": "Slug",
-    "SpecialLabel": "Speziell",
     "SpecialSensesLabel": "Besondere Sinne",
-    "Speed": "Bewegungsrate",
-    "SpeedBaseLabel": "Basisbewegungsrate {type}",
-    "SpeedFeet": "Bewegungsrate (Fuß)",
-    "SpeedLabel": "{type} Bewegungsrate",
-    "SpeedTypes": "Bewegungsarten",
-    "SpeedTypesBurrow": "Graben",
-    "SpeedTypesClimb": "Klettern",
-    "SpeedTypesFly": "Fliegen",
-    "SpeedTypesLand": "Boden",
-    "SpeedTypesSwim": "Schwimmen",
     "SpellAbilityModLabel": "+ Mod.",
     "SpellArea": "Bereich: {area}",
     "SpellAttackLabel": "Zauberangriff",
@@ -3410,10 +3466,8 @@
     "SpellCastingFormat": "{preparationType} {traditionSpells} Zauber",
     "SpellCollectionAdd": "Füge zu Zauberliste hinzu",
     "SpellCollectionRemove": "Von Zauberliste entfernen",
-    "SpellDurationLabel": "Dauer",
     "SpellFlexibleAvailable": "Flexibel: {value} / {max}",
     "SpellFlexibleLabel": "Flexibel",
-    "SpellFocusLabel": "Fokus",
     "SpellLevelBase": "Basis: {level}",
     "SpellLevelHeightened": "Erhöhung: +{heightened}",
     "SpellLevelLabel": "Zaubergrad",
@@ -3432,8 +3486,8 @@
       "Selection": "Erhöhung ({level}.)"
     },
     "SpellSlotEmpty": "Leerer Slot (ziehe Zauber hierhin)",
-    "SpellSlotExpendedError": "Kann {name} nicht wirken: Der Zauber ist bereits verbraucht",
-    "SpellSlotNotEnoughError": "Kann {name} auf {level} nicht wirken: Nicht genügend Zauberplätze vorhanden",
+    "SpellSlotExpendedError": "Cannot cast {spell}: slot is already expended.",
+    "SpellSlotNotEnoughError": "Cannot cast {spell} at {rank}: not enough spell slots.",
     "SpellTargetLabel": "Ziele",
     "SpellTraditionsLabel": "Zaubertraditionen",
     "SpellUnlimitedLabel": "Unlimitiert",
@@ -3499,7 +3553,6 @@
     "TabCharacterLabel": "Charakter",
     "TabCraftingLabel": "Handwerkskunst",
     "TabDescriptionLabel": "Beschreibung",
-    "TabDetailsLabel": "Details",
     "TabInventoryLabel": "Inventar",
     "TabManageTabsLabel": "Tabs verwalten",
     "TabPathfinderSociety": "Pathfinder Society",
@@ -4666,7 +4719,6 @@
       "None": "Volle Geschwindigkeit",
       "NormalTerrain": "Bewegungsrate Normales Gelände",
       "PartySpeed": "Gruppenbewegungsrate",
-      "Speed": "Bewegungsrate",
       "TerrainSlowdown": "Bewegungsrate Gelände",
       "Title": "Reisezeitrechner (Alpha)",
       "TravelDuration": "Reisedauer",
@@ -4694,7 +4746,6 @@
       "Label": "UUID",
       "SourceId": "Quell-ID"
     },
-    "UnitPriceLabel": "Preis einer Einheit",
     "UnitedPaizoWorkers": {
       "PFSNote": "Note for Pathfinder Society players: In support of UPW, merchandise purchased from the union store will count in the Online PFS region for the <span class=\"hover\" title=\"When you use a Hero Point to reroll a check, add a +1 circumstance bonus to the reroll\">Promotional Vestments</a> boon.",
       "ReleaseIntro": "Redmond, WA (October 14th, 2021) — Today, the workers at Paizo, Inc - publisher of the Pathfinder and Starfinder roleplaying games - are announcing their formation of the United Paizo Workers union (UPW), with the Communication Workers of America's CODE-CWA project. This union is the first of its kind in the tabletop roleplaying games industry.",
@@ -5353,9 +5404,6 @@
         "Note": {
           "criticalSuccess": "Bei einem Kritischen Treffer pflanzen sich Blitze, die Elektrizitätsschaden der gleichen Höhe verursachen, zu bis zu zwei Kreaturen deiner Wahl im Umkreis von 10 Fuß/3 m um das Ziel fort."
         }
-      },
-      "speed": {
-        "Name": "Schnell"
       },
       "spellStoring": {
         "Name": "Zauber speichernd"
