@@ -3,8 +3,6 @@ import { build } from "../helper/src/build/build.js";
 
 const PATHS = [
     "module.json",
-    "style.css",
-    "NodestoCapsCondensed2.otf",
     "src/babele-register.js",
     "src/translator",
     "static",

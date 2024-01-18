@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync,writeFileSync } from "fs";
+import { readdirSync, readFileSync, writeFileSync } from "fs";
 import { convertData } from "../helper/src/util/utilities.js";
 
 // Read config file
@@ -17,4 +17,12 @@ sourceFiles.forEach((sourceFile) => {
         unlabeledStrings = unlabeledStrings.concat(unlabeledFileStrings);
     }
 });
-writeFileSync(`${CONFIG.databasePath}/csv-overviews/unlabeledStrings.csv`, convertData(unlabeledStrings, "csv", ["fileId", "identifier"]));
+if (unlabeledStrings.length === 0) {
+    const allLabeled = "All strings are labeled.";
+    unlabeledStrings = unlabeledStrings.concat([{ fileId: allLabeled, identifier: "" }]);
+    console.warn(`${allLabeled}\n`);
+}
+writeFileSync(
+    `${CONFIG.databasePath}/csv-overviews/unlabeledStrings.csv`,
+    convertData(unlabeledStrings, "csv", ["fileId", "identifier"])
+);
