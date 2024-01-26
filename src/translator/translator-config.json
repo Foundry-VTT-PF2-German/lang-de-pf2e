@@ -103,27 +103,41 @@
             "entryType": "Item",
             "mappingEntries": {
                 "name": "name",
+                "badges": "system.badge.labels",
                 "cost": "system.cost.value",
                 "description": "system.description.value",
                 "duration": {
                     "path": "system.duration.value",
                     "converter": "translateDuration"
                 },
+                "gmNote": "system.description.gm",
+                "heightening": {
+                    "path": "system.heightening.levels",
+                    "converter": "translateHeightening"
+                },
                 "materials": "system.materials.value",
                 "prerequisites": "system.prerequisites.value",
-                "primarycheck": "system.primarycheck.value",
+                "primarycheck": "system.ritual.primary.check",
                 "range": {
                     "path": "system.range.value",
                     "converter": "translateRange"
                 },
-                "secondarycaster": "system.secondarycasters.value",
-                "secondarycheck": "system.secondarycheck.value",
+                "rules": {
+                    "path": "system.rules",
+                    "converter": "translateRules"
+                },
+                "secondarycaster": "system.ritual.secondary.casters",
+                "secondarycheck": "system.ritual.secondary.checks",
                 "skillVariants": {
                     "path": "system.variants"
                 },
                 "source": {
                     "path": "system.source.value",
                     "converter": "translateSource"
+                },
+                "spellVariants": {
+                    "path": "system.overlays",
+                    "converter": "translateSpellVariant"
                 },
                 "target": "system.target.value",
                 "time": {
