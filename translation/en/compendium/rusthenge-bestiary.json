@@ -1,0 +1,731 @@
+{
+  "label": "rusthenge-bestiary",
+  "entries": {
+    "Ancient Apparatus": {
+      "name": "Ancient Apparatus",
+      "description": "<p>A complex device made of multicolored metal that resembles a combination of grinding gears, spider-like legs, and twitching blades, from which emits a constant soft ticking sound. All of the metal in the device appears to be rusted or corroded.</p>",
+      "disable": "<p>@Check[type:thievery|dc:18] to adjust the device's workings so they seize up and no longer function, or @Check[type:religion|dc:21] to focus prayers to a non-evil deity into the device to disrupt its ability to channel ambient faith</p>",
+      "reset": "<p>The ancient apparatus reverts to its non-active mode and resets automatically at the end of any round in which there are no obvious targets to attack.</p>",
+      "routine": "<p>(3 actions) The ancient apparatus emits beams of rust-colored light, spending an action to make ranged Strikes against three targets in area <strong>D3</strong>. The apparatus can target creatures as if it possessed darkvision, but has no ability to discern between friend or foe. It can't target a creature more than once, and if there are more than three targets, it selects its targets from those it can see in the room randomly. The ancient apparatus has only 1 action as long as its Hit Points are below its BT.</p>",
+      "stealth": "<p>(trained)</p>",
+      "items": {
+        "action->Spin Up": {
+          "name": "Spin Up",
+          "description": "<p><strong>Trigger</strong> The ancient apparatus takes damage or an attempt to disable it fails</p>\n<hr />\n<p><strong>Effect</strong> The ancient apparatus begins to grind and churn faster. Its soft ticking whirs up to a discordant buzzing sound, and the entire thing begins to glow with an unsettling rust-colored light. All living creatures in area <strong>D3</strong> experience the unsettling taste of rust in their mouths and must succeed on a @Check[type:fortitude|dc:18] save to avoid becoming @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}. The ancient apparatus then rolls initiative.</p>"
+        },
+        "strike-ranged->Rusty Light Beam": {
+          "name": "Rusty Light Beam"
+        },
+        "action->Rust Creep": {
+          "name": "Rust Creep",
+          "description": "<p>Those afflicted by rust creep develop uncomfortable rust-colored bruises on their flesh and endure full-body aches like those one might experience after a long workout. As the affliction progresses, their bodies—as well as the clothing and items they wear or carry—increasingly break down until a painful death occurs. If a character successfully resists contracting rust creep, or recovers from a case of rust creep, they are temporarily immune to future rust creep infections for 24 hours.</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:15]</p>\n<p><strong>Stage 1</strong> –1 status penalty to Athletics checks (1 day)</p>\n<p><strong>Stage 2</strong> as stage 1 (1 day)</p>\n<p><strong>Stage 3</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} (1 day)</p>\n<p><strong>Stage 4</strong> enfeebled 1 and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}, plus any armor, clothing and items you carry and that are of a level equal to or less than the disease become broken as the decay spreads to them (1 day; broken items remain broken)</p>\n<p><strong>Stage 5</strong> @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious} (1 day)</p>\n<p><strong>Stage 6</strong> unconscious (1 day)</p>\n<p><strong>Stage 7</strong> death</p>"
+        }
+      }
+    },
+    "Clockwork Belimarius": {
+      "name": "Clockwork Belimarius",
+      "blurb": "Variant clockwork mage",
+      "publicNotes": "<p>A clockwork mage is a lethal blend of magic and machinery. Each of these clockworks is imbued with an arcane stone at its core that powers spells through the wand embedded in its chest.</p>\n<hr />\n<p>Intricate, complex machines, clockworks are built with care by highly skilled engineers. Though their creation involves some amount of magic, they're primarily mechanical, packed with precision-tuned gears and springs working in concert.</p>\n<p>The sturdy mainspring within a clockwork must be wound to provide the energy needed to power the device. Some larger clockworks contain a series of springs for different limbs that each need to be wound. A clockwork's crafter creates a unique metal key while building the clockwork; winding the clockwork usually involves inserting the key into the machine's back and turning clockwise. Larger clockworks require greater strength to turn the key, and typically have larger keys to allow for more torque-some even accommodating a team of winders rather than an individual. Programming a clockwork requires both the key and the knowledge to set the program correctly, information usually reserved for the clockwork's creator or owner.</p>",
+      "items": {
+        "spellcastingEntry->Arcane Innate Spells": {
+          "name": "Arcane Innate Spells"
+        },
+        "spell->Color Spray": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.UKsIOWmMx4hSpafl]\nColor Spray"
+        },
+        "consumable->Clockwork Wand": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.vJZ49cgi8szuQXAD]\nClockwork Wand",
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.vJZ49cgi8szuQXAD]\n<p>The clockwork wand is a <em>@UUID[Compendium.pf2e.equipment-srd.Item.vJZ49cgi8szuQXAD]{Magic Wand}</em> containing the last 2nd-rank innate spell the clockwork mage cast (the GM determines the spell randomly if it has not cast any eligible spells). The spells are placed within the wand while the mage is created, and the creator can substitute other arcane spells of the appropriate rank.</p>\n<hr />\n<p>This baton is about a foot long and contains a single spell. The appearance typically relates to the spell within.</p>\n<p><strong>Activate</strong> Cast a Spell</p>\n<p><strong>Frequency</strong> once per day, plus overcharge</p>\n<hr />\n<p><strong>Effect</strong> You Cast the Spell at the indicated level.</p>\n<p><strong>Craft Requirements</strong> Supply a listed-level casting of the spell.</p>\n<hr />\n<p><em>Note: To create a scroll or wand of a specific spell, drag the spell from the compendium or compendium browser into the inventory of a PC, NPC, or loot actor.</em></p>"
+        },
+        "strike-melee->Halberd": {
+          "name": "Halberd"
+        },
+        "action->Wind-Up": {
+          "name": "Wind-Up",
+          "description": "<p>24 hours, @Check[type:thievery|dc:21|traits:action:disable-a-device], standby</p>\n<hr />\n<p>For a clockwork to act, it must be wound with a unique key by another creature. This takes 1 minute. Once wound, it remains operational for the listed amount of time, usually 24 hours, after which time it becomes unaware of its surroundings and can't act until it's wound again. Some clockworks' abilities require them to spend some of their remaining operational time. They can't spend more than they have and shut down immediately once they have 0 time remaining. If it's unclear when a clockwork was last wound, most clockwork keepers wind all their clockworks at a set time, typically 8 a.m.</p>\n<p>A clockwork that lists standby in its wind-up entry can enter standby mode as a 3-action activity. Its operational time doesn't decrease in standby, but it can sense its surroundings (with a -2 penalty to Perception). It can't act, with one exception: when it perceives a creature, it can exit standby as a reaction (rolling initiative if appropriate).</p>\n<p>A creature can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device} to wind a clockwork down (with a DC listed in the wind-up entry). For each success, the clockwork loses 1 hour of operational time. This can be done even if the clockwork is in standby mode.</p>"
+        },
+        "action->Clockwork Wand": {
+          "name": "Clockwork Wand",
+          "description": "<p>The clockwork mage uses a mechanical wand as a focus to channel magical energy. This wand is built into the clockwork mage's chest, with only the crystal at the end exposed. The mage can Interact to the remove the wand, or someone else can remove it with a @Check[type:thievery|dc:25|traits:action:disable-a-device] check to @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device}. The clockwork mage becomes unable to cast any spells except cantrips while the wand is removed.</p>\n<p>When removed, the clockwork wand is a <em>@UUID[Compendium.pf2e.equipment-srd.Item.vJZ49cgi8szuQXAD]{Magic Wand}</em> containing the last 1st-rank innate spell the clockwork mage cast (@UUID[Compendium.pf2e.spells-srd.Item.4koZzrnMXhhosn0D]{Fear}, if the clockwork Belimarius hasn't yet cast a 1st-rank spell in this adventure). The spells are placed within the wand while the mage is created, and the creator can substitute other arcane spells of the appropriate rank.</p>"
+        },
+        "action->Dispelling Critical": {
+          "name": "Dispelling Critical",
+          "description": "<p>On a critical hit with a halberd Strike, shards of noqual built into the clockwork Belimarius glow green for a moment. Instead of inflicting additional damage with the critical hit, the clockwork Belimarius instead attempts a counteract check with a [[/r 1d20+18 #Counteract]]{+18} bonus against one magical effect active on the target.</p>"
+        },
+        "action->Energize Clockwork Wand": {
+          "name": "Energize Clockwork Wand",
+          "description": "<p><strong>Frequency</strong> once per 10 minutes.</p>\n<hr />\n<p><strong>Effect</strong> The clockwork mage regains a spell it has already cast that day. It must spend 1 hour of its operational time, or 2 hours if the spell is 3rd rank or higher.</p>"
+        }
+      }
+    },
+    "Clockwork Serpent Spy": {
+      "name": "Clockwork Serpent Spy",
+      "blurb": "Variant clockwork spy",
+      "publicNotes": "<p>Engineers, technologists, and mechanically gifted wizards employ clockwork spies-tiny, spiderlike constructs capable of recording and playing back audio-to surreptitiously surveil their enemies or steal secrets from competitors. Their spindly bodies and delicate components make them unsuitable for combat; in fact, most builders construct clockwork spies with a self-destruct mechanism to ensure the spies' meddling can't be traced back to them.</p>\n<hr />\n<p>Intricate, complex machines, clockworks are built with care by highly skilled engineers. Though their creation involves some amount of magic, they're primarily mechanical, packed with precision-tuned gears and springs working in concert.</p>\n<p>The sturdy mainspring within a clockwork must be wound to provide the energy needed to power the device. Some larger clockworks contain a series of springs for different limbs that each need to be wound. A clockwork's crafter creates a unique metal key while building the clockwork; winding the clockwork usually involves inserting the key into the machine's back and turning clockwise. Larger clockworks require greater strength to turn the key, and typically have larger keys to allow for more torque-some even accommodating a team of winders rather than an individual. Programming a clockwork requires both the key and the knowledge to set the program correctly, information usually reserved for the clockwork's creator or owner.</p>",
+      "items": {
+        "strike-melee->Sharpened Gear": {
+          "name": "Sharpened Gear"
+        },
+        "action->Record Audio": {
+          "name": "Record Audio",
+          "description": "<p>The clockwork spy records all sounds within @Template[type:emanation|distance:25]{25 feet} onto a small gemstone worth 1 gp embedded in its body. The clockwork spy can record up to 1 hour of sound on a single gemstone. Once it begins recording, it can't cease recording early, nor can it record onto a gemstone that already contains a recording.</p>\n<p>Some clockwork spies contain multiple gemstones to allow for a series of recordings. Since clockwork spies are not intelligent, they must be given simple commands regarding when to start recording sounds. A clockwork spy can differentiate between different kinds of creatures but not between specific individuals.</p>\n<p>The spy can start or stop playback of recorded sound by spending a single action. Removing a gemstone from or installing a gemstone into a clockwork spy requires a successful @Check[type:thievery|dc:14|traits:action:disable-a-device] check to @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device}; on a failure, the gemstone is undamaged, but any recorded sounds are erased and the gemstone still can't be used to make another recording.</p>"
+        },
+        "action->Wind-Up": {
+          "name": "Wind-Up",
+          "description": "<p>24 hours, @Check[type:thievery|dc:17|traits:action:disable-a-device], standby</p>\n<hr />\n<p>For a clockwork to act, it must be wound with a unique key by another creature. This takes 1 minute. Once wound, it remains operational for the listed amount of time, usually 24 hours, after which time it becomes unaware of its surroundings and can't act until it's wound again. Some clockworks' abilities require them to spend some of their remaining operational time. They can't spend more than they have and shut down immediately once they have 0 time remaining. If it's unclear when a clockwork was last wound, most clockwork keepers wind all their clockworks at a set time, typically 8 a.m.</p>\n<p>A clockwork that lists standby in its wind-up entry can enter standby mode as a 3-action activity. Its operational time doesn't decrease in standby, but it can sense its surroundings (with a -2 penalty to Perception). It can't act, with one exception: when it perceives a creature, it can exit standby as a reaction (rolling initiative if appropriate).</p>\n<p>A creature can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device} to wind a clockwork down (with a DC listed in the wind-up entry). For each success, the clockwork loses 1 hour of operational time. This can be done even if the clockwork is in standby mode.</p>"
+        },
+        "action->Self-Destruct": {
+          "name": "Self-Destruct",
+          "description": "<p>A clockwork spy must use this reaction unless specifically programmed otherwise by its creator.</p>\n<p><strong>Trigger</strong> The clockwork spy is reduced to 0 Hit Points.</p>\n<hr />\n<p><strong>Effect</strong> The spy thrashes around and emits a tinny scream followed by a steady ticking sound. At the beginning of what would have been its next turn, the clockwork spy explodes, dealing @Damage[1d12[piercing]] damage in a @Template[type:emanation|distance:5]{5-foot radius} (@Check[type:reflex|dc:17|basic:true] save). Its gemstone is destroyed, along with any information contained inside it.</p>\n<p>An adjacent creature can cancel the self-destruct sequence by succeeding at a @Check[type:thievery|dc:17|traits:action:disable-a-device] check to @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device}.</p>"
+        },
+        "action->Bleeding Gash": {
+          "name": "Bleeding Gash",
+          "description": "<p>On a critical hit with a sharpened gear Strike, the clockwork serpent spy also inflicts @Damage[1d4[persistent,bleed]] damage (@Check[type:fortitude|dc:17] save negates the additional bleed damage).</p>"
+        }
+      }
+    },
+    "Dretch": {
+      "name": "Dretch",
+      "languages": "telepathy 100 feet",
+      "publicNotes": "<p>Among the lowest and least powerful of all demons, dretches are just as vicious and cruel as their more powerful brethren. They happily vent their frustrations on anything weaker than themselves.</p>\n<p>Born from the souls of the slothful, these demons appear vaguely humanoid in appearance with awkward limbs and slack lumps of skin hanging from their frames. Supposedly, a single slothful soul of sufficient depravity and strength can spawn an entire horde of these creatures. However, as weaker demons, their lot in life is to suffer at the hands of more powerful Abyssal predators, and only a tiny number of dretches ever manage to become something more. For this reason, dretches are quite accommodating when summoned by mortals. They're usually content to work under conditions few other outsiders would accept, although they'll still gladly turn on even the kindest of masters who show even the slightest hint of weakness.</p>\n<hr />\n<p>Mortal souls that have been twisted and corrupted by sin sometimes arise in the afterlife as demons. These powerful and destructive fiends seek to spread their particular sin to warp more souls, thereby bolstering their numbers and continuing the cycle.</p>",
+      "items": {
+        "spellcastingEntry->Divine Innate Spells": {
+          "name": "Divine Innate Spells"
+        },
+        "strike-melee->Jaws": {
+          "name": "Jaws"
+        },
+        "strike-melee->Claw": {
+          "name": "Claw"
+        },
+        "strike-melee->Heated Light Mace": {
+          "name": "Heated Light Mace"
+        },
+        "action->Telepathy 100 feet": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.kdhbPaBMK1d1fpbA]\nTelepathy 100 feet"
+        },
+        "action->Sloth": {
+          "name": "Sloth",
+          "description": "<p>At the start of each of the dretch's turns, roll [[/br 1d4 #Actions Regained]]{1d4}. The result is the number of actions the dretch regains that turn (maximum 3).</p>\n<p>Effects like the @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed} condition can further reduce their number of actions.</p>"
+        },
+        "action->Cower": {
+          "name": "Cower",
+          "description": "<p>The dretch makes itself as small as possible, protecting its vital organs with its limbs. It gains a +4 circumstance bonus to AC but takes a -2 penalty to attack rolls. This lasts until the dretch moves from its current space, falls @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}, or ends the effect as a free action.</p>"
+        },
+        "action->Frenzied Slashes": {
+          "name": "Frenzied Slashes",
+          "description": "<p>The dretch makes three claw Strikes, each at a -2 penalty, all targeting the same creature. The dretch's multiple attack penalty doesn't increase until after it has made all three attacks.</p>\n<p>The dretch gains the @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2} condition until the beginning of its next turn.</p>"
+        },
+        "action->Vicious Criticals": {
+          "name": "Vicious Criticals",
+          "description": "<p>A dretch makes the most of any weakness it finds. Whenever a dretch scores a critical hit with its claw Strike, the target takes an additional @Damage[1d6[bleed]].</p>"
+        }
+      }
+    },
+    "Fallen Acolyte": {
+      "name": "Fallen Acolyte",
+      "blurb": "Human ex-clerics",
+      "items": {
+        "armor->Rusted (Broken) Full Plate": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.Gq1cZWSKOtJhKd2p]\nRusted (Broken) Full Plate",
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.Gq1cZWSKOtJhKd2p]\n<p>Plate mail consists of interlocking plates that encase nearly the entire body in a carapace of steel. It is costly and heavy, and the wearer often requires help to don it correctly, but it provides some of the best defense armor can supply. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.</p>"
+        },
+        "strike-melee->Sickle": {
+          "name": "Sickle"
+        },
+        "lore->Warfare Lore": {
+          "name": "Warfare Lore"
+        }
+      }
+    },
+    "Glutu": {
+      "name": "Glutu",
+      "blurb": "Male variant boggard swampseer",
+      "publicNotes": "<p>The boggard swampseer has been gifted with magic through its worship of the demon lord Gogunta, and uses its power to rule a boggard village, keeping the rest of the village in line and planning raids on nearby communities.</p>\n<hr />\n<p>Boggards are aggressive humanoid amphibians that thrive in swamps, marshes, and even some rain forests. Boggards hatch from eggs into tadpoles, fiercely competing for food and even consuming their siblings in that struggle. Over 3 years, the surviving boggards develops arms, legs, and lungs while learning the rudiments of hunting, crafts, and warfare-everything needed to survive in their might-makes-right society. At the top of most boggard hierarchies lords a hulking swampseer imbued with sinister divine magic.</p>",
+      "speed": "swamp stride",
+      "items": {
+        "spellcastingEntry->Divine Prepared Spells": {
+          "name": "Divine Prepared Spells"
+        },
+        "spell->Sound Burst": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.wzLkNU3AAqOSKFPR]\nSound Burst"
+        },
+        "spell->Chill Touch": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.mAMEt4FFbdqoRnkN]\nChill Touch",
+          "target": "1 living or undead creature"
+        },
+        "strike-melee->Whip": {
+          "name": "Whip"
+        },
+        "strike-melee->Tongue": {
+          "name": "Tongue"
+        },
+        "action->Drowning Drone": {
+          "name": "Drowning Drone",
+          "description": "<p><strong>Trigger</strong> The boggard swampseer or one of its allies within 60 feet attempts a saving throw against an auditory or sonic effect.</p>\n<hr />\n<p><strong>Effect</strong> The swampseer releases a croak that drowns out other sound. It rolls a @Check[type:performance] check. It and boggard allies in the area can use the higher result of the swampseer's Performance check or their saves to resolve the effects against the auditory or sonic effect.</p>"
+        },
+        "action->Swamp Stride": {
+          "name": "Swamp Stride",
+          "description": "<p>A boggard swampseer ignores difficult terrain caused by swamp terrain features.</p>"
+        },
+        "action->Terrifying Croak": {
+          "name": "Terrifying Croak",
+          "description": "<p>The boggard swampseer unleashes a terrifying croak. Any non-boggard within @Template[type:emanation|distance:30] becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} unless they succeed at a @Check[type:will|dc:19] save.</p>\n<p>Those who critically succeed are temporarily immune for 1 minute.</p>"
+        },
+        "action->Tongue Grab": {
+          "name": "Tongue Grab",
+          "description": "<p>If the boggard swampseer hits a creature with its tongue, that creature becomes @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} by the boggard. Unlike with a normal grab, the creature isn't @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}, but it can't move beyond the reach of the boggard's tongue.</p>\n<p>A creature can sever the tongue by hitting AC 15 and dealing at least 4 slashing damage. Though this doesn't deal any damage to the boggard, it prevents it from using its tongue Strike until it regrows its tongue, which takes a week.</p>"
+        }
+      }
+    },
+    "Knurr Ragnulf": {
+      "name": "Knurr Ragnulf",
+      "items": {
+        "armor->Rusty (Broken) Full Plate": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.Gq1cZWSKOtJhKd2p]\nRusty (Broken) Full Plate",
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.Gq1cZWSKOtJhKd2p]\n<p>Plate mail consists of interlocking plates that encase nearly the entire body in a carapace of steel. It is costly and heavy, and the wearer often requires help to don it correctly, but it provides some of the best defense armor can supply. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.</p>"
+        },
+        "strike-melee->Warhammer": {
+          "name": "Warhammer"
+        },
+        "action->Intimidating Strike": {
+          "name": "Intimidating Strike",
+          "description": "<p>Knurr makes a melee Strike while roaring Xar-Azmak's name. If he hits and deals damage, the target is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}, or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical hit.</p>"
+        }
+      }
+    },
+    "Meitremar": {
+      "name": "Meitremar",
+      "blurb": "Male human cultist of Xar-Azmak",
+      "items": {
+        "spellcastingEntry->Divine Spontaneous Spells": {
+          "name": "Divine Spontaneous Spells"
+        },
+        "spellcastingEntry->Demonic Bloodline Spells": {
+          "name": "Demonic Bloodline Spells"
+        },
+        "spell->Create Undead": {
+          "cost": "black onyx, see Table 7-1"
+        },
+        "spell->Inveigle": {
+          "target": "1 creature of a level no greater than double the inveigle ritual's level"
+        },
+        "armor->Rusted (Broken) Breastplate": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.r0ifJfoz8aqf0mwk]\nRusted (Broken) Breastplate",
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.r0ifJfoz8aqf0mwk]\n<p>Though referred to as a breastplate, this type of armor consists of several pieces of plate or half-plate armor that protect the torso, chest, neck, and sometimes the hips and lower legs. It strategically grants some of the protection of plate while allowing greater flexibility and speed.</p>"
+        },
+        "equipment->Horn of Rust": {
+          "gmNote": "<p>While the Horn of Rust's power has diminished over the ages since Xar-Azmak's death, those who carry it are still subject to its palpable chaotic influences. If you aren't chaotic evil, you are @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} while carrying or using the Horn of Rust, and if you're lawful or good, you are instead @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}. The longer a non-worshipper of Xar-Azmak carries the Horn of Rust, the greater the chances a vloriak or other demon (or group of demons) will seek them out to slay them and reclaim the artifact. The frequency of these attacks is left to the GM to determine, but they should occur no less frequently than once a month. These attacks should always be at least moderate encounters; if the PCs don't take them seriously, the attacks could eventually escalate into severe encounters.</p>\n<hr />\n<p><strong>Xar-Azmak Resurrected</strong> If the demon lord Xar-Azmak is resurrected, the Horn of Rust becomes a 20th-level item. Its swirling aura of rusty metal shards grants a +3 item bonus to AC, deals @Damage[20d6[slashing]] damage (@Check[type:reflex|dc:43|basic:true] save), and the tetanus has a @Check[type:fortitude|dc:43] save. It has a [[/r 1d20+31 #Counteract]]{+31} counteract modifier against diseases. You can cast the following additional spells using the artifact's charges.</p>\n<ul>\n<li>4th @UUID[Compendium.pf2e.spells-srd.Item.0fYE64odlKqISzft]{Rusting Grasp}</li>\n<li>5th @UUID[Compendium.pf2e.spells-srd.Item.MlpbeZ61Euhl0d60]{Toxic Cloud}</li>\n<li>6th @UUID[Compendium.pf2e.spells-srd.Item.r7ihOgKv19eJQnik]{Disintegrate}</li>\n<li>7th @UUID[Compendium.pf2e.spells-srd.Item.sX2o0HH4RjJDAZ8C]{Divine Decree} (chaotic or evil only)</li>\n<li>8th @UUID[Compendium.pf2e.spells-srd.Item.M0jQlpQYUr0pp2Sv]{Desiccate}</li>\n<li>9th @UUID[Compendium.pf2e.spells-srd.Item.ihbRf964JDXztcy3]{Disjunction}</li>\n<li>10th @UUID[Compendium.pf2e.spells-srd.Item.wLIvH0AT1u7oa64N]{Cataclysm}<hr /></li>\n</ul>\n<p><strong>Destruction </strong>The Horn of Rust must be washed with the juice of a fresh peach plucked from an immortal arboreal, then dipped into a pool of molten dawnsilver, and finally cooled with the tears of a remorseful demon. Alternatively, GMs can devise a series of their own quests for the PCs and send them to destroy this ancient artifact. Once the horn is destroyed, Xar-Azmak can never be resurrected.</p>"
+        },
+        "equipment->Tarnished Silver Religious Symbol (Xar-azmak)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.upzjwQ96cZG0Xlmx]\nTarnished Silver Religious Symbol (Xar-azmak)",
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.upzjwQ96cZG0Xlmx]\n<p>This piece of wood or silver is emblazoned with an image representing a deity. Some divine spellcasters, such as clerics, can use a religious symbol of their deity as a divine focus to use certain abilities and cast some spells. A religious symbol must be held in one hand to use it.</p>"
+        },
+        "equipment->Key": {
+          "name": "Key",
+          "gmNote": "<p>key to chest in area <strong>E2</strong></p>"
+        },
+        "consumable->Wand of Create Food (Level 2)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.vJZ49cgi8szuQXAD]\nWand of Create Food (Level 2)",
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.vJZ49cgi8szuQXAD]\n<p>@UUID[Compendium.pf2e.spells-srd.Item.Mt6ZzkVX8Q4xigFq]{Create Food}</p><hr /><p>This baton is about a foot long and contains a single spell. The appearance typically relates to the spell within.</p>\n<p><strong>Activate</strong> Cast a Spell</p>\n<p><strong>Frequency</strong> once per day, plus overcharge</p>\n<hr />\n<p><strong>Effect</strong> You Cast the Spell at the indicated level.</p>\n<p><strong>Craft Requirements</strong> Supply a listed-level casting of the spell.</p>\n<hr />\n<p><em>Note: To create a scroll or wand of a specific spell, drag the spell from the compendium or compendium browser into the inventory of a PC, NPC, or loot actor.</em></p>"
+        },
+        "consumable->Wand of Restoration (Level 2)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.vJZ49cgi8szuQXAD]\nWand of Restoration (Level 2)",
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.vJZ49cgi8szuQXAD]\n<p>@UUID[Compendium.pf2e.spells-srd.Item.SnaLVgxZ9ryUFmUr]{Restoration}</p><hr /><p>This baton is about a foot long and contains a single spell. The appearance typically relates to the spell within.</p>\n<p><strong>Activate</strong> Cast a Spell</p>\n<p><strong>Frequency</strong> once per day, plus overcharge</p>\n<hr />\n<p><strong>Effect</strong> You Cast the Spell at the indicated level.</p>\n<p><strong>Craft Requirements</strong> Supply a listed-level casting of the spell.</p>\n<hr />\n<p><em>Note: To create a scroll or wand of a specific spell, drag the spell from the compendium or compendium browser into the inventory of a PC, NPC, or loot actor.</em></p>"
+        },
+        "strike-melee->Pick": {
+          "name": "Pick"
+        },
+        "action->Reach Spell": {
+          "name": "Reach Spell",
+          "description": "<p>If Meitremar's next action this turn is to Cast a Spell that has a range, he increases that spell's range by 30 feet (or increases the range of a touch spell to 30 feet).</p>"
+        },
+        "action->Signature Spell": {
+          "name": "Signature Spell",
+          "description": "<p>Meitremar can heighten @UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal} spells freely.</p>"
+        }
+      }
+    },
+    "Ordwi": {
+      "name": "Ordwi",
+      "blurb": "Female human cleric of Cayden Cailean",
+      "items": {
+        "spellcastingEntry->Divine Prepared Spells": {
+          "name": "Divine Prepared Spells"
+        },
+        "spellcastingEntry->Divine Focus Spells": {
+          "name": "Divine Focus Spells"
+        },
+        "armor->Explorer's Clothing": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.dDIPA1WE9ESF67EB]\n<p>Explorer's clothing is sturdy enough that it can be reinforced to protect you, even though it isn't a suit of armor. It comes in many forms, though the most common sorts look like clerical vestments, monk's garments, or wizard's robes, as members of all three classes are likely to avoid wearing armor.</p>"
+        },
+        "equipment->Iron Religious Symbol": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.upzjwQ96cZG0Xlmx]\nIron Religious Symbol",
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.upzjwQ96cZG0Xlmx]\n<p>This piece of wood or silver is emblazoned with an image representing a deity. Some divine spellcasters, such as clerics, can use a religious symbol of their deity as a divine focus to use certain abilities and cast some spells. A religious symbol must be held in one hand to use it.</p>"
+        },
+        "consumable->Healing Potion (Minor)": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.2RuepCemJhrpKKao]\n<p>A healing potion is a vial of a ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a healing potion, you regain [[/r 1d8[healing]]]{1d8 Hit Points}.</p>"
+        },
+        "strike-melee->Rapier": {
+          "name": "Rapier"
+        },
+        "action->Divine Font": {
+          "name": "Divine Font",
+          "description": "<p>@UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal}</p>"
+        },
+        "action->Healing Hands": {
+          "name": "Healing Hands",
+          "description": "<p>When Ordwi casts heal, she rolls 1d10s instead of d8s.</p>"
+        }
+      }
+    },
+    "Primordial Envy": {
+      "name": "Primordial Envy",
+      "publicNotes": "<p>The primordial envy is most often found in underground ruins within Edasseril. It hungers for magic, leaching it from any source it can come into contact with. This hunger can be exploited by clever adventurers who bait it with powerful destructive magics. A primordial envy is one of the most defensive sin oozes, and it tends to layer abjuration spells over itself to both increase its resilience and empower its attacks.</p>\n<hr />\n<p>Thassilon's ruins contain numerous sources of raw magical power that have been lost or forgotten. As many of these sources are steeped in sinful soul energy used by the runelords to enhance their power, some of these sources go \"sour,\" forming into a sinsludge—a mucky effluvium that develops into a barely rudimentary consciousness based on the emotion behind the sin.</p>\n<h2>Other Sinsludges</h2>\n<p>The primordial envy is the least dangerous sinsludge. The glistening pride's shimmering visage lures victims, then curses them with an inflated and competitive ego that tends to get them killed. The crusted sloth leaves victims wallowing in lethargy until they starve, while the shimmering greed imprisons would-be treasure seekers within shells of precious metal. The slithering lust's sweet scents enthrall victims with their deepest desires, distracting them as it feeds. But the most terrible of the sinsludges are the ravenous wrath, which uses blasts of devastating energy to feed, and the rancid gluttony, which consumes souls and leaves bodies behind as lethal undead.</p>",
+      "saveDetails": "–2 status vs. evocation and necromancy",
+      "senses": "magic sense (precise) 30 feet",
+      "items": {
+        "strike-melee->Pseudopod": {
+          "name": "Pseudopod"
+        },
+        "action->Magic Sense": {
+          "name": "Magic Sense",
+          "description": "<p>A primordial envy can detect magical auras, items, and spellcasters within 30 feet.</p>"
+        },
+        "action->-2 Status Vs. Evocation and Necromancy": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.kquBnQ0kObZztnBc]\n-2 Status Vs. Evocation and Necromancy"
+        },
+        "action->Confiscate Spell": {
+          "name": "Confiscate Spell",
+          "description": "<p><strong>Trigger</strong> A creature within 30 feet that the primordial envy can sense Casts a Spell</p>\n<hr />\n<p><strong>Effect</strong> The primordial envy's surface shimmers with a kaleidoscope of color that shines out to illuminate the triggering creature. The primordial envy attempts to counter the spell, with a counteract modifier of [[/r 1d20+12 #Counteract]]{+12}. On a success, the spell is countered and the primordial envy gains [[/br 2d6 #Temp HP]] temporary Hit Points.</p>"
+        },
+        "action->Spell Drain": {
+          "name": "Spell Drain",
+          "description": "<p>The primordial envy attempts to drain magic from a spellcasting creature that it has @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}. The spellcasting creature must attempt a @Check[type:will|dc:20] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected and is temporarily immune to Spell Drain for 24 hours.</p>\n<p><strong>Success</strong> The creature takes @Damage[1d6[mental]] damage.</p>\n<p><strong>Failure</strong> The creature takes @Damage[2d6[mental]] damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 hour.</p>\n<p><strong>Critical Failure</strong> As failure, but one of the creature's uncast spells or unused spell slots is lost, as if they had cast it. The spell or slot lost is one of the highest-rank spells the creature can cast, determined randomly if multiple prepared spells are available. If a cantrip is drained, the spellcaster loses access to that cantrip for 10 minutes. The primordial envy becomes @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened} 1 for 1 round, and can use the extra action to Stride or Strike.</p>"
+        }
+      }
+    },
+    "Rushing Waters": {
+      "name": "Rushing Waters",
+      "description": "<p>Rivulets of water begin to run from the circle of stones to gather in a growing puddle at the center.</p>",
+      "disable": "<p>@Check[type:thievery|dc:20] (expert) to rub out the @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} runes on the ceiling, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (2nd level, counteract DC 18) to counteract the trap</p>",
+      "reset": "<p>The magic rejuvenates over 10 minutes, after which it is recharged and ready to activate again.</p>",
+      "stealth": "<p>(trained)</p>",
+      "items": {
+        "action->Spherical Deluge": {
+          "name": "Spherical Deluge",
+          "description": "<p><strong>Trigger</strong> A creature enters the area south of the ring of stones marked on the map</p>\n<hr />\n<p><strong>Effect</strong> A deluge of water rises up from the ring of stones, then flows forcefully down the passageway to drain into the pit at area <strong>F1b</strong>. Large and smaller creatures in the water's path must attempt a @Check[type:fortitude|dc:20|traits:damaging-effect] save. The rushing waters vanish instantly upon striking the pit floor, but do leave everything down there sopping wet.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature withstands the force of the rushing waters and is unaffected.</p>\n<p><strong>Success</strong> The creature takes @Damage[1d10[bludgeoning]] damage as the rushing waters slam them into a cave wall.</p>\n<p><strong>Failure</strong> The creature is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} by the rushing waters, takes @Damage[(1d10+6)[bludgeoning]] damage, and is pushed by the water to the spiky pit trap and triggers the trap.</p>\n<p><strong>Critical Failure</strong> As failure, but the creature can't attempt to @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge} if they fall into the spiky pit trap.</p>"
+        }
+      }
+    },
+    "Rust Zombie": {
+      "name": "Rust Zombie",
+      "hpDetails": "void healing",
+      "publicNotes": "<p>Plague zombies are infested with hideous contagions.</p>\n<hr />\n<p>A zombie's only desire is to consume the living. Unthinking and ever-shambling harbingers of death, zombies stop only when they're destroyed.</p>",
+      "items": {
+        "condition->Slowed": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]\n<p>You have fewer actions. Slowed always includes a value. When you regain your actions at the start of your turn, reduce the number of actions you regain by your slowed value. Because slowed has its effect at the start of your turn, you don't immediately lose actions if you become slowed during your turn.</p>"
+        },
+        "strike-melee->Fist": {
+          "name": "Fist"
+        },
+        "strike-melee->Jaws": {
+          "name": "Jaws",
+          "description": "<p><strong>Requirements</strong> The zombie has a creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}.</p>"
+        },
+        "action->Slow": {
+          "name": "Slow",
+          "description": "<p>A zombie is permanently @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} and can't use reactions.</p>"
+        },
+        "action->Rust Creep": {
+          "name": "Rust Creep",
+          "description": "<p>Those afflicted by rust creep develop uncomfortable rust-colored bruises on their flesh and endure full-body aches like those one might experience after a long workout. As the affliction progresses, their bodies—as well as the clothing and items they wear or carry—increasingly break down until a painful death occurs. If a character successfully resists contracting rust creep, or recovers from a case of rust creep, they are temporarily immune to future rust creep infections for 24 hours.</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:15]</p>\n<p><strong>Stage 1</strong> –1 status penalty to Athletics checks (1 day)</p>\n<p><strong>Stage 2</strong> as stage 1 (1 day)</p>\n<p><strong>Stage 3</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} (1 day)</p>\n<p><strong>Stage 4</strong> enfeebled 1 and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}, plus any armor, clothing and items you carry and that are of a level equal to or less than the disease become broken as the decay spreads to them (1 day; broken items remain broken)</p>\n<p><strong>Stage 5</strong> @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious} (1 day)</p>\n<p><strong>Stage 6</strong> unconscious (1 day)</p>\n<p><strong>Stage 7</strong> death</p>"
+        }
+      }
+    },
+    "Rusted Cage Trap": {
+      "name": "Rusted Cage Trap",
+      "description": "<p>A rusty cage embedded in the ceiling drops down with a clang to try to entrap a creature that steps onto the pressure plate in the middle of the room.</p>",
+      "disable": "<p>@Check[type:thievery|dc:13] to harmlessly trigger the trap by nudging the pressure plate, @Check[type:thievery|dc:20] to stabilize the pressure plate so it doesn't trigger, or @Check[type:athletics|dc:20] to @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} from the cage or @UUID[Compendium.pf2e.actionspf2e.Item.SjmKHgI7a5Z9JzBx]{Force Open} the cage once it falls</p>",
+      "reset": "<p>The mechanism to manually reset this trap is located in area <strong>D15</strong>.</p>",
+      "items": {
+        "action->Slam Down": {
+          "name": "Slam Down",
+          "description": "<p><strong>Trigger</strong> A creature walks under the cage and steps on the pressure plate</p>\n<hr />\n<p><strong>Effect</strong> The cage drops from the ceiling to trap the triggering creature, who must attempt a @Check[type:reflex|dc:17|traits:damaging-effect] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature avoids the trap, and returns to the space it just left rather than entering the trap's space.</p>\n<p><strong>Success</strong> As Critical Success, but the falling trap delivers a glancing blow and @Damage[(1d6+3)[bludgeoning]] damage to the creature as it stumbles back.</p>\n<p><strong>Failure</strong> The falling trap lands on the triggering creature. A Medium or smaller creature becomes trapped inside the cage (@UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} DC 20). A Large or larger creature takes @Damage[(2d6+5)[bludgeoning]] damage and is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} as the cage bounces off the creature's body, becoming destroyed in the process.</p>\n<p><strong>Critical Failure</strong> As Failure, but a Medium or smaller creature is also struck by the cage, knocked prone, and then takes @Damage[(2d6+5)[bludgeoning]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} by the cage as it lands on a limb.</p>"
+        }
+      }
+    },
+    "Rusted Door": {
+      "name": "Rusted Door",
+      "description": "<p>Shards of rust extend from the door and crumble away to cling to the flesh and clothes of anyone who attempts to open or damage the door.</p>",
+      "disable": "<p>@Check[type:thievery|dc:18] to deface the hidden runes that allow the trap to activate, or @Check[type:religion|dc:21] to offer prayers to a non-evil deity to override the ancient influence of Xar-Azmak</p>",
+      "reset": "<p>The rusted door resets automatically after 1 round.</p>",
+      "stealth": "<p>(trained)</p>",
+      "items": {
+        "action->Inflict Rust Creep": {
+          "name": "Inflict Rust Creep",
+          "description": "<p><strong>Trigger</strong> A non-worshipper of Xar-Azmak attempts to open the door or causes damage to it with a melee Strike</p>\n<hr />\n<p><strong>Effect</strong> The triggering creature is exposed to rust creep as tendrils of rust-red energy seem to slither out of the rusty patches on the door to rasp strangely gently against exposed skin.</p>\n<hr />\n<p>Those afflicted by rust creep develop uncomfortable rust-colored bruises on their flesh and endure full-body aches like those one might experience after a long workout. As the affliction progresses, their bodies—as well as the clothing and items they wear or carry—increasingly break down until a painful death occurs. If a character successfully resists contracting rust creep, or recovers from a case of rust creep, they are temporarily immune to future rust creep infections for 24 hours.</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:15|traits:disease,divine,transmutation]</p>\n<p><strong>Stage 1</strong> –1 status penalty to Athletics checks (1 day)</p>\n<p><strong>Stage 2</strong> as stage 1 (1 day)</p>\n<p><strong>Stage 3</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} (1 day)</p>\n<p><strong>Stage 4</strong> enfeebled 1 and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}, plus any armor, clothing and items you carry and that are of a level equal to or less than the disease become broken as the decay spreads to them (1 day; broken items remain broken)</p>\n<p><strong>Stage 5</strong> @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious} (1 day)</p>\n<p><strong>Stage 6</strong> unconscious (1 day)</p>\n<p><strong>Stage 7</strong> death</p>"
+        }
+      }
+    },
+    "Rustsworn Initiate": {
+      "name": "Rustsworn Initiate",
+      "blurb": "Human cultist",
+      "items": {
+        "strike-melee->Dagger": {
+          "name": "Dagger"
+        },
+        "strike-ranged->Dagger": {
+          "name": "Dagger"
+        },
+        "action->Gang Up": {
+          "name": "Gang Up",
+          "description": "<p>An enemy is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against the Rustsworn initiate's melee attacks due to flanking as long as that enemy is within both their reach and their ally's reach.</p>"
+        }
+      }
+    },
+    "Rusty Floor Spikes": {
+      "name": "Rusty Floor Spikes",
+      "description": "<p>Pressure plates on the floor near the north door cause rusty spikes to lance up out of the floor in area <strong>C3</strong>.</p>",
+      "disable": "<p>@Check[type:thievery|dc:18] (trained) to disable the pressure plates.</p>",
+      "reset": "<p>Turn the resetting wheel in the eastern Inner Guard Station (area <strong>C8b</strong>).</p>",
+      "stealth": "<p>(trained)</p>",
+      "items": {
+        "action->Spring Up": {
+          "name": "Spring Up",
+          "description": "<p><strong>Trigger</strong> A creature steps on the pressure plate</p>\n<hr />\n<p><strong>Effect</strong> The spikes spring up, Striking all creatures in the hallway. The floor becomes greater difficult terrain.</p>"
+        },
+        "strike-melee->Rusty Spike": {
+          "name": "Rusty Spike"
+        },
+        "action->Tetanus": {
+          "name": "Tetanus",
+          "description": "<p>An infection introduced through open wounds, tetanus can produce stiffness, muscle spasms strong enough to break bones, and ultimately death.</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:14]</p>\n<p><strong>Onset</strong> 10 days</p>\n<p><strong>Stage 1</strong> @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} (1 week)</p>\n<p><strong>Stage 2</strong> @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2} and can't speak (1 day)</p>\n<p><strong>Stage 3</strong> @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} with spasms (1 day)</p>\n<p><strong>Stage 4</strong> death</p>"
+        }
+      }
+    },
+    "Rusty Spike Launcher": {
+      "name": "Rusty Spike Launcher",
+      "description": "<p>As the large rusty door swings open, a mass of rusty spikes appear out of nowhere in the open doorway and launch violently into the room.</p>",
+      "disable": "<p>@Check[type:thievery|dc:20] to decouple the triggering rods that cause the spikes to extend, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (2nd level; counteract DC 18) to counteract the trap</p>",
+      "reset": "<p>The trap automatically resets once the door is closed.</p>",
+      "stealth": "<p>(trained)</p>",
+      "items": {
+        "action->Launch Spikes": {
+          "name": "Launch Spikes",
+          "description": "<p><strong>Trigger</strong> a creature opens the door without uttering a prayer to Xar-Azmak first</p>\n<hr />\n<p><strong>Effect</strong> A mass of rusty spikes appears in the open doorway and then fire into area <strong>E1</strong>. The rusty spikes curve through the air to seek targets—all creatures in area <strong>E1</strong> must attempt a @Check[type:reflex|dc:20|traits:damaging-effect] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature avoids the spikes and takes no damage.</p>\n<p><strong>Success</strong> A spike grazes the creature, inflicting @Damage[2d10[piercing]] damage.</p>\n<p><strong>Failure</strong> A spike impales the creature, inflicting @Damage[(2d10+13)[piercing]] damage.</p>\n<p><strong>Critical Failure</strong> As failure, but the spike also exposes the creature to tetanus.</p>"
+        }
+      }
+    },
+    "Severed Head": {
+      "name": "Severed Head",
+      "blurb": "Variant severed head",
+      "hpDetails": "void healing",
+      "publicNotes": "<p>The most common beheaded appears simply as a rotting head, barely preserved by the magic that created it.</p>\n<hr />\n<p>Beheaded are the reanimated heads of decapitation victims. These mindless undead fly through the air or roll around to attack their prey.</p>",
+      "items": {
+        "strike-melee->Jaws": {
+          "name": "Jaws"
+        },
+        "action->Gnash": {
+          "name": "Gnash",
+          "description": "<p><strong>Requirements</strong> The beheaded's previous action was a jaws Strike that dealt damage to its target.</p>\n<hr />\n<p><strong>Effect</strong> The severed head makes a second jaws Strike as it violently shakes itself, trying to rip away a mouthful of flesh. On a success, the target takes an additional 1d4 slashing damage and 1 persistent bleed damage and is exposed to rust creep.</p>"
+        },
+        "action->Rust Creep": {
+          "name": "Rust Creep",
+          "description": "<p>These undead inflict rust creep with their jaws Strikes. A creature damaged by a jaws Strike or a Gnash from one of these severed heads must succeed at a DC 15 Fortitude save or contract rust creep.</p>\n<p>Those afflicted by rust creep develop uncomfortable rust-colored bruises on their flesh and endure full-body aches like those one might experience after a long workout. As the affliction progresses, their bodies—as well as the clothing and items they wear or carry—increasingly break down until a painful death occurs. If a character successfully resists contracting rust creep, or recovers from a case of rust creep, they are temporarily immune to future rust creep infections for 24 hours.</p>\n<hr />\n<p><strong>Rustcreep</strong></p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:15]</p>\n<p><strong>Stage 1</strong> –1 status penalty to Athletics checks (1 day)</p>\n<p><strong>Stage 2</strong> as stage 1 (1 day)</p>\n<p><strong>Stage 3</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} (1 day)</p>\n<p><strong>Stage 4</strong> enfeebled 1 and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}, plus any armor, clothing and items you carry and that are of a level equal to or less than the disease become broken as the decay spreads to them (1 day; broken items remain broken)</p>\n<p><strong>Stage 5</strong> @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious} (1 day)</p>\n<p><strong>Stage 6</strong> unconscious (1 day)</p>\n<p><strong>Stage 7</strong> death</p>"
+        },
+        "lore->Acrobatics": {
+          "skillVariants": {
+            "0": {
+              "label": "+8 to Maneuver in Flight"
+            }
+          }
+        }
+      }
+    },
+    "Spiky Pit Trap": {
+      "name": "Spiky Pit Trap",
+      "description": "<p>A piece of hide covered with a layer of dirt and gravel is suspended over a 20-foot pit filled with spikes.</p>",
+      "disable": "<p>@Check[type:thievery|dc:18] (trained) to manually trigger the trap without falling in, or @Check[type:thievery|dc:25] (trained) to secure the hide so the trap doesn't activate</p>",
+      "reset": "<p>Creatures can still fall into the trap, but the hide that covers it must be reset manually (a 10-minute activity) for the trap to become @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} again.</p>",
+      "stealth": "<p>(trained)</p>",
+      "items": {
+        "action->Pitfall": {
+          "name": "Pitfall",
+          "description": "<p><strong>Trigger</strong> A creature or other large weight (such as the rushing waters of the previous trap) moves onto the gravel-covered hide</p>\n<hr />\n<p><strong>Effect</strong> The triggering creature or object falls in and takes falling damage (@Damage[10[bludgeoning]] damage) and is targeted by a spike's Strike. A falling creature can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge} with a @Check[type:reflex|dc:20] save (this becomes a @Check[type:reflex|dc:22] save if rushing waters are pouring into the pit).</p>"
+        },
+        "strike-melee->Spike": {
+          "name": "Spike"
+        }
+      }
+    },
+    "Starving Werebat": {
+      "name": "Starving Werebat",
+      "blurb": "Weak svirfneblin werebat",
+      "languages": "bat empathy",
+      "publicNotes": "<p>Werebats form organized colonies of opportunistic hunters. They aren't shy about transforming creatures to add to their colony, whom they initiate with elaborate social ceremonies and bloody hazing. The curse of the werebat gives them a strong urge to prey upon on weaker, lonely creatures. True werebats are often unusually tall and thin, with angular features. In combat, werebats favor their unarmed attacks because they can't fly while wielding weapons in their wings.</p>\n<hr />\n<p>Werecreatures are humanoids who transform into animals and animal-humanoid hybrids under the light of the full moon. The fate of these shapechanging creatures derives from an ancient primal curse that they can, in turn, transmit through their own bites. The stat blocks in this section reflect werecreatures in their hybrid forms.</p>",
+      "tokenName": "Werebat",
+      "items": {
+        "strike-melee->Fangs": {
+          "name": "Fangs"
+        },
+        "strike-melee->Wing": {
+          "name": "Wing"
+        },
+        "strike-melee->Dagger": {
+          "name": "Dagger"
+        },
+        "strike-ranged->Dagger": {
+          "name": "Dagger"
+        },
+        "action->Scent (Imprecise) 30 feet": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.rqfnQ5VHT5hxm25r]\nScent (Imprecise) 30 feet"
+        },
+        "action->Bat Empathy": {
+          "name": "Bat Empathy",
+          "description": "<p>A werebat can communicate with bats.</p>"
+        },
+        "action->Wing Thrash": {
+          "name": "Wing Thrash",
+          "description": "<p><strong>Trigger</strong> An adjacent enemy damages the werebat</p>\n<hr />\n<p><strong>Effect</strong> The werebat makes one or two wing Strikes, each against a different adjacent creature.</p>"
+        },
+        "action->Change Shape": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.08egiRxOvMX97XTc]\nChange Shape",
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.08egiRxOvMX97XTc]\n<ul>\n<li><strong>Human</strong>\n<ul>\n<li><strong>Melee</strong> fist [[/r 1d20+10 #Fist]]{+10}/[[/r 1d20+5 #Fist]]{+5}/[[/r 1d20 #Fist]]{+0} (agile, nonlethal), <strong>Damage</strong> @Damage[(1d4+2)[bludgeoning]] damage</li>\n<li><strong>Speed</strong> 25 feet</li>\n</ul>\n</li>\n<li><strong>Giant Bat</strong>\n<ul>\n<li><strong>Speed</strong> 15 feet, fly 30 feet</li>\n</ul>\n</li>\n</ul>\n<hr />\n<p>The werecreature changes into its humanoid, hybrid, or animal shape. Each shape has a specific, persistent appearance. A true werecreature's natural form is its hybrid shape.</p>\n<p>In humanoid shape, the werecreature uses its original humanoid size, loses its jaws and claws Strikes, and gains a melee fist Strike that deals bludgeoning damage equal to the slashing damage dealt by its claw.</p>\n<p>In animal shape, its Speed and size change to that of the animal, it gains any special Strike effects of the animal that it didn't already have (such as Grab), and it loses its weapon Strikes.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.ChangeShape]</p>"
+        },
+        "action->Curse of the Werebat": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.ICnpftxZEilrYjn0]\nCurse of the Werebat",
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.ICnpftxZEilrYjn0]\n<p>This curse affects only humanoids.</p>\n<hr />\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:15]</p>\n<p>On each full moon, the cursed creature must succeed at another Fortitude save or turn into a werecreature until dawn. The creature is under the GM's control and goes on a rampage for half the night before falling unconscious until dawn.</p>"
+        },
+        "action->Moon Frenzy": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.FA0ri2fAcMa1HgZe]\nMoon Frenzy"
+        }
+      }
+    },
+    "Theiltemar": {
+      "name": "Theiltemar",
+      "blurb": "Male variant skeleton",
+      "hpDetails": "void healing",
+      "publicNotes": "<p>Among the ranks of the dead, none are so numerous, nor so varied, as the skeleton. While most are almost entirely made from bone, some maintain a few scraps of flesh to aid them in movement, such as wing membranes.</p>",
+      "items": {
+        "spellcastingEntry->Divine Spontaneous Spells": {
+          "name": "Divine Spontaneous Spells"
+        },
+        "strike-melee->Claw": {
+          "name": "Claw"
+        },
+        "action->Rusting Death": {
+          "name": "Rusting Death",
+          "description": "<p>When Theiltemar is destroyed, his bones explode as the necromantic energy holding him together is released. This shreds his rusted chain mail as well, flinging rusty shards of jagged metal in all directions. Adjacent creatures take @Damage[2d6[piercing]] damage (@Check[type:reflex|dc:21|basic:true] save) and are exposed to rust creep. As his remains settled to the floor, the wall of force blocking area <strong>F14</strong> flickers and fades.</p>"
+        },
+        "action->Rust Creep": {
+          "name": "Rust Creep",
+          "description": "<p>Those afflicted by rust creep develop uncomfortable rust-colored bruises on their flesh and endure full-body aches like those one might experience after a long workout. As the affliction progresses, their bodies—as well as the clothing and items they wear or carry—increasingly break down until a painful death occurs. If a character successfully resists contracting rust creep, or recovers from a case of rust creep, they are temporarily immune to future rust creep infections for 24 hours.</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:15]</p>\n<p><strong>Stage 1</strong> –1 status penalty to Athletics checks (1 day)</p>\n<p><strong>Stage 2</strong> as stage 1 (1 day)</p>\n<p><strong>Stage 3</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} (1 day)</p>\n<p><strong>Stage 4</strong> enfeebled 1 and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}, plus any armor, clothing and items you carry and that are of a level equal to or less than the disease become broken as the decay spreads to them (1 day; broken items remain broken)</p>\n<p><strong>Stage 5</strong> @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious} (1 day)</p>\n<p><strong>Stage 6</strong> unconscious (1 day)</p>\n<p><strong>Stage 7</strong> death</p>"
+        }
+      }
+    },
+    "Trygve": {
+      "name": "Trygve",
+      "blurb": "Human smith",
+      "items": {
+        "armor->Breastplate": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.r0ifJfoz8aqf0mwk]\n<p>Though referred to as a breastplate, this type of armor consists of several pieces of plate or half-plate armor that protect the torso, chest, neck, and sometimes the hips and lower legs. It strategically grants some of the protection of plate while allowing greater flexibility and speed.</p>"
+        },
+        "equipment->Key": {
+          "name": "Key",
+          "gmNote": "<p>Secure storage key</p>"
+        },
+        "strike-melee->Light Hammer": {
+          "name": "Light Hammer"
+        },
+        "strike-ranged->Light Hammer": {
+          "name": "Light Hammer"
+        },
+        "action->Smith's Fury": {
+          "name": "Smith's Fury",
+          "description": "<p>Trygve deals an additional 1d6 bludgeoning damage on a critical hit when he Strikes with his light hammer.</p>"
+        },
+        "lore->Smithing Lore": {
+          "name": "Smithing Lore"
+        }
+      }
+    },
+    "Vanda": {
+      "name": "Vanda",
+      "items": {
+        "armor->Full Plate": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.Gq1cZWSKOtJhKd2p]\n<p>Plate mail consists of interlocking plates that encase nearly the entire body in a carapace of steel. It is costly and heavy, and the wearer often requires help to don it correctly, but it provides some of the best defense armor can supply. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.</p>"
+        },
+        "strike-melee->Greatsword": {
+          "name": "Greatsword"
+        },
+        "lore->Warfare Lore": {
+          "name": "Warfare Lore"
+        }
+      }
+    },
+    "Vloriak": {
+      "name": "Vloriak",
+      "languages": "telepathy 100 feet",
+      "publicNotes": "<p>Vloriaks rise from the sinful souls of those whose acts of sabotage resulted in despair and terror, and they delight in the destruction of mortal artifice. Often called despoiler demons, vloriaks were the followers of Xar-Azmak. Their numbers have dwindled over the eons since the Lord of Rust's death; those that exist now are scattered throughout the Abyss. Their chitinous bodies and faceted eyes give them an insectile appearance.</p>\n<h2>Vlorian Influence</h2>\n<p>Vloriaks hail from the otherworldly realm of Vlorus, and as such carry within themselves the potential for decay and rusting ruin. Other creatures that dwell in Vlorus—particularly fiends who rise to power there—can gain similar powers over rust as well. The Vlorian cythnigot encountered earlier in this adventure is an example, but fiends of any type can become infested with unique rust-themed abilities if they hail from this otherworldly realm.</p>",
+      "saveDetails": "+1 status to all saves vs. magic",
+      "items": {
+        "spellcastingEntry->Divine Innate Spells": {
+          "name": "Divine Innate Spells"
+        },
+        "strike-melee->Claw": {
+          "name": "Claw"
+        },
+        "strike-melee->Tongue": {
+          "name": "Tongue"
+        },
+        "action->Telepathy 100 feet": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.kdhbPaBMK1d1fpbA]\nTelepathy 100 feet"
+        },
+        "action->Restoration Vulnerability": {
+          "name": "Restoration Vulnerability",
+          "description": "<p>A vloriak suffers agonizing pain when a creature or object recovers from a debilitating effect in its proximity. The first time in a round in which a creature who is affected by a negative condition and is within sight of the demon reduces that condition's value, the demon takes @Damage[3d6[mental]] damage and cannot Lick Rust on its next turn.</p>"
+        },
+        "action->Lick Rust": {
+          "name": "Lick Rust",
+          "description": "<p><strong>Requirements</strong> The vloriak rusted a metal item with its tongue this turn</p>\n<hr />\n<p><strong>Effect</strong> The vloriak attempts a tongue Strike on the same target it just attacked. If it hits, it deals no damage as it licks away the rust and heals [[/r 2d6[healing]]] Hit Points (or [[/r 4d6[healing]]] Hit Points if the Strike was a critical hit). It can't Lick Rust on its next turn.</p>"
+        },
+        "action->Rust": {
+          "name": "Rust",
+          "description": "<p>A vloriak's saliva causes metal to rust rapidly. If it succeeds at a tongue Strike or @UUID[Compendium.pf2e.actionspf2e.Item.Dt6B1slsBy8ipJu9]{Disarm} attempt, the vloriak deals @Damage[2d6[untyped]] damage (doubled on a critical hit) to a metal item the target is wearing or holding, ignoring its Hardness. If the vloriak hits an unattended metal item, the item takes this damage automatically. If a creature uses the Shield Block reaction with a metal shield against a tongue attack, the shield is automatically broken, but no other item is rusted on that attack.</p>"
+        },
+        "action->Spew Rusted Shards": {
+          "name": "Spew Rusted Shards",
+          "description": "<p>The vloriak spews a @Template[type:cone|distance:15] of acid and rusted metal. Creatures in the area take 3d6 acid and @Damage[3d6[piercing]] damage (@Check[type:reflex|dc:22|basic:true] save). A creature that takes any piercing damage is exposed to tetanus. The vloriak can't Spew Rusted Shards for [[/br 1d4 #rounds]]{1d4 rounds}.</p>"
+        },
+        "action->Tetanus": {
+          "name": "Tetanus",
+          "description": "<p>An infection introduced through open wounds, tetanus can produce stiffness, muscle spasms strong enough to break bones, and ultimately death.</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:14]</p>\n<p><strong>Onset</strong> 10 days</p>\n<p><strong>Stage 1</strong> @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} (1 week)</p>\n<p><strong>Stage 2</strong> @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2} and can't speak (1 day)</p>\n<p><strong>Stage 3</strong> @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} with spasms (1 day)</p>\n<p><strong>Stage 4</strong> death</p>"
+        }
+      }
+    },
+    "Vlorian Cythnigot": {
+      "name": "Vlorian Cythnigot",
+      "blurb": "Variant cythnigot",
+      "languages": "telepathy (touch only)",
+      "publicNotes": "<p>The cythnigot is a foul fungal parasite that grows and thrives in the corpses of small creatures. It wears these bodies like a suit, but also adjusts and tailors the fleshy covering to suit its needs, and the body ends up looking as alien as anything else spawned from the Abyssal depths. The cythnigot's most identifying feature is the long stalk of fungal material that extends from creature's body, ending in a surprisingly strong set of fanged jaws.</p>",
+      "items": {
+        "spellcastingEntry->Occult Innate Spells": {
+          "name": "Occult Innate Spells"
+        },
+        "spell->Detect Alignment (At will, Lawful only)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.QnTtGCAvdWRU4spv]\nDetect Alignment (At will, Lawful only)"
+        },
+        "strike-melee->Bite": {
+          "name": "Bite"
+        },
+        "action->Telepathy (Touch only)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.kdhbPaBMK1d1fpbA]\nTelepathy (Touch only)"
+        },
+        "action->Rust Creep": {
+          "name": "Rust Creep",
+          "description": "<p>A creature bitten by the Vlorian cythnigot becomes afflicted by rust creep, but with a DC 20 Fortitude save.</p>\n<hr />\n<p>Those afflicted by rust creep develop uncomfortable rust-colored bruises on their flesh and endure full-body aches like those one might experience after a long workout. As the affliction progresses, their bodies—as well as the clothing and items they wear or carry—increasingly break down until a painful death occurs. If a character successfully resists contracting rust creep, or recovers from a case of rust creep, they are temporarily immune to future rust creep infections for 24 hours.</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:20|traits:divine,transmutation]</p>\n<p><strong>Stage 1</strong> –1 status penalty to Athletics checks (1 day)</p>\n<p><strong>Stage 2</strong> as stage 1 (1 day)</p>\n<p><strong>Stage 3</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} (1 day)</p>\n<p><strong>Stage 4</strong> enfeebled 1 and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}, plus any armor, clothing and items you carry and that are of a level equal to or less than the disease become broken as the decay spreads to them (1 day; broken items remain broken)</p>\n<p><strong>Stage 5</strong> @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious} (1 day)</p>\n<p><strong>Stage 6</strong> unconscious (1 day)</p>\n<p><strong>Stage 7</strong> death</p>"
+        },
+        "action->Sickening Display": {
+          "name": "Sickening Display",
+          "description": "<p>The cythnigot presents its awful appearance fully, and creatures in a @Template[type:emanation|distance:10] must attempt a @Check[type:will|dc:20] save. Once a creature attempts this save, it's temporarily immune to further Sickening Displays for 1 minute.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} until its next turn.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, and is off-guard for as long as it's sickened.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} and is off-guard for as long as it's sickened.</p>"
+        }
+      }
+    },
+    "Zaiox": {
+      "name": "Zaiox",
+      "blurb": "Variant male dero magister",
+      "publicNotes": "<p>Dero magisters are leaders among dero society. They perform the bulk of the cruel operations and memory-altering procedures inflicted upon their victims.</p>\n<hr />\n<p>Deros are short, wiry humanoids with milky white eyes, gray-blue skin, and wild shocks of off-white or gray hair. The descendants of a mysterious type of fey abandoned in the deepest, darkest caverns of Golarion, deros are the subject of fearful legends and folk tales to most of the world's surface races. They skulk beneath major metropolitan areas, performing cruel and twisted experiments on unwilling subjects. A dero is 3 feet tall and weighs approximately 70 pounds.</p>",
+      "items": {
+        "spellcastingEntry->Occult Spontaneous Spells": {
+          "name": "Occult Spontaneous Spells"
+        },
+        "spellcastingEntry->Occult Innate Spells": {
+          "name": "Occult Innate Spells"
+        },
+        "spell->Darkness (At Will)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.4GE2ZdODgIQtg51c]\nDarkness (At Will)"
+        },
+        "spell->Hideous Laughter": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.tlSE7Ly8vi1Dgddv]\nHideous Laughter"
+        },
+        "spell->Sound Burst": [
+          {
+            "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.wzLkNU3AAqOSKFPR]\nSound Burst",
+            "id": "TuM7xwEDIHACG7NZ"
+          },
+          {
+            "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.wzLkNU3AAqOSKFPR]\nSound Burst",
+            "id": "C2rsbTOD3F9y6irF"
+          }
+        ],
+        "spell->Chill Touch": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.mAMEt4FFbdqoRnkN]\nChill Touch",
+          "target": "1 living or undead creature"
+        },
+        "spell->Dancing Lights": {
+          "name": "Dancing Lights",
+          "description": "<p>You create up to four floating lights, no two of which are more than 10 feet apart. Each sheds light like a torch. When you Sustain the Spell, you can move any number of lights up to 60 feet. Each light must remain within 120 feet of you and within 10 feet of all others, or it winks out.</p>"
+        },
+        "strike-melee->Aklys": {
+          "name": "Aklys"
+        },
+        "strike-ranged->Aklys": {
+          "name": "Aklys"
+        },
+        "action->Vulnerable to Sunlight": {
+          "name": "Vulnerable to Sunlight",
+          "description": "<p>A dero magister takes [[/r {10}]]{10 damage} for every hour they're exposed to sunlight.</p>"
+        },
+        "action->Cytillesh Stare": {
+          "name": "Cytillesh Stare",
+          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> Zaiox glares at a creature he can see within 30 feet. The target is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round and must succeed at a @Check[type:will|dc:21] save or be @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 round.</p>"
+        }
+      }
+    }
+  },
+  "mapping": {
+    "blurb": "system.details.blurb",
+    "description": {
+      "converter": "translateActorDescription",
+      "path": "system.details.description"
+    },
+    "disable": "system.details.disable",
+    "hpDetails": "system.attributes.hp.details",
+    "items": {
+      "converter": "translateActorItems",
+      "path": "items"
+    },
+    "languages": "system.details.languages.details",
+    "name": {
+      "converter": "translateDualLanguage",
+      "path": "name"
+    },
+    "portrait": {
+      "converter": "updateActorImage",
+      "path": "img"
+    },
+    "publicNotes": {
+      "converter": "translateActorDescription",
+      "path": "system.details.publicNotes"
+    },
+    "reset": "system.details.reset",
+    "routine": "system.details.routine",
+    "saveDetails": "system.attributes.allSaves.value",
+    "senses": "system.perception.details",
+    "source": {
+      "converter": "translateSource",
+      "path": "system.details.publication.title"
+    },
+    "speed": "system.attributes.speed.details",
+    "stealth": "system.attributes.stealth.details",
+    "tokenImage": {
+      "converter": "updateTokenImage",
+      "path": "prototypeToken.texture.src"
+    },
+    "tokenName": {
+      "converter": "translateTokenName",
+      "path": "prototypeToken.name"
+    }
+  }
+}
