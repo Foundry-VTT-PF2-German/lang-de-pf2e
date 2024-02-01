@@ -912,7 +912,7 @@
       "description": "<p>You put your alchemical interest into practice. You become trained in alchemical bombs and Crafting; if you were already trained in Crafting, you instead become trained in a skill of your choice. You become trained in alchemist class DC. You gain the alchemist's @UUID[Compendium.pf2e.classfeatures.Item.wySB9VHOW1v3TX1L]{Infused Reagents} class feature, gaining a number of reagents each day equal to your level. You also gain the @UUID[Compendium.pf2e.feats-srd.Item.is3Oz9wt11lNq62K]{Alchemical Crafting} feat and four additional formulas for 1st-level alchemical items, as well as the ability to create free items during your daily preparations. Your advanced alchemy level is 1 and doesn't increase on its own.</p>\n<p><strong>Special</strong> You cannot select another dedication feat until you have gained two other feats from the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.Ux0sa5SUBu616i5k]{Alchemist} archetype.</p>",
       "prerequisites": [
         {
-          "value": "Intelligence 14"
+          "value": "Intelligence +2"
         }
       ]
     },
@@ -1304,7 +1304,7 @@
     },
     "Animal Senses": {
       "name": "Animal Senses",
-      "description": "<p>You gain one of the following senses available to your inherent animal: @UUID[Compendium.pf2e.ancestryfeatures.Item.HHVQDp61ehcpdiU8]{Darkvision}, @UUID[Compendium.pf2e.ancestryfeatures.Item.DRtaqOHXTRtGRIUT]{Low-Light Vision}, or scent (imprecise) 30 feet. You must have low-light vision before you can gain darkvision with this feat. If your inherent animal doesn't typically have a specific type of sense, you can't gain that sense with this feat.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat multiple times, choosing a different sense each time.</p>"
+      "description": "<p>You gain one of the following senses available to your inherent animal: darkvision, low-light vision, or scent (imprecise) 30 feet. You must have low-light vision before you can gain darkvision with this feat. If your inherent animal doesn't typically have a specific type of sense, you can't gain that sense with this feat.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat multiple times, choosing a different sense each time.</p>"
     },
     "Animal Shape": {
       "name": "Animal Shape",
@@ -1318,6 +1318,10 @@
           "value": "Animal Instinct"
         }
       ]
+    },
+    "Animal Soul Siblings": {
+      "name": "Animal Soul Siblings",
+      "description": "<p>Your eyes have been opened to the spiritual essence suffusing the world. You gain @UUID[Compendium.pf2e.spells-srd.Item.BBvV7qoXGdw09q1C]{Speak with Animals} as a primal innate spell that you can cast once per day. You get a +1 circumstance bonus to Diplomacy checks to @UUID[Compendium.pf2e.actionspf2e.Item.plBGdZhqq5JBl1D8]{Gather Information} from animals.</p>"
     },
     "Animal Speaker": {
       "name": "Animal Speaker",
@@ -1467,7 +1471,7 @@
     },
     "Aquatic Eyes": {
       "name": "Aquatic Eyes",
-      "description": "<p>As your connection to water grows, you can see more easily in places with less light, such as the depths of the ocean. You gain @UUID[Compendium.pf2e.ancestryfeatures.Item.DRtaqOHXTRtGRIUT]{Low-Light Vision}, or you gain @UUID[Compendium.pf2e.ancestryfeatures.Item.HHVQDp61ehcpdiU8]{Darkvision} if your ancestry already has low-light vision.</p>\n<hr />\n<p><strong>Special</strong> If your ancestry has neither low-light vision nor darkvision, you can take this ancestry feat a second time to gain darkvision. You can't retrain out of this feat.</p>"
+      "description": "<p>As your connection to water grows, you can see more easily in places with less light, such as the depths of the ocean. You gain low-light vision, or you gain darkvision if your ancestry already has low-light vision.</p>\n<hr />\n<p><strong>Special</strong> If your ancestry has neither low-light vision nor darkvision, you can take this ancestry feat a second time to gain darkvision. You can't retrain out of this feat.</p>"
     },
     "Arcane Breadth": {
       "name": "Arcane Breadth",
@@ -3172,7 +3176,7 @@
     },
     "Bleeding Finisher": {
       "name": "Bleeding Finisher",
-      "description": "<p>Your blow inflicts profuse bleeding. Make a slashing or piercing Strike with a weapon or unarmed attack that allows you to add your precise strike damage.</p>\n<p>If you hit, the target also takes @UUID[Compendium.pf2e.conditionitems.Item.lDVqvLKA6eF3Df60]{Persistent Bleed Damage} equal to your precise strike finisher damage.</p>"
+      "description": "<p>Your blow inflicts profuse bleeding. Make a slashing or piercing Strike with a weapon or unarmed attack that allows you to add your precise strike damage.</p>\n<p>If you hit, the target also takes @Damage[(@actor.flags.pf2e.swashbuckler.preciseStrike)d6[persistent,bleed]]{persistent bleed damage} equal to your precise strike finisher damage.</p>"
     },
     "Bless Shield": {
       "name": "Bless Shield",
@@ -3362,7 +3366,7 @@
     },
     "Bloodline Mutation": {
       "name": "Bloodline Mutation",
-      "description": "<p>You permanently mutate to become more like the creatures of your bloodline. You gain the appropriate trait or traits for those types of creatures (aberration for aberrant, angel and celestial for angelic, psychopomp and monitor for psychopomp, and so on).</p>\n<p>You gain @UUID[Compendium.pf2e.ancestryfeatures.Item.DRtaqOHXTRtGRIUT]{Low-Light Vision} or @UUID[Compendium.pf2e.ancestryfeatures.Item.HHVQDp61ehcpdiU8]{Darkvision}, if one is appropriate for creatures with those traits. Choose one of the following.</p>\n<ul>\n<li>If the creatures associated with your bloodline have the ability to @UUID[Compendium.pf2e.actionspf2e.Item.cS9nfDRGD83bNU1p]{Fly}, you gain a fly Speed equal to your land Speed.</li>\n<li>If the creatures associated with your bloodline are aquatic or amphibious, you become amphibious, able to breathe water and air equally well, and you gain a @UUID[Compendium.pf2e.actionspf2e.Item.c8TGiZ48ygoSPofx]{Swim} Speed equal to your Speed.</li>\n<li>If creatures associated with your bloodline have a resistance or immunity to acid, cold, electricity, fire, sonic, or void, choose an energy type your bloodline is immune or resistant to and gain resistance 20 against that energy type.</li>\n</ul>",
+      "description": "<p>You permanently mutate to become more like the creatures of your bloodline. You gain the appropriate trait or traits for those types of creatures (aberration for aberrant, angel and celestial for angelic, psychopomp and monitor for psychopomp, and so on).</p>\n<p>You gain low-light vision or darkvision, if one is appropriate for creatures with those traits. Choose one of the following.</p>\n<ul>\n<li>If the creatures associated with your bloodline have the ability to @UUID[Compendium.pf2e.actionspf2e.Item.cS9nfDRGD83bNU1p]{Fly}, you gain a fly Speed equal to your land Speed.</li>\n<li>If the creatures associated with your bloodline are aquatic or amphibious, you become amphibious, able to breathe water and air equally well, and you gain a @UUID[Compendium.pf2e.actionspf2e.Item.c8TGiZ48ygoSPofx]{Swim} Speed equal to your Speed.</li>\n<li>If creatures associated with your bloodline have a resistance or immunity to acid, cold, electricity, fire, sonic, or void, choose an energy type your bloodline is immune or resistant to and gain resistance 20 against that energy type.</li>\n</ul>",
       "prerequisites": [
         {
           "value": "a bloodline based on a specific type of creature"
@@ -3516,6 +3520,10 @@
     "Bone Swarm": {
       "name": "Bone Swarm",
       "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You scatter your body and transform into a whirling storm of bones for up to 1 minute or until you spend a single action to return to your normal shape. You become Huge, gain the swarm trait, and gain a fly Speed of 40 feet. As a swarm, you have the following characteristics.</p>\n<ul>\n<li>You are immune to the @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}, @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}, and @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} conditions.</li>\n<li>You have weakness 5 to area and splash damage.</li>\n<li>You can occupy the same space as other creatures and must do so to use your damaging ability.</li>\n<li>As a 2-action activity, you can deal @Damage[10d6[bludgeoning]] damage to all creatures sharing your space (@Check[type:reflex|dc:resolve(@actor.attributes.classOrSpellDC.value)|basic:true] save with a DC equal to your class DC or spell DC, whichever is higher).</li>\n<li>You can't speak, Cast Spells, use manipulate actions requiring your hands, Activate magic items, or make any Strikes with your normal body.</li>\n<li>You don't gain the swarm mind ability, so you are still affected normally by mental effects. You also retain the benefits of skeleton feats that don't require communication or the use of hands.</li>\n</ul>"
+    },
+    "Boneyard Acquaintance": {
+      "name": "Boneyard Acquaintance",
+      "description": "<p>Before your soul returned to the Material Plane, you interacted with a host of other souls on their way to the Boneyard. One of these acquaintances owes you a favor. You can temporarily summon it to come to your aid, and it appears as a swirling mass of ectoplasm with indiscernible features and a translucent @UUID[Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z]{Dagger}, the favored weapon of Pharasma. This functions as @UUID[Compendium.pf2e.spells-srd.Item.jQdm301h6e8hIY4U]{Spiritual Guardian}, which you can cast once per day as a divine innate spell, but you don't need to worship a deity to do so.</p>"
     },
     "Boneyard's Call": {
       "name": "Boneyard's Call",
@@ -4379,7 +4387,7 @@
     },
     "Celestial Form": {
       "name": "Celestial Form",
-      "description": "<p>You take on a celestial countenance, appearing like a type of celestial who serves your deity; for example, as an angel, you would gain a halo and feathery wings.</p>\n<p>You gain a fly Speed equal to your Speed. You gain @UUID[Compendium.pf2e.ancestryfeatures.Item.HHVQDp61ehcpdiU8]{Darkvision} if you don't already have it, and you gain the celestial trait and the trait appropriate to the type of servitor you've become (archon, angel, or azata, for example).</p>",
+      "description": "<p>You take on a celestial countenance, appearing like a type of celestial who serves your deity; for example, as an angel, you would gain a halo and feathery wings.</p>\n<p>You gain a fly Speed equal to your Speed. You gain darkvision if you don't already have it, and you gain the celestial trait and the trait appropriate to the type of servitor you've become (archon, angel, or azata, for example).</p>",
       "prerequisites": [
         {
           "value": "tenets of good"
@@ -4836,13 +4844,17 @@
         }
       ]
     },
+    "Clinging to Life": {
+      "name": "Clinging to Life",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You're reduced to 0 hit points and don't immediately die.</p>\n<hr />\n<p>This life still holds much for you, and you aren't ready to fall back into the River of Souls just yet. When you're reduced to 0 Hit Points and not immediately killed, you go to 1 Hit Point instead, fall @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}, and are @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}, and you don't gain the @UUID[Compendium.pf2e.conditionitems.Item.Yl48xTdMh3aeQYL2]{Wounded 1} condition.</p>"
+    },
     "Cloak Of Poison": {
       "name": "Cloak Of Poison",
       "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You secrete a cloak of concentrated poison that harms any who dare attack you. For 1 minute, any creature that touches you or damages you with an unarmed attack or melee weapon without the reach trait takes @Damage[3d6[poison]] damage.</p>"
     },
     "Clockwork Celerity": {
       "name": "Clockwork Celerity",
-      "description": "<p><strong>Trigger</strong> Your turn begins.</p>\n<hr />\n<p>You can use unstable clockwork devices in your innovation to push your invention to act more quickly. You are @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened} for this turn. How you can use the extra action depends on your innovation.</p>\n<ul>\n<li><strong>Armor</strong> You can use the extra action to Step, Stride, or use another movement action granted by your innovation (such as Swim if you have the Diving Armor feat).</li>\n<li><strong>Construct</strong> You can use the extra action to Command your construct innovation (or to provide 1 of the actions if you spend 2 actions to Command your construct).</li>\n<li><strong>Weapon</strong> You can use the extra action to Strike with your innovation or Reload your innovation.</li>\n</ul>\n<hr />\n<p>@Check[type:flat|dc:17|name:Unstable Flat Check|showDC:all|traits:unstable]{Unstable Check}</p>\n<p>On a failure, the innovation malfunctions in a spectacular (though harmless) fashion, such as a belch of smoke or shower of sparks, and it becomes incapable of being used for further unstable actions.</p>\n<p>On a critical failure, you also take @Damage[(@actor.level)[fire]]{fire damage} equal to your level.</p>",
+      "description": "<p><strong>Trigger</strong> Your turn begins.</p>\n<hr />\n<p>You can use unstable clockwork devices in your innovation to push your invention to act more quickly. You are @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened} for this turn. How you can use the extra action depends on your innovation.</p>\n<ul>\n<li><strong>Armor</strong> You can use the extra action to Step, Stride, or use another movement action granted by your innovation (such as Swim if you have the Diving Armor feat).</li>\n<li><strong>Construct</strong> You can use the extra action to Command your construct innovation (or to provide 1 of the actions if you spend 2 actions to Command your construct).</li>\n<li><strong>Weapon</strong> You can use the extra action to Strike with your innovation or Reload your innovation.</li>\n</ul>\n<hr />\n<p>@Check[flat|dc:17|options:unstable-check|name:PF2E.SpecificRule.Inventor.Unstable.FlatCheck.Label]{PF2E.SpecificRule.Inventor.Unstable.FlatCheck.Label}</p>",
       "prerequisites": [
         {
           "value": "armor, construct, or weapon innovation"
@@ -6204,7 +6216,7 @@
     },
     "Darkseer": {
       "name": "Darkseer",
-      "description": "<p>@UUID[Compendium.pf2e.deities.Item.ZfN7jkK6boU1FuiS]{Zon-Kuthon} smiles upon you-even if you curse his name-granting you pitch-black eyes that allow you to see in shadows and darkness. You gain @UUID[Compendium.pf2e.ancestryfeatures.Item.HHVQDp61ehcpdiU8]{Darkvision}.</p>",
+      "description": "<p>@UUID[Compendium.pf2e.deities.Item.ZfN7jkK6boU1FuiS]{Zon-Kuthon} smiles upon you-even if you curse his name-granting you pitch-black eyes that allow you to see in shadows and darkness. You gain darkvision.</p>",
       "prerequisites": [
         {
           "value": "Gloomseer"
@@ -6427,7 +6439,7 @@
     },
     "Deep Freeze": {
       "name": "Deep Freeze",
-      "description": "<p>You vent a jet of supercooled fluid from your innovation, damaging a foe and slowing it down. Target one creature within 60 feet. That creature takes [[/r @actor.level[cold]]]{cold damage equal to your level}, with effects depending on its @Check[type:reflex|dc:resolve(@actor.attributes.classDC.value)] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes half damage and takes a -5-foot status penalty to its Speeds for 1 round.</p>\n<p><strong>Failure</strong> The target takes full damage and takes a -10-foot status penalty to its Speeds for 1 round.</p>\n<p><strong>Critical Failure</strong> The target takes double damage, is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 round, and takes a -15-foot status penalty to its Speeds for 1 round.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.BBGg5gpMmuBSo7Mi]{Effect: Deep Freeze}</p>\n<p><strong>Unstable Function</strong> Your innovation discharges an enormous cone of supercooled fluid, potentially causing cascading failures. Add the unstable trait to Deep Freeze. The ability affects all creatures within a @Template[type:cone|distance:60] instead of a single target, and it deals [[/r 2*@actor.level[cold]]]{cold damage equal to double your level} instead of equal to your level.</p>\n<p>If you have the revolutionary innovation class feature, you can choose a @Template[type:cone|distance:60] or a @Template[type:cone|distance:90] when you use an unstable Deep Freeze.</p>\n<p>@Check[type:flat|dc:17|name:Unstable Flat Check]{Unstable Check}</p>\n<p><strong>Special</strong> If your innovation is a minion, it can take this action rather than you.</p>"
+      "description": "<p>You vent a jet of supercooled fluid from your innovation, damaging a foe and slowing it down. Target one creature within 60 feet. That creature takes @Damage[@actor.level[cold]]{cold damage equal to your level}, with effects depending on its @Check[type:reflex|dc:resolve(@actor.attributes.classDC.value)] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes half damage and takes a -5-foot status penalty to its Speeds for 1 round.</p>\n<p><strong>Failure</strong> The target takes full damage and takes a -10-foot status penalty to its Speeds for 1 round.</p>\n<p><strong>Critical Failure</strong> The target takes double damage, is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 round, and takes a -15-foot status penalty to its Speeds for 1 round.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.BBGg5gpMmuBSo7Mi]{Effect: Deep Freeze}</p>\n<p><strong>Unstable Function</strong> Your innovation discharges an enormous cone of supercooled fluid, potentially causing cascading failures. Add the unstable trait to Deep Freeze. The ability affects all creatures within a @Template[type:cone|distance:60] instead of a single target, and it deals @Damage[(2*@actor.level)[cold]|traits:unstable|options:area-damage]{cold damage equal to double your level} instead of equal to your level.</p>\n<p>If you have the revolutionary innovation class feature, you can choose a @Template[type:cone|distance:60] or a @Template[type:cone|distance:90] when you use an unstable Deep Freeze.</p>\n<p><strong>Special</strong> If your innovation is a minion, it can take this action rather than you.</p>"
     },
     "Deep Lore": {
       "name": "Deep Lore",
@@ -6447,7 +6459,7 @@
     },
     "Deep Vision": {
       "name": "Deep Vision",
-      "description": "<p>Your vision is suited for night or the underground. You gain @UUID[Compendium.pf2e.ancestryfeatures.Item.HHVQDp61ehcpdiU8]{Darkvision}.</p>"
+      "description": "<p>Your vision is suited for night or the underground. You gain darkvision.</p>"
     },
     "Deeper Dabbler": {
       "name": "Deeper Dabbler",
@@ -7151,7 +7163,7 @@
     },
     "Distracting Explosion": {
       "name": "Distracting Explosion",
-      "description": "<p><strong>Trigger</strong> A creature within your reach uses a concentrate action.</p>\n<hr />\n<p>Your enemies think they can concentrate on something else while you're nearby? Oh, you'll give them a distraction, all right! Make a melee Strike against the triggering creature with a weapon or unarmed attack that is benefiting from your offensive boost. This Strike doesn't count toward your multiple attack penalty, and your multiple attack penalty doesn't apply to this Strike.</p>\n<p><strong>Unstable Function</strong> You pull out all the stops to create an explosive distraction. Add the unstable trait to Distracting Explosion. If the attack hits, you disrupt the triggering concentrate action.</p>\n<p>@Check[type:flat|dc:17|name:Unstable Flat Check]{Unstable Check}</p>\n<p><strong>Special</strong> If your innovation is a minion, it can take this reaction instead of you, even though minions can't normally take reactions or act when it's not their turn. It uses your reaction for the turn to do so.</p>",
+      "description": "<p><strong>Trigger</strong> A creature within your reach uses a concentrate action.</p>\n<hr />\n<p>Your enemies think they can concentrate on something else while you're nearby? Oh, you'll give them a distraction, all right! Make a melee Strike against the triggering creature with a weapon or unarmed attack that is benefiting from your offensive boost. This Strike doesn't count toward your multiple attack penalty, and your multiple attack penalty doesn't apply to this Strike.</p>\n<p><strong>Unstable Function</strong> You pull out all the stops to create an explosive distraction. Add the unstable trait to Distracting Explosion. If the attack hits, you disrupt the triggering concentrate action.</p>\n<p>@Check[type:flat|dc:17|options:unstable-check|name:PF2E.SpecificRule.Inventor.Unstable.FlatCheck.Label]{PF2E.SpecificRule.Inventor.Unstable.FlatCheck.Label}</p>\n<p><strong>Special</strong> If your innovation is a minion, it can take this reaction instead of you, even though minions can't normally take reactions or act when it's not their turn. It uses your reaction for the turn to do so.</p>",
       "prerequisites": [
         {
           "value": "offensive boost"
@@ -7181,7 +7193,7 @@
     },
     "Distracting Performance": {
       "name": "Distracting Performance",
-      "description": "<p>Your performances are especially distracting, allowing your allies to sneak away with ease.</p>\n<p>When you @UUID[Compendium.pf2e.actionspf2e.Item.HCl3pzVefiv9ZKQW]{Aid} an ally who is trying to @UUID[Compendium.pf2e.actionspf2e.Item.GkmbTGfg8KcgynOA]{Create a Diversion}, instead of the usual effects of Aid, you can roll a Performance check and use that result to determine the outcome of the diversion, instead of the ally rolling a Deception check.</p>",
+      "description": "<p>Your performances are especially distracting, allowing your allies to sneak away with ease.</p>\n<p>When you @UUID[Compendium.pf2e.actionspf2e.Item.HCl3pzVefiv9ZKQW]{Aid} an ally who is trying to @UUID[Compendium.pf2e.actionspf2e.Item.GkmbTGfg8KcgynOA]{Create a Diversion}, instead of the usual effects of Aid, you can roll a @Check[type:performance] check and use that result to determine the outcome of the diversion, instead of the ally rolling a Deception check.</p>",
       "prerequisites": [
         {
           "value": "expert in Performance"
@@ -7404,15 +7416,7 @@
     },
     "Divine Infusion": {
       "name": "Divine Infusion",
-      "description": "<p>You pour energy into the subject of your healing to empower its attacks. If the next action you use is to cast @UUID[Compendium.pf2e.spells-srd.Item.wdA52JJnsuQWeyqz]{Harm} or @UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal} to restore Hit Points to a single creature, the target then deals an additional 1d6 damage with its melee weapons and unarmed attacks until the end of its next turn. The damage type is void if you cast <em>harm</em> and vitality if you cast <em>heal</em>.</p>\n<p>If the spell cast is at least 5th rank, this damage increases to 2d6, and if the spell is at least 8th rank, the damage increases to 3d6.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.cH8JD3ub4eEKuIAD]{Effect: Divine Infusion (Heal)}</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.bIU1q05vzkKBtFj2]{Effect: Divine Infusion (Harm)}</p>",
-      "prerequisites": [
-        {
-          "value": "good alignment"
-        },
-        {
-          "value": "healing font"
-        }
-      ]
+      "description": "<p>You pour energy into the subject of your healing to empower its attacks. If the next action you use is to cast @UUID[Compendium.pf2e.spells-srd.Item.wdA52JJnsuQWeyqz]{Harm} or @UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal} to restore Hit Points to a single creature, the target then deals an additional 1d6 damage with its melee weapons and unarmed attacks until the end of its next turn. The damage type is void if you cast <em>harm</em> and vitality if you cast <em>heal</em>.</p>\n<p>If the spell cast is at least 5th rank, this damage increases to 2d6, and if the spell is at least 8th rank, the damage increases to 3d6.</p>"
     },
     "Divine Rebuttal": {
       "name": "Divine Rebuttal",
@@ -7701,7 +7705,7 @@
     },
     "Dragon's Breath": {
       "name": "Dragon's Breath",
-      "description": "<p>You can put more effort into your Kobold Breath to channel greater draconic power, though it takes more out of you. When you use Kobold Breath, you can increase the damage dice to d8s and increase the area to @Template[type:line|distance:60]{60 feet} for a line breath weapon or @Template[type:cone|distance:30]{30 feet} for a cone. If you do, you can't use Kobold Breath again for 1 hour.</p>\n<p>@Damage[ceil(@actor.level/2)d8[@actor.flags.pf2e.draconicExemplar.damageType]]{Leveled damage}</p>",
+      "description": "<p>You can put more effort into your Kobold Breath to channel greater draconic power, though it takes more out of you. When you use Kobold Breath, you can increase the damage dice to d8s and increase the area to @Template[type:line|distance:60]{60 feet} for a line breath weapon or @Template[type:cone|distance:30]{30 feet} for a cone. If you do, you can't use Kobold Breath again for 1 hour.</p>\n<p>@Damage[ceil(@actor.level/2)d8[@actor.flags.pf2e.draconicExemplar.damageType|traits:area-damage]]{Leveled damage}</p>",
       "prerequisites": [
         {
           "value": "Kobold Breath"
@@ -7985,12 +7989,7 @@
         {
           "value": "trained in a skill with the Recall Knowledge action"
         }
-      ],
-      "rules": {
-        "0": {
-          "text": "When you fail (but don't critically fail) a Recall Knowledge check using any skill, you learn a bit of true knowledge and a bit of erroneous knowledge."
-        }
-      }
+      ]
     },
     "Duel Spell Advantage": {
       "name": "Duel Spell Advantage",
@@ -8474,7 +8473,7 @@
     },
     "Electrify Armor": {
       "name": "Electrify Armor",
-      "description": "<p><strong>Requirements</strong> You are wearing your armor innovation.</p>\n<p>You electrify your armor to punish foes who dare to attack you. For 1 round, any creature that touches you, or that hits you with a melee unarmed attack or a non-reach melee weapon attack, takes @Damage[1d4[electricity]] damage. The effect ends if you cease wearing your armor innovation.</p>\n<p>If you have the revolutionary innovation class feature, the damage increases to @Damage[2d4[electricity]]{2d4}.</p>\n<p><strong>Unstable Function</strong> You create an unstable chain reaction, sending countless sparks dancing across your armor. Add the unstable trait to Electrify Armor. The effects last for 1 minute instead of 1 round, and the damage dice increase from d4s to d12s.( @Damage[1d12[electricity]] / @Damage[2d12[electricity]])</p>\n<p>@Check[type:flat|dc:17|name:Unstable Flat Check]{Unstable Check}</p>",
+      "description": "<p><strong>Requirements</strong> You are wearing your armor innovation.</p>\n<p>You electrify your armor to punish foes who dare to attack you. For 1 round, any creature that touches you, or that hits you with a melee unarmed attack or a non-reach melee weapon attack, takes @Damage[1d4[electricity|overrideTraits]] damage. The effect ends if you cease wearing your armor innovation.</p>\n<p>If you have the revolutionary innovation class feature, the damage increases to @Damage[2d4[electricity]|overrideTraits]{2d4}.</p>\n<p><strong>Unstable Function</strong> You create an unstable chain reaction, sending countless sparks dancing across your armor. Add the unstable trait to Electrify Armor. The effects last for 1 minute instead of 1 round, and the damage dice increase from d4s to d12s.( @Damage[1d12[electricity]] / @Damage[2d12[electricity]])</p>\n<hr />\n<p>@Check[flat|dc:17|options:unstable-check|name:PF2E.SpecificRule.Inventor.Unstable.FlatCheck.Label]{PF2E.SpecificRule.Inventor.Unstable.FlatCheck.Label}</p>",
       "prerequisites": [
         {
           "value": "armor innovation"
@@ -8483,7 +8482,7 @@
     },
     "Elemental Apotheosis": {
       "name": "Elemental Apotheosis",
-      "description": "<p>You take on an elemental countenance, appearing like a type of elemental of your element. You gain any Speeds listed in the @UUID[Compendium.pf2e.spells-srd.Item.1K6AYGisvo9gqdhs]{Elemental Form} spell for your element and gain <em>@UUID[Compendium.pf2e.ancestryfeatures.Item.HHVQDp61ehcpdiU8]{Darkvision}</em> if you don't already have it. You also gain the elemental trait and the trait of your chosen element.</p>",
+      "description": "<p>You take on an elemental countenance, appearing like a type of elemental of your element. You gain any Speeds listed in the @UUID[Compendium.pf2e.spells-srd.Item.1K6AYGisvo9gqdhs]{Elemental Form} spell for your element and gain darkvision if you don't already have it. You also gain the elemental trait and the trait of your chosen element.</p>",
       "prerequisites": [
         {
           "value": "Nourishing Gate"
@@ -8538,7 +8537,7 @@
     },
     "Elemental Eyes": {
       "name": "Elemental Eyes",
-      "description": "<p>You can see in the darkness as easily as an elemental. You gain @UUID[Compendium.pf2e.ancestryfeatures.Item.HHVQDp61ehcpdiU8]{Darkvision}.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat only at 1st level, and you can't retrain into or out of this feat.</p>",
+      "description": "<p>You can see in the darkness as easily as an elemental. You gain darkvision.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat only at 1st level, and you can't retrain into or out of this feat.</p>",
       "prerequisites": [
         {
           "value": "low-light vision"
@@ -8723,7 +8722,7 @@
     },
     "Ember's Eyes": {
       "name": "Ember's Eyes",
-      "description": "<p>Your eyes blaze with inner flame. You gain @UUID[Compendium.pf2e.ancestryfeatures.Item.DRtaqOHXTRtGRIUT]{Low-Light Vision}, or you gain @UUID[Compendium.pf2e.ancestryfeatures.Item.HHVQDp61ehcpdiU8]{Darkvision} if your ancestry already has low-light vision.</p>\n<hr />\n<p><strong>Special</strong> If your ancestry has neither low-light vision nor darkvision, you can take this ancestry feat a second time to gain darkvision. You can't retrain out of this feat.</p>"
+      "description": "<p>Your eyes blaze with inner flame. You gain low-light vision, or you gain darkvision if your ancestry already has low-light vision.</p>\n<hr />\n<p><strong>Special</strong> If your ancestry has neither low-light vision nor darkvision, you can take this ancestry feat a second time to gain darkvision. You can't retrain out of this feat.</p>"
     },
     "Emblazon Antimagic": {
       "name": "Emblazon Antimagic",
@@ -8852,7 +8851,7 @@
     },
     "Emotional Surge": {
       "name": "Emotional Surge",
-      "description": "<p>Your heart soars, increasing your power for a moment. You gain a +2 status bonus to attack rolls and skill checks until the start of your next turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.dTymNXgTtnjqgYP9]{Effect: Emotional Surge}</p>",
+      "description": "<p>Your heart soars, increasing your power for a moment. You gain a +2 status bonus to attack rolls and skill checks until the start of your next turn.</p>",
       "prerequisites": [
         {
           "value": "emotional acceptance subconscious mind"
@@ -8892,6 +8891,10 @@
           "value": "Twilight Speaker Dedication"
         }
       ]
+    },
+    "Empathy Incarnate": {
+      "name": "Empathy Incarnate",
+      "description": "<p>Reincarnation has given you a compassionate perspective and enabled you to relate to almost everyone you speak with, putting them at ease and quickly generating trust. Whenever you attempt a Diplomacy check to @UUID[Compendium.pf2e.actionspf2e.Item.OX4fy22hQgUHDr0q]{Make an Impression} or @UUID[Compendium.pf2e.actionspf2e.Item.DCb62iCBrJXy0Ik6]{Request} something, the DC is reduced by 2, and if the creature you're speaking with is lower level than you, any success is a critical success. Whenever you attempt a Diplomacy check to @UUID[Compendium.pf2e.actionspf2e.Item.plBGdZhqq5JBl1D8]{Gather Information}, you can't critically fail.</p>"
     },
     "Emphatic Emissary": {
       "name": "Emphatic Emissary",
@@ -9021,7 +9024,7 @@
           "value": "focus pool"
         },
         {
-          "value": "at least one innate spell from a,gnome heritage or ancestry feat that shares a tradition,with at least one of your focus spells"
+          "value": "at least one innate spell from a gnome heritage or ancestry feat that shares a tradition with at least one of your focus spells"
         }
       ]
     },
@@ -9035,7 +9038,7 @@
     },
     "Energy Blessed": {
       "name": "Energy Blessed",
-      "description": "<p>Energy runs through your blood more powerfully. When you use Energy Emanation, you can create an emanation of 5 feet, 10 feet, or 15 feet. The damage increases to 6d6 plus an additional 1d6 for every level you have above 9th, instead of 1d6 plus an additional 1d6 for every 2 levels above 1st.</p>",
+      "description": "<p>Energy runs through your blood more powerfully. When you use Energy Emanation, you can create an emanation of @Template[type:emanation|distance:5]{5 feet}, @Template[type:emanation|distance:10]{10 feet}, or @Template[type:emanation|distance:15]{15 feet}. The damage increases to @Damage[(6+max(0,@actor.level - 9))d6[@actor.flags.pf2e.elementalHeartDwarf.damageType]|traits:area-damage], instead of 1d6 plus an additional 1d6 for every 2 levels above 1st.</p>",
       "prerequisites": [
         {
           "value": "elemental heart dwarf heritage"
@@ -10044,7 +10047,7 @@
     },
     "Explosive Leap": {
       "name": "Explosive Leap",
-      "description": "<p>You aim an explosion from your innovation downward to launch yourself into the air. You jump up to 30 feet in any direction without touching the ground. You must land on a space of solid ground, or else you fall after using your next action. As normal for effects where you fall after using your next action, you still fall at the end of your turn, even if you don't use any further actions that turn.</p>\n<p><strong>Special</strong> If your innovation is a minion, it can take this action rather than you.</p>\n<hr />\n<p>@Check[type:flat|dc:17|name:Unstable Flat Check|showDC:all|traits:unstable]{Unstable Check}</p>\n<p>On a failure, the innovation malfunctions in a spectacular (though harmless) fashion, such as a belch of smoke or shower of sparks, and it becomes incapable of being used for further unstable actions.</p>\n<p>On a critical failure, you also take @Damage[(@actor.level)[fire]]{fire damage} equal to your level.</p>"
+      "description": "<p>You aim an explosion from your innovation downward to launch yourself into the air. You jump up to 30 feet in any direction without touching the ground. You must land on a space of solid ground, or else you fall after using your next action. As normal for effects where you fall after using your next action, you still fall at the end of your turn, even if you don't use any further actions that turn.</p>\n<p><strong>Special</strong> If your innovation is a minion, it can take this action rather than you.</p>\n<hr />\n<p>@Check[flat|dc:17|options:unstable-check|name:PF2E.SpecificRule.Inventor.Unstable.FlatCheck.Label]{PF2E.SpecificRule.Inventor.Unstable.FlatCheck.Label}</p>"
     },
     "Explosive Maneuver": {
       "name": "Explosive Maneuver",
@@ -10185,7 +10188,7 @@
     },
     "Eyes of the Night": {
       "name": "Eyes of the Night",
-      "description": "<p>You can see in the darkness as easily as a true vampire. You gain @UUID[Compendium.pf2e.ancestryfeatures.Item.HHVQDp61ehcpdiU8]{Darkvision}.</p>\n<p><strong>Special</strong> You can select this feat only at 1st level, and you can't retrain into or out of this feat.</p>",
+      "description": "<p>You can see in the darkness as easily as a true vampire. You gain darkvision.</p>\n<p><strong>Special</strong> You can select this feat only at 1st level, and you can't retrain into or out of this feat.</p>",
       "prerequisites": [
         {
           "value": "low-light vision"
@@ -10573,7 +10576,7 @@
     },
     "Ferrousoul": {
       "name": "Ferrousoul",
-      "description": "<p>Whether in their pure elemental forms or as part of an alloy such as steel, the elemental metal in your soul resonates strongly with iron, bronze, and other sturdy, practical metals suitable for weaponry. Your fist attacks gain the modular B, P, or S trait and lose the nonlethal trait. Your fist's damage die increases to [[/r 1d6]].</p>"
+      "description": "<p>Whether in their pure elemental forms or as part of an alloy such as steel, the elemental metal in your soul resonates strongly with iron, bronze, and other sturdy, practical metals suitable for weaponry. Your fist attacks gain the modular B, P, or S trait and lose the nonlethal trait. Your fist's damage die increases to 1d6.</p>"
     },
     "Festering Wounds": {
       "name": "Festering Wounds",
@@ -10690,7 +10693,7 @@
     },
     "Fiendish Form": {
       "name": "Fiendish Form",
-      "description": "<p>Your features reshape into those of a type of fiend who serves your deity; for example, as a demon you might have putrid scales, twisted horns, and red eyes.</p>\n<p>You gain a fly Speed equal to your Speed. You gain @UUID[Compendium.pf2e.ancestryfeatures.Item.HHVQDp61ehcpdiU8]{Darkvision} if you don't already have it, and you gain the fiend trait and the trait appropriate to the type of servitor you've become (such as daemon, demon, or devil).</p>",
+      "description": "<p>Your features reshape into those of a type of fiend who serves your deity; for example, as a demon you might have putrid scales, twisted horns, and red eyes.</p>\n<p>You gain a fly Speed equal to your Speed. You gain darkvision if you don't already have it, and you gain the fiend trait and the trait appropriate to the type of servitor you've become (such as daemon, demon, or devil).</p>",
       "prerequisites": [
         {
           "value": "tenets of evil"
@@ -10708,7 +10711,7 @@
     },
     "Fiendish Mount": {
       "name": "Fiendish Mount",
-      "description": "<p>Your steed ally manifests a suite of powerful and sinister gifts granted to it by your deity.</p>\n<p>It gains @UUID[Compendium.pf2e.ancestryfeatures.Item.HHVQDp61ehcpdiU8]{Darkvision}, its maximum Hit Points increase by 40, and it gains weakness 10 to holy damage.</p>\n<p>Additionally, it grows wings appropriate for a servitor of your deity (such as bat wings for a devil), granting it a @UUID[Compendium.pf2e.actionspf2e.Item.cS9nfDRGD83bNU1p]{Fly} Speed equal to its Speed.</p>\n<p>It gains the fiend trait and the trait appropriate to the type of servitor it has become (such as daemon, demon, or devil).</p>",
+      "description": "<p>Your steed ally manifests a suite of powerful and sinister gifts granted to it by your deity.</p>\n<p>It gains darkvision, its maximum Hit Points increase by 40, and it gains weakness 10 to holy damage.</p>\n<p>Additionally, it grows wings appropriate for a servitor of your deity (such as bat wings for a devil), granting it a @UUID[Compendium.pf2e.actionspf2e.Item.cS9nfDRGD83bNU1p]{Fly} Speed equal to its Speed.</p>\n<p>It gains the fiend trait and the trait appropriate to the type of servitor it has become (such as daemon, demon, or devil).</p>",
       "prerequisites": [
         {
           "value": "divine ally (steed)"
@@ -11773,7 +11776,7 @@
     },
     "Ganzi Gaze": {
       "name": "Ganzi Gaze",
-      "description": "<p>You have unusual sensory abilities passed down from your chaotic forebears. You gain @UUID[Compendium.pf2e.ancestryfeatures.Item.DRtaqOHXTRtGRIUT]{Low-Light Vision}. If you already have low-light vision, you gain @UUID[Compendium.pf2e.ancestryfeatures.Item.HHVQDp61ehcpdiU8]{Darkvision} instead.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat a second time to gain darkvision in addition to low-light vision.</p>"
+      "description": "<p>You have unusual sensory abilities passed down from your chaotic forebears. You gain low-light vision. If you already have low-light vision, you gain darkvision instead.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat a second time to gain darkvision in addition to low-light vision.</p>"
     },
     "Gaping Flesh": {
       "name": "Gaping Flesh",
@@ -12109,7 +12112,7 @@
     },
     "Gigaton Strike": {
       "name": "Gigaton Strike",
-      "description": "<p>When you use a full-power Megaton Strike, you can knock your foe back. When you succeed at your Strike while using an unstable Megaton Strike, your target must attempt a @Check[type:fortitude|dc:resolve(@actor.attributes.classDC.value)] save against your class DC.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is pushed back 5 feet.</p>\n<p><strong>Failure</strong> The creature is pushed back 10 feet.</p>\n<p><strong>Critical Failure</strong> The creature is pushed back 20 feet.</p>\n<p>@Check[type:flat|dc:17|name:Unstable Flat Check]{Unstable Check}</p>\n<p><strong>Special</strong> If your innovation is a minion, this benefit applies on its unstable Megaton Strikes.</p>",
+      "description": "<p>When you use a full-power Megaton Strike, you can knock your foe back. When you succeed at your Strike while using an unstable Megaton Strike, your target must attempt a @Check[type:fortitude|dc:resolve(@actor.proficiencies.classDCs.inventor.value)] save against your class DC.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is pushed back 5 feet.</p>\n<p><strong>Failure</strong> The creature is pushed back 10 feet.</p>\n<p><strong>Critical Failure</strong> The creature is pushed back 20 feet.</p>\n<p><strong>Special</strong> If your innovation is a minion, this benefit applies on its unstable Megaton Strikes.</p>",
       "prerequisites": [
         {
           "value": "Megaton Strike"
@@ -12192,7 +12195,7 @@
     },
     "Gloomseer": {
       "name": "Gloomseer",
-      "description": "<p>Gloom holds few terrors for you, and the pall of darkness over Nidal has made you comfortable in dim light. You gain @UUID[Compendium.pf2e.ancestryfeatures.Item.DRtaqOHXTRtGRIUT]{Low-Light Vision}.</p>",
+      "description": "<p>Gloom holds few terrors for you, and the pall of darkness over Nidal has made you comfortable in dim light. You gain low-light vision.</p>",
       "prerequisites": [
         {
           "value": "Nidalese ethnicity"
@@ -12307,27 +12310,9 @@
       "name": "Goblin Song",
       "description": "<p>You sing annoying goblin songs, distracting your foes with silly and repetitive lyrics. Attempt a @Check[type:performance|defense:will] check against the Will DC of a single enemy within 30 feet. This has all the usual traits and restrictions of a Performance check to sing.</p>\n<p>You can affect up to two targets within range if you have expert proficiency in Performance, four if you have master proficiency, and eight if you have legendary proficiency.</p>\n<hr />\n<p><strong>Critical Success</strong> The target takes a –1 status penalty to Perception checks and Will saves for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.bIRIS6mnynr72RDw]{Effect: Goblin Song (Critical Success)}</p>\n<p><strong>Success</strong> The target takes a –1 status penalty to Perception checks and Will saves for 1 round.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.5veOBmMYQxywTudd]{Effect: Goblin Song (Success)}</p>\n<p><strong>Critical Failure</strong> The target is temporarily immune to Goblin Song for 1 hour.</p>"
     },
-    "Goblin Weapon Expertise": {
-      "name": "Goblin Weapon Expertise",
-      "description": "<p>Your goblin affinity blends with your class training, granting you great skill with goblin weapons. Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in the dogslicer, horsechopper, and all goblin weapons in which you are trained.</p>",
-      "prerequisites": [
-        {
-          "value": "Goblin Weapon Familiarity"
-        }
-      ]
-    },
     "Goblin Weapon Familiarity": {
       "name": "Goblin Weapon Familiarity",
       "description": "<p>Others might look upon them with disdain, but you know that the weapons of your people are as effective as they are sharp. You gain access to all uncommon weapons with the goblin trait. You have familiarity with weapons with the goblin trait—for the purposes of proficiency, you treat any of these that are martial weapons as simple weapons and any that are advanced weapons as martial weapons.</p>\n<p>At 5th level, whenever you get a critical hit with one of these weapons, you get its critical specialization effect.</p>"
-    },
-    "Goblin Weapon Frenzy": {
-      "name": "Goblin Weapon Frenzy",
-      "description": "<p>You know how to wield your people's vicious weapons. Whenever you score a critical hit using a goblin weapon, you apply the weapon's critical specialization effect.</p>",
-      "prerequisites": [
-        {
-          "value": "Goblin Weapon Familiarity"
-        }
-      ]
     },
     "Godless Healing": {
       "name": "Godless Healing",
@@ -12561,7 +12546,7 @@
     },
     "Gravesight": {
       "name": "Gravesight",
-      "description": "<p>You can see in the darkness as easily as a psychopomp. You gain @UUID[Compendium.pf2e.ancestryfeatures.Item.HHVQDp61ehcpdiU8]{Darkvision}.</p>\n<p><strong>Special</strong> You can select this feat only at 1st level, and you can't retrain into or out of this feat.</p>",
+      "description": "<p>You can see in the darkness as easily as a psychopomp. You gain darkvision.</p>\n<p><strong>Special</strong> You can select this feat only at 1st level, and you can't retrain into or out of this feat.</p>",
       "prerequisites": [
         {
           "value": "low-light vision"
@@ -13264,7 +13249,7 @@
     },
     "Haphazard Repair": {
       "name": "Haphazard Repair",
-      "description": "<p>You quickly fix your innovation, at the cost of its stability. You @UUID[Compendium.pf2e.actionspf2e.Item.bT3skovyLUtP22ME]{Repair} your innovation almost immediately. You don't have to place the innovation on a flat surface, but you do need to be adjacent to it (including holding or wearing it), as well as having a repair kit as normal.</p>\n<hr />\n<p>@Check[type:flat|dc:17|name:Unstable Flat Check|showDC:all|traits:unstable]{Unstable Check}</p>\n<p>On a failure, the innovation malfunctions in a spectacular (though harmless) fashion, such as a belch of smoke or shower of sparks, and it becomes incapable of being used for further unstable actions.</p>\n<p>On a critical failure, you also take @Damage[(@actor.level)[fire]]{fire damage} equal to your level.</p>"
+      "description": "<p>You quickly fix your innovation, at the cost of its stability. You @UUID[Compendium.pf2e.actionspf2e.Item.bT3skovyLUtP22ME]{Repair} your innovation almost immediately. You don't have to place the innovation on a flat surface, but you do need to be adjacent to it (including holding or wearing it), as well as having a repair kit as normal.</p>\n<hr />\n<p>@Check[type:flat|dc:17|name:Unstable Flat Check|showDC:all|traits:unstable]{Unstable Check}</p>\n<p>On a failure, the innovation malfunctions in a spectacular (though harmless) fashion, such as a belch of smoke or shower of sparks, and it becomes incapable of being used for further unstable actions.</p>\n<p>On a critical failure, you also take @Damage[(@actor.level)[@actor.flags.pf2e.inventor.explode]] damage.</p>"
     },
     "Harbinger's Caw": {
       "name": "Harbinger's Caw",
@@ -13628,7 +13613,7 @@
     },
     "Helpful Tinkering": {
       "name": "Helpful Tinkering",
-      "description": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<hr />\n<p>You don't just tinker with your own innovation, you fiddle with your allies' weapons as well (for their benefit, of course). Choose an ally in your reach and one of their weapons. Attempt a Crafting check against a high DC for your level.</p>\n<hr />\n<p><strong>Success</strong> For 1 minute, the chosen ally's Strikes with the chosen weapon gain the same offensive boost your innovation has.</p>\n<p><strong>Critical Failure</strong> Your ally takes damage of the type and amount that your offensive boost normally deals on a successful Strike.</p>",
+      "description": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<hr />\n<p>You don't just tinker with your own innovation, you fiddle with your allies' weapons as well (for their benefit, of course). Choose an ally in your reach and one of their weapons. Attempt a @Check[type:crafting|dc:@self.level|adjustment:2] check against a high DC for your level.</p>\n<hr />\n<p><strong>Success</strong> For 1 minute, the chosen ally's Strikes with the chosen weapon gain the same offensive boost your innovation has.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.MbtWd4PvUHmwPtFO]{Effect: Helpful Tinkering}</p>\n<p><strong>Critical Failure</strong> Your ally takes @Damage[1d6[@actor.flags.pf2e.inventor.offensiveBoost]]{damage} of the type and amount that your offensive boost normally deals on a successful Strike.</p>",
       "prerequisites": [
         {
           "value": "offensive boost"
@@ -14020,6 +14005,14 @@
         }
       ]
     },
+    "I Sense Malevolence": {
+      "name": "I Sense Malevolence",
+      "description": "<p>Your time in the River of Souls has given you deep insight into the machinations of those who refuse to move on. You gain @UUID[Compendium.pf2e.spells-srd.Item.3ehSrqTAm7IPqbIZ]{Spirit Sense} as a 6th-rank occult innate spell, which you can cast once per day.</p>"
+    },
+    "I've Had Many Jobs": {
+      "name": "I've Had Many Jobs",
+      "description": "<p>Finding and excelling at odd jobs is child's play to one who has worked many occupations during many lives. When you attempt to @UUID[Compendium.pf2e.actionspf2e.Item.QyzlsLrqM0EEwd7j]{Earn Income}, you function as if you were trained in the skill used. If you are at least expert in the skill used, the DC for your skill check is reduced by 2.</p>"
+    },
     "Ice Crafter": {
       "name": "Ice Crafter",
       "description": "<p>The ancient ice-crafting techniques of the saumen kar awaken within you. You become trained in Crafting, or become an expert if you were already trained. You gain the @UUID[Compendium.pf2e.feats-srd.Item.xWY5omyIcILNR7y1]{Magical Crafting} skill feat. You can craft permanent items out of ice instead of metal or wood; these items are a translucent crystal-blue in color, resemble icicles and glacier ice, and have the same statistics and properties as cold iron, including the price and the ability to deal additional damage to certain kinds of creatures. Any creature who wields or wears a piece of ice-crafted equipment takes 1 cold damage each round from contact with the primal cold of the crafted ice.</p>",
@@ -14334,15 +14327,6 @@
         },
         {
           "value": "evil alignment"
-        }
-      ]
-    },
-    "Improved Communal Healing": {
-      "name": "Improved Communal Healing",
-      "description": "<p>You can direct excess channeled energy outward to benefit an ally.</p>\n<p>You can grant the Hit Points you would regain from @UUID[Compendium.pf2e.feats-srd.Item.yExxOkHN1PN37hUa]{Communal Healing} to any one creature within the range of your heal spell instead of yourself. You can also use Communal Healing when you target only yourself with a <em>heal</em> spell, though if you do, you must grant the additional healing to someone other than yourself.</p>",
-      "prerequisites": [
-        {
-          "value": "Communal Healing"
         }
       ]
     },
@@ -14700,6 +14684,10 @@
           "value": "master in Perception"
         }
       ]
+    },
+    "Indomitable Spirit": {
+      "name": "Indomitable Spirit",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>Your soul has accumulated countless particles of quintessence over myriad deaths and rebirths, and for one moment, this raw material from the Great Beyond envelops you and your comrades. Until the end of your next turn, you and any allies adjacent to you get a +4 circumstance bonus to AC and are @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened}. The additional action can be used to Strike or Stride.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.A06Qu3BNMQ4FGinM]{Effect: Indomitable Spirit}</p>"
     },
     "Inertial Barrier": {
       "name": "Inertial Barrier",
@@ -15142,13 +15130,13 @@
       "description": "<p>You become trained in Crafting and inventor class DC. You gain the @UUID[Compendium.pf2e.feats-srd.Item.XR95taODq1sq82Du]{Inventor} skill feat, even if you don't meet the skill feat's requirements. Choose an innovation. You gain that @UUID[Compendium.pf2e.classfeatures.Item.jIAgXe2FetAKBwt7]{Innovation}, though you don't gain any other abilities that modify or use that innovation, such as modifications or Explode.</p>\n<p><strong>Special</strong> You cannot select another dedication feat until you have first gained two other feats from the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.aAm6jY2k5qBuWETd]{Inventor} archetype.</p>",
       "prerequisites": [
         {
-          "value": "Intelligence 14"
+          "value": "Intelligence +2"
         }
       ]
     },
     "Investigate Haunting": {
       "name": "Investigate Haunting",
-      "description": "<p>You are skilled at noticing the telltale signs of ghosts and hauntings. Even when you aren't Investigating in exploration mode, you get a check to Recall Knowledge about incorporeal undead and haunts active in the area. You also gain a +2 circumstance bonus to skill checks to disable haunts.</p>",
+      "description": "<p>You are skilled at noticing the telltale signs of ghosts and hauntings. Even when you aren't Investigating in exploration mode, you get a check to @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Recall Knowledge} about incorporeal undead and haunts active in the area. You also gain a +2 circumstance bonus to skill checks to disable haunts.</p>",
       "prerequisites": [
         {
           "value": "Ghost Hunter Dedication"
@@ -15787,7 +15775,7 @@
     },
     "Know It All (Eldritch Researcher)": {
       "name": "Know It All (Eldritch Researcher)",
-      "description": "<p>Your knowledge of abstruse topics is unparalleled. When you succeed at a check to Recall Knowledge, you gain additional information or context. When you critically succeed at a Knowledge check, at the GM's discretion you might gain even more additional information or context than normal.</p>",
+      "description": "<p>Your knowledge of abstruse topics is unparalleled. When you succeed at a check to @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Recall Knowledge}, you gain additional information or context. When you critically succeed at a Knowledge check, at the GM's discretion you might gain even more additional information or context than normal.</p>",
       "prerequisites": [
         {
           "value": "Eldritch Researcher Dedication"
@@ -15848,7 +15836,7 @@
     },
     "Kobold Breath": {
       "name": "Kobold Breath",
-      "description": "<p>You channel your draconic exemplar's power into a gout of energy that manifests as a @Template[type:line|distance:30] or a @Template[type:cone|distance:15], dealing @Damage[ceil(@actor.level/2)d4[@actor.flags.pf2e.draconicExemplar.damageType]] damage. Each creature in the area must attempt a basic saving throw against the higher of your class DC or spell DC. You can't use this ability again for [[/r 1d4 #rounds]]{1d4 rounds}.</p>\n<p>At 3rd level and every 2 levels thereafter, the damage increases by 1d4. The shape of the breath, the damage type, and the saving throw match those of your @UUID[Compendium.pf2e.ancestryfeatures.Item.egpiSWBrNBb1Fmig]{Draconic Exemplar}. This ability has the trait associated with the type of damage it deals.</p>\n<hr />\n<p>@Check[type:fortitude|dc:resolve(@actor.attributes.classOrSpellDC.value)|basic:true] @Check[type:reflex|dc:resolve(@actor.attributes.classOrSpellDC.value)|basic:true]</p>"
+      "description": "<p>You channel your draconic exemplar's power into a gout of energy that manifests as a @Template[type:line|distance:30] or a @Template[type:cone|distance:15], dealing @Damage[ceil(@actor.level/2)d4[@actor.flags.pf2e.draconicExemplar.damageType]|traits:area-damage] damage. Each creature in the area must attempt a basic saving throw against the higher of your class DC or spell DC. You can't use this ability again for [[/r 1d4 #rounds]]{1d4 rounds}.</p>\n<p>At 3rd level and every 2 levels thereafter, the damage increases by 1d4. The shape of the breath, the damage type, and the saving throw match those of your @UUID[Compendium.pf2e.ancestryfeatures.Item.egpiSWBrNBb1Fmig]{Draconic Exemplar}. This ability has the trait associated with the type of damage it deals.</p>\n<hr />\n<p>@Check[type:fortitude|dc:resolve(@actor.attributes.classOrSpellDC.value)|basic:true] @Check[type:reflex|dc:resolve(@actor.attributes.classOrSpellDC.value)|basic:true]</p>"
     },
     "Kobold Lore": {
       "name": "Kobold Lore",
@@ -16231,7 +16219,7 @@
     },
     "Lemma Of Vision": {
       "name": "Lemma Of Vision",
-      "description": "<p>You've solved a tiny stepping stone in your self-discovery, awakening new depths in your sight. You gain @UUID[Compendium.pf2e.ancestryfeatures.Item.HHVQDp61ehcpdiU8]{Darkvision}.</p>"
+      "description": "<p>You've solved a tiny stepping stone in your self-discovery, awakening new depths in your sight. You gain darkvision.</p>"
     },
     "Lengthy Diversion": {
       "name": "Lengthy Diversion",
@@ -16289,6 +16277,10 @@
           "value": "Envenom"
         }
       ]
+    },
+    "Let's Try That Again": {
+      "name": "Let's Try That Again",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You fail a skill check.</p>\n<hr />\n<p>You feel a sense of deja vu when you've made a mistake, almost as if you weren't so careless in a past life and could certainly do better if given another chance. Reroll the triggering skill check and use the new result, even if it's worse than your first roll.</p>"
     },
     "Lethal Finisher": {
       "name": "Lethal Finisher",
@@ -16464,6 +16456,10 @@
         }
       }
     },
+    "Like a Roach": {
+      "name": "Like a Roach",
+      "description": "<p>Living with the bare necessities isn't terribly hard for someone who has defied death, and like a cockroach, you always know how to survive. When you @UUID[Compendium.pf2e.actionspf2e.Item.49y9Ec4bDii8pcD3]{Subsist} during downtime, the DC for your skill check is reduced by 2. You don't need a minimum proficiency rank to Subsist in unusual environments, nor do you take a –5 penalty if you Subsist after 8 hours or less of exploration.</p>"
+    },
     "Lingering Chill": {
       "name": "Lingering Chill",
       "description": "<p>The chill of ice entered your veins and never left, adjusting the internal temperature of your body. Your breath comes out in puffs, and your skin is as cold and smooth as the ice in your veins. You can cast @UUID[Compendium.pf2e.spells-srd.Item.gYjPm7YwGtEa1oxh]{Ray of Frost} as a primal innate cantrip. You gain resistance to cold damage equal to half your level, and you're protected from severe cold temperatures.</p>",
@@ -16481,6 +16477,10 @@
           "value": "maestro muse"
         }
       ]
+    },
+    "Lingering Echoes": {
+      "name": "Lingering Echoes",
+      "description": "<p>Not everyone is reincarnated, and you feel a strong connection with the spiritual echoes of those who didn't receive the same opportunity as you. You gain @UUID[Compendium.pf2e.spells-srd.Item.FM3SmEW8N1FCRjqt]{Talking Corpse} as an occult innate spell that you can cast once per day. You can ask a fourth question of a corpse when you cast this spell. The corpse attempts its @Check[type:will|dc:resolve(@actor.system.attributes.classOrSpellDC.value)|traits:occult,spell] save against your spell DC or your class DC, whichever is higher.</p>"
     },
     "Lingering Flames": {
       "name": "Lingering Flames",
@@ -16502,6 +16502,10 @@
           "value": "You speak at least three languages."
         }
       ]
+    },
+    "Linguistic Revival": {
+      "name": "Linguistic Revival",
+      "description": "<p>You achieved fluency in different languages with each reincarnation, and your brain remembers much of the grammar, idioms, and obscenities that you spouted in old lives. You gain @UUID[Compendium.pf2e.spells-srd.Item.SwUiVavHKMWG7t5K]{Truespeech} as a 5th-rank occult innate spell that you can cast once a day on yourself only. While the spell is active, you get a +2 circumstance bonus to Diplomacy checks while speaking to a creature in a language other than Common.</p>"
     },
     "Link Focus": {
       "name": "Link Focus",
@@ -17858,24 +17862,16 @@
     },
     "Megaton Strike": {
       "name": "Megaton Strike",
-      "description": "<p>You activate gears, explosives, and other hidden mechanisms in your innovation to make a powerful attack. You make a Strike, dealing an extra die of weapon damage. If you're at least 10th level, increase this to two extra dice, and if you're at least 18th level, increase it to three extra dice. The type of Strike you can make depends on your innovation.</p>\n<ul>\n<li><strong>Armor</strong> You Strike with a melee unarmed attack or a melee weapon. To use a melee weapon for this, you must have prepared it in advance with special contraptions when you make your daily preparations.</li>\n<li><strong>Construct</strong> Your minion innovation Strikes.</li>\n<li><strong>Weapon</strong> You Strike with your weapon innovation.</li>\n</ul>\n<p><strong>Unstable Function</strong> You put even more force into the Strike, though you risk stress fractures to your innovation. Add the unstable trait to Megaton Strike. The Strike deals another extra damage die, for a total of two extra dice at 4th level, three at 10th level, and four at 18th level.</p>\n<p>@Check[type:flat|dc:17|name:Unstable Flat Check]{Unstable Check}</p>\n<p><strong>Special</strong> If your innovation is a minion, it can take this action rather than you.</p>",
+      "description": "<p>You activate gears, explosives, and other hidden mechanisms in your innovation to make a powerful attack. You make a Strike, dealing an extra die of weapon damage. If you're at least 10th level, increase this to two extra dice, and if you're at least 18th level, increase it to three extra dice. The type of Strike you can make depends on your innovation.</p>\n<ul>\n<li><strong>Armor</strong> You Strike with a melee unarmed attack or a melee weapon. To use a melee weapon for this, you must have prepared it in advance with special contraptions when you make your daily preparations.</li>\n<li><strong>Construct</strong> Your minion innovation Strikes.</li>\n<li><strong>Weapon</strong> You Strike with your weapon innovation.</li>\n</ul>\n<p><strong>Unstable Function</strong> You put even more force into the Strike, though you risk stress fractures to your innovation. Add the unstable trait to Megaton Strike. The Strike deals another extra damage die, for a total of two extra dice at 4th level, three at 10th level, and four at 18th level.</p>\n<p><strong>Special</strong> If your innovation is a minion, it can take this action rather than you.</p>",
       "prerequisites": [
         {
           "value": "armor, construct, or weapon innovation"
         }
-      ],
-      "rules": {
-        "1": {
-          "label": "Unstable Megaton Strike"
-        },
-        "3": {
-          "label": "Unstable Megaton Strike"
-        }
-      }
+      ]
     },
     "Megavolt": {
       "name": "Megavolt",
-      "description": "<p>You bleed off some electric power from your innovation in the shape of a damaging bolt. Creatures in a @Template[type:line|distance:20] from your innovation take 3d4 electricity damage, with a @Check[type:reflex|dc:resolve(@actor.attributes.classDC.value)|basic:true] against your class DC. The electricity damage increases by 1d4 at 8th level and every 2 levels thereafter. @Damage[floor(@actor.level/2)d4[electricity]|traits:area-damage]{leveled electricity damage}</p>\n<p><strong>Unstable Function</strong> You overload and supercharge the voltage even higher. Add the unstable trait to Megavolt. The area increases to a @Template[type:line|distance:60] and the damage increases from d4s to d12s @Damage[floor(@actor.level/2)d12[electricity]|traits:area-damage]{leveled electricity damage (d12)}. If you have the breakthrough innovation class feature, you can choose a 60-foot or @Template[type:line|distance:90] for the area when you use an unstable Megavolt; if you also have the revolutionary innovation class feature, you can choose a 60-foot, 90-foot, or @Template[type:line|distance:120].</p>\n<p>@Check[type:flat|dc:17|name:Unstable Flat Check]{Unstable Check}</p>\n<p><strong>Special</strong> If your innovation is a minion, it can take this action rather than you.</p>"
+      "description": "<p>You bleed off some electric power from your innovation in the shape of a damaging bolt. Creatures in a @Template[type:line|distance:20] from your innovation take 3d4 electricity damage, with a @Check[type:reflex|dc:resolve(@actor.proficiencies.classDCs.inventor.value)|basic:true] against your class DC. The electricity damage increases by 1d4 at 8th level and every 2 levels thereafter. @Damage[floor(@actor.level/2)d4[electricity]|traits:area-damage]{leveled electricity damage}</p>\n<p><strong>Unstable Function</strong> You overload and supercharge the voltage even higher. Add the unstable trait to Megavolt. The area increases to a @Template[type:line|distance:60] and the damage increases from d4s to d12s @Damage[floor(@actor.level/2)d12[electricity]|traits:unstable,area-damage]{leveled electricity damage (d12)}. If you have the breakthrough innovation class feature, you can choose a 60-foot or @Template[type:line|distance:90] for the area when you use an unstable Megavolt; if you also have the revolutionary innovation class feature, you can choose a 60-foot, 90-foot, or @Template[type:line|distance:120].</p>\n<p><strong>Special</strong> If your innovation is a minion, it can take this action rather than you.</p>"
     },
     "Meld into Eidolon": {
       "name": "Meld into Eidolon",
@@ -17916,7 +17912,7 @@
     },
     "Mental Static": {
       "name": "Mental Static",
-      "description": "<p><strong>Trigger</strong> You roll a critical success on a Will save against a mental effect from a creature.</p>\n<hr />\n<p>Your thoughts sting back when a lesser mind tries to invade your own. You deal [[/r @actor.level[mental]]]{mental damage equal to your level} to the triggering creature. If you so desire, you can also send the creature a single mental image to coincide with the damage, such as a watchful eye or the dread of floating in an infinite sea.</p>"
+      "description": "<p><strong>Trigger</strong> You roll a critical success on a Will save against a mental effect from a creature.</p>\n<hr />\n<p>Your thoughts sting back when a lesser mind tries to invade your own. You deal @Damage[@actor.level[mental]]{mental damage equal to your level} to the triggering creature. If you so desire, you can also send the creature a single mental image to coincide with the damage, such as a watchful eye or the dread of floating in an infinite sea.</p>"
     },
     "Mental Sustenance": {
       "name": "Mental Sustenance",
@@ -18634,7 +18630,7 @@
     },
     "Mystery Conduit": {
       "name": "Mystery Conduit",
-      "description": "<p>The power of your mystery enables you to cast more than just revelation spells.</p>\n<p>When you cast a spell of 5th level or lower that has no duration, instead of spending a spell slot, you can advance the effects of your oracular curse in the same manner as when you cast a revelation spell. A spell cast in this way gains the cursebound trait.</p>"
+      "description": "<p>The power of your mystery enables you to cast more than just revelation spells.</p>\n<p>When you cast a spell of 5th rank or lower that has no duration, instead of spending a spell slot, you can advance the effects of your oracular curse in the same manner as when you cast a revelation spell. A spell cast in this way gains the cursebound trait.</p>"
     },
     "Nagaji Lore": {
       "name": "Nagaji Lore",
@@ -18666,6 +18662,9 @@
       "name": "Named Artillery",
       "description": "<p>It is a tradition among artillerists to name the siege weapon most important to them and closest to their heart-much as a sailor on a ship, the weapon is their livelihood. You've gone a step further, and you always make sure that your named artillery has the best possible maintenance and upkeep. You can spend a full day adjusting and working on a single siege weapon to designate it as your named artillery. The siege weapon you designated as your named artillery gains a +2 circumstance bonus to AC, Fortitude saves, and Reflex saves as well as additional Hit Points equal to twice your level.</p>\n<p>During your daily preparations, you must spend at least one hour on maintenance to service your named artillery. If you fail to do so, or if you spend a full day designating a new piece of named artillery, the previous named artillery loses any benefits from this feat. Only one artillerist can designate a particular siege weapon as their named artillery, even if several artillerists are serving on the same siege weapon's crew (though it's typically more efficient for a group with several artillerists to divide them up, assigning one to each siege weapon).</p>",
       "prerequisites": [
+        {
+          "value": "Artillerist Dedication"
+        },
         {
           "value": "Trained in crafting"
         }
@@ -18823,7 +18822,7 @@
     },
     "Negate Damage": {
       "name": "Negate Damage",
-      "description": "<p><strong>Trigger</strong> You would take damage.</p>\n<hr />\n<p>Your armor innovation activates various devices you prepared ahead of time, and you use one of them to reduce the damage you would take by 15.</p>\n<p><strong>Unstable Function</strong> You activate all the precautions at once, violently repelling the incoming attack to blunt its force. Add the unstable trait to Negate Damage and reduce the damage you would take by 50.</p>\n<p>@Check[type:flat|dc:17|name:Unstable Flat Check]{Unstable Check}</p>",
+      "description": "<p><strong>Trigger</strong> You would take damage.</p>\n<hr />\n<p>Your armor innovation activates various devices you prepared ahead of time, and you use one of them to reduce the damage you would take by 15.</p>\n<p><strong>Unstable Function</strong> You activate all the precautions at once, violently repelling the incoming attack to blunt its force. Add the unstable trait to Negate Damage and reduce the damage you would take by 50.</p>\n<p>@Check[flat|dc:17|options:unstable-check|name:PF2E.SpecificRule.Inventor.Unstable.FlatCheck.Label]{PF2E.SpecificRule.Inventor.Unstable.FlatCheck.Label}</p>",
       "prerequisites": [
         {
           "value": "armor innovation"
@@ -18896,7 +18895,7 @@
     },
     "Nightvision Adaptation": {
       "name": "Nightvision Adaptation",
-      "description": "<p>The nanites in your ocular processors have adapted to darkness, enhancing your ability to see in the dark. You gain @UUID[Compendium.pf2e.ancestryfeatures.Item.HHVQDp61ehcpdiU8]{Darkvision}.</p>"
+      "description": "<p>The nanites in your ocular processors have adapted to darkness, enhancing your ability to see in the dark. You gain darkvision.</p>"
     },
     "Nightwave Springing Reload": {
       "name": "Nightwave Springing Reload",
@@ -19008,7 +19007,7 @@
     },
     "Nocturnal Grippli": {
       "name": "Nocturnal Grippli",
-      "description": "<p>You tend to do most of your hunting and work at night and have adapted to the requirements of nocturnal life. You gain @UUID[Compendium.pf2e.ancestryfeatures.Item.HHVQDp61ehcpdiU8]{Darkvision}, allowing you to see in darkness and dim light just as well as you can in bright light. However, in darkness, you see in black and white only.</p>\n<hr />\n<p><strong>Special</strong> You can take this feat only at 1st level, and you can't retrain out of this feat or into this feat.</p>"
+      "description": "<p>You tend to do most of your hunting and work at night and have adapted to the requirements of nocturnal life. You gain darkvision, allowing you to see in darkness and dim light just as well as you can in bright light. However, in darkness, you see in black and white only.</p>\n<hr />\n<p><strong>Special</strong> You can take this feat only at 1st level, and you can't retrain out of this feat or into this feat.</p>"
     },
     "Nocturnal Kindred": {
       "name": "Nocturnal Kindred",
@@ -19024,7 +19023,7 @@
     },
     "Nocturnal Sense": {
       "name": "Nocturnal Sense",
-      "description": "<p>Your senses gain even greater clarity. While raging, you gain @UUID[Compendium.pf2e.ancestryfeatures.Item.HHVQDp61ehcpdiU8]{Darkvision} if you don't already have it, and the range of your imprecise scent increases to 60 feet.</p>",
+      "description": "<p>Your senses gain even greater clarity. While raging, you gain darkvision if you don't already have it, and the range of your imprecise scent increases to 60 feet.</p>",
       "prerequisites": [
         {
           "value": "Acute Scent, or precise or imprecise scent"
@@ -19504,7 +19503,7 @@
     },
     "Overdrive Ally": {
       "name": "Overdrive Ally",
-      "description": "<p><strong>Requirements</strong> You are currently in overdrive.</p>\n<hr />\n<p>You quickly fling some of your powered-up mechanisms to an ally, sharing your benefits with them briefly. Choose an ally within 30 feet. Until the end of their next turn, that ally's Strikes deal additional damage equal to half your Intelligence modifier, or your full Intelligence modifier if you were in critical overdrive. The ally doesn't gain the increased damage from expert, master, or legendary overdrive.</p>",
+      "description": "<p><strong>Requirements</strong> You are currently in overdrive.</p>\n<hr />\n<p>You quickly fling some of your powered-up mechanisms to an ally, sharing your benefits with them briefly. Choose an ally within 30 feet. Until the end of their next turn, that ally's Strikes deal additional damage equal to half your Intelligence modifier, or your full Intelligence modifier if you were in critical overdrive. The ally doesn't gain the increased damage from expert, master, or legendary overdrive.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.a4C89wVlcwV6Uxx4]{Effect: Overdrive Ally}</p>",
       "prerequisites": [
         {
           "value": "Overdrive"
@@ -19678,6 +19677,10 @@
           "value": "expert in Fortitude saves"
         }
       ]
+    },
+    "Pain is Temporary": {
+      "name": "Pain is Temporary",
+      "description": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<hr />\n<p>Sangpotshi practitioners know that suffering is a fleeting sensation that ultimately strengthens the soul and prepares it for a new reincarnation. Bolstered by this understanding, you've learned to temporarily steel yourself against all forms of pain. You gain resistance 10 to all damage until the end of your next turn.</p>"
     },
     "Paired Link": {
       "name": "Paired Link",
@@ -20134,7 +20137,7 @@
     },
     "Persistent Boost": {
       "name": "Persistent Boost",
-      "description": "<p>Your innovation sets foes on fire, covers them in acid, leaves barbed thorns behind, or otherwise deals persistent damage to your foes that sticks around long after you deliver your boosted attack. When you or your construct innovation damage a foe with offensive boost, that foe also takes @Damage[1d8[persistent]] damage of the same damage type as the offensive boost damage.</p>",
+      "description": "<p>Your innovation sets foes on fire, covers them in acid, leaves barbed thorns behind, or otherwise deals persistent damage to your foes that sticks around long after you deliver your boosted attack. When you or your construct innovation damage a foe with offensive boost, that foe also takes @Damage[1d8[persistent,@actor.flags.pf2e.inventor.offensiveBoost]]{persistent damage} of the same damage type as the offensive boost damage.</p>",
       "prerequisites": [
         {
           "value": "offensive boost"
@@ -20294,7 +20297,7 @@
     },
     "Pierce the Darkness": {
       "name": "Pierce the Darkness",
-      "description": "<p>Your eyes have adapted to see in all circumstances, even without the assistance of light. You gain @UUID[Compendium.pf2e.ancestryfeatures.Item.HHVQDp61ehcpdiU8]{Darkvision}, allowing you to see in darkness and dim light just as well as you can in bright light. However, in darkness you see in black and white only.</p>\n<hr />\n<p><strong>Special</strong> You can take this feat only at 1st level, and you can't retrain out of this feat or into this feat.</p>",
+      "description": "<p>Your eyes have adapted to see in all circumstances, even without the assistance of light. You gain darkvision, allowing you to see in darkness and dim light just as well as you can in bright light. However, in darkness you see in black and white only.</p>\n<hr />\n<p><strong>Special</strong> You can take this feat only at 1st level, and you can't retrain out of this feat or into this feat.</p>",
       "prerequisites": [
         {
           "value": "low-light vision"
@@ -20397,7 +20400,7 @@
     },
     "Pistolero's Challenge": {
       "name": "Pistolero's Challenge",
-      "description": "<p>With a stern call, carefully chosen barb, or some other challenging declaration, you demand your foe's attention in a duel. Choose an opponent within 30 feet who you can perceive and can hear you, and make your choice of a Deception or @Check[type:intimidation|defense:will] check against the target's Will DC. No matter the result of the check, the foe is temporarily immune to your Pistolero's Challenge until noon the next day.</p>\n<p>You can have only one challenge in effect at a time; challenging a new opponent ends this effect on any current target. Otherwise, the effect lasts until one of you is defeated, flees, or the encounter ends.</p>\n<p><strong>Success</strong> Both you and the opponent gain a +2 status bonus to damage rolls with Strikes made against each other. If you're a master in the skill you used for the check, the status bonus to damage rolls increases to +3, and if you're legendary, it increases to +4.</p>\n<p><strong>Critical Failure</strong> You become @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} and can't use this ability again for 1 minute.</p>",
+      "description": "<p>With a stern call, carefully chosen barb, or some other challenging declaration, you demand your foe's attention in a duel. Choose an opponent within 30 feet who you can perceive and can hear you, and make your choice of a @Check[type:deception|defense:will] or @Check[type:intimidation|defense:will] check against the target's Will DC. No matter the result of the check, the foe is temporarily immune to your Pistolero's Challenge until noon the next day.</p>\n<p>You can have only one challenge in effect at a time; challenging a new opponent ends this effect on any current target. Otherwise, the effect lasts until one of you is defeated, flees, or the encounter ends.</p>\n<p><strong>Success</strong> Both you and the opponent gain a +2 status bonus to damage rolls with Strikes made against each other. If you're a master in the skill you used for the check, the status bonus to damage rolls increases to +3, and if you're legendary, it increases to +4.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.0kO3M46aK64a8ru8]{Effect: Pistolero's Challenge}</p>\n<p><strong>Critical Failure</strong> You become @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} and can't use this ability again for 1 minute.</p>",
       "prerequisites": [
         {
           "value": "Way of the Pistolero"
@@ -20471,6 +20474,15 @@
       "prerequisites": [
         {
           "value": "leaf order or Untamed Form"
+        }
+      ]
+    },
+    "Plant Soul Siblings": {
+      "name": "Plant Soul Siblings",
+      "description": "<p>You're now able to connect with the spirits present in the greenery of the natural world. You gain @UUID[Compendium.pf2e.spells-srd.Item.qvwIwJ9QBihy8R0t]{Speak with Plants} as a primal innate spell that you can cast once per day. You get a +2 circumstance bonus to Diplomacy checks to Gather Information from animals or plants.</p>",
+      "prerequisites": [
+        {
+          "value": "Animal Soul Siblings"
         }
       ]
     },
@@ -21783,6 +21795,10 @@
       "name": "Rapid Response",
       "description": "<p><strong>Trigger</strong> An ally is reduced to 0 Hit Points.</p>\n<hr />\n<p>You work quickly and efficiently in times of danger to deliver needed assistance. You Stride towards the triggering ally. You gain a +10-foot circumstance bonus to your Speed during this movement.</p>"
     },
+    "Rapid Retraining": {
+      "name": "Rapid Retraining",
+      "description": "<p>Some feel trapped by their choices and have a tough time reinventing themselves. To you, this dilemma is just a natural part of reincarnation. @UUID[Compendium.pf2e.actionspf2e.Item.24PSsn1SKpUwYA1X]{Retraining} other feats or skill increases during downtime only takes 4 days instead of a week, and class features that require a choice can be retrained in a week instead of a month. You also never need to find a teacher to retrain, as the memories of abilities you possessed in past lives are superior to any instructor.</p>"
+    },
     "Rat Familiar": {
       "name": "Rat Familiar",
       "description": "<p>You have a pet rat that has become magically bonded to you. You gain a familiar, and this familiar must be a rat. It still gets the benefits of familiar abilities, but its base form remains a rat.</p>"
@@ -22296,6 +22312,10 @@
         }
       ]
     },
+    "Reincarnated Ridiculer": {
+      "name": "Reincarnated Ridiculer",
+      "description": "<p>You've practiced the art of taunting an enemy, ensuring they know death will only make you stronger. When you @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} an opponent, the target doesn't become temporarily immune to your attempts to Demoralize it unless you critically fail the check. If the target critically hit you with a Strike on its previous turn, the DC for this check is reduced by 4.</p>"
+    },
     "Reinforce Eidolon": {
       "name": "Reinforce Eidolon",
       "description": "<p>You buffer your eidolon. You gain the <em>reinforce eidolon</em> link cantrip.</p>"
@@ -22325,6 +22345,10 @@
     "Rejuvenation Token": {
       "name": "Rejuvenation Token",
       "description": "<p>You tie yourself to the Material Plane by implanting a piece of your consciousness into a weapon, piece of armor, or other item that's precious to you. As long as this object is intact, even if your body is destroyed, you can be restored to the exact state you were in the last time you made daily preparations with this object in your possession. The soulbound object can be used as a special focus for @UUID[Compendium.pf2e.spells-srd.Item.IkGYwHRLhkuoGReG]{Raise Dead}, @UUID[Compendium.pf2e.spells-srd.Item.kqhPt9344UkcGVYO]{Resurrect}, or similar magic. This warps the spell to bring you back in your skeletal undead state rather than bringing you back to life. Pharasma can't prevent you from returning when the spell is modified in this way.</p>\n<p>When you return, you permanently lose a memory that was precious to you, in addition to any other side effects of the spell that brought you back. Your soulbound object becomes inert until you spend 1 week of downtime to anchor yourself to it again, further fragmenting your mind.</p>"
+    },
+    "Release the Light": {
+      "name": "Release the Light",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Requirements</strong> You're below 20 Hit Points.</p>\n<hr />\n<p>Many people report seeing a bright light before their death. You're one of these people, and at rare intervals when hope seems dim, the light exudes outward from your soul. You shed bright light in a 30-foot radius (and dim light for another 30 feet beyond that) until the end of your next turn. Enemy creatures in the area who rely on sight must attempt a @Check[type:fortitude|dc:resolve(@actor.system.attributes.classOrSpellDC.value)] save equal to your class DC or spell DC, whichever is higher.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for 1 round and dazzled for 1 minute.</p>\n<p><strong>Critical Failure</strong> The creature is blinded for 2 rounds and dazzled for 1 minute.</p>"
     },
     "Relentless Disarm": {
       "name": "Relentless Disarm",
@@ -22793,7 +22817,7 @@
     },
     "Ricochet Legend": {
       "name": "Ricochet Legend",
-      "description": "<p>The more obstacles between you and your target, the deadlier your shots become, as you ricochet off multiple surfaces to hit them. When using Ricochet Shot, your shot can bounce off of any surface within your weapon's first three range increments and the target can't benefit from cover unless they have total cover on all sides.</p>\n<p>In addition, a creature must attempt a Will save against your class DC the first time in an encounter you attack it with a Ricochet Shot. If it fails, it's @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 2} and is unable to determine where your shot originated.</p>",
+      "description": "<p>The more obstacles between you and your target, the deadlier your shots become, as you ricochet off multiple surfaces to hit them. When using Ricochet Shot, your shot can bounce off of any surface within your weapon's first three range increments and the target can't benefit from cover unless they have total cover on all sides.</p>\n<p>In addition, a creature must attempt a @Check[type:will|dc:resolve(@actor.system.proficiencies.classDCs.gunslinger.dc)] save against your class DC the first time in an encounter you attack it with a Ricochet Shot. If it fails, it's @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 2} and is unable to determine where your shot originated.</p>",
       "prerequisites": [
         {
           "value": "Ricochet Master"
@@ -22898,12 +22922,7 @@
         {
           "value": "trained in Medicine"
         }
-      ],
-      "rules": {
-        "2": {
-          "text": "When you @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Treat Wounds}, you can deal @Damage[1d8[slashing]] damage to your patient just before applying the effects of Treat Wounds. If you do, you gain a +2 circumstance bonus to your Medicine check to Treat Wounds, and if you roll a success, you get a critical success instead."
-        }
-      }
+      ]
     },
     "Rites Of Convocation": {
       "name": "Rites Of Convocation",
@@ -23354,7 +23373,7 @@
     },
     "Saoc Astrology": {
       "name": "Saoc Astrology",
-      "description": "<p><strong>Frequency</strong> 3 times per day</p>\n<p><strong>Access</strong> Lirgeni nationality</p>\n<p><strong>Requirements</strong> You must spend 10 minutes just after your daily preparations examining the sky or consulting a star chart or you can't use this action that day.</p>\n<hr />\n<p>The ancient Saoc Brethren were the masters of astrology, and while your knowledge may be but a pale shadow of their wisdom, it still comes in handy. You recall the stars' predictions about your current situation. If your next action requires you to attempt one or more skill checks, roll [[/r 1d8]]. On a result of 6, 7, or 8, you gain a +2 circumstance bonus to the first such skill check you attempt. On a 3, 4, or 5, you gain a +1 circumstance bonus. On a 2, you gain nothing. On a 1, you take a -1 circumstance penalty to the skill check.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.6ACbQIpmmemxmoBJ]{Effect: Saoc Astrology}</p>"
+      "description": "<p><strong>Frequency</strong> 3 times per day</p>\n<p><strong>Access</strong> Lirgeni nationality</p>\n<p><strong>Requirements</strong> You must spend 10 minutes just after your daily preparations examining the sky or consulting a star chart or you can't use this action that day.</p>\n<hr />\n<p>The ancient Saoc Brethren were the masters of astrology, and while your knowledge may be but a pale shadow of their wisdom, it still comes in handy. You recall the stars' predictions about your current situation. If your next action requires you to attempt one or more skill checks, roll [[/r 1d8]]. On a result of 6, 7, or 8, you gain a +2 circumstance bonus to the first such skill check you attempt. On a 3, 4, or 5, you gain a +1 circumstance bonus. On a 2, you gain nothing. On a 1, you take a -1 circumstance penalty to the skill check.</p>"
     },
     "Sap Life": {
       "name": "Sap Life",
@@ -23722,7 +23741,7 @@
     },
     "Searing Restoration": {
       "name": "Searing Restoration",
-      "description": "<p>They told you there was no way that explosions could heal people, but they were fools… Fools who didn't understand your brilliance! You create a minor explosion from your innovation, altering the combustion to cauterize wounds using vaporized medicinal herbs. You or a living creature adjacent to you regains [[/r (max(1,ceil(@actor.level/2)))d10[healing]]] Hit Points. In addition, the creature you heal can attempt an immediate flat check to recover from a single source of persistent bleed damage, with the DC reduction from appropriate assistance. At 3rd level, and every 2 levels thereafter, increase the healing by 1d10.</p>\n<p><strong>Special</strong> If your innovation is a minion, it can take this action rather than you, though because it's not a living creature, it can't use the ability on itself.</p>\n<hr />\n<p>@Check[type:flat|dc:17|name:Unstable Flat Check|showDC:all|traits:unstable]{Unstable Check}</p>\n<p>On a failure, the innovation malfunctions in a spectacular (though harmless) fashion, such as a belch of smoke or shower of sparks, and it becomes incapable of being used for further unstable actions.</p>\n<p>On a critical failure, you also take @Damage[(@actor.level)[fire]]{fire damage} equal to your level.</p>"
+      "description": "<p>They told you there was no way that explosions could heal people, but they were fools… Fools who didn't understand your brilliance! You create a minor explosion from your innovation, altering the combustion to cauterize wounds using vaporized medicinal herbs. You or a living creature adjacent to you regains @Damage[max(1,ceil(@actor.level/2))d10[healing]] Hit Points. In addition, the creature you heal can attempt an immediate flat check to recover from a single source of persistent bleed damage, with the DC reduction from appropriate assistance. At 3rd level, and every 2 levels thereafter, increase the healing by 1d10.</p>\n<p><strong>Special</strong> If your innovation is a minion, it can take this action rather than you, though because it's not a living creature, it can't use the ability on itself.</p>"
     },
     "Seasoned": {
       "name": "Seasoned",
@@ -23800,6 +23819,10 @@
           "value": "Shadow Reservoir"
         }
       ]
+    },
+    "See You in Hell": {
+      "name": "See You in Hell",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You are reduced to 0 Hit points by a creature but not immediately killed.</p>\n<hr />\n<p>You aren't sure if you'll be reincarnated again, so you might as well take this foe with you. A blast of spiritual energy lashes out from the depths of your soul, targeting the creature who attacked you. The creature takes mental damage equal to the amount that reduced you to 0 Hit Points (basic @Check[type:will|dc:resolve(@actor.system.attributes.classOrSpellDC.value)] save with a DC equal to your class DC or spell DC, whichever is higher).</p>"
     },
     "See the Unseen": {
       "name": "See the Unseen",
@@ -24359,7 +24382,7 @@
     },
     "Shared Overdrive": {
       "name": "Shared Overdrive",
-      "description": "<p>You've experimented enough on your teammates to transfer a substantial number of powered-up gizmos to them, enabling one of your allies to benefit from the full effects and duration of your Overdrive. The first time you use Overdrive Ally during a given Overdrive, the effect lasts for the remainder of the duration of your Overdrive, instead of just until the end of the target's next turn. Any further uses of Overdrive Ally during the same Overdrive have their normal duration, per Overdrive Ally.</p>",
+      "description": "<p>You've experimented enough on your teammates to transfer a substantial number of powered-up gizmos to them, enabling one of your allies to benefit from the full effects and duration of your Overdrive. The first time you use Overdrive Ally during a given Overdrive, the effect lasts for the remainder of the duration of your Overdrive, instead of just until the end of the target's next turn. Any further uses of Overdrive Ally during the same Overdrive have their normal duration, per Overdrive Ally.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.EEujvJ9UzzK7fvqG]{Effect: Overdrive Ally (Shared Overdrive)}</p>",
       "prerequisites": [
         {
           "value": "Overdrive Ally"
@@ -25209,6 +25232,10 @@
       "name": "Sleek Reposition",
       "description": "<p><strong>Requirements</strong> You are wielding a finesse weapon or polearm.</p>\n<hr />\n<p>While your opponent is still recovering from your prior attack, you snag its armor, clothing, or flesh to move it as you please. Make a melee Strike with a finesse weapon or polearm. If you hit a target that is your size or smaller, you can automatically @UUID[Compendium.pf2e.actionspf2e.Item.lOE4yjUnETTdaf2T]{Reposition} it, with the same benefits as the Reposition action (including the critical success effect, if your Strike was a critical hit). If you used a weapon with reach, use the weapon's reach for this Reposition.</p>\n<p>This Strike has the following failure effect.</p>\n<p><strong>Failure</strong> The target becomes @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} until the end of your current turn.</p>"
     },
+    "Sleep of the Reborn": {
+      "name": "Sleep of the Reborn",
+      "description": "<p>Philosophers compare the cycle of life, death, and rebirth to sleeping, dreaming, and waking. You take it to another level by reliving previous lives in dreams, always waking invigorated and thankful for a new chance at life. Whenever you rest for 8 hours, you gain the effects of a long-term rest. If you're an ancestry that neither sleeps nor dreams, you still receive this benefit by entering a reflective, meditative state during rest.</p>"
+    },
     "Sleeper Hold": {
       "name": "Sleeper Hold",
       "description": "<p><strong>Requirements</strong> You have a creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}.</p>\n<hr />\n<p>You pinch crucial points of your target's nervous system, impeding its ability to function. Attempt an Athletics check to @UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]{Grapple} the creature, with the following success and critical success effects instead of the usual effects.</p>\n<hr />\n<p><strong>Critical Success</strong> The target falls @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious} for 1 minute, though it remains standing and doesn't drop what it holds.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} until the end of its next turn.</p>"
@@ -25782,7 +25809,7 @@
     },
     "Spark Fist": {
       "name": "Spark Fist",
-      "description": "<p><strong>Access</strong> You are from Dongun Hold or Alkenstar.</p>\n<p><strong>Frequency</strong> once per minute</p>\n<hr />\n<p>You dust explosive black powder on your fist or glove before attacking, which combusts as you hit an opponent. The resulting pops of flame harm both you and your enemy. Until the end of your next turn, your fist loses the nonlethal trait and deals an additional @Damage[1[fire]]{1 fire} on a successful Strike. Each time you succeed on a fist Strike, you take @Damage[1[fire]]{1 fire}. If your fist would deal more than one weapon damage die, the fire damage dealt on a successful Strike, to both you and your opponent, is equal to the number of weapon damage dice.</p>",
+      "description": "<p><strong>Access</strong> You are from Dongun Hold or Alkenstar.</p>\n<p><strong>Frequency</strong> once per minute</p>\n<hr />\n<p>You dust explosive black powder on your fist or glove before attacking, which combusts as you hit an opponent. The resulting pops of flame harm both you and your enemy. Until the end of your next turn, your fist loses the nonlethal trait and deals an additional 1 fire damage on a successful Strike. Each time you succeed on a fist Strike, you take @Damage[1[fire]] damage. If your fist would deal more than one weapon damage die, the fire damage dealt on a successful Strike, to both you and your opponent, is equal to the number of weapon damage dice.</p>",
       "prerequisites": [
         {
           "value": "expert in Crafting"
@@ -26474,7 +26501,7 @@
     },
     "Starlight Armor": {
       "name": "Starlight Armor",
-      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You armor yourself in the light of distant suns, shielding yourself from harm. The armor grants you resistance 7 to piercing, bludgeoning, and slashing damage. The armor also sheds bright light for 20 feet (and dim light for the next 20 feet).</p>\n<p>Whenever an adjacent creature attacks you, the attacker must attempt a @Check[type:will|dc:resolve(@actor.attributes.spellDC.value)] save against your spell DC at the end of its action. On a failure, it becomes @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} until the end of its next turn. Regardless of the result of the save, the attacker is temporarily immune until the end of its next turn. The dazzling effect has the light and visual traits.</p>\n<p>When you reach 17th level, the resistance increases to 10.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Y96a1OedsU8PVf7z]{Effect: Starlight Armor}</p>\n<hr />\n<p><em>Note: A duration for this ability was not provided by Paizo. The effect linked here is set to 1 minute.</em></p>",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You armor yourself in the light of distant suns, shielding yourself from harm. The armor grants you resistance 7 to piercing, bludgeoning, and slashing damage. The armor also sheds bright light for 20 feet (and dim light for the next 20 feet).</p>\n<p>Whenever an adjacent creature attacks you, the attacker must attempt a @Check[type:will|dc:resolve(@actor.attributes.spellDC.value)|traits:light,visual] save against your spell DC at the end of its action. On a failure, it becomes @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} until the end of its next turn. Regardless of the result of the save, the attacker is temporarily immune until the end of its next turn. The dazzling effect has the light and visual traits.</p>\n<p>When you reach 17th level, the resistance increases to 10.</p>\n<hr />\n<p><em>Note: A duration for this ability was not provided by Paizo. The effect linked here is set to 1 minute.</em></p>",
       "prerequisites": [
         {
           "value": "Oatia Skysage Dedication"
@@ -26759,7 +26786,7 @@
     },
     "Stoked Flame Stance": {
       "name": "Stoked Flame Stance",
-      "description": "<p><strong>Requirements</strong> You're unarmored.</p>\n<hr />\n<p>You enter a stance of fast, fiery movements. You can make flashing spark attacks that deal 1d8 slashing damage. They are in the brawling group and have the forceful, nonlethal, sweep, and unarmed traits. If you have access to the flashing sparks' critical specialization effect, you can take an alternate effect instead: if your critical Strike dealt damage, the target takes 1d6 persistent fire damage.</p>\n<p>While in Stoked Flame Stance, you gain a +5-foot status bonus to your Speed. If you have incredible movement, increase the benefit from incredible movement to a +15-foot status bonus plus 5 feet for every 4 levels beyond 3rd.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.rp1YauUSULuqW8rs]{Stance: Stoked Flame Stance}</p>\n<hr />\n<p><strong>Special</strong> This feat gains your choice of either the divine or occult trait, matching your ki spell tradition if possible.</p>"
+      "description": "<p><strong>Requirements</strong> You're unarmored.</p>\n<hr />\n<p>You enter a stance of fast, fiery movements. You can make flashing spark attacks that deal 1d8 slashing damage. They are in the brawling group and have the forceful, nonlethal, sweep, and unarmed traits. If you have access to the flashing sparks' critical specialization effect, you can take an alternate effect instead: if your critical Strike dealt damage, the target takes 1d6 persistent fire damage.</p>\n<p>While in Stoked Flame Stance, you gain a +5-foot status bonus to your Speed. If you have incredible movement, increase the benefit from incredible movement to a +15-foot status bonus plus 5 feet for every 4 levels beyond 3rd.</p>\n<hr />\n<p><strong>Special</strong> This feat gains your choice of either the divine or occult trait, matching your ki spell tradition if possible.</p>"
     },
     "Stone Blood": {
       "name": "Stone Blood",
@@ -26797,7 +26824,7 @@
       "description": "<p>You've learned to call the primal power of elemental stone to your aid. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.k5S2a2a6o2GS5l01]{Stonestrike Stance} action.</p>\n<hr />\n<p><strong>Special</strong> You cannot select another dedication feat until you have gained two other feats from the stone brawler archetype.</p>",
       "prerequisites": [
         {
-          "value": "Constitution 14"
+          "value": "Constitution +2"
         }
       ]
     },
@@ -26824,6 +26851,15 @@
       "prerequisites": [
         {
           "value": "Stonebound Dedication"
+        }
+      ]
+    },
+    "Stone Soul Siblings": {
+      "name": "Stone Soul Siblings",
+      "description": "<p>Your connection with nature's spirits has progressed to the point where you can even have casual conversation with pebbles and boulders. You gain @UUID[Compendium.pf2e.spells-srd.Item.YIMampGpij4Y30yE]{Speak with Stones} as a primal innate spell that you can cast once per day. You get a +2 circumstance bonus to Diplomacy checks to Gather Information from stones.</p>",
+      "prerequisites": [
+        {
+          "value": "Plant Soul Siblings"
         }
       ]
     },
@@ -26958,7 +26994,7 @@
     },
     "Storyteller's Mask": {
       "name": "Storyteller's Mask",
-      "description": "<p>Your mask remembers the stories of Shifting Frog, Storyteller of the Past and Future. You can cast @UUID[Compendium.pf2e.spells-srd.Item.qsNeG9KZpODSACMq]{Foresight} once per day as an innate spell, either arcane if you have Wizard Dedication or primal if you have Druid Dedication, but the duration is 10 minutes instead of 1 hour. Immediately after you Cast a non-cantrip Spell that targets only a single foe, you can Recall Knowledge about that foe.</p>",
+      "description": "<p>Your mask remembers the stories of Shifting Frog, Storyteller of the Past and Future. You can cast @UUID[Compendium.pf2e.spells-srd.Item.qsNeG9KZpODSACMq]{Foresight} once per day as an innate spell, either arcane if you have Wizard Dedication or primal if you have Druid Dedication, but the duration is 10 minutes instead of 1 hour. Immediately after you Cast a non-cantrip Spell that targets only a single foe, you can @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Recall Knowledge} about that foe.</p>",
       "prerequisites": [
         {
           "value": "Druid Dedication or Wizard Dedication"
@@ -27317,7 +27353,7 @@
     },
     "Summon Wood Elemental": {
       "name": "Summon Wood Elemental",
-      "description": "<p>Your connection to the Plane of Wood allows you to summon elemental allies. Once per day, you can cast @UUID[Compendium.pf2e.spells-srd.Item.lpT6LotUaQPfinjj]{Summon Elemental} as a 5th-rank primal innate spell, but the elemental must be a wood elemental.</p>"
+      "description": "<p>Your connection to the Plane of Wood allows you to summon elemental allies. Once per day, you can cast <em>@UUID[Compendium.pf2e.spells-srd.Item.lpT6LotUaQPfinjj]{Summon Elemental} </em>as a 5th-rank primal innate spell, but the elemental must be a wood elemental.</p>"
     },
     "Summoner Dedication": {
       "name": "Summoner Dedication",
@@ -28361,6 +28397,10 @@
         }
       ]
     },
+    "This Time, Bring the Body": {
+      "name": "This Time, Bring the Body",
+      "description": "<p>Death sends a soul into the River of Souls. Since your soul has experienced not only death but also rebirth, you can shift your physical body into the Ethereal Plane for brief intervals. You gain @UUID[Compendium.pf2e.spells-srd.Item.D2nPKbIS67m9199U]{Ethereal Jaunt} as a 9th-rank occult innate spell that you can cast once per day. Thanks to your soul's intimate connection with the Ethereal Plane, you can move at your normal speed while this spell is in effect.</p>"
+    },
     "Thorned Seedpod": {
       "name": "Thorned Seedpod",
       "description": "<p>When your seedpods strike a felling blow, they burst into viciously thorny vines. When you critically succeed at a seedpod Strike, vines twist and stab your foe, dealing 1d4 persistent piercing damage.</p>",
@@ -28404,7 +28444,7 @@
     },
     "Thoughtform Summoning": {
       "name": "Thoughtform Summoning",
-      "description": "<p>You can create a prototypical creature from the depths of your imagination instead of calling one from elsewhere. Whenever you summon a creature, you can choose to instead create a psychic construct of that creature. This grants it resistance to physical damage equal to half its level, weakness 5 to force and mental damage, and the ability to pass through enemies' spaces without needing to @UUID[Compendium.pf2e.actionspf2e.Item.21WIfSu7Xd7uKqV8]{Tumble Through} (though it can't end its turn in an occupied space).</p>"
+      "description": "<p>You can create a prototypical creature from the depths of your imagination instead of calling one from elsewhere. Whenever you summon a creature, you can choose to instead create a psychic construct of that creature. This grants it resistance to physical damage equal to half its level, weakness 5 to force and mental damage, and the ability to pass through enemies' spaces without needing to @UUID[Compendium.pf2e.actionspf2e.Item.21WIfSu7Xd7uKqV8]{Tumble Through} (though it can't end its turn in an occupied space).</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.ByXEvk0gyFwUk5gU]{Effect: Thoughtform Summoning}</p>"
     },
     "Thoughtsense": {
       "name": "Thoughtsense",
@@ -29480,6 +29520,10 @@
         }
       ]
     },
+    "Unbreakable Resolve": {
+      "name": "Unbreakable Resolve",
+      "description": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Trigger</strong> You fail a Will save.</p>\n<hr />\n<p>The experience of coming back after death has granted you a strong sense of resolve; devilish words, slick spells, and conniving trickery can't easily catch you off guard. Reroll the triggering save, using the second result only if it's better.</p>"
+    },
     "Unbreakable-er Goblin": {
       "name": "Unbreakable-er Goblin",
       "description": "<p>As hard as most unbreakable goblins are to break, you are that much harder to break. You gain 20 Hit Points from your ancestry instead of 10. When you fall, you take no falling damage. If you have the @UUID[Compendium.pf2e.feats-srd.Item.AlhyF8LCW011w9kq]{Bouncy Goblin} feat, after falling or jumping from a height of at least 20 feet, you can bounce back into the air, up to half the distance you fell (and half as far forward if you jumped). These bounces continue until you bounce less than 20 feet.</p>",
@@ -30021,7 +30065,7 @@
       "description": "<p>You tell a quick story or begin telling a longer tale. This is most useful when you want to prove your scholarly credibility or impress someone quickly. Roll a check with a skill that can be used to Recall Knowledge in which you have expert proficiency, using the result entry for the Perform action. Like Performing, Storytelling rarely has an effect on its own, but it might influence the DCs of subsequent Diplomacy checks against the observers-or even change their attitudes-if the GM sees fit. This action is not a Performance and cannot be used in place of anything that requires you to Perform.</p>",
       "prerequisites": [
         {
-          "value": "Magaambyuan Attendant Dedication"
+          "value": "Magaambyan Attendant Dedication"
         },
         {
           "value": "Uzunjati affiliation"
@@ -30127,7 +30171,7 @@
       "description": "<p>You are adept at designing and maintaining mechanical vehicles, and you lavish your attention and ingenuity on one vehicle in particular. You become an expert in Crafting, and you choose one vehicle you own-or your party owns collectively-to be your signature vehicle: the vehicle you spend time customizing to grant it various advantages. You can spend 1 week of downtime with a new vehicle to designate it as your signature vehicle instead. Due to your amazing customizations and adjustments, pilots gain a +1 circumstance bonus to any piloting checks they make to control your signature vehicle. If you are a master in Crafting, this bonus increases to +2.</p>\n<p><strong>Special</strong> You cannot select another dedication feat until you have gained two other feats from the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.Q72YDLPh0urLfWPm]{Vehicle Mechanic} archetype.</p>",
       "prerequisites": [
         {
-          "value": "Intelligence 14"
+          "value": "Intelligence +2"
         },
         {
           "value": "trained in Crafting"
@@ -30217,7 +30261,7 @@
     },
     "Versatile Font": {
       "name": "Versatile Font",
-      "description": "<p>As you explore your deity's aspects, you move beyond restrictions on healing or harming. You can prepare either @UUID[Compendium.pf2e.spells-srd.Item.wdA52JJnsuQWeyqz]{Harm} or @UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal}in the spell slots gained from the harmful font or healing font.</p>",
+      "description": "<p>As you explore your deity's aspects, you move beyond restrictions on healing or harming. You can prepare either @UUID[Compendium.pf2e.spells-srd.Item.wdA52JJnsuQWeyqz]{Harm} or @UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal} in the spell slots gained from the harmful font or healing font.</p>",
       "prerequisites": [
         {
           "value": "harmful font or healing font"
@@ -31064,6 +31108,10 @@
       "name": "Weight Of Stone",
       "description": "<p>A packed cloud of thundering boulders descends from the sky, beating down everyone in its path. The rain of stone falls in a cylinder 20 feet in diameter and 80 feet high, and the bottom must be within 120 feet of you. Each creature in the area takes @Damage[(floor((@actor.level -6)/2)+4)d8[bludgeoning]|traits:area-damage] damage and might be pushed downward, depending on its @Check[type:reflex|dc:resolve(@actor.attributes.classDC.value)] save against your class DC.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is pushed downward 40 feet without taking falling damage. If it reaches the bottom of the cylinder or the ground, the push ends. If the creature is pushed to the ground, it can't Fly, @UUID[Compendium.pf2e.spells-srd.Item.fI20AVwOzJMHXRdo]{Levitate}, or otherwise leave the ground for 1 round.</p>\n<p><strong>Critical Failure</strong> As failure, but double damage and the distance the creature is pushed is 80 feet.</p>\n<hr />\n<p><strong>Level (+2)</strong> The damage increases by 1d8.</p>"
     },
+    "Weight of Experience": {
+      "name": "Weight of Experience",
+      "description": "<p>The experience you've accumulated over multiple lifetimes envelops you like a weighted blanket, providing comfort and bestowing confidence under pressure. You gain the trained proficiency rank in one skill of your choice and the @UUID[Compendium.pf2e.feats-srd.Item.W6Gl9ePmItfDHji0]{Assurance} skill feat in that skill as a bonus feat.</p>"
+    },
     "Weight of Guilt": {
       "name": "Weight of Guilt",
       "description": "<p>Guilt clouds the minds of those who ignore your Glimpse of Redemption. Instead of making the triggering creature enfeebled 2, you can make it stupefied 2 for the same duration.</p>",
@@ -31451,6 +31499,10 @@
       "name": "Winter's Kiss",
       "description": "<p>Whether in the heart of a volcanic passageway or the glacial tundras of the Crown of the World, the only temperature you ever personally experience is an oddly comfortable chill. You are now protected from extreme cold and extreme heat, and you gain resistance to fire equal to half your level. If you would already have resistance to fire equal to half your level from a heritage, ancestry feat, class feat, or another archetype feat, you instead gain resistance to fire equal to your level.</p>"
     },
+    "Wisdom from Another Life": {
+      "name": "Wisdom from Another Life",
+      "description": "<p>You absorbed a wide variety of facts before you died, and your soul still remembers slivers of this precious knowledge. You gain the trained proficiency rank in one skill of your choice and the @UUID[Compendium.pf2e.feats-srd.Item.BocFD2KV0qgUC76x]{Additional Lore} skill feat as a bonus feat.</p>"
+    },
     "Wish Alchemy": {
       "name": "Wish Alchemy",
       "description": "<p>You have learned Artokus Kirran's most hidden secrets, granting you the ability to create alchemy infused with the power of wishes.</p>\n<p>Once per day when you use @UUID[Compendium.pf2e.classfeatures.Item.Pe0zmIqyTBc2Td0I]{Advanced Alchemy} during your daily preparations, you can spend a batch of infused reagents to create a wish vial containing a single common arcane spell of your choice of 8th level or lower.</p>\n<p>The spell must have a casting time of no more than 3 actions, no Cost, and must be able to target you. Only you can Activate the wish vial, which takes the same number of @UUID[Compendium.pf2e.actionspf2e.Item.pvQ5rY2zrtPI614F]{Interact} actions as the spell's casting time and grants you the effects of the spell.</p>"
@@ -31727,6 +31779,10 @@
     "You Failed to Account For... This!": {
       "name": "You Failed to Account For... This!",
       "description": "<p><strong>Trigger</strong> A creature you can see targets you with an attack against your AC.</p>\n<hr />\n<p>When your foes try to attack you, you always seem to have some outlandish invention you can pull out at the last second to protect you from whatever attack they throw at you. Describe a device you're attempting to use to protect yourself from the foe's attack-for instance, when attacked by a shocker lizard's shock Strike, you might pull out a specially grounded lightning rod from that time you tried to power an invention by harnessing a thunderstorm! Using an invention to defend in this way means that the attack roll for the triggering attack targets your Crafting DC instead of your AC.</p>\n<p>Since you're using your Crafting DC instead of your AC, any penalties to your AC don't apply, but this doesn't remove any conditions or other effects that are causing you such penalties. For instance, if you were @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} and used an invention to defend against a sneak attack, you'd still take the extra precision damage if you were hit, even though the -2 penalty to AC from being off-guard wouldn't apply to your Crafting DC.</p>"
+    },
+    "You Seem Somewhat Familiar": {
+      "name": "You Seem Somewhat Familiar",
+      "description": "<p><strong>Trigger</strong> You succeed or critically succeed at a @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Recall Knowledge} check about a creature.</p>\n<hr />\n<p>You fought hundreds of foes in your various past lives, and now and then, something about a new opponent tugs at your memory, almost as if you defeated their grandparent long ago. You get a +2 circumstance bonus to your next attack roll, damage roll, or saving throw against this creature. You only receive this bonus once per creature.</p>"
     },
     "You're Next": {
       "name": "You're Next",
