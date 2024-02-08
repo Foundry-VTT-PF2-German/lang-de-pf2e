@@ -244,9 +244,9 @@
         },
         "Spellcasting": {
           "Tab": {
-            "Activations": "Activations",
-            "KnownSpells": "Known Spells",
-            "Rituals": "Rituals"
+            "Activations": "Aktivierungen",
+            "KnownSpells": "Bekannte Zauber",
+            "Rituals": "Rituale"
           }
         }
       },
@@ -479,7 +479,7 @@
       },
       "Inventory": {
         "CarryType": {
-          "OpenMenu": "Change Carry Type"
+          "OpenMenu": "Nutzung ändern"
         },
         "DistributeCoins": "Verteile Münzen",
         "Encumbrance": "Belastung",
@@ -1178,7 +1178,7 @@
           "dazzled": "Geblendet",
           "deafened": "Taub",
           "death-effects": "Todeseffekte",
-          "detection": "detection",
+          "detection": "Entdeckung",
           "disease": "Krankheit",
           "djezet": "Djezet",
           "doomed": "Todgeweiht",
@@ -1596,13 +1596,13 @@
     "InitiativeWithSkill": "Initiative: {skillName}",
     "InlineAction": {
       "Check": {
-        "DC": "DC {dc}",
-        "StatisticVsDefense": "{statistic} vs {defense}",
-        "VsDefense": "vs {defense}"
+        "DC": "SG {dc}",
+        "StatisticVsDefense": "{statistic} gg. {defense}",
+        "VsDefense": "gg. {defense}"
       },
       "Warning": {
-        "InvalidAction": "Invalid Action: {slug}",
-        "UnresolvableAction": "Unresolvable Action: {slug}"
+        "InvalidAction": "Ungültige Aktion: {slug}",
+        "UnresolvableAction": "Unauflösbare Aktion: {slug}"
       }
     },
     "InlineCheck": {
@@ -2393,11 +2393,11 @@
       },
       "Plural": "Ggst.",
       "RefreshFromCompendium": {
-        "DifferentItemType": "The compendium source for {item} ({uuid}) is of a different type than what is present on this actor.",
+        "DifferentItemType": "Die Kompendiumquelle zu {item} ({uuid}) hat einen anderen Typ als auf dem Akteur vorhanden.",
         "Label": "Aktualis.",
-        "SourceNotFound": "The compendium source for {item} (source ID: {sourceId}) was not found.",
-        "SubitemFailure": "One or more subitems on {item} ({uuid}) were unable to be refreshed.",
-        "Success": "Item \"{item}\" has been refreshed.",
+        "SourceNotFound": "Die Kompendiumquelle für {item} (Quell-ID: {sourceId}) wurde nicht gefunden.",
+        "SubitemFailure": "Einer oder mehrere untergeordnete Gegenstände in {item} ({uuid}) konnten nicht aktualisiert werden.",
+        "Success": "Gegenstand \"{item}\" wurde aktualisiert.",
         "Tooltip": {
           "Disabled": "Element kann nicht aktualisiert werden: enthält Daten, die beim Hinzufügen zum Akteur gespeichert wurden",
           "Enabled": "Aktualisieren die Daten dieses Elements mit den neuesten Daten aus dem Kompendium, aus dem es stammt."
@@ -2462,12 +2462,12 @@
           "Hint": "Wenn du einem Leiden entgegenwirkst, so ist der SG den Spielwerten des Leidens zu entnehmen. Bei einem Zauber handelt es sich um den Zauber-SG des Zauberwirkers. Der SL kann auch einen SG aufgrund der Stufe eines Effektes bestimmen.",
           "Label": "Entgegenwirken",
           "criticalFailure": "Du schaffst es nicht, dem Ziel entgegenzuwirken.",
-          "criticalSuccess": "Du wirkst dem Ziel entgegen, wenn seine Entgegenwirkungsstufe {rank} oder niedriger ist.",
-          "failure": "Du wirkst dem Ziel entgegen, wenn seine Entgegenwirkungsstufe niedriger als {rank} ist.",
-          "success": "Du wirkst dem Ziel entgegen, wenn seine Entgegenwirkungsstufe {rank} oder niedriger ist."
+          "criticalSuccess": "Du wirkst dem Ziel entgegen, wenn sein Entgegenwirkengrad {rank} oder niedriger ist.",
+          "failure": "Du wirkst dem Ziel entgegen, wenn sein Entgegenwirkengrad niedriger als {rank} ist.",
+          "success": "Du wirkst dem Ziel entgegen, wenn sein Entgegenwirkengrad {rank} oder niedriger ist."
         },
         "Defense": {
-          "BasicDefense": "basic {save}",
+          "BasicDefense": "{save} (einfach)",
           "BasicSave": "Einfach",
           "Label": "Verteidigung"
         },
@@ -2514,18 +2514,18 @@
           "Hint": "Zeigt an, dass diese Waffe als Munition in eine andere Waffe geladen werden kann."
         },
         "CriticalSpecialization": {
-          "axe": "Choose one creature adjacent to the initial target and within reach. If its AC is lower than your attack roll result for the critical hit, you deal damage to that creature equal to the result of the weapon damage die you rolled (including extra dice for its <em>striking rune</em>, if any). This amount isn't doubled, and no bonuses or other additional dice apply to this damage.",
+          "axe": "Wähle eine Kreatur angrenzend zu deinem ursprünglichen Ziel aus, die sich innerhalb deines Angriffsradius befindet. Wenn die RK dieser Kreatur niedriger ist als dein Angriffswurf für den Kritischen Treffer, verursachst du bei dieser Kreatur Schaden entsprechend dem Resultat des Schadenswurfes deiner Waffe, den du zuvor gewürfelt hast (inklusive des Schadens durch <em>Schadensrunen</em>, so vorhanden). Dieser Schaden wird nicht verdoppelt und nicht durch Boni oder andere zusätzliche Würfel erhöht.",
           "bomb": "Erhöhe den Radius des Flächenschadens der Bombe (so vorhanden) auf 10 Fuß/3 m.",
           "bow": "If the target of the critical hit is adjacent to a surface, it gets stuck to that surface by the missile. The target is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} and must spend an Interact action to attempt a @Check[type:athletics|dc:10|name:Pull the Missile Free|showDC:all] check to pull the missile free; it can't move from its space until it succeeds. The creature doesn't become stuck if it is incorporeal, is liquid, or could otherwise escape without effort (such as by being large enough that the missile would not be an impediment.)",
-          "brawling": "The target must succeed at a @Check[type:fortitude|dc:resolve(@actor.attributes.classDC.value)|name:Brawling Critical Specialization] save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until the end of your next turn.",
+          "brawling": "Das Ziel muss einen @Check[type:fortitude|dc:resolve(@actor.attributes.classDC.value)]{Zähigkeitswurf} gegen deinen Klassen-SG ablegen; misslingt ihm dieser Rettungswurf, erhält es bis zum Ende deines nächsten Zuges den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}.",
           "club": "You knock the target up to 10 feet in a straight line away from you, in a direction of your choice. This is forced movement.",
-          "firearm": "The target must succeed at a @Check[type:fortitude|dc:resolve(@actor.attributes.classDC.value)|name:Firearm Critical Specialization] save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.",
+          "firearm": "Das Ziel muss einen @Check[type:fortitude|dc:resolve(@actor.attributes.classDC.value)]{Zähigkeitswurf} gegen deinen Klassen-SG bestehen oder erhält den Status @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1}.",
           "flail": "The target is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} unless they success at a @Check[type:reflex|dc:resolve(@actor.attributes.classDC.value)|name:Flail Critical Specialization] save against your class DC.",
           "hammer": "The target is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} unless they succeed at a @Check[type:fortitude|dc:resolve(@actor.attributes.classDC.value)|name:Hammer Critical Specialization] save against your class DC.",
           "polearm": "Das Ziel wird 1,50 m in eine Richtung deiner Wahl bewegt. Dies zählt als Erzwungene Fortbewegung.",
           "shield": "Du stößt das Ziel 5 Fuß/1,50 m von dir fort. Dies zählt als Erzwungene Fortbewegung.",
-          "sling": "The target must succeed at a @Check[type:fortitude|dc:resolve(@actor.attributes.classDC.value)|name:Sling Critical Specialization] save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.",
-          "spear": "Weapons of this type pierce the target, weakening its attacks. The target is @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} until the start of your next turn.",
+          "sling": "Das Ziel muss einen @Check[type:fortitude|dc:resolve(@actor.attributes.classDC.value)]{Zähigkeitswurf} gegen deinen Klassen-SG ablegen; bei Misslingen erhält es den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1}.",
+          "spear": "Waffen dieser Art durchbohren das Ziel und schwächen dessen Angriffe. Bis zu Beginn deines nächsten Zuges erhält das Ziel den Zustand @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 1}.",
           "sword": "Das Ziel wird durch deinen Angriff aus dem Gleichgewicht gebracht und erhält bis zu Beginn deines nächsten Zuges den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß}."
         },
         "Damage": {
@@ -2732,8 +2732,8 @@
           "ChangeShape": "<p>Das Monster verändert auf unbegrenzte Zeit seine Gestalt. Es kann diese Aktion benutzen, um zu seiner natürlichen Gestalt zurückzukehren oder um in eine neue Gestalt zu wechseln. Sofern nichts anderes angegeben ist, kann Gestalt wechseln nicht eingesetzt werden, um das Aussehen eines bestimmten Individuums anzunehmen. Der Einsatz von Gestalt wechseln zählt als Verkleidung im Sinne der Anwendung @UUID[Compendium.pf2e.actionspf2e.Item.AJstokjdG6iDjVjE]{Verkleiden} der Fertigkeit Täuschung. Die Verwandlung des Monsters schlägt automatisch jeden Wahrnehmungs-SG zum Festzustellen, ob die Kreatur der Abstammung oder dem Kreaturenart angehört, dessen Gestalt sie angenommen hat. Weiterhin erhält sie einen Zustandsbonus von +4 auf ihren Täuschungs-SG gegen das Durchschauen der Verkleidung. Bei der Fähigkeit Gestalt wechseln wird angegeben, welche Gestalten das Monster annehmen kann. Es erhält keinerlei Sonderfähigkeiten der neuen Gestalt, nur deren körperliche Erscheinung. So werden z.B. in jeder Gestalt seine normalen Bewegungsraten und Angriffe durch die der neuen Gestalt ersetzt, sowie möglicherweise auch Sinne und Größe. Alle Änderungen werden im Spielwerteblock aufgeführt.</p>",
           "ConstantSpells": "<p>Ein ständig wirkender Zauber wirkt unbegrenzt lange auf das Monster, ohne dass es diesen wirken muss. Sollte einem ständig wirkenden Zauber entgegengewirkt werden, kann das Monster ihn wieder aktivieren, indem es die zum normalen Wirken des Zaubers notwendigen Aktionen aufwendet.</p>",
           "Constrict": "<p>Das Monster fügt einer beliebigen Anzahl an Kreaturen, die es @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{ergriffen} oder @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{gebunden} hat, den angegebenen Schaden zu. Jede dieser Kreaturen kann einen einfachen Zähigkeitswurf gegen den angegebenen SG ablegen.</p>",
-          "Coven": "<p>This monster can form a coven with two or more other creatures who also have the coven ability. This involves performing an 8-hour ceremony with all prospective coven members. After the coven is formed, each of its members gains elite adjustments, adjusting their levels accordingly. Coven members can sense other members' locations and conditions by spending a single action, which has the concentrate trait, and can sense what another coven member is sensing as a two-action activity, which has the concentrate trait as well.</p>\n<p>Covens also grant spells and rituals to their members, but these can be cast only in cooperation between three coven members who are all within 30 feet of one another. A coven member can contribute to a coven spell with a single-action spellcasting activity that has a single verbal component. If two coven members have contributed these actions within the last round, a third member can cast a coven spell on her turn by spending the normal spellcasting actions. A coven can cast its coven spells an unlimited number of times but can cast only one coven spell each round. All covens grant the 8th-rank <em>@UUID[Compendium.pf2e.spells-srd.Item.dN8QBNuTiaBHCKUe]{Baleful Polymorph}</em> spell and all the following spells, which the coven can cast at any rank up to 5th: <em>@UUID[Compendium.pf2e.spells-srd.Item.41TZEjhO6D1nWw2X]{Augury}</em>, <em>@UUID[Compendium.pf2e.spells-srd.Item.vLA0q0WOK2YPuJs6]{Charm}</em>, <em>@UUID[Compendium.pf2e.spells-srd.Item.HXhWYJviWalN5tQ2]{Clairaudience}</em>, <em>@UUID[Compendium.pf2e.spells-srd.Item.zvKWclOZ7A53DObE]{Clairvoyance}</em>, <em>@UUID[Compendium.pf2e.spells-srd.Item.yM3KTTSAIHhyuP14]{Dream Message}</em>, <em>@UUID[Compendium.pf2e.spells-srd.Item.i35dpZFI7jZcRoBo]{Illusory Disguise}</em>, <em>@UUID[Compendium.pf2e.spells-srd.Item.Ucf8eynbZMfUucjE]{Illusory Scene}</em>, <em>@UUID[Compendium.pf2e.spells-srd.Item.Ek5XI0aEdZhBgm21]{Prying Eye}</em>, and <em>@UUID[Compendium.pf2e.spells-srd.Item.FM3SmEW8N1FCRjqt]{Talking Corpse}</em>. Individual creatures with the coven ability also grant additional spells to any coven they join. A coven can also cast the <em>@UUID[Compendium.pf2e.spells-srd.Item.XkDCzMIyc0YOjw05]{Control Weather}</em> ritual, with a DC of 23 instead of the standard DC.</p>\n<p>If a coven member leaving the coven or the death of a coven member brings the coven below three members, the remaining members keep their elite adjustments for 24 hours, but without enough members to contribute the necessary actions, they can't cast coven spells.</p>",
-          "Darkvision": "<p>A monster with darkvision can see perfectly well in areas of darkness and dim light, though such vision is in black and white only. Some forms of magical darkness, such as a 4th-rank <em>@UUID[Compendium.pf2e.spells-srd.Item.4GE2ZdODgIQtg51c]{Darkness}</em> spell, block normal darkvision. A monster with @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.4Ho2xMPEC05aSxzr]{Greater Darkvision}, however, can see through even these forms of magical darkness.</p>",
+          "Coven": "<p>Dieses Monster kann mit wenigstens zwei weiteren Kreaturen, die ebenfalls die Fähigkeit Zirkel besitzen, einen Zirkel bilden. Dazu ist eine Zeremonie über 8 Stunden vonnöten, an der alle angehenden Mitglieder des Zirkels teilhaben müssen. Nach Bildung des Zirkels erhalten alle Mitglieder die Anpassung Eliteversion (siehe Seite 6), wobei ihre Stufen entsprechend angepasst werden. Die Mitglieder des Zirkels können durch Aufwenden einer Aktion mit der Kategorie Konzentration spüren, wo sich die anderen Mitglieder aufhalten und welche Zustände sie zurzeit haben. Mit einer Zwei Aktionen erfordernden Aktivität, die ebenfalls die Kategorie Konzentration hat, kann ein Mitglied des Zirkels wahrnehmen, was ein anderes Mitglied wahrnimmt.</p>\n<p>Der Zirkel gewährt seinen Mitgliedern weitere Zauber und Rituale. Diese können aber nur in Zusammenarbeit von drei Mitgliedern des Zirkels gewirkt werden, die sich innerhalb von 30 Fuß/9 m voneinander befinden. Ein Mitglied des Zirkels kann zu dem Zirkelzauber beitragen, indem es eine Aktion zum Zauberwirken mit einer Verbalen Komponente aufwendet. Wenn während der letzten Runde zwei Mitglieder des Zirkels diese Aktionen beigetragen haben, kann ein drittes Mitglied den Zirkelzauber in seinem Zug wirken, indem es die normal zum Wirken des Zaubers notwendigen Aktionen aufwendet. Der Zirkel kann seine Zirkelzauber beliebig oft wirken, kann aber nicht mehr als einen Zirkelzauber pro Runde wirken. Alle Zirkel gewähren den Zauber @UUID[Compendium.pf2e.spells-srd.Item.dN8QBNuTiaBHCKUe]{Verfluchte Verwandlung} auf dem 8. Grad, sowie alle folgenden Zauber, die der Zirkel auf beliebigem Grad bis zum 5. Grad wirken kann: @UUID[Compendium.pf2e.spells-srd.Item.Ek5XI0aEdZhBgm21]{Ausspähendes Auge}, @UUID[Compendium.pf2e.spells-srd.Item.HXhWYJviWalN5tQ2]{Hellhören}, @UUID[Compendium.pf2e.spells-srd.Item.zvKWclOZ7A53DObE]{Hellsehen}, @UUID[Compendium.pf2e.spells-srd.Item.vLA0q0WOK2YPuJs6]{Kreatur bezaubern}, @UUID[Compendium.pf2e.spells-srd.Item.FM3SmEW8N1FCRjqt]{Sprechende Leiche}, @UUID[Compendium.pf2e.spells-srd.Item.Ucf8eynbZMfUucjE]{Szenisches Trugbild}, @UUID[Compendium.pf2e.spells-srd.Item.yM3KTTSAIHhyuP14]{Traumnachricht}, @UUID[Compendium.pf2e.spells-srd.Item.i35dpZFI7jZcRoBo]{Verkleidende Illusion} und @UUID[Compendium.pf2e.spells-srd.Item.41TZEjhO6D1nWw2X]{Vorahnung}. Einzelne Kreaturen mit der Fähigkeit Zirkel können einem Zirkel, dem sie beitreten, weitere Zauber gewähren Ein Zirkel kann außerdem das Ritual @UUID[Compendium.pf2e.spells-srd.Item.XkDCzMIyc0YOjw05]{Wetterkontrolle} wirken. Dabei beträgt der SG 23 statt des normalen SG.</p>\n<p>Wenn durch den Austritt oder Tod eines Mitglieds, die Anzahl der Mitglieder des Zirkels unter drei sinkt, können die verbleibenden Mitglieder ihre Anpassung Eliteversion 24 Stunden lang aufrechterhalten, aber ohne genügend Mitglieder, die die entsprechende Anzahl von Aktionen beitragen, können sie keine Zirkelzauber wirken.</p>",
+          "Darkvision": "<p>Ein Monster mit Dunkelsicht kann sowohl in der Dunkelheit als auch bei Dämmerlicht perfekt sehen, allerdings nur in schwarz-weiß. Manche Arten magischer Dunkelheit, wie z.B. durch den Zauber @UUID[Compendium.pf2e.spells-srd.Item.4GE2ZdODgIQtg51c]{Dunkelheit} auf dem 4. Grad blockieren normale Dunkelsicht. Ein Monster mit @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.4Ho2xMPEC05aSxzr]{Mächtiger Dunkelsicht} kann allerdings auch diese Art von Dunkelheit durchdringen.</p>",
           "Disease": "<p>Wenn eine Kreatur der Krankheit des Monsters ausgesetzt ist, muss sie einen Zähigkeitswurf ablegen. Bei einem Fehlschlag erleidet sie die Folgen der Krankheit. Die Stufe der Krankheit ist gleich der Stufe des Monsters, von dem sie zugefügt wurde. Die Krankheit befolgt dabei die Regeln für Leiden auf Seite 457 im Grundregelwerk.</p>",
           "Engulf": "<p>Das Monster Läuft bis zum doppelten seiner Bewegungsrate und kann sich auf seinem Weg auch durch Felder anderer Kreaturen bewegen. Alle Kreaturen, die die gleiche Größenkategorie wie das Monster oder kleiner haben und durch deren Felder sich das Monster bewegt, müssen einen Reflexwurf ablegen, um nicht von dem Monster umhüllt zu werden. Für Kreaturen, die nicht handeln können, ist der Rettungswurf automatisch ein kritischer Fehlschlag. Eine Kreatur, deren Rettungswurf ein Erfolg ist, kann wählen, ob sie zur Seite geschoben wird – aus dem Weg des Monsters – oder ob das Monster sie bis zum Ende seiner Bewegung vor sich herschiebt. Das Monster kann pro Kreatur nur einen Versuch machen, sie zu umhüllen. Es kann so viele Kreaturen aufnehmen, wie in seine Angriffsfläche hineinpassen.</p>\n<p>Eine Kreatur, deren Rettungswurf fehlschlägt, wird in den Körper des Monsters hineingezogen. Sie erhält die Zustände @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} und @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1} und muss die Luft anhalten oder sie beginnt zu ersticken. Die Kreatur nimmt den angegebenen Schaden zunächst, wenn sie umhüllt wird, sowie jeweils am Ende ihres Zuges, wenn sie weiterhin umhüllt ist. Eine umhüllte Kreatur kann sich mit der Aktion @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Entkommen} gegen den angegebenen SG befreien. Eine umhüllte Kreatur kann ebenfalls das Monster angreifen, jedoch nur mit Waffenlosen Angriffen oder mit Waffen von leichter Last oder geringer. Die umhüllende Kreatur ist gegen diese Angriffe @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} betroffen. Nimmt das Monster dabei von einem einzelnen Angriff oder Zauber Hieb- oder Stichschaden in Höhe des unter Befreien angegebenen Wertes oder darüber hinaus, kann sich die umhüllte Kreatur herausschneiden. Eine Kreatur, die sich auf eine dieser Weisen befreit, kann sofort wieder atmen und verlässt die Angriffsfläche des Monsters.</p>",
           "FastHealing": "<p>Ein Monster mit dieser Fähigkeit gewinnt jeweils zu Beginn seines Zuges die angegebene Anzahl von Trefferpunkten zurück.</p>",
@@ -2742,7 +2742,7 @@
           "FrightfulPresence": "<p>Wenn eine Kreatur den Bereich der Aura betritt, muss sie einen Willenswurf ablegen.</p>\n<p>Unabhängig vom Ergebnis des Wurfs ist sie anschließend 1 Minute lang temporär immun gegen die Unheimliche Ausstrahlung des Monsters.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist von der Ausstrahlung nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 4}.</p>",
           "Grab": "<p><strong>Requirements</strong> The monster's last action was a successful Strike that lists Grab in its damage entry, or the monster has a creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}</p><hr /><p><strong>Effect</strong> If used after a Strike, the monster attempts to @UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]{Grapple} the creature using the body part it attacked with. This attempt neither applies nor counts toward the creature's multiple attack penalty.</p><p>The monster can instead use Grab and choose one creature it's grabbing or restraining with an appendage that has Grab to automatically extend that condition to the end of the monster's next turn.</p>",
           "GreaterConstrict": "<p>Das Monster fügt einer beliebigen Anzahl von Kreaturen, die es @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{gegriffen} oder @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{gebunden} hat, den angegebenen Schaden zu. Jede dieser Kreaturen kann einen einfachen Zähigkeitswurf gegen den angegebenen SG ablegen. Eine Kreatur, deren Rettungswurf ein Fehlschlag ist, erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Bewusstlos}. Eine Kreatur, deren Rettungswurf ein Erfolg ist, ist anschließend 1 Minute lang temporär dagegen immun, durch Mächtiges Würgen bewusstlos zu werden.</p>",
-          "GreaterDarkvision": "<p>A creature with greater darkvision can see perfectly well in areas of darkness and dim light, though such vision is in black and white only. Some forms of magical darkness, such as a 4th-rank <em>@UUID[Compendium.pf2e.spells-srd.Item.4GE2ZdODgIQtg51c]{Darkness}</em> spell, block normal @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.qCCLZhnp2HhP3Ex6]{Darkvision}. A creature with greater darkvision, however, can see through even these forms of magical darkness.</p>",
+          "GreaterDarkvision": "<p>Ein Monster mit Dunkelsicht kann sowohl in der Dunkelheit als auch bei Dämmerlicht perfekt sehen, allerdings nur in schwarz-weiß. Manche Arten magischer Dunkelheit, wie z.B. durch den Zauber @UUID[Compendium.pf2e.spells-srd.Item.4GE2ZdODgIQtg51c]{Dunkelheit} auf dem 4. Grad blockieren normale @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.qCCLZhnp2HhP3Ex6]{Dunkelsicht}. Ein Monster mit Mächtiger Dunkelsicht kann allerdings auch diese Art von Dunkelheit durchdringen.</p>",
           "ImprovedGrab": "<p>Das Monster kann @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.Tkd8sH4pwFIPzqTr]{Ergreifen} als Freie Aktion einsetzen, deren Auslöser der ursprüngliche Treffer ist. Ein Monster mit Verbessertem Ergreifen muss aber weiterhin eine Aktion aufwenden, wenn es für bereits @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{ergriffene} Kreaturen die Dauer des Ergreifens verlängern will.</p>",
           "ImprovedKnockdown": "<p>Das Monster kann @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.BCLvAx4Pz4MLa2pu]{Niederwerfen} als Freie Aktion einsetzen, deren Auslöser der ursprüngliche Treffer ist.</p>",
           "ImprovedPush": "<p>Das Monster kann @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.t6cx9FOODmeZQNYl]{Stoßen} als Freie Aktion einsetzen, deren Auslöser der ursprüngliche Treffer ist.</p>",
@@ -3231,15 +3231,15 @@
           },
           "Hint": "Sprachen die Charaktere kennen oder gelernt haben (z.B. Drakonisch, Gnomisch)",
           "Rarities": {
-            "Common": "<rarity>Common</rarity> Languages",
+            "Common": "<rarity>Gewöhnliche</rarity> Sprachen",
             "Name": "Seltenheit von Sprachen",
-            "Rare": "<rarity>Rare</rarity> Languages",
-            "Secret": "<rarity>Secret</rarity> Languages",
+            "Rare": "<rarity>Seltene</rarity> Sprachen",
+            "Secret": "<rarity>Geheime</rarity> Sprachen",
             "Unavailable": {
-              "Hint": "Languages not available for use on any creature in this world",
-              "Label": "Unavailable Languages"
+              "Hint": "Sprachen, die innerhalb dieser Welt für keine Kreatur zur Verfügung stehen",
+              "Label": "Nicht verfügbare Sprachen"
             },
-            "Uncommon": "<rarity>Uncommon</rarity> Languages"
+            "Uncommon": "<rarity>Ungewöhnliche</rarity> Sprachen"
           }
         },
         "Name": "Hausregeln",
@@ -3360,14 +3360,14 @@
           "Name": "Automatische Bonusprogression"
         },
         "FreeArchetype": {
-          "Hint": "Grant additional feat slots for the free archetype variant from GM Core pg 84.",
+          "Hint": "Gewähre zusätzlichen Talentplatz für die Freie Archetypen Regelvariante aus dem Kern Spielleiter.",
           "Name": "Freie Archetypen"
         },
         "Hint": "Aktivieren und konfigurieren Sie Regelvarianten wie Kompetenz ohne Stufe oder das Ausdauersystem.",
         "Label": "Einstellungen von Regelvarianten",
         "Name": "Regelvarianten",
         "Proficiency": {
-          "Hint": "Play with the proficiency without level variant from GM Core pg 85.",
+          "Hint": "Spiele mit der Variante Kompetenzen ohne Stufe aus dem Kern Spielleiter.",
           "ModifiersHint": "Modifikatorbonus pro Kompetenzgrad festlegen.",
           "Name": "Kompetenz ohne Stufe"
         },
@@ -3955,7 +3955,7 @@
     "TraitDescriptionEsoterica": "Viele Thaumaturgentalente und -klassenmerkmale, welche von den diversen Talismanen, übernatürlichen Schmuckstücken und anderen mitgeführten Gegenständen Gebrauch machen, besitzen diese Kategorie. Fähigkeiten dieser Kategorie setzen voraus, dass du deine Esoterica mit dir führst. In der Regel hast du deine Esoterica dabei, doch unter seltenen Umständen könntest du sie nicht zur Hand haben, z.B. wenn sie dir abgenommen wurden.",
     "TraitDescriptionEvolution": "Talente mit dieser Kategorie betreffen nicht dich, sondern dein Eidolon. In der Regel verleihen sie ihm zusätzliche körperliche Eigenschaften.",
     "TraitDescriptionExpandable": "Ein Gegenstand dieser Kategorie wächst bei Aktivierung zu einer bestimmten Größenkategorie heran. Sofern nicht anders vermerkt, muss diese Fläche zu dir angrenzend sein und sich auf dem Boden befinden; der Gegenstand muss genug Raum für seine Ausdehnung haben, andernfalls hat die Aktivierung keinen Effekt. Endet der Effekt, zerfällt ein Ausdehnender Verbrauchsgegenstand zu Staub, während ein Ausdehnender Nichtverbrauchsgegenstand seine normale Größe wieder annimmt.",
-    "TraitDescriptionExperiment": "An experimental cryptid has been purposefully altered through alchemy, engineering, magic, or ritual to contain some degree of construct components. Although powerful, the process is volatile and imperfect.",
+    "TraitDescriptionExperiment": "Ein Experimenteller Kryptid wurde absichtlich mittels Alchemie, Mechanik, Magie oder Ritualen verändert, um bis zu einem gewissen Grad Konstruktkomponenten aufzunehmen. Obwohl das Resultat mächtig wird, ist der Prozess unausgegoren und gefährlich.",
     "TraitDescriptionExploration": "Eine Aktivität dieser Kategorie erfordert mehr als einen Zug und kann in der Regel nur im Erkundungsmodus genutzt werden.",
     "TraitDescriptionExtradimensional": "Dieser Effekt oder Gegenstand erschafft einen Extradimensionalen Raum. Wird ein Extradimensionalen Raum in einem anderen Extradimensionalen Raum platziert, funktioniert er nicht, bis er wieder entfernt wird.",
     "TraitDescriptionFatal": "Bei dieser Fähigkeit ist stets eine Würfelsorte angegeben, erhöhe bei einem Kritischen Treffer mit dieser Waffe den Schadenswürfel der Waffe auf diese Sorte. Zusätzlich erhält die Waffe bei einem Kritischen Treffer einen zusätzlichen Schadenswürfel der hier aufgeführten Sorte.",
@@ -4034,7 +4034,7 @@
     "TraitDescriptionLaminar": "Die Rüstung besteht aus mehreren Schichten, so dass sie vom Zustand Beschädigt weniger betroffen wird. Der Zustandsmalus auf die RK aufgrund von Beschädigt ist 0 bei einer Leichten Rüstung, ‑1 bei einer Mittelschweren Rüstung und ‑2 bei einer Schweren Rüstung.",
     "TraitDescriptionLaunching": "Ein Mechanismus im Schild kann Geschosse verschießen, so dass der Schild auch als Fernkampfwaffe funktioniert. Die Eigenschaft benennt auch die Waffenart, z.B. „Wurfpfeile abschießend“. Zum Abschießen wird die dieselbe Anzahl an Händen wie für die Fernkampfwaffe benötigt (die Hand, welche den Schild hält, zählt aber gegen diese Anforderung, so dass eine einhändige Fernkampfwaffe weiterhin nur eine Hand benötigt). Zum Nachladen ist die übliche Anzahl an Aktionen der Kategorie Interagieren erforderlich (Minimal 1 Aktion); du kannst die Hand, mit der du bereits den Schild hältst, nicht zum Nachladen nutzen.",
     "TraitDescriptionLeshy": "Eine Kreatur mit dieser Kategorie ist eine der Abstammung Lesnik.",
-    "TraitDescriptionLight": "Lichteffekte überwinden nichtmagische Dunkelheit in ihrem Wirkungsbereich und können magischer Dunkelheit entgegenwirken. Um Dunkelheitmagie entgegenzuwirken, muss du sie in der Regel direkt als Ziel wählen; manche Lichtzauber versuchen aber, Dunkelheit automatisch entgegenzuwirken.",
+    "TraitDescriptionLight": "Lichteffekte überwinden nichtmagische Dunkelheit in ihrem Wirkungsbereich und können magischer Dunkelheit entgegenwirken. Um Dunkelheitmagie entgegenzuwirken, musst du sie in der Regel direkt als Ziel wählen; manche Lichtzauber versuchen aber, Dunkelheit automatisch entgegenzuwirken.",
     "TraitDescriptionLinguistic": "Ein Effekt dieser Kategorie erfordert, dass das Ziel die genutzte Sprache versteht, um zu funktionieren.",
     "TraitDescriptionLitany": "Litaneien sind besondere Stoßgebetszauber, die in der Regel von Streitern genutzt werden und eine Aktion erfordern; meistens verleihen sie Immunität gegen weitere Litaneien.",
     "TraitDescriptionLizardfolk": "Iruxis sind eine Familie von reptilienartigen Humanoiden.",
@@ -5143,7 +5143,7 @@
       "anchoring": {
         "Name": "Verankernd",
         "Note": {
-          "criticalSuccess": "If you critically hit a target with an anchoring weapon, the weapon casts <em>@UUID[Compendium.pf2e.spells-srd.Item.ksLCg62cLOojw3gN]{Dimensional Anchor}</em> on the target (@Check[type:will|dc:27|name:Anchoring Rune], counteract modifier [[/r 1d20+17 # Anchoring Rune Counteract Check]]{+17})."
+          "criticalSuccess": "Wenn du bei einem Gegner mit der Waffe des Verankerns einen Kritischen Treffer erzielst, wirkt die Waffe @UUID[Compendium.pf2e.spells-srd.Item.ksLCg62cLOojw3gN]{Planare Fessel} auf das Ziel (@Check[type:will|dc:27]{Willenswurf}, @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.mmfWcV3Iyql5nzTo]{Entgegenwirken}-Modifikator [[/r 1d20+17 #Entgegenwirken]]{+17})."
         }
       },
       "ashen": {
@@ -5268,8 +5268,8 @@
       "greaterAnchoring": {
         "Name": "Stark Verankernd",
         "Note": {
-          "criticalSuccess": "When you critically hit a target with a weapon with the anchoring rune, the weapon casts 8th-rank <em>@UUID[Compendium.pf2e.spells-srd.Item.ksLCg62cLOojw3gN]{Dimensional Anchor}</em> on the target (@Check[type:will|dc:38|name:Greater Anchoring Rune], counteract modifier [[/r 1d20+28 #Greater Anchoring Rune Counteract Check]]{+28}), except that if the target critically succeeds at its Will save, instead of having no effect, the <em>dimensional anchor</em> lasts for 1 round.",
-          "success": "When you hit a target with the weapon but don't critically hit, the target is affected by 4th-rank <em>@UUID[Compendium.pf2e.spells-srd.Item.ksLCg62cLOojw3gN]{Dimensional Anchor}</em> for 1 round without a save (counteract modifier [[/r 1d20+28 #Greater Anchoring Rune Counteract Check]]{+28})."
+          "criticalSuccess": "Wenn du bei einem Gegner mit einer Waffe des Starken Verankerns einen Kritischen Treffer erzielst, wirkt die Waffe @UUID[Compendium.pf2e.spells-srd.Item.ksLCg62cLOojw3gN]{Planare Fessel} auf dem 8. Grad auf das Ziel (@Check[type:will|dc:38]{Willenswurf}, @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.mmfWcV3Iyql5nzTo]{Entgegenwirken}-Modifikator [[/r 1d20+28 #Entgegenwirken]]{+28}). Gelingt dem Ziel gegen diesen Zauber ein Kritischer Erfolg bei seinem Willenswurf, wirkt die <em>Planare Fessel</em> dennoch für 1 Runde, statt gar keine Wirkung zu zeigen.",
+          "success": "Wenn du den Gegner mit der Waffe triffst, aber keinen Kritischen Treffer erzielst, wird das Ziel dennoch für 1 Runde von einer @UUID[Compendium.pf2e.spells-srd.Item.ksLCg62cLOojw3gN]{Planaren Fessel} des 4. Grades betroffen, ohne dass ihm ein Rettungswurf zusteht (dabei gilt der @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.mmfWcV3Iyql5nzTo]{Entgegenwirken}-Modifikator [[/r 1d20+28 #Entgegenwirken]]{+28})."
         }
       },
       "greaterAshen": {
