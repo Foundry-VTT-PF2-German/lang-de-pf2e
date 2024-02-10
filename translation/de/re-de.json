@@ -594,6 +594,7 @@
         "AttacksWaterCreatures": "Angriffe von Wasserkreaturen",
         "ColdIronBludgeoning": "cold iron bludgeoning",
         "ImpulseFireFrom": "Feuerimpuls von {origin}",
+        "IngestedPoisons": "Eingenommene Gifte",
         "MagicalBludgeoning": "Magischer Wuchtschaden",
         "MagicalColdIron": "Magisches Kaltes Eisen",
         "MagicalDuskwood": "magical duskwood",
@@ -1517,6 +1518,11 @@
       "AncientElf": {
         "Prompt": "Wähle Zugangsklassentalent."
       },
+      "Android": {
+        "ConsistentSurge": "kannst Nanitenschub alle 10 Minuten statt nur einmal pro Stunde nutzen.",
+        "OffensiveSubroutine": "Wenn du einen Angriffswurf ablegst, kannst du deinen Nanitenschub aktivieren und so einen Zustandsbonus von +1 auf den auslösenden Angriffswurf erhalten.",
+        "ProtectiveSubroutine": "Wenn du einen Rettungswurf ablegst, kannst du wählen, deinen Nanitenschub zu aktivieren und einen Zustandsbonus von +2 auf den auslösenden Rettungswurf zu erlangen."
+      },
       "AnimalForm": {
         "Ape": "Affe",
         "Bat": "Fledermaus",
@@ -1776,6 +1782,10 @@
         "ReplenishmentOfWar": {
           "Note": "Wenn du einer Kreatur mit einem Angriff mit der Bevorzugten Waffe deiner Gottheit Schaden zufügst, erlangst du eine Anzahl Temporärer Trefferpunkte in Höhe deiner halben Stufe (oder im Falle eines Kritischen Treffers in Höhe deiner Stufe). @UUID[Compendium.pf2e.feat-effects.Item.BJc494USeyM011p3]{Effekt: Heiliger Krieger}"
         },
+        "SacredGround": {
+          "Harmful": "A creature that remains in the area for the entire 10 minutes regains @Damage[(@actor.level)[void,healing]]{Hit Points} equal to your level. This activity has the healing and void traits and heals undead creatures (or other creatures with void healing).",
+          "Healing": "A creature that remains in the area for the entire 10 minutes regains @Damage[(@actor.level)[vitality,healing]]{Hit Points} equal to your level. This activity has the healing and vitality traits and heals living creatures."
+        },
         "SapLife": {
           "Note": "When you cast a <em>harm</em> spell and damage at least one living creature, you regain [[/r (@item.rank)[healing]]] Hit Points."
         },
@@ -2006,6 +2016,9 @@
         }
       },
       "Equipment": {
+        "ArachnidHarness": {
+          "ClimbWithAllLimbs": "Kletter mit allen freien Körperteilen"
+        },
         "ArmbandsOfAthleticism": {
           "GreaterNote": "Whenever you use an action to Climb or Swim and you succeed at the Athletics check, add a +10-foot item bonus to the distance you move.",
           "Note": "Whenever you use an action to Climb or Swim and you succeed at the Athletics check, add a +5-foot item bonus to the distance you move."
@@ -2099,6 +2112,9 @@
         "ScapularOfShields": {
           "CriticalImmunityLabel": "Activate Scapular of Shields to gain critical immunity.",
           "ResistAllLabel": "Activate Scapular of Shields to gain resistance to all damage."
+        },
+        "SerpentDagger": {
+          "Note": "When you critically succeed at an attack roll with the <em>serpent dagger</em>, the target becomes @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} unless it succeeds at a @Check[type:fortitude|dc:19] save."
         },
         "Sparkler": {
           "CriticalHitNote": "Bei einem Kritischen Treffer erhält das Ziel für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet}.",
@@ -2304,6 +2320,12 @@
         }
       },
       "Halfling": {
+        "GuidingLuck": "You can use Halfling Luck twice per day: once in response to its normal trigger, and once when you fail a Perception check or attack roll instead of the normal trigger.",
+        "IncredibleLuck": {
+          "Base": "Du kannst einmal pro Stunde Halblingsglück nutzen statt nur einmal am Tag.",
+          "GuidingLuck": "Solltest du über das Talent Glückliche Fügung verfügen, kannst du einen gescheiterten Angriffs- oder Wahrnehmungswurf immer noch nur einmal am Tag wiederholen. (Du kannst aber Halblingsglück und Glückliche Fügung innerhalb derselben Stunde nutzen.)",
+          "SharedLuck": "Solltest du über das Talent Hilfreicher Halbling verfügen, so kannst du Halblingsglück zugunsten eines Verbündeten nur einmal am Tag nutzen."
+        },
         "Innocuous": {
           "Note": "Sollte dir ein Fertigkeitswurf für Täuschung zum Schaffen einer Ablenkung misslingen, so bemerken humanoide Kreaturen deine versuchten Tricks nur dann, wenn du einen Kritischen Fehlschlag erzielst."
         },
@@ -2313,6 +2335,10 @@
         "SureFeet": {
           "BalanceNote": "Solltest du bei einem Fertigkeitswurf für Akrobatik zum Balancieren einen Erfolg erzielen, zählt dieser als Kritischer Erfolg. Du bist beim Balancieren oder Klettern nicht Auf dem Falschen Fuß betroffen.",
           "ClimbNote": "Solltest du bei einem Fertigkeitswurf für Athletik zum Klettern einen Erfolg erzielen, zählt dieser als Kritischer Erfolg. Du bist beim Balancieren oder Klettern nicht Auf dem Falschen Fuß betroffen."
+        },
+        "SharedLuck": {
+          "Base": "Du kannst Halblingsglück nutzen, wenn einem Verbündeten innerhalb von 30 Fuß/9 m ein Fertigkeits- oder Rettungswurf misslingt, um dem Verbündeten die Wiederholung des auslösenden Wurfes zu ermöglichen, statt deinen eigenen misslungenen Wurf zu wiederholen. Dein Verbündeter muss das neue Ergebnis nutzen, selbst wenn es schlechter ausfallen sollte.",
+          "GuidingLuck": "Du kannst den Effekt von Glückliche Fügung nicht in Verbindung mit Geteiltes Glück bei Angriffs- und Wahrnehmungswürfen nutzen."
         }
       },
       "HarrowChosen": {
@@ -2438,7 +2464,9 @@
         },
         "Overdrive": {
           "CriticalFailure": "Ups! Irgendetwas explodiert. Du erleidest Feuerschaden in Höhe deiner Stufe (@Damage[@actor.level[@actor.flags.pf2e.inventor.explode]|immutable|name:PF2E.SpecificRule.Inventor.Innovation.MalfunctionDamage]) und kannst Schnellgang 1 Minute lang nicht verwenden, während deine Geräte sich abkühlen und zurücksetzen.",
-          "DamageTypePrompt": "Feuerschaden mit Schnellgang verursachen?"
+          "CriticalSuccess": "Deine Geräte gehen in einen Zustand von unglaublicher Effizienz über, den sogenannten Kritischen @UUID[Compendium.pf2e.feat-effects.Item.1XlJ9xLzL19GHoOL]{Schnellgang}, was deinen Angriffen große Kraft verleiht.",
+          "FireDamage": "Schnellgang: Feuerschaden",
+          "Success": "Deine Geräte beschleunigen, genannt @UUID[Compendium.pf2e.feat-effects.Item.1XlJ9xLzL19GHoOL]{Schnellgang} und verleihen deinen Angriffen zusätzliche Kraft."
         },
         "Unstable": {
           "FlatCheck": {
@@ -2520,6 +2548,10 @@
             "Threshold": "Wähle eine Portalverbesserung."
           },
           "SingleGate": "Einfaches Portal"
+        },
+        "Overflow": {
+          "Title": "Überlastung",
+          "Description": "Nutzt du einen Impuls der Kategorie Überlastung, deaktiviert sich deine Kinetische Aura, bis du sie wieder aktivierst (in der Regel mittels der Aktion @UUID[Compendium.pf2e.actionspf2e.Item.g8QrV39TmZfkbXgE]{Elemente fokussieren}). Derartiges ist ungeheuer anstrengend, weshalb du nur einen Impuls der Kategorie Überlastung pro Runde nutzen kannst, selbst wenn du dein Kinetisches Portal reaktivierst."
         }
       },
       "Kobold": {
@@ -2968,6 +3000,11 @@
             "Heightened": "Du verzerrst den Raum derart vollständig, dass du die Entfernung dazwischen nicht mehr zurücklegen musst. Du kannst stattdessen wählen, auf ein Feld innerhalb deiner Sicht- und Schusslinie zu teleportieren; die Reichweite des Effektes entspricht deiner doppelten Bewegungsrate nach Hinzurechnen des Zustandsbonus aus diesem Zauber. Dies verleiht dem Zauber die Kategorie Teleportation."
           },
           "WhisperingSteps": "Wähle einen Gegner, der Ziel des Zaubers ist. Sollte der Zauber den Gegner treffen oder dessen Rettungswurf misslingen, so wisperst du in seinen Verstand und zwingst ihn zu einem Schritt in eine Richtung deiner Wahl. Da dies eine erzwungene Bewegung ist, kannst du ihn nicht zu einem Schritt in Gefährliches Gelände, über eine Klippe oder ähnliches zwingen. Nach dem Schritt wird die Kreatur vorübergehend für 24 Stunden gegen diese Verstärkung immun."
+        },
+        "OscillatingWave": {
+          "AddEnergy": "Energie hinzufügen",
+          "ConservationOfEnergyLabel": "Energieerhalt",
+          "RemoveEnergy": "Energie abziehen"
         },
         "SpellModification": {
           "Daze": "Du kannst Benommenheit über große Entfernung hinweg wirken. Die Reichweite steigt auf 120 Fuß/36 m.",
