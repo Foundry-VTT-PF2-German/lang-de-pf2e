@@ -450,10 +450,13 @@ class Translator {
             // Translation for regular strings like labels
             this.dynamicArrayMerge(data, translation, this.getMapping("rule", true));
 
-            // Translation for array of choices within ChoiceSet rule element
+            // Translation for array of choices within ChoiceSet rule element and array of values within ItemAlteration rule element
             for (let i = 0; i < data.length; i++) {
                 if (data[i].choices && translation[i]?.choices) {
                     this.dynamicArrayMerge(data[i].choices, translation[i].choices, this.getMapping("choice", true));
+                }
+                if (data[i].value && translation[i]?.value) {
+                    this.dynamicArrayMerge(data[i].value, translation[i].value, this.getMapping("value", true));
                 }
             }
         }
