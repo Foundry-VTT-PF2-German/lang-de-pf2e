@@ -382,6 +382,23 @@ class Translator {
         return data;
     }
 
+    // Translate adventure scenes. This supports duplicate scene names within the same adventure
+    translateAdventureScenes(data, translation) {
+        data.forEach((entry, index, arr) => {
+            let sceneTranslation = translation ? translation[entry.name] ?? undefined : undefined;
+
+            // Check if the scene translation is an array (in case of duplicate scene names)
+            // Take the sceneTranslation that matches the current scenes' id
+            if (Array.isArray(sceneTranslation)) {
+                sceneTranslation = sceneTranslation.find((scene) => scene.id === entry._id) ?? false;
+            }
+            if (sceneTranslation) {
+                this.dynamicMerge(arr[index], sceneTranslation, this.getMapping("adventureScene", true));
+            }
+        });
+        return data;
+    }
+
     // Return either localized or both localized and english text, based on module setting
     translateDualLanguage(data, translation) {
         if (!translation || data === translation) {
