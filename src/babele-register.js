@@ -64,6 +64,9 @@ Hooks.once("init", () => {
             translateAdventureJournalPages: (data, translation) => {
                 return game.langDePf2e.translateAdventureJournalPages(data, translation);
             },
+            translateAdventureScenes: (data, translation) => {
+                return game.langDePf2e.translateAdventureScenes(data, translation);
+            },
             translateDualLanguage: (data, translation) => {
                 return game.langDePf2e.translateDualLanguage(data, translation);
             },
