@@ -151,7 +151,7 @@ class Translator {
                 ? new CompendiumMapping(this.mappings[mapping].entryType, this.mappings[mapping].mappingEntries)
                 : {};
         }
-        return this.mapping[mapping];
+        return this.mappings[mapping];
     }
 
     // Merge an object using a provided field mapping
@@ -211,6 +211,23 @@ class Translator {
         if (imageDirectory) {
             this.addMediaPath(module, compendium, `modules/${module}/${imageDirectory}`);
         }
+    }
+
+    // Translate an array of similar objects, e.g. scenes or journal pages. This supports duplicate object names within the array using ids to identify the correct data
+    translateArrayOfObjects(data, translation, mappingType) {
+        data.forEach((entry, index, arr) => {
+            let objectTranslation = translation ? translation[entry.name] ?? undefined : undefined;
+
+            // Check if the object translation is an array (in case of duplicate names)
+            // Take the objectTranslation that matches the current objects' id
+            if (Array.isArray(objectTranslation)) {
+                objectTranslation = objectTranslation.find((obj) => obj.id === entry._id) ?? false;
+            }
+            if (objectTranslation) {
+                this.dynamicMerge(arr[index], objectTranslation, this.getMapping(mappingType, true));
+            }
+        });
+        return data;
     }
 
     // If an actor description format is provided create formatted html, otherwise use plain text
@@ -356,49 +373,6 @@ class Translator {
         return data;
     }
 
-    // Translate adventure journals. This is primarily used in order to access a custom converter for pages translation
-    translateAdventureJournals(data, translation) {
-        data.forEach((entry, index, arr) => {
-            let journalTranslation = translation ? translation[entry.name] ?? undefined : undefined;
-            this.dynamicMerge(arr[index], journalTranslation, this.getMapping("adventureJournal", true));
-        });
-        return data;
-    }
-
-    // Translate adventure journal pages. This supports duplicate page names within the same journal
-    translateAdventureJournalPages(data, translation) {
-        data.forEach((entry, index, arr) => {
-            let pageTranslation = translation ? translation[entry.name] ?? undefined : undefined;
-
-            // Check if the page translation is an array (in case of duplicate page names)
-            // Take the pageTranslation that matches the current pages' id
-            if (Array.isArray(pageTranslation)) {
-                pageTranslation = pageTranslation.find((page) => page.id === entry._id) ?? false;
-            }
-            if (pageTranslation) {
-                this.dynamicMerge(arr[index], pageTranslation, this.getMapping("adventureJournalPage", true));
-            }
-        });
-        return data;
-    }
-
-    // Translate adventure scenes. This supports duplicate scene names within the same adventure
-    translateAdventureScenes(data, translation) {
-        data.forEach((entry, index, arr) => {
-            let sceneTranslation = translation ? translation[entry.name] ?? undefined : undefined;
-
-            // Check if the scene translation is an array (in case of duplicate scene names)
-            // Take the sceneTranslation that matches the current scenes' id
-            if (Array.isArray(sceneTranslation)) {
-                sceneTranslation = sceneTranslation.find((scene) => scene.id === entry._id) ?? false;
-            }
-            if (sceneTranslation) {
-                this.dynamicMerge(arr[index], sceneTranslation, this.getMapping("adventureScene", true));
-            }
-        });
-        return data;
-    }
-
     // Return either localized or both localized and english text, based on module setting
     translateDualLanguage(data, translation) {
         if (!translation || data === translation) {
@@ -509,60 +483,5 @@ class Translator {
             return artworkList[this.sluggify(dataObject.name)][type] ?? value;
         }
         return value;
-    }
-
-    // Migrate images to new structure
-    migrateImages(moduleName) {
-        for (const scene of game.scenes) {
-            for (const token of scene.tokens) {
-                if (
-                    token.actor?.flags?.core?.sourceId &&
-                    token.actor.flags.core.sourceId.startsWith("Compendium.pf2e")
-                ) {
-                    fromUuid(token.actor.flags.core.sourceId).then((compActor) => {
-                        const update = { _id: token._id };
-                        if (token.texture.src.search(`/${moduleName}/`) > -1) {
-                            Object.assign(update, { texture: { src: compActor.prototypeToken.texture.src } });
-                        }
-                        if (token.actorData?.img && token.actorData.img.search(`/${moduleName}/`) > -1) {
-                            update.actorData = update.actorData || {};
-                            Object.assign(update.actorData, { img: compActor.img });
-                        }
-                        if (token.actorData?.system?.details?.publicNotes) {
-                            update.actorData = update.actorData || {};
-                            const newNotes = token.actorData.system.details.publicNotes.replaceAll(
-                                "/npc/icons/",
-                                "/static/icons/"
-                            );
-                            Object.assign(update.actorData, { system: { details: { publicNotes: newNotes } } });
-                        }
-                        if (Object.keys(update).length > 1) {
-                            scene.updateEmbeddedDocuments("Token", [update]);
-                        }
-                    });
-                }
-            }
-        }
-
-        for (const actor of game.actors) {
-            if (actor.flags?.core?.sourceId && actor.flags.core.sourceId.startsWith("Compendium.pf2e")) {
-                fromUuid(actor.flags.core.sourceId).then((compActor) => {
-                    const update = {};
-                    if (actor.prototypeToken.texture.src.search(`/${moduleName}/`) > -1) {
-                        Object.assign(update, {
-                            prototypeToken: { texture: { src: compActor.prototypeToken.texture.src } },
-                        });
-                    }
-                    if (actor.img.search(`/${moduleName}/`) > -1) {
-                        Object.assign(update, { img: compActor.img });
-                    }
-                    if (actor.system?.details?.publicNotes) {
-                        const newNotes = actor.system.details.publicNotes.replaceAll("/npc/icons/", "/static/icons/");
-                        Object.assign(update, { system: { details: { publicNotes: newNotes } } });
-                    }
-                    actor.update(update);
-                });
-            }
-        }
     }
 }

@@ -59,13 +59,13 @@ Hooks.once("init", () => {
                 return game.langDePf2e.translateActorItems(data, translation);
             },
             translateAdventureJournals: (data, translation) => {
-                return game.langDePf2e.translateAdventureJournals(data, translation);
+                return game.langDePf2e.translateArrayOfObjects(data, translation, "adventureJournal");
             },
             translateAdventureJournalPages: (data, translation) => {
-                return game.langDePf2e.translateAdventureJournalPages(data, translation);
+                return game.langDePf2e.translateArrayOfObjects(data, translation, "adventureJournalPage");
             },
             translateAdventureScenes: (data, translation) => {
-                return game.langDePf2e.translateAdventureScenes(data, translation);
+                return game.langDePf2e.translateArrayOfObjects(data, translation, "adventureScene");
             },
             translateDualLanguage: (data, translation) => {
                 return game.langDePf2e.translateDualLanguage(data, translation);
