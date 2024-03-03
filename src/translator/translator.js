@@ -296,22 +296,21 @@ class Translator {
             // For compendium items, get the data from the compendium
             if (
                 entry.flags?.core?.sourceId &&
-                entry.flags.core.sourceId.startsWith("Compendium") &&
+                entry.flags.core.sourceId.startsWith("Compendium.pf2e.") &&
                 !entry.flags.core.sourceId.includes(".Actor.") &&
                 !this.itemBlacklist.includes(entry.flags.core.sourceId)
             ) {
                 // Get the actual compendium name
-                const itemCompendium = entry.flags.core.sourceId.slice(
-                    entry.flags.core.sourceId.indexOf(".") + 1,
-                    entry.flags.core.sourceId.lastIndexOf(".", entry.flags.core.sourceId.lastIndexOf(".") - 1)
-                );
+                const itemCompendium = entry.flags.core.sourceId.split(".");
 
                 const originalName = fromUuidSync(entry.flags.core.sourceId)?.flags?.babele?.originalName;
                 if (originalName) {
                     entry.name = originalName;
 
                     // Get the item from the compendium
-                    const itemData = game.babele.packs.get(itemCompendium).translate(entry);
+                    const itemData = game.babele.packs
+                        .get(`${itemCompendium[1]}.${itemCompendium[2]}`)
+                        .translate(entry);
 
                     if (mergeFromCompendium) {
                         arr[index] = itemData;
