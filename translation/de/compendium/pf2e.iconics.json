@@ -128,7 +128,9 @@
           "name": "Vorbereitete Arkane Zauber"
         },
         "consumable->Scroll of Grim Tendrils (Rank 1)": {
-          "name": "Schriftrolle: Finstere Tentakel (Grad 1)"
+          "name": "Schriftrolle: Finstere Tentakel (Grad 1)",
+          "consumableSpellName": "Finstere Tentakel",
+          "consumableSpellDescription": "<p>Aus Dunkelheit geschaffene Tentakel entrollen sich aus deinen Fingerspitzen und schnellen durch die Luft. Du verursachst bei allen Kreaturen im Wirkungsbereich 2W4 Punkte Leerenschaden sowie 1 Punkt Blutungsschaden. Jede lebendige Kreatur muss außerdem einen Zähigkeitswurf ausführen.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erleidet halben Leerenschaden und keinen anhaltenden Blutungsschaden.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet vollen Schaden.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erleidet jeweils doppelten Leerenschaden und anhaltende Blutung.</p>\n<hr />\n<p><strong>Erhöhung (+1)</strong> Der Leerenschaden erhöht sich um 2W4 und der anhaltende Blutungsschaden um 1.</p>\n<p><strong>Gradabhängiger Blutungsschaden:</strong> @Damage[(@item.level)[bleed]]</p>"
         },
         "heritage->Skilled Heritage (Society)": {
           "name": "<Compendium> (Gesellschaftskunde)"
@@ -189,10 +191,15 @@
           "description": "<p>Dieser Beutel enthält materielle Komponenten für jene Zaubersprüche, welche sie benötigen. Die Komponenten verbrauchen sich zwar über Zeit, du kannst sie aber immer dann auffüllen, wenn du deine täglichen Zauber vorbereitest.</p>"
         },
         "consumable->Wand of Mystic Armor (Rank 1)": {
-          "name": "Zauberstab: Mystische Rüstung (Grad 1)"
+          "name": "Zauberstab: Mystische Rüstung (Grad 1)",
+          "consumableSpellName": "Mystische Rüstung",
+          "consumableSpellDescription": "<p>Du schützt dich mit einer Rüstung aus schimmernder magischer Energie. Sie verleiht dir einen Gegenstandsbonus von +1 auf die RK und einen maximalen Geschicklichkeitsbonus von +5. Während du <em>Mystische Rüstung</em> trägst, verwendest du deinen ungerüsteten Kompetenzgrad, um deine RK zu berechnen.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.qkwb5DD3zmKwvbk0]{Zaubereffekt: Mystische Rüstung}</p>\n<hr />\n<p><strong>Erhöhung (4.)</strong> Du erhältst einen Gegenstandsbonus von +1 auf Rettungswürfe.</p>\n<p><strong>Erhöhung (6.)</strong> Der Gegenstandsbonus auf die RK steigt auf +2 und du erhältst einen Gegenstandsbonus von +1 auf Rettungswürfe.</p>\n<p><strong>Erhöhung (8.)</strong> Der Gegenstandsbonus auf die RK steigt auf +2 und du erhältst einen Gegenstandsbonus von +2 auf Rettungswürfe.</p>\n<p><strong>Erhöhung (10.)</strong> Der Gegenstandsbonus auf die RK steigt auf +3 und du erhältst einen Gegenstandsbonus von +3 auf Rettungswürfe.</p>"
         },
         "consumable->Wand of Force Barrage (Rank 1)": {
-          "name": "Zauberstab: Kraftgeschoss (Grad 1)"
+          "name": "Zauberstab: Kraftgeschoss (Grad 1)",
+          "consumableSpellName": "Kraftgeschoss",
+          "consumableSpellDescription": "<p>You fire a shard of solidified magic toward a creature that you can see. It automatically hits and deals 1d4+1 force damage. For each additional action you use when Casting the Spell, increase the number of shards you shoot by one, to a maximum of three shards for 3 actions. You choose the target for each shard individually. If you shoot more than one shard at the same target, combine the damage before applying bonuses or penalties to damage, resistances, weaknesses, and so forth.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> You fire one additional shard with each action you spend.</p>",
+          "consumableSpellTarget": "1 Kreatur"
         },
         "spellcastingEntry->Arcane Prepared Spells": {
           "name": "Vorbereitete Arkane Zauber"
@@ -324,14 +331,23 @@
         },
         "consumable->Scroll of Pet Cache (Level 1)": {
           "name": "Schriftrolle: Tierversteck (Grad 1)",
+          "consumableSpellName": "Tierversteck",
+          "consumableSpellDescription": "<p>Du öffnest deinen Umhang oder schaffst mit deinen Händen eine kleine Lücke, durch welche du dein Ziel in eine Taschendimension ziehst, die gerade groß genug ist, um grundlegenden Komfort zu bieten. Keine andere Kreatur kann diesen extradimensionalen Raum betreten und das Ziel kann nur die Gegenstände mit sich bringen, welche dafür gedacht sind, von Kreaturen seiner Art getragen zu werden. Der Raum bietet genügend Luft, Wasser und Nahrungsmittel, um das Ziel für die Wirkungsdauer zu versorgen.</p>\n<p>Du kannst den Zauber aufheben. Der Zauber endet auch, wenn du stirbst oder einen extradimensionalen betrittst. Wenn der Zauber endet, erscheint das Ziel im nächstliegenden freien Feld (außerhalb jedes extradimensionalen Raumes, welchen du betreten haben magst).</p>",
+          "consumableSpellTarget": "1 bereitwillige Kreatur, welche dein Tiergefährte oder Vertrauter ist",
           "description": "<p>@UUID[Compendium.pf2e.spells-srd.Item.F1nlmqOIucch3Cmt]{Tierversteck}</p>\n<hr />\n<Compendium>"
         },
         "consumable->Scroll of Familiar's Face (Level 3)": {
           "name": "Schriftrolle: Antlitz des Vertrauten (Grad 3)",
+          "consumableSpellName": "Antlitz des Vertrauten",
+          "consumableSpellDescription": "<p>Das Ziel wird zu einem Ausspähsensor. Dies erlaubt es dir, durch seine Augen zu sehen, zu riechen, was es riecht, und auf ähnliche Weise die anderen Sinne wahrzunehmen. Wenn du während der Wirkungsdauer dieses Zaubers einen Zauber der Kategorie Offenbarung wirken kannst, welcher deine Sinne verbessert (zum Beispiel, um @UUID[Compendium.pf2e.spells-srd.Item.jwK43yKsHTkJQvQ9]{Unsichtbares wahrnehmen}), erhältst du den Vorteil des Zaubers durch die Sinne deines Zieles statt durch deine eigenen. Du kannst auch durch das Ziel sprechen, wobei die Stimme deiner stark ähnelt, aber immer noch etwas von dem Tiergefährten hat und die Form vom Knurren oder Krächzen des Tieres annimmt. Du kannst @UUID[Compendium.pf2e.actionspf2e.Item.q9nbyIF0PEBqMtYe]{Tier anweisen} als Teil des Aufrechterhaltens des Zaubers anwenden. Du brauchst keine Sichtlinie zu deinem Ziel, um diesen Zauber zu wirken.</p>",
+          "consumableSpellTarget": "1 bereitwillige Kreatur, welche dein Tiergefährte oder Vertrauter ist",
           "description": "<p>@UUID[Compendium.pf2e.spells-srd.Item.9GkOWDFDEMuV3hJr]{Antlitz des Vertrauten}</p>\n<hr />\n<Compendium>"
         },
         "consumable->Wand of Soothe (Level 1)": {
           "name": "Zauberstab: Balsam (Grad 1)",
+          "consumableSpellName": "Balsam",
+          "consumableSpellDescription": "<p>Du beruhigst den Geist des Ziels, sodass seine mentalen Barrieren gestärkt und seine Wunden geheilt werden. Wenn du diesen Zauber wirkst, erhält das Ziel 1W10+4 Trefferpunkte zurück sowie während der Wirkungsdauer einen Zustandsbonus von +2 auf Rettungswürfe gegen Mentale Effekte.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.nkk4O5fyzrC0057i]{Zaubereffekt: Balsam}</p>\n<hr />\n<p><strong>Erhöhung (+1)</strong> Die Anzahl der geheilten Trefferpunkte erhöht sich um 1W10+4.</p>",
+          "consumableSpellTarget": "1 bereitwillige Kreatur",
           "description": "<p>@UUID[Compendium.pf2e.spells-srd.Item.szIyEsvihc5e1w8n]{Balsam}</p>\n<hr />\n<Compendium>"
         },
         "feat->Hexes": {
@@ -552,7 +568,10 @@
           "name": "Göttliche Fokuszauber"
         },
         "consumable->Scroll of Runic Weapon (Rank 1)": {
-          "name": "Schriftrolle: Runenwaffe (Grad 1)"
+          "name": "Schriftrolle: Runenwaffe (Grad 1)",
+          "consumableSpellName": "Runenwaffe",
+          "consumableSpellDescription": "<p>Die Waffe schimmert vor Magie, und auf ihrer Länge sind temporäre Runen eingraviert. Das Ziel wird zu einer <em>+1 Waffe des Schadens</em> mit einem Gegenstandsbonus von +1 auf Angriffswürfe. Die Anzahl der Schadenswürfel der Waffe steigt auf zwei.</p>\n<hr />\n<p><strong>Erhöhung (6.)</strong> Das Ziel ist eine <em>+2 Waffe des Starken Schadens</em>.</p>\n<p><strong>Erhöhung (9.)</strong> Das Ziel ist eine <em>+3 Waffe des Mächtigen Schadens</em>.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.GnWkI3T3LYRlm3X8]{Zaubereffekt: Runenwaffe}</p>",
+          "consumableSpellTarget": "1 Waffe, die entweder nicht getragen oder von dir oder einem bereitwilligen Verbündeten geführt wird"
         },
         "consumable->Salt and Pepper": {
           "name": "Salz und Pfeffer"
@@ -588,13 +607,21 @@
           }
         },
         "consumable->Scroll of Faerie Fire (Rank 2)": {
-          "name": "Schriftrolle: Feenfeuer (Grad 2)"
+          "name": "Schriftrolle: Feenfeuer (Grad 2)",
+          "consumableSpellName": "Feenfeuer",
+          "consumableSpellDescription": "<p>Alle Kreaturen im Wirkungsbereich werden von farbenfrohen, keine Hitze abstrahlenden Flammen umhüllt, wenn du diesen Zauber wirkst. Du suchst die Farbe der Flammen beim Wirken des Zaubers aus. Sichtbare Kreaturen können nicht @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Verborgen} werden, während sie unter dem Effekt von <em>Feenfeuer </em>stehen. Unsichtbare Kreaturen sind unter dem Effekt von <em>Feenfeuer</em> nicht mehr @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Unentdeckt}, sondern nur @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Verborgen}.</p>"
         },
         "consumable->Scroll of Restoration (Rank 2)": {
-          "name": "Schriftrolle: Genesung (Grad 2)"
+          "name": "Schriftrolle: Genesung (Grad 2)",
+          "consumableSpellName": "Genesung",
+          "consumableSpellDescription": "<p>Heilende Magie wirkt den Effekten von Giften und Zuständen entgegen, welche die Leistungsfähigkeit einer Kreatur einschränken. Wenn du Genesung wirkst, musst du dich entscheiden, entweder Zustandsgrad zu reduzieren oder die Wirkung eines Giftes zu lindern. Eine Kreatur kann nur von einem <em>Genesungs</em>-Zauber pro Tag profitieren. Außerdem kann derselbe Zustand oder dasselbe Gift nicht mehr als einmal von <em>Genesung </em>gemindert werden.</p>\n<p><strong>Zustandsgrad reduzieren</strong> Reduziere den Grad eines der Zustände @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen}, @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos} oder @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen} um 2. Du kannst auch zwei der genannten Zustände um 1 reduzieren.</p>\n<p><strong>Gift lindern</strong> Reduziere die Phase eines Giftes um 1. Du kannst die Phase nicht unter 1 mindern oder das Leiden heilen.</p>\n<hr />\n<p><strong>Erhöhung (4.)</strong> Füge @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt} der Liste von Zuständen hinzu, deren Grad du reduzieren kannst. Linderst du ein Gift, reduziere seine Phase um 2. Du erhältst außerdem eine dritte Option, mit der du den Zustandsgrad von @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Todgeweiht} eines Zieles um 1 reduzieren kannst. Ist der Zustand @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Todgeweiht} allerdings permanent, lässt er sich nicht mindern.</p>\n<p><strong>Erhöhung (6.)</strong> Wie bei Grad 4, aber du kannst auch einen permanenten Zustand @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Todgeweiht} mindern, wenn du eine Aktion zum Zauberwirken mit einer Materialkomponente hinzufügst. Du musst Diamantstaub im Wert von 100 GM als Kosten hinzufügen.</p>",
+          "consumableSpellTarget": "1 Kreatur"
         },
         "consumable->Wand of Heal (Rank 1)": {
-          "name": "Zauberstab: Heilung (Grad 1)"
+          "name": "Zauberstab: Heilung (Grad 1)",
+          "consumableSpellName": "Heilung",
+          "consumableSpellDescription": "<p>Du kanalisierst Lebensenergie, um ein Lebewesen zu heilen oder einen Untoten zu verletzen. Ist das Ziel ein bereitwilliges Lebewesen, gibst du ihm 1W8 Trefferpunkte zurück. Ist das Ziel eine untote Kreatur, erleidet es 1W8 Punkte Lebenssschaden und muss einen einfachen Zähigkeitswurf ausführen. Die Anzahl von Aktionen, die du zum Wirken dieses Zaubers aufwendest, bestimmt seine Ziele, Reichweite, Wirkungsbereich und anderen Parameter.</p>\n<p><span class=\"action-glyph\">1</span>  Der Zauber hat eine Reichweite von Berührung.</p>\n<p><span class=\"action-glyph\">2</span> <strong>(Konzentration)</strong> Der Zauber hat eine Reichweite von 30 Fuß/9 m. Heilst du eine lebendige Kreatur, erhöhe die geheilten Trefferpunkte um 8.</p>\n<p><span class=\"action-glyph\">3</span> <strong>(Konzentration)</strong> Du verteilst Lebensenergie in einer @Template[type:emanation|distance:30]{Ausstrahlung von 30 Fuß/9 m}. Dies betrifft alle lebendigen und untoten Kreaturen im Wirkungsbereich.</p>\n<hr />\n<p><strong>Erhöhung (+1)</strong> Die Anzahl der geheilten oder abgezogenen Trefferpunkte erhöht sich um 1W8. Die zusätzlich geheilten Trefferpunkte beim Aufwand von 2 Aktionen erhöhen sich um 8.</p>",
+          "consumableSpellTarget": "1 untote oder bereitwillige lebendige Kreatur"
         },
         "consumable->Salt and Pepper": {
           "name": "Salz und Pfeffer"
@@ -627,7 +654,7 @@
           "name": "Gottheit (Sarenrae)"
         },
         "feat->Divine Font (Healing)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.classfeatures.Item.gblTFUOgolqFS9v4]\nDivine Font (Healing)"
+          "name": "<Compendium> (Heilung)"
         },
         "feat->Domain Initiate (Fire)": {
           "name": "Domäneneingeweihter (Feuer)"
@@ -665,7 +692,7 @@
           "name": "Vorbereitete Göttliche Zauber"
         },
         "spellcastingEntry->Divine Font (Healing)": {
-          "name": "Divine Font (Healing)"
+          "name": "Göttlicher Quell (Heilung)"
         },
         "spellcastingEntry->Focus Spells": {
           "name": "Göttliche Fokuszauber"
@@ -680,16 +707,22 @@
           "name": "Umgang mit Rüstungen (Mittelschwere Rüstung)"
         },
         "consumable->Scroll of Resist Energy (Rank 2)": {
-          "name": "Schriftrolle: Energien widerstehen (Grad 2)"
+          "name": "Schriftrolle: Energien widerstehen (Grad 2)",
+          "consumableSpellName": "Energien widerstehen",
+          "consumableSpellDescription": "<p>Ein Schild aus Elementarenergie schützt eine Kreatur gegen eine Art von Energieschaden. Entscheide dich für Elektrizität, Feuer, Kälte, Schall oder Säure. Das Ziel sowie seine Ausrüstung erhält Resistenz 5 gegen die gewählte Schadensart.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.con2Hzt47JjpuUej]{Zaubereffekt: Energien widerstehen}</p>\n<hr />\n<p><strong>Erhöhung (4.)</strong> Die Resistenz steigt auf 10 und du kannst bis zu zwei Kreaturen als Ziele auswählen.</p>\n<p><strong>Erhöhung (7.)</strong> Die Resistenz steigt auf 15 und du kannst bis zu fünf Kreaturen als Ziele auswählen.</p>",
+          "consumableSpellTarget": "1 Kreatur"
         },
         "consumable->Scroll of Restoration (Rank 2)": {
-          "name": "Schriftrolle: Genesung (Grad 2)"
+          "name": "Schriftrolle: Genesung (Grad 2)",
+          "consumableSpellName": "Genesung",
+          "consumableSpellDescription": "<p>Heilende Magie wirkt den Effekten von Giften und Zuständen entgegen, welche die Leistungsfähigkeit einer Kreatur einschränken. Wenn du Genesung wirkst, musst du dich entscheiden, entweder Zustandsgrad zu reduzieren oder die Wirkung eines Giftes zu lindern. Eine Kreatur kann nur von einem <em>Genesungs</em>-Zauber pro Tag profitieren. Außerdem kann derselbe Zustand oder dasselbe Gift nicht mehr als einmal von <em>Genesung </em>gemindert werden.</p>\n<p><strong>Zustandsgrad reduzieren</strong> Reduziere den Grad eines der Zustände @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen}, @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos} oder @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen} um 2. Du kannst auch zwei der genannten Zustände um 1 reduzieren.</p>\n<p><strong>Gift lindern</strong> Reduziere die Phase eines Giftes um 1. Du kannst die Phase nicht unter 1 mindern oder das Leiden heilen.</p>\n<hr />\n<p><strong>Erhöhung (4.)</strong> Füge @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt} der Liste von Zuständen hinzu, deren Grad du reduzieren kannst. Linderst du ein Gift, reduziere seine Phase um 2. Du erhältst außerdem eine dritte Option, mit der du den Zustandsgrad von @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Todgeweiht} eines Zieles um 1 reduzieren kannst. Ist der Zustand @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Todgeweiht} allerdings permanent, lässt er sich nicht mindern.</p>\n<p><strong>Erhöhung (6.)</strong> Wie bei Grad 4, aber du kannst auch einen permanenten Zustand @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Todgeweiht} mindern, wenn du eine Aktion zum Zauberwirken mit einer Materialkomponente hinzufügst. Du musst Diamantstaub im Wert von 100 GM als Kosten hinzufügen.</p>",
+          "consumableSpellTarget": "1 Kreatur"
         },
         "feat->Deity (Sarenrae)": {
           "name": "Gottheit (Sarenrae)"
         },
         "feat->Divine Font (Healing)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.classfeatures.Item.gblTFUOgolqFS9v4]\nDivine Font (Healing)"
+          "name": "<Compendium> (Heilung)"
         },
         "feat->Domain Initiate (Fire)": {
           "name": "Domäneneingeweihter (Feuer)"
@@ -718,7 +751,7 @@
           "name": "Vorbereitete Göttliche Zauber"
         },
         "spellcastingEntry->Divine Font (Healing)": {
-          "name": "Divine Font (Healing)"
+          "name": "Göttlicher Quell (Heilung)"
         },
         "spellcastingEntry->Focus Spells": {
           "name": "Göttliche Fokuszauber"
@@ -733,16 +766,22 @@
           "name": "Umgang mit Rüstungen (Leichte Rüstung)"
         },
         "consumable->Scroll of Resist Energy (Rank 2)": {
-          "name": "Schriftrolle: Energien widerstehen (Grad 2)"
+          "name": "Schriftrolle: Energien widerstehen (Grad 2)",
+          "consumableSpellName": "Energien widerstehen",
+          "consumableSpellDescription": "<p>Ein Schild aus Elementarenergie schützt eine Kreatur gegen eine Art von Energieschaden. Entscheide dich für Elektrizität, Feuer, Kälte, Schall oder Säure. Das Ziel sowie seine Ausrüstung erhält Resistenz 5 gegen die gewählte Schadensart.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.con2Hzt47JjpuUej]{Zaubereffekt: Energien widerstehen}</p>\n<hr />\n<p><strong>Erhöhung (4.)</strong> Die Resistenz steigt auf 10 und du kannst bis zu zwei Kreaturen als Ziele auswählen.</p>\n<p><strong>Erhöhung (7.)</strong> Die Resistenz steigt auf 15 und du kannst bis zu fünf Kreaturen als Ziele auswählen.</p>",
+          "consumableSpellTarget": "1 Kreatur"
         },
         "consumable->Wand of Mending (Rank 1)": {
-          "name": "Zauberstab: Ausbessern (Grad 1)"
+          "name": "Zauberstab: Ausbessern (Grad 1)",
+          "consumableSpellName": "Ausbessern",
+          "consumableSpellDescription": "<p>Du reparierst das Zielobjekt. Es erhält 5 Trefferpunkte pro Zaubergrad zurück, wobei es möglicherweise den Zustand @UUID[Compendium.pf2e.conditionitems.Item.6dNUvdb1dhToNDj3]{Beschädigt} verliert, wenn seine Trefferpunkte über den Beschädigungswert steigen. Du bist nicht imstande, fehlende Teile zu ersetzen oder vollständig zerstörte Objekte zu reparieren.</p>\n<hr />\n<p><strong>Erhöhung (2.)</strong> Du kannst ein nichtmagisches Objekt von 1 Last oder weniger als Zielobjekt auswählen.</p>\n<p><strong>Erhöhung (3.)</strong> Du kannst ein nichtmagisches Objekt von 2 Lasten oder weniger, oder ein magisches Objekt von 1 Last oder weniger als Ziel auswählen.</p>",
+          "consumableSpellTarget": "Nicht-magisches Objekt von leichter Last oder weniger"
         },
         "feat->Deity (Sarenrae)": {
           "name": "Gottheit (Sarenrae)"
         },
         "feat->Divine Font (Healing)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.classfeatures.Item.gblTFUOgolqFS9v4]\nDivine Font (Healing)"
+          "name": "<Compendium> (Heilung)"
         },
         "feat->Domain Initiate (Fire)": {
           "name": "Domäneneingeweihter (Feuer)"
