@@ -224,6 +224,10 @@ class Translator {
                 objectTranslation = objectTranslation.find((obj) => obj.id === entry._id) ?? false;
             }
             if (objectTranslation) {
+                // For adventure journal pages, normalize the name
+                if (mappingType === "adventureJournalPage") {
+                    objectTranslation.name = this.normalizeName(objectTranslation.name);
+                }
                 this.dynamicMerge(arr[index], objectTranslation, this.getMapping(mappingType, true));
             }
         });
@@ -283,13 +287,51 @@ class Translator {
         return data;
     }
 
-    translateActorItems(data, translation, mergeFromCompendium = true) {
+    // Return either localized or both localized and english text, based on module setting
+    translateDualLanguage(data, translation) {
+        if (!translation || data === translation) {
+            return data;
+        } else if (game.settings.get("lang-de-pf2e", "dual-language-names")) {
+            return this.normalizeName(translation) + "/" + data;
+        } else {
+            return this.normalizeName(translation);
+        }
+    }
+
+    // Translate heightened spells
+    translateHeightening(data, translation) {
+        if (data.levels) {
+            if (translation) {
+                mergeObject(data.levels, translation, { overwrite: true });
+            }
+            Object.keys(data.levels).forEach((level) => {
+                ["duration", "range", "time"].forEach((fieldName) => {
+                    if (data.levels[level][fieldName]?.value) {
+                        data.levels[level][fieldName].value = this.translateValue(
+                            fieldName,
+                            data.levels[level][fieldName].value
+                        );
+                    }
+                });
+            });
+        }
+        return data;
+    }
+
+    translateItems(data, translation, actorItem = false, mergeFromCompendium = true) {
         data.forEach((entry, index, arr) => {
             // Get the available translation for the item and the sluggified item name
-            const itemKey =
-                entry.type != "melee"
-                    ? `${entry.type}->${entry.name}`
-                    : `strike-${entry.system.weaponType.value}->${entry.name}`;
+            let itemKey;
+
+            // Build itemKey depending on the type of item (world item or actor item)
+            if (actorItem) {
+                itemKey =
+                    entry.type != "melee"
+                        ? `${entry.type}->${entry.name}`
+                        : `strike-${entry.system.weaponType.value}->${entry.name}`;
+            } else {
+                itemKey = entry.name;
+            }
             let itemTranslation = translation ? translation[itemKey] ?? undefined : undefined;
             const itemNameSlug = this.sluggify(entry.name);
 
@@ -369,37 +411,6 @@ class Translator {
             }
         });
 
-        return data;
-    }
-
-    // Return either localized or both localized and english text, based on module setting
-    translateDualLanguage(data, translation) {
-        if (!translation || data === translation) {
-            return data;
-        } else if (game.settings.get("lang-de-pf2e", "dual-language-names")) {
-            return this.normalizeName(translation) + "/" + data;
-        } else {
-            return this.normalizeName(translation);
-        }
-    }
-
-    // Translate heightened spells
-    translateHeightening(data, translation) {
-        if (data.levels) {
-            if (translation) {
-                mergeObject(data.levels, translation, { overwrite: true });
-            }
-            Object.keys(data.levels).forEach((level) => {
-                ["duration", "range", "time"].forEach((fieldName) => {
-                    if (data.levels[level][fieldName]?.value) {
-                        data.levels[level][fieldName].value = this.translateValue(
-                            fieldName,
-                            data.levels[level][fieldName].value
-                        );
-                    }
-                });
-            });
-        }
         return data;
     }
 
