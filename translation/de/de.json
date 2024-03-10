@@ -135,6 +135,9 @@
         "TakesNoDamage": "<actor>{actor}</actor> nimmt keinen Schaden.",
         "TheTarget": "Das Ziel"
       },
+      "AttackEffects": {
+        "PlusList": "(plus {list})"
+      },
       "Attacks": "Angriffe",
       "Character": {
         "Attribute": {
@@ -231,9 +234,12 @@
           "Defense": {
             "Heavy": "Schwere Rüstung",
             "HeavyBarding": "Schwerer Harnisch",
+            "HeavyShort": "Heavy",
             "Light": "Leichte Rüstung",
             "LightBarding": "Leichter Harnisch",
+            "LightShort": "Light",
             "Medium": "Mittelschwere Rüstung",
+            "MediumShort": "Medium",
             "Title": "Verteidigungen",
             "Unarmored": "Ungerüstete Verteidigung"
           },
@@ -405,7 +411,7 @@
             "LowLightVision": "Dämmersicht",
             "MotionSense": "Bewegungssinn",
             "Scent": "Geruchssinn",
-            "SeeInvisibility": "Unsichtbares sehen",
+            "SeeInvisibility": "See the Unseen",
             "Spiritsense": "Geistergespür",
             "Thoughtsense": "Gedankengespür",
             "Tremorsense": "Erschütterungssinn",
@@ -501,7 +507,7 @@
         "TotalBulk": "Gesamte Last: {bulk}",
         "UnitTitle": {
           "Bulk": "Einzellast",
-          "Price": "Einzelpreis"
+          "Price": "Price"
         }
       },
       "IWREditor": {
@@ -628,7 +634,16 @@
         },
         "Wealth": "Vermögen"
       },
-      "Plural": "Akteure"
+      "Plural": "Akteure",
+      "Vehicle": {
+        "EmitsSound": {
+          "Encounter": "During Encounters",
+          "False": "No",
+          "Hint": "Whether this vehicle is emitting sound and can be sensed via hearing.",
+          "Title": "Emitting Sound?",
+          "True": "Yes"
+        }
+      }
     },
     "ActorSizeGargantuan": "Gigantisch",
     "ActorSizeHuge": "Riesig",
@@ -653,34 +668,24 @@
     "AncestryFeatLevels": "Abstammungstalentstufen",
     "AncestryFeatures": "Abstammungsmerkmale",
     "AncestryHP": "Abstammungs-TP",
-    "AreaLabel": "Bereich",
-    "AreaSize10": "10 Fuß/3 m",
-    "AreaSize100": "100 Fuß/30 m",
-    "AreaSize1000": "1000 Fuß/300 m",
-    "AreaSize120": "120 Fuß/36 m",
-    "AreaSize15": "15 Fuß/4,5 m",
-    "AreaSize1Mile": "1 Meile/1,5 km",
-    "AreaSize20": "20 Fuß/6 m",
-    "AreaSize25": "25 Fuß/7,50 m",
-    "AreaSize30": "30 Fuß/9 m",
-    "AreaSize360": "360 Fuß/108 m",
-    "AreaSize40": "40 Fuß/12 m",
-    "AreaSize45": "45 Fuß/13,5 m",
-    "AreaSize5": "5 Fuß/1,5 m",
-    "AreaSize50": "50 Fuß/15 m",
-    "AreaSize500": "500 Fuß/150 m",
-    "AreaSize60": "60 Fuß/18 m",
-    "AreaSize65": "65 Fuß/19,5 m",
-    "AreaSize75": "75 Fuß/22,5 m",
-    "AreaSize80": "80 Fuß/24 m",
-    "AreaSize90": "90 Fuß/27 m",
-    "AreaSizeQuarterMile": "Viertelmeile/400 m",
-    "AreaTypeBurst": "Explosion",
-    "AreaTypeCone": "Kegel",
-    "AreaTypeCube": "Würfel",
-    "AreaTypeEmanation": "Ausstrahlung",
-    "AreaTypeLine": "Linie",
-    "AreaTypeSquare": "Quadrat",
+    "Area": {
+      "InFeet": "Area (Feet)",
+      "Label": "Area",
+      "Shape": {
+        "burst": "burst",
+        "cone": "cone",
+        "cube": "cube",
+        "cylinder": "cylinder",
+        "emanation": "emanation",
+        "line": "line",
+        "square": "square"
+      },
+      "Size": {
+        "Half": "half",
+        "Mile": "mile",
+        "Quarter": "quarter"
+      }
+    },
     "ArmorArmorLabel": "RK Bonus",
     "ArmorCheckLabel": "Rüstungsmalus",
     "ArmorCheckPenalty": "Rüstungsmalus",
@@ -885,8 +890,8 @@
     "CharacterTraits": "Charaktermerkmale",
     "CharacterTraitsHeader": "Kategorien & andere Details",
     "ChatRollDetails": {
+      "DiceAndModifiers": "Dice and Modifiers",
       "FlatCheckNoModifiers": "Einfache Würfe enthalten keine Modifikatoren, Boni oder Mali.",
-      "ModifiersAndDice": "Modifikatoren und Würfel",
       "RollOptions": "Wurfoptionen",
       "Select": "Wurf untersuchen",
       "Title": "Wurf untersuchen"
@@ -894,10 +899,11 @@
     "Check": {
       "DC": {
         "Label": {
-          "AdjustedTarget": "<target>Ziel: {target}</target> <dc>({dcType} <preadjusted>{preadjusted}</preadjusted> <adjusted>{adjusted}</adjusted>)</dc>",
-          "NoChangeTarget": "<target>Ziel: {target}</target> <dc>({dcType} <adjusted>{adjusted}</adjusted>)</dc>",
+          "AdjustedTarget": "<opposer>Target: {opposer}</opposer> <dc>({dcType} <preadjusted>{preadjusted}</preadjusted> <adjusted>{adjusted}</adjusted>)</dc>",
+          "NoChangeTarget": "<opposer>Target: {opposer}</opposer> <dc>({dcType} <adjusted>{adjusted}</adjusted>)</dc>",
           "NoTarget": "<dc>{dcType} {dc}</dc>",
-          "WithTarget": "<target>Ziel: {target}</target> <dc>({dcType} {dc})</dc>"
+          "WithTarget": "<opposer>Target: {opposer}</target> <dc>({dcType} {dc})</dc>",
+          "WithOrigin": "<opposer>Origin: {opposer}</target> <dc>({dcType} {dc})</dc>"
         },
         "Specific": {
           "armor": "RK",
@@ -1160,7 +1166,9 @@
         "Type": {
           "abysium": "Abysium",
           "adamantine": "Adamant",
+          "alchemical": "alchemical",
           "all-damage": "jede Schadensart",
+          "arcane": "arcane",
           "area-damage": "Flächenschaden",
           "arrow-vulnerability": "Schwäche gg. Pfeile",
           "auditory": "Hörbar",
@@ -1180,6 +1188,7 @@
           "death-effects": "Todeseffekte",
           "detection": "Entdeckung",
           "disease": "Krankheit",
+          "divine": "divine",
           "djezet": "Djezet",
           "doomed": "Todgeweiht",
           "drained": "Ausgelaugt",
@@ -1212,6 +1221,7 @@
           "nonlethal-attacks": "Nichttödliche Angriffe",
           "noqual": "Noqual",
           "object-immunities": "Immunitäten eines Gegenstandes",
+          "occult": "occult",
           "off-guard": "Auf dem Falschen Fuß",
           "olfactory": "Riechbar",
           "orichalcum": "Orichalcum",
@@ -1222,6 +1232,7 @@
           "plant": "Pflanze",
           "polymorph": "Gestaltwandel",
           "possession": "Besessenheit",
+          "primal": "primal",
           "prone": "Liegend",
           "protean-anatomy": "Proteanische Anatomie",
           "radiation": "Strahlung",
@@ -1313,8 +1324,7 @@
         "vitality": "Leben",
         "void": "Leere",
         "untyped": "Unspezif."
-      },
-      "Scatter": "Streuschaden"
+      }
     },
     "DamageButton": {
       "Adjust": "[Shift-Click] Passe den Wert vorher an.",
@@ -1541,7 +1551,6 @@
     "FeatTypeSkill": "Fertigkeitstalent",
     "FeaturesAncestryHeader": "Abstammungsmerkmale",
     "FeaturesClassHeader": "Klassenmerkmale",
-    "Feet": "Fuß",
     "FlatCheck": "Einfacher Wurf",
     "Focus": {
       "NotEnoughFocusPointsError": "Sie haben nicht genug Fokuspunkte um diesen Zauber zu wirken.",
@@ -1552,7 +1561,18 @@
       "label": "Fokuspunkte",
       "pointLabel": "Punkte"
     },
-    "Foot": "Fuß",
+    "Foot": {
+      "Label": "foot",
+      "Plural": "feet",
+      "Preformatted": {
+        "5": "5 feet",
+        "10": "10 feet",
+        "15": "15 feet",
+        "20": "20 feet",
+        "25": "25 feet",
+        "30": "30 feet"
+      }
+    },
     "FormulaKnownTitle": "Bekannte Formeln",
     "FormulaListEmpty": "Leer (ziehe Formel/Ggst. hierhin)",
     "Formula": "Formel",
@@ -1839,7 +1859,10 @@
           "Heal": "Heilung",
           "Label": "Göttlicher Quell"
         },
-        "DivineSkill": "Göttliche Fertigkeit",
+        "DivineSkill": {
+          "Hint": "Most deities have a single divine skill, though some offer a choice between two.",
+          "Label": "Divine Skill"
+        },
         "Domain": {
           "Abomination": {
             "Description": "Du versuchst, unter den dich Umgebenden Abscheu und Schrecken zu verbreiten.",
@@ -2181,6 +2204,7 @@
           },
           "Range": "Reichweite",
           "ReevaluateFormula": {
+            "InitiativeRoll": "On Initiative Roll",
             "Label": "Neu bewerten?",
             "Never": "Nie",
             "TurnEnd": "Beginn des Zugs",
@@ -2196,6 +2220,7 @@
           "Description": "Maybe it's a treatable condition.",
           "Name": "Disintegrated"
         },
+        "Looping": "Loop back to start?",
         "Plural": "Effekte",
         "ShowTokenIcon": "Tokenbild anzeigen?",
         "Unidentified": "Unidentifiziert?"
@@ -2520,7 +2545,7 @@
           "brawling": "Das Ziel muss einen @Check[type:fortitude|dc:resolve(@actor.attributes.classDC.value)]{Zähigkeitswurf} gegen deinen Klassen-SG ablegen; misslingt ihm dieser Rettungswurf, erhält es bis zum Ende deines nächsten Zuges den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}.",
           "club": "You knock the target up to 10 feet in a straight line away from you, in a direction of your choice. This is forced movement.",
           "firearm": "Das Ziel muss einen @Check[type:fortitude|dc:resolve(@actor.attributes.classDC.value)]{Zähigkeitswurf} gegen deinen Klassen-SG bestehen oder erhält den Status @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1}.",
-          "flail": "The target is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} unless they success at a @Check[type:reflex|dc:resolve(@actor.attributes.classDC.value)|name:Flail Critical Specialization] save against your class DC.",
+          "flail": "The target is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} unless they succeed at a @Check[type:reflex|dc:resolve(@actor.attributes.classDC.value)|name:Flail Critical Specialization] save against your class DC.",
           "hammer": "The target is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} unless they succeed at a @Check[type:fortitude|dc:resolve(@actor.attributes.classDC.value)|name:Hammer Critical Specialization] save against your class DC.",
           "polearm": "Das Ziel wird 1,50 m in eine Richtung deiner Wahl bewegt. Dies zählt als Erzwungene Fortbewegung.",
           "shield": "Du stößt das Ziel 5 Fuß/1,50 m von dir fort. Dies zählt als Erzwungene Fortbewegung.",
@@ -2722,7 +2747,7 @@
     "NPC": {
       "Abilities": {
         "Glossary": {
-          "AllAroundVision": "<p>Das Monster kann gleichzeitig in alle Richtungen sehen und kann daher nicht flankiert werden.</p>",
+          "AllAroundVision": "<p>This monster can see in all directions simultaneously and therefore can't be flanked.</p>",
           "AquaticAmbush": "<p><strong>Anforderungen</strong> Das Monster versteckt sich im Wasser und eine Kreatur, die es bisher nicht entdeckt hat, befindet sich innerhalb der angegebenen Entfernung.</p>\n<p><strong>Effekt</strong> Das Monster bewegt sich durch Wasser und über Land eine Strecke entsprechend seiner Bewegungsrate plus 10 Fuß/3 m auf die auslösende Kreatur zu. Sobald die Kreatur sich im Angriffsradius des Monsters befindet, führt das Monster einen Angriff durch. Gegenüber diesem Angriff ist die Kreatur @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} betroffen.</p>",
           "AtWillSpells": "<p>Das Monster kann seine beliebig oft wirkbaren Zauber so oft einsetzen, wie es möchte, ohne dafür Zauberplätze aufwenden zu müssen.</p>",
           "AttackOfOpportunity": "<p><strong>Auslöser</strong> Eine Kreatur innerhalb des Angriffsradius des Monsters benutzt eine Bewegungsaktion oder eine Handhabenaktion, macht einen Fernkampfangriff oder verlässt ein Feld während einer Bewegungsaktion.</p>\n<p><strong>Effekt</strong> Das Monster führt einen Angriff im Nahkampf gegen die auslösende Kreatur aus. Wenn der Angriff ein Kritischer Treffer ist und der Auslöser eine Handhabenaktion war, so unterbricht das Monster diese Aktion. Dieser Angriff zählt nicht zur Berechnung des Malus für Mehrfachangriffe des Monsters und sein Malus für Mehrfachangriffe wird auf diesen Angriff nicht angewendet.</p>",
@@ -2732,7 +2757,7 @@
           "ChangeShape": "<p>Das Monster verändert auf unbegrenzte Zeit seine Gestalt. Es kann diese Aktion benutzen, um zu seiner natürlichen Gestalt zurückzukehren oder um in eine neue Gestalt zu wechseln. Sofern nichts anderes angegeben ist, kann Gestalt wechseln nicht eingesetzt werden, um das Aussehen eines bestimmten Individuums anzunehmen. Der Einsatz von Gestalt wechseln zählt als Verkleidung im Sinne der Anwendung @UUID[Compendium.pf2e.actionspf2e.Item.AJstokjdG6iDjVjE]{Verkleiden} der Fertigkeit Täuschung. Die Verwandlung des Monsters schlägt automatisch jeden Wahrnehmungs-SG zum Festzustellen, ob die Kreatur der Abstammung oder dem Kreaturenart angehört, dessen Gestalt sie angenommen hat. Weiterhin erhält sie einen Zustandsbonus von +4 auf ihren Täuschungs-SG gegen das Durchschauen der Verkleidung. Bei der Fähigkeit Gestalt wechseln wird angegeben, welche Gestalten das Monster annehmen kann. Es erhält keinerlei Sonderfähigkeiten der neuen Gestalt, nur deren körperliche Erscheinung. So werden z.B. in jeder Gestalt seine normalen Bewegungsraten und Angriffe durch die der neuen Gestalt ersetzt, sowie möglicherweise auch Sinne und Größe. Alle Änderungen werden im Spielwerteblock aufgeführt.</p>",
           "ConstantSpells": "<p>Ein ständig wirkender Zauber wirkt unbegrenzt lange auf das Monster, ohne dass es diesen wirken muss. Sollte einem ständig wirkenden Zauber entgegengewirkt werden, kann das Monster ihn wieder aktivieren, indem es die zum normalen Wirken des Zaubers notwendigen Aktionen aufwendet.</p>",
           "Constrict": "<p>Das Monster fügt einer beliebigen Anzahl an Kreaturen, die es @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{ergriffen} oder @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{gebunden} hat, den angegebenen Schaden zu. Jede dieser Kreaturen kann einen einfachen Zähigkeitswurf gegen den angegebenen SG ablegen.</p>",
-          "Coven": "<p>Dieses Monster kann mit wenigstens zwei weiteren Kreaturen, die ebenfalls die Fähigkeit Zirkel besitzen, einen Zirkel bilden. Dazu ist eine Zeremonie über 8 Stunden vonnöten, an der alle angehenden Mitglieder des Zirkels teilhaben müssen. Nach Bildung des Zirkels erhalten alle Mitglieder die Anpassung Eliteversion (siehe Seite 6), wobei ihre Stufen entsprechend angepasst werden. Die Mitglieder des Zirkels können durch Aufwenden einer Aktion mit der Kategorie Konzentration spüren, wo sich die anderen Mitglieder aufhalten und welche Zustände sie zurzeit haben. Mit einer Zwei Aktionen erfordernden Aktivität, die ebenfalls die Kategorie Konzentration hat, kann ein Mitglied des Zirkels wahrnehmen, was ein anderes Mitglied wahrnimmt.</p>\n<p>Der Zirkel gewährt seinen Mitgliedern weitere Zauber und Rituale. Diese können aber nur in Zusammenarbeit von drei Mitgliedern des Zirkels gewirkt werden, die sich innerhalb von 30 Fuß/9 m voneinander befinden. Ein Mitglied des Zirkels kann zu dem Zirkelzauber beitragen, indem es eine Aktion zum Zauberwirken mit einer Verbalen Komponente aufwendet. Wenn während der letzten Runde zwei Mitglieder des Zirkels diese Aktionen beigetragen haben, kann ein drittes Mitglied den Zirkelzauber in seinem Zug wirken, indem es die normal zum Wirken des Zaubers notwendigen Aktionen aufwendet. Der Zirkel kann seine Zirkelzauber beliebig oft wirken, kann aber nicht mehr als einen Zirkelzauber pro Runde wirken. Alle Zirkel gewähren den Zauber @UUID[Compendium.pf2e.spells-srd.Item.dN8QBNuTiaBHCKUe]{Verfluchte Verwandlung} auf dem 8. Grad, sowie alle folgenden Zauber, die der Zirkel auf beliebigem Grad bis zum 5. Grad wirken kann: @UUID[Compendium.pf2e.spells-srd.Item.Ek5XI0aEdZhBgm21]{Ausspähendes Auge}, @UUID[Compendium.pf2e.spells-srd.Item.HXhWYJviWalN5tQ2]{Hellhören}, @UUID[Compendium.pf2e.spells-srd.Item.zvKWclOZ7A53DObE]{Hellsehen}, @UUID[Compendium.pf2e.spells-srd.Item.vLA0q0WOK2YPuJs6]{Kreatur bezaubern}, @UUID[Compendium.pf2e.spells-srd.Item.FM3SmEW8N1FCRjqt]{Sprechende Leiche}, @UUID[Compendium.pf2e.spells-srd.Item.Ucf8eynbZMfUucjE]{Szenisches Trugbild}, @UUID[Compendium.pf2e.spells-srd.Item.yM3KTTSAIHhyuP14]{Traumnachricht}, @UUID[Compendium.pf2e.spells-srd.Item.i35dpZFI7jZcRoBo]{Verkleidende Illusion} und @UUID[Compendium.pf2e.spells-srd.Item.41TZEjhO6D1nWw2X]{Vorahnung}. Einzelne Kreaturen mit der Fähigkeit Zirkel können einem Zirkel, dem sie beitreten, weitere Zauber gewähren Ein Zirkel kann außerdem das Ritual @UUID[Compendium.pf2e.spells-srd.Item.XkDCzMIyc0YOjw05]{Wetterkontrolle} wirken. Dabei beträgt der SG 23 statt des normalen SG.</p>\n<p>Wenn durch den Austritt oder Tod eines Mitglieds, die Anzahl der Mitglieder des Zirkels unter drei sinkt, können die verbleibenden Mitglieder ihre Anpassung Eliteversion 24 Stunden lang aufrechterhalten, aber ohne genügend Mitglieder, die die entsprechende Anzahl von Aktionen beitragen, können sie keine Zirkelzauber wirken.</p>",
+          "Coven": "<p>This monster can form a coven with two or more other creatures who also have the coven ability. This involves performing an 8-hour ceremony with all prospective coven members. After the coven is formed, each of its members gains elite adjustments, adjusting their levels accordingly. Coven members can sense other members' locations and conditions by spending a single action, which has the concentrate trait, and can sense what another coven member is sensing as a two-action activity, which has the concentrate trait as well.</p>\n<p>Covens also grant spells and rituals to their members, but these can be cast only in cooperation between three coven members who are all within 30 feet of one another. A coven member can contribute to a coven spell with a single action that has the concentrate trait. If two coven members have contributed these actions within the last round, a third member can cast a coven spell on her turn by spending the normal spellcasting actions. A coven can cast its coven spells an unlimited number of times but can cast only one coven spell each round. All covens grant the 8th-rank @UUID[Compendium.pf2e.spells-srd.Item.dN8QBNuTiaBHCKUe]{Cursed Metamorphosis} spell and all the following spells, which the coven can cast at any rank up to 5th: @UUID[Compendium.pf2e.spells-srd.Item.41TZEjhO6D1nWw2X]{Augury}, @UUID[Compendium.pf2e.spells-srd.Item.vLA0q0WOK2YPuJs6]{Charm}, @UUID[Compendium.pf2e.spells-srd.Item.HXhWYJviWalN5tQ2]{Clairaudience}, @UUID[Compendium.pf2e.spells-srd.Item.zvKWclOZ7A53DObE]{Clairvoyance}, @UUID[Compendium.pf2e.spells-srd.Item.yM3KTTSAIHhyuP14]{Dream Message}, @UUID[Compendium.pf2e.spells-srd.Item.i35dpZFI7jZcRoBo]{Illusory Disguise}, @UUID[Compendium.pf2e.spells-srd.Item.Ucf8eynbZMfUucjE]{Illusory Scene}, @UUID[Compendium.pf2e.spells-srd.Item.Ek5XI0aEdZhBgm21]{Scouting Eye}, and @UUID[Compendium.pf2e.spells-srd.Item.FM3SmEW8N1FCRjqt]{Talking Corpse}. Individual creatures with the coven ability also grant additional spells to any coven they join. A coven can also cast the @UUID[Compendium.pf2e.spells-srd.Item.XkDCzMIyc0YOjw05]{Control Weather} ritual, with a DC of 23 instead of the standard DC.</p>\n<p>If a coven member's departure or death brings the coven below three members, the remaining members keep their elite adjustments for 24 hours, but without enough members to contribute the necessary actions, they can't cast coven spells.</p>",
           "Darkvision": "<p>Ein Monster mit Dunkelsicht kann sowohl in der Dunkelheit als auch bei Dämmerlicht perfekt sehen, allerdings nur in schwarz-weiß. Manche Arten magischer Dunkelheit, wie z.B. durch den Zauber @UUID[Compendium.pf2e.spells-srd.Item.4GE2ZdODgIQtg51c]{Dunkelheit} auf dem 4. Grad blockieren normale Dunkelsicht. Ein Monster mit @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.4Ho2xMPEC05aSxzr]{Mächtiger Dunkelsicht} kann allerdings auch diese Art von Dunkelheit durchdringen.</p>",
           "Disease": "<p>Wenn eine Kreatur der Krankheit des Monsters ausgesetzt ist, muss sie einen Zähigkeitswurf ablegen. Bei einem Fehlschlag erleidet sie die Folgen der Krankheit. Die Stufe der Krankheit ist gleich der Stufe des Monsters, von dem sie zugefügt wurde. Die Krankheit befolgt dabei die Regeln für Leiden auf Seite 457 im Grundregelwerk.</p>",
           "Engulf": "<p>Das Monster Läuft bis zum doppelten seiner Bewegungsrate und kann sich auf seinem Weg auch durch Felder anderer Kreaturen bewegen. Alle Kreaturen, die die gleiche Größenkategorie wie das Monster oder kleiner haben und durch deren Felder sich das Monster bewegt, müssen einen Reflexwurf ablegen, um nicht von dem Monster umhüllt zu werden. Für Kreaturen, die nicht handeln können, ist der Rettungswurf automatisch ein kritischer Fehlschlag. Eine Kreatur, deren Rettungswurf ein Erfolg ist, kann wählen, ob sie zur Seite geschoben wird – aus dem Weg des Monsters – oder ob das Monster sie bis zum Ende seiner Bewegung vor sich herschiebt. Das Monster kann pro Kreatur nur einen Versuch machen, sie zu umhüllen. Es kann so viele Kreaturen aufnehmen, wie in seine Angriffsfläche hineinpassen.</p>\n<p>Eine Kreatur, deren Rettungswurf fehlschlägt, wird in den Körper des Monsters hineingezogen. Sie erhält die Zustände @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} und @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1} und muss die Luft anhalten oder sie beginnt zu ersticken. Die Kreatur nimmt den angegebenen Schaden zunächst, wenn sie umhüllt wird, sowie jeweils am Ende ihres Zuges, wenn sie weiterhin umhüllt ist. Eine umhüllte Kreatur kann sich mit der Aktion @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Entkommen} gegen den angegebenen SG befreien. Eine umhüllte Kreatur kann ebenfalls das Monster angreifen, jedoch nur mit Waffenlosen Angriffen oder mit Waffen von leichter Last oder geringer. Die umhüllende Kreatur ist gegen diese Angriffe @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} betroffen. Nimmt das Monster dabei von einem einzelnen Angriff oder Zauber Hieb- oder Stichschaden in Höhe des unter Befreien angegebenen Wertes oder darüber hinaus, kann sich die umhüllte Kreatur herausschneiden. Eine Kreatur, die sich auf eine dieser Weisen befreit, kann sofort wieder atmen und verlässt die Angriffsfläche des Monsters.</p>",
@@ -2742,7 +2767,7 @@
           "FrightfulPresence": "<p>Wenn eine Kreatur den Bereich der Aura betritt, muss sie einen Willenswurf ablegen.</p>\n<p>Unabhängig vom Ergebnis des Wurfs ist sie anschließend 1 Minute lang temporär immun gegen die Unheimliche Ausstrahlung des Monsters.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist von der Ausstrahlung nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 4}.</p>",
           "Grab": "<p><strong>Requirements</strong> The monster's last action was a successful Strike that lists Grab in its damage entry, or the monster has a creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}</p><hr /><p><strong>Effect</strong> If used after a Strike, the monster attempts to @UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]{Grapple} the creature using the body part it attacked with. This attempt neither applies nor counts toward the creature's multiple attack penalty.</p><p>The monster can instead use Grab and choose one creature it's grabbing or restraining with an appendage that has Grab to automatically extend that condition to the end of the monster's next turn.</p>",
           "GreaterConstrict": "<p>Das Monster fügt einer beliebigen Anzahl von Kreaturen, die es @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{gegriffen} oder @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{gebunden} hat, den angegebenen Schaden zu. Jede dieser Kreaturen kann einen einfachen Zähigkeitswurf gegen den angegebenen SG ablegen. Eine Kreatur, deren Rettungswurf ein Fehlschlag ist, erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Bewusstlos}. Eine Kreatur, deren Rettungswurf ein Erfolg ist, ist anschließend 1 Minute lang temporär dagegen immun, durch Mächtiges Würgen bewusstlos zu werden.</p>",
-          "GreaterDarkvision": "<p>Ein Monster mit Dunkelsicht kann sowohl in der Dunkelheit als auch bei Dämmerlicht perfekt sehen, allerdings nur in schwarz-weiß. Manche Arten magischer Dunkelheit, wie z.B. durch den Zauber @UUID[Compendium.pf2e.spells-srd.Item.4GE2ZdODgIQtg51c]{Dunkelheit} auf dem 4. Grad blockieren normale @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.qCCLZhnp2HhP3Ex6]{Dunkelsicht}. Ein Monster mit Mächtiger Dunkelsicht kann allerdings auch diese Art von Dunkelheit durchdringen.</p>",
+          "GreaterDarkvision": "<p>A creature with greater darkvision can see perfectly well in areas of darkness and dim light, though such vision is in black and white only. A creature with greater darkvision can see through even forms of magical darkness.</p>",
           "ImprovedGrab": "<p>Das Monster kann @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.Tkd8sH4pwFIPzqTr]{Ergreifen} als Freie Aktion einsetzen, deren Auslöser der ursprüngliche Treffer ist. Ein Monster mit Verbessertem Ergreifen muss aber weiterhin eine Aktion aufwenden, wenn es für bereits @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{ergriffene} Kreaturen die Dauer des Ergreifens verlängern will.</p>",
           "ImprovedKnockdown": "<p>Das Monster kann @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.BCLvAx4Pz4MLa2pu]{Niederwerfen} als Freie Aktion einsetzen, deren Auslöser der ursprüngliche Treffer ist.</p>",
           "ImprovedPush": "<p>Das Monster kann @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.t6cx9FOODmeZQNYl]{Stoßen} als Freie Aktion einsetzen, deren Auslöser der ursprüngliche Treffer ist.</p>",
@@ -2753,14 +2778,17 @@
           "NegativeHealing": "<p>Eine Kreatur mit Leerenheilung zieht ihre Lebenskraft aus Leerenenergie statt aus Lebensenergie. Sie wird durch Lebensschaden verletzt und kann mit Heilungseffekten der Kategorie Leben nicht geheilt werden. Sie nimmt keinen Leerenschaden und wird von Effekten der Kategorie Leere, die Untote heilen, ebenfalls geheilt.</p>",
           "Poison": "<p>Wenn eine Kreatur dem Gift des Monsters ausgesetzt ist, muss sie einen Zähigkeitswurf ablegen. Bei einem Fehlschlag wird sie vergiftet. Die Stufe des Gifts ist gleich der Stufe des Monsters, von dem es zugefügt wurde. Das Gift befolgt dabei die Regeln für Leiden auf Seite 457 im Pathfinder Grundregelwerk.</p>",
           "PowerAttack": "<p><strong>Häufigkeit</strong> Einmal pro Runde</p>\n<p><strong>Effekt</strong> Das Monster führt einen Nahkampfangriff aus. Dies zählt beim Malus für Mehrfachangriffe als zwei Angriffe. Wenn der Angriff trifft, fügt das Monster einen zusätzlichen Würfel Waffenschaden zu.</p>",
+          "Pull": "<p><strong>Requirements</strong> The monster's last action was a success with a Strike that lists Pull in its damage entry</p><hr /><p><strong>Effect</strong> The monster attempts to @UUID[Compendium.pf2e.actionspf2e.Item.lOE4yjUnETTdaf2T]{Reposition} the creature, moving it closer to the monster. This attempt neither applies nor counts toward the monster's multiple attack penalty. If Pull lists a distance, change the distance the creature is pulled on a success to that distance.</p>",
           "Push": "<p><strong>Requirements</strong> The monster's last action was a successful Strike that lists Push in its damage entry</p><hr /><p><strong>Effect</strong> The monster attempts to @UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Shove} the creature. This attempt neither applies nor counts toward the monster's multiple attack penalty. If Push lists a distance, change the distance the creature is pushed on a success to that distance.</p>",
+          "ReactiveStrike": "<p><strong>Trigger</strong> A creature within the monster's reach uses a manipulate action or a move action, makes a ranged attack, or leaves a square during a move action it's using.</p>\n<hr />\n<p><strong>Effect</strong> The monster attempts a melee Strike against the triggering creature. If the attack is a critical hit and the trigger was a manipulate action, the monster disrupts that action. This Strike doesn't count toward the monster's multiple attack penalty, and its multiple attack penalty doesn't apply to this Strike.</p>",
           "Regeneration": "<p>Das Monster gewinnt jeweils zu Beginn seines Zuges die angegebene Anzahl von Trefferpunkten zurück. Solange seine Regeneration aktiv ist, kann sich der Zustandswert des Monsters für @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{Sterbend} niemals über 3 erhöhen. Nimmt das Monster jedoch Schaden eines in der Beschreibung dieser Fähigkeit angegebenen Typs, deaktiviert sich seine Regeneration bis zum Ende seines nächsten Zuges. Diese Deaktivierung findet statt, bevor der Schaden des betreffenden Typs zugefügt wird, sodass das Monster durch diesen Schaden sterben kann, wenn es dadurch Sterbend 4 erreicht.</p>",
           "Rend": "<p>Der Eintrag für Zerreißen nennt einen Angriff des Monsters.</p>\n<p><strong>Anforderungen</strong> Das Monster trifft innerhalb einer Runde den gleichen Gegner mit zwei aufeinanderfolgenden Angriffen der angegebenen Art.</p>\n<p><strong>Effekt</strong> Das Monster fügt dem Gegner automatisch erneut den Schaden des angegebenen Angriffs zu.</p>",
           "RetributiveStrike": "<p><strong>Auslöser</strong> Ein Gegner fügt einem Verbündeten des Monsters Schaden zu und beide befinden sich innerhalb von 15 Fuß/4,50 m Entfernung von dem Monster.</p>\n<p><strong>Effekt</strong> Der Verbündete erhält Resistenz gegen jede Schadensart des auslösenden Schadens in Höhe deiner Stufe + 2. Befindet sich der Gegner innerhalb der Reichweite des Monsters, so macht es einen Nahkampfangriff gegen ihn.</p>",
           "Scent": "<p>Geruchssinn bedeutet, Kreaturen aufgrund ihres Geruchs aufzuspüren, und ist im Normalfall ein Vager Sinn. Die Reichweite wird bei der Fähigkeit angegeben und kann nur eingesetzt werden, um Kreaturen zu spüren, die auch einen Geruch verbreiten, z.B. verbreiten körperlose Kreaturen keinen Geruch.</p>\n<p>Bei Kreaturen, die einen strengen Geruch verbreiten oder aus deren Richtung der Wind weht, kann der SL festlegen, dass sich die Reichweite des Geruchssinns verdoppelt oder gar verdreifacht. Ebenso kann der SL die Reichweite verringern, wenn sich eine Kreatur windabgewandt befindet.</p>",
           "ShieldBlock": "<p><strong>Auslöser</strong> Das Monster hat seinen Schild gehoben und würde durch einen physischen Angriff Schaden erleiden.</p>\n<p><strong>Effekt</strong> Das Monster nutzt seinen Schild, um einen Schlag abzuwehren. Der Schild schützt das Monster vor Schaden in maximal der Höhe seiner Härte. Verbleibender Schaden wird jeweils von dem Monster und dem Schild erlitten, was dazu führen kann, dass der Schild beschädigt oder zerstört wird.</p>",
           "SneakAttack": "<p>Wenn das Monster mit einer Nahkampfwaffe mit der Eigenschaft Agil oder Finesse, einem Waffenlosen Angriff mit der Eigenschaft Agil oder Finesse oder einer Fernkampfwaffe einen Angriff gegen eine Kreatur ausführt, die @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} betroffen ist, fügt es dieser zusätzlich den angegebenen Präzisionsschaden zu. Bei einem Fernkampfangriff mit einer Wurfwaffe muss die Waffe ebenfalls die Eigenschaft Agil oder Finesse haben.</p>",
-          "SwallowWhole": "<p>Das Monster versucht eine Kreatur der angegebenen Größenkategorie oder kleiner, die sie mit ihrem Bissangriff oder dem Maul ergriffen hat, zu verschlingen. Wenn das Monster bereits eine Kreatur der maximalen angegebenen Größe verschlungen hat, kann sie Verschlingen nicht erneut einsetzen. Ist die verschlungene Kreatur kleiner als das Maximum, kann das Monster üblicherweise weitere Kreaturen verschlingen; der SL bestimmt hier das Limit. Das Monster legt einen Fertigkeitswurf für @Check[type:athletics|defense:reflex]{Athletik} ab gegen den Reflex-SG der ergriffenen Kreatur. Bei Erfolg wird die Kreatur verschlungen. Das Maul bzw. der Bissangriff hält die Kreatur nicht mehr fest und kann wieder für die Aktionen Angriff oder Ergreifen eingesetzt werden. Das Monster kann verschlungene Kreaturen nicht angreifen.</p>\n<p>Eine verschlungene Kreatur erhält die Zustände @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} und @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1} und muss die Luft anhalten oder sie beginnt zu ersticken. Die Kreatur nimmt den angegebenen Schaden das erste Mal, wenn sie verschlungen wird, sowie jeweils am Ende ihres Zuges, wenn sie weiterhin verschlungen ist. Eine Kreatur, die mittels der Aktion @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Entkommen} den Zustand Gegriffen verliert, verlässt das Monster durch dessen Maul. Dadurch werden unter Umständen auch andere im Maul oder durch einen Bissangriff ergriffene Kreaturen befreit. Eine verschlungene Kreatur kann das Monster angreifen, jedoch nur mit Waffenlosen Angriffen oder mit Waffen mit leichter Last oder geringer. Die verschlingende Kreatur ist gegen diese Angriffe @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} betroffen. Nimmt das Monster dabei von einem einzelnen Angriff oder Zauber Hieb- oder Stichschaden in Höhe des unter Befreien angegebenen Wertes oder darüber hinaus, kann sich die verschlungene Kreatur herausschneiden. Eine Kreatur, die sich durch Entkommen oder herausschneiden befreit, kann sofort wieder atmen und verlässt die Angriffsfläche des Monsters.</p>\n<p>Stirbt das Monster, so können alle verschlungenen Kreaturen von den Kreaturen, die an die Angriffsfläche des Monsters angrenzen, befreit werden, indem diese insgesamt gemeinsam 3 Aktionen zum Aufschneiden des Monsters aufwenden. Hierzu müssen allerdings Waffen oder Waffenlose Angriffe verwendet werden, die Hieb- oder Stichschaden zufügen.</p>",
+          "Stench": "<p>A creature entering the aura or starting its turn in the area must succeed at a Fortitude save or become @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (plus @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} as long as it's sickened on a critical failure). A creature that succeeds at its save or recovers from being sickened is temporarily immune to all stench auras for 1 minute.</p>",
+          "SwallowWhole": "<p>The monster attempts to swallow a creature of the listed size or smaller that it has grabbed or restrained in its jaws or mouth. If a swallowed creature is of the maximum size listed, the monster can't use Swallow Whole again. If the creature is smaller than the maximum, the monster can usually swallow more creatures; the GM determines the maximum. The monster attempts an @Check[type:athletics|defense:reflex] check opposed by the grabbed creature's Reflex DC. If it succeeds, it swallows the creature. The monster's mouth or jaws no longer grab a creature it has swallowed, so the monster is free to use them to Strike or Grab once again. The monster can't attack creatures it has swallowed.</p>\n<p>A swallowed creature is @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}, is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1}, and has to hold its breath or start suffocating. The swallowed creature takes the listed amount of damage when first swallowed and at the end of each of its turns while it's swallowed. If the victim @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escapes} this ability's grabbed condition, it exits through the monster's mouth. This frees any other creature grabbed in the monster's mouth or jaws. A swallowed creature can attack the monster that has swallowed it, but only with unarmed attacks or with weapons of light Bulk or less. The swallowing creature is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against the attack. If the monster takes piercing or slashing damage equaling or exceeding the listed Rupture value from a single attack or spell, the swallowed creature cuts itself free. A creature that gets free by either Escaping or cutting itself free can immediately breathe and exits the swallowing monster's space.</p>\n<p>If the monster dies, a swallowed creature can be freed by creatures adjacent to the corpse if they spend a combined total of 3 actions cutting the monster open with a weapon or unarmed attack that deals piercing or slashing damage.</p>",
           "SwarmMind": "<p>Dieses Monster hat keinen einzelnen Verstand, weil es sich meist um einen Schwarm kleinerer Kreaturen handelt. Es ist immun gegen mentale Effekte, die nur eine bestimmte Anzahl von Kreaturen als Ziel haben. Es kann aber weiterhin von mentalen Effekten betroffen werden, die alle Kreaturen in einem Bereich betreffen.</p>",
           "Telepathy": "<p>Ein Monster mit Telepathie kann auf mentale Weise mit jeder Kreatur innerhalb des angegebenen Radius kommunizieren, solange es mit dieser über eine gemeinsame Sprache verfügt. Dies gibt dem Monster keinen besonderen Zugriff auf die Gedanken der Kreatur. Diese Kommunikation übermittelt dabei nicht mehr Information als normale Sprache.</p>",
           "Thoughtsense": "<p>Gedankengespür ermöglicht es einem Monster das mentale Wesen einer Kreatur innerhalb der angegebenen Reichweite wahrzunehmen, jedoch nicht das Aufspüren geistloser Kreaturen.</p>",
@@ -3280,6 +3308,10 @@
         "Hint": "Schränken Sie ein, zu welchen Metaspiel-Informationen Ihre Spieler Zugang haben.",
         "Label": "Spielinformationen begrenzen",
         "Name": "Spielinformationen",
+        "SecretChecks": {
+          "Hint": "Players can see rolls with the Secret trait in chat.",
+          "Name": "Show Secret Checks"
+        },
         "ShowDC": {
           "Hint": "Spieler können die SGs bei Würfen gegen NSCs und anderen Quellen sehen, die nicht zu Spielern gehören.",
           "Name": "Wurf-SGs anzeigen"
@@ -3777,6 +3809,7 @@
     "TraitBottledBreath": "Flaschenluft",
     "TraitBrace": "Abwehr",
     "TraitBrutal": "Brutal",
+    "TraitBugbear": "Bugbear",
     "TraitBulwark": "Bollwerk",
     "TraitCaligni": "Caligni",
     "TraitCantrip": "Zaubertrick",
@@ -3789,6 +3822,7 @@
     "TraitCatalyst": "Katalysator",
     "TraitCatfolk": "Amurrun",
     "TraitCelestial": "Celestisch",
+    "TraitCentaur": "Centaur",
     "TraitChampion": "Streiter",
     "TraitChangeling": "Wechselbalg",
     "TraitCharauKa": "Charau-ka",
@@ -3990,6 +4024,7 @@
     "TraitDescriptionGnoll": "Gnolle sind Humanoide, die Hyänen ähneln.",
     "TraitDescriptionGnome": "Eine Kreatur dieser Kategorie ist ein Angehöriger der Abstammung Gnom. Gnome sind kleine, magiebegabte Leute, welche nach neuen Erfahrungen suchen und meistens über Dämmersicht verfügen. Eine Fähigkeit dieser Kategorie kann nur von Gnomen gewählt und/oder genutzt werden. Eine Waffe dieser Kategorie wird von Gnomen erschaffen und/oder verwendet.",
     "TraitDescriptionGoblin": "Eine Kreatur dieser Kategorie kann einer von vielen Unterarten angehören, zu denen u.a. Goblin, Hobgoblins und Grottenschrate zählen. Goblins haben meistens Dunkelsicht. Eine Fähigkeit dieser Kategorie kann nur von Goblins gewählt und/oder genutzt werden. Eine Waffe dieser Kategorie wird von Goblins erschaffen und/oder verwendet.",
+    "TraitDescriptionBugbear": "Bugbears are the monsters lurking in the closet and hiding under the bed.",
     "TraitDescriptionGoloma": "Abgeschieden lebende Humanoide mit zahllosen Augen.",
     "TraitDescriptionGrapple": "Du kannst diese Waffe benutzen, um einen Gegner mit einem Fertigkeitswurf für Athletik zu ergreifen, auch wenn du keine Hand frei hast. Dies benutzt den Angriffsradius der Waffe (falls dieser sich von deinem eigenen Angriffsradius unterscheidet) und fügt den Gegenstandsbonus der Waffe für Angriffswürfe als Gegenstandsbonus deinem Fertigkeitswurf für Athletik hinzu. Wenn du bei dem Versuch, den Gegner zu ergreifen, einen Kritischen Fehlschlag erzielst, kannst du die Waffe fallen lassen, um statt des Kritischen Fehlschlages nur die Auswirkungen eines Fehlschlages zu erleiden.",
     "TraitDescriptionGrimoire": "Ein Zauberbuch enthält schriftlich niedergelegtes Wissen, welches es einem Charakter ermöglicht, verschiedene Zauber zu lernen und vorzubereiten. Für Magier ist ein Zauberbuch eine absolute Notwendigkeit (sie erhalten für gewöhnlich ihr erstes Zauberbuch umsonst), für andere Zauberwirker ein nützlicher Luxus, der ihnen einen Weg zum Erlenen zusätzlicher Zauber eröffnet. Jedes Zauberbuch kann bis zu 100 Zauber fassen; der angegebene Preis gilt für ein leeres Zauberbuch.",
@@ -4506,6 +4541,7 @@
     "TraitRangeIncrement280": "Entfernungseinheit 280 Fuß/84 m",
     "TraitRangeIncrement290": "Entfernungseinheit 290 Fuß/87 m",
     "TraitRangeIncrement30": "Entfernungseinheit 30 Fuß/9 m",
+    "TraitRangeIncrement35": "Range Increment 35 feet",
     "TraitRangeIncrement300": "Entfernungseinheit 300 Fuß/90 m",
     "TraitRangeIncrement310": "Entfernungseinheit 310 Fuß/93 m",
     "TraitRangeIncrement320": "Entfernungseinheit 320 Fuß/96 m",
@@ -4564,6 +4600,7 @@
     "TraitScrying": "Ausspähung",
     "TraitSeaDevil": "Meeresteufel",
     "TraitSecret": "Verdeckt",
+    "TraitSedacthy": "Sedacthy",
     "TraitSerpentfolk": "Ophis",
     "TraitSeugathi": "Seugathi",
     "TraitSewnIntoClothing": "In Kleidung eingenäht",
@@ -4997,7 +5034,6 @@
         "morningstar": "Morgenstern",
         "naginata": "Naginata",
         "nightstick": "Schlagstock",
-        "nine-ring-sword": "Neunringschwert",
         "nodachi": "Nodachi",
         "nunchaku": "Nunchaku",
         "ogre-hook": "Ogerhaken",
@@ -5533,7 +5569,6 @@
     "WeaponRangeReach": "Angriffsradius",
     "WeaponReloadLabel": "Nachladezeit",
     "WeaponSpecialization": "Waffenspezialisierung",
-    "WeaponSplashDamageLabel": "Spritzschaden",
     "WeaponStrikeLabel": "Angriff",
     "WeaponTypeAdvanced": "Spezialwaffe",
     "WeaponTypeMartial": "Kriegswaffe",
