@@ -1,3 +1,4 @@
-## v5.13.6.1
-* Verschiedene Coding-Optimierungen
+## v5.14.1.0
+* Update auf PF2-Systemversion 5.14.1
+* Implementierung Support für Automated Animations. Übersetzte Einträge sollten jetzt korrekte Animationen anzeigen. Danke an n1xx1 für den Coding-Vorschlag
 * Solltet ihr veraltete Einträge, falsche Formatierungen oder ähnliche Fehler finden, dann meldet sie gerne als Issue auf unserer GitHub-Projektseite.

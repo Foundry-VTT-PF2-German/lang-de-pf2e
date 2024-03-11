@@ -333,7 +333,7 @@ class Translator {
                 itemKey = entry.name;
             }
             let itemTranslation = translation ? translation[itemKey] ?? undefined : undefined;
-            const itemNameSlug = this.sluggify(entry.name);
+            let itemName = entry.name;
 
             // For compendium items, get the data from the compendium
             if (
@@ -348,6 +348,7 @@ class Translator {
                 const originalName = fromUuidSync(entry.flags.core.sourceId)?.flags?.babele?.originalName;
                 if (originalName) {
                     entry.name = originalName;
+                    itemName = originalName;
 
                     // Get the item from the compendium
                     const itemData = game.babele.packs
@@ -399,6 +400,20 @@ class Translator {
 
                 this.dynamicMerge(arr[index], itemTranslation, this.getMapping("item", true));
 
+                // Add babele standard translated fields
+                mergeObject(arr[index], {
+                    translated: true,
+                    hasTranslation: true,
+                    originalName: itemName,
+                    flags: {
+                        babele: {
+                            translated: true,
+                            hasTranslation: true,
+                            originalName: itemName,
+                        },
+                    },
+                });
+
                 // Translate available rules
                 if (itemTranslation.rules) {
                     arr[index].system.rules = this.translateRules(entry.system.rules, itemTranslation.rules);
@@ -407,7 +422,7 @@ class Translator {
 
             // Add the item slug if not already included
             if (!arr[index].system.slug || arr[index].system.slug === "") {
-                arr[index].system.slug = itemNameSlug;
+                arr[index].system.slug = this.sluggify(itemName);
             }
         });
 

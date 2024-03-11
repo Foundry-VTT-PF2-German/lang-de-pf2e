@@ -25,6 +25,39 @@ function removeMismatchingTypes(fallback, other = {}) {
     return fallback;
 }
 
+// Automated Animations compatibility for translated items - thanks to n1xx1 from the italian localization for the coding
+
+function hookOnAutoAnimations() {
+    if (!game.modules.has("autoanimations")) {
+        return;
+    }
+
+    Hooks.on("AutomatedAnimations-WorkflowStart", (data, animationData) => {
+        if (data.item?.flags?.babele?.originalName) {
+            data.recheckAnimation = true;
+            data.item = AACreateItemNameProxy(data.item, data.item.flags.babele.originalName);
+        }
+
+        if (data.ammoItem?.flags?.babele?.originalName) {
+            data.recheckAnimation = true;
+            data.ammoItem = AACreateItemNameProxy(data.ammoItem, data.ammoItem.flags.babele.originalName);
+        }
+
+        if (data.originalItem?.flags?.babele?.originalName) {
+            data.recheckAnimation = true;
+            data.originalItem = AACreateItemNameProxy(data.originalItem, data.originalItem.flags.babele.originalName);
+        }
+    });
+}
+
+function AACreateItemNameProxy(item, realName) {
+    return new Proxy(item, {
+        get(target, p, receiver) {
+            return "name" === p ? realName : Reflect.get(target, p, receiver);
+        },
+    });
+}
+
 Hooks.once("init", () => {
     if (typeof Babele !== "undefined") {
         game.settings.register("lang-de-pf2e", "dual-language-names", {
@@ -115,6 +148,8 @@ Hooks.once("init", () => {
                 return game.langDePf2e.updateImage("token", data, dataObject, translatedCompendium);
             },
         });
+
+        hookOnAutoAnimations();
     }
 });
 
