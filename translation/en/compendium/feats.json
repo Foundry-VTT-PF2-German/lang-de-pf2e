@@ -1380,7 +1380,16 @@
         {
           "value": "ability to cast animate rope"
         }
-      ]
+      ],
+      "rules": {
+        "1": {
+          "value": {
+            "1": {
+              "text": "@UUID[Compendium.pf2e.feat-effects.Item.eaKB3rIkJyfsow5H]{Effect: Animate Net}"
+            }
+          }
+        }
+      }
     },
     "Ankle Bite": {
       "name": "Ankle Bite",
@@ -14709,7 +14718,16 @@
     },
     "Inertial Barrier": {
       "name": "Inertial Barrier",
-      "description": "<p>Your spell leaves behind barriers that reduce shock and motion. Use this amp in place of a psi cantrip's normal amp entry.</p>\n<hr />\n<p><strong>Amp</strong> You or one target of the spell gains resistance to physical damage equal to 2 + the spell's rank until the start of your next turn.</p>"
+      "description": "<p>Your spell leaves behind barriers that reduce shock and motion. Use this amp in place of a psi cantrip's normal amp entry.</p>\n<hr />\n<p><strong>Amp</strong> You or one target of the spell gains resistance to physical damage equal to 2 + the spell's rank until the start of your next turn.</p>",
+      "rules": {
+        "1": {
+          "value": {
+            "1": {
+              "text": "@UUID[Compendium.pf2e.feat-effects.Item.HcNa7gv7a357CnFi]{Effect: Inertial Barrier}"
+            }
+          }
+        }
+      }
     },
     "Inescapable Grasp": {
       "name": "Inescapable Grasp",
@@ -17913,7 +17931,16 @@
     },
     "Mental Balm": {
       "name": "Mental Balm",
-      "description": "<p>Your spells release soothing mental waves. Use this amp in place of a psi cantrip's normal amp entry. You can use this amp only on a psi cantrip that targets or affects you or one or more of your allies and doesn't target or affect any enemies.</p>\n<hr />\n<p><strong>Amp</strong> You or one ally within 30 feet gains a +2 status bonus to Will saves against emotion effects for 1 minute. You can also have the amped psi cantrip attempt to counteract one effect imposing the @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} condition on yourself or the chosen ally, or an effect imposing the @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied} condition that has a duration of 1 hour or less. If you successfully counteract the effect, you remove only the frightened and stupefied conditions, not any other part of the effect.</p>"
+      "description": "<p>Your spells release soothing mental waves. Use this amp in place of a psi cantrip's normal amp entry. You can use this amp only on a psi cantrip that targets or affects you or one or more of your allies and doesn't target or affect any enemies.</p>\n<hr />\n<p><strong>Amp</strong> You or one ally within 30 feet gains a +2 status bonus to Will saves against emotion effects for 1 minute. You can also have the amped psi cantrip attempt to counteract one effect imposing the @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} condition on yourself or the chosen ally, or an effect imposing the @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied} condition that has a duration of 1 hour or less. If you successfully counteract the effect, you remove only the frightened and stupefied conditions, not any other part of the effect.</p>",
+      "rules": {
+        "1": {
+          "value": {
+            "1": {
+              "text": "@UUID[Compendium.pf2e.feat-effects.Item.tcdIBJTHuexSKJ6S]{Effect: Mental Balm}"
+            }
+          }
+        }
+      }
     },
     "Mental Buffer": {
       "name": "Mental Buffer",
@@ -23549,7 +23576,6 @@
         {
           "value": "master in Society"
         }
-
       ]
     },
     "School Counterspell": {
@@ -23616,7 +23642,7 @@
     },
     "Scorching Column": {
       "name": "Scorching Column",
-      "description": "<p>With an upward gesture, you shape a vertical column of extreme heat. The cylinder is 10 feet in diameter and 30 feet high, and the bottom must be within 60 feet of you. Each creature in the area takes @Damage[(floor((@actor.level -1)/3)+1)d6[fire]|traits:area-damage] damage with a @Check[type:reflex|dc:resolve(@actor.system.proficiencies.classDCs.kineticist.dc)|basic:true] save against your class DC.</p>\n<p>The flame remains briefly, making all squares in the column hazardous terrain until the end of your next turn, and you can Sustain the impulse up to 1 minute. A creature takes @Damage[(2*floor((@actor.level -1)/3)+1)[fire]] damage each time it moves into one of these squares.</p>\n<hr />\n<p><strong>Level (+3)</strong> The initial damage increases by 1d6, and the hazardous terrain damage increases by 2.</p>"
+      "description": "<p>With an upward gesture, you shape a vertical column of extreme heat. The cylinder is @Template[type:cylinder|distance:5]{10 feet in diameter} and 30 feet high, and the bottom must be within 60 feet of you. Each creature in the area takes @Damage[(floor((@actor.level -1)/3)+1)d6[fire]|traits:area-damage] damage with a @Check[type:reflex|dc:resolve(@actor.system.proficiencies.classDCs.kineticist.dc)|basic:true] save against your class DC.</p>\n<p>The flame remains briefly, making all squares in the column hazardous terrain until the end of your next turn, and you can Sustain the impulse up to 1 minute. A creature takes @Damage[(2*floor((@actor.level -1)/3)+1)[fire]] damage each time it moves into one of these squares.</p>\n<hr />\n<p><strong>Level (+3)</strong> The initial damage increases by 1d6, and the hazardous terrain damage increases by 2.</p>"
     },
     "Scorching Disarm": {
       "name": "Scorching Disarm",
@@ -23932,10 +23958,10 @@
       "name": "Sense Alignment",
       "description": "<p>You read the body language of an intelligent creature within 30 feet and pick up on subtle cues to detect its general propensity for good or evil and law or chaos. The GM rolls a secret @Check[type:perception|defense:deception|traits:secret] check, comparing the result against the target's Deception DC.</p>\n<hr />\n<p><strong>Critical Success</strong> You ascertain the target's alignment.</p>\n<p><strong>Success</strong> You ascertain the target's alignment, but only along one axis (your choice of either the good-evil axis or the lawful-chaotic axis).</p>\n<p><strong>Failure</strong> You do not learn the target's alignment.</p>\n<p><strong>Critical Failure</strong> You incorrectly ascertain the target's alignment, misidentifying their alignment along either one axis or both (GM's choice).</p>",
       "prerequisites": [
-            {
-                "value": "Edgewatch Detective Dedication"
-            }
-        ]
+        {
+          "value": "Edgewatch Detective Dedication"
+        }
+      ]
     },
     "Sense Allies": {
       "name": "Sense Allies",
@@ -24683,7 +24709,16 @@
         {
           "value": "ability to cast light"
         }
-      ]
+      ],
+      "rules": {
+        "1": {
+          "value": {
+            "1": {
+              "text": "@UUID[Compendium.pf2e.feat-effects.Item.s5OHkf1HkLwgvZT7]{Effect: Shining Arms}"
+            }
+          }
+        }
+      }
     },
     "Shining Oath": {
       "name": "Shining Oath",
