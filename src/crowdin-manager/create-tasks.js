@@ -8,8 +8,8 @@ const { tasksApi } = new crowdin.default({ token: CONFIG.personalToken });
 
 // Define labels that are currently localized
 const localizedLabels = [
-    1, 5, 7, 9, 11, 21, 23, 31, 33, 35, 37, 39, 43, 47, 49, 51, 53, 55, 57, 59, 61, 63, 67, 69, 71, 75, 77, 79, 81, 83, 85,
-    87, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 119, 121, 135, 137, 139, 142,
+    1, 5, 7, 9, 11, 21, 23, 31, 33, 35, 37, 39, 43, 47, 49, 51, 53, 55, 57, 59, 61, 63, 67, 69, 71, 73, 75, 77, 79, 81,
+    83, 85, 87, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 119, 121, 125, 129, 135, 137, 139, 142,
 ];
 
 const labels = JSON.parse(readFileSync(`${CONFIG.databasePath}/crowdin-backup/labels.json`, "utf-8"));
