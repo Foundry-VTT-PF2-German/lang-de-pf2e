@@ -138,6 +138,9 @@ Hooks.once("init", () => {
             translateTime: (data) => {
                 return game.langDePf2e.translateValue("time", data);
             },
+            translateTokens: (data, translation, _dataObject, _translatedCompendium) => {
+                return game.langDePf2e.translateArrayOfObjects(data, translation, "token");
+            },
             translateTokenName: (data, translation, _dataObject, _translatedCompendium, translationObject) => {
                 return game.langDePf2e.translateTokenName(data, translation, translationObject);
             },
