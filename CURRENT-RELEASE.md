@@ -1,6 +1,5 @@
-## v5.14.4.1
-* Übersetzung Inhalte zum Abenteuer "Geteilte Wellen"
-* Übersetzung Inhalte zum Abenteuer "Im Zeichen der Roten Mantis"
-* Übersetzung Inhalte zum Abenteuer "Little Trouble in Big Absalom"
-* Übersetzung Inhalte zum Abenteuer "Teufelskreis der Feindschaft"
+## v5.15.0.0
+* Update auf PF2-Systemversion 5.15.0
+* Übersetzung Inhalte zum Abenteuer "Ins Schwarze!"
+* Beginn Übersetzung Inhalte zum Abenteuerpfad "Königsmacher"
 * Solltet ihr veraltete Einträge, falsche Formatierungen oder ähnliche Fehler finden, dann meldet sie gerne als Issue auf unserer GitHub-Projektseite.
