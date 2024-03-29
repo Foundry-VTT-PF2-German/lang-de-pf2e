@@ -1,7 +1,5 @@
 {
-    "paths": {
-        "dictionary": "modules/lang-de-pf2e/translation/de/dictionary.json"
-    },
+    "paths": { "dictionary": "modules/lang-de-pf2e/translation/de/dictionary.json" },
     "artworkExceptions": {
         "pathfinder-bestiary": {
             "pf2e-tokens-bestiaries": "all",
@@ -133,14 +131,8 @@
         "Compendium.pf2e.spells-srd.Item.6dDtGIUerazSHIOu"
     ],
     "mappings": {
-        "choice": {
-            "entryType": "Item",
-            "mappingEntries": { "label": "label" }
-        },
-        "heightening": {
-            "entryType": "Item",
-            "mappingEntries": { "target": "target.value" }
-        },
+        "choice": { "entryType": "Item", "mappingEntries": { "label": "label" } },
+        "heightening": { "entryType": "Item", "mappingEntries": { "target": "target.value" } },
         "item": {
             "entryType": "Item",
             "mappingEntries": {
@@ -152,64 +144,30 @@
                     "path": "system.spell.system.duration.value",
                     "converter": "translateDuration"
                 },
-                "consumableSpellRange": {
-                    "path": "system.spell.system.range.value",
-                    "converter": "translateRange"
-                },
+                "consumableSpellRange": { "path": "system.spell.system.range.value", "converter": "translateRange" },
                 "consumableSpellTarget": "system.spell.system.target.value",
-                "consumableSpellTime": {
-                    "path": "system.spell.system.time.value",
-                    "converter": "translateTime"
-                },
+                "consumableSpellTime": { "path": "system.spell.system.time.value", "converter": "translateTime" },
                 "cost": "system.cost.value",
                 "description": "system.description.value",
-                "duration": {
-                    "path": "system.duration.value",
-                    "converter": "translateDuration"
-                },
+                "duration": { "path": "system.duration.value", "converter": "translateDuration" },
                 "gmNote": "system.description.gm",
-                "heightening": {
-                    "path": "system.heightening.levels",
-                    "converter": "translateHeightening"
-                },
+                "heightening": { "path": "system.heightening.levels", "converter": "translateHeightening" },
                 "materials": "system.materials.value",
                 "prerequisites": "system.prerequisites.value",
                 "primarycheck": "system.ritual.primary.check",
-                "range": {
-                    "path": "system.range.value",
-                    "converter": "translateRange"
-                },
-                "rules": {
-                    "path": "system.rules",
-                    "converter": "translateRules"
-                },
+                "range": { "path": "system.range.value", "converter": "translateRange" },
+                "rules": { "path": "system.rules", "converter": "translateRules" },
                 "secondarycaster": "system.ritual.secondary.casters",
                 "secondarycheck": "system.ritual.secondary.checks",
-                "skillVariants": {
-                    "path": "system.variants"
-                },
-                "source": {
-                    "path": "system.source.value",
-                    "converter": "translateSource"
-                },
-                "spellVariants": {
-                    "path": "system.overlays",
-                    "converter": "translateSpellVariant"
-                },
+                "skillVariants": { "path": "system.variants" },
+                "source": { "path": "system.source.value", "converter": "translateSource" },
+                "spellVariants": { "path": "system.overlays", "converter": "translateSpellVariant" },
                 "target": "system.target.value",
-                "time": {
-                    "path": "system.time.value",
-                    "converter": "translateTime"
-                },
+                "time": { "path": "system.time.value", "converter": "translateTime" },
                 "trainedLore": "system.trainedLore"
             }
         },
-        "tile": {
-            "entryType": "Scene",
-            "mappingEntries": {
-                "texture": "texture.src"
-            }
-        },
+        "tile": { "entryType": "Scene", "mappingEntries": { "texture": "texture.src" } },
         "adventureJournal": {
             "entryType": "JournalEntry",
             "mappingEntries": {
@@ -219,11 +177,7 @@
         },
         "adventureJournalPage": {
             "entryType": "JournalEntry",
-            "mappingEntries": {
-                "name": "name",
-                "caption": "image.caption",
-                "text": "text.content"
-            }
+            "mappingEntries": { "name": "name", "caption": "image.caption", "text": "text.content" }
         },
         "adventureScene": {
             "entryType": "Scene",
@@ -232,16 +186,15 @@
                 "background": "background.src",
                 "drawings": { "path": "drawings", "converter": "textCollection" },
                 "notes": { "path": "notes", "converter": "textCollection" },
-                "tiles": { "path": "tiles", "converter": "translateTiles" }
+                "tiles": { "path": "tiles", "converter": "translateTiles" },
+                "tokens": { "path": "tokens", "converter": "translateTokens" }
             }
         },
-        "rule": {
-            "entryType": "Item",
-            "mappingEntries": { "label": "label", "prompt": "prompt", "text": "text" }
+        "rule": { "entryType": "Item", "mappingEntries": { "label": "label", "prompt": "prompt", "text": "text" } },
+        "token": {
+            "entryType": "Actor",
+            "mappingEntries": { "name": "name", "items": { "path": "delta.items", "converter": "translateActorItems" } }
         },
-        "value": {
-            "entryType": "Item",
-            "mappingEntries": { "text": "text" }
-        }
+        "value": { "entryType": "Item", "mappingEntries": { "text": "text" } }
     }
 }
