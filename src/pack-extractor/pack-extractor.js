@@ -1,11 +1,7 @@
 import { readFileSync, writeFileSync } from "fs";
 import { getZipContentFromURL, writeFilesFromBlob } from "../helper/src/util/fileHandler.js";
 import { replaceProperties } from "../helper/src/util/utilities.js";
-import {
-    buildItemDatabase,
-    extractFolders,
-    extractPackGroupList,
-} from "../helper/src/pack-extractor/pack-extractor.js";
+import { buildItemDatabase, extractPackGroupList } from "../helper/src/pack-extractor/pack-extractor.js";
 import { PF2_DEFAULT_MAPPING } from "../helper/src/pack-extractor/constants.js";
 
 // Read config file
@@ -27,18 +23,10 @@ const itemDatabase = buildItemDatabase(packs, CONFIG.itemDatabase);
 // Extract data for all configured packs
 const extractedPackGroupList = extractPackGroupList(packs, CONFIG.packs, itemDatabase);
 
-// Extract compendium folders for configured packs
-const extractedFolders = extractFolders(packs.filter((pack) => CONFIG.folders.includes(pack.fileName)));
-
 // Write extracted packs to target directories
 Object.keys(extractedPackGroupList.extractedPackGroups).forEach((packGroup) => {
     const path = CONFIG.packs[packGroup].savePath;
     Object.keys(extractedPackGroupList.extractedPackGroups[packGroup]).forEach((pack) => {
-        // Check if pack has compendium folders and add them
-        if (Object.keys(extractedFolders).includes(pack)) {
-            extractedPackGroupList.extractedPackGroups[packGroup][pack].folders = extractedFolders[pack];
-        }
-
         writeFileSync(
             `${path}/${pack}.json`,
             JSON.stringify(extractedPackGroupList.extractedPackGroups[packGroup][pack], null, 2)
