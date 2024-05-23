@@ -227,6 +227,10 @@
       "name": "Effekt: Knochenschwarm",
       "description": "<p>Du erhältst die Größenkategorie Riesig, die Kategorie Schwarm und eine Bewegungsrate für Fliegen von 40 Fuß/12 m. Als Schwarm besitzt du die folgenden Eigenschaften:</p>\n<ul>\n<li>Immunität gegen die Zustände @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Gebunden}, @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} und @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}.</li>\n<li>Schwäche 5 gegen Alchemistischen Flächenschaden und Flächenschaden.</li>\n<li>Du kannst dieselbe Angriffsfläche wie andere Kreaturen belegen und musst dies sogar, um ihnen Schaden zuzufügen.</li>\n<li>Als Aktivität aus 2 Aktionen kannst du allen Kreaturen, mit denen du deine Angriffsfläche teilst, @Damage[10d6[bludgeoning]]{10W6 Punkte Wuchtschaden} zufügen (@Check[type:reflex|dc:resolve(@actor.attributes.classOrSpellDC.value)|basic:true]{einfacher Reflexwurf}, dein Klassen- oder Zauber-SG, so höher).</li>\n<li>Du kannst nicht sprechen, Zauber wirken, Hände erfordernde Handlungen der Kategorie Handhaben ausführen, magische Gegenstände aktivieren oder Angriffe mit deinem normalen Körper ausführen.</li>\n<li>Du erlangst nicht die Fähigkeit @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.baA0nSMhQyFyJIia]{Schwarmbewusstsein} und wirst weiterhin normal von mentalen Effekten betroffen. Du behältst zudem die Vorteile aller Skeletttalente, welche nicht auf Kommunikation oder die Nutzung der Hände abstellen.</li>\n</ul>"
     },
+    "Effect: Born to the Trees": {
+      "name": "Effect: Born to the Trees",
+      "description": "<p>You gain a climb Speed equal to your Speed and a +1 circumstance bonus to Acrobatics checks to @UUID[Compendium.pf2e.actionspf2e.Item.M76ycLAqHoAgbcej]{Balance} and Athletics checks to @UUID[Compendium.pf2e.actionspf2e.Item.JUvAvruz7yRQXfz2]{Long Jump} and @UUID[Compendium.pf2e.actionspf2e.Item.2HJ4yuEFY1Cast4h]{High Jump}.</p>"
+    },
     "Effect: Brightness Seeker": {
       "name": "Effekt: Anrufung des Glanzes",
       "description": "<p><strong>Auslöser</strong> Du legst einen Angriffs-, Fertigkeits- oder Rettungswurf im Rahmen der mittels @UUID[Compendium.pf2e.spells-srd.Item.41TZEjhO6D1nWw2X]{Vorahnung} abgetasteten Handlung ab, hast aber noch nicht gewürfelt</p>\n<hr />\n<p><strong>Effekt</strong> Du erlangst einen Zustandsbonus von +1 auf den auslösenden Wurf oder einen Zustandsbonus von +2, sollte das Ergebnis der Vorahnung „Wehe“ lauten und du trotzdem weitermachen.</p>"
@@ -673,12 +677,35 @@
       "name": "Effekt: Elementarzauberer-Zugang",
       "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.tx9pkrpmtqe4FnvS]{Elementarzauberer-Zugang}</p>\n<p>Im Rahmen deiner täglichen Vorbereitungen kannst du dich auf ein Element deiner Wahl aus den Optionen deiner Philosophie der Elemente einstimmen. Du erlangst Resistenz in Höhe deiner halben Stufe (Minimum 1) gegen Schaden durch Effekte der entsprechenden Kategorie. Diese Einstimmung hält bis zu deinen nächsten täglichen Vorbereitungen an.</p>"
     },
-    "Effect: Emblazon Antimagic (Weapon)": {
-      "name": "Effekt: Antimagisches Heiliges Zeichen (Waffe)",
-      "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.xAFdoKl7aOP9rVkl]{Antimagisches Heiliges Zeichen}.</p>\n<p>Wenn der Träger der Waffe mit ihr einen Kritischen Treffer landet, kann er versuchen, einem auf dem Ziel liegenden Zauber entgegenzuwirken (er verwendet zum Entgegenwirken deine halbe Stufe, aufgerundet). Dies lässt das Heilige Zeichen daraufhin augenblicklich verschwinden.</p>",
+    "Effect: Emblazon Antimagic": {
+      "name": "Effect: Emblazon Antimagic",
+      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.xAFdoKl7aOP9rVkl]{Emblazon Antimagic}</p>\n<ul>\n<li><strong>Shield</strong> When the wielder has the shield raised, they gain the shield's circumstance bonus to saving throws against magic.</li>\n<li><strong>Weapon</strong> When the weapon's wielder critically hits with the weapon, they can attempt to counteract a spell on their target, using half their level, rounded up, as the counteract rank.</li>\n</ul>",
       "rules": {
-        "1": {
-          "text": "Wenn du mit deiner Waffe einen Kritischen Treffer landest, kannst du versuchen, einem auf dem Ziel liegenden Zauber entgegenzuwirken (er verwendet zum Entgegenwirken deine halbe Stufe, aufgerundet). Dies lässt das Heilige Zeichen daraufhin augenblicklich verschwinden."
+        "0": {
+          "choices": {
+            "0": {
+              "label": "TYPES.Item.shield"
+            },
+            "1": {
+              "label": "TYPES.Item.weapon"
+            }
+          }
+        }
+      }
+    },
+    "Effect: Emblazon Armament": {
+      "name": "Effect: Emblazon Armament",
+      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.7RFjTTzznsdPcaYB]{Emblazon Armament}</p>\n<ul>\n<li><strong>Shield</strong> The shield gains a +1 status bonus to its Hardness.</li>\n<li><strong>Weapon</strong> The wielder gains a +1 status bonus to damage rolls with the weapon.</li>\n</ul>",
+      "rules": {
+        "0": {
+          "choices": {
+            "0": {
+              "label": "TYPES.Item.shield"
+            },
+            "1": {
+              "label": "TYPES.Item.weapon"
+            }
+          }
         }
       }
     },
@@ -689,6 +716,22 @@
     "Effect: Emblazon Armament (Weapon)": {
       "name": "Effekt: Heiliges Zeichen (Waffe)",
       "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.7RFjTTzznsdPcaYB]{Heiliges Zeichen}</p>\n<p>Der Träger der Waffe erhält einen Zustandsbonus von +1 auf Schadenswürfe.</p>"
+    },
+    "Effect: Emblazon Energy": {
+      "name": "Effect: Emblazon Energy",
+      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.rKZE8BA9IQHSSWoW]{Emblazon Energy}</p>\n<ul>\n<li><strong>Shield</strong> Choose acid, cold, electricity, fire, or sonic. The wielder gains the shield's circumstance bonus to saving throws against that damage type.</li>\n<li><strong>Weapon</strong> Choose acid, cold, electricity, fire, or sonic. The weapon deals an extra 1d4 damage of that type. Increase this extra damage to 1d6 if you have a domain spell with a trait matching that type.</li>\n</ul>",
+      "rules": {
+        "0": {
+          "choices": {
+            "0": {
+              "label": "TYPES.Item.shield"
+            },
+            "1": {
+              "label": "TYPES.Item.weapon"
+            }
+          }
+        }
+      }
     },
     "Effect: Emblazon Energy (Weapon, Acid)": {
       "name": "Effekt: Energiegeladenes Heiliges Zeichen (Waffe, Säure)",
@@ -924,6 +967,15 @@
       "name": "Effekt: Energiegeladenes Geschoss",
       "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.o3J79hnr00ztcwtT]{Energiegeladenes Geschoss}.</p>\n<p>Wähle Elektrizität, Feuer, Kälte oder Säure. Triffst du mit deinem nächsten Armbrust- oder Feuerwaffenangriff vor Ende deines Zuges, verursachst du zusätzlich 1W6 Punkte Schaden der gewählten Art. Mit der 12. Stufe steigt dieser Schaden auf 2W6 zusätzliche Punkte und mit der 18. Stufe auf 3W6 zusätzliche Punkte.</p>"
     },
+    "Effect: Fungal Rot": {
+      "name": "Effect: Fungal Rot",
+      "badges": [
+        "Mild",
+        "Moderate",
+        "Severe"
+      ],
+      "description": "<p>As you use your powers, radioactive molds and fungi consume your flesh, making you look (and feel) like a rotting, walking corpse.</p>\n<p><strong>Mild Backlash</strong> You take damage equal to your level as your body decays.</p>\n<p><strong>Moderate Backlash</strong> You take damage equal to your level and become @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}.</p>\n<p><strong>Severe Backlash</strong> You take damage equal to twice your level and become @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 4}. You can't reduce the value of your sickened condition below 1 for 1 hour.</p>"
+    },
     "Effect: Furnace Form": {
       "name": "Effekt: Flammengestalt",
       "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.6vHkvQv0j56nZuR3]{Flammengestalt}</p>\n<p>Du wirst zu einer lebendigen Flamme, was dir Immunität gegen Feuer, Resistenz 10 gegen Präzisionsschaden und Schwäche 5 gegen Kälte und Wasser verleiht. Deine Waffenlosen Angriffe verursachen zusätzlich 1W4 Punkte Feuerschaden. Deine Feuerzauber verursachen einen Schadenswürfel mehr Feuerschaden (unter Verwendung derselben Schadenswürfel, die der Zauber benutzt). Deine Feuerelementargeschosse verursachen einen zusätzlichen Schadenswürfel. In der Flammengestalt besitzt du eine Bewegungsrate für Fliegen von 40 Fuß/12 Metern und muss nicht atmen.</p>"
@@ -1059,6 +1111,10 @@
     "Effect: High-Speed Regeneration Speed Boost": {
       "name": "Effekt: Hochgeschwindigkeitsregeneration Geschwindigkeitsbonus",
       "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.xDTjr415ZZM8x2WW]{Hochgeschwindigkeitsregeneration}.</p>\n<p>Du erhältst einen Zustandsbonus von +10 Fuß/3 m auf deine Bewegungsrate.</p>"
+    },
+    "Effect: Hopeful Athamaru": {
+      "name": "Effect: Hopeful Athamaru",
+      "description": "<p>You gain a +1 circumstance bonus to saving throws against fear.</p>"
     },
     "Effect: Hungry Goblin": {
       "name": "Effekt: Gefräßiger Goblin",
@@ -1237,6 +1293,15 @@
           "label": "Befreiender Schritt (gg. Untote)"
         }
       }
+    },
+    "Effect: Life-Draining": {
+      "name": "Effect: Life-Draining",
+      "badges": [
+        "Mild",
+        "Moderate",
+        "Severe"
+      ],
+      "description": "<p>The flourishing plant life that covers your body is a part of you, but it draws nutrients from your blood, making you weaker the more the flowers grow. As the plants grow, you need to spend more and more time recuperating. Recuperating in the sunshine lowers this duration, as it feeds the flowers, speeding your recovery.</p>\n<p><strong>Mild Backlash</strong> You become @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} as the plants feed off your life force. This condition lasts until you spend 3 consecutive actions to rest and do nothing.</p>\n<p><strong>Moderate Backlash</strong> You become @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} and @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued} until you spend 20 minutes recuperating by resting and doing nothing. If you spend this time basking in sunshine, it instead takes 10 minutes.</p>\n<p><strong>Severe Backlash</strong> You become @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 3} until you spend 2 hours napping. While napping, you're @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious} and can't take actions or engage in exploration activities, but a creature can wake you with a single action with the manipulate trait. If you spend this time napping in natural sunlight, it instead takes 1 hour. You're fatigued until you can get a full night's rest.</p>"
     },
     "Effect: Life-Giving Magic": {
       "name": "Effekt: Lebensspendende Magie",
@@ -1493,6 +1558,24 @@
       "name": "Effekt: Waffe vergiften",
       "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.ALbosSUygdq4T1Yk]{Waffe vergiften}</p>"
     },
+    "Effect: Portents of the Haruspex": {
+      "name": "Effect: Portents of the Haruspex",
+      "badges": [
+        "Acid",
+        "Bludgeoning",
+        "Bludgeoning",
+        "Cold",
+        "Electricity",
+        "Fire",
+        "Mental",
+        "Piercing",
+        "Piercing",
+        "Poison",
+        "Slashing",
+        "Slashing"
+      ],
+      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.tz0gvfTwcDq0yEfg]{Portents of the Haruspex}</p>\n<p>Roll 1d12 to determine the damage type. The next time before the end of your next turn that you or your allies deals that damage type to an enemy, that enemy has weakness equal to your level against that damage.</p>"
+    },
     "Effect: Prayer-Touched Weapon": {
       "name": "Effekt: Gebetsberührte Waffe",
       "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.2qR4QAgJVArv63Z2]{Gebetsberührte Waffe}</p>\n<p>Die ausgewählte Waffe verursacht zusätzlich 1W6 Punkte Lebensschaden.</p>"
@@ -1579,6 +1662,10 @@
       "name": "Effect: Protective Spirit Mask",
       "description": "<p>You gain a +1 circumstance bonus to AC until the start of the caster's next turn.</p>\n<p><strong>Granted By:</strong>@UUID[Compendium.pf2e.feats-srd.Item.nn7DiYYWinsSYrZy]{Protective Spirit Mask}</p>"
     },
+    "Effect: Proud Mentor": {
+      "name": "Effect: Proud Mentor",
+      "description": "<p>You gain temporary Hit Points equal to your level.</p>"
+    },
     "Effect: Psi Strikes": {
       "name": "Effekt: Mentale Angriffe",
       "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.uisI6b7Ua5zSHDwj]{Mentale Angriffe}</p>\n<p>Der Angriff verursacht zusätzlich 1W6 Punkte Kraftschaden.</p>"
@@ -1608,12 +1695,12 @@
       "description": "<p><strong>Anforderungen</strong> Du befindest dich nicht im Kampfrausch und besitzt auch nicht den Zustand @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Erschöpft}.</p>\n<hr />\n<p>Du lässt dem in dir brodelndem Zorn freien Lauf und verfällst in Kampfrausch. Du erhältst eine Anzahl an Temporären Trefferpunkten\nin Höhe deiner Stufe plus deines Konstitutionsmodifikators. Diese Raserei währt 1 Minute, außer du erhältst vorher den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Bewusstlos} oder kannst keine Gegner mehr wahrnehmen. Du kannst deinen Kampfrausch nicht freiwillig vorzeitig beenden.</p>\n<p>Im Kampfrausch…</p>\n<ul>\n<li>… verursachst du 2 zusätzliche Schadenspunkte mit Nahkampfwaffen und Waffenlosen Angriffen. Dieser zusätzliche Schaden wird halbiert, sollte deine Waffe oder dein Waffenloser Angriff über die Eigenschaft Agil verfügen.</li>\n<li>… erleidest du einen Malus von -1 auf deine RK.</li>\n<li>… kannst du keine Handlungen der Kategorie Konzentration nutzen, sofern sie nicht ebenfalls der Kategorie Kampfrausch angehören. Du kannst im Kampfrausch die Aktion @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Suchen} anwenden.</li>\n</ul>\n<p>Mit Ende des Kampfrausches verlierst du alle noch verbliebenen Temporären Trefferpunkte aus dem Kampfrausch und kannst die Aktion Kampfrausch 1 Minute lang nicht wieder anwenden.</p>"
     },
     "Effect: Raise Menhir": {
-      "name": "Effect: Raise Menhir",
-      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.BuVIM4cV7qhVZ2WF]{Raise Menhir}</p>\n<p>Choose arcane, divine, or occult; all creatures within 15 feet of the monument gain a +2 status bonus to their saving throws against effects with that trait.</p>"
+      "name": "Effekt: Schützender Menhir",
+      "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.BuVIM4cV7qhVZ2WF]{Schützender Menhir}</p>\n<p>Wähle Arkan, Göttlich oder Okkult; alle Kreaturen innerhalb von 15 Fuß/4,50 m zum Monument erhalten einen Zustandsbonus von +2 auf ihre Rettungswürfe gegen Effekte der gewählten Kategorie.</p>"
     },
     "Effect: Raise Symbol": {
-      "name": "Effect: Raise Symbol",
-      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.koER7gKf6CnW5O0s]{Raise Symbol}</p>\n<p>You gain a +2 circumstance bonus to saving throws until the start of your next turn. While it's raised, if you roll a success at a saving throw against a vitality or void effect, you get a critical success instead.</p>"
+      "name": "Effekt: Symbol präsentieren",
+      "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.koER7gKf6CnW5O0s]{Symbol präsentieren}</p>\n<p>Du erlangst einen Situationsbonus von +2 auf Rettungswürfe bis zum Beginn deines nächsten Zuges. Solange du dein Symbol präsentierst und zugleich einen erfolgreichen Rettungswurf gegen einen Effekt der Kategorie Leben oder Leere ablegst, wird dies als Kritischer Erfolg behandelt.</p>"
     },
     "Effect: Rallying Charge": {
       "name": "Effekt: Stärkender Ansturm",
@@ -1634,6 +1721,10 @@
     "Effect: Reanimator Dedication": {
       "name": "Effekt: Reanimatoren-Zugang",
       "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.5Cm2TYHzoO2DbQNM]{Reanimator-Zugang}</p>\n<p>Von dir belebte Untote erlangen einen Zustandsbonus von +1 auf Angriffswürfe, RK, Rettungswürfe und Fertigkeitswürfe für die Wirkungsdauer von @UUID[Compendium.pf2e.spells-srd.Item.9WGeBwIIbbUuWKq0]{Tote beleben}</p>"
+    },
+    "Effect: Rebirth In Living Stone": {
+      "name": "Effect: Rebirth In Living Stone",
+      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.mNiJvsbyxdLBnTRs]{Rebirth In Living Stone}<br /><br /></p>\n<p>Rock overflows from within you to consume your form before cracking open to reveal your body transformed into living stone. You gain 40 temporary Hit Points. You're immune to critical hits and precision damage. You can't be pushed, pulled, or tripped while you're standing on earth or stone. Your earth Elemental Blasts deal an additional 1d10 damage of their normal type. These benefits last until the end of your next turn, but you can Sustain them up to 1 minute. After you gain temporary Hit Points from this impulse, you can't do so again for 10 minutes.</p>\n<hr />\n<p><strong>Level (20th)</strong> You gain 50 temporary Hit Points.</p>"
     },
     "Effect: Recall Under Pressure": {
       "name": "Effect: Recall Under Pressure",
@@ -1677,16 +1768,16 @@
       }
     },
     "Effect: Resounding Finale": {
-      "name": "Effect: Resounding Finale",
-      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.lhSqWHXK1JShUabF]{Resounding Finale}</p>\n<p>All allies that had been benefiting from the spell's effects gain sonic resistance against the triggering damage.</p>"
+      "name": "Effekt: Übertönendes Finale",
+      "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.lhSqWHXK1JShUabF]{Übertönendes Finale}</p>\n<p>Alle Verbündeten, die von deinem Kompositionszauber profitiert haben, erlangen Schallresistenz gegen den auslösenden Schaden.</p>"
     },
     "Effect: Restorative Strike": {
-      "name": "Effect: Restorative Strike",
-      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.xUlRLkWnfZ7reej6]{Restorative Strike}</p>\n<p>Cast a 1-action @UUID[Compendium.pf2e.spells-srd.Item.wdA52JJnsuQWeyqz]{Harm} or @UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal} spell to heal yourself, expending the spell normally. It loses the manipulate trait when cast this way. Then make a melee Strike. If you make this Strike with your deity's favored weapon, you gain a +1 status bonus to the attack roll.</p>\n<p>If the Strike hits, you can target a second willing creature to heal the same amount from the spell. This creature can be outside of the spell's range, provided it's adjacent to the enemy you hit.</p>"
+      "name": "Effekt: Heilender Angriff",
+      "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.xUlRLkWnfZ7reej6]{Heilender Angriff}</p>\n<p>Wirke @UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heilung} oder  @UUID[Compendium.pf2e.spells-srd.Item.wdA52JJnsuQWeyqz]{Leid} zu 1 Aktion, um dich selbst zu heilen; dies verbraucht den Zauber wie üblich und verliert die Kategorie Handhaben. Führe dann einen Nahkampfangriff aus. Solltest du die Bevorzugte Waffe deiner Gottheit nutzen, so erlangst du einen Zustandsbonus von +1 auf deinen Angriffswurf.</p>\n<p>Trifft der Angriff, kannst du eine zweite, dazu bereite Kreatur als Ziel wählen und ihr dieselbe Heilung zukommen lassen, die du durch den Zauber erlangt hast. Diese Kreatur kann sich außerhalb der Reichweite des Zaubers befinden, sofern sie zum getroffenen Ziel angrenzend ist.</p>"
     },
     "Effect: Resurrectionist": {
-      "name": "Effect: Resurrectionist",
-      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.Dr6h8WRW6xnLRfxr]{Resurrectionist}</p>\n<p>You gain fast healing 5.</p>"
+      "name": "Effekt: Macht des Lebens",
+      "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.Dr6h8WRW6xnLRfxr]{Macht des Lebens}</p>\n<p>Du erhältst Schnelle Heilung 5.</p>"
     },
     "Effect: Root Magic": {
       "name": "Effekt: Schutzmagie",
@@ -1706,8 +1797,8 @@
       "description": "<p>Du erlangst einen Zustandsbonus von +2 auf Rettungswürfe gegen Besessenheits- und Todeseffekte sowie gegen Effekte, welche deine Seele manipulieren oder stehlen wollen.</p>"
     },
     "Effect: Sanctify Armament": {
-      "name": "Effect: Sanctify Armament",
-      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.xtXWw3cUnVB25XSV]{Sanctify Armament}</p>\n<p>The weapon gains your holy or unholy trait. It also deals an additional 2d6 spirit damage to creatures of the opposed trait.</p>"
+      "name": "Effekt: Waffe weihen",
+      "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.xtXWw3cUnVB25XSV]{Waffe weihen}</p>\n<p>Die Waffe erhält deine Kategorie Heilig oder Unheilig. Sie verursacht zusätzlich 2W6 Seelenschaden bei Kreaturen der entgegengesetzten Kategorie.</p>"
     },
     "Effect: Saoc Astrology": {
       "name": "Effekt: Saoc-Astrologie",
@@ -1751,7 +1842,7 @@
     },
     "Effect: Shared Clarity": {
       "name": "Effekt: Geteilter Gestählter Willen",
-      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.ybrx1nsg5J0L8d3j]{Shared Clarity}</p>\n<p>Allies within 15 feet of you who failed the same saving throw against the same mental effect can also spend their reactions to reroll the failed saving throw with a +2 circumstance bonus.</p>"
+      "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.ybrx1nsg5J0L8d3j]{Geteilter Gestählter Willen}</p>\n<p>Verbündeten innerhalb von 15 Fuß/4,50 m zu dir, denen derselbe Rettungswurf gegen denselben mentalen Effekt misslungen ist, ihre Reaktionen nutzen, um den gescheiterten Rettungswurf mit einem Situationsbonus von +2 zu wiederholen.</p>"
     },
     "Effect: Shattershields": {
       "name": "Effekt: Zerberstende Schilde",
@@ -1766,8 +1857,12 @@
       "description": "<p>In deinen Händen steigt die Härte des Schildes um 2.</p>"
     },
     "Effect: Shield of Faith": {
-      "name": "Effect: Shield of Faith",
-      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.w3qyriA1YnzXaas3]{Shield of Faith}</p>\n<p>You gain a +1 status bonus to your AC.</p>"
+      "name": "Effekt: Schild des Glaubens",
+      "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.w3qyriA1YnzXaas3]{Schild des Glaubens}</p>\n<p>Du erlangst einen Zustandsbonus von +1 auf deine RK.</p>"
+    },
+    "Effect: Shielding Wave": {
+      "name": "Effect: Shielding Wave",
+      "description": "<p>You gain resistance to acid or fire damage.</p>"
     },
     "Effect: Shining Arms": {
       "name": "Effekt: Leuchtende Waffe",
@@ -1807,8 +1902,8 @@
       "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.X9AkydrMdFwg7qIn]{Zauberparade}</p>\n<p>Du leitest magische Kraft in deinen Körper oder deine Rüstung, um körperliche und magische Angriffe zu parieren. Du erhältst bis zum Beginn deines nächsten Zuges einen Situationsbonus von +1 auf deine RK und auf Rettungswürfe gegen Zauber, die dich zum Ziel haben.</p>"
     },
     "Effect: Spell Protection Array": {
-      "name": "Effect: Spell Protection Array",
-      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.3CPKbiweBRzXAJA9]{Spell Protection Array}</p>\n<p>You gain a +1 status bonus to saving throws against magic.</p>"
+      "name": "Effekt: Schutzkreis gegen Magie erschaffen",
+      "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.3CPKbiweBRzXAJA9]{Schutzkreis gegen Magie erschaffen}</p>\n<p>Du erhältst einen +1 Zustandsbonus auf Rettungswürfe gegen Magie.</p>"
     },
     "Effect: Spin Tale": {
       "name": "Effect: Spin Tale",
@@ -1915,7 +2010,7 @@
       "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.Y8LHfkzGyOhPlUou]{Zwillingsparade}, wenn keine der Waffen die Eigenschaft Parade hat.</p>\n<p>Du erhältst einen Situationsbonus von +1 auf deine RK bis zum Beginn deines nächsten Zuges.</p>"
     },
     "Effect: Twin Parry (Parry Trait)": {
-      "name": "Effekt: Zwillingsparade (Eigenschaft Parade)",
+      "name": "Effekt: Zwillingsparade (Kategorie Parade)",
       "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.Y8LHfkzGyOhPlUou]{Zwillingsparade}, wenn eine deiner Waffen die Eigenschaft Parade besitzt.</p>\n<p>Du erhältst einen Situationsbonus von +2 auf deine RK bis zum Beginn deines nächsten Zuges.</p>",
       "rules": {
         "0": {
@@ -1940,12 +2035,16 @@
       "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.xSYkYRKlSyLzPrH1]{Ewige Treue}</p>\n<p>Untote Kreaturen erhalten einen Zustandsbonus von +2 auf Rettungswürfe gegen Lebensschaden und auf Willenswürfe gegen Fremdeffekte, welche ihnen den Zustand @UUID[Compendium.pf2e.conditionitems.Item.9qGBRpbX9NEwtAAr]{Gesteuert} geben würden.</p>"
     },
     "Effect: Undying Ferocity": {
-      "name": "Effect: Undying Ferocity",
-      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.zZOycr00XDVTKuXa]{Undying Ferocity}</p>\n<p>When you use Orc Ferocity, you gain temporary Hit Points equal to your level.</p>"
+      "name": "Effekt: Unverwüstliche Wildheit",
+      "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.zZOycr00XDVTKuXa]{Unverwüstliche Wildheit}</p>\n<p>Du erlangst Temporäre Trefferpunkte entsprechend deiner Stufe.</p>"
     },
     "Effect: Unleash Psyche": {
       "name": "Effekt: Psyche entfesseln",
       "description": "<p>Gewährt durch @UUID[Compendium.pf2e.actionspf2e.Item.7GeguyqyD1TjoC4r]{Psyche entfesseln}.</p>\n<p>Wirkst du einen Schadenszauber, erlangst du einen Zustandsbonus auf den Schaden in Höhe des doppelten Zaubergrades. Dies gilt nur für Zauber, die keine Wirkungsdauer besitzen und die du mittels Mentalistenzauberei wirkst.</p>"
+    },
+    "Effect: Unwavering Resilience": {
+      "name": "Effect: Unwavering Resilience",
+      "description": "<p>You gain a number of temporary Hit Point equal to your level.</p>"
     },
     "Effect: Ursine Avenger Form": {
       "name": "Effekt: Gestalt des Rächenden Bären",
@@ -1960,8 +2059,8 @@
       "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.YeVDITJplindA27l]{Siegeskraft}</p>\n<p>Du erlangst Temporäre Trefferpunkte in Höhe deines Konstitutionsmodifikators bis zum Ende deiner nächsten Runde.</p>"
     },
     "Effect: Vigorous Anthem": {
-      "name": "Effect: Vigorous Anthem",
-      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.4SKech3n0F38HrR5]{Vigorous Anthem}</p>\n<p>You gain temporary HP equal to 3 + the source's Charisma modifier.</p>"
+      "name": "Effekt: Hymne der Stärkung",
+      "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.4SKech3n0F38HrR5]{Hymne der Stärkung}</p>\n<p>Du erhältst temporäre TP in Höhe von 3 + Charismamodifikator der Quelle.</p>"
     },
     "Effect: Vivacious Bravado": {
       "name": "Effekt: Lebhafte Bravour",
@@ -1980,7 +2079,7 @@
       "description": "<p>Granted by @UUID[Compendium.pf2e.adventure-specific-actions.Item.GpT5RXUwhINODqkJ]{(Affinity Ablaze) Arms of Balance: Walking the Cardinal Paths}</p>\n<p>One of your weapons or your unarmed Strikes deal an additional 2d6 fire, cold, acid, or electricity damage. The Strikes gain the appropriate energy trait as well.</p>"
     },
     "Effect: Watch Your Back": {
-      "name": "Effect: Watch Your Back",
+      "name": "Effekt: Ich krieg dich!",
       "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.zZCyJhsaugHB6mZW]{Ich krieg dich!}</p>\n<p>Das Ziel erhält einen Zustandsbonus von +2 auf Wahrnehmungswürfe gegen dich und zugleich einen Zustandsmalus von -2 auf Willenswürfe gegen Furchteffekte.</p>"
     },
     "Effect: Watchful Gaze": {
@@ -2221,8 +2320,8 @@
       "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.C3MgEkPNaIhTddbr]{Pfauenhaltung}</p>\n<p>Du nimmst eine gerade, stolze Haltung an, ohne deine Mobilität zu opfern, und trittst dabei mit der Eleganz und Würde eines Pfaus auf. In dieser Haltung kannst du nur Nahkampfangriffe mit dem vorausgesetzten Schwert ausführen. Einmal pro Runde kannst du nach einem Treffer mit einem Mönchsschwertangriff als deine nächste Handlung, als Freie Aktion, einen Schritt ausführen.</p>"
     },
     "Stance: Point Blank Stance": {
-      "name": "Stance: Point Blank Stance",
-      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.Yl2wYv24v5kw95aS]{Point-Blank Shot}.</p>\n<p>When using a ranged weapon that doesn't have the volley trait, you gain a +2 circumstance bonus to damage rolls on attacks against targets within the weapon's first range increment.</p>"
+      "name": "Haltung: Kernschuss",
+      "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.Yl2wYv24v5kw95aS]{Kernschusshaltung}.</p>\n<p>Wenn du eine Fernkampfwaffe nutzt, die nicht über die Eigenschaft Ballistisch verfügt, erhältst du einen Situationsbonus von +2 auf Schadenswürfe, sofern sich deine Ziele innerhalb der ersten Entfernungseinheit befinden.</p>"
     },
     "Stance: Powder Punch Stance": {
       "name": "Haltung: Schwarzpulverhaltung",
@@ -2235,10 +2334,6 @@
     "Stance: Ravel Of Thorns": {
       "name": "Haltung: Dornenranken",
       "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.mHvkBdBN4gs6CH1g]{Dornenranken}</p>\n<p>Dornenranken wachsen in geometrischen Mustern auf Oberflächen innerhalb deiner Kinetischen Aura. Eine Kreatur, deren Zug innerhalb der Dornen beginnt, erhält einen Situationsmalus von -10 Fuß/3 m auf ihre Bewegungsraten, bis sie den Wirkungsbereich verlässt. Die Dornen sind Gefährliches Gelände. Eine Kreatur erleidet 2 Punkte Stichschaden, wenn sie eines der betroffenen Felder betritt. Sollte ein betroffenes Feld Wasser oder Erdboden enthalten, so verdopple den Schaden durch Gefährliches Gelände für alle Dornen. Solltest du dich bewegen, so verschwinden die Dornen; am Ende deines Zuges wachsen neue Dornen.</p>\n<hr />\n<p><strong>Stufe (+4) Der Schaden steigt um 1 Punkt.</p>\n<p><strong>Stufenabhängiger Stichschaden:</strong> @Damage[(floor((@actor.level -4)/4)+2)[piercing]]</p>"
-    },
-    "Stance: Rebirth In Living Stone": {
-      "name": "Haltung: Felsgestalt",
-      "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.mNiJvsbyxdLBnTRs]{Felsgestalt}</p>\n<p>Felsen quellen aus dir hervor, verzehren deinen Leib und brechen dann wieder auf, um zu enthüllen, dass dein Körper nun aus lebendem Gestein besteht. Du erlangst 40 Temporäre Trefferpunkte. Du bist immun gegen Kritische Treffer und Präzisionsschaden. Du kannst nicht gestoßen, gezogen oder zu Fall gebracht werden, während du auf Erde oder Stein stehst. Dein Erdelementargeschoss verursacht zusätzlich 1W10 Schadenspunkte seiner normalen Kategorie. Diese Vorteile währen bis zum Ende deines nächsten Zuges, können aber maximal 1 Minute Aufrechterhalten werden. Nachdem du durch diesen Impuls Temporäre Trefferpunkte erlangt hast, kannst du erst nach 10 Minuten erneut Temporäre TP durch Felsgestalt erhalten.</p>\n<hr />\n<p><strong>Stufe (20.)</strong> Du erlangst 50 Temporäre Trefferpunkte.</p>"
     },
     "Stance: Reflective Ripple Stance": {
       "name": "Haltung: Wellenhaltung",
@@ -2356,7 +2451,7 @@
     },
     "Stance: Winter Sleet": {
       "name": "Haltung: Glatteis",
-      "description": "<p>Gewährt durch @UUID[Compendium.pf2e.feats-srd.Item.xn6EaAbQlAB5ZGe6]{Glatteis}</p>\n<p>Markgefrierende Kältewirbel, die dem grausamsten Winter entsprungen scheinen, umgeben dich. Oberflächen innerhalb deiner Kinetischen Aura werden von glattem Eis überzogen. Eine Kreatur, die sich auf diesem Boden bewegt, muss einen Wurf zum @UUID[Compendium.pf2e.actionspf2e.Item.M76ycLAqHoAgbcej]{Balancieren} gegen SG 15 ablegen; bei Misslingen stürzt sie. Auf dem Eis ist man @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} betroffen. Du selbst bist gegen diese Effekte immun.</p>\n<p>Sollte eine Kreatur auf dem Eis von einem deiner Wasserimpulse getroffen werden oder gegen einen seiner Wasserimpulse einen Kritischen Fehlschlag erzielen, erhält sie bis zum Ende ihres nächsten Zuges den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}.</p>"
+      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.xn6EaAbQlAB5ZGe6]{Winter Sleet}</p>\n<p>Bone-chilling, swirling sleet surrounds you, cruel as deepest winter. Surfaces in your kinetic aura are coated in slippery ice. A creature that moves on the ice immediately falls unless it succeeds at an Acrobatics check or Reflex save against your impulse DC – 2. A creature that Steps or Crawls doesn't have to attempt a check or save. You're immune to this effect.</p>\n<p>If a creature on the ice is critically hit by one of your water impulses or critically fails at a save against one, that creature is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until the end of its next turn.</p>"
     },
     "Stance: Wolf Stance": {
       "name": "Haltung: Wolfshaltung",
