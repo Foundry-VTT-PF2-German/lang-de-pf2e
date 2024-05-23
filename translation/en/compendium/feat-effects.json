@@ -227,6 +227,10 @@
       "name": "Effect: Bone Swarm",
       "description": "<p>You become Huge, gain the swarm trait, and gain a fly Speed of 40 feet. As a swarm, you have the following characteristics.</p>\n<ul>\n<li>You are immune to the @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}, @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}, and @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} conditions.</li>\n<li>You have weakness 5 to area and splash damage.</li>\n<li>You can occupy the same space as other creatures and must do so to use your damaging ability.</li>\n<li>As a 2-action activity, you can deal @Damage[10d6[bludgeoning]] damage to all creatures sharing your space (@Check[type:reflex|dc:resolve(@actor.attributes.classOrSpellDC.value)|basic:true] save with a DC equal to your class DC or spell DC, whichever is higher).</li>\n<li>You can't speak, Cast Spells, use manipulate actions requiring your hands, Activate magic items, or make any Strikes with your normal body.</li>\n<li>You don't gain the swarm mind ability, so you are still affected normally by mental effects. You also retain the benefits of skeleton feats that don't require communication or the use of hands.</li>\n</ul>"
     },
+    "Effect: Born to the Trees": {
+      "name": "Effect: Born to the Trees",
+      "description": "<p>You gain a climb Speed equal to your Speed and a +1 circumstance bonus to Acrobatics checks to @UUID[Compendium.pf2e.actionspf2e.Item.M76ycLAqHoAgbcej]{Balance} and Athletics checks to @UUID[Compendium.pf2e.actionspf2e.Item.JUvAvruz7yRQXfz2]{Long Jump} and @UUID[Compendium.pf2e.actionspf2e.Item.2HJ4yuEFY1Cast4h]{High Jump}.</p>"
+    },
     "Effect: Brightness Seeker": {
       "name": "Effect: Brightness Seeker",
       "description": "<p><strong>Trigger</strong> You attempt an attack roll, skill check, or saving throw while performing the course of action from your @UUID[Compendium.pf2e.spells-srd.Item.41TZEjhO6D1nWw2X]{Augury}, but you haven't rolled yet.</p>\n<hr />\n<p><strong>Effect</strong> You gain a +1 status bonus to the triggering check, or a +2 status bonus if the result of the augury was woe and you proceeded anyway.</p>"
@@ -673,12 +677,35 @@
       "name": "Effect: Elementalist Dedication",
       "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.tx9pkrpmtqe4FnvS]{Elementalist Dedication}</p>\n<p>Each day when you make your daily preparations, you can attune yourself to one element of your choice from your elemental philosophy. You gain resistance equal to half your level (minimum 1 resistance) against damage dealt by effects with your attuned elemental trait. This attunement lasts until you next make your daily preparations.</p>"
     },
-    "Effect: Emblazon Antimagic (Weapon)": {
-      "name": "Effect: Emblazon Antimagic (Weapon)",
-      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.xAFdoKl7aOP9rVkl]{Emblazon Antimagic}.</p>\n<p>When the weapon's wielder critically hits with the weapon, they can attempt to counteract a spell on their target, using half their level, rounded up, as the counteract rank. If they attempt to do so, the emblazoned symbol immediately disappears.</p>",
+    "Effect: Emblazon Antimagic": {
+      "name": "Effect: Emblazon Antimagic",
+      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.xAFdoKl7aOP9rVkl]{Emblazon Antimagic}</p>\n<ul>\n<li><strong>Shield</strong> When the wielder has the shield raised, they gain the shield's circumstance bonus to saving throws against magic.</li>\n<li><strong>Weapon</strong> When the weapon's wielder critically hits with the weapon, they can attempt to counteract a spell on their target, using half their level, rounded up, as the counteract rank.</li>\n</ul>",
       "rules": {
-        "1": {
-          "text": "When you critically hit with the this weapon, you can attempt to counteract a spell on your target, using half your level (rounded up) as the counteract rank. If you do this, the emblazon symbol immediately disappears."
+        "0": {
+          "choices": {
+            "0": {
+              "label": "TYPES.Item.shield"
+            },
+            "1": {
+              "label": "TYPES.Item.weapon"
+            }
+          }
+        }
+      }
+    },
+    "Effect: Emblazon Armament": {
+      "name": "Effect: Emblazon Armament",
+      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.7RFjTTzznsdPcaYB]{Emblazon Armament}</p>\n<ul>\n<li><strong>Shield</strong> The shield gains a +1 status bonus to its Hardness.</li>\n<li><strong>Weapon</strong> The wielder gains a +1 status bonus to damage rolls with the weapon.</li>\n</ul>",
+      "rules": {
+        "0": {
+          "choices": {
+            "0": {
+              "label": "TYPES.Item.shield"
+            },
+            "1": {
+              "label": "TYPES.Item.weapon"
+            }
+          }
         }
       }
     },
@@ -689,6 +716,22 @@
     "Effect: Emblazon Armament (Weapon)": {
       "name": "Effect: Emblazon Armament (Weapon)",
       "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.7RFjTTzznsdPcaYB]{Emblazon Armament}</p>\n<p>The wielder gains a +1 status bonus to damage rolls with the chosen weapon</p>"
+    },
+    "Effect: Emblazon Energy": {
+      "name": "Effect: Emblazon Energy",
+      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.rKZE8BA9IQHSSWoW]{Emblazon Energy}</p>\n<ul>\n<li><strong>Shield</strong> Choose acid, cold, electricity, fire, or sonic. The wielder gains the shield's circumstance bonus to saving throws against that damage type.</li>\n<li><strong>Weapon</strong> Choose acid, cold, electricity, fire, or sonic. The weapon deals an extra 1d4 damage of that type. Increase this extra damage to 1d6 if you have a domain spell with a trait matching that type.</li>\n</ul>",
+      "rules": {
+        "0": {
+          "choices": {
+            "0": {
+              "label": "TYPES.Item.shield"
+            },
+            "1": {
+              "label": "TYPES.Item.weapon"
+            }
+          }
+        }
+      }
     },
     "Effect: Emblazon Energy (Weapon, Acid)": {
       "name": "Effect: Emblazon Energy (Weapon, Acid)",
@@ -924,6 +967,15 @@
       "name": "Effect: Fulminating Shot",
       "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.o3J79hnr00ztcwtT]{Fulminating Shot}</p>\n<p>Choose acid, cold, electricity, or fire. If you hit with your next attack roll using a firearm or crossbow before the end of your turn, you deal 1d6 additional damage of this type. At 12th level, this increases to 2d6 additional damage, and at 18th level, it increases to 3d6 additional damage.</p>"
     },
+    "Effect: Fungal Rot": {
+      "name": "Effect: Fungal Rot",
+      "badges": [
+        "Mild",
+        "Moderate",
+        "Severe"
+      ],
+      "description": "<p>As you use your powers, radioactive molds and fungi consume your flesh, making you look (and feel) like a rotting, walking corpse.</p>\n<p><strong>Mild Backlash</strong> You take damage equal to your level as your body decays.</p>\n<p><strong>Moderate Backlash</strong> You take damage equal to your level and become @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}.</p>\n<p><strong>Severe Backlash</strong> You take damage equal to twice your level and become @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 4}. You can't reduce the value of your sickened condition below 1 for 1 hour.</p>"
+    },
     "Effect: Furnace Form": {
       "name": "Effect: Furnace Form",
       "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.6vHkvQv0j56nZuR3]{Furnace Form}</p>\n<p>You become living flame, giving you fire immunity, resistance 10 to precision damage, and weakness 5 to cold and to water. Your unarmed attacks deal 1d4 additional fire damage, and your fire spells deal one additional die of fire damage (of the same damage die the spell uses). Your fire Elemental Blasts deal an additional die of damage. In fire form, you have a fly Speed of 40 feet.</p>"
@@ -1059,6 +1111,10 @@
     "Effect: High-Speed Regeneration Speed Boost": {
       "name": "Effect: High-Speed Regeneration Speed Boost",
       "description": "<p>You gain a +10-foot status bonus to your Speed.</p>"
+    },
+    "Effect: Hopeful Athamaru": {
+      "name": "Effect: Hopeful Athamaru",
+      "description": "<p>You gain a +1 circumstance bonus to saving throws against fear.</p>"
     },
     "Effect: Hungry Goblin": {
       "name": "Effect: Hungry Goblin",
@@ -1237,6 +1293,15 @@
           "label": "Liberating Step (vs. undead)"
         }
       }
+    },
+    "Effect: Life-Draining": {
+      "name": "Effect: Life-Draining",
+      "badges": [
+        "Mild",
+        "Moderate",
+        "Severe"
+      ],
+      "description": "<p>The flourishing plant life that covers your body is a part of you, but it draws nutrients from your blood, making you weaker the more the flowers grow. As the plants grow, you need to spend more and more time recuperating. Recuperating in the sunshine lowers this duration, as it feeds the flowers, speeding your recovery.</p>\n<p><strong>Mild Backlash</strong> You become @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} as the plants feed off your life force. This condition lasts until you spend 3 consecutive actions to rest and do nothing.</p>\n<p><strong>Moderate Backlash</strong> You become @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} and @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued} until you spend 20 minutes recuperating by resting and doing nothing. If you spend this time basking in sunshine, it instead takes 10 minutes.</p>\n<p><strong>Severe Backlash</strong> You become @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 3} until you spend 2 hours napping. While napping, you're @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious} and can't take actions or engage in exploration activities, but a creature can wake you with a single action with the manipulate trait. If you spend this time napping in natural sunlight, it instead takes 1 hour. You're fatigued until you can get a full night's rest.</p>"
     },
     "Effect: Life-Giving Magic": {
       "name": "Effect: Life-Giving Magic",
@@ -1493,6 +1558,24 @@
       "name": "Effect: Poison Weapon",
       "description": "<p>Applied when you apply a poison created with @UUID[Compendium.pf2e.feats-srd.Item.ALbosSUygdq4T1Yk]{Poison Weapon}.</p>"
     },
+    "Effect: Portents of the Haruspex": {
+      "name": "Effect: Portents of the Haruspex",
+      "badges": [
+        "Acid",
+        "Bludgeoning",
+        "Bludgeoning",
+        "Cold",
+        "Electricity",
+        "Fire",
+        "Mental",
+        "Piercing",
+        "Piercing",
+        "Poison",
+        "Slashing",
+        "Slashing"
+      ],
+      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.tz0gvfTwcDq0yEfg]{Portents of the Haruspex}</p>\n<p>Roll 1d12 to determine the damage type. The next time before the end of your next turn that you or your allies deals that damage type to an enemy, that enemy has weakness equal to your level against that damage.</p>"
+    },
     "Effect: Prayer-Touched Weapon": {
       "name": "Effect: Prayer-Touched Weapon",
       "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.2qR4QAgJVArv63Z2]{Prayer-Touched Weapon}</p>\n<p>The chosen weapon deals an extra 1d6 vitality damage.</p>"
@@ -1579,6 +1662,10 @@
       "name": "Effect: Protective Spirit Mask",
       "description": "<p>You gain a +1 circumstance bonus to AC until the start of the caster's next turn.</p>\n<p><strong>Granted By:</strong>@UUID[Compendium.pf2e.feats-srd.Item.nn7DiYYWinsSYrZy]{Protective Spirit Mask}</p>"
     },
+    "Effect: Proud Mentor": {
+      "name": "Effect: Proud Mentor",
+      "description": "<p>You gain temporary Hit Points equal to your level.</p>"
+    },
     "Effect: Psi Strikes": {
       "name": "Effect: Psi Strikes",
       "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.uisI6b7Ua5zSHDwj]{Psi Strikes}</p>\n<p>The attack deals an extra 1d6 force damage.</p>"
@@ -1634,6 +1721,10 @@
     "Effect: Reanimator Dedication": {
       "name": "Effect: Reanimator Dedication",
       "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.5Cm2TYHzoO2DbQNM]{Reanimator Dedication}</p>\n<p>The undead you animate gains a +1 status bonus to attack rolls, AC, saving throws, and skill checks for the duration of @UUID[Compendium.pf2e.spells-srd.Item.9WGeBwIIbbUuWKq0]{Summon Undead}.</p>"
+    },
+    "Effect: Rebirth In Living Stone": {
+      "name": "Effect: Rebirth In Living Stone",
+      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.mNiJvsbyxdLBnTRs]{Rebirth In Living Stone}<br /><br /></p>\n<p>Rock overflows from within you to consume your form before cracking open to reveal your body transformed into living stone. You gain 40 temporary Hit Points. You're immune to critical hits and precision damage. You can't be pushed, pulled, or tripped while you're standing on earth or stone. Your earth Elemental Blasts deal an additional 1d10 damage of their normal type. These benefits last until the end of your next turn, but you can Sustain them up to 1 minute. After you gain temporary Hit Points from this impulse, you can't do so again for 10 minutes.</p>\n<hr />\n<p><strong>Level (20th)</strong> You gain 50 temporary Hit Points.</p>"
     },
     "Effect: Recall Under Pressure": {
       "name": "Effect: Recall Under Pressure",
@@ -1768,6 +1859,10 @@
     "Effect: Shield of Faith": {
       "name": "Effect: Shield of Faith",
       "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.w3qyriA1YnzXaas3]{Shield of Faith}</p>\n<p>You gain a +1 status bonus to your AC.</p>"
+    },
+    "Effect: Shielding Wave": {
+      "name": "Effect: Shielding Wave",
+      "description": "<p>You gain resistance to acid or fire damage.</p>"
     },
     "Effect: Shining Arms": {
       "name": "Effect: Shining Arms",
@@ -1946,6 +2041,10 @@
     "Effect: Unleash Psyche": {
       "name": "Effect: Unleash Psyche",
       "description": "<p>When you cast a damaging spell, you gain a status bonus to its damage equal to double the spell's rank. This applies only to spells that don't have a duration and that you cast using psychic spellcasting.</p>"
+    },
+    "Effect: Unwavering Resilience": {
+      "name": "Effect: Unwavering Resilience",
+      "description": "<p>You gain a number of temporary Hit Point equal to your level.</p>"
     },
     "Effect: Ursine Avenger Form": {
       "name": "Effect: Ursine Avenger Form",
@@ -2236,10 +2335,6 @@
       "name": "Stance: Ravel Of Thorns",
       "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.mHvkBdBN4gs6CH1g]{Ravel Of Thorns}</p>\n<p>Thorny vines grow in geometric patterns on surfaces in your kinetic aura. A creature that starts its turn in the thorns takes a –10-foot circumstance penalty to its Speeds until it leaves the area. The thorns are hazardous terrain. A creature takes @Damage[(floor((@actor.level -4)/4)+2)[piercing]] damage each time it moves into one of these squares. If any square the thorns grow on is water or soil, double the hazardous terrain damage for all thorns. If you move, the thorns disappear; new thorns grow at the end of your turn.</p>\n<hr />\n<p><strong>Level (+4)</strong> The damage increases by 1.</p>"
     },
-    "Stance: Rebirth In Living Stone": {
-      "name": "Stance: Rebirth In Living Stone",
-      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.mNiJvsbyxdLBnTRs]{Rebirth In Living Stone}<br /><br /></p>\n<p>Rock overflows from within you to consume your form before cracking open to reveal your body transformed into living stone. You gain 40 temporary Hit Points. You're immune to critical hits and precision damage. You can't be pushed, pulled, or tripped while you're standing on earth or stone. Your earth Elemental Blasts deal an additional 1d10 damage of their normal type. These benefits last until the end of your next turn, but you can Sustain them up to 1 minute. After you gain temporary Hit Points from this impulse, you can't do so again for 10 minutes.</p>\n<hr />\n<p><strong>Level (20th)</strong> You gain 50 temporary Hit Points.</p>"
-    },
     "Stance: Reflective Ripple Stance": {
       "name": "Stance: Reflective Ripple Stance",
       "description": "<p>You can make flowing wave attacks that deal 1d6 bludgeoning damage. They are in the brawling group and have the agile, disarm, finesse, nonlethal, trip, unarmed, and water traits.</p>\n<p>While in Reflective Ripple Stance, you gain a +1 circumstance bonus to Athletics checks to @UUID[Compendium.pf2e.actionspf2e.Item.Dt6B1slsBy8ipJu9]{Disarm}, @UUID[Compendium.pf2e.actionspf2e.Item.c8TGiZ48ygoSPofx]{Swim}, or @UUID[Compendium.pf2e.actionspf2e.Item.ge56Lu1xXVFYUnLP]{Trip}, and you gain a +2 circumstance bonus to your Reflex DC to avoid being Disarmed and Tripped.</p>"
@@ -2356,7 +2451,7 @@
     },
     "Stance: Winter Sleet": {
       "name": "Stance: Winter Sleet",
-      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.xn6EaAbQlAB5ZGe6]{Winter Sleet}</p>\n<p>Bone-chilling, swirling sleet surrounds you, cruel as deepest winter. Surfaces in your kinetic aura are coated in slippery ice. A creature that moves on this uneven ground immediately falls unless it @UUID[Compendium.pf2e.actionspf2e.Item.M76ycLAqHoAgbcej]{Balances} (DC 15). A creature is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} on the ice, as normal for uneven ground. You're immune to these effects.</p>\n<p>If a creature on the ice is critically hit by one of your water impulses or critically fails at a save against one, that creature is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until the end of its next turn.</p>"
+      "description": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.xn6EaAbQlAB5ZGe6]{Winter Sleet}</p>\n<p>Bone-chilling, swirling sleet surrounds you, cruel as deepest winter. Surfaces in your kinetic aura are coated in slippery ice. A creature that moves on the ice immediately falls unless it succeeds at an Acrobatics check or Reflex save against your impulse DC – 2. A creature that Steps or Crawls doesn't have to attempt a check or save. You're immune to this effect.</p>\n<p>If a creature on the ice is critically hit by one of your water impulses or critically fails at a save against one, that creature is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until the end of its next turn.</p>"
     },
     "Stance: Wolf Stance": {
       "name": "Stance: Wolf Stance",
