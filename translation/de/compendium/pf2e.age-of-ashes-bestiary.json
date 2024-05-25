@@ -160,7 +160,7 @@
     "Ash Web": {
       "name": "Aschenetz",
       "description": "<p>Dieser gefährliche, rußigschwarze Schimmel setzt seine giftigen Sporen frei, wenn er gestört wird. Das ganze Vorkommen hier ist ein einziger Organismus. Neun Flecken zu jeweils 3 m Seitenlänge müssen entfernt werden, allerdings stirbt der ganze Organismus, sobald er genug Schaden erlitten hat.</p>",
-      "disable": "<p>@Check[type:survival|dc:27|name:Remove Patch|traits:environmental,fungus] (Überlebenskunst, Experte), um einen 10 Fuß/3 m-Flecken Aschenetz zu entfernen, ohne die Sporen auszulösen.</p>",
+      "disable": "<p>@Check[type:survival|dc:27|name:Remove Patch|traits:environmental,fungus] (Überlebenskunde, Experte), um einen 10 Fuß/3 m-Flecken Aschenetz zu entfernen, ohne die Sporen auszulösen.</p>",
       "reset": "<p>Dieses große Vorkommen Aschenetz setzt sich automatisch zu Beginn der Runde zurück.</p>",
       "stealth": "<p>(Experte)</p>",
       "items": {
@@ -407,7 +407,7 @@
         },
         "action->Hunt Prey": {
           "name": "Jagdbeute",
-          "description": "<p>Der Söldner wählt eine einzelne Kreatur als seine Beute und konzentriert seine Angriffe auf sie. Er musst imstande sein, diese Beute zu sehen oder zu hören, oder während der Erkundung ihren Spuren folgen. Er erlangt einen Situationsbonus von +2 auf Wahrnehmungswürfe, wenn er seine Beute @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{sucht}, und auf Fertigkeitswürfe für Überlebenskunst, wenn er die Beute mittels @UUID[Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD]{Spuren folgen} jagt. Er ignoriert zudem den Malus auf Fernkampfangriffe, sollte sich seine Jagdbeute innerhalb der zweiten Entfernungsreichweite seiner Waffe befinden.</p>\n<p>Er kann stets nur eine Kreatur zu seiner Jagdbeute bestimmen. Sowie er eine neue Kreatur zu seiner Jagdbeute bestimmt, verliert die vorherige Jagdbeute diesen Status. Dasselbe geschieht, wenn er seine täglichen Vorbereitungen trifft.</p>"
+          "description": "<p>Der Söldner wählt eine einzelne Kreatur als seine Beute und konzentriert seine Angriffe auf sie. Er musst imstande sein, diese Beute zu sehen oder zu hören, oder während der Erkundung ihren Spuren folgen. Er erlangt einen Situationsbonus von +2 auf Wahrnehmungswürfe, wenn er seine Beute @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{sucht}, und auf Fertigkeitswürfe für Überlebenskunde, wenn er die Beute mittels @UUID[Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD]{Spuren folgen} jagt. Er ignoriert zudem den Malus auf Fernkampfangriffe, sollte sich seine Jagdbeute innerhalb der zweiten Entfernungsreichweite seiner Waffe befinden.</p>\n<p>Er kann stets nur eine Kreatur zu seiner Jagdbeute bestimmen. Sowie er eine neue Kreatur zu seiner Jagdbeute bestimmt, verliert die vorherige Jagdbeute diesen Status. Dasselbe geschieht, wenn er seine täglichen Vorbereitungen trifft.</p>"
         },
         "action->Hunted Shot": {
           "name": "Aufeinanderfolgende Schüsse",
@@ -535,6 +535,10 @@
         },
         "spell->Crushing Despair": {
           "name": "<Compendium>"
+        },
+        "spell->Resilient Sphere": {
+          "name": "<Compendium>",
+          "target": "1 Kreatur"
         },
         "spell->Mage Hand": {
           "name": "<Compendium>"
@@ -852,7 +856,7 @@
         },
         "action->Magma Splash": {
           "name": "Magmablut",
-          "description": "<p>Wenn ein Dalos Schaden durch einen Nahkampfangriff erleidet, spritzt Magma aus der offenen Wunde und bleibt an umstehenden Kreaturen haften. Jede Kreatur in einer @Template[type:emanation|distance:10]{Ausstrahlung von 10 Fuß/3 m} muss einen @Check[type:reflex|dc:31|traits:damaging-effect]{Reflexwurf} ablegen. Bei einem Fehlschlag erleidet die Kreatur @Damage[3d6[persistent,fire]]{3W6 Punkte anhaltenden Feuerschaden}, während das heiße Gestein an ihnen klebt und langsam abkühlt. Der SG, um diesen anhaltenden Schaden zu beenden, sinkt jede Runde nach der Ersten um 5, da das Magma abkühlt.</p>"
+          "description": "<p>Wenn ein Dalos Schaden durch einen Nahkampfangriff erleidet, spritzt Magma aus der offenen Wunde und bleibt an umstehenden Kreaturen haften. Jede Kreatur in einer @Template[type:emanation|distance:10]{Ausstrahlung von 10 Fuß/3 m} muss einen @Check[type:reflex|dc:31|traits:damaging-effect]{Reflexwurf} ablegen. Bei einem Fehlschlag erleidet die Kreatur @Damage[3d6[persistent,fire]]{3W6 Punkte Anhaltenden Feuerschaden}, während das heiße Gestein an ihnen klebt und langsam abkühlt. Der SG, um diesen Anhaltenden Schaden zu beenden, sinkt jede Runde nach der Ersten um 5, da das Magma abkühlt.</p>"
         },
         "action->Volcanic Heat": {
           "name": "Vulkanhitze",
@@ -952,7 +956,7 @@
         },
         "action->Hunt Prey": {
           "name": "Jagdbeute",
-          "description": "<p>Dmiri wählt eine einzelne Kreatur als ihre Beute und konzentriert ihre Angriffe auf sie. Sie muss imstande sein, diese Beute zu sehen oder zu hören, oder während der Erkundung ihren Spuren folgen. Dmiri erlangt einen Situationsbonus von +2 auf Wahrnehmungswürfe, wenn sie ihre Beute @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Sucht}, und auf Fertigkeitswürfe für Überlebenskunst, wenn sie die Beute mittels @UUID[Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD]{Spuren folgen} jagt. Sie ignoriert zudem den Malus auf Fernkampfangriffe, sollte sich ihre Jagdbeute innerhalb der zweiten Entfernungsreichweite ihrer Waffe befindet.</p>\n<p>Sie kann stets nur eine Kreatur zu ihrer Jagdbeute bestimmen. Sowie sie eine neue Kreatur zu ihrer Jagdbeute bestimmt, verliert die vorherige Jagdbeute diesen Status. Dasselbe geschieht, wenn sie ihre täglichen Vorbereitungen triffst.</p>"
+          "description": "<p>Dmiri wählt eine einzelne Kreatur als ihre Beute und konzentriert ihre Angriffe auf sie. Sie muss imstande sein, diese Beute zu sehen oder zu hören, oder während der Erkundung ihren Spuren folgen. Dmiri erlangt einen Situationsbonus von +2 auf Wahrnehmungswürfe, wenn sie ihre Beute @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Sucht}, und auf Fertigkeitswürfe für Überlebenskunde, wenn sie die Beute mittels @UUID[Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD]{Spuren folgen} jagt. Sie ignoriert zudem den Malus auf Fernkampfangriffe, sollte sich ihre Jagdbeute innerhalb der zweiten Entfernungsreichweite ihrer Waffe befindet.</p>\n<p>Sie kann stets nur eine Kreatur zu ihrer Jagdbeute bestimmen. Sowie sie eine neue Kreatur zu ihrer Jagdbeute bestimmt, verliert die vorherige Jagdbeute diesen Status. Dasselbe geschieht, wenn sie ihre täglichen Vorbereitungen triffst.</p>"
         },
         "action->Hunter's Aim": {
           "name": "Treffsicherheit des Jägers",
@@ -1148,7 +1152,7 @@
         },
         "action->1-2 Acid Rain": {
           "name": "1-2: Säureregen",
-          "description": "<p>Stark säurehaltiger Niederschlag durchnässt Kreaturen in einem @Template[type:burst|distance:20]{Explosionsradius von 20 Fuß/6 m}. Kreaturen im Wirkungsbereich erleiden @Damage[6d10[acid]]{6W10 Punkte Säureschaden} (@Check[type:reflex|dc:42|basic:true]{einfacher Reflexwurf}; bei einem Kritischen Fehlschlag erleidet eine Kreatur zudem @Damage[5[persistent,acid]]{5 Punkte anhaltenden Säureschaden}).</p>"
+          "description": "<p>Stark säurehaltiger Niederschlag durchnässt Kreaturen in einem @Template[type:burst|distance:20]{Explosionsradius von 20 Fuß/6 m}. Kreaturen im Wirkungsbereich erleiden @Damage[6d10[acid]]{6W10 Punkte Säureschaden} (@Check[type:reflex|dc:42|basic:true]{einfacher Reflexwurf}; bei einem Kritischen Fehlschlag erleidet eine Kreatur zudem @Damage[5[persistent,acid]]{5 Punkte Anhaltenden Säureschaden}).</p>"
         },
         "action->3-4 Freezing Wind": {
           "name": "3-4: Eisiger Wind",
@@ -1160,7 +1164,7 @@
         },
         "action->7-8 Flaming Vortex": {
           "name": "7-8: Flammenwirbel",
-          "description": "<p>Feuerstrahlen fahren auf alle Kreaturen innerhalb eines @Template[type:burst|distance:20]{Explosionsradius von 20 Fuß/6 m} herab. Kreaturen im Wirkungsbereich erleiden @Damage[6d10[fire]]{6W10 Punkte Feuerschaden} (@Check[type:reflex|dc:42|basic:true]{einfacher Reflexwurf}; bei einem Kritischen Fehlschlag erleidet eine Kreatur zudem [[/r 5[persistent,fire]]]{5 Punkte anhaltenden Feuerschaden}).</p>"
+          "description": "<p>Feuerstrahlen fahren auf alle Kreaturen innerhalb eines @Template[type:burst|distance:20]{Explosionsradius von 20 Fuß/6 m} herab. Kreaturen im Wirkungsbereich erleiden @Damage[6d10[fire]]{6W10 Punkte Feuerschaden} (@Check[type:reflex|dc:42|basic:true]{einfacher Reflexwurf}; bei einem Kritischen Fehlschlag erleidet eine Kreatur zudem [[/r 5[persistent,fire]]]{5 Punkte Anhaltenden Feuerschaden}).</p>"
         },
         "action->9-10 Poison Miasma": {
           "name": "9-10: Giftnebel",
@@ -1242,7 +1246,7 @@
         },
         "action->Hunt Prey": {
           "name": "Jagdbeute",
-          "description": "<p>Der Sklavenmeister wählt eine Kreatur, die er sehen oder hören kann oder deren Spuren er folgt, zu seiner Beute. Er erhält einen Situationsbonus von +2 auf Wahrnehmungswürfe, wenn er seine Beute @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Sucht} und auf Fertigkeitswürfe für Überlebenskunst zum @UUID[Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD]{Spuren der Beute lesen}. Er ignoriert zudem den Entfernungsmalus auf Fernkampfangriffe gegen die Beute, sofern diese nicht weiter als die zweite Entfernungseinheit entfernt ist. Trifft der Sklavenmeister seine Jagdbeute erstmals in einer Runde, fügt er ihr zusätzliche [[/r 2d8[precision]]]{2W8 Punkte Präzisionsschaden} zu. Ein Sklavenmeister kann stets nur über eine ausgewählte Jagdbeute verfügen.</p>"
+          "description": "<p>Der Sklavenmeister wählt eine Kreatur, die er sehen oder hören kann oder deren Spuren er folgt, zu seiner Beute. Er erhält einen Situationsbonus von +2 auf Wahrnehmungswürfe, wenn er seine Beute @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Sucht} und auf Fertigkeitswürfe für Überlebenskunde zum @UUID[Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD]{Spuren der Beute lesen}. Er ignoriert zudem den Entfernungsmalus auf Fernkampfangriffe gegen die Beute, sofern diese nicht weiter als die zweite Entfernungseinheit entfernt ist. Trifft der Sklavenmeister seine Jagdbeute erstmals in einer Runde, fügt er ihr zusätzliche [[/r 2d8[precision]]]{2W8 Punkte Präzisionsschaden} zu. Ein Sklavenmeister kann stets nur über eine ausgewählte Jagdbeute verfügen.</p>"
         },
         "action->Hunter's Flurry": {
           "name": "Jägervorteil",
@@ -2645,7 +2649,7 @@
         },
         "action->Golem Antimagic": {
           "name": "Golem-Antimagie",
-          "description": "<p>Geheilt durch Leerenenergie (durch Flächeneffekte [[/r 2d8[healing]]]{2W8 TP}); Geschädigt durch Kälte und Lebensenergie ([[/r 5d10]]{5W10}, [[/r 2d8]]{2W8} durch Flächen- und anhaltenden Schaden); @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt} durch Erdeffekte</p>\n<hr />\n<p>Ein Golem ist gegen die Zauber und magischen Fähigkeiten aus anderen Quellen immun. Allerdings besitzt jede Art von Golem bestimmte Schwächen – ein paar magische Effekte, die ihn auf besondere Weise betreffen. Diese Ausnahmen findest du in verkürzter Form in den Spielwerten des Golems, während die vollständigen Regeln hier aufgeführt werden. Sollte ein Eintrag mehrere Kategorien aufführen (z.B. „Kälte“ und „Wasser“), so wird der Golem von Effekten jeder Kategorie betroffen (und nicht nur von solchen, die allen Kategorien angehören).</p>\n<ul>\n<li><strong>Empfindlichkeit gegenüber</strong> Jeder Golem ist gegenüber einem oder mehreren bestimmten Zaubern empfindlich; die Effekte sind in den Spielwerten beschrieben.</li>\n<li><strong>Geheilt durch</strong> Jede Magie dieser Kategorie, die den Golem zum Ziel hat, nimmt ihm den Zustand Verlangsamt und verleiht ihm TP in Höhe der Hälfte des normalerweise verursachten Schadens. Sollte der Zug des Golems in einem Bereich von Magie dieser Kategorie beginnen oder er einem anhaltenden Effekt der fraglichen Kategorie unterliegen, so erlangt er die in Klammern aufgeführten Trefferpunkte.</li>\n<li><strong>Geschädigt durch</strong> Jede Magie dieser Kategorie, die den Golem zum Ziel hat, lässt ihn anstelle des normalen Effektes den aufgeführten, kategorielosen Schaden erleiden. Sollte der Zug des Golems in einem Bereich von Magie dieser Kategorie beginnen oder er einem anhaltenden Effekt der fraglichen Kategorie unterliegen, so erleidet er den in Klammern aufgeführten Schaden.</li>\n<li><strong>Verlangsamt durch</strong> Jede Magie dieser Kategorie, die den Golem zum Ziel hat, verleiht ihm anstelle des normalen Effektes für [[/r 2d6 #rounds]]{2W6 Runden} den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}. Sollte der Zug des Golems in einem Bereich von Magie dieser Kategorie beginnen, so erhält er für diese Runde den Zustand Verlangsamt 1.</li>\n</ul>"
+          "description": "<p>Geheilt durch Leerenenergie (durch Flächeneffekte [[/r 2d8[healing]]]{2W8 TP}); Geschädigt durch Kälte und Lebensenergie ([[/r 5d10]]{5W10}, [[/r 2d8]]{2W8} durch Flächen- und Anhaltenden Schaden); @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt} durch Erdeffekte</p>\n<hr />\n<p>Ein Golem ist gegen die Zauber und magischen Fähigkeiten aus anderen Quellen immun. Allerdings besitzt jede Art von Golem bestimmte Schwächen – ein paar magische Effekte, die ihn auf besondere Weise betreffen. Diese Ausnahmen findest du in verkürzter Form in den Spielwerten des Golems, während die vollständigen Regeln hier aufgeführt werden. Sollte ein Eintrag mehrere Kategorien aufführen (z.B. „Kälte“ und „Wasser“), so wird der Golem von Effekten jeder Kategorie betroffen (und nicht nur von solchen, die allen Kategorien angehören).</p>\n<ul>\n<li><strong>Empfindlichkeit gegenüber</strong> Jeder Golem ist gegenüber einem oder mehreren bestimmten Zaubern empfindlich; die Effekte sind in den Spielwerten beschrieben.</li>\n<li><strong>Geheilt durch</strong> Jede Magie dieser Kategorie, die den Golem zum Ziel hat, nimmt ihm den Zustand Verlangsamt und verleiht ihm TP in Höhe der Hälfte des normalerweise verursachten Schadens. Sollte der Zug des Golems in einem Bereich von Magie dieser Kategorie beginnen oder er einem anhaltenden Effekt der fraglichen Kategorie unterliegen, so erlangt er die in Klammern aufgeführten Trefferpunkte.</li>\n<li><strong>Geschädigt durch</strong> Jede Magie dieser Kategorie, die den Golem zum Ziel hat, lässt ihn anstelle des normalen Effektes den aufgeführten, kategorielosen Schaden erleiden. Sollte der Zug des Golems in einem Bereich von Magie dieser Kategorie beginnen oder er einem anhaltenden Effekt der fraglichen Kategorie unterliegen, so erleidet er den in Klammern aufgeführten Schaden.</li>\n<li><strong>Verlangsamt durch</strong> Jede Magie dieser Kategorie, die den Golem zum Ziel hat, verleiht ihm anstelle des normalen Effektes für [[/r 2d6 #rounds]]{2W6 Runden} den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}. Sollte der Zug des Golems in einem Bereich von Magie dieser Kategorie beginnen, so erhält er für diese Runde den Zustand Verlangsamt 1.</li>\n</ul>"
         },
         "action->Necrotic Field": {
           "name": "Nekrotisches Feld",
@@ -2799,7 +2803,7 @@
           "name": "<Compendium>"
         },
         "equipment->Hunter's Arrowhead": {
-          "description": "<p>Dieser wie eine Pfeilspitze geformte Glücksbringer ist nicht dafür geeignet, an einem Pfeil angebracht zu werden. Stattdessen ist er dazu gedacht, in einer Tasche oder an einem Köcher getragen zu werden. Auf eine Pfeilspitze des Jägers wurden Abbildungen graviert, die dem elfischen Gott Ketephys heilig sind. Trägst du eine davon bei dir, verleiht sie dir großes Geschick bei der Jagd. Du erhältst einen Gegenstandsbonus von +1 auf Fertigkeitswürfe für Überlebenskunst und auf Angriffswürfe gegen Kreaturen, die du mit deiner Waldläuferfähigkeit Jagdbeute zur Beute erklärt hast: Dieser Bonus auf den Angriffswurf ist ein Gegenstandsbonus und damit nicht kumulativ mit einem Gegenstandsbonus einer magischen Waffe. Eine Pfeilspitze des Jägers ist zudem ein Heiliges Symbol des Ketephys.</p>\n<p>Diese spezielle Pfeilspitze des Jägers (und nur diese) ist der Schlüssel zum Tor des Jägers in Alsetas Ring. Wird dieses Aiudara mit dieser Pfeilspitze berührt, aktiviert sich das Portal, sofern es funktionsfähig ist.</p>\n<hr />\n<p><strong>Aktivieren</strong> <span class=\"action-glyph\">R</span> Befehl</p>\n<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<p><strong>Auslöser</strong> Dein Angriffswurf mit einem Bogen würde fehlschlagen;</p>\n<p><strong>Effekt</strong> Du erhältst einen Situationsbonus von +2 auf deinen Angriffswurf. Dadurch kann ein Fehlschlag rückwirkend zu einem Treffer werden.</p>",
+          "description": "<p>Dieser wie eine Pfeilspitze geformte Glücksbringer ist nicht dafür geeignet, an einem Pfeil angebracht zu werden. Stattdessen ist er dazu gedacht, in einer Tasche oder an einem Köcher getragen zu werden. Auf eine Pfeilspitze des Jägers wurden Abbildungen graviert, die dem elfischen Gott Ketephys heilig sind. Trägst du eine davon bei dir, verleiht sie dir großes Geschick bei der Jagd. Du erhältst einen Gegenstandsbonus von +1 auf Fertigkeitswürfe für Überlebenskunde und auf Angriffswürfe gegen Kreaturen, die du mit deiner Waldläuferfähigkeit Jagdbeute zur Beute erklärt hast: Dieser Bonus auf den Angriffswurf ist ein Gegenstandsbonus und damit nicht kumulativ mit einem Gegenstandsbonus einer magischen Waffe. Eine Pfeilspitze des Jägers ist zudem ein Heiliges Symbol des Ketephys.</p>\n<p>Diese spezielle Pfeilspitze des Jägers (und nur diese) ist der Schlüssel zum Tor des Jägers in Alsetas Ring. Wird dieses Aiudara mit dieser Pfeilspitze berührt, aktiviert sich das Portal, sofern es funktionsfähig ist.</p>\n<hr />\n<p><strong>Aktivieren</strong> <span class=\"action-glyph\">R</span> Befehl</p>\n<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<p><strong>Auslöser</strong> Dein Angriffswurf mit einem Bogen würde fehlschlagen;</p>\n<p><strong>Effekt</strong> Du erhältst einen Situationsbonus von +2 auf deinen Angriffswurf. Dadurch kann ein Fehlschlag rückwirkend zu einem Treffer werden.</p>",
           "rules": {
             "0": {
               "label": "Pfeilspitze des Jägers (gg. Jagdbeute)"
@@ -4658,7 +4662,7 @@
         },
         "action->Volcanic Purge": {
           "name": "Vulkanausbruch",
-          "description": "<p>Wenn die nächste Aktion des Drachen die Odemwaffe ist, haftet das Magma an jenen, denen es Schaden zufügt. Jede Kreatur, deren Rettungswurf gegen die Odemwaffe fehlschlägt, erleidet @Damage[4d6[persistent,fire]]{4W6 Punkte anhaltenden Feuerschaden} und solange sie diesen anhaltenden Feuerschaden hat, erleidet sie außerdem einen Zustandsmalus von -3 m auf ihre Bewegungsraten.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.7qoZauizAKfPIXeu]{Effekt: Vulkanausbruch}</p>"
+          "description": "<p>Wenn die nächste Aktion des Drachen die Odemwaffe ist, haftet das Magma an jenen, denen es Schaden zufügt. Jede Kreatur, deren Rettungswurf gegen die Odemwaffe fehlschlägt, erleidet @Damage[4d6[persistent,fire]]{4W6 Punkte Anhaltenden Feuerschaden} und solange sie diesen Anhaltenden Feuerschaden hat, erleidet sie außerdem einen Zustandsmalus von -3 m auf ihre Bewegungsraten.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.7qoZauizAKfPIXeu]{Effekt: Vulkanausbruch}</p>"
         }
       }
     },
@@ -4959,7 +4963,7 @@
         },
         "action->Firebleed": {
           "name": "Brennendes Blut",
-          "description": "<p><strong>Auslöser</strong> Xotani erleidet Schaden</p>\n<p><strong>Effekt</strong> Aus Xotanis Wunde bricht Magma in einem @Template[type:cone|distance:30]{Kegel von 30 Fuß/9 m} hervor und verursacht @Damage[6d8[fire],6d8[persistent,fire]]{6W8 Punkte Feuerschaden und 6W8 Punkte anhaltenden Feuerschaden} (@Check[type:reflex|dc:42|basic:true]{einfacher Reflexwurf}).</p>"
+          "description": "<p><strong>Auslöser</strong> Xotani erleidet Schaden</p>\n<p><strong>Effekt</strong> Aus Xotanis Wunde bricht Magma in einem @Template[type:cone|distance:30]{Kegel von 30 Fuß/9 m} hervor und verursacht @Damage[6d8[fire],6d8[persistent,fire]]{6W8 Punkte Feuerschaden und 6W8 Punkte Anhaltenden Feuerschaden} (@Check[type:reflex|dc:42|basic:true]{einfacher Reflexwurf}).</p>"
         },
         "action->Frightful Presence": {
           "description": "<p>@Template[type:emanation|distance:300]{300 Fuß/90 m} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}, @Check[type:will|dc:39|traits:aura,fear,emotion,mental]{Willenswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
@@ -4978,7 +4982,7 @@
         },
         "action->Breath Weapon": {
           "name": "Odemwaffe",
-          "description": "<p>Xotani atmet einen Feuerstoß in einem @Template[type:cone|distance:70]{Kegel von 70 Fuß/21 m} aus, der allen Kreaturen im Wirkungsbereich @Damage[18d6[fire],4d6[persistent,fire]]{18W6 Feuerschaden und 4W6 anhaltenden Feuerschaden} zufügt (@Check[type:reflex|dc:42|basic:true]{einfacher Reflexwurf}). Xotani kann danach seine Odemwaffe [[/br 1d4 #Runden]]{1W4 Runden} lang nicht erneut benutzen.</p>"
+          "description": "<p>Xotani atmet einen Feuerstoß in einem @Template[type:cone|distance:70]{Kegel von 70 Fuß/21 m} aus, der allen Kreaturen im Wirkungsbereich @Damage[18d6[fire],4d6[persistent,fire]]{18W6 Feuerschaden und 4W6 Anhaltenden Feuerschaden} zufügt (@Check[type:reflex|dc:42|basic:true]{einfacher Reflexwurf}). Xotani kann danach seine Odemwaffe [[/br 1d4 #Runden]]{1W4 Runden} lang nicht erneut benutzen.</p>"
         },
         "action->Swallow Whole": {
           "description": "<p>Riesig, @Damage[(8d6+8)[bludgeoning],12d6[fire]]{8W6+8 Wuchtschaden plus 12W6 Feuerschaden}, Befreien 35</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
@@ -5006,15 +5010,15 @@
         },
         "action->Internal Furnace": {
           "name": "Innere Glut",
-          "description": "<p><strong>Auslöser</strong> Eine zur Xotanibrut angrenzende Kreatur berührt sie oder trifft sie mit einem physischen Angriff</p>\n<p><strong>Effekt</strong> Die auslösende Kreatur erhält @Damage[5d8[persistent,fire]]{5W8 Punkte anhaltenden Feuerschaden} (@Check[type:reflex|dc:37|traits:damaging-effect]{Reflexwurf}, keine Wirkung)</p>"
+          "description": "<p><strong>Auslöser</strong> Eine zur Xotanibrut angrenzende Kreatur berührt sie oder trifft sie mit einem physischen Angriff</p>\n<p><strong>Effekt</strong> Die auslösende Kreatur erhält @Damage[5d8[persistent,fire]]{5W8 Punkte Anhaltenden Feuerschaden} (@Check[type:reflex|dc:37|traits:damaging-effect]{Reflexwurf}, keine Wirkung)</p>"
         },
         "action->Breath Weapon": {
           "name": "Odemwaffe",
-          "description": "<p>Die Xotanibrut speit Magma in einem @Template[type:cone|distance:60]{Kegel von 60 Fuß/18 m} aus, das jeder Kreatur im Wirkungsbereich @Damage[10d10[fire],2d6[persistent,fire]]{10W10 Punkte Feuerschaden und 2W6 Punkte anhaltenden Feuerschaden} zufügt (@Check[type:reflex|dc:39|basic:true]{einfacher Reflexwurf}). Die Xotanibrut kann danach ihre Odemwaffe [[/br 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.</p>"
+          "description": "<p>Die Xotanibrut speit Magma in einem @Template[type:cone|distance:60]{Kegel von 60 Fuß/18 m} aus, das jeder Kreatur im Wirkungsbereich @Damage[10d10[fire],2d6[persistent,fire]]{10W10 Punkte Feuerschaden und 2W6 Punkte Anhaltenden Feuerschaden} zufügt (@Check[type:reflex|dc:39|basic:true]{einfacher Reflexwurf}). Die Xotanibrut kann danach ihre Odemwaffe [[/br 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.</p>"
         },
         "action->Heat Surge": {
           "name": "Aufheizen",
-          "description": "<p>Wenn die Xotanibrut einen Kritischen Treffer erzielt, heizt sich ihr Körper auf. Bis zum Beginn ihres nächsten Zuges erhöht sich der Schaden von Innere Glut auf @Damage[10d8[persistent,fire]]{10W8 Punkte anhaltenden Feuerschaden}.</p>"
+          "description": "<p>Wenn die Xotanibrut einen Kritischen Treffer erzielt, heizt sich ihr Körper auf. Bis zum Beginn ihres nächsten Zuges erhöht sich der Schaden von Innere Glut auf @Damage[10d8[persistent,fire]]{10W8 Punkte Anhaltenden Feuerschaden}.</p>"
         }
       }
     },
