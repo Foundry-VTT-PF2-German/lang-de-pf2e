@@ -1,3 +1,5 @@
+import { CompendiumMapping } from "../../../babele/script/compendium-mapping.js";
+
 // Create Translator instance and register settings
 Hooks.once("init", () => {
     game.langDePf2e = Translator.get();
@@ -197,7 +199,7 @@ class Translator {
         // Register compendium, check if different modules excludes the compendium
         if (!(this.compendiumExceptions[compendium] && this.compendiumExceptions[compendium] !== module)) {
             if (typeof Babele !== "undefined") {
-                Babele.get().register({
+                game.babele.register({
                     module: module,
                     lang: language,
                     dir: compendiumDirectory,

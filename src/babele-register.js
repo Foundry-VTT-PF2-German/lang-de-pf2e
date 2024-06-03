@@ -72,13 +72,13 @@ Hooks.once("init", () => {
             }, 100),
         });
 
-        Babele.get().register({
+        game.babele.register({
             module: "lang-de-pf2e",
             lang: "de",
             dir: "translation/de/compendium",
         });
 
-        Babele.get().registerConverters({
+        game.babele.registerConverters({
             normalizeName: (_data, translation) => {
                 return game.langDePf2e.normalizeName(translation);
             },
