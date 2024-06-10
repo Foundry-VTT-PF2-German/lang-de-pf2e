@@ -192,10 +192,13 @@ class Translator {
 
     // Check if strike is ranged or melee and return the type
     checkStrikeType(strike) {
+        let strikeType = "strike-melee";
         strike.system.traits.value.forEach((trait) => {
-            if (trait.startsWith("range-")) return "strike-ranged";
+            if (trait.startsWith("range-")) {
+                strikeType = "strike-ranged";
+            }
         });
-        return "strike-melee";
+        return strikeType;
     }
 
     // Normalize name for correct display within Foundry
