@@ -190,6 +190,14 @@ class Translator {
         }
     }
 
+    // Check if strike is ranged or melee and return the type
+    checkStrikeType(strike) {
+        strike.system.traits.value.forEach((trait) => {
+            if (trait.startsWith("range-")) return "strike-ranged";
+        });
+        return "strike-melee";
+    }
+
     // Normalize name for correct display within Foundry
     normalizeName(name) {
         return name.replace("ß", "ss");
@@ -330,7 +338,7 @@ class Translator {
                 itemKey =
                     entry.type != "melee"
                         ? `${entry.type}->${entry.name}`
-                        : `strike-${entry.system.weaponType.value}->${entry.name}`;
+                        : `${this.checkStrikeType(entry)}->${entry.name}`;
             } else {
                 itemKey = entry.name;
             }
