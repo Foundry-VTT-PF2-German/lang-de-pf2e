@@ -42,7 +42,7 @@ class Translator {
         Object.keys(artworkExceptions).forEach((compendium) => {
             Object.keys(artworkExceptions[compendium]).forEach((module) => {
                 if (game.modules.get(module)?.active) {
-                    mergeObject(this.artworkExceptions, {
+                    foundry.utils.mergeObject(this.artworkExceptions, {
                         [compendium]: { [module]: artworkExceptions[compendium][module] },
                     });
                 }
@@ -54,7 +54,7 @@ class Translator {
         const basicCompendiumExceptions = config[0]?.compendiumExceptions ?? {};
         Object.keys(basicCompendiumExceptions).forEach((compendium) => {
             if (game.modules.get(basicCompendiumExceptions[compendium])?.active) {
-                mergeObject(this.compendiumExceptions, {
+                foundry.utils.mergeObject(this.compendiumExceptions, {
                     [compendium]: basicCompendiumExceptions[compendium],
                 });
             }
@@ -130,7 +130,7 @@ class Translator {
                     })
                 );
 
-                mergeObject(this.artworkLists, { [compendium]: images });
+                foundry.utils.mergeObject(this.artworkLists, { [compendium]: images });
             });
         }
     }
@@ -159,7 +159,7 @@ class Translator {
     // Merge an object using a provided field mapping
     dynamicMerge(sourceObject, translation, mapping) {
         if (translation) {
-            mergeObject(sourceObject, mapping.map(sourceObject, translation ?? {}), { overwrite: true });
+            foundry.utils.mergeObject(sourceObject, mapping.map(sourceObject, translation ?? {}), { overwrite: true });
         }
         return sourceObject;
     }
@@ -315,7 +315,7 @@ class Translator {
     translateHeightening(data, translation) {
         if (data.levels) {
             if (translation) {
-                mergeObject(data.levels, translation, { overwrite: true });
+                foundry.utils.mergeObject(data.levels, translation, { overwrite: true });
             }
             Object.keys(data.levels).forEach((level) => {
                 ["duration", "range", "time"].forEach((fieldName) => {
@@ -414,7 +414,7 @@ class Translator {
                 this.dynamicMerge(arr[index], itemTranslation, this.getMapping("item", true));
 
                 // Add babele standard translated fields
-                mergeObject(arr[index], {
+                foundry.utils.mergeObject(arr[index], {
                     translated: true,
                     hasTranslation: true,
                     originalName: itemName,

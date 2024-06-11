@@ -177,7 +177,10 @@ export const convertJournals = (journalObject) => {
                             }</strong> ${feat.system.prerequisites.value
                                 .map((prerequisite, index) => {
                                     // If a prerequisite is a class feature, link it
-                                    const displayName = feat.translation.prerequisites[index].value;
+                                    // Take the english text if array length differs from translation array due to missing data sync
+                                    const displayName = feat.translation.prerequisites[index]
+                                        ? feat.translation.prerequisites[index].value
+                                        : feat.system.prerequisites.value[index].value;
                                     if (featureMap.has(prerequisite.value)) {
                                         return `@UUID[Compendium.pf2e.classfeatures.Item.${
                                             featureMap.get(prerequisite.value)._id
