@@ -331,6 +331,7 @@
           "kibwani": "Kibwani",
           "kitsune": "Kitsune",
           "kovintal": "Kovintal",
+          "lashunta": "Lashunta",
           "lirgeni": "Lirgeni",
           "mahwek": "Mahwek",
           "migo": "Mi-Go",
@@ -1175,6 +1176,7 @@
           "arrow-vulnerability": "arrow vulnerability",
           "auditory": "auditory",
           "axe-vulnerability": "axe vulnerability",
+          "axes": "axes",
           "blinded": "blinded",
           "broken": "broken",
           "clumsy": "clumsy",
@@ -1487,6 +1489,28 @@
       "RevealName": "Reveal Name",
       "XP": "XP"
     },
+    "Environment": {
+      "Type": {
+        "Aquatic": "Aquatic",
+        "Arctic": "Arctic",
+        "Desert": "Desert",
+        "Forest": "Forest",
+        "Mountain": "Mountain",
+        "Plains": "Plains",
+        "Swamp": "Swamp",
+        "Underground": "Underground",
+        "Urban": "Urban"
+      },
+      "Feature": {
+        "Crowd": "Crowd",
+        "Ice": "Ice",
+        "Lava": "Lava",
+        "Rubble": "Rubble",
+        "Sand": "Sand",
+        "Sewer": "Sewer",
+        "Snow": "Snow"
+      }
+    },
     "ErrorMessage": {
       "CantCreateEffectMacro": "An effect for a toggle macro must come from a compendium or world item.",
       "CantImportTooHighVersion": "Unable to import {sourceName}: its schema version ({sourceSchemaVersion}) is higher than this world's ({worldSchemaVersion}).",
@@ -1653,6 +1677,7 @@
     "InvestedLabel": "Invested",
     "Item": {
       "ABC": {
+        "Add": "Add",
         "Features": "Features",
         "InvalidDrop": "{badType} cannot be dropped here (must be {goodType})"
       },
@@ -2298,6 +2323,7 @@
             "Label": "Detach Item",
             "Prompt": "Are you sure you want to detach {attachable}?"
           },
+          "Label": "Attach",
           "Outcome": {
             "Failure": "You were unable to attach {attachable}.",
             "Success": "{attachable} is now attached to {target}."
@@ -2438,12 +2464,14 @@
         "Hint": {
           "Slug": "A stable, human-readable identifier: if set, it will remain in place even if the item is renamed.",
           "SourceId": "The UUID of the original compendium item",
-          "UUID": "A universally unique identifier for this item"
+          "UUID": "A universally unique identifier for this item",
+          "RollOptions": "An item roll option's prefix depends on its usage. <em>item:</em> is used most of the time, but <em>parent:</em> is used for the item containing the rule element."
         },
         "New": "New Rule Element",
         "RegenerateSlug": "(Re)generate Slug",
         "Remove": "Remove Rule Element",
-        "Tab": "Rules"
+        "Tab": "Rules",
+        "ViewRollOptions": "View Roll Options"
       },
       "Shield": {
         "Base": {
@@ -2621,10 +2649,6 @@
     "ItemTitle": "Item",
     "ItemsLabel": "Items",
     "Keybinding": {
-      "CycleTokenStack": {
-        "Hint": "Cycle the Z indices of a mouse-hovered stack of tokens, pushing the top to the bottom.",
-        "Label": "Cycle Token Stack"
-      },
       "GMVision": {
         "Hint": "Brighten dark scenes for easier viewing.",
         "Label": "GM Vision"
@@ -3060,6 +3084,33 @@
       "rollingDescription": "DC {dc} (Dying {dying})",
       "success": "Reduce your dying value by 1."
     },
+    "Region": {
+      "Environment": {
+        "Mode": {
+          "Add": {
+            "Label": "Add"
+          },
+          "Hint": "Set the mode for this terrain behavior. Either adds the selected types to the exisiting environment types, removes the selected types from the exisiting types or overrides the exsiting types with the selected types.",
+          "Label": "Mode",
+          "Override": {
+            "Label": "Override"
+          },
+          "Remove": {
+            "Label": "Remove"
+          }
+        },
+        "Label": "Environment",
+        "RegionLegend": {
+          "Header": "Scene Defaults",
+          "SceneRegionsHeader": "Scene Regions"
+        },
+        "Type": {
+          "Hint": "One or more environment types for this scene region.",
+          "Label": "Environment",
+          "SceneHint": "Specify one or more environment types for the entire scene."
+        }
+      }
+    },
     "RemoveCoinsByValueLabel": "Remove value, not specific type",
     "RemoveCoinsTitle": "Remove Coins",
     "RemoveCombatProficiency": {
@@ -3205,6 +3256,9 @@
         "ShowUnknownSources": "Do not filter entries with unknown sources.",
         "SourcesListHeader": "Specified Sources"
       },
+      "Core": {
+        "ManagedBySystem": "Managed and locked by the PF2e System"
+      },
       "CritRule": {
         "Choices": {
           "Doubledamage": "Double the damage",
@@ -3285,6 +3339,10 @@
           "Campaign": "Campaign",
           "Damage": "Damage Types",
           "Traits": "Traits and Categories"
+        },
+        "EnvironmentTypes": {
+          "Hint": "Any custom environment type",
+          "Name": "Environment Types"
         },
         "WeaponCategories": {
           "Hint": "The top level of Pathfinder 2e weapon taxonomy (e.g., Simple, Martial)",
@@ -3519,44 +3577,30 @@
     "SidebarAppearanceLabel": "Appearance",
     "Size": "Size",
     "SizeLabel": "Size",
-    "SkillAcr": "Acrobatics",
-    "SkillAcrobatics": "Acrobatics",
-    "SkillArc": "Arcana",
-    "SkillArcana": "Arcana",
-    "SkillAth": "Athletics",
-    "SkillAthletics": "Athletics",
+    "Skill": {
+      "Acrobatics": "Acrobatics",
+      "Arcana": "Arcana",
+      "Athletics": "Athletics",
+      "Crafting": "Crafting",
+      "Deception": "Deception",
+      "Diplomacy": "Diplomacy",
+      "Intimidation": "Intimidation",
+      "Medicine": "Medicine",
+      "Nature": "Nature",
+      "Occultism": "Occultism",
+      "Performance": "Performance",
+      "Religion": "Religion",
+      "Society": "Society",
+      "Stealth": "Stealth",
+      "Survival": "Survival",
+      "Thievery": "Thievery"
+    },
     "SkillCheckWithName": "Skill Check: {skillName}",
-    "SkillCra": "Crafting",
-    "SkillCrafting": "Crafting",
-    "SkillDec": "Deception",
-    "SkillDeception": "Deception",
-    "SkillDip": "Diplomacy",
-    "SkillDiplomacy": "Diplomacy",
     "SkillFeatLevels": "Skill Feat Levels",
     "SkillIncreaseLevels": "Skill Increase Levels",
-    "SkillIntimidation": "Intimidation",
-    "SkillItm": "Intimidation",
     "SkillLabel": "Skill",
     "SkillLore": "Lore",
-    "SkillMed": "Medicine",
-    "SkillMedicine": "Medicine",
-    "SkillNat": "Nature",
-    "SkillNature": "Nature",
-    "SkillOcc": "Occultism",
-    "SkillOccultism": "Occultism",
-    "SkillPerformance": "Performance",
     "SkillPotencyHeader": "Skill Potencies",
-    "SkillPrf": "Performance",
-    "SkillRel": "Religion",
-    "SkillReligion": "Religion",
-    "SkillSoc": "Society",
-    "SkillSociety": "Society",
-    "SkillSte": "Stealth",
-    "SkillStealth": "Stealth",
-    "SkillSur": "Survival",
-    "SkillSurvival": "Survival",
-    "SkillThi": "Thievery",
-    "SkillThievery": "Thievery",
     "SkillsLabel": "Skills",
     "Slug": "Slug",
     "SpecialSensesLabel": "Special Senses",
@@ -4019,7 +4063,7 @@
     "TraitDescriptionEntrench": "You can position yourself in the armor or reposition its articulated pieces to better protect against some attacks. If you're trained in this armor, while wearing it you can spend a single action to gain a +1 circumstance bonus to AC against a certain type of attack until the start of your next turn. The entrench trait lists the type of attack this bonus applies against, typically entrench melee or entrench ranged.",
     "TraitDescriptionEnvironment": "A hazard with this trait is something dangerous that's part of the natural world, such as quicksand or harmful mold.",
     "TraitDescriptionEsoterica": "The esoterica trait is present in many thaumaturge feats and class features that incorporate the various talismans, supernatural trinkets, and other objects you carry with you. Abilities that have the esoterica trait require you to be in possession of your esoterica to use them. Normally, you're assumed to always have your esoterica with you, but in some rare circumstances, you might either not have them on hand or have your gear stripped from you.",
-    "TraitDescriptionEtherial": "Ethereal creatures are natives of the Ethereal Plane. They can survive the basic environmental effects of the Ethereal Plane.",
+    "TraitDescriptionEthereal": "Ethereal creatures are natives of the Ethereal Plane. They can survive the basic environmental effects of the Ethereal Plane.",
     "TraitDescriptionEvolution": "Feats with this trait affect your eidolon instead of you, typically by granting it additional physical capabilities.",
     "TraitDescriptionExpandable": "An item with the expandable trait increases to a specific size when activated. Unless otherwise noted, this space must be adjacent to you and on the ground, and the item needs to have enough open space to expand into or else the activation has no effect. When the effect ends, the expanded item disintegrates if it's a consumable or shrinks back to its normal size if it's not a consumable.",
     "TraitDescriptionExperiment": "An experimental cryptid has been purposefully altered through alchemy, engineering, magic, or ritual to contain some degree of construct components. Although powerful, the process is volatile and imperfect.",
@@ -4274,6 +4318,7 @@
     "TraitDescriptionVampire": "Undead creatures who thirst for blood, vampires are notoriously versatile and hard to destroy.",
     "TraitDescriptionVanara": "An inquisitive ancestry with primate-like features and prehensile tails.",
     "TraitDescriptionVehicular": "A vehicular weapon is attached to a vehicle or worn by a mount and can typically only be wielded by the driver of the vehicle or the mount's primary rider. The driver or rider can control a vehicular weapon with the same hands they use to steer the vehicle or guide the mount. A vehicular weapon can be Disarmed by knocking the controls (typically reins for a mount or a steering device for a vehicle) out of the wielder's hands.",
+    "TraitDescriptionVenomous": "These weapons inject poison into every hit. When you hit a creature with this weapon, it deals an additional 1 persistent poison damage. This increases to 2 persistent poison damage if the weapon has a greater striking rune.",
     "TraitDescriptionVersatile": "A versatile weapon can be used to deal a different type of damage than that listed in the Damage entry. This trait indicates the alternate damage type. For instance, a piercing weapon that is versatile S can be used to deal piercing or slashing damage. You choose the damage type each time you make an attack.",
     "TraitDescriptionVirulent": "Afflictions with the virulent trait are harder to remove. You must succeed at two consecutive saves to reduce a virulent affliction's stage by 1. A critical success reduces a virulent affliction's stage by only 1 instead of by 2.",
     "TraitDescriptionVishkanya": "An ancestry with snake-like features and powerful venom.",
@@ -4780,6 +4825,7 @@
     "TraitVanara": "Vanara",
     "TraitVehicular": "Vehicular",
     "TraitVelstrac": "Velstrac",
+    "TraitVenomous": "Venomous",
     "TraitVersatile": "Versatile",
     "TraitVersatileAcid": "Versatile Acid",
     "TraitVersatileB": "Versatile B",
@@ -6003,6 +6049,7 @@
       "DepositSubtitle": "Deposit item",
       "EditLootLabel": "Configure Loot?",
       "GMSupervisionError": "A GM must be online in order to interact with {loot}.",
+      "Give": "Give",
       "GiveMessage": "{giver} gives {quantity} × {item} to {recipient}.",
       "GiveSubtitle": "Give item",
       "HiddenWhenEmpty": {
@@ -6027,8 +6074,9 @@
       "PermissionError": "A GM must be online in order to loot or stow an item.",
       "PlantMessage": "{planter} plants {quantity} × {item} on {corpse}.",
       "PlantSubtitle": "Plant Item",
-      "PurchaseLoot": "Purchase Items",
-      "PurchaseLootMessage": "How many items do you wish to purchase?",
+      "Purchase": "Purchase",
+      "PurchaseLootPrompt": "Does {buyer} want to purchase this item?",
+      "PurchasePrice": "Purchase Price",
       "Quantity": "Quantity",
       "SellMessage": "{seller} sells {quantity} × {item} to {buyer}.",
       "SellSubtitle": "Sell item",
