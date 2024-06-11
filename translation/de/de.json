@@ -331,6 +331,7 @@
           "kibwani": "Kibwani",
           "kitsune": "Kitsune",
           "kovintal": "Kovintisch",
+          "lashunta": "Lashunta",
           "lirgeni": "Lirgeni",
           "mahwek": "Mahwek",
           "migo": "Mi-Go",
@@ -1175,6 +1176,7 @@
           "arrow-vulnerability": "Schwäche gg. Pfeile",
           "auditory": "Hörbar",
           "axe-vulnerability": "Schwäche gg. Äxte",
+          "axes": "axes",
           "blinded": "Blind",
           "broken": "Beschädigt",
           "clumsy": "Unbeholfen",
@@ -1487,6 +1489,28 @@
       "RevealName": "Name anzeigen",
       "XP": "EP"
     },
+    "Environment": {
+      "Type": {
+        "Aquatic": "Aquatic",
+        "Arctic": "Arctic",
+        "Desert": "Desert",
+        "Forest": "Forest",
+        "Mountain": "Mountain",
+        "Plains": "Plains",
+        "Swamp": "Swamp",
+        "Underground": "Underground",
+        "Urban": "Urban"
+      },
+      "Feature": {
+        "Crowd": "Crowd",
+        "Ice": "Ice",
+        "Lava": "Lava",
+        "Rubble": "Rubble",
+        "Sand": "Sand",
+        "Sewer": "Sewer",
+        "Snow": "Snow"
+      }
+    },
     "ErrorMessage": {
       "CantCreateEffectMacro": "Ein Effekt für ein Umschaltmakro muss aus einem Kompendium oder einem Weltgegenstand stammen.",
       "CantImportTooHighVersion": "{sourceName} kann nicht importiert werden: die Schema-Version ({sourceSchemaVersion}) ist höher als die Version ({worldSchemaVersion}) der Welt.",
@@ -1653,6 +1677,7 @@
     "InvestedLabel": "Resonanz aufgebaut",
     "Item": {
       "ABC": {
+        "Add": "Add",
         "Features": "Merkmale",
         "InvalidDrop": "{badType} kann hier nicht platziert werden (es muss {goodType} sein)."
       },
@@ -2298,6 +2323,7 @@
             "Label": "Gegenstand loslösen",
             "Prompt": "Bist du sicher, dass du {attachable} loslösen willst?"
           },
+          "Label": "Attach",
           "Outcome": {
             "Failure": "Du konntest {attachable} nicht anbringen.",
             "Success": "{attachable} ist nun an {target} angebracht."
@@ -2438,12 +2464,14 @@
         "Hint": {
           "Slug": "Ein fixer, lesbarer Bezeichner: Einmal gesetzt bleibt er auch nach Umbenennung des Gegenstands gleich.",
           "SourceId": "Die UUID des originären Kompendium-Gegenstands",
-          "UUID": "Ein universell eindeutiger Bezeichner für diesen Gegenstand"
+          "UUID": "Ein universell eindeutiger Bezeichner für diesen Gegenstand",
+          "RollOptions": "An item roll option's prefix depends on its usage. <em>item:</em> is used most of the time, but <em>parent:</em> is used for the item containing the rule element."
         },
         "New": "Neues Regelelement",
         "RegenerateSlug": "Slug erzeugen/erneuern",
         "Remove": "Regelement löschen",
-        "Tab": "Regeln"
+        "Tab": "Regeln",
+        "ViewRollOptions": "View Roll Options"
       },
       "Shield": {
         "Base": {
@@ -2621,10 +2649,6 @@
     "ItemTitle": "Ggstd.",
     "ItemsLabel": "Gegenstände",
     "Keybinding": {
-      "CycleTokenStack": {
-        "Hint": "Durchlaufen Sie die Z-Indizes eines mit der Maus verschobenen Stapels von Token und schieben Sie den obersten nach unten.",
-        "Label": "Wechsle Token-Stapel"
-      },
       "GMVision": {
         "Hint": "Erhellt dunkle Szenen für bessere Sicht",
         "Label": "SL-Sicht"
@@ -3060,6 +3084,33 @@
       "rollingDescription": "Erholungswurf gegen SG {dc} (Sterbend {dying})",
       "success": "Vermindere deinen Wert für Sterbend um 1."
     },
+    "Region": {
+      "Environment": {
+        "Mode": {
+          "Add": {
+            "Label": "Add"
+          },
+          "Hint": "Set the mode for this terrain behavior. Either adds the selected types to the exisiting environment types, removes the selected types from the exisiting types or overrides the exsiting types with the selected types.",
+          "Label": "Mode",
+          "Override": {
+            "Label": "Override"
+          },
+          "Remove": {
+            "Label": "Remove"
+          }
+        },
+        "Label": "Environment",
+        "RegionLegend": {
+          "Header": "Scene Defaults",
+          "SceneRegionsHeader": "Scene Regions"
+        },
+        "Type": {
+          "Hint": "One or more environment types for this scene region.",
+          "Label": "Environment",
+          "SceneHint": "Specify one or more environment types for the entire scene."
+        }
+      }
+    },
     "RemoveCoinsByValueLabel": "Entferne Wert in Münzen",
     "RemoveCoinsTitle": "Münzen entfernen",
     "RemoveCombatProficiency": {
@@ -3205,6 +3256,9 @@
         "ShowUnknownSources": "Einträge mit unbekannter Quelle anzeigen",
         "SourcesListHeader": "Auswahl Quellen"
       },
+      "Core": {
+        "ManagedBySystem": "Managed and locked by the PF2e System"
+      },
       "CritRule": {
         "Choices": {
           "Doubledamage": "Verdoppelt den Schaden",
@@ -3285,6 +3339,10 @@
           "Campaign": "Kampagne",
           "Damage": "Schadensarten",
           "Traits": "Merkmale und Kategorien"
+        },
+        "EnvironmentTypes": {
+          "Hint": "Any custom environment type",
+          "Name": "Environment Types"
         },
         "WeaponCategories": {
           "Hint": "Die oberste Stufe der Waffeneinordnung bei Pathfinder 2e (z.B. Einfache, Kriegswaffe)",
@@ -3519,44 +3577,30 @@
     "SidebarAppearanceLabel": "Aussehen",
     "Size": "Größe",
     "SizeLabel": "Größe",
-    "SkillAcr": "Akrobatik",
-    "SkillAcrobatics": "Akrobatik",
-    "SkillArc": "Arkane Künste",
-    "SkillArcana": "Arkane Künste",
-    "SkillAth": "Athletik",
-    "SkillAthletics": "Athletik",
+    "Skill": {
+      "Acrobatics": "Acrobatics",
+      "Arcana": "Arcana",
+      "Athletics": "Athletics",
+      "Crafting": "Crafting",
+      "Deception": "Deception",
+      "Diplomacy": "Diplomacy",
+      "Intimidation": "Intimidation",
+      "Medicine": "Medicine",
+      "Nature": "Nature",
+      "Occultism": "Occultism",
+      "Performance": "Performance",
+      "Religion": "Religion",
+      "Society": "Society",
+      "Stealth": "Stealth",
+      "Survival": "Survival",
+      "Thievery": "Thievery"
+    },
     "SkillCheckWithName": "Fertigkeitswurf: {skillName}",
-    "SkillCra": "Handwerkskunst",
-    "SkillCrafting": "Handwerkskunst",
-    "SkillDec": "Täuschung",
-    "SkillDeception": "Täuschung",
-    "SkillDip": "Diplomatie",
-    "SkillDiplomacy": "Diplomatie",
     "SkillFeatLevels": "Fertigkeitstalentstufen",
     "SkillIncreaseLevels": "Fertigkeitsverbesserungsstufen",
-    "SkillIntimidation": "Einschüchtern",
-    "SkillItm": "Einschüchtern",
     "SkillLabel": "Fertigkeit",
     "SkillLore": "Kenntnis",
-    "SkillMed": "Heilkunde",
-    "SkillMedicine": "Heilkunde",
-    "SkillNat": "Naturkunde",
-    "SkillNature": "Naturkunde",
-    "SkillOcc": "Okkultismus",
-    "SkillOccultism": "Okkultismus",
-    "SkillPerformance": "Darbietung",
     "SkillPotencyHeader": "Fertigkeitsverbesserungen",
-    "SkillPrf": "Darbietung",
-    "SkillRel": "Religionskunde",
-    "SkillReligion": "Religionskunde",
-    "SkillSoc": "Gesellschaftskunde",
-    "SkillSociety": "Gesellschaftskunde",
-    "SkillSte": "Heimlichkeit",
-    "SkillStealth": "Heimlichkeit",
-    "SkillSur": "Überlebenskunde",
-    "SkillSurvival": "Überlebenskunde",
-    "SkillThi": "Diebeskunst",
-    "SkillThievery": "Diebeskunst",
     "SkillsLabel": "Fertigkeiten",
     "Slug": "Slug",
     "SpecialSensesLabel": "Besondere Sinne",
@@ -4019,7 +4063,7 @@
     "TraitDescriptionEntrench": "Du kannst die Rüstung oder dazu gedachte Teile der Rüstung gegen bestimmte Angriffe in Position bringen. Sofern du im Umgang mit der fraglichen Rüstung geübt bist, kannst du eine Aktion aufwenden, während du sie trägt, um einen Situationsbonus von +1 auf deine RK gegen eine bestimmte Angriffsart bis zum Beginn deines nächsten Zuges zu erhalten. Der Verschanzeneintrag benennt die Angriffsart, gegen die der Bonus genutzt werden kann (meistens Verschanzen Nahkampf oder Verschanzen Fernkampf).",
     "TraitDescriptionEnvironment": "Eine Gefahr dieser Kategorie ist ein gefährlicher Teil der Natur, z.B. Treibsand oder schädlicher Schimmel.",
     "TraitDescriptionEsoterica": "Viele Thaumaturgentalente und -klassenmerkmale, welche von den diversen Talismanen, übernatürlichen Schmuckstücken und anderen mitgeführten Gegenständen Gebrauch machen, besitzen diese Kategorie. Fähigkeiten dieser Kategorie setzen voraus, dass du deine Esoterica mit dir führst. In der Regel hast du deine Esoterica dabei, doch unter seltenen Umständen könntest du sie nicht zur Hand haben, z.B. wenn sie dir abgenommen wurden.",
-    "TraitDescriptionEtherial": "Ethereal creatures are natives of the Ethereal Plane. They can survive the basic environmental effects of the Ethereal Plane.",
+    "TraitDescriptionEthereal": "Ethereal creatures are natives of the Ethereal Plane. They can survive the basic environmental effects of the Ethereal Plane.",
     "TraitDescriptionEvolution": "Talente mit dieser Kategorie betreffen nicht dich, sondern dein Eidolon. In der Regel verleihen sie ihm zusätzliche körperliche Eigenschaften.",
     "TraitDescriptionExpandable": "Ein Gegenstand dieser Kategorie wächst bei Aktivierung zu einer bestimmten Größenkategorie heran. Sofern nicht anders vermerkt, muss diese Fläche zu dir angrenzend sein und sich auf dem Boden befinden; der Gegenstand muss genug Raum für seine Ausdehnung haben, andernfalls hat die Aktivierung keinen Effekt. Endet der Effekt, zerfällt ein Ausdehnender Verbrauchsgegenstand zu Staub, während ein Ausdehnender Nichtverbrauchsgegenstand seine normale Größe wieder annimmt.",
     "TraitDescriptionExperiment": "Ein Experimenteller Kryptid wurde absichtlich mittels Alchemie, Mechanik, Magie oder Ritualen verändert, um bis zu einem gewissen Grad Konstruktkomponenten aufzunehmen. Obwohl das Resultat mächtig wird, ist der Prozess unausgegoren und gefährlich.",
@@ -4274,6 +4318,7 @@
     "TraitDescriptionVampire": "Undead creatures who thirst for blood, vampires are notoriously versatile and hard to destroy.",
     "TraitDescriptionVanara": "Eine neugierige Abstammung mit affenähnlichen Zügen und greifenden Schwänzen.",
     "TraitDescriptionVehicular": "Eine Fahrzeugwaffe wird an einem Fahrzeug befestigt oder von einem Reittier getragen und kann in der Regel nur vom Lenker des Fahrzeuges oder des Reittieres geführt werden. Dieser kontrolliert die Fahrzeugwaffe mit denselben Händen, mit denen er das Fahrzeug lenkt oder das Reittier führt. Eine Fahrzeugwaffe kann mittels Entwaffnen betroffen werden, indem man die Steuerung (z.B. das Lenkrad eines Fahrzeuges oder die Zügel eines Reittieres) dem Lenker aus den Händen schlägt.",
+    "TraitDescriptionVenomous": "These weapons inject poison into every hit. When you hit a creature with this weapon, it deals an additional 1 persistent poison damage. This increases to 2 persistent poison damage if the weapon has a greater striking rune.",
     "TraitDescriptionVersatile": "Eine Vielseitige Waffe kann andere Schadensarten verursachen als jene, welche im Schadenseintrag der Waffe genannt sind. Die Waffeneigenschaft nennt die alternative Schadensart. Eine Waffe, welche normalerweise Stichschaden verursacht und welche die Waffeneigenschaft Vielseitig H besitzt kann also entweder Stichschaden oder Hiebschaden verursachen. Du kannst die Schadensart bei jedem Angriff auswählen.",
     "TraitDescriptionVirulent": "Ein Leiden dieser Kategorie ist schwerer zu überwinden. Dir müssen zwei Rettungswürfe in Folge gelingen, um ein virulentes Leiden um 1 Phase zu senken. Ein Kritischer Erfolg reduziert die Phase eines virulenten Leidens nur um 1 statt um 2.",
     "TraitDescriptionVishkanya": "Eine Abstammung mit schlangenähnlichen Zügen und starkem Gift.",
@@ -4780,6 +4825,7 @@
     "TraitVanara": "Vanara",
     "TraitVehicular": "Fahrzeug",
     "TraitVelstrac": "Velstrac",
+    "TraitVenomous": "Venomous",
     "TraitVersatile": "Vielseitig",
     "TraitVersatileAcid": "Vielseitig Säure",
     "TraitVersatileB": "Vielseitig W",
@@ -6003,6 +6049,7 @@
       "DepositSubtitle": "Verstaue Gegenstand",
       "EditLootLabel": "Beute konfigurieren?",
       "GMSupervisionError": "Ein SL muss online sein um mit {loot} zu interagieren.",
+      "Give": "Give",
       "GiveMessage": "{giver} gibt {quantity} × {item} an {recipient}.",
       "GiveSubtitle": "Gib Gegenstand",
       "HiddenWhenEmpty": {
@@ -6027,8 +6074,9 @@
       "PermissionError": "Ein SL muss online sein um Beute aufzuheben oder zu verstauen.",
       "PlantMessage": "{planter} platziert {quantity}x {item} auf {corpse}s Überresten.",
       "PlantSubtitle": "Platziere Ggst.",
-      "PurchaseLoot": "Gegenstände kaufen",
-      "PurchaseLootMessage": "Wie viele Gegenstände möchtest du kaufen?",
+      "Purchase": "Purchase",
+      "PurchaseLootPrompt": "Does {buyer} want to purchase this item?",
+      "PurchasePrice": "Purchase Price",
       "Quantity": "Menge",
       "SellMessage": "{seller} verkauft {quantity} × {item} an {buyer}.",
       "SellSubtitle": "Verkaufe Gegenstand",
