@@ -2,7 +2,7 @@
 function removeMismatchingTypes(fallback, other = {}) {
     for (let k of Object.keys(other)) {
         const replacement = other[k];
-        const replacementType = getType(replacement);
+        const replacementType = foundry.utils.getType(replacement);
 
         if (!fallback.hasOwnProperty(k)) {
             delete other[k];
@@ -10,7 +10,7 @@ function removeMismatchingTypes(fallback, other = {}) {
         }
 
         const original = fallback[k];
-        const originalType = getType(original);
+        const originalType = foundry.utils.getType(original);
 
         if (replacementType === "Object" && originalType === "Object") {
             removeMismatchingTypes(original, replacement);
