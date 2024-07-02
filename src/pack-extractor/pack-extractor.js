@@ -1,5 +1,5 @@
 import { readFileSync, writeFileSync } from "fs";
-import { getZipContentFromURL, writeFilesFromBlob } from "../helper/src/util/fileHandler.js";
+import { getZipContentFromURL, writeFilesFromBlob } from "../helper/src/util/file-handler.js";
 import { replaceProperties } from "../helper/src/util/utilities.js";
 import { buildItemDatabase, extractPackGroupList } from "../helper/src/pack-extractor/pack-extractor.js";
 import { PF2_DEFAULT_MAPPING } from "../helper/src/pack-extractor/constants.js";

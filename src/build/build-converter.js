@@ -1,5 +1,5 @@
 import { readdirSync } from "fs";
-import { getConfigParameter, readJSONFile } from "../helper/src/build/config_helper.js";
+import { getConfigParameter, readJSONFile } from "../helper/src/build/config-helper.js";
 import { sluggify } from "../helper/src/util/utilities.js";
 
 const BLACKLIST_PREFIX = "block:";

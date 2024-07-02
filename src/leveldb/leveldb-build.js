@@ -1,5 +1,5 @@
 import { existsSync, mkdirSync, readFileSync } from "fs";
-import { deleteFolderRecursive } from "../helper/src/util/fileHandler.js";
+import { deleteFolderRecursive } from "../helper/src/util/file-handler.js";
 import { createPack } from "../helper/src/util/level-db.js";
 
 // Path to config file

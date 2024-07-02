@@ -1,5 +1,5 @@
 import { existsSync, readFileSync } from "fs";
-import { saveFileWithDirectories } from "../helper/src/util/fileHandler.js";
+import { saveFileWithDirectories } from "../helper/src/util/file-handler.js";
 import { getJSONfromPack } from "../helper/src/util/level-db.js";
 
 // Path to config file
