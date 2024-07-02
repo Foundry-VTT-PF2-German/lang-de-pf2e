@@ -1,7 +1,7 @@
 import { unflattenObject } from "../helper/src/util/utilities.js";
 import { xliffToJson } from "../helper/src/util/xliff-tool.js";
 import { existsSync, readFileSync } from "fs";
-import { saveFileWithDirectories } from "../helper/src/util/fileHandler.js";
+import { saveFileWithDirectories } from "../helper/src/util/file-handler.js";
 
 // Path to config file
 const CFG_FILE = "./src/xliff/xliff-config.json";
