@@ -26,7 +26,6 @@ class Translator {
 
     // Initialize translator
     async initialize() {
-        this.artworkExceptions = {};
         // Read config file
         const config = await Promise.all([
             fetch("modules/lang-de-pf2e/src/translator/translator-config.json")
@@ -36,29 +35,8 @@ class Translator {
                 }),
         ]);
 
-        // Create list of artwork exceptions and initialize artwork lists
+        // Initialize artwork lists
         this.artworkLists = {};
-        const artworkExceptions = config[0]?.artworkExceptions ?? {};
-        Object.keys(artworkExceptions).forEach((compendium) => {
-            Object.keys(artworkExceptions[compendium]).forEach((module) => {
-                if (game.modules.get(module)?.active) {
-                    foundry.utils.mergeObject(this.artworkExceptions, {
-                        [compendium]: { [module]: artworkExceptions[compendium][module] },
-                    });
-                }
-            });
-        });
-
-        // Get list of compendium exceptions
-        this.compendiumExceptions = {};
-        const basicCompendiumExceptions = config[0]?.compendiumExceptions ?? {};
-        Object.keys(basicCompendiumExceptions).forEach((compendium) => {
-            if (game.modules.get(basicCompendiumExceptions[compendium])?.active) {
-                foundry.utils.mergeObject(this.compendiumExceptions, {
-                    [compendium]: basicCompendiumExceptions[compendium],
-                });
-            }
-        });
 
         // Load translations from dictionary
         const dictionaryPath = config[0]?.paths?.dictionary ?? undefined;
@@ -93,46 +71,26 @@ class Translator {
     }
 
     // Register a madia path for a compendium containing portrait and token images
-    addMediaPath(moduleName, compendium, path) {
-        let creatureExclusions = [];
-        let excluded = false;
-        // Check if a different module excludes the compendium
-        if (this.artworkExceptions[compendium]) {
-            excluded = Object.keys(this.artworkExceptions[compendium]).some((exceptionModule) => {
-                [exceptionModule];
-                if (moduleName !== exceptionModule && this.artworkExceptions[compendium][exceptionModule] === "all") {
-                    return true;
-                } else if (
-                    moduleName !== exceptionModule &&
-                    Array.isArray(this.artworkExceptions[compendium][exceptionModule])
-                ) {
-                    creatureExclusions = creatureExclusions.concat(this.artworkExceptions[compendium][exceptionModule]);
-                }
-            });
-        }
+    addMediaPath(compendium, path) {
+        ["portraits", "tokens"].forEach(async (imageType) => {
+            const imagePath = game.settings.get("lang-de-pf2e", "token")
+                ? path.concat(`/portraits/`)
+                : path.concat(`/${imageType}/`);
+            const images = {};
+            await FilePicker.browse("data", imagePath).then((picker) =>
+                picker.files.forEach((file) => {
+                    const actorName = file.split("\\").pop().split("/").pop().replace(".webp", "");
 
-        if (!excluded) {
-            ["portraits", "tokens"].forEach(async (imageType) => {
-                const imagePath = game.settings.get("lang-de-pf2e", "token")
-                    ? path.concat(`/portraits/`)
-                    : path.concat(`/${imageType}/`);
-                const images = {};
-                await FilePicker.browse("data", imagePath).then((picker) =>
-                    picker.files.forEach((file) => {
-                        const actorName = file.split("\\").pop().split("/").pop().replace(".webp", "");
-                        if (!creatureExclusions.includes(actorName)) {
-                            Object.assign(images, {
-                                [actorName]: {
-                                    [imageType.substring(0, imageType.length - 1)]: file,
-                                },
-                            });
-                        }
-                    })
-                );
+                    Object.assign(images, {
+                        [actorName]: {
+                            [imageType.substring(0, imageType.length - 1)]: file,
+                        },
+                    });
+                })
+            );
 
-                foundry.utils.mergeObject(this.artworkLists, { [compendium]: images });
-            });
-        }
+            foundry.utils.mergeObject(this.artworkLists, { [compendium]: images });
+        });
     }
 
     // Sluggify a string
@@ -207,22 +165,20 @@ class Translator {
     }
 
     registerCompendium(module, compendium, language, compendiumDirectory, imageDirectory = undefined) {
-        // Register compendium, check if different modules excludes the compendium
-        if (!(this.compendiumExceptions[compendium] && this.compendiumExceptions[compendium] !== module)) {
-            if (typeof Babele !== "undefined") {
-                game.babele.register({
-                    module: module,
-                    lang: language,
-                    dir: compendiumDirectory,
-                });
-            } else {
-                console.error("lang-de-pf2e: Required module Babele not active");
-            }
+        // Register compendium
+        if (game.babele) {
+            game.babele.register({
+                module: module,
+                lang: language,
+                dir: compendiumDirectory,
+            });
+        } else {
+            console.error("lang-de-pf2e: Required module Babele not active");
         }
 
         // Register imageDirectory if provided
         if (imageDirectory) {
-            this.addMediaPath(module, compendium, `modules/${module}/${imageDirectory}`);
+            this.addMediaPath(compendium, `modules/${module}/${imageDirectory}`);
         }
     }
 
@@ -509,8 +465,21 @@ class Translator {
         return value;
     }
 
-    // Update the image if included in the media path
+    // For default icons, update the image if included in the media path
     updateImage(type, value, dataObject, translatedCompendium) {
+        // Get image source based on type
+        let imageSource = "";
+        if (type === "portrait") {
+            imageSource = dataObject.img;
+        } else if (type === "token") {
+            imageSource = dataObject.prototypeToken.texture.src;
+        } else {
+            return value;
+        }
+        // Check, if image source uses default image
+        if (!(imageSource.includes("systems/pf2e/icons") || imageSource.includes("icons/svg/mystery-man"))) {
+            return value;
+        }
         const artworkList = this.artworkLists[translatedCompendium.metadata.name];
         if (
             dataObject.type === "npc" &&
