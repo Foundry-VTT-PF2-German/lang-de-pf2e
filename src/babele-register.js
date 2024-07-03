@@ -59,7 +59,7 @@ function AACreateItemNameProxy(item, realName) {
 }
 
 Hooks.once("init", () => {
-    if (typeof Babele !== "undefined") {
+    if (game.babele) {
         game.settings.register("lang-de-pf2e", "dual-language-names", {
             name: "Namen in Deutsch und Englisch",
             hint: "Zusätzlich zum deutschen Namen wird auch der englische Name verwendet.",
