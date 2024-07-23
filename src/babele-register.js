@@ -122,6 +122,13 @@ Hooks.once("init", () => {
             translateRules: (data, translation) => {
                 return game.langDePf2e.translateRules(data, translation);
             },
+            translateSkillSpecial: (data, translation) => {
+                return game.langDePf2e.dynamicArrayMerge(
+                    data,
+                    translation,
+                    game.langDePf2e.getMapping("skillSpecial", true)
+                );
+            },
             translateSource: (data) => {
                 return game.langDePf2e.translateValue("source", data);
             },
