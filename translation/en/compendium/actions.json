@@ -21,6 +21,14 @@
       "name": "Act Together",
       "description": "<p><strong>Frequency</strong> once per round</p>\n<p>You and your eidolon act as one. Either you or your eidolon takes an action or activity using the same number of actions as Act Together, and the other takes a single action.</p>\n<p>For example, if you spent 2 actions to Act Together, you could cast @UUID[Compendium.pf2e.spells-srd.Item.y6rAdMK6EFlV6U0t]{Breathe Fire} (2 actions) and your eidolon could Strike (1 action), or your eidolon could use its Breath Weapon (2 actions) and you could Stride (1 action).</p>\n<p>This lets you each use separate exploration activities like @UUID[Compendium.pf2e.actionspf2e.Item.IE2nThCmoyhQA0Jn]{Avoid Notice} as you travel.</p>"
     },
+    "Activate Resonant Reflection": {
+      "name": "Activate Resonant Reflection",
+      "description": "<p><strong>Activate</strong> <span class=\"action-glyph\">2</span> envision</p>\n<p><strong>Frequency</strong> once per day for each reflection</p><hr /><p>You activate one of your resonant reflections:</p>"
+    },
+    "Administer Ambient Magic": {
+      "name": "Administer Ambient Magic",
+      "description": "<p><strong>Frequency</strong> once per hour</p><hr /><p><strong>Effect</strong> Your ostilli pulses a calm lavender color as it converts stored magic into a curative balm. You regain @Damage[(2*(floor(@actor.level/4))d4)[healing]] Hit Points, and you can immediately attempt a flat check to recover from persistent bleed damage with the DC reduced to 10. This healing increases by 2d4 at 8th level and every 4 levels thereafter.</p>"
+    },
     "Administer First Aid": {
       "name": "Administer First Aid",
       "description": "<p><strong>Requirements</strong> You're wearing or holding a @UUID[Compendium.pf2e.equipment-srd.Item.s1vB3HdXjMigYAnY]{Healer's Toolkit}.</p>\n<hr />\n<p>You perform first aid on an adjacent creature that is @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{Dying} or @UUID[Compendium.pf2e.conditionitems.Item.lDVqvLKA6eF3Df60]{Bleeding}. If a creature is both dying and bleeding, choose which ailment you're trying to treat before you roll. You can Administer First Aid again to attempt to remedy the other effect.</p>\n<ul>\n<li><strong>Stabilize</strong> Attempt a <span data-pf2-action=\"administerFirstAid\" data-pf2-variant=\"stabilize\" data-pf2-glyph=\"D\">Medicine</span> check on a creature that has 0 Hit Points and the dying condition. The DC is equal to 5 + that creature's recovery roll DC (typically 15 + its dying value).</li>\n<li><strong>Stop Bleeding</strong> Attempt a <span data-pf2-action=\"administerFirstAid\" data-pf2-variant=\"stop-bleeding\" data-pf2-glyph=\"D\">Medicine</span> check on a creature that is taking persistent bleed damage. The DC is usually the DC of the effect that caused the bleed.</li>\n</ul>\n<hr />\n<p><strong>Success</strong> If you're trying to stabilize, the target loses the dying condition (but remains @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}). If you're trying to stop bleeding, the target benefits from an assisted recovery with the lowered DC for particularly appropriate help.</p>\n<p><strong>Critical Failure</strong> If you were trying to stabilize, the target's dying value increases by 1. If you were trying to stop bleeding, the target immediately takes an amount of damage equal to its persistent bleed damage.</p>"
@@ -121,6 +129,10 @@
       "name": "Binding Vow",
       "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p><strong>Effect</strong> You bind yourself by formally speaking a binding vow. Supernatural power flows through and around you as you speak it, and all those present to hear it intrinsically know that it binds you. Breaking this vow is anathema to you, and if you break it willingly, you lose all pactbinder benefits until you fulfill your vow or, if that's impossible, participate in an atone ritual. The vow doesn't prevent unwilling violations and can't be used to try to circumvent mind-control magic, confusion, or similar situations where you perform an action not entirely of your own volition. A Binding Vow doesn't end until you've fulfilled it. Even if you die, the vow still binds you if you return to life. The vow doesn't force you to go to ridiculous extremes, such as dying, to fulfill your vow unless you specifically swear to go to such extremes. Trying to subvert your binding vow by making selfish promises (such as swearing to an ally that you'll kill someone you already wanted to kill) is in itself a violation of your vow, as is attempting to subvert other vows you've made (such as those from other pactbinder feats or a champion's code). When you make a Request or @UUID[Compendium.pf2e.actionspf2e.Item.tHCqgwjtQtzNqVvd]{Coerce} directly in service of fulfilling your vow, you gain a +1 circumstance bonus to your check against any creatures aware of your vow.</p>"
     },
+    "Bite and Sting": {
+      "name": "Bite and Sting",
+      "description": "<p><strong>Requirements</strong> Your swarm is outside your body</p><hr /><p><strong>Effect</strong> Each creature in your swarm's space takes @Damage[(floor(@actor.level/2))d4[piercing]] damage with a @Check[type:reflex|dc:resolve(@actor.system.attributes.classOrSpellDC.value)|basic:true] save against your class DC or spell DC, whichever is higher. At 4th level and every 2 levels thereafter, the damage increases by 1d4.</p>"
+    },
     "Blizzard Evasion": {
       "name": "Blizzard Evasion",
       "description": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You take 40 or more physical damage from a single attack</p>\n<hr />\n<p><strong>Effect</strong> You discorporate into a whirling blizzard for up to 3 rounds. During this time, you gain resistance 10 to physical damage and weakness 10 to force damage. You gain a fly speed of 40 feet, but the only action you can take is to @UUID[Compendium.pf2e.actionspf2e.Item.cS9nfDRGD83bNU1p]{Fly}. The first time each round you enter another creature's space while discorporated, or the first time a creature enters your space, that creature takes @Damage[4d8[cold]] damage and must succeed at a @Check[type:fortitude|dc:resolve(@actor.system.attributes.classOrSpellDC.value)] saving throw against your class DC or spell DC, whichever is higher, or else be @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}. At the start of your turn, you can end this effect as a free action.</p>"
@@ -135,7 +147,7 @@
     },
     "Boarding Assault": {
       "name": "Boarding Assault",
-      "description": "<p>Either Stride twice or attempt an Acrobatics check (DC determined by the GM, but usually DC 20) to swing on a rope up to twice your Speed.</p>\n<p>If you boarded or disembarked from a boat or similar vehicle during this movement, you can make a melee Strike that deals one additional weapon damage die.</p>"
+      "description": "<p>Either Stride twice or attempt an @Check[type:acrobatics] check (DC determined by the GM, but usually DC 20) to swing on a rope up to twice your Speed.</p>\n<p>If you boarded or disembarked from a boat or similar vehicle during this movement, you can make a melee Strike that deals one additional weapon damage die.</p>"
     },
     "Borrow an Arcane Spell": {
       "name": "Borrow an Arcane Spell",
@@ -285,6 +297,10 @@
       "name": "Chassis Deflection",
       "description": "<p><strong>Trigger</strong> A critical hit deals physical damage to you.</p>\n<hr />\n<p>Attempt a @Check[type:flat|dc:17]. If you are successful, the attack becomes a normal hit.</p>"
     },
+    "Claw Stance": {
+      "name": "Claw Stance",
+      "description": "<p><strong>Effect</strong> You extend the claws in your hands and focus your attention to take down single targets. The only Strikes you can make are frenzied claw unarmed attacks. These deal @Damage[1d6[slashing]] damage, are in the brawling group, and have the agile, finesse, grapple, unarmed, and versatile piercing traits.</p>"
+    },
     "Cleanse Soul Path": {
       "name": "Cleanse Soul Path",
       "description": "<p>You meditate, pray, or otherwise try to reinforce your soul's connection to your soulforged armament. This takes 10 minutes. Attempt a counteract check against your <em>soulforged corruption</em>. The counteract rank is half your level rounded up, and the counteract check modifier is your Religion modifier. If successful, reduce the stage of your <em>soulforged corruption</em> by 1 (to a minimum of Stage 1).</p>"
@@ -377,6 +393,10 @@
       "name": "Dampening Harmonics",
       "description": "<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p><strong>Effect</strong> You establish a force field that grants you resistance 10 to damage dealt by spells and magical abilities with the trait of your magiphage ability, except for force damage. The force field lasts for 10 minutes. Each time the field prevents damage, the duration decreases by 1 minute.</p>"
     },
+    "Dancing Dodge": {
+      "name": "Dancing Dodge",
+      "description": "<p><strong>Trigger</strong> You're hit by a Strike during the first round of combat</p><hr /><p><strong>Effect</strong> You take advantage of the fact that your foe isn't ready to anticipate your dance-like moves in combat. Add a +3 circumstance bonus to your Armor Class against the triggering Strike to determine the Strike's actual result.</p>"
+    },
     "Daydream Trance": {
       "name": "Daydream Trance",
       "description": "<p>You fall into a half-sleeping trance. This lasts for 1 minute or until you fall @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}, whichever comes first. You can voluntarily end your trance by taking a single action, which has a concentrate trait, and succeeding at a @Check[type:will|dc:resolve(@actor.system.attributes.classOrSpellDC.value)] save against your own class DC or spell DC, whichever is higher. Once your trance ends, you can't enter a Daydream Trance again for 1 minute. While you're in your trance, you gain the following effects:</p>\n<ul>\n<li>You gain a +1 status bonus to Will saves. This bonus increases to +2 against mental effects. If you're legendary in Occultism, the bonus against mental effects increases to +3.</li>\n<li>You take a -1 penalty to Perception checks and initiative rolls.</li>\n</ul>"
@@ -392,6 +412,10 @@
     "De-Animating Gestures (True)": {
       "name": "De-Animating Gestures (True)",
       "description": "<p>You designate a single construct within 30 feet that you can see or hear. The construct is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 minute.</p>"
+    },
+    "Death Drone": {
+      "name": "Death Drone",
+      "description": "<p>The cicadas in your swarm make a droning sound that stimulates a fear response. Each creature within your swarm's space takes @Damage[6d4[mental]] damage and must attempt a @Check[type:will|dc:resolve(@actor.system.attributes.classOrSpellDC.value)] save against your class DC or spell DC, whichever is higher.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creatures takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage, is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}, and takes a –2 circumstance penalty to Perception checks that require hearing.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage, is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}, and is @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} until the start of your next turn.</p>"
     },
     "Debilitating Strike": {
       "name": "Debilitating Strike",
@@ -441,6 +465,10 @@
       "name": "Devise a Stratagem",
       "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p>You assess a foe's weaknesses in combat and use them to formulate a plan of attack against your enemy. Choose a creature you can see, and roll a d20. If you Strike the chosen creature later this round, you must use the result of the roll you made to Devise a Stratagem for your Strike's attack roll instead of rolling. You make this substitution only for the first Strike you make against the creature this round, not any subsequent attacks.</p>\n<p>When you make this substitution, you can also add your Intelligence modifier to your attack roll instead of your Strength or Dexterity modifier, provided your Strike uses an agile or finesse melee weapon, an agile or finesse unarmed attack, a ranged weapon (which must be agile or finesse if it's a melee weapon with the thrown trait) or @UUID[Compendium.pf2e.equipment-srd.Item.TLQErnOpM9Luy7rL]{Sap}.</p>\n<p>If you're aware that the creature you choose is the subject of a lead you're pursuing, you can use this ability as a free action.</p>"
     },
+    "Devour Ambient Magic": {
+      "name": "Devour Ambient Magic",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> A creature Casts a Spell with you as the only target</p><hr /><p><strong>Effect</strong> Your ostilli radiates cyan light as its tentacle-like filters attempt to consume the magical effect. You can attempt to counteract the triggering spell with an @Check[type:arcana] or @Check[type:nature] check and a counteract rank equal to half your level.</p>"
+    },
     "Disable a Device": {
       "name": "Disable a Device",
       "description": "<p>This action allows you to disarm a trap or another complex device. Often, a device requires numerous successes before becoming disabled, depending on its construction and complexity. A @UUID[Compendium.pf2e.equipment-srd.Item.zvLyCVD8g2PdHJAc]{Thieves' Toolkit} is helpful and sometimes even required to Disable a Device, as determined by the GM, and sometimes a device requires a higher proficiency rank in Thievery to disable it.</p>\n<p>Your <span data-pf2-action=\"disableDevice\" data-pf2-glyph=\"D\">Thievery</span> check result determines your progress.</p>\n<hr />\n<p><strong>Critical Success</strong> You disable the device, or you achieve two successes toward disabling a device requiring more than one success. You leave no trace of your tampering, and you can rearm the device later, if that type of device can be rearmed.</p>\n<p><strong>Success</strong> You disable the device, or you achieve one success toward disabling a device that requires more than one success.</p>\n<p><strong>Critical Failure</strong> You trigger the device.</p>"
@@ -484,6 +512,10 @@
     "Drain Life": {
       "name": "Drain Life",
       "description": "<p>Your eidolon attacks a living creature and drains some of the creature's life force to feed your shared link. Your eidolon Strikes a living enemy. If the Strike hits and deals damage, the target must attempt a Fortitude save, with the following effects. On a critical hit, the enemy uses the result one degree worse than it rolled.</p>\n<p><strong>Critical Success</strong> No effect.</p>\n<p><strong>Success</strong> Your eidolon drains a small amount of life force. The enemy takes additional void damage equal to half your level.</p>\n<p><strong>Failure</strong> Your eidolon drains enough life force to satisfy itself. The enemy takes additional void damage equal to half your level and is @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}. Your eidolon gains temporary Hit Points equal to the enemy's level, which last for 1 minute.</p>\n<p><strong>Critical Failure</strong> Your eidolon drains an incredible amount of life force and is thoroughly glutted with energy. As failure, but the enemy is @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} and the temporary Hit Points are equal to double the enemy's level.</p>"
+    },
+    "Drape Ambient Magic": {
+      "name": "Drape Ambient Magic",
+      "description": "<p><strong>Frequency</strong> once per round</p><hr /><p><strong>Effect</strong> Your ostilli turns clear as it converts its stored magic into a bubble of refracting light around you. You become @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} to all creatures until the end of your turn. If you Strike a creature, that creature is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against that attack, and you then become observed.</p>"
     },
     "Dream Research": {
       "name": "Dream Research",
@@ -553,6 +585,10 @@
       "name": "Envenom",
       "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>Through use of either saliva or blood, you use your innate toxins to apply vishkanyan venom to your weapon or a piece of ammunition. To use your blood, you must be injured, or you can deal @Damage[1[slashing]] damage to yourself as part of the action. The vishkanyan venom remains potent until the end of your next turn, or until you expend it as normal for an injury poison by either hitting a target or critically failing an attack roll.</p>\n<p><strong>Minor Vishkanyan Venom</strong> (injury, poison)</p>\n<hr />\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:resolve(@actor.attributes.classOrSpellDC.value)|traits:injury,poison,damaging-effect]</p>\n<p><strong>Maximum Duration</strong> 6 rounds</p>\n<p><strong>Stage 1</strong> @Damage[1d4[poison]] damage (1 round)</p>\n<p><strong>Stage 2</strong> @Damage[1d4[poison]] damage (1 round)</p>\n<p><strong>Stage 3</strong> @Damage[1d4[poison]] damage (1 round)</p>"
     },
+    "Erupting Spurs": {
+      "name": "Erupting Spurs",
+      "description": "<p><strong>Trigger</strong> A creature takes persistent bleed damage from your bone flense spell</p><hr /><p><strong>Effect</strong> You will the bone spurs to erupt in a particularly devastating manner, dealing @Damage[6d6[piercing]] damage (basic Fortitude save) to the triggering creature instead of the persistent bleed damage from bone flense. The duration of bone flense immediately ends.</p>"
+    },
     "Escape": {
       "name": "Escape",
       "description": "<p>You attempt to escape from being @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}, @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}, or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}. Choose one creature, object, spell effect, hazard, or other impediment imposing any of those conditions on you. Attempt a <span data-pf2-action=\"escape\" data-pf2-glyph=\"A\">check</span> using your <span data-pf2-action=\"escape\" data-pf2-glyph=\"A\" data-pf2-skill=\"unarmed\">unarmed attack modifier</span> against the DC of the effect. This is typically the Athletics DC of a creature grabbing you, the Thievery DC of a creature who tied you up, the spell DC for a spell effect, or the listed Escape DC of an object, hazard, or other impediment. You can attempt an <span data-pf2-action=\"escape\" data-pf2-glyph=\"A\" data-pf2-skill=\"acrobatics\">Acrobatics</span> or <span data-pf2-action=\"escape\" data-pf2-glyph=\"A\" data-pf2-skill=\"athletics\">Athletics</span> check instead of using your attack modifier if you choose (but this action still has the attack trait).</p>\n<hr />\n<p><strong>Critical Success</strong> You get free and remove the grabbed, immobilized, and restrained conditions imposed by your chosen target. You can then Stride up to 5 feet.</p>\n<p><strong>Success</strong> You get free and remove the grabbed, immobilized, and restrained conditions imposed by your chosen target.</p>\n<p><strong>Critical Failure</strong> You don't get free, and you can't attempt to Escape again until your next turn.</p>"
@@ -563,7 +599,7 @@
     },
     "Expel Maelstrom": {
       "name": "Expel Maelstrom",
-      "description": "<p><strong>Requirements</strong> You are in a curse maelstrom state</p>\n<hr />\n<p><strong>Effect</strong> You expel the maelstrom from your body, sending the energy to reside in one unlucky creature within 60 feet. Your curse maelstrom state ends. The result depends on the creature's Will save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected, and the curse's energy dissipates harmlessly.</p>\n<p><strong>Success</strong> The creature comes to house the maelstrom's wrath within it. It takes a -1 status penalty to all saving throws and skill checks for 1 minute.</p>\n<p><strong>Failure</strong> The maelstrom strikes deep into the creature's soul. It takes a -2 status penalty to all saving throws and skill checks for 10 minutes.</p>\n<p><strong>Critical Failure</strong> The maelstrom pitches the creature into a single fit of utter misfortune before burrowing into its soul. As failure, but the creature also must roll twice and take the lower result on its next saving throw or skill check; this is a misfortune effect.</p>"
+      "description": "<p><strong>Requirements</strong> You are in a curse maelstrom state</p><hr /><p><strong>Effect</strong> You expel the maelstrom from your body, sending the energy to reside in one unlucky creature within 60 feet. Your curse maelstrom state ends. The result depends on the creature's @Check[will] save.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected, and the curse's energy dissipates harmlessly.</p>\n<p><strong>Success</strong> The creature comes to house the maelstrom's wrath within it. It takes a -1 status penalty to all saving throws and skill checks for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.fIRJftsmd83iSoR4]{Effect: Expel Maelstrom (Success)}</p>\n<p><strong>Failure</strong> The maelstrom strikes deep into the creature's soul. It takes a -2 status penalty to all saving throws and skill checks for 10 minutes.</p>\n<p><strong>Critical Failure</strong> The maelstrom pitches the creature into a single fit of utter misfortune before burrowing into its soul. As failure, but the creature also must roll twice and take the lower result on its next saving throw or skill check; this is a misfortune effect.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.lc8ez8O4eN73hNpR]{Effect: Expel Maelstrom (Failure or Critical Failure)}</p>"
     },
     "Explode": {
       "name": "Explode",
@@ -752,6 +788,10 @@
     "Implement's Interruption": {
       "name": "Implement's Interruption",
       "description": "<p><strong>Trigger</strong> The target of your Exploit Vulnerability uses a concentrate, manipulate, or move action, or leaves a square during a move action it's using.</p>\n<p><strong>Requirements</strong> You're holding your weapon implement and are benefiting from Exploit Vulnerability against a creature. The creature must be within your reach if you're wielding a melee weapon, or within 10 feet if you're wielding a ranged weapon.</p>\n<hr />\n<p>Your weapon senses a moment of weakness and guides your hand to strike down a foe. Make a Strike against the triggering creature with your weapon implement. If your attack is a critical hit, you disrupt the triggering action. This Strike doesn't count toward your multiple attack penalty, and your multiple attack penalty doesn't apply to this Strike.</p>"
+    },
+    "Impromptu Investment": {
+      "name": "Impromptu Investment",
+      "description": "<p>(one minute)</p>\n<p><strong>Frequency</strong> once per 10 minutes</p><hr /><p><strong>Effect</strong> You can remove investiture from an item you currently have invested, and this investiture does not count against your daily limit. You can invest a new item in this item's place.</p>"
     },
     "Indomitable Act": {
       "name": "Indomitable Act",
@@ -973,6 +1013,10 @@
       "name": "Pistolero's Retort",
       "description": "<p><strong>Requirements</strong> You're wielding a one-handed firearm or one-handed crossbow.</p>\n<p><strong>Trigger</strong> A foe within the first range increment of the one-handed firearm or one-handed crossbow you're wielding critically fails an attack roll against you.</p>\n<hr />\n<p>You punish your foe's failure with a shot. Make a Strike against the triggering foe with a one-handed firearm or one-handed crossbow.</p>"
     },
+    "Pitch-Perfect Projection": {
+      "name": "Pitch-Perfect Projection",
+      "description": "<p>By using your perfect pitch, you can amplify your voice to cause magical auditory effects to reach further. If your next action this round is to Cast a Spell or use an action that creates an auditory effect with a range, increase that range by 30 feet.</p>"
+    },
     "Point Out": {
       "name": "Point Out",
       "description": "<p><strong>Requirements</strong> A creature is undetected by one or more of your allies but isn't undetected by you.</p>\n<hr />\n<p>You indicate a creature that you can see to one or more allies, gesturing in a direction and describing the distance verbally. That creature is @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} to your allies, rather than @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Undetected}. This works only for allies who can see you and are in a position where they could potentially detect the target. If your allies can't hear or understand you, they must succeed at a Perception check against the creature's Stealth DC or they misunderstand and believe the target is in a different location.</p>"
@@ -1049,6 +1093,10 @@
       "name": "Rampaging Ferocity",
       "description": "<p><strong>Trigger</strong> You use @UUID[Compendium.pf2e.feats-srd.Item.PlhPpdwIV0rIAJ8K]{Orc Ferocity}</p>\n<hr />\n<p>You lash out viciously even as you fend off death. Make a single melee Strike. If this Strike brings a foe to 0 Hit Points, this activation of Orc Ferocity doesn't count against its frequency.</p>"
     },
+    "Reactive Falsehood": {
+      "name": "Reactive Falsehood",
+      "description": "<p><strong>Frequency</strong> once per hour</p>\n<p><strong>Trigger</strong> You fail to @UUID[Compendium.pf2e.actionspf2e.Item.ewwCglB7XOPLUz72]{Lie} to a creature in public</p><hr /><p><strong>Effect</strong> As your target sees through your lie, you spin your falsehood in a way that utilizes the crowd's reaction to bolster believability. Re-roll your Deception check to Lie with a +2 status bonus and use this check's result as the actual result to Lie.</p>"
+    },
     "Reactive Strike": {
       "name": "Reactive Strike",
       "description": "<p><strong>Trigger</strong> A creature within your reach uses a manipulate action or a move action, makes a ranged attack, or leaves a square during a move action it's using.</p>\n<hr />\n<p>You lash out at a foe that leaves an opening. Make a melee Strike against the triggering creature. If your attack is a critical hit and the trigger was a manipulate action, you disrupt that action. This Strike doesn't count toward your multiple attack penalty, and your multiple attack penalty doesn't apply to this Strike.</p>"
@@ -1075,7 +1123,7 @@
     },
     "Recall the Teachings": {
       "name": "Recall the Teachings",
-      "description": "<p>The heightened power of your psyche lets you recall every lesson you've ever learned. You search your mind for the right teaching, which at first seems cryptic but comes into clarity when it's most relevant. Until the start of your next turn, you count as having prepared to @UUID[Compendium.pf2e.actionspf2e.Item.HCl3pzVefiv9ZKQW]{Aid} all allies within 30 feet of you. If you use the Aid reaction to help one of them during that time, you roll an @Check[type:occultism|dc:20|traits:action:aid]{Occultism check} for Aid as you recall a lesson to help them. Most lessons take the form of short axioms, parables, or sayings, meaning that conveying them to your ally usually grants your Aid reaction the auditory and linguistic traits.</p>"
+      "description": "<p>The heightened power of your psyche lets you recall every lesson you've ever learned. You search your mind for the right teaching, which at first seems cryptic but comes into clarity when it's most relevant. Until the start of your next turn, you count as having prepared to @UUID[Compendium.pf2e.actionspf2e.Item.HCl3pzVefiv9ZKQW]{Aid} all allies within 30 feet of you. If you use the Aid reaction to help one of them during that time, you roll an @Check[type:occultism|dc:15|traits:action:aid]{Occultism check} for Aid as you recall a lesson to help them. Most lessons take the form of short axioms, parables, or sayings, meaning that conveying them to your ally usually grants your Aid reaction the auditory and linguistic traits.</p>"
     },
     "Recenter": {
       "name": "Recenter",
@@ -1108,6 +1156,10 @@
     "Repeat a Spell": {
       "name": "Repeat a Spell",
       "description": "<p>You repeatedly cast the same spell while moving at half speed. Typically, this spell is a cantrip that you want to have in effect in the event a combat breaks out, and it must be one you can cast in 2 actions or fewer. In order to prevent fatigue due to repeated casting, you'll likely use this activity only when something out of the ordinary occurs.</p>\n<p>You can instead use this activity to continue @UUID[Compendium.pf2e.actionspf2e.Item.3f5DMFu8fPiqHpRg]{Sustain a Spell} or @UUID[Compendium.pf2e.actionspf2e.Item.3f5DMFu8fPiqHpRg]{Sustain} with a sustained duration. Most such spells or item effects can be sustained for 10 minutes, though some specify they can be sustained for a different duration.</p>"
+    },
+    "Repel Ambient Magic": {
+      "name": "Repel Ambient Magic",
+      "description": "<p>Your ostilli glows green as it absorbs magic. Until the start of your next turn, you gain a +1 circumstance bonus to AC and saving throws against the next magical attack, cantrip, or spell that targets you. This bonus increases to +2 at 12th level.</p>"
     },
     "Reposition": {
       "name": "Reposition",
@@ -1175,7 +1227,7 @@
     },
     "Seek": {
       "name": "Seek",
-      "description": "<p>You scan an area for signs of creatures or objects, possibly including secret doors or hazards. Choose an area to scan. The GM determines the area you can scan with one Seek action--almost always 30 feet or less in any dimension. The GM might impose a penalty if you search far away from you or adjust the number of actions it takes to Seek a particularly cluttered area.</p>\n<p>The GM attempts a single secret <span data-pf2-action=\"seek\" data-pf2-glyph=\"A\">Perception</span> check for you and compares the result to the Stealth DCs of any @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Undetected} or @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} creatures in the area, or the DC to detect each object in the area (as determined by the GM or by someone @UUID[Compendium.pf2e.actionspf2e.Item.qVNVSmsgpKFGk9hV]{Concealing the Object}). A creature you detect might remain hidden, rather than becoming @UUID[Compendium.pf2e.conditionitems.Item.1wQY3JYyhMYeeV2G]{Observed}, if you're using an imprecise sense or if an effect (such as @UUID[Compendium.pf2e.spells-srd.Item.XXqE1eY3w3z6xJCB]{Invisibility}) prevents the subject from being observed.</p>\n<hr />\n<p><strong>Critical Success</strong> Any undetected or hidden creature you critically succeeded against becomes observed by you. You learn the location of objects in the area you critically succeeded against.</p>\n<p><strong>Success</strong> Any undetected creature you suceeded against becomes hidden from you instead of undetected, and any hidden creature you succeeded against becomes observed by you. You learn the location of any object or get a clue to its whereabouts, as determined by the GM.</p>"
+      "description": "<p>You scan an area for signs of creatures or objects, possibly including secret doors or hazards. Choose an area to scan. The GM determines the area you can scan with one Seek action—almost always 30 feet or less in any dimension. The GM might impose a penalty if you search far away from you or adjust the number of actions it takes to Seek a particularly cluttered area.</p>\n<p>The GM attempts a single secret <span data-pf2-action=\"seek\" data-pf2-glyph=\"A\">Perception</span> check for you and compares the result to the Stealth DCs of any @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Undetected} or @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} creatures in the area, or the DC to detect each object in the area (as determined by the GM or by someone @UUID[Compendium.pf2e.actionspf2e.Item.qVNVSmsgpKFGk9hV]{Concealing the Object}). A creature you detect might remain hidden, rather than becoming @UUID[Compendium.pf2e.conditionitems.Item.1wQY3JYyhMYeeV2G]{Observed}, if you're using an imprecise sense or if an effect (such as @UUID[Compendium.pf2e.spells-srd.Item.XXqE1eY3w3z6xJCB]{Invisibility}) prevents the subject from being observed.</p>\n<hr />\n<p><strong>Critical Success</strong> Any undetected or hidden creature you critically succeeded against becomes observed by you. You learn the location of objects in the area you critically succeeded against.</p>\n<p><strong>Success</strong> Any undetected creature you suceeded against becomes hidden from you instead of undetected, and any hidden creature you succeeded against becomes observed by you. You learn the location of any object or get a clue to its whereabouts, as determined by the GM.</p>"
     },
     "Seething Frenzy": {
       "name": "Seething Frenzy",
@@ -1283,11 +1335,15 @@
     },
     "Spirit's Mercy": {
       "name": "Spirit's Mercy",
-      "description": "<p><strong>Trigger</strong> You take vitality or void damage, or you take any type of damage caused by a haunt, ghost, or other incorporeal undead</p>\n<p><strong>Cost</strong> 1 spirit wisp or remnant</p>\n<hr />\n<p><strong>Effect</strong> You purify a spirit by having it perform a final act of mercy to lessen the damage caused by another spirit. This grants you resistance to vitality and void damage (or resistance to all damage if caused by a haunt or incorporeal undead) against the triggering effect. If you expend a spirit wisp, the resistance is equal to twice your level. If you expend a spirit remnant, the resistance is equal to three times the level of the incorporeal undead or haunt from which you gained the remnant.</p>"
+      "description": "<p><strong>Trigger</strong> You take vitality or void damage, or you take any type of damage caused by a haunt, ghost, or other incorporeal undead</p>\n<p><strong>Cost</strong> 1 spirit wisp or remnant</p><hr /><p><strong>Effect</strong> You purify a spirit by having it perform a final act of mercy to lessen the damage caused by another spirit. This grants you resistance to vitality and void damage (or resistance to all damage if caused by a haunt or incorporeal undead) against the triggering effect. If you expend a spirit wisp, the resistance is equal to twice your level. If you expend a spirit remnant, the resistance is equal to three times the level of the incorporeal undead or haunt from which you gained the remnant.</p>"
     },
     "Spiritual Aid": {
       "name": "Spiritual Aid",
       "description": "<p><strong>Trigger</strong> You fail a Reflex or Will saving throw</p>\n<hr />\n<p><strong>Effect</strong> You reroll the triggering saving throw. You must use the second result, even if it's worse. If you roll a success, you get a critical success instead.</p>"
+    },
+    "Spit Ambient Magic": {
+      "name": "Spit Ambient Magic",
+      "description": "<p><strong>Frequency</strong> once per round</p><hr /><p><strong>Effect</strong> Your ostilli flashes red as it regurgitates a dart of magic at a target within 30 feet. This magical dart deals @Damage[((1+floor((@actor.level -2)/4))d6)[piercing]] damage (@Check[type:reflex|dc:resolve(@actor.system.attributes.classOrSpellDC.value)|basic:true] save against the higher of your class DC or spell DC). This damage increases by 1d6 at 6th level and every 4 levels thereafter.</p>"
     },
     "Spring the Trap": {
       "name": "Spring the Trap",
@@ -1357,6 +1413,14 @@
       "name": "Sustain an Effect",
       "description": "<p>You Sustain one effect with a sustained duration while moving at half speed. Most such effects can be sustained for 10 minutes, though some specify they can be sustained for a different duration. Sustaining an effect that requires making complex decisions, such as <em>spectral weapon</em>, can make you @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}, as determined by the GM.</p>"
     },
+    "Swarm Forth": {
+      "name": "Swarm Forth",
+      "description": "<p><strong>Requirements</strong> Your swarm is within your body</p><hr /><p><strong>Effect</strong> Your swarm boils forth from your body into a space adjacent to yours. (Its space can overlap yours.) It remains separate from you until the end of your next turn, but you can Sustain the effect up to 1 minute. The effect also ends if you end your turn more than 60 feet away from the swarm. When you use Swarm Forth and each time you Sustain the effect, you can have the swarm Stride.</p>"
+    },
+    "Swift Choreography": {
+      "name": "Swift Choreography",
+      "description": "<p><strong>Trigger</strong> An ally within 30 feet would become @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}, @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}, @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}, @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}, or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}</p><hr /><p><strong>Effect</strong> You call out a quick reminder to your ally about a special move you'd suggested to them at some point in the past, allowing the ally to avoid the triggering effect completely.</p>"
+    },
     "Swim": {
       "name": "Swim",
       "description": "<p>You attempt an <span data-pf2-action=\"swim\" data-pf2-glyph=\"A\">Athletics</span> check to move a maximum distance of 10 feet through water. The GM determines the DC based on the turbulence or danger of the water; in most instances of calm water, you get an automatic critical success. If your land Speed is 40 feet or higher, increase the maximum possible distance by 5 feet for every 20 feet of Speed above 20 feet.</p>\n<p>If you end your turn in water and haven't succeeded at a Swim action that turn, you sink 10 feet or get moved by the current, as determined by the GM. This doesn't apply if your last action on your turn was to enter the water.</p>\n<hr />\n<p><strong>Critical Success</strong> You move through the water, increasing the maximum distance by 5 feet.</p>\n<p><strong>Success</strong> You move through the water.</p>\n<p><strong>Critical Failure</strong> You make no progress. If you're holding your breath, you lose 1 round of air.</p>\n<h2>Sample Swim Tasks</h2>\n<p><strong>Untrained</strong> lake or other still water</p>\n<p><strong>Trained</strong> flowing water, like a river</p>\n<p><strong>Expert</strong> swiftly flowing river</p>\n<p><strong>Master</strong> stormy sea</p>\n<p><strong>Legendary</strong> maelstrom, waterfall</p>"
@@ -1384,6 +1448,10 @@
     "Take a Taste": {
       "name": "Take a Taste",
       "description": "<p><strong>Requirements</strong> The zombie has a creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}.</p>\n<hr />\n<p>The zombie tries to grasp and bite a creature. The zombie makes a jaws Strike against the creature. This Strike uses the same statistics as its normal melee Strike, except its damage die is 1d10 and it deals piercing damage.</p>"
+    },
+    "Talon Stance": {
+      "name": "Talon Stance",
+      "description": "<p><strong>Effect</strong> You sway in a loose stance that lets you sweep in wide arcs with the claws on your feet. The only Strikes you can make are spinning talon unarmed attacks. These deal @Damage[1d8[slashing]] damage, are in the brawling group, and have the finesse, sweep, and unarmed traits. You don't need a free hand to use spinning talon strikes.</p>"
     },
     "Tap Ley Line": {
       "name": "Tap Ley Line",
@@ -1473,6 +1541,10 @@
       "name": "Tumble Through",
       "description": "<p>You Stride up to your Speed. During this movement, you can try to move through the space of one enemy. Attempt an <span data-pf2-action=\"tumbleThrough\" data-pf2-glyph=\"A\">Acrobatics</span> check against the enemy's Reflex DC as soon as you try to enter its space. You can @UUID[Compendium.pf2e.actionspf2e.Item.21WIfSu7Xd7uKqV8]{Tumble Through} using Climb, Fly, Swim, or another action instead of Stride in the appropriate environment.</p>\n<p><strong>Success</strong> You move through the enemy's space, treating the squares in its space as difficult terrain (every 5 feet costs 10 feet of movement). If you don't have enough Speed to move all the way through its space, you get the same effect as a failure.</p>\n<p><strong>Failure</strong> Your movement ends, and you trigger reactions as if you had moved out of the square you started in.</p>"
     },
+    "Turn Aside Ambient Magic": {
+      "name": "Turn Aside Ambient Magic",
+      "description": "<p>Your ostilli glows a faint yellow as it establishes a barrier. Choose acid, cold, electricity, fire, or sonic damage. Until the beginning of your next turn, you gain resistance against the chosen damage type equal to half your level.</p>"
+    },
     "Unleash Psyche": {
       "name": "Unleash Psyche",
       "description": "<p><strong>Trigger</strong> Your turn begins.</p>\n<hr />\n<p><strong>Requirements</strong> You're in an encounter, you Cast a Spell on your previous turn, and you aren't @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied}.</p>\n<hr />\n<p>You call on the depths of your mind and let psychic power flood through. Your Psyche remains Unleashed for 2 rounds or until your fall @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}, whichever comes first. You can't voluntarily quell your unleashed psyche. While your Psyche is Unleashed, the following effects occur.</p>\n<ul>\n<li>You're constantly surrounded by the visual manifestation of your psychic magic.</li>\n<li>When you cast a damaging spell, you gain a status bonus to its damage equal to double the spell's rank. This applies only to spells that don't have a duration and that you cast using psychic spellcasting.</li>\n<li>You can use actions that have the psyche trait. After your unleashed psyche subsides, your mind must recover from the strain of channeling its full power. You can't use Unleash Psyche again for 2 rounds, and you're @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 2 rounds.</li>\n</ul>"
@@ -1483,7 +1555,7 @@
     },
     "Upstage": {
       "name": "Upstage",
-      "description": "<p><strong>Trigger</strong> A foe attempts a skill check and doesn't get a critical success</p>\n<hr />\n<p>After your foe has tried their best, you show everyone how it's really done. Attempt a check using the same skill that triggered this reaction.</p>\n<hr />\n<p><strong>Critical Success</strong> You gain a +1 status bonus to attack rolls, Perception checks, saving throws, and skill checks until the end of your next turn.</p>\n<p><strong>Success</strong> As critical success, except you gain the benefits only if the triggering creature failed their skill check.</p>"
+      "description": "<p><strong>Trigger</strong> A foe attempts a skill check and doesn't get a critical success</p><hr /><p>After your foe has tried their best, you show everyone how it's really done. Attempt a check using the same skill that triggered this reaction.</p><hr /><p><strong>Critical Success</strong> You gain a +1 status bonus to attack rolls, Perception checks, saving throws, and skill checks until the end of your next turn.</p>\n<p><strong>Success</strong> As critical success, except you gain the benefits only if the triggering creature failed their skill check.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.fSZH0aVKyPxatE6i]{Effect: Upstage}</p>"
     },
     "Venom Draw": {
       "name": "Venom Draw",
