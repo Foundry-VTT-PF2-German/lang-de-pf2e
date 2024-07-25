@@ -86,6 +86,11 @@
     "Cacaodaemon": {
       "name": "Cacaodaemon",
       "languages": "telepathy 100 feet",
+      "skillSpecialDeception": {
+        "0": {
+          "label": "to appear as an inanimate object"
+        }
+      },
       "items": {
         "strike-melee->Nib Teeth": {
           "name": "Nib Teeth"
@@ -100,13 +105,6 @@
         "action->Bitter Heart": {
           "name": "Bitter Heart",
           "description": "<p>The dissonance between the cacaodaemon's sweet scent and bitter inside drains the victim's spirit</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:17]</p>\n<p><strong>Maximum Duration</strong> 6 rounds</p>\n<p><strong>Stage 1</strong> @Damage[1d8[mental]] damage and @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} (1 round).</p>\n<p><strong>Stage 2</strong> @Damage[1d8[mental]] damage and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} (1 round)</p>\n<p><strong>Stage 3</strong> @Damage[1d12[mental]] damage and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2} (1 round)</p>"
-        },
-        "lore->Deception": {
-          "skillVariants": {
-            "0": {
-              "label": "+10 to appear as an inanimate object"
-            }
-          }
         }
       }
     },
@@ -485,19 +483,17 @@
     },
     "Kobold Tunnelrunner": {
       "name": "Kobold Tunnelrunner",
+      "skillSpecialCrafting": {
+        "0": {
+          "label": "traps"
+        }
+      },
       "items": {
         "strike-melee->Light Pick": {
           "name": "Light Pick"
         },
         "action->Sneak Attack": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>The kobold tunnelrunner deals an extra 1d4 precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
-        },
-        "lore->Crafting": {
-          "skillVariants": {
-            "0": {
-              "label": "+4 traps"
-            }
-          }
         },
         "lore->Lore": {
           "name": "Lore"
@@ -1124,6 +1120,14 @@
     },
     "saveDetails": "system.attributes.allSaves.value",
     "senses": "system.perception.details",
+    "skillSpecialCrafting": {
+      "converter": "translateSkillSpecial",
+      "path": "system.skills.crafting.special"
+    },
+    "skillSpecialDeception": {
+      "converter": "translateSkillSpecial",
+      "path": "system.skills.deception.special"
+    },
     "source": {
       "converter": "translateSource",
       "path": "system.details.publication.title"
