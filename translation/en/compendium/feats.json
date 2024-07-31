@@ -11512,7 +11512,7 @@
     },
     "Fey Skin": {
       "name": "Fey Skin",
-      "description": "<p>While you are more susceptible to cold iron than most of the Wingless, you also have an incredible resilience and a deeper connection to the healing energies of the First World. Increase your maximum Hit Points by an amount equal to your level.</p>\n<p>If you rest for 10 minutes, brilliant light from the First World seeps into your form from your wings (or the spot where your wings would be), causing you to regain a number of [[/r @actor.level]]{Hit Points equal to your level}; this is cumulative with any Hit Points you regain from Treat Wounds.</p>\n<p>However, you gain weakness 5 to cold iron.</p>"
+      "description": "<p>While you are more susceptible to cold iron than most of the Wingless, you also have an incredible resilience and a deeper connection to the healing energies of the First World. Increase your maximum Hit Points by an amount equal to your level.</p>\n<p>If you rest for 10 minutes, brilliant light from the First World seeps into your form from your wings (or the spot where your wings would be), causing you to regain a number of @Damage[(@actor.level)[healing]]{Hit Points equal to your level}; this is cumulative with any Hit Points you regain from Treat Wounds.</p>\n<p>However, you gain weakness 5 to cold iron.</p>"
     },
     "Fey Tracker": {
       "name": "Fey Tracker",
@@ -11614,7 +11614,7 @@
     },
     "Fiery Retort": {
       "name": "Fiery Retort",
-      "description": "<p><strong>Trigger</strong> An opponent adjacent to you hits you with a melee weapon or a melee unarmed attack.</p>\n<p><strong>Frequency</strong> once per minute</p>\n<hr />\n<p>Ignoring your pain, you sear your attacker with a wave of flame. The triggering opponent takes [[/r @actor.level[fire]]]{fire damage} equal to your level.</p>",
+      "description": "<p><strong>Trigger</strong> An opponent adjacent to you hits you with a melee weapon or a melee unarmed attack.</p>\n<p><strong>Frequency</strong> once per minute</p>\n<hr />\n<p>Ignoring your pain, you sear your attacker with a wave of flame. The triggering opponent takes @Damage[(@actor.level)[fire]]{fire damage} equal to your level.</p>",
       "prerequisites": [
         {
           "value": "flame order"
@@ -13253,7 +13253,7 @@
     },
     "Glory And Valor!": {
       "name": "Glory And Valor!",
-      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You are descended from the einherji, the worthy warriors of chaos. You call upon your ascendant blood with a mighty cry that fills you with a revitalizing energy for 1 minute or until you critically fail a Strike, whichever comes first. For the duration, the first time each round you successfully Strike a creature of your level or higher, you regain [[/r ceil(@actor.level/2)]]{Hit Points equal to half your level}.</p>"
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You are descended from the einherji, the worthy warriors of chaos. You call upon your ascendant blood with a mighty cry that fills you with a revitalizing energy for 1 minute or until you critically fail a Strike, whichever comes first. For the duration, the first time each round you successfully Strike a creature of your level or higher, you regain @Damage[(floor(@actor.level/2))[healing]]{Hit Points equal to half your level}.</p>"
     },
     "Glutton For Flesh": {
       "name": "Glutton For Flesh",
@@ -20099,7 +20099,7 @@
     },
     "Native Waters": {
       "name": "Native Waters",
-      "description": "<p>You were born with or obtained a special connection to either fresh water or salt water. Once made, this decision can't be changed. Whenever you take your full rest in a natural body of water of the type corresponding to your connection, you recover [[/r @actor.level[healing]]]{additional Hit Points} equal to your level, and if you have the @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed} or @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued} conditions, you reduce them by 2 instead of 1.</p>"
+      "description": "<p>You were born with or obtained a special connection to either fresh water or salt water. Once made, this decision can't be changed. Whenever you take your full rest in a natural body of water of the type corresponding to your connection, you recover @Damage[(@actor.level)[healing]]{additional Hit Points} equal to your level, and if you have the @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed} or @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued} conditions, you reduce them by 2 instead of 1.</p>"
     },
     "Natural Ambassador": {
       "name": "Natural Ambassador",
@@ -23286,7 +23286,7 @@
     },
     "Quill Spray": {
       "name": "Quill Spray",
-      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You can launch a mass of quills at opponents. You spray quills in a @Template[type:cone|distance:30], dealing 5d8 piercing damage. Each creature in the area must attempt a @Check[type:reflex|dc:resolve(@actor.attributes.classOrSpellDC.value)|basic:true] saving throw against the higher of your class DC or spell DC. On a critical failure, a creature also takes 5 persistent bleed damage. At 11th level and every even level thereafter, the piercing damage increases by 1d8 and the persistent bleed damage increases by 1.</p>\n<p>[[/r ceil(@actor.level/2)d8[piercing]]]{Leveled Piercing Damage}</p>\n<p>[[/r (ceil(@actor.level/2))[bleed]]]{Leveled Bleed Damage}</p>\n<hr />\n<p><em><strong>Note</strong> The feat does not specify the type of saving throw required. A reflex saving throw has been added, in line with Barbed Quills.</em></p>",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You can launch a mass of quills at opponents. You spray quills in a @Template[type:cone|distance:30], dealing 5d8 piercing damage. Each creature in the area must attempt a @Check[type:reflex|dc:resolve(@actor.attributes.classOrSpellDC.value)|basic:true] saving throw against the higher of your class DC or spell DC. On a critical failure, a creature also takes 5 persistent bleed damage. At 11th level and every even level thereafter, the piercing damage increases by 1d8 and the persistent bleed damage increases by 1.</p>\n<p>@Damage[(ceil(@actor.level/2))d8[piercing]]{Leveled Piercing Damage}</p>\n<p>@Damage[(ceil(@actor.level/2))[bleed]]{Leveled Bleed Damage}</p>\n<hr />\n<p><em><strong>Note</strong> The feat does not specify the type of saving throw required. A reflex saving throw has been added, in line with Barbed Quills.</em></p>",
       "prerequisites": [
         {
           "value": "quillcoat shisk or quill unarmed attack"
@@ -25016,7 +25016,7 @@
     },
     "Rouse the Forest's Fury": {
       "name": "Rouse the Forest's Fury",
-      "description": "<p>Terrifying trees attack your enemies. Three Large trees appear in unoccupied spaces within 500 feet, at least 15 feet from one another. Each tree has AC 40, Fortitude +33, Reflex +24, Will +30, and 200 HP. The trees can flank, but are unable to move. When the trees appear, each makes a Strike; they share a multiple attack penalty. The tree's melee Strike is a branch that has reach 10 feet; on a hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} by the tree (@UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} DC 40). The ranged Strike is a hurled fruit, gourd, seed, or stone with a range increment of 60 feet. Either Strike has a +30 attack modifier and deals @Damage[(4d10+9)[bludgeoning]] damage.</p>\n<p>The trees last until the end of your next turn, and you can Sustain the impulse. Each time you Sustain the impulse, you can have one tree make a Strike.</p>\n<hr />\n<p><strong>Level (20th)</strong> The attack modifier is +32 and the Strike damage is 5d10+9.</p>"
+      "description": "<p>Terrifying trees attack your enemies. Three Large trees appear in unoccupied spaces within 500 feet, at least 15 feet from one another. Each tree has AC 40, Fortitude +33, Reflex +24, Will +30, and 200 HP. The trees can flank, but are unable to move. When the trees appear, each makes a Strike; they share a multiple attack penalty. The tree's melee Strike is a branch that has reach 10 feet; on a hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} by the tree ([[/act escape dc=40]]). The ranged Strike is a hurled fruit, gourd, seed, or stone with a range increment of 60 feet. Either Strike has a +30 attack modifier and deals @Damage[(4d10+9)[bludgeoning]] damage.</p>\n<p>The trees last until the end of your next turn, and you can Sustain the impulse. Each time you Sustain the impulse, you can have one tree make a Strike.</p>\n<hr />\n<p><strong>Level (20th)</strong> The attack modifier is +32 and the Strike damage is 5d10+9.</p>"
     },
     "Ru-shi": {
       "name": "Ru-shi",
