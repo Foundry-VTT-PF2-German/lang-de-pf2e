@@ -104,7 +104,6 @@ export const convertJournals = (journalObject) => {
 
                             // Ignore feats that don't exist in the de module translation file at all
                             if (!featsTranslated.entries[featData[1].name]) {
-                                console.warn(`Feat ${featData[1].name} missing in translation file`);
                                 continue;
                             }
 
