@@ -102,6 +102,12 @@ export const convertJournals = (journalObject) => {
                                 continue;
                             }
 
+                            // Ignore feats that don't exist in the de module translation file at all
+                            if (!featsTranslated.entries[featData[1].name]) {
+                                console.warn(`Feat ${featData[1].name} missing in translation file`);
+                                continue;
+                            }
+
                             // Found a feat with a previously detected feat as prerequisite -> Probably part of the archetype
                             // Sometimes there are additional spaces in the prerequites, due to bad handling within the english localization. We handle these by trimming
                             if (
