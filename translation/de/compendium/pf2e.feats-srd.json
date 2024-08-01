@@ -11512,7 +11512,7 @@
     },
     "Fey Skin": {
       "name": "Feenhaut",
-      "description": "<p>Du bist für Kaltes Eisen empfänglicher als die meisten anderen Flügellosen, besitzt dafür aber unglaubliche Widerstandskräfte und eine tiefgreifende Verbindung zu den heilenden Energien der Ersten Welt. Erhöhe dein Trefferpunkte-Maximum um einen Wert in Höhe deiner Stufe. Wenn du 10 Minuten lang ausruhst, fließt über deine Flügel (oder deine Schulterblätter, solltest du keine Flügel besitzen) helles Licht aus der Ersten Welt in deinen Leib und lässt dich eine Anzahl an Trefferpunkten gleich deiner Stufe zurückerlangen; dies ist mit Wunden behandeln kumulativ. Du erhältst allerdings auch Schwäche gegen Kaltes Eisen 5.</p>"
+      "description": "<p>Du bist für Kaltes Eisen empfänglicher als die meisten anderen Flügellosen, besitzt dafür aber unglaubliche Widerstandskräfte und eine tiefgreifende Verbindung zu den heilenden Energien der Ersten Welt. Erhöhe dein Trefferpunkte-Maximum um einen Wert in Höhe deiner Stufe. Wenn du 10 Minuten lang ausruhst, fließt über deine Flügel (oder deine Schulterblätter, solltest du keine Flügel besitzen) helles Licht aus der Ersten Welt in deinen Leib und lässt dich eine Anzahl an Trefferpunkten gleich deiner Stufe zurückerlangen (@Damage[(@actor.level)[healing]]); dies ist mit Wunden behandeln kumulativ. Du erhältst allerdings auch Schwäche gegen Kaltes Eisen 5.</p>"
     },
     "Fey Tracker": {
       "name": "Feen aufspüren",
@@ -11614,7 +11614,7 @@
     },
     "Fiery Retort": {
       "name": "Feurige Antwort",
-      "description": "<p><strong>Auslöser</strong> Ein Gegner auf einem zu dir angrenzenden Feld trifft dich mit einer Nahkampfwaffe oder einem Waffenlosen Nahkampfangriff.</p>\n<p><strong>Häufigkeit</strong> Einmal pro Minute</p>\n<hr />\n<p>Du ignorierst die Schmerzen des Angriffes und versengst den Angreifer mit einer Flammenwelle. Der auslösende Gegner erleidet Feuerschaden entsprechend [[/r @actor.level[fire]]]{deiner Stufe}.</p>",
+      "description": "<p><strong>Auslöser</strong> Ein Gegner auf einem zu dir angrenzenden Feld trifft dich mit einer Nahkampfwaffe oder einem Waffenlosen Nahkampfangriff.</p>\n<p><strong>Häufigkeit</strong> Einmal pro Minute</p>\n<hr />\n<p>Du ignorierst die Schmerzen des Angriffes und versengst den Angreifer mit einer Flammenwelle. Der auslösende Gegner erleidet Feuerschaden entsprechend deiner Stufe (@Damage[(@actor.level)[fire]]).</p>",
       "prerequisites": [
         {
           "value": "Orden der Flammen"
@@ -13253,7 +13253,7 @@
     },
     "Glory And Valor!": {
       "name": "Ruhm und Tapferkeit!",
-      "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<hr />\n<p>Du stammt von den Einherier ab, den würdigen Kriegern des Chaos. Du kannst mit einem lauten Kampfschrei auf die Macht deines Blutes zurückgreifen, um dich mit belebender Energie zu erfüllen. Der folgende Effekt währt 1 Minute lang oder bis dir bei einem Angriff ein Kritischer Fehlschlag unterläuft: Wenn du während einer Runde zum ersten Mal erfolgreich eine Kreatur von wenigstens deiner Stufe triffst, erlangst du Trefferpunkte in Höhe deiner halben Stufe zurück.</p>"
+      "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<hr />\n<p>Du stammt von den Einherier ab, den würdigen Kriegern des Chaos. Du kannst mit einem lauten Kampfschrei auf die Macht deines Blutes zurückgreifen, um dich mit belebender Energie zu erfüllen. Der folgende Effekt währt 1 Minute lang oder bis dir bei einem Angriff ein Kritischer Fehlschlag unterläuft: Wenn du während einer Runde zum ersten Mal erfolgreich eine Kreatur von wenigstens deiner Stufe triffst, erlangst du Trefferpunkte in Höhe deiner halben Stufe zurück (@Damage[(floor(@actor.level/2))[healing]]).</p>"
     },
     "Glutton For Flesh": {
       "name": "Vielfraß",
@@ -20099,7 +20099,7 @@
     },
     "Native Waters": {
       "name": "Heimisches Gewässer",
-      "description": "<p>Du wurdest mit einer besonderen Verbundenheit, wahlweise zu Süß- oder Salzwasser, geboren oder hast diese Verbindung im Laufe der Zeit entwickelt. Einmal getroffen, kann diese Entscheidung nicht mehr geändert werden. Immer wenn du deine volle Ruhezeit in einem natürlichen Gewässer des Typs, der deiner Verbindung entspricht, einlegst, erholst du dich um zusätzliche [[/r @actor.level[healing]]]{Trefferpunkte in Höhe deiner Stufe}; solltest du unter den Zuständen @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Todgeweiht} oder @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Erschöpft} leiden, reduzierst du den Zustandswert um 2 statt um 1.</p>"
+      "description": "<p>Du wurdest mit einer besonderen Verbundenheit, wahlweise zu Süß- oder Salzwasser, geboren oder hast diese Verbindung im Laufe der Zeit entwickelt. Einmal getroffen, kann diese Entscheidung nicht mehr geändert werden. Immer wenn du deine volle Ruhezeit in einem natürlichen Gewässer des Typs, der deiner Verbindung entspricht, einlegst, erholst du dich um zusätzliche Trefferpunkte in Höhe deiner Stufe (@Damage[(@actor.level)[healing]]); solltest du unter den Zuständen @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Todgeweiht} oder @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Erschöpft} leiden, reduzierst du den Zustandswert um 2 statt um 1.</p>"
     },
     "Natural Ambassador": {
       "name": "Natural Ambassador",
@@ -25016,7 +25016,7 @@
     },
     "Rouse the Forest's Fury": {
       "name": "Zorn des Waldes",
-      "description": "<p>Furchterweckende Bäume greifen deine Gegner an. Drei Große Bäume erscheinen auf freien Feldern innerhalb von 500 Fuß/150 m mit wenigstens 15 Fuß/4,50 m Abstand zwischen sich. Jeder Baum besitzt RK 40, REF +24, WIL +30, ZÄH +33 und 200 TP. Die Bäume können Flankieren, sich aber nicht fortbewegen. Wenn die Bäume erscheinen, führt jeder einen Angriff aus, wobei sie sich einen Malus für Mehrfachangriffe teilen. Der Nahkampfangriff eines Baumes ist ein Astangriff mit Angriffsradius 10 Fuß/3 m; bei einem Treffer wird das Ziel vom Baum in den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} versetzt (@UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Entkommen} SG 40). Als Fernkampfangriff wirft der Baum eine Frucht, einen Stein, eine Saat oder dergleichen mit Entfernungseinheit 60 Fuß/18 m. Jeder Angriff besitzt einen Angriffsmodifikator von [[/r 1d20+30]]{+30} und verursacht @Damage[(4d10+9)[bludgeoning]]{4W10+9 Punkte Wuchtschaden}.</p>\n<p>Die Bäume bestehen bis zum Ende deines nächsten Zuges; du kannst den Impuls aber Aufrechterhalten. Wenn du den Impuls Aufrechterhältst, kannst du einen Baum einen Angriff ausführen lassen.</p>\n<hr />\n<p><strong>Stufe (20.)</strong> Der Angriffsmodifikator ist [[/r 1d20+32]]{+32} und der Angriffsschaden beträgt @Damage[(5d10+9)[bludgeoning]]{5W10+9}.</p>"
+      "description": "<p>Furchterweckende Bäume greifen deine Gegner an. Drei Große Bäume erscheinen auf freien Feldern innerhalb von 500 Fuß/150 m mit wenigstens 15 Fuß/4,50 m Abstand zwischen sich. Jeder Baum besitzt RK 40, REF +24, WIL +30, ZÄH +33 und 200 TP. Die Bäume können Flankieren, sich aber nicht fortbewegen. Wenn die Bäume erscheinen, führt jeder einen Angriff aus, wobei sie sich einen Malus für Mehrfachangriffe teilen. Der Nahkampfangriff eines Baumes ist ein Astangriff mit Angriffsradius 10 Fuß/3 m; bei einem Treffer wird das Ziel vom Baum in den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} versetzt ([[/act escape dc=40]]). Als Fernkampfangriff wirft der Baum eine Frucht, einen Stein, eine Saat oder dergleichen mit Entfernungseinheit 60 Fuß/18 m. Jeder Angriff besitzt einen Angriffsmodifikator von [[/r 1d20+30]]{+30} und verursacht @Damage[(4d10+9)[bludgeoning]]{4W10+9 Punkte Wuchtschaden}.</p>\n<p>Die Bäume bestehen bis zum Ende deines nächsten Zuges; du kannst den Impuls aber Aufrechterhalten. Wenn du den Impuls Aufrechterhältst, kannst du einen Baum einen Angriff ausführen lassen.</p>\n<hr />\n<p><strong>Stufe (20.)</strong> Der Angriffsmodifikator ist [[/r 1d20+32]]{+32} und der Angriffsschaden beträgt @Damage[(5d10+9)[bludgeoning]]{5W10+9}.</p>"
     },
     "Ru-shi": {
       "name": "Ru-shi",
