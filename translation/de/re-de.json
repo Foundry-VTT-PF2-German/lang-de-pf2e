@@ -589,6 +589,38 @@
       "White": "Weiß",
       "Yellow": "Gelb"
     },
+    "Dragon": {
+      "Adamantine": "Adamantine Dragon",
+      "Arcane": "Arcane Dragon",
+      "Black": "Schwarzer Drache",
+      "Blue": "Blauer Drache",
+      "Brass": "Messingdrache",
+      "Bronze": "Bronzedrache",
+      "Conspirator": "Conspirator Dragon",
+      "Copper": "Kupferdrache",
+      "Diabolic": "Diabolic Dragon",
+      "Divine": "Divine Dragon",
+      "Empyreal": "Empyreal Dragon",
+      "Fortune": "Fortune Dragon",
+      "Green": "Grüner Drache",
+      "Gold": "Golddrache",
+      "Horned": "Horned Dragon",
+      "Mirage": "Mirage Dragon",
+      "Occult": "Occult Dragon",
+      "Omen": "Omen Dragon",
+      "Primal": "Primal Dragon",
+      "Red": "Roter Drache",
+      "Silver": "Silberdrache",
+      "White": "Weißer Drache"
+    },
+    "FeatDescription": {
+      "Frequency": {
+        "OncePerTurn": "einmal pro Runde"
+      },
+      "Requirements": {
+        "Label": "Voraussetzungen"
+      }
+    },
     "IWR": {
       "Custom": {
         "AcidAndSpellsThatCauseRust": "acid and spells that cause rust",
@@ -602,9 +634,11 @@
         "AllStrikeDamageFromUndeadCreatures": "all damage from Strikes made by undead creatures",
         "AttacksDemons": "Angriffe von Dämonen",
         "AttacksWaterCreatures": "Angriffe von Wasserkreaturen",
+        "BludgeoningPiercingSlashing": "bludgeoning, piercing and slashing damage",
         "ColdIronBludgeoning": "cold iron bludgeoning",
         "CrystalHazards": "Mit Kristallen assoziierte Gefahren",
         "DraconicBreathWeapons": "Drachenodemwaffen",
+        "HolyBludgeoningPiercingSlashing": "holy bludgeoning, piercing and slashing damage",
         "ImpulseFireFrom": "Feuerimpuls von {origin}",
         "IngestedPoisons": "Eingenommene Gifte",
         "MagicalBludgeoning": "Magischer Wuchtschaden",
@@ -618,6 +652,7 @@
         "PhysicalRangedAttacks": "Physische Fernkampfangriffe",
         "RangedWeaponAttacks": "Angriffe mit Fernkampfwaffen",
         "Spirits": "Geister",
+        "UnholyBludgeoningPiercingSlashing": "unholy bludgeoning, piercing and slashing damage",
         "VoidZonKuthonFollowers": "Leereneffekte von Anhängern von Zon-Kuthon"
       }
     },
@@ -1810,10 +1845,20 @@
         "Prompt": "Wähle den Bonus der Unterstützung."
       },
       "Alchemist": {
+        "Alchemy": {
+          "IdentifyAlchemy": "You can automatically identify alchemical items that you have the formula for."
+        },
         "AlchemicalCrossbow": {
           "Prompt": "Wähle eine Bombe für die Armbrust."
         },
+        "ExpandedSplash": {
+          "Note": "The splash damage affects all creatures within 10 feet of the target instead of 5 feet."
+        },
         "ResearchField": {
+          "Bomber": {
+            "FieldBenefit": "When throwing an alchemical bomb with the splash trait, you can choose to deal splash damage to only your primary target instead of the usual splash area.",
+            "GreaterFieldDiscovery": "You can increase the splash on your bombs to damage creatures within 10 feet, or 15 feet if you have Expanded Splash."
+          },
           "Prompt": "Wähle ein Forschungsgebiet."
         }
       },
@@ -1883,6 +1928,11 @@
       },
       "ArtokussFire": {
         "Note": "Das Alchemistenfeuer verursacht 1W4 Punkte Anhaltenden Feuerschaden zusätzlich zu dem, was das Alchemistenfeuer normalerweise verursachen würde. Eine Kreatur, die durch das Alchemistenfeuer Anhaltenden Feuerschaden erleidet, benötigt zwei erfolgreiche Einfache Würfe, um den Anhaltenden Schaden zu beenden, oder einen Wurf, wenn die Kreatur Unterstützung bei der Bekämpfung hatte, die den SG des Wurfes auf 10 reduziert."
+      },
+      "Assassin": {
+        "Assassinate": {
+          "Note": "If you hit, your mark takes an additional @Damage[(6d6[precision])[@item.system.damage.damageType]] damage with a @Check[type:fortitude|dc:resolve(@actor.system.attributes.classOrSpellDC.value)|basic:true] save. If the mark critically fails, it dies unless its level is higher than yours."
+        }
       },
       "Automaton": {
         "ArcaneLocomotion": {
@@ -2010,7 +2060,7 @@
           "ToggleLabel": "Geisterhafter Kampfrausch"
         },
         "Superstition": {
-          "TargetingCaster": "Ziel ist Zauberwirker"
+          "TargetingCaster": "Witnessed target casting a spell"
         }
       },
       "Bard": {
@@ -2091,20 +2141,46 @@
           "Label": "Göttliches Niederstrecken"
         },
         "EvilDamage": "Seelenschaden",
+        "ExaltedReaction": {
+          "Desecration": "Each enemy in your champion's aura takes a –1 status penalty to attack rolls against you until the start of your next turn. @UUID[Compendium.pf2e.feat-effects.Item.Ef63SlxSKlZmHosM]{Effect: Exalted Reaction (Desecrator)}",
+          "Grandeur": "In addition to the enemy affected by Flash of Grandeur, each other enemy in your champion's aura is affected by the revealing light spell for 1 round.",
+          "Iniquity": "Each enemy in your champion's aura other than the triggering creature takes half the damage you deal to the triggering enemy.",
+          "Justice": "Each ally in your champion's aura with the target in their melee reach can spend a reaction to Strike the target with a –5 penalty.",
+          "Liberation": "In addition to the ally affected by Liberating Step, you and all other allies in your champion's aura can Step as a free action. You and your allies gain the benefit even if the ally who benefited from Liberating Step can't move",
+          "Obedience": "Each enemy in your champion's aura other than the triggering creature must also either drop @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} or take mental damage (each enemy chooses). These creatures take only minimum damage (typically @Damage[ternary(gte(@actor.level,19),6,ternary(gte(@actor.level,16),5,ternary(gte(@actor.level,12),4,ternary(gte(@actor.level,11),3)[mental]]), and the effects they take can't be adjusted by anything that changes your Iron Command. For instance, the Iron Repercussions feat couldn't turn the damage into persistent mental damage for creatures other than the triggering creature.",
+          "Redemption": "If the enemy refuses, you can choose to grant the resistance to yourself and all allies in your champion's aura, including the triggering ally. If you do, the resistance is reduced by 2 for all @UUID[Compendium.pf2e.feat-effects.Item.GFLiTESBmoyQ3sLx]{Effect: Exalted Reaction (Redemption)}"
+        },
         "IronRepercussions": {
           "Description": "Deinem Gnadenlosen Befehl nicht zu gehorchen hat anhaltende Konsequenzen. Sollte ein Gegner sich weigern, vor dir zu knien, kannst du ihm statt normalem mentalen Schaden Anhaltenden mentalen Schaden (@Damage[(ternary(gte(@actor.level,19),6,ternary(gte(@actor.level,16),5,ternary(gte(@actor.level,12),4,ternary(gte(@actor.level,9),3,ternary(gte(@actor.level,5),2,1))))))d6[persistent,mental]]) zufügen. Du musst entscheiden, ob der Schaden anhaltend sein soll, ehe dein Gegner sich entscheidet zu knien oder nicht. Die Schadenshöhe bleibt unverändert."
+        },
+        "Mercy": {
+          "Body": {
+            "Label": "Mercy of the Body"
+          },
+          "Grace": {
+            "Label": "Mercy of Grace"
+          },
+          "Mind": {
+            "Label": "Mercy of the Mind"
+          }
         },
         "NegativeDamage": "Leerenschaden",
         "OngoingSelfishness": {
           "Description": "Nachdem du Egoistischen Schild genutzt hast, erlangst du Resistenz gegen allen weiteren Schaden durch den auslösenden Gegner bis zum Ende des Zuges, in dem du die Reaktion eingesetzt hast. Diese Resistenz entspricht der Hälfte dessen, was du durch Egoistischen Schild erlangst. @UUID[Compendium.pf2e.feat-effects.Item.seOQfjfjrDyK6rCo]{Effekt: Ewiger Egoismus}"
         },
         "RangedReprisal": {
-          "Description": "Du kannst Vergeltender Angriff mit einer Fernkampfwaffe nutzen. Zusätzlich kannst du bei einem Gegner, welcher deine Reaktion ausgelöst hat, sich maximal 5 Fuß/1,50 m außerhalb deines Angriffsradius aber nicht innerhalb deines Angriffsradius befindet, als Teil deiner Reaktion einen Schritt zurücklegen, um ihn in die Nahkampfreichweite deines Vergeltender Angriff zu bekommen."
+          "Description": "You can use a ranged weapon to make a ranged Strike instead of a melee Strike for Retributive Strike. The enemy needs to be in range, but not in reach, and it must still be in your champion's aura. You can also make melee Strikes against enemies a bit farther away. If the enemy that triggered your reaction is outside your reach but is within 5 feet of your reach, as part of your reaction you can Step to put the enemy in your reach before making a melee Retributive Strike."
+        },
+        "RelentlessReaction": {
+          "Grandeur": "The enemy also takes @Damage[(@actor.abilities.cha.mod)[persistent,spirit]] damage, and it can't recover from this persistent damage while affected by the revealing light from your Flash of Grandeur.",
+          "Iniquity": "An enemy damaged by the initial reaction's damage also takes @Damage[(@actor.abilities.cha.mod)[persistent,spirit]] damage.",
+          "Liberation": "You punish those who ensnare your allies. If the triggering enemy was using any effects to make your ally grabbed, restrained, immobilized, or paralyzed when you used Liberating Step, that enemy takes @Damage[(@actor.abilities.cha.mod)[persistent,spirit]] damage",
+          "ObedienceRedemption": "If the enemy refuses, it takes @Damage[(@actor.abilities.cha.mod)[persistent,spirit]] damage"
         },
         "RetributiveStrike": "Vergeltender Angriff",
         "TargetReaction": "Ziel hat deine Streiterreaktion ausgelöst",
         "UnimpededStep": {
-          "Description": "Dank der freigesetzten göttlichen Befreiungskraft ist die Bewegung, die dein Verbündeter dank deines Befreienden Schrittes zurücklegen kann, nicht von Schwierigem Gelände, Mächtigem Schwierigem Gelände, Schmalen Oberflächen und Unebenem Boden betroffen."
+          "Description": "Your ally's movement from your Liberating Step is unaffected by difficult terrain, greater difficult terrain, narrow surfaces, and uneven ground. If you have the exalted reaction benefit, this applies to everyone who Steps."
         },
         "WeightOfGuilt": {
           "Description": "Schuldgefühle vernebeln das Denken jener, die deinen @UUID[Compendium.pf2e.actionspf2e.Item.tuZnRWHixLArvaIf]{Blick der Läuterung} ignorieren. Du kannst der auslösenden Kreatur anstelle von @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 2} für dieselbe Wirkungsdauer den Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 2} verleihen."
@@ -2428,6 +2504,9 @@
         },
         "EnchantingArrow": {
           "Note": "Bei einem Kritischen Treffer erleidet das Ziel zusätzlich den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1}."
+        },
+        "IncorporealShot": {
+          "Label": "Incorporeal Shot - Target Wearing Armor"
         }
       },
       "Elf": {
@@ -2495,6 +2574,11 @@
           "Fire": "Grün (Feuer)",
           "Poison": "Orange (Gift)",
           "Cold": "Braun (Kälte)"
+        },
+        "ChaliceOfJustice": {
+          "SipOfJustice": {
+            "Note": "Whenever you critically hit an unholy creature with the <em>chalice of justice</em>, the creature is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 round."
+          }
         },
         "ChannelProtectionAmuletLabel": "Schutz vor Heilung oder Leid",
         "ChaplainsCudgel": {
@@ -2627,6 +2711,7 @@
         "Braggart": "War dein Gegner gegen dein @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralisieren} temporär immun, endet diese temporäre Immunität.",
         "Fencer": "Der Gegner ist bis zu deinem nächsten Zug @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} betroffen.",
         "Name": "Vorbildlicher Abschluss",
+        "Rascal": "The foe takes a -10 circumstance penalty to its speed until the start of your next turn. @UUID[Compendium.pf2e.feat-effects.Item.fgz7lwg1xHsVW4dX]{Effect: Exemplary Finisher (Rascal)}",
         "Wit": "Der Gegner erleidet bis zum Beginn deines nächsten Zuges einen Situationsmalus von -2 auf Angriffswürfe gegen dich. @UUID[Compendium.pf2e.feat-effects.Item.cu10OjQUdY0a9gpj]{Effekt: Vorbildlicher Abschluss (Esprit)}"
       },
       "ExorcistDedication": {
@@ -2642,6 +2727,12 @@
         "Prompt": "Spielkarten als Dolche oder Wurfpfeile behandeln?"
       },
       "Feat": {
+        "BespellStrikes": {
+          "Requirements": "Deine letzte Handlung war das Wirken eines Zaubers, der nicht zu den Zaubertricks zählt",
+          "Oracle": "You siphon spell energy into one weapon you're wielding, or into one of your unarmed attacks, such as a fist. Until the end of your turn, the weapon or unarmed attack deals an extra 1d6 force damage and gains the divine trait if it didn't have it already. If the spell dealt a different type of damage, the Strike deals this type of damage instead (or one type of your choice if the spell could deal multiple types of damage).",
+          "Sorcerer": "You siphon spell energy into one weapon you're wielding or into one of your unarmed attacks, such as a fist. Until the end of your turn, the weapon or unarmed attack deals an extra 1d6 force damage and gains the trait of your bloodline's magical tradition if it didn't have it already. If the spell dealt a different type of damage, the Strike deals this type of damage instead (or one type of your choice if the spell could deal multiple types of damage).",
+          "Wizard": "Du leitest Zauberenergie in eine von dir geführte Waffe oder in einen deiner Waffenlosen Angriffe, z.B. in deine Faust. Bis zum Ende deines Zuges verursacht die Waffe oder der Waffenlose Angriff zusätzliche 1W6 Punkte Kraftschaden und erhält die Kategorie Arkan, so er sie noch nicht besessen hat; sollte der Zauber Schaden einer anderen Kategorie verursachen, so verursacht auch der Angriff diese Schadensart (oder eine Schadensart deiner Wahl, sollte der Zauber imstande sein, mehrere Schadensarten zu verursachen)."
+        },
         "CharmingLiar": {
           "Note": "Wenn du einen Kritischen Erfolg beim Lügen erhältst, verbessert sich die Einstellung des Zieles dir gegenüber um eine Stufe, als ob du mit der Aktion Beeindrucken mit Hilfe von Diplomatie Erfolg gehabt hättest."
         },
@@ -3030,6 +3121,14 @@
         }
       },
       "Investigator": {
+        "CertainStratagem": {
+          "Note": "You deal half of your @Damage[(floor((@actor.level+3)/4)[precision])[@item.system.damage.damageType]]{Strategic Strike damage} to the target"
+        },
+        "DeviseAStratagem": {
+          "Attack": "Attack Stratagem",
+          "Defensive": "Defensive Stratagem",
+          "Skill": "Skill Stratagem"
+        },
         "Methodology": {
           "Prompt": "Wähle eine Methodik."
         },
@@ -3239,22 +3338,29 @@
           "sword": "Spezialschwerter"
         },
         "AdvancedAthamaruWeapons": "Advanced Athamaru Weapons",
+        "AdvancedBowsAndCrossbows": "Spezialbögen und -armbrüste",
         "AdvancedHalflingWeapons": "Halblings-Spezialwaffen",
         "AdvancedHobgoblinWeapons": "Hobgoblin-Spezialwaffen",
+        "AdvancedKholoWeapons": "Advanced Kholo Weapons",
         "AdvancedKoboldWeapons": "Kobold-Spezialwaffen",
         "AdvancedMerfolkWeapons": "Advanced Merfolk Weapons",
         "AdvancedOrcWeapons": "Orkische Spezialwaffen",
         "AdvancedSurkiWeapons": "Advanced Surki Weapons",
         "AdvancedTenguWeapons": "Tengu-Spezialwaffen",
+        "AdvancedTripkeeWeapons": "Advanced Tripkee Weapons",
+        "AdvancedTwoHandedMeleeWeapons": "Zweihändige Nahkampfspezialwaffen",
         "AdvancedVanaraWeapons": "Vanarische Spezialwaffen",
         "AdvancedVishkanyaWeapons": "Vischkanysche Spezialwaffen",
         "BayonetsAndReinforcedStocks": "Bajonette und Verstärkte Schäfte",
+        "BountyHunterWeapons": "Bounty Hunter Tools of the Trade",
         "MartialAthamaruWeapons": "Martial Athamaru Weapons",
         "MartialAzarketiWeapons": "Azarketi-Kriegswaffen",
         "MartialBombsFirearms": "Kriegsbomben & Feuerwaffen",
+        "MartialBowsAndCrossbows": "Kriegsbögen und -armbrüste",
         "MartialCatfolkWeapons": "Amurrun-Kriegswaffen",
         "MartialCentaurWeapons": "Martial Centaur Weapons",
         "MartialConrasuWeapons": "Conrasu-Kriegswaffen",
+        "MartialDuskwalkerWeapons": "Martial Duskwalker Weapons",
         "MartialDwarfWeapons": "Zwergische Kriegswaffen",
         "MartialElfWeapons": "Elfische Kriegswaffen",
         "MartialFirearmsCrossbows": "Kriegsfeuerwaffen & -armbrüste",
@@ -3284,19 +3390,25 @@
         },
         "MartialHalflingWeapons": "Halblings-Kriegswaffen",
         "MartialHobgoblinWeapons": "Hobgoblin-Kriegswaffen",
+        "MartialKholoWeapons": "Martial Kholo Weapons",
         "MartialKoboldWeapons": "Kobold-Kriegswaffen",
         "MartialMerfolkWeapons": "Martial Merfolk Weapons",
         "MartialOrcWeapons": "Orkische Kriegswaffen",
         "MartialSurkiWeapons": "Martial Surki Weapons",
         "MartialTenguWeapons": "Tengu-Kriegswaffen",
+        "MartialTripkeeWeapons": "Martial Tripkee Weapons",
+        "MartialTwoHandedMeleeWeapons": "Zweihändige Nahkampfkriegswaffen",
         "MartialVanaraWeapons": "Vanarische Kriegswaffen",
         "MartialVishkanyaWeapons": "Vischkanysche Kriegswaffen",
         "MinotaurWeapons": "Minotaur Weapons",
         "MonasticArchery": "Bogenschütze",
+        "PerformativeWeapons": "Gladiator Performative Weapons",
+        "PirateWeapons": "Pirate Weapons",
         "SimpleBombsFirearms": "Einfache Bomben & Feuerwaffen",
         "SimpleFirearmsCrossbows": "Einfache Feuerwaffen & Armbrüste",
         "SimpleMartialBows": "Einfache & Kriegsbögen",
-        "SimpleMartialTwoHandedMeleeWeapons": "Einfache Zweihand- & Zweihandkriegswaffen"
+        "SimpleMartialTwoHandedMeleeWeapons": "Einfache Zweihand- & Zweihandkriegswaffen",
+        "VikingWeapons": "Viking Weapons"
       },
       "MechanicalSymbiosis": {
         "FailureNote": "Du bist @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1}",
@@ -3397,11 +3509,29 @@
         }
       },
       "Oracle": {
+        "ConduitOfVoidAndVitality": {
+          "HarmDescription": "You cast a 3-action harm spell, expending the slot as normal. If the spell restores Hit Points to one or more creatures, then one creature healed by this spell regains @Damage[(@actor.conditions.cursebound.value)d8[healing,void]|shortLabel:true] additional Hit Points; if the spell damages one or more creatures, then one creature harmed by this spell takes @Damage[(@actor.conditions.cursebound.value)d8[void]|shortLabel:true] additional damage.",
+          "HealDescription": "You cast a 3-action heal spell, expending the slot as normal. If the spell restores Hit Points to one or more creatures, then one creature healed by this spell regains @Damage[(@actor.conditions.cursebound.value)d8[healing,vitality]|shortLabel:true] additional Hit Points; if the spell damages one or more creatures, then one creature harmed by this spell takes @Damage[(@actor.conditions.cursebound.value)d8[vitality]|shortLabel:true] additional damage."
+        },
+        "Cursebound": {
+          "IncreaseNote": "When you use a cursebound ability, you become @UUID[Compendium.pf2e.conditionitems.Item.zXZjC8HLaRoLR17U]{Cursebound 1}, or if you already were cursebound, you increase the value of your cursebound condition by 1.",
+          "MaximumNote": "You can't use a cursebound ability if you are already at your maximum @UUID[Compendium.pf2e.conditionitems.Item.zXZjC8HLaRoLR17U]{Cursebound} value."
+        },
+        "DiverseMystery": {
+          "Toggle": "Used Diverse Mystery cursebound spell"
+        },
+        "MeddlingFutures": {
+          "Note": "If you attempt to use a different action, you must succeed at a @Check[type:flat|dc:6] or the action is lost."
+        },
         "Mystery": {
           "Prompt": "Wähle ein Mysterium."
         },
         "MysteryConduit": {
           "Note": "Wenn du einen Zauber des 5. Grades oder niedriger wirkst, der keine Wirkungsdauer hat, kannst du, anstatt einen Zauberplatz zu verbrauchen, die Auswirkungen deines Fluchs fortschreiten lassen, als hättest du einen Offenbarungszauber gewirkt. Ein Zauber, den du auf diese Weise wirkst, erhält die Kategorie Fluchgebunden."
+        },
+        "NudgeTheScales": {
+          "Death": "Death",
+          "Life": "Life"
         },
         "CurseSeverity": {
           "NoneToMinor": "Dein Fluch schreitet in die schwache Phase vor, nachdem du zum ersten Mal nach deinen täglichen Vorbereitungen einen Offenbarungszauber gewirkt hast.",
@@ -3493,14 +3623,16 @@
         "Shillelagh": "Wähle eine Keule oder einen Stecken.",
         "Skill": "Wähle eine Fertigkeit.",
         "SkillFeat": "Wähle ein Fertigkeitstalent",
+        "SkillTrained": "Wähle eine Geübte Fertigkeit.",
+        "SkillUntrained": "Wähle eine Ungeübte Fertigkeit.",
         "Spell": "Wähle einen Zauber.",
         "SubconsciousMind": "Wähle einen Unterbewussten Verstand.",
         "ThirdImplement": "Wähle dein drittes Paraphernum.",
         "Tradition": "Wähle eine Tradition.",
         "Trait": "Wähle eine Kategorie.",
-        "VersatileTrait": "Wähle die vielseitige Schadensart.",
         "UnarmedAttack": "Wähle einen unbewaffneten Angriff.",
         "UntamedForm": "Wähle einen Gestaltswandel-Effekt.",
+        "VersatileTrait": "Wähle die vielseitige Schadensart.",
         "Weapon": "Wähle eine Waffe.",
         "WeaponGroup": "Wähle eine Waffengruppe.",
         "WeaponOrUnarmed": "Wähle eine Waffe oder unbewaffneten Angriff."
@@ -3874,18 +4006,18 @@
         "Bloodline": {
           "Prompt": "Wähle eine Blutlinie.",
           "BloodMagicDescription": {
-            "Aberrant": "Unverständliches, fremdartiges Flüstern schützt deinen Verstand oder den eines Zieles und verleiht dem Ziel deines Zaubers für 1 Runde einen Zustandsbonus von +2 auf Willenswürfe.",
+            "Aberrant": "Either one target takes a –1 status penalty to Will saving throws for 1 round or you gain a +2 status bonus to Will saving throws for 1 round.",
             "AncestralBloodMagic": "Abstammungs-Zauber wirken",
-            "Angelic": "Eine Engelsaura umgibt dich oder ein Ziel; die Aura verleiht einen Zustandsbonus von +1 auf Rettungswürfe für 1 Runde.",
-            "Demonic": "Die Last der Sünde schwächt die Verteidigungen eines Zieles oder macht dich beeindruckender. Entweder erleidet ein Ziel für 1 Runde einen Zustandsmalus von -1 auf seine RK oder du erhältst für 1 Runde einen Zustandsbonus von +1 auf Fertigkeitswürfe für Einschüchtern.",
-            "Diabolic": "Höllenfeuer versengt ein Ziel oder füllt deinen Mund mit Lügen. Das Ziel erleidet entweder 1 Punkt Feuerschaden (@Damage[@item.level[fire]]) pro Zaubergrad (sollte der Zauber bereits Feuerschaden verursachen, so addiere diesen Zusatzschaden hinzu, ehe die Schwächen und Resistenzen des Zieles zur Anwendung kommen) oder du erlangst einen Zustandsbonus von +1 auf Fertigkeitswürfe für Täuschung für 1 Runde.",
-            "Draconic": "Drachenschuppen wachsen kurzfristig auf deiner Haut oder der eines Zieles; dies verleiht dir oder deinem Ziel 1 Runde lang einen Zustandsbonus von +1 auf die RK.",
-            "Elemental": "Elementare Energie umgibt dich oder ein Ziel. Entweder erhältst du 1 Runde lang einen Zustandsbonus von +1 auf Fertigkeitswürfe für Einschüchtern oder ein Ziel erleidet 1 Schadenspunkt pro Zaubergrad (@Damage[@item.level[@actor.flags.pf2e.sorcerer.elementalBloodline.damageType]]); dabei handelt es sich abhängig von deinem gewählten Element (siehe unten) um Feuer- oder Wuchtschaden. Sollte der Zauber bereits Schaden dieser Art verursachen, so kombiniere ihn mit dem Ausgangsschaden des Zaubers, ehe Schwächen und Resistenzen des Zieles zur Anwendung kommen.",
-            "Fey": "Farbenfrohe Feenillusionen umtanzen dich oder ein Ziel; sie verleihen für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Verborgen}, sind aber zu offenkundig, als dass man sie für die Aktion Verstecken nutzen könnte.",
+            "Angelic": "You or one target is granted a +1 status bonus to saving throws for 1 round",
+            "Demonic": "Either a target takes a -1 status penalty to AC for 1 round, or you gain a +2 status bonus to Intimidation checks for 1 round.",
+            "Diabolic": "Either a target takes @Damage[@item.level[fire]] (if the spell already deals initial fire damage, combine this with the spell's initial damage before determining weaknesses and resistances), or you gain a +2 status bonus to Deception checks for 1 round",
+            "Draconic": "You or one target is granted a +1 status bonus to AC for 1 round.",
+            "Elemental": "Either you gain a +2 status bonus to Intimidation checks for 1 round, or a target takes @Damage[@item.level[@actor.flags.pf2e.elementalBloodline.damageType]] damage. If the spell already deals that type of damage, combine it with the spell's initial damage before determining weaknesses and resistances.",
+            "Fey": "Either you gain a +2 status bonus to Performance checks for 1 round, or you can become @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} for 1 round. Such obvious concealment can't be used to @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa]{Hide}",
             "Genie": "Deine Zauberei verzerrt die Realität und lenkt deine Gegner ab. Du erlangst entweder einen Zustandsbonus von +1 auf Fertigkeitswürfe für Täuschung für 1 Runde oder ein Ziel erleidet einen Zustandsmalus von -1 auf Wahrnehmung für 1 Runde.",
-            "Hag": "Hasserfüllte Flüche strafen deine Gegner. Die erste Kreatur, welche dir vor dem Ende deines nächsten Zuges Schaden zufügt, erleidet 2 Punkte mentalen Schaden pro Zaubergrad (@Damage[@item.level[mental]]) und muss einen @Check[type:will|basic:true|dc:resolve(@actor.system.attributes.spellDC.value)]{einfachen Willenswurf} ablegen.",
+            "Hag": "You deal @Damage[(4*@item.level)[mental]] damage (@Check[type:will|basic:true|dc:resolve(@actor.system.attributes.spellDC.value)] save) to the first creature that deals damage to you before the end of your next turn; if no creature damages you in that time, you consume that spite to gain temporary Hit Points at the beginning of your next turn equal to the spell's rank. These temporary Hit Points last until the beginning of your following turn.",
             "Harrow": "You become enveloped in possibility, represented as multiple versions of yourself from your possible futures overlaid on each other. You gain @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealement} for 1 round, but can't use the concealment to @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa]{Hide}.",
-            "Imperial": "Ein Schub von Erinnerungen deiner Vorfahren verleiht dir oder einem Ziel 1 Runde lang einen Zustandsbonus von +1 auf Fertigkeitswürfe.",
+            "Imperial": "Until the start of your next turn, you gain your choice of either a +1 status bonus to AC or to saving throws.",
             "Title": "Blutmagie",
             "Nymph": "Die Anmut von Nymphen untermalt deine Bewegungen und lenkt deine Gegner ab. Dies verleiht dir entweder einen Zustandsbonus von +1 auf Fertigkeitswürfe für Diplomatie oder generiert einer Zustandsmalus von -1 auf die Willenswürfe eines Zieles für 1 Runde.",
             "Phoenix": "The primal fire of life and death flows through you or one target. Choose to have either you or a target of the spell gain temporary Hit Points equal to the spell's rank for 1 round, or to have a target of the spell take @Damage[@item.level[fire]] damage (if the spell already deals initial fire damage, combine this with the spell's initial damage before determining weaknesses and resistances).",
@@ -3895,7 +4027,7 @@
               "PerceptionPenalty": "-1 auf Wahrnehmung",
               "StealthBonus": "+1 auf Heimlichkeit"
             },
-            "Undead": "Nekromantische Energie durchströmt dich oder ein Ziel. Entweder erhältst du 1 Runde lang Temporäre Trefferpunkte in Höhe des Zaubergrades oder ein Ziel erleidet 1 Punkt Leerensschaden (@Damage[@item.level[void]]) pro Zaubergrad (sollte der Zauber bereits Leerenschaden verursachen, so addiere diesen Zusatzschaden hinzu, ehe die Schwächen und Resistenzen des Zieles zur Anwendung kommen).",
+            "Undead": "Either you gain temporary Hit Points equal to the spell's rank until the start of your next turn, or a target takes @Damage[@item.level[void]] damage (if the spell already deals initial void damage, combine this with the spell's initial damage before determining weaknesses and resistances).",
             "Wyrmblessed": "Die Macht der Drachen hört man in deiner Stimme. Du erhältst entweder 1 Runde lang einen Zustandsbonus von +1 auf Einschüchtern oder ein Ziel erleidet 1 Runde lang einen Zustandsmalus von -1 auf Willenswürfe."
           }
         }
@@ -4251,11 +4383,21 @@
           "Mobile": "Mobil",
           "Perfect": "Perfekt",
           "PreciseNote": "Bei einem Fehlschlag mit Zuversichtlicher Abschluss fügst du deinen vollständigen Präzisionsschaden zu statt nur der Hälfte (@Damage[((@actor.flags.pf2e.swashbuckler.preciseStrike)d6[precision])[@item.system.damage.damageType]]).",
+          "Retreating": "Retreating",
+          "RetreatingNote": "You Step as a free action.",
+          "Revitalizing": "Revitalizing",
+          "Stumbling": "Stumbling",
           "Stunning": "Betäubend",
           "Targeting": "Gezielt",
+          "TwirlingThrow": "Twirling Throw",
+          "TwirlingThrowNote": "The weapon returns to your hand after the attack",
           "Unbalancing": "Gleichgew. raubend"
         },
+        "GoadingFeint": {
+          "Note": "On a successful Feint, the target take a -2 circumstance penalty to attack rolls against you instead of any other effects that you would gain when you Feint. @UUID[Compendium.pf2e.feat-effects.Item.rflbFzV44Fd6aBLE]{Effect: Goading Feint}"
+        },
         "Panache": "Du erhältst @UUID[Compendium.pf2e.feat-effects.Item.uBJsxCzNhje8m8jj]{Elan}.",
+        "PanacheFailure": "You gain panache until the end of your next turn @UUID[Compendium.pf2e.feat-effects.Item.uBJsxCzNhje8m8jj]{Effect: Panache}",
         "Style": {
           "Prompt": "Wähle eine Fasson."
         }
