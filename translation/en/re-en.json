@@ -2,17 +2,17 @@
   "PF2E": {
     "AmmunitionNotes": {
       "AntlerArrow": {
-        "CriticalText": "The DC of the Athletics check to pull the missile free increases to @Check[type:athletics|dc:15|name:Pull the Missile Free|showDC:all]",
-        "Text": "The target must succeed at a @Check[type:reflex|dc:16|name:Antler Arrow] save or become stuck to the surface, taking the critical specialization effects of a bow",
+        "CriticalText": "The DC of the Athletics check to pull the missile free increases to @Check[athletics|dc:15|name:Pull the Missile Free|showDC:all]",
+        "Text": "The target must succeed at a @Check[reflex|dc:16|name:Antler Arrow] save or become stuck to the surface, taking the critical specialization effects of a bow",
         "Title": "Antler Arrow"
       },
       "ExplosiveAmmunition": {
         "Greater": {
-          "Text": "The missile explodes in a @Template[type:burst|distance:10], dealing @Damage[10d6[fire]] damage to each creature in the area (including the target). Each creature must attempt a @Check[type:reflex|dc:30|basic:true|name:Explosive Ammunition] save.",
+          "Text": "The missile explodes in a @Template[type:burst|distance:10], dealing @Damage[10d6[fire]] damage to each creature in the area (including the target). Each creature must attempt a @Check[reflex|dc:30|basic|name:Explosive Ammunition] save.",
           "Title": "Explosive Ammunition (Greater)"
         },
         "Normal": {
-          "Text": "The missile explodes in a @Template[type:burst|distance:10], dealing @Damage[6d6[fire]] damage to each creature in the area (including the target). Each creature must attempt a @Check[type:reflex|dc:25|basic:true|name:Explosive Ammunition] save.",
+          "Text": "The missile explodes in a @Template[type:burst|distance:10], dealing @Damage[6d6[fire]] damage to each creature in the area (including the target). Each creature must attempt a @Check[reflex|dc:25|basic|name:Explosive Ammunition] save.",
           "Title": "Explosive Ammunition"
         }
       },
@@ -31,21 +31,21 @@
         }
       },
       "FreezingAmmunition": {
-        "Text": "The target must succeed at a @Check[type:fortitude|dc:19] save or be @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 round by the intense cold (slowed 1 for 1 minute on a critical failure).",
+        "Text": "The target must succeed at a @Check[fortitude|dc:19] save or be @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 round by the intense cold (slowed 1 for 1 minute on a critical failure).",
         "Title": "Freezing Ammunition"
       },
       "MeteorShot": {
         "CriticalFailureText": "On a critical failure, the weapon misfires.",
         "Greater": {
-          "Text": "In addition to the weapon's normal damage, the meteor shot deals fire damage and the ground in the area becomes difficult terrain. The ammunition deals @Damage[6d6[fire]] damage in a @Template[type:emanation|distance:10] around the target (@Check[type:reflex|dc:29|basic:true|name:Meteor Shot] save).",
+          "Text": "In addition to the weapon's normal damage, the meteor shot deals fire damage and the ground in the area becomes difficult terrain. The ammunition deals @Damage[6d6[fire]] damage in a @Template[type:emanation|distance:10] around the target (@Check[reflex|dc:29|basic|name:Meteor Shot] save).",
           "Title": "Meteor Shot (Greater)"
         },
         "Major": {
-          "Text": "In addition to the weapon's normal damage, the meteor shot deals fire damage and the ground in the area becomes difficult terrain. The ammunition deals @Damage[9d6[fire]] damage in a @Template[type:emanation|distance:20] around the target (@Check[type:reflex|dc:37|basic:true|name:Meteor Shot] save).",
+          "Text": "In addition to the weapon's normal damage, the meteor shot deals fire damage and the ground in the area becomes difficult terrain. The ammunition deals @Damage[9d6[fire]] damage in a @Template[type:emanation|distance:20] around the target (@Check[reflex|dc:37|basic|name:Meteor Shot] save).",
           "Title": "Meteor Shot (Major)"
         },
         "Normal": {
-          "Text": "In addition to the weapon's normal damage, the meteor shot deals fire damage and the ground in the area becomes difficult terrain. The ammunition deals @Damage[3d6[fire]] damage in a @Template[type:emanation|distance:5] around the target (@Check[type:reflex|dc:23|basic:true|name:Meteor Shot] save).",
+          "Text": "In addition to the weapon's normal damage, the meteor shot deals fire damage and the ground in the area becomes difficult terrain. The ammunition deals @Damage[3d6[fire]] damage in a @Template[type:emanation|distance:5] around the target (@Check[reflex|dc:23|basic|name:Meteor Shot] save).",
           "Title": "Meteor Shot"
         }
       },
@@ -76,7 +76,7 @@
     "AttackEffects": {
       "DropWeapon": "The creature drops the wielded weapon.",
       "IgnoreConcealed": "The attack ignores the @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} condition.",
-      "ReduceHiddenCheck": "The DC of the flat check to target a @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} creature is only @Check[type:flat|dc:5].",
+      "ReduceHiddenCheck": "The DC of the flat check to target a @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} creature is only @Check[flat|dc:5].",
       "IgnoreCover": "The target doesn't benefit from lesser cover, and it reduces the AC bonus from standard cover by 2 against the attack.",
       "IncreasedCriticalChance": "If the attack hits and the creature rolls a 19 on the d20 roll, the attack is a critical hit. This has no effect if the 19 would be a failure.",
       "IncreasedReach5": "Reach increased by 5 feet",
@@ -183,7 +183,7 @@
         "Shove": "You can spend an action immediately after a hit to push the target 5 feet with the effects of a successful @UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Shove}"
       },
       "OozeForm": {
-        "GelatinousCubeNote": "A creature hit by your cube face Strike must succeed at a @Check[type:fortitude|dc:resolve(@actor.attributes.spellDC.value)|traits:incapacitation] save against your spell DC or be @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1} (or @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} for 1 round on a critical failure); this save has the incapacitation trait."
+        "GelatinousCubeNote": "A creature hit by your cube face Strike must succeed at a @Check[fortitude|dc:resolve(@actor.attributes.spellDC.value)|traits:incapacitation] save against your spell DC or be @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1} (or @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} for 1 round on a critical failure); this save has the incapacitation trait."
       },
       "WormForm": {
         "PurpleWorm": "Purple Worm",
@@ -228,7 +228,7 @@
         }
       },
       "BioluminescenceBomb": {
-        "success": "<p>Each creature within @Template[type:emanation|distance:10]{10 feet} of where the bomb exploded must succeed at a @Check[type:reflex|dc:17] save or be marked with dye that continues to glow for 24 hours. An affected creature must also attempt a @Check[type:fortitude|dc:17] saving throw against the overwhelming burst of light.</p><p><strong>Success</strong> The creature is unaffected.</p><p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round.</p><p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for 1 round, then dazzled for 1 round.</p>"
+        "success": "<p>Each creature within @Template[type:emanation|distance:10]{10 feet} of where the bomb exploded must succeed at a @Check[reflex|dc:17] save or be marked with dye that continues to glow for 24 hours. An affected creature must also attempt a @Check[fortitude|dc:17] saving throw against the overwhelming burst of light.</p><p><strong>Success</strong> The creature is unaffected.</p><p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round.</p><p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for 1 round, then dazzled for 1 round.</p>"
       },
       "BlightBomb": {
         "Greater": {
@@ -289,10 +289,10 @@
       },
       "DwarvenDaisy": {
         "Lesser": {
-          "success": "<strong>Effect</strong> The bomb also deals @Damage[(1[splash])[fire]]{1 fire splash damage} and the target must succeed at a @Check[type:fortitude|dc:16|traits:damaging-effect|showDC:all] save or become @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round."
+          "success": "<strong>Effect</strong> The bomb also deals @Damage[(1[splash])[fire]]{1 fire splash damage} and the target must succeed at a @Check[fortitude|dc:16|traits:damaging-effect|showDC:all] save or become @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round."
         },
         "Moderate": {
-          "success": "<strong>Effect</strong> The bomb also deals @Damage[(2[splash])[fire]]{2 fire splash damage} and the target must succeed at a @Check[type:fortitude|dc:18|traits:damaging-effect|showDC:all] save or become @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round."
+          "success": "<strong>Effect</strong> The bomb also deals @Damage[(2[splash])[fire]]{2 fire splash damage} and the target must succeed at a @Check[fortitude|dc:18|traits:damaging-effect|showDC:all] save or become @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round."
         }
       },
       "FrostVial": {
@@ -513,16 +513,16 @@
       },
       "Thunderstone": {
         "Greater": {
-          "success": "<strong>Effect</strong> The bomb also deals @Damage[(3[splash])[sonic]]{3 sonic splash damage} and all creatures within 10 feet must succeed at a @Check[type:fortitude|dc:28|showDC:all] save or be @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} until the end of its next turn."
+          "success": "<strong>Effect</strong> The bomb also deals @Damage[(3[splash])[sonic]]{3 sonic splash damage} and all creatures within 10 feet must succeed at a @Check[fortitude|dc:28|showDC:all] save or be @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} until the end of its next turn."
         },
         "Lesser": {
-          "success": "<strong>Effect</strong> The bomb also deals @Damage[(1[splash])[sonic]]{1 sonic splash damage} and all creatures within 10 feet must succeed at a @Check[type:fortitude|dc:17|showDC:all] save or be @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} until the end of its next turn."
+          "success": "<strong>Effect</strong> The bomb also deals @Damage[(1[splash])[sonic]]{1 sonic splash damage} and all creatures within 10 feet must succeed at a @Check[fortitude|dc:17|showDC:all] save or be @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} until the end of its next turn."
         },
         "Major": {
-          "success": "<strong>Effect</strong> The bomb also deals @Damage[(4[splash])[sonic]]{4 sonic splash damage} and all creatures within 10 feet must succeed at a @Check[type:fortitude|dc:36|showDC:all] save or be @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} until the end of its next turn."
+          "success": "<strong>Effect</strong> The bomb also deals @Damage[(4[splash])[sonic]]{4 sonic splash damage} and all creatures within 10 feet must succeed at a @Check[fortitude|dc:36|showDC:all] save or be @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} until the end of its next turn."
         },
         "Moderate": {
-          "success": "<strong>Effect</strong> The bomb also deals @Damage[(2[splash])[sonic]]{2 sonic splash damage} and all creatures within 10 feet must succeed at a @Check[type:fortitude|dc:20|showDC:all] save or be @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} until the end of its next turn."
+          "success": "<strong>Effect</strong> The bomb also deals @Damage[(2[splash])[sonic]]{2 sonic splash damage} and all creatures within 10 feet must succeed at a @Check[fortitude|dc:20|showDC:all] save or be @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} until the end of its next turn."
         }
       },
       "TwigjackSack": {
@@ -545,20 +545,20 @@
       },
       "VexingVapor": {
         "Greater": {
-          "criticalSuccess": "<strong>Effect</strong> The bomb also deals @Damage[(3[splash])[mental]]{3 mental splash damage} and the target must succeed at a @Check[type:flat|dc:5] before taking actions with the concentrate trait, this lasts for 1 minute.",
-          "success": "<strong>Effect</strong> The bomb also deals @Damage[(3[splash])[mental]]{3 mental splash damage} and the target must succeed at a @Check[type:flat|dc:5] before taking actions with the concentrate trait, this lasts until the end of its next turn."
+          "criticalSuccess": "<strong>Effect</strong> The bomb also deals @Damage[(3[splash])[mental]]{3 mental splash damage} and the target must succeed at a @Check[flat|dc:5] before taking actions with the concentrate trait, this lasts for 1 minute.",
+          "success": "<strong>Effect</strong> The bomb also deals @Damage[(3[splash])[mental]]{3 mental splash damage} and the target must succeed at a @Check[flat|dc:5] before taking actions with the concentrate trait, this lasts until the end of its next turn."
         },
         "Lesser": {
-          "criticalSuccess": "<strong>Effect</strong> The bomb also deals @Damage[(1[splash])[mental]]{1 mental splash damage} and the target must succeed at a @Check[type:flat|dc:5] before taking actions with the concentrate trait, this lasts for 1 minute.",
-          "success": "<strong>Effect</strong> The bomb also deals @Damage[(1[splash])[mental]]{1 mental splash damage} and the target must succeed at a @Check[type:flat|dc:5] before taking actions with the concentrate trait, this lasts until the end of its next turn."
+          "criticalSuccess": "<strong>Effect</strong> The bomb also deals @Damage[(1[splash])[mental]]{1 mental splash damage} and the target must succeed at a @Check[flat|dc:5] before taking actions with the concentrate trait, this lasts for 1 minute.",
+          "success": "<strong>Effect</strong> The bomb also deals @Damage[(1[splash])[mental]]{1 mental splash damage} and the target must succeed at a @Check[flat|dc:5] before taking actions with the concentrate trait, this lasts until the end of its next turn."
         },
         "Major": {
-          "criticalSuccess": "<strong>Effect</strong> The bomb also deals @Damage[(4[splash])[mental]]{4 mental splash damage} and the target must succeed at a @Check[type:flat|dc:5] before taking actions with the concentrate trait, this lasts for 1 minute.",
-          "success": "<strong>Effect</strong> The bomb also deals @Damage[(4[splash])[mental]]{4 mental splash damage} and the target must succeed at a @Check[type:flat|dc:5] before taking actions with the concentrate trait, this lasts until the end of its next turn."
+          "criticalSuccess": "<strong>Effect</strong> The bomb also deals @Damage[(4[splash])[mental]]{4 mental splash damage} and the target must succeed at a @Check[flat|dc:5] before taking actions with the concentrate trait, this lasts for 1 minute.",
+          "success": "<strong>Effect</strong> The bomb also deals @Damage[(4[splash])[mental]]{4 mental splash damage} and the target must succeed at a @Check[flat|dc:5] before taking actions with the concentrate trait, this lasts until the end of its next turn."
         },
         "Moderate": {
-          "criticalSuccess": "<strong>Effect</strong> The bomb also deals @Damage[(2[splash])[mental]]{2 mental splash damage} and the target must succeed at a @Check[type:flat|dc:5] before taking actions with the concentrate trait, this lasts for 1 minute.",
-          "success": "<strong>Effect</strong> The bomb also deals @Damage[(2[splash])[mental]]{2 mental splash damage} and the target must succeed at a @Check[type:flat|dc:5] before taking actions with the concentrate trait, this lasts until the end of its next turn."
+          "criticalSuccess": "<strong>Effect</strong> The bomb also deals @Damage[(2[splash])[mental]]{2 mental splash damage} and the target must succeed at a @Check[flat|dc:5] before taking actions with the concentrate trait, this lasts for 1 minute.",
+          "success": "<strong>Effect</strong> The bomb also deals @Damage[(2[splash])[mental]]{2 mental splash damage} and the target must succeed at a @Check[flat|dc:5] before taking actions with the concentrate trait, this lasts until the end of its next turn."
         }
       },
       "WaterBomb": {
@@ -1040,7 +1040,7 @@
           "Prompt": "Select a rune.",
           "RuneOfDestruction": {
             "Label": "Rune of Destruction",
-            "Text": "A creature hit with the weapon is @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} unless it succeeds at a @Check[type:fortitude|dc:35|name:Rune of Destruction|traits:arcane,electricity] save."
+            "Text": "A creature hit with the weapon is @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} unless it succeeds at a @Check[fortitude|dc:35|name:Rune of Destruction|traits:arcane,electricity] save."
           },
           "RuneOfFlames": {
             "Label": "Rune of Flames"
@@ -1119,12 +1119,12 @@
         "LeadingHead": "Leading Head",
         "LeadingHeadDescription": {
           "NoHeadSelected": "During each of the Great Flood's appearances, one head takes the lead once combat begins, chosen by the GM when initiative is rolled. Whichever head is in the lead grants a different action the Great Flood can use during its first turn each round (see Coordinated Actions).",
-          "Aloof": "The aloof head casts a 5th-rank @UUID[Compendium.pf2e.spells-srd.Item.aIHY2DArKFweIrpf]{Command} (@Check[type:will|dc:42]).",
+          "Aloof": "The aloof head casts a 5th-rank @UUID[Compendium.pf2e.spells-srd.Item.aIHY2DArKFweIrpf]{Command} (@Check[will|dc:42]).",
           "Ambitious": "The ambitious head declares a divine position above its station. It gains 100 temporary Hit Points for 1 minute. It also gains a weakness 20 to spirit damage and can't Claim Position again for 1 minute.",
           "Assertive": "The Great Flood Swims, then makes a melee Strike.",
           "Capricious": "The capricious head counteracts each mental effect on themself as a 10th-rank effect with a [[/r 1d20+32 #Counteract]]{+32} counteract modifier.",
           "PeoplePleaser": "The heads discuss and audibly agree on a creature to target. Until they Build Consensus again, their Strikes deal an additional 20 precision damage to that creature.",
-          "Perfectionist": "The perfectionist head criticizes a creature within their aura. The creature must succeed at a @Check[type:will|dc:42] save or take @Damage[9d6[persistent,mental]] damage.",
+          "Perfectionist": "The perfectionist head criticizes a creature within their aura. The creature must succeed at a @Check[will|dc:42] save or take @Damage[9d6[persistent,mental]] damage.",
           "Playful": "The playful head makes an ill-timed quip about the impermanence of life. They attempt to @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} each creature within their aura.",
           "Secretive": "The Great Flood is @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Invisible} until the end of their turn and teleports to an open space within their aura.",
           "Suspicious": "The Great Flood peers at their surroundings. Until they move, they see through illusions in their aura and the reach of their jaws is increased to 25 feet."
@@ -1200,10 +1200,10 @@
           "Skillful": "Skillful",
           "Spellcasting": "Spellcasting"
         },
-        "MajorFailure": "Your curse interferes with this action, and you must succeed at a @Check[type:flat|dc:8|showDC:owner] or lose the action.",
+        "MajorFailure": "Your curse interferes with this action, and you must succeed at a @Check[flat|dc:8|showDC:owner] or lose the action.",
         "MeddlingAncestor": "Meddling Ancestor",
-        "MinorFailure": "Your curse interferes with this action, and you must succeed at a @Check[type:flat|dc:4|showDC:owner] or lose the action.",
-        "ModerateFailure": "Your curse interferes with this action, and you must succeed at a @Check[type:flat|dc:6|showDC:owner] or lose the action."
+        "MinorFailure": "Your curse interferes with this action, and you must succeed at a @Check[flat|dc:4|showDC:owner] or lose the action.",
+        "ModerateFailure": "Your curse interferes with this action, and you must succeed at a @Check[flat|dc:6|showDC:owner] or lose the action."
       },
       "Battle": {
         "MadeAStrike": "You've made a strike this round",
@@ -1870,7 +1870,7 @@
       "AlkenstarAgent": {
         "LooseCannon": {
           "Note": {
-            "CriticalFailure": "The firearm misfires and also explodes. It becomes @UUID[Compendium.pf2e.conditionitems.Item.6dNUvdb1dhToNDj3]{Broken}, and it deals its normal weapon damage to all creatures in a @Template[type:burst|distance:20] centered on the firearm, with a @Check[type:reflex|dc:resolve(@actor.attributes.classDC.value)|basic:true]. This damage includes any from the weapon's fundamental and property runes.",
+            "CriticalFailure": "The firearm misfires and also explodes. It becomes @UUID[Compendium.pf2e.conditionitems.Item.6dNUvdb1dhToNDj3]{Broken}, and it deals its normal weapon damage to all creatures in a @Template[type:burst|distance:20] centered on the firearm, with a @Check[reflex|dc:resolve(@actor.attributes.classDC.value)|basic]. This damage includes any from the weapon's fundamental and property runes.",
             "Failure": "The firearm misfires, but it doesn't cause the other critical failure effects."
           }
         }
@@ -1931,7 +1931,7 @@
       },
       "Assassin": {
         "Assassinate": {
-          "Note": "If you hit, your mark takes an additional @Damage[(6d6[precision])[@item.system.damage.damageType]] damage with a @Check[type:fortitude|dc:resolve(@actor.system.attributes.classOrSpellDC.value)|basic:true] save. If the mark critically fails, it dies unless its level is higher than yours."
+          "Note": "If you hit, your mark takes an additional @Damage[(6d6[precision])[@item.system.damage.damageType]] damage with a @Check[fortitude|against:class-spell|basic] save. If the mark critically fails, it dies unless its level is higher than yours."
         }
       },
       "Automaton": {
@@ -2500,7 +2500,7 @@
       },
       "EldritchArcher": {
         "ArrowOfDeath": {
-          "Note": "On a critical hit, the target must also succeed at a @Check[type:fortitude|dc:resolve(@actor.attributes.classOrSpellDC.value)|traits:death,incapacitation] saving throw, or be immediately slain."
+          "Note": "On a critical hit, the target must also succeed at a @Check[fortitude|dc:resolve(@actor.attributes.classOrSpellDC.value)|traits:death,incapacitation] saving throw, or be immediately slain."
         },
         "EnchantingArrow": {
           "Note": "On a critical hit, the target also becomes @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}."
@@ -2542,12 +2542,12 @@
           "Note": "Whenever you use an action to Climb or Swim and you succeed at the Athletics check, add a +5-foot item bonus to the distance you move."
         },
         "BlackScorpionStingmace": {
-          "BlackScorpionVenomNote": "<p>On a critical hit, the target is exposed to black scorpion venom.</p>\n<p><strong>Black Scorpion Venom</strong> (poison)</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:36]</p>\n<p><strong>Maximum Duration</strong> 6 rounds</p>\n<p><strong>Stage 1</strong> @Damage[2d12[poison]] damage and @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2} (1 round)</p>\n<p><strong>Stage 2</strong> @Damage[3d12[poison]] damage, clumsy 2, and @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} (1 round)</p>\n<p><strong>Stage 3</strong> @Damage[4d12[poison]] damage, @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 4}, and @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 2} (1 round).</p>"
+          "BlackScorpionVenomNote": "<p>On a critical hit, the target is exposed to black scorpion venom.</p>\n<p><strong>Black Scorpion Venom</strong> (poison)</p>\n<p><strong>Saving Throw</strong> @Check[fortitude|dc:36]</p>\n<p><strong>Maximum Duration</strong> 6 rounds</p>\n<p><strong>Stage 1</strong> @Damage[2d12[poison]] damage and @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2} (1 round)</p>\n<p><strong>Stage 2</strong> @Damage[3d12[poison]] damage, clumsy 2, and @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} (1 round)</p>\n<p><strong>Stage 3</strong> @Damage[4d12[poison]] damage, @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 4}, and @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 2} (1 round).</p>"
         },
         "BoastfulHunter": {
           "BoredLabel": "The Boastful Hunter is Bored",
           "InsultedLabel": "The Boastful Hunter is Insulted",
-          "MisfireNote": "All attacks with an insulted <em>boastful hunter</em> incur a @Check[type:flat|dc:5] misfire chance until the weapon is appeased."
+          "MisfireNote": "All attacks with an insulted <em>boastful hunter</em> incur a @Check[flat|dc:5] misfire chance until the weapon is appeased."
         },
         "Bomb": {
           "Choice": "Type of Bomb",
@@ -2682,7 +2682,7 @@
           "ResistAllLabel": "Activate Scapular of Shields to gain resistance to all damage."
         },
         "SerpentDagger": {
-          "Note": "When you critically succeed at an attack roll with the <em>serpent dagger</em>, the target becomes @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} unless it succeeds at a @Check[type:fortitude|dc:19] save."
+          "Note": "When you critically succeed at an attack roll with the <em>serpent dagger</em>, the target becomes @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} unless it succeeds at a @Check[fortitude|dc:19] save."
         },
         "Sparkler": {
           "CriticalHitNote": "On a critical hit, you cause the target to become @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round.",
@@ -2776,7 +2776,7 @@
       },
       "Fighter": {
         "DazingBlow": {
-          "Note": "If the Strike hits, the creature must attempt a @Check[type:fortitude|dc:resolve(@actor.attributes.classDC.value)|traits:incapacitation] save against your class DC; this is an incapacitation effect.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 2}.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 3}."
+          "Note": "If the Strike hits, the creature must attempt a @Check[fortitude|dc:resolve(@actor.attributes.classDC.value)|traits:incapacitation] save against your class DC; this is an incapacitation effect.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 2}.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 3}."
         },
         "DoubleSlice": {
           "SecondAttackLabel": "Double Slice Second Attack"
@@ -2863,14 +2863,14 @@
         "AttunementShift": "Attunement Shift",
         "TerrainAttunement": {
           "Aquatic": "You gain a swim Speed equal to your land Speed. If you're on a surface, temporary waves of water follow your movements, allowing you to use your swim Speed—if you have one—as your land Speed.",
-          "Arctic": "Enemies must attempt a @Check[type:fortitude] save. They take a –5-foot status penalty to their Speeds for 2 rounds (–10-foot on a critical failure).",
-          "Desert": "Enemies must attempt a @Check[type:fortitude] save. On a failure, they're @UUID[Compendium.pf2e.conditionitems.HL2l2VRSaQHu9lUw]{Fatigued} until they drink water or another potable liquid.",
-          "Forest": "Branches and vines reach out to get in your foes' way. Enemies must attempt a @Check[type:reflex] save. On a failure, they become @UUID[Compendium.pf2e.conditionitems.i3OJZU2nk64Df3xm]{Clumsy 1} for 1 round (@UUID[Compendium.pf2e.conditionitems.i3OJZU2nk64Df3xm]{Clumsy 2} on a critical failure).",
+          "Arctic": "Enemies must attempt a @Check[fortitude] save. They take a –5-foot status penalty to their Speeds for 2 rounds (–10-foot on a critical failure).",
+          "Desert": "Enemies must attempt a @Check[fortitude] save. On a failure, they're @UUID[Compendium.pf2e.conditionitems.HL2l2VRSaQHu9lUw]{Fatigued} until they drink water or another potable liquid.",
+          "Forest": "Branches and vines reach out to get in your foes' way. Enemies must attempt a @Check[reflex] save. On a failure, they become @UUID[Compendium.pf2e.conditionitems.i3OJZU2nk64Df3xm]{Clumsy 1} for 1 round (@UUID[Compendium.pf2e.conditionitems.i3OJZU2nk64Df3xm]{Clumsy 2} on a critical failure).",
           "Label": "Terrain Attunement",
           "Mountain": "You gain resistance to physical damage (except adamantine) equal to the spell level for 1 round.",
           "Plains": "You gain temporary Hit Points equal to the spell level for 1 round.",
           "Sky": "You can Fly up to 10 feet. If you're in the air at the end of the turn and don't have a fly Speed, you fall.",
-          "Swamp": "Affected foes take @Damage[(max(1,floor(@item.level/2)))[persistent,poison]] damage with a @Check[type:fortitude|basic:true] save.",
+          "Swamp": "Affected foes take @Damage[(max(1,floor(@item.level/2)))[persistent,poison]] damage with a @Check[fortitude|basic] save.",
           "Underground": "For 1 round, you gain darkvision as well as imprecise tremorsense out to 15 feet."
         }
       },
@@ -3150,7 +3150,7 @@
             "Label": "Critical Blast",
             "Metal": "The target takes 1d6 persistent bleed damage; if the creature has the metal trait or is made of metal, it instead takes @Damage[1d6[persistent,untyped]] damage with no type from rust. You gain an item bonus to this persistent damage equal to your item bonus to impulse attack rolls, such as from a gate attenuator.",
             "Water": "The blast deals 2 splash damage per damage die of the blast, with the same damage type.",
-            "Wood": "If the target of the critical hit is adjacent to a surface, roots entangle it. The target is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} and must spend an Interact action to attempt a @Check[type:athletics|dc:10] check to pull itself free. The target doesn't become stuck if it is incorporeal, is liquid, or could otherwise escape without effort."
+            "Wood": "If the target of the critical hit is adjacent to a surface, roots entangle it. The target is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} and must spend an Interact action to attempt a @Check[athletics|dc:10] check to pull itself free. The target doesn't become stuck if it is incorporeal, is liquid, or could otherwise escape without effort."
           },
           "ElementalBlast": {
             "Label": {
@@ -3251,7 +3251,7 @@
       },
       "Lich": {
         "HandOfTheLich": {
-          "Note": "The creature is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until the end of your next turn unless it succeeds at a @Check[type:fortitude|dc:resolve(@actor.attributes.spellDC.value)] save against your spell DC."
+          "Note": "The creature is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until the end of your next turn unless it succeeds at a @Check[fortitude|dc:resolve(@actor.attributes.spellDC.value)] save against your spell DC."
         }
       },
       "LitAlicornLance": "Alicorn Lance is lit",
@@ -3443,7 +3443,7 @@
           "TwoActionLabel": "One Inch Punch (Two Actions)"
         },
         "StunningFist": {
-          "Note": "The target must succeed at a @Check[type:fortitude|dc:resolve(@actor.system.proficiencies.classDCs.monk.value)|name:Monk|traits:incapacitation|overrideTraits:true] save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1} (or @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 3} on a critical failure)."
+          "Note": "The target must succeed at a @Check[fortitude|dc:resolve(@actor.system.proficiencies.classDCs.monk.value)|name:Monk|traits:incapacitation|overrideTraits:true] save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1} (or @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 3} on a critical failure)."
         },
         "WolfDrag": {
           "Note": "If the attack succeeds, you knock the target @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}."
@@ -3521,7 +3521,7 @@
           "Toggle": "Used Diverse Mystery cursebound spell"
         },
         "MeddlingFutures": {
-          "Note": "If you attempt to use a different action, you must succeed at a @Check[type:flat|dc:6] or the action is lost."
+          "Note": "If you attempt to use a different action, you must succeed at a @Check[flat|dc:6] or the action is lost."
         },
         "Mystery": {
           "Prompt": "Select a mystery."
@@ -3864,7 +3864,7 @@
           },
           "Critical": {
             "Label": "Critical",
-            "Note": "The target attempts a @Check[type:fortitude|dc:resolve(@actor.system.proficiencies.classDCs.rogue.dc)] save against your class DC with the following effects.<hr><p><strong>Critical Success</strong> The target is unaffected.</p><p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until the end of your next turn.</p><p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 2} until the end of your next turn.</p><p><strong>Critical Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} until the end of your next turn.</p>"
+            "Note": "The target attempts a @Check[fortitude|against:rogue] save against your class DC with the following effects.<hr><p><strong>Critical Success</strong> The target is unaffected.</p><p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until the end of your next turn.</p><p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 2} until the end of your next turn.</p><p><strong>Critical Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} until the end of your next turn.</p>"
           },
           "Enfeebled": {
             "Label": "Enfeebled",
@@ -4015,7 +4015,7 @@
             "Elemental": "Either you gain a +2 status bonus to Intimidation checks for 1 round, or a target takes @Damage[@item.level[@actor.flags.pf2e.elementalBloodline.damageType]] damage. If the spell already deals that type of damage, combine it with the spell's initial damage before determining weaknesses and resistances.",
             "Fey": "Either you gain a +2 status bonus to Performance checks for 1 round, or you can become @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} for 1 round. Such obvious concealment can't be used to @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa]{Hide}",
             "Genie": "Your spellcasting warps reality and distracts your foes. Either you gain a +1 status bonus to Deception checks for 1 round, or a target takes a -1 status penalty to Perception for 1 round.",
-            "Hag": "You deal @Damage[(4*@item.level)[mental]] damage (@Check[type:will|basic:true|dc:resolve(@actor.system.attributes.spellDC.value)] save) to the first creature that deals damage to you before the end of your next turn; if no creature damages you in that time, you consume that spite to gain temporary Hit Points at the beginning of your next turn equal to the spell's rank. These temporary Hit Points last until the beginning of your following turn.",
+            "Hag": "You deal @Damage[(4*@item.level)[mental]] damage (@Check[will|basic|dc:resolve(@actor.system.attributes.spellDC.value)] save) to the first creature that deals damage to you before the end of your next turn; if no creature damages you in that time, you consume that spite to gain temporary Hit Points at the beginning of your next turn equal to the spell's rank. These temporary Hit Points last until the beginning of your following turn.",
             "Harrow": "You become enveloped in possibility, represented as multiple versions of yourself from your possible futures overlaid on each other. You gain @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealement} for 1 round, but can't use the concealment to @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa]{Hide}.",
             "Imperial": "Until the start of your next turn, you gain your choice of either a +1 status bonus to AC or to saving throws.",
             "Title": "Blood Magic",
@@ -4172,7 +4172,7 @@
         "ReverberatingSpell": "The spell deals an additional @Damage[1d8[sonic]] damage and all creatures who fail their save against the spell are @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} for 1 round. Targets who critically fail their saves against this spell are instead deafened for 1 minute. The spell gains the sonic trait.",
         "RockslideSpell": "(@item.rank) 5-foot squares in the area equal to the spell rank become difficult terrain for 1 round. These squares must be on the ground, and the entire area of difficult terrain must be contiguous. The spell gains the earth trait.",
         "ScintillatingSpell": "If your next action is to Cast a Spell that doesn't have the darkness trait, has no duration, and requires creatures to attempt a Reflex save, the spell explodes in a spray of scintillating lights, in addition to its other effects. Each creature that failed its Reflex save against the spell is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round, and those who critically failed are instead @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for 1 round.",
-        "SecondaryDetonationArray": "If your next action is to Cast a Spell that deals damage, has no duration, and affects an area, a glowing magic circle appears in a @Template[type:burst|distance:5] within that area. At the beginning of your next turn, the circle detonates, dealing @Damage[(@item.level)d6[force]] damage to all creatures within the circle, with a @Check[type:reflex|dc:resolve(@actor.system.attributes.spellDC.value)]. If the spell dealt a different type of damage, the circle deals @Damage[(@item.level)d6[@actor.flags.pf2e.spellshape.arrayDamage]]{this type of damage instead} (or one type of your choice if the spell could deal multiple types of damage)",
+        "SecondaryDetonationArray": "If your next action is to Cast a Spell that deals damage, has no duration, and affects an area, a glowing magic circle appears in a @Template[type:burst|distance:5] within that area. At the beginning of your next turn, the circle detonates, dealing @Damage[(@item.level)d6[force]] damage to all creatures within the circle, with a @Check[reflex|dc:resolve(@actor.system.attributes.spellDC.value)]. If the spell dealt a different type of damage, the circle deals @Damage[(@item.level)d6[@actor.flags.pf2e.spellshape.arrayDamage]]{this type of damage instead} (or one type of your choice if the spell could deal multiple types of damage)",
         "SnowdriftSpell": "Select one creature affected by the spell on the ground. Each square on the ground under or adjacent to the creature fills with ankle-deep snow. Those squares are difficult terrain until the beginning of your next turn. A creature can Interact to clear a square of snow, and the snow in a square melts if that square is exposed to a fire effect.",
         "SowSpell": "If your next action is to Cast a Spell using 1 action or 2 actions, the spell instead plants itself in an adjacent square. You must make all decisions regarding the spell at the time you cast it. Within the next 10 minutes, you can direct your sown spell to sprout and produce the spell's effects as a reaction, which is triggered when a creature enters the sown spell's space or a square adjacent to it. You can have only one sown spell at a time, and if you don't trigger the spell within 10 minutes, it dissipates and the spell is lost. A creature can notice the sown spell with a successful Perception check against your spell DC.",
         "SplitHex": "If the next action you use is to Cast a Spell to cast a harmful hex with a single target, reduce its rank by 2 (making it 2 ranks lower than the maximum spell rank you can cast). If you do, you can select a second target for that hex to affect.",
@@ -4196,7 +4196,7 @@
         },
         "BeaconMark": {
           "Description": "When you cast _sigil_, you can modify the spell to add the following heightened entry.",
-          "DescriptionHeightened": "You attune yourself to the marked target. While the spell lasts, you can spend a single action, which has the concentrate, detection, and divination traits, to attempt to locate the target, learning the direction to the target as long as you are within 1 mile of it. If the target is a creature or a creature is in possession of the target object, the creature can attempt a @Check[type:will] saving throw against your spell DC. If it succeeds, your attempt to locate the target fails and you can't attempt this again for 1 day. You can only have a single target marked with a _sigil_ modified in this way. If you Cast this Spell again on a second target, the _sigil_ spell on the first target ends, and your mark fades."
+          "DescriptionHeightened": "You attune yourself to the marked target. While the spell lasts, you can spend a single action, which has the concentrate, detection, and divination traits, to attempt to locate the target, learning the direction to the target as long as you are within 1 mile of it. If the target is a creature or a creature is in possession of the target object, the creature can attempt a @Check[will] saving throw against your spell DC. If it succeeds, your attempt to locate the target fails and you can't attempt this again for 1 day. You can only have a single target marked with a _sigil_ modified in this way. If you Cast this Spell again on a second target, the _sigil_ spell on the first target ends, and your mark fades."
         },
         "ChokingSmoke": {
           "Description": "When you cast _fireball_ heightened to at least 6th rank, you can modify the spell's standard effects as follows: Reduce the spell's damage by 6d6. Your _fireball_ leaves behind a lingering cloud of toxic smoke in its area. While it's smoke instead of mist, this cloud otherwise has the effects of @UUID[Compendium.pf2e.spells-srd.Item.GKpEcy9WId6NJvtx]{Stinking Cloud}."
@@ -4250,7 +4250,7 @@
           "Description": "When you cast _vampiric feast_, you can modify its standard effects as follows: Instead of gaining temporary Hit Points, if your target fails or critically fails its saving throw, you can attempt a counteract check to remove the clumsy or enfeebled conditions on yourself, using the source of that condition to determine the counteract rank and DC. If the condition was caused by an ongoing effect and you don't remove that effect, the condition returns at the end of your next turn."
         },
         "SummonEnsemble": {
-          "Description": "When you cast _summon instrument_, you can modify its duration to be sustained, up to 1 minute. When you do, you summon a number of instruments equal to your spellcasting ability modifier that hover around you and play of their own accord. Once per turn when you Sustain the Spell, choose an opponent within 30 feet who can hear your performance. The target must attempt a @Check[type:will] save against the spell's DC; on a failure, it becomes distracted by your performance and becomes @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} for 1 round. The target is then temporarily immune for 24 hours."
+          "Description": "When you cast _summon instrument_, you can modify its duration to be sustained, up to 1 minute. When you do, you summon a number of instruments equal to your spellcasting ability modifier that hover around you and play of their own accord. Once per turn when you Sustain the Spell, choose an opponent within 30 feet who can hear your performance. The target must attempt a @Check[will] save against the spell's DC; on a failure, it becomes distracted by your performance and becomes @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} for 1 round. The target is then temporarily immune for 24 hours."
         },
         "TopplingTentacles": {
           "Description": "When you cast _black tentacles_, replace the spell's standard effects with the following: Tentacles slither along the ground in the area, attempting to hinder anyone within. Sticky black tentacles attempt to @UUID[Compendium.pf2e.actionspf2e.Item.ge56Lu1xXVFYUnLP]{Trip} each creature in the area. Attempt spell attack rolls against the Reflex DCs of each affected creature. Any creature you succeed against is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} and takes @Damage[3d6[bludgeoning]] damage. Whenever a creature ends its turn in the area, the tentacles attempt to Trip that creature if it isn't already prone, and they deal @Damage[1d6[bludgeoning]] damage to any creature already prone. Creatures treat the spell's area as difficult terrain."
@@ -4262,7 +4262,7 @@
           "Description": "When you cast _sleep_, you can modify the spell to add the following to its standard effects: Subjects of your spell experience troubled dreams. When a target that failed or critically failed its saving throw wakes up, it is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}."
         },
         "VolatileGrease": {
-          "Description": "When you cast _grease_, you can modify its target to be 1 creature. If you do, replace the spell's standard effects with the following: You splash the target with combustible grease. The target must attempt a @Check[type:reflex] save.",
+          "Description": "When you cast _grease_, you can modify its target to be 1 creature. If you do, replace the spell's standard effects with the following: You splash the target with combustible grease. The target must attempt a @Check[reflex] save.",
           "CriticalSuccess": "The target is unaffected.",
           "Failure": "As success, except the weakness to fire lasts for 1 minute.",
           "Success": "The target is splattered with grease and gains weakness 2 to fire until the end of your next turn. The target or an adjacent creature can rub off the combustible grease with an Interact action, ending the effect.",
@@ -4542,7 +4542,7 @@
         }
       },
       "VitalityManipulationStance": {
-        "Note": "When you use Stunning Fist, instead of saving against being stunned, you can choose to have the target make a @Check[type:fortitude|dc:resolve(@actor.attributes.classDC.value)] save against your class DC with the following results. You must choose to do this before the target rolls its save.</p><hr><p><strong>Critical Success</strong> The target is unaffected.</p><p><strong>Success</strong> The target's muscles become temporarily weaker. For 1 round, the target is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2}, and any time it attempts to take an action with the manipulate trait, the action is disrupted unless it succeeds at a flat check with a DC equal to 5 + its enfeebled value.</p><p><strong>Failure</strong> As success, but the duration is 1 minute.</p><p><strong>Critical Failure</strong> As success, but the duration is 1 minute, the flat check is DC 11, and the target takes -10-foot status penalty to all Speeds for the duration.</p>",
+        "Note": "When you use Stunning Fist, instead of saving against being stunned, you can choose to have the target make a @Check[fortitude|dc:resolve(@actor.attributes.classDC.value)] save against your class DC with the following results. You must choose to do this before the target rolls its save.</p><hr><p><strong>Critical Success</strong> The target is unaffected.</p><p><strong>Success</strong> The target's muscles become temporarily weaker. For 1 round, the target is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2}, and any time it attempts to take an action with the manipulate trait, the action is disrupted unless it succeeds at a flat check with a DC equal to 5 + its enfeebled value.</p><p><strong>Failure</strong> As success, but the duration is 1 minute.</p><p><strong>Critical Failure</strong> As success, but the duration is 1 minute, the flat check is DC 11, and the target takes -10-foot status penalty to all Speeds for the duration.</p>",
         "StrikeLabel": "Vitality Blast"
       },
       "WardMedic": {
@@ -4566,7 +4566,7 @@
       "WellspringMage": {
         "CriticalSuccess": "You temporarily recover an expended spell slot of any rank of your choice. The temporary spell slot lasts for 1 minute, and if you don't use it by then, you experience an immediate @UUID[Compendium.pf2e.rollable-tables.RollTable.N0pDFNCffTe2Du39]{Wellspring Surge}.",
         "Failure": "You generate a @UUID[Compendium.pf2e.rollable-tables.RollTable.N0pDFNCffTe2Du39]{Wellspring Surge}, with a spell rank chosen randomly among your top three ranks of spell slots (or all your ranks if you have fewer than three)",
-        "Initiative": "When you roll initiative for a non-trivial combat encounter, as well as in other high-stress situations of the GM's choice, magic wells up within you. Attempt a @Check[type:flat|dc:6|traits:wellspring-magic].",
+        "Initiative": "When you roll initiative for a non-trivial combat encounter, as well as in other high-stress situations of the GM's choice, magic wells up within you. Attempt a @Check[flat|dc:6|traits:wellspring-magic].",
         "Success": "You temporarily recover an expended spell slot of a spell rank chosen randomly among your top three ranks of spell slots (or all your ranks of spell slots if you have fewer than three). The slot lasts 3 rounds instead of 1 minute, otherwise you experience a @UUID[Compendium.pf2e.rollable-tables.RollTable.N0pDFNCffTe2Du39]{Wellspring Surge}."
       },
       "Werecreature": {
@@ -4649,7 +4649,7 @@
               "Title": "Familiar of Overwhelming Tides"
             },
             "ParasiticMight": {
-              "Description": "When you Cast or Sustain a hex, one creature within 15 feet of your familiar with less than half of its maximum Hit Points becomes @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} unless it succeeds at a @Check[type:fortitude|dc:resolve(@actor.system.attributes.spellDC.value)] saving throw.",
+              "Description": "When you Cast or Sustain a hex, one creature within 15 feet of your familiar with less than half of its maximum Hit Points becomes @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} unless it succeeds at a @Check[fortitude|dc:resolve(@actor.system.attributes.spellDC.value)] saving throw.",
               "Title": "Familiar of Parasitic Might"
             },
             "RestoredSpirit": {
@@ -4667,7 +4667,7 @@
             "RollOptionLabel": "You hit the same enemy with two consecutive nail strikes"
           },
           "IronTeeth": {
-            "Note": "A creature that you critically hit with a jaws Strike must succeed at a @Check[type:fortitude|dc:resolve(@actor.system.attributes.classDC.value)] save or become @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}."
+            "Note": "A creature that you critically hit with a jaws Strike must succeed at a @Check[fortitude|against:class] save or become @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}."
           },
           "LivingHair": {
             "SrikeLabel": "Quill"
