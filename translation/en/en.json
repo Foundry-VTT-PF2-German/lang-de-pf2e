@@ -2590,14 +2590,14 @@
           "axe": "Choose one creature adjacent to the initial target and within reach. If its AC is lower than your attack roll result for the critical hit, you deal damage to that creature equal to the result of the weapon damage die you rolled (including extra dice for its <em>striking rune</em>, if any). This amount isn't doubled, and no bonuses or other additional dice apply to this damage.",
           "bomb": "Increase the radius of the bomb's splash damage (if any) to 10 feet.",
           "bow": "If the target of the critical hit is adjacent to a surface, it gets stuck to that surface by the missile. The target is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} and must spend an Interact action to attempt a @Check[athletics|dc:10|name:Pull the Missile Free|showDC:all] check to pull the missile free; it can't move from its space until it succeeds. The creature doesn't become stuck if it is incorporeal, is liquid, or could otherwise escape without effort (such as by being large enough that the missile would not be an impediment.)",
-          "brawling": "The target must succeed at a @Check[fortitude|dc:resolve(@actor.attributes.classDC.value)|name:Brawling Critical Specialization] save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until the end of your next turn.",
+          "brawling": "The target must succeed at a @Check[fortitude|against:class|name:Brawling Critical Specialization] save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until the end of your next turn.",
           "club": "You knock the target up to 10 feet in a straight line away from you, in a direction of your choice. This is forced movement.",
-          "firearm": "The target must succeed at a @Check[fortitude|dc:resolve(@actor.attributes.classDC.value)|name:Firearm Critical Specialization] save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.",
-          "flail": "The target is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} unless they succeed at a @Check[reflex|dc:resolve(@actor.attributes.classDC.value)|name:Flail Critical Specialization] save against your class DC.",
-          "hammer": "The target is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} unless they succeed at a @Check[fortitude|dc:resolve(@actor.attributes.classDC.value)|name:Hammer Critical Specialization] save against your class DC.",
+          "firearm": "The target must succeed at a @Check[fortitude|against:class|name:Firearm Critical Specialization] save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.",
+          "flail": "The target is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} unless they succeed at a @Check[reflex|against:class|name:Flail Critical Specialization] save against your class DC.",
+          "hammer": "The target is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} unless they succeed at a @Check[fortitude|against:class|name:Hammer Critical Specialization] save against your class DC.",
           "polearm": "The target is moved 5 feet in a direction of your choice. This is forced movement.",
           "shield": "You knock the target back from you 5 feet. This is forced movement.",
-          "sling": "The target must succeed at a @Check[fortitude|dc:resolve(@actor.attributes.classDC.value)|name:Sling Critical Specialization] save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.",
+          "sling": "The target must succeed at a @Check[fortitude|against:class|name:Sling Critical Specialization] save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.",
           "spear": "Weapons of this type pierce the target, weakening its attacks. The target is @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} until the start of your next turn.",
           "sword": "The target is made off-balance by your attack, becoming @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} until the start of your next turn."
         },
@@ -3325,9 +3325,17 @@
         "Disabled": "Disabled"
       },
       "Homebrew": {
+        "ArmorGroups": {
+          "Hint": "The mid level of Pathfinder 2e armor taxonomy (e.g, Plate, Chain)",
+          "Name": "Armor Groups"
+        },
+        "BaseArmors": {
+          "Hint": "The bottom level of Pathfinder 2e armor taxonomy (e.g, Full Plate, Chain Mail)",
+          "Name": "Armor Base Types"
+        },
         "BaseWeapons": {
           "Hint": "The bottom level of Pathfinder 2e weapon taxonomy (e.g, Heavy Crossbow, Longsword)",
-          "Name": "Base Weapons"
+          "Name": "Weapon Base Types"
         },
         "ConfirmDelete": {
           "Message": "Delete Homebrew element <strong>{element}</strong>?",
@@ -3345,7 +3353,7 @@
           "Label": "Label"
         },
         "EquipmentTraits": {
-          "Hint": "Traits applicable to equipment other than weapons",
+          "Hint": "Traits applicable to equipment, armor, and consumables",
           "Name": "Equipment Traits"
         },
         "FeatTraits": {
@@ -3361,6 +3369,7 @@
             "Label": "The \"Common\" Language"
           },
           "Hint": "Languages for characters to know or learn (e.g., Draconic, Gnomish)",
+          "Name": "Languages",
           "Rarities": {
             "Common": "<rarity>Common</rarity> Languages",
             "Name": "Language Rarities",
@@ -3375,6 +3384,10 @@
         },
         "Name": "Homebrew Elements",
         "ReservedTerm": "\"{term}\" is a reserved term.",
+        "ShieldTraits": {
+          "Hint": "Traits that can be applied to shields",
+          "Name": "Shield Traits"
+        },
         "SpellTraits": {
           "Hint": "Traits that can be applied to any spell (e.g., Cursebound, Healing)",
           "Name": "Spell Traits"
@@ -3382,11 +3395,8 @@
         "Tabs": {
           "Campaign": "Campaign",
           "Damage": "Damage Types",
-          "Traits": "Traits and Categories"
-        },
-        "EnvironmentTypes": {
-          "Hint": "Any custom environment type",
-          "Name": "Environment Types"
+          "Taxonomies": "Gear Taxonomies",
+          "Traits": "Traits"
         },
         "WeaponCategories": {
           "Hint": "The top level of Pathfinder 2e weapon taxonomy (e.g., Simple, Martial)",
@@ -4133,7 +4143,7 @@
     "TraitDescriptionFire": "Effects with the fire trait deal fire damage, or either conjure or manipulate fire. Those that manipulate fire have no effect in an area without fire. Creatures with this trait consist primarily of fire or have a connection to magical fire.",
     "TraitDescriptionFleshwarp": "A humanoid transformed so completely by outside forces that they are now a unique ancestry.",
     "TraitDescriptionFlexible": "The armor is flexible enough that it doesn't hinder most actions. You don't apply its check penalty to Acrobatics or Athletics checks.",
-    "TraitDescriptionFlourish": "Flourish actions are actions that require too much exertion to perform a large number in a row. You can use only 1 action with the flourish trait per turn.",
+    "TraitDescriptionFlourish": "Actions with the flourish trait are special techniques that require too much exertion for you to perform frequently. You can use only one action with the flourish trait per round.",
     "TraitDescriptionFocus": "Focus spells are a special type of spell attained directly from a branch of study, from a deity, or from another specific source. You can learn focus spells only through special class features or feats, rather than choosing them from a spell list. Furthermore, you cast focus spells using a special pool of Focus Points—you can't prepare a focus spell in a spell slot or use your spell slots to cast focus spells; similarly, you can't spend your Focus Points to cast spells that aren't focus spells.",
     "TraitDescriptionFocused": "An item with this trait can give you an additional Focus Point. This focus point is separate from your focus pool and doesn't count toward the cap on your focus pool. You can gain this benefit only if you have a focus pool, and there might be restrictions on how the point can be used. You can't gain more than 1 Focus Point per day from focused items.",
     "TraitDescriptionFoldaway": "<p>This shield can collapse into a smaller form attached to a gauntlet for stability and easy travel. You can use an Interact action to deploy or stow the shield. While it's deployed, you can Raise the Shield as long as you have that hand free or are holding an object of light Bulk that's not a weapon in that hand. The shield impedes the use of your hand while it's deployed. Though you can still hold items in that hand, you can't wield weapons in that hand, operate anything that takes two hands, or attack with the gauntlet.</p><p>A foldaway shield must be attached to a gauntlet for stability. It can be affixed to an item with 10 minutes of work and a successful DC 10 Crafting check; this includes the time needed to remove the shield from a previous gauntlet, if necessary. If the gauntlet is destroyed, the foldaway shield can usually be salvaged. The collapsible nature of the shield makes it impossible to affix an attached weapon to it.</p>",
