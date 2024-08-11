@@ -8,11 +8,11 @@
       },
       "ExplosiveAmmunition": {
         "Greater": {
-          "Text": "The missile explodes in a @Template[burst|distance:10], dealing @Damage[10d6[fire]] damage to each creature in the area (including the target). Each creature must attempt a @Check[reflex|dc:30|basic|name:Explosive Ammunition] save.",
+          "Text": "Wenn aktivierte Starke Explosivmunition ein Ziel trifft, erzeugt das Geschoss eine @Template[burst|distance:10]{10 Fuß/3 m-Explosion} und verursacht dabei @Damage[10d6[fire]]{10W6 Punkte Feuerschaden} bei jeder Kreatur im Wirkungsbereich (das Ziel eingeschlossen). Jede Kreatur muss einen @Check[reflex|dc:30|basic|name:Explosivmunition]{einfachen Reflexwurf} ablegen.",
           "Title": "Starke Explosivmunition"
         },
         "Normal": {
-          "Text": "The missile explodes in a @Template[burst|distance:10], dealing @Damage[6d6[fire]] damage to each creature in the area (including the target). Each creature must attempt a @Check[reflex|dc:25|basic|name:Explosive Ammunition] save.",
+          "Text": "Wenn aktivierte Explosivmunition ein Ziel trifft, erzeugt das Geschoss eine @Template[burst|distance:10]{10 Fuß/3 m-Explosion} und verursacht dabei @Damage[6d6[fire]]{6W6 Punkte Feuerschaden} bei jeder Kreatur im Wirkungsbereich (das Ziel eingeschlossen). Jede Kreatur muss einen @Check[reflex|dc:25|basic|name:Explosivmunition]{einfachen Reflexwurf} ablegen.",
           "Title": "Explosivmunition"
         }
       },
@@ -37,15 +37,15 @@
       "MeteorShot": {
         "CriticalFailureText": "Bei einem Kritischen Fehlschlag erleidet die Waffe eine Fehlzündung.",
         "Greater": {
-          "Text": "In addition to the weapon's normal damage, the meteor shot deals fire damage and the ground in the area becomes difficult terrain. The ammunition deals @Damage[6d6[fire]] damage in a @Template[emanation|distance:10] around the target (@Check[reflex|dc:29|basic|name:Meteor Shot] save).",
+          "Text": "Neben dem normalen Waffenschaden verursacht die Kugel Feuerschaden und macht den Boden im Wirkungsbereich zu Schwierigem Gelände. Die Kugel verursacht @Damage[6d6[fire]]{6W6 Punkte Feuerschaden} in einer @Template[emanation|distance:10]{10 Fuß/3 m-Ausstrahlung} um das Ziel (@Check[reflex|dc:29|basic|name:Meteoritenschauerkugel]{einfacher Reflexwurf}).",
           "Title": "Starke Meteoritenschauerkugel"
         },
         "Major": {
-          "Text": "In addition to the weapon's normal damage, the meteor shot deals fire damage and the ground in the area becomes difficult terrain. The ammunition deals @Damage[9d6[fire]] damage in a @Template[emanation|distance:20] around the target (@Check[reflex|dc:37|basic|name:Meteor Shot] save).",
+          "Text": "Neben dem normalen Waffenschaden verursacht die Kugel Feuerschaden und macht den Boden im Wirkungsbereich zu Schwierigem Gelände. Die Kugel verursacht @Damage[9d6[fire]]{9W6 Punkte Feuerschaden} in einer @Template[emanation|distance:20]{20 Fuß/6 m-Ausstrahlung} um das Ziel (@Check[reflex|dc:37|basic|name:Meteoritenschauerkugel]{einfacher Reflexwurf}).",
           "Title": "Mächtige Meteoritenschauerkugel"
         },
         "Normal": {
-          "Text": "In addition to the weapon's normal damage, the meteor shot deals fire damage and the ground in the area becomes difficult terrain. The ammunition deals @Damage[3d6[fire]] damage in a @Template[emanation|distance:5] around the target (@Check[reflex|dc:23|basic|name:Meteor Shot] save).",
+          "Text": "Neben dem normalen Waffenschaden verursacht die Kugel Feuerschaden und macht den Boden im Wirkungsbereich zu Schwierigem Gelände. Die Kugel verursacht @Damage[3d6[fire]]{3W6 Punkte Feuerschaden} in einer @Template[emanation|distance:5]{5 Fuß/1,50 m-Ausstrahlung} um das Ziel (@Check[reflex|dc:23|basic|name:Meteoritenschauerkugel]{einfacher Reflexwurf}).",
           "Title": "Meteoritenschauerkugel"
         }
       },
@@ -183,7 +183,7 @@
         "Shove": "Du darfst nach einem Treffer augenblicklich eine Aktion aufwenden, um das Ziel 5 Fuß/1,50 m mit dem Effekt eines erfolgreichen @UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Fortstoßen} wegzuschieben."
       },
       "OozeForm": {
-        "GelatinousCubeNote": "Eine Kreatur, die mit Oberflächenkontakt getroffen wurde, muss einen @Check[fortitude|dc:resolve(@actor.system.attributes.spellDC.value)|traits:incapacitation]{Zähigkeitswurf} gegen deinen Zauber-SG ablegen oder erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1} (oder eine Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt} bei einem Kritischen Fehlschlag); Dieser Rettungswurf ist ein Kampfunfähigkeitseffekt."
+        "GelatinousCubeNote": "A creature hit by your cube face Strike must succeed at a @Check[fortitude|against:spell|traits:incapacitation] save against your spell DC or be @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1} (or @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} for 1 round on a critical failure); this save has the incapacitation trait."
       },
       "WormForm": {
         "PurpleWorm": "Purple Worm",
@@ -228,7 +228,7 @@
         }
       },
       "BioluminescenceBomb": {
-        "success": "<p>Each creature within @Template[emanation|distance:10]{10 feet} of where the bomb exploded must succeed at a @Check[reflex|dc:17] save or be marked with dye that continues to glow for 24 hours. An affected creature must also attempt a @Check[fortitude|dc:17] saving throw against the overwhelming burst of light.</p><p><strong>Success</strong> The creature is unaffected.</p><p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round.</p><p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for 1 round, then dazzled for 1 round.</p>"
+        "success": "<p>Jede Kreatur innerhalb von @Template[emanation|distance:10]{10 Fuß/3 m} um den Explosionsort muss einen @Check[reflex|dc:17]{Reflexwurf} bestehen oder wird mit einem Farbstoff markiert, der 24 Stunden lang leuchtet. Betroffene Kreaturen müssen außerdem einen @Check[fortitude|dc:17]{Zähigkeitswurf} gegen die überwältigende Explosion des Lichts ablegen.</p>\n<p><strong>Erfolg</strong> Die Kreatur ist nicht betroffen</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erhält für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind}, danach für 1 Runde den Zustand Geblendet.</p>"
       },
       "BlightBomb": {
         "Greater": {
@@ -1221,7 +1221,7 @@
       },
       "Life": {
         "DescriptionModerate": "Wenn du eine Handlung abschließt, mit der du einen Zauber wirkst, bei dem es sich nicht um einen Zaubertrick handelt, erhält - nach deiner Wahl - entweder eines der Ziele des Zaubers oder die Kreatur, welche sich dir am nächsten befindet Trefferpunkte in Höhe des Zaubergrades zurück (@Damage[@item.level[healing]]). Du kannst dich auf diese Weise jedoch nicht selbst heilen, Diese Heilung hat die Kategorien Heilung, Leben und Nekromantie, sowie die Kategorie der Tradition des Zaubers.",
-        "DescriptionMajor": "Each time you use a spell slot to cast a 5th-rank or higher spell that takes 2 or more actions to cast, you disperse vitality energy in a @Template[burst|distance:30] with the effects of a 3-action @UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal} spell with a rank 4 lower than that of the spell you cast. This healing occurs immediately after you finish @UUID[Compendium.pf2e.actionspf2e.aBQ8ajvEBByv45yz]{Casting the Spell}. You don't benefit from this healing. Instead, you lose double the number of Hit Points rolled for the heal spell.",
+        "DescriptionMajor": "Immer wenn du einen Zauberplatz verwendest, um einen Zauber des 5. Grades oder höher zu wirken, welcher 2 oder mehr Aktionen erfordert, um ihn zu wirken, strahlst du in einem Umkreis von @Template[burst|distance:30]{30 Fuß/9 m} Lebensenergie aus, mit der Wirkung des Zaubers @UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heilung} wie mit 3 Aktionen gewirkt und mit einem um 4 niedrigeren Grad als der Zauber, den du gewirkt hast. Diese Heilung tritt in Kraft unmittelbar, nachdem du die Handlung Zauber wirken abgeschlossen hast. Du selbst kannst von dieser Heilung keinen Nutzen ziehen. Stattdessen verlierst du die doppelte Anzahl an Trefferpunkten, die du für die Heilung erwürfelt hast.",
         "ToggleLabel": "Alle Ziele der Heilung sind lebende Kreaturen"
       },
       "Time": {
@@ -1870,7 +1870,7 @@
       "AlkenstarAgent": {
         "LooseCannon": {
           "Note": {
-            "CriticalFailure": "The firearm misfires and also explodes. It becomes @UUID[Compendium.pf2e.conditionitems.Item.6dNUvdb1dhToNDj3]{Broken}, and it deals its normal weapon damage to all creatures in a @Template[burst|distance:20] centered on the firearm, with a @Check[reflex|dc:resolve(@actor.attributes.classDC.value)|basic]. This damage includes any from the weapon's fundamental and property runes.",
+            "CriticalFailure": "The firearm misfires and also explodes. It becomes @UUID[Compendium.pf2e.conditionitems.Item.6dNUvdb1dhToNDj3]{Broken}, and it deals its normal weapon damage to all creatures in a @Template[burst|distance:20] centered on the firearm, with a @Check[reflex|against:class|basic]. This damage includes any from the weapon's fundamental and property runes.",
             "Failure": "Es kommt zu einer Fehlzündung, aber nicht  zu den Kritischen Fehlschlagseffekten."
           }
         }
@@ -2228,7 +2228,7 @@
           "Description": "Nachdem du einen Domänenzauber gewirkt hast, erhältst du Resistenz gegen allen Schaden in Höhe des Grades des gewirkten Zaubers bis zum Beginn deines nächsten Zuges."
         },
         "DirectedChannel": {
-          "ItemAlterationNote": "You can make the area a @Template[cone|distance:60] instead of an emanation."
+          "ItemAlterationNote": "Du kannst den Wirkungsbereich von einer Ausstrahlung zu einem @Template[cone|distance:60]{60 Fuß/18 m Kegel} ändern."
         },
         "DivineFont": {
           "Harmful": "Verletzend",
@@ -2500,7 +2500,7 @@
       },
       "EldritchArcher": {
         "ArrowOfDeath": {
-          "Note": "Bei einem Kritischen Treffer muss das Ziel einen @Check[fortitude|dc:resolve(@actor.attributes.classOrSpellDC.value)|traits:death,incapacitation]{Zähigkeitswurf} ablegen, oder wird sofort getötet."
+          "Note": "On a critical hit, the target must also succeed at a @Check[fortitude|against:class-spell|traits:death,incapacitation] saving throw, or be immediately slain."
         },
         "EnchantingArrow": {
           "Note": "Bei einem Kritischen Treffer erleidet das Ziel zusätzlich den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1}."
@@ -2776,7 +2776,7 @@
       },
       "Fighter": {
         "DazingBlow": {
-          "Note": "Bei einem Treffer muss die Kreatur einen @Check[fortitude|dc:resolve(@actor.attributes.classDC.value)|traits:incapacitation]{Zähigkeitswurf} gegen deinen Klassen-SG ablegen; dieser Effekt hat die Kategorie Kampfunfähig.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 2}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 3}."
+          "Note": "If the Strike hits, the creature must attempt a @Check[fortitude|against:class|traits:incapacitation] save against your class DC; this is an incapacitation effect.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 2}.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 3}."
         },
         "DoubleSlice": {
           "SecondAttackLabel": "Zweiter Angriff von Doppelschnitt"
@@ -3225,7 +3225,7 @@
           "VenomtailKobold": "Giftschwanzkobold"
         },
         "DragonsBreath": {
-          "DescriptionAlteration": "You channel your draconic exemplar's power into a gout of energy that manifests as a @Template[line|distance:60] or a @Template[cone|distance:30], dealing @Damage[ceil(@actor.level/2)d8[@actor.flags.pf2e.draconicExemplar.damageType]|traits:area-damage] damage. Each creature in the area must attempt a basic saving throw against the higher of your class DC or spell DC. You can't use this ability again for 1 hour."
+          "DescriptionAlteration": "Du besitzt die Fähigkeit, einen besonders mächtigen Odem auszustoßen, was dir allerdings im Gegenzug auch mehr Kraft abverlangt. Du kannst somit den Schadenswürfel deines Koboldodems auf vom W4 auf W8 (@Damage[ceil(@actor.level/2)d8[@actor.flags.pf2e.draconicExemplar.damageType]|traits:area-damage]) sowie den Wirkungsbereich auf eine @Template[line|distance:60]{60 Fuß/18 m} lange Linie bzw. einen @Template[cone|distance:30]{Kegel mit 30 Fuß/9 m} Radius verbessern, deinen Koboldodem anschließend aber 1 Stunde lang nicht erneut einsetzen."
         },
         "DragonsPresence": {
           "Note": "Wenn du einen Erfolg bei einem Rettungswurf gegen einen Furchteffekt erzielst, erhältst du stattdessen einen kritischen Erfolg. Wenn du einen Fehlschlag gegen einen Furchteffekt würfelst, erhältst du stattdessen einen kritischen Fehlschlag."
@@ -3251,7 +3251,7 @@
       },
       "Lich": {
         "HandOfTheLich": {
-          "Note": "Die Kreatur ist bis zum Ende deiner nächsten Runde @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}, außer sie hat bei einem @Check[fortitude|dc:resolve(@actor.system.attributes.spellDC.value)] gegen deinen Zauber-SG Erfolg.."
+          "Note": "The creature is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until the end of your next turn unless it succeeds at a @Check[fortitude|against:spell] save against your spell DC."
         }
       },
       "LitAlicornLance": "Alicornlanze leuchtet",
@@ -3443,7 +3443,7 @@
           "TwoActionLabel": "Konzentrierter Faustschlag (Zwei Aktionen)"
         },
         "StunningFist": {
-          "Note": "The target must succeed at a @Check[fortitude|against:monk|name:Monk|traits:incapacitation|overrideTraits:true] save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1} (or @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 3} on a critical failure)."
+          "Note": "Das Ziel muss einen @Check[fortitude|against:monk|name:Mönch|traits:incapacitation|overrideTraits:true]{Zähigkeitswurf} gegen deinen Klassen-SG ablegen; bei einem Fehlschlag erhält es den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1} (bei einem Kritischen Fehlschlag @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 3})."
         },
         "WolfDrag": {
           "Note": "Bei einem erfolgreichen Angriff verleihst du dem Ziel den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}."
@@ -3655,7 +3655,7 @@
             "AmpHeightenedNinth": "Erhöhte Verstärkung (9.)",
             "AmpHeightenedTenth": "Erhöhte Verstärkung (10.)"
           },
-          "AstralRain": "The area changes to a @Template[burst|distance:5], and you can Sustain the Spell up to 1 minute. The first time each round that you Sustain the Spell, you can move the burst up to 20 feet.",
+          "AstralRain": "Der Wirkungsbereich verändert sich zu einer @Template[burst|distance:5]{5 Fuß/1,50 m-Explosion} und du kannst den Zauber bis zu 1 Minute lang aufrechterhalten. Wenn du den Zauber erstmal während einer Runde aufrechterhältst, kannst du die Explosion um bis zu 20 Fuß/6 m weit bewegen.",
           "ContagiousIdea": "Du kannst wählen, den Gedanken vom zweiten Ziel auf ein drittes Ziel weiterzutragen unter denselben Bedingungen wie beim ersten zum zweiten Ziel. Ein Angenehmer Gedanke verleiht das Doppelte an Temporären Trefferpunkten (10; plus 2 pro Graderhöhung).",
           "DancingBlade": {
             "Base": "Die Angriffe der Waffe werden stärker und deine Kontrolle wächst. Der Waffenschadenswürfel steigt von W6 zu W10. Wenn du den Zauber wirkst oder aufrechterhältst, kannst du neben den Standardoptionen aus den folgenden Optionen wählen.",
@@ -3723,11 +3723,11 @@
             "Heightened": "Der Schaden des Geschosses steigt um 2W4 statt 1W4."
           },
           "RedistributePotential": {
-            "Base": "You can affect the flow of energy on a much grander scale. Instead of two 5-foot squares, you create two @Template[burst|distance:10]{10-foot bursts}. They still must be adjacent to one another and can overlap. A creature in both areas can still be affected by only one of your choice. The spell's damage increases to 6d6. The conditions last for 1 minute.",
+            "Base": "Du kannst den Energiefluss in weitaus größerem Maßstab betreffen. Statt zwei Felder mit jeweils 5 Fuß/1,50 m Seitenlänge erzeugst du zwei @Template[burst|distance:10]{10 Fuß/3 m-Explosionen}. Diese müssen immer noch zueinander angrenzen und können sich überlappen. Eine Kreatur in beiden Bereichen wird immer noch nur von einem betroffen (deine Wahl). Der Schaden steigt auf 6W6 Punkte. Die Zustände währen 1 Minute lang.",
             "Heightened": "Erhöhe den Schaden um 2W6 statt um 1W4."
           },
           "RemovePresence": "Wähle ein Ziel des Zaubers oder eine Kreatur im Wirkungsbereich des Zaubers. Wird dieser Gegner vom Zauber getroffen, bzw. misslingt sein Rettungswurf, erhältst du ihm gegenüber den Zustand Unentdeckt und verschwindest für 1 Minute aus seiner Sinneswahrnehmung, sofern du nicht vorher eine feindselige Handlung ausführst. Diese ähnelt @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Unsichtbar}, allerdings enthüllen dich Effekte wie Unsichtbares wahrnehmen nicht - du beeinflusst den Verstand des Zieles, nicht seine Sicht. Wahre Sicht kann diese Illusion durchschauen, sofern der Wurf zum Entgegenwirken gelingt.",
-          "ShatterMind": "You increase the area of the spell to your choice of a @Template[cone|distance:30] or @Template[cone|distance:60], and the damage dice for the spell change to d10s. Creatures that fail are @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} until the start of your next turn (or @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2} on a critical failure).",
+          "ShatterMind": "Du erhöhst den Wirkungsbereich zu einem @Template[cone|distance:30]{30 Fuß/9 m-Kegel} oder einen @Template[cone|distance:60]{60 Fuß/18 m-Kegel} (deine Wahl) und der Schadenswürfel des Zaubers verändert sich zu W10. Misslingt einer Kreatur der Rettungswurf, erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 1} bis zum Beginn deines nächsten Zuges (bzw. @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 2} im Fall eines Kritischen Fehlschlages).",
           "ShatterSpace": "Du oder das Ziel des Zaubers werden von einer Spirale aus zerrissener Realität umgeben. Dies ist eine Aura; wähle den Radius der Ausstrahlung (maximal 20 Fuß/6 m). Beginnt eine Kreatur ihren Zug in der Aura oder betritt sie die Aura während ihres Zuges, erleidet sie 1W6 Punkte Hiebschaden pro Grad des Verstärkten Mentalen Zaubertricks (@Damage[(@item.level)d6[slashing]], einfacher Reflexwurf gegen deinen Zauber-SG). Im Fall eines Kritischen Fehlschlages verliert die Kreatur das Gleichgewicht, stürzt und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}. Die Aura währt bis zum Beginn deines nächsten Zuges. Du entscheidest, ob die von dir als Zentrum der Aura bestimmte Kreatur (also du oder das Ziel des Zaubers) von ihr betroffen wird.",
           "Shield": {
             "Base": "Du erschaffst eine gestaffelte Barriere aus drei Schildeffekten, um deine Verteidigung zu verbessern. Die Wirkungsdauer steigt auf Bis zu 1 Minute aufrechterhaltbar. Der Schild senkt sich immer noch zu Beginn jedes deiner Züge, du kannst ihn aber wieder heben, wenn du den Zauber aufrechterhältst.",
@@ -3744,7 +3744,7 @@
           },
           "TelekineticRend": {
             "Base": "Deine Gedanken gewinnen an Umfang und Kraft. Die Explosionen verursachen jeweils 1W6 Punkte Hiebschaden und 1W6 Punkte Wuchtschaden. Erzielt eine Kreatur bei ihrem Rettungswurf einen Kritischen Fehlschlag, erhält sie zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1}.",
-            "Heightened": "Both types of damage increase by 1d6 instead of just one. Add a third non-overlapping @Template[burst|distance:5] to the area."
+            "Heightened": "Der Schaden steigt für beide Schadensarten um 1W6 Punkte statt nur bei einer. Du erzeugst innerhalb der Reichweite eine dritte @Template[burst|distance:5]{5 Fuß/1,50 m-Explosion}, die sich mit den anderen nicht überlappen darf."
           },
           "TesseractTunnel": "Du musst dich nicht mehr von Punkt A nach Punkt B bewegen, um dabei einen Tunnel zu öffnen. Stattdessen bestimmst du beim Wirken des Zaubers ein Feld innerhalb deiner Bewegungsrate; du kannst dann ggf. augenblicklich auf das andere Feld teleportieren. Zudem ist der Tunnel in beide Richtungen begehbar und keine Einbahnstraße mehr. Die Wirkungsdauer steigt auf 1 Minute; du kannst den Zauber vorzeitig Aufheben.",
           "ThermalStasis": "Die Wirkungsdauer steigt auf 1 Minute.",
@@ -4015,7 +4015,7 @@
             "Elemental": "Either you gain a +2 status bonus to Intimidation checks for 1 round, or a target takes @Damage[@item.level[@actor.flags.pf2e.elementalBloodline.damageType]] damage. If the spell already deals that type of damage, combine it with the spell's initial damage before determining weaknesses and resistances.",
             "Fey": "Either you gain a +2 status bonus to Performance checks for 1 round, or you can become @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} for 1 round. Such obvious concealment can't be used to @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa]{Hide}",
             "Genie": "Deine Zauberei verzerrt die Realität und lenkt deine Gegner ab. Du erlangst entweder einen Zustandsbonus von +1 auf Fertigkeitswürfe für Täuschung für 1 Runde oder ein Ziel erleidet einen Zustandsmalus von -1 auf Wahrnehmung für 1 Runde.",
-            "Hag": "You deal @Damage[(4*@item.level)[mental]] damage (@Check[will|basic|dc:resolve(@actor.system.attributes.spellDC.value)] save) to the first creature that deals damage to you before the end of your next turn; if no creature damages you in that time, you consume that spite to gain temporary Hit Points at the beginning of your next turn equal to the spell's rank. These temporary Hit Points last until the beginning of your following turn.",
+            "Hag": "You deal @Damage[(4*@item.level)[mental]] damage (@Check[will|basic|against:spell] save) to the first creature that deals damage to you before the end of your next turn; if no creature damages you in that time, you consume that spite to gain temporary Hit Points at the beginning of your next turn equal to the spell's rank. These temporary Hit Points last until the beginning of your following turn.",
             "Harrow": "You become enveloped in possibility, represented as multiple versions of yourself from your possible futures overlaid on each other. You gain @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealement} for 1 round, but can't use the concealment to @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa]{Hide}.",
             "Imperial": "Until the start of your next turn, you gain your choice of either a +1 status bonus to AC or to saving throws.",
             "Title": "Blutmagie",
@@ -4151,10 +4151,10 @@
         "EbbAndFlow": "Wähle eine Kreatur innerhalb der Reichweite, welche durch den Zauber geheilt werden soll, und eine weitere innerhalb der Reichweite, die durch den Zauber Schaden erleiden soll. Dein Zauber <em>Heilung</em> oder <em>Leid</em> hat beide Kreaturen als Ziele.",
         "EchoingChannel": "Wähle eine weitere Kreatur innerhalb der Reichweite des Zaubers. Diese Kreatur wird das Ziel der Version zu 1 Aktion desselben Zaubers mit demselben Grad wie die 2-Aktionen-Version, ohne dass dies einen weiteren Zauberplatz verbraucht.",
         "EnergyAblation": "Sollte deine nächste Handlung das Wirken eines Zaubers sein, der Schaden wenigstens einer Energiekategorie (Elektrizität, Feuer, Kälte, Kraft, Leben, Leere, Säure oder Schall) verursachen würde, erlangst du Resistenz gegen eine Energiekategorie deiner Wahl in Höhe des Zaubergrades (Minimum 1) bis zum Ende deines nächsten Zuges. Du erlangst die Resistenz unabhängig davon, ob deine Zauber Schaden verursacht oder nicht.",
-        "ExplosiveArrival": "If your next action is to Cast a Spell with the summon trait, all creatures in a @Template[emanation|distance:10] around the creature you summoned take @Damage[(@item.level)d4[fire]] damage. If the creature summoned has the @Damage[(@item.level)d4[acid]]{acid}, @Damage[(@item.level)d4[cold]]{cold}, @Damage[(@item.level)d4[electricity]]{electricity}, @Damage[(@item.level)d4[sonic]]{sonic}, or @Damage[(@item.level)d4[spirit]]{spirit} trait, you can deal damage of that type instead.",
+        "ExplosiveArrival": "Sofern du als nächste Handlung einen Zauber der Kategorie Beschwörung wirkst, erleiden alle Kreaturen innerhalb von @Template[emanation|distance:10]{10 Fuß/3 m} um die beschworene Kreatur herum 1W4 Feuerschaden pro Zaubergrad (@Damage[(@item.level)d4[fire]]). Sollte die beschworene Kreatur die Kategorie Elektrizität, Kälte, Säure oder Schall besitzen, so kannst du stattdessen Schaden dieser Art verursachen (@Damage[(@item.level)d4[electricity]], @Damage[(@item.level)d4[cold]], @Damage[(@item.level)d4[acid]], @Damage[(@item.level)d4[sonic]]). Sollte sie die Kategorie Geist besitzen, so kannst du alternativ Seelenschaden verursachen (@Damage[(@item.level)d4[spirit]]).",
         "ForcibleEnergy": "Sollte deine nächste Handlung das Wirken eines Zaubers sein, der Elektrizitäts-, Feuer-, Säure- oder Schallschaden verursacht, kannst du ein Ziel wählen, so es Schaden erleidet. Dieses Ziel erhält Schwäche 5 gegen diese Schadensart bis zum Ende deines nächsten Zuges. Sollte ein Zauber mehrere Arten von Energieschaden verursachen, so wähle eine davon, gegen die das Ziel Schwäche erleidet. Dies hat keinen Effekt auf Kreaturen mit Resistenz oder Immunität gegen die gewählte Schadensart. @UUID[Compendium.pf2e.feat-effects.Item.0Ai0u9kNJrEudPnN]{Effekt: Nachhallende Energie}",
         "FormControl": "Der effektive Zaubergrad des Zaubers ist um 2 niedriger als normal (Minimum 1. Grad), dafür kannst du die Verwandlung bis zu 1 Stunde aufrechterhalten, sofern dies länger ist als die aufgeführte Wirkungsdauer. Du kannst den Effekt immer noch jederzeit Aufheben, sofern es der Zauber gestattet.",
-        "GarlandSpell": "A garland of plants grows in a @Template[burst|distance:10] in the spell's range. The plants are difficult terrain and hazardous terrain, covered in your choice of thorns or poisonous vines. Any creature that moves into one of these squares or ends its turn in one takes @Damage[2d6[piercing]]damage for thorns or @Damage[2d6[poison]] for vines. A creature can take this damage only once per turn. You and your familiar are immune to this damage. The plants last for 1 minute or until you cast another Garland Spell, whichever comes first. The damage increases to 3d6 at 16th level and 4d6 at 20th level.",
+        "GarlandSpell": "Wucherndes Pflanzenleben wächst in einer @Template[burst|distance:10]{10 Fuß/3 m-Explosion} innerhalb der Reichweite des Zaubers. Dieser Bereich ist Schwieriges Gelände und Gefährliches Gelände und mit deiner Wahl von Dornen oder giftigen Ranken bedeckt. Bewegt sich eine Kreatur auf eines dieser Felder oder beendet in einem ihren Zug, so erleidet sie 2W6 Schadenspunkte (Stichschaden bei Dornen, Giftschaden bei Ranken). Eine Kreatur kann diesen Schaden nur einmal pro Zug erleiden. Du und dein Vertrauter seid gegen diesen Schaden immun. Die Pflanzen bestehen 1 Minute lang, verschwinden aber vorzeitig, solltest du eher einen weiteren Wuchernden Zauber wirken. Der Schaden steigt mit der 16. Stufe auf 3W6 Punkte und mit der 20. Stufe auf 4W6 Punkte (@Damage[(ternary(gte(@actor.level,20),4,ternary(gte(@actor.level,16),3,2)))d6[piercing]] @Damage[(ternary(gte(@actor.level,20),4,ternary(gte(@actor.level,16),3,2)))d6[poison]]).",
         "GrowthSpell": "Erweitere den Flächeneffekt des Zaubers. Bei einem Explosionsradius steigt der Radius um 5 Fuß/1,50 m, bei einem Kegel wächst der Kegel um 10 Fuß/3 m, bei einer Linie wächst die Linie um 15 Fuß/4,50 m. Der Zauber erlangt die Kategorie Holz.",
         "GustingSpell": "If the next action you use is to Cast a Spell with the air or electricity trait, you can Fly up to 10 feet before or after the spell is cast.",
         "Harmonize": "Sollte deine nächste Handlung darin bestehen eine Komposition zu wirken, wird diese zu einer Harmonischen Komposition. Im Gegensatz zu einer normalen Komposition endet eine Harmonische Komposition nicht, wenn du eine andere Komposition wirkst, so dass du eine andere Komposition im selben Zug wie eine harmonische Komposition wirken kannst. Wirkst du allerdings eine andere Harmonische Komposition, so endet der Effekt einer früheren Harmonischen Komposition.",
@@ -4172,7 +4172,7 @@
         "ReverberatingSpell": "Der Zauber verursacht zusätzliche @Damage[1d8[sonic]]{1W8 Schallschaden}. Jede Kreatur, deren Rettungswurf gegen den Zauber misslingt, erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Taub} für 1 Runde (bzw. 1 Minute im Fall eines Kritischen Fehlschlages). Der Zauber erhält die Kategorie Schall.",
         "RockslideSpell": "Der Zauber wandelt (@item.rank) * 5 Fuß/1,50 m-Felder innerhalb des Wirkungsbereiches zu Schwierigem Gelände um. Diese Felder müssen sich auf der Erdoberfläche befinden. Der Zauber erhält die Kategorie Erde.",
         "ScintillatingSpell": "Sofern du als nächste Handlung einen Zauber wirkst, der nicht die Kategorie Dunkel besitzt, über keine Wirkungsdauer verfügt und von Kreaturen einen Reflexwurf verlangt, explodiert der Zauber in strahlenden Lichtern neben seinen sonstigen Effekten. Jede Kreatur, deren Reflexwurf misslingt, erhält 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet} (bzw. 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind} im Fall eines Kritischen Fehlschlages).",
-        "SecondaryDetonationArray": "If your next action is to Cast a Spell that deals damage, has no duration, and affects an area, a glowing magic circle appears in a @Template[burst|distance:5] within that area. At the beginning of your next turn, the circle detonates, dealing @Damage[(@item.level)d6[force]] damage to all creatures within the circle, with a @Check[reflex|dc:resolve(@actor.system.attributes.spellDC.value)]. If the spell dealt a different type of damage, the circle deals @Damage[(@item.level)d6[@actor.flags.pf2e.spellshape.arrayDamage]]{this type of damage instead} (or one type of your choice if the spell could deal multiple types of damage)",
+        "SecondaryDetonationArray": "If your next action is to Cast a Spell that deals damage, has no duration, and affects an area, a glowing magic circle appears in a @Template[burst|distance:5] within that area. At the beginning of your next turn, the circle detonates, dealing @Damage[(@item.level)d6[force]] damage to all creatures within the circle, with a @Check[reflex|against:spell]. If the spell dealt a different type of damage, the circle deals @Damage[(@item.level)d6[@actor.flags.pf2e.spellshape.arrayDamage]]{this type of damage instead} (or one type of your choice if the spell could deal multiple types of damage)",
         "SnowdriftSpell": "Wähle eine Kreatur am Boden, die von dem Zauber betroffen ist. Jedes Feld am Boden unter und angrenzend zu dieser Kreatur füllt sich mit knöchelhohem Schnee. Diese Felder sind bis zum Beginn deines nächsten Zuges Schwieriges Gelände. Eine Kreatur kann Interagieren nutzen, um ein Feld vom Schnee zu räumen. Der Schnee in einem Feld schmilzt, sollte das Feld einem Feuereffekt ausgesetzt werden.",
         "SowSpell": "Sofern du als nächste Handlung einen Zauber wirkst, der 1 oder 2 Aktionen als Zeitaufwand hat, pflanzt sich der Zauber selbst in ein angrenzendes Feld. Du musst alle Entscheidungen hinsichtlich des Zaubers beim Wirken treffen. Innerhalb der nächsten 10 Minuten kannst du den ausgesäten Zauber sodann anweisen, zu sprießen und die Effekte des Zaubers als Reaktion zu generieren. Diese Reaktion wird ausgelöst, wenn eine Kreatur das Feld des Zaubers oder ein daran angrenzendes Feld betritt. Du kannst stets nur über einen ausgesäten Zauber verfügen; solltest du ihn nicht innerhalb von 10 Minuten auslösen, verpufft die Zauberenergie und ist verloren. Eine Kreatur kann den ausgesäten Zauber mit einem erfolgreichen @Check[perception|dc:resolve(@actor.system.attributes.spellDC.value)]{Wahrnehmungswurf} gegen deinen Zauber-SG bemerken.",
         "SplitHex": "Sofern du als nächste Handlung einen Zauber wirkst, um eine schädigende Hexerei auf ein einzelnes Ziel zu wirken, reduziere den Grad um 2 (d.h. um 2 Grade unter deinen maximalen Hexenzaubergrad). Dadurch kann deine Hexerei ein zweites Ziel betreffen.",
@@ -4230,7 +4230,7 @@
           "DescriptionHeightened": "Der Schaden erhöht sich um 1W6 und der anhaltende Feuerschaden um 2."
         },
         "ScatteredFire": {
-          "Description": "When you cast _fireball_, you can modify its area to be two non-overlapping @Template[burst|distance:10]{10-foot bursts}."
+          "Description": "<p>Wenn du _Feuerball_ wirkst, kannst du den Zauber so modifizieren, dass der Bereich aus zwei sich nicht überschneidenden @Template[burst|distance:10]{10 Fuß/3 m} Explosionen besteht.</p>"
         },
         "ShiningArms": {
           "Description": "Wenn du den Zauber _Licht_ wirkst, kannst du das Ziel so modifizieren, dass es eine Nahkampfwaffe ist. Dies kann entweder eine nicht getragene Waffe oder eine Waffe in deinem Besitz bzw. im Besitz eines willigen Verbündeten sein. Außerdem modifizierst du die Wirkungsdauer, sodass sie 1 Minute beträgt. Wenn du dies tust, füge den folgenden Effekt hinzu: Erzielt eine Kreatur, welche die Leuchtende Waffe benutzt, einen Kritischen Treffer gegen eine Kreatur, kannst du den Zauber als Reaktion beenden, wodurch der Gegner 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet} erleidet. Nachdem du diese Reaktion genutzt hast, kannst du diese Modifikation für die nächsten 10 Minuten nicht erneut nutzen.",
@@ -4244,7 +4244,7 @@
           "Description": "Wenn du _Feuerball_ auf mindestens Grad 4 erhöht wirkst, kannst du den Zauber modifizieren und den folgenden Effekt dem normalen Effekt hinzufügen: Dein _Feuerball_ hinterlässt eine flüchtige Wolke aus Rauch im Wirkungsbereich. Obwohl es sich um eine Rauchwolke anstelle von Nebel handelt, hat diese denselben Effekt wie @UUID[Compendium.pf2e.spells-srd.Item.9XHmC2JgTUIQ1CCm]{Nebel}, mit der Ausnahme, dass die Rauchwolke nur eine Runde lang anhält."
         },
         "SurroundingFlames": {
-          "Description": "When you cast _wall of fire_, you can modify its standard effects as follows: Instead of a 5-foot-thick, 10-foot-radius ring of flame, you can form the wall into a @Template[burst|distance:10]{10-foot-radius} hemisphere of fire."
+          "Description": "Wenn du _Feuerwand_ wirkst, kannst du den normalen Effekt modifizieren: Anstelle eines 5 Fuß/1,50 m breiten Feuerringes mit 10 Fuß/3 Metern Radius kannst du die Feuerwand in eine 10 Fuß/3-m-Halbsphäre aus Feuer umformen."
         },
         "StealVitality": {
           "Description": "<p>Wenn du _Vampirschmaus_ wirkst, kannst du die normalen Effekte wie folgt modifizieren: Statt temporäre Trefferpunkte zu erhalten, wenn das Ziel einen Fehlschlag oder Kritischen Fehlschlag bei seinem Rettungswurf erleidet, kannst du stattdessen einen Wurf zum @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.mmfWcV3Iyql5nzTo]{Entgegenwirken} ablegen, um selbst den Zustand Unbeholfen oder Kraftlos abzulegen. Du nutzt den Ursprung des Zustands, um den Entgegenwirkengrad und den Entgegenwirken-SG zu bestimmen. Wenn der Zustand durch einen anhaltenden Effekt verursacht wurde und du den Effekt nicht entfernst, kehrt der Zustand am Ende deines nächsten Zuges zurück.</p>"
@@ -4542,7 +4542,7 @@
         }
       },
       "VitalityManipulationStance": {
-        "Note": "When you use Stunning Fist, instead of saving against being stunned, you can choose to have the target make a @Check[fortitude|dc:resolve(@actor.attributes.classDC.value)] save against your class DC with the following results. You must choose to do this before the target rolls its save.</p><hr><p><strong>Critical Success</strong> The target is unaffected.</p><p><strong>Success</strong> The target's muscles become temporarily weaker. For 1 round, the target is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2}, and any time it attempts to take an action with the manipulate trait, the action is disrupted unless it succeeds at a flat check with a DC equal to 5 + its enfeebled value.</p><p><strong>Failure</strong> As success, but the duration is 1 minute.</p><p><strong>Critical Failure</strong> As success, but the duration is 1 minute, the flat check is DC 11, and the target takes -10-foot status penalty to all Speeds for the duration.</p>",
+        "Note": "When you use Stunning Fist, instead of saving against being stunned, you can choose to have the target make a @Check[fortitude|against:class] save against your class DC with the following results. You must choose to do this before the target rolls its save.</p><hr><p><strong>Critical Success</strong> The target is unaffected.</p><p><strong>Success</strong> The target's muscles become temporarily weaker. For 1 round, the target is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2}, and any time it attempts to take an action with the manipulate trait, the action is disrupted unless it succeeds at a flat check with a DC equal to 5 + its enfeebled value.</p><p><strong>Failure</strong> As success, but the duration is 1 minute.</p><p><strong>Critical Failure</strong> As success, but the duration is 1 minute, the flat check is DC 11, and the target takes -10-foot status penalty to all Speeds for the duration.</p>",
         "StrikeLabel": "Vitality Blast"
       },
       "WardMedic": {
@@ -4629,7 +4629,7 @@
               "Title": "Vertrauter der Wandelnden Schriftzeichen"
             },
             "FreezingRime": {
-              "Description": "Your familiar is cold to the touch, its breath always visible. When you Cast or Sustain a hex, you can cause ice to form in a @Template[burst|distance:5] centered on a square of your familiar's space. Those squares are difficult terrain until the start of your next turn.",
+              "Description": "Dein Vertrauter fühlt sich eiskalt an und man kann seinen Atem stets sehen. Wenn du eine Hexerei wirkst oder Aufrechterhältst, kannst du von einem Feld der Angriffsfläche deines Vertrauten aus in einer @Template[burst|distance:5]{5 Fuß/1,50 m-Explosion} Eis entstehen lassen. Diese Felder sind bis zum Beginn deines nächsten Zuges Schwieriges Gelände.",
               "Title": "Vertrauter des Frostigen Reifs"
             },
             "KeenSenses": {
@@ -4649,7 +4649,7 @@
               "Title": "Vertrauter der Überwältigenden Fluten"
             },
             "ParasiticMight": {
-              "Description": "Wenn du eine Hexerei wirkst oder Aufrechterhältst, kann dein Vertrauter auf die schwindende Stärke anderer zurückgreifen, um sich zu nähren. Eine Kreatur innerhalb von 15 Fuß/4,50 m Entfernung zu deinem Vertrauten, die über weniger als die Hälfte ihrer maximalen Trefferpunkte verfügt, muss einen @Check[fortitude|dc:resolve(@actor.system.attributes.spellDC.value)]{Zähigkeitswurf (Zauber SG)} ablegen; bei Misslingen erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1}.",
+              "Description": "When you Cast or Sustain a hex, one creature within 15 feet of your familiar with less than half of its maximum Hit Points becomes @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} unless it succeeds at a @Check[fortitude|against:spell] saving throw.",
               "Title": "Vertrauter von Parasitärer Macht"
             },
             "RestoredSpirit": {
