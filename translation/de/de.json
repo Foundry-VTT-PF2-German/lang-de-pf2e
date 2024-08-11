@@ -2590,14 +2590,14 @@
           "axe": "Wähle eine Kreatur angrenzend zu deinem ursprünglichen Ziel aus, die sich innerhalb deines Angriffsradius befindet. Wenn die RK dieser Kreatur niedriger ist als dein Angriffswurf für den Kritischen Treffer, verursachst du bei dieser Kreatur Schaden entsprechend dem Resultat des Schadenswurfes deiner Waffe, den du zuvor gewürfelt hast (inklusive des Schadens durch <em>Schadensrunen</em>, so vorhanden). Dieser Schaden wird nicht verdoppelt und nicht durch Boni oder andere zusätzliche Würfel erhöht.",
           "bomb": "Erhöhe den Radius des Flächenschadens der Bombe (so vorhanden) auf 10 Fuß/3 m.",
           "bow": "Wenn das Ziel des Kritischen Treffers zu einer Oberfläche angrenzend ist, wird es durch das Geschoss an dieser Oberfläche festgenagelt. Das Ziel erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Bewegungsunfähig} und muss eine Interagieren-Aktion aufwenden um einen erfolgreichen Fertigkeitswurf für @Check[athletics|dc:10|name:Geschoss herausziehen|showDC:all]{Athletik} ablegen, um das Geschoss herauszuziehen. Bis dieser Fertigkeitswurf gelingt, kann das Ziel sich nicht von seinem Platz wegbewegen. Wenn die Kreatur Körperlos oder flüssig ist (wie beispielsweise ein Wasserelementar oder bestimmte Schlicke) oder sie auf Grund anderer Umstände problemlos freikommen könnte, hängt sie nicht fest.",
-          "brawling": "The target must succeed at a @Check[fortitude|against:class|name:Brawling Critical Specialization] save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until the end of your next turn.",
+          "brawling": "Das Ziel muss einen @Check[fortitude|against:class]{Zähigkeitswurf} gegen deinen Klassen-SG ablegen; misslingt ihm dieser Rettungswurf, erhält es bis zum Ende deines nächsten Zuges den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}.",
           "club": "Du schleuderst dein Ziel bis zu 10 Fuß/3 m von dir fort (du wählst die Entfernung). Dies zählt als Erzwungene Fortbewegung.",
-          "firearm": "The target must succeed at a @Check[fortitude|against:class|name:Firearm Critical Specialization] save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.",
-          "flail": "The target is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} unless they succeed at a @Check[reflex|against:class|name:Flail Critical Specialization] save against your class DC.",
-          "hammer": "The target is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} unless they succeed at a @Check[fortitude|against:class|name:Hammer Critical Specialization] save against your class DC.",
+          "firearm": "Das Ziel muss einen @Check[fortitude|against:class]{Zähigkeitswurf} gegen deinen Klassen-SG bestehen oder erhält den Status @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1}.",
+          "flail": "Das Ziel muss einen @Check[reflex|against:class|name:Kritische Spezialisierung Flegel]{Reflexwurf} gegen deinen Klassen-SG ablegen; bei Misslingen wird es umgeworfen und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}.",
+          "hammer": "Das Ziel muss einen @Check[fortitude|against:class|name:Kritische Spezialisierung Hammer]{Zähigkeitswurf} gegen deinen Klassen-SG ablegen; bei Misslingen wird es umgeworfen und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}.",
           "polearm": "Das Ziel wird 1,50 m in eine Richtung deiner Wahl bewegt. Dies zählt als Erzwungene Fortbewegung.",
           "shield": "Du stößt das Ziel 5 Fuß/1,50 m von dir fort. Dies zählt als Erzwungene Fortbewegung.",
-          "sling": "The target must succeed at a @Check[fortitude|against:class|name:Sling Critical Specialization] save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.",
+          "sling": "Das Ziel muss einen @Check[fortitude|against:class]{Zähigkeitswurf} gegen deinen Klassen-SG ablegen; bei Misslingen erhält es den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1}.",
           "spear": "Waffen dieser Art durchbohren das Ziel und schwächen dessen Angriffe. Bis zu Beginn deines nächsten Zuges erhält das Ziel den Zustand @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 1}.",
           "sword": "Das Ziel wird durch deinen Angriff aus dem Gleichgewicht gebracht und erhält bis zu Beginn deines nächsten Zuges den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß}."
         },
@@ -3325,9 +3325,17 @@
         "Disabled": "Deaktiviert"
       },
       "Homebrew": {
+        "ArmorGroups": {
+          "Hint": "The mid level of Pathfinder 2e armor taxonomy (e.g, Plate, Chain)",
+          "Name": "Armor Groups"
+        },
+        "BaseArmors": {
+          "Hint": "The bottom level of Pathfinder 2e armor taxonomy (e.g, Full Plate, Chain Mail)",
+          "Name": "Armor Base Types"
+        },
         "BaseWeapons": {
           "Hint": "Die unterste Ebene der Waffentaxonomie von Pathfinder 2e (z. B. Schwere Armbrust, Langschwert)",
-          "Name": "Basiswaffen"
+          "Name": "Weapon Base Types"
         },
         "ConfirmDelete": {
           "Message": "Hausregel-Element <strong>{element}</strong> entfernen?",
@@ -3345,7 +3353,7 @@
           "Label": "Bezeichnung"
         },
         "EquipmentTraits": {
-          "Hint": "Kategorien für Gegenstände (außer Waffen)",
+          "Hint": "Traits applicable to equipment, armor, and consumables",
           "Name": "Gegenstandskategorien"
         },
         "FeatTraits": {
@@ -3361,6 +3369,7 @@
             "Label": "Die \"Allgemeine\" Sprache"
           },
           "Hint": "Sprachen die Charaktere kennen oder gelernt haben (z.B. Drakonisch, Gnomisch)",
+          "Name": "Languages",
           "Rarities": {
             "Common": "<rarity>Gewöhnliche</rarity> Sprachen",
             "Name": "Seltenheit von Sprachen",
@@ -3375,6 +3384,10 @@
         },
         "Name": "Hausregeln",
         "ReservedTerm": "\"{term}\" ist ein reservierter Begriff.",
+        "ShieldTraits": {
+          "Hint": "Traits that can be applied to shields",
+          "Name": "Shield Traits"
+        },
         "SpellTraits": {
           "Hint": "Eigenschaften, die auf jeden Zauber angewendet werden können (z. B. \"Fluchgebunden\", \"Heilung\")",
           "Name": "Zaubermerkmale"
@@ -3382,11 +3395,8 @@
         "Tabs": {
           "Campaign": "Kampagne",
           "Damage": "Schadensarten",
-          "Traits": "Merkmale und Kategorien"
-        },
-        "EnvironmentTypes": {
-          "Hint": "Eine selbsterstellte Umgebungsart",
-          "Name": "Umgebungsarten"
+          "Taxonomies": "Gear Taxonomies",
+          "Traits": "Traits"
         },
         "WeaponCategories": {
           "Hint": "Die oberste Stufe der Waffeneinordnung bei Pathfinder 2e (z.B. Einfache, Kriegswaffe)",
@@ -4133,7 +4143,7 @@
     "TraitDescriptionFire": "Effekte der Kategorie Feuer verursachen Feuerschaden oder manipulieren Feuer oder zaubern es herbei. Manipulierende Effekte haben keine Effekte in Regionen ohne Feuer. Kreaturen dieser Kategorie bestehen hauptsächlich aus Feuer oder besitzen eine magische Verbindung zu diesem Element.",
     "TraitDescriptionFleshwarp": "Humanoide, welche durch äußere Kräfte derart verwandelt wurden, dass sie nun eine eigene Abstammung darstellen.",
     "TraitDescriptionFlexible": "Die Rüstung ist so flexibel, dass sie dich bei den meisten Handlungen nicht behindert. Du erhältst auf Fertigkeitswürfe für Akrobatik oder Athletik keinen Rüstungsmalus.",
-    "TraitDescriptionFlourish": "Anstrengende Handlungen sind Techniken, welche große Anstrengungen erfordern und daher nicht wiederholt am Stück durchgeführt werden können. Du kannst pro Zug nur 1 Aktion der Kategorie Anstrengend durchführen.",
+    "TraitDescriptionFlourish": "Actions with the flourish trait are special techniques that require too much exertion for you to perform frequently. You can use only one action with the flourish trait per round.",
     "TraitDescriptionFocus": "Fokuszauber sind eine besondere Art Zauberspruch, die du direkt durch das Studium deiner Spezialisierung, deiner Gottheit oder aus anderen spezifischen Quellen beziehst. Du kannst Fokuszauber nur über ein Klassenmerkmal oder Talent erlernen, anstatt sie von einer Zauberliste auszuwählen. Außerdem wirkst du sie unter Verwendung eines separaten Vorrats von Fokuspunkten. Du bereitest sie nicht auf einem Zauberplatz vor oder benutzt einen dieser Plätze, um sie zu wirken. Gleichermaßen ist es dir nicht erlaubt, Fokuspunkte zum Wirken von Zaubern zu verbrauchen, die keine Fokuszauber sind.",
     "TraitDescriptionFocused": "Ein Gegenstand dieser Kategorie kann dir einen zusätzlichen Fokuspunkt geben. Dieser Fokuspunkt ist nicht Teil deines Fokusvorrats und zählt nicht gegen dessen Limit. Du kannst von diesem Punkt nur profitieren, wenn du einen Fokusvorrat besitzt; seine Nutzung könnte Einschränkungen unterliegen. Du kannst maximal 1 Fokuspunkt am Tag von Gegenständen dieser Kategorie erhalten.",
     "TraitDescriptionFoldaway": "<p>Dieser Schild kann zu einer kleineren Form zusammengelegt werden, die an einem Panzerhandschuh befestigt ist, um das Reisen zu erleichtern. Ist er ausgefaltet, kannst du den Schild heben, solange die fragliche Hand frei ist oder du maximal einen Gegenstand von Leichter Last damit hältst (keine Waffe). Der Schild behindert die Nutzung der fraglichen Hand, während er entfaltet ist. Du kannst mit ihr zwar Gegenstände halten, aber keine Waffe führen, mit dem Panzerhandschuh angreifen oder etwas bedienen, das zwei Hände benötigt.</p><p>Ein Faltbarer Schild muss aus Stabilitätsgründen an einem Panzerschuh befestigt sein; er kann an einem Gegenstand im Rahmen von 10 Minuten Arbeit und einem Wurf für Handwerkskunst gegen SG 10 befestigt werden (dies umfasst auch gegebenenfalls die Zeit zum Lösen des Schildes von einem anderen Panzerhandschuh). Wird der Handschuh zerstört, kann der Faltbare Schild normalerweise\ngeborgen werden. An einem Faltbaren Schild kann keine Waffe befestigt werden.</p>",
