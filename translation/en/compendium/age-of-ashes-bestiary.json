@@ -2359,6 +2359,8 @@
           "name": "Champion Devotion Spells"
         },
         "spell->Litany against Wrath": {
+          "name": "Litany against Wrath",
+          "description": "<p>Your litany rails against the sin of wrath, punishing the target for attacking good creatures. The target must attempt a Will save. A particularly wrathful creature, such as a wrath demon, uses the outcome one degree of success worse than the result of its saving throw. The target then becomes temporarily immune to all of your litanies for 1 minute.</p>\n<hr /><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The first time the target uses an action that deals damage to at least one good creature, the target takes 3d6 spirit damage.</p>\n<p><strong>Failure</strong> Each time the target uses an action that deals damage to at least one good creature, the target takes 3d6 spirit damage.</p>\n<p><strong>Critical Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2}. Each time it uses an action that deals damage to at least one good creature, the target takes 3d6 spirit damage.</p>\n<hr /><p><strong>Heightened (+1)</strong> The damage increases by 1d6.</p>",
           "target": "1 evil creature"
         },
         "spell->Dancing Lights": {
@@ -3147,11 +3149,11 @@
         },
         "action->Giant Tarantula Venom": {
           "name": "Giant Tarantula Venom",
-          "description": "<p><strong>Saving Throw</strong> @Check[fortitude|dc:23]</p>\n<p><strong>Maximum Duration</strong> 8 rounds</p>\n<p><strong>Stage 1</strong> 1d6 poison (1 round)</p>\n<p><strong>Stage 2</strong> 1d6 poison, off-guard, and clumsy 1 (1 round)</p>\n<p><strong>Stage 3</strong> 1d6 poison, off-guard, and clumsy 2 (1 round)</p>\n<p><strong>Stage 4</strong> 1d6 poison and paralyzed (1 round).</p>"
+          "description": "<p><strong>Saving Throw</strong> @Check[fortitude|dc:23]</p>\n<p><strong>Maximum Duration</strong> 8 rounds</p>\n<p><strong>Stage 1</strong> @Damage[1d6[poison]] (1 round)</p>\n<p><strong>Stage 2</strong> 1d6 poison, @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}, and @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} (1 round)</p>\n<p><strong>Stage 3</strong> 1d6 poison, off-guard, and @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2} (1 round)</p>\n<p><strong>Stage 4</strong> 1d6 poison and @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} (1 round).</p>"
         },
         "action->Hair Barrage": {
           "name": "Hair Barrage",
-          "description": "<p>The tarantula flicks its legs, flinging spiky hairs in a @Template[cone|distance:15]. This deals @Damage[4d6[piercing]] damage with a @Check[reflex|dc:25|basic] save.</p>"
+          "description": "<p>The tarantula flicks its legs, flinging spiky hairs in a @Template[cone|distance:15]. This deals @Damage[4d6[piercing]|traits:area-damage] damage with a @Check[reflex|dc:25|basic] save.</p>"
         },
         "action->Knockdown": {
           "name": "Knockdown"
@@ -4111,6 +4113,40 @@
         "action->Self-Repair": {
           "name": "Self-Repair",
           "description": "<p>The ruin can spend 10 minutes repairing itself to regain up to [[/r 30[healing]]]{30 Hit Points}. If the ruin is interrupted during this time, it loses its focus and the repair fails.</p>\n<p>This ability functions even if the ruin is reduced to 0 HP, unless a @UUID[Compendium.pf2e.spells-srd.Item.Dbd5W6G8U2vzWolN]{Consecrate} ritual has been performed to purify the building, in which case the soulbound ruin is destroyed. This ritual must be dedicated to a good deity or a deity with a strong opposition to undead, such as Pharasma.</p>"
+        }
+      }
+    },
+    "Spawn of Dahak": {
+      "name": "Spawn of Dahak",
+      "blurb": "Variant Racharak",
+      "items": {
+        "strike-melee->Warhammer": {
+          "name": "Warhammer",
+          "rules": {
+            "0": {
+              "label": "Weapon Red-Hot"
+            }
+          }
+        },
+        "action->Tail Swipe": {
+          "name": "Tail Swipe",
+          "description": "<p><strong>Trigger</strong> A creature within reach of the spawn's tail uses a move action or leaves a square during a move action it's using.</p>\n<hr />\n<p><strong>Effect</strong> The spawn of Dahak makes a tail Strike at the creature with a -2 penalty. If it hits, they disrupt the creature's action.</p>"
+        },
+        "action->Breath Weapon": {
+          "name": "Breath Weapon",
+          "description": "<p>The spawn breathes flames that deals @Damage[9d6[fire]] damage to all creatures in a @Template[cone|distance:30] (@Check[reflex|dc:26|basic] save).</p>\n<p>They can't use Breath Weapon again for [[/br 1d4 #Recharge Breath Weapon]]{1d4 rounds}</p>"
+        },
+        "action->Draconic Frenzy": {
+          "name": "Draconic Frenzy",
+          "description": "<p>The spawn makes two claw Strikes and one bite Strike in any order.</p>"
+        },
+        "action->Shrieking Frenzy": {
+          "name": "Shrieking Frenzy",
+          "description": "<p><strong>Trigger</strong> The spawn's turn begins.</p>\n<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p><strong>Effect</strong> The spawn is @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened} until the end of their turn, and can use the extra action to Stride or Strike. While in the frenzy, the spawn can't speak and automatically critically fails Stealth checks, due to their loud wailing.</p>"
+        },
+        "action->Thrown Weapon Mastery": {
+          "name": "Thrown Weapon Mastery",
+          "description": "<p>When the spawn throws a weapon, the weapon gains the deadly d6 weapon trait. When they throw an improvised weapon, they don't take the -2 penalty for using an improvised weapon, nor do they take the penalty for using that weapon to make a lethal attack instead of a nonlethal attack.</p>"
         }
       }
     },
