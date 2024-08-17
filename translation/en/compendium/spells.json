@@ -1077,16 +1077,16 @@
       "description": "<p>You evoke the energy of a part of the Outer Rifts. The damage types of the spell (one energy and one physical) are based on the result of rolling on the table below. You deal @Damage[4d6[untyped]] damage of each of the corresponding damage types to each creature in the cone (8d6 total damage).</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage for each type increases by 1d6</p>\n<h2>Chthonian Wrath</h2><table class=\"pf2e\"><thead><tr><th>[[/r 1D4]]</th><th>Realm</th><th>Manifestation</th><th>Damage and type</th></tr></thead><tbody>\n<tr>\n<td>1</td>\n<td>Skies</td>\n<td>Bolts and lightning and flying debris</td>\n<td>Bludgeoning and electricity</td>\n</tr>\n<tr>\n<td>2</td>\n<td>Depths</td>\n<td>Acid and demonic shells</td>\n<td>Acid and slashing</td>\n</tr>\n<tr>\n<td>3</td>\n<td>Frozen</td>\n<td>Frigid air and ice</td>\n<td>Bludgeoning and cold</td>\n</tr>\n<tr>\n<td>4</td>\n<td>Volcanic</td>\n<td>Jagged volcanic rocks and magma</td>\n<td>Fire and piercing</td>\n</tr>\n</tbody>\n</table>",
       "spellVariants": {
         "BbMuJTegkAU3FWLe": {
-          "name": "Abyssal Wrath (Depths)"
+          "name": "Chthonian Wrath (Depths)"
         },
         "CCyXVS0emyKH4mbU": {
-          "name": "Abyssal Wrath (Volcanic)"
+          "name": "Chthonian Wrath (Volcanic)"
         },
         "iS7lFrCWupPSb8Rv": {
-          "name": "Abyssal Wrath (Frozen)"
+          "name": "Chthonian Wrath (Frozen)"
         },
         "tDZV8KuCodZHCSsA": {
-          "name": "Abyssal Wrath (Skies)"
+          "name": "Chthonian Wrath (Skies)"
         }
       }
     },
@@ -1412,7 +1412,7 @@
     },
     "Cornucopia": {
       "name": "Cornucopia",
-      "description": "<p>Vines twine into a wicker horn in your hands, and out spills a single fruit, nut, or similar small bit of produce. A creature who eats the produce with an Interact action regains 1d6+4 HP. The cornucopia, as well as any unconsumed pieces of fruit, wither away at the end of the duration.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The cornucopia produces an additional piece of food. A creature can consume any amount of food from the same casting with a single Interact action. Eating six pieces of produce from the cornucopia gives as much nourishment as one square meal for a typical human.</p>\n<p>[[/r ((@item.level)d6+(@item.level)*4)[vitality,healing]]]{Consume all produce}</p>"
+      "description": "<p>Vines twine into a wicker horn in your hands, and out spills a single fruit, nut, or similar small bit of produce. A creature who eats the produce with an Interact action regains 1d6+4 HP. The cornucopia, as well as any unconsumed pieces of fruit, wither away at the end of the duration.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The cornucopia produces an additional piece of food. A creature can consume any amount of food from the same casting with a single Interact action. Eating six pieces of produce from the cornucopia gives as much nourishment as one square meal for a typical human.</p>\n<p>@Damage[((@item.level)d6+(@item.level)*4)[vitality,healing]]{Consume all produce}</p>"
     },
     "Corpse Communion": {
       "name": "Corpse Communion",
@@ -1978,7 +1978,7 @@
     },
     "Divinity Leech": {
       "name": "Divinity Leech",
-      "description": "<p>You disrupt the connection between a divine caster or deific servitor and their deity, blocking their use of divine power. If the target fails its save, it is @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}.</p>\n<p>For the spell's duration, whenever the target casts a divine spell, you regain [[/r 6d6[healing]]]{6d6 Hit Points} and the target must attempt another Will save with the following effects.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> Each target of the divine spell has an outcome one degree of success better than the result it rolled.</p>\n<p><strong>Failure</strong> The divine spell is lost and target is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>\n<p><strong>Critical Failure</strong> As failure, but the target is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned} for 1 round.</p>",
+      "description": "<p>You disrupt the connection between a divine caster or deific servitor and their deity, blocking their use of divine power. If the target fails its save, it is @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}.</p>\n<p>For the spell's duration, whenever the target casts a divine spell, you regain @Damage[6d6[healing]] Hit Points and the target must attempt another Will save with the following effects.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> Each target of the divine spell has an outcome one degree of success better than the result it rolled.</p>\n<p><strong>Failure</strong> The divine spell is lost and target is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>\n<p><strong>Critical Failure</strong> As failure, but the target is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned} for 1 round.</p>",
       "target": "1 creature"
     },
     "Dizzying Colors": {
@@ -3094,7 +3094,7 @@
     },
     "Freeze Time": {
       "name": "Freeze Time",
-      "description": "<p>You temporarily stop time for everything but yourself, allowing you to use several actions in what appears to others to be no time at all. Immediately after casting <em>freeze time</em>, you can use up to 9 actions in 3 sets of up to 3 actions each.</p>\n<p>After each set of actions, 1 round passes, but for only you, effects specifically targeting or affecting you, and effects that you create during the stoppage. All other creatures and objects are invulnerable to your attacks, and you can't target or affect them with anything.</p>\n<p>Once you have finished your actions, time begins to flow again for the rest of the world. If you created an effect with a duration that extends beyond <em>freeze time'</em>s duration, such as @UUID[Compendium.pf2e.spells-srd.Item.IarZrgCeaiUqOuRu]{Wall of Fire}, it immediately affects others again, but it doesn't have any of the effects that happen only when you first Cast the Spell.</p>"
+      "description": "<p>You temporarily stop time for everything but yourself, allowing you to use several actions in what appears to others to be no time at all. Immediately after casting <em>freeze time</em>, you can use up to 9 actions in 3 sets of up to 3 actions each.</p>\n<p>After each set of actions, 1 round passes, but for only you, effects specifically targeting or affecting you, and effects that you create during the stoppage. All other creatures and objects are invulnerable to your attacks, and you can't target or affect them with anything.</p>\n<p>Once you have finished your actions, time begins to flow again for the rest of the world. If you created an effect with a duration that extends beyond <em>freeze time</em>'s duration, such as @UUID[Compendium.pf2e.spells-srd.Item.IarZrgCeaiUqOuRu]{Wall of Fire}, it immediately affects others again, but it doesn't have any of the effects that happen only when you first Cast the Spell.</p>"
     },
     "Freezing Rain": {
       "name": "Freezing Rain",
@@ -3299,7 +3299,7 @@
     },
     "Gouging Claw": {
       "name": "Gouging Claw",
-      "description": "<p>You temporarily morph your limb into a clawed appendage. Make a melee spell attack roll against your target's AC. If you hit, you deal your choice of 2d6 slashing damage or 2d6 piercing damage, plus @Damage[(@item.level +1)[bleed]] damage. On a critical success, you deal double damage and double bleed damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1d6 and the persistent bleed damage increases by 1.</p>",
+      "description": "<p>You temporarily morph your limb into a clawed appendage. Make a melee spell attack roll against your target's AC. If you hit, you deal your choice of 2d6 slashing damage or 2d6 piercing damage, plus 2 persistent bleed damage. On a critical success, you deal double damage and double bleed damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1d6 and the persistent bleed damage increases by 1.</p>",
       "spellVariants": {
         "URQWpedXx9fB1fR7": {
           "name": "Gouging Claw (Piercing)"
@@ -3737,7 +3737,7 @@
     },
     "Ignition": {
       "name": "Ignition",
-      "description": "<p>You snap your fingers and point at a target, which begins to smolder. Make a spell attack roll against the target's AC, dealing 2d4 fire damage on a hit. If the target is within your melee reach, you can choose to make a melee spell attack with the flame instead of a ranged spell attack, which increases all the spell's damage dice to d6s.</p>\n<hr />\n<p><strong>Critical Success</strong> The target takes double damage and 1d4 persistent fire damage.</p>\n<p><strong>Success</strong> The target takes full damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The initial damage increases by 1d4 and the persistent fire damage on a critical hit increases by 1d4.</p>\n<p>[[/r (@item.level)d4[persistent,fire]]]{Leveled Persistent Fire Damage}</p>\n<p>[[/r (@item.level)d6[persistent,fire]]]{Leveled Persistent Fire Damage (Melee)}</p>",
+      "description": "<p>You snap your fingers and point at a target, which begins to smolder. Make a spell attack roll against the target's AC, dealing 2d4 fire damage on a hit. If the target is within your melee reach, you can choose to make a melee spell attack with the flame instead of a ranged spell attack, which increases all the spell's damage dice to d6s.</p>\n<hr />\n<p><strong>Critical Success</strong> The target takes double damage and 1d4 persistent fire damage.</p>\n<p><strong>Success</strong> The target takes full damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The initial damage increases by 1d4 and the persistent fire damage on a critical hit increases by 1d4.</p>\n<p>@Damage[1d4[persistent,fire]]{Leveled Persistent Fire Damage}</p>\n<p>@Damage[1d6[persistent,fire]]{Leveled Persistent Fire Damage (Melee)}</p>",
       "spellVariants": {
         "xYyA7CV1GaFTRjBQ": {
           "name": "Ignition (Melee)"
@@ -3863,7 +3863,7 @@
     },
     "Incendiary Aura": {
       "name": "Incendiary Aura",
-      "description": "<p>You surround yourself with a combustible aura. Each time a creature within the emanation takes fire damage, it catches on fire, taking [[/r (ceil(@item.level/2)+1)d4[persistent,fire]]] damage.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> Increase the persistent damage by 1d4 and the radius of the emanation by 5 feet.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.pE2TWhG97XbhgAdH]{Spell Effect: Incendiary Aura}</p>"
+      "description": "<p>You surround yourself with a combustible aura. Each time a creature within the emanation takes fire damage, it catches on fire, taking @Damage[(ceil(@item.level/2)+1)d4[persistent,fire]] damage.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> Increase the persistent damage by 1d4 and the radius of the emanation by 5 feet.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.pE2TWhG97XbhgAdH]{Spell Effect: Incendiary Aura}</p>"
     },
     "Incendiary Fog": {
       "name": "Incendiary Fog",
@@ -4171,7 +4171,7 @@
     },
     "Life Link": {
       "name": "Life Link",
-      "description": "<p>You forge a connection of life energy between you and your target, distributing harm between both of you. When you first Cast the Spell, the target recovers [[/r 1d4[healing]]]{1d4 Hit Points}.</p>\n<p>The first time each round that the target takes damage, reduce the damage it takes by 3 (to a minimum of 0 damage). You lose 3 Hit Points each time, or the total damage dealt, if less than 3; this damage ignores any immunities or resistances you have and can't otherwise be mitigated in any way.</p>\n<p>The spell ends immediately if you fall @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}. You can Dismiss the spell.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> You can target 2 creatures other than you. The initial healing increases to [[/r 3d4[healing]]]{3d4 Hit Points} and the maximum damage reduced and Hit Points lost increases to 5.</p>\n<p><strong>Heightened (6th)</strong> You can target 3 creatures other than you. The initial healing increases to [[/r 6d4[healing]]]{6d4 Hit Points} and the maximum damage reduced and Hit Points lost increases to 10.</p>\n<p><strong>Heightened (9th)</strong> You can target 4 creatures other than you. The initial healing increases to [[/r 9d4[healing]]]{9d4 Hit Points} and the maximum damage reduced and Hit Points lost increases to 15.</p>",
+      "description": "<p>You forge a connection of life energy between you and your target, distributing harm between both of you. When you first Cast the Spell, the target recovers @Damage[1d4[healing]]{1d4 Hit Points}.</p>\n<p>The first time each round that the target takes damage, reduce the damage it takes by 3 (to a minimum of 0 damage). You lose 3 Hit Points each time, or the total damage dealt, if less than 3; this damage ignores any immunities or resistances you have and can't otherwise be mitigated in any way.</p>\n<p>The spell ends immediately if you fall @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}. You can Dismiss the spell.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> You can target 2 creatures other than you. The initial healing increases to @Damage[3d4[healing]]{3d4 Hit Points} and the maximum damage reduced and Hit Points lost increases to 5.</p>\n<p><strong>Heightened (6th)</strong> You can target 3 creatures other than you. The initial healing increases to @Damage[6d4[healing]]{6d4 Hit Points} and the maximum damage reduced and Hit Points lost increases to 10.</p>\n<p><strong>Heightened (9th)</strong> You can target 4 creatures other than you. The initial healing increases to @Damage[9d4[healing]]{9d4 Hit Points} and the maximum damage reduced and Hit Points lost increases to 15.</p>",
       "heightening": {
         "3": {
           "target": "2 creatures other than you"
@@ -4611,6 +4611,11 @@
       "name": "Mislead",
       "description": "<p>You turn yourself @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Invisible} and create an illusory duplicate of yourself. When you Sustain the spell, you can mentally dictate a course of action for your duplicate to follow that round. Your duplicate acts as though it had your full number of actions, though it can't actually affect anything in the environment. Both the duplicate and your invisibility persist for the spell's duration. Performing a hostile action doesn't end <em>mislead</em>'s invisibility, just like a 4th-rank @UUID[Compendium.pf2e.spells-srd.Item.XXqE1eY3w3z6xJCB]{Invisibility} spell. A creature that determines the duplicate is an illusion doesn't necessarily know you're invisible, and one that can see your invisible form doesn't necessarily know your duplicate is an illusion.</p>\n<p>If you Cast a Spell, attack, or otherwise interact with another creature, as a part of that action you can attempt a Deception check against observers' Perception DCs to convince them your duplicate used that action. This doesn't fool anyone who's aware your duplicate is an illusion, nor does it work if the attack obviously couldn't have come from the duplicate. For instance, if you fired a ray, you could make it look like it came from the duplicate as long as the duplicate was positioned appropriately, but if you attacked with a sword and your duplicate was across the room from the target, your Deception check would automatically fail.</p>"
     },
+    "Missed Cue": {
+      "name": "Missed Cue",
+      "description": "<p>You make the spell's target believe they had something incredibly important to say but forgot to say it, and now they've missed their opportunity. Sensations of overwhelming panic akin to stage fright flood the target's mind, causing them to suffer excruciating mental anguish and take 12d6 mental damage. The target might even become filled with the conviction that they've doomed themselves by missing their cue. The target must attempt a Will save.</p>\n<hr />\n<p><strong>Critical Success</strong> The conviction of a missed cue is only a fleeting notion that passes quickly without any effect on the target.</p>\n<p><strong>Success</strong> The target takes half damage and is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Failure</strong> The target takes full damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}. In addition, the target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for as long as they remain frightened.</p>\n<p><strong>Critical Failure</strong> The target takes double damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3}. In addition, the target is slowed 1 for as long as they remain frightened.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 2d6.</p>",
+      "target": "1 creature"
+    },
     "Mist": {
       "name": "Mist",
       "description": "<p>You call forth a cloud of mist. All creatures within the mist become @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed}, and all creatures outside the mist become concealed to creatures within it. You can Dismiss the cloud.</p>"
@@ -4714,6 +4719,10 @@
     "Musical Accompaniment": {
       "name": "Musical Accompaniment",
       "description": "<p>You're surrounded by orchestral music that shifts and changes to match your behavior. This music provides a +1 status bonus to Performance checks. At the GM's discretion, it provides this bonus to Deception, Diplomacy, and Intimidation checks as the music changes to support you in social situations, though some creatures are unaffected by such obvious attempts to use music to illicit specific emotions. This music moves with you and has a maximum volume equal to four humans shouting. You take a -4 penalty to Stealth checks while the music is playing. You can't control the exact music this spell creates. The music doesn't create intelligible words or singing. You can Dismiss this spell.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.nLige83aiMBh0ylb]{Spell Effect: Musical Accompaniment}</p>\n<hr />\n<p><strong>Heightened (2nd)</strong> The duration increases to 10 minutes.</p>"
+    },
+    "Musical Shift": {
+      "name": "Musical Shift",
+      "description": "<p>With a quick series of wrist flicks, music fills the air. While the music can be heard as if it were performed normally at a distance, creatures in the spell's area become affected in more significant ways. When you cast musical shift, select a key signature (to affect enemies) and a time signature (to affect allies) from the options below; all creatures within the area are affected as indicated. You can change the key signature or time signature as part of the action you take when you Sustain the spell.</p>\n<p><strong>Flat</strong> (key signature) Whenever an enemy critically fails at a Strike, saving throw, or skill check, they fall @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} in addition to other effects from the critical failure.</p>\n<p><strong>Natural</strong> (key signature) Enemies take a –2 status penalty to attack rolls.</p>\n<p><strong>Sharp</strong> (key signature) Whenever an enemy takes piercing or slashing damage, they also take 2d6 persistent bleed damage.</p>\n<p><strong>Double</strong> (time signature) You and your allies become @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened} and can use the extra action each round only for @UUID[Compendium.pf2e.actionspf2e.Item.d5I6018Mci2SWokk]{Leap}, Stand, Step, or Stride actions.</p>\n<p><strong>Quadruple</strong> (time signature) You and your allies gain a +2 status bonus to attack rolls.</p>\n<p><strong>Triple</strong> (time signature) You and your allies gain a +2 status bonus to Armor Class and Reflex saving throws.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.1W1LZ3qrZLXr2Mn7]{Spell Effect: Musical Shift}</p>"
     },
     "Mycological Malady": {
       "name": "Mycological Malady",
@@ -5562,7 +5571,7 @@
     },
     "Quench": {
       "name": "Quench",
-      "description": "<p>You cause the air in the area to become supersaturated with water vapor. Non-magical fires within the area are automatically extinguished. Fire creatures within the area take [[/r 4d8]] damage (basic Fortitude save). Choose one magical fire, fire spell, or fire item in the area and attempt to counteract it. If you succeed against an item, the item loses its fire properties for 10 minutes (for instance, a <em>+1 Flaming Longsword</em> would become a <em>+1 Longsword</em>). If the target is an artifact or similarly powerful item, you automatically fail to counteract it.</p>\n<p>The first time each round you Sustain this spell, you can move the area of vapor anywhere within range, but the only effect when you do so is to automatically extinguish non-magical fires.</p>\n<p>If you have the Counterspell reaction, you can use <em>quench</em> to counter any spell with the fire trait instead of needing to have the triggering fire spell prepared or in your repertoire.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> Increase the damage to fire creatures by [[/r 2d8]].</p>"
+      "description": "<p>You cause the air in the area to become supersaturated with water vapor. Non-magical fires within the area are automatically extinguished. Fire creatures within the area take @Damage[4d8[untyped]] damage (basic Fortitude save). Choose one magical fire, fire spell, or fire item in the area and attempt to counteract it. If you succeed against an item, the item loses its fire properties for 10 minutes (for instance, a <em>+1 Flaming Longsword</em> would become a <em>+1 Longsword</em>). If the target is an artifact or similarly powerful item, you automatically fail to counteract it.</p>\n<p>The first time each round you Sustain this spell, you can move the area of vapor anywhere within range, but the only effect when you do so is to automatically extinguish non-magical fires.</p>\n<p>If you have the Counterspell reaction, you can use <em>quench</em> to counter any spell with the fire trait instead of needing to have the triggering fire spell prepared or in your repertoire.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> Increase the damage to fire creatures by @Damage[2d8[untyped]] .</p>"
     },
     "Quick Sort": {
       "name": "Quick Sort",
@@ -5736,6 +5745,10 @@
     "Reed Whistle": {
       "name": "Reed Whistle",
       "description": "<p>You enchant a blade of grass that you can easily hold in your mouth without inhibiting your speech or other actions. As a reaction, you can reduce the spell's remaining duration by 1 hour to Point Out a creature you detect as you sharply whistle through the reed. You and your allies also gain a +2 circumstance bonus to Perception checks to @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seek} the creature for [[/r 1d4 #rounds]]{1d4 rounds}.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> The spell's duration becomes 4 hours.</p>"
+    },
+    "Reflected Beauty": {
+      "name": "Reflected Beauty",
+      "description": "<p>When you cast reflected beauty, choose a willing creature that's the same size as you and that you can see within 30 feet. The spell then disguises you with a realistic illusion, as if via @UUID[Compendium.pf2e.spells-srd.Item.i35dpZFI7jZcRoBo]{Illusory Disguise} heightened to 3rd rank, but includes tactile and olfactory sensation in addition to visual and voice. The appearance of the illusion that disguises you includes any changes to sex characteristics or other aspects needed to match the target creature's heart's desire, allowing you to interact with them as the person they could be. If you're ever more than 30 feet from the subject you're reflecting, <em>reflected beauty</em> immediately ends. You can Dismiss this spell.</p>"
     },
     "Reflective Scales": {
       "name": "Reflective Scales",
@@ -6394,7 +6407,7 @@
     },
     "Shocking Grasp": {
       "name": "Shocking Grasp",
-      "description": "<p>You shroud your hands in a crackling field of lightning. Make a melee spell attack roll. On a hit, the target takes 2d12 electricity damage. If the target is wearing metal armor or is made of metal, you gain a +1 circumstance bonus to your attack roll with shocking grasp, and the target also takes [[/r (1d4+((@item.level)-1))[persistent,electricity]]] damage on a hit. On a critical hit, double the initial damage, but not the persistent damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1d12, and the persistent electricity damage increases by 1.</p>",
+      "description": "<p>You shroud your hands in a crackling field of lightning. Make a melee spell attack roll. On a hit, the target takes 2d12 electricity damage. If the target is wearing metal armor or is made of metal, you gain a +1 circumstance bonus to your attack roll with shocking grasp, and the target also takes @Damage[(1d4+((@item.level)-1))[persistent,electricity]] damage on a hit. On a critical hit, double the initial damage, but not the persistent damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1d12, and the persistent electricity damage increases by 1.</p>",
       "target": "1 creature"
     },
     "Shockwave": {
@@ -6539,6 +6552,12 @@
       "name": "Song of Marching",
       "description": "<p>You maintain a brisk performance that keeps allies on the move. You and your allies in the area can @UUID[Compendium.pf2e.actionspf2e.Item.JuqmIAnkL9hVGai8]{Hustle} for the spell's duration, in addition to your other exploration activities (your exploration activity is Sustaining this spell). You and your allies then become temporarily immune for 1 day.</p>\n<p>If you enter an encounter while performing this song, you can use your Performance modifier for the initiative roll. You and your affected allies also receive a +1 status bonus to that initiative roll.</p>\n<hr />\n<p><strong>Heightened (6th)</strong> You can Sustain the Spell for up to 2 hours.</p>\n<p><strong>Heightened (9th)</strong> You can Sustain the Spell for up to 4 hours.</p>"
     },
+    "Song of Silver": {
+      "name": "Song of Silver",
+      "description": "<p>The majority of the <em>Song of Silver's</em> time needed to Cast it consists of preparations for the performance, which must take place on a stage in Kintargo. While the <em>Song of Silver</em> can be cast by a single primary caster, up to six secondary casters can assist by helping to decorate the stage with Crafting or by spreading word and gathering an audience with Society. At the end of this 8-hour period, the primary caster performs the song, which takes up the final minute of the casting time.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.BdgWuULYjFwlVkr7]{Spell Effect: Song of Silver}</p>\n<hr />\n<p><strong>Critical Success</strong> The stage and rooftop above any stage where the song was performed glows softly with silver radiance for 1 week. During this time, the ritual tries to counteract teleportation effects and planar travel into or out of Kintargo attempted by unholy creatures, and all weapons wielded within Kintargo are treated as if they were made of silver for the purposes of calculating damage against creatures who possess weakness to silver. The ritual also generates the Success effects below. The <em>Song of Silver</em> can't be attempted again for 1 month.</p>\n<p><strong>Success</strong> For 1 week, the primary and secondary casters gain a +2 status bonus to all saving throws against mental effects; this bonus doubles to a +4 status bonus against all fear effects. Each caster gains the ability to cast @UUID[Compendium.pf2e.spells-srd.Item.Hnc7eGi7vyZenAIm]{Breath of Life} as an innate occult spell at a rank equal to what the <em>Song of Silver</em> was cast at, once during the week. These benefits are suppressed as long as the character is outside of Kintargo. The <em>Song of Silver</em> can't be attempted again for 1 month.</p>\n<p><strong>Failure</strong> The <em>Song of Silver</em> fails, and it can't be attempted again for 1 month.</p>\n<p><strong>Critical Failure</strong> Not only does the ritual fail, but the primary caster is overwhelmed with shame at the failure and becomes @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2} for 1 week (can't be removed by any means). The <em>Song of Silver</em> can't be attempted again for 6 months.</p>\n<hr />\n<p><strong>Heightened (10th)</strong> The effects of the <em>Song of Silver</em> expand to cover all of Ravounel.</p>",
+      "primarycheck": "Performance",
+      "secondarycheck": "Crafting, Society"
+    },
     "Song of Strength": {
       "name": "Song of Strength",
       "description": "<p>You bolster your allies' physical strength with a hearty exhortation. You and your allies gain a +1 status bonus to Athletics checks and to their DCs against Athletics skill actions such as @UUID[Compendium.pf2e.actionspf2e.Item.Dt6B1slsBy8ipJu9]{Disarm}, @UUID[Compendium.pf2e.actionspf2e.Item.lOE4yjUnETTdaf2T]{Reposition}, @UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Shove}, and @UUID[Compendium.pf2e.actionspf2e.Item.ge56Lu1xXVFYUnLP]{Trip}.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.8adLKKzJy49USYJt]{Spell Effect: Song of Strength}</p>"
@@ -6635,7 +6654,7 @@
     },
     "Spellmaster's Ward": {
       "name": "Spellmaster's Ward",
-      "description": "<p>You create one or more glowing protective runes that revolve around you. For each additional action you use when Casting the Spell, increase the number of runes you create by one, to a maximum of three runes for 3 actions.</p>\n<p>When you next take damage from a spell, a rune is expended to prevent [[/r 2d6 + (@item.rank - 5)]] of that spell's damage. If damage from the triggering spell remains, additional runes are expended until the damage is completely negated, or until all runes have been spent, whichever comes first.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> Each rune prevents an additional 1 damage.</p>"
+      "description": "<p>You create one or more glowing protective runes that revolve around you. For each additional action you use when Casting the Spell, increase the number of runes you create by one, to a maximum of three runes for 3 actions.</p>\n<p>When you next take damage from a spell, a rune is expended to prevent @Damage[2d6 + (@item.rank - 5)[untyped]] of that spell's damage. If damage from the triggering spell remains, additional runes are expended until the damage is completely negated, or until all runes have been spent, whichever comes first.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> Each rune prevents an additional 1 damage.</p>"
     },
     "Spellwrack": {
       "name": "Spellwrack",
@@ -6739,7 +6758,7 @@
     },
     "Splinter Volley": {
       "name": "Splinter Volley",
-      "description": "<p>You launch a volley of splinters at your foes. Make a spell attack roll against a single creature. On a hit, the splinters deal 4d6 piercing damage. The splinters deal double damage on a critical hit and [[/r (floor(@item.level/2))[bleed]]] damage. You can spend a third action while casting this spell to fire splinters at two different targets instead of one. These attacks each increase your multiple attack penalty, but you don't increase your multiple attack penalty until after you make both spell attack rolls for <em>splinter volley</em>.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> Increase the damage dealt to each target by 4d6 and the persistent bleed damage by 1.</p>",
+      "description": "<p>You launch a volley of splinters at your foes. Make a spell attack roll against a single creature. On a hit, the splinters deal 4d6 piercing damage. The splinters deal double damage on a critical hit and @Damage[(floor(@item.level/2))[bleed]] damage. You can spend a third action while casting this spell to fire splinters at two different targets instead of one. These attacks each increase your multiple attack penalty, but you don't increase your multiple attack penalty until after you make both spell attack rolls for <em>splinter volley</em>.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> Increase the damage dealt to each target by 4d6 and the persistent bleed damage by 1.</p>",
       "target": "1 or 2 creatures"
     },
     "Split Shadow": {
@@ -7186,6 +7205,11 @@
       "name": "Take Root",
       "description": "<p>Roots sprout from the flesh of the target and coil across the floor or around objects, reinforcing their stance or grip. The targeted creature gains a +1 circumstance bonus to their Fortitude DC against attempts to @UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Shove} them and a +1 circumstance bonus to their Reflex DC against attempts to @UUID[Compendium.pf2e.actionspf2e.Item.Dt6B1slsBy8ipJu9]{Disarm} or @UUID[Compendium.pf2e.actionspf2e.Item.ge56Lu1xXVFYUnLP]{Trip} them. This bonus also applies to saving throws against spells or effects that would attempt to remove a held item from their grasp.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.ZGzhNFB3SM8owk85]{Spell Effect: Take Root}</p>",
       "target": "1 willing creature"
+    },
+    "Take Your Places": {
+      "name": "Take Your Places",
+      "description": "<p>The scene would play out exactly as you envisioned it, if only the actors would respect their blocking. You instantly transport the targeted creatures and any items they're wearing and holding from their current space to an unoccupied space within range. You don't need to be able to see the destinations as long as you've been there in the past and know its relative location and distance from each target. Creatures affected by take your places are then temporarily immune to this spell for 1 minute.</p>",
+      "target": "up to 4 willing creatures"
     },
     "Take its Course": {
       "name": "Take its Course",
@@ -7640,7 +7664,7 @@
     },
     "Unblinking Flame Aura": {
       "name": "Unblinking Flame Aura",
-      "description": "<p>You focus your sight inside and call on your inner fire to grant you warmth, steady your vision, and soothe your body. You recover [[/r (3*@item.level)[healing]]]{15 Hit Points}. For the duration, you gain a +2 status bonus on Perception checks and resistance 10 to cold.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.HoCUCi2jL1OLfXWR]{Spell Effect: Unblinking Flame Aura}</p>\n<hr />\n<p><strong>Heightened (+1)</strong> You recover an additional 3 Hit Points, and the resistance to cold increases by 2.</p>"
+      "description": "<p>You focus your sight inside and call on your inner fire to grant you warmth, steady your vision, and soothe your body. You recover @Damage[(3*@item.level)[healing]]{15 Hit Points}. For the duration, you gain a +2 status bonus on Perception checks and resistance 10 to cold.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.HoCUCi2jL1OLfXWR]{Spell Effect: Unblinking Flame Aura}</p>\n<hr />\n<p><strong>Heightened (+1)</strong> You recover an additional 3 Hit Points, and the resistance to cold increases by 2.</p>"
     },
     "Unblinking Flame Emblem": {
       "name": "Unblinking Flame Emblem",
@@ -7889,6 +7913,10 @@
     "Vibrant Thorns": {
       "name": "Vibrant Thorns",
       "description": "<p>Your body sprouts a coat of brambly thorns that thrive on life magic. Adjacent creatures that hit you with a melee attack, as well as creatures that hit you with unarmed attacks, take @Damage[(@item.rank)[piercing]] damage each time they do. Anytime you cast a vitality spell, the thorns' damage increases to @Damage[(@item.rank)d6[piercing]] until the start of your next turn.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1, or 1d6 after you cast a vitality spell.</p>"
+    },
+    "Vibrant Vibrato": {
+      "name": "Vibrant Vibrato",
+      "description": "<p>Your voice trills in perfect vibrato. When casting the spell, you can make the area any radius you choose, up to 40 feet. The reverberations of your voice continue to shimmer and hang in the air as long as you Sustain the spell but can't be heard at all outside of the area. A creature must attempt a Will save if it's within the area when you Cast the Spell or as soon as it enters the area while the spell is in effect. Once a creature has attempted the save, it uses the same result for that casting of vibrant vibrato.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes @Damage[5d10[persistent,sonic]] damage at the end of their turn as long as they remain within the aura's area of effect.</p>\n<p><strong>Failure</strong> As success, but if the creature leaves the area, or if you move far enough from the creature that they're no longer in the area, the creature hears a shattering sound and takes 5d10 sonic damage and is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}. The creature is then @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} for the rest of the spell's duration.</p>\n<p><strong>Critical Failure</strong> As failure, but the creature takes double the sonic damage and is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 3}.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage on a failed save increases by 1d10.</p>"
     },
     "Vicious Jealousy": {
       "name": "Vicious Jealousy",
