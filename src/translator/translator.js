@@ -480,7 +480,7 @@ class Translator {
             return value;
         }
         // Check, if image source uses default image
-        if (!(imageSource.includes("systems/pf2e/icons") || imageSource.includes("icons/svg/mystery-man"))) {
+        if (!(imageSource.includes("systems/pf2e/") || imageSource.includes("icons/svg/mystery-man"))) {
             return value;
         }
         const artworkList = this.artworkLists[translatedCompendium.metadata.name];
