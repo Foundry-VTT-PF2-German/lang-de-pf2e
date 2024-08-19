@@ -186,8 +186,8 @@
         "GelatinousCubeNote": "Eine Kreatur, die mit Oberflächenkontakt getroffen wurde, muss einen @Check[fortitude|against:spell|traits:incapacitation]{Zähigkeitswurf} gegen deinen Zauber-SG ablegen oder erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1} (oder eine Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt} bei einem Kritischen Fehlschlag); Dieser Rettungswurf ist ein Kampfunfähigkeitseffekt."
       },
       "WormForm": {
-        "Hybrid": "Hybrid",
-        "PurpleWorm": "Purple Worm"
+        "Hybrid": "Hybridgestalt",
+        "PurpleWorm": "Purpurwurm"
       }
     },
     "BombNotes": {
@@ -2907,7 +2907,8 @@
       "Ganzi": {
         "Irrepressible": {
           "SaveNote": "Erzielst du bei einem Rettungswurf gegen einen Effekt der Kategorie Furcht oder Gefühl einen Erfolg, erlangst du stattdessen einen Kritischen Erfolg."
-        }
+        },
+        "Resistance": "Ganzi Resistenz"
       },
       "GeneralTraining": {
         "Prompt": "Wähle ein Allgemeines Talent der 1. Stufe."
@@ -3182,7 +3183,10 @@
             "Label": "Instabil-Prüfung"
           },
           "Note": "Wenn du eine instabile Aktion durchführst, musst du unmittelbar nach der Anwendung der Effekte einen @Check[flat|dc:15|options:unstable-check|name:PF2E.SpecificRule.Inventor.Unstable.FlatCheck.Label]{Einfachen Wurf} ablegen.",
-          "Stable": "Stabil"
+          "Stable": "Stabil",
+          "UnstableFunction": {
+            "Label": "Aktiviere Instabil Funktionen"
+          }
         }
       },
       "Investigator": {
@@ -3499,6 +3503,10 @@
       "Mindmoppet": {
         "BrokenShell": "Shell is Broken"
       },
+      "Modifier": {
+        "Bonus": "Bonus",
+        "Penalty": "Malus"
+      },
       "Monk": {
         "DragonRoar": {
           "Label": "Erster Angriff gg. verängstigte Kreatur"
@@ -3536,6 +3544,29 @@
           "Mountain": "Gebirge",
           "Prompt": "Wähle ein gebundenes Gelände",
           "Swamp": "Sumpf"
+        }
+      },
+      "MusicalShift": {
+        "Double": {
+          "Label": "Double"
+        },
+        "Flat": {
+          "Label": "Flat",
+          "Note": "<p>Whenever the enemy critically fails at a Strike, saving throw, or skill check, they fall @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} in addition to other effects from the critical failure.</p>"
+        },
+        "Natural": {
+          "Label": "Natural"
+        },
+        "Prompt": "Select a Signature",
+        "Quadruple": {
+          "Label": "Quadruple"
+        },
+        "Sharp": {
+          "Label": "Sharp",
+          "Note": "<p>Whenever an enemy takes piercing or slashing damage, they also take @Damage[2d6[bleed]] damage.</p>"
+        },
+        "Triple": {
+          "Label": "Triple"
         }
       },
       "Nagaji": {
@@ -4128,6 +4159,14 @@
           },
           "Prompt": "Wähle eine Blutlinie."
         },
+        "DiabolicEdict": {
+          "Label": "Performing requested Diabolic Edict task",
+          "Prompt": "Choose if you accept this edict.",
+          "Accept": "Accept",
+          "Refuse": "Refuse",
+          "Bonus": "Diabolic Edict: Accepted",
+          "Penalty": "Diabolic Edict: Refused"
+        },
         "SecondBloodMagic": "Second Blood Magic",
         "TapIntoBlood": {
           "Arcane": "Your mind temporarily opens to the secrets of the world. Attempt to [[/act recall-knowledge skill=arcana]]{Recall Knowledge}; you can use Arcana instead of the skill normally needed for that subject. If you critically fail at this check, you get a failure instead.",
@@ -4136,6 +4175,10 @@
           "Primal": "The immense power of nature echoes in your voice. You can attempt a Nature check to [[/act demoralize skill=nature]]{Demoralize} a target.",
           "Requirements": "You are benefiting from a blood magic effect"
         }
+      },
+      "SolarRejuvenation": {
+        "Ghoran": "Die Wärme und das Licht der Sonne spenden dir Lebensenergie. Wenn du dich tagsüber 10 Minuten lang im Freien aufhältst, erhältst du Trefferpunkte in Höhe deines Konstitutionsmodifikators x deiner halben Stufe zurück (@Damage[(floor(@actor.level/2)*@actor.con.mod)[healing]]). Du erhältst diesen Vorteil zusätzlich zu jeder Heilung durch @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Wunden versorgen}.",
+        "Leshy": "Wenn du am Tag für 10 Minuten im Freien rastest, gewinnst du Trefferpunkte in Höhe deines KO-Modifikators x deiner halben Stufe zurück (@Damage[(floor(@actor.level/2)*@actor.con.mod)[healing]]). Du erhältst diesen Vorteil zusätzlich zu jeglicher Heilung durch @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Wunden versorgen}. Lesniks, deren pflanzliche Nahrungsquelle nicht auf Photosynthese beruht, benötigen eine andere passende Umgebung. Pilzlesniks brauchen zum Beispiel eine dunkle, feuchte Umgebung und einen Haufen verrottende Pflanzen."
       },
       "SoulWarden": {
         "SafeguardSoul": {
@@ -4350,7 +4393,7 @@
         "EchoingChannel": "Wähle eine weitere Kreatur innerhalb der Reichweite des Zaubers. Diese Kreatur wird das Ziel der Version zu 1 Aktion desselben Zaubers mit demselben Grad wie die 2-Aktionen-Version, ohne dass dies einen weiteren Zauberplatz verbraucht.",
         "EnergyAblation": "Sollte deine nächste Handlung das Wirken eines Zaubers sein, der Schaden wenigstens einer Energiekategorie (Elektrizität, Feuer, Kälte, Kraft, Leben, Leere, Säure oder Schall) verursachen würde, erlangst du Resistenz gegen eine Energiekategorie deiner Wahl in Höhe des Zaubergrades (Minimum 1) bis zum Ende deines nächsten Zuges. Du erlangst die Resistenz unabhängig davon, ob deine Zauber Schaden verursacht oder nicht.",
         "EnergyFusion": "If the next action you use is to Cast a Spell that deals energy damage, select a non-cantrip spell in your spell repertoire that deals a different type of energy damage, and expend an additional spell slot of the same rank as this secondary spell. The spell you cast deals additional damage equal to the rank of the secondary spell slot expended. The spell's total damage is divided evenly between the energy type of the spell you cast and the energy type of the secondary spell.",
-        "ExplosiveArrival": "Sofern du als nächste Handlung einen Zauber der Kategorie Beschwörung wirkst, erleiden alle Kreaturen innerhalb von @Template[emanation|distance:10]{10 Fuß/3 m} um die beschworene Kreatur herum 1W4 Feuerschaden pro Zaubergrad (@Damage[(@item.level)d4[fire]]). Sollte die beschworene Kreatur die Kategorie Elektrizität, Kälte, Säure oder Schall besitzen, so kannst du stattdessen Schaden dieser Art verursachen (@Damage[(@item.level)d4[electricity]], @Damage[(@item.level)d4[cold]], @Damage[(@item.level)d4[acid]], @Damage[(@item.level)d4[sonic]]). Sollte sie die Kategorie Geist besitzen, so kannst du alternativ Seelenschaden verursachen (@Damage[(@item.level)d4[spirit]]).",
+        "ExplosiveArrival": "Sofern du als nächste Handlung einen Zauber der Kategorie Beschwörung wirkst, erleiden alle Kreaturen innerhalb von @Template[emanation|distance:10]{10 Fuß/3 m} um die beschworene Kreatur herum 1W4 Feuerschaden pro Zaubergrad (@Damage[(@item.level)d4[fire]|traits:area-damage]). Sollte die beschworene Kreatur die Kategorie Elektrizität, Kälte, Säure oder Schall besitzen, so kannst du stattdessen Schaden dieser Art verursachen (@Damage[(@item.level)d4[electricity]|traits:area-damage], @Damage[(@item.level)d4[cold]|traits:area-damage], @Damage[(@item.level)d4[acid]|traits:area-damage], @Damage[(@item.level)d4[sonic]|traits:area-damage]). Sollte sie die Kategorie Geist besitzen, so kannst du alternativ Seelenschaden verursachen (@Damage[(@item.level)d4[spirit]|traits:area-damage]).",
         "ForcibleEnergy": "Sollte deine nächste Handlung das Wirken eines Zaubers sein, der Elektrizitäts-, Feuer-, Säure- oder Schallschaden verursacht, kannst du ein Ziel wählen, so es Schaden erleidet. Dieses Ziel erhält Schwäche 5 gegen diese Schadensart bis zum Ende deines nächsten Zuges. Sollte ein Zauber mehrere Arten von Energieschaden verursachen, so wähle eine davon, gegen die das Ziel Schwäche erleidet. Dies hat keinen Effekt auf Kreaturen mit Resistenz oder Immunität gegen die gewählte Schadensart. @UUID[Compendium.pf2e.feat-effects.Item.0Ai0u9kNJrEudPnN]{Effekt: Nachhallende Energie}",
         "FormControl": "Der effektive Zaubergrad des Zaubers ist um 2 niedriger als normal (Minimum 1. Grad), dafür kannst du die Verwandlung bis zu 1 Stunde aufrechterhalten, sofern dies länger ist als die aufgeführte Wirkungsdauer. Du kannst den Effekt immer noch jederzeit Aufheben, sofern es der Zauber gestattet.",
         "GarlandSpell": "Wucherndes Pflanzenleben wächst in einer @Template[burst|distance:10]{10 Fuß/3 m-Explosion} innerhalb der Reichweite des Zaubers. Dieser Bereich ist Schwieriges Gelände und Gefährliches Gelände und mit deiner Wahl von Dornen oder giftigen Ranken bedeckt. Bewegt sich eine Kreatur auf eines dieser Felder oder beendet in einem ihren Zug, so erleidet sie 2W6 Schadenspunkte (Stichschaden bei Dornen, Giftschaden bei Ranken). Eine Kreatur kann diesen Schaden nur einmal pro Zug erleiden. Du und dein Vertrauter seid gegen diesen Schaden immun. Die Pflanzen bestehen 1 Minute lang, verschwinden aber vorzeitig, solltest du eher einen weiteren Wuchernden Zauber wirken. Der Schaden steigt mit der 16. Stufe auf 3W6 Punkte und mit der 20. Stufe auf 4W6 Punkte (@Damage[(ternary(gte(@actor.level,20),4,ternary(gte(@actor.level,16),3,2)))d6[piercing]] @Damage[(ternary(gte(@actor.level,20),4,ternary(gte(@actor.level,16),3,2)))d6[poison]]).",
@@ -4367,9 +4410,13 @@
         "Martyr": "Du verlierst pro Zaubergrad 1W8 TP (dies kann nicht reduziert oder anderweitig abgefangen werden) und dein Verbündeter erlangt dieselbe Anzahl an Trefferpunkten zusätzlich zurück (@Damage[(@item.rank)d8]).",
         "MelodiousSpell": "Der Zauber erhält die Kategorie Subtil. Diese Kategorie verbirgt nur die Handlung des Zauberns selbst und die Manifestationen, nicht aber die Effekte des Zaubers. Du kannst wählen, als Teil dieser Aktion @UUID[Compendium.pf2e.actionspf2e.Item.GkmbTGfg8KcgynOA]{Für Ablenkung zu sorgen}, zu @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralisieren}, zu @UUID[Compendium.pf2e.actionspf2e.Item.DCb62iCBrJXy0Ik6]{Erbitten} oder einen @UUID[Compendium.pf2e.actionspf2e.Item.EEDElIyin4z60PXx]{Auftritt} auszuführen. In diesem Fall muss der folgende Zauber über die Kategorie Gefühl, Hörbar, Schall oder Sichtbar verfügen, um die Kategorie Subtil erhalten zu können.",
         "NonLethal": "Solltest du als nächste Handlung einen Zauber wirken, welcher Schaden verursacht und nicht die Kategorie Leere oder Tod besitzt, so erhält dieser Zauber die Kategorie Nichttödlich.",
+        "OstentatiousArrivalManifestEidolon": "Alle Kreaturen innerhalb einer @Template[type:emanation|distance:10]{10 Fuß/3 m Ausstrahlung} um die herbeigezauberte oder manifestierte Kreatur erleiden Feuerschaden (@Damage[(@actor.level)d4[@actor.flags.pf2e.spellshape.arrayDamage]]). Sollte die herbeigezauberte oder manifestierte Kreatur die Kategorie Elektrizität, Feuer, Kälte, Schall oder Wasser besitzen, so entspricht die Schadensart stattdessen dieser Kategorie (bzw. Kälteschaden bei der Kategorie Wasser). Sollte die Kreaturen mehreren dieser Kategorien angehören, entscheidest du, welchen Schaden sie verursacht.",
+        "OstentatiousArrivalSummonSpell": "Alle Kreaturen innerhalb einer @Template[type:emanation|distance:10]{10 Fuß/3 m Ausstrahlung} um die herbeigezauberte oder manifestierte Kreatur erleiden Feuerschaden (@Damage[(@item.level)d4[@actor.flags.pf2e.spellshape.arrivalDamage]]). Sollte die herbeigezauberte oder manifestierte Kreatur die Kategorie Elektrizität, Feuer, Kälte, Schall oder Wasser besitzen, so entspricht die Schadensart stattdessen dieser Kategorie (bzw. Kälteschaden bei der Kategorie Wasser). Sollte die Kreaturen mehreren dieser Kategorien angehören, entscheidest du, welchen Schaden sie verursacht.",
         "OverwhelmingBreath": "If you use your next action to Cast a Spell that has the monk trait and no duration, the spell and any Strikes you make as a result of casting it ignore an amount of the target's resistance to physical damage equal to your level.",
         "OverwhelmingEnergy": "Sofern deine nächste Handlung das Wirken eines Zaubers ist, ignoriert dieser Zauber beim Ziel Resistenz gegen Elektrizität, Feuer, Kälte, Säure oder Schall in Höhe deiner Stufe. Dies gilt für sämtlichen Schaden, den der Zauber generiert, Anhaltenden Schaden und Schaden aufgrund eines anhaltenden Effektes des Zaubers eingeschlossen, z.B. die Wand, welche eine @UUID[Compendium.pf2e.spells-srd.Item.IarZrgCeaiUqOuRu]{Feuerwand} erzeugt. Immunitäten einer Kreatur sind hiervon nicht betroffen.",
+        "PitchPerfectProjection": "If your next action this round is to Cast a Spell or use an action that creates an auditory effect with a range, increase that range by 30 feet.",
         "PortentousSpell": "If the next action you use is to Cast a Spell, any creature that attempts to use a reaction triggered by your Cast a Spell activity takes a –2 circumstance penalty to attack rolls and skill checks rolled as part of the reaction. In addition, if the spell includes a spell attack or requires a saving throw, creatures you hit or that fail their saves are @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fascinated} with you until the start of your next turn. @UUID[Compendium.pf2e.feat-effects.Item.klZVVIetJlR99cT6]{Effect: Portentous Spell}",
+        "PurifyingSpell": "Sofern du als nächste Handlung den Zauber Heilung auf eine einzelne lebende Kreatur wirkst, kannst du zusätzlich zu den normalen Effekten einer Krankheit oder Vergiftung entgegenwirken, unter der das Ziel leidet. In diesem Fall erlangt der Zauber Heilung die Kategorie Wasser.",
         "QuickenedCasting": "Sollte deine nächste Handlung das Wirken eines Zaubers oder Zaubertricks deiner Klasse sein, dessen Grad wenigstens 2 Grade niedriger ist als der höchste dir mögliche Zaubergrad deiner Klasse, so reduziere die zum Wirken erforderliche Anzahl an Aktionen um 1 (Minimum 1 Aktion).",
         "ReachSpell": "Sofern deine nächste Handlung das Wirken eines Zaubers mit einer Reichweite ist, so steigt diese Reichweite um 30 Fuß/9 m. Sollte der Zauber die Reichweite Berührung besitzen, steigt seine Reichweite auf 30 Fuß/9 m.",
         "Remediate": "Sofern du als nächste Handlung 3 Aktionen zum Wirken von Heilung oder Leid aufwendest, um Kreaturen Schaden zuzufügen, kannst du die nachhallende Energie nutzen, um widerstreitende Kräfte auszugleichen. Du kannst den Zauber <em>Heilung</em> oder <em>Leid</em> einsetzen, um einen Wurf zum @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.mmfWcV3Iyql5nzTo]{Entgegenwirken} gegen einen Effekt der Kategorie Göttlich innerhalb des Wirkungsbereiches abzulegen. Der Zauber erzeugt ferner seine üblichen Effekte.",
@@ -4467,6 +4514,11 @@
         },
         "ElementalAssault": {
           "Prompt": "Wähle ein Element."
+        }
+      },
+      "Summoner": {
+        "OstentatiousArrival": {
+          "Label": "Explosive Manifestation: Kreaturenkategorie"
         }
       },
       "Surki": {
