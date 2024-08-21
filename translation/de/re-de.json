@@ -595,22 +595,32 @@
       "Black": "Schwarzer Drache",
       "Blue": "Blauer Drache",
       "Brass": "Messingdrache",
+      "Brine": "Salzdrache",
       "Bronze": "Bronzedrache",
+      "Cloud": "Wolkendrache",
       "Conspirator": "Conspirator Dragon",
       "Copper": "Kupferdrache",
+      "Crystal": "Kristalldrache",
       "Diabolic": "Diabolic Dragon",
       "Divine": "Divine Dragon",
       "Empyreal": "Empyreal Dragon",
+      "Forest": "Walddrache",
       "Fortune": "Fortune Dragon",
       "Gold": "Golddrache",
       "Green": "Grüner Drache",
       "Horned": "Horned Dragon",
+      "Magma": "Magmadrache",
       "Mirage": "Mirage Dragon",
       "Occult": "Occult Dragon",
       "Omen": "Omen Dragon",
       "Primal": "Primal Dragon",
       "Red": "Roter Drache",
+      "Sea": "Seedrache",
       "Silver": "Silberdrache",
+      "Sky": "Himmelsdrache",
+      "Sovereign": "Herrscherdrache",
+      "Umbral": "Zwielichtdrache",
+      "Underworld": "Unterweltdrache",
       "White": "Weißer Drache"
     },
     "FeatDescription": {
@@ -1860,9 +1870,28 @@
         "ResearchField": {
           "Bomber": {
             "FieldBenefit": "When throwing an alchemical bomb with the splash trait, you can choose to deal splash damage to only your primary target instead of the usual splash area.",
+            "FieldVials": {
+              "RollOptionLabel": "Versatile Vials Damage"
+            },
             "GreaterFieldDiscovery": "You can increase the splash on your bombs to damage creatures within 10 feet, or 15 feet if you have Expanded Splash."
           },
-          "Prompt": "Wähle ein Forschungsgebiet."
+          "Chirurgeon": {
+            "FieldVials": {
+              "Description": "Your versatile vials can be used to heal a living creature @Damage[(ternary(gte(@actor.level,18),4,ternary(gte(@actor.level,12),3,ternary(gte(@actor.level,4),2,1))))d6[healing]] Hit Points. A creature can drink the vial for this benefit, or you can throw the vial at a willing creature within 20 feet as an Interact action to heal that creature. In either case, a vial used this way loses the acid and splash traits and gains the coagulant and healing traits, plus the elixir trait if a creature drinks it."
+            }
+          },
+          "FieldVials": "Field Vials",
+          "Mutagenist": {
+            "FieldVials": {
+              "Description": "You can drink the contents of one your versatile vials to suppress the drawback you take from one mutagen currently affecting you until the beginning of your next turn. A vial used this way loses the acid, bomb, and splash traits and gains the elixir trait. If you have more than one drawback due to @UUID[Compendium.pf2e.feats-srd.Item.jSkJIWPfSZZzvYzq]{Combine Elixirs} or a similar ability, drinking the vial suppresses one drawback of your choice."
+            }
+          },
+          "Prompt": "Wähle ein Forschungsgebiet.",
+          "Toxicologist": {
+            "FieldVials": {
+              "Description": "You can apply the contents of a versatile vial to a weapon or piece of ammunition as an injury poison. Add the versatile vial's initial damage to the first successful Strike with that weapon or ammunition. The substance becomes inert at the end of your current turn."
+            }
+          }
         }
       },
       "AldoriDuelist": {
@@ -2120,6 +2149,20 @@
         "Orlovsky": "Orlowski",
         "Prompt": "Wähle eine brevische Adelslinie.",
         "Surtova": "Surtowa"
+      },
+      "BreathWeapon": {
+        "Shape": {
+          "Cone": {
+            "Label": "Kegel",
+            "Description": "<p>Dein Eidolon stößt einen Schwall zerstörerischer Energie aus. Es fügt allen Kreaturen in einem @Template[cone|distance:30]{30 Fuß/9 m Kegel} @Damage[((ceil(@actor.level/2))d6)[@actor.flags.pf2e.breathweapon.breathDamage]|options:area-damage] zu (einfacher REF gegen deinen Zauber-SG)."
+          },
+          "Line": {
+            "Label": "Linie",
+            "Description": "<p>Dein Eidolon stößt einen Schwall zerstörerischer Energie aus. Es fügt allen Kreaturen in einem @Template[line|distance:60]{60 Fuß/18 m Linie} @Damage[((ceil(@actor.level/2))d6)[@actor.flags.pf2e.breathweapon.breathDamage]|options:area-damage] zu (einfacher REF gegen deinen Zauber-SG)."
+          }
+        },
+        "Cooldown": "Dein Eidolon kann seine Odemwaffe die nächsten [[/r 1d4 #Runden]]{1W4 Runden} nicht erneut nutzen.",
+        "Scaling": "Mit der 3. Stufe und dann alle 2 weiteren Stufen steigt der Schaden um 1W6."
       },
       "CapeOfJustice": {
         "Toggle": "Target is your designated offender"
@@ -2815,11 +2858,19 @@
         "Forager": {
           "Note": "Wenn du Überlebenskunde zum Überleben nutzt, und dabei etwas schlechteres als einen Erfolg erzielst, so gilt das Ergebnis dennoch als Erfolg. Du kannst außerdem mehrere Kreaturen am Existenzminimum versorgen."
         },
+        "KnowItAll": {
+          "Bard": "Gelingt dir ein Fertigkeitswurf zum @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Wissen abrufen}, erlangst du zusätzliche Informationen oder Zusammenhänge. Gelingt dir bei einem solchen Wurf ein Kritischer Erfolg, kann der SL dir sogar weitere Informationen oder Kontext zukommen lassen als normal.",
+          "Thaumaturge": "Du kennst alle Gerüchte und alle Geschichten in den Büchern und weißt, dass du wahrscheinlich alle entsprechenden Informationen kennst. Gelingt dir ein Wurf zum @UUID[Compendium.pf2e.actionspf2e.1OagaWtBpVXExToo]{Wissen abrufen}, erlangst du zusätzliche Informationen oder Kontext zum fraglichen Thema. Im Fall eines Kritischen Erfolges könntest du nach Maßgabe des SL noch mehr Informationen als üblich erlangen."
+        },
         "PeerBeyond": {
           "Note": "Du kannst Kenntnis (Geister) oder Kenntnis (Spukerscheinungen) zum Auswürfeln deiner Initiative nutzen, solltest du wissen, dass ein körperloser Untoter oder eine Spukerscheinung zugegen ist."
         },
         "RiskySurgery": {
           "Note": "Wenn du die Handlung Wunden versorgen anwendest, kannst du deinem Patienten @Damage[1d8[slashing]]{1W8 Punkte Hiebschaden} zufügen, kurz bevor die Effekte von Wunden versorgen wirksam werden. Wenn du das tust, erhältst du einen Situationsbonus von +2 für deinen Fertigkeitswurf für Heilkunde, um Wunden zu versorgen. Wenn du einen Erfolg erzielst, erhältst du stattdessen einen Kritischen Erfolg."
+        },
+        "SolarRejuvenation": {
+          "Ghoran": "Die Wärme und das Licht der Sonne spenden dir Lebensenergie. Wenn du dich tagsüber 10 Minuten lang im Freien aufhältst, erhältst du Trefferpunkte in Höhe deines Konstitutionsmodifikators x deiner halben Stufe zurück (@Damage[(floor(@actor.level/2)*@actor.con.mod)[healing]]). Du erhältst diesen Vorteil zusätzlich zu jeder Heilung durch @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Wunden versorgen}.",
+          "Leshy": "Wenn du am Tag für 10 Minuten im Freien rastest, gewinnst du Trefferpunkte in Höhe deines KO-Modifikators x deiner halben Stufe zurück (@Damage[(floor(@actor.level/2)*@actor.con.mod)[healing]]). Du erhältst diesen Vorteil zusätzlich zu jeglicher Heilung durch @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Wunden versorgen}. Lesniks, deren pflanzliche Nahrungsquelle nicht auf Photosynthese beruht, benötigen eine andere passende Umgebung. Pilzlesniks brauchen zum Beispiel eine dunkle, feuchte Umgebung und einen Haufen verrottende Pflanzen."
         },
         "ThlipitContestantDedication": {
           "Lash": "Lash"
@@ -3209,6 +3260,11 @@
         }
       },
       "ItemStrike": "Angriff: {item}",
+      "KeepPace": {
+        "BountyHunter": "When your hunted prey tries to bolt, you follow. You Stride up to your Speed, following your hunted prey and keeping it in reach throughout its movement until it stops moving or you've moved your full Speed. You can use Keep Pace to @UUID[Compendium.pf2e.actionspf2e.Item.H6v1VgowHaKHnVlG]{Burrow}, @UUID[Compendium.pf2e.actionspf2e.Item.pprgrYQ1QnIDGZiy]{Climb}, @UUID[Compendium.pf2e.actionspf2e.Item.cS9nfDRGD83bNU1p]{Fly}, or @UUID[Compendium.pf2e.actionspf2e.Item.c8TGiZ48ygoSPofx]{Swim} instead of Stride if you have the appropriate movement type.",
+        "GameHunter": "Once you are upon your prey, they can't escape. @UUID[Compendium.pf2e.actionspf2e.Item.Bcxarzksqt9ezrs6]{Stride} up to your Speed, following the foe and keeping it in reach throughout its movement until it stops moving or you've moved your full Speed. You can use Keep Pace to @UUID[Compendium.pf2e.actionspf2e.Item.H6v1VgowHaKHnVlG]{Burrow}, @UUID[Compendium.pf2e.actionspf2e.Item.pprgrYQ1QnIDGZiy]{Climb}, @UUID[Compendium.pf2e.actionspf2e.Item.cS9nfDRGD83bNU1p]{Fly}, or @UUID[Compendium.pf2e.actionspf2e.Item.c8TGiZ48ygoSPofx]{Swim} instead of Stride if you have the corresponding movement type.",
+        "Trigger": "Your prey is within reach and attempts to move away from you."
+      },
       "Kineticist": {
         "GateAttenuator": "Portalstärker",
         "Impulse": {
@@ -4176,10 +4232,6 @@
           "Requirements": "You are benefiting from a blood magic effect"
         }
       },
-      "SolarRejuvenation": {
-        "Ghoran": "Die Wärme und das Licht der Sonne spenden dir Lebensenergie. Wenn du dich tagsüber 10 Minuten lang im Freien aufhältst, erhältst du Trefferpunkte in Höhe deines Konstitutionsmodifikators x deiner halben Stufe zurück (@Damage[(floor(@actor.level/2)*@actor.con.mod)[healing]]). Du erhältst diesen Vorteil zusätzlich zu jeder Heilung durch @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Wunden versorgen}.",
-        "Leshy": "Wenn du am Tag für 10 Minuten im Freien rastest, gewinnst du Trefferpunkte in Höhe deines KO-Modifikators x deiner halben Stufe zurück (@Damage[(floor(@actor.level/2)*@actor.con.mod)[healing]]). Du erhältst diesen Vorteil zusätzlich zu jeglicher Heilung durch @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Wunden versorgen}. Lesniks, deren pflanzliche Nahrungsquelle nicht auf Photosynthese beruht, benötigen eine andere passende Umgebung. Pilzlesniks brauchen zum Beispiel eine dunkle, feuchte Umgebung und einen Haufen verrottende Pflanzen."
-      },
       "SoulWarden": {
         "SafeguardSoul": {
           "Label": "Verteidigung gegen manipulieren deine Seele"
@@ -4482,7 +4534,7 @@
           "ShadowGrasp": "Schattengriff",
           "SkywardSlash": "Himmelshieb",
           "StingingLash": "Brennende Peitsche",
-          "Stonestrike": "Stonestrike",
+          "Stonestrike": "Steinschlagangriff",
           "StumblingSwing": "Torkelnder Schlag",
           "TigerClaw": "Tigerklaue",
           "WindCrash": "Sturmwind",
