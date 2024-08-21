@@ -595,32 +595,32 @@
       "Black": "Schwarzer Drache",
       "Blue": "Blauer Drache",
       "Brass": "Messingdrache",
-      "Brine": "Brine Dragon",
+      "Brine": "Salzdrache",
       "Bronze": "Bronzedrache",
-      "Cloud": "Cloud Dragon",
+      "Cloud": "Wolkendrache",
       "Conspirator": "Conspirator Dragon",
       "Copper": "Kupferdrache",
-      "Crystal": "Crystal Dragon",
+      "Crystal": "Kristalldrache",
       "Diabolic": "Diabolic Dragon",
       "Divine": "Divine Dragon",
       "Empyreal": "Empyreal Dragon",
-      "Forest": "Forest Dragon",
+      "Forest": "Walddrache",
       "Fortune": "Fortune Dragon",
       "Gold": "Golddrache",
       "Green": "Grüner Drache",
       "Horned": "Horned Dragon",
-      "Magma": "Magma Dragon",
+      "Magma": "Magmadrache",
       "Mirage": "Mirage Dragon",
       "Occult": "Occult Dragon",
       "Omen": "Omen Dragon",
       "Primal": "Primal Dragon",
       "Red": "Roter Drache",
-      "Sea": "Sea Dragon",
+      "Sea": "Seedrache",
       "Silver": "Silberdrache",
-      "Sky": "Sky Dragon",
-      "Sovereign": "Sovereign Dragon",
-      "Umbral": "Umbral Dragon",
-      "Underworld": "Underworld Dragon",
+      "Sky": "Himmelsdrache",
+      "Sovereign": "Herrscherdrache",
+      "Umbral": "Zwielichtdrache",
+      "Underworld": "Unterweltdrache",
       "White": "Weißer Drache"
     },
     "FeatDescription": {
@@ -2153,16 +2153,16 @@
       "BreathWeapon": {
         "Shape": {
           "Cone": {
-            "Label": "Cone",
-            "Description": "Your eidolon exhales a blast of destructive energy. Your eidolon deals @Damage[((ceil(@actor.level/2))d6)[@actor.flags.pf2e.breathweapon.breathDamage]|options:area-damage] damage to all creatures in a @Template[cone|distance:30], with a basic Reflex save against your spell DC."
+            "Label": "Kegel",
+            "Description": "<p>Dein Eidolon stößt einen Schwall zerstörerischer Energie aus. Es fügt allen Kreaturen in einem @Template[cone|distance:30]{30 Fuß/9 m Kegel} @Damage[((ceil(@actor.level/2))d6)[@actor.flags.pf2e.breathweapon.breathDamage]|options:area-damage] zu (einfacher REF gegen deinen Zauber-SG)."
           },
           "Line": {
-            "Label": "Line",
-            "Description": "Your eidolon exhales a blast of destructive energy. Your eidolon deals @Damage[((ceil(@actor.level/2))d6)[@actor.flags.pf2e.breathweapon.breathDamage]|options:area-damage] damage to all creatures in a @Template[line|distance:60], with a basic Reflex save against your spell DC."
+            "Label": "Linie",
+            "Description": "<p>Dein Eidolon stößt einen Schwall zerstörerischer Energie aus. Es fügt allen Kreaturen in einem @Template[line|distance:60]{60 Fuß/18 m Linie} @Damage[((ceil(@actor.level/2))d6)[@actor.flags.pf2e.breathweapon.breathDamage]|options:area-damage] zu (einfacher REF gegen deinen Zauber-SG)."
           }
         },
-        "Cooldown": "Your eidolon then can't use their Breath Weapon again for the next [[/r 1d4 #rounds]]{1d4 rounds}.",
-        "Scaling": "At 3rd level and every 2 levels thereafter, the damage increases by 1d6."
+        "Cooldown": "Dein Eidolon kann seine Odemwaffe die nächsten [[/r 1d4 #Runden]]{1W4 Runden} nicht erneut nutzen.",
+        "Scaling": "Mit der 3. Stufe und dann alle 2 weiteren Stufen steigt der Schaden um 1W6."
       },
       "CapeOfJustice": {
         "Toggle": "Target is your designated offender"
@@ -2859,8 +2859,8 @@
           "Note": "Wenn du Überlebenskunde zum Überleben nutzt, und dabei etwas schlechteres als einen Erfolg erzielst, so gilt das Ergebnis dennoch als Erfolg. Du kannst außerdem mehrere Kreaturen am Existenzminimum versorgen."
         },
         "KnowItAll": {
-          "Bard": "When you succeed at a check to Recall Knowledge, you gain additional information or context. When you critically succeed at a check to Recall Knowledge, you get additional information or context or can ask an additional follow-up question (the GM chooses which).",
-          "Thaumaturge": "Having heard every rumor or story in the book, you know that if you've heard of something in the first place, you've probably heard about it at length. When you succeed at a check to Recall Knowledge, you gain additional information or context about the given topic. When you critically succeed at a check to Recall Knowledge, at the GM's discretion, you might gain even more additional information or context than normal."
+          "Bard": "Gelingt dir ein Fertigkeitswurf zum @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Wissen abrufen}, erlangst du zusätzliche Informationen oder Zusammenhänge. Gelingt dir bei einem solchen Wurf ein Kritischer Erfolg, kann der SL dir sogar weitere Informationen oder Kontext zukommen lassen als normal.",
+          "Thaumaturge": "Du kennst alle Gerüchte und alle Geschichten in den Büchern und weißt, dass du wahrscheinlich alle entsprechenden Informationen kennst. Gelingt dir ein Wurf zum @UUID[Compendium.pf2e.actionspf2e.1OagaWtBpVXExToo]{Wissen abrufen}, erlangst du zusätzliche Informationen oder Kontext zum fraglichen Thema. Im Fall eines Kritischen Erfolges könntest du nach Maßgabe des SL noch mehr Informationen als üblich erlangen."
         },
         "PeerBeyond": {
           "Note": "Du kannst Kenntnis (Geister) oder Kenntnis (Spukerscheinungen) zum Auswürfeln deiner Initiative nutzen, solltest du wissen, dass ein körperloser Untoter oder eine Spukerscheinung zugegen ist."
@@ -2869,8 +2869,8 @@
           "Note": "Wenn du die Handlung Wunden versorgen anwendest, kannst du deinem Patienten @Damage[1d8[slashing]]{1W8 Punkte Hiebschaden} zufügen, kurz bevor die Effekte von Wunden versorgen wirksam werden. Wenn du das tust, erhältst du einen Situationsbonus von +2 für deinen Fertigkeitswurf für Heilkunde, um Wunden zu versorgen. Wenn du einen Erfolg erzielst, erhältst du stattdessen einen Kritischen Erfolg."
         },
         "SolarRejuvenation": {
-          "Ghoran": "The warmth and light of the sun gives you life. If you rest outdoors for 10 minutes during the day, you regain Hit Points equal to your @Damage[(floor(@actor.level/2)*@actor.con.mod)[healing]]{Constitution modifier × half your level}. You gain this benefit in addition to any healing from @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Treat Wounds}.",
-          "Leshy": "If you rest outdoors for 10 minutes during the day, you regain Hit Points equal to your @Damage[(floor(@actor.level/2)*@actor.con.mod)[healing]]{Constitution modifier × half your level}. You gain this benefit in addition to any healing from @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Treat Wounds}. Leshies whose plant nourishment does not rely on photosynthesis require a similarly suitable environment. For example, fungus leshies need dark, damp environments and a pile of decaying plant matter."
+          "Ghoran": "Die Wärme und das Licht der Sonne spenden dir Lebensenergie. Wenn du dich tagsüber 10 Minuten lang im Freien aufhältst, erhältst du Trefferpunkte in Höhe deines Konstitutionsmodifikators x deiner halben Stufe zurück (@Damage[(floor(@actor.level/2)*@actor.con.mod)[healing]]). Du erhältst diesen Vorteil zusätzlich zu jeder Heilung durch @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Wunden versorgen}.",
+          "Leshy": "Wenn du am Tag für 10 Minuten im Freien rastest, gewinnst du Trefferpunkte in Höhe deines KO-Modifikators x deiner halben Stufe zurück (@Damage[(floor(@actor.level/2)*@actor.con.mod)[healing]]). Du erhältst diesen Vorteil zusätzlich zu jeglicher Heilung durch @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Wunden versorgen}. Lesniks, deren pflanzliche Nahrungsquelle nicht auf Photosynthese beruht, benötigen eine andere passende Umgebung. Pilzlesniks brauchen zum Beispiel eine dunkle, feuchte Umgebung und einen Haufen verrottende Pflanzen."
         },
         "ThlipitContestantDedication": {
           "Lash": "Lash"
