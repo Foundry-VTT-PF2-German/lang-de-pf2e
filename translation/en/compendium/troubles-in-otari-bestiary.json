@@ -18,7 +18,16 @@
       "name": "Bugbear Marauder",
       "items": {
         "weapon->Longsword": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.LJdbVTOZog39EEbi]\n<p>Longswords can be one-edged or two-edged swords. Their blades are heavy and they're between 3 and 4 feet in length.</p>"
+          "name": "Longsword",
+          "description": "<p>Longswords can be one-edged or two-edged swords. Their blades are heavy and they're between 3 and 4 feet in length.</p>"
+        },
+        "weapon->Javelin": {
+          "name": "Javelin",
+          "description": "<p>This thin spear is well balanced for throwing but is not designed for melee use.</p>"
+        },
+        "armor->Leather Armor": {
+          "name": "Leather Armor",
+          "description": "<p>A mix of flexible and molded boiled leather, a suit of this type of armor provides some protection with maximum flexibility.</p>"
         },
         "strike-melee->Longsword": {
           "name": "Longsword"
@@ -63,25 +72,74 @@
         "spellcastingEntry->Divine Prepared Spells": {
           "name": "Divine Prepared Spells"
         },
+        "spell->Dispel Magic": {
+          "name": "Dispel Magic",
+          "description": "<p>You unravel the magic behind a spell or effect. Attempt a counteract check against the target. If you successfully counteract a magic item, the item becomes a mundane item of its type for 10 minutes. This doesn't change the item's non-magical properties. If the target is an artifact or similar item, you automatically fail.</p>",
+          "target": "1 spell effect or unattended magic item"
+        },
+        "spell->Resist Energy": {
+          "name": "Resist Energy",
+          "description": "<p>A shield of elemental energy protects a creature against one type of energy damage. Choose acid, cold, electricity, fire, or sonic damage. The target and its gear gain resistance 5 against the damage type you chose.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.con2Hzt47JjpuUej]{Spell Effect: Resist Energy}</p>\n<hr />\n<p><strong>Heightened (4th)</strong> The resistance increases to 10, and you can target up to two creatures.</p>\n<p><strong>Heightened (7th)</strong> The resistance increases to 15, and you can target up to five creatures.</p>",
+          "target": "1 creature"
+        },
         "spell->See Invisibility": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.jwK43yKsHTkJQvQ9]\nSee Invisibility"
+          "name": "See Invisibility",
+          "description": "<p>You can see @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Invisible} creatures and objects. They appear to you as translucent shapes, and they are @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} to you.</p>\n<hr />\n<p><strong>Heightened (5th)</strong> The spell has a duration of 8 hours.</p>"
         },
         "spell->Burning Hands": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.y6rAdMK6EFlV6U0t]\nBurning Hands"
+          "name": "Burning Hands",
+          "description": "<p>Gouts of flame rush from your hands. You deal 2d6 fire damage to creatures in the area.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 2d6.</p>"
+        },
+        "spell->Command": {
+          "name": "Command",
+          "description": "<p>You shout a command that's hard to ignore. You can command the target to approach you, run away (as if it had the @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} condition), release what it's holding, drop @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}, or stand in place. It can't Delay or take any reactions until it has obeyed your command. The effects depend on the target's Will save.</p>\n<hr /><p><strong>Success</strong> The creature is unaffected.</p>\n<p><strong>Failure</strong> For the first action on its next turn, the creature must use a single action to do as you command.</p>\n<p><strong>Critical Failure</strong> The target must use all its actions on its next turn to obey your command.</p>\n<hr /><p><strong>Heightened (5th)</strong> You can target up to 10 creatures.</p>",
+          "target": "1 creature"
+        },
+        "spell->Daze": {
+          "name": "Daze",
+          "description": "<p>You cloud the target's mind and daze it with a mental jolt. The jolt deals mental damage equal to your spellcasting ability modifier; the target must attempt a basic Will save. If the target critically fails the save, it is also @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The damage increases by 1d6.</p>",
+          "target": "1 creature"
+        },
+        "spell->Fear": {
+          "name": "Fear",
+          "description": "<p>You plant fear in the target; it must attempt a Will save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}.</p>\n<p><strong>Critical Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3} and @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} for 1 round.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> You can target up to five creatures.</p>",
+          "target": "1 creature"
+        },
+        "spell->Heal": {
+          "name": "Heal",
+          "description": "<p>You channel vitality energy to heal the living or damage the undead. If the target is a willing living creature, you restore 1d8 Hit Points. If the target is undead, you deal that amount of vitality damage to it, and it gets a basic Fortitude save. The number of actions you spend when Casting this Spell determines its targets, range, area, and other parameters.</p>\n<p><span class=\"action-glyph\">1</span> <strong>(somatic)</strong> The spell has a range of touch.</p>\n<p><span class=\"action-glyph\">2</span> <strong>(verbal, somatic)</strong> The spell has a range of 30 feet. If you're healing a living creature, increase the Hit Points restored by 8</p>\n<p><span class=\"action-glyph\">3</span> <strong>(material, somatic, verbal)</strong> You disperse vitality energy in a 30-foot emanation. This targets all living and undead creatures in the burst.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The amount of healing or damage increases by 1d8, and the extra healing for the 2-action version increases by 8.</p>",
+          "target": "1 willing living creature or 1 undead"
         },
         "spell->Light": {
+          "name": "Light",
+          "description": "<p>The object glows, casting bright light in a 20-foot radius (and dim light for the next 20 feet) like a torch. If you cast this spell again on a second object, the light spell on the first object ends.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.cVVZXNbV0nElVOPZ]{Spell Effect: Light}</p>\n<hr />\n<p><strong>Heightened (4th)</strong> The object sheds bright light in a 60-foot radius (and dim light for the next 60 feet).</p>",
           "target": "1 object of 1 Bulk or less, either unattended or possessed by you or a willing ally"
         },
+        "spell->Message": {
+          "name": "Message",
+          "description": "<p>You mouth words quietly, but instead of coming out of your mouth, they're transferred directly to the ears of the target. While others can't hear your words any better than if you normally mouthed them, the target can hear your words as if they were standing next to you.</p>\n<p>The target can give a brief response as a reaction, or as a free action on their next turn if they wish, but they must be able to see you and be within range to do so. If they respond, their response is delivered directly to your ear, just like the original message.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> The spell's range increases to 500 feet.</p>",
+          "target": "1 creature"
+        },
+        "spell->Sigil": {
+          "name": "Sigil",
+          "description": "<p>You harmlessly place your unique magical sigil, which is about 1 square inch in size, on the targeted creature or object. The mark can be visible or invisible, and you can change it from one state to another by using an Interact action to touch the target. The mark can be scrubbed or scraped off with 5 minutes of work. If it's on a creature, it fades naturally over the course of a week. The time before the mark fades increases depending on your heightened level.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> The sigil instead fades after 1 month.</p>\n<p><strong>Heightened (5th)</strong> The sigil instead fades after 1 year.</p>\n<p><strong>Heightened (7th)</strong> The sigil never fades.</p>",
+          "target": "1 creature or object"
+        },
+        "weapon->Dagger": {
+          "name": "Dagger",
+          "description": "<p>This small, bladed weapon is held in one hand and used to stab a creature in close combat. It can also be thrown.</p>"
+        },
         "armor->Half Plate": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.pRoikbRo5HFW6YUB]\n<p>Half plate consists of most of the upper body plates used in full plate, with lighter or sparser steel plate protection for the arms and legs. This provides some of the protection of full plate with greater flexibility and speed. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.</p>"
+          "name": "Half Plate",
+          "description": "<p>Half plate consists of most of the upper body plates used in full plate, with lighter or sparser steel plate protection for the arms and legs. This provides some of the protection of full plate with greater flexibility and speed. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.</p>"
         },
         "equipment->Religious Symbol of Asmodeus (Wooden)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.plplsXJsqrdqNQVI]\nReligious Symbol of Asmodeus (Wooden)",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.plplsXJsqrdqNQVI]\n<p>This piece of wood or silver is emblazoned with an image representing a deity. Some divine spellcasters, such as clerics, can use a religious symbol of their deity as a divine focus to use certain abilities and cast some spells. A religious symbol must be held in one hand to use it.</p>"
+          "name": "Religious Symbol of Asmodeus (Wooden)",
+          "description": "<p>This piece of wood or silver is emblazoned with an image representing a deity. Some divine spellcasters, such as clerics, can use a religious symbol of their deity as a divine focus to use certain abilities and cast some spells. A religious symbol must be held in one hand to use it.</p>"
         },
         "equipment->Area Map": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.UhcRWtnjU2WLSClx]\nArea Map",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.UhcRWtnjU2WLSClx]\n<p>This map shows Maunder Castle, the logging camp, logger movements, and plans of attack.</p>\n<hr />\n<p>Maps are uncommon. Most maps you can find are simple and functional. A survey map details a single location in excellent detail.</p>\n<p>One of these maps gives you a +1 item bonus to Survival checks and any skill checks to Recall Knowledge, provided the checks are related to the location detailed on the map.</p>",
+          "name": "Area Map",
+          "description": "<p>This map shows Maunder Castle, the logging camp, logger movements, and plans of attack.</p>\n<hr />\n<p>Maps are uncommon. Most maps you can find are simple and functional. A survey map details a single location in excellent detail.</p>\n<p>One of these maps gives you a +1 item bonus to Survival checks and any skill checks to Recall Knowledge, provided the checks are related to the location detailed on the map.</p>",
           "rules": {
             "0": {
               "label": "Area Map (mapped area)"
@@ -89,11 +147,11 @@
           }
         },
         "consumable->Scroll of Magic Weapon (Level 1)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.RjuupS9xyXDLgyIr]\nScroll of Magic Weapon (Level 1)",
+          "name": "Scroll of Magic Weapon (Level 1)",
           "consumableSpellName": "Magic Weapon",
           "consumableSpellDescription": "<p>The weapon glimmers with magic and energy. The target becomes a +1 striking weapon, gaining a +1 item bonus to attack rolls and increasing the number of weapon damage dice to two.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.GnWkI3T3LYRlm3X8]{Spell Effect: Runic Weapon}</p>",
           "consumableSpellTarget": "1 weapon that is unattended or wielded by you or a willing ally",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.RjuupS9xyXDLgyIr]\n<p>@UUID[Compendium.pf2e.spells-srd.Item.TFitdEOpQC4SzKQQ]{Runic Weapon}</p><hr /><p>Casting a Spell from a scroll requires holding the scroll in one hand and activating it with a Cast a Spell activity using the normal number of actions for that spell.</p>\n<p>To Cast a Spell from a scroll, the spell must appear on your spell list. Because you're the one Casting the Spell, use your spell attack roll and spell DC. The spell also gains the appropriate trait for your tradition (arcane, divine, occult, or primal).</p>\n<p>Any physical material components and costs are provided when a scroll is created, so you don't need to provide them when Casting a Spell from a scroll. You must replace any required material component for that spell with a somatic component. If the spell requires a focus, you must have that focus to Cast the Spell from a scroll.</p>\n<hr />\n<p><em>Note: To create a scroll or wand of a specific spell, drag the spell from the compendium or compendium browser into the inventory of a PC, NPC, or loot actor.</em></p>"
+          "description": "<p>@UUID[Compendium.pf2e.spells-srd.Item.TFitdEOpQC4SzKQQ]{Runic Weapon}</p><hr /><p>Casting a Spell from a scroll requires holding the scroll in one hand and activating it with a Cast a Spell activity using the normal number of actions for that spell.</p>\n<p>To Cast a Spell from a scroll, the spell must appear on your spell list. Because you're the one Casting the Spell, use your spell attack roll and spell DC. The spell also gains the appropriate trait for your tradition (arcane, divine, occult, or primal).</p>\n<p>Any physical material components and costs are provided when a scroll is created, so you don't need to provide them when Casting a Spell from a scroll. You must replace any required material component for that spell with a somatic component. If the spell requires a focus, you must have that focus to Cast the Spell from a scroll.</p>\n<hr />\n<p><em>Note: To create a scroll or wand of a specific spell, drag the spell from the compendium or compendium browser into the inventory of a PC, NPC, or loot actor.</em></p>"
         },
         "strike-melee->Dagger": {
           "name": "Dagger"
@@ -114,9 +172,21 @@
       "name": "Kobold Trapmaster",
       "publicNotes": "<p>Kobold trapmasters are the masterminds behind crafting and implementing wily traps in kobold lairs, and are widely respected among their kind.</p>",
       "items": {
+        "weapon->Shortsword": {
+          "name": "Shortsword",
+          "description": "<p>These blades come in a variety of shapes and styles, but they are typically 2 feet long.</p>"
+        },
+        "weapon->Spear": {
+          "name": "Spear",
+          "description": "<p>A long metal shaft ending with a metal spike, a spear can be used one-handed as a melee weapon and can be thrown.</p>"
+        },
+        "armor->Leather Armor": {
+          "name": "Leather Armor",
+          "description": "<p>A mix of flexible and molded boiled leather, a suit of this type of armor provides some protection with maximum flexibility.</p>"
+        },
         "consumable->Spike Trap": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.3V2U720YhW2nyGVx]\nSpike Trap",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.3V2U720YhW2nyGVx]\n<p>This basic snare consists of hidden spikes that rely on a creature's momentum to lacerate or potentially impale it as it enters the snare's square, dealing 2d8 piercing damage. The creature must attempt a @Check[reflex|dc:17|basic] saving throw.</p>"
+          "name": "Spike Trap",
+          "description": "<p>This basic snare consists of hidden spikes that rely on a creature's momentum to lacerate or potentially impale it as it enters the snare's square, dealing 2d8 piercing damage. The creature must attempt a @Check[reflex|dc:17|basic] saving throw.</p>"
         },
         "strike-melee->Shortsword": {
           "name": "Shortsword"
@@ -133,7 +203,8 @@
           "description": "<p>The kobold trapmaster deploys one spike trap in an adjacent square.</p>"
         },
         "action->Sneak Attack": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>The kobold trapmaster deals an extra 1d6 damage to creatures that have the @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} condition.</p>"
+          "name": "Sneak Attack",
+          "description": "<p>The kobold trapmaster deals an extra 1d6 damage to creatures that have the @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} condition.</p>"
         },
         "action->Spike Trap": {
           "name": "Spike Trap",
@@ -149,14 +220,26 @@
         }
       },
       "items": {
+        "weapon->Maul": {
+          "name": "Maul",
+          "description": "<p>Mauls are massive warhammers that must be swung with two hands.</p>"
+        },
+        "weapon->Javelin": {
+          "name": "Javelin",
+          "description": "<p>This thin spear is well balanced for throwing but is not designed for melee use.</p>"
+        },
         "armor->Half Plate": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.pRoikbRo5HFW6YUB]\n<p>Half plate consists of most of the upper body plates used in full plate, with lighter or sparser steel plate protection for the arms and legs. This provides some of the protection of full plate with greater flexibility and speed. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.</p>"
+          "name": "Half Plate",
+          "description": "<p>Half plate consists of most of the upper body plates used in full plate, with lighter or sparser steel plate protection for the arms and legs. This provides some of the protection of full plate with greater flexibility and speed. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.</p>"
         },
         "strike-melee->Maul": {
           "name": "Maul"
         },
         "strike-ranged->Javelin": {
           "name": "Javelin"
+        },
+        "action->Attack of Opportunity": {
+          "name": "Attack of Opportunity"
         },
         "action->Brutish Shove": {
           "name": "Brutish Shove",
@@ -184,11 +267,28 @@
         "spellcastingEntry->Divine Innate Spells": {
           "name": "Divine Innate Spells"
         },
+        "spell->Paralyze": {
+          "name": "Paralyze",
+          "description": "<p>You block the target's motor impulses before they can leave its mind, threatening to freeze the target in place. The target must attempt a Will save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} for 1 round.</p>\n<p><strong>Critical Failure</strong> The target is Paralyzed for 4 rounds. At the end of each of its turns, it can attempt a new Will save to reduce the remaining duration by 1 round, or end it entirely on a critical success.</p>\n<hr />\n<p><strong>Heightened (7th)</strong> You can target up to 10 creatures.</p>",
+          "target": "1 creature"
+        },
         "spell->Hideous Laughter": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.tlSE7Ly8vi1Dgddv]\nHideous Laughter"
+          "name": "Hideous Laughter",
+          "description": "<p>The target is overtaken with uncontrollable laughter. It must attempt a Will save.</p>\n<hr /><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is plagued with uncontrollable laughter. It can't use reactions.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} and can't use reactions.</p>\n<p><strong>Critical Failure</strong> The target falls @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} and can't use actions or reactions for 1 round. It then suffers the failure effects.</p>",
+          "target": "1 living creature"
         },
         "spell->See Invisibility": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.jwK43yKsHTkJQvQ9]\nSee Invisibility"
+          "name": "See Invisibility",
+          "description": "<p>You can see @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Invisible} creatures and objects. They appear to you as translucent shapes, and they are @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} to you.</p>\n<hr />\n<p><strong>Heightened (5th)</strong> The spell has a duration of 8 hours.</p>"
+        },
+        "spell->Charm": {
+          "name": "Charm",
+          "description": "<p>To the target, your words are honey and your visage seems bathed in a dreamy haze. It must attempt a Will save, with a +4 circumstance bonus if you or your allies recently threatened it or used hostile actions against it.</p>\n<p>You can Dismiss the spell. If you use hostile actions against the target, the spell ends. When the spell ends, the target doesn't necessarily realize it was charmed unless its friendship with you or the actions you convinced it to take clash with its expectations, meaning you could potentially convince the target to continue being your friend via mundane means.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected and aware you tried to charm it.</p>\n<p><strong>Success</strong> The target is unaffected but thinks your spell was something harmless instead of charm, unless it identifies the spell.</p>\n<p><strong>Failure</strong> The target's attitude becomes @UUID[Compendium.pf2e.conditionitems.Item.v66R7FdOf11l94im]{Friendly} toward you. If it was Friendly, it becomes @UUID[Compendium.pf2e.conditionitems.Item.v44P3WUcU1j0115l]{Helpful}. It can't use hostile actions against you.</p>\n<p><strong>Critical Failure</strong> The target's attitude becomes Helpful toward you, and it can't use hostile actions against you.</p>\n<hr />\n<p><strong>Heightened (4th)</strong> The duration lasts until the next time you make your daily preparations.</p>\n<p><strong>Heightened (8th)</strong> The duration lasts until the next time you make your daily preparations, and you can target up to 10 creatures.</p>",
+          "target": "1 creature"
+        },
+        "spell->Grim Tendrils": {
+          "name": "Grim Tendrils",
+          "description": "<p>Tendrils of darkness curl out from your fingertips and race through the air. You deal 2d4 void damage and [[/r (@item.level)[bleed]]] damage to living creatures in the line. Each living creature in the line must attempt a Fortitude save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half the void damage and no persistent bleed damage.</p>\n<p><strong>Failure</strong> The creature takes full damage.</p>\n<p><strong>Critical Failure</strong> The creature takes double void damage and double persistent bleed damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The void damage increases by 2d4, and the persistent bleed damage increases by 1.</p>"
         },
         "strike-melee->Jaws": {
           "name": "Jaws"
@@ -204,6 +304,9 @@
         "action->Remove Memory": {
           "name": "Remove Memory",
           "description": "<p>The Kurnugian ends their Hypnotic Stare ability early, and just before this happens, the target must succeed at a @Check[will|dc:24] saving throw or forget any hostile activities the Kurnugian jackal performed against it.</p>"
+        },
+        "action->Knockdown": {
+          "name": "Knockdown"
         }
       }
     },
@@ -238,28 +341,89 @@
         "spellcastingEntry->Arcane Focus Spells": {
           "name": "Arcane Focus Spells"
         },
+        "spell->Acid Arrow": {
+          "name": "Acid Arrow",
+          "description": "<p>You conjure an arrow of acid that keeps corroding the target after it hits. Make a spell attack against the target. On a hit, you deal 3d8 acid damage plus @Damage[(floor(@item.rank/2))d6[persistent,acid]] damage. On a critical hit, double the initial damage, but not the persistent damage.</p><hr /><p><strong>Heightened (+2)</strong> The initial damage increases by 2d8, and the persistent acid damage increases by 1d6.</p>",
+          "target": "1 creature"
+        },
         "spell->Obscuring Mist": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.9XHmC2JgTUIQ1CCm]\nObscuring Mist"
+          "name": "Obscuring Mist",
+          "description": "<p>You call forth a cloud of mist. All creatures within the mist become @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed}, and all creatures outside the mist become Concealed to creatures within it. You can Dismiss the cloud.</p>"
+        },
+        "spell->Resist Energy": {
+          "name": "Resist Energy",
+          "description": "<p>A shield of elemental energy protects a creature against one type of energy damage. Choose acid, cold, electricity, fire, or sonic damage. The target and its gear gain resistance 5 against the damage type you chose.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.con2Hzt47JjpuUej]{Spell Effect: Resist Energy}</p>\n<hr />\n<p><strong>Heightened (4th)</strong> The resistance increases to 10, and you can target up to two creatures.</p>\n<p><strong>Heightened (7th)</strong> The resistance increases to 15, and you can target up to five creatures.</p>",
+          "target": "1 creature"
+        },
+        "spell->Command": {
+          "name": "Command",
+          "description": "<p>You shout a command that's hard to ignore. You can command the target to approach you, run away (as if it had the @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} condition), release what it's holding, drop @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}, or stand in place. It can't Delay or take any reactions until it has obeyed your command. The effects depend on the target's Will save.</p>\n<hr /><p><strong>Success</strong> The creature is unaffected.</p>\n<p><strong>Failure</strong> For the first action on its next turn, the creature must use a single action to do as you command.</p>\n<p><strong>Critical Failure</strong> The target must use all its actions on its next turn to obey your command.</p>\n<hr /><p><strong>Heightened (5th)</strong> You can target up to 10 creatures.</p>",
+          "target": "1 creature"
+        },
+        "spell->Daze": {
+          "name": "Daze",
+          "description": "<p>You cloud the target's mind and daze it with a mental jolt. The jolt deals mental damage equal to your spellcasting ability modifier; the target must attempt a basic Will save. If the target critically fails the save, it is also @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The damage increases by 1d6.</p>",
+          "target": "1 creature"
+        },
+        "spell->Detect Magic": {
+          "name": "Detect Magic",
+          "description": "<p>You send out a pulse that registers the presence of magic. You receive no information beyond the presence or absence of magic. You can choose to ignore magic you're fully aware of, such as the magic items and ongoing spells of you and your allies.</p>\n<p>You detect illusion magic only if that magic's effect has a lower level than the rank of your detect magic spell. However, items that have an illusion aura but aren't deceptive in appearance (such as an invisibility potion) typically are detected normally.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> You learn the school of magic for the highest-level effect within range that the spell detects. If multiple effects are equally strong, the GM determines which you learn.</p>\n<p><strong>Heightened (4th)</strong> As 3rd level, but you also pinpoint the source of the highest-level magic. Like for an imprecise sense, you don't learn the exact location, but can narrow down the source to within a 5-foot cube (or the nearest if larger than that).</p>"
+        },
+        "spell->Fear": {
+          "name": "Fear",
+          "description": "<p>You plant fear in the target; it must attempt a Will save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}.</p>\n<p><strong>Critical Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3} and @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} for 1 round.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> You can target up to five creatures.</p>",
+          "target": "1 creature"
+        },
+        "spell->Ghost Sound": {
+          "name": "Ghost Sound",
+          "description": "<p>You create an auditory illusion of simple sounds that has a maximum volume equal to four normal humans shouting. The sounds emanate from a square you designate within range. You can't create intelligible words or other intricate sounds (such as music).</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> The range increases to 60 feet.</p>\n<p><strong>Heightened (5th)</strong> The range increases to 120 feet.</p>"
+        },
+        "spell->Gust of Wind": {
+          "name": "Gust of Wind",
+          "description": "<p>A violent wind issues forth from your palm, blowing from the point where you are when you cast the spell to the line's opposite end. The wind extinguishes small non-magical fires, disperses fog and mist, blows objects of light Bulk or less around, and pushes larger objects. Large or smaller creatures in the area must attempt a Fortitude save. Large or smaller creatures that later move into the gust must attempt the save on entering.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature can't move against the wind.</p>\n<p><strong>Failure</strong> The creature is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}. If it was flying, it suffers the effects of critical failure instead.</p>\n<p><strong>Critical Failure</strong> The creature is pushed 30 feet in the wind's direction, knocked Prone, and takes 2d6 bludgeoning damage.</p>"
         },
         "spell->Mage Hand": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.pwzdSlJgYqN7bs2w]\nMage Hand"
+          "name": "Mage Hand",
+          "description": "<p>You create a single magical hand, either invisible or ghostlike, that grasps the target object and moves it slowly up to 20 feet. Because you're levitating the object, you can move it in any direction. When you Sustain the Spell, you can move the object an additional 20 feet. If the object is in the air when the spell ends, the object falls.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> You can target an unattended object with a Bulk of 1 or less.</p>\n<p><strong>Heightened (5th)</strong> The range increases to 60 feet, and you can target an unattended object with a Bulk of 1 or less.</p>\n<p><strong>Heightened (7th)</strong> The range increases to 60 feet, and you can target an unattended object with a Bulk of 2 or less.</p>",
+          "target": "1 unattended object of light Bulk or less"
         },
         "spell->Magic Missile": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.gKKqvLohtrSJj3BM]\nMagic Missile"
+          "name": "Magic Missile",
+          "description": "<p>You send a dart of force streaking toward a creature that you can see. It automatically hits and deals 1d4+1 force damage. For each additional action you use when Casting the Spell, increase the number of missiles you shoot by one, to a maximum of three missiles for 3 actions. You choose the target for each missile individually. If you shoot more than one missile at the same target, combine the damage before applying bonuses or penalties to damage, resistances, weaknesses, and so forth.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> You shoot one additional missile with each action you spend.</p>",
+          "target": "1 creature"
+        },
+        "spell->Message": {
+          "name": "Message",
+          "description": "<p>You mouth words quietly, but instead of coming out of your mouth, they're transferred directly to the ears of the target. While others can't hear your words any better than if you normally mouthed them, the target can hear your words as if they were standing next to you.</p>\n<p>The target can give a brief response as a reaction, or as a free action on their next turn if they wish, but they must be able to see you and be within range to do so. If they respond, their response is delivered directly to your ear, just like the original message.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> The spell's range increases to 500 feet.</p>",
+          "target": "1 creature"
+        },
+        "spell->Ray of Frost": {
+          "name": "Ray of Frost",
+          "description": "<p>You blast an icy ray. Make a spell attack roll. The ray deals 2d4 cold damage.</p>\n<hr />\n<p><strong>Critical Success</strong> The target takes double damage and takes a -10-foot status penalty to its Speeds for 1 round.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.I4PsUAaYSUJ8pwKC]{Spell Effect: Ray of Frost}</p>\n<p><strong>Success</strong> The target takes normal damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1d4.</p>",
+          "target": "1 creature"
+        },
+        "spell->Shield": {
+          "name": "Shield",
+          "description": "<p>You raise a magical shield of force. This counts as using the Raise a Shield action, giving you a +1 circumstance bonus to AC until the start of your next turn, but it doesn't require a hand to use.</p>\n<p>While the spell is in effect, you can use the @UUID[Compendium.pf2e.feats-srd.Item.jM72TjJ965jocBV8]{Shield Block} reaction with your magic shield. The shield has Hardness 5. After you use Shield Block, the spell ends and you can't cast it again for 10 minutes. Unlike a normal Shield Block, you can use the spell's reaction against the @UUID[Compendium.pf2e.spells-srd.Item.gKKqvLohtrSJj3BM]{Force Barrage} spell.</p>\n<p>Heightening the spell increases the shield's Hardness.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Jemq5UknGdMO7b73]{Spell Effect: Shield}</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> The shield has Hardness 10.</p>\n<p><strong>Heightened (5th)</strong> The shield has Hardness 15.</p>\n<p><strong>Heightened (7th)</strong> The shield has Hardness 20.</p>\n<p><strong>Heightened (9th)</strong> The shield has Hardness 25.</p>"
+        },
+        "weapon->Staff": {
+          "name": "Staff",
+          "description": "<p>This long piece of wood can aid in walking and deliver a mighty blow.</p>"
         },
         "equipment->Spellbook (Advanced Arcanomnemonics)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.FOWF5f0tCaApv9RE]\nSpellbook (Advanced Arcanomnemonics)"
+          "name": "Spellbook (Advanced Arcanomnemonics)",
+          "description": "<p>A spellbook holds the written knowledge necessary to learn and prepare various spells, a necessity for wizards (who typically get one for free) and a useful luxury for other spellcasters looking to learn additional spells. Each spellbook can hold up to 100 spells. The Price listed is for a blank spellbook.</p>"
         },
         "equipment->Material Component Pouch": {
           "name": "Material Component Pouch",
           "description": "<p>This pouch contains material components for those spells that require them. Though the components are used up over time, you can refill spent components during your daily preparations.</p>"
         },
         "consumable->Wand of Fear (Level 1)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.UJWiN0K3jqVjxvKk]\nWand of Fear (Level 1)",
+          "name": "Wand of Fear (Level 1)",
           "consumableSpellName": "Fear",
           "consumableSpellDescription": "<p>You plant fear in the target; it must attempt a Will save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}.</p>\n<p><strong>Critical Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3} and @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} for 1 round.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> You can target up to five creatures.</p>",
           "consumableSpellTarget": "1 creature",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.UJWiN0K3jqVjxvKk]\n<p>@UUID[Compendium.pf2e.spells-srd.Item.4koZzrnMXhhosn0D]{Fear}</p>\n<hr />\n<p>This baton is about a foot long and contains a single spell. The appearance typically relates to the spell within.</p>\n<p><strong>Activate</strong> Cast a Spell</p>\n<p><strong>Frequency</strong> once per day, plus overcharge</p>\n<hr />\n<p><strong>Effect</strong> You Cast the Spell at the indicated level.</p>\n<p><strong>Craft Requirements</strong> Supply a listed-level casting of the spell.</p>"
+          "description": "<p>@UUID[Compendium.pf2e.spells-srd.Item.4koZzrnMXhhosn0D]{Fear}</p>\n<hr />\n<p>This baton is about a foot long and contains a single spell. The appearance typically relates to the spell within.</p>\n<p><strong>Activate</strong> Cast a Spell</p>\n<p><strong>Frequency</strong> once per day, plus overcharge</p>\n<hr />\n<p><strong>Effect</strong> You Cast the Spell at the indicated level.</p>\n<p><strong>Craft Requirements</strong> Supply a listed-level casting of the spell.</p>"
         },
         "strike-melee->Staff": {
           "name": "Staff"
@@ -298,14 +462,35 @@
     "Omblin Leadbuster": {
       "name": "Omblin Leadbuster",
       "items": {
+        "weapon->Hand Crossbow": {
+          "name": "Hand Crossbow",
+          "description": "<p>Sometimes referred to as an alley bow by rogues or ruffians, this small crossbow fires small bolts that are sometimes used to deliver poison to the target. It's small enough to be shot one-handed, but it still requires two hands to load.</p>"
+        },
+        "weapon->Rapier": {
+          "name": "Rapier",
+          "description": "<p>The rapier is a long and thin piercing blade with a basket hilt. It is prized among many as a dueling weapon.</p>"
+        },
+        "armor->Leather Armor": {
+          "name": "Leather Armor",
+          "description": "<p>A mix of flexible and molded boiled leather, a suit of this type of armor provides some protection with maximum flexibility.</p>"
+        },
+        "consumable->Bolts": {
+          "name": "Bolts",
+          "description": "<p>Shorter than traditional arrows but similar in construction, bolts are the ammunition used by crossbows.</p>"
+        },
         "strike-melee->Rapier": {
           "name": "Rapier"
         },
         "strike-ranged->Hand Crossbow": {
           "name": "Hand Crossbow"
         },
+        "action->Nimble Dodge": {
+          "name": "Nimble Dodge",
+          "description": "<p><strong>Trigger</strong> A creature targets you with an attack and you can see the attacker.</p>\n<p><strong>Requirements</strong> You are not encumbered</p>\n<hr />\n<p>You deftly dodge out of the way, gaining a +2 circumstance bonus to AC against the triggering attack.</p>"
+        },
         "action->Sneak Attack": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>Omblin deals an extra 1d6 to creatures that have the @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} condition.</p>"
+          "name": "Sneak Attack",
+          "description": "<p>Omblin deals an extra 1d6 to creatures that have the @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} condition.</p>"
         },
         "action->Unbalancing Blow": {
           "name": "Unbalancing Blow",
@@ -320,6 +505,18 @@
     "Orc Commander": {
       "name": "Orc Commander",
       "items": {
+        "weapon->Maul": {
+          "name": "Maul",
+          "description": "<p>Mauls are massive warhammers that must be swung with two hands.</p>"
+        },
+        "weapon->Javelin": {
+          "name": "Javelin",
+          "description": "<p>This thin spear is well balanced for throwing but is not designed for melee use.</p>"
+        },
+        "armor->Hide Armor": {
+          "name": "Hide Armor",
+          "description": "<p>A mix of furs, sturdy hide, and sometimes molded boiled leather, this armor provides protection due to its layers of leather, though its bulkiness slows the wearer down and decreases mobility.</p>"
+        },
         "strike-melee->Maul": {
           "name": "Maul"
         },
@@ -328,6 +525,9 @@
         },
         "strike-ranged->Javelin": {
           "name": "Javelin"
+        },
+        "action->Ferocity": {
+          "name": "Ferocity"
         },
         "action->Battle Cry": {
           "name": "Battle Cry",
@@ -338,8 +538,17 @@
     "Orc Scrapper": {
       "name": "Orc Scrapper",
       "items": {
+        "weapon->Javelin": {
+          "name": "Javelin",
+          "description": "<p>This thin spear is well balanced for throwing but is not designed for melee use.</p>"
+        },
+        "weapon->Battle Axe": {
+          "name": "Battle Axe",
+          "description": "<p>These axes are designed explicitly as weapons, rather than tools. They typically weigh less, with a shaft reinforced with metal bands or bolts, and have a sharper blade, making them ideal for chopping limbs rather than wood.</p>"
+        },
         "armor->Breastplate": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.r0ifJfoz8aqf0mwk]\n<p>Though referred to as a breastplate, this type of armor consists of several pieces of plate or half-plate armor that protect the torso, chest, neck, and sometimes the hips and lower legs. It strategically grants some of the protection of plate while allowing greater flexibility and speed.</p>"
+          "name": "Breastplate",
+          "description": "<p>Though referred to as a breastplate, this type of armor consists of several pieces of plate or half-plate armor that protect the torso, chest, neck, and sometimes the hips and lower legs. It strategically grants some of the protection of plate while allowing greater flexibility and speed.</p>"
         },
         "strike-melee->Battle Axe": {
           "name": "Battle Axe"
@@ -349,6 +558,9 @@
         },
         "strike-ranged->Javelin": {
           "name": "Javelin"
+        },
+        "action->Ferocity": {
+          "name": "Ferocity"
         }
       }
     },
@@ -360,11 +572,48 @@
           "name": "Divine Innate Spells"
         },
         "spell->Invisibility (Self Only)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.XXqE1eY3w3z6xJCB]\nInvisibility (Self Only)",
+          "name": "Invisibility (Self Only)",
+          "description": "<p>Cloaked in illusion, the target becomes @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Invisible}. This makes it @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Undetected} to all creatures, though the creatures can attempt to find the target, making it @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} to them instead. If the target uses a hostile action, the spell ends after that hostile action is completed.</p>\n<hr />\n<p><strong>Heightened (4th)</strong> The spell lasts 1 minute, but it doesn't end if the target uses a hostile action.</p>",
           "target": "self"
         },
+        "spell->Command": {
+          "name": "Command",
+          "description": "<p>You shout a command that's hard to ignore. You can command the target to approach you, run away (as if it had the @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} condition), release what it's holding, drop @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}, or stand in place. It can't Delay or take any reactions until it has obeyed your command. The effects depend on the target's Will save.</p>\n<hr /><p><strong>Success</strong> The creature is unaffected.</p>\n<p><strong>Failure</strong> For the first action on its next turn, the creature must use a single action to do as you command.</p>\n<p><strong>Critical Failure</strong> The target must use all its actions on its next turn to obey your command.</p>\n<hr /><p><strong>Heightened (5th)</strong> You can target up to 10 creatures.</p>",
+          "target": "1 creature"
+        },
+        "spell->Daze": {
+          "name": "Daze",
+          "description": "<p>You cloud the target's mind and daze it with a mental jolt. The jolt deals mental damage equal to your spellcasting ability modifier; the target must attempt a basic Will save. If the target critically fails the save, it is also @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The damage increases by 1d6.</p>",
+          "target": "1 creature"
+        },
+        "spell->Guidance": {
+          "name": "Guidance",
+          "description": "<p>You ask for divine guidance, granting the target a +1 status bonus to one attack roll, Perception check, saving throw, or skill check the target attempts before the duration ends. The target chooses which roll to use the bonus on before rolling. If the target uses the bonus, the spell ends. Either way, the target is then temporarily immune for 1 hour.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.3qHKBDF7lrHw8jFK]{Spell Effect: Guidance}</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.3LyOkV25p7wA181H]{Effect: Guidance Immunity}</p>",
+          "target": "1 creature"
+        },
+        "spell->Heal": {
+          "name": "Heal",
+          "description": "<p>You channel vitality energy to heal the living or damage the undead. If the target is a willing living creature, you restore 1d8 Hit Points. If the target is undead, you deal that amount of vitality damage to it, and it gets a basic Fortitude save. The number of actions you spend when Casting this Spell determines its targets, range, area, and other parameters.</p>\n<p><span class=\"action-glyph\">1</span> <strong>(somatic)</strong> The spell has a range of touch.</p>\n<p><span class=\"action-glyph\">2</span> <strong>(verbal, somatic)</strong> The spell has a range of 30 feet. If you're healing a living creature, increase the Hit Points restored by 8</p>\n<p><span class=\"action-glyph\">3</span> <strong>(material, somatic, verbal)</strong> You disperse vitality energy in a 30-foot emanation. This targets all living and undead creatures in the burst.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The amount of healing or damage increases by 1d8, and the extra healing for the 2-action version increases by 8.</p>",
+          "target": "1 willing living creature or 1 undead"
+        },
         "spell->Mage Hand": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.pwzdSlJgYqN7bs2w]\nMage Hand"
+          "name": "Mage Hand",
+          "description": "<p>You create a single magical hand, either invisible or ghostlike, that grasps the target object and moves it slowly up to 20 feet. Because you're levitating the object, you can move it in any direction. When you Sustain the Spell, you can move the object an additional 20 feet. If the object is in the air when the spell ends, the object falls.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> You can target an unattended object with a Bulk of 1 or less.</p>\n<p><strong>Heightened (5th)</strong> The range increases to 60 feet, and you can target an unattended object with a Bulk of 1 or less.</p>\n<p><strong>Heightened (7th)</strong> The range increases to 60 feet, and you can target an unattended object with a Bulk of 2 or less.</p>",
+          "target": "1 unattended object of light Bulk or less"
+        },
+        "spell->Message": {
+          "name": "Message",
+          "description": "<p>You mouth words quietly, but instead of coming out of your mouth, they're transferred directly to the ears of the target. While others can't hear your words any better than if you normally mouthed them, the target can hear your words as if they were standing next to you.</p>\n<p>The target can give a brief response as a reaction, or as a free action on their next turn if they wish, but they must be able to see you and be within range to do so. If they respond, their response is delivered directly to your ear, just like the original message.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> The spell's range increases to 500 feet.</p>",
+          "target": "1 creature"
+        },
+        "spell->Sanctuary": {
+          "name": "Sanctuary",
+          "description": "<p>You ward a creature with protective energy that deters enemy attacks. Creatures attempting to attack the target must attempt a Will save each time. If the target uses a hostile action, the spell ends.</p>\n<hr /><p><strong>Critical Success</strong> Sanctuary ends.</p>\n<p><strong>Success</strong> The creature can attempt its attack and any other attacks against the target this turn.</p>\n<p><strong>Failure</strong> The creature can't attack the target and wastes the action. It can't attempt further attacks against the target this turn.</p>\n<p><strong>Critical Failure</strong> The creature wastes the action and can't attempt to attack the target for the rest of sanctuary's duration.</p>",
+          "target": "1 creature"
+        },
+        "spell->Shield": {
+          "name": "Shield",
+          "description": "<p>You raise a magical shield of force. This counts as using the Raise a Shield action, giving you a +1 circumstance bonus to AC until the start of your next turn, but it doesn't require a hand to use.</p>\n<p>While the spell is in effect, you can use the @UUID[Compendium.pf2e.feats-srd.Item.jM72TjJ965jocBV8]{Shield Block} reaction with your magic shield. The shield has Hardness 5. After you use Shield Block, the spell ends and you can't cast it again for 10 minutes. Unlike a normal Shield Block, you can use the spell's reaction against the @UUID[Compendium.pf2e.spells-srd.Item.gKKqvLohtrSJj3BM]{Force Barrage} spell.</p>\n<p>Heightening the spell increases the shield's Hardness.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Jemq5UknGdMO7b73]{Spell Effect: Shield}</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> The shield has Hardness 10.</p>\n<p><strong>Heightened (5th)</strong> The shield has Hardness 15.</p>\n<p><strong>Heightened (7th)</strong> The shield has Hardness 20.</p>\n<p><strong>Heightened (9th)</strong> The shield has Hardness 25.</p>"
         },
         "strike-melee->Fangs": {
           "name": "Fangs"

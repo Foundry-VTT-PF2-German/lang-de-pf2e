@@ -11,7 +11,8 @@
           "name": "Arcane Innate Spells"
         },
         "spell->True Seeing (Constant)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.uqlxMQQeSGWEVjki]\nTrue Seeing (Constant)"
+          "name": "True Seeing (Constant)",
+          "description": "<p>You see things within 60 feet as they actually are. The GM rolls a secret counteract check against any illusion or transmutation in the area, but only for the purpose of determining whether you see through it (for instance, if the check succeeds against a polymorph spell, you can see the creature's true form, but you don't end the polymorph spell).</p>"
         },
         "strike-melee->Jaws": {
           "name": "Jaws"
@@ -24,6 +25,12 @@
         },
         "strike-ranged->Eye Beam": {
           "name": "Eye Beam"
+        },
+        "action->Constant Spells": {
+          "name": "Constant Spells"
+        },
+        "action->All-Around Vision": {
+          "name": "All-Around Vision"
         },
         "action->Intense Chill": {
           "name": "Intense Chill",
@@ -41,6 +48,9 @@
             "id": "DVThmJrdhHWi62Yw"
           }
         ],
+        "action->Void Healing": {
+          "name": "Void Healing"
+        },
         "action->Numbing Ice": {
           "name": "Numbing Ice",
           "description": "<p>A creature who takes damage from the benthic reaver's eye beam Strike must succeed at a @Check[fortitude|dc:41] save or become @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 2} as cold stiffens its limbs. A flying creature who fails its save also descends safely to the ground below. This is forced movement.</p>"
@@ -48,6 +58,9 @@
         "action->Song of the Lost": {
           "name": "Song of the Lost",
           "description": "<p>The benthic reaver unleashes a cry of mourning. All creatures within 60 feet must attempt a @Check[will|dc:41] save to resist. The benthic reaver can't use Song of the Lost for [[/br 1d4 #Recharge Song of the Lost]]{1d4 rounds}.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}.</p>\n<p><strong>Critical Failure</strong> As failure, but the creature is also @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1} with sympathy.</p>"
+        },
+        "action->Improved Knockdown": {
+          "name": "Improved Knockdown"
         }
       }
     },
@@ -62,8 +75,8 @@
           "name": "Cannonball"
         },
         "action->Wind-Up": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.xS8ybzuqPSi3Jb8k]\nWind-Up",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.xS8ybzuqPSi3Jb8k]\n<p>24 hours, @Check[thievery|dc:33|traits:action:disable-a-device] check, standby</p>\n<p>For a clockwork to act, it must be wound with a unique key by another creature. This takes 1 minute. Once wound, it remains operational for the listed amount of time, usually 24 hours, after which time it becomes unaware of its surroundings and can't act until it's wound again. Some clockworks' abilities require them to spend some of their remaining operational time. They can't spend more than they have and shut down immediately once they have 0 time remaining. If it's unclear when a clockwork was last wound, most clockwork keepers wind all their clockworks at a set time, typically 8 a.m.</p>\n<p>A clockwork that lists standby in its wind-up entry can enter standby mode as a 3-action activity. Its operational time doesn't decrease in standby, but it can sense its surroundings (with a -2 penalty to Perception). It can't act, with one exception: when it perceives a creature, it can exit standby as a reaction (rolling initiative if appropriate).</p>\n<p>A creature can attempt to Disable a Device to wind a clockwork down (with a DC listed in the wind-up entry). For each success, the clockwork loses 1 hour of operational time. This can be done even if the clockwork is in standby mode.</p>"
+          "name": "Wind-Up",
+          "description": "<p>24 hours, @Check[thievery|dc:33|traits:action:disable-a-device] check, standby</p>\n<p>For a clockwork to act, it must be wound with a unique key by another creature. This takes 1 minute. Once wound, it remains operational for the listed amount of time, usually 24 hours, after which time it becomes unaware of its surroundings and can't act until it's wound again. Some clockworks' abilities require them to spend some of their remaining operational time. They can't spend more than they have and shut down immediately once they have 0 time remaining. If it's unclear when a clockwork was last wound, most clockwork keepers wind all their clockworks at a set time, typically 8 a.m.</p>\n<p>A clockwork that lists standby in its wind-up entry can enter standby mode as a 3-action activity. Its operational time doesn't decrease in standby, but it can sense its surroundings (with a -2 penalty to Perception). It can't act, with one exception: when it perceives a creature, it can exit standby as a reaction (rolling initiative if appropriate).</p>\n<p>A creature can attempt to Disable a Device to wind a clockwork down (with a DC listed in the wind-up entry). For each success, the clockwork loses 1 hour of operational time. This can be done even if the clockwork is in standby mode.</p>"
         },
         "action->Bombard": {
           "name": "Bombard",
@@ -123,9 +136,15 @@
             "id": "T67rfyPzxmU6ckF4"
           }
         ],
+        "action->Void Healing": {
+          "name": "Void Healing"
+        },
         "action->Berserk": {
           "name": "Berserk",
           "description": "<p>At the beginning of each of its turns in combat, a cursed king must attempt a @Check[flat|dc:2]. If it succeeds, the DC increases by 1. If it fails, it immediately goes berserk, becoming mindless for the rest of its turn, immune to all mental effects, and attacking the nearest creature it can reach. While it's berserk, each of its unarmed attacks gain the deadly d8 trait. At the end of a turn it failed this flat check or whenever the combat encounter ends, the DC resets to 2.</p>"
+        },
+        "action->Grab": {
+          "name": "Grab"
         }
       }
     },
@@ -139,13 +158,30 @@
           "name": "Occult Innate Spells"
         },
         "spell->Blood Vendetta": {
-          "requirements": "You can bleed"
+          "name": "Blood Vendetta",
+          "description": "<p><strong>Requirements</strong> You can bleed.</p>\n<p><strong>Trigger</strong> A creature deals piercing, slashing, or persistent bleed damage to you.</p>\n<hr />\n<p>You curse the target, punishing it for having the audacity to spill your blood. The target takes 2d6 persistent bleed damage and must attempt a Will save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes half the persistent bleed damage.</p>\n<p><strong>Failure</strong> The target takes the full persistent bleed damage. Until the bleeding stops, the target has weakness 1 to piercing and slashing damage. @UUID[Compendium.pf2e.spell-effects.Item.buXx8Azr4BYWPtFg]{Spell Effect: Blood Vendetta (Failure)}</p>\n<p><strong>Critical Failure</strong> As failure, but the target takes double the persistent bleed damage.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The persistent bleed damage increases by 2d6.</p>",
+          "requirements": "You can bleed",
+          "target": "The triggering creature"
+        },
+        "spell->Charitable Urge": {
+          "name": "Charitable Urge",
+          "description": "<p>You speak on the virtue of charity, compelling the target to give away its possessions. The target must attempt a Will save. If the target has no items on its person, the spell fails.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1} as it wrestles with the urge.</p>\n<p><strong>Failure</strong> On its next turn, before it does anything else, the target must present the nearest creature with an item in its possession; the target chooses which item to give, and if the only item it has is one that it's currently using to defend itself, such as a weapon during a combat encounter, it can choose to be Stunned for 1 round instead of giving up the item. This might require the target to @UUID[Compendium.pf2e.actionspf2e.Item.pvQ5rY2zrtPI614F]{Interact} to retrieve an item or move to reach the nearest creature, and handing the item to the target always requires an Interact action.</p>\n<p><strong>Critical Failure</strong> As failure, except the duration is 4 rounds, and the target must repeat the effects of failure on each of its turns. At the end of each of its turns, the target can attempt a new Will save to reduce the remaining duration by 1 round, ending it entirely on a critical success.</p>",
+          "target": "1 creature"
+        },
+        "spell->Detect Magic": {
+          "name": "Detect Magic",
+          "description": "<p>You send out a pulse that registers the presence of magic. You receive no information beyond the presence or absence of magic. You can choose to ignore magic you're fully aware of, such as the magic items and ongoing spells of you and your allies.</p>\n<p>You detect illusion magic only if that magic's effect has a lower level than the rank of your detect magic spell. However, items that have an illusion aura but aren't deceptive in appearance (such as an invisibility potion) typically are detected normally.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> You learn the school of magic for the highest-level effect within range that the spell detects. If multiple effects are equally strong, the GM determines which you learn.</p>\n<p><strong>Heightened (4th)</strong> As 3rd level, but you also pinpoint the source of the highest-level magic. Like for an imprecise sense, you don't learn the exact location, but can narrow down the source to within a 5-foot cube (or the nearest if larger than that).</p>"
+        },
+        "spell->Read Aura": {
+          "name": "Read Aura",
+          "description": "<p>You focus on the target object, opening your mind to perceive magical auras. When the casting is complete, you know whether that item is magical, and if it is, you learn the school of magic.</p>\n<p>If the object is illusory, you detect this only if the effect's level is lower than the rank of your read aura spell.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> You can target up to 10 objects.</p>\n<p><strong>Heightened (6th)</strong> You can target any number of objects.</p>",
+          "target": "1 object"
         },
         "strike-melee->Fanged-Maw Finger": {
           "name": "Fanged-Maw Finger"
         },
         "action->Regeneration 10 (Deactivated by Cold Iron)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.lR9R5Vld8Eu2Dha5]\nRegeneration 10 (Deactivated by Cold Iron)"
+          "name": "Regeneration 10 (Deactivated by Cold Iron)"
         },
         "action->Conformance": {
           "name": "Conformance",
@@ -187,7 +223,7 @@
           "description": "<p>A fleshforged dreadnought is covered in handholds and footholds that make it easy to climb. Creatures of Medium or smaller size can Climb the dreadnought, sharing one of its spaces as they do so. The DC to Climb a fleshforged dreadnought is 15, and creatures move 5 more feet on a success and 10 more feet on a critical success, to a maximum of their Speed when Climbing the construct.</p>"
         },
         "action->Regeneration 20 (Deactivated by Cold Iron)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.lR9R5Vld8Eu2Dha5]\nRegeneration 20 (Deactivated by Cold Iron)"
+          "name": "Regeneration 20 (Deactivated by Cold Iron)"
         },
         "action->Caustic Leak": {
           "name": "Caustic Leak",
@@ -202,10 +238,11 @@
           "description": "<p>The fleshforged dreadnought releases a wave of caustic fluid from vents in its sides. Creatures within a @Template[emanation|distance:20] take @Damage[8d6[acid]] damage (@Check[reflex|dc:40|basic]). Creatures who fail their saves also take @Damage[3d6[persistent,acid]] damage.</p>"
         },
         "action->Trample": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.UNah0bxXxkcZjxO3]\n<p>Huge or smaller, battering ram, @Check[reflex|dc:44|basic]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Trample]</p>"
+          "name": "Trample",
+          "description": "<p>Huge or smaller, battering ram, @Check[reflex|dc:44|basic]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Trample]</p>"
         },
         "action->Improved Push 15 feet": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.6l7e7CHQLESlI57U]\nImproved Push 15 feet"
+          "name": "Improved Push 15 feet"
         }
       }
     },
@@ -246,7 +283,7 @@
           "name": "Earthen Shard"
         },
         "action->Tremorsense (Imprecise) 60 feet": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.j2wsK6IsW5yMW1jW]\nTremorsense (Imprecise) 60 feet"
+          "name": "Tremorsense (Imprecise) 60 feet"
         },
         "action->Earth Block": {
           "name": "Earth Block",
@@ -269,10 +306,65 @@
           "name": "Occult Spontaneous Spells"
         },
         "spell->Calm Emotions": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.b515AZlB0sridKSq]\nCalm Emotions"
+          "name": "Calm Emotions",
+          "description": "<p>You forcibly calm creatures in the area, soothing them into a nonviolent state; each creature must attempt a Will save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> Calming urges impose a -1 status penalty to the creature's attack rolls.</p>\n<p><strong>Failure</strong> Any emotion effects that would affect the creature are suppressed and the creature can't use hostile actions. If the target is subject to hostility from any other creature, it ceases to be affected by calm emotions.</p>\n<p><strong>Critical Failure</strong> As failure, but hostility doesn't end the effect.</p>\n<hr />\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Qr5rgoZvI4KmFY0N]{Spell Effect: Calm}</p>"
+        },
+        "spell->Telekinetic Maneuver": {
+          "name": "Telekinetic Maneuver",
+          "description": "<p>With a rush of telekinetic power, you move a foe or something they carry. You can attempt to Disarm, Shove, or Trip the target using a spell attack roll instead of an Athletics check.</p>",
+          "target": "1 creature"
+        },
+        "spell->Daze": {
+          "name": "Daze",
+          "description": "<p>You cloud the target's mind and daze it with a mental jolt. The jolt deals mental damage equal to your spellcasting ability modifier; the target must attempt a basic Will save. If the target critically fails the save, it is also @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The damage increases by 1d6.</p>",
+          "target": "1 creature"
+        },
+        "spell->Message": {
+          "name": "Message",
+          "description": "<p>You mouth words quietly, but instead of coming out of your mouth, they're transferred directly to the ears of the target. While others can't hear your words any better than if you normally mouthed them, the target can hear your words as if they were standing next to you.</p>\n<p>The target can give a brief response as a reaction, or as a free action on their next turn if they wish, but they must be able to see you and be within range to do so. If they respond, their response is delivered directly to your ear, just like the original message.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> The spell's range increases to 500 feet.</p>",
+          "target": "1 creature"
+        },
+        "spell->Mindlink": {
+          "name": "Mindlink",
+          "description": "<p>You link your mind to the target's mind and mentally impart to that target an amount of information in an instant that could otherwise be communicated in 10 minutes.</p>",
+          "target": "1 willing creature"
+        },
+        "spell->Phantom Pain": [
+          {
+            "name": "Phantom Pain",
+            "description": "<p>Illusory pain wracks the target, dealing 2d4 mental damage and 1d4 persistent mental damage. The target must attempt a Will save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes full initial damage but no persistent damage, and the spell ends immediately.</p>\n<p><strong>Failure</strong> The target takes full initial and persistent damage, and the target is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}. If the target recovers from being Sickened, the persistent damage ends and the spell ends.</p>\n<p><strong>Critical Failure</strong> As failure, but the target is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 2d4 and the persistent damage by 1d4.</p>\n<p>[[/r (@item.level)d4[persistent,mental]]]{Leveled Persistent Mental Damage}</p>",
+            "target": "1 creature",
+            "id": "lRbaqDedCxNoqH4j"
+          },
+          {
+            "name": "Phantom Pain",
+            "description": "<p>Illusory pain wracks the target, dealing 2d4 mental damage and 1d4 persistent mental damage. The target must attempt a Will save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes full initial damage but no persistent damage, and the spell ends immediately.</p>\n<p><strong>Failure</strong> The target takes full initial and persistent damage, and the target is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}. If the target recovers from being Sickened, the persistent damage ends and the spell ends.</p>\n<p><strong>Critical Failure</strong> As failure, but the target is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 2d4 and the persistent damage by 1d4.</p>\n<p>[[/r (@item.level)d4[persistent,mental]]]{Leveled Persistent Mental Damage}</p>",
+            "target": "1 creature",
+            "id": "1UJKihYLpIh9k5mM"
+          }
+        ],
+        "spell->Read Aura": {
+          "name": "Read Aura",
+          "description": "<p>You focus on the target object, opening your mind to perceive magical auras. When the casting is complete, you know whether that item is magical, and if it is, you learn the school of magic.</p>\n<p>If the object is illusory, you detect this only if the effect's level is lower than the rank of your read aura spell.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> You can target up to 10 objects.</p>\n<p><strong>Heightened (6th)</strong> You can target any number of objects.</p>",
+          "target": "1 object"
+        },
+        "spell->Shield": {
+          "name": "Shield",
+          "description": "<p>You raise a magical shield of force. This counts as using the Raise a Shield action, giving you a +1 circumstance bonus to AC until the start of your next turn, but it doesn't require a hand to use.</p>\n<p>While the spell is in effect, you can use the @UUID[Compendium.pf2e.feats-srd.Item.jM72TjJ965jocBV8]{Shield Block} reaction with your magic shield. The shield has Hardness 5. After you use Shield Block, the spell ends and you can't cast it again for 10 minutes. Unlike a normal Shield Block, you can use the spell's reaction against the @UUID[Compendium.pf2e.spells-srd.Item.gKKqvLohtrSJj3BM]{Force Barrage} spell.</p>\n<p>Heightening the spell increases the shield's Hardness.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Jemq5UknGdMO7b73]{Spell Effect: Shield}</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> The shield has Hardness 10.</p>\n<p><strong>Heightened (5th)</strong> The shield has Hardness 15.</p>\n<p><strong>Heightened (7th)</strong> The shield has Hardness 20.</p>\n<p><strong>Heightened (9th)</strong> The shield has Hardness 25.</p>"
         },
         "spell->Soothe": {
+          "name": "Soothe",
+          "description": "<p>You grace the target's mind, boosting its mental defenses and healing its wounds. The target regains 1d10+4 Hit Points when you Cast the Spell and gains a +2 status bonus to saves against mental effects for the duration.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.nkk4O5fyzrC0057i]{Spell Effect: Soothe}</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The amount of healing increases by 1d10+4.</p>",
           "target": "1 willing living creature"
+        },
+        "spell->Telekinetic Projectile": {
+          "name": "Telekinetic Projectile",
+          "description": "<p>You hurl a loose, unattended object that is within range and that has 1 Bulk or less at the target. Make a spell attack roll against the target. If you hit, you deal bludgeoning, piercing, or slashing damage-as appropriate for the object you hurled-equal to 1d6 plus your spellcasting ability modifier. No specific traits or magic properties of the hurled item affect the attack or the damage.</p>\n<hr />\n<p><strong>Critical Success</strong> You deal double damage.</p>\n<p><strong>Success</strong> You deal full damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1d6.</p>",
+          "target": "1 creature"
+        },
+        "weapon->Dagger": {
+          "name": "Dagger",
+          "description": "<p>This small, bladed weapon is held in one hand and used to stab a creature in close combat. It can also be thrown.</p>"
         },
         "strike-melee->Dagger": {
           "name": "Dagger"
@@ -309,6 +401,22 @@
       "publicNotes": "<p>Separated from their pack during a prolonged storm of wild magic, the Mana Wastes mutant gnoll hulk transformed into a gigantic, ravenous creature.</p>\n<hr />\n<p>The erratic magical energies of the Mana Wastes can warp and twist creatures foolish or unlucky enough to be trapped in them. The physiological effects of this exposure vary in scope from grotesque full-body transformations to more subtle changes to the skin or senses, and they're frequently accompanied by changes in disposition, motivation, or temperament.</p>",
       "senses": "magic hunger (imprecise) 30 feet",
       "items": {
+        "weapon->Battle Axe": {
+          "name": "Battle Axe",
+          "description": "<p>These axes are designed explicitly as weapons, rather than tools. They typically weigh less, with a shaft reinforced with metal bands or bolts, and have a sharper blade, making them ideal for chopping limbs rather than wood.</p>"
+        },
+        "weapon->Composite Longbow": {
+          "name": "Composite Longbow",
+          "description": "<p>This projectile weapon is made from horn, wood, and sinew laminated together to increase the power of its pull and the force of its projectile. Like all longbows, its great size also increases the bow's range and power. You must use two hands to fire it, and it cannot be used while mounted. Any time an ability is specifically restricted to a longbow, such as Erastil's favored weapon, it also applies to composite longbows unless otherwise stated.</p>"
+        },
+        "armor->Leather Armor": {
+          "name": "Leather Armor",
+          "description": "<p>A mix of flexible and molded boiled leather, a suit of this type of armor provides some protection with maximum flexibility.</p>"
+        },
+        "consumable->Arrows": {
+          "name": "Arrows",
+          "description": "<p>These projectiles are the ammunition for bows. The shaft of an arrow is made of wood. It is stabilized in flight by fletching at one end and bears a metal head on the other.</p>"
+        },
         "strike-melee->Battle Axe": {
           "name": "Battle Axe"
         },
@@ -338,7 +446,8 @@
       "senses": "defender's link",
       "items": {
         "weapon->Bastard Sword": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.6KWYmeRMxsQfWhhJ]\n<p>This broad-bladed sword, sometimes called the hand-and-a-half sword, has a longer grip so it can be held in one hand or used with two hands to provide extra piercing or slashing power.</p>"
+          "name": "Bastard Sword",
+          "description": "<p>This broad-bladed sword, sometimes called the hand-and-a-half sword, has a longer grip so it can be held in one hand or used with two hands to provide extra piercing or slashing power.</p>"
         },
         "strike-melee->Bastard Sword": {
           "name": "Bastard Sword"
@@ -351,11 +460,11 @@
           "description": "<p>Each Quantium golem automatically knows the Hit Points, conditions, afflictions, and location of the other.</p>"
         },
         "action->Lifesense 120 feet": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.sebk9XseMCRkDqRg]\nLifesense 120 feet"
+          "name": "Lifesense 120 feet"
         },
         "action->Golem Antimagic": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.r34QDwKiWZoVymJa]\nGolem Antimagic",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.r34QDwKiWZoVymJa]\n<p>harmed by sonic ([[/r {9d10}]]{9d10 damage}, [[/r {3d10}]]{3d10 damage} from areas or persistent damage); healed by fire (area [[/r 3d10[healing]]] Hit Points); slowed by cold</p>\n<hr />\n<p>A golem is immune to spells and magical abilities other than its own, but each type of golem is affected by a few types of magic in special ways. These exceptions are listed in shortened form in the golem's stat block, with the full rules appearing here. If an entry lists multiple types (such as \"cold and water\"), either type of spell can affect the golem.</p>\n<ul>\n<li><strong>Harmed By</strong> Any magic of this type that targets the golem causes it to take the listed amount of damage (this damage has no type) instead of the usual effect. If the golem starts its turn in an area of magic of this type or is affected by a persistent effect of the appropriate type, it takes the damage listed in the parenthetical.</li>\n<li><strong>Healed By</strong> Any magic of this type that targets the golem makes the golem lose the slowed condition and gain HP equal to half the damage the spell would have dealt. If the golem starts its turn in an area of this type of magic, it gains the HP listed in the parenthetical.</li>\n<li><strong>Slowed By</strong> Any magic of this type that targets the golem causes it to be @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for [[/br 2d6 #rounds]]{2d6 rounds} instead of the usual effect. If the golem starts its turn in an area of this type of magic, it's slowed 1 for that round.</li>\n<li><strong>Vulnerable To</strong> Each golem is vulnerable to one or more specific spells, with the effects described in its stat block.</li>\n</ul>"
+          "name": "Golem Antimagic",
+          "description": "<p>harmed by sonic ([[/r {9d10}]]{9d10 damage}, [[/r {3d10}]]{3d10 damage} from areas or persistent damage); healed by fire (area [[/r 3d10[healing]]] Hit Points); slowed by cold</p>\n<hr />\n<p>A golem is immune to spells and magical abilities other than its own, but each type of golem is affected by a few types of magic in special ways. These exceptions are listed in shortened form in the golem's stat block, with the full rules appearing here. If an entry lists multiple types (such as \"cold and water\"), either type of spell can affect the golem.</p>\n<ul>\n<li><strong>Harmed By</strong> Any magic of this type that targets the golem causes it to take the listed amount of damage (this damage has no type) instead of the usual effect. If the golem starts its turn in an area of magic of this type or is affected by a persistent effect of the appropriate type, it takes the damage listed in the parenthetical.</li>\n<li><strong>Healed By</strong> Any magic of this type that targets the golem makes the golem lose the slowed condition and gain HP equal to half the damage the spell would have dealt. If the golem starts its turn in an area of this type of magic, it gains the HP listed in the parenthetical.</li>\n<li><strong>Slowed By</strong> Any magic of this type that targets the golem causes it to be @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for [[/br 2d6 #rounds]]{2d6 rounds} instead of the usual effect. If the golem starts its turn in an area of this type of magic, it's slowed 1 for that round.</li>\n<li><strong>Vulnerable To</strong> Each golem is vulnerable to one or more specific spells, with the effects described in its stat block.</li>\n</ul>"
         },
         "action->Paired Reconstruction": {
           "name": "Paired Reconstruction",
@@ -381,7 +490,8 @@
       "senses": "defender's link",
       "items": {
         "weapon->Bastard Sword": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.6KWYmeRMxsQfWhhJ]\n<p>This broad-bladed sword, sometimes called the hand-and-a-half sword, has a longer grip so it can be held in one hand or used with two hands to provide extra piercing or slashing power.</p>"
+          "name": "Bastard Sword",
+          "description": "<p>This broad-bladed sword, sometimes called the hand-and-a-half sword, has a longer grip so it can be held in one hand or used with two hands to provide extra piercing or slashing power.</p>"
         },
         "strike-melee->Bastard Sword": {
           "name": "Bastard Sword"
@@ -394,11 +504,11 @@
           "description": "<p>Each Quantium golem automatically knows the Hit Points, conditions, afflictions, and location of the other.</p>"
         },
         "action->Lifesense 120 feet": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.sebk9XseMCRkDqRg]\nLifesense 120 feet"
+          "name": "Lifesense 120 feet"
         },
         "action->Golem Antimagic": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.r34QDwKiWZoVymJa]\nGolem Antimagic",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.r34QDwKiWZoVymJa]\n<p>harmed by sonic ([[/r {9d10}]]{9d10 damage}, [[/r {3d10}]]{3d10 damage} from areas or persistent damage); healed by fire (area [[/r 3d10[healing]]] Hit Points); slowed by cold</p>\n<hr />\n<p>A golem is immune to spells and magical abilities other than its own, but each type of golem is affected by a few types of magic in special ways. These exceptions are listed in shortened form in the golem's stat block, with the full rules appearing here. If an entry lists multiple types (such as \"cold and water\"), either type of spell can affect the golem.</p>\n<ul>\n<li><strong>Harmed By</strong> Any magic of this type that targets the golem causes it to take the listed amount of damage (this damage has no type) instead of the usual effect. If the golem starts its turn in an area of magic of this type or is affected by a persistent effect of the appropriate type, it takes the damage listed in the parenthetical.</li>\n<li><strong>Healed By</strong> Any magic of this type that targets the golem makes the golem lose the slowed condition and gain HP equal to half the damage the spell would have dealt. If the golem starts its turn in an area of this type of magic, it gains the HP listed in the parenthetical.</li>\n<li><strong>Slowed By</strong> Any magic of this type that targets the golem causes it to be @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for [[/br 2d6 #rounds]]{2d6 rounds} instead of the usual effect. If the golem starts its turn in an area of this type of magic, it's slowed 1 for that round.</li>\n<li><strong>Vulnerable To</strong> Each golem is vulnerable to one or more specific spells, with the effects described in its stat block.</li>\n</ul>"
+          "name": "Golem Antimagic",
+          "description": "<p>harmed by sonic ([[/r {9d10}]]{9d10 damage}, [[/r {3d10}]]{3d10 damage} from areas or persistent damage); healed by fire (area [[/r 3d10[healing]]] Hit Points); slowed by cold</p>\n<hr />\n<p>A golem is immune to spells and magical abilities other than its own, but each type of golem is affected by a few types of magic in special ways. These exceptions are listed in shortened form in the golem's stat block, with the full rules appearing here. If an entry lists multiple types (such as \"cold and water\"), either type of spell can affect the golem.</p>\n<ul>\n<li><strong>Harmed By</strong> Any magic of this type that targets the golem causes it to take the listed amount of damage (this damage has no type) instead of the usual effect. If the golem starts its turn in an area of magic of this type or is affected by a persistent effect of the appropriate type, it takes the damage listed in the parenthetical.</li>\n<li><strong>Healed By</strong> Any magic of this type that targets the golem makes the golem lose the slowed condition and gain HP equal to half the damage the spell would have dealt. If the golem starts its turn in an area of this type of magic, it gains the HP listed in the parenthetical.</li>\n<li><strong>Slowed By</strong> Any magic of this type that targets the golem causes it to be @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for [[/br 2d6 #rounds]]{2d6 rounds} instead of the usual effect. If the golem starts its turn in an area of this type of magic, it's slowed 1 for that round.</li>\n<li><strong>Vulnerable To</strong> Each golem is vulnerable to one or more specific spells, with the effects described in its stat block.</li>\n</ul>"
         },
         "action->Paired Reconstruction": {
           "name": "Paired Reconstruction",
@@ -422,6 +532,14 @@
       "name": "Ratajin Mastermind",
       "publicNotes": "<p>Most commonly found in Vudra and Jalmeray, ratajin aren't so much twisted by curses as they are molded by the lingering effects of curses inflicted on generations millennia past. The difference lies in understanding the original ratajin characteristics. No curse gave ratajin four eyes on a slender face, nor triple-jointed, hypermobile legs and multiple arms. Nor did curses provide ratajin with skin tones of all hues within the color spectrum. Instead, these residual curses have given each ratajin distinctive geometric markings all across their body. Every ratajin also experiences a cursed twist on their senses, altering how they view and interact with the world around them. Some ratajin visualize the world in shifted, indescribable color spectra. For others, sounds physically manifest as feelings on their skin. Haunting melodies of past actions might whisper in the wind behind one ratajin, while another can be awake only during hours devoid of sunlight.</p>\n<p>While particular curse manifestations are passed along family lines, each ratajin's worldview can offer a unique perspective. Ratajin tend to be receptive to new ideas, making them well-suited to tackle complex situations. They often prefer to focus on difficult problems, working without rest until they reach a solution. What satisfies the definition of a worthy pursuit varies with individual ratajin, from tinkering with new applications of technology to uncovering secrets of centuries-old magical tomes. Their intellectual approach to problems can make ratajin especially useful in situations requiring delicate words, and their quick thinking serves them well as adventurers when the time comes for action. These same characteristics also make them capable merchants and scholars.</p>\n<p>Earning a ratajin's trust can prove difficult. Their large-scale communities often collaborate to devise clever solutions that ensure equitable treatment among people, but each community varies greatly due to the different needs of the inhabitants. Outsiders who require too much help too quickly might cause a ratajin to withdraw, believing their guest incapable of adjusting to life's many hurdles. Poorly chosen words of pity or meaningless sympathy toward the nature of a ratajin's unique sensory experience can also cause lingering resentment.</p>",
       "items": {
+        "weapon->Rapier": {
+          "name": "Rapier",
+          "description": "<p>The rapier is a long and thin piercing blade with a basket hilt. It is prized among many as a dueling weapon.</p>"
+        },
+        "armor->Leather Armor": {
+          "name": "Leather Armor",
+          "description": "<p>A mix of flexible and molded boiled leather, a suit of this type of armor provides some protection with maximum flexibility.</p>"
+        },
         "strike-melee->Rapier": {
           "name": "Rapier"
         },
@@ -458,6 +576,9 @@
         "action->Share the Skin": {
           "name": "Share the Skin",
           "description": "<p><strong>Requirements</strong> A @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}, @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}, @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}, @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}, or willing creature is within the skinskitter's reach</p>\n<hr />\n<p><strong>Effect</strong> The skinskitter scrapes and shears away large sheets of the victim's skin. This requires an @Check[athletics|defense:fortitude] check against the victim's Fortitude DC if the victim is grabbed and is automatic for any of the other conditions. The massive pain causes the victim to become @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} for 1 minute, and the skinskitter drapes itself in the flapping skin, granting it 10 temporary Hit Points for 1 minute.</p>"
+        },
+        "action->Grab": {
+          "name": "Grab"
         }
       }
     },
@@ -487,12 +608,18 @@
         "action->Magic Sense (Imprecise) 30 feet": {
           "name": "Magic Sense (Imprecise) 30 feet"
         },
+        "action->+1 Status to All Saves vs. Magic": {
+          "name": "+1 Status to All Saves vs. Magic"
+        },
         "action->Regeneration 10 (Deactivated by Glass)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.lR9R5Vld8Eu2Dha5]\nRegeneration 10 (Deactivated by Glass)"
+          "name": "Regeneration 10 (Deactivated by Glass)"
         },
         "action->Unstable Feedback": {
           "name": "Unstable Feedback",
           "description": "<p><strong>Trigger</strong> A creature Casts a Spell on the spellscar fext, and the spellscar fext either succeeds at its saving throw versus the spell or the caster fails the spell attack roll against the spellscar fext</p>\n<hr />\n<p><strong>Effect</strong> The caster of the triggering spell undergoes a @UUID[Compendium.pf2e.rollable-tables.RollTable.N0pDFNCffTe2Du39]{Wellspring Surge}. Even if several spellscar fexts use this reaction after succeeding at a save against the same spell, the spellcaster undergoes only one wellspring surge.</p>"
+        },
+        "action->Void Healing": {
+          "name": "Void Healing"
         },
         "action->Grasp Power": {
           "name": "Grasp Power",
@@ -505,11 +632,18 @@
       "hpDetails": "void healing, reconstitution, stone flesh",
       "languages": "(can't speak)",
       "items": {
+        "weapon->Scimitar": {
+          "name": "Scimitar",
+          "description": "<p>This one-handed curved blade is sharp on one side.</p>"
+        },
         "strike-melee->Scimitar": {
           "name": "Scimitar"
         },
         "strike-melee->Fist": {
           "name": "Fist"
+        },
+        "action->Attack of Opportunity": {
+          "name": "Attack of Opportunity"
         },
         "action->Reconstitution": {
           "name": "Reconstitution",
@@ -518,6 +652,9 @@
         "action->Stone Flesh": {
           "name": "Stone Flesh",
           "description": "<p>A stone sister is made of a bizarre stone that never stops bleeding from numerous cracks along her skin. She reacts to certain spells in unique ways, as listed below.</p>\n<ul>\n<li>Spells that alter earth, such as shape stone, either deal [[/r 3d10 #Damage]] points of damage or heal [[/r 3d10[healing]]] Hit Points, as decided by the caster. If the spell is specifically harmful or beneficial to earth and stone, the GM might decide it can only harm the stone sister, or only heal her.</li>\n<li>Stone to flesh doesn't revert a stone sister to flesh and blood but instead weakens her. She loses her resistance to physical damage for 1 minute. If she's reduced to 0 Hit Points during this time, she's permanently destroyed and can't reform.</li>\n</ul>"
+        },
+        "action->Void Healing": {
+          "name": "Void Healing"
         },
         "action->Curse of Stone": {
           "name": "Curse of Stone",
