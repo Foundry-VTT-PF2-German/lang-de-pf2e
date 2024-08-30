@@ -83,6 +83,9 @@
       "KnockProne": "Bei einem Treffer erhält das Ziel den Status @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}.",
       "ReduceHiddenCheck": "Der SG des einfachen Wurfes um eine @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Versteckte} Kreatur anzuvisieren ist nur @Check[flat|dc:5]{5}."
     },
+    "Background": {
+      "Favored": "<p><strong>Frequency</strong> once per day;</p><hr><p><strong>Effect</strong> Reroll the skill check. You must use the second result, even if it's worse.</p>"
+    },
     "BattleForm": {
       "AberrantForm": {
         "GugSqueezeNote": "Deine zahlreichen Gelenke erlauben es dir dich durch enge Stellen zu zwängen, als wärst du eine Mittelgroße Kreatur."
@@ -95,6 +98,7 @@
         "AqueousFist": "Aquatische Faust",
         "Beak": "Schnabel",
         "Beard": "Bart",
+        "Belly": "Belly",
         "BigClaw": "Big Claw",
         "Bite": "Biss",
         "Blade": "Klinge",
@@ -107,6 +111,7 @@
         "Branch": "Ast",
         "Claw": "Klaue",
         "CubeFace": "Oberflächenkontakt",
+        "ElementalCurrent": "Elemental Current",
         "Fangs": "Zähne",
         "FireMote": "Feuerfunke",
         "Fist": "Faust",
@@ -132,11 +137,15 @@
         "Pseudopod": "Pseudopode",
         "Quill": "Stacheln",
         "Rock": "Felsen",
+        "Root": "Root",
         "Seed": "Saatkorn",
         "Spikes": "Stacheln",
         "Spine": "Stachel",
+        "Spoke": "Spoke",
         "Stinger": "Stachel",
+        "SpiritTouch": "Spirit Touch",
         "StoneBall": "Steinball",
+        "StrikingSurface": "Striking Surface",
         "Sunbeam": "Sonnenstrahl",
         "Tail": "Schwanz",
         "Talon": "Kralle",
@@ -151,7 +160,8 @@
         "WaterSpout": "Wasser speien",
         "Wave": "Welle",
         "Web": "Netz",
-        "Wing": "Flügel"
+        "Wing": "Flügel",
+        "Wrap": "Wrap"
       },
       "CosmicForm": {
         "MoonNote": "Das Ziel erhält eine Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 2}.",
@@ -634,6 +644,11 @@
         "Label": "Auslöser"
       }
     },
+    "GenericLabel": {
+      "PreviousAction": {
+        "ClimbLeapStride": "Your previous action was to Climb, Leap, or Stride"
+      }
+    },
     "IWR": {
       "Custom": {
         "AcidAndSpellsThatCauseRust": "acid and spells that cause rust",
@@ -777,12 +792,14 @@
           },
           "Faydhaan": "Faydhaan",
           "Fish": "Fisch",
+          "Fox": "Fox",
           "Gancanagh": "Gancanagh",
           "Gimmerling": "Gimmerling",
           "Gosreg": "Gosreg",
           "Gourd": "Kürbis",
           "Gylou": "Gylou",
           "Hag": "Vettel",
+          "Human": "Human",
           "Humanoid": "Humanoider",
           "HumanoidLarge": "Großer Humanoider",
           "HumanoidMedium": "Mittelgroßer Humanoider",
@@ -810,12 +827,15 @@
           "Plant": "Plant",
           "PorcupineGiant": "Riesenstachelschwein",
           "Pukwudgie": "Pukwudgie",
+          "RacoonDog": "Racoon Dog",
           "RajaKrodha": "Raja-Krodha",
           "Raktavarna": "Raktawarna",
           "Rat": "Ratte",
           "Scorpion": "Skorpion",
           "Shark": "Shark",
+          "Spider": "Spider",
           "Succubus": "Sukkubus",
+          "Tailless": "Tailless",
           "Tree": "Baum",
           "Unicorn": "Einhorn",
           "Vampire": "Vampir",
@@ -824,7 +844,8 @@
           "Voidworm": "Limbuswurm",
           "WingedHumanoid": "Geflügelter Humanoider",
           "Wolf": "Wolf",
-          "WolfDire": "Schreckenswolf"
+          "WolfDire": "Schreckenswolf",
+          "Yaoguai": "Yaoguai"
         },
         "Label": "Aktuelle Gestalt"
       },
@@ -1076,6 +1097,9 @@
       "Shell": {
         "BrokenShell": "Broken Shell",
         "CriticalHit": "Shell Broken by a Critical Hit"
+      },
+      "Shieldmarshal": {
+        "LawbringerSpeedLabel": "Lawbringer - Moving Toward Target"
       },
       "ShockerLizard": {
         "ShockingBurst": {
@@ -1599,7 +1623,6 @@
       "BattleForm": "Kampfgestalt",
       "ChoiceSet": "Auswahlliste",
       "CraftingEntry": "Handwerkskunst (Eintrag)",
-      "CraftingFormula": "Handwerkskunst (Formel)",
       "CreatureSize": "Kreaturengröße",
       "CriticalSpecialization": "Kritische Spezialisierung",
       "DamageAlteration": "Schaden anpassen",
@@ -1858,14 +1881,33 @@
         "Prompt": "Wähle den Bonus der Unterstützung."
       },
       "Alchemist": {
+        "AlchemicalAssessment": {
+          "Note": "If have the formula for the item you're identifying, and you roll a critical failure, you get a failure instead."
+        },
         "AlchemicalCrossbow": {
           "Prompt": "Wähle eine Bombe für die Armbrust."
         },
         "Alchemy": {
           "IdentifyAlchemy": "You can automatically identify alchemical items that you have the formula for."
         },
+        "BlowgunPoisoner": {
+          "CriticalNote": "If you critically succeed at a blowgun Strike using a poisoned dart, the target's initial save against the poison is one degree of success worse than the creature rolls; this is a misfortune effect.",
+          "StealthNote": "In addition, if you make a blowgun Strike while @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} or @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Undetected}, you don't automatically become @UUID[Compendium.pf2e.conditionitems.Item.1wQY3JYyhMYeeV2G]{Observed}. Instead, immediately attempt a @Check[stealth|against:perception] check against the Perception DC of the target. If you succeed, you don't become observed, and are hidden (if you were undetected, you still become hidden rather than remaining undetected)."
+        },
         "ExpandedSplash": {
           "Note": "The splash damage affects all creatures within 10 feet of the target instead of 5 feet."
+        },
+        "ImprovedInvigoratingElixir": {
+          "Description": "Add the listed conditions to those you can choose for an invigorating elixir you create to counteract:",
+          "Label": "Improved Invigorating Elixir",
+          "Mental": {
+            "Label": "Physical Invigoration",
+            "Conditions": "@UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded}, @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened}, @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained}, @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}, @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed}"
+          },
+          "Physical": {
+            "Label": "Mental Invigoration",
+            "Conditions": "@UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused}, controlled, @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing}, @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened}, @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}, @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed}."
+          }
         },
         "ResearchField": {
           "Bomber": {
@@ -1892,6 +1934,12 @@
               "Description": "You can apply the contents of a versatile vial to a weapon or piece of ammunition as an injury poison. Add the versatile vial's initial damage to the first successful Strike with that weapon or ammunition. The substance becomes inert at the end of your current turn."
             }
           }
+        },
+        "SupremeInvigoratingElixir": {
+          "Description": "For the purposes of counteracting effects with invigorating elixirs, treat your level as though it were 2 higher. Add the listed conditions to those you can choose for an invigorating elixir you create to counteract: @UUID[Compendium.pf2e.conditionitems.Item.dTwPJuKgBQCMxixg]{Petrified}, @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned}. You can also choose a disease regardless of what, if any, conditions it imposes."
+        },
+        "UncannyBombs": {
+          "Note": "You automatically succeed at the flat check when targeting a @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} creature."
         }
       },
       "AldoriDuelist": {
@@ -2240,6 +2288,14 @@
         "WeightOfGuilt": {
           "Description": "Schuldgefühle vernebeln das Denken jener, die deinen @UUID[Compendium.pf2e.actionspf2e.Item.tuZnRWHixLArvaIf]{Blick der Läuterung} ignorieren. Du kannst der auslösenden Kreatur anstelle von @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 2} für dieselbe Wirkungsdauer den Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 2} verleihen."
         }
+      },
+      "ChangeShape": {
+        "Anadi": "You change into your human or spider shape. Each shape has a specific, persistent appearance. In your human shape, you can't use unarmed attacks granted by your ancestry. You aren't off-guard when climbing in your spider shape. However, in your spider shape you can't use weapons, shields, or other held items of any sort, and you are limited in what actions you can take that have the manipulate trait. The only manipulate actions you can take are to @UUID[Compendium.pf2e.actionspf2e.Item.aBQ8ajvEBByv45yz]{Cast a Spell} with somatic components, weave silk or webbing, or simple @UUID[Compendium.pf2e.actionspf2e.Item.pvQ5rY2zrtPI614F]{Interact} actions such as opening an unlocked door. Your spider legs can't perform actions that require fingers or significant manual dexterity, including any action that would require a check to accomplish. The GM might determine other manipulate actions are appropriate for your spider legs.",
+        "Beastkin": "You change into your humanoid or hybrid shape. Each shape has a specific, persistent appearance, and most beastkin remain in their hybrid shapes by default. In hybrid shape, you appear as a mix between your ancestry and your inherent animal. While in hybrid shape, you gain a jaws unarmed Strike resembling the features of your inherent animal (fangs for bats, beaks for eagles, mandibles for wasps, and so on). Your jaws deal 1d4 piercing damage, have the agile, finesse, and unarmed traits, and are in the brawling weapon group. In your humanoid shape, you retain the appearance of your original ancestry.",
+        "Kitsune": "You transform into a specific alternate form determined by your heritage. If your heritage doesn't list a form, your alternate form is a tailless form, which is a common Medium humanoid ancestry prevalent where you grew up (typically human). This form is the same age and body type as your true form and has roughly analogous physical traits, such as hair color. Using Change Shape counts as creating a disguise for the @UUID[Compendium.pf2e.actionspf2e.Item.AJstokjdG6iDjVjE]{Impersonate} use of Deception. You lose any unarmed Strikes you gained from a kitsune heritage or ancestry feat in this form. You can remain in your alternate form indefinitely, and you can shift back to your true kitsune form by using this action again.",
+        "Tanuki": "You can transform into a mundane raccoon dog, using the statistics of @UUID[Compendium.pf2e.spells-srd.Item.gfPjmG6Fe6D3MFjl]{Pest Form}. This is a specific raccoon dog form that's the same age and body type as your true form and has roughly analogous physical traits, such as hair color. Using Change Shape counts as creating a disguise for the @UUID[Compendium.pf2e.actionspf2e.Item.AJstokjdG6iDjVjE]{Impersonate} use of Deception. You lose any unarmed Strikes you gained from a tanuki heritage or ancestry feat in this form. You can remain in your raccoon dog form indefinitely, and you can shift back to your tanuki form by using this action again.",
+        "Werecreature": "You transform into your hybrid or animal shape. Your equipment transforms with you and continues to provide bonuses, but your animal shape cannot use weapons, shields, or other held items and cannot use manipulate actions. You gain a movement speed, unarmed attacks, and potentially other abilities based on your werecreature type. These unarmed attacks are in the brawling group. You can Dismiss the effect to return to your humanoid shape, and you resume your humanoid shape automatically if you're reduced to 0 Hit Points.",
+        "Yaoguai": "You transform to or from your true yaoguai form into a humanoid alternate form, which is a common Medium humanoid ancestry prevalent where you were born (typically human). This form is the same apparent age and body type as your yaoguai form and has roughly analogous physical traits, such as hair color. Using Change Shape counts as creating a disguise for the @UUID[Compendium.pf2e.actionspf2e.Item.AJstokjdG6iDjVjE]{Impersonate} use of Deception. You can remain in your humanoid form indefinitely, but you revert to your yaoguai form after 1 hour of unconsciousness or 1 minute after death."
       },
       "CharmOfResistance": {
         "Greater": "Starker Glücksbringer der Resistenz: {damageType}",
@@ -2829,6 +2885,9 @@
           "Sorcerer": "You siphon spell energy into one weapon you're wielding or into one of your unarmed attacks, such as a fist. Until the end of your turn, the weapon or unarmed attack deals an extra 1d6 force damage and gains the trait of your bloodline's magical tradition if it didn't have it already. If the spell dealt a different type of damage, the Strike deals this type of damage instead (or one type of your choice if the spell could deal multiple types of damage).",
           "Wizard": "Du leitest Zauberenergie in eine von dir geführte Waffe oder in einen deiner Waffenlosen Angriffe, z.B. in deine Faust. Bis zum Ende deines Zuges verursacht die Waffe oder der Waffenlose Angriff zusätzliche 1W6 Punkte Kraftschaden und erhält die Kategorie Arkan, so er sie noch nicht besessen hat; sollte der Zauber Schaden einer anderen Kategorie verursachen, so verursacht auch der Angriff diese Schadensart (oder eine Schadensart deiner Wahl, sollte der Zauber imstande sein, mehrere Schadensarten zu verursachen)."
         },
+        "BurnIt": {
+          "Label": "Burn It!"
+        },
         "CharmingLiar": {
           "Note": "Wenn du einen Kritischen Erfolg beim Lügen erhältst, verbessert sich die Einstellung des Zieles dir gegenüber um eine Stufe, als ob du mit der Aktion Beeindrucken mit Hilfe von Diplomatie Erfolg gehabt hättest."
         },
@@ -3401,6 +3460,7 @@
       },
       "Magus": {
         "ArcaneCascade": {
+          "IncreaseDamage": "Increase Arcane Cascade damage",
           "WeaponDamage": "Waffenschaden"
         },
         "HybridStudy": {
@@ -3468,14 +3528,17 @@
         "AdvancedHobgoblinWeapons": "Hobgoblin-Spezialwaffen",
         "AdvancedKholoWeapons": "Advanced Kholo Weapons",
         "AdvancedKoboldWeapons": "Kobold-Spezialwaffen",
+        "AdvancedMonasticWeaponry": "Advanced Monastic Weaponry",
         "AdvancedMerfolkWeapons": "Advanced Merfolk Weapons",
         "AdvancedOrcWeapons": "Orkische Spezialwaffen",
+        "AdvancedSamsaranWeapons": "Advanced Samsaran Weapons",
         "AdvancedSurkiWeapons": "Advanced Surki Weapons",
         "AdvancedTenguWeapons": "Tengu-Spezialwaffen",
         "AdvancedTripkeeWeapons": "Advanced Tripkee Weapons",
         "AdvancedTwoHandedMeleeWeapons": "Zweihändige Nahkampfspezialwaffen",
         "AdvancedVanaraWeapons": "Vanarische Spezialwaffen",
         "AdvancedVishkanyaWeapons": "Vischkanysche Spezialwaffen",
+        "AdvancedWayangWeapons": "Advanced Wayang Weapons",
         "BayonetsAndReinforcedStocks": "Bajonette und Verstärkte Schäfte",
         "BountyHunterWeapons": "Bounty Hunter Tools of the Trade",
         "MartialAthamaruWeapons": "Martial Athamaru Weapons",
@@ -3518,13 +3581,16 @@
         "MartialKholoWeapons": "Martial Kholo Weapons",
         "MartialKoboldWeapons": "Kobold-Kriegswaffen",
         "MartialMerfolkWeapons": "Martial Merfolk Weapons",
+        "MartialOniWeapons": "Martial Oni Weapons",
         "MartialOrcWeapons": "Orkische Kriegswaffen",
+        "MartialSamsaranWeapons": "Martial Samsaran Weapons",
         "MartialSurkiWeapons": "Martial Surki Weapons",
         "MartialTenguWeapons": "Tengu-Kriegswaffen",
         "MartialTripkeeWeapons": "Martial Tripkee Weapons",
         "MartialTwoHandedMeleeWeapons": "Zweihändige Nahkampfkriegswaffen",
         "MartialVanaraWeapons": "Vanarische Kriegswaffen",
         "MartialVishkanyaWeapons": "Vischkanysche Kriegswaffen",
+        "MartialWayangWeapons": "Martial Wayang Weapons",
         "MinotaurWeapons": "Minotaur Weapons",
         "MonasticArchery": "Bogenschütze",
         "PerformativeWeapons": "Gladiator Performative Weapons",
@@ -3728,6 +3794,10 @@
         "ThoroughReports": "Umfassende Berichte"
       },
       "Poppet": {
+        "Tsukumogami": {
+          "Ceramic": "Ceramic",
+          "Cloth": "Cloth or Wood"
+        },
         "WashOut": {
           "Note": "Jedes Mal, wenn du einen erfolgreichen Zähigkeitswurf gegen ein anhaltendes Gift ablegst, reduzierst du die Phase um 2, oder um 1 bei einem Ausgeprägten Gift. Jeder Kritische Erfolg, den du gegen ein anhaltendes Gift erzielst, reduziert die Phase um 3, oder um 2 bei Ausgeprägtem Gift."
         }
@@ -3743,6 +3813,7 @@
         "AdvancedMulticlassFeat": "Wähle ein Klassentalent bis zur Hälfte deiner Charakterstufe.",
         "Alignment": "Wähle eine Gesinnung",
         "Benefit": "Wähle einen Vorteil.",
+        "Cantrip": "Select a cantrip.",
         "CantripOrNonCantrip": "Wähle Zaubertrick oder Zauber.",
         "ClassDCAbilityScore": "Wähle das Attribut deines Klassen-SG.",
         "Color": "Wähle eine Farbe.",
@@ -3768,6 +3839,7 @@
         "LevelOneClassFeat": "Wähle ein Klassentalent der 1. Stufe.",
         "LevelOneOrTwoClassFeat": "Wähle ein Klassentalent der 1. oder 2. Stufe.",
         "Material": "Wähle ein Material.",
+        "MovementType": "Select a movement type.",
         "PathToPerfection": "Wähle einen Weg zur Perfektion.",
         "Persona": "Select a persona trait.",
         "PsiCantrip": "Wähle einen Mentalen Zaubertrick.",
@@ -4446,9 +4518,11 @@
         "EnergyAblation": "Sollte deine nächste Handlung das Wirken eines Zaubers sein, der Schaden wenigstens einer Energiekategorie (Elektrizität, Feuer, Kälte, Kraft, Leben, Leere, Säure oder Schall) verursachen würde, erlangst du Resistenz gegen eine Energiekategorie deiner Wahl in Höhe des Zaubergrades (Minimum 1) bis zum Ende deines nächsten Zuges. Du erlangst die Resistenz unabhängig davon, ob deine Zauber Schaden verursacht oder nicht.",
         "EnergyFusion": "If the next action you use is to Cast a Spell that deals energy damage, select a non-cantrip spell in your spell repertoire that deals a different type of energy damage, and expend an additional spell slot of the same rank as this secondary spell. The spell you cast deals additional damage equal to the rank of the secondary spell slot expended. The spell's total damage is divided evenly between the energy type of the spell you cast and the energy type of the secondary spell.",
         "ExplosiveArrival": "Sofern du als nächste Handlung einen Zauber der Kategorie Beschwörung wirkst, erleiden alle Kreaturen innerhalb von @Template[emanation|distance:10]{10 Fuß/3 m} um die beschworene Kreatur herum 1W4 Feuerschaden pro Zaubergrad (@Damage[(@item.level)d4[fire]|traits:area-damage]). Sollte die beschworene Kreatur die Kategorie Elektrizität, Kälte, Säure oder Schall besitzen, so kannst du stattdessen Schaden dieser Art verursachen (@Damage[(@item.level)d4[electricity]|traits:area-damage], @Damage[(@item.level)d4[cold]|traits:area-damage], @Damage[(@item.level)d4[acid]|traits:area-damage], @Damage[(@item.level)d4[sonic]|traits:area-damage]). Sollte sie die Kategorie Geist besitzen, so kannst du alternativ Seelenschaden verursachen (@Damage[(@item.level)d4[spirit]|traits:area-damage]).",
+        "FamiliarsResolve": "If the next action you use is to Cast a Spell, you or an ally within 30 feet gain a +2 status bonus to saving throws against effects that would cause you to be doomed or frightened for 1 round. At 14th level, you or an ally gain a +3 status bonus to saving throws against these effects instead. @UUID[Compendium.pf2e.feat-effects.Item.6I4qWkHzxj4MAt6g]{Effect: Familiar's Resolve}",
         "ForcibleEnergy": "Sollte deine nächste Handlung das Wirken eines Zaubers sein, der Elektrizitäts-, Feuer-, Säure- oder Schallschaden verursacht, kannst du ein Ziel wählen, so es Schaden erleidet. Dieses Ziel erhält Schwäche 5 gegen diese Schadensart bis zum Ende deines nächsten Zuges. Sollte ein Zauber mehrere Arten von Energieschaden verursachen, so wähle eine davon, gegen die das Ziel Schwäche erleidet. Dies hat keinen Effekt auf Kreaturen mit Resistenz oder Immunität gegen die gewählte Schadensart. @UUID[Compendium.pf2e.feat-effects.Item.0Ai0u9kNJrEudPnN]{Effekt: Nachhallende Energie}",
         "FormControl": "Der effektive Zaubergrad des Zaubers ist um 2 niedriger als normal (Minimum 1. Grad), dafür kannst du die Verwandlung bis zu 1 Stunde aufrechterhalten, sofern dies länger ist als die aufgeführte Wirkungsdauer. Du kannst den Effekt immer noch jederzeit Aufheben, sofern es der Zauber gestattet.",
         "GarlandSpell": "Wucherndes Pflanzenleben wächst in einer @Template[burst|distance:10]{10 Fuß/3 m-Explosion} innerhalb der Reichweite des Zaubers. Dieser Bereich ist Schwieriges Gelände und Gefährliches Gelände und mit deiner Wahl von Dornen oder giftigen Ranken bedeckt. Bewegt sich eine Kreatur auf eines dieser Felder oder beendet in einem ihren Zug, so erleidet sie 2W6 Schadenspunkte (Stichschaden bei Dornen, Giftschaden bei Ranken). Eine Kreatur kann diesen Schaden nur einmal pro Zug erleiden. Du und dein Vertrauter seid gegen diesen Schaden immun. Die Pflanzen bestehen 1 Minute lang, verschwinden aber vorzeitig, solltest du eher einen weiteren Wuchernden Zauber wirken. Der Schaden steigt mit der 16. Stufe auf 3W6 Punkte und mit der 20. Stufe auf 4W6 Punkte (@Damage[(ternary(gte(@actor.level,20),4,ternary(gte(@actor.level,16),3,2)))d6[piercing]] @Damage[(ternary(gte(@actor.level,20),4,ternary(gte(@actor.level,16),3,2)))d6[poison]]).",
+        "GoldenDragonsBounty": "If the next action you use is to Cast a Spell that deals bludgeoning, piercing, or slashing damage, that damage is your choice of cold iron, silver, or steel for the purposes of weaknesses, resistances, vulnerabilities, and the like. At 14th level, adamantine is added to the list of metal choices. The spell gains the metal trait.",
         "GrowthSpell": "Erweitere den Flächeneffekt des Zaubers. Bei einem Explosionsradius steigt der Radius um 5 Fuß/1,50 m, bei einem Kegel wächst der Kegel um 10 Fuß/3 m, bei einer Linie wächst die Linie um 15 Fuß/4,50 m. Der Zauber erlangt die Kategorie Holz.",
         "GustingSpell": "If the next action you use is to Cast a Spell with the air or electricity trait, you can Fly up to 10 feet before or after the spell is cast.",
         "Harmonize": "Sollte deine nächste Handlung darin bestehen eine Komposition zu wirken, wird diese zu einer Harmonischen Komposition. Im Gegensatz zu einer normalen Komposition endet eine Harmonische Komposition nicht, wenn du eine andere Komposition wirkst, so dass du eine andere Komposition im selben Zug wie eine harmonische Komposition wirken kannst. Wirkst du allerdings eine andere Harmonische Komposition, so endet der Effekt einer früheren Harmonischen Komposition.",
@@ -4502,12 +4576,19 @@
         "MinorPrompt": "Select a minor spirit power"
       },
       "Sprite": {
+        "Dijiang": {
+          "Emotion": "When you roll a failure (though not a critical failure) on a saving throw against an emotion effect, you get a success instead."
+        },
         "LuminousSprite": {
           "Light": "Licht ausstoßen"
         },
         "SpritesSpark": {
+          "Dijiang": "Primordial Pulse",
           "Draxie": "Euphoriefunken",
+          "Gandharva": "Celestial Song",
           "Grig": "Missklang",
+          "Kanchil": "Puzzling Bolt",
+          "Leungli": "Surging Splash",
           "LuminousSprite": "Leuchtfunke",
           "Melixie": "Stachelschuss",
           "Nyktera": "Ultraschallimpuls",
@@ -4528,10 +4609,13 @@
           "FireTalon": "Feuerklaue",
           "FlashingSpark": "Blitzender Funke",
           "FlowingWave": "Fließende Welle",
+          "GaleBlossom": "Gale Blossom",
           "GorillaSlam": "Gorillaschlag",
           "IronSweep": "Eisenbesen",
           "LashingBranch": "Peitschenranke",
+          "RammingHorn": "Ramming Horn",
           "ShadowGrasp": "Schattengriff",
+          "ShatteringEarth": "Shattering Earth",
           "SkywardSlash": "Himmelshieb",
           "StingingLash": "Brennende Peitsche",
           "Stonestrike": "Steinschlagangriff",
@@ -4780,6 +4864,9 @@
       },
       "WardingRune": {
         "Prompt": "Wähle eine Magieschule außer Erkenntnismagie"
+      },
+      "Wayang": {
+        "ShadowOfTheCourtier": "Once per day, if you fail, but not critically fail, a check to Make an Impression, you can play it off as part of a performance, allowing you to reroll the check; this is a fortune effect."
       },
       "Weapon": {
         "Metal": "Nutzt eine Metallwaffe"
