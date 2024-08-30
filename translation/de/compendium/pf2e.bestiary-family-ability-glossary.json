@@ -245,7 +245,7 @@
     },
     "(Ghost) Draining Touch": {
       "name": "(Geist) Auslaugende Berührung",
-      "description": "<p>Mit seiner Berührung kann der Geist einer lebenden Kreatur die Lebensenergie entziehen. Er führt einen Geisterhandangriff aus, welcher keinen Schaden verursacht. Das Ziel erhält stattdessen für 1 Tag den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 1}, während der Geist [[/r (max(1,floor(@actor.level/2)))[healing]]]{Trefferpunkte in Höhe seiner Stufe} zurückerlangt.</p>"
+      "description": "<p>With a touch, the ghost attempts to drain a living creature's life force. It makes a ghostly hand Strike but deals no damage on a hit.</p>\n<p>Instead, the target becomes @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} for 1 day, and the ghost regains @Damage[(max(1,floor(@actor.level/2)))[healing]]{HP equal to half its own level}.</p>"
     },
     "(Ghost) Dreamwalker": {
       "name": "(Geist) Traumwandler",
@@ -313,7 +313,7 @@
     },
     "(Ghoul) Consume Flesh": {
       "name": "(Ghul) Fleisch verzehren",
-      "description": "<p><strong>Anforderungen</strong> Der Ghul befindet sich angrenzend zu einer Kreatur, die innerhalb der letzten Stunde gestorben ist.</p>\n<hr />\n<p><strong>Effekt</strong> Der Ghul verzehrt einen Teil der Leiche und erlangt [[/r 1d6[healing]]]{1W6 Trefferpunkte} plus 1W6 pro 2 seiner Stufen zurück.</p>\n<p>Er kann dies pro Leiche nur einmal tun.</p>"
+      "description": "<p><strong>Requirements</strong> The ghoul is adjacent to the corpse of a creature that died within the last hour.</p>\n<hr />\n<p><strong>Effect</strong> The ghoul devours a chunk of the corpse and regains @Damage[(1+(max(0,floor(@actor.level/2))))d6[healing]] Hit Points plus 1d6 for every 2 levels it has.</p>\n<p>It can regain Hit Points from any given corpse only once.</p>"
     },
     "(Ghoul) Ghoul Fever": {
       "name": "(Ghul) Ghulfieber",
@@ -561,7 +561,7 @@
     },
     "(Mana Wastes Mutant) Energy Blast": {
       "name": "(Manaödenmutant) Energieexplosion",
-      "description": "<p>Wähle eine Energieart. Diese Fähigkeit erhält die Energieart als Kategorie. Der Mutant erhält eine Form von physischer Veränderung an seiner Form, die darauf hinweist, wie die Energieexplosion abgefeuert wird, seien es zahllose Pusteln auf seinem Körper, ein zusätzliches Körperteil oder eine zusätzliche Öffnung in seiner Kehle, um die Explosion als Odemwaffe zu nutzen. Wähle, ob der Mutant eine @Template[line|distance:60]{60 Fuß/18 m-Linie} oder einen @Template[cone|distance:30]{30 Fuß/9 m-Kegel} aus Energie mit dieser Fähigkeit erschafft. Die Energie verursacht [[/r ((@actor.level)d6)[energy]]]{1W6 Schadenspunkte pro Stufe} und erlaubt einen @Check[reflex|dc:|basic]{einfachen Reflexwurf}. Der Mutant kann Energieexplosion für [[/br 1d4 #Runden]]{1W4 Runden} nicht erneut nutzen.</p>"
+      "description": "<p>Choose an energy type; this ability gains that energy type as a trait. The mutant gains some sort of physical alteration to their shape that suggests how they trigger their energy blast, be it numerous pustules on their body, an extra limb, or an additional opening in their throat to exhale the blast as a breath weapon. Choose whether the mutant creates a @Template[line|distance:60] of energy or a @Template[cone|distance:30] of energy when they activate this ability. The energy deals @Damage[((@actor.level)d6)[energy]]{1d6 damage per level} with a @Check[reflex|dc:|basic] save. The mutant can't use Energy Blast again for [[/br 1d4 #Recharge Energy Blast]]{1d4 rounds}.</p>"
     },
     "(Mana Wastes Mutant) Energy Resistance": {
       "name": "(Manaödenmutant) Energiestoß",
@@ -856,7 +856,7 @@
     },
     "(Skeleton) Frozen": {
       "name": "(Skelett) Gefroren",
-      "description": "<p>Die Knochen des Skeletts sind mit einer dünnen Eisschicht überzogen. Das Skelett erhält Immunität gegen Kälte, eine Schwäche von 5 gegen Feuer und verliert die Resistenz gegen Feuer. Das Skelett ist von einer Aura der Kälte umgeben, die allen angrenzenden Kreaturen zu Beginn des Zuges des Skeletts [[/r (max(1,floor(@actor.level/2)))[cold]]]{Kälteschaden in Höhe der halben Stufe des Skeletts} zufügt (@Check[reflex|dc:|basic]{einfacher Reflexwurf} mit einem normalen SG für seine Stufe).</p>"
+      "description": "<p>The skeleton's bones are covered in a thin layer of ice. The skeleton gains immunity to cold and weakness 5 to fire and loses resistance to fire. The skeleton is surrounded by an aura of cold that deals @Damage[(max(1,floor(@actor.level/2)))[cold]]{cold damage equal to half the skeleton's level} to all adjacent creatures at the start of the skeleton's turn (@Check[reflex|dc:|basic] save with a standard DC for its level).</p>"
     },
     "(Skeleton) Grave Eruption": {
       "name": "(Skelett) Grabeseruption",
@@ -885,7 +885,7 @@
     },
     "(Skeleton) Skeleton of Roses": {
       "name": "(Skelett) Dornig",
-      "description": "<p>Dicke, 2,5 cm lange Dornen wachsen aus den Knochen des Skeletts; manche sind zudem von Rosenblüten bedeckt.</p>\n<p>Die Waffenlosen Nahkampfangriffe des Skeletts verursachen zusätzlichen Stichschaden in Höhe von 1/3 der Kreaturenstufe des Skelett (Minimum 1 Schadenspunkt).</p>\n<p>Am Ende jedes Zuges, in dem das Skelett mit seinen Dornen Stichschaden verursacht hat, erlangt es [[/r (max(1,@actor.level))[healing]]]{TP in Höhe seiner Stufe} zurück (Minimum 1 TP). Wenn das Skelett auf diese Weise Trefferpunkte zurückerlangt, erblüht ggf. eine weitere Rose.</p>"
+      "description": "<p>Thick briars have grown through the skeleton's bones, covering it in red roses with inch-long thorns.</p>\n<p>The skeleton's unarmed melee Strikes deal additional piercing damage equal to 1/3 the skeleton's level (minimum 1 damage).</p>\n<p>At the end of each of its turns, if the skeleton has caused piercing damage with its thorns, it regains @Damage[(max(1,@actor.level))[healing]]{HP equal to its level} (minimum 1). Each time the skeleton regains HP in this way, another rose blossoms.</p>"
     },
     "(Sporeborn) Consume Biomatter": {
       "name": "(Sporenkreatur) Biomasse verzehren",
@@ -928,32 +928,32 @@
       "description": "<p><strong>Auslöser</strong> Der Springende Hans nutzt die Fähigkeit Riesensatz</p>\n<hr />\n<p><strong>Effekt</strong> Der Springende Hans erhält für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Unsichtbar}.</p>"
     },
     "(Stargut Hydra) Skymetal Metamorphosis (Abysium)": {
-      "name": "(Stargut Hydra) Skymetal Metamorphosis (Abysium)",
-      "description": "<p>Each stargut hydra has at least one metamorphosis resulting from consuming a specific skymetal and internalizing its properties.</p>\n<p><strong>Abysium</strong> (aura, poison) The stargut hydra emits an aura of nauseating radiation from the abysium in its body. Any creature that begins its turn within 30 feet of the stargut hydra is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}.</p>"
+      "name": "(Himmelsmetallhydra) Himmelsmetall Metamorphose (Abysium)",
+      "description": "<p>Jede Himmelsmetallhydra hat mindestens eine Metamorphose, die aus dem Verzehr eines bestimmten Himmelsmetalls und der Verinnerlichung seiner Eigenschaften resultiert.</p>\n<p><strong>Abysium</strong> (Aura, Gift) Die Himmelsmetallhydra verströmt eine Aura aus ekelerregender Strahlung von dem Abysium in ihrem Körper. Jede Kreatur, die sich zu Beginn ihres Zuges innerhalb von 30 Fuß/9 m um die Himmelsmetallhydra befindet, erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1}.</p>"
     },
     "(Stargut Hydra) Skymetal Metamorphosis (Adamantine)": {
-      "name": "(Stargut Hydra) Skymetal Metamorphosis (Adamantine)",
-      "description": "<p>Each stargut hydra has at least one metamorphosis resulting from consuming a specific skymetal and internalizing its properties.</p>\n<p><strong>Adamantine</strong> The stargut hydra's Strikes bypass Hardness and are treated as adamantine. The stargut hydra gains resistance 10 to physical damage (except adamantine).</p>"
+      "name": "(Himmelsmetallhydra) Himmelsmetall Metamorphose (Adamant)",
+      "description": "<p>Jede Himmelsmetallhydra hat mindestens eine Metamorphose, die aus dem Verzehr eines bestimmten Himmelsmetalls und der Verinnerlichung seiner Eigenschaften resultiert.</p>\n<p><strong>Adamant</strong> Die Angriffe der Himmelsmetallhydra umgehen die Härte und werden wie Adamant behandelt. Die Himmelsmetallhydra erhält Resistenz 10 gegen körperlichen Schaden (außer Adamant).</p>"
     },
     "(Stargut Hydra) Skymetal Metamorphosis (Djezet)": {
-      "name": "(Stargut Hydra) Skymetal Metamorphosis (Djezet)",
-      "description": "<p>Each stargut hydra has at least one metamorphosis resulting from consuming a specific skymetal and internalizing its properties.</p>\n<p><strong>Djezet</strong> (magical) The stargut hydra gains a +2 status bonus to saves against magic.</p>"
+      "name": "(Himmelsmetallhydra) Himmelsmetall Metamorphose (Djezet)",
+      "description": "<p>Jede Himmelsmetallhydra hat mindestens eine Metamorphose, die aus dem Verzehr eines bestimmten Himmelsmetalls und der Verinnerlichung seiner Eigenschaften resultiert.</p>\n<p><strong>Djezet</strong> (Magisch) Die Himmelsmetallhydra erhält einen Zustandsbonus von +2 auf Rettungswürfe gegen Magie.</p>"
     },
     "(Stargut Hydra) Skymetal Metamorphosis (Inubrix)": {
-      "name": "(Stargut Hydra) Skymetal Metamorphosis (Inubrix)",
-      "description": "<p>Each stargut hydra has at least one metamorphosis resulting from consuming a specific skymetal and internalizing its properties.</p>\n<p><strong>Inubrix</strong> The stargut hydra's Strikes ignore resistance to damage from metal armor's armor specialization effects and do not trigger the Shield Block reaction or reactions from armor property runes.</p>"
+      "name": "(Himmelsmetallhydra) Himmelsmetall Metamorphose (Inubrix)",
+      "description": "<p>Jede Himmelsmetallhydra hat mindestens eine Metamorphose, die aus dem Verzehr eines bestimmten Himmelsmetalls und der Verinnerlichung seiner Eigenschaften resultiert.</p>\n<p><strong>Inubrix</strong> Die Angriffe der Himmelsmetallhydra ignorieren die Resistenz gegen Schaden aus den Rüstungsspezialisierungseffekten von Metallrüstungen und lösen weder die Reaktion Schildblock noch Reaktionen von Rüstungseigenschaftsrunen aus.</p>"
     },
     "(Stargut Hydra) Skymetal Metamorphosis (Noqual)": {
-      "name": "(Stargut Hydra) Skymetal Metamorphosis (Noqual)",
-      "description": "<p>Each stargut hydra has at least one metamorphosis resulting from consuming a specific skymetal and internalizing its properties.</p>\n<p><strong>Noqual</strong> The stargut hydra's Strikes and abilities gain a +2 status bonus to damage against creatures with the ability to Cast a Spell.</p>"
+      "name": "(Himmelsmetallhydra) Himmelsmetall Metamorphose (Noqual)",
+      "description": "<p>Jede Himmelsmetallhydra hat mindestens eine Metamorphose, die aus dem Verzehr eines bestimmten Himmelsmetalls und der Verinnerlichung seiner Eigenschaften resultiert.</p>\n<p><strong>Noqual</strong> Die Angriffe und Fähigkeiten der Himmelsmetallhydra erhalten einen Zustandsbonus von +2 auf Schaden gegen Kreaturen mit der Fähigkeit Zauber wirken.</p>"
     },
     "(Stargut Hydra) Skymetal Metamorphosis (Orichalcum)": {
-      "name": "(Stargut Hydra) Skymetal Metamorphosis (Orichalcum)",
-      "description": "<p>Each stargut hydra has at least one metamorphosis resulting from consuming a specific skymetal and internalizing its properties.</p>\n<p><strong>Orichalcum</strong> When the stargut hydra has only two heads remaining, it is @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened}. It can use the extra action only to Stride or Strike.</p>"
+      "name": "(Himmelsmetallhydra) Himmelsmetall Metamorphose (Orichalcum)",
+      "description": "<p>Jede Himmelsmetallhydra hat mindestens eine Metamorphose, die aus dem Verzehr eines bestimmten Himmelsmetalls und der Verinnerlichung seiner Eigenschaften resultiert.</p>\n<p><strong>Orichalcum</strong> Wenn die Himmelsmetallhydra nur noch zwei Köpfe hat, erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Beschleunigt}. Sie kann die zusätzliche Aktion nur zum Laufen oder Angreifen nutzen.</p>"
     },
     "(Stargut Hydra) Skymetal Metamorphosis (Siccatite)": {
-      "name": "(Stargut Hydra) Skymetal Metamorphosis (Siccatite)",
-      "description": "<p>Each stargut hydra has at least one metamorphosis resulting from consuming a specific skymetal and internalizing its properties.</p>\n<p><strong>Siccatite</strong> After the stargut hydra takes fire damage, it becomes superheated, gaining immunity to fire and weakness 10 to cold. While superheated, cold damage can be used to cauterize a stump. After the stargut hydra takes cold damage, it becomes chilled, gaining immunity to cold and weakness 10 to fire.</p>"
+      "name": "(Himmelsmetallhydra) Himmelsmetall Metamorphose (Siccatit)",
+      "description": "<p>Jede Himmelsmetallhydra hat mindestens eine Metamorphose, die aus dem Verzehr eines bestimmten Himmelsmetalls und der Verinnerlichung seiner Eigenschaften resultiert.</p>\n<p><strong>Siccatti</strong> Nachdem die Himmelsmetallhydra Feuerschaden erlitten hat, wird sie überhitzt und erhält eine Immunität gegen Feuer und eine Schwäche 10 gegen Kälte. Während sie überhitzt ist, kann mit Kälteschaden ein Stumpf kauterisiert werden. Nachdem die Himmelsmetallhydra Kälteschaden erlitten hat, wird sie unterkühlt und erhält eine Immunität gegen Kälte und eine Schwäche 10 gegen Feuer.</p>"
     },
     "(Ulgrem-Axaan) Befouling Odor": {
       "name": "(Ulgrem-Axaan) Übler Geruch",
@@ -1254,12 +1254,12 @@
       "description": "<p>The visitant makes a claw Strike against a creature it has @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}. If the attack hits, that creature is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>"
     },
     "(Warden of the Wild) Voice of Nature": {
-      "name": "(Warden of the Wild) Voice of Nature",
-      "description": "<p>Though the Wardens of the Wild do not speak in words, they can communicate complex concepts flawlessly and wordlessly with any animal, beast, plant, or other creature of the natural world through prolonged eye contact. Sapient creatures with strong ties to the natural world, such as animal instinct barbarians or druids who speak the Wildsong, can somewhat understand a Warden of the Wild, though the meaning can be vague.</p>"
+      "name": "(Hüter der Natur) Stimme der Natur",
+      "description": "<p>Die Hüter der Natur kommunizieren nicht mit Worten, können aber dennoch komplexe Konzepte fehlerfrei und wortlos im Rahmen längeren Blickkontaktes jedem Tier und jeder Bestie, Pflanze oder anderen Kreatur der Natur vermitteln. Intelligente Kreaturen mit starken Bindungen an die Natur (z.B. Druiden, welche den Wildsang beherrschen, oder Barbaren mit Tierhaften Instinkten) können einen Hüter der Natur zuweilen irgendwie, wenn auch oft nur vage verstehen.</p>"
     },
     "(Warden of the Wild) Warden's Crown": {
-      "name": "(Warden of the Wild) Warden's Crown",
-      "description": "<p>A Warden of the Wild's horned crown commands respect from wild creatures. Wild creatures native to a warden's biome automatically improve their attitude toward it by one step (up to friendly) and typically do not take hostile actions towards each other while in the warden's presence.</p>"
+      "name": "(Hüter der Natur) Hüterkrone",
+      "description": "<p>Die Hörnerkrone eines Hüters der Natur nötigt wilden Kreaturen Respekt ab. Im Biom des Hüters einheimische, wilde Kreaturen sind dem Hüter gegenüber automatisch um einer Stufe besser eingestellt (maximal Freundlich) und unternehmen in der Gegenwart des Hüters keine feindseligen Handlungen gegeneinander.</p>"
     },
     "(Werecreature) Animal Empathy": {
       "name": "(Werwesen) Tierempathie",
