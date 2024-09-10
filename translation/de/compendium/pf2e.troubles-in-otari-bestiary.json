@@ -1,0 +1,499 @@
+{
+  "label": "Abenteuer in Otari Bestiarium",
+  "entries": {
+    "Brimstone Rat": {
+      "name": "Schwefelratte",
+      "skillSpecialAthletics": {
+        "0": {
+          "label": "Klettern oder Schwimmen"
+        }
+      },
+      "items": {
+        "strike-melee->Jaws": {
+          "name": "Biss"
+        }
+      }
+    },
+    "Bugbear Marauder": {
+      "name": "Grottenschratmarodeur",
+      "items": {
+        "weapon->Longsword": {
+          "description": "<Compendium>"
+        },
+        "strike-melee->Longsword": {
+          "name": "Langschwert"
+        },
+        "strike-melee->Fist": {
+          "name": "Faust"
+        },
+        "strike-ranged->Javelin": {
+          "name": "Wurfspeer"
+        },
+        "action->Bushwhack": {
+          "name": "Überfallen",
+          "description": "<p>Der Grottenschratmarodeur läuft bis zu 10 Fuß/3 m und versucht dann, eine Kreatur zu @UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]{Ergreifen}, die ihn nicht sehen kann und die auch nicht weiß, wo er sich befindet. Bei Erfolg fügt er dieser Kreatur zudem den Schaden seines Faustangriffes zu.</p>"
+        },
+        "action->Mauler": {
+          "name": "Zerfleischen",
+          "description": "<p>Der Grottenschrat erhält einen Situationsbonus von +3 auf Schadenswürfe gegen von ihm @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffene} Kreaturen.</p>"
+        }
+      }
+    },
+    "Collapsing Porch": {
+      "name": "Collapsing Porch",
+      "description": "<p>A section of splintery and rotten floorboards drop a creature 6 feet onto uneven rocks and piercing shards of wood.</p>",
+      "disable": "<p>@Check[crafting|dc:15] (trained) to replace or cover the weak sections of flooring, or @Check[survival|dc:15] (trained) to crumble the rotten floorboards from a safe distance</p>",
+      "reset": "<p>Once this section of the porch has collapsed, creatures can still fall through the hole until the porch is Repaired.</p>",
+      "stealth": "<p>(or 0 after the hazard is triggered)</p>",
+      "items": {
+        "action->Collapse": {
+          "name": "Collapse",
+          "description": "<p>If a creature walks on the area marked on the map, it falls through the weakened floorboards onto uneven rocks and sharp shards of wood, taking @Damage[1d4[piercing],1d6[bludgeoning]]{1d4 piercing damage and 1d6 bludgeoning damage}. The creature can use the @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge} reaction to avoid the fall and the damage.</p>"
+        }
+      }
+    },
+    "Hargrit Leadbuster": {
+      "name": "Hargrit Bleibrecher",
+      "skillSpecialDiplomacy": {
+        "0": {
+          "label": "gegen Teufel"
+        }
+      },
+      "items": {
+        "spellcastingEntry->Divine Prepared Spells": {
+          "name": "Vorbereitete Göttliche Zauber"
+        },
+        "spell->See Invisibility": {
+          "name": "<Compendium>"
+        },
+        "spell->Burning Hands": {
+          "name": "<Compendium>"
+        },
+        "spell->Light": {
+          "target": "1 Gegenstand von maximal 1 Last, den entweder niemand oder du oder ein bereitwilliger Verbündeter mit sich führt"
+        },
+        "armor->Half Plate": {
+          "description": "<Compendium>"
+        },
+        "equipment->Religious Symbol of Asmodeus (Wooden)": {
+          "name": "Religiöses Symbol des Asmodeus (Holz)",
+          "description": "<Compendium>"
+        },
+        "equipment->Area Map": {
+          "name": "Gebietskarte",
+          "description": "<p>Zeigt das Schlenderschloss, das Holzfällerlager, die Bewegungen der Holzfäller und Angriffspläne</p>\n<Compendium>",
+          "rules": {
+            "0": {
+              "label": "Gebietskarte (Abgedeckter Bereich)"
+            }
+          }
+        },
+        "consumable->Scroll of Magic Weapon (Level 1)": {
+          "name": "Schriftrolle: Runenwaffe (Grad 1)",
+          "consumableSpellName": "Runenwaffe",
+          "consumableSpellDescription": "<p>Die Waffe schimmert vor Magie, und auf ihrer Länge sind temporäre Runen eingraviert. Das Ziel wird zu einer <em>+1 Waffe des Schadens</em> mit einem Gegenstandsbonus von +1 auf Angriffswürfe. Die Anzahl der Schadenswürfel der Waffe steigt auf zwei.</p>\n<hr />\n<p>@UUID[Compendium.pf2e.spell-effects.Item.GnWkI3T3LYRlm3X8]{Zaubereffekt: Runenwaffe}</p>",
+          "consumableSpellTarget": "1 Waffe, die entweder nicht getragen oder von dir oder einem bereitwilligen Verbündeten geführt wird",
+          "description": "<p>@UUID[Compendium.pf2e.spells-srd.Item.TFitdEOpQC4SzKQQ]{Runenwaffe}</p>\n<hr />\n<Compendium>"
+        },
+        "strike-melee->Dagger": {
+          "name": "Dolch"
+        },
+        "strike-ranged->Dagger": {
+          "name": "Dolch"
+        },
+        "action->Unburdened Iron": {
+          "name": "Panzerträger",
+          "description": "<p>Hargrit ignoriert die Reduzierung seiner Bewegungsrate durch getragene Rüstung und zieht von jedem Malus auf seine Bewegungsrate (z.B. durch einen Zauber) 5 Fuß/1,50 m ab.</p>"
+        },
+        "lore->Fiend Lore": {
+          "name": "Kenntnis (Scheusale)"
+        }
+      }
+    },
+    "Kobold Trapmaster": {
+      "name": "Koboldfallenstellerin",
+      "publicNotes": "<p>Koboldfallensteller sind die Denker und Planer, welche in Koboldbauten clevere Fallen herstellen und aufstellen. Sie werden von ihren Artgenossen weithin respektiert.</p>",
+      "items": {
+        "consumable->Spike Trap": {
+          "name": "<Compendium>",
+          "description": "<Compendium>"
+        },
+        "strike-melee->Shortsword": {
+          "name": "Kurzschwert"
+        },
+        "strike-ranged->Spear": {
+          "name": "Speer"
+        },
+        "action->Hurried Retreat": {
+          "name": "Hastiger Rückzug",
+          "description": "<p>Befindet sich die Koboldin zu wenigstens einem Gegner angrenzend, läuft sie bis zu 30 Fuß/9 m weit und erhält er einen Situationsbonus von +2 auf ihre RK gegen Reaktionen, die sie durch diese Bewegung auslöst. Sie darf seine Bewegung nicht auf einem zu einem Gegner angrenzenden Feld beenden.</p>"
+        },
+        "action->Quick Trap": {
+          "name": "Schnelles Fallenstellen",
+          "description": "<p>Die Koboldfallenstellerin stellt eine Stachelvorrichtung in einem angrenzenden Feld auf.</p>"
+        },
+        "action->Sneak Attack": {
+          "description": "<p>Die Koboldfallenstellerin fügt Kreaturen zusätzliche 1W6 Punkte Schaden zu, sollten sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} besitzen.</p>"
+        },
+        "action->Spike Trap": {
+          "name": "Stachelvorrichtung",
+          "description": "<p>Sobald die Falle aufgestellt wurde, erleidet jeder, der ihr Feld betritt, @Damage[2d8[piercing]]2W8 Punkte Stichschaden} (@Check[reflex|dc:17|basic]{einfacher Reflexwurf}).</p>"
+        }
+      }
+    },
+    "Kotgar Leadbuster": {
+      "name": "Kotgar Bleibrecher",
+      "skillSpecialAthletics": {
+        "0": {
+          "label": "Fortstoßen"
+        }
+      },
+      "items": {
+        "armor->Half Plate": {
+          "description": "<Compendium>"
+        },
+        "strike-melee->Maul": {
+          "name": "Schlägel"
+        },
+        "strike-ranged->Javelin": {
+          "name": "Wurfspeer"
+        },
+        "action->Brutish Shove": {
+          "name": "Brutales Fortstoßen",
+          "description": "<p>Wenn Kotgar in seinem Zug bereits angegriffen hat und er eine zweihändige Nahkampfwaffe führt, kann er einen Angriff mit seiner zweihändigen Nahkampfwaffe ausführen. Wenn er ein Ziel der Größenkategorie Mittelgroß oder kleiner trifft, kann er es um 5 Fuß/1,50 m nach hinten fortschieben, oder um 10 Fuß/3 m, wenn sein Angriff ein Kritischer Erfolg war. Kotgar kann sich bewegen, um dem Ziel zu folgen. Das Ziel gilt bis zum Ende seines aktuellen Zuges als @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß}, unabhängig davon, ob Kotgar trifft oder nicht, außer der Angriff war ein Kritischer Fehlschlag.</p>"
+        },
+        "action->Powerful Shove": {
+          "name": "Kräftiges Fortstoßen",
+          "description": "<p>Wenn eine Kreatur, die von Kotgar fortgestoßen wird, ihre Bewegung beenden muss, da sie sonst einen Gegenstand treffen würde, erleidet sie @Damage[4[bludgeoning]]{4 Punkte Wuchtschaden}.</p>",
+          "rules": {
+            "0": {
+              "text": "<p><strong>{item|name}</strong></p>\n<p>{item|system.description.value}</p>"
+            }
+          }
+        },
+        "action->Unburdened Iron": {
+          "name": "Panzerträger",
+          "description": "<p>Kotgar ignoriert die Reduzierung seiner Bewegungsrate durch getragene Rüstung und zieht von jedem Malus auf seine Bewegungsrate (z.B. durch einen Zauber) 5 Fuß/1,50 m ab.</p>"
+        }
+      }
+    },
+    "Kurnugian Jackal": {
+      "name": "Kurnugian Jackal",
+      "publicNotes": "<p>Under specific planar conjunctions, Lamashtu bestows an unholy gift upon a jackal on the Material Plane. When that jackal bears a litter, one pup is born with a third eye in the center of its forehead. If the pup can survive to maturity, this jackal gains superior intelligence and psychic abilities, becoming a full-fledged Kurnugian jackal, so named after the Mother of Monsters' Abyssal realm. With increased cleverness comes an appetite to sow chaos in the name of Lamashtu. When a Kurnugian jackal reaches the pinnacle of their power, they appear twice as large as a regular jackal and far more cunning.</p>\n<p>A Kurnugian jackal enjoys stalking the outskirts of settlements, looking for lone individuals they can ambush. Once they spot their prey, they open their third eye to hypnotize and lure their target in. Often, a Kurnugian jackal leads victims into the wilderness and then releases their hold, leaving the victims lost with no memory of how they got there. Most succumb to exposure or the dangers of local wildlife as the jackal looks on gleefully. They seem to gain sustenance from their victims' predicament but also feast on the deceased victims' flesh. If their prey reaches safety, the Kurnugian jackal repeats the process on subsequent nights.</p>\n<p>Some Kurnugian jackals are adopted as objects of worship by Lamashtan cults, and others gather followers on their own. Their resemblance to Lamashtu's religious symbol affords them a great deal of reverence, and they sometimes claim to speak directly for the Mother of Monsters. A cult with a Kurnugian jackal often acts more boldly than one without.</p>",
+      "items": {
+        "spellcastingEntry->Divine Innate Spells": {
+          "name": "Divine Innate Spells"
+        },
+        "spell->Hideous Laughter": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.tlSE7Ly8vi1Dgddv]\nHideous Laughter"
+        },
+        "spell->See Invisibility": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.jwK43yKsHTkJQvQ9]\nSee Invisibility"
+        },
+        "strike-melee->Jaws": {
+          "name": "Jaws"
+        },
+        "action->Inflict Pain": {
+          "name": "Inflict Pain",
+          "description": "<p>When a target affected by the Kurnugian jackal's Hypnotic Stare ability takes damage, the jackal can focus the power of their third eye to intensify the pain of this damage, increasing the damage dealt by [[/r 1d6]]{1d6}.</p>"
+        },
+        "action->Hypnotic Stare": {
+          "name": "Hypnotic Stare",
+          "description": "<p>The Kurnugian jackal opens their third eye to look at a target within 30 feet that can see the jackal. That target takes a -2 penalty to Will saving throws until the end of the Kurnugian jackal's next turn. The Kurnugian jackal can maintain this stare against only one opponent at a time; if the jackal uses it on a second target, it ends for the first target. The jackal can dismiss it as a free action and use their Remove Memory ability if they so choose.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.qFDiWpzk8cuwQGyH]{Effect: Hypnotic Stare}</p>"
+        },
+        "action->Remove Memory": {
+          "name": "Remove Memory",
+          "description": "<p>The Kurnugian ends their Hypnotic Stare ability early, and just before this happens, the target must succeed at a @Check[will|dc:24] saving throw or forget any hostile activities the Kurnugian jackal performed against it.</p>"
+        }
+      }
+    },
+    "Magic Starknives Trap": {
+      "name": "Magic Starknives Trap",
+      "description": "<p>Starknife symbols on the six pillars glow and shoot across the room.</p>",
+      "disable": "<p>@Check[thievery|dc:21|traits:action:disable-a-device] (expert) or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} on any four of the six pillars disables the entire trap (the trap is a 2nd-rank spell and the DC to dispel it is 21). Destroying any four of the six pillars also disables the trap.</p>",
+      "reset": "<p>The trap deactivates 1 round after it has no target creatures and resets each day at sundown.</p>",
+      "routine": "<p>(3 actions) For each of its actions on its turn, a carving on a different pillar glows and makes a magical starknife Ranged Strike against a random creature within range. Creatures might have cover from this Strike, such as from one of the pillars in the room.</p>",
+      "stealth": "<p>to spot the magical energies reverberating in the pillars</p>",
+      "items": {
+        "action->Starknife Attack": {
+          "name": "Starknife Attack",
+          "description": "<p>If a creature passes the middle pair of pillars, both doors leading out of the room slam shut and lock; while the trap is active, the doors must be battered open with a successful @Check[athletics|dc:23|name:Batter Open Door|traits:action:force-open] check or sufficient damage (Hardness 12; HP 48 [BT 24]). One of the starknife carvings glows with light, detaches from the pillar, and then flies outward, making a magical starknife Ranged Strike against a random creature within range. The trap then rolls initiative with its Stealth modifier of +12</p>"
+        },
+        "strike-ranged->Magical Starknife": {
+          "name": "Magical Starknife"
+        }
+      }
+    },
+    "Morgrym Leadbuster": {
+      "name": "Morgrym Bleibrecher",
+      "skillSpecialDiplomacy": {
+        "0": {
+          "label": "gegen Dämonen"
+        }
+      },
+      "items": {
+        "spellcastingEntry->Arcane Prepared Spells": {
+          "name": "Vorbereitete Arkane Zauber"
+        },
+        "spellcastingEntry->Arcane Focus Spells": {
+          "name": "Arkane Fokuszauber"
+        },
+        "spell->Obscuring Mist": {
+          "name": "<Compendium>"
+        },
+        "spell->Mage Hand": {
+          "name": "<Compendium>"
+        },
+        "spell->Magic Missile": {
+          "name": "<Compendium>"
+        },
+        "equipment->Spellbook (Advanced Arcanomnemonics)": {
+          "name": "Zauberbuch (Fortgeschrittene Arkanomnemonik)"
+        },
+        "equipment->Material Component Pouch": {
+          "name": "Materialkomponentenbeutel",
+          "description": "<p>Dieser Beutel enthält materielle Komponenten für jene Zaubersprüche, welche sie benötigen. Die Komponenten verbrauchen sich zwar über Zeit, du kannst sie aber immer dann auffüllen, wenn du deine täglichen Zauber vorbereitest.</p>"
+        },
+        "consumable->Wand of Fear (Level 1)": {
+          "name": "Zauberstab: Furcht (1. Grad)",
+          "consumableSpellName": "Furcht",
+          "consumableSpellDescription": "<p>Du lehrst das Ziel das Fürchten. Es muss einen Willenswurf ausführen.</p>\n<p><strong>Kritischer Erfolg</strong> Das Ziel ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Das Ziel erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}.</p>\n<p><strong>Fehlschlag</strong> Das Ziel erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Das Ziel erhält die Zustände @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 3} und 1 Runde lang @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fliehend}.</p>\n<hr />\n<p><strong>Erhöhung (3.)</strong> Du kannst bis zu fünf Kreaturen zum Ziel des Zaubers erklären.</p>",
+          "consumableSpellTarget": "1 Kreatur",
+          "description": "<p>@UUID[Compendium.pf2e.spells-srd.Item.4koZzrnMXhhosn0D]{Furcht}</p>\n<hr />\n<Compendium>"
+        },
+        "strike-melee->Staff": {
+          "name": "Kampfstab"
+        },
+        "action->Necromantic Defense": {
+          "name": "Nekromantische Rochade",
+          "description": "<p>Wenn Morgrym Ziel eines Angriffs ist und eine untote Kreatur mit niedrigerer Stufe zu ihm angrenzend steht, tauschen Morgrym und der Untote ihre Positionen und der Untote wird Ziel des Angriffs.</p>"
+        },
+        "action->Arcane Bond": {
+          "name": "Arkane Verbindung",
+          "description": "<p>Einmal am Tag kann Morgrym die Macht seines gebundenen Gegenstandes anzapfen, um einen Zauber, den er an diesem Tag schon einmal gewirkt hat, auszuwählen und noch einmal zu zaubern. Den Zauber auszuwählen geschieht sofort, aber er muss trotzdem die entsprechenden Aktionen aufwenden, um den Spruch zu wirken.</p>"
+        },
+        "action->Necromancer": {
+          "name": "Nekromant",
+          "description": "<p>Mogrym arbeitet mit den düsteren Kräften von Leben und Tod und hat seine Magie darauf fokussiert, ihn dabei zu unterstützen. Er kann @UUID[Compendium.pf2e.spells-srd.Item.4koZzrnMXhhosn0D]{Furcht} als Schulenzauber wirken.</p>"
+        },
+        "lore->Demon Lore": {
+          "name": "Kenntnis (Dämonen)"
+        }
+      }
+    },
+    "Nightmare Terrain": {
+      "name": "Nightmare Terrain",
+      "description": "<p>What seems like an innocent stretch of land assaults trespassers with terrible illusions.</p>",
+      "disable": "<p>@Check[arcana|dc:22], @Check[nature|dc:22], @Check[occultism|dc:22], or @Check[religion|dc:22] (by a hero with expert proficiency in that skill) three times to temporarily disrupt the magic, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (3rd-level spell, DC 25)</p>",
+      "reset": "<p>The terrible visions cease after all creatures have left the affected area, but the hazard is immediately ready to inflict its visions on the next creature to enter.</p>",
+      "routine": "<p>(1 action) Terrible visions assail the minds of all creatures who can see within the affected area. Each creature must attempt a @Check[will|dc:24] saving throw.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}.</p>\n<p><strong>Failure</strong> The creature takes @Damage[(2d8+9)[mental]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3}.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[(4d8+18)[mental]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 4}.</p>",
+      "stealth": "<p>@Check[perception|dc:22|traits:action:seek] to detect the subtle magical aura of the land</p>",
+      "items": {
+        "action->Step into Nightmares": {
+          "name": "Step into Nightmares",
+          "description": "<p>If a creature that can see moves 10 feet into the affected area, the hazard rolls Stealth (+16) for its initiative.</p>"
+        }
+      }
+    },
+    "Omblin Leadbuster": {
+      "name": "Omblin Bleibrecher",
+      "items": {
+        "strike-melee->Rapier": {
+          "name": "Rapier"
+        },
+        "strike-ranged->Hand Crossbow": {
+          "name": "Handarmbrust"
+        },
+        "action->Sneak Attack": {
+          "description": "<p>Omblin fügt @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} angetroffenen Kreaturen zusätzliche 1W6 Punkte Schaden zu.</p>"
+        },
+        "action->Unbalancing Blow": {
+          "name": "Gleichgewicht Raubender Schlag",
+          "description": "<p>Wenn Omblin ein Ziel kritisch trifft und Schaden verursacht, gilt das Ziel bis zum Ende von Omblins nächstem Zug gegen seinen nächsten Angriff als @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} stehend.</p>"
+        },
+        "action->Unburdened Iron": {
+          "name": "Panzerträger",
+          "description": "<p>Omblin ignoriert die Reduzierung seiner Bewegungsrate durch getragene Rüstung und zieht von jedem Malus auf seine Bewegungsrate (z.B. durch einen Zauber) 5 Fuß/1,50 m ab.</p>"
+        }
+      }
+    },
+    "Orc Commander": {
+      "name": "Orkhäuptling",
+      "items": {
+        "strike-melee->Maul": {
+          "name": "Schlägel"
+        },
+        "strike-melee->Fist": {
+          "name": "Faust"
+        },
+        "strike-ranged->Javelin": {
+          "name": "Wurfspeer"
+        },
+        "action->Battle Cry": {
+          "name": "Kampfschrei",
+          "description": "<p>Mit lauten Befehlen gibt der Häuptling sich selbst und allen orkischen Verbündeten innerhalb von @Template[emanation|distance:60]{60 Fuß/18 m} einen Zustandsbonus von +1 auf Angriffs- und Schadenswürfe bis zum Beginn seines nächsten Zuges.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.Yqq4AkZ9lrm4CcID]{Effekt: Kampfschrei}</p>"
+        }
+      }
+    },
+    "Orc Scrapper": {
+      "name": "Orkschläger",
+      "items": {
+        "armor->Breastplate": {
+          "description": "<Compendium>"
+        },
+        "strike-melee->Battle Axe": {
+          "name": "Streitaxt"
+        },
+        "strike-melee->Fist": {
+          "name": "Faust"
+        },
+        "strike-ranged->Javelin": {
+          "name": "Wurfspeer"
+        }
+      }
+    },
+    "Scalliwing": {
+      "name": "Scalliwing",
+      "publicNotes": "<p>Couatls are large, brightly colored serpents with feathered wings. Good-natured, these creatures aid mortals and oppose evildoers, but sighting one presents a momentous occasion-these magnificent, albeit reclusive creatures rarely appear.</p>\n<p>The smallest members of the couatl family, Scalliwings resemble their larger kin but are roughly the size of a house cat, and a irascible mischievous streak tempers their kindly nature. While most couatls seek to right the world's wrongs or guide mortal civilization toward societal advancement, scalliwings work on a more individual level. They claim their role is to teach goodhearted spellcasters the ways of magic, and indeed they sometimes serve-or \"assist,\" as they're swift to correct-such spellcasters as familiars.</p>\n<p>With iridescent scales and bright feathers, scalliwings are remarkably pretty creatures. They seem well aware of this fact and use their appearance to ingratiate themselves with others. This beauty makes some of them slightly self-aggrandizing, but other scalliwings find that their small size and relatively weak defenses put them at the mercy of cruel, larger creatures who seek to imprison them as beautiful pets and trophies. While scalliwings might cheerfully reside in a single residence indefinitely of their own volition, captive scalliwings have orchestrated devious escapes, coordinating their efforts with other creatures to cause spectacular property damage in the process.</p>\n<p>Scalliwings measure about 2 feet long from nose to tail with wingspans of about the same length. They have life spans nearly as long as a human's. While a scalliwing appears slightly more common than their larger, reclusive kin, many mortals live entire lifetimes without ever encountering a scalliwing.</p>",
+      "items": {
+        "spellcastingEntry->Divine Innate Spells": {
+          "name": "Divine Innate Spells"
+        },
+        "spell->Invisibility (Self Only)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.XXqE1eY3w3z6xJCB]\nInvisibility (Self Only)",
+          "target": "self"
+        },
+        "spell->Mage Hand": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.pwzdSlJgYqN7bs2w]\nMage Hand"
+        },
+        "strike-melee->Fangs": {
+          "name": "Fangs"
+        },
+        "action->Wing Flash": {
+          "name": "Wing Flash",
+          "description": "<p>The scalliwing spreads their iridescent wings and flutters them in a hypnotizing pattern. Each creature within 30 feet that can see the scalliwing must attempt a @Check[will|dc:20] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} until the start of its next turn.</p>\n<p><strong>Failure</strong> The creature is off-guard until the start of its next turn, and it must spend its first action on its next turn admiring the scalliwing.</p>\n<p><strong>Critical Failure</strong> The creature is off-guard until the start of its next turn. For 1 minute, the creature must spend its first action each turn admiring the scalliwing. This effect ends if the scalliwing attacks or uses another hostile action against the affected creature.</p>"
+        }
+      }
+    },
+    "Stinkweed Shambler": {
+      "name": "Stinkweed Shambler",
+      "languages": "(can't speak any language)",
+      "publicNotes": "<p>Stinkweed shamblers are animate masses of foul vegetation that grow from necrotic soil where ghasts, disease-ridden zombies, or other putrid undead creatures have fallen. At a site where numerous undead creatures have been destroyed, an infestation of up to a dozen stinkweed shamblers might arise. Such \"rot-mates\" work well together, sharing a preternatural coordination. Stinkweed shamblers grow quickly, initially appearing as fast-growing green shoots with light-green leaves but soon growing into a humanoid form that can pull itself free from the ground and slowly move about on its own. Stinkweed shamblers' leaves are the source of their unpleasant smell, which is most pungent when the leaves are crushed or squeezed. Stinkweed shamblers are covered with several small, white flowers, each of which grows into the shape of a tiny skull.</p>\n<p>Stinkweed shamblers are nasty creatures, but their methods are uncomplicated. They like to capture and torment larger creatures such as livestock and humanoids. Aware that they aren't particularly strong and that their smell can give them away, stinkweed shamblers like to set simple traps such as deadfalls or pits. Their perverse fun ceases only when their prey has died from numerous injuries. Stinkweed shamblers don't consume their victims and in fact lack mouths; they gain all the sustenance they need from sunlight but also seem to derive some nutritional satisfaction from the pain that their torments engender.</p>\n<p>Most stinkweed shamblers grow to be about 3 feet tall and weigh only 30 pounds.</p>",
+      "items": {
+        "strike-melee->Vine": {
+          "name": "Vine"
+        },
+        "strike-ranged->Seedpod": {
+          "name": "Seedpod"
+        },
+        "action->Stench": {
+          "name": "Stench",
+          "description": "<p>10 feet. A creature entering the aura or starting its turn in the aura must succeed at a @Check[fortitude|dc:14] save or become @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} for 1 round (and @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 round on a critical failure). A creature that succeeds at its save is temporarily immune for 1 minute.</p>"
+        },
+        "action->Stinky Leaves": {
+          "name": "Stinky Leaves",
+          "description": "<p>The foul smell emitted by a stinkweed shambler becomes stronger when its leaves are crushed or burned. When a stinkweed shambler takes bludgeoning or fire damage, the DC for its Stench ability increases to 18 and its Stealth bonus decreases to +4. Both of these effects last for 1 minute.</p>"
+        },
+        "action->Waving Weed": {
+          "name": "Waving Weed",
+          "description": "<p>The stinkweed shambler Strides up to half its Speed. This movement doesn't provoke reactions.</p>"
+        },
+        "action->Woodland Stride": {
+          "name": "Woodland Stride",
+          "description": "<p>A stinkweed shambler ignores difficult terrain and greater difficult terrain from non-magical foliage.</p>"
+        }
+      }
+    },
+    "Tongues of Flame": {
+      "name": "Tongues of Flame",
+      "description": "<p>Nozzles hidden in the ceiling of the four corridors leading to the intersection spray jets of flame along their lengths when the trap is triggered.</p>",
+      "disable": "<p>@Check[thievery|dc:22|traits:action:disable-a-device] to disable a single nozzle, @Check[thievery|dc:21|traits:action:pick-a-lock] twice to unlock a door, or @Check[thievery|dc:25|traits:action:disable-a-device] to deactivate the trap from the control panel. A hero who isn't trained in Thievery automatically fails these checks.</p>",
+      "hpDetails": "to destroy a single nozzle; <strong>Door</strong> Hardness 6,  <strong>HP</strong>  22 (BT 11) to break open a door and escape the hallway",
+      "reset": "<p>The trap deactivates and resets after 10 minutes. After the trap is activated for the fourth time, it runs out of fuel and must be reset manually.</p>",
+      "routine": "<p>(4 actions) The trap loses 1 action each turn for each disabled nozzle. On each action, a different nozzle fires a jet of flame down a different corridor, dealing @Damage[3d6[fire]] damage to each creature in the first 10 feet of the corridor past the intersection (@Check[reflex|dc:22|basic]).</p>\n<p>A creature standing in the corridor intersection can be hit by only one flame jet per round even if they're in the area of multiple flame jets. The creature attempts only one saving throw per round, but it takes a -2 circumstance penalty to its saving throw.</p>",
+      "items": {
+        "action->Seal the Doors": {
+          "name": "Seal the Doors",
+          "description": "<p>If a creature enters the corridor intersection, the four doors exiting this intersection close and lock, and the trap rolls Stealth (+13) for its initiative.</p>"
+        }
+      }
+    },
+    "Viper Urn": {
+      "name": "Vipernurne",
+      "description": "<p>Eine Keramikurne mit einer zusammengerollten Viper in ihrem Inneren kippt und zerschellt, wenn man am Stolperdraht zieht.</p>",
+      "disable": "<p>@Check[thievery|dc:15|traits:action:disable-a-device]{Diebeskunst} (Geübt), um die Urne zu stabilisieren oder @Check[athletics|dc:15]{Athletik}, um die schwere Urne vorsichtig auf den Boden zu setzen.</p>",
+      "items": {
+        "action->Topple": {
+          "name": "Sturz",
+          "description": "<p>Wenn jemand an dem Stolperdraht zieht, kracht die Urne gegen eine Kreatur im Türrahmen, führt einen zerschmetternden Urnenangriff gegen diese Kreatur aus und entlässt dann eine @UUID[Compendium.pf2e.pathfinder-bestiary.Actor.lFlXmieuHTBIonhj]{Viper} auf das Feld, auf dem vorher die Falle stand. Die Viper greift jede nicht-pflanzenbasierte Kreatur an, die sie bemerkt.</p>"
+        },
+        "strike-melee->Shattering Urn": {
+          "name": "Zerschmetternder Urnenangriff"
+        }
+      }
+    },
+    "Web Lurker Noose": {
+      "name": "Web Lurker Noose",
+      "description": "<p>Discreet webbing at throat level snags a creature that walks into it.</p>",
+      "disable": "<p>@Check[survival|dc:18] (trained) or @Check[thievery|dc:18|traits:action:disable-a-device] (expert) to rearrange the webbing</p>",
+      "items": {
+        "strike-melee->Noose": {
+          "name": "Noose",
+          "description": "<p>The target gains the @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} condition is and pulled off the ground (@UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} DC 22).</p>"
+        },
+        "action->Web Noose": {
+          "name": "Web Noose",
+          "description": "<p>If a creature steps into the square with the web trip wire, the web lurker noose makes a noose Strike against the creature.</p>"
+        }
+      }
+    }
+  },
+  "mapping": {
+    "description": {
+      "converter": "translateActorDescription",
+      "path": "system.details.description"
+    },
+    "disable": "system.details.disable",
+    "hpDetails": "system.attributes.hp.details",
+    "items": {
+      "converter": "translateActorItems",
+      "path": "items"
+    },
+    "languages": "system.details.languages.details",
+    "name": {
+      "converter": "translateDualLanguage",
+      "path": "name"
+    },
+    "portrait": {
+      "converter": "updateActorImage",
+      "path": "img"
+    },
+    "publicNotes": {
+      "converter": "translateActorDescription",
+      "path": "system.details.publicNotes"
+    },
+    "reset": "system.details.reset",
+    "routine": "system.details.routine",
+    "skillSpecialAthletics": {
+      "converter": "translateSkillSpecial",
+      "path": "system.skills.athletics.special"
+    },
+    "skillSpecialDiplomacy": {
+      "converter": "translateSkillSpecial",
+      "path": "system.skills.diplomacy.special"
+    },
+    "source": {
+      "converter": "translateSource",
+      "path": "system.details.publication.title"
+    },
+    "stealth": "system.attributes.stealth.details",
+    "tokenImage": {
+      "converter": "updateTokenImage",
+      "path": "prototypeToken.texture.src"
+    },
+    "tokenName": {
+      "converter": "translateTokenName",
+      "path": "prototypeToken.name"
+    }
+  }
+}
