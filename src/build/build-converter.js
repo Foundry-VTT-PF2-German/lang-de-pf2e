@@ -109,11 +109,23 @@ export const convertJournals = (journalObject) => {
 
                             // Found a feat with a previously detected feat as prerequisite -> Probably part of the archetype
                             // Sometimes there are additional spaces in the prerequites, due to bad handling within the english localization. We handle these by trimming
+                            // Handle combined prerequisites, such as "Celebrity Dedication of Brawler Dedication, Master in Intimidation"
                             if (
                                 featData[1].system.prerequisites &&
                                 featData[1].system.prerequisites.value &&
                                 featData[1].system.prerequisites.value.find((prerequisite) => {
-                                    return includedFeatNames.includes(prerequisite.value.toLowerCase().trim());
+                                    let included = false;
+                                    for (const splittedPrerequisite of prerequisite.value
+                                        .toLowerCase()
+                                        .trim()
+                                        .split(" or ")) {
+                                        for (const splittedPre of splittedPrerequisite.split(", ")) {
+                                            if (includedFeatNames.includes(splittedPre)) {
+                                                included = true;
+                                            }
+                                        }
+                                    }
+                                    return included;
                                 })
                             ) {
                                 includedFeatNames.push(featData[0]);
