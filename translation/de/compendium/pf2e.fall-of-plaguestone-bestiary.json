@@ -1,0 +1,631 @@
+{
+  "label": "Der Untergang von Peststein Bestiarium",
+  "entries": {
+    "Alchemical Drudge": {
+      "name": "Alchemistische Knechte",
+      "languages": "(kann nicht sprechen), Empathische Verbindung",
+      "items": {
+        "strike-melee->Fist": {
+          "name": "Faust"
+        },
+        "action->Empathy Link": {
+          "name": "Empathische Verbindung",
+          "description": "<p>Ein Alchemistischer Knecht kann nicht sprechen, sein Geist ist aber mit seinem Schöpfer verbunden. Er kann einfache emotionale Informationen wie Freude, Furcht oder Wut seinem Schöpfer mitteilen. Sollte der Knecht zerstört werden, weiß sein Meister dies sofort. Diese Verbindung hat eine Reichweite von 1500 Fuß/450 m.</p>"
+        },
+        "action->Alchemical Strike": {
+          "name": "Alchemistischer Angriff",
+          "description": "<p>Ein Alchemistischer Knecht verfügt über ein besonderes Reservoir, welches mit den Zutaten einer alchemistischen Bombe bestückt werden kann, die Elektrizitäts-, Feuer-, Kälte- oder Säureschaden verursacht. Dies gestattet dem Knecht, seine Faustangriffe mit der fraglichen Schadensart aufzuladen. Jeder Treffer verursacht 1W6 Punkte derselben Schadensart wie die Bombe, mit welcher der Knecht bestückt ist. Die Flüssigkeitsanteile jeder Bombe genügen für 10 erfolgreiche Angriffe.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.yrenENpzVgBKsnNi]{Effekt: Alchemistischer Angriff}</p>"
+        },
+        "action->Vomit Alchemy": {
+          "name": "Alchemistisches Speien",
+          "description": "<p>Ein Alchemistischer Knecht kann eine Pfütze ätzender alchemistischer Reagenzien ausspeien und so ein zu ihm angrenzendes Feld füllen. Kreaturen im fraglichen Feld erleiden dabei @Damage[2d6[acid]]{2W6 Punkte Säureschaden} (@Check[reflex|dc:17|basic]{einfacher Reflexwurf}). Ebenso erleidet jede Kreatur, die ihren Zug in diesem Feld beendet, @Damage[2d6[acid]]{2W6 Punkte Säureschaden}. Die Pfütze verliert nach 1 Minute ihre Wirkungskraft.</p>"
+        }
+      }
+    },
+    "Bee Swarm": {
+      "name": "Bienenschwarm",
+      "items": {
+        "action->Beestings": {
+          "name": "Bienenstiche",
+          "description": "<p>Die Kreatur muss einen @Check[fortitude|dc:16|traits:damaging-effect]{Zähigkeitswurf} ablegen. Bei Misslingen erhält sie @Damage[1d4[poison]]{1W4 Punkte Giftschaden} und für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 1}.</p>"
+        },
+        "action->Swarming Stings": {
+          "name": "Stechender Schwarm",
+          "description": "<p>Jeder Gegner innerhalb der Angriffsfläche des Schwarmes erleidet @Damage[1d4[piercing]]{1W4 Punkte Stichschaden} (@Check[reflex|dc:16|basic]{einfacher Reflexwurf}). Misslingt einer Kreatur erstmals in einer Runde der Rettungswurf und erleidet sie Stichschaden, erleidet sie zudem die Effekte von Bienenstiche</p>\n<p>Wenn der Bienenschwarm diese Fähigkeit nutzt, erleidet er selbst 1 Schadenspunkt.</p>"
+        }
+      }
+    },
+    "Blood Ooze": {
+      "name": "Blutschlick",
+      "publicNotes": "<p>Dieser Schlick scheint vollständig aus Blut zu bestehen. Er schwillt an wie eine vor dem Platzen stehende Blase. Seine schmierige, blutrote Haut ist von Flecken verunstaltet, welche wie Gerinnsel an der Oberfläche aussehen.</p>\n<p>Blutschlicke werden mit finsteren alchemistischen Ritualen erschaffen und streben nur danach, das Blut der Lebenden zu verzehren, um ihre eigene Masse zu vergrößern. Dann verbergen sie sich in den Leichen ihrer Opfer, um zum Angriff herauszuplatzen, sollten sich neue Mahlzeiten nähern.</p>\n<p>Zur Erschaffung eines Blutschlicks muss wenigstens vier Mittelgroßen Kreaturen das Blut entzogen und einer fünften Kreatur zugeführt werden, während es mit gefährlichen Reagenzien versetzt wird, um die Gerinnung zu verhindern. Dabei stirbt der Wirt langsam, während sich der Blutschlick ausbildet und nach 2 bis 6 Stunden später herauskriecht. Blutschlicke besitzen keine Treue gegenüber ihren Schöpfern. Manche Alchemisten haben aber bemerkt, dass frischgeformte Blutschlicke es anscheinend vermeiden, Familienangehörigen ihres Wirtes Schaden zuzufügen.</p>\n<p>Es ist nicht weithin bekannt, dass Blutschlicke sich durch Teilung fortpflanzen. Dies geschieht aber nur, wenn ein Blutschlick derart gewachsen ist, dass durch die Teilung zwei normalgroße Blutschlicke entstehen.</p>",
+      "skillSpecialStealth": {
+        "0": {
+          "label": "wenn der Schlick sich in einer Leiche versteckt"
+        }
+      },
+      "items": {
+        "strike-melee->Pseudopod": {
+          "name": "Pseudopode"
+        },
+        "action->Infuse Corpse": {
+          "name": "Leiche ausfüllen",
+          "description": "<p>Ein Blutschlick kann in die Wunden einer Leiche einsickern und ihr Blut ersetzen. Er kann als Freie Aktion aus einer Leiche hervorplatzen.</p>"
+        },
+        "action->Motion Sense 60 feet": {
+          "name": "Bewegungsgespür 60 Fuß/18 m",
+          "description": "<p>Ein Blutschlick kann Bewegungen in der Nähe durch Vibration und Luftbewegung wahrnehmen.</p>"
+        },
+        "action->Blood Pool": {
+          "name": "Blut sammeln",
+          "description": "<p>Wenn eine zum Blutschlick angrenzende Kreatur Blutungsschaden erleidet, erlangt der Blutschlick Trefferpunkte in Höhe dieses Schadens zurück.</p>"
+        },
+        "action->Clot": {
+          "name": "Gerinnung",
+          "description": "<p><strong>Auslöser</strong>Der Blutschlick erleidet Hieb- oder Stichschaden.</p>\n<hr />\n<p><strong>Effekt</strong> Der Blutschlick lässt seine Masse um die Wunde herum gerinnen und reduziert den Schaden um 5 (bis auf ein Minimum von 0).</p>"
+        },
+        "action->Siphon Vitality": {
+          "name": "Vitalität absaugen",
+          "description": "<p>Der Blutschlick entzieht nahen Kreaturen das Blut, indem er ihre Haut aufplatzen und das Blut herausquellen lässt, um sich selbst zu heilen. Jede lebende Kreatur innerhalb von @Template[emanation|distance:15]{15 Fuß/4,50 m} erleidet @Damage[3d6[slashing]]{3W6 Hiebschaden} (@Check[fortitude|dc:21|basic]{einfacher Zähigkeitswurf}).</p>\n<p>Der Blutschlick erlangt Trefferpunkte in Höhe der Hälfte des höchsten Einzelschadens innerhalb des Wirkungsbereiches zurück.</p>"
+        }
+      }
+    },
+    "Bloodlash Bush": {
+      "name": "Blutpeitsche",
+      "publicNotes": "<p>Die Blutpeitsche ist ein Busch, welcher seinen Gegnern blutende Wunden zufügt, aus denen er sodann das Blut absaugt, um den Boden zu bewässern. Seine Saatkapseln können nur in Erde aufgehen, welche in Blut getränkt wurde.</p>\n<hr /> \n<p>Manche Pflanzen können ebenso gefährlich und sogar tödlich sein wie wilde Bestien, werden aber oft angesichts offensichtlicherer Bedrohungen übersehen.</p>\n<p>Was eben noch wie ein einfacher, gewöhnlicher Busch erschien, erwacht plötzlich zum Leben!</p>",
+      "items": {
+        "strike-melee->Vine": {
+          "name": "Ranke"
+        },
+        "action->Tremorsense (Imprecise) 30 feet": {
+          "name": "<Compendium> (Ungenau) 30 Fuß/9 m"
+        },
+        "action->Blood Siphon": {
+          "name": "Blut absaugen",
+          "description": "<p>Die Tastfäden des Busches reichen bis zu 20 Fuß/6 m und entziehen Kreaturen mit anhaltendem Blutungsschaden innerhalb dieses Bereiches das Blut. Ein betroffenes Opfer erleidet augenblicklich den anhaltenden Blutungsschaden (@Check[reflex|dc:17|basic]{einfacher Reflexwurf}).</p>\n<p>Der Busch erhält die doppelte Menge des verursachten Schadens als Trefferpunkte zurück.</p>"
+        },
+        "action->Spinning Strike": {
+          "name": "Wirbelangriff",
+          "description": "<p>Der Busch wirbelt im Kreis herum und peitscht dabei zugleich in alle Richtungen. Er führt einen Angriffswurf aus und vergleicht das Ergebnis mit der RK aller Kreaturen innerhalb seines Nahkampfangriffsradius. Ebenso wird der Schaden nur einmal ausgewürfelt, den jede getroffene Kreatur sodann erleidet.</p>"
+        },
+        "action->Weeping Wounds": {
+          "name": "Ausblutende Wunden",
+          "description": "<p>Die Ranken der Blutpeitsche hinterlassen entsetzliche, blutende Schnitte. Eine vom Rankenangriff getroffene Kreatur erleidet @Damage[1[bleed]]{1 Punkt anhaltenden Blutungsschaden} (bzw. @Damage[2[bleed]]{2 Punkte} bei einem Kritischen Treffer).</p>\n<p>Im Gegensatz zu anderen Formen anhaltenden Schadens ist dieser Schaden kumulativ bis zu maximal 5 Punkte anhaltenden Blutungsschaden. Er kann wie jeder andere anhaltende Blutungsschaden gestoppt werden.</p>"
+        }
+      }
+    },
+    "Caustic Wolf": {
+      "name": "Säurespeiender Wolf",
+      "items": {
+        "strike-melee->Jaws": {
+          "name": "Biss"
+        },
+        "action->Acid Breath": {
+          "name": "Säureodem",
+          "description": "<p>Der Wolf speit einen Strom hellgrüner Säure aus seinem Maul, die alle Kreaturen auf einer @Template[line|distance:30]{30 Fuß/9 m-Linie} betrifft. Alle Kreaturen im Wirkungsbereich erleiden @Damage[3d6[acid]]{3W6 Punkte Säureschaden} (@Check[reflex|dc:16|basic]{einfacher Reflexwurf}).</p>\n<p>Der Säurespeiende Wolf kann diese Fähigkeit für 1 Minute nicht mehr einsetzen.</p>"
+        },
+        "action->Howl": {
+          "name": "Geheul",
+          "description": "<p>Der Wolf stößt ein furchterweckendes Heulen aus und legt einen Fertigkeitswurf für Einschüchtern zum @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralisieren} ab. Dieser Effekt hat einen Radius von @Template[emanation|distance:30]{30 Fuß/9 m}. Wölfe innerhalb vom @Template[emanation|distance:100]{100 Fuß/30 m} Entfernung können eine Reaktion aufwenden, um in das Heulen einzustimmen; in diesem Fall geht derselbe Effekt von ihnen aus, sie nutzen den Fertigkeitswurf des Säurespeienden Wolfes mit einem Situationsmalus von -4.</p>\n<p>Sollte sich ein Charakter im Wirkungsbereich mehrerer heulender Wölfe befinden, sind die Effekte nicht kumulativ. Eine betroffene Kreatur ist im Anschluss für 24 Stunden gegen diesen Effekt vorübergehend immun, egal ob sie demoralisiert wurde oder nicht.</p>"
+        }
+      }
+    },
+    "Drunken Farmer": {
+      "name": "Betrunkener Bauer",
+      "items": {
+        "armor->Durable Farm Clothes": {
+          "name": "Widerstandsfähige Bauernkleidung (<Compendium>)",
+          "description": "<Compendium>"
+        },
+        "strike-melee->Fist": {
+          "name": "Faust"
+        },
+        "strike-melee->Chair": {
+          "name": "Stuhl"
+        },
+        "strike-ranged->Mug": {
+          "name": "Humpen"
+        },
+        "lore->Farming Lore": {
+          "name": "Kenntnis (Ackerbau)"
+        }
+      }
+    },
+    "Falling Debris": {
+      "name": "Herabfallende Trümmer",
+      "description": "<p>Ein druckempfindliches Bodenbrett ist mit einem Balken verbunden, welcher die „Decke“ des Tunnels stützt.</p>",
+      "disable": "<p>@Check[thievery|dc:15|name: Falle entschärfen|traits:mechanical,trap,hazard]{Diebeskunst (Geübt)} am Bodenbrett, ehe die Trümmer herabstürzen.</p>",
+      "stealth": "<p>(Geübt)</p>",
+      "items": {
+        "action->Falling Debris": {
+          "name": "Herabstürzende Trümmer",
+          "description": "<p><strong>Auslöser</strong> Druck wird auf das Bodenbrett ausgeübt.</p>\n<hr />\n<p><strong>Effekt</strong> Die Decke des Kriechganges stürzt in der Biegung und den beiden angrenzenden Feldern ein. Jeder in einem dieser drei Felder erleidet @Damage[3d6[bludgeoning]]{3W6 Punkte Wuchtschaden} und kann einen @Check[reflex|dc:14|traits:damaging-effect]{Reflexwurf} ablegen, um den Schaden zu reduzieren. Für die Kreatur im mittleren Feld, welche die Falle auslöst, ist dies ein einfacher Rettungswurf. Kreaturen in den beiden angrenzenden Feldern erleiden bei einem Erfolg oder Kritischen Erfolg keinen Schaden, da sie den herabstürzenden Trümmern ausweichen können; bei einem Fehlschlag erleiden sie den vollen Schaden und bei einem Kritischen Fehlschlag doppelten Schaden. Kreaturen, die durch die Trümmer Schaden erleiden, erhalten den Zustand @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Bewegungsunfähig} und sind unter dem erdrückenden Gewicht gefangen.</p>\n<p>Um eines der Trümmerfelder freizuräumen, ist ein Wurf für @Check[athletics|dc:17]{Athletik} erforderlich mit den folgenden Effekten:</p>\n<p><strong>Kritischer</strong> Erfolg Das Feld wird in 1 Minute freigeräumt.</p>\n<p><strong>Erfolg</strong> Das Feld wird in 5 Minuten freigeräumt.</p>\n<p><strong>Fehlschlag</strong> Das Feld wird in 10 Minuten freigeräumt.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Decke über dem Feld gibt erneut nach und weitere Trümmer hageln herab. Dies fügt dem freigrabenden Charakter und jedem, der in dem Feld feststeckt, weitere @Damage[2d6[bludgeoning]]{2W6 Schadenspunkte} zu. Dies dauert 1 Minute und führt zu keinen Fortschritten.</p>"
+        }
+      }
+    },
+    "Fiery Leopard": {
+      "name": "Feuerleopard",
+      "items": {
+        "strike-melee->Jaws": {
+          "name": "Biss"
+        },
+        "strike-melee->Claw": {
+          "name": "Klaue"
+        },
+        "action->Fiery Pelt": {
+          "name": "Brennendes Fell",
+          "description": "<p>Kreaturen, deren Zug im Zustand Gegriffen durch den Feuerleopard beginnt, erleiden @Damage[1d4[fire]]{1W4 Punkte Feuerschaden}. Wer den Feuerleoparden zu ergreifen versucht, erleidet pro Versuch @Damage[1d4[fire]]{1W4 Punkte Feuerschaden}.</p>"
+        }
+      }
+    },
+    "Giant Lightning Serpent": {
+      "name": "Riesenblitzschlange",
+      "items": {
+        "strike-melee->Fangs": {
+          "name": "Fangzähne"
+        },
+        "action->Coiled Opportunity (Special)": {
+          "name": "Blitzschneller Gelegenheitsangriff (Speziell)",
+          "description": "<p>Wie Gelegenheitsangriff, allerdings kann die Schlange diese Reaktion nur einsetzen, wenn sie sich zusammengerollt hat.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.AttackOfOpportunity]</p>"
+        },
+        "action->Coil": {
+          "name": "Zusammenrollen",
+          "description": "<p>Die Schlange nutzt eine Aktion, um sich zusammenzurollen; die entstandene Muskelspannung erhöht die  Reichweite ihres Fangzahnangriffe von 5 Fuß/1,50 m auf 10 Fuß/3 m; nach dem Angriff ist die Schlange nicht länger zusammengerollt.</p>"
+        },
+        "action->Lightning Rattle": {
+          "name": "Blitzrassel",
+          "description": "<p>Die Schlange rasselt mit ihrem seltsamen Metallschwanz und entfesselt einen Blitzstrahl (@Template[line|distance:60]{60 Fuß/18 m-Linie}; @Damage[2d10[electricity]]{2W10 Punkte Elektrizitätsschaden}; @Check[reflex|dc:17|basic]{einfacher Reflexwurf}).</p>\n<p>Nachdem die Riesenblitzschlange diese Fähigkeit benutzt hat, muss sie [[/br 1d4 #Runden]]{1W4 Runden} warten, bevor sie Blitzrassel erneut einsetzen kann.</p>"
+        }
+      }
+    },
+    "Graytusk": {
+      "name": "Grauhauer",
+      "items": {
+        "strike-melee->Shortsword": {
+          "name": "Kurzschwert"
+        },
+        "strike-melee->Fist": {
+          "name": "Faust"
+        },
+        "strike-ranged->Composite Longbow": {
+          "name": "Kompositlangbogen"
+        },
+        "action->Double Shot": {
+          "name": "Doppelschuss",
+          "description": "<p>Grauhauer kann zwei Fernkampfangriffe gegen unterschiedliche Ziele ausführen; jeder Angriff unterliegt einem Malus von -2, der Malus für Mehrfachangriffe steigt erst, nachdem beide Angriffe ausgeführt wurden.</p>"
+        }
+      }
+    },
+    "Hallod": {
+      "name": "Hallod",
+      "items": {
+        "equipment->Key": {
+          "name": "Schlüssel",
+          "gmNote": "<p>Schlüssel zur Schließkassette</p>"
+        },
+        "consumable->Healing Potion (Lesser)": {
+          "description": "<Compendium>"
+        },
+        "consumable->Juggernaut Mutagen (Lesser)": {
+          "description": "<Compendium>"
+        },
+        "strike-melee->Kukri": {
+          "name": "Kukri"
+        },
+        "strike-melee->Fist": {
+          "name": "Faust"
+        },
+        "strike-ranged->Heavy Crossbow": {
+          "name": "Schwere Armbrust"
+        },
+        "action->Dirty Trick": {
+          "name": "Schmutziger Trick",
+          "description": "<p><strong>Auslöser</strong> Hallod landet mit einem Nahkampfangriff einen Kritischen Treffer.</p>\n<hr />\n<p><strong>Effekt</strong> Hallod kann einen Fertigkeitswurf für Athletik zum@UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Fortstoßen} oder @UUID[Compendium.pf2e.actionspf2e.Item.ge56Lu1xXVFYUnLP]{Zu-Fall-Bringen} gegen das Ziel seines Angriffes ausführen. Hierbei kommt derselbe Malus für Mehrfachangriffe wie beim Angriff zur Anwendung, der Schmutzige Trick zählt aber nicht als zusätzlicher Angriff hinsichtlich dieses Malus.</p>",
+          "rules": {
+            "0": {
+              "text": "<div class='compact-text'>\n<p><strong>{item|name}</strong> <span class=\"action-glyph\">F</span></p>\n<p><strong>Auslöser</strong> Hallod landet mit einem Nahkampfangriff einen Kritischen Treffer.</p>\n<p><strong>Effekt</strong> Hallod kann einen Fertigkeitswurf für Athletik zum@UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Fortstoßen} oder @UUID[Compendium.pf2e.actionspf2e.Item.ge56Lu1xXVFYUnLP]{Zu-Fall-Bringen} gegen das Ziel seines Angriffes ausführen. Hierbei kommt derselbe Malus für Mehrfachangriffe wie beim Angriff zur Anwendung, der Schmutzige Trick zählt aber nicht als zusätzlicher Angriff hinsichtlich dieses Malus.</p>\n</div>"
+            }
+          }
+        },
+        "action->One-Two Move": {
+          "name": "Komboschlag",
+          "description": "<p>Hallod führt zwei Angriffe aus; der erste erfolgt in der Regel mit dem Kukri. Trifft dieser erste Angriff, erhält das Ziel gegen den zweiten Angriff den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} (der zweite Angriff ist meistens ein Faustschlag). Der Malus für Mehrfachangriffe kommt bei diesen Angriffen normal zur Anwendung.</p>"
+        },
+        "action->Sneak Attack": {
+          "description": "<p>Hallod fügt Kreaturen, die @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} sind, zusätzliche 1W6 Punkte Präzisionsschaden zu </p>"
+        }
+      }
+    },
+    "Ice Fall Trap": {
+      "name": "Frostfalle",
+      "description": "<p>Fächer in der Decke sind mit einer gefrierenden alchemistischen Flüssigkeit gefüllt, die sich in den Raum ergießt, sollte die Tür ohne den Schlüssel geöffnet werden.</p>",
+      "disable": "<p>@Check[thievery|dc:20|name:Entschärfe Frostfalle|traits:mechanical,trap]{Diebeskunst (Geübt)} an der Tür, damit die Falle beim Öffnen nicht ausgelöst wird.</p>",
+      "stealth": "<p>(Geübt)</p>",
+      "items": {
+        "action->Ice Fall": {
+          "name": "Herabgießende alchemistische Flüssigkeit",
+          "description": "<p><strong>Auslöser</strong> Die Tür wird angegriffen oder ohne den Schlüssel geöffnet.</p>\n<hr />\n<p><strong>Effekt</strong> Eiskalte alchemistische Pampe ergießt sich über den Raum und fügt jedem darin @Damage[4d6[cold]]{4W6 Punkte Kälteschaden} zu (@Check[reflex|dc:20|basic]{einfacher Reflexwurf}).</p>"
+        }
+      }
+    },
+    "Icy Rat": {
+      "name": "Eisratte",
+      "skillSpecialAthletics": {
+        "0": {
+          "label": "Klettern oder Schwimmen"
+        }
+      },
+      "items": {
+        "strike-melee->Jaws": {
+          "name": "Biss"
+        },
+        "action->Icy Death": {
+          "name": "Eisige Explosion",
+          "description": "<p>Wird eine Eisratte getötet, explodiert ihr Kadaver in einer Explosion aus gefrorenem Fell und Knochen; dies fügt allen angrenzenden Kreaturen @Damage[2d4[cold]]{2W4 Punkte Kälteschaden} zu (@Check[reflex|dc:14|basic]{einfacher Reflexwurf}).</p>"
+        }
+      }
+    },
+    "Lord Nar": {
+      "name": "Fürst Nar",
+      "items": {
+        "equipment->Bronze Key": {
+          "name": "Bronzeschlüssel"
+        },
+        "strike-melee->+1 Greatclub": {
+          "name": "+1 Zweihandkeule"
+        },
+        "strike-melee->Fist": {
+          "name": "Faust"
+        },
+        "strike-ranged->Hatchet": {
+          "name": "Beil"
+        },
+        "action->No Escape": {
+          "name": "Kein Entkommen",
+          "description": "<p><strong>Auslöser</strong> Ein angrenzender Gegner bewegt sich von Nar weg.</p>\n<hr />\n<p><strong>Effekt</strong> Fürst Nar kann sich bis zu seiner maximalen Bewegungsrate bewegen, muss seine Bewegung aber so nahe wie möglich zur auslösenden Kreatur beenden, ohne ihr Feld zu betreten.</p>"
+        },
+        "action->Rage": {
+          "name": "Kampfrausch",
+          "description": "<p>Fürst Nar verfällt für 1 Minute in Raserei. Dies verleiht ihm 8 Temporäre Trefferpunkte und einen Malus von -1 auf seine RK, während er mit seinen Angriffen 4 zusätzliche Schadenspunkte verursacht.</p>\n<p>Im Kampfrausch kann er keine Aktionen der Kategorie Konzentration nutzen, sofern sie nicht zugleich der Kategorie Kampfrausch angehören.</p>\n<p>Sobald sein Kampfrausch endet, kann Nar erst nach 1 Minute erneut in Kampfrausch verfallen.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.z3uyCMBddrPK5umr]{Effekt: Kampfrausch}</p>"
+        }
+      }
+    },
+    "Mangy Wolf": {
+      "name": "Räudiger Wolf",
+      "items": {
+        "strike-melee->Jaws": {
+          "name": "Biss"
+        },
+        "action->Fleas": {
+          "name": "Flöhe",
+          "description": "<p>Wer von einem Räudigen Wolf gebissen wird, muss einen @Check[fortitude|dc:14]{Zähigkeitswurf} ablegen; bei Misslingen erhält er für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1}. Ein Betroffener kann diesen Zustand vorzeitig beenden, indem er eine Aktion zum Interagieren aufwendet, um sich zu kratzen und die Flöhe zu verscheuchen.</p>"
+        }
+      }
+    },
+    "Mutant Wolf": {
+      "name": "Mutantenwolf",
+      "items": {
+        "strike-melee->Jaws": {
+          "name": "Biss"
+        },
+        "action->Motion Sense (Precise) 30 feet": {
+          "name": "Bewegungsgespür (genau) 30 Fuß/9 m",
+          "description": "<p>Ein Mutantenwolf kann Bewegungen in der Nähe durch Vibration und Luftbewegung wahrnehmen.</p>"
+        },
+        "action->Gore Spray": {
+          "name": "Eiterspritzer",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur landet bei einem angrenzenden Mutantenwolf einen Kritischen Treffer</p>\n<hr />\n<p><strong>Effekt</strong> Aus einer aufgeplatzten Pustel spritzt ätzender Eiter. Die auslösende Kreatur erleidet @Damage[3d6[acid]]{3W6 Punkte Säureschaden} (@Check[reflex|dc:19|basic]{einfacher Reflexwurf}). Diese Reaktion tritt sogar ein, sollte der Angriff den Wolf töten.</p>"
+        },
+        "action->Tear": {
+          "name": "Fetzen",
+          "description": "<p><strong>Auslöser</strong> Der Wolf hat seine letzte Aktion in diesem Zug zu einem Bissangriff genutzt und Schaden zugefügt.</p>\n<hr />\n<p><strong>Effekt</strong> Der Wolf reißt ein Stück Fleisch der Kreatur heraus; dies verursacht @Damage[(1d6+2)[slashing],1[persistent,acid]]{{1W6+2 Punkte Hiebschaden und 1 Punkt Anhaltenden Säureschaden}.</p>"
+        }
+      }
+    },
+    "Orc Alchemist": {
+      "name": "Orkalchemist",
+      "items": {
+        "weapon->Acid Flask (Lesser)": {
+          "description": "<Compendium>"
+        },
+        "weapon->Alchemist's Fire (Lesser)": {
+          "description": "<Compendium>"
+        },
+        "weapon->Bottled Lightning (Lesser)": {
+          "description": "<Compendium>"
+        },
+        "consumable->Elixir of Life (Minor)": {
+          "description": "<Compendium>"
+        },
+        "strike-melee->Orc Knuckle Dagger": {
+          "name": "Orkischer Stoßring"
+        },
+        "strike-melee->Fist": {
+          "name": "Faust"
+        },
+        "strike-ranged->Acid Flask": {
+          "name": "Säureflasche"
+        },
+        "strike-ranged->Alchemist's Fire": {
+          "name": "Alchemistenfeuer"
+        },
+        "strike-ranged->Bottled Lightning": {
+          "name": "Flaschenblitz"
+        }
+      }
+    },
+    "Spear Launcher": {
+      "name": "Speergeladene Armbrustfalle",
+      "description": "<p>Eine alte Schwere Armbrust ist unter einem Müllberg versteckt; sie ist mit einem Speer geladen und mit dem Seil verbunden, dass die Tür festhält.</p>",
+      "disable": "<p>@Check[thievery|dc:18|traits:action:disable-a-device]{{Diebeskunst (Geübt)} beim Seil; der SC kann das Seil lösen und die Tür öffnen, ohne die Falle auszulösen.</p>",
+      "stealth": "<p>(Geübt)</p>",
+      "items": {
+        "action->Spear": {
+          "name": "Speer",
+          "description": "<p><strong>Auslöser</strong> Das Seil wird durchtrennt oder verliert anderweitig seine Spannung.</p>\n<hr />\n<p><strong>Effekt</strong> Die Falle führt einen Angriff gegen die Kreatur aus, die am Seil hantiert.</p>"
+        },
+        "strike-melee->Spear": {
+          "name": "Speer"
+        }
+      }
+    },
+    "Stone Horse": {
+      "name": "Steinpferd",
+      "items": {
+        "strike-melee->Hoof": {
+          "name": "Hufe"
+        },
+        "action->Shattering Hooves": {
+          "name": "Schmetterhufe",
+          "description": "<p>Die Hufe des Steinpferdes sind so hart wie Eisen; sollte das Pferd mit einem Hufangriff einen Kritischen Treffer landen, erleidet auch die Rüstung des Zieles Schaden in derselben Höhe, die das Ziel erleidet (abzüglich Härte). Sollte das Ziel Schildblock gegen den Kritischen Treffer nutzen, so behandle die Härte des Schildes als um 5 niedriger (Minimum 0).</p>",
+          "rules": {
+            "0": {
+              "text": "Sollte das Pferd mit einem Hufangriff einen Kritischen Treffer landen, erleidet auch die Rüstung des Zieles Schaden in derselben Höhe, die das Ziel erleidet (abzüglich Härte). Sollte das Ziel Schildblock gegen den Kritischen Treffer nutzen, so behandle die Härte des Schildes als um 5 niedriger (Minimum 0)."
+            }
+          }
+        }
+      }
+    },
+    "The Amalgam": {
+      "name": "Das Amalgam",
+      "saveDetails": "Vielfacher Verstand",
+      "items": {
+        "strike-melee->Fist": {
+          "name": "Faust"
+        },
+        "strike-melee->Claw": {
+          "name": "Klaue"
+        },
+        "strike-melee->Jaws": {
+          "name": "Biss"
+        },
+        "strike-melee->Tail": {
+          "name": "Schwanzschlag"
+        },
+        "action->Many Minds": {
+          "name": "Vielfacher Verstand",
+          "description": "<p>Der Verstand des Amalgams besteht aus mehr als einem Bewusstsein, die nicht alle gleichermaßen von mentaler Magie betroffen sind. Das Amalgam behandelt seine Rettungswürfe gegen mentale Effekte als einen Schritt besser.</p>"
+        },
+        "action->Too Many Limbs": {
+          "name": "Zu viele Gliedmaßen",
+          "description": "<p>Das Amalgam kann bis zu vier Angriffe (je einen mit jedem der aufgeführten Nahkampfangriffen) ausführen, wobei maximal zwei gegen dasselbe Ziel erfolgen können. Es erleidet einen Malus von -2 auf jeden Angriff; der Malus für Mehrfachangriffe steigt aber erst nach Abschluss aller Angriffe.</p>"
+        },
+        "action->Trip": {
+          "description": "<Compendium>"
+        }
+      }
+    },
+    "The Behemoth": {
+      "name": "Der Behemoth",
+      "languages": "(kann nicht sprechen), Empathische Verbindung",
+      "items": {
+        "strike-melee->Fist": {
+          "name": "Faust"
+        },
+        "action->Empathy Link": {
+          "name": "Empathische Verbindung",
+          "description": "<p>Der Behemoth kann nicht sprechen, sein Geist ist aber mit seinem Schöpfer verbunden. Er kann einfache emotionale Informationen wie Freude, Furcht oder Wut seinem Schöpfer mitteilen. Sollte der Knecht zerstört werden, weiß sein Meister dies sofort. Diese Verbindung hat eine Reichweite von 1500 Fuß/450 m.</p>"
+        },
+        "action->Massive Strike": {
+          "name": "Massiver Angriff",
+          "description": "<p>Der Behemoth führt einen Nahkampfangriff aus. Bei Erfolg kann er die Zielkreatur um 10 Fuß/3 m fortstoßen (20 Fuß/6 m bei einem Kritischen Treffer). Das Ziel muss einen @Check[fortitude|dc:19]{Zähigkeitswurf} ablegen; bei einem Fehlschlag erhält es den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}.</p>"
+        },
+        "action->Stomp": {
+          "name": "Aufstampfen",
+          "description": "<p>Der Behemoth kann kraftvoll aufstampfen; alle Kreaturen innerhalb von 10 Fuß/3 m müssen einen @Check[reflex|dc:19]{Reflexwurf} ablegen; bei Misslingen erhält eine Kreatur den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}.</p>"
+        }
+      }
+    },
+    "The Sculptor": {
+      "name": "Der Former",
+      "items": {
+        "weapon->Alchemist's Fire (Moderate, Infused)": {
+          "name": "<Compendium> (Aufgeladen)",
+          "description": "<Compendium>"
+        },
+        "weapon->Frost Vial (Moderate, Infused)": {
+          "name": "<Compendium> (Aufgeladen)",
+          "description": "<Compendium>"
+        },
+        "equipment->Crafter's Eyepiece": {
+          "description": "<Compendium>"
+        },
+        "consumable->Bomber's Eye Elixir (Lesser)": {
+          "description": "<Compendium>"
+        },
+        "consumable->Elixir of Life (Lesser, Infused)": {
+          "name": "<Compendium> (Aufgeladen)",
+          "description": "<Compendium>"
+        },
+        "strike-melee->Orc Knuckle Dagger": {
+          "name": "Orkischer Stoßring"
+        },
+        "strike-melee->Fist": {
+          "name": "Faust"
+        },
+        "strike-ranged->Alchemist's Fire": {
+          "name": "Alchemistenfeuer"
+        },
+        "strike-ranged->Frost Vial": {
+          "name": "Frostphiole"
+        },
+        "strike-ranged->Acid Flask": {
+          "name": "Säureflasche"
+        },
+        "strike-ranged->Bottled Lightning": {
+          "name": "Flaschenblitz"
+        },
+        "action->Alchemy": {
+          "name": "Alchemie",
+          "description": "<p>Der Former hat mittels seiner Fähigkeit Alchemie 4 @UUID[Compendium.pf2e.equipment-srd.Item.gWr4q4HiyGhETA8H]{Alchemistenfeuer, Durchschnittliches}, 2 @UUID[Compendium.pf2e.equipment-srd.Item.TZUskLT7yvP7N2co]{Lebenselixier, Schwaches} und 4 @UUID[Compendium.pf2e.equipment-srd.Item.nVvH1ZcM7OwIVIs8]{Frostphiole, Durchschnittliche} hergestellt. Dies sind Infusionen. Er kann eine Aktion aufwenden, um eine weitere solche Phiole oder einen @UUID[Compendium.pf2e.equipment-srd.Item.AFR01HVd7DcZvkpP]{Flaschenblitz, Schwacher} oder eine @UUID[Compendium.pf2e.equipment-srd.Item.M1k5QQc1qQLxzyCK]{Säureflasche, Schwache} herzustellen.</p>"
+        },
+        "action->Quick Bomber": {
+          "name": "Schneller Bombenwerfer",
+          "description": "<p>Der Former kann eine Aktion zum Interagieren aufwenden, um eine Bombe hervorzuholen und mit ihr anzugreifen.</p>"
+        }
+      }
+    },
+    "Vilree": {
+      "name": "Vilrie",
+      "items": {
+        "weapon->Acid Flask (Moderate, Infused)": {
+          "name": "<Compendium> (Aufgeladen)",
+          "description": "<Compendium>"
+        },
+        "weapon->Alchemist's Fire (Moderate, Infused)": {
+          "name": "<Compendium> (Aufgeladen)",
+          "description": "<Compendium>"
+        },
+        "weapon->Bottled Lightning (Moderate, Infused)": {
+          "name": "<Compendium> (Aufgeladen)",
+          "description": "<Compendium>"
+        },
+        "weapon->Tanglefoot Bag (Lesser, Infused)": {
+          "name": "<Compendium> (Aufgeladen)",
+          "description": "<Compendium>"
+        },
+        "equipment->Bracers of Missile Deflection": {
+          "description": "<Compendium>"
+        },
+        "equipment->Key": {
+          "name": "Schlüssel"
+        },
+        "consumable->Potion of Fire Resistance (Lesser)": {
+          "description": "<Compendium>"
+        },
+        "consumable->Juggernaut Mutagen (Lesser)": {
+          "description": "<Compendium>"
+        },
+        "consumable->Acid Energy Mutagen (Lesser)": {
+          "name": "<Compendium> (Säure)",
+          "description": "<Compendium>"
+        },
+        "consumable->Elixir of Life (Lesser, Infused)": {
+          "name": "<Compendium> (Aufgeladen)",
+          "description": "<Compendium>"
+        },
+        "backpack->Belt Pouch": {
+          "name": "Gürteltasche"
+        },
+        "strike-ranged->Dagger": {
+          "name": "Dolch"
+        },
+        "strike-melee->Fist": {
+          "name": "Faust"
+        },
+        "strike-ranged->Acid Flask": {
+          "name": "Säureflasche"
+        },
+        "strike-ranged->Alchemist's Fire": {
+          "name": "Alchemistenfeuer"
+        },
+        "strike-ranged->Bottled Lightning": {
+          "name": "Flaschenblitz"
+        },
+        "strike-ranged->Tanglefoot Bag": {
+          "name": "Klebstoffbombe"
+        },
+        "strike-ranged->Alchemical Crossbow": {
+          "name": "Alchemistische Armbrust"
+        },
+        "action->Alchemy": {
+          "name": "Alchemie",
+          "description": "<p>Vilrie hat mittels ihrer Fähigkeit Alchemie 4 @UUID[Compendium.pf2e.equipment-srd.Item.SgtqZxt26BdjUmEB]{Säureflasche, Einfache} 6 @UUID[Compendium.pf2e.equipment-srd.Item.gWr4q4HiyGhETA8H]{Alchemistenfeuer, Durchschnittliches}, 2 @UUID[Compendium.pf2e.equipment-srd.Item.97QyNEOAyYLdGaYc]{Flaschenblitz, Einfacher}, 3 @UUID[Compendium.pf2e.equipment-srd.Item.TZUskLT7yvP7N2co]{Lebenselixir, Schwaches} und 2 @UUID[Compendium.pf2e.equipment-srd.Item.T6Appwwl6nUl56Xj]{Klebstoffbombe, Schwache} gefertigt. Dies sind Infusionen. Sie kann eine Aktion aufwenden, um eine weitere Phiole eines dieser Gegenstände oder einen der anderen als Formeln in ihrem Buch aufgeführten Gegenstände herzustellen.</p>"
+        },
+        "action->Far Lob": {
+          "name": "Weitwurf",
+          "description": "<p>Vilries Bomben besitzen eine Entfernungseinheit von 30 Fuß/9 m.</p>"
+        },
+        "action->Alchemical Crossbow": {
+          "name": "Alchemistische Armbrust",
+          "description": "<p>Vilries Armbrust kann alchemistisch aufgeladene Bolzen verschießen. Als Aktion kann sie ihre Armbrust mit einer alchemistischen Bombe laden; verursachen die nächsten 3 Angriffe mit der Armbrust; 1W6 Schadenspunkte passend zur Art der Bombe. Diese Angriffe verursachen niemals Flächenschaden.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.ucAwSIZsGrpBLg6G]{Effekt: Alchemistische Armbrust}</p>"
+        },
+        "action->Quick Bomber": {
+          "name": "Schneller Bombenwerfer",
+          "description": "<p>Vilrie kann eine Aktion zum Interagieren aufwenden, um eine Bombe hervorzuholen und mit ihr anzugreifen.</p>"
+        }
+      }
+    },
+    "Vine Lasher": {
+      "name": "Peitschenranke",
+      "publicNotes": "<p>Die Peitschenranke greift in Gruppen an und versucht, die Beute erst bewegungsunfähig zu machen und dann langsam in Stücke zu reißen.</p>\n<hr />\n<p>Was eben noch wie ein einfacher, gewöhnlicher Busch erschien, erwacht plötzlich zum Leben!</p>",
+      "items": {
+        "strike-melee->Vine": {
+          "name": "Ranke"
+        },
+        "action->Tremorsense (Imprecise) 30 feet": {
+          "name": "<Compendium> (Ungenau) 30 Fuß/9 m"
+        },
+        "action->Light Hold": {
+          "name": "Schwacher Griff",
+          "description": "<p>Eine von der Peitschenranke in den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} versetzt Kreatur erhält nicht zugleich den Zustand Bewegungsunfähig, allerdings unterliegen das Feld der Kreatur und die daran angrenzenden Felder den Regeln für Schwieriges Gelände. Sollte sich die Kreatur fortbewegen, bewegt sich die Peitschenranke mit ihr, so dass sie nie weiter als 10 Fuß/3 m von der Kreatur entfernt ist.</p>\n<p>Sollte eine Kreatur von mehreren Peitschenranken in den Zustand Gegriffen versetzt sein, so unterliegen das Feld der Kreatur und die daran angrenzenden Felder den Regeln für Sehr Schwieriges Gelände.</p>"
+        }
+      }
+    }
+  },
+  "mapping": {
+    "description": {
+      "converter": "translateActorDescription",
+      "path": "system.details.description"
+    },
+    "disable": "system.details.disable",
+    "items": {
+      "converter": "translateActorItems",
+      "path": "items"
+    },
+    "languages": "system.details.languages.details",
+    "name": {
+      "converter": "translateDualLanguage",
+      "path": "name"
+    },
+    "portrait": {
+      "converter": "updateActorImage",
+      "path": "img"
+    },
+    "publicNotes": {
+      "converter": "translateActorDescription",
+      "path": "system.details.publicNotes"
+    },
+    "saveDetails": "system.attributes.allSaves.value",
+    "skillSpecialAthletics": {
+      "converter": "translateSkillSpecial",
+      "path": "system.skills.athletics.special"
+    },
+    "skillSpecialStealth": {
+      "converter": "translateSkillSpecial",
+      "path": "system.skills.stealth.special"
+    },
+    "source": {
+      "converter": "translateSource",
+      "path": "system.details.publication.title"
+    },
+    "stealth": "system.attributes.stealth.details",
+    "tokenImage": {
+      "converter": "updateTokenImage",
+      "path": "prototypeToken.texture.src"
+    },
+    "tokenName": {
+      "converter": "translateTokenName",
+      "path": "prototypeToken.name"
+    }
+  }
+}
