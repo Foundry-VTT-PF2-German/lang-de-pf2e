@@ -1540,8 +1540,7 @@
             "Y": "y"
           }
         },
-        "Basic": {
-          "Label": "Basic",
+        "Basics": {
           "Level": {
             "Hint": "An optional level for the aura, to be used to set the level of the effects it transmits",
             "Label": "Level"
@@ -1583,6 +1582,7 @@
       },
       "General": {
         "Add": "Add",
+        "Basics": "Basics",
         "Brackets": "Brackets",
         "CriticalBehavior": {
           "false": "1x Damage on Crit",
@@ -1611,6 +1611,12 @@
         "Outcome": "Outcome",
         "Text": "Text Content",
         "Title": "Title"
+      },
+      "TokenImage": {
+        "Ring": {
+          "Label": "Dynamic Ring",
+          "ScaleCorrection": "Scale Correction"
+        }
       }
     },
     "RuleElement": {
@@ -1829,6 +1835,9 @@
       "Weave": "To Weave",
       "Woodworking": "Woodworking"
     },
+    "SpecificLore": {
+      "Herbalism": "Herbalism Lore"
+    },
     "SpecificRule": {
       "Acrobat": {
         "AcrobatDedication": {
@@ -1902,12 +1911,12 @@
           "Description": "Add the listed conditions to those you can choose for an invigorating elixir you create to counteract:",
           "Label": "Improved Invigorating Elixir",
           "Mental": {
-            "Label": "Physical Invigoration",
-            "Conditions": "@UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded}, @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened}, @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained}, @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}, @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed}"
-          },
-          "Physical": {
             "Label": "Mental Invigoration",
             "Conditions": "@UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused}, controlled, @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing}, @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened}, @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}, @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed}."
+          },
+          "Physical": {
+            "Label": "Physical Invigoration",
+            "Conditions": "@UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded}, @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened}, @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained}, @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}, @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed}"
           }
         },
         "ResearchField": {
@@ -2141,6 +2150,21 @@
           "ToggleLabel": "Spirit Rage"
         },
         "Superstition": {
+          "RagingResistance": {
+            "Prompt": "Select associated magical traditions.",
+            "ResistanceLabels": {
+              "ArcaneAndOccult": "Arcane and Occult spells",
+              "ArcaneAndPrimal": "Arcane and Primal spells",
+              "DivineAndOccult": "Divine and Occult spells",
+              "DivineAndPrimal": "Divine and Primal spells"
+            },
+            "Traditions": {
+              "ArcaneAndOccult": "Arcane and Occult",
+              "ArcaneAndPrimal": "Arcane and Primal",
+              "DivineAndOccult": "Divine and Occult",
+              "DivineAndPrimal": "Divine and Primal"
+            }
+          },
           "TargetingCaster": "Witnessed target casting a spell"
         }
       },
@@ -2228,7 +2252,7 @@
         "Anger": {
           "Activation": "If you're @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}, @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}, or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}, you can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape}. If you succeed, the creature or hazard imposing the condition on you (if applicable) takes force damage equal to your level.",
           "Description": "Your destructive wrath allows you to harm your foes but causes you pain in the process.",
-          "Fallout": " You become @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{fatigued }until you Settle your Emotions.",
+          "Fallout": "You become @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued} until you Settle your Emotions.",
           "Fervor": "When you Cast a Spell from your spell slots, if the spell deals damage and doesn't have a duration, you gain a status bonus to that spell's damage equal to the spell's rank. Spell: @UUID[Compendium.pf2e.spells-srd.Item.jsWthW1Qy6tg3SwD]{Draw Ire}",
           "Focus": "@UUID[Compendium.pf2e.spells-srd.Item.UGJzJRJDoonfWqqI]{Athletic Rush}",
           "Label": "Anger",
@@ -2238,7 +2262,7 @@
           "Activation": "If you're @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fascinated} or @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied}, you can attempt an additional save to end the effect if it allowed a save.",
           "Description": "Your powerful sense of wonderment can be infectious and distracting.",
           "Fallout": "You become @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} until you Settle your Emotions.",
-          "Fervor": " When you cast a spell, choose one creature that was hit by your spell attack roll or that failed its saving throw, if any. That creature becomes fascinated with you until the end of its next turn. It's then temporarily immune to this fervor effect for 1 hour. Spell: @UUID[Compendium.pf2e.spells-srd.Item.0qaqksrGGDj74HXE]{Revealing Light}",
+          "Fervor": "When you cast a spell, choose one creature that was hit by your spell attack roll or that failed its saving throw, if any. That creature becomes fascinated with you until the end of its next turn. It's then temporarily immune to this fervor effect for 1 hour. Spell: @UUID[Compendium.pf2e.spells-srd.Item.0qaqksrGGDj74HXE]{Revealing Light}",
           "Focus": "@UUID[Compendium.pf2e.spells-srd.Item.zul5cBTfr7NXHBZf]{Dazzling Flash (doesn't require a religious symbol)",
           "Label": "Awe",
           "Trigger": "You or an ally within 30 feet critically succeeds on an attack roll against an enemy's AC or a skill check against one of an enemy's DCs."
@@ -2319,6 +2343,11 @@
       },
       "CelestialResistance": {
         "Prompt": "Select a type of energy associated with your bloodline."
+      },
+      "Centaur": {
+        "MentorOfLegends": {
+          "Description": "In addition to its normal effects, the spell also grants temporary Hit Points equal to half your level. You can't cast this spell on yourself."
+        }
       },
       "Champion": {
         "AuraOfFaith": {
@@ -2415,6 +2444,73 @@
         "ClanPistol": "Clan Pistol (Ancestry Feat)",
         "Label": "Clan Weapon",
         "Prompt": "Select a clan weapon."
+      },
+      "ClassFeatures": {
+        "SpellRepertoire": {
+          "bard": {
+            "PartOne": "The collection of spells you can cast is called your spell repertoire. At 1st level, you learn two 1st-rank occult spells of your choice and five occult cantrips of your choice. You choose these from the common spells from the occult list or from other occult spells to which you have access. You can cast any spell in your spell repertoire by using a spell slot of an appropriate spell rank.",
+            "PartTwo": "You add to this spell repertoire as you increase in level. Each time you get a spell slot (see the Bard Spells per Day table), you add a spell to your spell repertoire of the same rank. At 2nd level, you select another 1st-rank spell; at 3rd level, you select two 2nd-rank spells, and so on. When you add spells, you might add a higher-rank version of a spell you already have, so you can cast a heightened version of that spell.",
+            "PartThree": "Though you gain them at the same rate, your spell slots and the spells in your spell repertoire are separate. If a feat or other ability adds a spell to your spell repertoire, it wouldn't give you another spell slot, and vice versa.",
+            "SpellSwapping": "As you gain new spells in your repertoire, you might want to replace some of the spells you previously learned. Each time you gain a level and learn new spells, you can swap out one of your old spells for a different spell of the same rank. This spell can be a cantrip. You can also swap out spells by retraining during downtime."
+          },
+          "oracle": {
+            "PartOne": "The collection of spells you can cast is called your spell repertoire. At 1st level, you learn two 1st-rank divine spells of your choice and five divine cantrips of your choice. You choose these from the common spells on the divine list or from other divine spells to which you have access. You can cast any spell in your spell repertoire by using a spell slot of an appropriate spell rank.",
+            "PartTwo": "You add to this spell repertoire as you increase in level. Each time you get a spell slot (see the Oracle Spells per Day table), you add a spell to your spell repertoire of the same rank. At 2nd level, you select another 1st-rank spell; at 3rd level, you select two 2nd-rank spells, and so on. When you add spells, you might add a higher-rank version of a spell you already have, so you can cast a heightened version of that spell.",
+            "PartThree": "Your spell slots and the spells in your spell repertoire are separate. If a feat or other ability adds a spell to your spell repertoire, it wouldn't give you another spell slot, and vice versa.",
+            "SpellSwapping": "As you gain new spells in your repertoire, you might want to replace some of the spells you previously learned. Each time you gain a level and learn new spells, you can swap out one of your old spells for a different spell of the same rank. This spell can be a cantrip. You can also swap out spells by retraining during downtime."
+          },
+          "psychic": {
+            "PartOne": "The collection of spells you can cast is called your spell repertoire. At 1st level, you learn one 1st-level occult spell of your choice and three occult cantrips of your choice. You choose these from the common spells from the occult list or from other occult spells to which you have access. You can cast any spell in your spell repertoire by using a spell slot of an appropriate spell level. Your choice of conscious mind also grants you additional spells in your repertoire, starting with an additional 1st-level spell and two cantrips listed in your conscious mind, which you cast as psi cantrips.",
+            "PartTwo": "You add to this spell repertoire as you increase in level. Each time you get a spell slot (see the Psychic Spells per Day table), you add a spell to your spell repertoire of the same level. At 2nd level, you select another 1st-level spell; at 3rd level, you select one 2nd-level spell, and so on. When you add spells, you might add a higher-level version of a spell you already have, so you can cast a heightened version of that spell. Your conscious mind also adds additional spells to your repertoire as you gain spells of higher levels.",
+            "PartThree": "Though you gain them at the same rate, your spell slots and the spells in your spell repertoire are separate. If a feat or other ability adds a spell to your spell repertoire, such as the spells you gain from your conscious mind, it wouldn't give you another spell slot, and vice versa.",
+            "SpellSwapping": "As you gain new spells in your repertoire, you might want to replace some of the spells you previously learned. Each time you gain a level and learn new spells, you can swap out one of your old spells for a different spell of the same level. This spell can be a cantrip. You can also swap out spells by retraining during downtime."
+          },
+          "sorcerer": {
+            "PartOne": "The collection of spells you can cast is called your spell repertoire. At 1st level, you learn two 1st-rank spells of your choice and four cantrips of your choice, as well as an additional spell and cantrip from your bloodline. You choose these from the common spells from the tradition corresponding to your bloodline, or from other spells from that tradition to which you have access. You can cast any spell in your spell repertoire by using a spell slot of an appropriate spell rank.",
+            "PartTwo": "You add to this spell repertoire as you increase in level. Each time you get a spell slot (see the Sorcerer Spells per Day table above), you add a spell to your spell repertoire of the same rank. When you gain a new rank of spells, your first new spell is always the sorcerous gift spell for that rank that's listed in your bloodline, but you can choose the other spells. At 2nd level, you select another 1st-rank spell; at 3rd level, you gain a new spell from your bloodline and two other 2nd-rank spells, and so on. When you add spells, you might select a higher-rank version of a spell you already know so that you can cast a heightened version of that spell.",
+            "PartThree": "Though you gain them at the same rate, your spell slots and the spells in your spell repertoire are separate. If a feat or other ability adds a spell to your spell repertoire, it wouldn't give you another spell slot or vice versa.",
+            "SpellSwapping": "As you gain new spells in your spell repertoire, you might want to replace some of the spells you previously learned. Each time you gain a level and learn new spells, you can swap out one of your old spells for a different spell of the same rank. This spell can be a cantrip, but you can't swap out bloodline spells. You can also swap out spells by retraining during downtime."
+          },
+          "SpellSwapping": "**Swapping Spells in Your Repertoire**",
+          "summoner": {
+            "PartOne": "The collection of spells you can cast is called your spell repertoire. At 1st level, you learn two 1st-level spells of your choice and five cantrips of your choice. You choose these from the common spells from the tradition corresponding to your eidolon, or from other spells from that tradition to which you have access. You can cast any spell in your spell repertoire by using a spell slot of an appropriate spell level. Your spell slots and the spells in your spell repertoire are separate. If a feat or other ability adds a spell to your spell repertoire, it doesn't give you another spell slot, and vice versa.",
+            "PartTwo": "You add to this spell repertoire as you increase in level. Each time you get a spell slot (see Table 2–4: Summoner Spells per Day), you add a spell of the same level to your spell repertoire. At 2nd level, you select another 1st-level spell. At 3rd level, you add the first 2nd-level spell to your repertoire. At 4th level you gain your second and your spell repertoire reaches its maximum size of five spells.",
+            "PartThree": "At 5th level, in addition to adding two 3rd-level spells to your repertoire, you lose your lowest level of spell slots. Any time you lose a level of spell slots, you lose two spells in your repertoire as well. These can come from spells you already know or out of the number of new spells you're learning. On levels in which you don't change your spell slots, you can swap out multiple spells, as described below.",
+            "SpellSwapping": "As you gain new spells in your repertoire, you might want to replace some of the spells you previously learned. Each time you gain a level and learn new spells, you can swap out one of your old spells for a different spell of the same level. If it's a level at which you lose a set of lower-level slots, you can replace the two in either order. You can also instead swap a cantrip. You can also swap out spells by retraining during downtime."
+          }
+        },
+        "WeaponExpertise": {
+          "champion": {
+            "Description": "You've dedicated yourself to learning the intricacies of your weapons. Your proficiency ranks for simple weapons, martial weapons, and unarmed attacks increase to expert."
+          },
+          "investigator": {
+            "Description": "You've dedicated yourself to learning the intricacies of your weapons. Your proficiency ranks for simple weapons, martial weapons, and unarmed attacks increase to expert."
+          },
+          "druid": {
+            "Description": "You've improved your combat skill. Your proficiency rank for simple weapons and unarmed attacks increases to expert."
+          },
+          "kineticist": {
+            "Description": "You've improved your combat skill. Your proficiency rank for simple weapons and unarmed attacks increase to expert."
+          },
+          "magus": {
+            "Description": "You've dedicated yourself to learning the intricacies of your weapons. Your proficiency ranks for simple weapons, martial weapons, and unarmed attacks increase to expert."
+          },
+          "oracle": {
+            "Description": "You've dedicated yourself to learning the intricacies of your weapons. Your proficiency ranks for simple weapons, martial weapons, and unarmed attacks increase to expert."
+          },
+          "sorcerer": {
+            "Description": "You've improved your combat skill. Your proficiency ranks for simple weapons and unarmed attacks increase to expert."
+          },
+          "swashbuckler": {
+            "Description": "You've dedicated yourself to learning the intricacies of your weapons. Your proficiency ranks for simple weapons, martial weapons, and unarmed attacks increase to expert. You gain access to the critical specialization effects of all weapons for which you have expert proficiency."
+          },
+          "witch": {
+            "Description": "Through sheer experience, you've improved your technique with your weapons. Your proficiency ranks for simple weapons and unarmed attacks increase to expert."
+          },
+          "wizard": {
+            "Description": "Through sheer experience, you've improved your technique with your weapons. Your proficiency ranks for simple weapons and unarmed attacks increase to expert."
+          }
+        }
       },
       "Cleric": {
         "CastigatingWeapon": {
@@ -2777,6 +2873,9 @@
         }
       },
       "Equipment": {
+        "AlchemistGoggles": {
+          "RollOptionLabel": "Failed Strike with an alchemical bomb"
+        },
         "AmphisbaenaHandwraps": {
           "TwinVenomStrikeLabel": "Amphisbaena Handwraps - Twin Venom Strike"
         },
@@ -2821,6 +2920,9 @@
           "Poison": "Orange (Poison)",
           "Void": "Pink (Void)"
         },
+        "CaressOfTheGreatSerpent": {
+          "SerpentsKiss": "Serpent's Kiss"
+        },
         "ChaliceOfJustice": {
           "SipOfJustice": {
             "Note": "Whenever you critically hit an unholy creature with the <em>chalice of justice</em>, the creature is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 round."
@@ -2841,6 +2943,9 @@
           "PouncingWhirlLabel": "Chimera Flail - Pouncing Whirl",
           "PouncingWhirlUsedLabel": "Chimera Flail - Pouncing Whirl Used",
           "StrideHalfLabel": "Chimera Flail - Stride at least half your Speed"
+        },
+        "CloakOfWavesAndClouds": {
+          "CutAirAndSea": "Cut Air and Sea"
         },
         "ConstrictingMeteor": {
           "CoilingChainLabel": "Constricting Meteor - Coiling Chain"
@@ -2945,6 +3050,9 @@
         "TacticiansHelm": {
           "ReactiveStrikeNote": "On a successful @UUID[Compendium.pf2e.actionspf2e.Item.KAVf7AmRnbCAHrkT]{Reactive Strike}, add one charge: @UUID[Compendium.pf2e.equipment-effects.Item.nLwtvyLZZTZgFmKq]{Effect: Tactician's Helm Charges}"
         },
+        "UnholyPlate": {
+          "Note": "On a critical hit with the horns, the target must succeed at a @Check[fortitude|dc:30] or become @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (or @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} on a critical failure)."
+        },
         "UnholyWater": {
           "Note": "Can damage only creatures with the holy trait."
         },
@@ -2967,6 +3075,11 @@
         "SpiritsMercy": {
           "Prompt": "Select the cost of your Spirit's Mercy",
           "PromptLevel": "Select the level of your Spirit Remnant"
+        }
+      },
+      "FamiliarSage": {
+        "LightningRingsOvercharge": {
+          "Prompt": "Did the Familiar Sage cast a spell with the air or electricity trait this turn?"
         }
       },
       "FanesFourberie": {
@@ -3011,6 +3124,9 @@
         "Forager": {
           "Note": "While using Survival to Subsist, if you roll any result worse than a success, you get a success. You can also provide for multiple creatures."
         },
+        "IntensifiedElementStance": {
+          "RollOptionLabel": "Intensified Element Stance — Damage vs. Constructs"
+        },
         "KnowItAll": {
           "Bard": "When you succeed at a check to Recall Knowledge, you gain additional information or context. When you critically succeed at a check to Recall Knowledge, you get additional information or context or can ask an additional follow-up question (the GM chooses which).",
           "Thaumaturge": "Having heard every rumor or story in the book, you know that if you've heard of something in the first place, you've probably heard about it at length. When you succeed at a check to Recall Knowledge, you gain additional information or context about the given topic. When you critically succeed at a check to Recall Knowledge, at the GM's discretion, you might gain even more additional information or context than normal."
@@ -3030,7 +3146,7 @@
         },
         "YoureNext": {
           "Rogue": "After downing a foe, you menace another. Attempt to @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} a creature within 60 feet, with a +2 circumstance bonus. If you have legendary proficiency in Intimidation, you can use this as a free action with the same trigger.",
-          "Swashbuckler": "After downing a foe, you promise another that you’re coming after them next. Attempt an Intimidation check with a +2 circumstance bonus to @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} a single creature that you can see and that can see you. If you’re legendary in Intimidation, you can use this as a free action with the same trigger.",
+          "Swashbuckler": "After downing a foe, you promise another that you're coming after them next. Attempt an Intimidation check with a +2 circumstance bonus to @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} a single creature that you can see and that can see you. If you're legendary in Intimidation, you can use this as a free action with the same trigger.",
           "Trigger": "You reduce an enemy to 0 Hit Points."
         }
       },
@@ -3565,6 +3681,14 @@
         },
         "Spellstrike": {
           "RechargeNote": "You recharge your Spellstrike when you cast a conflux spell that takes at least 1 action to cast."
+        },
+        "UnfurlingBrocade": {
+          "QiInfusedFabric": {
+            "Label": "Qi-Infused Fabric"
+          }
+        },
+        "UnsheathingTheSwordLight": {
+          "Note": "Countless copies of your sword, made of light, fall around you, dealing @Damage[(2*{item|flags.pf2e.rulesSelections.unsheathingTheSwordLight})[@item.system.damage.damageType]|options:area-damage,damage:material:cold-iron,damage:material:silver] damage to each creature within a @Template[type:emanation|distance:10] of the target, excluding you and the target of the Spellstrike."
         }
       },
       "MantleOfTheUnwaveringHeart": {
@@ -3718,6 +3842,11 @@
       },
       "Mindmoppet": {
         "BrokenShell": "Shell is Broken"
+      },
+      "Minotaur": {
+        "SiphonTorment": {
+          "Description": "The target creature gains temporary Hit Points equal to your level"
+        }
       },
       "Modifier": {
         "Bonus": "Bonus",
@@ -4343,7 +4472,7 @@
             "Fey": "Either you gain a +2 status bonus to Performance checks for 1 round, or you can become @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} for 1 round. Such obvious concealment can't be used to @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa]{Hide}",
             "Genie": "Your spellcasting warps reality and distracts your foes. Either you gain a +1 status bonus to Deception checks for 1 round, or a target takes a -1 status penalty to Perception for 1 round.",
             "Hag": "You deal @Damage[(4*@item.level)[mental]] damage (@Check[will|basic|against:spell] save) to the first creature that deals damage to you before the end of your next turn; if no creature damages you in that time, you consume that spite to gain temporary Hit Points at the beginning of your next turn equal to the spell's rank. These temporary Hit Points last until the beginning of your following turn.",
-            "Harrow": "You become enveloped in possibility, represented as multiple versions of yourself from your possible futures overlaid on each other. You gain @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealement} for 1 round, but can't use the concealment to @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa]{Hide}.",
+            "Harrow": "You become enveloped in possibility, represented as multiple versions of yourself from your possible futures overlaid on each other. You gain @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealment} for 1 round, but can't use the concealment to @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa]{Hide}.",
             "Imperial": "Until the start of your next turn, you gain your choice of either a +1 status bonus to AC or to saving throws.",
             "Nymph": "Nymph grace accentuates your movements and distracts your foes, either granting you a +1 status bonus to Diplomacy checks for 1 round or imposing a -1 status penalty on one target's Will saves for 1 round.",
             "Phoenix": "The primal fire of life and death flows through you or one target. Choose to have either you or a target of the spell gain temporary Hit Points equal to the spell's rank for 1 round, or to have a target of the spell take @Damage[@item.level[fire]] damage (if the spell already deals initial fire damage, combine this with the spell's initial damage before determining weaknesses and resistances).",
@@ -4641,7 +4770,7 @@
         "ReachSpell": "If the next action you use is to Cast a Spell that has a range, increase that spell's range by 30 feet. As is standard for increasing spell ranges, if the spell normally has a range of touch, you extend its range to 30 feet.",
         "Remediate": "If your next action is to use your divine font to cast a 3-action heal or harm spell, you can harness the residual energy to counterbalance opposing forces. In addition to its normal effects, you use your heal or harm spell to attempt to counteract one divine effect in the spell's area.",
         "ReverberatingSpell": "The spell deals an additional @Damage[1d8[sonic]] damage and all creatures who fail their save against the spell are @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} for 1 round. Targets who critically fail their saves against this spell are instead deafened for 1 minute. The spell gains the sonic trait.",
-        "RockslideSpell": "(@item.rank) 5-foot squares in the area equal to the spell rank become difficult terrain for 1 round. These squares must be on the ground, and the entire area of difficult terrain must be contiguous. The spell gains the earth trait.",
+        "RockslideSpell": "A number of 5-foot squares in the area equal to the spell rank become difficult terrain for 1 round. These squares must be on the ground, and the entire area of difficult terrain must be contiguous. The spell gains the earth trait.",
         "SafeguardSpell": "If the next action you take is to Cast a Spell with an area, you aren't affected by the spell even if you are within the area.",
         "ScintillatingSpell": "If your next action is to Cast a Spell that doesn't have the darkness trait, has no duration, and requires creatures to attempt a Reflex save, the spell explodes in a spray of scintillating lights, in addition to its other effects. Each creature that failed its Reflex save against the spell is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round, and those who critically failed are instead @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for 1 round.",
         "SecondaryDetonationArray": "If your next action is to Cast a Spell that deals damage, has no duration, and affects an area, a glowing magic circle appears in a @Template[burst|distance:5] within that area. At the beginning of your next turn, the circle detonates, dealing @Damage[(@item.level)d6[force]] damage to all creatures within the circle, with a @Check[reflex|against:spell]. If the spell dealt a different type of damage, the circle deals @Damage[(@item.level)d6[@actor.flags.pf2e.spellshape.arrayDamage]]{this type of damage instead} (or one type of your choice if the spell could deal multiple types of damage)",
@@ -4720,6 +4849,20 @@
           "TigerClaw": "Tiger Claw",
           "WindCrash": "Wind Crash",
           "WolfJaws": "Wolf Jaws"
+        }
+      },
+      "StarlitSentinel": {
+        "Constellation": {
+          "Archer": "Archer",
+          "Blossom": "Blossom",
+          "Ogre": "Ogre",
+          "Ox": "Ox",
+          "Prompt": "Choose a constellation",
+          "Swallow": "Swallow",
+          "Swordswoman": "Swordswoman"
+        },
+        "StarlitTransformation": {
+          "BoltsOfStarlight": "Bolts of Starlight"
         }
       },
       "SteadyBalance": {
