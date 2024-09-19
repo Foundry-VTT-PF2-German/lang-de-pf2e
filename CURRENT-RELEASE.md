@@ -1,3 +1,4 @@
-## v6.3.1.0
-* Update auf PF2-Systemversion 6.3.1
+## v6.4.0.0
+* Update auf PF2-Systemversion 6.4.0
+* In Abstimmung mit Ulisses werden wir zukünftig auch die Bestiarien zu Abenteuern, Abenteuerpfaden und Regelbüchern (ausgenommen reine Bestiarien-Bücher) in unserem DE-Modul übersetzen. Die folgenden Bestiarien sind ab dem aktuellen Release enthalten: Der Untergang von Peststein, Hochhelm, Der Reiseführer, Die Unfassbaren Lande, Schatten der Abenddämmerung, Der Teufelskreis der Feindschaft, Abenteuer in Otari
 * Solltet ihr veraltete Einträge, falsche Formatierungen oder ähnliche Fehler finden, dann meldet sie gerne als Issue auf unserer GitHub-Projektseite.
