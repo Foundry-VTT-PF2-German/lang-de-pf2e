@@ -814,12 +814,12 @@
       "description": "<p><strong>Kosten</strong> 2 Sätze aufgeladener Reagenzien</p>\n<hr />\n<p>Wähle eine fliegende Kreatur innerhalb von 18 m als Ziel. Bis zum Beginn deines nächsten Zuges muss die Kreatur, wann immer sie Fliegen nutzen will, einen Wurf für Akrobatik zum Manövrieren gegen den SG deiner Präsentation ablegen; bei Misslingen wird ihre Aktion Fliegen unterbrochen. Sollten alle Versuche der Kreatur zum Fliegen während ihres Zuges unterbrochen werden, so fällt sie am Ende ihres Zuges zu Boden, ohne Schaden zu erleiden. Ein Konfettiregen kostet 2 Sätze aufgeladener Reagenzien.</p>"
     },
     "Lantern Beam": {
-      "name": "Lantern Beam",
-      "description": "<p><strong>Requirements</strong> Your lantern light is shining</p>\n<hr />\n<p><strong>Effect</strong> Your lenses focus your light into a searing beam. You deal @Damage[((max(5,ceil(@actor.level/2)))d4)[fire]] damage to all creatures in a @Template[line|distance:30], with a @Check[reflex|against:class-spell|basic] saving throw against the higher of your class DC or spell DC. Your lantern light then extinguishes, and you can't use this ability or use your lantern light again for [[/r 1d4 #Recharge Lantern Beam]]{1d4 rounds}. At 11th level and every two levels thereafter, the damage increases by 1d4.</p>"
+      "name": "Lichtstrahl",
+      "description": "<p><strong>Anforderungen</strong> Dein Licht erstrahlt</p>\n<hr />\n<p><strong>Effekt</strong> Deine Linsen fokussieren dein Licht zu einem sengenden Strahl. Du fügst allen Kreaturen auf einer @Template[line|distance:30]{30 Fuß/9 m-Linie} 5W4 Feuerschaden zu (@Check[reflex|against:class-spell|basic]{einfacher Reflexwurf}). Dein Licht erlischt sodann und kann [[/r 1d4 #Runden]]{1W4 Runden} lang nicht aktiviert werden (und ohne dein Licht kannst du auch diese Fähigkeit nicht nutzen). Mit der 11. Stufe und dann jeder weiteren ungeraden Stufe steigt der Schaden um 1W4 Punkte.</p>\n<p><strong>Stufenabhängiger Feuerschaden:</strong> @Damage[((max(5,ceil(@actor.level/2)))d4)[fire]]</p>"
     },
     "Lantern Strobe": {
-      "name": "Lantern Strobe",
-      "description": "<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p><strong>Effect</strong> As you pulse your lantern, your emitters flash erratically, disorienting your opponents that see it. Each opponent in a @Template[cone|distance:15] must attempt a @Check[fortitude|against:class-spell] save against your class DC or spell DC (whichever is higher). On a failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round. On a critical failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for 1 round and dazzled for the following round.</p>"
+      "name": "Flackerlicht",
+      "description": "<p><strong>Häufigkeit</strong> Einmal pro Stunde</p>\n<hr />\n<p><strong>Effekt</strong> Du lässt dein Licht pulsieren und deine Emitter geben erratische Lichtblitze ab, welche Gegner desorientieren, die dies sehen können. Jeder Gegner in einem @Template[cone|distance:15]{15 Fuß/4,50-Kegel} muss einen @Check[fortitude|against:class-spell]{Zähigkeitswurf} ablegen. Bei einem Fehlschlag erhält eine Kreatur 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet} (bzw. bei einem Kritischen Fehlschlag 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind} und dann 1 Runde lang den Zustand Geblendet).</p>"
     },
     "Launch Fireworks Display": {
       "name": "Feuerwerk zünden",
@@ -1058,8 +1058,8 @@
       "description": "<p>Du lässt deinen Kopf vorschnellen. Dein aus deiner Abstammung resultierender Bissangriff erhält einen Angriffsradius von 10 Fuß/3 m bis zum Ende deines Zuges.</p>"
     },
     "Raise Slabs": {
-      "name": "Raise Slabs",
-      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p><strong>Effect</strong> Thick slabs of stone rise around you before tilting over. You deal @Damage[(ceil(@actor.level/2)d6)[bludgeoning]] damage to all adjacent creatures (@Check[reflex|against:class-spell|basic] against your class DC or spell DC, whichever is higher). On a critical failure, the creature is also knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}. At 3rd level, and every 2 levels thereafter, this damage increases by 1d6.</p>"
+      "name": "Granitplatten rufen",
+      "description": "<p><strong>Häufigkeit Einmal am Tag</p>\n<hr />\n<p><strong>Effekt</strong> Dicke Granitplatten wachsen um dich herum aus dem Boden und fallen dann nach außen um. Du fügst jeder angrenzenden Kreatur 1W6 Punkte Wuchtschaden zu (@Check[reflex|against:class-spell|basic]{einfacher Reflexwurf} gegen deinen Klassen- oder Zauber-SG [höherer Wert]). Bei einem Kritischen Fehlschlag erhält die Kreatur zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}. Mit der 3. Stufe und dann jeder weiteren ungeraden Stufe steigt der Schaden jeweils um 1W6 Punkte.</p>\n<p><strong>Stufenabhängiger Wuchtschaden:</strong> @Damage[(ceil(@actor.level/2)d6)[bludgeoning]]</p>"
     },
     "Raise a Shield": {
       "name": "Schild heben",
@@ -1138,8 +1138,8 @@
       "description": "<p>Du wirkst wiederholt den gleichen Zauber. Dabei bewegst du dich mit halber Geschwindigkeit. Meistens handelt es sich bei dem Zauber um einen Zaubertrick, von dem du möchtest, dass er bereits wirkt, wenn es zum Kampf kommen sollte. Diesen Zauber musst du mit maximal 2 Aktionen wirken können. Die Wiederholung eines Zaubers, der komplexe Entscheidungen erfordert, wie z.B. @UUID[Compendium.pf2e.spells-srd.Item.0zU8CPejjQFnhZFI]{Hirngespinst}, kann dich nach Ermessen der SL @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Erschöpfen} lassen.</p>"
     },
     "Repel Ambient Magic": {
-      "name": "Repel Ambient Magic",
-      "description": "<p>Your ostilli glows green as it absorbs magic. Until the start of your next turn, you gain a +1 circumstance bonus to AC and saving throws against the next magical attack, cantrip, or spell that targets you. This bonus increases to +2 at 12th level.</p>"
+      "name": "Umgebungsmagie abwehren",
+      "description": "<p>Dein Ostilli leuchtet grünlich, während er Magie absorbiert. Bis zum Beginn deines nächsten Zuges erlangst du einen Situationsbonus von +1 auf deine RK und Rettungswürfe gegen den nächsten magischen Angriff, Zaubertrick oder Zauber, der dich als Ziel hat. Dieser Bonus steigt mit der 12. Stufe auf +2.</p>"
     },
     "Reposition": {
       "name": "Versetzen",
@@ -1270,8 +1270,8 @@
       "description": "<p><strong>Häufigkeit</strong> Einmal alle 10 Minuten</p>\n<hr />\n<p><strong>Effekt</strong> Der Geist deines Vertrauten verlässt seinen Körper, hinterlässt eine leere Hülle und fliegt zu einem maximal 20 Fuß/6 m entfernten Gegner. Diesem fügt er 6W6 Punkte Seelenschaden zu (@Check[will|basic]{einfacher WIL} gegen deinen Zauber-SG). Sollte der Vertraut Schaden verursacht haben, fliegt er sodann zu einem maximal 30 Fuß/9 m vom Gegner entfernten Verbündeten und heilt bei diesem Trefferpunkt in Höhe des halben verursachten Schadens. Dann kehrt er in seinen Körper auf dem Ausgangsfeld zurück. Mit der 9. Stufe und dann jeder weiteren ungeraden Stufe verursacht der Angriff jeweils zusätzliche 2W6 Schadenspunkte.</p>\n<p><strong>Stufenabhängiger Seelenschaden:</strong> @Damage[(6+max(0,(ceil((@actor.level -8)/2)*2)))d6[spirit]]</p>"
     },
     "Shielding Wave": {
-      "name": "Shielding Wave",
-      "description": "<p>You raise a magical barrier of twisting currents. Until the start of your next turn, the first time you take acid or fire damage, you gain resistance to that damage equal to half your level (minimum 1). The resistance is equal to your level instead if you're submerged in water, if you already Cast a Spell with the water trait, or if you used another ability with the water trait this turn.</p>"
+      "name": "Schützende Welle",
+      "description": "<p>Du schaffst eine magische Barriere aus wirbelnden Strömungen. Bis zum Beginn deines nächsten Zuges erlangst du reaktiv Resistenz gegen den ersten Feuer- oder Säureschaden, den du erleidest. Diese Resistenz entspricht deiner halben Stufe (Minimum 1); bzw. deiner Stufe, solltest du im Wasser untergetaucht sein oder während dieses Zuges bereits einen Zauber oder eine Fähigkeit der Kategorie Wasser genutzt haben.</p>"
     },
     "Shove": {
       "name": "Fortstoßen",
@@ -1322,8 +1322,8 @@
       "description": "<p><strong>Auslöser</strong> Du erzielst einen Fehlschlag bei einem Reflex- oder Willenswurf</p>\n<hr />\n<p><strong>Effekt</strong> Du wiederholst den auslösenden Rettungswurf. Du musst das zweite Ergebnis verwenden, auch wenn es schlechter ist. Wenn du einen Erfolg erzielst, erhältst du stattdessen einen Kritischen Erfolg.</p>"
     },
     "Spit Ambient Magic": {
-      "name": "Spit Ambient Magic",
-      "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> Your ostilli flashes red as it regurgitates a dart of magic at a target within 30 feet. This magical dart deals @Damage[((1+floor((@actorl.level -2)/4))d6)[piercing]] damage (@Check[reflex|against:class-spell|basic] save against the higher of your class DC or spell DC). This damage increases by 1d6 at 6th level and every 4 levels thereafter.</p>"
+      "name": "Umgebungsmagie speien",
+      "description": "<p><strong>Häufigkeit</strong> Einmal pro Runde</p>\n<hr />\n<p><strong>Effekt</strong> Deine Ostilli blitzt rötlich auf, während er ein Geschoss aus Magie herauswürgt und gegen ein Ziel innerhalb von 30 Fuß/9 m Entfernung verschießt. Dieser magische Wurfpfeil verursacht 1W6 Stichschaden (@Check[reflex|against:class-spell|basic]{einfacher Reflexwurf}). Dieser Schaden steigt mit der 6. Stufe und dann alle weiteren 4 Stufen jeweils um 1W6 Punkte.</p>\n<p><strong>Stufenabhängiger Stichschaden:</strong> @Damage[((1+floor((@actorl.level -2)/4))d6)[piercing]]</p>"
     },
     "Spring the Trap": {
       "name": "Täuschende Wendung",
@@ -1374,8 +1374,8 @@
       "description": "<p>Du bewegst dich bis zu deiner Bewegungsrate (Seite 463) weit.</p>"
     },
     "Stridulating Song": {
-      "name": "Stridulating Song",
-      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p><strong>Effect</strong> You circulate magic through your wings, causing them to vibrate at high speeds such that their scraping produces disruptive sounds. You focus the sound at one creature within 30 feet who must succeed at a @Check[fortitude|against:class-spell] save against your class DC or spell DC (whichever is higher) or become @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure, as the vibrations disrupt its inner equilibrium. You can Sustain the effect for up to 1 minute; the creature can't recover from the sickened condition as long as you continue your song and it can hear you.</p>"
+      "name": "Stridulierendes Lied",
+      "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<hr />\n<p><strong>Effekt</strong> Du lässt Magie durch deine Flügel zirkulieren, so dass sie sehr schnell vibrieren und ihr Kratzen störende Geräusche produziert. Du fokussierst den Klang auf eine Kreatur innerhalb von 30 Fuß/9 m Entfernung; das Ziel muss einen @Check[fortitude|against:class-spell]{Zähigkeitswurf} gegen deinen Klassen- oder Zauber-SG (höherer Wert) ablegen. Bei Misslingen erhält es den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1} (bzw. @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 2} im Fall eines Kritischen Fehlschlages), da die Vibrationen sein inneres Gleichgewicht stören. Du kannst den Effekt bis zu 1 Minute lang aufrechterhalten und die Kreatur kann sich vom Zustand Kränkelnd nicht erholen, so lange du dein Lied fortsetzt und das Ziel dich hören kann.</p>"
     },
     "Strike": {
       "name": "Angriff",
@@ -1398,8 +1398,8 @@
       "description": "<p>Du hältst einen Effekt mit der Kategorie Aufrechterhaltbar aufrecht, während du dich mit halber Geschwindigkeit bewegst. Die meisten dieser Effekte können 10 Minuten lang aufrechterhalten werden, manche geben jedoch eine andere Wirkungsdauer an. Das Aufrechterhalten eines Effekts, der komplexe Entscheidungen erfordert, wie z.B. eine <em>Spektralwaffe</em>, kann dich nach Ermessen der SL @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Erschöpft} machen.</p>"
     },
     "Swarm Forth": {
-      "name": "Swarm Forth",
-      "description": "<p><strong>Requirements</strong> Your swarm is within your body</p>\n<hr />\n<p><strong>Effect</strong> Your swarm boils forth from your body into a space adjacent to yours. (Its space can overlap yours.) It remains separate from you until the end of your next turn, but you can Sustain the effect up to 1 minute. The effect also ends if you end your turn more than 60 feet away from the swarm. When you use Swarm Forth and each time you Sustain the effect, you can have the swarm Stride.</p>"
+      "name": "Ausschwärmen",
+      "description": "<p><strong>Anforderung</strong> Dein Schwarm befindet sich in deinem Körper</p>\n<hr />\n<p><strong>Effekt</strong> Dein Schwarm schwärmt aus deinem Leib heraus auf ein zu dir angrenzendes Feld (seine Angriffsfläche kann sich mit der deinen überlappen). Er bleibt bis zum Ende deines nächsten Zuges von dir getrennt, du kannst den Effekt aber bis zu 1 Minute lang Aufrechterhalten. Der Effekt endet ferner, solltest du deinen Zug weiter als 60 Fuß/18 m vom Schwarm entfernt beenden. Wenn du Ausschwärmen nutzt und wann immer du den Effekt Aufrechterhältst, kannst du den Schwarm Laufen nutzen lassen.</p>"
     },
     "Swift Choreography": {
       "name": "Swift Choreography",
@@ -1438,8 +1438,8 @@
       "description": "<p><strong>Anforderungen</strong> Der Zombie hat eine Kreatur in den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} oder @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Gebunden} versetzt.</p>\n<p>Der Zombie versucht, die Kreatur zu beißen. Er führt einen Bissangriff gegen sie aus; dieser Angriff nutzt dieselben Spielwerte wie sein normaler Nahkampfangriff, verursacht aber [[/r 1d10[piercing]]]{1W10 Punkte Stichschaden}.</p>"
     },
     "Talon Stance": {
-      "name": "Talon Stance",
-      "description": "<p><strong>Effect</strong> You sway in a loose stance that lets you sweep in wide arcs with the claws on your feet. The only Strikes you can make are spinning talon unarmed attacks. These deal @Damage[1d8[slashing]] damage, are in the brawling group, and have the finesse, sweep, and unarmed traits. You don't need a free hand to use spinning talon strikes.</p>"
+      "name": "Krallenhaltung",
+      "description": "<p><strong>Effekt</strong> Du nimmst eine lockere Haltung ein, die dir erlaubt, weite Bögen mit deinen Fußklauen zu schlagen. Du kannst keine anderen Angriffe als Wirbelnde Klauenangriffe ausführen; diese Waffenlosen Angriffe verursachen @Damage[1d8[slashing]]{1W8 Punkte Hiebschaden}, gehören zur Raufengruppe und besitzen die Kategorien Durchschlagend, Finesse und Waffenlos. Du benötigst keine freie Hand, um diese Angriffe zu führen.</p>"
     },
     "Tap Ley Line": {
       "name": "Leylinie anzapfen",
@@ -1522,8 +1522,8 @@
       "description": "<p><strong>Voraussetzungen</strong> Du muss über @UUID[Compendium.pf2e.equipment-srd.Item.s1vB3HdXjMigYAnY]{Heilerwerkzeuge} verfügen.</p>\n<p>Du verbringst 10 Minuten mit der Behandlung einer verwundeten lebenden Kreatur (du kannst diese Handlung auch bei dir selbst anwenden). Das Ziel wird daraufhin vorübergehend gegen die Handlung Wunden versorgen für 1 Stunde @UUID[Compendium.pf2e.feat-effects.Item.Lb4q2bBAgxamtix5]{immun} (das Intervall überlappt sich mit der Behandlungszeit, so dass ein Patient jede Stunde behandelt werden kann statt alle 70 Minuten).</p>\n<p>Der SG von Fertigkeitswürfen für Heilkunde zum Wunden versorgen beträgt meistens 15, der SL kann ihn aber an die Umstände anpassen - z.B. wenn du einen Patienten im Freien während eines tobenden Sturmes behandelst oder die Verletzungen magisch verflucht sind. Solltest du den Kompetenzgrad Experte in Heilkunde besitzen, kannst du stattdessen einen Fertigkeitswurf gegen SG 20 ablegen, um beim Patienten zusätzliche 10 Trefferpunkte zu heilen; mit dem Kompetenzgrad Meister kannst du einen Wurf gegen SG 30 ablegen, um beim Patienten zusätzliche 30 Trefferpunkte zu heilen, und mit dem Kompetenzgrad Legende einen Wurf gegen SG 40, um beim Patienten zusätzliche 50 Trefferpunkte zu heilen. Der Schaden, den du dem Patienten im Fall eines Kritischen Fehlschlages zufügst, bleibt derselbe, egal welchen Kompetenzgrad du besitzt. Gelingt dir der Fertigkeitswurf, kannst du das Ziel weiterbehandeln, um ihm zusätzliche Heilung zukommen zu lassen. Dehnst du die Behandlungszeit von den normalen 10 Minuten auf 1 Stunde aus, so verdopple die Anzahl an Trefferpunkten, welche der Patient durch Wunden versorgen zurückerlangt. Das Ergebnis deines Fertigkeitswurfes für Heilkunde bestimmt die Menge an zurückerlangten Trefferpunkten.</p>\n<p><strong>Kritischer Erfolg</strong> Das Ziel erlangt [[/r 4d8[healing]]]{4W8 Trefferpunkte} zurück. Der Zustand @UUID[Compendium.pf2e.conditionitems.Item.Yl48xTdMh3aeQYL2]{Verwundet} wird entfernt.</p>\n<p><strong>Erfolg</strong> Das Ziel erlangt [[/r 4d8[healing]]]{2W8 Trefferpunkte} zurück. Der Zustand Verwundet wird entfernt.</p>\n<p><strong>Kritischer Fehlschlag</strong> Das Ziel erleidet [[/r 1d8[damage]]]{1W8 Schadenspunkte}.</p>\n<p>@UUID[Compendium.pf2e.pf2e-macros.Macro.6duZj0Ygiqv712rq]{Wunden versorgen}</p>"
     },
     "Trench Digging": {
-      "name": "Trench Digging",
-      "description": "<p><strong>Trigger</strong> You're subjected to forced movement</p>\n<hr />\n<p><strong>Effect</strong> You deploy your claw spikes to churn the earth asunder, creating difficult terrain in each square of ground you're moved through.</p>"
+      "name": "Furchen reißen",
+      "description": "<p><strong>Auslöser</strong> Du wirst zu einer Bewegung gezwungen</p>\n<hr />\n<p><strong>Effekt</strong> Du nutzt deine Fußkrallen, um den Boden aufzureißen; dies erzeugt Schwieriges Gelände in jedem Feld mit festem Boden, durch welches du bewegt wirst.</p>"
     },
     "Trip": {
       "name": "Zu-Fall-Bringen",
@@ -1538,8 +1538,8 @@
       "description": "<p>Du nutzt die Handlung Laufen, um dich am Boden um bis zu deine Bewegungsrate fortzubewegen. Während dieser Bewegung kannst du versuchen, dich durch die Angriffsfläche eines Gegners zu bewegen. Lege hierzu einen Fertigkeitswurf für <span data-pf2-action=\"tumbleThrough\" data-pf2-glyph=\"A\">Akrobatik</span> gegen den Reflex-SG des Gegners ab, sobald du seine Angriffsfläche zu betreten versuchst. Du kannst Hindurchturnen statt im Rahmen einer Bewegung am Boden auch mit Fliegen, Klettern, Schwimmen oder einer anderen zur Umgebung passenden Aktion nutzen.</p>\n<p><strong>Erfolg</strong> Du bewegst dich durch die Angriffsfläche des Gegners, wobei du diese Felder als Schwieriges Gelände behandelst (jedes 5 Fuß/1,50 m-Feld kostet dich 10 Fuß/3 m an Bewegungsrate). Sollte deine Bewegungsrate nicht ausreichen, um dich durch die ganze Angriffsfläche des Gegners zu bewegen, scheitert die Handlung (siehe Fehlschlag).</p>\n<p><strong>Fehlschlag</strong> Deine Bewegung endet und du löst Reaktionen aus, als wenn du dich aus dem Feld hinaus bewegt hättest, auf dem du begonnen hast.</p>"
     },
     "Turn Aside Ambient Magic": {
-      "name": "Turn Aside Ambient Magic",
-      "description": "<p>Your ostilli glows a faint yellow as it establishes a barrier. Choose acid, cold, electricity, fire, or sonic damage. Until the beginning of your next turn, you gain resistance against the chosen damage type equal to half your level.</p>"
+      "name": "Umgebungsmagie ablenken",
+      "description": "<p>Dein Ostilli leuchtet in einem schwachen Gelb, während er eine Barriere aufbaut. Wähle Elektrizitäts-, Feuer-, Kälte-, Säure- oder Schallschaden. Bis zum Beginn deines nächsten Zuges erlangst du Resistenz gegen die gewählte Schadensart in Höhe deiner halben Stufe.</p>"
     },
     "Unleash Psyche": {
       "name": "Psyche entfesseln",
