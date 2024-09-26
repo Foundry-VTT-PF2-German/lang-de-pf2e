@@ -134,317 +134,317 @@
       }
     },
     "Entrapping Chair": {
-      "name": "Entrapping Chair",
-      "description": "<p>A chair on concealed tracks surges forward, knocking a creature into the chair's seat and trapping them in place with clamping armrests.</p>",
-      "disable": "<p>@Check[thievery|dc:23|name:Disrupt the Tracks|traits:action:disable-a-device] (expert) to disrupt the tracks</p>",
-      "reset": "<p>The trap resets automatically over 2 rounds if the chair is unoccupied.</p>",
-      "stealth": "<p>(0 to notice the chair)</p>",
+      "name": "Zupackender Stuhl",
+      "description": "<p>Auf verborgenen Schienen schießt ein Stuhl heran, holt eine Kreatur so von den Beinen, dass sie auf dem Stuhl zum Sitzen kommt, und hält sie dann mit zuschnappenden Armlehnen fest.</p>",
+      "disable": "<p>@Check[thievery|dc:23]{Diebeskunst} (Experte), um die Laufschienen zu blockieren</p>",
+      "reset": "<p>Wenn der Stuhl frei ist, setzt sich die Falle setzt sich über 2 Runden hinweg selbst zurück.</p>",
+      "stealth": "<p>(0 zum Bemerken des Stuhls)</p>",
       "items": {
         "action->Take a Seat!": {
-          "name": "Take a Seat!",
-          "description": "<p><strong>Trigger</strong> A creature steps on the track</p>\n<hr />\n<p><strong>Effect</strong> The chair rockets forward along the track and slams into the triggering creature, dealing @Damage[(3d8 + 15)[bludgeoning]] damage. A creature who succeeds at a @Check[reflex|dc:22|traits:damaging-effect] save takes no damage and moves out of the chair's path into a random adjacent square not containing the track. A creature who fails this saving throw is knocked into the chair's seat and immediately captured by the armrests, becoming @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} (@UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} on a critical failure; Escape DC 26).</p>"
+          "name": "Setzen!",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur tritt auf die Schienen</p>\n<hr />\n<p><strong>Effekt</strong> Der Stuhl schießt auf den Schienen vorwärts und rast in die auslösende Kreatur; dies fügt der Kreatur @Damage[(3d8 + 15)[bludgeoning]]{3W8+15 Punkte Wuchtschaden} zu. Gelingt der Kreatur ein @Check[reflex|dc:22|traits:damaging-effect]{Reflexwurf}, erleidet sie keinen Schaden und kann auf ein zufälliges angrenzendes Feld und dabei dem Stuhl aus dem Weg springen, wenn die Schienen nicht auch durch dieses Feld verlaufen. Misslingt der Kreatur dieser Reflexwurf, landet sie auf dem Stuhl, dessen Armschienen sofort zuklappen und die Kreatur festhalten; diese erleidet den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} (bzw. @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Gebunden} im Fall eines Kritischen Fehlschlages; @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Entkommen}-SG 26).</p>"
         }
       }
     },
     "Exhaling Portal": {
-      "name": "Exhaling Portal",
-      "description": "<p>Magic runes carved into a doorframe connect a door to the Plane of Air when opened, blowing creatures down the connecting hall.</p>",
-      "disable": "<p>@Check[thievery|dc:30|name:Scratch Out Runes|traits:action:disable-a-device] (expert) twice to scratch out the runes, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (5th level; counteract DC 30) to counteract the planar runes; @Check[athletics|dc:32|name:Shut the Door] to shut the door if it's open (using Athletics only stops the trap, it doesn't fully disable it)</p>",
-      "reset": "<p>Automatic after the door is shut</p>",
-      "routine": "<p>(1 action) The trap uses 1 action to blow powerful winds down the hall. Each creature in the hall must attempt a @Check[fortitude|dc:32] save with the same results as Gust. If this forced movement would cause a creature to collide with a solid object or fall downstairs or out a window, that creature takes an additional @Damage[(2d10 + 11)[bludgeoning]] damage (or @Damage[20[bludgeoning]] damage due to a fall).</p>",
+      "name": "Ausatmendes Portal",
+      "description": "<p>Magische, in einen Türrahmen oder dergleichen geritzte Runen verbinden eine Tür mit der Ebene der Luft, wenn sie geöffnet wird, so dass Kreaturen den verbundenen Gang hinuntergeblasen werden.</p>",
+      "disable": "<p>@Check[thievery|dc:30|traits:action:disable-a-device]{Diebeskunst} (Experte), zweimal zum Auskratzen der Runen, oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (5. Grad; @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.mmfWcV3Iyql5nzTo]{Entgegenwirken}-SG 30), um den planaren Runen entgegenzuwirken; @Check[athletics|dc:32]{Athletik}, um die geöffnete Tür zu schließen (dies schaltet die Falle nicht aus, sondern beendet nur ihre Wirkung)</p>",
+      "reset": "<p>Automatisch nach Schließen der Tür.</p>",
+      "routine": "<p>(1 Aktion) Die Falle nutzt 1 Aktion, um heftige Winde den Gang hinunterwehen zu lassen. Jede Kreatur im Gang muss einen @Check[fortitude|dc:32]{Zähigkeitswurf} ablegen, die Ergebnisse entsprechen denen unter Windstoß. Sollte diese erzwungene Bewegung die Kreatur gegen einen festen Gegenstand schleudern, aus einem Fenster oder eine Treppe hinabwerfen, so erleidet die Kreatur zusätzlich @Damage[(2d10 + 11)[bludgeoning]]{2W10+11 Punkte Wuchtschaden} (oder @Damage[20[bludgeoning]]{20 Punkte Schaden} durch einen Sturz).</p>",
       "items": {
         "action->Gust": {
-          "name": "Gust",
-          "description": "<p><strong>Trigger</strong> A creature opens the door</p>\n<hr />\n<p><strong>Effect</strong> The hall is buffeted by powerful winds for as long as the door remains open. A creature must succeed at a @Check[athletics|dc:32] check to move toward the door. A creature who fails at this check is pushed back 5 feet and falls @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>\n<p>Additionally, the triggering creature is blasted by a powerful gust of wind and must attempt a @Check[fortitude|dc:32] save. The trap then rolls initiative.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is pushed back 5 feet.</p>\n<p><strong>Failure</strong> The creature is pushed back 10 feet.</p>\n<p><strong>Critical Failure</strong> The creature is pushed back 10 feet and knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>"
+          "name": "Windstoß",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur öffnet die Tür</p>\n<hr />\n<p><strong>Effekt</strong> Machtvolle Winde wehen den Gang hinab, solange die Tür geöffnet ist. Eine Kreatur muss einen Fertigkeitswurf für @Check[athletics|dc:32]{Athletik} ablegen, um sich in Richtung der Tür zu bewegen; misslingt ihr dieser Wurf, wird sie 5 Fuß/1,50 m weit zurückgeweht und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}. Die auslösende Kreatur wird zudem von einem heftigen Windstoß getroffen und muss einen @Check[fortitude|dc:32]{Zähigkeitswurf} ablegen. Die Falle würfelt dann ihre Initiative.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur wird um 5 Fuß/1,50 m zurückgestoßen.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur wird um 10 Fuß/3 m zurückgestoßen.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur wird um 10 Fuß/3 m zurückgestoßen und erhält den Zustand Liegend.</p>"
         }
       }
     },
     "False Floor": {
-      "name": "False Floor",
-      "description": "<p>The floor in this chamber is an illusion, which conceals a 40-foot drop to the true floor below. Additionally, the area beneath the floor is magically silenced-no sound is audible within nor does sound leave this space.</p>",
-      "disable": "<p>Succeeding on a Perception check against the Stealth DC of 21 (including the check to find the trap) disbelieves the illusory floor, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (2nd level; counteract DC 18) to dispel the illusory floor; <em>dispel magic</em> (2nd level; counteract DC 20) to dispel the magical silence</p>",
-      "reset": "<p>Automatic</p>",
-      "stealth": "<p>(trained; or 0 if the illusory floor is dispelled)</p>",
+      "name": "Falscher Boden",
+      "description": "<p>Der Boden dieser Kammer ist eine Illusion – der wahre Boden liegt 40 Fuß/12 m tiefer. Zudem liegt der Bereich unter dem falschen Boden unter magischer Stille, so dass man nichts aus diesem Bereich hören kann und darin auch nichts zu hören ist (z.B. Schreie durch den Illusionsboden stürzender Personen oder Aufschlaggeräusche).</p>",
+      "disable": "<p>Mit einem Wahrnehmungswurf gegen den Heimlichkeits-SG von 21 (dies umfasst auch den Wurf zum Finden der Falle) zweifelt man den illusionären Boden an; oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (2. Grad, @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.mmfWcV3Iyql5nzTo]{Entgegenwirken}-SG 18) zum Bannen des illusionären Bodens; <em>Magie bannen</em> (2. Grad; Entgegenwirken-SG 20) zum Bannen der magischen Stille</p>",
+      "reset": "<p>Automatisch</p>",
+      "stealth": "<p>(Geübt; oder 0, sollte der illusionäre Boden gebannt werden)</p>",
       "items": {
         "action->Drop": {
-          "name": "Drop",
-          "description": "<p><strong>Trigger</strong> A creature walks onto the illusory floor</p>\n<hr />\n<p><strong>Effect</strong> The triggering creature falls through the illusory floor and takes falling damage (typically @Damage[20[bludgeoning]] damage). That creature can use the @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge} reaction to avoid falling. The DC to @UUID[Compendium.pf2e.actionspf2e.Item.pprgrYQ1QnIDGZiy]{Climb} the walls (@Check[athletics|dc:20|traits:action:climb]) or Grab an Edge is @Check[reflex|dc:20|traits:action:grab-an-edge].</p>"
+          "name": "Sturz",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur tritt auf den illusionären Boden</p>\n<hr />\n<p><strong>Effekt</strong> Die auslösende Kreatur fällt durch den falschen Boden und erleidet Sturzschaden (meistens @Damage[20[bludgeoning]]{20 Punkte Wuchtschaden}). Diese Kreatur kann die Reaktion @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Halt ergreifen} nutzen, um den Sturz zu vermeiden (@Check[reflex|dc:20|traits:action:grab-an-edge]{Reflexwurf}). Der SG für Würfe zum @UUID[Compendium.pf2e.actionspf2e.Item.pprgrYQ1QnIDGZiy]{Erklettern} der Wände oder zum Halt ergreifen ist @Check[athletics|dc:20|traits:action:climb]{Athletik}.</p>"
         }
       }
     },
     "False Step Floor": {
-      "name": "False Step Floor",
-      "description": "<p>Each time a creature enters the room, it slips through the floor, tumbles through an interdimensional void, and falls back into the room through the ceiling, landing on the floor.</p>",
-      "disable": "<p>@Check[thievery|dc:28|name:Disrupt the Magical Energy|traits:action:disable-a-device] (trained) to disrupt the magical energy, or @Check[arcana|dc:27|name:Realign the Magic] or @Check[occultism|dc:27|name:Realign the Magic] (trained) to realign the magical energy</p>",
+      "name": "Falsche Schwelle",
+      "description": "<p>Wenn eine Kreatur den Raum betritt, fällt sie durch den Boden, stürzt durch eine interdimensionale Leere und dann durch die Decke des Raumes, so dass sie auf den Boden aufschlägt.</p>",
+      "disable": "<p>@Check[thievery|dc:28]{Diebeskunst} (Geübt), zum Unterbrechen der magischen Energieflüsse, oder @Check[arcana|dc:27]{Arkane Künste} oder @Check[occultism|dc:27]{Okkultismus} (Geübt), um die magische Energie neu auszurichten</p>",
       "items": {
         "action->False Step": {
-          "name": "False Step",
-          "description": "<p><strong>Trigger</strong> A creature enters the room and steps onto the floor</p>\n<p><strong>Effect</strong> The creature slips through the floor; it tumbles through an interdimensional void before falling back into the room through the ceiling and landing on the floor. The triggering creature takes @Damage[40[bludgeoning]] damage from the fall. That creature can try to @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge} (DC 24) to avoid falling.</p>"
+          "name": "Falsche Schwelle",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur betritt den Raum und tritt auf den Boden</p>\n<hr />\n<p><strong>Effekt</strong> Die Kreatur rutscht durch den Boden, taumelt durch eine interdimensionale Leere, stürzt durch die Decke zurück in den Raum und landet auf dem Boden. Die auslösende Kreatur erleidet @Damage[40[bludgeoning]]{40 Punkte Wuchtschaden} durch den Sturz. Die Kreatur kann die Reaktion @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Halt ergreifen} (SG 24) nutzen, um nicht durch den Boden zu stürzen.</p>"
         }
       }
     },
     "K. H. W.'s Echo": {
-      "name": "K. H. W.'s Echo",
-      "hpDetails": "destabilized form",
+      "name": "K. H. W.s Echo",
+      "hpDetails": "Destabilisierte Gestalt",
       "items": {
         "strike-melee->Rope Dart": {
-          "name": "Rope Dart"
+          "name": "Seilpfeil"
         },
         "strike-ranged->Rope Dart": {
-          "name": "Rope Dart"
+          "name": "Seilpfeil"
         },
         "action->Attack of Opportunity (Special)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.hFtNbo1LKYCoDy2O]\nAttack of Opportunity (Special)",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.hFtNbo1LKYCoDy2O]\n<p>The Echo has reach 15 for the purpose of determining when Attack of Opportunity triggers and when making Attacks of Opportunity.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.AttackOfOpportunity]</p>"
+          "name": "<Compendium> (Speziell)",
+          "description": "<p>Das Echo verfügt über Angriffsradius 15 Fuß/4,50 m hinsichtlich der Frage, wann ein Reaktionsangriff ausgelöst wird und wenn es treffen kann.</p>\n<hr />\n<Compendium>"
         },
         "action->Destabilized Form": {
-          "name": "Destabilized Form",
-          "description": "<p>When the Echo has fewer than 140 Hit Points, his form destabilizes, large chunks disintegrating from his face, limbs, and torso. White moths constantly stream from the missing spaces, creating a @Template[emanation|distance:10] that deals @Damage[6d6[mental]] damage with a @Check[will|dc:34|basic].</p>\n<p>As long as the aura persists, he can dissolve into moths and re-form at another location within 15 feet as a free action at the beginning of each of his turns; this has the occult, conjuration, and teleportation traits.</p>"
+          "name": "Destabilisierte Gestalt",
+          "description": "<p>Ist das Echo unter 140 TP reduziert, destabilisiert sich seine Gestalt und lösen sich große Brocken von Gesicht, Gliedmaßen und Torso auf. Aus den Löchern strömen ohne Unterlass weiße Motten, die eine @Template[emanation|distance:10]{10 Fuß/3 m-Ausstrahlung} erschaffen, welche @Damage[6d6[mental]]{6W6 Punkte Mentalen Schaden} (@Check[will|dc:34|basic]{einfacher Willenswurf}) verursachen. Solange die Aura besteht, kann das Echo sich als Freie Aktion zu Beginn seines Zuges jeweils in Motten auflösen und an einem maximal 15 Fuß/4,50 m entfernten Ort neu bilden; diese Aktion besitzt die Kategorien Beschwörung, Okkult und Teleportation.</p>"
         },
         "action->Astral Spindel Implement": {
-          "name": "Astral Spindel Implement",
-          "description": "<p>The Echo carries a drop spindle that constantly spins red astral thread, which is both his thaumaturgic implement and weapon. If his <em>rope dart</em> is lost or broken, he can re-form it with an Interact action. If he critically succeeds at a <em>rope dart</em> Strike, overwhelming thoughts and figments flow down the thread into the target's mind. The target becomes @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} for 1 round.</p>",
+          "name": "Astralspindelparaphernum",
+          "description": "<p>Das Echo hält eine Spindel, die beständig einen roten Astralfaden spinnt. Sie ist zugleich Paraphernum und Waffe. Sollte sein <em>Seilpfeil</em> verlorengehen oder beschädigt werden, kann es ihn mit einer Interagieren-Aktion neu bilden. Gelingt ihm mit dem <em>Seilpfeil</em> ein Kritischer Treffer, fließen überwältigende Gedanken und Trugbilder den Faden entlang in den Verstand des Ziels Das Ziel erhält für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Verwirrt}.</p>",
           "rules": {
             "0": {
-              "text": "If he critically succeeds at a rope dart Strike, overwhelming thoughts and figments flow down the thread into the target's mind. The target becomes @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} for 1 round."
+              "text": "Gelingt ihm mit dem Seilpfeil ein Kritischer Treffer, fließen überwältigende Gedanken und Trugbilder den Faden entlang in den Verstand des Ziels Das Ziel erhält für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Verwirrt}."
             }
           }
         },
         "action->Astral Thread Control": {
-          "name": "Astral Thread Control",
-          "description": "<p><strong>Frequency</strong> once per round</p>\n<p><strong>Requirements</strong> The Echo's previous action was a successful thrown rope dart Strike</p>\n<hr />\n<p><strong>Effect</strong> The Echo flicks his wrist and makes a follow-up thrown rope dart Strike at a different target within 30 feet of the first target, using the same multiple attack penalty as his previous Strike. Regardless of whether his attack hits, he then retrieves the weapon.</p>"
+          "name": "Astralfadenherrschaft",
+          "description": "<p><strong>Häufigkeit</strong> Einmal pro Runde</p>\n<p><strong>Anforderungen</strong> Die letzte Aktion des Echos war ein erfolgreicher Fernkampfangriff mit dem Seilpfeil</p>\n<hr />\n<p><strong>Effekt</strong> Das Echo zuckt mit dem Handgelenk und führt einen weiteren Seilpfeil-Angriff gegen ein anderes Ziel innerhalb von 9 m zum ersten Ziel mit demselben Malus für Mehrfachangriffe durch. Unabhängig vom Erfolg holt es dann die Waffe ein.</p>"
         },
         "action->Contingency Oathday-Nine-Rova": {
-          "name": "Contingency Oathday-Nine-Rova",
-          "description": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> The Echo's turn begins and he's stunned, slowed, @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused}, @UUID[Compendium.pf2e.conditionitems.Item.9qGBRpbX9NEwtAAr]{Controlled}, @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}, @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}, @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}, @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}, or otherwise can't act</p>\n<hr />\n<p><strong>Effect</strong> The Echo has set up numerous contingencies in the event he's compromised. Talismans on his body shatter, counteracting the triggering effect. The Echo can use this free action even if he can't act.</p>"
+          "name": "Notfall Schwurtag-Neun-Rova",
+          "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<p><strong>Auslöser</strong> Der Zug des Echos beginnt und es hat den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt}, @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Bewegungsunfähig}, @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Gebunden}, @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen}, @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt}, @UUID[Compendium.pf2e.conditionitems.Item.9qGBRpbX9NEwtAAr]{Gesteuert}, @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt}, @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Verwirrt} oder kann anderweitig nicht handeln</p>\n<hr />\n<p><strong>Effekt</strong> Das Echo hat mehrere Notfallzauber für den Fall angelegt, dass es kompromittiert wird. Talismane an seinem Leib zerbersten und wirken dem auslösenden Effekt @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.mmfWcV3Iyql5nzTo]{Entgegen}. Das Echo kann diese Freie Aktion auch dann nutzen, wenn es ansonsten nicht handeln kann.</p>"
         },
         "action->Reconstitute from Thought": {
-          "name": "Reconstitute from Thought",
-          "description": "<p><strong>Requirements</strong> The Echo is standing on one of the eight large islands of the map, and the island hasn't darkened</p>\n<hr />\n<p><strong>Effect</strong> The Echo throws his rope dart into the island and uses it to absorb mental essence from the mindscape, repairing himself. He regains @Damage[45[healing]] Hit Points and the island turns a desaturated gray for 1 day, preventing future absorption and disabling the @UUID[Compendium.pf2e.pathfinder-dark-archive.Actor.0AdtolhMWrPlzVZY]{Call of the Void} hazard on that island.</p>"
+          "name": "Aus Gedanken wiedererstehen",
+          "description": "<p><strong>Anforderungen</strong> Das Echo steht auf einer der acht großen Inseln auf der Karte und die Insel ist nicht verdunkelt</p>\n<hr />\n<p><strong>Effekt</strong> Das Echo wirft seinen Seilpfeil in die Insel und saugt mentale Essenz aus der Geistebene ab, um sich zu reparieren. Es erlangt @Damage[45[healing]]{45 TP} zurück, während die Insel für 1 Tag farblos grau wird; für diese Zeit kann das Echo hier diese Fähigkeit nicht erneut nutzen. Ferner funktioniert hier dann die Gefahr @UUID[Compendium.pf2e.pathfinder-dark-archive.Actor.0AdtolhMWrPlzVZY]{Ruf der Leere} nicht.</p>"
         },
         "action->Spindle's Web": {
-          "name": "Spindle's Web",
-          "description": "<p>The Echo's spindle revolves faster and faster until it's a blur, lashing red threads in every direction. The threads deal @Damage[7d6[slashing],7d6[mental]]{7d6 slashing damage and 7d6 mental damage} to all creatures in a @Template[emanation|distance:30], with a @Check[reflex|dc:34|basic]. If a creature fails its save, the threads awaken the mindscape an</p>\n<p>chor within it, affecting it differently based on which anchor that creature used to gain access to the center of the mindscape. (If there is a PC who didn't absorb a mindscape anchor, for instance because there are more than four PCs in the party, then use the anchor of the PC closest to them.)</p>\n<p>The Echo then can't use Spindle's Web for [[/br 1d4 #rounds]]{1d4 rounds}.</p>\n<ul>\n<li><strong>Lantern</strong> The lantern outlines the creature with searing @UUID[Compendium.pf2e.spells-srd.Item.HRb2doyaLtaoCfi3]{Faerie Fire} that deals @Damage[2d6[persistent,fire]] damage.</li>\n<li><strong>Mirror</strong> The mirror reflects the creature to another location, teleporting them to a clear space within 25 feet of their current location.</li>\n<li><strong>Chalice</strong> The chalice drains life force, granting the Echo temporary HP equal to half the damage dealt.</li>\n<li><strong>Tome</strong> The tome floods the creature's mind with information; the target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 round.</li>\n</ul>"
+          "name": "Spindelnetz",
+          "description": "<p>Die Spindel des Echos dreht sich schneller und schneller, bis sie gänzlich verschwimmt und rote Fäden in jede Richtung peitscht. Die Fäden verursachen @Damage[7d6[slashing],7d6[mental]]{7W6 Punkte Hiebschaden und 7W6 Punkte Mentalen Schaden} bei allen Kreaturen in einer @Template[emanation|distance:30]{30 Fuß/9 m-Ausstrahlung} (@Check[reflex|dc:34|basic]{einfacher Reflexwurf}). Misslingt einer Kreatur der Rettungswurf, erwecken die Fäden die in ihr verankerte Geistebene, wirken aber unterschiedlich in Abhängigkeit von dem Anker, mit dem diese Kreatur Zugang zum Herzen der Geistebene erlangt hat. (Sollte einer der SC keinen Anker absorbiert haben, weil die Gruppe aus mehr als vier Spielern besteht, so nutze den Anker des ihm am nächsten SC.) Das Echo kann diese Fertigkeit [[/br 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.</p>\n<ul>\n<li><strong>Buch</strong> Das Buch überflutet den Verstand der Kreatur mit Informationen; das Ziel erhält für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}.</li>\n<li><strong>Kelch</strong> Der Kelch entzieht Lebenskraft; das Echo erhält Temporäre TP in Höhe der Hälfte des zugefügten Schadens.</li>\n<li><strong>Laterne</strong> Die Laterne umgibt die Kreatur mit brennendem Feenfeuer, das @Damage[2d6[persistent,fire]]{2W6 Punkte Anhaltenden Feuerschaden} verursacht.</li>\n<li><strong>Spiegel</strong> Der Spiegel reflektiert die Kreatur an eine andere Position und teleportiert sie auf ein freies Feld innerhalb von 25 Fuß/7,50 m.</li>\n</ul>"
         },
         "lore->Esoteric Lore": {
-          "name": "Esoteric Lore"
+          "name": "Kenntnis (Esoterik)"
         }
       }
     },
     "Mirror Door": {
-      "name": "Mirror Door",
-      "description": "<p>The reflection of a wall shows a phantom door where none exists. This door can only be manipulated while viewed through the mirror's reflection.</p>",
-      "disable": "<p>@Check[thievery|dc:18|name:Open the Door|traits:action:disable-a-device] to open the door while viewing the reflection</p>",
-      "reset": "<p>Automatic</p>",
+      "name": "Spiegeltür",
+      "description": "<p>Die Reflektion einer Wand zeigt eine Tür, wo es keine gibt. Diese Tür kann nur geöffnet werden, während man sie im Spiegel betrachtet.</p>",
+      "disable": "<p>@Check[thievery|dc:18|traits:action:disable-a-device]{Diebeskuns}, zum Öffnen der Tür, während man die Reflektion betrachtet.</p>",
+      "reset": "<p>Automatisch</p>",
       "items": {
         "action->Appear": {
-          "name": "Appear",
-          "description": "<p><strong>Trigger</strong> A creature views the wall through a mirror's reflection</p>\n<hr />\n<p><strong>Effect</strong> A door appears in the mirror's reflection of the wall. The triggering creature can open and manipulate this door only as long as they view it through the mirror and only by succeeding at a @Check[thievery|dc:18|name:Disable the Trap|traits:action:disable-a-device] check to disable the trap.</p>"
+          "name": "Erscheinen",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur betrachtet die Wand in einer Spiegelung</p>\n<hr />\n<p><strong>Effekt</strong> Im Spiegelbild der Wand erscheint eine Tür. Die auslösende Kreatur kann diese nur öffnen und bewegen, solange diese sie im Spiegel betrachtet und ihr ein Fertigkeitswurf für @Check[thievery|dc:18|traits:action:disable-a-device]{Diebeskunst} zum Entschärfen der Falle gelingt.</p>"
         }
       }
     },
     "Mother Mitera": {
-      "name": "Mother Mitera",
-      "hpDetails": "crystal vitality link",
+      "name": "Mutter Mitera",
+      "hpDetails": "Kristalllebensband",
       "items": {
         "spellcastingEntry->Primal Prepared Spells": {
-          "name": "Primal Prepared Spells"
+          "name": "Vorbereitete Naturzauber"
         },
         "spell->Freedom of Movement": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.aqRYNoSvxsVfqglH]\nFreedom of Movement"
+          "name": "<Compendium>"
         },
         "spell->Entangle": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.J6vNvrUT3b1hx2iA]\nEntangle"
+          "name": "<Compendium>"
         },
         "spell->Glitterdust": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.0qaqksrGGDj74HXE]\nGlitterdust"
+          "name": "<Compendium>"
         },
         "spell->Tree Shape": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.dileJ0Yxqg76LMvu]\nTree Shape"
+          "name": "<Compendium>"
         },
         "spell->Dancing Lights": {
-          "name": "Dancing Lights",
-          "description": "<p>You create up to four floating lights, no two of which are more than 10 feet apart. Each sheds light like a torch. When you Sustain the Spell, you can move any number of lights up to 60 feet. Each light must remain within 120 feet of you and within 10 feet of all others, or it winks out.</p>"
+          "name": "Tanzende Lichter",
+          "description": "<p>Du erschaffst bis zu vier schwebende Lichter in einem Abstand von nicht mehr als 10 Fuß/3 Meter voneinander. Jedes erhellt seine Umgebung wie eine @UUID[Compendium.pf2e.equipment-srd.Item.8Jdw4yAzWYylGePS]{Fackel}. Erhältst du den Zauber aufrecht, darfst du eine beliebige Anzahl der Lichter bis zu 60 Fuß/18 Meter weit bewegen. Dabei muss jedes Licht innerhalb von 120 Fuß/36 Metern Reichweite von dir und innerhalb von 10 Fuß/3 Metern von den anderen Lichtern bleiben. Ansonsten erlischt es.</p>"
         },
         "spell->Tanglefoot": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.uZK2BYzPnxUBnDjr]\nTanglefoot"
+          "name": "<Compendium>"
         },
         "equipment->Ceremonial Robes": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.jJZbdMHMdh8UL2j8]\nCeremonial Robes"
+          "name": "Zeremonielle Robe"
         },
         "treasure->Crystal Flower Crown": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.BlqDXtRZcevCYRNz]\nCrystal Flower Crown"
+          "name": "Kristallblumenkrone"
         },
         "strike-melee->Dagger": {
-          "name": "Dagger"
+          "name": "Dolch"
         },
         "strike-ranged->Dagger": {
-          "name": "Dagger"
+          "name": "Dolch"
         },
         "action->Crystal Vitality Link": {
-          "name": "Crystal Vitality Link",
-          "description": "<p>The power of the island links Mitera's vitality to her followers. As long as any of the three quartz formations are intact, whenever Mitera takes damage, any of her followers within 10 miles lose the same amount of Hit Points.</p>"
+          "name": "Kristalllebensband",
+          "description": "<p>Die Macht der Insel verbindet Miteras Lebenskraft mit der ihrer Anhänger. Solange auch nur eine der drei Quarzformationen intakt ist und Mitera Schaden erleidet, verliert jeder ihrer Anhänger innerhalb von 10 Meilen/15 km Entfernung denselben Betrag an Trefferpunkten.</p>"
         },
         "action->Ascension is Near": {
-          "name": "Ascension is Near",
-          "description": "<p><strong>Frequency</strong> once per ascension ritual</p>\n<hr />\n<p><strong>Effect</strong> Mitera activates the moonflower link with her followers. Any followers within @Template[emanation|distance:30]{30 feet} who failed their saving throw against the moonflower tea become @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}. Anyone who critically failed and did not receive an antidote explodes (this is about half of Mitera's congregation if the PCs didn't successfully administer the antidote). If anyone's body explodes, Mitera gains 30 temporary Hit Points and is @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened} for 3 rounds; she can use this additional action each round only for Strike and Stride actions.</p>"
+          "name": "Der Aufstieg ist nah",
+          "description": "<p><strong>Häufigkeit</strong> Einmal pro Aufstiegsritual</p>\n<hr />\n<p><strong>Effekt</strong> Mitera aktiviert die Mondblumenverbindung zu ihren Anhängern. Jeder Anhänger innerhalb von @Template[emanation|distance:30]{30 Fuß/9 m}, dessen Rettungswurf gegen den Mondblumentee misslungen ist, erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1}. Wer einen Kritischen Fehlschlag hatte und kein Gegenmittel erhalten hat, explodiert (dies betrifft etwa jeden zweiten Anhänger, sollten die SC kein Gegenmittel verabreicht haben). Explodiert jemand, so erhält Mitera 30 Temporäre TP und für 3 Runden den Zustand @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Beschleunigt}; sie kann diese zusätzliche Aktion jede Runde nur zum Angreifen oder Laufen nutzen.</p>"
         },
         "lore->Ludovica Lore": {
-          "name": "Ludovica Lore"
+          "name": "Kenntnis (Ludovica)"
         }
       }
     },
     "Quartz-Spawned Shadow": {
-      "name": "Quartz-Spawned Shadow",
-      "publicNotes": "<p>The mysterious undead known as shadows lurk in dark places and feed on those who stray too far from the light. Those who parley with shadows, typically by keeping them at bay with a glowing weapon, may learn great secrets, for they are ideal spies.</p>",
+      "name": "Quarzbrutschatten",
+      "publicNotes": "<p>Die mysteriösen, als Schatten bekannten Untoten lauern an dunklen Orten und nähren sich von jenen, die sich zu weit vom Licht entfernen. Wer mit Schatten verhandelt - meistens indem er sie mit einer leuchtenden Waffe auf Abstand hält -, könnte große Geheimnisse erfahren, sind sie doch ideale Spione.</p>",
       "items": {
         "strike-melee->Shadow Hand": {
-          "name": "Shadow Hand"
+          "name": "Schattenhand"
         },
         "action->Light Vulnerability": {
-          "name": "Light Vulnerability",
-          "description": "<p>An object shedding magical light (such as from the @UUID[Compendium.pf2e.spells-srd.Item.WBmvzNDfpwka3qT4]{Light} spell) is treated as magical when used to attack the shadow.</p>"
+          "name": "Empfindlichkeit gegen Licht",
+          "description": "<p>Ein Gegenstand, welcher magisches Licht abgibt (z.B. durch den Zauber @UUID[Compendium.pf2e.spells-srd.Item.WBmvzNDfpwka3qT4]{Licht}), wird als magisch behandelt, wenn er dazu benutzt wird, um den Schattenhegemon anzugreifen.</p>"
         },
         "action->Crystal Siphon": {
-          "name": "Crystal Siphon",
-          "description": "<p><strong>Requirements</strong> The shadow and the target are both within 40 feet of the crystal that spawned the shadow, and the crystal isn't covered or obstructed</p>\n<hr />\n<p><strong>Effect</strong> Shadows in the shape of tendrils curl around the target, drawing out a portion of the target's vitality and siphoning it into the crystal. The target takes @Damage[4d6[void]] damage (@Check[fortitude|dc:21|basic]). On a failure, they are also @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}. This enfeebled condition is cumulative with other enfeebled conditions from quartz-spawned shadows, to a maximum of enfeebled 4. If Crystal Siphon increases the creature's enfeebled value to 3 or more, the target's shadow is pulled entirely into the shadow's crystal.</p>\n<p>While the target's shadow is trapped, they feel an @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Invisible} tether linking them to the crystal, and they become @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} whenever they are more than 40 feet away from it. The enfeebled condition from Crystal Siphon can't be reduced until the crystal is broken; if the crystal is broken, the effect immediately ends.</p>"
+          "name": "Lebenskraft absaugen",
+          "description": "<p><strong>Anforderungen</strong> Der Schatten und das Ziel sind beide nicht mehr als 40 Fuß/12 m von dem Kristall entfernt, der den Schatten hervorgebracht hat, und der Kristall ist weder bedeckt noch anderweitig umhüllt</p>\n<hr />\n<p><strong>Effekt</strong> Schattenhafte Tentakel winden sich um das Ziel und entziehen ihm einen Teil seiner Lebenskraft, die in den Kristall fließt. Das Ziel erleidet @Damage[4d6[void]]{4W6 Punkte Leerenschaden} (@Check[fortitude|dc:21|basic]{einfacher Zähigkeitswurf}); bei misslungenem Rettungswurf erhält es ferner den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 1}. Der Zustand Kraftlos ist kumulativ, wenn er von mehreren Quarzbrutschatten erzeugt wird. Ab einem Zustandswert von 3 oder mehr wird der Schatten des Zieles in den Kristall des Brutschattens gezogen, das Ziel fühlt sich dann an den Kristall gekettet und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}, sollte es sich weiter als 40 Fuß/12 m vom fraglichen Kristall entfernen. Der Zustand Kraftlos kann nicht reduziert werden, solange der Kristall besteht; wird der Kristall zerstört, endet der Effekt augenblicklich.</p>"
         },
         "action->Slink in Shadows": {
-          "name": "Slink in Shadows",
-          "description": "<p>The shadow can @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa]{Hide} or end its @UUID[Compendium.pf2e.actionspf2e.Item.VMozDqMMuK5kpoX4]{Sneak} in a creature's or object's shadow.</p>"
+          "name": "In Schatten eintauchen",
+          "description": "<p>Der Schatten kann sich im Schatten einer Kreatur oder Gegenstandes @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa]{Verstecken} oder dort sein @UUID[Compendium.pf2e.actionspf2e.Item.VMozDqMMuK5kpoX4]{Schleichen} beenden.</p>"
         }
       }
     },
     "Reflected Desires": {
-      "name": "Reflected Desires",
-      "description": "<p>This mirror reflects the viewer's deepest desires.</p>",
-      "disable": "<p>@Check[thievery|dc:18|name:Shroud the Mirror|traits:action:disable-a-device] (trained) to shroud the mirror without looking at it, or @Check[occultism|dc:17|name:Erect Mental Barriers] (trained) to erect mental barriers</p>",
-      "reset": "<p>Automatic</p>",
-      "stealth": "<p>(0 to notice the mirror)</p>",
+      "name": "Spiegel der Tiefsten Wünsche",
+      "description": "<p>Dieser Spiegel zeigt die tiefsten Wünsche des Betrachters.</p>",
+      "disable": "<p>@Check[thievery|dc:18|traits:action:disable-a-device]{Diebeskunst} (Geübt), um den Spiegel ohne Hineinzusehen zu verhängen, oder @Check[occultism|dc:17]{Okkultismus} (Geübt), um mentale Barrieren zu errichten</p>",
+      "reset": "<p>Automatisch</p>",
+      "stealth": "<p>(0, um den Spiegel zu bemerken)</p>",
       "items": {
         "action->Tempt": {
-          "name": "Tempt",
-          "description": "<p><strong>Trigger</strong> A creature looks into the mirror</p>\n<hr />\n<p><strong>Effect</strong> The triggering creature sees themselves enjoying their deepest desires in the mirror's reflection, becoming @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fascinated} (@Check[will|dc:20] negates). This fascination ends automatically when the mirror is broken or covered up.</p>"
+          "name": "Versuchung",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur blickt in den Spiegel</p>\n<hr />\n<p><strong>Effekt</strong> Die auslösende Kreatur sieht sich selbst, wie sie sich an der Erfüllung ihrer tiefgreifendsten Wünsche erfreut, und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fasziniert} (@Check[will|dc:20]{Willenswurf}, keine Wirkung). Diese Faszination endet automatisch, sollte der Spiegel verhängt oder zerbrochen werden.</p>"
         }
       }
     },
     "Reflection": {
-      "name": "Reflection",
+      "name": "Reflektion",
       "items": {
         "strike-melee->Reflected Weapon": {
-          "name": "Reflected Weapon"
+          "name": "Reflektierte Waffe"
         },
         "action->Reflection Routine": {
-          "name": "Reflection Routine",
-          "description": "<p>Each reflection has 2 actions which it uses to Step, Stride, or Strike (in any combination). Reflections can act on the same turn they're created.</p>"
+          "name": "Reflektion-Ablauf",
+          "description": "<p>Jede Reflektion verfügt über 2 Aktionen, die sie für die Aktionen Angriff, Laufen oder Schritt in beliebiger Kombination nutzen kann. Reflektionen können während desselben Zuges handeln, in dem sie erschaffen wurden.</p>"
         }
       }
     },
     "Shrinking Hall": {
-      "name": "Shrinking Hall",
-      "description": "<p>This hallway is designed to shrink as creatures traverse it, making access to the door at the hall's end impossible.</p>",
-      "disable": "<p>@Check[thievery|dc:21|name:Jam the Scales|traits:action:disable-a-device] (trained) to jam the scales built into the floor</p>",
-      "reset": "<p>After 10 minutes without weight being placed on this hall's floor, this trap resets, returning the hall to its original size.</p>",
+      "name": "Schrumpfender Korridor",
+      "description": "<p>Dieser Flur ist so angelegt, dass er schrumpft, während er von Kreaturen durchquert wird, so dass es unmöglich wird, die Tür am Gangende zu erreichen.</p>",
+      "disable": "<p>@Check[thievery|dc:21|traits:action:disable-a-device]{Diebeskunst} (Geübt), um die Waagen im Boden zu blockieren</p>",
+      "reset": "<p>Lastet 10 Minuten lang kein Gewicht auf dem Gangboden, setzt sich die Falle zurück und der Korridor kehrt zu seiner ursprünglichen Größe zurück.</p>",
       "items": {
         "action->Shrink": {
-          "name": "Shrink",
-          "description": "<p><strong>Trigger</strong> 100 pounds of weight or more is placed on the hallway's floor</p>\n<hr />\n<p><strong>Effect</strong> The hall's last 40 feet of walls angle inward, causing the hall to shrink and contract down, reaching 6 inches in height and width at the hall's far end and completely blocking access to the hall's exit door for anything but a Tiny creature Squeezing.</p>"
+          "name": "Schrumpfen",
+          "description": "<p><strong>Auslöser</strong> Der Gangboden wird mit 100 Pfund oder mehr an Gewicht belastet</p>\n<hr />\n<p><strong>Effekt</strong> Die letzten 40 Fuß/12 m der Wände schieben sich nach innen, so dass die Deckenhöhe und Gangbreite immer weniger wird, bis nur noch 15 cm Höhe und Breite verbleiben – die Ausgangstür des Ganges wird so komplett blockiert und es ist höchstens einer Winzigen Kreatur möglich, sich @UUID[Compendium.pf2e.actionspf2e.Item.kMcV8e5EZUxa6evt]{Hindurchzuzwängen}.</p>"
         }
       }
     },
     "Shrouded Assailant": {
-      "name": "Shrouded Assailant",
-      "description": "<p>A spirit steps out of a covered mirror, pulling off and becoming shrouded in the cloth, which reveals the mirror. The shrouded figure attacks the living until the cloth is yanked off, which banishes the formless spirit.</p>",
-      "disable": "<p>@Check[thievery|dc:43|name:Steal the Cloth|traits:action:disable-a-device] (master) to steal the cloth before the spirit manifests, or @Check[athletics|dc:47|name:Pull the Cloth Off] to pull the cloth off the spirit after it manifests</p>",
-      "hpDetails": "spirit",
-      "reset": "<p>The haunt can be reset if the mirror is covered in a cloth or shroud.</p>",
-      "routine": "<p>(3 actions) The spirit uses 3 actions to Step, fly 60 feet, or Strike, in any order. On a successful Strike the spirit's target is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}, and on a critical success, the target is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}.</p>",
+      "name": "Angreifendes Gespenst",
+      "description": "<p>Ein Geist tritt aus einem verhüllten Spiegel, zieht dabei das Tuch hinunter und wird davon bedeckt, so dass der Spiegel freigelegt wird. Das verhüllte Gespenst greift die Lebenden an, bis das Tuch von ihm hinuntergezogen wird, was den gestaltlosen Geist verbannt.</p>",
+      "disable": "<p>@Check[thievery|dc:43|traits:action:disable-a-device]{Diebeskunst} (Meister), um das Tuch zu stehlen, ehe sich der Geist manifestiert, oder @Check[athletics|dc:47]{Athletik}, um das Tuch nach Manifestation des Geistes fortzuziehen</p>",
+      "hpDetails": "Geist",
+      "reset": "<p>Der Spuk kann durch erneutes Verhüllen des Spiegels zurückgesetzt werden.</p>",
+      "routine": "<p>(3 Aktionen) Der Geist nutzt 3 Aktionen für Angreifen, Fliegen (60 Fuß/18 m) oder Schritt in beliebiger Reihenfolge. Bei einem erfolgreichen Angriff erhält das Ziel den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}, bzw. im Fall eines Kritischen Treffers @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2}.</p>",
       "items": {
         "action->Don Shroud": {
-          "name": "Don Shroud",
-          "description": "<p><strong>Trigger</strong> A creature enters the area</p>\n<hr />\n<p><strong>Effect</strong> The spirit steps out of the mirror, wearing the cloth as a shroud and revealing the mirror. The triggering creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3} unless they succeed at a @Check[will|dc:38] save. The haunt then rolls initiative.</p>"
+          "name": "Sich verhüllen",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur betritt den Wirkungsbereich</p>\n<hr />\n<p><strong>Effekt</strong> Der Geist tritt aus dem Spiegel, trägt dabei das Tuch wie ein Leichentuch und legt den Spiegel frei. Die auslösende Kreatur muss einen @Check[will|dc:38]{Willenswurf} ablegen; bei Misslingen erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 3}. Die Spukerscheinung würfelt dann ihre Initiative.</p>"
         },
         "strike-melee->Shrouded Touch": {
-          "name": "Shrouded Touch"
+          "name": "Verhüllte Berührung"
         }
       }
     },
     "Shuffling Hall": {
-      "name": "Shuffling Hall",
-      "description": "<p>Four pressure plates along this mirrored hall rotate vertically when stepped on, sending a creature on the pressure plate tipping into an adjacent featureless room while simultaneously replacing the pressure plate and walls in the hall. Each pressure plate dumps creatures into a different room.</p>",
-      "disable": "<p>@Check[thievery|dc:12|name:Deactivate a Plate|traits:action:disable-a-device] to deactivate one pressure plate</p>",
-      "reset": "<p>Automatic</p>",
+      "name": "Seitwärtsverschiebung",
+      "description": "<p>Vier Druckplatten in diesem verspiegelten Flur rotieren vertikal, wenn man auf sie tritt, und schicken eine auf der Druckplatte stehende Kreatur in einen angrenzenden, gänzlich leeren Raum. Jede Druckplatte schickt Kreaturen in einen anderen Raum.</p>",
+      "disable": "<p>@Check[thievery|dc:12|traits:action:disable-a-device]{Diebeskunst}, zum Deaktivieren einer Druckplatte</p>",
+      "reset": "<p>Automatisch</p>",
       "items": {
         "action->Flip": {
-          "name": "Flip",
-          "description": "<p><strong>Trigger</strong> A creature steps on a pressure plate</p>\n<hr />\n<p><strong>Effect</strong> The floor and adjoining wall rotate up and over on a central axle, tipping the triggering creature into an adjacent featureless room and simultaneously replacing the pressure plate and wall with another set on the same axle. The triggering creature is pushed into an adjoining room, takes @Damage[1d8[bludgeoning]] damage, and lands @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}. A creature who succeeds at a @Check[reflex|dc:19|traits:damaging-effect] save takes no damage and rolls out of the way of the trap, returning to the space they were in before stepping on the pressure plate.</p>"
+          "name": "Seitwärtsrollen",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur tritt auf eine Druckplatte</p>\n<hr />\n<p><strong>Effekt</strong> Der Boden und die angrenzende Wand rotieren nach oben und über eine zentrale Achse, während die auslösende Kreatur in einen angrenzenden, völlig leeren Raum geschoben wird und zugleich die Druckplatte und die Wand mit einem anderen Paar auf derselben Achse ersetzt werden. Die auslösende Kreatur wird in einen angrenzenden Raum geschoben, erleidet @Damage[1d8[bludgeoning]]{1W8 Punkte Wuchtschaden} und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}. Gelingt der Kreatur ein @Check[reflex|dc:19|traits:damaging-effect]{Reflexwurf}, erleidet sie keinen Schaden und bewegt sich von der Falle herunter, so dass sie auf dem Feld landet, von dem aus sie ursprünglich auf die Druckplatte getreten ist.</p>"
         }
       }
     },
     "Sigil of Deepest Fears": {
-      "name": "Sigil of Deepest Fears",
-      "description": "<p>An arcane sigil forces creatures to confront their greatest fear.</p>",
-      "disable": "<p>@Check[thievery|dc:43|name:Drain the Sigil's Power|traits:action:disable-a-device] (master) to drain the sigil's power harmlessly, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (9th level; counteract DC 42) to counteract the sigil</p>",
-      "reset": "<p>1 day</p>",
-      "stealth": "<p>(master)</p>",
+      "name": "Siegel der Tiefsten Furcht",
+      "description": "<p>Ein arkanes Siegel zwingt Kreaturen, sich ihren größten Ängsten zu stellen.</p>",
+      "disable": "<p>@Check[thievery|dc:43|traits:action:disable-a-device]{Diebeskunst} (Meister), um dem Siegel die Energie abzusaugen, oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (9. Grad; @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.mmfWcV3Iyql5nzTo]{Entgegenwirken}-SG 42), um dem Siegel entgegenzuwirken</p>",
+      "reset": "<p>1 Tag</p>",
+      "stealth": "<p> (Meister)</p>",
       "items": {
         "action->Face Your Fear": {
-          "name": "Face Your Fear",
-          "description": "<p><strong>Trigger</strong> A creature moves within 10 feet of the sigil</p>\n<hr />\n<p><strong>Effect</strong> All creatures within 120 feet of the sigil are affected by a @UUID[Compendium.pf2e.spells-srd.Item.qDjeG6dxT4aEEC6J]{Weird} spell (@Check[will|dc:40|traits:damaging-effect] save).</p>"
+          "name": "Stell dich der Angst",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur nähert sich dem Siegel auf 10 Fuß/3 m oder weniger</p>\n<hr />\n<p><strong>Effekt</strong> Alle Kreaturen innerhalb von 120 Fuß/36 m Entfernung zum Siegel sind von @UUID[Compendium.pf2e.spells-srd.Item.qDjeG6dxT4aEEC6J]{Unheimliches Schicksal} (@Check[will|dc:40|traits:damaging-effect]{Willenswurf}) betroffen</p>"
         }
       }
     },
     "Spirit Window": {
-      "name": "Spirit Window",
-      "description": "<p>Spirits trapped inside a haunted window harm those who touch the window.</p>",
-      "disable": "<p>@Check[occultism|dc:48|name:Free the Spirits] (legendary) to free the spirits from the mirror, or @Check[religion|dc:48|name:Banish the Spirits] (legendary) to banish the spirits</p>",
-      "reset": "<p>1 round</p>",
+      "name": "Geisterfenster",
+      "description": "<p>In einem Fenster gefangene Geister verletzen jene, die das Fenster berühren.</p>",
+      "disable": "<p>@Check[occultism|dc:48]{Okkultismus} (Legende), um die Geister aus dem Spiegel zu befreien, oder @Check[religion|dc:48]{Religionskunde} (Legende), um die Geister zu verbannen</p>",
+      "reset": "<p>1 Runde</p>",
       "items": {
         "action->Siphon Soul": {
-          "name": "Siphon Soul",
-          "description": "<p><strong>Trigger</strong> A creature touches the window</p>\n<hr />\n<p><strong>Effect</strong> The triggering creature takes @Damage[(8d10 + 44)[void]] damage (@Check[will|dc:42|basic]) as the window attempts to steal their soul. If this damage would kill the target, its soul is trapped inside the window with the effects of @UUID[Compendium.pf2e.spells-srd.Item.GYmXvS9NJ7QwfWGg]{Seize Soul}.</p>"
+          "name": "Seele entziehen",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur berührt das Fenster</p>\n<hr />\n<p><strong>Effekt</strong> Die auslösende Kreatur erleidet @Damage[(8d10 + 44)[void]]{8W10+44 Punkte Leerenschaden} (@Check[will|dc:42|basic]{einfacher Willenswurf}), da das Fenster seine Seele zu stehlen versucht. Sollte dieser Schaden das Ziel töten, wird seine Seele im Fenster festgesetzt (wie @UUID[Compendium.pf2e.spells-srd.Item.GYmXvS9NJ7QwfWGg]{Seele einfangen}).</p>"
         }
       }
     },
     "Thalassophobic Pool": {
-      "name": "Thalassophobic Pool",
-      "description": "<p>The pool sucks in creatures that fall into it, making them sink into its endless depths.</p>",
-      "disable": "<p>@Check[diplomacy|dc:32|name:Calm the Pool] (master) or @Check[deception|dc:32|name:Calm the Pool] (master) to quell the fear and calm the pool or @Check[intimidation|dc:35|name:Scare the Pool] to give the pool something worse to fear; three successes required.</p>",
-      "reset": "<p>The trap resets once there are no moving creatures in it.</p>",
-      "routine": "<p>(3 actions) Water from the chalice increases the depth of the water by 10 feet for each action. Each time this happens, creatures in the pool are pushed 10 feet down and take @Damage[1d6[bludgeoning]] damage. As the pool has no bottom, creatures in it can fall down indefinitely; they must @UUID[Compendium.pf2e.actionspf2e.Item.c8TGiZ48ygoSPofx]{Swim} up to avoid drowning, but the water is especially choppy, so the Athletics DC is @Check[athletics|dc:25|traits:action:swim]. The pool never overflows. Each successful check to Disable reduces the pool's actions by 1, and once the pool is completely Disabled, the water becomes still and the Athletics DC to Swim becomes @Check[athletics|dc:10|traits:action:swim].</p>",
-      "stealth": "<p>(trained)</p>",
+      "name": "Becken der Blauen Tiefen",
+      "description": "<p>Das Becken saugt hineinstürzende Kreaturen ein und lässt sie in seine endlosen Tiefen sinken.</p>",
+      "disable": "<p>@Check[diplomacy|dc:32]{Diplomatie} oder @Check[deception|dc:32]{Täuschung} (Meister), um die Angst zu bekämpfen und das Becken zu besänftigen, oder @Check[intimidation|dc:35]{Einschüchtern}, um das Becken mit einer noch schlimmeren Furcht zu konfrontieren; drei Erfolge nötig.</p>",
+      "reset": "<p>Die Falle setzt sich zurück, sobald keine sich bewegenden Kreaturen mehr in ihr sind.</p>",
+      "routine": "<p>(3 Aktionen) Durch das Wasser aus dem Kelch wird das Becken pro Aktion um 10 Fuß/3 m tiefer. Wann immer dies geschieht, werden Kreaturen im Becken durch den Wasserdruck 10 Fuß/3 m in die Tiefe gedrückt und erleiden @Damage[1d6[bludgeoning]]{1W6 Punkte Wuchtschaden}. Da das Becken keinen Boden besitzt, können Kreaturen darin unbegrenzt lang stürzen; sie müssen nach oben @UUID[Compendium.pf2e.actionspf2e.Item.c8TGiZ48ygoSPofx]{Schwimmen}, um nicht zu ertrinken, allerdings ist das Wasser ziemlich aufgewühlt – der SG des Wurfes für @Check[athletics|dc:25|traits:action:swim]{Athletik} beträgt 25. Das Becken fließt niemals über. Jeder erfolgreiche Wurf zum Ausschalten reduziert die Anzahl der Aktionen des Beckens um 1. Wurde die Gefahr völlig ausgeschaltet, beruhigt sich das Wasser und der SG des Wurfes für Athletik zum Schwimmen sinkt auf @Check[athletics|dc:10|traits:action:swim]{Athletik}.</p>",
+      "stealth": "<p>(Geübt)</p>",
       "items": {
         "action->Downpour": {
-          "name": "Downpour",
-          "description": "<p><strong>Trigger</strong> A creature falls into the pool</p>\n<hr />\n<p><strong>Effect</strong> More water pours forth from the chalice. Creatures in the pool become @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}, and they can't decrease their clumsy condition so long as they remain in the pool. The trap then rolls initiative.</p>"
+          "name": "Sturzregen",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur fällt ins Becken</p>\n<hr />\n<p><strong>Effekt</strong> Mehr Wasser quillt aus dem Kelch. Kreaturen im Becken erhalten den Zustand @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 1} und können den Zustandswert für Unbeholfen nicht reduzieren, solange sie im Becken verbleiben. Die Falle würfelt dann ihre Initiative.</p>"
         }
       }
     },
     "The Morrowkin": {
-      "name": "The Morrowkin",
+      "name": "Der Zukunftsfresser",
       "items": {
         "strike-melee->Claw": {
-          "name": "Claw"
+          "name": "Klaue"
         },
         "action->Disgusted by Food": {
-          "name": "Disgusted by Food",
-          "description": "<p>The morrowkin eats dreams and potential, not food. A creature that spends an action to brandish food at the morrowkin automatically makes the creature @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (or increases its sickened value by 1, to a maximum of sickened 6), decreasing the morrowkin's AC, attack rolls, saves, skills, and ability DCs accordingly, as normal for the sickened condition. The morrowkin can't retch to reduce its sickened condition.</p>"
+          "name": "Von Nahrung angewidert",
+          "description": "<p>Der Zukunftsfresser ernährt sich von Träumen und dem Potenzial seiner Opfer – und von nichts anderem. Wendet eine Kreatur 1 Aktion auf, um dem Zukunftsfresser Nahrung zu präsentieren, erhält er automatisch den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1} (bzw. steigt der Zustandswert für Kränkelnd um 1 bis maximal Kränkelnd 6); senke die RK, Angriffswürfe, Rettungswürfe und Fähigkeits-SG des Zukunftsfressers passend zum Zustand Kränkelnd. Der Zukunftsfresser kann nicht würgen, um den Zustandswert zu senken.</p>"
         },
         "action->Endless": {
-          "name": "Endless",
-          "description": "<p>If reduced to 0 Hit Points or incapacitated for more than a few rounds, the morrowkin vanishes. In 1 minute, it reappears refreshed completely as if the previous battle never happened, with full HP, with all effects on it cleared, and with its Swallow Future ability ready to use again.</p>"
+          "name": "Endlos",
+          "description": "<p>Sollte der Zukunftsfresser auf 0 TP reduziert werden oder für länger als ein paar Runden den Zustand Kampfunfähig erhalten, verschwindet er. Nach 1 Minute kehrt er völlig erfrischt so zurück, als wäre der vorherige Kampf nicht geschehen – er verfügt wieder über volle TP, ist frei von Effekten und kann seine Fähigkeit Zukunft verschlingen sogleich nutzen.</p>"
         },
         "action->Drain Potential": {
-          "name": "Drain Potential",
-          "description": "<p>The morrowkin tries to drain the motivation from its target, who must attempt a @Check[fortitude|dc:31] save. If the target fails, it is @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 1} (@UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 2} on a critical failure) and must roll twice and use the worse result on all checks for 1 minute. Creatures wearing a hope talisman are unaffected.</p>"
+          "name": "Potenzial rauben",
+          "description": "<p>Der Zukunftsfresser versucht, seinem Ziel die Motivation zu entziehen. Das Ziel muss einen @Check[fortitude|dc:31]{Zähigkeitswurf} ablegen; bei Misslingen erhält es den Zustand @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Todgeweiht 1} (bzw. @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Todgeweiht 2} bei einem Kritischen Fehlschlag) und muss 1 Minute lang bei allen Würfen zweimal würfeln und das schlechtere Ergebnis nutzen. Der Träger eines Hoffnungstalismans ist davon nicht betroffen.</p>"
         },
         "action->Swallow Future": {
-          "name": "Swallow Future",
-          "description": "<p>The morrowkin inhales and draws forth the future deeds of all creatures around it. All creatures within a @Template[emanation|distance:30] of the morrowkin take [[/r (6d8 + 18)[mental]]] damage and must attempt a @Check[will|dc:39] save.</p>\n<p>The morrowkin can't Swallow Future again for 1 minute.</p>\n<p>Creatures wearing hope talismans can choose to let their hope talisman break in order to ignore the effect after seeing the result of their Will save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature takes no damage.</p>\n<p><strong>Success</strong> The creature takes half damage and is @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 1}.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 2}.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 4} (likely causing it to die immediately).</p>"
+          "name": "Zukunft verschlingen",
+          "description": "<p>Der Zukunftsfresser atmet tief ein und saugt alle künftigen Taten der Kreaturen in seiner Umgebung ein. Alle Kreaturen innerhalb einer @Template[emanation|distance:30]{30 Fuß/9 m-Ausstrahlung} um den Zukunftsfresser herum erleiden @Damage[(6d8+18)[mental]]{6W8+18 Punkte Mentalen Schaden} (@Check[will|dc:39]{Willenswurf}). Der Zukunftsfresser kann diese Fähigkeit 1 Minute lang nicht erneut einsetzen. Der Träger eines Hoffnungstalismans kann nach dem Willenswurf entscheiden, dass sein Talisman zerbricht, so dass er den Effekt ignorieren kann.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur nimmt keinen Schaden.</p>\n<p><strong>Erfolg</strong> Die Kreatur erhält halben Schaden und den Zustand @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Todgeweiht 1}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält vollen Schaden und den Zustand @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Todgeweiht 2}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erhält doppelten Schaden und den Zustand @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Todgeweiht 4} (was sie wahrscheinlich sofort tötet).</p>"
         },
         "action->Tomorrow's Fury": {
-          "name": "Tomorrow's Fury",
-          "description": "<p>The morrowkin makes claw attacks against any number of targets within reach. The claw attacks count against the morrowkin's multiple attack penalty, but don't apply the penalty until after all attacks have been made.</p>"
+          "name": "Zorn des Zukunftsfresser",
+          "description": "<p>Der Zukunftsfresser führt Klauenangriffe gegen alle Ziele innerhalb seines Angriffsradius aus (je 1 Angriff pro Ziel); die Angriffe zählen gegen seinen Malus für Mehrfachangriffe, dieser steigt aber erst nach dem letzten dieser Angriffe.</p>"
         }
       }
     },
@@ -489,40 +489,40 @@
       }
     },
     "Verdure's Moonflower": {
-      "name": "Verdure's Moonflower",
-      "hpDetails": "fast healing 10",
-      "languages": "telepathy 1 mile (other moonflowers only)",
-      "publicNotes": "<p>These enormous plants have thick, knotted trunks festooned with fanged blossoms. A gaping mouth sits at the top of the trunk, capable of swallowing most creatures smaller than the moonflower whole. Moonflowers can move slowly on their powerful roots or use them to attack, but usually they dig them deeply into the surrounding ground and remain stationary to await prey.</p>\n<p>Though moonflowers can't speak in the conventional sense, they communicate telepathically with other moonflowers. Explorers who encounter a single moonflower can thus be assured that any other moonflowers in the vicinity will be prepared for them. Those who manage to intercept a moonflower's telepathic communications are assaulted by visions of dreadful, primeval jungles ruled over by titanic plant life. Whether this is some vision of the past or a dream of the future shared by all moonflowers is unknown.</p>\n<p>Moonflowers are alien life-forms from a long-dead planet, but their proliferation throughout the galaxy has been ensured through the machinations of the Dominion of the Black, a sinister, alien organization from the dark places between the stars.</p>",
+      "name": "Inselmondblume",
+      "hpDetails": "Schnelle Heilung 10",
+      "languages": "Telepathie 1 Meile/1,5 km (nur andere Mondblumen)",
+      "publicNotes": "<p>Diese riesigen Pflanzen haben dicke, verknotete Stämme, die mit gezahnten Blüten geschmückt sind. An der Spitze des Stammes sitzt ein klaffender Mund, der in der Lage ist, die meisten Kreaturen zu verschlucken, die kleiner sind als die ganze Mondblüte. Mondblumen können sich langsam auf ihren kräftigen Wurzeln bewegen oder sie zum Angriff benutzen, aber normalerweise graben sie sie tief in den umgebenden Boden ein und bleiben auf der Stelle, um auf Beute zu warten.</p>\n<p>Obwohl Mondblumen nicht im herkömmlichen Sinne sprechen können, kommunizieren sie telepathisch mit anderen Mondblumen. Forscher, die einer einzigen Mondblume begegnen, können so sicher sein, dass alle anderen Mondblumen in der Nähe auf sie vorbereitet sein werden. Diejenigen, denen es gelingt, die telepathische Kommunikation einer Mondblume abzufangen, werden von Visionen von schrecklichen, urzeitlichen Dschungeln angegriffen, die von titanischen Pflanzen beherrscht werden. Ob dies eine Vision der Vergangenheit oder ein Traum von der Zukunft ist, den alle Mondblumen teilen, ist unbekannt.</p>\n<p>Mondblumen sind außerirdische Lebensformen von einem längst toten Planeten, aber ihre Verbreitung in der gesamten Galaxie wurde durch die Machenschaften des Reichs der Schwärze sichergestellt, einer finsteren, außerirdischen Organisation aus den dunklen Orten zwischen den Sternen.</p>",
       "skillSpecialStealth": {
         "0": {
-          "label": "in Thick Vegetation"
+          "label": "in dichter Vegetation"
         }
       },
-      "tokenName": "Moonflower",
+      "tokenName": "Mondblume",
       "items": {
         "strike-melee->Bite": {
-          "name": "Bite"
+          "name": "Biss"
         },
         "strike-melee->Root": {
-          "name": "Root"
+          "name": "Wurzel"
         },
         "action->Fast Healing 10": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.fJSNOw4zHGbIm4bZ]\nFast Healing 10"
+          "name": "<Compendium> 10"
         },
         "action->Pod Prison": {
-          "name": "Pod Prison",
-          "description": "<p><strong>Trigger</strong> The moonflower has swallowed a creature</p>\n<hr />\n<p><strong>Effect</strong> The swallowed creature is wrapped in a tight cocoon and extruded from the moonflower's body into an adjacent square. The creature continues to be Swallowed Whole. It can't use Acrobatics to @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} a pod, but other creatures can attempt to Rupture the pod. The cocooned creature takes half damage from any damage dealt to the cocoon. Once the cocoon is Ruptured, it deflates and decays.</p>"
+          "name": "Schotengefängnis",
+          "description": "<p><strong>Auslöser</strong> Die Mondblume hat eine Kreatur verschluckt</p>\n<hr />\n<p><strong>Effekt</strong> Die verschluckte Kreatur wird in einen engen Kokon gewickelt und aus dem Körper der Mondblume in ein angrenzendes Quadrat ausgeschieden. Die Kreatur gilt weiterhin als Ganz Geschluckt. Es kann keine Akrobatik verwenden, um einer Schote zu @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Entkommen}, aber andere Kreaturen können versuchen, die Schote zum Bersten zu bringen. Die in einem Kokon gefangene Kreatur erleidet die Hälfte des Schadens, der dem Kokon zugefügt wird. Sobald der Kokon Zerborsten ist, entleert er sich und zerfällt.</p>"
         },
         "action->Pod Spawn": {
-          "name": "Pod Spawn",
-          "description": "<p>Should a Small or larger creature die within a pod prison, the pod transforms into an adult moonflower with full Hit Points after [[/br 1d4 #Moonflower Transformation]]{1d4 hours} of growth.</p>\n<p>The newly formed moonflower has its own consciousness, but some aspect of its trunk or blossoms resembles the creature that died within. The dead creature's equipment remains inside the new moonflower and can be retrieved if the moonflower is slain.</p>"
+          "name": "Schotenbrut",
+          "description": "<p>Sollte eine kleine oder größere Kreatur innerhalb eines Schoten-Gefängnisses sterben, verwandelt sich die Schote nach [[/br 1d4 #Stunden]]{1W4 Stunden} Wachstum in eine erwachsene Mondblume mit vollen Trefferpunkten. Die neu geformte Mondblume hat ihr eigenes Bewusstsein, aber ein Aspekt ihres Stammes oder ihrer Blüten ähnelt der Kreatur, die darin gestorben ist. Die Ausrüstung der toten Kreatur bleibt im Inneren der neuen Mondblume und kann zurückgeholt werden, wenn die Mondblume getötet wird.</p>"
         },
         "action->Spray Blossoms": {
-          "name": "Spray Blossoms",
-          "description": "<p><strong>Effect</strong> The moonflower expels mindwarping petals in a @Template[cone|distance:30]. Creatures in the area take @Damage[4d6[mental],4d6[poison]]{4d6 mental damage and 4d6 poison damage} (@Check[will|dc:26|basic]). On a failure, they are @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2} for 1 minute, and on a critical failure, they are also @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} for 1 round.</p>\n<p>The moonflower can't Spray Blossoms again for [[/br 1d4 #Recharge Spray Blossoms]]{1d4 rounds}.</p>"
+          "name": "Blütenregen",
+          "description": "<p><strong>Effekt</strong> Die Mondblume stößt geistesbeeinflussende Blütenblätter in einem @Template[cone|distance:30]{30 Fuß/9 m-Kegel} aus. Kreaturen im Wirkungsbereich erleiden @Damage[4d6[mental],4d6[poison]]{4W6 Punkte Mentalen Schaden und 4W6 Punkte Giftschaden} (@Check[will|dc:26|basic]{einfacher Willenswurf}). Bei einem Fehlschlag erhält eine Kreatur für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 2} und bei einem Kritischen Fehlschlag zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Verwirrt} für 1 Minute. Die Mondblume kann diese Fähigkeit [[/br 1d4 #Runden]]{1W4 Runden} lang nicht erneut nutzen.</p>"
         },
         "action->Swallow Whole": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.uJSseLa57HZYSMUu]\n<p>Large, @Damage[(2d10+10)[bludgeoning],2d6[acid]]{2d10 + 10 bludgeoning and 2d6 acid}, Rupture 21</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
+          "description": "<p>Groß, @Damage[(2d10+10)[bludgeoning],2d6[acid]]{2W10+10 Wuchtschaden und 2W6 Säureschaden}, Befreien 21</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
         }
       }
     }
