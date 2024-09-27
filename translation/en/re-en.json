@@ -129,6 +129,7 @@
         "Leaves": "Leaves",
         "Leg": "Leg",
         "LightningLash": "Lightning Lash",
+        "LittleClaw": "Little Claw",
         "Mandibles": "Mandibles",
         "MetalShard": "Metal Shard",
         "Moonbeam": "Moonbeam",
@@ -139,6 +140,7 @@
         "Quill": "Quill",
         "Rock": "Rock",
         "Root": "Root",
+        "SacredArmament": "Sacred Armament",
         "Seed": "Seed",
         "Spikes": "Spikes",
         "Spine": "Spine",
@@ -235,7 +237,7 @@
         },
         "Moderate": {
           "criticalSuccess": "<strong>Effect</strong> The bomb also deals @Damage[(2*2)[persistent,fire]] and @Damage[(2[splash])[fire]]{2 fire splash damage}.",
-          "success": "<strong>Effect</strong> The bomb also deals @Damage[2[persistent,fire]] and @Damage[(2[splash])[fire]][fire]]]{2 fire splash damage}."
+          "success": "<strong>Effect</strong> The bomb also deals @Damage[2[persistent,fire]] and @Damage[(2[splash])[fire]]{2 fire splash damage}."
         }
       },
       "BioluminescenceBomb": {
@@ -667,6 +669,7 @@
         "ColdIronBludgeoning": "cold iron bludgeoning",
         "CrystalHazards": "crystal hazards",
         "DraconicBreathWeapons": "draconic breath weapons",
+        "EnemyStrikes": "enemy Strikes",
         "HolyBludgeoningPiercingSlashing": "holy bludgeoning, piercing and slashing damage",
         "ImpulseFireFrom": "impulse fire from {origin}",
         "IngestedPoisons": "ingested poisons",
@@ -1940,6 +1943,9 @@
           },
           "Prompt": "Select a research field.",
           "Toxicologist": {
+            "FieldBenefit": {
+              "RollOptionLabel": "Toxicologist — Field Benefit"
+            },
             "FieldVials": {
               "Description": "You can apply the contents of a versatile vial to a weapon or piece of ammunition as an injury poison. Add the versatile vial's initial damage to the first successful Strike with that weapon or ammunition. The substance becomes inert at the end of your current turn."
             }
@@ -2368,7 +2374,8 @@
           "Redemption": "If the enemy refuses, you can choose to grant the resistance to yourself and all allies in your champion's aura, including the triggering ally. If you do, the resistance is reduced by 2 for all @UUID[Compendium.pf2e.feat-effects.Item.GFLiTESBmoyQ3sLx]{Effect: Exalted Reaction (Redemption)}"
         },
         "GreaterSecurity": {
-          "Description": "While the companion shield is in effect, if your shield is raised, the ally with the companion shield gets the same bonus to AC your shield grants, and you can trigger Shield Block if that ally would meet the trigger. This uses your shield's statistics and applies damage to your shield."
+          "Description": "While the companion shield is in effect, if your shield is raised, the ally with the companion shield gets the same bonus to AC your shield grants, and you can trigger Shield Block if that ally would meet the trigger. This uses your shield's statistics and applies damage to your shield.",
+          "RollOptionLabel": "Greater Security — Champion has their shield raised"
         },
         "GruesomeStrike": {
           "Note": "The target must succeed at a @Check[fortitude|against:class] save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}."
@@ -2599,7 +2606,7 @@
         "Tactics": "An ally with Convergent Tactics is within reach of the target."
       },
       "CorrosiveBody": {
-        "Note": "The first time each round that you deal acid damage to a creature in this way, you gain [[/r 3d6 #Temporary Hit Points]]{3d6 temporary Hit Points}",
+        "Note": "The first time each round that you deal acid damage to a creature in this way, you gain temporary Hit Points. @UUID[Compendium.pf2e.spell-effects.Item.IUxQCyO3EXSkId5F]{Spell Effect: Corrosive Body (Temp HP)}",
         "Note9th": "The first time each round that you deal acid damage to a creature in this way, you gain [[/r 5d6 #Temporary Hit Points]]{5d6 temporary Hit Points}"
       },
       "Cover": {
@@ -3221,6 +3228,9 @@
       "FollowTheExpert": {
         "Prompt": "Select expert's proficiency in skill."
       },
+      "FrenziedRevelry": {
+        "Note": "Whenever someone benefitting from this bonus critically succeeds at a saving throw against an enemy's mental effect, its revelry increases, granting it a +1 status bonus to attack rolls and damage rolls for 1 round. @UUID[Compendium.pf2e.spell-effects.Item.ldl1aU5ovTQMUHJ2]{Spell Effect: Frenzied Revelry (Critical)}"
+      },
       "GameHunterDedication": {
         "TargetHuntedPrey": "Target is your Hunted Prey (Animal, Beast, or Dragon Only)"
       },
@@ -3431,6 +3441,10 @@
           "MagmaSpikeCriticalSpecialization": "Instead of the normal critical specialization effect, the target takes @Damage[1d6[persistent,fire]] damage; you gain a bonus on this persistent damage equal to your item bonus to attack rolls on unarmed attacks."
         }
       },
+      "ImpeccableFlow": {
+        "RollOptionLabel": "Impeccable Flow — You critically failed any check.",
+        "Note": "If you critically fail any check while under the effects of this spell, the bonus ends and you instead have a -1 status penalty to all checks for the remaining duration."
+      },
       "InCombat": {
         "ToggleLabel": "In Combat"
       },
@@ -3513,6 +3527,9 @@
         "CertainStratagem": {
           "Note": "You deal half of your @Damage[(floor((@actor.level+3)/4)d6[precision])[@item.system.damage.damageType]|traits:certain-stratagem]{Strategic Strike damage} to the target"
         },
+        "DetectivesReadiness": {
+          "ClueInAddendum": "You can use Clue In to assist an ally's saving throw against creatures or effects that are related to the question at the heart of an open investigation."
+        },
         "DeviseAStratagem": {
           "Attack": "Attack Stratagem",
           "Defensive": "Defensive Stratagem",
@@ -3522,7 +3539,7 @@
           "Prompt": "Select a methodology."
         },
         "PursueALead": {
-          "Label": "Investigating a designated subject with Pursue a Lead"
+          "Label": "Pursue a Lead — Investigation Bonus"
         },
         "SharedStratagem": {
           "Note": "The creature you hit is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} to a designated ally on the next attack the ally makes against the creature before the start of your next turn."
@@ -4007,6 +4024,11 @@
           "Unknown": "The Unknown"
         }
       },
+      "Organsight": {
+        "Organs": "Organsight (Organs)",
+        "Skin": "Organsight (Skin)",
+        "Success": "Organsight — Successful Medicine Check"
+      },
       "OverwhelmingBlow": {
         "CriticalHit": "Critically hit with Overwhelming Blow"
       },
@@ -4184,7 +4206,8 @@
           "ShatterSpace": "You or one target of the spell are surrounded by a spiral of torn space. This is an aura, and you choose the radius of the emanation, up to 20 feet. A creature that starts its turn in the aura or enters the aura during its turn takes @Damage[(@item.level)d6[slashing]] damage, with a basic Reflex save against your spell DC. If the creature critically fails, the torn space throws it off balance and it falls @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}. The aura lasts until the beginning of your next turn. You can choose whether the aura affects the creature emitting it.",
           "Shield": {
             "Base": "You create a layered barrier of three shields to improve your defenses. The duration increases to sustained up to 1 minute. The shield still lowers at the start of each of your turns, but you can raise it again when you Sustain the Spell.",
-            "BaseTwo": "When you Shield Block with this spell, one of the three layers breaks and you cease to gain the bonus to AC, but the spell doesn't end. You can keep using the spell until the final layer breaks; once it does, the spell ends and you can't cast shield or amped shield again for 10 minutes. You can choose to break additional layers when you Shield Block with this spell to improve your defenses. If you break two layers instead of one, increase the Hardness to 1-1/2 × the normal amount (7 at 1st rank, 15 at 3rd rank, 22 at 5th rank, 30 at 7th rank, and 37 at 9th rank). If you break all three layers, increase the Hardness to double the normal amount."
+            "BaseTwo": "When you Shield Block with this spell, one of the three layers breaks and you cease to gain the bonus to AC, but the spell doesn't end. You can keep using the spell until the final layer breaks; once it does, the spell ends and you can't cast shield or amped shield again for 10 minutes. You can choose to break additional layers when you Shield Block with this spell to improve your defenses. If you break two layers instead of one, increase the Hardness to 1-1/2 × the normal amount (7 at 1st rank, 15 at 3rd rank, 22 at 5th rank, 30 at 7th rank, and 37 at 9th rank). If you break all three layers, increase the Hardness to double the normal amount.",
+            "RollOptionLabel": "Shield (Amped) — Break layers to Shield Block"
           },
           "TargetOfPsychicIre": "Choose one target of the spell. Psychic phenomena turn themselves on the target—typically, objects fling themselves at the creature. At the beginning of each of the target's turns, it takes @Damage[(@item.level)d4[bludgeoning]] damage, with a basic Reflex save. The target remains marked by psychic ire for 3 rounds. The effect persists even if you fall @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious} or leave the area.",
           "TelekineticHand": {
@@ -4267,6 +4290,9 @@
           "FirstAttack": "First attack on hunted prey this round",
           "Prompt": "Select a hunter's edge."
         }
+      },
+      "RapidAdaptation": {
+        "Prompt": "Does this character already have a swim speed?"
       },
       "Ratfolk": {
         "LabRat": {
@@ -5163,6 +5189,11 @@
         },
         "YouDontSmellRight": {
           "Label": "Seek to determine if a creature is disguised."
+        }
+      },
+      "WingedWarrior": {
+        "Dedication": {
+          "RollOptionLabel": "Flying using permanent wings"
         }
       },
       "Witch": {
