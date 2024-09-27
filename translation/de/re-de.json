@@ -129,6 +129,7 @@
         "Leaves": "Blätter",
         "Leg": "Bein",
         "LightningLash": "Blitzpeitsche",
+        "LittleClaw": "Little Claw",
         "Mandibles": "Mandibel",
         "MetalShard": "Metallsplitter",
         "Moonbeam": "Mondstrahl",
@@ -139,6 +140,7 @@
         "Quill": "Stacheln",
         "Rock": "Felsen",
         "Root": "Root",
+        "SacredArmament": "Sacred Armament",
         "Seed": "Saatkorn",
         "Spikes": "Stacheln",
         "Spine": "Stachel",
@@ -235,7 +237,7 @@
         },
         "Moderate": {
           "criticalSuccess": "<strong>Effekt</strong> Die Bombe verursacht zusätzlich @Damage[(2*2)[persistent,fire]]{2*2 Punkte Anhaltenden Feuerschaden} und @Damage[(2[splash])[fire]]{2 Punkte Feuerflächenschaden}.",
-          "success": "<strong>Effekt</strong> Die Bombe verursacht zusätzlich @Damage[2[persistent,fire]]{2 Punkte Anhaltenden Feuerschaden} und @Damage[(2[splash])[fire]]{2 Punkte Feuerflächenschaden}."
+          "success": "<strong>Effect</strong> The bomb also deals @Damage[2[persistent,fire]] and @Damage[(2[splash])[fire]]{2 fire splash damage}."
         }
       },
       "BioluminescenceBomb": {
@@ -667,6 +669,7 @@
         "ColdIronBludgeoning": "cold iron bludgeoning",
         "CrystalHazards": "Mit Kristallen assoziierte Gefahren",
         "DraconicBreathWeapons": "Drachenodemwaffen",
+        "EnemyStrikes": "enemy Strikes",
         "HolyBludgeoningPiercingSlashing": "holy bludgeoning, piercing and slashing damage",
         "ImpulseFireFrom": "Feuerimpuls von {origin}",
         "IngestedPoisons": "Eingenommene Gifte",
@@ -1940,6 +1943,9 @@
           },
           "Prompt": "Wähle ein Forschungsgebiet.",
           "Toxicologist": {
+            "FieldBenefit": {
+              "RollOptionLabel": "Toxicologist — Field Benefit"
+            },
             "FieldVials": {
               "Description": "You can apply the contents of a versatile vial to a weapon or piece of ammunition as an injury poison. Add the versatile vial's initial damage to the first successful Strike with that weapon or ammunition. The substance becomes inert at the end of your current turn."
             }
@@ -2368,7 +2374,8 @@
           "Redemption": "If the enemy refuses, you can choose to grant the resistance to yourself and all allies in your champion's aura, including the triggering ally. If you do, the resistance is reduced by 2 for all @UUID[Compendium.pf2e.feat-effects.Item.GFLiTESBmoyQ3sLx]{Effect: Exalted Reaction (Redemption)}"
         },
         "GreaterSecurity": {
-          "Description": "While the companion shield is in effect, if your shield is raised, the ally with the companion shield gets the same bonus to AC your shield grants, and you can trigger Shield Block if that ally would meet the trigger. This uses your shield's statistics and applies damage to your shield."
+          "Description": "While the companion shield is in effect, if your shield is raised, the ally with the companion shield gets the same bonus to AC your shield grants, and you can trigger Shield Block if that ally would meet the trigger. This uses your shield's statistics and applies damage to your shield.",
+          "RollOptionLabel": "Greater Security — Champion has their shield raised"
         },
         "GruesomeStrike": {
           "Note": "The target must succeed at a @Check[fortitude|against:class] save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}."
@@ -2599,7 +2606,7 @@
         "Tactics": "An ally with Convergent Tactics is within reach of the target."
       },
       "CorrosiveBody": {
-        "Note": "Das erste Mal, wenn du in einer Runde Säureschaden an einer Kreatur auf diese Weise verursachst, erhältst du [[/r 3d6 #Temporäre Trefferpunkte]]{3W6 Temporäre Trefferpunkte}.",
+        "Note": "The first time each round that you deal acid damage to a creature in this way, you gain temporary Hit Points. @UUID[Compendium.pf2e.spell-effects.Item.IUxQCyO3EXSkId5F]{Spell Effect: Corrosive Body (Temp HP)}",
         "Note9th": "Das erste Mal, wenn du in einer Runde Säureschaden an einer Kreatur auf diese Weise verursachst, erhältst du [[/r 5d6 #Temporäre Trefferpunkte]]{5W6 Temporäre Trefferpunkte}."
       },
       "Cover": {
@@ -3221,6 +3228,9 @@
       "FollowTheExpert": {
         "Prompt": "Wähle den Kompetenzgrad des Experten in der Fertigkeit"
       },
+      "FrenziedRevelry": {
+        "Note": "Whenever someone benefitting from this bonus critically succeeds at a saving throw against an enemy's mental effect, its revelry increases, granting it a +1 status bonus to attack rolls and damage rolls for 1 round. @UUID[Compendium.pf2e.spell-effects.Item.ldl1aU5ovTQMUHJ2]{Spell Effect: Frenzied Revelry (Critical)}"
+      },
       "GameHunterDedication": {
         "TargetHuntedPrey": "Ziel ist deine Jagdbeute (nur Tier, Bestie oder Drache)"
       },
@@ -3431,6 +3441,10 @@
           "MagmaSpikeCriticalSpecialization": "Anstelle des normalen Kritischen Spezialisierungseffektes erleidet das Ziel @Damage[1d6[persistent,fire]]{1W6 Punkte Anhaltenden Feuerschaden}; du erhältst auf diesen Anhaltenden Schaden einen Bonus in Höhe deines Gegenstandsbonus auf Angriffswürfe für Waffenlose Angriffe."
         }
       },
+      "ImpeccableFlow": {
+        "RollOptionLabel": "Impeccable Flow — You critically failed any check.",
+        "Note": "If you critically fail any check while under the effects of this spell, the bonus ends and you instead have a -1 status penalty to all checks for the remaining duration."
+      },
       "InCombat": {
         "ToggleLabel": "Im Kampf"
       },
@@ -3513,6 +3527,9 @@
         "CertainStratagem": {
           "Note": "You deal half of your @Damage[(floor((@actor.level+3)/4)d6[precision])[@item.system.damage.damageType]|traits:certain-stratagem]{Strategic Strike damage} to the target"
         },
+        "DetectivesReadiness": {
+          "ClueInAddendum": "You can use Clue In to assist an ally's saving throw against creatures or effects that are related to the question at the heart of an open investigation."
+        },
         "DeviseAStratagem": {
           "Attack": "Attack Stratagem",
           "Defensive": "Defensive Stratagem",
@@ -3522,7 +3539,7 @@
           "Prompt": "Wähle eine Methodik."
         },
         "PursueALead": {
-          "Label": "Untersucht ein Thema von Hinweis nachgehen"
+          "Label": "Pursue a Lead — Investigation Bonus"
         },
         "SharedStratagem": {
           "Note": "Die von dir getroffene Kreatur zählt für den nächsten Angriff deines Verbündeten @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} bis zum Beginn deiner nächsten Runde."
@@ -4007,6 +4024,11 @@
           "Unknown": "Das Unbekannte"
         }
       },
+      "Organsight": {
+        "Organs": "Organsight (Organs)",
+        "Skin": "Organsight (Skin)",
+        "Success": "Organsight — Successful Medicine Check"
+      },
       "OverwhelmingBlow": {
         "CriticalHit": "Kritischer Treffer mit Überwältigender Schlag"
       },
@@ -4184,7 +4206,8 @@
           "ShatterSpace": "Du oder das Ziel des Zaubers werden von einer Spirale aus zerrissener Realität umgeben. Dies ist eine Aura; wähle den Radius der Ausstrahlung (maximal 20 Fuß/6 m). Beginnt eine Kreatur ihren Zug in der Aura oder betritt sie die Aura während ihres Zuges, erleidet sie 1W6 Punkte Hiebschaden pro Grad des Verstärkten Mentalen Zaubertricks (@Damage[(@item.level)d6[slashing]], einfacher Reflexwurf gegen deinen Zauber-SG). Im Fall eines Kritischen Fehlschlages verliert die Kreatur das Gleichgewicht, stürzt und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}. Die Aura währt bis zum Beginn deines nächsten Zuges. Du entscheidest, ob die von dir als Zentrum der Aura bestimmte Kreatur (also du oder das Ziel des Zaubers) von ihr betroffen wird.",
           "Shield": {
             "Base": "Du erschaffst eine gestaffelte Barriere aus drei Schildeffekten, um deine Verteidigung zu verbessern. Die Wirkungsdauer steigt auf Bis zu 1 Minute aufrechterhaltbar. Der Schild senkt sich immer noch zu Beginn jedes deiner Züge, du kannst ihn aber wieder heben, wenn du den Zauber aufrechterhältst.",
-            "BaseTwo": "Nutzt du mit diesem Zauber Schildblock, zerbricht zwar einer der Schildeffekte und verlierst du den Bonus auf die RK, endet die Wirkungsdauer aber nicht. Du kannst den Zauber weiterhin nutzen, bis auch der dritte Schildeffekt deiner Barriere zerbricht; in diesem Moment endet die Wirkungsdauer und kannst du 10 Minuten lang diesen Zauber weder in der normalen, noch in der Verstärken Version nutzen. Nutzt du die Schildblockoption des Zaubers, kannst du wählen, weitere Schildeffekte zu opfern, um deine Verteidigung zu verbessern. Solltest du neben dem ohnehin zerbrechenden Effekt einen weiteren opfern, steigt die Härte auf 150% des Normalen (7 mit dem 1. Grad, 15 mit dem 3. Grad, 22 mit dem 5. Grad, 30 mit dem 7. Grad und 37 mit dem 9. Grad). Solltest du neben dem ohnehin zerbrechenden Effekt zwei weitere opfern (also letztendlich alle drei Schildeffekte), steigt die Härte auf das Doppelte des normalen Wertes."
+            "BaseTwo": "Nutzt du mit diesem Zauber Schildblock, zerbricht zwar einer der Schildeffekte und verlierst du den Bonus auf die RK, endet die Wirkungsdauer aber nicht. Du kannst den Zauber weiterhin nutzen, bis auch der dritte Schildeffekt deiner Barriere zerbricht; in diesem Moment endet die Wirkungsdauer und kannst du 10 Minuten lang diesen Zauber weder in der normalen, noch in der Verstärken Version nutzen. Nutzt du die Schildblockoption des Zaubers, kannst du wählen, weitere Schildeffekte zu opfern, um deine Verteidigung zu verbessern. Solltest du neben dem ohnehin zerbrechenden Effekt einen weiteren opfern, steigt die Härte auf 150% des Normalen (7 mit dem 1. Grad, 15 mit dem 3. Grad, 22 mit dem 5. Grad, 30 mit dem 7. Grad und 37 mit dem 9. Grad). Solltest du neben dem ohnehin zerbrechenden Effekt zwei weitere opfern (also letztendlich alle drei Schildeffekte), steigt die Härte auf das Doppelte des normalen Wertes.",
+            "RollOptionLabel": "Shield (Amped) — Break layers to Shield Block"
           },
           "TargetOfPsychicIre": "Wähle ein Ziel des Zaubers. Übernatürliche Phänomene greifen das Ziel an - in der Regel fliegen Gegenstände aus eigener Kraft auf die Kreatur zu. Das Ziel nimmt zu Beginn jedes seiner Züge 1W4 Punkte Wuchtschaden pro Zaubergrad (@Damage[(@item.level)d4[bludgeoning]]) des Verstärkten Mentalen Zaubertricks (einfacher Reflexwurf). Das Ziel ist 3 Runden lang von deinem Mentalen Zorn betroffen; der Effekt hält sogar an, solltest du den Wirkungsbereich verlassen oder den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Bewusstlos} erhalten.",
           "TelekineticHand": {
@@ -4267,6 +4290,9 @@
           "FirstAttack": "Erster Angriff auf Jagdbeute in dieser Runde",
           "Prompt": "Wähle einen Jägervorteil."
         }
+      },
+      "RapidAdaptation": {
+        "Prompt": "Does this character already have a swim speed?"
       },
       "Ratfolk": {
         "LabRat": {
@@ -5163,6 +5189,11 @@
         },
         "YouDontSmellRight": {
           "Label": "Suche um eine verkleidete Kreatur zu erkennen."
+        }
+      },
+      "WingedWarrior": {
+        "Dedication": {
+          "RollOptionLabel": "Flying using permanent wings"
         }
       },
       "Witch": {
