@@ -399,7 +399,7 @@
     },
     "Destructive Vengeance": {
       "name": "Destructive Vengeance",
-      "description": "<p><strong>Trigger</strong> An enemy in your champion's aura damages you</p>\n<hr />\n<p><strong>Effect</strong> Bloodshed begets bloodshed as you drag your enemy toward oblivion. You increase the amount of damage you take by @Damage[(ternary(gte(@actor.level,19),6,ternary(gte(@actor.level,16),5,ternary(gte(@actor.level,12),4,ternary(gte(@actor.level,9),3,ternary(gte(@actor.level,5),2,1))))))d6], and you deal @Damage[(ternary(gte(@actor.level,19),6,ternary(gte(@actor.level,16),5,ternary(gte(@actor.level,12),4,ternary(gte(@actor.level,9),3,ternary(gte(@actor.level,5),2,1))))))d6[spirit]] damage to the triggering enemy. The damage you take and deal when you use this reaction increases to 2d6 at 5th level, 3d6 at 9th level, 4d6 at 12th level, 5d6 at 16th level, and 6d6 at 19th level.</p>\n<p>In addition, until the end of your next turn, your Strikes against the triggering creature deal 2 extra spirit damage. This extra damage increases to 4 at 9th level and 6 at 16th level.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.2a6fuugiPpICe3Li]{Effect: Champion's Extra Damage}</p>"
+      "description": "<p><strong>Trigger</strong> An enemy in your champion's aura damages you</p>\n<hr />\n<p><strong>Effect</strong> Bloodshed begets bloodshed as you drag your enemy toward oblivion. You increase the amount of damage you take by @Damage[(ternary(gte(@actor.level,19),6,ternary(gte(@actor.level,16),5,ternary(gte(@actor.level,12),4,ternary(gte(@actor.level,9),3,ternary(gte(@actor.level,5),2,1))))))d6], and you deal @Damage[(ternary(gte(@actor.level,19),6,ternary(gte(@actor.level,16),5,ternary(gte(@actor.level,12),4,ternary(gte(@actor.level,9),3,ternary(gte(@actor.level,5),2,1))))))d6[spirit]|options:destructive-vengeance:enemy] damage to the triggering enemy. The damage you take and deal when you use this reaction increases to 2d6 at 5th level, 3d6 at 9th level, 4d6 at 12th level, 5d6 at 16th level, and 6d6 at 19th level.</p>\n<p>In addition, until the end of your next turn, your Strikes against the triggering creature deal 2 extra spirit damage. This extra damage increases to 4 at 9th level and 6 at 16th level.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.2a6fuugiPpICe3Li]{Effect: Champion's Extra Damage}</p>"
     },
     "Detect Magic": {
       "name": "Detect Magic",
@@ -1323,7 +1323,7 @@
     },
     "Spit Ambient Magic": {
       "name": "Spit Ambient Magic",
-      "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> Your ostilli flashes red as it regurgitates a dart of magic at a target within 30 feet. This magical dart deals @Damage[((1+floor((@actorl.level -2)/4))d6)[piercing]] damage (@Check[reflex|against:class-spell|basic] save against the higher of your class DC or spell DC). This damage increases by 1d6 at 6th level and every 4 levels thereafter.</p>"
+      "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> Your ostilli flashes red as it regurgitates a dart of magic at a target within 30 feet. This magical dart deals @Damage[((1+floor((@actor.level -2)/4))d6)[piercing]] damage (@Check[reflex|against:class-spell|basic] save against the higher of your class DC or spell DC). This damage increases by 1d6 at 6th level and every 4 levels thereafter.</p>"
     },
     "Spring the Trap": {
       "name": "Spring the Trap",
@@ -1483,7 +1483,7 @@
     },
     "Thundering Roar": {
       "name": "Thundering Roar",
-      "description": "<p>The target unleashes a powerful vocalization. Each enemy in a 10- foot emanation takes 4d8 sonic damage with a basic Will save against your spell DC. A creature that fails its Will save is also @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The damage from the roar increases by 2d8.</p>"
+      "description": "<p>The target unleashes a powerful vocalization. Each enemy in a @Template[type:emanation|distance:10] takes @Damage[4d8[sonic]|options:area-damage] damage with a @Check[will|basic] save against your spell DC. A creature that fails its Will save is also @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>"
     },
     "Touch and Go": {
       "name": "Touch and Go",
