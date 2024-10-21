@@ -567,9 +567,9 @@
       }
     },
     "Dwarven Monster Hunter": {
-      "name": "Dwarven Monster Hunter",
-      "blurb": "Variant Monster Hunter",
-      "publicNotes": "<p>Some mercenaries eschew the complications of politics, oaths of service, and fealty and just get paid to hunt monsters. It's a straightforward form of mercenary service, often dangerous in the extreme, but one that can yield glory and fame.</p>\n<hr />\n<p>A broad category that includes those wielding arms, spells, or even guile and cunning, mercenaries hire themselves and their expertise to those with the gold to pay for it.</p>",
+      "name": "Zwergenmonsterjäger",
+      "blurb": "Monsterjäger Variante",
+      "publicNotes": "<p>Einige Söldner meiden die Hürden, welche ihnen von Politik, Treueschwüren und Lehnseiden auferlegt werden, und lassen sich einfach für die Jagd auf Monster bezahlen. Es ist eine sehr direkte Art des Söldnerdienstes, die oft extrem gefährlich ist, aber viel Ruhm und Ehre einbringen kann.</p>\n<hr />\n<p>Diese weit gefasste Kategorie, welche all jene beinhaltet, die auf Waffen, Zauber oder sogar List und Tücke zurückgreifen, umfasst die Söldner, welche sich und ihre Kenntnis an den Meistbietenden verkaufen.</p>",
       "items": {
         "weapon->Greataxe": {
           "description": "<Compendium>"
@@ -581,12 +581,12 @@
           "name": "Kompositlangbogen"
         },
         "action->Rage": {
-          "name": "Rage",
-          "description": "<p><strong>Requirements</strong> The monster hunter isn't @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued} or raging</p>\n<hr />\n<p><strong>Effect</strong> The monster hunter gains 9 temporary Hit Points that last until the rage ends. While raging, they deal 8 additional damage with melee attacks, gain a +10-foot status bonus to their Speed, and take a -1 penalty to AC. The monster hunter can't use concentrate actions except @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seek} and rage actions.</p>\n<p>The rage lasts for 1 minute, until there are no enemies the monster hunter can perceive, or until the monster hunter falls unconscious.</p>\n<p>Once the rage ends, the monster hunter can't again for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.z3uyCMBddrPK5umr]{Effect: Rage}</p>"
+          "name": "Kampfrausch",
+          "description": "<p><strong>Voraussetzung</strong> Der Monsterjäger ist weder @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Erschöpft}, noch befindet er sich schon im Kampfrausch</p>\n<hr />\n<p><strong>Effekt</strong> Der Monsterjäger erhält bis zum Ende des Kampfrausches 9 Temporäre Trefferpunkte. Solange der Zustand anhält, verursachen seine Nahkampfangriffe 8 zusätzliche Schadenspunkte, seine Bewegungsrate erhöht sich um +20 Fuß/6 m und seine RK sinkt um 1. Er kann außer @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Suchen} keine Handlungen der Kategorie Konzentration nutzen, sofern sie nicht ebenfalls der Kategorie Kampfrausch angehören. Der Kampfrausch dauert entweder für maximal 1 Minute an, oder aber bis der Monsterjäger bis dahin keine Gegner mehr wahrnimmt oder bewusstlos wird. Endet der Kampfrausch, kann der Monsterjäger die Fähigkeit Kampfrausch für 1 Minute lang nicht erneut einsetzen.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.z3uyCMBddrPK5umr]{Effekt: Kampfrausch}</p>"
         },
         "action->Sudden Charge": {
-          "name": "Sudden Charge",
-          "description": "<p>The monster hunter Strides twice and makes a melee Strike.</p>"
+          "name": "Plötzlicher Sturmangriff",
+          "description": "<p>Der Monsterjäger nutzt die Aktion Laufen zwei Mal und führt dann einen Nahkampfangriff aus.</p>"
         },
         "lore->Monster Lore": {
           "name": "Monster Lore"
@@ -594,15 +594,15 @@
       }
     },
     "Electrified Hall": {
-      "name": "Electrified Hall",
-      "description": "<p>Runes hidden in the door's carvings blast lightning down the hall.</p>",
-      "disable": "<p>@Check[thievery|dc:30] (master) to scratch out the runes, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (5th level; counteract DC 28) to counteract the runes</p>",
-      "reset": "<p>automatic</p>",
+      "name": "Blitzfalle",
+      "description": "<p>In den Mustern der Tür verborgene Runen schießen Blitze den Gang hinab.</p>",
+      "disable": "<p>@Check[thievery|dc:30]{Diebeskunst} (Meister), um die Runen auszukratzen; oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (5. Grad; @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.mmfWcV3Iyql5nzTo]{Entgegenwirken}- SG 28), um den Runen entgegenzuwirken</p>",
+      "reset": "<p>Automatisch</p>",
       "stealth": "<p>(Experte)</p>",
       "items": {
         "action->Synaptic Jolt": {
-          "name": "Synaptic Jolt",
-          "description": "<p><strong>Trigger</strong> A creature damages the door, fails to @UUID[Compendium.pf2e.actionspf2e.Item.SjmKHgI7a5Z9JzBx]{Force Open} the door, or fails a check to realign the stonework keys;</p>\n<hr />\n<p><strong>Effect</strong> Electricity fills the hallway and affects all creatures inside it, who must attempt a @Check[reflex|dc:28] save.</p>\n<hr />\n<p><strong>Critical Success</strong> No effect.</p>\n<p><strong>Success</strong> The trap deals @Damage[(1d12+5)[electricity]] damage.</p>\n<p><strong>Failure</strong> The trap deals @Damage[(2d12+10)[electricity]] damage, and the creature becomes @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 hour.</p>\n<p><strong>Critical Failure</strong> The trap deals @Damage[(4d12+20)[electricity]] damage, and the creature becomes @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2} and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2} for 1 hour.</p>"
+          "name": "Blitzschlag",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur fügt der Tür Schaden zu, scheitert beim @UUID[Compendium.pf2e.actionspf2e.Item.SjmKHgI7a5Z9JzBx]{Gewaltsam Öffnen} oder scheitert beim Lösen des Rätsels.</p>\n<hr />\n<p><strong>Effekt</strong> Elektrizität erfüllt den Gang und durchfährt alle Kreaturen darin (@Check[reflex|dc:28]{Reflexwurf}):</p>\n<p><strong>Kritischer Erfolg</strong> Kein Effekt.</p>\n<p><strong>Erfolg</strong> Die Falle verursacht @Damage[(1d12+5)[electricity]]{1W12+5 Punkte Elektrizitätsschaden}.</p>\n<p><strong>Fehlschlag</strong> Die Falle verursacht @Damage[(2d12+10)[electricity]]{2W12+10 Punkte Elektrizitätsschaden} und die Kreatur erhält 1 Stunde lang die Zustände @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 1} und @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen1}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Falle verursacht @Damage[(4d12+20)[electricity]]{4W12+20 Punkte Elektrizitätsschaden} und die Kreatur erhält 1 Stunde lang die Zustände @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 2} und @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 2}.</p>"
         }
       }
     },
@@ -638,18 +638,18 @@
       }
     },
     "Enraged Polar Bear Spirit": {
-      "name": "Enraged Polar Bear Spirit",
-      "description": "<p>The ghostly spirit of a polar bear stands on its hind legs and roars.</p>",
-      "disable": "<p>@Check[nature|dc:26] (expert) to calm the spirit, @Check[intimidate|dc:30] (master) to cow the spirit, or @Check[religion|dc:30] (expert) to contain the spiritual corruption (each successful check reduces its number of actions by 1)</p>",
-      "reset": "<p>The bear spirit calms after no creatures are in the room for 1 minute but is ready to lash out again after 10 minutes.</p>",
-      "routine": "<p>(3 actions) The bear moves around the room at an alarming speed, seemingly teleporting, and Strikes a random creature with its spiritual claws.</p>",
+      "name": "Zorniger Geisterhafter Bär",
+      "description": "<p>Ein geisterhafter Eisbär richtet sich auf die Hinterbeine auf und stößt ein Brüllen aus.</p>",
+      "disable": "<p>@Check[nature|dc:26]{Naturkunde} (Experte), um den Geist zu besänftigen; @Check[intimidate|dc:30]{Einschüchtern} (Meister), um den Geist gefügig zu machen; oder @Check[religion|dc:30]{Religionskunde} (Experte), um die spirituelle Verderbnis zu bekämpfen (jeder erfolgreiche Wurf reduziert die Anzahl seiner Aktionen um 1)</p>",
+      "reset": "<p>Der Geisterbär beruhigt sich, sobald sich 1 Minute lang keine Kreaturen im Raum aufhalten. Nach 10 Minuten ist er aber wieder kampfbereit.</p>",
+      "routine": "<p>(3 Aktionen) Der Bär bewegt sich mit beängstigender Geschwindigkeit durch den Raum, als würde er teleportieren, und führt einen Geisterklauenangriff gegen eine zufällig bestimmte Kreatur.</p>",
       "items": {
         "action->Feral Roar": {
-          "name": "Feral Roar",
-          "description": "<p><strong>Trigger</strong> A creature approaches within 10 feet of the polar bear spirit</p>\n<hr />\n<p><strong>Effect</strong> The polar bear spirit roars. Each creature in the room must attempt a @Check[will|dc:28] save. The enraged polar bear spirit rolls initiative.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected. Success The creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Failure</strong> The creature takes @Damage[6d6[sonic]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[12d6[sonic]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3}.</p>"
+          "name": "Wildes Brüllen",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur nähert sich dem Eisbären auf 10 Fuß/3 m oder weniger</p>\n<hr />\n<p><strong>Effekt</strong> Der Eisbärengeist brüllt. Jede Kreatur im Raum muss einen @Check[will|dc:28]{Willenswurf} ablegen. Der Eisbär würfelt dann seine Initiative.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet @Damage[6d6[sonic]]{6W6 Punkte Schallschaden} und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2}</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erleidet @Damage[12d6[sonic]]{12W6 Punkte Schallschaden} und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 3}.</p>"
         },
         "strike-melee->Spiritual Claws": {
-          "name": "Spiritual Claws"
+          "name": "Geisterklauen"
         }
       }
     },
