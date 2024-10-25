@@ -56,6 +56,9 @@
         "action->Prop": {
           "name": "Prop",
           "description": "<p>The castoroides stabilizes itself with its tail, gaining a +1 circumstance bonus to its Fortitude and Reflex DCs against Shove and Trip attempts until it next takes an action with the move trait.</p>"
+        },
+        "action->Grab": {
+          "name": "Grab"
         }
       }
     },
@@ -104,7 +107,7 @@
     },
     "Groplit": {
       "name": "Groplit",
-      "publicNotes": "<p>The groplit is a squat little animal shaped like a water droplet, with a bulbous rear end and an eel-like face that juts from a narrow skull. Its rear legs are more muscular than those in front, which it primarily uses for balance, giving it the gait and appearance of a toad. Groplits are best known for their greasy skin and queasy hygienic habits: they spend most of each day using their two long tongues to slurp up their own oily excretions or similarly viscous discharge originating from plants or other animals. Although they prefer to dwell in northern wetlands, fens, and moist caves, groplits can thrive in all but the most barren environments. They'll eat just about anything, though they tend to prefer small, crunchy animals like bugs and birds.</p>\n<p>Groplits are famously loyal and highly sociable companions, and they make for dedicated, if somewhat odd-looking, pets. They can be taught simple commands and appear to take great pride in obeying them, performing stunts even in the face of obvious danger. An unscrupulous master might train a groplit with the intent to sacrifice it in an emergency, a fate to which the groplit is happily resigned. This single-minded obedience and their slow reproductive rate make groplits fairly rare in the wild.</p>\n<p>As a result of the way their bones are structured, groplits exhibit an imperturbable smile, of sorts-a physical feature which some find as creepy (or enraging) as others find it endearing. Its apparently ceaseless jubilation has given this creature the nickname \"the grinning toad\" in some parts of the world.</p>\n<p>Because they love to lap up oily matter of all kinds, groplits are naturally drawn to greasy animals like @UUID[Compendium.pf2e.pathfinder-bestiary.Actor.eHLDsL1LG3jQ1H6Y]{Slurks}, @UUID[Compendium.pf2e.pathfinder-bestiary-2.Actor.g1htYgARxNKxc7MV]{Giant Slugs}, and lagofirs. For the most part, such animals rarely mind the company of an amiable groplit, though there's no such thing as a free meal; groplits who drop their guard amid their found family often end up on the wrong side of their companions' intestinal tracts.</p>",
+      "publicNotes": "<p>The groplit is a squat little animal shaped like a water droplet, with a bulbous rear end and an eel-like face that juts from a narrow skull. Its rear legs are more muscular than those in front, which it primarily uses for balance, giving it the gait and appearance of a toad. Groplits are best known for their greasy skin and queasy hygienic habits: they spend most of each day using their two long tongues to slurp up their own oily excretions or similarly viscous discharge originating from plants or other animals. Although they prefer to dwell in northern wetlands, fens, and moist caves, groplits can thrive in all but the most barren environments. They'll eat just about anything, though they tend to prefer small, crunchy animals like bugs and birds.</p>\n<p>Groplits are famously loyal and highly sociable companions, and they make for dedicated, if somewhat odd-looking, pets. They can be taught simple commands and appear to take great pride in obeying them, performing stunts even in the face of obvious danger. An unscrupulous master might train a groplit with the intent to sacrifice it in an emergency, a fate to which the groplit is happily resigned. This single-minded obedience and their slow reproductive rate make groplits fairly rare in the wild.</p>\n<p>As a result of the way their bones are structured, groplits exhibit an imperturbable smile, of sorts-a physical feature which some find as creepy (or enraging) as others find it endearing. Its apparently ceaseless jubilation has given this creature the nickname \"the grinning toad\" in some parts of the world.</p>\n<p>Because they love to lap up oily matter of all kinds, groplits are naturally drawn to greasy animals like @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.tashopA1s2fAbSXA]{Slurks}, @UUID[Compendium.pf2e.pathfinder-bestiary-2.Actor.g1htYgARxNKxc7MV]{Giant Slugs}, and lagofirs. For the most part, such animals rarely mind the company of an amiable groplit, though there's no such thing as a free meal; groplits who drop their guard amid their found family often end up on the wrong side of their companions' intestinal tracts.</p>",
       "skillSpecialAcrobatics": {
         "0": {
           "label": "to Escape"
@@ -201,6 +204,9 @@
         "action->Rolling Thunder": {
           "name": "Rolling Thunder",
           "description": "<p>The bison kicks up dust and shakes the ground as it charges. The stampeding bison Strides up to twice its Speed in a straight line, dealing @Damage[(4d8+8)[bludgeoning]] damage (@Check[reflex|dc:24|basic]) to any Large or smaller creature in its path.Multiple bison can participate in Rolling Thunder by spending this ability's actions and waiting to charge until the herd is ready. Before the beginning of its next turn, a bison can then charge as a reaction triggered by an adjacent bison beginning its Rolling Thunder charge. All bison in the combined charge must charge in parallel lines, so the areas can't overlap. The combined charge deals an additional @Damage[3d8[bludgeoning]] damage to creatures in the area, and a creature that fails the Reflex saving throw is also knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>"
+        },
+        "action->Knockdown": {
+          "name": "Knockdown"
         }
       }
     },
@@ -240,25 +246,35 @@
           "name": "Divine Innate Spells"
         },
         "spell->Dominate (Animals Only)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.OsOhx3TGIZ7AhD0P]\nDominate (Animals Only)"
+          "name": "Dominate (Animals Only)",
+          "description": "<p>You take command of the target, forcing it to obey your orders. If you issue an obviously self-destructive order, the target doesn't act until you issue a new order. The effect depends on its Will save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1} as it fights off your commands.</p>\n<p><strong>Failure</strong> You control the target. It gains the @UUID[Compendium.pf2e.conditionitems.Item.9qGBRpbX9NEwtAAr]{Controlled} condition, but it can attempt a Will save at the end of each of its turns. On a success, the spell ends.</p>\n<p><strong>Critical Failure</strong> As a failure, but the target receives a new save only if you give it a new order that is against its nature, such as killing its allies.</p>\n<hr />\n<p><strong>Heightened (10th)</strong> The duration is unlimited.</p>",
+          "target": "1 creature"
         },
         "spell->Dimension Door": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.VlNcjmYyu95vOUe8]\nDimension Door"
+          "name": "Dimension Door",
+          "description": "<p>Opening a door that bypasses normal space, you instantly transport yourself and any items you're wearing and holding from your current space to a clear space within range you can see. If this would bring another creature with you-even if you're carrying it in an extradimensional container-the spell is lost.</p>\n<hr />\n<p><strong>Heightened (5th)</strong> The range increases to 1 mile. You don't need to be able to see your destination, as long as you have been there in the past and know its relative location and distance from you. You are temporarily immune for 1 hour.</p>"
         },
         "spell->Dimension Door (At Will)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.VlNcjmYyu95vOUe8]\nDimension Door (At Will)"
+          "name": "Dimension Door (At Will)",
+          "description": "<p>Opening a door that bypasses normal space, you instantly transport yourself and any items you're wearing and holding from your current space to a clear space within range you can see. If this would bring another creature with you-even if you're carrying it in an extradimensional container-the spell is lost.</p>\n<hr />\n<p><strong>Heightened (5th)</strong> The range increases to 1 mile. You don't need to be able to see your destination, as long as you have been there in the past and know its relative location and distance from you. You are temporarily immune for 1 hour.</p>"
         },
         "spell->Speak with Animals (Constant)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.BBvV7qoXGdw09q1C]\nSpeak with Animals (Constant)"
+          "name": "Speak with Animals (Constant)",
+          "description": "<p>You can ask questions of, receive answers from, and use the Diplomacy skill with animals. The spell doesn't make them more friendly than normal. Cunning animals are likely to be terse and evasive, while less intelligent ones often make inane comments.</p>"
         },
         "spell->Abyssal Pact": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.tsKnoBuBbKMXkiz5]\nAbyssal Pact"
+          "name": "Abyssal Pact",
+          "description": "<p>You call in a favor from another demon whose level is no more than double <em>Abyssal pact's</em> spell rank, two demons whose levels are each at least 2 less than double the spell rank, or three demons whose levels are each at least 3 less than double the spell rank.</p>\n<hr />\n<p><strong>Critical Success</strong> You conjure the demon or demons. They are eager to pursue the task, so they don't ask for a favor.</p>\n<p><strong>Success</strong> You conjure the demon or demons. They are not eager to pursue the task, so they require a favor in return.</p>\n<p><strong>Failure</strong> You don't conjure any demons.</p>\n<p><strong>Critical Failure</strong> The demon or demons are angry that you disturbed them. They appear before you, but they immediately attack you.</p>",
+          "primarycheck": "Religion (expert; you must be a demon)"
         },
         "strike-melee->Jaws": {
           "name": "Jaws"
         },
         "strike-melee->Claw": {
           "name": "Claw"
+        },
+        "action->Constant Spells": {
+          "name": "Constant Spells"
         },
         "action->Disobedience Vulnerability": {
           "name": "Disobedience Vulnerability",
@@ -298,7 +314,8 @@
           "description": "<p><strong>Trigger</strong> The tar ooze is hit by a melee attack</p>\n<hr />\n<p><strong>Effect</strong> The ooze attempts to @UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]{Grapple} the creature that hit it. The ooze must still spend an action to extend the duration of the Grab on subsequent rounds, as normal.</p>"
         },
         "action->Engulf": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.zU3Ovaet4xQ5Gmvy]\n<p>@Check[reflex|dc:29|traits:damaging-effect], @Damage[6d6[bludgeoning]], @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} DC 29, Rupture 17</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Engulf]</p>"
+          "name": "Engulf",
+          "description": "<p>@Check[reflex|dc:29|traits:damaging-effect], @Damage[6d6[bludgeoning]], @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} DC 29, Rupture 17</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Engulf]</p>"
         },
         "action->Viscous Sludge": {
           "name": "Viscous Sludge",
@@ -307,6 +324,9 @@
         "action->Zombification": {
           "name": "Zombification",
           "description": "<p>A creature slain while engulfed by a tar ooze undergoes a horrifying transformation and crawls from the ooze a week later as a tar zombie.</p>"
+        },
+        "action->Improved Grab": {
+          "name": "Improved Grab"
         }
       }
     }
