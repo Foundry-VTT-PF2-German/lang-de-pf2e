@@ -51,7 +51,7 @@
     },
     "Effect: Asper's Elemental Aura": {
       "name": "Effect: Asper's Elemental Aura",
-      "description": "<p>Asper surrounds herself with the power of one of the elements under her control (air, fire, or water). If air, she gains resistance 10 to electricity damage and doubles her speed. If fire, she gains resistance 10 to fire damage. Any creature within 30 feet of her who receives fire damage receives an extra @Damage[2d10[persistent,fire]] damage. If water, she gains resistance 10 to cold damage and fast healing 20.</p>"
+      "description": "<p>You gain resistance 10 to damage of the chosen element (electricity for air, fire, or cold for water). If air, you double your speed. If fire, any creature within 30 feet of you who receives fire damage receives an extra 2d10 persistent fire damage. If water, you gain fast healing 20.</p>"
     },
     "Effect: Assimilate Lava": {
       "name": "Effect: Assimilate Lava",
@@ -117,13 +117,17 @@
       "name": "Effect: Beacon of the Rowan Guard",
       "description": "<p>While within the emanation, a creature with the elemental trait and either the plant trait or wood trait gains fast healing 10 and a +2 circumstance bonus to all attack and damage rolls.</p>"
     },
+    "Effect: Biggest Fan!": {
+      "name": "Effect: Biggest Fan!",
+      "description": "<p>You gain 1d6 temporary Hit Points.</p>"
+    },
     "Effect: Bittersweet Dreams": {
       "name": "Effect: Bittersweet Dreams",
       "description": "<p>The creature takes a status penalty to attack rolls, saving throws, and skill checks according to its save result.</p>"
     },
     "Effect: Black Cat Curse": {
       "name": "Effect: Black Cat Curse",
-      "description": "<p><strong>Effect</strong> Mistress Dusklight spews a hatefully uttered curse at one creature within 30 feet that she can see. If the target fails a @Check[will|dc:32] save, whenever it attempts an attack roll or saving throw, it must roll twice and use the lower result. The target is then temporarily immune for 24 hours. The curse persists until it is removed or the target succeeds a later saving throw against it. The victim can attempt a new @Check[will|dc:32] save once per hour to end the curse.</p>"
+      "description": "<p>Whenever you attempt an attack roll or saving throw, you must roll twice and use the lower result.</p>"
     },
     "Effect: Blade Barrage": {
       "name": "Effect: Blade Barrage",
@@ -198,13 +202,9 @@
       "name": "Effect: Bond in Light",
       "description": "<p>The creature glows with bright light in a 20-foot emanation and dim light to 40 feet and has fast healing 10.</p>"
     },
-    "Effect: Bosun's Command - Attack Bonus": {
-      "name": "Effect: Bosun's Command - Attack Bonus",
-      "description": "<p>The creature gains a +2 status bonus to attack rolls.</p>"
-    },
-    "Effect: Bosun's Command - Speed Bonus": {
-      "name": "Effect: Bosun's Command - Speed Bonus",
-      "description": "<p>The creature gains a +10 status bonus its Speeds.</p>"
+    "Effect: Bosun's Command": {
+      "name": "Effect: Bosun's Command",
+      "description": "<p>The creature gains the bosun's choice of a +2 status bonus to attack rolls or a +10 status bonus to its Speeds.</p>"
     },
     "Effect: Brand of the Impenitent": {
       "name": "Effect: Brand of the Impenitent",
@@ -609,7 +609,11 @@
     },
     "Effect: Filth Wave": {
       "name": "Effect: Filth Wave",
-      "description": "<p>The creature takes a -10-foot penalty to its Speeds.</p>"
+      "badges": [
+        "-5 ft.",
+        "-10 ft."
+      ],
+      "description": "<p>You take a penalty to your Speeds.</p>"
     },
     "Effect: Flammable": {
       "name": "Effect: Flammable",
@@ -675,6 +679,10 @@
       "name": "Effect: Glowing Spores",
       "description": "<p>The creature takes a -4 penalty to Stealth checks.</p>"
     },
+    "Effect: Glutton's Feast": {
+      "name": "Effect: Glutton's Feast",
+      "description": "<p>The ogre glutton gains 1d4 temporary hit points, or 2d4 following glutton's rush.</p>"
+    },
     "Effect: Goblin Song": {
       "name": "Effect: Goblin Song",
       "description": "<p>The creature takes a -1 status penalty to Perception checks and Will saves.</p>"
@@ -706,10 +714,12 @@
       "description": "<p>The creature gains a +1 status bonus to saves against magical effects. The bonus increases to +2 if the effect originated from a demon or other chaotic evil fiend.</p>"
     },
     "Effect: Guide's Warning": {
-      "name": "Effect: Guide's Warning"
+      "name": "Effect: Guide's Warning",
+      "description": "<p>You gain a +1 circumstance bonus to initiative rolls.</p>"
     },
     "Effect: Guiding Words": {
       "name": "Effect: Guiding Words",
+      "description": "<p>You gain a +1 status bonus to attack and damage rolls against the marked creature.</p>",
       "rules": {
         "0": {
           "label": "Attacking designated target"
@@ -717,7 +727,8 @@
       }
     },
     "Effect: Guildmaster's Lead": {
-      "name": "Effect: Guildmaster's Lead"
+      "name": "Effect: Guildmaster's Lead",
+      "description": "<p>The member of the Copper Hand deals an additional 1d6 precision damage the first time they deal damage.</p>"
     },
     "Effect: Hallucinogenic Pollen (Critical Failure)": {
       "name": "Effect: Hallucinogenic Pollen (Critical Failure)",
@@ -767,9 +778,13 @@
       "name": "Effect: Haywire",
       "description": "<p>The creature takes a -1 circumstance penalty to Strikes but deals an additional @Damage[1d6[bludgeoning]] damage plus @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.BCLvAx4Pz4MLa2pu]{Knockdown}.</p>"
     },
+    "Effect: Heart Break": {
+      "name": "Effect: Heart Break",
+      "description": "<p>Until the end of her next turn, each enemy within 60 feet of Narcela takes a -1 item penalty to Will saves.</p>"
+    },
     "Effect: Hope Vulnerability": {
       "name": "Effect: Hope Vulnerability",
-      "description": "<p>The elegecide is fueled by the certainty of doom, which leaves it weakened by any hope. The first time each round that a creature critically fails at an attack or skill check against the elegecide, it experiences a burst of hope that leaves it @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>"
+      "description": "<p>The first time each round that a creature critically fails at an attack or skill check against the elegecide, it experiences a burst of hope that leaves it @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>"
     },
     "Effect: Howl of Vengeful Fury": {
       "name": "Effect: Howl of Vengeful Fury",
@@ -949,6 +964,10 @@
       "name": "Effect: Manipulate Luck (Good)",
       "description": "<p>The affected creature can roll twice on one d20 roll within the next minute and use the higher result.</p>"
     },
+    "Effect: Manipulate Luck - Drusilla (Good)": {
+      "name": "Effect: Manipulate Luck - Drusilla (Good)",
+      "description": "<p>The affected creature can roll twice on one d20 roll within the next day and use the higher result.</p>"
+    },
     "Effect: Metallify": {
       "name": "Effect: Metallify",
       "description": "<p>The ooze gains resistance 5 to physical damage (except adamantine), it has a -5-foot penalty to its Speed, and its pseudopod Strikes gain the versatile S or P weapon trait.</p>"
@@ -976,6 +995,10 @@
     "Effect: Mutilating Bite": {
       "name": "Effect: Mutilating Bite",
       "description": "<p>The creature then takes a -1 status penalty to Charisma-based checks. This penalty is cumulative up to -3.</p>"
+    },
+    "Effect: My Turn!": {
+      "name": "Effect: My Turn!",
+      "description": "<p>Kar gains a +1 status bonus to attack rolls, saving throws, and skill checks.</p>"
     },
     "Effect: Nanite Surge (Glow)": {
       "name": "Effect: Nanite Surge (Glow)",
@@ -1257,6 +1280,10 @@
       "name": "Effect: Sixfold Flurry",
       "description": "<p>The creature gains a circumstance bonus to AC based on the Strikes it chose not to take.</p>"
     },
+    "Effect: Skin Net": {
+      "name": "Effect: Skin Net",
+      "description": "<p>You take a –10-foot circumstance penalty to your Speeds.</p>"
+    },
     "Effect: Slime Trap": {
       "name": "Effect: Slime Trap",
       "description": "<p>The creature takes a -10-foot circumstance penalty to its Speeds.</p>"
@@ -1344,11 +1371,11 @@
     },
     "Effect: Stoke the Fervent": {
       "name": "Effect: Stoke the Fervent",
-      "description": "<p>Each ally that hears the call gains a +1 status bonus to attack rolls, damage rolls, and saving throws, and takes a –1 status penalty to AC. Affected allies must use at least one of their actions to Strike each round, if they are able (even if it means attacking an ally, object, or thin air).</p>\n<p><em>The effect duration has been set to the average duration of [[/br 2d4 #rounds]]{2d4 rounds}. Set the duration to the correct value when the effect is added.</em></p>"
+      "description": "<p>Each ally that hears the call gains a +1 status bonus to attack rolls, damage rolls, and saving throws, and takes a –1 status penalty to AC. Affected allies must use at least one of their actions to Strike each round, if they are able (even if it means attacking an ally, object, or thin air).</p>\n<p><em>The effect duration has been set to the average duration of [[/gmr 2d4 #rounds]]{2d4 rounds}. Set the duration to the correct value when the effect is added.</em></p>"
     },
     "Effect: Stoke the Fervent (High Tormentor)": {
       "name": "Effect: Stoke the Fervent (High Tormentor)",
-      "description": "<p>Each ally that hears the call gains a +4 status bonus to attack rolls and damage rolls, a +2 status bonus to saving throws, and takes a -2 status penalty to AC. Affected allies must use at least one of their actions to Strike each round, if they are able (even if it means attacking an ally, object, or thin air).</p>\n<p><em>The effect duration has been set to the average duration of [[/br 2d4 #rounds]]{2d4 rounds}. Set the duration to the correct value when the effect is added.</em></p>"
+      "description": "<p>Each ally that hears the call gains a +4 status bonus to attack rolls and damage rolls, a +2 status bonus to saving throws, and takes a -2 status penalty to AC. Affected allies must use at least one of their actions to Strike each round, if they are able (even if it means attacking an ally, object, or thin air).</p>\n<p><em>The effect duration has been set to the average duration of [[/gmr 2d4 #rounds]]{2d4 rounds}. Set the duration to the correct value when the effect is added.</em></p>"
     },
     "Effect: Surge Forward": {
       "name": "Effect: Surge Forward",
@@ -1398,13 +1425,9 @@
       "name": "Effect: Sylvan Wine (Horned Hunter)",
       "description": "<p>The creature gains a +3 item bonus to Will saves.</p>"
     },
-    "Effect: Tail Lash (Attack Roll)": {
-      "name": "Effect: Tail Lash (Attack Roll)",
-      "description": "<p>The creature takes a -2 circumstance penalty to the triggering attack roll.</p>"
-    },
-    "Effect: Tail Lash (Skill Check)": {
-      "name": "Effect: Tail Lash (Skill Check)",
-      "description": "<p>The creature takes a -2 circumstance penalty to the triggering skill check.</p>"
+    "Effect: Tail Lash": {
+      "name": "Effect: Tail Lash",
+      "description": "<p>The creature takes a -2 circumstance penalty to the triggering roll.</p>"
     },
     "Effect: Take Them Down!": {
       "name": "Effect: Take Them Down!",
