@@ -85,6 +85,7 @@
           "HitPointsSingle": "{hitPoints} TP wiederhergestellt.",
           "InfusedReagents": "Aufgeladene Reagenzien wiederhergestellt.",
           "Resolve": "Entschlossenheit wiederhergestellt.",
+          "Resource": "{name} restored.",
           "SpellSlots": "Alle Zauberplätze wiederhergestellt.",
           "StaminaPoints": "Ausdauerpunkte wiederhergestellt.",
           "TemporaryItems": "Temporäre Gegenstände entfernt.",
@@ -101,7 +102,6 @@
     "ActionActionTypeLabel": "Aktionsart",
     "ActionActionsLabel": "Aktionen",
     "ActionBrowserSearchHint": "Sie können nach Namen oder benutzerdefinierten Attributen suchen. Mögliche Suchattribute sind:<br>source, spellType, level, materials, target, range, time, duration, damage, damageType, save, concentration, ritual, ability and classes. <br>Beispiel: 'fire, damage:d6' um alle Zauber zu finden, die Feuer in ihrem Namen und einen W6 im Schaden haben",
-    "ActionDeathNoteLabel": "Todeshinweis",
     "ActionNumber1": "Eine",
     "ActionNumber2": "Zwei",
     "ActionNumber3": "Drei",
@@ -140,6 +140,14 @@
       },
       "Attacks": "Angriffe",
       "Character": {
+        "ABCPicker": {
+          "SearchPlaceholder": "Search {items}",
+          "Title": "{type} Selection",
+          "Tooltip": {
+            "ConfirmSelection": "Confirm Selection",
+            "ViewSheet": "View Sheet"
+          }
+        },
         "Attribute": {
           "Apex": "Apex-Attribut",
           "Boosts": "Attributsverbesserungen",
@@ -1702,27 +1710,34 @@
         "Features": "Merkmale",
         "InvalidDrop": "{badType} kann hier nicht platziert werden (es muss {goodType} sein)."
       },
-      "Action": {
+      "Ability": {
         "Category": {
-          "None": "Keine",
-          "Defensive": "Defensiv",
-          "Interaction": "Interaktion",
-          "Offensive": "Offensiv",
-          "Familiar": "Vertrautenfähigkeit"
+          "None": "None",
+          "Defensive": "Defensive",
+          "Interaction": "Interaction",
+          "Offensive": "Offensive",
+          "Familiar": "Familiar Ability"
         },
-        "Plural": "Fähigkeiten",
+        "FIELDS": {
+          "deathNote": {
+            "label": "Death Note"
+          },
+          "selfEffect": {
+            "hint": "A single effect item to be applied to the actor that uses this action",
+            "label": "Self-Applied Effect"
+          }
+        },
+        "Plural": "Abilities",
         "SelfAppliedEffect": {
-          "Applied": "{effect} wurde angewandt.",
-          "Delete": "Referenz löschen",
-          "Drop": "Effekt einfügen",
-          "Label": "Autom. angewandter Effekt",
-          "Hint": "Ein einzelner Effekt, der auf den Akteur angewandt wird, der diese Aktion nutzt."
+          "Applied": "{effect} was applied.",
+          "Delete": "Delete Reference",
+          "Drop": "Drop Effect"
         },
         "Type": {
-          "Activity": "Aktivität",
-          "Free": "Freie Aktion",
-          "Single": "Einfache Aktion",
-          "Reaction": "Reaktion"
+          "Activity": "Activity",
+          "Free": "Free Action",
+          "Single": "Single Action",
+          "Reaction": "Reaction"
         }
       },
       "Activation": {
@@ -1751,6 +1766,7 @@
       },
       "Ancestry": {
         "DropFeatures": "Lege Abstammungsmerkmale hier ab.",
+        "Plural": "Ancestries",
         "Vision": {
           "Label": "Sicht",
           "Normal": "Normale Sicht"
@@ -1810,11 +1826,17 @@
         },
         "UnequippedHint": "Diese Rüstung hat mehr Last, weil sie nicht getragen wird."
       },
+      "Background": {
+        "Plural": "Backgrounds"
+      },
       "CampaignFeature": {
         "CampaignLabel": "Kampagne",
         "Plural": "Kampagnenfähigkeiten"
       },
       "CannotAddType": "Gegenstände vom Typ {tyoe} können diesem Akteur nicht hinzugefügt werden.",
+      "Class": {
+        "Plural": "Classes"
+      },
       "Condition": {
         "Chat": {
           "Current": "Aktuelle Zustände"
@@ -2221,6 +2243,7 @@
           "Hint": "Jede Gottheit hat eine bevorzugte Waffe. Diese Waffen können natürlich auch von anderen genutzt werden, die nicht zu den Klerikern und Streitern der Gottheit gehören.",
           "Label": "Bevorzugte Waffe(n)"
         },
+        "Plural": "Deities",
         "Sanctification": {
           "Can": {
             "Holy": "Kann Heilig wählen",
@@ -2274,6 +2297,11 @@
         "ShowTokenIcon": "Tokenbild anzeigen?",
         "Unidentified": "Unidentifiziert?"
       },
+      "FIELDS": {
+        "category": {
+          "label": "Category"
+        }
+      },
       "Feat": {
         "Info": {
           "Added": "{item} wurde {category} hinzugefügt."
@@ -2326,6 +2354,7 @@
         "AncestryNotFound": "Der referenzierte Abstammungseintrag wurde nicht gefunden.",
         "DragAncestryHere": "Ziehe eine Abstammung hierhin, um die für die Herkunft benötigte Abstammung zu setzen.",
         "NoneVersatile": "Keine (Vielseitig)",
+        "Plural": "Heritages",
         "RemoveAncestry": "Entferne benötigte Abstammung"
       },
       "IconLabel": "Icon",
@@ -2419,6 +2448,7 @@
         },
         "LevelLabel": "Gegenstand {level}",
         "OtherTag": {
+          "HandwrapsOfMightyBlows": "Handwraps of Mighty Blows",
           "Herbal": "Kräuter",
           "Improvised": "Improvisiert",
           "Shoddy": "Minderwertig"
@@ -3900,6 +3930,7 @@
     "TraitAttachedToFirearm": "Befestigt an Feuerwaffe",
     "TraitAttachedToFirearmFiringMechanism": "Befestigt an Feuerwaffe (Feuermechanismus)",
     "TraitAttachedToFirearmScope": "Befestigt an Feuerwaffe (Zielfernrohr)",
+    "TraitAttachedToMeleeWeapon": "Attached to a Melee Weapon",
     "TraitAttachedToShield": "Befestigt an Schild",
     "TraitAttachedToShipsBow": "Angebracht am Bug eines Schiffes",
     "TraitAttack": "Offensiv",
@@ -4188,7 +4219,7 @@
     "TraitDescriptionHaunt": "Eine Gefahr dieser Kategorie ist ein spirituelles Echo und entsteht oftmals durch einen tragischen Tod. Um eine Spukerscheinung zur Ruhe zu legen, muss oft ihre unerledigte Angelegenheit vollendet werden. Andernfalls kehrt der Spuk nach einiger Zeit zurück.",
     "TraitDescriptionHealing": "Ein Effekt dieser Kategorie stellt den Körper einer Kreatur wieder her; in der Regel bedeutet dies die Wiederherstellung von Trefferpunkten, zuweilen aber auch die Heilung von Krankheiten und anderen schwächenden Effekten.",
     "TraitDescriptionHefty": "Dieser massive Schild ist so schwer, dass es größere Anstrengung benötigt, um es zu heben. Ein Schild mit dieser Kategorie zu heben ist eine 2-Aktionen-Aktivität, außer dein Stärkewert ist gleich oder höher als der in der Kategorie angegebene Wert.",
-    "TraitDescriptionHex": "Eine Hexerei ist ein kurzfristiger Effekt, den du spontan mittels der Magie deines Schutzherrn über deinen Vertrauten erschaffst. Daher kannst du pro Zug nur einen Zauber der Kategorie Hexerei wirken; ein Versuch zum Wirken einer zweiten Hexerei im selben Zug scheitert und die genutzten Aktionen sind dann verloren.",
+    "TraitDescriptionHex": "A hex is a spell caused by your patron's direct attention and intervention. Your patron does not take well to being disturbed repeatedly, so you can cast only one spell that has the hex trait each turn; attempts to use a second automatically fail and usually cause your familiar to hiss in displeasure as your patron rejects your call.",
     "TraitDescriptionHindering": "Diese Rüstung ist so schwer und klobig, dass sie dich langsamer macht. Du erleidest einen Malus von ‑5 Fuß/1,50 m auf alle Bewegungsraten (dies kann deine Bewegungsrate nicht unter 5 Fuß/1,50 m reduzieren). Dies ist kumulativ mit dem Malus der Rüstung auf die Bewegungsrate und gilt selbst dann, wenn du dank deiner Stärke oder einer Fähigkeit diesen Malus senken oder ignorieren kannst.",
     "TraitDescriptionHobgoblin": "Eine Kreatur dieser Kategorie ist ein hochgewachsener, militaristischer Goblinoid. Hobgoblins besitzen oft Dunkelsicht.",
     "TraitDescriptionHoly": "Effekte der Kategorie Heilig stehen mit starken magischen Kräften der Tugend und der Güte in Verbindung. Sie entfalten oft eine stärkere Wirkung auf Kreaturen der Kategorie Unheilig. Kreaturen dieser Kategorie sind heiligen Sachen treu ergeben und besitzen oft eine Schwäche gegen Effekte der Kategorie Unheilig. Sollte eine Kreatur mit Schwäche gegen Heilig einen Gegenstand oder Effekt der Kategorie Heilig nutzen, so erleidet sie aufgrund ihrer Schwäche Schaden.",
@@ -4224,6 +4255,7 @@
     "TraitDescriptionLaunching": "Ein Mechanismus im Schild kann Geschosse verschießen, so dass der Schild auch als Fernkampfwaffe funktioniert. Die Eigenschaft benennt auch die Waffenart, z.B. „Wurfpfeile abschießend“. Zum Abschießen wird die dieselbe Anzahl an Händen wie für die Fernkampfwaffe benötigt (die Hand, welche den Schild hält, zählt aber gegen diese Anforderung, so dass eine einhändige Fernkampfwaffe weiterhin nur eine Hand benötigt). Zum Nachladen ist die übliche Anzahl an Aktionen der Kategorie Interagieren erforderlich (Minimal 1 Aktion); du kannst die Hand, mit der du bereits den Schild hältst, nicht zum Nachladen nutzen.",
     "TraitDescriptionLeshy": "Eine Kreatur mit dieser Kategorie gehört zur Abstammung Lesnik. Diese kleinen Pflanzen oder Pilzkreaturen haben humanoide Gestalt. Eine Fähigkeit dieser Kategorie kann nur von Lesniks gewählt oder genutzt werden. Eine Waffe dieser Kategorie wird von Lesniks hergestellt und genutzt.",
     "TraitDescriptionLight": "Lichteffekte überwinden nichtmagische Dunkelheit in ihrem Wirkungsbereich und können magischer Dunkelheit entgegenwirken. Um Dunkelheitmagie entgegenzuwirken, musst du sie in der Regel direkt als Ziel wählen; manche Lichtzauber versuchen aber, Dunkelheit automatisch entgegenzuwirken.",
+    "TraitDescriptionLineage": "A feat with this trait indicates a character's descendance from a particular type of creature. You can have only one lineage feat. You can select a lineage feat only at 1st level, and you can't retrain into or out of these feats.",
     "TraitDescriptionLinguistic": "Ein Effekt dieser Kategorie erfordert, dass das Ziel die genutzte Sprache versteht, um zu funktionieren.",
     "TraitDescriptionLitany": "Litaneien sind besondere Stoßgebetszauber, die in der Regel von Streitern genutzt werden und eine Aktion erfordern; meistens verleihen sie Immunität gegen weitere Litaneien.",
     "TraitDescriptionLizardfolk": "Eine Kreatur dieser Kategorie gehört der Abstammung Iruxi an – reptilische Humanoide.",
@@ -4941,6 +4973,7 @@
     "TraitVolley20": "Ballistisch 20 Fuß/6 m",
     "TraitVolley30": "Ballistisch 30 Fuß/9 m",
     "TraitVolley50": "Ballistisch 50 Fuß/15 m",
+    "TraitVolley60": "Volley 60 ft.",
     "TraitVorpalFear": "Furcht vor enthauptenden Waffen",
     "TraitWand": "Zauberstab",
     "TraitWater": "Wasser",
@@ -5257,6 +5290,7 @@
         "ogre-hook": "Ogerhaken",
         "orc-knuckle-dagger": "Orkischer Stoßring",
         "orc-necksplitter": "Orkischer Halsabschneider",
+        "orc-skewermaul": "Orc Skewermaul",
         "panabas": "Panabas",
         "pepperbox": "Bündelrevolver",
         "phalanx-piercer": "Phalanxbrecher",
@@ -6186,6 +6220,7 @@
       "Quantity": "Menge",
       "SellMessage": "{seller} verkauft {quantity} × {item} an {buyer}.",
       "SellSubtitle": "Verkaufe Gegenstand",
+      "SendToPartyStash": "Send to Party Stash",
       "SheetType": "Bogentyp",
       "SplitCoinsLabel": "Verteile Münzen",
       "SplitCoinsPopupHeader": "Wähle Akteure aus, die Anteile erhalten sollen",
