@@ -365,13 +365,13 @@
     "Blast Tumbler": {
       "name": "Energiestoß",
       "description": "<p>Eine schwer erreichbare Rune befindet sich auf der Zuhaltung des Schlosses. Diese gibt einen Energiestoß ab, wenn sich jemand an der Tür zu schaffen macht.</p>",
-      "disable": "<p>@Check[thievery|dc:32|name:Rune entschärfen|traits:action:disable-a-device]{Diebeskunst} (Meister), um die Rune zu entschärfen, oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (5. Grad; @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken}-SG 28), um die Magie der Rune zu bannen.</p>",
+      "disable": "<p>@Check[thievery|dc:32|name:Disarm the Rune|traits:action:disable-a-device] (master) to disarm the rune, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (5th rank; counteract DC 28) to counteract the rune's magic.</p>",
       "reset": "<p>Die Rune setzt sich 1 Minute nach Auslösen zurück.</p>",
       "stealth": "<p>@Check[perception|dc:32|traits:action:seek]{Wahrnehmung} (Meister)</p>",
       "items": {
         "action->Force Blast": {
           "name": "Kraftstoß",
-          "description": "<p><strong>Auslöser</strong> Eine nichtuntote Kreatur öffnet die Tür oder erzielt beim Versuch, die Rune zu entschärfen oder zu bannen, einen Kritischen Fehlschlag</p>\n<hr />\n<p><strong>Effekt</strong> Ein @Template[cone|distance:30]{30 Fuß/9 m-Kegel} aus kinetischer Energie geht von dem Schloss aus. Kreaturen innerhalb des Kegels müssen einen @Check[fortitude|dc:29|basic]{einfachen Zähigkeitswurf} ablegen; bei Misslingen erhalten sie @Damage[8d12[force]]{8W12 Punkte Kraftschaden} und werden um 10 Fuß/3 m fortgestoßen (bzw. um 20 Fuß/6 m bei einem Kritischen Fehlschlag; außerdem verleiht ein Kritischer Fehlschlag den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 2}).</p>"
+          "description": "<p><strong>Trigger</strong> A non-undead creature opens the door or critically fails an attempt to disarm or dispel the rune</p>\n<hr />\n<p><strong>Effect</strong> A @Template[cone|distance:30] of force issues forth from the lock. Creatures within the cone must succeed a @Check[fortitude|dc:29|basic|options:area-effect] saving throw or take @Damage[8d12[force]|options:area-damage] damage. Those who fail the save are pushed 10 feet, and those who critically fail are pushed 20 feet and are @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 2}.</p>"
         }
       }
     },
