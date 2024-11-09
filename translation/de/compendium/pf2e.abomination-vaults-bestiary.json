@@ -307,7 +307,7 @@
         },
         "action->Corrupting Gaze": {
           "name": "Verderbender Blick",
-          "description": "<p>Belcorra starrt eine maximal 30 Fuß/9 m weit entfernte Kreatur an, welche sie sehen können muss. Das Ziel erleidet @Damage[9d6[mental]]{9W6 Punkte mentalen Schaden} (@Check[will|dc:33|basic]{einfacher WIL}; bei gescheitertem Rettungswurf erhält das Ziel ferner für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 1}).</p>"
+          "description": "<p>Belcorra starrt eine maximal 30 Fuß/9 m weit entfernte Kreatur an, welche sie sehen können muss. Das Ziel erleidet @Damage[9d6[mental]]{9W6 Punkte mentalen Schaden} (@Check[will|dc:33|basic]{einfacher Willenswurf}; bei gescheitertem Rettungswurf erhält das Ziel ferner für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 1}).</p>"
         },
         "action->Haunted Lighthouse": {
           "name": "Heimgesuchter Leuchtturm",
@@ -371,7 +371,7 @@
       "items": {
         "action->Force Blast": {
           "name": "Kraftstoß",
-          "description": "<p><strong>Auslöser</strong> Eine nichtuntote Kreatur öffnet die Tür oder erzielt beim Versuch, die Rune zu entschärfen oder zu bannen, einen Kritischen Fehlschlag</p>\n<hr />\n<p><strong>Effekt</strong> Ein @Template[cone|distance:30]{30 Fuß/9 m-Kegel} aus kinetischer Energie geht von dem Schloss aus. Kreaturen innerhalb des Kegels müssen einen @Check[fortitude|dc:29|basic]{einfachen Zähigkeitswurf} ablegen; bei Misslingen erhalten sie @Damage[8d12[force]]{8W12 Punkte Kraftschaden} und werden um 10 Fuß/3 m fortgestoßen (bzw. um 20 Fuß/6 m bei einem Kritischen Fehlschlag; außerdem verleiht ein Kritischer Fehlschlag den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 2}).</p>"
+          "description": "<p><strong>Auslöser</strong> Eine nichtuntote Kreatur öffnet die Tür oder erzielt beim Versuch, die Rune zu entschärfen oder zu bannen, einen Kritischen Fehlschlag</p>\n<hr />\n<p><strong>Effekt</strong> Ein @Template[cone|distance:30]{30 Fuß/9 m-Kegel} aus kinetischer Energie geht von dem Schloss aus. Kreaturen innerhalb des Kegels müssen einen @Check[fortitude|dc:29|basic|options:area-effect]{einfachen Zähigkeitswurf} ablegen; bei Misslingen erhalten sie @Damage[8d12[force]|options:area-damage]{8W12 Punkte Kraftschaden} und werden um 10 Fuß/3 m fortgestoßen (bzw. um 20 Fuß/6 m bei einem Kritischen Fehlschlag; außerdem verleiht ein Kritischer Fehlschlag den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 2}).</p>"
         }
       }
     },
@@ -499,7 +499,7 @@
         },
         "action->Bright Release": {
           "name": "Strahlendes Ende",
-          "description": "<p>Sobald ein Leuchtwandler auf 0 TP fällt, verglüht er in einem Lichtstrahl und erlangt das flammende Ende, das ihm bei seinem Tod verwehrt wurde. Diese Flamme fügt jeder Kreatur innerhalb von @Template[emanation|distance:20]{20 Fuß/6 m} Entfernung @Damage[10d6[fire]]{10W6 Punkte Feuerschaden} (@Check[reflex|dc:25|basic]{einfacher REF}) zu. Kreaturen, die einen Fehlschlag erzielen, erhalten für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet} (bzw. @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind} für 1 Minute bei einem Kritischen Fehlschlag).</p>"
+          "description": "<p>Sobald ein Leuchtwandler auf 0 TP fällt, verglüht er in einem Lichtstrahl und erlangt das flammende Ende, das ihm bei seinem Tod verwehrt wurde. Diese Flamme fügt jeder Kreatur innerhalb von @Template[emanation|distance:20]{20 Fuß/6 m} Entfernung @Damage[10d6[fire]]{10W6 Punkte Feuerschaden} (@Check[reflex|dc:25|basic]{einfacher Reflexwurf}) zu. Kreaturen, die einen Fehlschlag erzielen, erhalten für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet} (bzw. @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind} für 1 Minute bei einem Kritischen Fehlschlag).</p>"
         },
         "action->Light Aura": {
           "name": "Leuchtaura",
@@ -515,7 +515,7 @@
         },
         "action->Light Flare": {
           "name": "Aufleuchten",
-          "description": "<p><strong>Anforderung</strong> Die Leuchtaura des Leuchtwandlers ist unterdrückt</p>\n<hr />\n<p><strong>Effekt</strong> Der Leuchtwandler entfacht mit einer Lichtexplosion seine Leuchtaura neu. Kreaturen in einem @Template[burst|distance:20]{20 Fuß/6 m-Explosionsradius} nehmen @Damage[5d6[fire]]{5W6 Punkte Feuerschaden} (@Check[reflex|dc:25|basic]{einfacher REF}). Kreaturen, die den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet} oder die Fähigkeit @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.I0HYG0ctCLP5JRsW]{Blindheit durch Licht} besitzen, empfinden das Aufleuchten als schmerzhaft; das Ergebnis ihrer Rettungswürfe wieder jeweils als um einen Schritt schlechter behandelt.</p>"
+          "description": "<p><strong>Anforderung</strong> Die Leuchtaura des Leuchtwandlers ist unterdrückt</p>\n<hr />\n<p><strong>Effekt</strong> Der Leuchtwandler entfacht mit einer Lichtexplosion seine Leuchtaura neu. Kreaturen in einem @Template[burst|distance:20]{20 Fuß/6 m-Explosionsradius} nehmen @Damage[5d6[fire]]{5W6 Punkte Feuerschaden} (@Check[reflex|dc:25|basic]{einfacher Reflexwurf}). Kreaturen, die den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet} oder die Fähigkeit @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.I0HYG0ctCLP5JRsW]{Blindheit durch Licht} besitzen, empfinden das Aufleuchten als schmerzhaft; das Ergebnis ihrer Rettungswürfe wieder jeweils als um einen Schritt schlechter behandelt.</p>"
         },
         "action->Shadow Jump": {
           "name": "Schattensprung",
@@ -597,7 +597,7 @@
         },
         "action->Death Flame": {
           "name": "Todesflamme",
-          "description": "<p>Stirbt der Verteidiger, so explodiert er in einer glühendweißen Flamme. Alle Kreaturen in einem @Template[burst|distance:20]{Explosionsradius von 20 Fuß/6 m} erleiden @Damage[6d10[fire]]{6W10 Punkte Feuerschaden} (@Check[reflex|dc:26|basic]{einfacher REF}). Seine Ausrüstung und Schätze sind davon nicht betroffen und verbleiben auf einem Haufen im Feld seines Todes.</p>"
+          "description": "<p>Stirbt der Verteidiger, so explodiert er in einer glühendweißen Flamme. Alle Kreaturen in einem @Template[burst|distance:20]{Explosionsradius von 20 Fuß/6 m} erleiden @Damage[6d10[fire]]{6W10 Punkte Feuerschaden} (@Check[reflex|dc:26|basic]{einfacher Reflexwurf}). Seine Ausrüstung und Schätze sind davon nicht betroffen und verbleiben auf einem Haufen im Feld seines Todes.</p>"
         },
         "action->Black Smear Poison": {
           "name": "Schwarze Schmiere",
@@ -912,7 +912,7 @@
       "items": {
         "action->Gnawing Fog": {
           "name": "Nagender Nebel",
-          "description": "<p><strong>Auslöser</strong> Eine Kreatur bewegt sich in die Mitte der Höhle (über die gestrichelte Linie auf der Karte hinweg)</p>\n<hr />\n<p><strong>Effekt</strong> Die Gefahr verursacht bei der auslösenden Kreatur und allen Nichtscheusalen innerhalb von @Template[emanation|distance:20]{20 Fuß/6 m} @Damage[9d6[piercing]]{9W6 Punkte Stichschaden} (@Check[reflex|dc:32|basic]{einfacher REF}). Erzielt eine Kreatur bei dem Rettungswurf einen Kritischen Fehlschlag, erhält sie zudem für [[/br 1d4 #Runden]]{1W4 Runden} den Zustand @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Verwirrt}.</p>"
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur bewegt sich in die Mitte der Höhle (über die gestrichelte Linie auf der Karte hinweg)</p>\n<hr />\n<p><strong>Effekt</strong> Die Gefahr verursacht bei der auslösenden Kreatur und allen Nichtscheusalen innerhalb von @Template[emanation|distance:20]{20 Fuß/6 m} @Damage[9d6[piercing]]{9W6 Punkte Stichschaden} (@Check[reflex|dc:32|basic]{einfacher Reflexwurf}). Erzielt eine Kreatur bei dem Rettungswurf einen Kritischen Fehlschlag, erhält sie zudem für [[/br 1d4 #Runden]]{1W4 Runden} den Zustand @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Verwirrt}.</p>"
         }
       }
     },
@@ -1095,7 +1095,7 @@
         },
         "action->Spore Explosion": {
           "name": "Sporenexplosion",
-          "description": "<p>Stirbt ein Drachenblutbovist, explodiert dieser und jede Kreatur in einem @Template[emanation|distance:20]{20 Fuß/6 m-Explosionsradius} erleidet @Damage[7d8[poison]]{7W8 Giftschaden} (@Check[fortitude|dc:26|basic]{einfacher ZÄH}).</p>"
+          "description": "<p>Stirbt ein Drachenblutbovist, explodiert dieser und jede Kreatur in einem @Template[emanation|distance:20]{20 Fuß/6 m-Explosionsradius} erleidet @Damage[7d8[poison]]{7W8 Giftschaden} (@Check[fortitude|dc:26|basic]{einfacher Zähigkeitswurf}).</p>"
         }
       }
     },
@@ -1155,7 +1155,7 @@
         },
         "action->Feed on Despair": {
           "name": "Von Verzweiflung zehren",
-          "description": "<p><strong>Häufigkeit</strong> einmal pro Runde</p>\n<p><strong>Voraussetzung</strong> Ein Gegner in einer Entfernung von bis zu 15 Fuß/4,50 m zum Schreckenslicht leidet unter einem Furchteffekt oder besitzt den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt} oder @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{Sterbend}.</p>\n<hr />\n<p><strong>Effekt</strong> Das Schreckenslicht nährt sich an der Verzweiflung der Kreatur. Das Schreckenslicht erhält @Damage[2d8[healing]]{2W8 Trefferpunkte} zurück und verursacht @Damage[3d8[void]]{3W8 Punkte Leerenschaden} bei der Kreatur (@Check[fortitude|dc:25|basic]{einfacher ZÄH}). Sollte das Schreckensflackern Verdunkelt worden sein, erleuchtet es wieder.</p>"
+          "description": "<p><strong>Häufigkeit</strong> einmal pro Runde</p>\n<p><strong>Voraussetzung</strong> Ein Gegner in einer Entfernung von bis zu 15 Fuß/4,50 m zum Schreckenslicht leidet unter einem Furchteffekt oder besitzt den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt} oder @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{Sterbend}.</p>\n<hr />\n<p><strong>Effekt</strong> Das Schreckenslicht nährt sich an der Verzweiflung der Kreatur. Das Schreckenslicht erhält @Damage[2d8[healing]]{2W8 Trefferpunkte} zurück und verursacht @Damage[3d8[void]]{3W8 Punkte Leerenschaden} bei der Kreatur (@Check[fortitude|dc:25|basic]{einfacher Zähigkeitswurf}). Sollte das Schreckensflackern Verdunkelt worden sein, erleuchtet es wieder.</p>"
         },
         "action->Go Dark": {
           "name": "Verdunkeln",
@@ -1507,7 +1507,7 @@
         },
         "action->Death Shadows": {
           "name": "Todesschatten",
-          "description": "<p>Wenn Dulac stirbt, wird ihre Leiche in einer Explosion eisiger Schatten zerstört. Alle Kreaturen innerhalb eines @Template[burst|distance:20]{Explosionsradius von 20 Fuß/6 m} erleiden @Damage[8d8[cold]]{8W8 Punkte Kälteschaden} (@Check[reflex|dc:28|basic]{einfacher REF}). Ihre Ausrüstung und Schätze sind davon nicht betroffen und bleiben in dem Feld zurück, wo sie gestorben ist.</p>"
+          "description": "<p>Wenn Dulac stirbt, wird ihre Leiche in einer Explosion eisiger Schatten zerstört. Alle Kreaturen innerhalb eines @Template[burst|distance:20]{Explosionsradius von 20 Fuß/6 m} erleiden @Damage[8d8[cold]]{8W8 Punkte Kälteschaden} (@Check[reflex|dc:28|basic]{einfacher Reflexwurf}). Ihre Ausrüstung und Schätze sind davon nicht betroffen und bleiben in dem Feld zurück, wo sie gestorben ist.</p>"
         },
         "action->Opportune Step": {
           "name": "Opportuner Schritt",
@@ -1679,7 +1679,7 @@
         },
         "action->Death Motes": {
           "name": "Todesfunken",
-          "description": "<p>Stirbt Galudu, so explodiert ihr Körper in hellen Funken magischer Energie. Alle Kreaturen in einem @Template[burst|distance:20]{Explosionsradius von 20 Fuß/6 m} erleiden @Damage[12d6[force]]{12W6 Punkte Kraftschaden} (@Check[reflex|dc:30|basic]{einfacher REF}). Ihre Ausrüstung ist davon nicht betroffen und verbleibt auf einem Haufen im Feld ihres Todes.</p>"
+          "description": "<p>Stirbt Galudu, so explodiert ihr Körper in hellen Funken magischer Energie. Alle Kreaturen in einem @Template[burst|distance:20]{Explosionsradius von 20 Fuß/6 m} erleiden @Damage[12d6[force]]{12W6 Punkte Kraftschaden} (@Check[reflex|dc:30|basic]{einfacher Reflexwurf}). Ihre Ausrüstung ist davon nicht betroffen und verbleibt auf einem Haufen im Feld ihres Todes.</p>"
         },
         "action->Opportune Step": {
           "name": "Opportuner Schritt",
@@ -1716,11 +1716,11 @@
         },
         "action->Bouncing Crush": {
           "name": "Hüpfendes Zerquetschen",
-          "description": "<p>Der Gibtanius springt, beendet seinen Sprung und nimmt so dieselbe Angriffsfläche mit einer anderen Kreatur ein. Er verursacht @Damage[5d6[bludgeoning]]{5W6 Punkte Wuchtschaden} gegenüber jeder Kreatur in der Angriffsfläche, zu der er gesprungen ist (@Check[reflex|dc:26|basic]{einfacher REF}), und führt ein @UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Fortstoßen} gegen jede dieser Kreaturen aus. Sollte das Fortstoßen einer beliebigen Kreatur misslingen, hüpft er auf die nächstmögliche Angriffsfläche seiner Wahl, die keine Kreatur enthält. Hüpfendes Zerquetschen zählt als ein einzelner Angriff beim Gibtanius hinsichtlich des Malus für Mehrfachangriffe.</p>"
+          "description": "<p>Der Gibtanius springt, beendet seinen Sprung und nimmt so dieselbe Angriffsfläche mit einer anderen Kreatur ein. Er verursacht @Damage[5d6[bludgeoning]]{5W6 Punkte Wuchtschaden} gegenüber jeder Kreatur in der Angriffsfläche, zu der er gesprungen ist (@Check[reflex|dc:26|basic]{einfacher Reflexwurf}), und führt ein @UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Fortstoßen} gegen jede dieser Kreaturen aus. Sollte das Fortstoßen einer beliebigen Kreatur misslingen, hüpft er auf die nächstmögliche Angriffsfläche seiner Wahl, die keine Kreatur enthält. Hüpfendes Zerquetschen zählt als ein einzelner Angriff beim Gibtanius hinsichtlich des Malus für Mehrfachangriffe.</p>"
         },
         "action->Breath Weapon": {
           "name": "Odemwaffe",
-          "description": "<p>Der Gibtanius speit einen Säurestrahl, der @Damage[9d6[acid]]{9W6 Punkte Säureschaden} bei allen Kreaturen auf einer @Template[line|distance:60]{60 Fuß/18 m-Linie} verursacht (@Check[reflex|dc:26|basic]{einfacher REF}). Er kann die Odemwaffe danach [[/br 1d4 #Runden]]{1W4 Runden} lang nicht anwenden.</p>"
+          "description": "<p>Der Gibtanius speit einen Säurestrahl, der @Damage[9d6[acid]]{9W6 Punkte Säureschaden} bei allen Kreaturen auf einer @Template[line|distance:60]{60 Fuß/18 m-Linie} verursacht (@Check[reflex|dc:26|basic]{einfacher Reflexwurf}). Er kann die Odemwaffe danach [[/br 1d4 #Runden]]{1W4 Runden} lang nicht anwenden.</p>"
         }
       }
     },
@@ -1764,7 +1764,7 @@
         },
         "action->Swarming Bites": {
           "name": "Beißender Schwarm",
-          "description": "<p>Jeder Gegner im Feld des Schwarms nimmt @Damage[2d8[piercing],1d6[acid]]{2W8 Stich- und 1W6 Säureschaden} (@Check[reflex|dc:22|basic]{einfacher REF}). Eine Kreatur, deren Rettungswurf gegen den Beißenden Angriff misslingt, nimmt @Damage[1d4[persistent,acid]]{1W4 Anhaltenden Säureschaden}.</p>"
+          "description": "<p>Jeder Gegner im Feld des Schwarms nimmt @Damage[2d8[piercing],1d6[acid]]{2W8 Stich- und 1W6 Säureschaden} (@Check[reflex|dc:22|basic]{einfacher Reflexwurf}). Eine Kreatur, deren Rettungswurf gegen den Beißenden Angriff misslingt, nimmt @Damage[1d4[persistent,acid]]{1W4 Anhaltenden Säureschaden}.</p>"
         }
       }
     },
@@ -1891,7 +1891,7 @@
       "items": {
         "action->Echoes of Defeat": {
           "name": "Echos der Niederlage",
-          "description": "<p><strong>Auslöser</strong> Eine Kreatur beendet eine Aktion der Kategorie Bewegung im Wirkungsbereich der Falle</p>\n<hr />\n<p><strong>Effekt</strong> Die auslösende Kreatur erleidet @Damage[(2d10+10)[mental]]{2W10+10 Punkte mentalen Schaden} (@Check[will|dc:32|basic]{einfacher WIL}), da sie sich an frühere Fehlschläge erinnert. Erleidet eine Kreatur diesen Schaden, vernimmt sie ein sanftes Flüstern: „Lass mich etwas von dir nehmen und ich kann den Schmerz beenden.“ Stimmt die Kreatur zu, verliert sie den Zugang zu einem zufällig bestimmten Fertigkeitstalent, welches nicht die Voraussetzung eines anderen Talents der Kreatur sein darf; die Kreatur erleidet keinen weiteren Schaden durch diese Falle. Der Effekt währt 1 Woche lang und kann vorzeitig mittels Effekten beendet werden, welche Flüche aufheben.</p>"
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur beendet eine Aktion der Kategorie Bewegung im Wirkungsbereich der Falle</p>\n<hr />\n<p><strong>Effekt</strong> Die auslösende Kreatur erleidet @Damage[(2d10+10)[mental]]{2W10+10 Punkte mentalen Schaden} (@Check[will|dc:32|basic]{einfacher Willenswurf}), da sie sich an frühere Fehlschläge erinnert. Erleidet eine Kreatur diesen Schaden, vernimmt sie ein sanftes Flüstern: „Lass mich etwas von dir nehmen und ich kann den Schmerz beenden.“ Stimmt die Kreatur zu, verliert sie den Zugang zu einem zufällig bestimmten Fertigkeitstalent, welches nicht die Voraussetzung eines anderen Talents der Kreatur sein darf; die Kreatur erleidet keinen weiteren Schaden durch diese Falle. Der Effekt währt 1 Woche lang und kann vorzeitig mittels Effekten beendet werden, welche Flüche aufheben.</p>"
         }
       }
     },
@@ -1904,7 +1904,7 @@
       "items": {
         "action->Flood of Despair": {
           "name": "Flut der Verzweiflung",
-          "description": "<p><strong>Auslöser</strong> Eine Kreatur beendet eine Aktion der Kategorie Bewegung im Wirkungsbereich der Falle</p>\n<hr />\n<p><strong>Effekt</strong> Die auslösende Kreatur erleidet @Damage[(2d10+10)[mental]]{2W10+10 Punkte mentalen Schaden} (@Check[will|dc:32|basic]{einfacher WIL}) angesichts der tiefgreifenden Schreckensvisionen. Erleidet eine Kreatur diesen Schaden, vernimmt sie ein sanftes Flüstern: „Lass mich etwas von dir nehmen und ich kann den Schmerz beenden.“ Stimmt die Kreatur zu, verliert sie den Zugang zu einem zufällig bestimmten Fertigkeitstalent, welches nicht die Voraussetzung eines anderen Talents der Kreatur sein darf; die Kreatur erleidet keinen weiteren Schaden durch diese Falle. Der Effekt währt 1 Woche lang und kann vorzeitig mittels Effekten beendet werden, welche Flüche aufheben. Zudem bemerkt die Kreatur augenblicklich die Geheimtür am Ende des Ganges, egal wie weit sie davon entfernt ist.</p>"
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur beendet eine Aktion der Kategorie Bewegung im Wirkungsbereich der Falle</p>\n<hr />\n<p><strong>Effekt</strong> Die auslösende Kreatur erleidet @Damage[(2d10+10)[mental]]{2W10+10 Punkte mentalen Schaden} (@Check[will|dc:32|basic]{einfacher Willenswurf}) angesichts der tiefgreifenden Schreckensvisionen. Erleidet eine Kreatur diesen Schaden, vernimmt sie ein sanftes Flüstern: „Lass mich etwas von dir nehmen und ich kann den Schmerz beenden.“ Stimmt die Kreatur zu, verliert sie den Zugang zu einem zufällig bestimmten Fertigkeitstalent, welches nicht die Voraussetzung eines anderen Talents der Kreatur sein darf; die Kreatur erleidet keinen weiteren Schaden durch diese Falle. Der Effekt währt 1 Woche lang und kann vorzeitig mittels Effekten beendet werden, welche Flüche aufheben. Zudem bemerkt die Kreatur augenblicklich die Geheimtür am Ende des Ganges, egal wie weit sie davon entfernt ist.</p>"
         }
       }
     },
@@ -2038,7 +2038,7 @@
         },
         "action->Poisoned Breath": {
           "name": "Giftiger Atem",
-          "description": "<p>Jarella atmet einen @Template[cone|distance:15]{15 Fuß/4,50 m-Kegel} aus giftigem Nebel aus, der @Damage[5d6[poison]]{5W6 Punkte Giftschaden} verursacht (@Check[fortitude|dc:22|basic]{einfacher ZÄH}; bei einem Kritischen Fehlschlag erhält das Ziel zudem für 24 Stunden den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 1}). Sie kann diese Fähigkeit [[/br 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.</p>"
+          "description": "<p>Jarella atmet einen @Template[cone|distance:15]{15 Fuß/4,50 m-Kegel} aus giftigem Nebel aus, der @Damage[5d6[poison]]{5W6 Punkte Giftschaden} verursacht (@Check[fortitude|dc:22|basic]{einfacher Zähigkeitswurf}; bei einem Kritischen Fehlschlag erhält das Ziel zudem für 24 Stunden den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 1}). Sie kann diese Fähigkeit [[/br 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.</p>"
         },
         "lore->Library Lore": [
           {
@@ -2163,7 +2163,7 @@
         },
         "action->Necrotic Decay": {
           "name": "Nekrotischer Verfall",
-          "description": "<p>Wenn Khurfel stirbt, verfault sein unsichtbares Fleisch rasch zu einem stinkenden Gas, welches sich um seine Leiche in einer @Template[emanation|distance:10]{10 Fuß/3 m-Ausstrahlung} ausbreitet. Das Gas fügt allen Kreaturen im Wirkungsbereich @Damage[10d6[void]]{10W6 Punkte Leerenschaden} zu, da auch diese von der Fleischfäule erfasst werden (@Check[fortitude|dc:28|basic]{einfacher ZÄH}).</p>"
+          "description": "<p>Wenn Khurfel stirbt, verfault sein unsichtbares Fleisch rasch zu einem stinkenden Gas, welches sich um seine Leiche in einer @Template[emanation|distance:10]{10 Fuß/3 m-Ausstrahlung} ausbreitet. Das Gas fügt allen Kreaturen im Wirkungsbereich @Damage[10d6[void]]{10W6 Punkte Leerenschaden} zu, da auch diese von der Fleischfäule erfasst werden (@Check[fortitude|dc:28|basic]{einfacher Zähigkeitswurf}).</p>"
         },
         "action->Frenzied Attack": {
           "name": "Blutrünstiger Angriff",
@@ -2472,7 +2472,7 @@
         },
         "action->Explosive Decay": {
           "name": "Explosiver Zerfall",
-          "description": "<p>Stirbt ein Mulventok, zerreißt sein spiegelndes Fleisch und explodiert er mit einem @Template[burst|distance:20]{Radius von 20 Fuß/6 m}. Kreaturen, die von der Detonation erfasst werden, werden mit Eingeweiden bedeckt und nehmen @Damage[8d6[void]]{8W6 Punkte Leerenschaden} (@Check[reflex|dc:22|basic]{einfacher REF})</p>"
+          "description": "<p>Stirbt ein Mulventok, zerreißt sein spiegelndes Fleisch und explodiert er mit einem @Template[burst|distance:20]{Radius von 20 Fuß/6 m}. Kreaturen, die von der Detonation erfasst werden, werden mit Eingeweiden bedeckt und nehmen @Damage[8d6[void]]{8W6 Punkte Leerenschaden} (@Check[reflex|dc:22|basic]{einfacher Reflexwurf})</p>"
         },
         "action->Stay in the Fight": {
           "name": "Im Kampf halten",
@@ -2870,7 +2870,7 @@
         },
         "action->Death Flame": {
           "name": "Todesflamme",
-          "description": "<p>Wenn Padli stirbt, explodiert seine Leiche in einem Aufblitzen weißglühender Flammen. Alle Kreaturen in einem @Template[burst|distance:20]{Explosionsradius von 20 Fuß/6 m} erleiden @Damage[6d10[fire]]{6W10 Punkte Feuerschaden} (@Check[reflex|dc:28|basic]{einfacher REF}). Seine Ausrüstung bleibt davon unbetroffen und liegt dann auf einem Haufen in dem Feld, wo er gestorben ist.</p>"
+          "description": "<p>Wenn Padli stirbt, explodiert seine Leiche in einem Aufblitzen weißglühender Flammen. Alle Kreaturen in einem @Template[burst|distance:20]{Explosionsradius von 20 Fuß/6 m} erleiden @Damage[6d10[fire]]{6W10 Punkte Feuerschaden} (@Check[reflex|dc:28|basic]{einfacher Reflexwurf}). Seine Ausrüstung bleibt davon unbetroffen und liegt dann auf einem Haufen in dem Feld, wo er gestorben ist.</p>"
         },
         "action->Occult Ward": {
           "name": "Okkulter Schutz",
@@ -2890,7 +2890,7 @@
       "items": {
         "action->Counterfeit Haunting": {
           "name": "Falscher Spuk",
-          "description": "<p><strong>Auslöser</strong> Eine lebende Kreatur bewegt sich über die Rune hinweg</p>\n<hr />\n<p><strong>Effekt</strong> Ein furchterweckendes Stöhnen hallt durch den Raum und eine raue Stimme schreit telepathisch: „Verschwindet!“ Dieses Brüllen verursacht allen Kreaturen im Raum @Damage[6d12[mental]]{6W12 Punkte mentalen Schaden} (@Check[will|dc:26|basic]{einfacher WIL}). Misslingt einer Kreatur der Rettungswurf, muss sie augenblicklich den Raum verlassen und kann ihn 1 Minute lang nicht freiwillig erneut betreten (bzw. 1 Stunde lang im Fall eines Kritischen Fehlschlages).</p>"
+          "description": "<p><strong>Auslöser</strong> Eine lebende Kreatur bewegt sich über die Rune hinweg</p>\n<hr />\n<p><strong>Effekt</strong> Ein furchterweckendes Stöhnen hallt durch den Raum und eine raue Stimme schreit telepathisch: „Verschwindet!“ Dieses Brüllen verursacht allen Kreaturen im Raum @Damage[6d12[mental]]{6W12 Punkte mentalen Schaden} (@Check[will|dc:26|basic]{einfacher Willenswurf}). Misslingt einer Kreatur der Rettungswurf, muss sie augenblicklich den Raum verlassen und kann ihn 1 Minute lang nicht freiwillig erneut betreten (bzw. 1 Stunde lang im Fall eines Kritischen Fehlschlages).</p>"
         }
       }
     },
@@ -2899,7 +2899,7 @@
       "description": "<p>Betritt ein Nichtteufel das Licht, hält die mit dem Licht verwobene Magie die Kreatur fest und löst einen Alarm aus.</p>",
       "disable": "<p>@Check[thievery|dc:26|name:Licht ablenken oder zerstreuen|traits:magical,trap]{Diebeskunst} (Meister), um das Licht abzulenken oder zu zerstreuen, so dass der Lichtkegel intakt bleibt, die Falle aber nicht ausgelöst wird, oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (4. Grad, @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken}-SG 26), um das Licht zu bannen und den Raum in Dunkelheit zu hüllen.</p>",
       "reset": "<p>Die Stasismagie im Licht benötigt 1 Stunde, um sich wieder aufzubauen, nach diesem Zeitraum kann die Falle wieder ausgelöst werden.</p>",
-      "routine": "<p>(1 Aktion) Alle Kreaturen im Raum, welche den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt} und/oder @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt} besitzen, erleiden @Damage[1d10[mental]]{1W10 Punkte mentalen Schaden} (@Check[will|dc:26|basic|traits:magical,trap]{einfacher WIL}). Kreaturen, deren Willenswurf misslingt, erhalten zudem für 1 Runde den Zustand Gelähmt, können sich als Reaktion aber mental gegen diese Stasis wehren - in diesem Fall erleiden sie @Damage[5d10[mental]]{5W10 Punkte mentalen Schaden} und verlieren den Zustand Gelähmt.</p>",
+      "routine": "<p>(1 Aktion) Alle Kreaturen im Raum, welche den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt} und/oder @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt} besitzen, erleiden @Damage[1d10[mental]]{1W10 Punkte mentalen Schaden} (@Check[will|dc:26|basic|traits:magical,trap]{einfacher Willenswurf}). Kreaturen, deren Willenswurf misslingt, erhalten zudem für 1 Runde den Zustand Gelähmt, können sich als Reaktion aber mental gegen diese Stasis wehren - in diesem Fall erleiden sie @Damage[5d10[mental]]{5W10 Punkte mentalen Schaden} und verlieren den Zustand Gelähmt.</p>",
       "stealth": "<p>(Experte)</p>",
       "items": {
         "action->Stasis Field": {
@@ -3037,7 +3037,7 @@
         },
         "action->Spore Explosion": {
           "name": "Sporenexplosion",
-          "description": "<p>Stirbt ein Schnitterschädelbovist, explodiert dieser und jede Kreatur in einem @Template[emanation|distance:20]{20 Fuß/6 m-Explosionsradius} erleidet @Damage[8d8[poison]]{8W8 Giftschaden} (@Check[fortitude|dc:28|basic]{einfacher ZÄH}). Kreaturen, denen der Rettungswurf misslingt, sind der Schädelfäule ausgesetzt.</p>"
+          "description": "<p>Stirbt ein Schnitterschädelbovist, explodiert dieser und jede Kreatur in einem @Template[emanation|distance:20]{20 Fuß/6 m-Explosionsradius} erleidet @Damage[8d8[poison]]{8W8 Giftschaden} (@Check[fortitude|dc:28|basic]{einfacher Zähigkeitswurf}). Kreaturen, denen der Rettungswurf misslingt, sind der Schädelfäule ausgesetzt.</p>"
         },
         "action->Paralysis": {
           "name": "Lähmung",
@@ -3049,7 +3049,7 @@
         },
         "action->Spore Cloud": {
           "name": "Sporenwolke",
-          "description": "<p>Der Bovist setzt Sporen in einem @Template[cone|distance:30]{30 Fuß/9 m-Kegel} frei, der @Damage[4d8[poison]]{4W8 Punkte Giftschaden} (@Check[fortitude|dc:28|basic]{einfacher ZÄH}) bei allen Kreaturen im Kegel verursacht. Kreaturen, denen der Rettungswurf misslingt, sind der Schädelfäule ausgesetzt.</p>"
+          "description": "<p>Der Bovist setzt Sporen in einem @Template[cone|distance:30]{30 Fuß/9 m-Kegel} frei, der @Damage[4d8[poison]]{4W8 Punkte Giftschaden} (@Check[fortitude|dc:28|basic]{einfacher Zähigkeitswurf}) bei allen Kreaturen im Kegel verursacht. Kreaturen, denen der Rettungswurf misslingt, sind der Schädelfäule ausgesetzt.</p>"
         }
       }
     },
@@ -3315,7 +3315,7 @@
         },
         "action->Warp Reality": {
           "name": "Realitätsverzerrung",
-          "description": "<p>Der Seugathi beugt die Realität nach seiner Wahl in einer @Template[emanation|distance:10]{10 Fuß/3 m-Ausstrahlung} oder einer @Template[line|distance:60]{60 Fuß/18 m-Linie}, um im Wirkungsbereich das Gelände zu verändern. Nach Wahl des Seugathis ändert sich das Gelände zu einer anderen Art (beispielsweise Aquatisch, Arktisch oder Wüste) und wird dabei entweder zu normalem oder schwierigem Gelände. Bauwerke, allgemeine geographische Merkmale und Kreaturen werden in dem Gebiet nicht verwandelt, aber Kreaturen im Wirkungsbereich nehmen @Damage[5d6[spirit]]{5W6 Seelenschaden} (@Check[fortitude|dc:28|basic]{einfacher ZÄH}), da die Realität versucht sie zusammen mit dem Gelände zu beugen. Auch wenn die Änderungen im Wirkungsbereich dauerhaft sind, könnte die natürliche Umgebung das Land irgendwann wieder in seinen Urzustand zurückversetzen (aquatische Bereiche trocknen aus, arktische Gebiete schmelzen, etc.)</p>"
+          "description": "<p>Der Seugathi beugt die Realität nach seiner Wahl in einer @Template[emanation|distance:10]{10 Fuß/3 m-Ausstrahlung} oder einer @Template[line|distance:60]{60 Fuß/18 m-Linie}, um im Wirkungsbereich das Gelände zu verändern. Nach Wahl des Seugathis ändert sich das Gelände zu einer anderen Art (beispielsweise Aquatisch, Arktisch oder Wüste) und wird dabei entweder zu normalem oder schwierigem Gelände. Bauwerke, allgemeine geographische Merkmale und Kreaturen werden in dem Gebiet nicht verwandelt, aber Kreaturen im Wirkungsbereich nehmen @Damage[5d6[spirit]]{5W6 Seelenschaden} (@Check[fortitude|dc:28|basic]{einfacher Zähigkeitswurf}), da die Realität versucht sie zusammen mit dem Gelände zu beugen. Auch wenn die Änderungen im Wirkungsbereich dauerhaft sind, könnte die natürliche Umgebung das Land irgendwann wieder in seinen Urzustand zurückversetzen (aquatische Bereiche trocknen aus, arktische Gebiete schmelzen, etc.)</p>"
         }
       }
     },
@@ -3442,11 +3442,11 @@
         },
         "action->Necrotic Decay": {
           "name": "Nekrotischer Verfall",
-          "description": "<p>Wenn ein Schanrigol-Behemoth stirbt, verfault sein Fleisch und wandelt sich zu einem verdorben riechenden Gas, das sich in einem Wirkungsbereich einer @Template[emanation|distance:5]{Ausstrahlung von 5 Fuß/1,50 m} Radius um den Leichnam ausbreitet. Das Gas fügt Kreaturen innerhalb des Wirkungsbereiches @Damage[9d6[void]]{9W6 Leerenschaden} zu, während ihr Fleisch langsam gerinnt und ebenfalls beginnt zu verrotten (@Check[fortitude|dc:27|basic]{einfacher ZÄH}).</p>"
+          "description": "<p>Wenn ein Schanrigol-Behemoth stirbt, verfault sein Fleisch und wandelt sich zu einem verdorben riechenden Gas, das sich in einem Wirkungsbereich einer @Template[emanation|distance:5]{Ausstrahlung von 5 Fuß/1,50 m} Radius um den Leichnam ausbreitet. Das Gas fügt Kreaturen innerhalb des Wirkungsbereiches @Damage[9d6[void]]{9W6 Leerenschaden} zu, während ihr Fleisch langsam gerinnt und ebenfalls beginnt zu verrotten (@Check[fortitude|dc:27|basic]{einfacher Zähigkeitswurf}).</p>"
         },
         "action->Sapping Squeeze": {
           "name": "Zehrendes Quetschen",
-          "description": "<p><strong>Anforderungen</strong> Der Schanrigol hat eine Kreatur in den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} versetzt</p>\n<hr />\n<p><strong>Effekt</strong> Der Schanrigol quetscht das Leben aus dem Ziel und fügt ihm @Damage[(1d10+11)[bludgeoning],1d6[bleed]]{1W10+11 Wuchtschaden und 1W6 Blutungsschaden} zu (@Check[fortitude|dc:25|basic]{einfacher ZÄH}). Der Schanrigol erhält Temporäre Trefferpunkte in Höhe des halben Wuchtschadens hinzu, den ein einzelnes Ziel nimmt. Diese temporären Trefferpunkte bleiben 1 Minute lang bestehen.</p>"
+          "description": "<p><strong>Anforderungen</strong> Der Schanrigol hat eine Kreatur in den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} versetzt</p>\n<hr />\n<p><strong>Effekt</strong> Der Schanrigol quetscht das Leben aus dem Ziel und fügt ihm @Damage[(1d10+11)[bludgeoning],1d6[bleed]]{1W10+11 Wuchtschaden und 1W6 Blutungsschaden} zu (@Check[fortitude|dc:25|basic]{einfacher Zähigkeitswurf}). Der Schanrigol erhält Temporäre Trefferpunkte in Höhe des halben Wuchtschadens hinzu, den ein einzelnes Ziel nimmt. Diese temporären Trefferpunkte bleiben 1 Minute lang bestehen.</p>"
         },
         "action->Shred Flesh": {
           "name": "Fleisch zerfetzen",
@@ -3479,7 +3479,7 @@
         },
         "action->Sapping Squeeze": {
           "name": "Zehrendes Quetschen",
-          "description": "<p><strong>Anforderungen</strong> Der Schanrigol hat eine Kreatur in den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} versetzt</p>\n<hr />\n<p><strong>Effekt</strong> Der Schanrigol quetscht das Leben aus dem Ziel und fügt ihm @Damage[(1d6+5)[bludgeoning],1d4[bleed]]{1W6+5 Wuchtschaden und 1W4 Blutungsschaden} zu (@Check[fortitude|dc:18|basic]{einfacher ZÄH}). Der Schanrigol erhält Temporäre Trefferpunkte in Höhe des halben Wuchtschadens hinzu, den ein einzelnes Ziel nimmt. Diese temporären Trefferpunkte bleiben 1 Minute lang bestehen.</p>"
+          "description": "<p><strong>Anforderungen</strong> Der Schanrigol hat eine Kreatur in den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} versetzt</p>\n<hr />\n<p><strong>Effekt</strong> Der Schanrigol quetscht das Leben aus dem Ziel und fügt ihm @Damage[(1d6+5)[bludgeoning],1d4[bleed]]{1W6+5 Wuchtschaden und 1W4 Blutungsschaden} zu (@Check[fortitude|dc:18|basic]{einfacher Zähigkeitswurf}). Der Schanrigol erhält Temporäre Trefferpunkte in Höhe des halben Wuchtschadens hinzu, den ein einzelnes Ziel nimmt. Diese temporären Trefferpunkte bleiben 1 Minute lang bestehen.</p>"
         },
         "action->Shred Flesh": {
           "name": "Fleisch zerfetzen",
@@ -3597,7 +3597,7 @@
       "description": "<p>Ein halbes Dutzend geisterhafter Kobolde erhebt sich als ein heulender Wirbel aus dem Schutt.</p>",
       "disable": "<p>@Check[intimidation|dc:18|name:Geister einschüchtern]{Einschüchtern} (geübt) (um die Geister mit einer bedrohlichen Darbietung einzuschüchtern), oder @Check[religion|dc:21|name:Geister exorzieren]{Religionskunde} (geübt) (um die Geister zu exorzieren).</p>",
       "reset": "<p>Die Spukerscheinung deaktiviert sich, sobald es zu Beginn ihres Zuges in Bereich <strong>A7</strong> keine Kreaturen mit dem Zustand Verängstigt gibt. Die geisterhaften Kobolde kehren in den Schutthaufen zurück und die Spukerscheinung kann sich 1 Stunde lang nicht erneut aktivieren.</p>",
-      "routine": "<p>(1 Aktion) Die Geister fliegen gemeinsam auf eine Kreatur im Bereich <strong>A7</strong> zu, die den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt} hat und flößen ihr das Gefühl von Verrat und Verwirrung ein. Das Ziel erleidet @Damage[(1d10+4)[mental]]{1W10+4 Punkte mentalen Schaden} (@Check[will|dc:18|basic]{einfacher WIL}).</p>",
+      "routine": "<p>(1 Aktion) Die Geister fliegen gemeinsam auf eine Kreatur im Bereich <strong>A7</strong> zu, die den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt} hat und flößen ihr das Gefühl von Verrat und Verwirrung ein. Das Ziel erleidet @Damage[(1d10+4)[mental]]{1W10+4 Punkte mentalen Schaden} (@Check[will|dc:18|basic]{einfacher Willenswurf}).</p>",
       "stealth": "<p>(Geübt)</p>",
       "items": {
         "action->Confusing Confrontation": {
@@ -4007,7 +4007,7 @@
         },
         "action->Necrotic Decay": {
           "name": "Nekrotischer Zerfall",
-          "description": "<p>Wenn Vischari stirbt, verfault ihr unsichtbares Fleisch sofort und wandelt sich zu einem verdorben riechenden Gas, das sich in einer @Template[emanation|distance:5]{5 Fuß/1,50 m-Ausstrahlung} um den Leichnam ausbreitet. Das Gas fügt Kreaturen innerhalb des Wirkungsbereiches @Damage[7d6[void]]{7W6 Leerenschaden} zu, während ihr Fleisch langsam gerinnt und ebenfalls verrottet (@Check[fortitude|dc:24|basic]{einfacher ZÄH}).</p>"
+          "description": "<p>Wenn Vischari stirbt, verfault ihr unsichtbares Fleisch sofort und wandelt sich zu einem verdorben riechenden Gas, das sich in einer @Template[emanation|distance:5]{5 Fuß/1,50 m-Ausstrahlung} um den Leichnam ausbreitet. Das Gas fügt Kreaturen innerhalb des Wirkungsbereiches @Damage[7d6[void]]{7W6 Leerenschaden} zu, während ihr Fleisch langsam gerinnt und ebenfalls verrottet (@Check[fortitude|dc:24|basic]{einfacher Zähigkeitswurf}).</p>"
         },
         "action->Immobilizing Blow": {
           "name": "Kampfunfähig machender Schlag",
@@ -4201,7 +4201,7 @@
         },
         "action->Squirming Embrace": {
           "name": "Zuckende Umarmung",
-          "description": "<p>Volluk nutzt Laufen und beendet seine Bewegung auf demselben Feld wie eine andere Kreatur; dieser fügt er sodann @Damage[3d8[piercing]]{3W8 Punkte Stichschaden} zu (@Check[reflex|dc:23|basic]{einfacher REF}).</p>"
+          "description": "<p>Volluk nutzt Laufen und beendet seine Bewegung auf demselben Feld wie eine andere Kreatur; dieser fügt er sodann @Damage[3d8[piercing]]{3W8 Punkte Stichschaden} zu (@Check[reflex|dc:23|basic]{einfacher Reflexwurf}).</p>"
         },
         "action->Swarm Shape": {
           "name": "Schwarmgestalt",
@@ -4254,7 +4254,7 @@
       "description": "<p>Alle im Raum verspüren das überwältigende Gefühl beobachtet zu werden; einen Herzschlag später öffnet sich ein unheimliches rotes Auge in der Westwand.</p>",
       "disable": "<p>@Check[deception|dc:22|name:Uninteressant erscheinen|traits:haunt]{Täuschung} (Geübt), um für das Auge uninteressant zu erscheinen (und daher von ihm ignoriert zu werden), oder @Check[religion|dc:22|name:Schutzzeichen|traits:haunt]{Religionskunde} (Geübt), um Schutzzeichen zu schlagen und vom Auge nicht gesehen oder nicht betroffen zu werden.</p>",
       "reset": "<p>Die Spukerscheinung kehrt in den Ruhezustand am Ende einer Runde zurück, in welcher sie keine Kreaturen mit dem Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt} erblickt hat. Nach 1 Stunde setzt sie sich zurück.</p>",
-      "routine": "<p>(1 Aktion) Das Auge schaut sich um und jede Kreatur, die es sehen kann (egal ob in Bereich <strong>C4</strong> oder außerhalb davon), erleidet @Damage[4d6[mental]]{4W6 Punkte mentalen Schaden} (@Check[will|dc:21|basic|traits:haunt]{einfacher WIL}), da sie von schmerzhafter Furcht durchfahren wird. Erleidet eine Kreatur durch diesen Effekt mentalen Schaden, kann sie am Ende ihres nächsten Zuges nicht ihren Zustandswert für @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt} reduzieren.</p>",
+      "routine": "<p>(1 Aktion) Das Auge schaut sich um und jede Kreatur, die es sehen kann (egal ob in Bereich <strong>C4</strong> oder außerhalb davon), erleidet @Damage[4d6[mental]]{4W6 Punkte mentalen Schaden} (@Check[will|dc:21|basic|traits:haunt]{einfacher Willenswurf}), da sie von schmerzhafter Furcht durchfahren wird. Erleidet eine Kreatur durch diesen Effekt mentalen Schaden, kann sie am Ende ihres nächsten Zuges nicht ihren Zustandswert für @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt} reduzieren.</p>",
       "stealth": "<p>(Experte)</p>",
       "items": {
         "action->Someone is Watching": {
