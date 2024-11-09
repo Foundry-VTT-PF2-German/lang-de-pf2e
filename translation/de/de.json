@@ -85,6 +85,7 @@
           "HitPointsSingle": "{hitPoints} TP wiederhergestellt.",
           "InfusedReagents": "Aufgeladene Reagenzien wiederhergestellt.",
           "Resolve": "Entschlossenheit wiederhergestellt.",
+          "Resource": "{name} wiederhergestellt.",
           "SpellSlots": "Alle Zauberplätze wiederhergestellt.",
           "StaminaPoints": "Ausdauerpunkte wiederhergestellt.",
           "TemporaryItems": "Temporäre Gegenstände entfernt.",
@@ -101,7 +102,6 @@
     "ActionActionTypeLabel": "Aktionsart",
     "ActionActionsLabel": "Aktionen",
     "ActionBrowserSearchHint": "Sie können nach Namen oder benutzerdefinierten Attributen suchen. Mögliche Suchattribute sind:<br>source, spellType, level, materials, target, range, time, duration, damage, damageType, save, concentration, ritual, ability and classes. <br>Beispiel: 'fire, damage:d6' um alle Zauber zu finden, die Feuer in ihrem Namen und einen W6 im Schaden haben",
-    "ActionDeathNoteLabel": "Todeshinweis",
     "ActionNumber1": "Eine",
     "ActionNumber2": "Zwei",
     "ActionNumber3": "Drei",
@@ -140,6 +140,14 @@
       },
       "Attacks": "Angriffe",
       "Character": {
+        "ABCPicker": {
+          "SearchPlaceholder": "Durchsuche {items}",
+          "Title": "Auswahl {type}",
+          "Tooltip": {
+            "ConfirmSelection": "Auswahl bestätigen",
+            "ViewSheet": "Bogen öffnen"
+          }
+        },
         "Attribute": {
           "Apex": "Apex-Attribut",
           "Boosts": "Attributsverbesserungen",
@@ -1702,21 +1710,28 @@
         "Features": "Merkmale",
         "InvalidDrop": "{badType} kann hier nicht platziert werden (es muss {goodType} sein)."
       },
-      "Action": {
+      "Ability": {
         "Category": {
-          "None": "Keine",
+          "None": "Kein",
           "Defensive": "Defensiv",
           "Interaction": "Interaktion",
           "Offensive": "Offensiv",
           "Familiar": "Vertrautenfähigkeit"
         },
+        "FIELDS": {
+          "deathNote": {
+            "label": "Todeshinweis"
+          },
+          "selfEffect": {
+            "hint": "Ein einzelner Effekt, der auf den Akteur angewandt wird, der diese Aktion nutzt.",
+            "label": "Autom. angewandter Effekt"
+          }
+        },
         "Plural": "Fähigkeiten",
         "SelfAppliedEffect": {
           "Applied": "{effect} wurde angewandt.",
           "Delete": "Referenz löschen",
-          "Drop": "Effekt einfügen",
-          "Label": "Autom. angewandter Effekt",
-          "Hint": "Ein einzelner Effekt, der auf den Akteur angewandt wird, der diese Aktion nutzt."
+          "Drop": "Effekt einfügen"
         },
         "Type": {
           "Activity": "Aktivität",
@@ -1751,6 +1766,7 @@
       },
       "Ancestry": {
         "DropFeatures": "Lege Abstammungsmerkmale hier ab.",
+        "Plural": "Abstammungen",
         "Vision": {
           "Label": "Sicht",
           "Normal": "Normale Sicht"
@@ -1810,11 +1826,17 @@
         },
         "UnequippedHint": "Diese Rüstung hat mehr Last, weil sie nicht getragen wird."
       },
+      "Background": {
+        "Plural": "Hintergründe"
+      },
       "CampaignFeature": {
         "CampaignLabel": "Kampagne",
         "Plural": "Kampagnenfähigkeiten"
       },
       "CannotAddType": "Gegenstände vom Typ {tyoe} können diesem Akteur nicht hinzugefügt werden.",
+      "Class": {
+        "Plural": "Klassen"
+      },
       "Condition": {
         "Chat": {
           "Current": "Aktuelle Zustände"
@@ -2221,6 +2243,7 @@
           "Hint": "Jede Gottheit hat eine bevorzugte Waffe. Diese Waffen können natürlich auch von anderen genutzt werden, die nicht zu den Klerikern und Streitern der Gottheit gehören.",
           "Label": "Bevorzugte Waffe(n)"
         },
+        "Plural": "Gottheiten",
         "Sanctification": {
           "Can": {
             "Holy": "Kann Heilig wählen",
@@ -2274,6 +2297,11 @@
         "ShowTokenIcon": "Tokenbild anzeigen?",
         "Unidentified": "Unidentifiziert?"
       },
+      "FIELDS": {
+        "category": {
+          "label": "Kategorie"
+        }
+      },
       "Feat": {
         "Info": {
           "Added": "{item} wurde {category} hinzugefügt."
@@ -2326,6 +2354,7 @@
         "AncestryNotFound": "Der referenzierte Abstammungseintrag wurde nicht gefunden.",
         "DragAncestryHere": "Ziehe eine Abstammung hierhin, um die für die Herkunft benötigte Abstammung zu setzen.",
         "NoneVersatile": "Keine (Vielseitig)",
+        "Plural": "Herkünfte",
         "RemoveAncestry": "Entferne benötigte Abstammung"
       },
       "IconLabel": "Icon",
@@ -2419,6 +2448,7 @@
         },
         "LevelLabel": "Gegenstand {level}",
         "OtherTag": {
+          "HandwrapsOfMightyBlows": "Schlaghandwickel",
           "Herbal": "Kräuter",
           "Improvised": "Improvisiert",
           "Shoddy": "Minderwertig"
@@ -3900,6 +3930,7 @@
     "TraitAttachedToFirearm": "Befestigt an Feuerwaffe",
     "TraitAttachedToFirearmFiringMechanism": "Befestigt an Feuerwaffe (Feuermechanismus)",
     "TraitAttachedToFirearmScope": "Befestigt an Feuerwaffe (Zielfernrohr)",
+    "TraitAttachedToMeleeWeapon": "An einer Nahkampfwaffe angebracht",
     "TraitAttachedToShield": "Befestigt an Schild",
     "TraitAttachedToShipsBow": "Angebracht am Bug eines Schiffes",
     "TraitAttack": "Offensiv",
@@ -4224,6 +4255,7 @@
     "TraitDescriptionLaunching": "Ein Mechanismus im Schild kann Geschosse verschießen, so dass der Schild auch als Fernkampfwaffe funktioniert. Die Eigenschaft benennt auch die Waffenart, z.B. „Wurfpfeile abschießend“. Zum Abschießen wird die dieselbe Anzahl an Händen wie für die Fernkampfwaffe benötigt (die Hand, welche den Schild hält, zählt aber gegen diese Anforderung, so dass eine einhändige Fernkampfwaffe weiterhin nur eine Hand benötigt). Zum Nachladen ist die übliche Anzahl an Aktionen der Kategorie Interagieren erforderlich (Minimal 1 Aktion); du kannst die Hand, mit der du bereits den Schild hältst, nicht zum Nachladen nutzen.",
     "TraitDescriptionLeshy": "Eine Kreatur mit dieser Kategorie gehört zur Abstammung Lesnik. Diese kleinen Pflanzen oder Pilzkreaturen haben humanoide Gestalt. Eine Fähigkeit dieser Kategorie kann nur von Lesniks gewählt oder genutzt werden. Eine Waffe dieser Kategorie wird von Lesniks hergestellt und genutzt.",
     "TraitDescriptionLight": "Lichteffekte überwinden nichtmagische Dunkelheit in ihrem Wirkungsbereich und können magischer Dunkelheit entgegenwirken. Um Dunkelheitmagie entgegenzuwirken, musst du sie in der Regel direkt als Ziel wählen; manche Lichtzauber versuchen aber, Dunkelheit automatisch entgegenzuwirken.",
+    "TraitDescriptionLineage": "Ein Talent dieser Kategorie weist einen Charakter als von einer bestimmten Kreaturenart abstammend aus. Du kannst nur über ein Geblütstalent verfügen. Du kannst nur auf der 1. Stufe ein Geblütstalent erlangen und ein Geblütstalent über Umlernen weder erhalten noch verlieren.",
     "TraitDescriptionLinguistic": "Ein Effekt dieser Kategorie erfordert, dass das Ziel die genutzte Sprache versteht, um zu funktionieren.",
     "TraitDescriptionLitany": "Litaneien sind besondere Stoßgebetszauber, die in der Regel von Streitern genutzt werden und eine Aktion erfordern; meistens verleihen sie Immunität gegen weitere Litaneien.",
     "TraitDescriptionLizardfolk": "Eine Kreatur dieser Kategorie gehört der Abstammung Iruxi an – reptilische Humanoide.",
@@ -4251,7 +4283,7 @@
     "TraitDescriptionMove": "Eine Aktion dieser Kategorie enthält die Bewegung von einem Feld in ein anderes.",
     "TraitDescriptionMulticlass": "Archetypen der Kategorie Klasse repräsentieren eine Verzweigung deiner Ausbildung in die Spezialisierung einer anderen Klasse. Du kannst das Zugangstalent eines Klassenarchetypen nicht wählen, wenn du der fraglichen Klasse bereits angehörst.",
     "TraitDescriptionMummy": "Bei Mumien handelt es sich um untote Kreaturen, die aus konservierten Leichen entstanden sind.",
-    "TraitDescriptionMutagen": "An elixir with the mutagen trait temporarily transmogrifies the subject's body and alters its mind. A mutagen always conveys one or more beneficial effects paired with one or more detrimental effects. Mutagens are polymorph effects, meaning you can benefit from only one at a time.",
+    "TraitDescriptionMutagen": "Ein Elixier dieser Kategorie verwandelt und verändert vorübergehend Körper und Geist des Konsumenten; es hat stets einen oder mehrere positive und einen oder mehrere negative Effekte. Mutagene sind Gestaltwandeleffekte, d.h. du kannst stets nur von maximal einem zugleich profitieren.",
     "TraitDescriptionMutant": "Dieses Monster ist mutiert oder weiterentwickelt und hat dadurch ungewöhnliche Vor- oder Nachteile, vielleicht auch beides.",
     "TraitDescriptionNagaji": "Eine traditionalistische Abstammung mit reptilienartigen Zügen und Schlangenköpfen.",
     "TraitDescriptionNephilim": "Kreaturen mit dieser Kategorie haben die vielseitige Herkunft Nephilim gewählt. Nephilim sind eine gemischte Abstammung zwischen Sterblichen und einem Unsterblichen Wesen einer anderen Ebene. Talente mit dieser Kategorie können nur von Nephilim gewählt werden.",
@@ -4941,6 +4973,7 @@
     "TraitVolley20": "Ballistisch 20 Fuß/6 m",
     "TraitVolley30": "Ballistisch 30 Fuß/9 m",
     "TraitVolley50": "Ballistisch 50 Fuß/15 m",
+    "TraitVolley60": "Ballistisch 60 Fuß/18 m",
     "TraitVorpalFear": "Furcht vor enthauptenden Waffen",
     "TraitWand": "Zauberstab",
     "TraitWater": "Wasser",
@@ -5257,6 +5290,7 @@
         "ogre-hook": "Ogerhaken",
         "orc-knuckle-dagger": "Orkischer Stoßring",
         "orc-necksplitter": "Orkischer Halsabschneider",
+        "orc-skewermaul": "Orc Skewermaul",
         "panabas": "Panabas",
         "pepperbox": "Bündelrevolver",
         "phalanx-piercer": "Phalanxbrecher",
@@ -5402,7 +5436,7 @@
       "anchoring": {
         "Name": "Verankernd",
         "Note": {
-          "criticalSuccess": "Wenn du bei einem Gegner mit der Waffe des Verankerns einen Kritischen Treffer erzielst, wirkt die Waffe @UUID[Compendium.pf2e.spells-srd.Item.ksLCg62cLOojw3gN]{Planare Fessel} auf das Ziel (@Check[will|dc:27]{Willenswurf}, @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.mmfWcV3Iyql5nzTo]{Entgegenwirken}-Modifikator [[/r 1d20+17 #Entgegenwirken]]{+17})."
+          "criticalSuccess": "Wenn du bei einem Gegner mit der Waffe des Verankerns einen Kritischen Treffer erzielst, wirkt die Waffe @UUID[Compendium.pf2e.spells-srd.Item.ksLCg62cLOojw3gN]{Planare Fessel} auf das Ziel (@Check[will|dc:27]{Willenswurf}, @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken}-Modifikator [[/r 1d20+17 #Entgegenwirken]]{+17})."
         }
       },
       "ashen": {
@@ -5527,8 +5561,8 @@
       "greaterAnchoring": {
         "Name": "Stark Verankernd",
         "Note": {
-          "criticalSuccess": "Wenn du bei einem Gegner mit einer Waffe des Starken Verankerns einen Kritischen Treffer erzielst, wirkt die Waffe @UUID[Compendium.pf2e.spells-srd.Item.ksLCg62cLOojw3gN]{Planare Fessel} auf dem 8. Grad auf das Ziel (@Check[will|dc:38]{Willenswurf}, @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.mmfWcV3Iyql5nzTo]{Entgegenwirken}-Modifikator [[/r 1d20+28 #Entgegenwirken]]{+28}). Gelingt dem Ziel gegen diesen Zauber ein Kritischer Erfolg bei seinem Willenswurf, wirkt die <em>Planare Fessel</em> dennoch für 1 Runde, statt gar keine Wirkung zu zeigen.",
-          "success": "Wenn du den Gegner mit der Waffe triffst, aber keinen Kritischen Treffer erzielst, wird das Ziel dennoch für 1 Runde von einer @UUID[Compendium.pf2e.spells-srd.Item.ksLCg62cLOojw3gN]{Planaren Fessel} des 4. Grades betroffen, ohne dass ihm ein Rettungswurf zusteht (dabei gilt der @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.mmfWcV3Iyql5nzTo]{Entgegenwirken}-Modifikator [[/r 1d20+28 #Entgegenwirken]]{+28})."
+          "criticalSuccess": "Wenn du bei einem Gegner mit einer Waffe des Starken Verankerns einen Kritischen Treffer erzielst, wirkt die Waffe @UUID[Compendium.pf2e.spells-srd.Item.ksLCg62cLOojw3gN]{Planare Fessel} auf dem 8. Grad auf das Ziel (@Check[will|dc:38]{Willenswurf}, @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken}-Modifikator [[/r 1d20+28 #Entgegenwirken]]{+28}). Gelingt dem Ziel gegen diesen Zauber ein Kritischer Erfolg bei seinem Willenswurf, wirkt die <em>Planare Fessel</em> dennoch für 1 Runde, statt gar keine Wirkung zu zeigen.",
+          "success": "Wenn du den Gegner mit der Waffe triffst, aber keinen Kritischen Treffer erzielst, wird das Ziel dennoch für 1 Runde von einer @UUID[Compendium.pf2e.spells-srd.Item.ksLCg62cLOojw3gN]{Planaren Fessel} des 4. Grades betroffen, ohne dass ihm ein Rettungswurf zusteht (dabei gilt der @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken}-Modifikator [[/r 1d20+28 #Entgegenwirken]]{+28})."
         }
       },
       "greaterAshen": {
@@ -6186,6 +6220,7 @@
       "Quantity": "Menge",
       "SellMessage": "{seller} verkauft {quantity} × {item} an {buyer}.",
       "SellSubtitle": "Verkaufe Gegenstand",
+      "SendToPartyStash": "Verschiebe ins Gruppenlager",
       "SheetType": "Bogentyp",
       "SplitCoinsLabel": "Verteile Münzen",
       "SplitCoinsPopupHeader": "Wähle Akteure aus, die Anteile erhalten sollen",
