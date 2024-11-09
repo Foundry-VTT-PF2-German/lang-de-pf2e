@@ -288,7 +288,7 @@
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.bikFUFRLwfdvX2x2]\n<p>An invisibility potion is colorless and oddly lightweight. Upon drinking it, you gain the effects of a 2nd-rank invisibility spell.</p>"
         },
         "consumable->Healing Potion (Moderate)": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.G7haQ5gDt30ftJLC]\n<p>A healing potion is a vial of a ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a healing potion, you regain [[/r (3d8+10)[healing]]]{3d8+10 Hit Points}.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.G7haQ5gDt30ftJLC]\n<p>A healing potion is a vial of a ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a healing potion, you regain @Damage[(3d8+10)[healing]] Hit Points.</p>"
         },
         "strike-melee->Shortsword": {
           "name": "Shortsword"
@@ -576,6 +576,13 @@
         },
         "spell->Meteor Swarm": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.jrBa9deU2ULFWvSl]\nMeteor Swarm"
+        },
+        "spell->Create Demiplane": {
+          "primarycheck": "Arcana, Nature, Occultism, or Religion (legendary)",
+          "secondarycheck": "Arcana, Nature, Occultism,  Religion (whichever three aren't used for the primary check)"
+        },
+        "spell->Freedom": {
+          "primarycheck": "Arcana (legendary) or Occultism (legendary)"
         },
         "spell->Plane Shift": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.5bTt2CvYHPvaR7QQ]\nPlane Shift",
@@ -3049,7 +3056,7 @@
           "description": "<p>Contains keys to all locks in Drelev Keep</p>"
         },
         "consumable->Healing Potion (Moderate)": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.G7haQ5gDt30ftJLC]\n<p>A healing potion is a vial of a ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a healing potion, you regain [[/r (3d8+10)[healing]]]{3d8+10 Hit Points}.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.G7haQ5gDt30ftJLC]\n<p>A healing potion is a vial of a ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a healing potion, you regain @Damage[(3d8+10)[healing]] Hit Points.</p>"
         },
         "strike-melee->Longsword": {
           "name": "Longsword"
@@ -5569,7 +5576,7 @@
         },
         "action->Golem Antimagic": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.r34QDwKiWZoVymJa]\nGolem Antimagic",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.r34QDwKiWZoVymJa]\n<p>harmed by acid ([[/r {9d10}]]{9d10 damage}, [[/r {2d10}]]{2d10 damage} from areas or persistent damage); healed by fire (area [[/r 2d10[healing]]] Hit Points); slowed by electricity</p>\n<hr />\n<p>A golem is immune to spells and magical abilities other than its own, but each type of golem is affected by a few types of magic in special ways. These exceptions are listed in shortened form in the golem's stat block, with the full rules appearing here. If an entry lists multiple types (such as \"cold and water\"), either type of spell can affect the golem.</p>\n<ul>\n<li><strong>Harmed By</strong> Any magic of this type that targets the golem causes it to take the listed amount of damage (this damage has no type) instead of the usual effect. If the golem starts its turn in an area of magic of this type or is affected by a persistent effect of the appropriate type, it takes the damage listed in the parenthetical.</li>\n<li><strong>Healed By</strong> Any magic of this type that targets the golem makes the golem lose the slowed condition and gain HP equal to half the damage the spell would have dealt. If the golem starts its turn in an area of this type of magic, it gains the HP listed in the parenthetical.</li>\n<li><strong>Slowed By</strong> Any magic of this type that targets the golem causes it to be @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for [[/br 2d6 #rounds]]{2d6 rounds} instead of the usual effect. If the golem starts its turn in an area of this type of magic, it's slowed 1 for that round.</li>\n<li><strong>Vulnerable To</strong> Each golem is vulnerable to one or more specific spells, with the effects described in its stat block.</li>\n</ul>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.r34QDwKiWZoVymJa]\n<p>harmed by acid (@Damage[9d10[untyped]] damage, @Damage[2d10[untyped]] damage from areas or persistent damage); healed by fire (area @Damage[2d10[healing]] Hit Points); slowed by electricity</p>\n<hr />\n<p>A golem is immune to spells and magical abilities other than its own, but each type of golem is affected by a few types of magic in special ways. These exceptions are listed in shortened form in the golem's stat block, with the full rules appearing here. If an entry lists multiple types (such as \"cold and water\"), either type of spell can affect the golem.</p>\n<ul>\n<li><strong>Harmed By</strong> Any magic of this type that targets the golem causes it to take the listed amount of damage (this damage has no type) instead of the usual effect. If the golem starts its turn in an area of magic of this type or is affected by a persistent effect of the appropriate type, it takes the damage listed in the parenthetical.</li>\n<li><strong>Healed By</strong> Any magic of this type that targets the golem makes the golem lose the slowed condition and gain HP equal to half the damage the spell would have dealt. If the golem starts its turn in an area of this type of magic, it gains the HP listed in the parenthetical.</li>\n<li><strong>Slowed By</strong> Any magic of this type that targets the golem causes it to be @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for [[/br 2d6 #rounds]]{2d6 rounds} instead of the usual effect. If the golem starts its turn in an area of this type of magic, it's slowed 1 for that round.</li>\n<li><strong>Vulnerable To</strong> Each golem is vulnerable to one or more specific spells, with the effects described in its stat block.</li>\n</ul>"
         },
         "action->Numerian Construct": {
           "name": "Numerian Construct",
@@ -5723,6 +5730,10 @@
         "spell->Wish": {
           "name": "Wish",
           "description": "<p>You state a wish, making your greatest desire come true. A wish spell can produce any one of the following effects.</p>\n<ul>\n<li>Duplicate any arcane spell of 9th level or lower to which you have access.</li>\n<li>Duplicate any non-arcane spell of 7th level or lower to which you have access.</li>\n<li>Produce any effect whose power level is in line with the above effects.</li>\n<li>Reverse certain effects that refer to the wish spell.</li>\n</ul>\n<p>The GM might allow you to try using <em>wish</em> to produce greater effects than these, but doing so might be dangerous or the spell might have only a partial effect.</p>"
+        },
+        "spell->Create Demiplane": {
+          "primarycheck": "Arcana, Nature, Occultism, or Religion (legendary)",
+          "secondarycheck": "Arcana, Nature, Occultism,  Religion (whichever three aren't used for the primary check)"
         },
         "spell->Discern Location": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.CeSh8QcVnqP5OlLj]\nDiscern Location"
@@ -6236,7 +6247,7 @@
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.J7Y7tl0bbdz7TcCc]\nRay of Enfeeblement"
         },
         "consumable->Healing Potion (Moderate)": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.G7haQ5gDt30ftJLC]\n<p>A healing potion is a vial of a ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a healing potion, you regain [[/r (3d8+10)[healing]]]{3d8+10 Hit Points}.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.G7haQ5gDt30ftJLC]\n<p>A healing potion is a vial of a ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a healing potion, you regain @Damage[(3d8+10)[healing]] Hit Points.</p>"
         },
         "strike-melee->Greatsword": {
           "name": "Greatsword"
@@ -6818,7 +6829,7 @@
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.LJdbVTOZog39EEbi]\n<p>Longswords can be one-edged or two-edged swords. Their blades are heavy and they're between 3 and 4 feet in length.</p>"
         },
         "consumable->Healing Potion (Moderate)": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.G7haQ5gDt30ftJLC]\n<p>A healing potion is a vial of a ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a healing potion, you regain [[/r (3d8+10)[healing]]]{3d8+10 Hit Points}.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.G7haQ5gDt30ftJLC]\n<p>A healing potion is a vial of a ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a healing potion, you regain @Damage[(3d8+10)[healing]] Hit Points.</p>"
         },
         "strike-melee->Longsword": {
           "name": "Longsword"
@@ -8959,7 +8970,8 @@
           "name": "Arcane Prepared Spells"
         },
         "spell->Imprisonment (Cannot Currently Cast)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.2CNqkt2s2IYkVnv6]\nImprisonment (Cannot Currently Cast)"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.2CNqkt2s2IYkVnv6]\nImprisonment (Cannot Currently Cast)",
+          "primarycheck": "Arcana (legendary) or Occultism (legendary)"
         },
         "spell->Planar Binding": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.2ykmAVKrsAWcazcC]\nPlanar Binding",
