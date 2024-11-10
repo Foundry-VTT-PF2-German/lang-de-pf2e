@@ -1,5 +1,5 @@
 ## v6.6.1.0
-* Wir begrüßen LowPaw als neuen Contributor für das DE-Modul
+* Wir begrüßen LoxPaw als neuen Contributor für das DE-Modul
 * Update auf PF2-Systemversion 6.6.1
 * Überarbeitung SL-Schirm
 * Ergänzung Übersetzungen zu "Ruf der Wildnis"
