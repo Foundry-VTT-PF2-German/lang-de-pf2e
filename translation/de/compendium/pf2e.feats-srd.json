@@ -1240,7 +1240,7 @@
     },
     "Ambush Bladderwort": {
       "name": "Blasenkrautüberfall",
-      "description": "<p>Du pflanzt die Saat eines riesigen Binsenkrauts in einem unbelegten Feld mit Boden oder Wasser innerhalb von 30 Fuß/9 m Entfernung. Der Impuls währt 10 Minuten lang an, kann aber vorzeitig beendet werden, indem du ihn erneut nutzt. Sollte eine Kreatur das fragliche Feld betreten, bricht aus der Saat eine gewaltige, durchscheinende Pflanze heraus, die sich eng um die auslösende Kreatur legt und dann mit Wasser füllt. Die Kreatur muss einen @Check[reflex|against:kineticist]{Reflexwurf} gegen deinen Klassen-SG ablegen. Bei Misserfolg erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Bewegungsunfähig} und muss den Atem anhalten, um nicht zu ertrinken. Der SG des Wurfes zum @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Entkommen} ist ebenfalls dein Klassen-SG. Die Pflanze besitzt RK 10 und 50 TP.</p>\n<p>Sollte eine Kreatur im Inneren der Pflanze sterben, schrumpft die Pflanze und verwandelt sich und die Überreste in eine wässrige Frucht. Eine Kreatur kann diesen Verbrauchsgegenstand verzehren, um 1W8+4 TP zurückzuerhalten; im Anschluss ist diese Kreatur dann gegen diesen Effekt für 10 Minuten vorübergehend immun. Die Frucht verwest nach 1 Stunde.</p>\n<hr />\n<p><strong>Stufe (+4)</strong> Die TP des Binsenkrauts steigen um 25 und die Heilung durch die Frucht steigt um 1W8+4 Punkte.</p>\n<p><strong>Stufenabhängige Heilung:</strong> [[/r ((floor((max(4,@actor.level)-4)/4)+1)d8+(floor((max(4,@actor.level)-4)/4)*4+4))[healing]]]</p>"
+      "description": "<p>Du pflanzt die Saat eines riesigen Binsenkrauts in einem unbelegten Feld mit Boden oder Wasser innerhalb von 30 Fuß/9 m Entfernung. Der Impuls währt 10 Minuten lang an, kann aber vorzeitig beendet werden, indem du ihn erneut nutzt. Sollte eine Kreatur das fragliche Feld betreten, bricht aus der Saat eine gewaltige, durchscheinende Pflanze heraus, die sich eng um die auslösende Kreatur legt und dann mit Wasser füllt. Die Kreatur muss einen @Check[reflex|against:kineticist]{Reflexwurf} gegen deinen Klassen-SG ablegen. Bei Misserfolg erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Bewegungsunfähig} und muss den Atem anhalten, um nicht zu ertrinken. Der SG des Wurfes zum @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Entkommen} ist ebenfalls dein Klassen-SG. Die Pflanze besitzt RK 10 und 50 TP.</p>\n<p>Sollte eine Kreatur im Inneren der Pflanze sterben, schrumpft die Pflanze und verwandelt sich und die Überreste in eine wässrige Frucht. Eine Kreatur kann diesen Verbrauchsgegenstand verzehren, um 1W8+4 TP zurückzuerhalten; im Anschluss ist diese Kreatur dann gegen diesen Effekt für 10 Minuten vorübergehend immun. Die Frucht verwest nach 1 Stunde.</p>\n<hr />\n<p><strong>Stufe (+4)</strong> Die TP des Binsenkrauts steigen um 25 und die Heilung durch die Frucht steigt um 1W8+4 Punkte.</p>\n<p><strong>Stufenabhängige Heilung:</strong> @Damage[((floor((max(4,@actor.level)-4)/4)+1)d8+(floor((max(4,@actor.level)-4)/4)*4+4))[healing]]</p>"
     },
     "Ambush Hunter": {
       "name": "Hinterhältiger Jäger",
@@ -1655,11 +1655,21 @@
     },
     "Animist Dedication": {
       "name": "Animist Dedication",
-      "description": "<p>You have formed a bond with an apparition and can cast divine spells. Choose a single apparition from those available to the animist. You become bound to that apparition and can attune to it each day during your daily preparations to become trained in its apparition skills. If you are 8th level, you are expert in its apparition skills while attuned to it, and if you are 16th level, you are a master in its apparition skills while attuned to it. You can spend 1 day of downtime ending your relationship with this apparition and bonding to a new one.</p>\n<p>You gain the Cast a Spell activity. You can prepare two common cantrips each day from the divine spell list or any other divine cantrips you have access to, including the cantrip listed in your apparition's apparition spells. You're trained in the spell attack modifier and spell DC statistics. Your key spellcasting attribute for animist archetype spells is Wisdom, and they are divine animist spells.</p>"
+      "description": "<p>You have formed a bond with an apparition and can cast divine spells. Choose a single apparition from those available to the animist. You become bound to that apparition and can attune to it each day during your daily preparations to become trained in its apparition skills. If you are 8th level, you are expert in its apparition skills while attuned to it, and if you are 16th level, you are a master in its apparition skills while attuned to it. You can spend 1 day of downtime ending your relationship with this apparition and bonding to a new one.</p>\n<p>You gain the Cast a Spell activity. You can prepare two common cantrips each day from the divine spell list or any other divine cantrips you have access to, including the cantrip listed in your apparition's apparition spells. You're trained in the spell attack modifier and spell DC statistics. Your key spellcasting attribute for animist archetype spells is Wisdom, and they are divine animist spells.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.ZNz2aC4wQ7KC6Ixe]{Animist}</p>",
+      "prerequisites": [
+        {
+          "value": "Wisdom +2"
+        }
+      ]
     },
     "Animist's Power": {
       "name": "Animist's Power",
-      "description": "<p>You gain one animist feat. For the purpose of meeting its prerequisites, your animist level is equal to half your character level. You can't use this feat to gain animist feats with the wandering trait.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat more than once. Each time you select it, you gain another animist feat.</p>"
+      "description": "<p>You gain one animist feat. For the purpose of meeting its prerequisites, your animist level is equal to half your character level. You can't use this feat to gain animist feats with the wandering trait.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat more than once. Each time you select it, you gain another animist feat.</p>",
+      "prerequisites": [
+        {
+          "value": "Spiritual Awakening"
+        }
+      ]
     },
     "Ankle Bite": {
       "name": "Wadenbiss",
@@ -1767,7 +1777,12 @@
     },
     "Apparition Magic": {
       "name": "Apparition Magic",
-      "description": "<p>You can cast more divine spells each day. You gain 1 additional spell slot from animist archetype feats for each spell rank other than your two highest animist spell slots. These additional slots can only be used to prepare spells from your apparition's apparition spells.</p>"
+      "description": "<p>You can cast more divine spells each day. You gain 1 additional spell slot from animist archetype feats for each spell rank other than your two highest animist spell slots. These additional slots can only be used to prepare spells from your apparition's apparition spells.</p>",
+      "prerequisites": [
+        {
+          "value": "Basic Animist Spellcasting"
+        }
+      ]
     },
     "Apparition Sense": {
       "name": "Apparition Sense",
@@ -2703,7 +2718,7 @@
         }
       ]
     },
-    "Back To Back": {
+    "Back to Back": {
       "name": "Rücken an Rücken",
       "description": "<p>Du achtest auf die Rücken deiner Verbündeten und hilfst ihnen dabei, den deinen zu decken. Jeder zu dir angrenzende Verbündete ist gegen den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} aufgrund von Flankieren immun, solange du nicht selbst flankiert wirst. Während du zu wenigstens einem Verbündeten angrenzend bist, bist du gegen den Zustand Auf dem Falschen Fuß aufgrund von Flankieren immun, solange nicht wenigstens einer der zu dir angrenzenden Verbünden nicht selbst flankiert wird.</p>",
       "prerequisites": [
@@ -2847,7 +2862,12 @@
     },
     "Basic Animist Spellcasting": {
       "name": "Basic Animist Spellcasting",
-      "description": "<p>You gain the basic spellcasting benefits as a prepared divine caster. In addition to standard divine tradition spells, you can prepare your bonded apparition's apparition spells in your spell slots of the appropriate level from the animist archetype.</p>"
+      "description": "<p>You gain the basic spellcasting benefits as a prepared divine caster. In addition to standard divine tradition spells, you can prepare your bonded apparition's apparition spells in your spell slots of the appropriate level from the animist archetype.</p>",
+      "prerequisites": [
+        {
+          "value": "Animist Dedication"
+        }
+      ]
     },
     "Basic Arcana": {
       "name": "Einfache Arkana",
@@ -3958,21 +3978,21 @@
         }
       ]
     },
+    "Blessing of the Five": {
+      "name": "Segnung der Fünf",
+      "description": "<p><strong>Häufigkeit</strong> Einmal pro Tag</p>\n<hr />\n<p>Du wendest dich an die @UUID[Compendium.pf2e.deities.Item.JndhOIHnQoMwnsw3]{Gottklaue}, auf dass sie deine Verbündeten heile. Du wirkst die 3 Aktionen Version von @UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heilung}, erhöht auf eine Stufe, die deiner aufgerundeten halben Stufe minus 1 entspricht. Du kannst bis zu vier Kreaturen in dem Wirkungsbereich bestimmen, welche von dem Zauber nicht beeinflusst werden. Anstatt dessen kannst du diese Fähigkeit auch nutzen, um eine Kreatur innerhalb von 30 Fuß/9 m um dich herum, die innerhalb der letzten Runde gestorben ist, von den Toten zurück zu holen. Wenn du dies tust, wird die Kreatur wieder auf 1 Lebenspunkt wiederhergestellt und erhält 24 Stunden lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Todgeweiht 1}.</p>",
+      "prerequisites": [
+        {
+          "value": "Orden der Gottklaue"
+        }
+      ]
+    },
     "Blessing of the Sun Gods": {
       "name": "Blessing of the Sun Gods",
       "description": "<p>The Old Sun Gods share their power with you. Select the ambition, cities, darkness, dreams, family, fire, freedom, healing, moon, passion, or sun domain. You gain an initial domain spell for that domain. If you don't already have one, you gain a focus pool of 1 Focus Point, which you can regain using the Refocus activity to pray to the Old Sun Gods; if you already have a focus pool, increase the number of Focus Points in your focus pool by 1.</p>\n<p>Your Bright Lion focus spells are divine spells; you become trained in divine spell attacks and spell DCs, using Charisma as your spellcasting ability score.</p>\n<p><strong>Special</strong> You can select this feat multiple times, selecting a different domain each time and gaining its domain spell.</p>",
       "prerequisites": [
         {
           "value": "Bright Lion Dedication"
-        }
-      ]
-    },
-    "Blessings of the Five": {
-      "name": "Segnung der Fünf",
-      "description": "<p><strong>Häufigkeit</strong> Einmal pro Tag</p>\n<hr />\n<p>Du wendest dich an die Gottklaue, auf dass sie deine Verbündeten heile. Du wirkst die 3 Aktionen Version von @UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heilung}, erhöht auf eine Stufe, die deiner aufgerundeten halben Stufe minus 1 entspricht. Du kannst bis zu vier Kreaturen in dem Wirkungsbereich bestimmen, welche von dem Zauber nicht beeinflusst werden. Anstatt dessen kannst du diese Fähigkeit auch nutzen, um eine Kreatur innerhalb von 9 m um dich herum, die innerhalb der letzten Runde gestorben ist, von den Toten zurück zu holen. Wenn du dies tust, wird die Kreatur wieder auf 1 Lebenspunkt wiederhergestellt und erhält 24 Stunden lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Todgeweiht 1}.</p>",
-      "prerequisites": [
-        {
-          "value": "Orden der Gottklaue"
         }
       ]
     },
@@ -7100,11 +7120,11 @@
       ]
     },
     "Crimson Shroud": {
-      "name": "Blutroter Schleier",
+      "name": "Crimson Shroud",
       "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You swathe yourself in a veil of red mist for 1 minute. While the shroud is active, you gain fast healing equal to half your level. You can Interact with your shroud, swirling it around you, to gain a +1 circumstance bonus to AC until the beginning of your next turn. Finally, if you die while the shroud is active, you can choose to have your entire body vanish into red mist, leaving behind only your gear; you make this choice when you activate Crimson Shroud.</p>\n<p>At 10th level, you can use this ability once per hour instead of once per day.</p>",
       "prerequisites": [
         {
-          "value": "Rote-Mantis-Zugang"
+          "value": "Red Mantis Assassin Dedication"
         }
       ]
     },
@@ -9867,7 +9887,7 @@
       "name": "Schicksalsfresser",
       "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<p><strong>Auslöser</strong> Eine Kreatur innerhalb einer Reichweite von 60 Fuß/18 m nutzt einen Effekt der Kategorie Glück oder Unglück.</p>\n<hr />\n<p>Versucht jemand in deiner Nähe, das Schicksal zu manipulieren, greifst du sofort ein, indem du diese Beeinflussung absorbierst. Der auslösende Effekt wird dadurch unterbrochen. Sollte es sich beim von dir absorbierten Effekt um einen Unglückseffekt gehandelt haben, erhält das Talent Schicksalsfresser die Kategorie Glück, bei einem Glückseffekt hingegen die Kategorie Unglück. Dieses Glück oder Unglück wird dabei jedoch auf denselben Wurf angewandt, der dein Talent überhaupt erst ausgelöst hat. Daher kannst du mit diesem Talent nicht gleichzeitig einen Glückseffekt negieren und einen Unglückseffekt auf diesen Wurf legen.</p>"
     },
-    "Ebb And Flow": {
+    "Ebb and Flow": {
       "name": "Verwobener Quell",
       "description": "<p>Du kannst zugleich Lebens- und Leerenenergie nutzen, um deine Verbündeten zu heilen und deinen Gegnern Schaden zuzufügen. Sofern du als nächste Handlung 1 oder 2 Aktionen zum Wirken von @UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heilung} oder @UUID[Compendium.pf2e.spells-srd.Item.wdA52JJnsuQWeyqz]{Leid} aufwendest, kannst du eine Kreatur innerhalb der Reichweite wählen, welche durch den Zauber geheilt werden soll, und eine weitere innerhalb der Reichweite, die durch den Zauber Schaden erleiden soll. Dein Zauber <em>Heilung</em> oder <em>Leid</em> hat beide Kreaturen als Ziele.</p>",
       "prerequisites": [
@@ -11042,9 +11062,9 @@
         }
       }
     },
-    "Entreat With Forebears": {
+    "Entreat with Forebears": {
       "name": "Verwandtschaftliche Beziehungen",
-      "description": "<p>Etwas an dir sorgt dafür, dass Kreaturen deiner Blutlinie dich - möglicherweise unbewusst - als einen der ihren erkennen und du für ihre Tricks nicht empfänglich bist. Du erhältst einen Situationsbonus von +1 auf Fertigkeitswürfe für Diplomatie, Einschüchtern und Täuschung, wenn du mit Kreaturen interagierst, deren Kategorie mit deiner Blutlinie korrespondiert, sowie einen Situationsbonus von +1 auf Wahrnehmung und Rettungswürfe gegen solche Kreaturen. Ein Zauberer der Aberrationenblutlinie würde z.B. diesen Vorteil gegenüber Kreaturen der Kategorie Aberration erhalten. Der SL hat dabei das letzte Worte, welche Kreaturen deiner Blutlinie entsprechen.</p>",
+      "description": "<p>Etwas an dir sorgt dafür, dass Kreaturen deiner Blutlinie dich – möglicherweise unbewusst – als einen der ihren erkennen und du für ihre Tricks nicht empfänglich bist. Du erhältst einen Situationsbonus von +1 auf Fertigkeitswürfe für Diplomatie, Einschüchtern und Täuschung, wenn du mit Kreaturen interagierst, deren Kategorie mit deiner Blutlinie korrespondiert, sowie einen Situationsbonus von +1 auf Wahrnehmung und Rettungswürfe gegen solche Kreaturen. Ein Zauberer der Aberrationenblutlinie würde z.B. diesen Vorteil gegen- über Kreaturen der Kategorie Aberration erhalten. Der SL hat dabei das letzte Worte, welche Kreaturen deiner Blutlinie entsprechen.</p>",
       "prerequisites": [
         {
           "value": "Eine Blutlinie, die einer Kreaturenkategorie entspricht"
@@ -11341,8 +11361,8 @@
         }
       ]
     },
-    "Everyone's A Suspect": {
-      "name": "Jeder ist Verdächtig",
+    "Everyone's a Suspect": {
+      "name": "Jeder ist ein Verdächtiger",
       "description": "<p>Du bist grundsätzlich misstrauisch gegenüber jedem, den du triffst. Darum machst du dir sicherheitshalber geistige Notizen, wie man sie am besten besiegen kann; das schließt auch deine Verbündeten mit ein. Nachdem du 1 Minute mit einer Kreatur interagiert hast, nutzt du automatisch @UUID[Compendium.pf2e.actionspf2e.Item.xTK2zsWFyxSJvYbX]{Hinweis nachgehen} mit der fraglichen Kreatur als Thema der Maßgeblichen Frage. Du kannst zu jeder Zeit beliebig vielen Hinweisen dieser Art nachgehen; wenn du aktiv Hinweis nachgehen nutzt, musst du keine dieser automatisch aufgenommenen Ermittlungen aufgeben.</p>"
     },
     "Evolved Spellhorn": {
@@ -11391,7 +11411,7 @@
     },
     "Exemplar Dedication": {
       "name": "Exemplar Dedication",
-      "description": "<p>A spark of inherent divine power has lit itself within you. You become trained in martial weapons. You gain one ikon, the ability to use the ikon's immanence and transcendence actions and effects, and the @UUID[Compendium.pf2e.actionspf2e.Item.9cGJBXSJW6EpgibP]{Shift Immanence} action. Because you have only a single ikon, when you Spark Transcendence, your divine spark recedes back to the depths of your soul and must be recalled with Shift Immanence to re-empower your ikon. You become trained in exemplar class DC.</p>",
+      "description": "<p>A spark of inherent divine power has lit itself within you. You become trained in martial weapons. You gain one ikon, the ability to use the ikon's immanence and transcendence actions and effects, and the @UUID[Compendium.pf2e.actionspf2e.Item.9cGJBXSJW6EpgibP]{Shift Immanence} action. Because you have only a single ikon, when you Spark Transcendence, your divine spark recedes back to the depths of your soul and must be recalled with Shift Immanence to re-empower your ikon. You become trained in exemplar class DC.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.IBJrhr3Sj6CSIBWo]{Exemplar}</p>",
       "prerequisites": [
         {
           "value": "Strength +2 or Dexterity +2"
@@ -11573,7 +11593,15 @@
     },
     "Expert Animist Spellcasting": {
       "name": "Expert Animist Spellcasting",
-      "description": "<p>You gain the expert spellcasting benefits as a prepared divine caster.</p>"
+      "description": "<p>You gain the expert spellcasting benefits as a prepared divine caster.</p>",
+      "prerequisites": [
+        {
+          "value": "Basic Animist Spellcasting"
+        },
+        {
+          "value": "master in Religion"
+        }
+      ]
     },
     "Expert Backstabber": {
       "name": "Heimtücke",
@@ -12047,7 +12075,11 @@
         }
       ]
     },
-    "Eye For Numbers": {
+    "Eye for Masonry": {
+      "name": "Auge für Steinarbeiten",
+      "description": "<p>Deine Vertrautheit mit Architektur erlaubt dir, leicht subtile Abweichungen bei Steinarbeiten zu entdecken. Du erlangst einen Situationsbonus von +2 auf Wahrnehmungswürfe, um ungewöhnliche Steinarbeiten zu bemerken. Dieser Bonus gilt hinsichtlich mechanischen Fallen aus Stein oder die im Stein versteckt sind, sowie Geheimtüren im Stein.</p>\n<p>Du erlangst einen Situationsbonus von +1 auf Würfe für Athletik zum @UUID[Compendium.pf2e.actionspf2e.Item.SjmKHgI7a5Z9JzBx]{Gewaltsam öffnen} von Steintüren oder für Diebeskunst zum @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Mechanismus ausschalten} (sofern hauptsächlich aus Stein bestehend).</p>"
+    },
+    "Eye for Numbers": {
       "name": "Auge für Zahlen",
       "description": "<p>Du hast gelernt, Mengen visuell schnell zu erfassen und kannst so rasch mit nur einem Blick die Anzahl von Gegenständen mit relativer Genauigkeit einschätzen. Du erfährst augenblicklich die Anzahl ähnlich aussehender Gegenstände in einer sichtbaren Gesamtmenge (wie z.B. Münzen, Bücher oder Menschen), gerundet auf die erste Stelle der Zahl. Beispielsweise könntest du auf einen Behälter voller Trankphiolen schauen und dank des Talents erfahren, dass es sich um ca. 30 Phiolen handelt. Du wüsstest dadurch allerdings nicht, dass es genau 33 Phiolen waren, um wie viele unterschiedliche Tränke es sich handelte oder um wie viele welcher Art. Du könntest ebenso auf einen Haufen von 2.805 Münzen schauen und wüsstest, dass es insgesamt ca. 3.000 Münzen sind. Du kannst diese Fähigkeit nur für zählbare Gegenstände verwenden, also beispielsweise nicht für Sandkörner oder Sterne am Himmel.</p>\n<p>Wenn du eine bestimmte Anzahl von Gegenständen zählst, die ein Feind besitzt, z.B. die Anzahl der Münzen oder Ausrüstungsgegenstände, die er bei sich trägt, kannst du diese Information bei deiner nächsten @UUID[Compendium.pf2e.actionspf2e.Item.QNAVeNKtHA0EUw4X]{Finte} oder @UUID[Compendium.pf2e.actionspf2e.Item.GkmbTGfg8KcgynOA]{Für Ablenkung sorgen} gegen dieses Ziel innerhalb von 1 Minute verwenden. Wenn du das tust, erhältst du einen Situationsbonus von +1 auf deinen Wurf und kannst Gesellschaftskunde anstelle von Täuschung für den Wurf verwenden.</p>\n<p>Wenn du die Handlung Schrift entziffern für Texte verwendest, die hauptsächlich aus Zahlen oder mathematischen Formeln bestehen, so erhältst du einen Situationsbonus von +2 auf den Fertigkeitswurf.</p>",
       "prerequisites": [
@@ -12061,13 +12093,9 @@
         }
       }
     },
-    "Eye For Treasure": {
+    "Eye for Treasure": {
       "name": "Schatzkundiger",
       "description": "<p>Du erkennst gute Handwerkskunst, wenn du sie siehst, und verfällst regelmäßig ins Schwärmen, wenn es um Formen und Techniken geht.</p>\n<p>Du erlangst daher den Kompetenzgrad Geübt in der Fertigkeit Handwerkskunst sowie einen Situationsbonus von +1 auf sämtliche Fertigkeitswürfe für Handwerkskunst zum @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Wissen abrufen}. Solltest du bereits über ein anderes Regelelement - beispielsweise durch deine Klasse - in dieser Fertigkeit geübt sein, kannst du stattdessen eine andere Fertigkeit deiner Wahl auf den Kompetenzgrad Geübt verbessern.</p>\n<p>Zusätzlich gewinnst du das Fertigkeitstalent @UUID[Compendium.pf2e.feats-srd.Item.voYr7ygVcWmlg1f4]{Handwerkerblick}, wodurch du magische Gegenstände mit Hilfe der Fertigkeit Handwerkskunst identifizieren kannst.</p>"
-    },
-    "Eye for Masonry": {
-      "name": "Auge für Steinarbeiten",
-      "description": "<p>Deine Vertrautheit mit Architektur erlaubt dir, leicht subtile Abweichungen bei Steinarbeiten zu entdecken. Du erlangst einen Situationsbonus von +2 auf Wahrnehmungswürfe, um ungewöhnliche Steinarbeiten zu bemerken. Dieser Bonus gilt hinsichtlich mechanischen Fallen aus Stein oder die im Stein versteckt sind, sowie Geheimtüren im Stein.</p>\n<p>Du erlangst einen Situationsbonus von +1 auf Würfe für Athletik zum @UUID[Compendium.pf2e.actionspf2e.Item.SjmKHgI7a5Z9JzBx]{Gewaltsam öffnen} von Steintüren oder für Diebeskunst zum @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Mechanismus ausschalten} (sofern hauptsächlich aus Stein bestehend).</p>"
     },
     "Eye of Ozem": {
       "name": "Ozems Auge",
@@ -12461,7 +12489,7 @@
       "name": "Faultspawn",
       "description": "<p>You bear a grudge, inherited from a blasphemous asura forebear in your bloodline, against a particular deity and their works.</p>\n<p>You gain the @UUID[Compendium.pf2e.actionspf2e.Item.e5JscXqvBUC867oo]{Find Fault} reaction.</p>"
     },
-    "Favor Of Heaven": {
+    "Favor of Heaven": {
       "name": "Gunst des Himmels",
       "description": "<p>Du bist einer von Hei Fengs Auserwählten und hast die Autorität des Celestischen Gerichts auf seiner Seite. Einmal am Tag kannst du @UUID[Compendium.pf2e.spells-srd.Item.PHVHBbdHeQRfjLmE]{Geist zerstören} als immanenten göttlichen Zauber des 6. Grades wirken. Zusätzlich erhältst du Widerstand 5 gegen Heiligen und Unheiligen Schaden.</p>"
     },
@@ -12564,9 +12592,9 @@
         }
       ]
     },
-    "Feed On Pain": {
+    "Feed on Pain": {
       "name": "Vom Schmerz ernähren",
-      "description": "<p><strong>Häufigkeit</strong> Einmal pro Stunde</p>\n<p><strong>Auslöser</strong> Du richtest Schaden des Typs Mental an.</p>\n<hr />\n<p>Das Leiden anderer Kreaturen erfüllt dich mit falschem Leben. Du erhältst temporäre Trefferpunkte in Höhe des halben mentalen Schadens, den du durch den auslösenden Effekt verursachst. Wenn der betreffende Effekt mehreren Zielen Schaden zufügt, berechnest du die temporären Trefferpunkte anhand der Kreatur, die am meisten Schaden einstecken musste. Du verlierst alle verbleibenden temporären Trefferpunkte nach 1 Minute.</p>",
+      "description": "<p><strong>Häufigkeit</strong> Einmal pro Stunde</p>\n<p><strong>Auslöser</strong>Du richtest Schaden des Typs Mental an.</p>\n<hr />\n<p>Das Leiden anderer Kreaturen erfüllt dich mit falschem Leben. Du erhältst temporäre Trefferpunkte in Höhe des halben mentalen Schadens, den du durch den auslösenden Effekt verursachst. Wenn der betreffende Effekt mehreren Zielen Schaden zufügt, berechnest du die temporären Trefferpunkte anhand der Kreatur, die am meisten Schaden einstecken musste. Du verlierst alle verbleibenden temporären Trefferpunkte nach 1 Minute.</p>",
       "prerequisites": [
         {
           "value": "Adhyabhau"
@@ -12594,8 +12622,8 @@
         }
       ]
     },
-    "Feet That Stride The Sky": {
-      "name": "Feet That Stride The Sky",
+    "Feet That Stride the Sky": {
+      "name": "Feet That Stride the Sky",
       "description": "<p>You feel the call of the sky, or perhaps a desperate urge to test the limits of the earth's hold on you. When you or a creature you're mounted on attempts a @UUID[Compendium.pf2e.actionspf2e.Item.2HJ4yuEFY1Cast4h]{High Jump} or @UUID[Compendium.pf2e.actionspf2e.Item.JUvAvruz7yRQXfz2]{Long Jump}, you can spend a Mythic Point to allow you or the mount to attempt the check at mythic proficiency; determine the DC using the Long Jump DCs, and increase your maximum distance to double your Speed.</p>",
       "prerequisites": [
         {
@@ -13400,7 +13428,7 @@
         }
       ]
     },
-    "Flourish And Ruin": {
+    "Flourish and Ruin": {
       "name": "Gedeih und Verderb",
       "description": "<p>Du kannst die Lebensessenz deiner Seele anrufen, um deinen Verbündeten das Leben wiederzugeben oder Ranken herbeirufen, die deine Feinde fesseln und auf sie niederschmettern. Du kannst jeweils einmal am Tag @UUID[Compendium.pf2e.spells-srd.Item.x5rGOmhDRDVQPrnW]{Feld der Lebensenergie} und @UUID[Compendium.pf2e.spells-srd.Item.JbAcSLu62TU1OgNF]{Schlingpflanzenwuchs} als immanente Naturzauber des 6. Grades wirken.</p>"
     },
@@ -13604,21 +13632,21 @@
         }
       ]
     },
-    "Font Of Life Or Death": {
-      "name": "Font Of Life Or Death",
-      "description": "<p>As you reach ever higher in your quest to achieve true divinity, the powers of life and death flow evermore easily from you. Choose either heal or harm; you gain the chosen spell as an 8th rank innate spell you can cast three times per day. Your hierophant can cast these innate spells as well by expending one of your daily uses.</p>",
-      "prerequisites": [
-        {
-          "value": "Godling Dedication"
-        }
-      ]
-    },
     "Font of Knowledge": {
       "name": "Quell des Wissens",
       "description": "<p>Erfahrung oder gestrenge Studien haben die wahre Meisterschaft in einer Vielzahl von Themen verschafft. Wenn du über etwas Bescheid weißt, kennst du sehr viele Details. Wenn du bei einem Fertigkeitswurf zum @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Wissen abrufen} einen Erfolg erzielst, erhältst du zusätzliche Informationen oder Kontext. Bei einem Kritischen Erfolg kann der Spielleiter entscheiden, dir sogar noch mehr zusätzliche Informationen und Zusammenhänge als sonst üblich zu geben.</p>",
       "prerequisites": [
         {
           "value": "Herr-der-Schriftrollen-Zugang "
+        }
+      ]
+    },
+    "Font of Life or Death": {
+      "name": "Font of Life or Death",
+      "description": "<p>As you reach ever higher in your quest to achieve true divinity, the powers of life and death flow evermore easily from you. Choose either heal or harm; you gain the chosen spell as an 8th rank innate spell you can cast three times per day. Your hierophant can cast these innate spells as well by expending one of your daily uses.</p>",
+      "prerequisites": [
+        {
+          "value": "Godling Dedication"
         }
       ]
     },
@@ -14277,16 +14305,13 @@
     },
     "Game Hunter Dedication": {
       "name": "Großwildjäger-Zugang",
-      "description": "<p>Du bist geschickt im Aufspüren von Großwild und ähnlichen Kreaturen. Du erhältst die Waldläuferfähigkeit @UUID[Compendium.pf2e.actionspf2e.Item.JYi4MnsdFu618hPm]{Jagdbeute}, kannst aber nur Bestien, Drachen und Tiere als Beute bestimmen. Zusätzlich zu den anderen Vorteilen von Jagdbeute erhältst du einen Situationsbonus von +2 auf Würfe für Heimlichkeit gegen die von dir gejagte Beute.</p>\n<p>Wenn dir ein erfolgreicher Angriff gegen deine gejagte Beute gelingt und diese dabei @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} betroffen ist, muss sie einen Zähigkeitswurf gegen deinen Klassen-SG ablegen. Bei einem Fehlschlag werden sämtliche Bewegungsraten deines Ziels für 1 Runde um 10 Fuß/3 Meter verringert; bei einem Kritischen Fehlschlag beträgt die Dauer dieses Effekts 1 Minute. Anschließend ist das Ziel vorübergehend 10 Minuten lang immun gegen diesen Effekt. Wenn du bereits die Fähigkeit Jagdbeute besitzt, erhältst du den Kompetenzgrad Experten in Überlebenskunde. Du wendest den Bonus auf Würfe für Heimlichkeit und die Verringerung der Bewegungsrate nur an, wenn deine Beute eine Bestie, ein Drache oder ein Tier ist.</p>\n<p><strong>Speziell</strong> Du kannst keine weiteren Zugangstalente auswählen, bis du 2 oder mehr Talente des Archetyps @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.8RYKz1WDPMJBmMNt]{Großwildjäger} erhalten hast.</p>",
+      "description": "<p>Du bist geschickt im Aufspüren von Großwild und ähnlichen Kreaturen. Du erhältst die Waldläuferfähigkeit @UUID[Compendium.pf2e.actionspf2e.Item.JYi4MnsdFu618hPm]{Jagdbeute}, kannst aber nur Bestien, Drachen und Tiere als Beute bestimmen. Zusätzlich zu den anderen Vorteilen von Jagdbeute erhältst du einen Situationsbonus von +2 auf Würfe für Heimlichkeit gegen die von dir gejagte Beute.</p>\n<p>Wenn dir ein erfolgreicher Angriff gegen deine gejagte Beute gelingt und diese dabei @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} betroffen ist, muss sie einen Zähigkeitswurf gegen deinen Klassen-SG ablegen. Bei einem Fehlschlag werden sämtliche Bewegungsraten deines Ziels für 1 Runde um 10 Fuß/3 Meter verringert; bei einem Kritischen Fehlschlag beträgt die Dauer dieses Effekts 1 Minute. Anschließend ist das Ziel vorübergehend 10 Minuten lang immun gegen diesen Effekt. Wenn du bereits die Fähigkeit Jagdbeute besitzt, erhältst du den Kompetenzgrad Experten in Überlebenskunde. Du wendest den Bonus auf Würfe für Heimlichkeit und die Verringerung der Bewegungsrate nur an, wenn deine Beute eine Bestie, ein Drache oder ein Tier ist.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.eTosCwuCMf09fYYH]{Effekt: Großwildjäger (Fehlschlag)}</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.lfbDqyKUMssoxUTZ]{Effekt: Großwildjäger (Kritischer Fehlschlag)}</p>\n<hr />\n<p><strong>Speziell</strong> Du kannst keine weiteren Zugangstalente auswählen, bis du 2 oder mehr Talente des Archetyps @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.8RYKz1WDPMJBmMNt]{Großwildjäger} erhalten hast.</p>",
       "prerequisites": [
         {
           "value": "Kompetenzgrad Geübt in Überlebenskunde"
         }
       ],
       "rules": {
-        "3": {
-          "text": "Wenn dir ein erfolgreicher Angriff gegen deine gejagte Beute gelingt und diese dabei Auf dem Falschen Fuß betroffen ist, muss sie einen Zähigkeitswurf gegen deinen Klassen-SG ablegen. Bei einem Fehlschlag werden sämtliche Bewegungsraten deines Ziels für 1 Runde um 10 Fuß/3 Meter verringert; bei einem Kritischen Fehlschlag beträgt die Dauer dieses Effekts 1 Minute. Anschließend ist das Ziel vorübergehend 10 Minuten lang immun gegen diesen Effekt."
-        },
         "5": {
           "label": "Verwendet Heimlichkeit gegen Jagdbeute"
         }
@@ -14711,10 +14736,6 @@
         }
       ]
     },
-    "Gift Of The Moon": {
-      "name": "Gabe des Mondes",
-      "description": "<p>Du kannst deine Macht mit anderen teilen, allerdings können sie nicht so leicht wie du dem Fluch der Werwesen entkommen. Du kannst @UUID[Compendium.pf2e.spells-srd.Item.YtesyvfAIwXOqISq]{Raserei des Werwolfs} einmal am Tag als immanenten Naturmagiezauber des 5. Grades wirken. Mit der 15. Stufe kann du den Zauber alternativ auf Grad 6 wirken. Mit der 17. Stufe verleiht die Grad-6-Version ihre Standardeffekte mit folgenden Ausnahmen: Die Temporären Trefferpunkte steigen auf 15 und die Schwäche gegen Silber steigt auf 15. Mit der 20. Stufe kann du stattdessen <em>Raserei des Werwolfs</em> auf Grad 10 wirken. Der Zauber nutzt deinen Klassen-SG oder deinen Zauber-SG, so dieser höher ist.</p>"
-    },
     "Gift of the Hoard": {
       "name": "Drachengeschenk",
       "description": "<p>Nachdem du die Wünsche eines mächtigen Drachen erfüllt hast, hat dieser dir einen Teil seiner magischen Essenz verliehen. Deine Augen leuchten fortan und haben eine zum Drachen passende Farbe, ebenso bildet sich schwache Schuppenhaut derselben Farbe auf deinen Gliedern und am Hals aus. Zudem spürst du ein fast unersättliches Verlangen, selbst einen Schatzhort anzusammeln. Du erlangst den Zauberblutlinienzauber @UUID[Compendium.pf2e.spells-srd.Item.JcobNl4iE9HmMYtE]{Drachenodem}, mit dem du den Odem „deines“ Drachen nachahmst, sowie einen Fokusvorrat, der 1 Fokuspunkt fasst. Solltest du bereits über einen Fokusvorrat verfügen, so wächst dieser um 1 Punkt. Du @UUID[Compendium.pf2e.actionspf2e.Item.OSefkMgojBLqmRDh]{erneuerst deinen Fokus}, indem du deine Schätze zählst und arrangierst.</p>",
@@ -14727,6 +14748,10 @@
     "Gift of the Immortal Herb": {
       "name": "Gift of the Immortal Herb",
       "description": "<p><strong>Usage</strong> imbued into a body ikon</p>\n<hr />\n<p>Your blood turns a divine gold, shining in moments its spilled and begetting new life. The imbued ikon gains the following effects.</p>\n<p><strong>Immanence</strong> If your divine spark remains in your body ikon for 10 continuous minutes, you regrow one damaged or ruined limb or organ.</p>\n<p><strong>Transcendence—</strong>@UUID[Compendium.pf2e.actionspf2e.Item.rU3CE5niG8vHc5x4]{Shed the Mortal Skin} <span class=\"action-glyph\">1</span> (healing, light, transcendence, vitality)</p>\n<p>@Embed[Compendium.pf2e.actionspf2e.Item.rU3CE5niG8vHc5x4 inline]</p>"
+    },
+    "Gift of the Moon": {
+      "name": "Gabe des Mondes",
+      "description": "<p>Du kannst deine Macht mit anderen teilen, allerdings können sie nicht so leicht wie du dem Fluch der Werwesen entkommen. Du kannst @UUID[Compendium.pf2e.spells-srd.Item.YtesyvfAIwXOqISq]{Raserei des Werwolfs} einmal am Tag als immanenten Naturmagiezauber des 5. Grades wirken. Mit der 15. Stufe kann du den Zauber alternativ auf Grad 6 wirken. Mit der 17. Stufe verleiht die Grad-6-Version ihre Standardeffekte mit folgenden Ausnahmen: Die Temporären Trefferpunkte steigen auf 15 und die Schwäche gegen Silber steigt auf 15. Mit der 20. Stufe kann du stattdessen Raserei des Werwolfs auf Grad 10 wirken. Der Zauber nutzt deinen Klassen-SG oder deinen Zauber-SG, so dieser höher ist.</p>"
     },
     "Gifted Power": {
       "name": "Verliehene Macht",
@@ -14863,8 +14888,8 @@
         }
       ]
     },
-    "Glory And Valor!": {
-      "name": "Glory And Valor!",
+    "Glory and Valor!": {
+      "name": "Glory and Valor!",
       "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You call upon your ascendant blood with a mighty cry that fills you with a revitalizing energy for 1 minute or until you critically fail a Strike, whichever comes first. For the duration, the first time each round you successfully Strike a creature of your level or higher, you regain @Damage[(floor(@actor.level/2))[healing]]{Hit Points equal to half your level}.</p>",
       "prerequisites": [
         {
@@ -14872,7 +14897,7 @@
         }
       ]
     },
-    "Glutton For Flesh": {
+    "Glutton for Flesh": {
       "name": "Vielfraß",
       "description": "<p>Du bist imstande, mehr Fleisch in deinem eigentlich ausgezehrten Körper einzulagern und so länger den Zustand Gesättigt aufrechtzuerhalten. Wenn du @UUID[Compendium.pf2e.actionspf2e.Item.1If9lLVoZdO8woVg]{Fleisch verzehrst}, während du den Zustand Gestättigt besitzt, erlangst du stattdessen den Zustand Vollgefressen. Der Zustand Vollgefressen währt 3 Stunden lang und verändert sich dann wieder zu Gesättigt; dies währt 1 Stunde. Besitzt du den Zustand Vollgefressen, wenn eine Fähigkeit deinen Zustand Gesättigt beenden würde, endet der Zustand Vollgefressen und bist du „nur“ noch Gesättigt.</p>\n<p>Solltest du über das Talent @UUID[Compendium.pf2e.feats-srd.Item.7GrACprIxZuarGDs]{Grabesstärke} verfügen, erlangst du im Zustand Vollgefressen einen Zustandsbonus von +10 Fuß/3 m auf deine Bewegungsrate statt des Bonus von +5 Fuß/1,50 m im Zustand Gesättigt.</p>",
       "prerequisites": [
@@ -15879,7 +15904,7 @@
       "name": "Vettelsicht",
       "description": "<p>Du pflegst die übernatürlichen Fähigkeiten, die du durch deine Vettelmutter erhalten hast - insbesondere deine Sicht. Dadurch erlangst du Dunkelsicht.</p>"
     },
-    "Hail Of Splinters": {
+    "Hail of Splinters": {
       "name": "Splitterhagel",
       "description": "<p>Ein Hagel aus kantigen Holzsplittern fliegt von dir ausgehend fort. Kreaturen in einem @Template[cone|distance:30]{30 Fuß/9 m-Kegel} erleiden 1W4 Punkte Stichschaden und 1W4 Punkte Blutungsschaden (@Check[reflex|against:kineticist|basic|options:area-effect]{einfacher Reflexwurf} gegen deinen Klassen-SG).</p>\n<hr />\n<p><strong>Stufe (+2)</strong> Der Schaden steigt jeweils um 1W4 Punkte.</p>\n<p><strong>Stufenabhängiger Stich- und Blutungsschaden:</strong> @Damage[(floor((@actor.level -1)/2)+1)d4[piercing],(floor((@actor.level -1)/2)+1)d4[bleed]|options:area-damage]</p>"
     },
@@ -16050,7 +16075,7 @@
         }
       ]
     },
-    "Hard To Fool": {
+    "Hard to Fool": {
       "name": "Schwer zu täuschen",
       "description": "<p>Du bist daran gewöhnt, durch huschende Schatten und verwirrende Magie zu blicken. Du erlangst einen Situationsbonus von +1 auf Wahrnehmungswürfe gegen Illusionen und auf Willenswürfe gegen Illusions- und Schatteneffekte.</p>"
     },
@@ -16609,8 +16634,8 @@
         }
       }
     },
-    "History Of Violence": {
-      "name": "History Of Violence",
+    "History of Violence": {
+      "name": "History of Violence",
       "description": "<p>Your attacks bring with them echoes of previous battles, calling the unquiet victims of your most brutal acts to savage your opponents. Make a Strike. If this Strike hits, you deal additional void damage equal to your key attribute modifier to the target and all enemies within 30 feet. If your attack is a critical hit, you deal twice as much damage instead, and the target of your Strike takes persistent void damage equal to your key attribute modifier as your fallen foes attempt to drag the target into oblivion with them. This Strike counts as two attacks for calculating your multiple attack penalty.</p>",
       "prerequisites": [
         {
@@ -16812,8 +16837,8 @@
         }
       ]
     },
-    "Hurl At the Horizon": {
-      "name": "Hurl At the Horizon",
+    "Hurl at the Horizon": {
+      "name": "Hurl at the Horizon",
       "description": "<p><strong>Usage</strong> imbued into a thrown or melee weapon ikon</p>\n<hr />\n<p>Your weapon flies from your hand as if propelled under its own power. The imbued ikon gains the following ability.</p>\n<p><strong>Immanence</strong> Your weapon gains the thrown 15 feet trait, or increases its thrown distance by 10 feet if it already has the thrown trait.</p>"
     },
     "Hurling Charge": {
@@ -16942,7 +16967,7 @@
       "name": "Igneogenese",
       "description": "<p>Du kannst einen permanenten Steingegenstand herstellen, indem du entweder Materie durch dein Kinetisches Portal ziehst und dabei formst oder die Erde und den Stein um dich herum manipulierst. Der Gegenstand muss in einen zu dir angrenzenden Würfel mit 5 Fuß/1,50 m Seitenlänge passen und auf solidem Boden stehen; du kannst ihn das ganze Feld ausfüllen lassen. Solltest du den Gegenstand unter dir oder einer anderen willigen Kreatur erschaffen, kannst du dich oder die Kreatur von dem Gegenstand in die Höhe heben lassen. Dieser Impuls besitzt eine unbegrenzte Wirkungsdauer, doch solltest du diesen Impuls erneut nutzen, nimmt der Gegenstand wieder seine ursprüngliche Form an, bzw. kehrt an seinen Ursprungsort zurück. Du kannst 1 Stunde aufwenden, um Igneogenese als Erkundungsaktivität zu nutzen; in diesem Fall ist der Gegenstand permanent und nichtmagisch.</p>\n<p>Der Gegenstand darf keine komplexen oder beweglichen Teile enthalten. Du kannst als Teil des Einsatzes dieses Impulses einen Wurf für Handwerkskunst ablegen, um deiner Schöpfung Details hinzuzufügen wie z.B. ein Symbol, eine kurze Botschaft oder ein Muster; der SL bestimmt den SG.</p>\n<hr />\n<p><strong>Stufe (+3)</strong> Du kannst den Gegenstand um einen weiteren Würfel zu 5 Fuß/1,50 m Seitenlänge vergrößern. Jeder Würfel muss an einen anderen anschließen.</p>"
     },
-    "Ignite The Sun": {
+    "Ignite the Sun": {
       "name": "Sonnensphäre",
       "description": "<p>Du beherrschst die Feuer der Schöpfung. Du erzeugst eine Miniatursonne mit einem @Template[burst|distance:5]{5 Fuß/1,50 m Explosionsradius} innerhalb von 500 Fuß/150 m Entfernung. Eine Kreatur innerhalb des Wirkungsbereiches erleidet @Damage[7d6[fire]|options:area-damage]{7W6 Punkte Feuerschaden} (@Check[reflex|against:kineticist|basic|options:area-effect]{einfacher Reflexwurf} gegen deinen Klassen-SG). Eine Kreatur kann diesen Schaden nur einmal pro Runde erleiden. Die Sonne gibt helles Licht innerhalb einer Ausstrahlung von 500 Fuß/150 m ab (und Dämmerlicht auf weiteren 500 Fuß/150 m); dies gilt als Sonnenlicht für Kreaturen mit Empfindlichkeit oder Verwundbarkeit durch Sonnenlicht.</p>\n<p>Die Sonne währt bis zum Ende deines nächsten Zuges, kann aber 1 Minute lang Aufrechterhalten werden. Wenn du den Impuls erstmals während einer Runde Aufrechterhältst, kannst du wählen, den Explosionsradius der Sonne um 5 Fuß/1,50 m zu erhöhen und sie dann um bis zu 30 Fuß/9 m weit Fliegen zu lassen. Die Sonne kann die Angriffsflächen von Kreaturen durchqueren und den Kreaturen dabei den beschriebenen Schaden zufügen.</p>\n<p>Die Sonne leitet beständig Feuer in dich und deine Verbündeten; du und alle deine Verbündeten im Licht der Sonne verursachen mit allen Angriffen zusätzlich @Damage[1d6[fire]]{1W6 Punkte Feuerschaden}, dasselbe gilt für Zauber und Impulse, die Feuerschaden verursachen (Sonnensphäre selbst ausgenommen). Dies ist nicht kumulativ, solltet ihr im Lichte mehrerer Sonnen sein.</p>"
     },
@@ -18753,9 +18778,9 @@
         }
       ]
     },
-    "Keep Up Appearances": {
+    "Keep up Appearances": {
       "name": "Anschein Wahren",
-      "description": "<p><strong>Kriterien</strong> Taldanische Kultur</p>\n<p><strong>Auslöser</strong> Du bist von einem Effekt der Kategorie Gefühl betroffen.</p>\n<hr />\n<p>Taldanischer Stolz bedeutet, dass du niemals Schwäche zeigst. Lege einen Fertigkeitswurf für Täuschung ab und vergleiche das Ergebnis mit dem Wahrnehmungs-SG aller dich beobachtenden Kreaturen. Bei einem Erfolg glaubt die betreffende Kreatur, dass du nicht von einem Gefühlseffekt betroffen bist. Eine Kreatur, die auf diese Weise getäuscht wurde, kann von dem Gefühlseffekt nicht profitieren und keine Fähigkeiten einsetzen, die voraussetzen, dass du von diesem Gefühlseffekt beeinflusst bist. Beispiel: Setzt du die Fähigkeit erfolgreich ein, um ein Irrlicht (S. MHB Seite 184) zu täuschen, damit es glaubt, du stündest nicht unter einem Furchteffekt, kann es seine Fähigkeit Von Furcht zehren nicht auf dich anwenden.</p>"
+      "description": "<p><strong>Kriterien</strong> Taldanische Kultur</p>\n<p><strong>Auslöser</strong> Du bist von einem Effekt der Kategorie Gefühl betroffen</p>\n<hr />\n<p>Taldanischer Stolz bedeutet, dass du niemals Schwäche zeigst. Lege einen Fertigkeitswurf für @Check[deception]{Täuschung} ab und vergleiche das Ergebnis mit dem Wahrnehmungs-SG aller dich beobachtenden Kreaturen. Bei einem Erfolg glaubt die betreffende Kreatur, dass du nicht von einem Gefühlseffekt betroffen bist. Eine Kreatur, die auf diese Weise getäuscht wurde, kann von dem Gefühlseffekt nicht profitieren und keine Fähigkeiten einsetzen, die voraussetzen, dass du von diesem Gefühlseffekt beeinflusst bist. Beispiel: Setzt du die Fähigkeit erfolgreich ein, um ein Irrlicht zu täuschen, damit es glaubt, du stündest nicht unter einem Furchteffekt, kann es seine Fähigkeit Von Furcht zehren nicht auf dich anwenden.</p>"
     },
     "Keep up the Good Fight": {
       "name": "Beharrliches Weiterkämpfen",
@@ -18878,8 +18903,8 @@
       "name": "Tiefschläger",
       "description": "<p>Du malträtierst Gegner innerhalb deines Angriffsradius, indem du gezielt auf deren Knie, Schienbeine und andere schmerzempfindliche Teile ihrer Anatomie einprügelst. Führe dazu einen Angriff mit einer deiner Nahkampfwaffen oder mit einem Waffenlosen Nahkampfangriff aus. Dieser Angriff fügt deinem Gegner zwar keinen Schaden zu, das Ziel erleidet bei einem Treffer jedoch einen Zustandsmalus von -10 Fuß/3 Metern auf seine Bewegungsrate - bei einem Kritischen Treffer sogar einen Zustandsmalus von -15 Fuß/4,50 Metern. Dieser Malus betrifft ausschließlich die Bewegungsrate am Boden und ist nur dann anwendbar, wenn die angezielte Kreatur über Beine oder andere empfindliche Körperteile verfügt, die du mit diesem Talent treffen kannst. Wie üblich kann die Bewegungsrate auch durch dieses Talent nicht auf unter 5Fuß/1,50 Meter reduziert werden. Der Malus währt 1 Runde lang.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.kZdVPBO58uq38KIR]{Effekt: Tiefschläger}</p>"
     },
-    "Kneel Before The Rightful Heir": {
-      "name": "Kneel Before The Rightful Heir",
+    "Kneel Before the Rightful Heir": {
+      "name": "Kneel Before the Rightful Heir",
       "description": "<p>You command that your foes bow down before you or face your wrath. All enemies within 40 feet who can see and hear you must attempt a Will saving throw against your class DC or spell DC, whichever is higher. Regardless of the result, a creature is then temporarily immune to Kneel Before the Rightful Heir for 24 hours.</p>\n<p>Critical Success The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes @Damage[3d6[persistent,mental]] damage.</p>\n<p><strong>Failure</strong> The creature takes @Damage[6d6[persistent,mental]] damage.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[6d6[persistent,mental]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2} for as long as it's taking that persistent damage.</p>\n<p>The persistent mental damage can be ended only if the creature Drops Prone in a location that you can see and doesn't Stand until their next turn. An affected creature is aware of this restriction.</p>",
       "prerequisites": [
         {
@@ -19311,8 +19336,8 @@
       "name": "Blut der linken Seite",
       "description": "<p><strong>Häufigkeit</strong> Einmal pro Stunde</p>\n<hr />\n<p>Es heißt, dass Fleisch der rechten Körperhälfte einer Hyäne könne Krankheiten heilen, während das der linken Seite tödlich giftig sei. Du fügst dir @Damage[1[slashing]]{1 Punkt Hiebschaden} zu, um eine Waffe, die du hältst, zu vergiften. Wenn du mit dieser Waffe einen Treffer erzielst und Schaden anrichtest, nimmt das Ziel zusätzlich @Damage[1d4[persistent,poison]]{1W4 Punkte Anhaltenden Giftschaden}. Nach einem Treffer oder spätestens am Ende deines nächsten Zuges verliert das Gift auf deiner Waffe seine Wirkung.</p>"
     },
-    "Legacy Of Monarchs": {
-      "name": "Legacy Of Monarchs",
+    "Legacy of Monarchs": {
+      "name": "Legacy of Monarchs",
       "description": "<p>No matter what might happen to you, your legacy shall never die. If you're slain, any of your knights who touches your corpse can choose to take up your mantle; over the course of 10 minutes, they don your equipment, replace their attribute modifiers with yours, replace their skills and feats with yours, and become you for all intents and purposes, retaining only their ancestry, heritage, and ancestry feats. If you're later returned to life, you can choose to reclaim your mantle from your former knight; if you do so, they revert to their previous state, and you reclaim all that was yours. Otherwise, you can choose to live a new life, retraining all your skills and feats while adopting a new name and identity.</p>",
       "prerequisites": [
         {
@@ -19320,8 +19345,8 @@
         }
       ]
     },
-    "Legend Of Combat": {
-      "name": "Legend Of Combat",
+    "Legend of Combat": {
+      "name": "Legend of Combat",
       "description": "<p>You can deliver a lightning-fast series of blows and strikes, bringing all the strength of your legend to bear against those who have yet to experience your prowess. Spend a Mythic Point. For the next minute, you gain an extra reaction at the start of each of your turns. You also gain the @UUID[Compendium.pf2e.actionspf2e.Item.plLX3yDcKo2YiJ0j]{Speed of Arms} reaction.</p>",
       "prerequisites": [
         {
@@ -19664,8 +19689,8 @@
         }
       ]
     },
-    "Liberty Or Death": {
-      "name": "Liberty Or Death",
+    "Liberty or Death": {
+      "name": "Liberty or Death",
       "description": "<p><strong>Requirements</strong> A creature has been the target of your Ultimatum of Liberation for at least 1 minute</p>\n<hr />\n<p>You have given a despot enough time to think, and now is the time for them to forfeit their control or die. Spend a Mythic Point and make a Strike at mythic proficiency against the required creature. If you succeed and deal damage, the target must succeed on a @Check[fortitude|against:class-spell] save against your class DC or spell DC (whichever is higher) or die. If the target succeeds, they are immune to this ability for 24 hours.</p>",
       "prerequisites": [
         {
@@ -20074,7 +20099,7 @@
         }
       ]
     },
-    "Look But Don't Touch": {
+    "Look but Don't Touch": {
       "name": "Nur gucken, nicht anfassen!",
       "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<hr />\n<p>Viele Blumen sind schön anzusehen, aber giftig, wenn man sie berührt - und du bist eine von ihnen. 1 Minute lang erleidet jede Kreatur, die dich berührt oder dich mit einer Nahkampfwaffe ohne die Eigenschaft Reichweite bzw. mit einem Waffenlosen Nahkampfangriff verletzt, @Damage[3d6[poison]]{3W6 Punkte Giftschaden}.</p>"
     },
@@ -20087,8 +20112,8 @@
         }
       ]
     },
-    "Lord Of The Fiends": {
-      "name": "Lord Of The Fiends",
+    "Lord of the Fiends": {
+      "name": "Lord of the Fiends",
       "description": "<p>You consider every fiend a future subject and can assess them at a glance. Spend a Mythic Point. Attempt a check at mythic proficiency to Recall Knowledge about every fiend you can see. For the next hour, whenever you roll a success on a Deception, Diplomacy, or Intimidation check against a fiend, you get a critical success instead.</p>",
       "prerequisites": [
         {
@@ -20800,18 +20825,18 @@
         }
       ]
     },
-    "Mask Of Fear": {
+    "Mask of Fear": {
       "name": "Maske der Furcht",
-      "description": "<p><strong>Auslöser</strong> Du besitzt zu Beginn deines Zuges den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt}.</p>\n<p><strong>Anforderung</strong> Du trägst deine <em>Kriegsmaske</em>.</p>\n<hr />\n<p>Deine <em>Kriegsmaske</em> geht vor deinem Gesicht in Flammen auf und löst deine Befürchtungen. Du hast nicht mehr den Zustand Verängstigt, allerdings wird deine Kriegsmaske dadurch zerstört. Du kannst sie erst während deiner nächsten täglichen Vorbereitungen wiederverwenden.</p>\n<p><strong>Speziell</strong> Du kannst diese Reaktion nutzen, auch wenn du einen Zustand hast, der es dir normalerweise verbieten würde, eine Reaktion zu nutzen, wie etwa „@UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fliehend}, solange du den Zustand Verängstigt besitzt“ oder „@UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt}, solange du den Zustand Verängstigt besitzt“.</p>",
+      "description": "<p><strong>Auslöser</strong> Du besitzt zu Beginn deines Zuges den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt}.</p>\n<p><strong>Anforderung</strong> Du trägst deine <em>Kriegsmaske</em>.</p>\n<hr />\n<p>Deine <em>Kriegsmaske</em> geht vor deinem Gesicht in Flammen auf und löst deine Befürchtungen. Du hast nicht mehr den Zustand Verängstigt, allerdings wird deine <em>Kriegsmaske</em> dadurch zerstört. Du kannst sie erst während deiner nächsten täglichen Vorbereitungen wiederverwenden.</p>\n<hr />\n<p><strong>Speziell</strong> Du kannst diese Reaktion nutzen, auch wenn du einen Zustand hast, der es dir normalerweise verbieten würde, eine Reaktion zu nutzen, wie etwa \"@UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{zu fliehen}, solange du den Zustand Verängstigt besitzt“ oder „@UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt}, solange du den Zustand Verängstigt besitzt“.</p>",
       "prerequisites": [
         {
           "value": "Kriegsmaske"
         }
       ]
     },
-    "Mask Of Pain": {
+    "Mask of Pain": {
       "name": "Maske der Schmerzen",
-      "description": "<p><strong>Auslöser</strong> Du legst einen erfolgreichen Wurf zum @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralisieren} ab.</p>\n<p><strong>Anforderung</strong> Du trägst deine <em>Kriegsmaske</em>.</p>\n<hr />\n<p>Deine <em>Kriegsmaske</em> wandelt sich zu einem Abbild deines Schmerzes, dass du ausbrechen lassen kannst. Die Kreatur, die du erfolgreich Demoralisiert hast, nimmt @Damage[2d6[mental]]{2W6 Punkte Mentalen Schaden} oder @Damage[4d6[mental]]{4W6 Punkte Mentalen Schaden}, wenn du den Kompetenzgrad Legende in Einschüchtern besitzt. Das Ziel ist danach für 24 Stunden immun gegen weiteren Schaden von Maske der Schmerzen.</p>",
+      "description": "<p><strong>Auslöser</strong>Du legst einen erfolgreichen Wurf zum Demoralisieren ab.</p>\n<p><strong>Anforderungen</strong>Du trägst deine <em>Kriegsmaske</em>.</p>\n<hr />\n<p>Deine Maske wandelt sich zu einem Abbild deines Schmerzes, dass du ausbrechen lassen kannst. Die Kreatur, die du erfolgreich demoralisiert hast, nimmt @Damage[2d6[mental]]{2W6 Punkte Mentalen Schaden} oder @Damage[4d6[mental]]{4W6 Punkte Mentalen Schaden}, wenn du den Kompetenzgrad Legende in Einschüchtern besitzt. Das Ziel ist danach für 24 Stunden immun gegen weiteren Schaden von Maske der Schmerzen.</p>",
       "prerequisites": [
         {
           "value": "Experte in Einschüchtern"
@@ -20829,16 +20854,16 @@
         }
       }
     },
-    "Mask Of Power": {
+    "Mask of Power": {
       "name": "Maske der Macht",
-      "description": "<p>Deine <em>Kriegsmaske</em> stärkt deine Bindung zur Quelle ihrer Macht. Während deiner täglichen Vorbereitungen kannst du aus den Zaubern @UUID[Compendium.pf2e.spells-srd.Item.4koZzrnMXhhosn0D]{Furcht}, @UUID[Compendium.pf2e.spells-srd.Item.R8bqnYiThB6MYTxD]{Phantomschmerz} oder @UUID[Compendium.pf2e.spells-srd.Item.Gb7SeieEvd0pL2Eh]{Zielsicherer Angriff} wählen. Bis zu deinen nächsten Vorbereitungen kannst du diesen Zauber einmal am Tag als immanenten Zauber des 1. Grades wirken. Die Tradition des Zaubers ist an deine <em>Kriegsmaske</em> gebunden. Du musst die Maske tragen, um den Zauber zu wirken.</p>",
+      "description": "<p>Deine <em>Kriegsmaske</em> stärkt deine Bindung zur Quelle ihrer Macht. Während deiner täglichen Vorbereitungen kannst du aus den Zaubern @UUID[Compendium.pf2e.spells-srd.Item.4koZzrnMXhhosn0D]{Furcht}, @UUID[Compendium.pf2e.spells-srd.Item.R8bqnYiThB6MYTxD]{Phantomschmerz}, oder @UUID[Compendium.pf2e.spells-srd.Item.Gb7SeieEvd0pL2Eh]{Zielsicherer Angriff} wählen.</p>\n<p>Bis zu deinen nächsten Vorbereitungen kannst du diesen Zauber einmal am Tag als immanenten Zauber des 1. Grades wirken. Die Tradition des Zaubers ist an deine Kriegsmaske gebunden. Du musst die Maske tragen, um den Zauber zu wirken.</p>",
       "prerequisites": [
         {
           "value": "Kriegsmaske"
         }
       ]
     },
-    "Mask Of Rejection": {
+    "Mask of Rejection": {
       "name": "Maske der Ablehnung",
       "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<p><strong>Auslöser</strong> Du hast einen Fehlschlag bei einem Rettungswurf gegen einen Effekt der magischen Tradition deiner Maske.</p>\n<p><strong>Anforderung</strong> Du trägst deine <em>Kriegsmaske</em></p>\n<hr />\n<p>Deine <em>Kriegsmaske</em> treibt dich zur Weißglut und du versuchst die gegen dich gewirkte Magie zu neutralisieren. Du wiederholst den auslösenden Rettungswurf mit einem Situationsbonus von +2 und musst das neue Ergebnis nutzen, auch wenn es schlechter ist als der erste Wurf.</p>",
       "prerequisites": [
@@ -20872,7 +20897,15 @@
     },
     "Master Animist Spellcasting": {
       "name": "Master Animist Spellcasting",
-      "description": "<p>You gain the master spellcasting benefits as a prepared divine caster.</p>"
+      "description": "<p>You gain the master spellcasting benefits as a prepared divine caster.</p>",
+      "prerequisites": [
+        {
+          "value": "Expert Animist Spellcasting"
+        },
+        {
+          "value": "legendary in Religion"
+        }
+      ]
     },
     "Master Bard Spellcasting": {
       "name": "Barden-Meisterzauberei",
@@ -21310,8 +21343,8 @@
         }
       ]
     },
-    "Meditate On This!": {
-      "name": "Meditate On This!",
+    "Meditate on This!": {
+      "name": "Meditate on This!",
       "description": "<p><strong>Access</strong> Tian Xia origin</p>\n<hr />\n<p>You meditate to alter your qi, coloring it with your resentment and anger. Until the start of your next turn, whenever you hit a creature with an unarmed Strike, or an adjacent creature deals piercing, slashing, or bleed damage to you, the creature that you hit or that damaged you must attempt a @Check[will|against:barbarian] save against your class DC. The creature is then temporarily immune for 1 minute.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3} and @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} until the end of its next turn.</p>",
       "prerequisites": [
         {
@@ -21564,8 +21597,8 @@
       "name": "Meticulous Restorer",
       "description": "<p>Waste not, want not; your steady eye allows you to restore craftwork quickly while conserving valuable material. You gain the Quick Repair feat. In addition, when you roll a critical failure while attempting to Repair an item, you get a failure instead.</p>"
     },
-    "Might Of The Realm": {
-      "name": "Might Of The Realm",
+    "Might of the Realm": {
+      "name": "Might of the Realm",
       "description": "<p>Bolstered by the presence of your knights, you strike a mighty blow in the name of your rule. Strike an enemy. This counts as two attacks when calculating your multiple attack penalty. If this Strike hits, you deal an additional amount of damage equal to double the number of your designated knights whom you can see. If the Strike is a critical hit, the target is also @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} until the start of your next turn.</p>",
       "prerequisites": [
         {
@@ -22816,9 +22849,9 @@
       "name": "Behänder Angriff",
       "description": "<p>Du bist gewitzt genug, auch Schwachstellen in den Angriffen deiner Gegner zu finden. Wenn du die Reaktion @UUID[Compendium.pf2e.feats-srd.Item.dNH8OHEvx3vI9NBQ]{Behändes Ausweichen} nutzt, kannst du gegen die auslösende Kreatur einen Nahkampfangriff ausführen. Dieser Angriff zählt nicht gegen deinen Malus für Mehrfachangriffe und ist von diesem auch nicht betroffen. Solltest du das Talent @UUID[Compendium.pf2e.feats-srd.Item.F6ZAceuDpiM9bUiF]{Behändes Wegrollen} einsetzen, kannst du diesen Angriff zu einem beliebigen Zeitpunkt deines Abrollens ausführen.</p>"
     },
-    "No Cause For Alarm": {
-      "name": "Kein Grund zur Panik",
-      "description": "<p>Du versuchst, das Gefühl von Panik zu vermindern. Führe einen Fertigkeitswurf für @Check[diplomacy]{Diplomatie} durch und vergleiche das Ergebnis mit dem Willens-SG @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigter} Kreaturen, die sich in einem @Template[emanation|distance:10]{Umkreis von 10 Fuß/3 m} um dich befinden. Jede von ihnen ist 1 Stunde lang temporär immun.</p>\n<p><strong>Kritischer Erfolg</strong> Verringere den Zustandswert der verängstigten Kreatur um -2.</p>\n<p><strong> Erfolg</strong> Verringere den Zustandswert der verängstigten Kreatur um -1.</p>",
+    "No Cause for Alarm": {
+      "name": "Kein Grund zur Sorge",
+      "description": "<p>Du versuchst, das Gefühl von Panik zu vermindern. Führe einen Fertigkeitswurf für @Check[diplomacy]{Diplomatie} durch und vergleiche das Ergebnis mit dem WIL-SG @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigter} Kreaturen, die sich in einem @Template[emanation|distance:10]{Radius von 10 Fuß/3 m} um dich herum befinden. Jede von ihnen ist dann 1 Stunde lang gegen dieses Talent temporär immun.</p>\n<p><strong>Kritischer Erfolg</strong> Verringere den Zustandswert der Kreatur für Verängstigt um 2.</p>\n<p><strong>Erfolg</strong> Verringere den Zustandswert für Verängstigt um 1.</p>",
       "prerequisites": [
         {
           "value": "Geübt in Diplomatie"
@@ -22963,9 +22996,9 @@
         }
       ]
     },
-    "Nothing But Fluff": {
+    "Nothing but Fluff": {
       "name": "Nichts als Füllung",
-      "description": "<p>Dein flauschiges Innere hat keine spezifischen Organe oder Stützstrukturen, so dass es nur wenige verletzliche Schwachstellen gibt. Du erhältst Resistenz gegen Stichschaden in Höhe deiner halben Stufe.</p>",
+      "description": "<p>Dein flauschiges Innere hat keine spezifischen Organe oder Stützstrukturen, so dass es nur wenige verletzliche Schwachstellen gibt. Du erhältst Resistenz gegen Präzisionsschaden in Höhe deiner halben Stufe.</p>",
       "prerequisites": [
         {
           "value": "Puppenkonstruktherkunft"
@@ -23114,7 +23147,7 @@
         }
       ]
     },
-    "Ode To Ouroboros": {
+    "Ode to Ouroboros": {
       "name": "Ode an Ouroboros",
       "description": "<p>Du erlernst den Kompositionszauber @UUID[Compendium.pf2e.spells-srd.Item.DgCS456mXKw97vNy]{Ode an Ouroboros}, der dir ermöglicht, deine Verbündeten vorübergehend vor dem Tod zu bewahren.</p>"
     },
@@ -23171,8 +23204,8 @@
         }
       ]
     },
-    "Once And Future": {
-      "name": "Once And Future",
+    "Once and Future": {
+      "name": "Once and Future",
       "description": "<p>Though foul treachery might lay you low or dark magic still your heart, when the people cry out for you in desperate need, you shall rise to protect them. You can't die except due to old age as long as one of your knights is alive and within 30 feet; if your dying or doomed condition would increase to a high enough value to kill you, it doesn't increase, and any effect that would instantly kill you instead just reduces you to 0 Hit Points. The first time each year you would die for any reason other than old age, you instead return to life and consciousness with a number of Hit Points equal to twice your level and gain a Mythic Point. If you ever truly die and aren't returned to life within 1 year, you're reborn as a child into a new mortal body somewhere in the world where stories of your accomplishments are still told. You don't complete your journey along the River of Souls until all mortal memory of you has vanished.</p>",
       "prerequisites": [
         {
@@ -23180,21 +23213,12 @@
         }
       ]
     },
-    "One Among The Masses": {
-      "name": "One Among The Masses",
+    "One Among the Masses": {
+      "name": "One Among the Masses",
       "description": "<p>It will take more than a gathered mass of foes to take you down. You gain resistance equal to your level to damage dealt by swarms, troops, and creatures who occupy the same space as you. In addition, you can briefly menace large groups of enemies to step aside. You gain the@UUID[Compendium.pf2e.actionspf2e.Item.QGeA2sPtDdryTpWw]{ Overawe Crowd} activity.</p>",
       "prerequisites": [
         {
           "value": "Apocalypse Rider Dedication"
-        }
-      ]
-    },
-    "One For All": {
-      "name": "Einer für Alle",
-      "description": "<p>Du findest genau die richtigen Worte der Ermutigung, um die Bemühungen deiner Verbündeten zu stärken. Bestimme einen Verbündeten innerhalb von 9 m von dir. Diese Aktion zählt als ausreichende Vorbereitung für die Reaktion @UUID[Compendium.pf2e.actionspf2e.Item.HCl3pzVefiv9ZKQW]{Jemand Anderem helfen}. Wenn du diese Reaktion nutzt, um dem ausgewählten Verbündeten zu helfen, kannst du anstelle des normalen Wurfes einen Fertigkeitswurf für @Check[diplomacy|traits:action:aid,bravado]{Diplomatie} ablegen und erhält die Handlung die Kategorie Bravour.</p>",
-      "prerequisites": [
-        {
-          "value": "Geübt in Diplomatie"
         }
       ]
     },
@@ -23210,6 +23234,15 @@
     "One More Activation": {
       "name": "Aktivierung herauskitzeln",
       "description": "<p>Du schmiedest eine tiefergreifende Verbindung zu jenen Gegenständen, zu denen du Resonanz aufbaust, sodass du sie öfter als üblich aktivieren kannst. Du kannst einmal am Tag einen Gegenstand, zu dem du Resonanz besitzt, selbst dann aktivieren, wenn du alle Aktivierungen für die aktuelle Häufigkeit aufgebraucht hast. Dies ist dir nur bei Gegenständen möglich, deren Stufe maximal deiner halben Stufe entsprechen und die eine Häufigkeit von Einmal am Tag oder häufiger aufweisen. Du kannst diese Fähigkeit nur einmal pro Runde einsetzen.</p>"
+    },
+    "One for All": {
+      "name": "Einer für Alle",
+      "description": "<p>Du findest genau die richtigen Worte der Ermutigung, um die Bemühungen deiner Verbündeten zu stärken. Bestimme einen Verbündeten innerhalb von 30 Fuß/9 m von dir. Diese Aktion zählt als ausreichende Vorbereitung für die Reaktion @UUID[Compendium.pf2e.actionspf2e.Item.HCl3pzVefiv9ZKQW]{Jemand Anderem helfen}. Wenn du diese Reaktion nutzt, um dem ausgewählten Verbündeten zu helfen, kannst du anstelle des normalen Wurfes einen Fertigkeitswurf für @Check[diplomacy|traits:action:aid,bravado]{Diplomatie} ablegen und erhält die Handlung die Kategorie Bravour.</p>",
+      "prerequisites": [
+        {
+          "value": "Geübt in Diplomatie"
+        }
+      ]
     },
     "One with Earth": {
       "name": "Eins mit der Erde",
@@ -23634,15 +23667,6 @@
         }
       ]
     },
-    "Pack Of the Beast Lord": {
-      "name": "Pack Of the Beast Lord",
-      "description": "<p>You and your united companion call upon the service of others of its kind, creating figment duplicates of your companion to form a massive swarm of formidable power. Spend a Mythic Point. Your united companion becomes Gargantuan for 1 minute. It gains immunity to precision damage, resistance to physical damage equal to half your level, and a weakness to area damage equal to half your level. While in this form, your united companion gains the @UUID[Compendium.pf2e.actionspf2e.Item.ZJ8KJp5mZYgzPJYN]{Amassed Assault} action, which you immediately Command them to use as the final step of this activation.</p>",
-      "prerequisites": [
-        {
-          "value": "Beast Lord Dedication"
-        }
-      ]
-    },
     "Pack Performance": {
       "name": "Rudeldarbietung",
       "description": "<p><strong>Auslöser</strong> Eine Kreatur wirkt deinem gerade gewirkten Zauber entgegen oder unterbricht ihn.</p>\n<p><strong>Anforderungen</strong> Ein tierischer Scherge befindet sich innerhalb von 30 Fuß/9 m Entfernung zu dir.</p>\n<hr />\n<p>Wenn du und Tiere zusammen singen, klingen deine Worte kräftiger und mutiger und durchbrechen alle Störungen. Das dir assistierende Tier kann Laufen nutzen und die auslösende Kreatur angreifen. Sollte der Angriff gelingen, wird deiner Handlung nicht entgegengewirkt, bzw. wird sie nicht unterbrochen.</p>",
@@ -23675,6 +23699,15 @@
       "prerequisites": [
         {
           "value": "Rudelführer"
+        }
+      ]
+    },
+    "Pack of the Beast Lord": {
+      "name": "Pack of the Beast Lord",
+      "description": "<p>You and your united companion call upon the service of others of its kind, creating figment duplicates of your companion to form a massive swarm of formidable power. Spend a Mythic Point. Your united companion becomes Gargantuan for 1 minute. It gains immunity to precision damage, resistance to physical damage equal to half your level, and a weakness to area damage equal to half your level. While in this form, your united companion gains the @UUID[Compendium.pf2e.actionspf2e.Item.ZJ8KJp5mZYgzPJYN]{Amassed Assault} action, which you immediately Command them to use as the final step of this activation.</p>",
+      "prerequisites": [
+        {
+          "value": "Beast Lord Dedication"
         }
       ]
     },
@@ -24496,7 +24529,7 @@
         }
       ]
     },
-    "Pick Up The Pace": {
+    "Pick up the Pace": {
       "name": "Beeilung",
       "description": "<p>Du führst durch beispielhaftes Verhalten und kannst anderen dazu verhelfen, sich über ihre normalen Grenzen hinaus anzutreiben. Wenn du im Erkundungsmodus die Aktivität @UUID[Compendium.pf2e.actionspf2e.Item.JuqmIAnkL9hVGai8]{Eilen} einsetzt, so kann deine Gruppe so lange eilen, wie das Mitglied, das allein am längsten eilen kann.</p>",
       "prerequisites": [
@@ -24518,19 +24551,6 @@
       "name": "Rattenfängers Flötenspiel",
       "description": "<p>Du erlernst den Kompositionszauber @UUID[Compendium.pf2e.spells-srd.Item.Um0aaJotqMKGmAlR]{Rattenfängers Flötenspiel}, der dir ermöglicht, die Handlungen willensschwacher Individuen zu kontrollieren.</p>"
     },
-    "Pierce The Eye": {
-      "name": "Pierce The Eye",
-      "description": "<p><strong>Requirements</strong> You are wielding a ranged weapon.</p>\n<hr />\n<p>You aim a shot from your weapon directly at a foe's eye, blinding them in the process. Make a ranged Strike. On a hit, the target additionally takes @Damage[2d8[persistent,bleed]] damage. The target must also attempt a @Check[fortitude|against:class] save against your class DC with the following effects.</p>\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} until the end of its next turn.</p>\n<p><strong>Failure</strong> The target is blinded for as long as they are taking the persistent bleed damage and for 1 additional round thereafter.</p>\n<p><strong>Critical Failure</strong> As failure, but the target also takes a –2 circumstance penalty to the flat check to remove the persistent bleed damage; a creature Administering First Aid to stop this persistent bleed damage takes a –2 circumstance penalty to the Medicine check.</p>",
-      "prerequisites": [
-        {
-          "value": "Eternal Legend Dedication"
-        }
-      ]
-    },
-    "Pierce The Light": {
-      "name": "Schattenwechselnder",
-      "description": "<p>Du zerreißt den Schleier zwischen dem Universum und ihrem Schatten. Du kannst zweimal pro Woche als immanenten okkulten Zauber @UUID[Compendium.pf2e.spells-srd.Item.5bTt2CvYHPvaR7QQ]{Interplanares Teleportieren} wirken, aber nur auf dich selbst. Du kannst nur zum Universum oder ins Grau reisen, wobei dein Körper als Fokuskomponente dient.</p>"
-    },
     "Pierce the Darkness": {
       "name": "Golomadunkelsicht",
       "description": "<p>Deine Augen haben sich daran gewöhnt, in allen Situationen sehen zu können - selbst komplett ohne Licht. Du erhältst Dunkelsicht, was es dir ermöglicht, in Dunkelheit und dämmrigen Licht genauso gut zu sehen wie bei normalem Licht. Allerdings siehst du in der Dunkelheit nur in Schwarz und Weiß.</p>\n<p><strong>Speziell</strong> Du kannst dieses Talent nur auf der 1. Stufe wählen und es auch nicht durch Umlernen erhalten oder entfernen.</p>",
@@ -24539,6 +24559,19 @@
           "value": "Dämmersicht"
         }
       ]
+    },
+    "Pierce the Eye": {
+      "name": "Pierce the Eye",
+      "description": "<p><strong>Requirements</strong> You are wielding a ranged weapon.</p>\n<hr />\n<p>You aim a shot from your weapon directly at a foe's eye, blinding them in the process. Make a ranged Strike. On a hit, the target additionally takes @Damage[2d8[persistent,bleed]] damage. The target must also attempt a @Check[fortitude|against:class] save against your class DC with the following effects.</p>\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} until the end of its next turn.</p>\n<p><strong>Failure</strong> The target is blinded for as long as they are taking the persistent bleed damage and for 1 additional round thereafter.</p>\n<p><strong>Critical Failure</strong> As failure, but the target also takes a –2 circumstance penalty to the flat check to remove the persistent bleed damage; a creature Administering First Aid to stop this persistent bleed damage takes a –2 circumstance penalty to the Medicine check.</p>",
+      "prerequisites": [
+        {
+          "value": "Eternal Legend Dedication"
+        }
+      ]
+    },
+    "Pierce the Light": {
+      "name": "Schattenwechselnder",
+      "description": "<p>Du zerreißt den Schleier zwischen der Materiellen Ebene und ihrem Schatten. Du kannst zweimal pro Woche als immanenten okkulten Zauber @UUID[Compendium.pf2e.spells-srd.Item.5bTt2CvYHPvaR7QQ]{Interplanares Teleportieren} wirken, aber nur auf dich selbst. Du kannst nur zum Universum oder zum Grau reisen, wobei dein Körper als Fokuskomponente dient.</p>"
     },
     "Piercing Critical": {
       "name": "Verbesserter Kritischer Treffer",
@@ -25465,8 +25498,8 @@
         }
       ]
     },
-    "Protect The Royal Line": {
-      "name": "Protect The Royal Line",
+    "Protect the Royal Line": {
+      "name": "Protect the Royal Line",
       "description": "<p><strong>Requirements</strong> You're flanked by at least two enemies.</p>\n<hr />\n<p>You must keep your royal person safe from harm, especially when surrounded by those who would dare approach you. Attempt an Athletics check to @UUID[Compendium.pf2e.actionspf2e.Item.lOE4yjUnETTdaf2T]{Reposition} or @UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Shove} one of the enemies who's flanking you. If you can see at least one of your designated knights, you gain a +2 circumstance bonus to this check; this bonus increases to +4 if one of your designated knights is adjacent to you. If you succeed, you get a critical success. If your roll would've been a critical success, you increase the distance you Reposition or Shove the enemy by 5 feet.</p>",
       "prerequisites": [
         {
@@ -25795,12 +25828,7 @@
         {
           "value": "Meister in Athletik"
         }
-      ],
-      "rules": {
-        "1": {
-          "text": "Beim Klettern kannst du bei einem Erfolg 5 Fuß/1,50 m weiter klettern (bei einem Kritischen Erfolg bis zu 10 Fuß/3 m weiter)."
-        }
-      }
+      ]
     },
     "Quick Coercion": {
       "name": "Schnelles Bedrängen",
@@ -26032,12 +26060,7 @@
         {
           "value": "Meister in Athletik"
         }
-      ],
-      "rules": {
-        "1": {
-          "text": "Du kannst dich beim Schwimmen pro Runde 5 Fuß/1,50 m weiter fortbewegen (10 Fuß/3 m bei einem Kritischen Erfolg)"
-        }
-      }
+      ]
     },
     "Quick Unlock": {
       "name": "Schnelles Aufschliessen",
@@ -26427,11 +26450,11 @@
       "name": "Rattenflüsterer",
       "description": "<p>Du kannst Nager wie Biber, Eichhörnchen, Mäuse, Ratten und Stachelschweine um Informationen fragen, Antworten von ihnen erhalten und auch die Fertigkeit Diplomatie einsetzen. Dieses Talent betrifft keine anderen Säugetiere wie Fledermäuse oder Hunde. Wenn es fraglich ist, ob ein Tier als Nager zählt, hat der SL stets das letzte Wort.</p>"
     },
-    "Rattle The Earth": {
+    "Rattle the Earth": {
       "name": "Erbebende Erde",
       "description": "<p>Du stampfst auf den Boden mit der Wucht eines Erdschlages und verursachst ein Erdbeben. Dies hat die Effekte des Zaubers @UUID[Compendium.pf2e.spells-srd.Item.x7SPrsRxGb2Vy2nu]{Erdbeben}, geht aber von dir entweder in Form eines @Template[cone|distance:60]{60 Fuß/18 m-Kegels} aus oder in Form einer Ausstrahlung, die deiner Kinetischen Aura entspricht. Du und dein Feld sind von dem Erdbeben nicht betroffen. Die Spalten sind nur 10 Fuß/3 m tief und der SG des Einfachen Wurfes für einen Einsturz ist um 4 niedriger.</p>\n<hr />\n<p><strong>Stufe (16.)</strong> Die Spalten sind 20 Fuß/6 m tief und der SG des Einfachen Wurfes ist um 2 niedriger.</p>\n<p><strong>Stufe (20.)</strong> Die Spaltentiefe und der Einfache Wurf entsprechen dem Zauber.</p>"
     },
-    "Ravel Of Thorns": {
+    "Ravel of Thorns": {
       "name": "Dornenranken",
       "description": "<p>Dornenranken wachsen in geometrischen Mustern auf Oberflächen innerhalb deiner Kinetischen Aura. Eine Kreatur, deren Zug innerhalb der Dornen beginnt, erhält einen Situationsmalus von -10 Fuß/3 m auf ihre Bewegungsraten, bis sie den Wirkungsbereich verlässt. Die Dornen sind Gefährliches Gelände. Eine Kreatur erleidet 2 Punkte Stichschaden, wenn sie eines der betroffenen Felder betritt. Sollte ein betroffenes Feld Wasser oder Erdboden enthalten, so verdopple den Schaden durch Gefährliches Gelände für alle Dornen. Solltest du dich bewegen, so verschwinden die Dornen; am Ende deines Zuges wachsen neue Dornen.</p>\n<hr />\n<p><strong>Stufe (+4) Der Schaden steigt um 1 Punkt.</p>\n<p><strong>Stufenabhängiger Stichschaden:</strong> @Damage[(floor((@actor.level -4)/4)+2)[piercing]]</p>"
     },
@@ -26475,13 +26498,13 @@
         }
       ]
     },
-    "Reach For Immortality": {
-      "name": "Reach For Immortality",
-      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>Your divine spark is now a bonfire in your soul, bringing you to the very cusp of undying immortality. You cease aging. When you would die for any reason, you can Spark Transcendence as a free action that can be taken at any time, regardless of your current condition. You reach for your divine spark and seize it in your hand to survive at 0 Hit Points, purging yourself of any negative conditions. Invigorated by this return to life, you then heal yourself for half of your total Hit Points, Stand, instantly summon any held ikons to your hand, and Shift your Immanence to any of your ikons.</p>"
-    },
     "Reach Spell": {
       "name": "Weitreichender Zauber",
       "description": "<p>Du kannst die Reichweite deiner Zauber erhöhen. Sofern deine nächste Handlung das Wirken eines Zaubers mit einer Reichweite ist, so steigt diese Reichweite um 30 Fuß/9 m. Sollte der Zauber die Reichweite Berührung besitzen, steigt seine Reichweite auf 30 Fuß/9 m.</p>"
+    },
+    "Reach for Immortality": {
+      "name": "Reach for Immortality",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>Your divine spark is now a bonfire in your soul, bringing you to the very cusp of undying immortality. You cease aging. When you would die for any reason, you can Spark Transcendence as a free action that can be taken at any time, regardless of your current condition. You reach for your divine spark and seize it in your hand to survive at 0 Hit Points, purging yourself of any negative conditions. Invigorated by this return to life, you then heal yourself for half of your total Hit Points, Stand, instantly summon any held ikons to your hand, and Shift your Immanence to any of your ikons.</p>"
     },
     "Reach for the Sky": {
       "name": "Hände hoch!",
@@ -26597,28 +26620,6 @@
         }
       ]
     },
-    "Read The Roots": {
-      "name": "Wurzelhall",
-      "description": "<p><strong>Anforderungen</strong> Du stehst auf dem Boden und innerhalb von 100 Fuß/30 m um dich herum gibt es im Boden verwurzelte Pflanzen.</p>\n<hr />\n<p>Die Wurzelsysteme der Bäume sind ein weitreichendes Informationsnetzwerk. Du weißt, wie man darauf zurückgreift und seine Geheimnisse erfährt. Du nutzt @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Absuchen} innerhalb von 30 Fuß/9 m mittels Erschütterungssinn (einem ungenauen Sinn) anstelle eines deiner eigenen Sinne. Du kannst zudem Dinge wahrnehmen, welche die Oberfläche berühren oder durch sie graben, auf der du stehst.</p>"
-    },
-    "Read The Stars": {
-      "name": "In den Sternen lesen",
-      "description": "<p>Du bist ein außerordentlich geübter Iruxiastrologe und kannst nützliche, wenn auch kryptische Hinweise aus den Sternenkonstellationen erfahren. Einmal in der Nacht, wenn du den Sternenhimmel deutlich sehen kannst, kannst du eine Stunde lang den Himmel betrachten und erfahren, wie die Sterne zu einem bestimmten Ziel, Ereignis oder Aktivität stehen, welches nicht weiter als eine Woche entfernt liegt. Die SL legt einen verdeckten Wurf gegen entweder Astrologie-SG 28 oder Okkultismus-SG 32 ab. Bei einem Erfolg erfährst du einen kryptischen Hinweis oder Rat, der dir bei dem Ereignis helfen könnte. Bei einem Kritischen Fehlschlag erhältst du einen irreführenden Hinweis oder Rat.</p>",
-      "prerequisites": [
-        {
-          "value": "Geübt in Kenntnis (Astrologie) oder Okkultismus"
-        }
-      ]
-    },
-    "Read The Wind": {
-      "name": "Read The Wind",
-      "description": "<p>You can derive meaning from the tiniest details when tracking an enemy. Whenever you succeed at a check to @UUID[Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD]{Track} at mythic proficiency, you can immediately attempt a check to Recall Knowledge about the creature you're tracking, also at mythic proficiency and with a suitable skill determined by the GM.</p>",
-      "prerequisites": [
-        {
-          "value": "Hunter’s Calling"
-        }
-      ]
-    },
     "Read the Dust": {
       "name": "Read the Dust",
       "description": "<p><strong>Trigger</strong> an undead creature is reduced to zero Hit Points or a haunt is disabled within 60 feet of you</p>\n<hr />\n<p>You watch the creature or hazard as it collapses, careful for any sign it may return. You immediately learn if the creature or hazard has an ability that will restore it, like rejuvenation or a haunt's reset.</p>\n<p>If it can return, you also learn the time span before its return and how to prevent that return in broad terms, such as \"lay its body to rest\" or \"destroy its armor.\" If this requires any people or objects that aren't already present, you also learn the direction towards each missing piece from the dust's movement.</p>"
@@ -26632,6 +26633,28 @@
         },
         {
           "value": "Meister in Naturkunde"
+        }
+      ]
+    },
+    "Read the Roots": {
+      "name": "Wurzelhall",
+      "description": "<p><strong>Anforderungen</strong> Du stehst auf dem Boden und innerhalb von 100 Fuß/30 m um dich herum gibt es im Boden verwurzelte Pflanzen.</p>\n<hr />\n<p>Die Wurzelsysteme der Bäume sind ein weitreichendes Informationsnetzwerk. Du weißt, wie man darauf zurückgreift und seine Geheimnisse erfährt. Du nutzt @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Absuchen} innerhalb von 30 Fuß/9 m mittels Erschütterungssinn (einem ungenauen Sinn) anstelle eines deiner eigenen Sinne. Du kannst zudem Dinge wahrnehmen, welche die Oberfläche berühren oder durch sie graben, auf der du stehst.</p>"
+    },
+    "Read the Stars": {
+      "name": "In den Sternen lesen",
+      "description": "<p>Du bist ein außerordentlich geübter Iruxiastrologe und kannst nützliche, wenn auch kryptische Hinweise aus den Sternenkonstellationen erfahren. Einmal in der Nacht, wenn du den Sternenhimmel deutlich sehen kannst, kannst du eine Stunde lang den Himmel betrachten und erfahren, wie die Sterne zu einem bestimmten Ziel, Ereignis oder Aktivität stehen, welches nicht weiter als eine Woche entfernt liegt. Die SL legt einen verdeckten Wurf gegen entweder @Check[kenntnis-astrologie-lore|dc:28|traits:secret]{Kenntnis (Astrologie)} oder @Check[occultism|dc:32|traits:secret]{Okkultismus} ab. Bei einem Erfolg erfährst du einen kryptischen Hinweis oder Rat, der dir bei dem Ereignis helfen könnte. Bei einem Kritischen Fehlschlag erhältst du einen irreführenden Hinweis oder Rat.</p>",
+      "prerequisites": [
+        {
+          "value": "Geübt in Kenntnis (Astrologie) oder Okkultismus"
+        }
+      ]
+    },
+    "Read the Wind": {
+      "name": "Read the Wind",
+      "description": "<p>You can derive meaning from the tiniest details when tracking an enemy. Whenever you succeed at a check to @UUID[Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD]{Track} at mythic proficiency, you can immediately attempt a check to Recall Knowledge about the creature you're tracking, also at mythic proficiency and with a suitable skill determined by the GM.</p>",
+      "prerequisites": [
+        {
+          "value": "Hunter’s Calling"
         }
       ]
     },
@@ -26699,7 +26722,7 @@
         }
       ]
     },
-    "Rebirth In Living Stone": {
+    "Rebirth in Living Stone": {
       "name": "Felsgestalt",
       "description": "<p>Felsen quellen aus dir hervor, verzehren deinen Leib und brechen dann wieder auf, um zu enthüllen, dass dein Körper nun aus lebendem Gestein besteht. Du erlangst 40 Temporäre Trefferpunkte. Du bist immun gegen Kritische Treffer und Präzisionsschaden. Du kannst nicht gestoßen, gezogen oder zu Fall gebracht werden, während du auf Erde oder Stein stehst. Dein Erdelementargeschoss verursacht zusätzlich 1W10 Schadenspunkte seiner normalen Kategorie. Diese Vorteile währen bis zum Ende deines nächsten Zuges, können aber maximal 1 Minute Aufrechterhalten werden. Nachdem du durch diesen Impuls Temporäre Trefferpunkte erlangt hast, kannst du erst nach 10 Minuten erneut Temporäre TP durch Felsgestalt erhalten.</p>\n<hr />\n<p><strong>Stufe (20.)</strong> Du erlangst 50 Temporäre Trefferpunkte.</p>"
     },
@@ -27294,8 +27317,8 @@
       "name": "Zauber wieder vorbereiten",
       "description": "<p>Du hast entdeckt, wie du einige deiner Zauberplätze wieder und wieder nutzen kannst. Du kannst 10 Minuten aufwenden, um einen Zauber vorzubereiten, den du heute bereits gewirkt hast, und Zugang zum fraglichen Zauberplatz zurückerlangen. Der Zauber darf maximal dem 4. Grad angehören und darf keine Wirkungsdauer besitzen. Du kannst einen Zauber auf diese Weise selbst dann wieder vorbereiten, wenn du ihn am selben Tag bereits erneut vorbereitet hattest.</p>\n<p>Solltest du über die Arkane Magisterarbeit @UUID[Compendium.pf2e.classfeatures.Item.QzWXMCSGNfvvpYgF]{Zauber austauschen} verfügen, kannst du stattdessen einen anderen Zauber in einem verbrauchten Zauberplatz vorbereiten, solange der neue Zauber keine Wirkungsdauer hat. Du kannst für diesen Zauberplatz Zauber austauschen erneut nutzen, bist aber dann auf Zauber ohne Wirkungsdauer beschränkt, bis du deine nächsten täglichen Vorbereitungen triffst.</p>"
     },
-    "Reprisal Of The Fallen": {
-      "name": "Reprisal Of The Fallen",
+    "Reprisal of the Fallen": {
+      "name": "Reprisal of the Fallen",
       "description": "<p>You can feel the sorrow, pain, and rage of those fallen to oppression, peering from just behind the veil of death, and you can bring them forth to exact their revenge. You can cast either a 9th-rank @UUID[Compendium.pf2e.spells-srd.Item.hghGRzOSzEl4UXdS]{Invoke Spirits} or @UUID[Compendium.pf2e.spells-srd.Item.FEsuyf203wTNE2et]{Wails of the Damned} once per day as an innate occult spell. For either spell, use your class DC or spell DC, whichever is higher.</p>",
       "prerequisites": [
         {
@@ -27544,7 +27567,7 @@
     },
     "Reveal Beasts": {
       "name": "Bestien offenbaren",
-      "description": "<p>Du bist geübt darin, Schwächen in all jenen aufzudecken oder zu erschaffen, welche eine Bedrohung für die Zivilisation darstellen. Wenn du bei einem Wurf auf Wissen abrufen zum Identifizieren eines Tiers oder einer Bestie einen Erfolg erzielst, erhältst du stattdessen einen Kritischen Erfolg. Das nächste Mal, wenn du dieser Kreatur Schaden zufügst, erhält sie während dieses Angriffs den Zustand Schwäche 5 gegen eine von dir verursachte Schadensart deiner Wahl.</p>",
+      "description": "<p>Du bist geübt darin, Schwächen in all jenen aufzudecken oder zu erschaffen, welche eine Bedrohung für die Zivilisation darstellen. Wenn du bei einem Wurf auf @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Wissen abrufen} zum Identifizieren eines Tiers oder einer Bestie einen Erfolg erzielst, erhältst du stattdessen einen Kritischen Erfolg. Das nächste Mal, wenn du dieser Kreatur Schaden zufügst, erhält sie während dieses Angriffs den Zustand Schwäche 5 gegen eine von dir verursachte Schadensart deiner Wahl.</p>",
       "prerequisites": [
         {
           "value": "Orden des Nagels"
@@ -27801,13 +27824,9 @@
         }
       ]
     },
-    "Rites Of Convocation": {
+    "Rites of Convocation": {
       "name": "Riten der Beschwörung",
       "description": "<p>Dein Schutzherr gewährt dir die Fähigkeit andere Kreaturen zu deiner Hilfe herbeizurufen. Wähle einen Beschwörung einer Kreatur-Zauber aus (wie @UUID[Compendium.pf2e.spells-srd.Item.4YnON9JHYqtLzccu]{Beschwörung eines Tieres}, @UUID[Compendium.pf2e.spells-srd.Item.lKcsmeOrgHtK4xQa]{Beschwörung eines Konstruktes} usw.) der auf der Zauberliste deiner Tradition steht. Durch 10 Minuten Konversation mit deinem Vertrauten kannst du einen deiner vorbereiteten Zauber in einem deiner Hexenzauberplätze durch den gewählten Zauber austauschen, dieser wird auf denselben Grad erhöht. Der Zauber, den du austauschst, muss wenigstens den minimalen Grad des gewünschten Beschwörung einer Kreatur-Zaubers besitzen.</p>"
-    },
-    "Rites Of Transfiguration": {
-      "name": "Riten der Verwandlung",
-      "description": "<p>Du kannst die Macht deines Schutzherrn dafür nutzen, um anderen Kreaturen eine Gestalt zu geben, die mehr ihrem Verhalten oder deinen Wünschen entspricht. Dein Vertrauter lernt @UUID[Compendium.pf2e.spells-srd.Item.dN8QBNuTiaBHCKUe]{Verfluchte Verwandlung}, selbst wenn <em>Verfluchte Verwandlung</em> nicht auf der Zauberliste deiner Tradition stehen sollte. Durch 10 Minuten Konversation mit deinem Vertrauten, kannst du einen deiner vorbereiteten Zauber des 6. Grades oder höher in einem deiner Hexenzauberplätze gegen Verfluchte Verwandlung auf demselben Grad austauschen.</p>"
     },
     "Rites of Liberation": {
       "name": "Rites of Liberation",
@@ -27817,6 +27836,10 @@
           "value": "Broken Chain Dedication"
         }
       ]
+    },
+    "Rites of Transfiguration": {
+      "name": "Riten der Verwandlung",
+      "description": "<p>Du kannst die Macht deines Schutzherrn dafür nutzen, um anderen Kreaturen eine Gestalt zu geben, die mehr ihrem Verhalten oder deinen Wünschen entspricht. Dein Vertrauter lernt @UUID[Compendium.pf2e.spells-srd.Item.dN8QBNuTiaBHCKUe]{Verfluchte Verwandlung}, selbst wenn <em>Verfluchte Verwandlung</em> nicht auf der Zauberliste deiner Tradition stehen sollte. Durch 10 Minuten Konversation mit deinem Vertrauten, kannst du einen deiner vorbereiteten Zauber des 6. Grades oder höher in einem deiner Hexenzauberplätze gegen Verfluchte Verwandlung auf demselben Grad austauschen.</p>"
     },
     "Ritual Researcher": {
       "name": "Ritualforscher",
@@ -27949,15 +27972,6 @@
       "name": "Rokoamagie",
       "description": "<p>Ahnengeister binden sich an dich und verleihen dir die Kräfte einer Rokoa. Du kannst jeweils einmal am Tag als immanenten Naturzauber @UUID[Compendium.pf2e.spells-srd.Item.BBvV7qoXGdw09q1C]{Mit Tieren sprechen} und @UUID[Compendium.pf2e.spells-srd.Item.HTou8cG05yuSkesj]{Zustand} wirken.</p>"
     },
-    "Roll With it (Kingmaker)": {
-      "name": "Wegrollen",
-      "description": "<p><strong>Auslöser</strong>Deine Jagdbeute trifft dich mit einem Nahkampfangriff. Es muss sich dabei um einen Riesen handeln.</p>\n<hr />\n<p>Du kannst den Angriffen eines Riesen leicht entgehen. Lege einen Reflexwurf gegen SG 10 + dem Angriffsbonus des Riesens ab. Wenn dir das Ergebnis erlauben würde- als Teil der Reaktion zu Laufen, kannst du stattdessen auch Fliegen oder Schwimmen, wenn du die entsprechende Bewegungsart besitzt.</p>\n<p><strong>Kritischer Erfolg</strong> Der Angriff verfehlt dich (oder wird lediglich ein Erfolg, wenn das Ergebnis des Angriffs zuvor ein Kritischer Erfolg war). Als Teil der Reaktion kannst du dich bis zu 10 Fuß/3 m bewegen. Wenn du dies tust, erhält die Reaktion die Kategorie Bewegung.</p>\n<p><strong>Erfolg</strong> Der Angriff verursacht halben Schaden. Du kannst dich als Teil der Reaktion um 5 Fuß/1,50 m bewegen, diese Bewegung muss allerdings angrenzend zum auslösenden Riesen beendet werden. Wenn du dies tust, erhält die Reaktion die Kategorie Bewegung.</p>\n<p><strong>Kritischer Fehlschlag</strong> Dir gelingt es nicht, dem Angriff auszuweichen und du wirst von der Wucht des Schlags zu Boden geworfen. Du erhältst den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}.</p>",
-      "prerequisites": [
-        {
-          "value": "Riesenjäger"
-        }
-      ]
-    },
     "Roll the Bones of Fate": {
       "name": "Würfelorakel",
       "description": "<p><strong>Häufigkeit</strong> Alle 10 Minuten</p>\n<hr />\n<p>Du würfelst mit einer Handvoll Knochenwürfel, um den Verlauf künftiger Ereignisse zu erfahren (oder vielleicht zu beeinflussen). Würfle mit [[/r 1d4]]{1W4} und verwende das Ergebnis von der folgenden Tabelle. Wenn du dieses Talent erneut nutzt, enden alle noch währenden Effekte der letzten Anwendung.</p>\n<ul>\n<li>\n<p><strong>1. Gut</strong> Du oder ein maximal 30 Fuß/9 m entfernter Verbündeter kann beim nächsten Angriffs- oder Fertigkeitswurf zweimal würfeln und das höhere Ergebnis behalten. Dies ist ein Glückseffekt.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.gtpqoCOWhF9Pjb8G]{Effekt: Würfelorakel (Gut)}</p>\n</li>\n<li>\n<p><strong>2. Schlecht</strong> Eine von dir beobachtete, maximal 30 Fuß/9 m entfernte Kreatur muss einen Willenswurf gegen deinen Zauber-SG ablegen; bei einem Fehlschlag muss das Ziel bei seinem nächsten Angriffs- oder Fertigkeitswurf (sofern dieser wenigstens eine Aktion als Aufwand erfordert) zweimal würfeln und das schlechtere Ergebnis behalten. Dies ist ein Unglückseffekt.</p>\n</li>\n<li>\n<p><strong>3. Halb und Halb</strong> Du erlangst die Vorteile der Ergebnisse 1 und 2.</p>\n</li>\n<li>\n<p><strong>4. Verfluchte Wahrscheinlichkeiten</strong> Deine Einmischung in die Mächte der Prophezeiung bringt Unheil über alle. Jede Kreatur innerhalb von 30 Fuß/9 m Entfernung zu dir im Moment der Nutzung dieses Talents würfelt bei ihrem nächsten Angriffs- oder Fertigkeitswurf (sofern dieser wenigstens eine Aktion als Aufwand erfordert) zweimal; sollte das höchste Ergebnis eine ungerade Zahl sein, so behält sie das schlechtere Ergebnis (dies ist ein Unglückseffekt), ist das höchste Ergebnis eine gerade Zahl, so behält sie diese (dies ist ein Glückseffekt).</p>\n</li>\n</ul>",
@@ -27976,6 +27990,15 @@
         },
         {
           "value": "Elastischer Goblin"
+        }
+      ]
+    },
+    "Roll with it (Kingmaker)": {
+      "name": "Wegrollen",
+      "description": "<p><strong>Auslöser</strong>Deine Jagdbeute trifft dich mit einem Nahkampfangriff. Es muss sich dabei um einen Riesen handeln.</p>\n<hr />\n<p>Du kannst den Angriffen eines Riesen leicht entgehen. Lege einen Reflexwurf gegen SG 10 + dem Angriffsbonus des Riesens ab. Wenn dir das Ergebnis erlauben würde- als Teil der Reaktion zu Laufen, kannst du stattdessen auch Fliegen oder Schwimmen, wenn du die entsprechende Bewegungsart besitzt.</p>\n<p><strong>Kritischer Erfolg</strong> Der Angriff verfehlt dich (oder wird lediglich ein Erfolg, wenn das Ergebnis des Angriffs zuvor ein Kritischer Erfolg war). Als Teil der Reaktion kannst du dich bis zu 10 Fuß/3 m bewegen. Wenn du dies tust, erhält die Reaktion die Kategorie Bewegung.</p>\n<p><strong>Erfolg</strong> Der Angriff verursacht halben Schaden. Du kannst dich als Teil der Reaktion um 5 Fuß/1,50 m bewegen, diese Bewegung muss allerdings angrenzend zum auslösenden Riesen beendet werden. Wenn du dies tust, erhält die Reaktion die Kategorie Bewegung.</p>\n<p><strong>Kritischer Fehlschlag</strong> Dir gelingt es nicht, dem Angriff auszuweichen und du wirst von der Wucht des Schlags zu Boden geworfen. Du erhältst den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}.</p>",
+      "prerequisites": [
+        {
+          "value": "Riesenjäger"
         }
       ]
     },
@@ -28432,9 +28455,9 @@
         }
       ]
     },
-    "Scales Of The Dragon": {
+    "Scales of the Dragon": {
       "name": "Drachenschuppen",
-      "description": "<p>Auf deinem ganzen Körper wachsen Schuppen, welche dich vor physischen und magischen Bedrohungen schützen. Wenn du keine Rüstung trägst, gewähren dir die Schuppen einen Zustandsbonus von +2 auf deine RK und lassen noch einen maximalen Geschicklichkeitsbonus von +2 zu. Deine Resistenz durch dein Talent @UUID[Compendium.pf2e.feats-srd.Item.oo34CloLefFRi72w]{Drachenjünger-Zugang} erhöht sich auf 3 + deine halbe Stufe.</p>",
+      "description": "<p>Auf deinem ganzen Körper wachsen Schuppen, welche dich vor physischen und magischen Bedrohungen schützen. Wenn du keine Rüstung trägst, gewähren dir die Schuppen einen Zustandsbonus von +2 auf deine RK und lassen noch einen maximalen Geschicklichkeitsbonus von +3 zu. Deine Resistenz durch dein Talent @UUID[Compendium.pf2e.feats-srd.Item.oo34CloLefFRi72w]{Drachenjünger-Zugang} erhöht sich auf 3 + deine halbe Stufe.</p>",
       "prerequisites": [
         {
           "value": "Drachenjünger-Zugang"
@@ -28610,7 +28633,7 @@
         }
       ]
     },
-    "Schooled In Secrets": {
+    "Schooled in Secrets": {
       "name": "Eingeweihter",
       "description": "<p>Du erkennst die Zeichen und Symbole, die Mitglieder von Mysterienkulten und anderen Geheimbünden verwenden, um ihre Mitgliedschaft anderen Mitgliedern gegenüber zu offenbaren. Du kannst Okkultismus anstelle von Diplomatie verwenden, um die Handlung [[/act gather-information skill=occultism]]{Informationen sammeln} für solche Gruppen einzusetzen, oder anstelle von Täuschung, um dich als Mitglied zu [[/act impersonate skill=occultism]]{Verkleiden}.</p>\n<p>Wenn du einem Geheimkult, einer Loge, Sekte oder ähnlichen Organisationen angehörst, erkennst du automatisch Mitglieder deiner Gruppe, außer wenn sie ihre Anwesenheit gezielt vor dir zu verbergen versuchen. Ebenso erkennen sie dein Verhältnis zu der Gruppe, wenn du dies nicht explizit verbirgst.</p>",
       "prerequisites": [
@@ -28664,12 +28687,12 @@
       "name": "Überraschendes Verkleidung fallenlassen",
       "description": "<p>Du lässt im richtigen Moment deine Verkleidung fallen und überraschst dein Ziel. Nachdem du dich mittels Schminkzeug als jemand anderer @UUID[Compendium.pf2e.actionspf2e.Item.AJstokjdG6iDjVjE]{Verkleidet} hast, kannst du deine Verkleidung mit einer dramatischen Geste entfernen. Jede Kreatur, der es bisher nicht gelungen ist, deine Verkleidung zu durchschauen, erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} gegen deinen nächsten Angriff bis zum Ende deines Zuges.</p>"
     },
-    "Scour The Library": {
+    "Scour the Library": {
       "name": "Bibliothek durchkämmen",
       "description": "<p>Wenn du einen gegnerischen Angriff beobachtest, gehst du rasch im Geiste dein Wissen durch und erstellst einen Kampfplan. Lege einen Wurf zum @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Wissen abrufen} für die passende Fertigkeit über eine maximal 60 Fuß/18 m entfernte Kreatur ab. Bei Erfolg erlangst du neben den normalen Vorteilen einen Situationsbonus von +1 auf deinen nächsten Angriffswurf gegen diese Kreatur und auf deine RK gegen den nächsten Angriff dieser Kreatur. Bei einem Kritischen Erfolg steigt der Bonus auf +2.</p>",
       "prerequisites": [
         {
-          "value": "Unterbewusster Verstandoption Gesammeltes Wissen"
+          "value": "Unterbewusster Verstand - Gesammeltes Wissen"
         }
       ]
     },
@@ -28866,8 +28889,8 @@
       "name": "Lied des Meeres",
       "description": "<p>Der Schall trägt unter den Wellen weit und dein Volk verfügt über starke, bezaubernde Stimmen. Du erhältst den Kompetenzgrad Geübt in Darbietung. Solltest du über eine andere Quelle, z.B. deinen Hintergrund, automatisch den Kompetenzgrad Geübt in Darbietung erlangen, so erhältst du ihn stattdessen in einer anderen Fertigkeit deiner Wahl. Du erhältst zudem das Fertigkeitstalent @UUID[Compendium.pf2e.feats-srd.Item.lFwfUvH2708rl6i3]{Virtuose Darbietung (Gesang)} und deine Stimme trägt über und unter Wasser gleich weit.</p>"
     },
-    "Seat Of Power": {
-      "name": "Seat Of Power",
+    "Seat of Power": {
+      "name": "Seat of Power",
       "description": "<p>Your sheer determination has created a demiplane that houses a grand residence which will serve as the heart of your planned realm. You determine the appearance of this seat of power, such as a duskwood longhouse, a crumbling stone castle, an ice tower, or a pagoda constructed from the solidified souls of the damned. You can enter your realm using the @UUID[Compendium.pf2e.actionspf2e.Item.QWAWf8NDKpo1mzLE]{Enter Seat Of Power} activity. You and any creatures you choose gain three times as many Hit Points when resting within your seat of power. Once per day while within your seat of power, you can cast cleanse affliction as a 4th-rank innate divine spell or sound body as a 4th-rank innate divine spell. You can target only yourself with these spells.</p>",
       "prerequisites": [
         {
@@ -28992,7 +29015,7 @@
     },
     "Seek Injustice": {
       "name": "Ungerechtigkeit aufspüren",
-      "description": "<p><strong>Häufigkeit</strong> Einmal pro Tag</p>\n<hr />\n<p>Indem du dich einen Moment fokussierst, kannst du die untrüglichen Anzeichen von Korruption ausmachen, egal auf welche Weise sie vor deiner Sicht verborgen wurden. Du kannst 1 Minute lang durch bis zu 1,5 m Stein, Holz oder ähnliche Barrieren hindurchsehen, als würden sie nicht existieren (wobei jedoch eine beliebige Menge an Metall oder dichtere Barrieren diesen Effekt blockieren).</p>",
+      "description": "<p><strong>Häufigkeit</strong> Einmal pro Tag</p>\n<hr />\n<p>Indem du dich einen Moment fokussierst, kannst du die untrüglichen Anzeichen von Korruption ausmachen, egal auf welche Weise sie vor deiner Sicht verborgen wurden. Du kannst 1 Minute lang durch bis zu 5 Fuß/1,50 m Stein, Holz oder ähnliche Barrieren hindurchsehen, als würden sie nicht existieren (wobei jedoch eine beliebige Menge an Metall oder dichtere Barrieren diesen Effekt blockieren).</p>",
       "prerequisites": [
         {
           "value": "Orden der Geissel"
@@ -29091,15 +29114,6 @@
         }
       ]
     },
-    "Sense For Trouble": {
-      "name": "Siebter Sinn",
-      "description": "<p>Du merkst, wenn etwas faul an der Sache ist. Du kannst @UUID[Compendium.pf2e.feats-srd.Item.7qBuzHY8kEG8SdEP]{Katzenglück} auch dann auslösen, nachdem du deine Initiative gewürfelt hast, um den Initiativewurf zu wiederholen und das bessere Ergebnis zu wählen. Siebter Sinn ändert nicht die Häufigkeit von Katzenglück.</p>",
-      "prerequisites": [
-        {
-          "value": "Katzenglück"
-        }
-      ]
-    },
     "Sense Ki": {
       "name": "Sense Ki",
       "description": "<p>You can read the presence of qi in your area. You gain imprecise lifesense out to a range of 30 feet.</p>",
@@ -29115,6 +29129,15 @@
       "prerequisites": [
         {
           "value": "Geistesverbindung"
+        }
+      ]
+    },
+    "Sense for Trouble": {
+      "name": "Siebter Sinn",
+      "description": "<p>Du merkst, wenn etwas faul an der Sache ist. Du kannst @UUID[Compendium.pf2e.feats-srd.Item.7qBuzHY8kEG8SdEP]{Katzenglück} auch dann auslösen, nachdem du deine Initiative gewürfelt hast, um den Initiativewurf zu wiederholen und das bessere Ergebnis zu wählen. Siebter Sinn ändert nicht die Häufigkeit von Katzenglück.</p>",
+      "prerequisites": [
+        {
+          "value": "Katzenglück"
         }
       ]
     },
@@ -29470,21 +29493,21 @@
         }
       ]
     },
-    "Shape Of The Dragon": {
+    "Shape of the Cloud Dragon": {
+      "name": "Shape of the Cloud Dragon",
+      "description": "<p>You've discovered how to transform yourself into a cloud dragon. Once per day, you can cast 7th-rank @UUID[Compendium.pf2e.spells-srd.Item.5c692cCcTDXjSEzk]{Dragon Form} as an innate arcane spell, transforming into a cloud dragon. The spell automatically heightens to 8th level if you're 16th level and 9th rank if you're 18th level.</p>\n<p>On a critical hit with an unarmed Strike gained from dragon form, you recharge the spell's breath weapon immediately.</p>\n<p>While in this form, you gain the following cloud dragon-specific abilities:</p>\n<ul>\n<li><strong>Cloud</strong> cloud walk (you can walk on clouds or fog);\n<ul>\n<li><strong>Melee</strong> <span class=\"action-glyph\">1</span> jaws, <strong>Damage</strong> 2d10 piercing plus 1d12 electricity;</li>\n<li><strong>Melee</strong> <span class=\"action-glyph\">1</span> claw (agile), <strong>Damage</strong> 3d10 slashing;</li>\n<li><strong>Melee</strong> <span class=\"action-glyph\">1</span> tail (reach 10 feet), <strong>Damage</strong> 3d10 bludgeoning;</li>\n<li><strong>Melee</strong> <span class=\"action-glyph\">1</span> horn (reach 10 feet), <strong>Damage</strong> 3d8 piercing;</li>\n<li>Breath Weapon @Template[cone|distance:30], 6d12 electricity.</li>\n</ul>\n</li>\n</ul>\n<hr />\n<p><strong>Special</strong> You can use this feat in place of @UUID[Compendium.pf2e.feats-srd.Item.eR0sifECG27CC4do]{Shape of the Dragon} to fulfill feat requirements.</p>",
+      "prerequisites": [
+        {
+          "value": "Dragon Disciple Dedication"
+        }
+      ]
+    },
+    "Shape of the Dragon": {
       "name": "Drachengestalt (Drachenjünger)",
       "description": "<p>Du hast herausgefunden, wie du dich selbst in einen Drachen verwandeln kannst. Einmal am Tag kannst du den Zauber @UUID[Compendium.pf2e.spells-srd.Item.5c692cCcTDXjSEzk]{Drachengestalt} der 7. Stufe als immanenten arkanen Zauber wirken, was dich in einen Drachen deiner gewählten Art verwandelt. Der Zauber wird auf den 8. Grad erhöht, sobald du auf der 16. Stufe bist, und auf den 9. Grad, sobald du die 18. Stufe erreichst. Jedes Mal, wenn du mit einem durch die <em>Drachengestalt</em> erhaltenen waffenlosen Angriff einen Kritischen Treffer erzielst, wird die Odemwaffe des Zaubers sofort wieder aufgeladen.</p>",
       "prerequisites": [
         {
           "value": "Drachenjünger-Zugang"
-        }
-      ]
-    },
-    "Shape of the Cloud Dragon": {
-      "name": "Shape of the Cloud Dragon",
-      "description": "<p>You've discovered how to transform yourself into a cloud dragon. Once per day, you can cast 7th-rank @UUID[Compendium.pf2e.spells-srd.Item.5c692cCcTDXjSEzk]{Dragon Form} as an innate arcane spell, transforming into a cloud dragon. The spell automatically heightens to 8th level if you're 16th level and 9th rank if you're 18th level.</p>\n<p>On a critical hit with an unarmed Strike gained from dragon form, you recharge the spell's breath weapon immediately.</p>\n<p>While in this form, you gain the following cloud dragon-specific abilities:</p>\n<ul>\n<li><strong>Cloud</strong> cloud walk (you can walk on clouds or fog);\n<ul>\n<li><strong>Melee</strong> <span class=\"action-glyph\">1</span> jaws, <strong>Damage</strong> 2d10 piercing plus 1d12 electricity;</li>\n<li><strong>Melee</strong> <span class=\"action-glyph\">1</span> claw (agile), <strong>Damage</strong> 3d10 slashing;</li>\n<li><strong>Melee</strong> <span class=\"action-glyph\">1</span> tail (reach 10 feet), <strong>Damage</strong> 3d10 bludgeoning;</li>\n<li><strong>Melee</strong> <span class=\"action-glyph\">1</span> horn (reach 10 feet), <strong>Damage</strong> 3d8 piercing;</li>\n<li>Breath Weapon @Template[cone|distance:30], 6d12 electricity.</li>\n</ul>\n</li>\n</ul>\n<hr />\n<p><strong>Special</strong> You can use this feat in place of @UUID[Compendium.pf2e.feats-srd.Item.eR0sifECG27CC4do]{Shape Of The Dragon} to fulfill feat requirements.</p>",
-      "prerequisites": [
-        {
-          "value": "Dragon Disciple Dedication"
         }
       ]
     },
@@ -30061,18 +30084,6 @@
       "name": "Schrumpfen",
       "description": "<p>Dein Eidolon kann sich schrumpfen, um in kleine Räume zu passen. Es kann seine Größenkategorie auf maximal Klein reduzieren. Es kann im geschrumpften Zustand diese Fähigkeit erneut nutzen, um zu seiner normalen Größe zurückzukehren.</p>"
     },
-    "Shrink the Span": {
-      "name": "Shrink the Span",
-      "description": "<p>You can teleport yourself a short distance. You gain the @UUID[Compendium.pf2e.spells-srd.Item.Az3PmWnlWSb5ELX9]{Shrink the Span} ki spell. Increase the number of Focus Points in your focus pool by 1.</p>",
-      "prerequisites": [
-        {
-          "value": "Incredible Movement"
-        },
-        {
-          "value": "Ki-Zauber"
-        }
-      ]
-    },
     "Shroud of Ghosts": {
       "name": "Shroud of Ghosts",
       "description": "<p><strong>Usage</strong> imbued into a worn ikon</p>\n<hr />\n<p>Your ikon is connected to the world of the spirits, allowing you to partially fade into their realm. The imbued ikon gains the following ability.</p>\n<p><strong>Transcendence—</strong>@UUID[Compendium.pf2e.actionspf2e.Item.exuTl8tvVlewxVGJ]{Skirt the Underworld} <span class=\"action-glyph\">2</span> (concentrate, illusion, incapacitation, transcendence)</p>\n<p>@Embed[Compendium.pf2e.actionspf2e.Item.exuTl8tvVlewxVGJ inline]</p>"
@@ -30489,7 +30500,7 @@
       "name": "Plänklerangriff",
       "description": "<p>Du verbindest Fortbewegung und Angriffe. Nutze entweder Schritt und dann Angriff oder nutze Angriff und dann Schritt.</p>"
     },
-    "Skirt The Light": {
+    "Skirt the Light": {
       "name": "Schattenreisender",
       "description": "<p>Du kannst das Grenzland zwischen der Materiellen Ebene und der Schattenebene bereisen und sogar andere mitnehmen. Du kannst einmal am Tag als immanenten okkulten Zauber @UUID[Compendium.pf2e.spells-srd.Item.rxvS7EMJ7qmexAyA]{Schattenreise} wirken.</p>"
     },
@@ -30675,11 +30686,11 @@
         }
       ]
     },
-    "Slip The Grasp": {
+    "Slip the Grasp": {
       "name": "Herausrutschen",
       "description": "<p><strong>Anforderungen</strong> Du besitzt den Zustand @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Bewegungsunfähig}, @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Gebunden} oder @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen}.</p>\n<hr />\n<p>Du verfügst über eine Eigenschaft, die es dir erlaubt, rasch aus fesselnden Effekten zu entrinnen. Lege einen Wurf zum Entkommen ab; bei Erfolg kannst sogleich die Aktion Laufen oder Schritt nutzen oder einen Angriff mit einem Waffenlosen Nahkampfangriff gegen die Kreatur führen, der du entkommen bist. Bei Misslingen kannst du einen zweiten Wurf zum Entkommen ablegen. Dein Malus für Mehrfachangriffe steigt entsprechend nach Ausführung der genutzten Handlung.</p>"
     },
-    "Slip With The Breeze": {
+    "Slip with the Breeze": {
       "name": "Windsprung",
       "description": "<p>Du erzeugst beim Springen Windstöße, so dass du größere Entfernungen zurücklegen kannst. Du erhältst die Fertigkeitstalente @UUID[Compendium.pf2e.feats-srd.Item.HJYQlmGTdtyGWr6a]{Mächtiger Sprung} und @UUID[Compendium.pf2e.feats-srd.Item.ZBhvJ9O8MvBFAlhq]{Schnelles Springen} als Bonustalente.</p>",
       "prerequisites": [
@@ -30739,7 +30750,7 @@
       "name": "Insektenflüsterer",
       "description": "<p>Du verstehst die Sprachen der meisten kleinen Insekten und kannst mit ihnen reden. Du kannst Insekten, Gliederfüßern und terrestrischen Wirbellosen Fragen stellen, von ihnen Antworten erhalten und ihnen gegenüber Diplomatie nutzen. Der SL hat das letzte Wort, welche Kreaturen betroffen sind.</p>"
     },
-    "Smash From The Air": {
+    "Smash from the Air": {
       "name": "Zauber abwehren",
       "description": "<p>Dein Können ermöglicht es dir sogar Zauber abzuwehren. Du kannst @UUID[Compendium.pf2e.feats-srd.Item.6xBu4BewIkOIt9M0]{Geschoss abwehren} gegen Fernkampfzauberangriffswürfe nutzen.</p>",
       "prerequisites": [
@@ -30820,24 +30831,24 @@
         }
       ]
     },
-    "Snap Out Of It! (Pathfinder Agent)": {
-      "name": "Komm zu Sinnen! (Feldforscher)",
-      "description": "<p>Kundschafter sind darin ausgebildet, einander dabei zu helfen, sicher und erfolgreich zu sein. Du weißt, wie du deine Verbündeten wieder dazu bringst, Herr ihrer Sinne zu werden. Führe einen Fertigkeitswurf für Heilkunde auf einen angrenzenden Verbündeten durch, welcher dem Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen}, @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt}, @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fasziniert} oder @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt} unterliegt und wähle einen dieser Zustände aus. Der SG ist der SG des Effektes, welcher den Zustand ausgelöst hat.</p>\n<p><strong>Kritischer Erfolg</strong> Reduziere den Wert des gewählten Zustands um 2. Wenn du als Zustand Fasziniert gewählt hast, endet dieser Zustand.</p>\n<p><strong>Erfolg</strong> Reduziere den Wert des gewählten Zustands um 1. Wenn du als Zustand Fasziniert gewählt hast, endet dieser Zustand.</p>\n<p><strong>Fehlschlag</strong> Das Ziel wird nicht durch dich beeinflusst.</p>\n<p><strong>Kritischer Fehlschlag</strong> Erhöhe den Wert des gewählten Zustands um 1. Wenn du als Zustand Fasziniert gewählt hast, erhöhe die Wirkungsdauer des Zustands um 1 Runde.</p>",
-      "prerequisites": [
-        {
-          "value": " Feldforscher-Zugang"
-        },
-        {
-          "value": "Kompetenzgrad Meister in Heilkunde"
-        }
-      ]
-    },
     "Snap Out of It! (Marshal)": {
       "name": "Komm zu dir!",
       "description": "<p>Du versuchst, mit einem lautgerufenen Befehl den vernebelten Verstand eines Verbündeten zu befreien. Wähle einen Verbündeten innerhalb deiner Marschallsaura, der derzeit von einem Mentalen Effekt betroffen ist, welcher einen Willenswurf erlaubt und eine Wirkungsdauer von nicht mehr als 1 Minute aufweist. Der Verbündete kann sofort einen neuen Willenswurf mit einem Situationsbonus von +1 gegen den SG des Effekts ablegen und beendet den Effekt bei einem Erfolg. Dies kann den Effekt nur für den von dir ausgesuchten Verbündeten beenden, nicht für andere Opfer des Effekts. Unabhängig vom Ergebnis ist der betroffene Verbündete 10 Minuten lang gegen dieses Talent immun.</p>",
       "prerequisites": [
         {
           "value": "Marschall-Zugang"
+        }
+      ]
+    },
+    "Snap Out of It! (Pathfinder Agent)": {
+      "name": "Komm zu Sinnen! (Feldforscher)",
+      "description": "<p>Kundschafter sind darin ausgebildet, einander dabei zu helfen, sicher und erfolgreich zu sein. Du weißt, wie du deine Verbündeten wieder dazu bringst, Herr ihrer Sinne zu werden. Führe einen Fertigkeitswurf für Heilkunde auf einen angrenzenden Verbündeten durch, welcher dem Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen}, @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt}, @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fasziniert} oder @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt} unterliegt und wähle einen dieser Zustände aus. Der SG ist der SG des Effektes, welcher den Zustand ausgelöst hat.</p>\n<p><strong>Kritischer Erfolg</strong> Reduziere den Wert des gewählten Zustands um 2. Wenn du als Zustand Fasziniert gewählt hast, endet dieser Zustand.</p>\n<p><strong>Erfolg</strong> Reduziere den Wert des gewählten Zustands um 1. Wenn du als Zustand Fasziniert gewählt hast, endet dieser Zustand.</p>\n<p><strong>Fehlschlag</strong> Das Ziel wird nicht durch dich beeinflusst.</p>\n<p><strong>Kritischer Fehlschlag</strong> Erhöhe den Wert des gewählten Zustands um 1. Wenn du als Zustand Fasziniert gewählt hast, erhöhe die Wirkungsdauer des Zustands um 1 Runde.</p>",
+      "prerequisites": [
+        {
+          "value": "Feldforscher-Zugang"
+        },
+        {
+          "value": "Meister in Heilkunde"
         }
       ]
     },
@@ -31117,25 +31128,25 @@
         }
       ]
     },
-    "Song Of Marching": {
-      "name": "Marschlied",
-      "description": "<p>Du erlernst den Kompositionszaubertrick @UUID[Compendium.pf2e.spells-srd.Item.LTUaK3smfm5eDiFK]{Marschlied}, welcher dir und deinen Verbündeten gestattet, große Entfernungen zurückzulegen, ohne zu ermüden.</p>"
-    },
-    "Song Of Strength": {
-      "name": "Lied der Stärke",
-      "description": "<p>Deine Auftritte inspirieren bei deinen Verbündeten Stärke. Du erlernst den Kompositionszaubertrick @UUID[Compendium.pf2e.spells-srd.Item.Xxdwkt0EEDgP1LGc]{Lied der Stärke}.</p>",
-      "prerequisites": [
-        {
-          "value": "Krieger-Muse"
-        }
-      ]
-    },
     "Song of Grace and Speed": {
       "name": "Song of Grace and Speed",
       "description": "<p>You instill great swiftness into your allies. You and all allies within 30 feet become @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened} for 1 minute and can use the additional action to Strike, Stride, or Step.</p>",
       "prerequisites": [
         {
           "value": "Nantambu Chime-Ringer Dedication"
+        }
+      ]
+    },
+    "Song of Marching": {
+      "name": "Marschlied",
+      "description": "<p>Du erlernst den Kompositionszaubertrick @UUID[Compendium.pf2e.spells-srd.Item.LTUaK3smfm5eDiFK]{Marschlied}, welcher dir und deinen Verbündeten gestattet, große Entfernungen zurückzulegen, ohne zu ermüden.</p>"
+    },
+    "Song of Strength": {
+      "name": "Lied der Stärke",
+      "description": "<p>Deine Auftritte inspirieren bei deinen Verbündeten Stärke. Du erlernst den Kompositionszaubertrick @UUID[Compendium.pf2e.spells-srd.Item.Xxdwkt0EEDgP1LGc]{Lied der Stärke}.</p>",
+      "prerequisites": [
+        {
+          "value": "Kriegermuse"
         }
       ]
     },
@@ -31310,16 +31321,16 @@
       "name": "Funke der Unabhängigkeit",
       "description": "<p>Du berührst eine Kreatur mit der Kategorie Scherge und teilst mit dir deinen erhöhten Sinn der Selbstständigkeit, die du gefunden hast. Der Scherge ist eine Runde lang @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Beschleunigt} und ist dann für 10 Minuten temporär immun gegen diese Fähigkeit. Es kann eine zusätzliche Aktion nutzen, um einen Schritt zu machen, zu Laufen oder Anzugreifen.</p>"
     },
-    "Speak With Bats": {
+    "Speak with Bats": {
       "name": "Mit Fledermäusen sprechen",
-      "description": "<p>Du kannst Fledermäusen Fragen stellen und von ihnen Antworten erhalten und ihnen gegenüber Diplomatie nutzen. Du erhältst einen Situationsbonus von +2 auf alle Fertigkeitswürfe für Diplomatie zum Beeindrucken oder Erbitten bei Fledermäusen.</p>",
+      "description": "<p>Du kannst Fledermäusen Fragen stellen und von ihnen Antworten erhalten und ihnen gegenüber Diplomatie nutzen. Du erhältst einen Situationsbonus von +2 auf alle Fertigkeitswürfe für Diplomatie zum @UUID[Compendium.pf2e.actionspf2e.Item.OX4fy22hQgUHDr0q]{Beeindrucken} oder @UUID[Compendium.pf2e.actionspf2e.Item.DCb62iCBrJXy0Ik6]{Erbitten} bei Fledermäusen.</p>",
       "prerequisites": [
         {
           "value": "Herkunft Nyktera"
         }
       ]
     },
-    "Speak With Flowers": {
+    "Speak with Flowers": {
       "name": "Mit Blumen sprechen",
       "description": "<p>In deinem Herzen bist du eine Blume, die von der Magie der Ältesten beseelt ist. Mit ein wenig Mühe kannst du daher mit deinen Verwandten sprechen. Du kannst blühenden Pflanzen aller Art Fragen stellen, von ihnen Antworten erhalten und die Fertigkeit Diplomatie einsetzen.</p>"
     },
@@ -31860,7 +31871,12 @@
     },
     "Spiritual Awakening": {
       "name": "Spiritual Awakening",
-      "description": "<p>You gain a 1st- or 2nd-level animist feat.</p>"
+      "description": "<p>You gain a 1st- or 2nd-level animist feat.</p>",
+      "prerequisites": [
+        {
+          "value": "Animist Dedication"
+        }
+      ]
     },
     "Spiritual Disruption": {
       "name": "Spirituelle Störung",
@@ -32344,10 +32360,6 @@
         }
       ]
     },
-    "Steady On Stone": {
-      "name": "Steinerne Stabilität",
-      "description": "<p>Dank deiner Verbindung zur Erde halten dich natürliche unebene Überflächen kaum auf. Du kannst Schwieriges Gelände aufgrund von Geröll und/oder unebenen Boden ignorieren, solange es sich um Stein und Erde handelt. Nutzt du Akrobatik zum Balancieren auf schmalen Oberflächen oder unebenen Boden aus Stein und Erde, erhältst du nicht den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß}; deine erfolgreichen Würfe für Akrobatik werden in diesem Fall zudem als Kritische Erfolge behandelt.</p>"
-    },
     "Steady Spellcasting": {
       "name": "Standhaftes Zauberwirken",
       "description": "<p>Du bist dir deiner Techniken sicher, so dass du Zauber nicht einfach verlierst. Sollte eine Reaktionen dich beim Zauberwirken unterbrechen, so lege einen @Check[flat|showDC:all|dc:15]{Einfachen Wurf} ab; bei Erfolg wird deine Handlung nicht unterbrochen.</p>"
@@ -32355,6 +32367,10 @@
     "Steady Spellcasting (Magus)": {
       "name": "Standhaftes Zauberwirken (Magus)",
       "description": "<p>Du hast großes Selbstvertrauen in deine Technik und verlierst deine Konzentration beim Wirken eines Zaubers nicht so rasch. Sollte eine Reaktion dich beim Zauberwirken unterbrechen, so lege einen @Check[flat|showDC:all|dc:15]{Einfachen Wurf} ab; bei Erfolg wird deine Handlung nicht unterbrochen.</p>"
+    },
+    "Steady on Stone": {
+      "name": "Steinerne Stabilität",
+      "description": "<p>Dank deiner Verbindung zur Erde halten dich natürliche unebene Überflächen kaum auf. Du kannst Schwieriges Gelände aufgrund von Geröll und/oder unebenen Boden ignorieren, solange es sich um Stein und Erde handelt. Nutzt du Akrobatik zum Balancieren auf schmalen Oberflächen oder unebenen Boden aus Stein und Erde, erhältst du nicht den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß}; deine erfolgreichen Würfe für Akrobatik werden in diesem Fall zudem als Kritische Erfolge behandelt.</p>"
     },
     "Steadying Stone": {
       "name": "Standhafter Stein",
@@ -33095,15 +33111,15 @@
     },
     "Sturdy Bindings": {
       "name": "Stabile Fesseln",
-      "description": "<p>Dein @UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]{Ergreifen} ist besonders zuverlässig. Immer wenn du einen Kritischen Fehlschlag bei einem Wurf zum Ergreifen eines Ziels erzielst, zählt dies lediglich als Fehlschlag. Zusätzlich dazu erleidet jede von dir Ergriffene Kreatur, die einen Fehlschlag beim Wurf auf Entkommen erzielt, stattdessen einen Kritischen Fehlschlag. Wenn sie einen Kritischen Erfolg erzielt, zählt dies nur als Erfolg.</p>",
+      "description": "<p>Dein @UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]{Ergreifen} ist besonders zuverlässig. Immer wenn du einen Kritischen Fehlschlag bei einem Wurf zum Ergreifen eines Ziels erzielst, zählt dies lediglich als Fehlschlag. Zusätzlich dazu erleidet jede von dir Ergriffene Kreatur, die einen Fehlschlag beim Wurf auf @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Entkommen} erzielt, stattdessen einen Kritischen Fehlschlag. Wenn sie einen Kritischen Erfolg erzielt, zählt dies nur als Erfolg.</p>",
       "prerequisites": [
         {
           "value": "Orden der Kette"
         }
       ]
     },
-    "Stymie The Gods": {
-      "name": "Stymie The Gods",
+    "Stymie the Gods": {
+      "name": "Stymie the Gods",
       "description": "<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p>By exerting your will as a nascent god present in the mortal realms, you can hold off the influences of most distant entities, even ones much older and more powerful than yourself. Either you or your hierophant are able to use this action. When either of you do, you both gain a +2 status bonus to Armor Class and saving throws against divine spells, as well as the spells, Strikes, and abilities of extraplanar creatures, for 3 rounds. This benefit affects both you and your hierophant even if you are on separate planes of existence when this ability is used.</p>\n<p>If a Mythic Point is spent by the individual using Stymie the Gods, the bonus increases to +4 and the effects last for 10 minutes</p>",
       "prerequisites": [
         {
@@ -33831,10 +33847,6 @@
         }
       ]
     },
-    "Symphony Of The Unfettered Heart": {
-      "name": "Symphonie des freien Herzens",
-      "description": "<p>Du erlernst den Kompositionszauber @UUID[Compendium.pf2e.spells-srd.Item.ZAX0OOcKtYMQlquR]{Symphonie des freien Herzens}, mit dem du einen Verbündeten vor Zuständen schützen kannst, die ihn kampfunfähig machen würden.</p>"
-    },
     "Symphony of Blood": {
       "name": "Symphonie des Blutes",
       "description": "<p>Du erweckst das Blut deiner Gegner, auf dass es dir Kraft verleihe. Einmal am Tag kannst du dazu den Zauber @UUID[Compendium.pf2e.spells-srd.Item.fd31tAHSSGXyOxW6]{Vampirische Blutlust} als immanenten göttlichen Zauber des 7. Grades wirken.</p>"
@@ -33847,6 +33859,10 @@
           "value": "Harmonie"
         }
       ]
+    },
+    "Symphony of the Unfettered Heart": {
+      "name": "Symphonie des freien Herzens",
+      "description": "<p>Du erlernst den Kompositionszauber @UUID[Compendium.pf2e.spells-srd.Item.ZAX0OOcKtYMQlquR]{Symphonie des freien Herzens}, mit dem du einen Verbündeten vor Zuständen schützen kannst, die ihn kampfunfähig machen würden.</p>"
     },
     "Synchronous Slither": {
       "name": "Synchronous Slither",
@@ -34519,7 +34535,7 @@
     },
     "The Bigger They Are": {
       "name": "Je größer sie sind",
-      "description": "<p>Du läufst, springst und schwingst dich um eine Kreatur mit waghalsigem Tempo auf der Suche nach einer Schwachstelle herum. Lege einen Wurf zum [[/act tumble-through]]{Hindurchturnen} gegen eine Kreatur ab, die wenigstens eine Größenkategorie größer ist als du; nutze die folgenden Effekte:</p>\n<p><strong>Kritischer Erfolg</strong> Du bewegst dich durch die Angriffsfläche des Feindes und behandelst die fraglichen Felder als Schwieriges Geländes (jedes 5 Fuß/1,50 m-Feld kostet 10 Fuß/3 m an Bewegung). Sollte deine Bewegungsrate nicht ausreichen, um dich durch die gesamte Angriffsfläche zu bewegen, so erhältst du den Effekt eines Fehlschlages. Andernfalls erhält das Ziel bis zum Ende deines Zuges Schwäche gegen den Schaden deines Präzisionsangriffes in Höhe deiner halben Stufe.</p>\n<p><strong>Erfolg</strong> Wie beim Erfolg, die Schwäche gilt aber nur bei dem nächsten Angriff, den du im fraglichen Zeitraum gegen das Ziel ausführst.</p>\n<p><strong>Fehlschlag</strong> Deine Bewegung endet und du löst Reaktionen aus, als hättest du dich aus deinem Startfeld hinausbewegt.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie beim Fehlschlag, aber du erhältst zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}.</p>"
+      "description": "<p>Du läufst, springst und schwingst dich um eine Kreatur mit waghalsigem Tempo auf der Suche nach einer Schwachstelle herum. Lege einen Wurf zum [[/act tumble-through]]{Hindurchturnen} gegen eine Kreatur ab, die wenigstens eine Größenkategorie größer ist als du; nutze die folgenden Effekte:</p>\n<p><strong>Kritischer Erfolg</strong> Du bewegst dich durch die Angriffsfläche des Feindes und behandelst die fraglichen Felder als Schwieriges Geländes (jedes 5 Fuß/1,50 m-Feld kostet 10 Fuß/3 m an Bewegung). Sollte deine Bewegungsrate nicht ausreichen, um dich durch die gesamte Angriffsfläche zu bewegen, so erhältst du den Effekt eines Fehlschlages. Andernfalls erhält das Ziel bis zum Ende deines Zuges Schwäche gegen den Schaden deines Präzisionsangriffes in Höhe deiner halben Stufe.</p>\n<p><strong>Erfolg</strong> Wie beim Erfolg, die Schwäche gilt aber nur bei dem nächsten Angriff, den du im fraglichen Zeitraum gegen das Ziel ausführst.</p>\n<p><strong>Fehlschlag</strong> Deine Bewegung endet und du löst Reaktionen aus, als hättest du dich aus deinem Startfeld hinausbewegt.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie beim Fehlschlag, aber du erhältst zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.SLXhPgaeKB0W3k1D]{Effekt: Je größer sie sind}</p>"
     },
     "The Bitter Scholar's Promotion": {
       "name": "The Bitter Scholar's Promotion",
@@ -37364,7 +37380,7 @@
     },
     "Virulent Strike": {
       "name": "Virulent Strike",
-      "description": "<p>You hasten the passage of time for a living creature, prematurely aging them into decrepitude. A living creature within 60 feet takes @Damage[14d6[void]] damage and a part of its body you chose withers, taking the following penalties depending on the result of their a @Check[fortitude|against:class-spell] saving throw against your class DC or spell DC, whichever is higher.</p>\n<ul>\n<li><strong>Arms</strong> The target's arms grow weak. The target becomes @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}.</li>\n<li><strong>Head</strong> The target has trouble thinking straight. The target becomes @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}.</li>\n<li><strong>Legs</strong> The target's legs buckle with every movement. The target takes a –10-foot status penalty to its Speeds.</li>\n<li>\n<p><strong>Torso</strong> The target's skin becomes thin and papery. The target gains weakness 10 to slashing damage.</p>\n</li>\n</ul>\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes half damage and the withering penalty lasts until the end of your next turn.</p>\n<p><strong>Failure</strong> The creature takes full damage and the withering penalty lasts for 1 minute.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage, and you can choose a second part of the body to wither. Both penalties last for 1 minute.</p>",
+      "description": "<p>Those afflicted by certain maladies are closer to death in your presence. Make a Strike against a creature. If your attack hits, the target must attempt a new saving throw against the highest-level disease or poison that is currently affecting it, possibly progressing it to a higher stage even if the affliction's interval hasn't passed. If the target successfully saves or critically saves against the affliction, the affliction's stage isn't reduced. If your attack was a critical hit, the target takes a –4 circumstance penalty to the save.</p>",
       "prerequisites": [
         {
           "value": "Apocalypse Rider Dedication"
@@ -37555,7 +37571,7 @@
         }
       ]
     },
-    "Walk Through The Conflagration": {
+    "Walk Through the Conflagration": {
       "name": "Durch die Feuersbrunst",
       "description": "<p>Du stürzt durch dein eigenes Kinetisches Portal und hinterlässt nur eine kurzlebige Flamme mit deinen Umrissen, erscheinst aber majestätisch neben einem anderen Feuer. Du teleportierst dich und alle getragenen und mitgeführten Gegenstände ohne Zeitverlust auf ein freies Feld innerhalb von 120 Fuß/36 m Entfernung; du musst dieses Feld sehen können und es muss zu einer offenen Flamme oder einer Kreatur angrenzend sein, die unter Anhaltendem Feuerschaden leidet. Diese Handlung scheitert, falls du eine andere Kreatur mit dir bringen würdest (Kreaturen in extradimensionalen Behältern eingeschlossen).</p>\n<p>Bevor du abreist oder nachdem du angekommen bist, umgibt dich ein Flammenwirbel als @Template[emanation|distance:5]{5 Fuß/1,50 m-Ausstrahlung}. Jede Kreatur im Wirkungsbereich erleidet 4W6 Punkte Feuerschaden (@Check[reflex|against:kineticist|basic|options:area-effect]{einfacher Reflexwurf} gegen deinen Klassen-SG).</p>\n<hr />\n<p><strong>Stufe (+3)</strong> Der Feuerschaden steigt um 1W6 Punkte.</p>\n<p><strong>Stufenabhängiger Feuerschaden:</strong> @Damage[(floor((@actor.level -14)/3)+4)d6[fire]|options:area-damage]</p>"
     },
@@ -38049,18 +38065,14 @@
       "name": "Netzweber",
       "description": "<p><strong>Häufigkeit</strong> Einmal alle 10 Minuten</p>\n<hr />\n<p>Deine natürliche Fähigkeit, seidenartige Netze zu erzeugen, vermischt sich mit deinen magischen Kräften. Dies erlaubt es dir, ungewöhnlich große Netze in kurzer Zeit zu produzieren. Diese Fähigkeit hat die Effekte des Zaubers @UUID[Compendium.pf2e.spells-srd.Item.9s5tqqXNzcoKamWx]{Spinnenetz} auf dem 2. Grad; dabei wird dein Klassen-SG oder Zauber-SG verwendet, je nachdem, was davon höher ist. (@Check[reflex|against:class-spell|traits:magical,conjuration]{Reflexwurf} oder @Check[athletics|against:class-spell|traits:magical,conjuration]{Athletik})</p>"
     },
-    "Weft And Warp": {
-      "name": "Weft And Warp",
+    "Weft and Warp": {
+      "name": "Weft and Warp",
       "description": "<p>With graceful poise, you perform a dance of dangerous attacks. Stride up to half your speed toward an enemy; if you end this movement adjacent to them make a melee Strike against that foe. If you hit, you can @UUID[Compendium.pf2e.actionspf2e.Item.lOE4yjUnETTdaf2T]{Reposition} the target into your square at the same time that you Step into their square. You then make another Strike against the same target, who is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} to the attack. Finally, you can Step away from that enemy.</p>",
       "prerequisites": [
         {
           "value": "Eternal Legend Dedication"
         }
       ]
-    },
-    "Weight Of Stone": {
-      "name": "Steinhagel",
-      "description": "<p>Vom Himmel donnert eine Wolke aus Felsen herab, die alles in ihrem Weg niederprügelt. Der Steinregen erfolgt in einem Zylinder mit 20 Fuß/6 m Durchmesser und 80 Fuß/24 m Höhe, wobei der Boden des Zylinders innerhalb von 120 Fuß/36 m Entfernung zu dir liegen muss. Jede Kreatur im Wirkungsbereich erleidet 4W8 Punkte Wuchtschaden und muss einen @Check[reflex|against:kineticist|options:area-effect,damaging-effect]{Reflexwurf} gegen deinen Klassen-SG ablegen:</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen</p>\n<p><strong>Erfolg</strong> Die Kreatur erleidet halben Schaden.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet vollen Schaden und wird um maximal 40 Fuß/12 m nach unten gestoßen, ohne Sturzschaden zu erleiden. Wird sie zum Boden gedrückt, endet der Stoß. Sollte die Kreatur zu Boden gedrückt werden, kann sie 1 Runde lang den Boden nicht mittels Fliegen, Schweben o.a. verlassen.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie beim Fehlschlag, aber doppelter Schaden und die Kreatur wird um bis zu 80 Fuß/24 m Richtung Boden gestoßen.</p>\n<hr />\n<p><strong>Stufe (+2)</strong> Der Schaden steigt um 1W8.</p>\n<p><strong>Stufenabhängiger Wuchtschaden:</strong> @Damage[(floor((@actor.level -6)/2)+4)d8[bludgeoning]|options:area-damage]</p>"
     },
     "Weight of Experience": {
       "name": "Weight of Experience",
@@ -38074,6 +38086,10 @@
           "value": "Berufung Läuterer"
         }
       ]
+    },
+    "Weight of Stone": {
+      "name": "Steinhagel",
+      "description": "<p>Vom Himmel donnert eine Wolke aus Felsen herab, die alles in ihrem Weg niederprügelt. Der Steinregen erfolgt in einem Zylinder mit 20 Fuß/6 m Durchmesser und 80 Fuß/24 m Höhe, wobei der Boden des Zylinders innerhalb von 120 Fuß/36 m Entfernung zu dir liegen muss. Jede Kreatur im Wirkungsbereich erleidet 4W8 Punkte Wuchtschaden und muss einen @Check[reflex|against:kineticist|options:area-effect,damaging-effect]{Reflexwurf} gegen deinen Klassen-SG ablegen:</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen</p>\n<p><strong>Erfolg</strong> Die Kreatur erleidet halben Schaden.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet vollen Schaden und wird um maximal 40 Fuß/12 m nach unten gestoßen, ohne Sturzschaden zu erleiden. Wird sie zum Boden gedrückt, endet der Stoß. Sollte die Kreatur zu Boden gedrückt werden, kann sie 1 Runde lang den Boden nicht mittels Fliegen, Schweben o.a. verlassen.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie beim Fehlschlag, aber doppelter Schaden und die Kreatur wird um bis zu 80 Fuß/24 m Richtung Boden gestoßen.</p>\n<hr />\n<p><strong>Stufe (+2)</strong> Der Schaden steigt um 1W8.</p>\n<p><strong>Stufenabhängiger Wuchtschaden:</strong> @Damage[(floor((@actor.level -6)/2)+4)d8[bludgeoning]|options:area-damage]</p>"
     },
     "Weighty Impact": {
       "name": "Niederwerfender Angriff",
@@ -38154,9 +38170,9 @@
         }
       ]
     },
-    "What's That Up Your Sleeve": {
+    "What's That up Your Sleeve": {
       "name": "Was hast du im Ärmel?",
-      "description": "<p>Ob als Geber oder Spieler, du hast gelernt, Betrüger zu erkennen. Wenn eine andere Kreatur versucht, einen Gegenstand vor dir zu @UUID[Compendium.pf2e.actionspf2e.Item.qVNVSmsgpKFGk9hV]{verbergen}, verwende deinen SG für Kenntnis (Glücksspiel), wenn dieser höher ist als dein Wahrnehmungs-SG, um zu bestimmen, ob sie erfolgreich ist. Wenn du eine Kreatur nach einem verborgenen Gegenstand durchsuchst, kannst du Kenntnis (Glücksspiel) anstelle von Wahrnehmung einsetzen.</p>",
+      "description": "<p>Ob als Geber oder Spieler, du hast gelernt, Betrüger zu erkennen. Wenn eine andere Kreatur versucht, einen Gegenstand vor dir zu @UUID[Compendium.pf2e.actionspf2e.Item.qVNVSmsgpKFGk9hV]{Verbergen}, verwende deinen SG für Kenntnis (Glücksspiel), wenn dieser höher ist als dein Wahrnehmungs-SG, um zu bestimmen, ob sie erfolgreich ist. Wenn du eine Kreatur nach einem verborgenen Gegenstand durchsuchst, kannst du Kenntnis (Glücksspiel) anstelle von Wahrnehmung einsetzen.</p>",
       "prerequisites": [
         {
           "value": "Experte in Kenntnis (Glücksspiel)"
@@ -38569,11 +38585,11 @@
       "name": "Flügelchen",
       "description": "<p>Durch den Einfluss des Wohltäters deines Baus ist dir ein Paar kleine Flügel gewachsen. Diese Flügel sind zwar ungeeignet, um richtig fliegen zu können, ein Flügelschlag reicht jedoch aus, um weiter @UUID[Compendium.pf2e.actionspf2e.Item.d5I6018Mci2SWokk]{Springen} zu können. Wenn du horizontal springst, kannst du 5 Fuß/1,50 m weiter springen. Diese erhöhte Reichweite ist nicht kumulativ mit der Sprungreichweite des Talents @UUID[Compendium.pf2e.feats-srd.Item.HJYQlmGTdtyGWr6a]{Mächtiger Springer}. Wenn du einen @UUID[Compendium.pf2e.actionspf2e.Item.JUvAvruz7yRQXfz2]{Weitsprung} machst, kannst du bis zu 3 m weiter springen, als dein Athletikwurf es dir erlauben würde. Du kannst jedoch nicht weiter springen als deine Bewegungsrate es dir erlaubt. Du erleidest keinen automatischen Fehlschlag für deine Würfe zum @UUID[Compendium.pf2e.actionspf2e.Item.2HJ4yuEFY1Cast4h]{Hochsprung} oder Weitsprung, wenn du vorher nicht wenigstens 3 m Anlauf nimmst.</p>"
     },
-    "Wings Of Air": {
+    "Wings of Air": {
       "name": "Schwingen aus Luft",
       "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<hr />\n<p>Du kannst dir unter großen Anstrengungen fedrige oder wolkige Schwingen aus dem Rücken wachsen lassen. Diese Schwingen währen dann für 10 Minuten und verleihen dir solange eine Bewegungsrate für Fliegen in Höhe deiner Bewegungsrate am Boden.</p>"
     },
-    "Wings Of The Dragon": {
+    "Wings of the Dragon": {
       "name": "Drachenflügel",
       "description": "<p>Du kannst drakonische Schwingen ausbilden und mit diesen schnell durch die Luft sausen. Du erhältst den Blutlinienzauber @UUID[Compendium.pf2e.spells-srd.Item.HWJODX2zPg5cg34F]{Drachenflügel} des Zauberers sowie einen Fokusvorrat in Höhe von 1. Solltest du bereits über einen Fokusvorrat verfügen, erhöhe diesen um 1.</p>",
       "prerequisites": [
@@ -38691,6 +38707,15 @@
     "Witchwood Seed": {
       "name": "Hexenholzsaat",
       "description": "<p>Du berührst eine Kreatur und pflanzt ihr eine bösartige Saat ein. Die Kreatur erleidet 5W10 Punkte Stichschaden und muss einen @Check[fortitude|against:kineticist]{Zähigkeitswurf} gegen deinen Klassen-SG ablegen. Im Anschluss ist sie gegen diesen Impuls 24 Stunden lang immun. Kreaturen der Kategorie Fungus, Holz oder Pflanze sind gegen diesen Impuls immun.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen</p>\n<p><strong>Erfolg</strong> Die Kreatur erhält den halben Schaden und einen Zustandsmalus von -10 Fuß/3 m auf alle Bewegungsraten bis zum Ende ihres nächsten Zuges.</p>\n<p><strong>Fehlschlag</strong> Das Ziel erleidet vollen Schaden und erhält bis zum Ende seines nächsten Zuges die Zustände @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Bewegungsunfähig} und @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 2}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Das Ziel erleidet doppelten Schaden und die Zustände Bewegungsunfähig und Unbeholfen 2. Es kann am Ende jedes seiner Züge einen neuen Rettungswurf ablegen; der Effekt endet bei Erfolg.</p>\n<hr />\n<p><strong>Stufe (+4)</strong> Der Schaden steigt um 1W10 Punkte.</p>\n<p><strong>Stufenabhängiger Stichschaden:</strong> @Damage[(floor((@actor.level -12)/4)+5)d10[piercing]]</p>"
+    },
+    "Wither Away": {
+      "name": "Wither Away",
+      "description": "<p>You hasten the passage of time for a living creature, prematurely aging them into decrepitude. A living creature within 60 feet takes @Damage[14d6[void]] damage and a part of its body you chose withers, taking the following penalties depending on the result of their a @Check[fortitude|against:class-spell] saving throw against your class DC or spell DC, whichever is higher.</p>\n<ul>\n<li><strong>Arms</strong> The target's arms grow weak. The target becomes @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}.</li>\n<li><strong>Head</strong> The target has trouble thinking straight. The target becomes @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}.</li>\n<li><strong>Legs</strong> The target's legs buckle with every movement. The target takes a –10-foot status penalty to its Speeds.</li>\n<li><strong>Torso</strong> The target's skin becomes thin and papery. The target gains weakness 10 to slashing damage.</li>\n</ul>\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes half damage and the withering penalty lasts until the end of your next turn.</p>\n<p><strong>Failure</strong> The creature takes full damage and the withering penalty lasts for 1 minute.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage, and you can choose a second part of the body to wither. Both penalties last for 1 minute.</p>",
+      "prerequisites": [
+        {
+          "value": "Apocalypse Rider Dedication"
+        }
+      ]
     },
     "Withstand Death": {
       "name": "Sich dem Tode widersetzen",
@@ -38972,8 +38997,8 @@
         }
       ]
     },
-    "You Can’t Kill An Idea": {
-      "name": "You Can’t Kill An Idea",
+    "You Can’t Kill an Idea": {
+      "name": "You Can’t Kill an Idea",
       "description": "<p>Those who would destroy you instead transform you into a powerful yet formless entity. If you would be killed while you have an Ultimatum of Liberation active, you (along with your equipment) become an ideaform.</p>\n<p>As an ideaform, you are @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Invisible} and incorporeal. You have only 1 Hit Point and can't gain more, but you are immune to all damage; if your dying or doomed condition would increase to a high enough value to kill you, it does not increase, and you are immune to any effect that would instantly kill or destroy you. You are immune to the @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious} condition, yet can take only purely mental actions. You can communicate telepathically with your allies at unlimited range, and gain two extra reactions at the start of each of your turns. Additionally, you can Aid allies through nothing but telepathic advice, without having to spend an action to prepare first, and can spend a Mythic Point to do so at mythic proficiency. Any circumstance bonus you grant through Aiding is increased by 1.</p>\n<p>Before an hour passes while being an ideaform, you must choose a willing follower of your cause to fuse with and cease to be an ideaform. Use your level, their ancestry, heritage, and ancestry feats, and work with your GM to choose which combination of class, attribute modifiers, skills, and feats would make a good representation of this fusion. This new character has all your previous equipment. If you do not fuse with a follower after an hour of being an ideaform, you cease to be an ideaform and die; the equipment you had at the time of your original death also ceases to exist.</p>",
       "prerequisites": [
         {
