@@ -308,16 +308,18 @@ class Translator {
             let itemName = entry.name;
 
             // For compendium items, get the data from the compendium
+
+            const compendiumLink = getCompendiumLinkFromItemData(entry);
             if (
-                entry.flags?.core?.sourceId &&
-                entry.flags.core.sourceId.startsWith("Compendium.pf2e.") &&
-                !entry.flags.core.sourceId.includes(".Actor.") &&
-                !this.itemBlacklist.includes(entry.flags.core.sourceId)
+                compendiumLink &&
+                compendiumLink.startsWith("Compendium.pf2e.") &&
+                !compendiumLink.includes(".Actor.") &&
+                !this.itemBlacklist.includes(compendiumLink)
             ) {
                 // Get the actual compendium name
-                const itemCompendium = entry.flags.core.sourceId.split(".");
+                const itemCompendium = compendiumLink.split(".");
 
-                const originalName = fromUuidSync(entry.flags.core.sourceId)?.flags?.babele?.originalName;
+                const originalName = fromUuidSync(compendiumLink)?.flags?.babele?.originalName;
                 if (originalName) {
                     entry.name = originalName;
                     itemName = originalName;
@@ -494,4 +496,25 @@ class Translator {
         }
         return value;
     }
+}
+
+/**
+ * Extracts an item's compendium link for items, that originate from a compendium
+ *
+ * @param {Object} item         Item data
+ * @returns {string|boolean}  The item's compendium link
+ */
+function getCompendiumLinkFromItemData(item) {
+    let compendiumLink = false;
+    if (item.flags?.core?.sourceId && item.flags.core.sourceId !== null) {
+        compendiumLink = item.flags.core.sourceId;
+    }
+    if (item._stats?.compendiumSource && item._stats.compendiumSource !== null) {
+        compendiumLink = item._stats.compendiumSource;
+    }
+    if (compendiumLink !== false && compendiumLink.startsWith("Compendium.pf2e.")) {
+        return compendiumLink;
+    }
+
+    return false;
 }
