@@ -53,6 +53,17 @@
         },
         "skillSpecial": { "entryType": "Actor", "mappingEntries": { "label": "label" } },
         "tile": { "entryType": "Scene", "mappingEntries": { "texture": "texture.src" } },
+        "adventureActor": {
+            "entryType": "Actor",
+            "mappingEntries": {
+                "name": "name",
+                "acDetails": "system.attributes.ac.details",
+                "blurb": "system.details.blurb",
+                "sourceId": "flags.core.sourceId",
+                "tokenName": { "path": "prototypeToken.name", "converter": "translateTokenName" },
+                "items": { "path": "items", "converter": "translateAdventureActorItems" }
+            }
+        },
         "adventureJournal": {
             "entryType": "JournalEntry",
             "mappingEntries": {
