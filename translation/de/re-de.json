@@ -678,6 +678,7 @@
         "BludgeoningPiercingSlashing": "Hieb-, Stich- und Wuchtschaden",
         "ColdIronBludgeoning": "cold iron bludgeoning",
         "CrystalHazards": "Mit Kristallen assoziierte Gefahren",
+        "DamageFromSwornCreatures": "damage from sworn creature kind",
         "DraconicBreathWeapons": "Drachenodemwaffen",
         "EnemyStrikes": "Gegnerische Angriffe",
         "HolyBludgeoningPiercingSlashing": "Heiliger Hieb-, Stich- und Wuchtschaden",
@@ -860,6 +861,7 @@
           "Rat": "Ratte",
           "Scorpion": "Skorpion",
           "Shark": "Hai",
+          "SnappingFlytrap": "Snapping Flytrap",
           "Spider": "Spinne",
           "Succubus": "Sukkubus",
           "Tailless": "Schwanzlos",
@@ -1293,7 +1295,8 @@
         "ToggleLabel": "Alle Ziele der Heilung sind lebende Kreaturen"
       },
       "Time": {
-        "ACLabel": "Abwehr von Reaktionen oder freien Aktionen während der Bewegung"
+        "ACLabel": "Abwehr von Reaktionen oder freien Aktionen während der Bewegung",
+        "DefendAgainstLabel": "Curse of Turbulent Moments — Defense penalty"
       }
     },
     "PersistentDamage": {
@@ -1921,6 +1924,7 @@
         "Prompt": "Wähle den Bonus der Unterstützung."
       },
       "Alchemist": {
+        "AdvancedAlchemy": "Advanced Alchemy",
         "AlchemicalAssessment": {
           "Note": "Solltest du die Anleitung für den fraglichen Gegenstand kennen, wird ein Kritischer Fehlschlag als Fehlschlag gezählt."
         },
@@ -2258,6 +2262,8 @@
       },
       "BonusLabel": {
         "NegativeOne": "-1",
+        "NegativeThree": "-3",
+        "NegativeTwo": "-2",
         "PlusFour": "+4",
         "PlusOne": "+1",
         "PlusThree": "+3",
@@ -2318,7 +2324,7 @@
           "Description": "Dein ehrfürchtiges Staunen kann ansteckend und ablenkend zugleich sein.",
           "Fallout": "Du erhältst den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß}, bis du die Aktivität Emotionen beruhigen nutzt.",
           "Fervor": "Wenn du einen Zauber wirkst, kannst du eine Kreatur auswählen, welche von deinem Zauberangriffswurf getroffen wurde oder deren Rettungswurf fehlgeschlagen ist. Diese Kreatur erhält bis zum Ende ihres nächsten Zuges dir gegenüber den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fasziniert}. Im Anschluss ist sie für 1 Stunde gegen diesen Eifereffekt immun. Zauber: @UUID[Compendium.pf2e.spells-srd.Item.0qaqksrGGDj74HXE]{Enthüllendes Licht}",
-          "Focus": "@UUID[Compendium.pf2e.spells-srd.Item.zul5cBTfr7NXHBZf]{{Blendender Lichtblitz} (benötigt kein religiöses Symbol)",
+          "Focus": "@UUID[Compendium.pf2e.spells-srd.Item.zul5cBTfr7NXHBZf]{Dazzling Flash} (doesn't require a religious symbol)",
           "Label": "Ehrfurcht",
           "Trigger": "Dir oder einem maximal 30 Fuß/9 m weit entfernten Verbündeten gelingt ein Kritischer Erfolg bei einem Angriffswurf gegen die RK eines Gegners oder bei einem Fertigkeitswurf gegen den SG eines Gegners."
         },
@@ -2338,7 +2344,7 @@
           "Fervor": "Der von deinem Zustand Verängstigt ausgelöste Zustandsmalus betrifft weder deinen Zauber-SG noch deinen Zauberangriffsbonus. Stattdessen erhältst du einen Zustandsbonus entsprechend des eigentlichen Zustandsmalus und deine Gegner erleiden zusätzlich den Zustandsmalus auf ihre Rettungswürfe gegen deine Zauber. Alle anderen Spielwerte unterliegen dem üblichen Zustandsmalus. Zauber: @UUID[Compendium.pf2e.spells-srd.Item.4koZzrnMXhhosn0D]{Furcht}",
           "Focus": "@UUID[Compendium.pf2e.spells-srd.Item.DU5daB09xwfE1y38]{Wachender Albtraum}",
           "Label": "Furcht",
-          "Trigger": "Du lässt dich von deiner Furcht antreiben, statt dich von ihr verzehren zu lassen – jedoch verbrennt dies deine Ausdauer."
+          "Trigger": "An enemy makes you @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened}."
         },
         "Hatred": {
           "Activation": "Du kannst die Aktion Laufen oder Schritt nutzen. Du musst diese Fortbewegung näher an deinem Emotionalen Fokus beenden als dein Ausgangspunkt.",
@@ -2415,7 +2421,15 @@
         "DivineSmite": {
           "Label": "Göttliches Niederstrecken"
         },
-        "EvilDamage": "Seelenschaden",
+        "ExaltedGreatness": {
+          "Grandeur": "Any _revealing light_ created by your Flash of Grandeur lasts for 1 minute.",
+          "Iniquity": "The damage dealt to enemies other than the triggering creatures increases by @Damage[(ternary(gte(@actor.level,19),6,ternary(gte(@actor.level,16),5,ternary(gte(@actor.level,12),4,ternary(gte(@actor.level,9),3,ternary(gte(@actor.level,5),2,1))))))[spirit]] damage (apply this after you halve the damage).",
+          "Justice": "The penalty for allies from your exalted reaction is –2 instead of –5.",
+          "Label": "Exalted Greatness",
+          "Liberation": "You and all affected allies can attempt to break free, not just the triggering ally.",
+          "Obedience": "The damage dealt to creatures other than the triggering creature who refuse to drop @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} increases to half the damage the triggering creature would take (roll the damage only once for all affected creatures).",
+          "Redemption": "The resistance granted by your exalted reaction is not reduced."
+        },
         "ExaltedReaction": {
           "Desecration": "Jeder Gegner innerhalb deiner Streiteraura erhält einen Zustandsmalus von -1 auf Angriffswürfe gegen dich bis zum Beginn deines nächsten Zuges. @UUID[Compendium.pf2e.feat-effects.Item.Ef63SlxSKlZmHosM]{Effekt: Erhebung (Schändung)}",
           "Grandeur": "Neben dem auslösenden Gegner sind auch alle anderen Gegner innerhalb deiner Streiteraura 1 Runde lang von Enthüllendem Licht betroffen.",
@@ -2425,6 +2439,7 @@
           "Obedience": "Jeder Gegner innerhalb deiner Streiteraura muss sich entscheiden, entweder auf die Knie fallen (und den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend} erhalten) oder Mentalen Schaden erleiden. Diese Kreaturen erleiden nur minimalen Schaden (in der Regel @Damage[ternary(gte(@actor.level,19),6,ternary(gte(@actor.level,16),5,ternary(gte(@actor.level,12),4,ternary(gte(@actor.level,11),3)[mental]] Schadenspunkte), die erlittenen Effekte können durch nichts modifiziert werden, das deinen Gnadenlosen Befehl verändert. Z.B. könnte das Talent Gnadenlose Folgen den Schaden für andere als die auslösende Kreatur nicht in Anhaltenden Mentalen Schaden umwandeln.",
           "Redemption": "Verweigert sich der Gegner, so kannst du dir und allen Verbündeten innerhalb deiner Streiteraura (den auslösenden Verbündeten eingeschlossen), die Schadensresistenz verleihen; in diesem Fall fällt die Resistenz bei jedem um 2 geringer aus. @UUID[Compendium.pf2e.feat-effects.Item.GFLiTESBmoyQ3sLx]{Effekt: Erhebung (Läuterung)}"
         },
+        "EvilDamage": "Seelenschaden",
         "GreaterSecurity": {
           "Description": "Während der Seelenschild aktiv ist und du deinen Schild Gehoben hast, erhält der Verbündete mit dem Seelenschild denselben Bonus auf seine RK, die dein Schild verleiht; sofern der Verbündete die Auslösungsbedingungen von Schildblock erfüllen, kannst du Schildblock nutzen. Dies nutzt die Spielwerte deines Schildes; dein Schild erleidet den Schaden.",
           "RollOptionLabel": "Mächtige Sicherheit — Der Streiter hat seinen Schild Gehoben"
@@ -2447,6 +2462,9 @@
           }
         },
         "NegativeDamage": "Leerenschaden",
+        "OathOfTheSlayer": {
+          "RollOptionLabel": "Oath of the Slayer — Double additional damage"
+        },
         "OngoingSelfishness": {
           "Description": "Nachdem du Egoistischen Schild genutzt hast, erlangst du Resistenz gegen allen weiteren Schaden durch den auslösenden Gegner bis zum Ende des Zuges, in dem du die Reaktion eingesetzt hast. Diese Resistenz entspricht der Hälfte dessen, was du durch Egoistischen Schild erlangst. @UUID[Compendium.pf2e.feat-effects.Item.seOQfjfjrDyK6rCo]{Effekt: Ewiger Egoismus}"
         },
@@ -2575,6 +2593,9 @@
         }
       },
       "Cleric": {
+        "BattleHarbinger": {
+          "DivineFont": "Instead of preparing @UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal} or @UUID[Compendium.pf2e.spells-srd.Item.wdA52JJnsuQWeyqz]{Harm} spells with your divine font, you instead gain the battle font, which allows you to prepare battle aura spells. You gain 4 additional spell slots each day at your highest rank of cleric spell slots. You can prepare only @UUID[Compendium.pf2e.spells-srd.Item.7ZinJNzxq0XF0oMx]{Bane} or @UUID[Compendium.pf2e.spells-srd.Item.XSujb7EsSwKl19Uu]{Bless} in these slots. Any feats and effects that refer to a battle aura refers to these spells, regardless of whether they were cast with your standard spell slots or your divine font spell slots. At 5th level, the number of additional slots increases to 5, and at 15th level, the total number of additional slots increases to 6. Your battle auras use your class DC instead of your spell DC."
+        },
         "CastigatingWeapon": {
           "Note": "Nachdem du über Göttliche Strafe Seelenschaden zugefügt hast, erhält deine Waffe oder dein Waffenloser Angriff die Kategorie Heilig oder Unheilig und verursacht Seelenschaden bis zum Ende deines Zuges. @UUID[Compendium.pf2e.feat-effects.Item.BTI4obxa5UmNltyU]{Effekt: Strafende Waffe}"
         },
@@ -3104,9 +3125,9 @@
           "StrikeLabel": "Geisterhand"
         },
         "RhinoShot": {
-          "CriticalSuccess": "Das Ziel muss einen @Check[fortitude|dc:19|traits:conjuration,consumable,magical|showDC:all]{Zähigkeitswurf} mit einem Erfolg ablegen oder es wird umgeworfen und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}.",
+          "CriticalSuccess": "The target must critically succeed at a @Check[fortitude|dc:19|name:Rhino Shot|traits:conjuration,consumable,magical|showDC:all] save or be knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.",
           "Label": "Nashornpfeil",
-          "Success": "Das Ziel muss einen @Check[fortitude|dc:19|traits:conjuration,consumable,magical|showDC:all]{Zähigkeitswurf} mit einem Kritischen Erfolg ablegen oder es wird umgeworfen und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}."
+          "Success": "The target must succeed at a @Check[fortitude|dc:19|name:Rhino Shot|traits:conjuration,consumable,magical|showDC:all] save or be knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}."
         },
         "RobeOfTheArchmagi": {
           "VsArcaneSpells": "{item} (gg. Arkane Zauber)"
@@ -3478,6 +3499,7 @@
           "bow": "Spezialbögen",
           "brawling": "Spezialraufwaffen",
           "club": "Spezialkeulen",
+          "crossbow": "Advanced Crossbows",
           "dart": "Spezialwurfpfeile",
           "firearm": "Spezialfeuerwaffen",
           "flail": "Spezialflegel",
@@ -3496,6 +3518,7 @@
           "bow": "Einfache & Kriegsbögen",
           "brawling": "Einfache & Kriegsraufwaffen",
           "club": "Einfache & Kriegskeulen",
+          "crossbow": "Simple & Martial Crossbows",
           "dart": "Einfache & Kriegswurfpfeile",
           "firearm": "Einfache & Kriegsfeuerwaffen",
           "flail": "Einfache & Kriegsflegel",
@@ -3615,6 +3638,14 @@
         "ClayFist": {
           "Label": "Lehmfaust",
           "Note": "Wenn du mit deiner Lehmfaust einen Waffenlosen Angriff ausführst und triffst, erhält dein Ziel einen Zustandsmalus von -2 auf Rettungswürfe gegen Flucheffekte für 1 Stunde. @UUID[Compendium.pf2e.feat-effects.Item.bvk5rwYSoTtz8QGf]{Effekt: Verfluchte Lehmfaust}"
+        }
+      },
+      "GreyGardener": {
+        "Execution": {
+          "Note": "If you hit, your condemned foe takes an extra @Damage[(8d6[precision])[@item.system.damage.damageType]] damage with a @Check[fortitude|against:class-spell|basic] save. If the condemned foe is reduced to 0 Hit Points by the execution and requires a head to live, they die."
+        },
+        "HarshJudgement": {
+          "SeekCondemnedFoeLabel": "Harsh Judgement - Seek Condemned Foe"
         }
       },
       "Gunslinger": {
@@ -3986,6 +4017,13 @@
           "Note": "Jeder erfolgreiche Rettungswurf gegen eine Krankheit reduziert ihre Phase um 2 oder um 1 bei einer Ausgeprägten Krankheit. Jeder Kritische Erfolg gegen eine bestehende Krankheit reduziert ihre Phase um 3 oder um 2 bei einer Ausgeprägten Krankheit."
         }
       },
+      "LostInTheCrowd": {
+        "CrowdSize": {
+          "Ten": "At least 10 creatures",
+          "Hundred": "At least 100 creatures"
+        },
+        "Prompt": "Select a crowd size."
+      },
       "MagicalExperiment": {
         "EnhancedSenses": "Verbesserte Sinne",
         "ResistantSkin": "Widerstandsfähige Haut",
@@ -4053,6 +4091,7 @@
           "bow": "Spezialbögen",
           "brawling": "Spezialraufwaffen",
           "club": "Spezialkeulen",
+          "crossbow": "Advanced Crossbows",
           "dart": "Spezialwurfpfeile",
           "firearm": "Spezialfeuerwaffen",
           "flail": "Spezialflegel",
@@ -4105,6 +4144,7 @@
           "bow": "Kriegsbögen",
           "brawling": "Kriegsraufwaffen",
           "club": "Kriegskeulen",
+          "crossbow": "Martial Crossbows",
           "dart": "Kriegswurfpfeile",
           "firearm": "Kriegsfeuerwaffen",
           "flail": "Kriegsflegel",
@@ -4183,11 +4223,21 @@
           "ThreeActionLabel": "Konzentrierter Faustschlag (Drei Aktionen)",
           "TwoActionLabel": "Konzentrierter Faustschlag (Zwei Aktionen)"
         },
+        "QiSpells": {
+          "HeavensThunder": {
+            "RollOptionLabel": "Heaven's Thunder — Qi Blast"
+          }
+        },
         "StunningFist": {
           "Note": "Das Ziel muss einen @Check[fortitude|against:monk|name:Mönch|traits:incapacitation|overrideTraits:true]{Zähigkeitswurf} gegen deinen Klassen-SG ablegen; bei einem Fehlschlag erhält es den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1} (bei einem Kritischen Fehlschlag @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 3})."
         },
         "WolfDrag": {
           "Note": "Bei einem erfolgreichen Angriff verleihst du dem Ziel den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}."
+        }
+      },
+      "MortalHerald": {
+        "DivinePresence": {
+          "OffGuardToggle": "Divine Presence — Make target Off-Guard"
         }
       },
       "MountainStance": {
@@ -4398,6 +4448,7 @@
         "Material": "Wähle ein Material.",
         "MovementType": "Wähle eine Bewegungsart.",
         "PathToPerfection": "Wähle einen Weg zur Perfektion.",
+        "Penalty": "Select a penalty.",
         "Persona": "Select a persona trait.",
         "PsiCantrip": "Wähle einen Mentalen Zaubertrick.",
         "Resistance": "Wähle eine Resistenz.",
@@ -4645,6 +4696,14 @@
         "ReflectionOfWater": {
           "Description": "You cast @UUID[Compendium.pf2e.spells-srd.Item.zfn5RqAdF63neqpP]{Control Water} as a 5th-rank innate divine spell. The area of water you control increases by 10 feet in length and width for every 2 levels you have beyond 10th level.",
           "Title": "Reflection of Water"
+        }
+      },
+      "RivethunInvoker": {
+        "InvokeOffense": {
+          "Label": "Invoke Offense"
+        },
+        "OneWithTheSpirits": {
+          "Label": "One with the Spirits — Deal spirit damage"
         }
       },
       "Rogue": {
@@ -5098,10 +5157,18 @@
         "GustingSpell": "Sofern du als nächste Handlung einen Zauber der Kategorie Elektrizität oder Luft wirkst, kannst du Fliegen nutzen, um dich bis zu 10 Fuß/3 m weit fortzubewegen, bevor oder nachdem du den Zauber wirkst.",
         "Harmonize": "Sollte deine nächste Handlung darin bestehen eine Komposition zu wirken, wird diese zu einer Harmonischen Komposition. Im Gegensatz zu einer normalen Komposition endet eine Harmonische Komposition nicht, wenn du eine andere Komposition wirkst, so dass du eine andere Komposition im selben Zug wie eine harmonische Komposition wirken kannst. Wirkst du allerdings eine andere Harmonische Komposition, so endet der Effekt einer früheren Harmonischen Komposition.",
         "HealingTransformation": "Dein Gestaltwandel-Zauber heilt bei der Kreatur zusätzlich zum Effekt des Zaubers 1W6 Trefferpunkte pro Zaubergrad (@Damage[(@item.rank)d6[healing]]). Dies ist ein Effekt der Kategorie Heilung.",
+        "HeraldicProclamation": "All allies within 30 feet gain @Damage[(2*@item.rank)[healing,vitality]|shortLabel] Hit Points, and all enemies within 30 feet take @Damage[(2*@item.rank)[spirit]|traits:sanctified] damage with a @Check[will|basic] save against your spell DC.",
         "HeroicRecovery": "Das Ziel erhält drei Boni bis zum Ende seines nächsten Zuges: einen Zustandsbonus von +5 Fuß/1,50 m auf Bewegungsrate, einen Zustandsbonus von +1 auf Angriffswürfe und einen Zustandsbonus von +1 auf Schadenswürfe. Sollte das Ziel den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend} haben, kann es umgehend als freie Aktion aufstehen, ohne dabei eine Reaktion auszulösen.",
         "InTune": "Sofern du als nächste Handlung einen Kompositionszauber mit Wirkungsbereich Ausstrahlung wirkst, bist nicht du der Ausgangspunkt des Effektes, sondern ein dazu bereiter, maximal 60 Fuß/18 m von dir entfernter Verbündeter. Falls du über das Talent @UUID[Compendium.pf2e.feats-srd.Item.ot0uyFtnC1Whz5bp]{Gezielte Kompositionen} verfügst, kannst du alternativ den daraus resultierenden Kegel von dem Verbündeten ausgehen lassen.",
         "InterweaveDispel": "Sollte deine nächste Handlung das Wirken eines Zaubers gegen eine Kreatur sein, der nur ein Ziel als Parameter hat, und solltest du den Gegner entweder mit deinem Zauberangriffswurf treffen oder sein Rettungswurf misslingen, so kannst du als Freie Aktion @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} auf den Gegner wirken. Dabei wendest du wie üblich einen Zauberplatz auf und zielst einen Zaubereffekt an, der den Gegner betrifft.",
         "IntoTheFuture": "Solltest du als nächste Handlung einen Zauber mit einem Zeitaufwand von maximal 2 Aktionen wirken, so treten die Effekte des Zaubers statt augenblicklich 1 Runde später zu Beginn deines nächsten Zuges ein. Ziele und Entscheidungen hinsichtlich des Zaubers müssen beim Wirken des Zaubers bestimmt und getroffen werden; Voraussetzungen wie Sicht- und Schusslinie müssen beim Wirken des Zaubers und beim Eintreten des Effektes jeweils erfüllt sein. Konsequenzen, die sich aus dem Wirken des Zaubers ergeben, z.B. die Reaktion @UUID[Compendium.pf2e.actionspf2e.Item.KAVf7AmRnbCAHrkT]{Reaktionsangriff} oder das Ende des Zustandes @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fasziniert} bei einem Gegner aufgrund einer feindseligen Handlung, werden nicht verzögert.",
+        "KaleidoscopicEntreaty": {
+          "Description": "If your next action is to cast @UUID[Compendium.pf2e.spells-srd.Item.Yph1UqZU8vMc9bJG]{Entreat Spirit}, you can cause that spirit to unleash a brilliant display of color, light, and sound in a @Template[type:emanation|distance:10] centered on you. Each creature in the area must attempt a @Check[fortitude|against:class-spell] save against your class DC or spell DC with the following results.",
+          "CriticalFailure": "The creature is @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for 1 round and dazzled for 1 minute.",
+          "CriticalSuccess": "The creature is unaffected.",
+          "Failure": "The creature is dazzled for 1 minute.",
+          "Success": "The creature is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round."
+        },
         "KnowledgeOfShapes": "Du kannst @UUID[Compendium.pf2e.feats-srd.Item.FoWO4RnHRwfEIC7Q]{Ausgedehnter Zauber} oder @UUID[Compendium.pf2e.feats-srd.Item.BWomK7EVY0WXxWgh]{Weitreichender Zauber} als Freie Aktion nutzen.",
         "LeyLineConduit": "Sofern deine nächste Handlung das Wirken eines Zaubers des maximal 5. Grades ohne Wirkungsdauer ist, verbrauchst du den vorbereiteten Zauber beim Wirken nicht.",
         "Martyr": "Du verlierst pro Zaubergrad 1W8 TP (dies kann nicht reduziert oder anderweitig abgefangen werden) und dein Verbündeter erlangt dieselbe Anzahl an Trefferpunkten zusätzlich zurück (@Damage[(@item.rank)d8]).",
@@ -5574,6 +5641,26 @@
             "StalkingNight": {
               "Description": "Wenn du eine Hexerei wirkst oder Aufrechterhältst, während dein Vertrauter zu einem Gegner mit dem Zustand @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Verborgen}, @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Versteckt} oder @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Unentdeckt} angrenzend ist, erhält der Gegner den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}.",
               "Title": "Vertrauter des Nächtlichen Pirschers"
+            },
+            "BolsteringAid": {
+              "Description": "Your familiar knows all manner of tricks that can help! When you Cast or Sustain a hex, and your familiar is adjacent to an ally, that ally gains a +2 status bonus to the next non-attack skill check that ally attempts before the start of your next turn.",
+              "Title": "Familiar of Bolstering Aid"
+            },
+            "EnticingNegotiation": {
+              "Description": "When you Cast or Sustain a hex and your familiar is within 10 feet of an enemy, the enemy becomes @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} until the start of your next turn. Your familiar can only distract a single enemy per round in this way.",
+              "Title": "Familiar of Enticing Negotiation"
+            },
+            "ObscuringSnowfall": {
+              "Description": "When you Cast or Sustain a hex, you can cause clinging snow to fall in a @Template[type:burst|distance:5] centered on a square of your familiar's space. This snowfall remains until the start of your next turn, and enemies that enter these squares during that period are @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} until the start of your next turn.",
+              "Title": "Familiar of Obscuring Snowfall"
+            },
+            "PairedPerplexity": {
+              "Description": "When you Cast or Sustain a hex, your familiar seems to double and be in two places at once. One creature you choose within 20 feet of it is @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} until the start of your next turn; this is a visual effect.",
+              "Title": "Familiar of Paired Perplexity"
+            },
+            "SwarmsHeart": {
+              "Description": "When you Cast or Sustain a hex, the insects swarm to protect you and your allies. Until the start of your next turn, your familiar grants concealment to you or any ally while sharing the same space.",
+              "Title": "Familiar of Swarm's Heart"
             }
           },
           "Prompt": "Wähle einen Schutzherr."
