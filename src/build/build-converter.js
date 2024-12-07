@@ -43,8 +43,19 @@ const readSystemMap = (filename) => {
     }
     const folderPath = systemFolder + "packs/" + filename;
     for (const child of readdirSync(folderPath)) {
-        const featData = readJSONFile(folderPath + "/" + child);
-        result.set(featData.name.toLowerCase().trim(), featData);
+        if (child.startsWith("_")) {
+            continue;
+        }
+        if (child.includes(".json")) {
+            const featData = readJSONFile(folderPath + "/" + child);
+            result.set(featData.name.toLowerCase().trim(), featData);
+            continue;
+        }
+        for (const grandchild of readdirSync(folderPath + "/" + child)) {
+            const featData = readJSONFile(folderPath + "/" + child + "/" + grandchild);
+            result.set(featData.name.toLowerCase().trim(), featData);
+            continue;
+        }
     }
     return result;
 };
@@ -278,9 +289,11 @@ export const convertDeities = (deitiesTranslated) => {
     );
 
     // Get the Ids for all spells in the compendium
-    const spellIds = [];
-    spellsMap.forEach((spell) => spellIds.push(`Compendium.pf2e.spells-srd.Item.${spell._id}`));
-
+    const spellIds = {};
+    spellsMap.forEach(
+        (spell) =>
+            (spellIds[`Compendium.pf2e.spells-srd.Item.${spell.name}`] = `Compendium.pf2e.spells-srd.Item.${spell._id}`)
+    );
     // Loop through translated deity description entries and add details section
     Object.keys(deitiesTranslated.entries).forEach((deityName) => {
         const deityAttributes = deitiesMap.get(deityName.toLowerCase()).system.attribute;
@@ -306,8 +319,8 @@ export const convertDeities = (deitiesTranslated) => {
             textTitle = "Klerikerzauber";
             textAdditions[textTitle] = [];
             Object.keys(deitySpells).forEach((deitySpell) => {
-                if (spellIds.includes(deitySpells[deitySpell])) {
-                    textAdditions[textTitle].push(`${deitySpell}. @UUID[${deitySpells[deitySpell]}]`);
+                if (Object.keys(spellIds).includes(deitySpells[deitySpell])) {
+                    textAdditions[textTitle].push(`${deitySpell}. @UUID[${spellIds[deitySpells[deitySpell]]}]`);
                 } else {
                     console.warn(`Spell @UUID[${deitySpells[deitySpell]}] missing in ${deityName}`);
                 }
