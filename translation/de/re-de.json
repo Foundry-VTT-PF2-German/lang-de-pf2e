@@ -116,6 +116,7 @@
         "FireMote": "Feuerfunke",
         "Fist": "Faust",
         "FlameHair": "Flammenhaar",
+        "FlamingSword": "Flaming Sword",
         "Foot": "Fuß",
         "Foreleg": "Vorderbein",
         "Gust": "Windstoß",
@@ -123,6 +124,7 @@
         "Hoof": "Huf",
         "Horn": "Horn",
         "Horns": "Hörner",
+        "HurledDebris": "Hurled Debris",
         "Jaws": "Biss",
         "LavaFist": "Lavafaust",
         "Leaf": "Blatt",
@@ -171,7 +173,14 @@
         "SunNote": "Das Ziel erhält eine Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet}."
       },
       "DaemonForm": {
-        "CeustodaemonDamageNote": "Jeder erfolgreiche Biss- oder Klauenangriff verursacht zusätzlich @Damage[1d6[untyped]]{1W6 Punkte Schaden} und du erleidest dieselbe Menge an Schaden."
+        "Note": {
+          "CeustodaemonDamage": "Any successful jaws or claw Strike deals an additional @Damage[1d6[untyped]] damage, and you take the same amount of damage"
+        }
+      },
+      "DemonForm": {
+        "Note": {
+          "AbrikandiluCritical": "On a critical hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} for 1 minute."
+        }
       },
       "ElementEmbodied": {
         "AirPushNote": "Plus @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.t6cx9FOODmeZQNYl]{Stoßen} 10 Fuß/3 m",
@@ -653,10 +662,14 @@
     },
     "GenericLabel": {
       "ItemVs": {
+        "DeathVoid": "{Item} vs. Death and Void effects",
         "Fear": "{item} gg. Furcht"
       },
       "PreviousAction": {
         "ClimbLeapStride": "Deine vorangegangene Aktion war Klettern, Springen oder Laufen"
+      },
+      "Resist": {
+        "ForcedMovement": "vs. forced movement"
       },
       "StrikeCount": {
         "First": "Erster Angriff",
@@ -677,6 +690,7 @@
         "AttacksDemons": "Angriffe von Dämonen",
         "AttacksWaterCreatures": "Angriffe von Wasserkreaturen",
         "BludgeoningPiercingSlashing": "Hieb-, Stich- und Wuchtschaden",
+        "BludgeoningPiercingSlashingFromFrightenedStrikes": "bludgeoning, piercing and slashing Strike damage from frightened creatures",
         "ColdIronBludgeoning": "cold iron bludgeoning",
         "CrystalHazards": "Mit Kristallen assoziierte Gefahren",
         "DamageFromSwornCreatures": "damage from sworn creature kind",
@@ -684,6 +698,7 @@
         "EnemyStrikes": "Gegnerische Angriffe",
         "HolyBludgeoningPiercingSlashing": "Heiliger Hieb-, Stich- und Wuchtschaden",
         "ImpulseFireFrom": "Feuerimpuls von {origin}",
+        "IncorporealCreatures": "incorporeal creatures",
         "IngestedPoisons": "Eingenommene Gifte",
         "MagicalBludgeoning": "Magischer Wuchtschaden",
         "MagicalColdIron": "Magisches Kaltes Eisen",
@@ -1874,6 +1889,7 @@
       "Water": "Im Wasser",
       "WaterOrMud": "In Wasser oder Schlamm",
       "Weave": "Zum Weben",
+      "Wilderness": "In Wilderness",
       "Woodworking": "Holzarbeiten"
     },
     "SpecificLore": {
@@ -1995,7 +2011,8 @@
         },
         "UncannyBombs": {
           "Note": "Dir gelingt automatisch der Einfache Wurf, wenn das Ziel dir gegenüber den Zustand @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Verborgen} besitzt."
-        }
+        },
+        "VersatileVials": "Versatile Vials"
       },
       "AldoriDuelist": {
         "DuelistsEdge": {
@@ -2009,6 +2026,9 @@
             "Failure": "Es kommt zu einer Fehlzündung, aber nicht  zu den Kritischen Fehlschlagseffekten."
           }
         }
+      },
+      "AllowedDrops": {
+        "OneHandedWeapon": "one-handed weapon"
       },
       "Anadi": {
         "SpiderOrHybridForm": "In Spinnen- oder Mischgestalt"
@@ -2056,9 +2076,22 @@
           "Prompt": "How many successfully shoved creatures?"
         }
       },
+      "ApocalypseRider": {
+        "StealDeath": {
+          "RollOptionLabel": "Steal Death — You and your mount are within 10 feet."
+        },
+        "ToWar": {
+          "RollOptionLabel": "To War! — Foe was damaged by the apocalypse mount."
+        }
+      },
       "AquaticCombat": {
         "FireNote": "Unter Wasser kannst du keine Feuerzauber einsetzen und keine Aktionen mit der Kategorie Feuer benutzen.",
-        "RangedNote": "Fernkampfangriffe, die Hieb- oder Wuchtschaden zufügen, schlagen automatisch fehl, wenn sich der Angreifer oder das Ziel unter Wasser befindet. Für Fernkampfangriffe, die Stichschaden verursachen, durch oder gegen eine Kreatur, die sich unter Wasser befindet, wird die Entfernungseinheit der Waffe halbiert."
+        "RangedNote": "Non-piercing ranged attacks have their range increments halved."
+      },
+      "Archfiend": {
+        "FiendEternal": {
+          "RollOptionLabel": "Fiend Eternal – Recall Knowledge or Gather Information"
+        }
       },
       "Ardande": {
         "CausticNectar": {
@@ -2071,6 +2104,28 @@
       },
       "ArtokussFire": {
         "Note": "Das Alchemistenfeuer verursacht 1W4 Punkte Anhaltenden Feuerschaden zusätzlich zu dem, was das Alchemistenfeuer normalerweise verursachen würde. Eine Kreatur, die durch das Alchemistenfeuer Anhaltenden Feuerschaden erleidet, benötigt zwei erfolgreiche Einfache Würfe, um den Anhaltenden Schaden zu beenden, oder einen Wurf, wenn die Kreatur Unterstützung bei der Bekämpfung hatte, die den SG des Wurfes auf 10 reduziert."
+      },
+      "AscendedCelestial": {
+        "AegisForTheInnocent": {
+          "HalveAuraToggle": "Aegis for the Innocent — Halve aura radius"
+        },
+        "CelestialArmaments": {
+          "Note": "When you critically hit a target with the weapon, the target must succeed at a @Check[fortitude|against:class-spell] or be @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for [[/r 1d4 #rounds]]{1d4 rounds}."
+        },
+        "CelestialRebirth": {
+          "SpellDescriptionAlteration": "When you cast a spell with the healing trait that doesn't target you, you regain @Damage[(@item.rank)d6[healing]] Hit Points."
+        },
+        "ChannelDivineSpark": {
+          "Note": "Each time that you damage a creature with a melee Strike, you can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Shove} or @UUID[Compendium.pf2e.actionspf2e.Item.ge56Lu1xXVFYUnLP]{Trip} that creature as a free action."
+        },
+        "Dedication": {
+          "NimbusToggle": "Ascended Celestial — Nimbus of Light",
+          "RollTwiceToggle": "Ascended Celestial — Roll twice on Will save"
+        },
+        "ScouringSpark": {
+          "DamageReceivedNote": "Any creature that damages you with an unarmed melee attack or a non-reach melee weapon takes @Damage[3d6[fire]] damage.",
+          "DoubleDamageNote": "The damage from this feat is doubled against creatures with the aberration, fiend, or undead trait."
+        }
       },
       "Assassin": {
         "Assassinate": {
@@ -2262,6 +2317,38 @@
           "TremorsensePrecise": "Verbessere deinen Erschütterungssinn zu präzise"
         }
       },
+      "BeastLord": {
+        "ChosenWard": {
+          "DefenseToggle": "Chosen Ward — Apply bonus to AC and Reflex saves",
+          "FortuneToggle": "Chosen Ward — Apply Reflex saves fortune effect"
+        },
+        "CreatureOfMyth": {
+          "Description": "Your specialized united companion grows with unparalleled power and strength, becoming a creature of myth. It gains the following effect.",
+          "BalefulBody": {
+            "Description": "Your united companion's blood is boiling, its mechanical fluid is acidic, or its insides are otherwise destructive to the touch. Choose acid, fire, or poison. If your united companion would take damage from a melee attack, it deals @Damage[floor(@actor.level / 2)]{half your level} in damage of the chosen type to the creature that made the melee attack. By spending a Mythic Point when you Command your united companion, your united companion can spew its corrosive power as a 2-action activity to deal @Damage[14d6|options:area-damage|shortLabel] damage of the chosen type in a @Template[type:cone|distance:15] or @Template[type:line|distance:30] (@Check[reflex|against:class-spell|basic|options:area-effect] save against your class DC or spell DC, whichever is higher).",
+            "Label": "Baleful Body"
+          },
+          "ChimericHeads": {
+            "Description": "Your united companion sprouts an extra head which gives it extra eyes and allows it to make additional attacks with related unarmed attacks. Your united companion gains all-around vision. By spending a Mythic Point when you Command your united companion, your united companion can make two Strikes with its unarmed attacks as a single action, each using its current multiple attack penalty. Both Strikes must have the same target. If both attacks hit, combine their damage, and then add any other applicable effects. This counts as one attack when calculating your united companion's multiple attack penalty. Your united companion must have a head and at least one unarmed attack that uses its mouth or head (such as a beak, jaws, or mandible attack) to select this.",
+            "Label": "Chimeric Heads"
+          },
+          "EnergyAegis": {
+            "Description": "Your united companion is protected from hazardous energy. Your united companion becomes immune to your choice of acid, cold, electricity, or fire. Your companion gains a +1 status bonus to AC and saves that originate from creatures with the listed trait and to effects and spells with the listed trait. By spending a Mythic Point when you Command your united companion, your united companion can take a single action with the concentrate trait to extend these same benefits to all creatures who are adjacent to it until the beginning of your next turn.",
+            "Label": "Energy Aegis"
+          },
+          "MagnificentFlight": {
+            "Description": "Your united companion grows wings or learns some other method of flight. Your united companion gains a Fly speed equal to its Speed and it gains the mount special ability. If your united companion already had the mount special ability or a Fly speed equal to its Speed, it instead increases its Speed by 10 feet. By spending a Mythic Point when you Command your united companion, your united companion can, as a two-action activity, Fly up to twice its speed and make a single unarmed melee attack at any point along the way.",
+            "Label": "Magnificent Flight"
+          },
+          "ProtectiveSkin": {
+            "Description": "Your united companion is hardened by the infused magic of otherworldly powers. Its maximum Hit Points increase by 30 but it gains a weakness of 10 to either cold iron or silver. By spending a Mythic Point when you Command your united companion, your united companion gains fast healing equal to your level for 1 minute.",
+            "Label": "Protective Skin"
+          }
+        },
+        "WeAreOne": {
+          "OffGuardToggle": "We Are One — Make target Off-Guard against your Strike"
+        }
+      },
       "BlessingOfDefiance": {
         "Prompt": "Wähle einen Rettungswurf."
       },
@@ -2273,6 +2360,12 @@
       },
       "BloodlettingKukri": {
         "Note": "Sofern das Ziel bei einem kritischen Treffer nicht bereits unter anhaltenden Blutungsschaden leidet, erhältst du zudem [[/r 1d8 #Temporäre Trefferpunkte]]{1W8 Temporäre Trefferpunkte}."
+      },
+      "BodyParts": {
+        "Arms": "Arms",
+        "Head": "Head",
+        "Legs": "Legs",
+        "Torso": "Torso"
       },
       "BonusLabel": {
         "NegativeOne": "-1",
@@ -2311,6 +2404,17 @@
         },
         "Cooldown": "Dein Eidolon kann seine Odemwaffe die nächsten [[/r 1d4 #Runden]]{1W4 Runden} nicht erneut nutzen.",
         "Scaling": "Mit der 3. Stufe und dann alle 2 weiteren Stufen steigt der Schaden um 1W6."
+      },
+      "BrokenChain": {
+        "ReleaseMe": {
+          "BonusToggle": "Release Me! — Apply melee Strike bonus"
+        },
+        "UltimatumOfLiberation": {
+          "BonusIncreaseToggle": "Ultimatum of Liberation — Increase save bonus to +3"
+        },
+        "YouCantKillAnIdea": {
+          "IdeaformToggle": "Become an ideaform"
+        }
       },
       "CapeOfJustice": {
         "Toggle": "Target is your designated offender"
@@ -2571,6 +2675,20 @@
             "Description": "Dein Körper ist daran gewöhnt, es mit körperlichen Gefahren zu tun zu haben und Krankheitserregern, Giftstoffen und anderem regelmäßig ausgesetzt zu sein. Dein Kompetenzgrad für Zähigkeitswürfe verbessert sich zu Meister. Erzielst du bei einem Zähigkeitswurf einen Erfolg, so zählt dies als Kritischer Erfolg."
           }
         },
+        "MagicalFortitude": {
+          "oracle": {
+            "Description": "Magical power has improved your body's resiliency. Your proficiency rank for Fortitude saves increases to expert."
+          },
+          "sorcerer": {
+            "Description": "Magical power has improved your body's resiliency. Your proficiency rank for Fortitude saves increases to expert."
+          },
+          "witch": {
+            "Description": "Your patron's power boosts your physical resiliency. Your proficiency rank for Fortitude saves increases to expert."
+          },
+          "wizard": {
+            "Description": "Magical power has improved your body's resiliency. Your proficiency rank for Fortitude saves increases to expert."
+          }
+        },
         "PerceptionMastery": {
           "barbarian": {
             "Description": "Dein Instinkt schärft deine Sinne. Dein Kompetenzgrad für Wahrnehmung steigt auf Meister."
@@ -2630,13 +2748,13 @@
             "Master": "Du hast das Okkulte gemeistert. Dein Kompetenzgrad für okkulte Zauberangriffswürfe und Zauber-SG steigt auf Meister."
           },
           "sorcerer": {
-            "Expert": "Deine angeborene Magie reagiert rasch und machtvoll auf deine Wünsche. Dein Kompetenzgrad für Zauberangriffswürfe und Zauber-SG steigen auf Experte.",
-            "Legendary": "Du bist ein wahres Wunderkind. Dein Kompetenzgrad für Zauberangriffswürfe und Zauber-SG der Tradition deiner Blutlinie steigt auf Legende.",
-            "Master": "Du hast die Magie in deinem Blut gemeistert. Dein Kompetenzgrad für Zauberangriffswürfe und Zauber-SG steigt auf Meister."
+            "Expert": "Your inherent magic responds easily and powerfully to your command. Your proficiency ranks for spell attack modifier and spell DC for spells of your bloodline's tradition increase to expert.",
+            "Legendary": "You demonstrate prodigious talent for spellcasting. Your proficiency ranks for spell attack modifier and spell DC for spells of your bloodline's tradition increase to legendary.",
+            "Master": "You have achieved mastery over the magic in your blood. Your proficiency ranks for spell attack modifier and spell DC for spells of your bloodline's tradition increase to master."
           },
           "summoner": {
-            "Expert": "Die Verbindung zu deinem Eidolon wird stärker und mit ihr deine Zauber. Dein Kompetenzgrad in Zauberangriffswürfen und deinem Zauber-SG für Zauber der Tradition deines Eidolons steigt auf Experte.",
-            "Master": "Die Verbindung zu deinem Eidolon ist stark genug, um dir die Meisterschaft über die damit verbundenen Zauber zu verschaffen. Dein Kompetenzgrad für Zauberangriffswürfe und Zauber-SG für die Zauber der Tradition deines Eidolons verbessert sich zu Meister."
+            "Expert": "As your connection to your eidolon deepens, the power of your spells increases. Your proficiency ranks for spell attack modifier and spell DC for spells of your eidolon's tradition increase to expert.",
+            "Master": "Your connection to your eidolon is strong enough to grant you mastery over associated spells. Your proficiency ranks for spell attack modifier and spell DC for spells of your eidolon's tradition increase to master."
           },
           "witch": {
             "Expert": "Du hast gelernt die Macht, die dir dein Schutzherr zur Verfügung gestellt hat, besser zu kontrollieren. Dein Kompetenzgrad für Zauberangriffswürfe und Zauber-SG steigt auf Experte.",
@@ -2733,6 +2851,9 @@
         },
         "CommunalHealing": {
           "Note": "Wenn du <em>Heilung</em> nutzt, um eine andere Kreatur zu heilen, erlangst du selbst @Damage[@item.rank[vitality,healing]|shortLabel] Trefferpunkte zurück."
+        },
+        "CompetitiveEdge": {
+          "RollOptionLabel": "Competitive Edge — Increase status bonus"
         },
         "CremateUndead": {
           "Note": "Wenn du <em>Heilung</em> nutzt um Untoten Schaden zuzufügen, nimmt jeder Untote zusätzlich Anhaltenden Feuerschaden (@Damage[(@item.rank)[persistent,fire]])."
@@ -2918,6 +3039,9 @@
           "AttackNote": "Ein Angriff mit deinen Reißzähnen fügt beim einem kritischen Treffer zusätzlich @Damage[1d4[bleed]]{1W4 Punkte Blutungsschaden} zu."
         }
       },
+      "Disarm": {
+        "WeakenedGraspBonusLabel": "Disarm (vs. weakened grasp)"
+      },
       "DivineAlly": {
         "AllowedDrops": "Streiter-Klassenmerkmal",
         "Prompt": "Wähle einen göttlichen Verbündeten."
@@ -3064,6 +3188,9 @@
         }
       },
       "Elf": {
+        "AgelessPatience": {
+          "Note": "You don't treat a natural 1 as worse than usual on this check; you get a critical failure only if your result is 10 lower than the DC."
+        },
         "Atavism": {
           "Prompt": "Wähle eine elfische Herkunft."
         },
@@ -3249,6 +3376,9 @@
         "MaskOfTheMantis": {
           "VernaisIreLabel": "Vernai's Ire"
         },
+        "MindsLightCirclet": {
+          "LightToggle": "Mind's Light Circlet — You have at least 1 Focus Point"
+        },
         "NosoiCharm": {
           "PerformanceLabel": "Nososglücksbringer (Instrument spielen, Singen oder Redekunst)",
           "RequestLabel": "Nososglücksbringer (Erbitten)"
@@ -3263,6 +3393,10 @@
         },
         "RobeOfTheArchmagi": {
           "VsArcaneSpells": "{item} (gg. Arkane Zauber)"
+        },
+        "RootBoots": {
+          "GripGround": "Root Boots — Grip the Ground",
+          "WoodenSurfaceLabel": "Root Boots — Wooden Surface"
         },
         "ScapularOfShields": {
           "CriticalImmunityLabel": "Activate Scapular of Shields to gain critical immunity.",
@@ -3300,6 +3434,18 @@
         },
         "ZuhrasGloves": {
           "WallOfMetalLabel": "Metallwand ist aktiv"
+        }
+      },
+      "EternalLegend": {
+        "DeathFromAbove": {
+          "Label": "Death from Above",
+          "Note": "The target dealt damage by your Strike must succeed at a @Check[fortitude|against:class] or become @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}."
+        },
+        "Dedication": {
+          "AdjustmentToggle": "Eternal Legend — Apply adjustment against condition"
+        },
+        "FinishTheirStory": {
+          "Note": "The target dies instantly."
         }
       },
       "Exemplar": {
@@ -3711,7 +3857,7 @@
       "Geomancer": {
         "AttunementShift": "Einstimmungswechsel",
         "TerrainAttunement": {
-          "Aquatic": "Du erhältst eine Bewegungsrate für Schwimmen entsprechend deiner Bewegungsrate an Land. Stehst du hingegen auf einer festen Oberfläche, folgen vorübergehend auftauchende Wellen deinen Bewegungen, sodass du deine Bewegungsrate für Schwimmen (sofern vorhanden) als deine Bewegungsrate an Land nutzen kannst.",
+          "Aquatic": "You gain a swim Speed equal to your land Speed. If you're on a surface, temporary waves of water follow your movements, allowing you to use your swim Speed—if you have one—as your land Speed. This effect lasts 1 round.",
           "Arctic": "Feinde müssen einen @Check[fortitude]{Zähigkeitswurf} ablegen. Bei einem Fehlschlag erhalten sie für 2 Runden einen Zustandsmalus von -5 Fuß/1,50 m (bzw. -10 Fuß/3 m bei einem Kritischen Fehlschlag) auf ihre Bewegungsraten.",
           "Desert": "Feinde müssen einen @Check[fortitude]{Zähigkeitswurf} ablegen. Bei einem Fehlschlag erhalten sie den Zustand @UUID[Compendium.pf2e.conditionitems.HL2l2VRSaQHu9lUw]{Erschöpft}, bis sie Wasser trinken oder eine andere hydrierende Flüssigkeit zu sich nehmen.",
           "Forest": "Äste und Ranken legen sich deinen Gegnern gezielt in den Weg. Deine Feinde müssen daher einen @Check[reflex]{Reflexwurf} ablegen; bei einem Fehlschlag erleidet ein Gegner für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.i3OJZU2nk64Df3xm]{Unbeholfen 1} (bzw. @UUID[Compendium.pf2e.conditionitems.i3OJZU2nk64Df3xm]{Unbeholfen 2} bei einem Kritischen Fehlschlag).",
@@ -3759,6 +3905,15 @@
         "Twitchy": {
           "InitiativeToggle": "Zappelig - Gegner nutzt Diplomatie oder Täuschung für Initiative",
           "TOTMToggle": "Zappelig - Verteidigung gegen Gefahren"
+        }
+      },
+      "Godling": {
+        "DivineInvulnerability": {
+          "IncreasedResistanceToggle": "Divine Invulnerability — Increase resistance"
+        },
+        "DomainDamageDropdown": "Godling — Domain damage type",
+        "StymieTheGods": {
+          "BonusToggle": "Stymie the Gods — Defending against an extraplanar creature"
         }
       },
       "GoldenBladeOfMzali": {
@@ -3851,8 +4006,7 @@
       "HeroPointDeck": {
         "AncestralMight": {
           "FirstBoostPrompt": "Select one of your ancestry boosts, or pick any if it only had free boosts.",
-          "SecondBoostPrompt": "Select another one of your ancestry boosts. Skip if it only had free boosts.",
-          "SkipChoice": "Skip"
+          "SecondBoostPrompt": "Select another one of your ancestry boosts. Decline if it only had free boosts."
         },
         "AuraOfProtection": {
           "SpellRankPrompt": "Select the rank of the spell you just cast."
@@ -4244,6 +4398,7 @@
         "AdvancedMerfolkWeapons": "Aquarier Spezialwaffen",
         "AdvancedOrcWeapons": "Orkische Spezialwaffen",
         "AdvancedSamsaranWeapons": "Samsaranische Spezialwaffen",
+        "AdvancedStudentOfArchery": "Advanced Student of Archery Weapon",
         "AdvancedSurkiWeapons": "Surki Spezialwaffen",
         "AdvancedTenguWeapons": "Tengu-Spezialwaffen",
         "AdvancedTripkeeWeapons": "Tripkie Spezialwaffen",
@@ -4297,6 +4452,7 @@
         "MartialOniWeapons": "Oni Kriegswaffen",
         "MartialOrcWeapons": "Orkische Kriegswaffen",
         "MartialSamsaranWeapons": "Samsaranische Kriegswaffen",
+        "MartialStudentOfArchery": "Martial Student of Archery Weapon",
         "MartialSurkiWeapons": "Surki Kriegswaffen",
         "MartialTenguWeapons": "Tengu-Kriegswaffen",
         "MartialTripkeeWeapons": "Tripkie Kriegswaffen",
@@ -4418,6 +4574,9 @@
         "Triple": {
           "Label": "Triple"
         }
+      },
+      "Mythic": {
+        "PointSpentPrompt": "Was a Mythic Point spent on this ability?"
       },
       "Nagaji": {
         "VenomSpit": {
@@ -4550,6 +4709,7 @@
       "Prompt": {
         "AdvancedMulticlassFeat": "Wähle ein Klassentalent bis zur Hälfte deiner Charakterstufe.",
         "Alignment": "Wähle eine Gesinnung",
+        "Attribute": "Select an attribute.",
         "Benefit": "Wähle einen Vorteil.",
         "Cantrip": "Wähle einen Zaubertrick",
         "CantripOrNonCantrip": "Wähle Zaubertrick oder Zauber.",
@@ -4574,6 +4734,7 @@
         "Immunity": "Wähle eine Immunität",
         "Item": "Wähle einen Gegenstand.",
         "Lesson": "Wähle eine Lektion.",
+        "Level": "Select a level.",
         "LevelOneAncestryFeat": "Wähle ein Abstammungstalent der 1. Stufe.",
         "LevelOneClassFeat": "Wähle ein Klassentalent der 1. Stufe.",
         "LevelOneOrTwoClassFeat": "Wähle ein Klassentalent der 1. oder 2. Stufe.",
@@ -4583,6 +4744,7 @@
         "Penalty": "Wähle einen Malus",
         "Persona": "Select a persona trait.",
         "PsiCantrip": "Wähle einen Mentalen Zaubertrick.",
+        "RangedWeapon": "Select a ranged weapon.",
         "Resistance": "Wähle eine Resistenz.",
         "Rune": "Wähle eine Rune.",
         "Sanctification": "Wähle deine Weihe",
@@ -4684,6 +4846,7 @@
             "Base": "Deine telepathische Nachricht gestattet dir, eure Handlungen zu koordinieren, während du Informationen weitergibst. Das Ziel der Botschaft kann augenblicklich seine Reaktion für Laufen oder Schritt nutzen.",
             "Heightened": "Das Ziel der Botschaft kann als Reaktion alternativ Angriff, @UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Fortstoßen} oder @UUID[Compendium.pf2e.actionspf2e.Item.ge56Lu1xXVFYUnLP]{Zu Fall bringen} wählen."
           },
+          "MindsLightCirclet": "You transfer some of the magical luminescence from the mind's light circlet to one of the creatures. Choose a creature targeted by the spell or in its area. Until the start of your next turn, that creature sheds bright light in a 20-foot radius (and dim light to the next 20 feet) and can't be @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed}. If the creature is @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Invisible}, it's concealed while alight, rather than being @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Undetected}.",
           "OmnidirectionalScan": {
             "Base": "Deine Beobachtungen sind so genau, dass du die wahrscheinlichen Stärken und Schwächen deines Gegners weitergeben kannst. Du erfährst den höchsten und den niedrigsten Rettungswurf des ausgewählten Gegners und du und alle deine Verbündeten innerhalb von 30 Fuß/9 m erhalten einen Situationsbonus von +1 auf Angriffs- und Schadenswürfe gegen die Kreatur.",
             "BaseTwo": "Nutzt du die vorbereitete Reaktion zum Unterstützen und gelingt dein Wurf, so steigen diese Boni bei dem von dir unterstützten Angriff auf +2. Im Fall eines Kritischen Erfolges steigt der Bonus auf +3, bzw. auf +4, solltest du in Zauberangriffswürfen den Kompetenzgrad Legendär besitzen."
@@ -4777,6 +4940,11 @@
         }
       },
       "Ranger": {
+        "FocusSpells": {
+          "GravityWeapon": {
+            "RollOptionLabel": "Gravity Weapon - First weapon Strike this round"
+          }
+        },
         "HamstringingStrike": {
           "Note": "Wenn du deine Beute triffst, erleidet die Kreatur einen Situationsmalus von -5 Fuß/1,50 m auf die Bewegungsrate. Bei einem Kritischen Treffer erhöht sich der Malus auf -10 Fuß/3 m. @UUID[Compendium.pf2e.feat-effects.Item.ESnzqtwSgahLcxg2]{Effekt: Sehnenschnitt}",
           "Prompt": "Wähle ein Trefferergebnis."
@@ -4980,6 +5148,9 @@
           "SpellNote": "Immer wenn du einen Zauber aus einem deiner Zauberplätze wirkst, erhältst du einen Zustandsbonus von +1 auf Angriffswürfe mit deinen unbewaffneten Angriffen bis zum Beginn deines nächsten Zuges."
         }
       },
+      "SkilledClimber": {
+        "Label": "Climbing Cavern Wall or Tree"
+      },
       "SkillMastery": {
         "ExpertPrompt": "Wähle eine Fertigkeit in der du Experte wirst.",
         "MasterPrompt": "Wähle eine Fertigkeit in der du Meister wirst."
@@ -5106,6 +5277,21 @@
       },
       "SpellEffectGluttonsJaw": {
         "Text": "Wenn du triffst und Schaden verursachst, erhältst du [[/r (ceil(@item.level/2))d6 #Temporäre Trefferpunkte]]{Temporäre Trefferpunkte}."
+      },
+      "SpellEffectMantle": {
+        "FrozenHeart": {
+          "Label": {
+            "ChillingIce": "Chilling Ice",
+            "HeartOfIce": "Heart of Ice",
+            "IceGlide": "Ice Glide",
+            "IceGlideSurface": "Moving along a smooth surface",
+            "IcyClaws": "Icy Claws"
+          },
+          "RollOptionLabel": {
+            "First": "Mantle of the Frozen Heart — First ability",
+            "Second": "Mantle of the Frozen Heart — Second ability"
+          }
+        }
       },
       "SpellEffectPreciousMetals": {
         "Copper": "Kupfer",
@@ -5306,7 +5492,7 @@
         "Martyr": "Du verlierst pro Zaubergrad 1W8 TP (dies kann nicht reduziert oder anderweitig abgefangen werden) und dein Verbündeter erlangt dieselbe Anzahl an Trefferpunkten zusätzlich zurück (@Damage[(@item.rank)d8]).",
         "MelodiousSpell": "Der Zauber erhält die Kategorie Subtil. Diese Kategorie verbirgt nur die Handlung des Zauberns selbst und die Manifestationen, nicht aber die Effekte des Zaubers. Du kannst wählen, als Teil dieser Aktion @UUID[Compendium.pf2e.actionspf2e.Item.GkmbTGfg8KcgynOA]{Für Ablenkung zu sorgen}, zu @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralisieren}, zu @UUID[Compendium.pf2e.actionspf2e.Item.DCb62iCBrJXy0Ik6]{Erbitten} oder einen @UUID[Compendium.pf2e.actionspf2e.Item.EEDElIyin4z60PXx]{Auftritt} auszuführen. In diesem Fall muss der folgende Zauber über die Kategorie Gefühl, Hörbar, Schall oder Sichtbar verfügen, um die Kategorie Subtil erhalten zu können.",
         "NonLethal": "Solltest du als nächste Handlung einen Zauber wirken, welcher Schaden verursacht und nicht die Kategorie Leere oder Tod besitzt, so erhält dieser Zauber die Kategorie Nichttödlich.",
-        "OstentatiousArrivalManifestEidolon": "Alle Kreaturen innerhalb einer @Template[type:emanation|distance:10]{10 Fuß/3 m Ausstrahlung} um die herbeigezauberte oder manifestierte Kreatur erleiden Feuerschaden (@Damage[(@actor.level)d4[@actor.flags.pf2e.spellshape.arrayDamage]]). Sollte die herbeigezauberte oder manifestierte Kreatur die Kategorie Elektrizität, Feuer, Kälte, Schall oder Wasser besitzen, so entspricht die Schadensart stattdessen dieser Kategorie (bzw. Kälteschaden bei der Kategorie Wasser). Sollte die Kreaturen mehreren dieser Kategorien angehören, entscheidest du, welchen Schaden sie verursacht.",
+        "OstentatiousArrivalManifestEidolon": "All creatures except you in a @Template[type:emanation|distance:10] around the creature you summoned or manifested take @Damage[(@actor.level)d4[@actor.flags.pf2e.spellshape.arrayDamage]]. If the creature you summoned or manifested has the acid, cold, electricity, fire, sonic, or water trait, the damage is that type instead (or cold damage for the water trait). If the creature has more than one of these traits, you choose which damage type to deal.",
         "OstentatiousArrivalSummonSpell": "Alle Kreaturen innerhalb einer @Template[type:emanation|distance:10]{10 Fuß/3 m Ausstrahlung} um die herbeigezauberte oder manifestierte Kreatur erleiden Feuerschaden (@Damage[(@item.level)d4[@actor.flags.pf2e.spellshape.arrivalDamage]]). Sollte die herbeigezauberte oder manifestierte Kreatur die Kategorie Elektrizität, Feuer, Kälte, Schall oder Wasser besitzen, so entspricht die Schadensart stattdessen dieser Kategorie (bzw. Kälteschaden bei der Kategorie Wasser). Sollte die Kreaturen mehreren dieser Kategorien angehören, entscheidest du, welchen Schaden sie verursacht.",
         "OverwhelmingBreath": "Wirkst du als nächste Handlung einen Zauber der Kategorie Mönch, welcher keine Wirkungsdauer besitzt, so ignorieren der Zauber und alle Angriffe, die du durch ihn ausführen kannst, beim Ziel Resistenz gegen Körperlichen Schaden in Höhe deiner Stufe.",
         "OverwhelmingEnergy": "Sofern deine nächste Handlung das Wirken eines Zaubers ist, ignoriert dieser Zauber beim Ziel Resistenz gegen Elektrizität, Feuer, Kälte, Säure oder Schall in Höhe deiner Stufe. Dies gilt für sämtlichen Schaden, den der Zauber generiert, Anhaltenden Schaden und Schaden aufgrund eines anhaltenden Effektes des Zaubers eingeschlossen, z.B. die Wand, welche eine @UUID[Compendium.pf2e.spells-srd.Item.IarZrgCeaiUqOuRu]{Feuerwand} erzeugt. Immunitäten einer Kreatur sind hiervon nicht betroffen.",
@@ -5503,6 +5689,9 @@
           "Success": "Wenn du dich beim Erfolg vollständig durch das Feld des Ziels bewegen konntest, erhält es bis für deinen nächsten Angriff eine Schwäche gegen deinen Präzisionsschaden. @UUID[Compendium.pf2e.feat-effects.Item.SLXhPgaeKB0W3k1D]{Effekt: Je größer sie sind}"
         }
       },
+      "SwearOath": {
+        "RollOptionLabel": "Swear Oath — Apply bonus to readied action"
+      },
       "TOTMToggle": {
         "FirstRangeIncrement": "Aktiviere Fähigkeiten die erfordern, dass sich dein Ziel innerhalb der ersten Entfernungseinheit der Waffe befindet.",
         "Incorporeal": "Aktiviere Fähigkeiten die erfordern, dass das Ziel körperlos ist",
@@ -5520,6 +5709,7 @@
         "Toshiro": "Toshiro"
       },
       "Target": {
+        "AgainstAnimals": "Against Animals",
         "AgainstDemons": "Gegenüber Dämonen",
         "AgainstDevils": "Gegenüber Teufeln",
         "AgainstHumanoids": "Gegenüber Humanoiden",
@@ -5560,15 +5750,70 @@
       },
       "Thaumaturge": {
         "Implement": {
-          "Amulet": "Amulett",
-          "Bell": "Glocke",
-          "Chalice": "Kelch",
-          "Lantern": "Laterne",
-          "Mirror": "Spiegel",
-          "Regalia": "Insignie",
-          "Tome": "Buch",
-          "Wand": "Stab",
-          "Weapon": "Waffe"
+          "Adept": {
+            "Label": "Implement Adept"
+          },
+          "Amulet": {
+            "Adept": {
+              "Description": "When you use Amulet's Abeyance, you or your ally chooses one type of damage dealt by the triggering attack and gains resistance 5 against that damage type until the start of your next turn. At 15th level, this lingering resistance increases from 5 to 10.",
+              "Prompt": "Select a damage type dealt by the triggering attack."
+            },
+            "Label": "Amulet"
+          },
+          "Bell": {
+            "Label": "Bell"
+          },
+          "Chalice": {
+            "Adept": {
+              "DescriptionAlteration": "On a sip, the temporary Hit Points granted to the creature increase to 2 + your Charisma modifier + your level. When drained, the chalice heals the creature 5 Hit Points for each level you have.",
+              "Note": "If you or an ally within 30 feet takes piercing or slashing damage from a foe's critical hit or takes persistent bleed damage, Drinking from the Chalice before the end of your next turn grants that injured creature greater restoration to make up for its lost vitality. On a sip, the temporary Hit Points granted to the creature increase to 2 + your Charisma modifier + your level. When drained, the chalice heals the creature 5 Hit Points for each level you have. @UUID[Compendium.pf2e.feat-effects.Item.Sq558879cgEc1lGC]{Effect: Chalice Adept Benefit (Self)}"
+            },
+            "Label": "Chalice"
+          },
+          "Lantern": {
+            "BonusToggle": "Target is within the lantern's bright light",
+            "Label": "Lantern",
+            "LightToggle": "Light lantern implement"
+          },
+          "Mirror": {
+            "Label": "Mirror"
+          },
+          "Paragon": {
+            "Label": "Implement Paragon"
+          },
+          "Prompt": "Select an implement.",
+          "Regalia": {
+            "Label": "Regalia",
+            "UnflankableToggle": "Regalia owner is being flanked."
+          },
+          "Tome": {
+            "FirstSkillDropdown": "Tome — First skill",
+            "Label": "Tome",
+            "Paragon": {
+              "InitiativeBonusLabel": "Tome (Paragon)",
+              "InitiativeToggle": "Tome — Initiative vs. creatures or haunts"
+            },
+            "SecondSkillDropdown": "Tome — Second skill"
+          },
+          "Wand": {
+            "Adept": {
+              "Cold": "If the target fails its save and takes damage, it becomes chilled, taking a –10-foot status penalty to its Speeds for 1 round.",
+              "RangeIncrease": "Tne range of Fling Magic increases to 120 feet.",
+              "Electricity": "If the target fails its save and takes damage, it becomes shocked, becoming @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} until the end of your next turn.",
+              "Fire": "If the target fails its save and takes damage, it catches flame, taking @Damage[1d10[persistent,fire]] (or @Damage[2d10[persistent,fire]] on a critical failure).",
+              "FireParagon": "If the target fails its save and takes damage, it catches flame, taking @Damage[2d10[persistent,fire]] (or @Damage[4d10[persistent,fire]] on a critical failure)."
+            },
+            "Label": "Wand",
+            "Paragon": {
+              "Description": "The range of Fling Magic increases to 180 feet. You can choose to target a single creature or to affect all creatures in a @Template[burst|distance:20]."
+            }
+          },
+          "Weapon": {
+            "Adept": {
+              "Note": "You deal @Damage[1[@item.system.damage.damageType]] damage, possibly applying any bonus damage due to the target's weakness."
+            },
+            "Label": "Weapon"
+          }
         },
         "TalismanEsoterica": "Talisman-Esoterica"
       },
@@ -5648,6 +5893,12 @@
         "Note": "When you use Stunning Fist, instead of saving against being stunned, you can choose to have the target make a @Check[fortitude|against:class] save against your class DC with the following results. You must choose to do this before the target rolls its save.</p><hr><p><strong>Critical Success</strong> The target is unaffected.</p><p><strong>Success</strong> The target's muscles become temporarily weaker. For 1 round, the target is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2}, and any time it attempts to take an action with the manipulate trait, the action is disrupted unless it succeeds at a flat check with a DC equal to 5 + its enfeebled value.</p><p><strong>Failure</strong> As success, but the duration is 1 minute.</p><p><strong>Critical Failure</strong> As success, but the duration is 1 minute, the flat check is DC 11, and the target takes -10-foot status penalty to all Speeds for the duration.</p>",
         "StrikeLabel": "Vitality Blast"
       },
+      "WanderingChef": {
+        "RegionalSpecialty": {
+          "BonusToggle": "Regional Specialty — Apply saving throw bonus",
+          "Prompt": "Is the item 18th level or higher?"
+        }
+      },
       "WardMedic": {
         "Note": "Wenn du die Handlungen Wunden versorgen oder Krankheiten behandeln einsetzt, dann kannst du zwei Ziele behandeln. Besitzt du den Kompetenzgrad Meister in Heilkunde, kannst du vier Ziele gleichzeitig versorgen und mit dem Kompetenzgrad Legende kannst du bis zu 8 Patienten gleichzeitig behandeln."
       },
@@ -5697,6 +5948,9 @@
           "Label": "Wereber"
         },
         "Werecrocodile": {
+          "DeathRoll": {
+            "ToggleLabel": "Death Roll — In Water"
+          },
           "Description": "Du erhältst eine Bewegungsrate von 25 Fuß/7,50 m und eine Bewegungsrate von 15 Fuß/4,50 m für Schwimmen. Dein Angriff ist ein Bissangriff mit 1W8 Stichschaden und der Kategorie Ergreifen. Du kannst in Tier- und Hybridgestalt deinen Atem 2 Stunden lang anhalten.",
           "Label": "Werkrokodil"
         },
@@ -5721,7 +5975,7 @@
           "Label": "Werwolf"
         },
         "YouDontSmellRight": {
-          "Label": "Suche um eine verkleidete Kreatur zu erkennen."
+          "Label": "Seek to determine if a creature is disguised"
         }
       },
       "WingedWarrior": {
@@ -5803,10 +6057,10 @@
             "RollOptionLabel": "Du triffst denselben Gegner mit zwei aufeinanderfolgenden Fingernagelangriffen"
           },
           "IronTeeth": {
-            "Note": "Fügst du einer Kreatur mit einem Bissangriff Kritischen Schaden zu, so muss sie einen @Check[fortitude|against:witch]{Zähigkeitswurf} (Klassen SG) ablegen; bei Misslingen erleidet sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1}."
+            "Note": "A creature that you critically hit with a jaws Strike must succeed at a @Check[fortitude|against:class-spell] save gainst your class DC or Spell DC or become @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}."
           },
           "LivingHair": {
-            "SrikeLabel": "Stachel"
+            "StrikeLabel": "Quill"
           }
         },
         "WitchsArmaments": {
