@@ -102,7 +102,6 @@
     },
     "ActionActionTypeLabel": "Aktionsart",
     "ActionActionsLabel": "Aktionen",
-    "ActionBrowserSearchHint": "Sie können nach Namen oder benutzerdefinierten Attributen suchen. Mögliche Suchattribute sind:<br>source, spellType, level, materials, target, range, time, duration, damage, damageType, save, concentration, ritual, ability and classes. <br>Beispiel: 'fire, damage:d6' um alle Zauber zu finden, die Feuer in ihrem Namen und einen W6 im Schaden haben",
     "ActionNumber1": "Eine",
     "ActionNumber2": "Zwei",
     "ActionNumber3": "Drei",
@@ -210,14 +209,21 @@
           "Title": "Charakter konfigurieren"
         },
         "Crafting": {
+          "Action": {
+            "Hint": "Select an item to craft using {resource} ({value}/{max})"
+          },
           "BatchQuantity": "x{quantity}",
           "Cost": "Kosten",
           "Daily": {
             "Complete": "Tägliche Herstellung abgeschlossen.",
             "Perform": "Tägliche Herstellung durchführen"
           },
-          "MissingResource": "Unzureichende Rohstoffe für das Herstellen.",
-          "RemainingSlots": "Leerer Platz ({remaining} verbleibend)"
+          "FreeCrafting": "Free Crafting",
+          "FreeCraftingTooltip": "If enabled, creates items immediately without spending gold",
+          "MissingResource": "You have insufficient resources to complete crafting.",
+          "PrepareHint": "Select the items that you want to prepare",
+          "RemainingSlots": "Leerer Platz ({remaining} verbleibend)",
+          "Search": "Search Formulas"
         },
         "CreateFeat": "Talent hinzuf.",
         "FeatSlot": {
@@ -235,6 +241,7 @@
           "MythicDestinyPlaceholder": "Mythic Destiny",
           "MythicHeader": "Mythic",
           "MythicFeatPlaceholder": "Mythic Feat",
+          "MythicTier": "Tier",
           "SkillHeader": "Fertigkeitstalente"
         },
         "HandsOccupied": "Hänge belegt",
@@ -538,6 +545,7 @@
         "Section": {
           "WeaponsAndShields": "Waffen & Schilde"
         },
+        "Search": "Search Inventory",
         "TotalBulk": "Gesamte Last: {bulk}",
         "UnitTitle": {
           "Bulk": "Einzellast",
@@ -853,7 +861,6 @@
     "BackgroundSkillFeats": "Fertigkeitstalente",
     "BaseModifier": "Basismodifikator",
     "BaseWeapons": "Basiswaffen",
-    "BestiaryBrowserSearchHint": "Sie können nach Namen oder benutzerdefinierten Attributen suchen. Mögliche suchbare Attribute sind:<br> source, spellType, level, materials, target, range, time, duration, damage, damageType, save, concentration, ritual, ability and classes.<br>Beispiel: 'fire, damage:d6' um alle Zauber zu zeigen, die feuer in ihrem Namen und einen W6 im Schaden haben",
     "Biography": "Biografie",
     "BiographyAllies": "Verbündete",
     "BiographyAppearance": "Erscheinungsbild",
@@ -883,35 +890,6 @@
     "BonusSPLabel": "Bonus AP",
     "BonusSPperLevel": "Bonus AP pro Stufe",
     "BrowseLabel": "Auflisten",
-    "BrowserClearFilter": "Filter löschen",
-    "BrowserClearFilters": "Alle Filter löschen",
-    "BrowserFilterAlignments": "Gesinnungen",
-    "BrowserFilterAncestries": "Abstammungen",
-    "BrowserFilterArmorFilters": "Rüstungsfilter",
-    "BrowserFilterCastingTime": "Einsatzzeit",
-    "BrowserFilterCategory": "Kategorien",
-    "BrowserFilterClass": "Klassen",
-    "BrowserFilterComplexity": "Gefahrenkomplexität",
-    "BrowserFilterConjunction": {
-      "AndLabel": "Alle der Oberen",
-      "OrLabel": "Eines der Oberen"
-    },
-    "BrowserFilterInventoryTypes": "Gegenstandsarten",
-    "BrowserFilterLevels": "Stufen",
-    "BrowserFilterProficiencyRequirements": "Kompetenzanforderungen",
-    "BrowserFilterRarities": "Seltenheitsgrade",
-    "BrowserFilterSizes": "Größen",
-    "BrowserFilterSkills": "Fertigkeiten",
-    "BrowserFilterSource": "Quellen",
-    "BrowserFilterSpellCategories": "Kategorien",
-    "BrowserFilterTraditions": "Traditionen",
-    "BrowserFilterTraits": "Merkmale",
-    "BrowserFilterWeaponFilters": "Waffenfilter",
-    "BrowserSearchPlaceholder": "Suchtext",
-    "BrowserSearchTitle": "Anleitung mit Rechtsklick",
-    "BrowserSettingsSaved": "Eingaben wurden gespeichert",
-    "BrowserSortyByLabel": "Sortieren nach",
-    "BrowserWarnPackNotLoaded": "Kompendium \"{pack}\" konnte nicht geladen werden.",
     "BulkMaxLabel": "Max. Last",
     "CapacityBarLabel": "Kapazität",
     "CarryType": {
@@ -942,7 +920,11 @@
     "CharacterTraits": "Charaktermerkmale",
     "CharacterTraitsHeader": "Kategorien & andere Details",
     "ChatRollDetails": {
+      "ContextualOptions": {
+        "postRoll": "Post Roll Options"
+      },
       "DiceAndModifiers": "Würfel und Modifikatoren",
+      "DiceRollOptionsHint": "Dice and modifier roll options are used when predicating DamageAlteration rule elements.",
       "FlatCheckNoModifiers": "Einfache Würfe enthalten keine Modifikatoren, Boni oder Mali.",
       "RollOptions": "Wurfoptionen",
       "Select": "Wurf untersuchen",
@@ -1013,6 +995,33 @@
       "BuyLabel": "Kaufe Gegenstand",
       "FailedToBuyItemWithCharacter": "{item} konnte nicht von {character} gekauft werden.",
       "FailedToBuyItemWithSomeCharacters": "{item} konnte von einigen der ausgewählten Akteuren nicht gekauft werden.",
+      "Filter": {
+        "Alignments": "Alignments",
+        "Ancestries": "Ancestries",
+        "ArmorFilters": "Armor Filters",
+        "ClearFilter": "Clear",
+        "ClearAllFilters": "Clear All Filters",
+        "CastingTime": "Casting time",
+        "Categories": "Categories",
+        "Class": "Classes",
+        "Complexity": "Hazard Complexities",
+        "Conjunction": {
+          "AndLabel": "All of above",
+          "OrLabel": "Any of above"
+        },
+        "FilterSources": "Filter Sources",
+        "InventoryTypes": "Inventory Types",
+        "Levels": "Levels",
+        "OrderByLabel": "Order by",
+        "ProficiencyRequirements": "Proficiency Requirements",
+        "Rarities": "Rarities",
+        "Sizes": "Sizes",
+        "Source": "Sources",
+        "Traditions": "Traditions",
+        "WeaponFilters": "Weapon Filters",
+        "SearchPlaceholder": "Search Text",
+        "WarnPackNotLoaded": "Compendium \"{pack}\" could not be loaded."
+      },
       "Hint": "Nutze die Tabs oben um ein Kompendium auszuwählen",
       "RollTable": {
         "AddDialogText": "{count} Ergebnis(se) zu Würfeltabelle hinzufügen?",
@@ -1024,15 +1033,22 @@
         "WeightLabel": "Gewichtung"
       },
       "Settings": {
+        "OpenSettings": "Open Settings",
         "PacksLabel": "Pakete",
-        "SourcesLabel": "Quellen"
+        "Saved": "Settings have been saved",
+        "SourcesLabel": "Quellen",
+        "Title": "Compendium Browser Settings"
       },
       "TabAction": "Aktionen",
       "TabBestiary": "Monster",
       "TabCampaign": "Kampagne",
       "TabFeat": "Merkmale/Talente",
       "TakeLabel": "Gegenstand nehmen",
-      "Title": "Kompendienbrowser"
+      "Title": "Kompendienbrowser",
+      "TraitsComponent": {
+        "Empty": "No options",
+        "NoMatch": "No matching options"
+      }
     },
     "CompendiumMigrationStatus": {
       "Document": "Document",
@@ -1131,10 +1147,8 @@
       "CraftQuantityTitle": "Anzahl",
       "ExpendFormula": "Formel anwenden",
       "NoEligibleEntry": "Kein zulässiger Handwerks-Eintrag gefunden.",
-      "QuickAddTitle": "Fügen Sie diese Formel schnell der täglichen Handwerksliste hinzu",
       "RemoveFormulaDialogQuestion": "Bist du sicher, dass du die Formel für {name} entfernen willst?",
       "RemoveFormulaDialogTitle": "Formel entfernen",
-      "ToggleFreeCrafting": "Schalte kostenloses Handwerk um",
       "ToggleQuickAlchemy": "Schnelle Alchemie",
       "UndeletableTooltip": "Diese Handwerksformel ist Teil eines anderen Elements und kann nicht einzeln gelöscht werden.",
       "UnprepareFormulaDialogQuestion": "Bist du sicher die Formel für {name} nicht mehr vorzubereiten?",
@@ -1609,7 +1623,6 @@
     "FeatActionTypeLabel": "Aktionsart",
     "FeatActionsLabel": "Anzahl der Aktionen",
     "FeatBackgroundShort": "HG",
-    "FeatBrowserSearchHint": "Sie können nach Namen oder benutzerdefinierten Attributen suchen. Mögliche suchbare Attribute sind:<br>source, spellType, level, materials, target, range, time, duration, damage, damageType, save, concentration, ritual, ability und classes. <br>Beispiel: 'fire, damage:d6' um alle Zauber zu finden, die Feuer in ihrem Namen und einen W6 im Schaden haben",
     "FeatLevelLabel": "Stufe",
     "FeatPFSBoonHeader": "Gesellschaftssegen",
     "FeatPrereqLabel": "Voraussetzungen",
@@ -1705,7 +1718,6 @@
       "TypeUnsupported": "Fehler in @Template: type {type} wird nicht unterstützt",
       "WidthNoNumber": "Fehler in @Template: width {width} ist keine Zahl"
     },
-    "InventroyBrowserSearchHint": "Sie können nach Namen oder benutzerdefinierten Attributen suchen. Mögliche suchbare Attribute sind:<br> source, spellType, level, materials, target, range, time, duration, damage, damageType, save, concentration, ritual, ability und classes. <br>Beispiel: 'fire, damage:d6' um alle Zauber zu finden, die Feuer in ihrem Namen und einen W6 im Schaden haben",
     "InvestedLabel": "Resonanz aufgebaut",
     "Item": {
       "ABC": {
@@ -1720,6 +1732,10 @@
           "Interaction": "Interaktion",
           "Offensive": "Offensiv",
           "Familiar": "Vertrautenfähigkeit"
+        },
+        "CraftedItem": {
+          "Crafted": "{item} was crafted.",
+          "CraftedWithoutResources": "Crafted without required resources"
         },
         "FIELDS": {
           "deathNote": {
@@ -2471,6 +2487,8 @@
         },
         "LevelLabel": "Gegenstand {level}",
         "OtherTag": {
+          "AlchemicalFood": "Alchemical Food",
+          "AlchemicalTool": "Alchemical Tool",
           "HandwrapsOfMightyBlows": "Schlaghandwickel",
           "Herbal": "Kräuter",
           "Improvised": "Improvisiert",
@@ -2878,7 +2896,7 @@
           "ConstantSpells": "<p>Ein ständig wirkender Zauber wirkt unbegrenzt lange auf das Monster, ohne dass es diesen wirken muss. Sollte einem ständig wirkenden Zauber entgegengewirkt werden, kann das Monster ihn wieder aktivieren, indem es die zum normalen Wirken des Zaubers notwendigen Aktionen aufwendet.</p>",
           "Constrict": "<p>Das Monster fügt einer beliebigen Anzahl an Kreaturen, die es @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{ergriffen} oder @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{gebunden} hat, den angegebenen Schaden zu. Jede dieser Kreaturen kann einen einfachen Zähigkeitswurf gegen den angegebenen SG ablegen.</p>",
           "Coven": "<p>Dieses Monster kann mit wenigstens zwei weiteren Kreaturen, die ebenfalls die Fähigkeit Zirkel besitzen, einen Zirkel bilden. Dazu ist eine Zeremonie über 8 Stunden vonnöten, an der alle angehenden Mitglieder des Zirkels teilhaben müssen. Nach Bildung des Zirkels erhalten alle Mitglieder die Anpassung Eliteversion, wobei ihre Stufen entsprechend angepasst werden. Die Mitglieder des Zirkels können durch Aufwenden einer Aktion mit der Kategorie Konzentration spüren, wo sich die anderen Mitglieder aufhalten und welche Zustände sie zurzeit haben. Mit einer Zwei Aktionen erfordernden Aktivität, die ebenfalls die Kategorie Konzentration hat, kann ein Mitglied des Zirkels wahrnehmen, was ein anderes Mitglied wahrnimmt.</p>\n<p>Der Zirkel gewährt seinen Mitgliedern weitere Zauber und Rituale. Diese können aber nur in Zusammenarbeit von drei Mitgliedern des Zirkels gewirkt werden, die sich innerhalb von 9 m voneinander befinden. Ein Mitglied des Zirkels kann zu dem Zirkelzauber beitragen, indem es eine Aktion zum Zauberwirken mit der Kategorie Konzentration aufwendet. Wenn während der letzten Runde zwei Mitglieder des Zirkels diese Aktionen beigetragen haben, kann ein drittes Mitglied den Zirkelzauber in seinem Zug wirken, indem es die normal zum Wirken des Zaubers notwendigen Aktionen aufwendet. Der Zirkel kann seine Zirkelzauber beliebig oft wirken, kann aber nicht mehr als einen Zirkelzauber pro Runde wirken. Alle Zirkel gewähren den Zauber @UUID[Compendium.pf2e.spells-srd.Item.dN8QBNuTiaBHCKUe]{Verfluchte Verwandlung} auf dem 8. Grad, sowie alle folgenden Zauber, die der Zirkel auf beliebigem Grad bis zum 5. Grad wirken kann: @UUID[Compendium.pf2e.spells-srd.Item.Ek5XI0aEdZhBgm21]{Ausspähendes Auge}, @UUID[Compendium.pf2e.spells-srd.Item.HXhWYJviWalN5tQ2]{Hellhören}, @UUID[Compendium.pf2e.spells-srd.Item.zvKWclOZ7A53DObE]{Hellsehen}, @UUID[Compendium.pf2e.spells-srd.Item.vLA0q0WOK2YPuJs6]{Kreatur bezaubern}, @UUID[Compendium.pf2e.spells-srd.Item.FM3SmEW8N1FCRjqt]{Sprechende Leiche}, @UUID[Compendium.pf2e.spells-srd.Item.Ucf8eynbZMfUucjE]{Szenisches Trugbild}, @UUID[Compendium.pf2e.spells-srd.Item.yM3KTTSAIHhyuP14]{Traumnachricht}, @UUID[Compendium.pf2e.spells-srd.Item.i35dpZFI7jZcRoBo]{Verkleidende Illusion} und @UUID[Compendium.pf2e.spells-srd.Item.41TZEjhO6D1nWw2X]{Vorahnung}. Einzelne Kreaturen mit der Fähigkeit Zirkel können einem Zirkel, dem sie beitreten, weitere Zauber gewähren Ein Zirkel kann außerdem das Ritual @UUID[Compendium.pf2e.spells-srd.Item.XkDCzMIyc0YOjw05]{Wetterkontrolle} wirken. Dabei beträgt der SG 23 statt des normalen SG.</p>\n<p>Wenn durch den Austritt oder Tod eines Mitglieds, die Anzahl der Mitglieder des Zirkels unter drei sinkt, können die verbleibenden Mitglieder ihre Anpassung Eliteversion 24 Stunden lang aufrechterhalten, aber ohne genügend Mitglieder, die die entsprechende Anzahl von Aktionen beitragen, können sie keine Zirkelzauber wirken.</p>",
-          "Darkvision": "<p>Ein Monster mit Dunkelsicht kann sowohl in der Dunkelheit als auch bei Dämmerlicht perfekt sehen, allerdings nur in schwarz-weiß. Manche Arten magischer Dunkelheit, wie z.B. durch den Zauber @UUID[Compendium.pf2e.spells-srd.Item.4GE2ZdODgIQtg51c]{Dunkelheit} auf dem 4. Grad blockieren normale Dunkelsicht. Ein Monster mit @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.4Ho2xMPEC05aSxzr]{Mächtiger Dunkelsicht} kann allerdings auch diese Art von Dunkelheit durchdringen.</p>",
+          "Darkvision": "<p>A monster with darkvision can see perfectly well in areas of darkness and dim light, though such vision is in black and white only. Some forms of magical darkness, such as a 4th-rank @UUID[Compendium.pf2e.spells-srd.Item.4GE2ZdODgIQtg51c]{Darkness} spell, block normal darkvision. A monster with @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.4Ho2xMPEC05aSxzr]{Greater Darkvision}, however, can see through even these forms of magical darkness.</p>",
           "Disease": "<p>Wenn eine Kreatur der Krankheit des Monsters ausgesetzt ist, muss sie einen Zähigkeitswurf ablegen. Bei einem Fehlschlag erleidet sie die Folgen der Krankheit. Die Stufe der Krankheit ist gleich der Stufe des Monsters, von dem sie zugefügt wurde. Die Krankheit befolgt dabei die Regeln für Leiden auf Seite 457 im Grundregelwerk.</p>",
           "Engulf": "<p>Das Monster Läuft bis zum doppelten seiner Bewegungsrate und kann sich auf seinem Weg auch durch Felder anderer Kreaturen bewegen. Alle Kreaturen, die die gleiche Größenkategorie wie das Monster oder kleiner haben und durch deren Felder sich das Monster bewegt, müssen einen Reflexwurf ablegen, um nicht von dem Monster umhüllt zu werden. Für Kreaturen, die nicht handeln können, ist der Rettungswurf automatisch ein kritischer Fehlschlag. Eine Kreatur, deren Rettungswurf ein Erfolg ist, kann wählen, ob sie zur Seite geschoben wird - aus dem Weg des Monsters - oder ob das Monster sie bis zum Ende seiner Bewegung vor sich herschiebt. Das Monster kann pro Kreatur nur einen Versuch machen, sie zu umhüllen. Es kann so viele Kreaturen aufnehmen, wie in seine Angriffsfläche hineinpassen.</p>\n<p>Eine Kreatur, deren Rettungswurf fehlschlägt, wird in den Körper des Monsters hineingezogen. Sie erhält die Zustände @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} und @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1} und muss die Luft anhalten oder sie beginnt zu ersticken. Die Kreatur nimmt den angegebenen Schaden zunächst, wenn sie umhüllt wird, sowie jeweils am Ende ihres Zuges, wenn sie weiterhin umhüllt ist. Eine umhüllte Kreatur kann sich mit der Aktion @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Entkommen} gegen den angegebenen SG befreien. Eine umhüllte Kreatur kann ebenfalls das Monster angreifen, jedoch nur mit Waffenlosen Angriffen oder mit Waffen von leichter Last oder geringer. Die umhüllende Kreatur ist gegen diese Angriffe @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} betroffen. Nimmt das Monster dabei von einem einzelnen Angriff oder Zauber Hieb- oder Stichschaden in Höhe des unter Befreien angegebenen Wertes oder darüber hinaus, kann sich die umhüllte Kreatur herausschneiden. Eine Kreatur, die sich auf eine dieser Weisen befreit, kann sofort wieder atmen und verlässt die Angriffsfläche des Monsters.</p>",
           "FastHealing": "<p>Ein Monster mit dieser Fähigkeit gewinnt jeweils zu Beginn seines Zuges die angegebene Anzahl von Trefferpunkten zurück.</p>",
@@ -3357,10 +3375,10 @@
         "DeleteAllQuestion": "Bist du sicher, dass du alle Einstellungen zu berücksichtigten Quellen zurücksetzen möchtest?",
         "DeleteAllTitle": "Einstellungen zurücksetzen",
         "Hint": "Einstellungen zur Filterung der Anzeige im Kompendienbrowser auf spezifische Quellen.",
-        "IgnoreAsGM": "Der SL sieht alle Einträge unabhängig der gesetzten Filter",
+        "IgnoreAsGM": "Let GMs ignore these settings and see all entries.",
         "Name": "Berücksichtigte Quellen",
-        "ShowEmptySources": "Einträge mit leerer Quelle anzeigen",
-        "ShowUnknownSources": "Einträge mit unbekannter Quelle anzeigen",
+        "ShowEmptySources": "Allow entries with empty sources.",
+        "ShowUnknownSources": "Allow entries with unknown sources.",
         "SourcesListHeader": "Auswahl Quellen"
       },
       "Core": {
@@ -3741,7 +3759,6 @@
     "SpellArea": "Bereich: {area}",
     "SpellAttackLabel": "Zauberangriff",
     "SpellAttackWithTradition": "Zauberangriff: {tradition}",
-    "SpellBrowserSearchHint": "Sie können nach Namen oder benutzerdefinierten Attributen suchen. Mögliche suchbare Attribute sind:<br> source, spellType, level, materials, target, range, time, duration, damage, damageType, save, concentration, ritual, ability und classes. <br>Beispiel: 'fire, damage:d6' um alle Zauber zu finden, die Feuer in ihrem Namen und einen W6 im Schaden haben",
     "SpellCastingFormat": "{preparationType} {traditionSpells} Zauber",
     "SpellCollectionAdd": "Füge zu Zauberliste hinzu",
     "SpellCollectionRemove": "Von Zauberliste entfernen",
@@ -4081,14 +4098,14 @@
     "TraitDescriptionAdditive": "Talente der Kategorie Mixtur gestatten dir, mittels Schneller Alchemie erschaffenen Verbrauchsgegenständen weitere Substanzen hinzuzufügen (dies geht nicht in Verbindung mit Schnellen Phiolen). Du kannst einem alchemistischen Gegenstand einen Zusatz hinzufügen. Du kannst pro Runde insgesamt nur einen Zusatz hinzufügen. Die meisten Fähigkeiten dieser Kategorie benennen, mit welchen alchemistischen Verbrauchsgegenständen sie genutzt werden können.",
     "TraitDescriptionAdjusted": "Die Ausrüstung kommt mit einer eingebauten Anpassung in ihrer Beschreibung. Diese Anpassung ist dauerhaft eingebaut, was bedeutet, dass die Ausrüstung keine anderen Anpassungen haben kann und ebenfalls nicht ausgetauscht werden kann. Wenn die Anpassung die Spielwerte des Gegenstandes verändert, etwa wenn die Eigenschaft Laut hinzugefügt wird, wird dies in der Ausrüstungstabelle wiedergegeben.",
     "TraitDescriptionAdjustment": "Gegenstände mit dieser Kategorie sollen andere Ausrüstungsgegenstände modifizieren, z.B. Rüstungen, Schilde oder Waffen. Der entsprechende Gegenstand gibt an, welche Arten von Gegenständen er verändert. Ein Ausrüstungsgegenstand kann stets nur über eine Anpassung verfügen. Sofern nicht anders vermerkt, benötigt man zum Anbringen oder Entfernen einer Anpassung 10 Minuten sowie eine Reparaturausrüstung.",
-    "TraitDescriptionAeon": "Diese Beobachter sind die selbsternannten Verteidiger der Realität. Traditionelle Aionen besitzen duale Natur und Gestalt und haben viele gegensätzliche Interessen. Für Axiomiten und Unvermeidbare gilt dies jedoch nicht. Aionen, bei denen es sich nicht um Axiomiten oder Unvermeidbare handelt, kommunizieren über einen fremdartigen telepathischen Mischmasch verschiedener Sinneseindrücke, der Gedankenbild genannt wird.",
+    "TraitDescriptionAeon": "These monitors are the self-styled defenders of reality. Traditional aeons have dualistic natures and forms, hold a dichotomy of interests, and communicate via a strange telepathic hodgepodge of sensory sending called envisioning. Axiomites and their creations are aeons, but don't share all the characteristics of traditional aeons.",
     "TraitDescriptionAesir": "Asen sind zumeist kriegslüsterne Beobachter von den chaotischen Ebenen, die ihre Fähigkeiten im Kampf schärfen und sich auf eine letzte Schlacht vorbereiten, welche das Ende des Multiversums einläutet.",
     "TraitDescriptionAftermath": "Diese Kategorie umfasst Talente, welche besondere Fähigkeiten repräsentieren, die man nach Kontakt mit dem Seltsamen und Tödlichen erlangen kann.",
     "TraitDescriptionAgathion": "Diese Familie von tiergesichtigen Celestischen stammt aus dem Nirwana. Die meisten Agathionen sind Neutral Gut, haben Dunkelsicht und Schwäche gegen Bösen Schaden.",
     "TraitDescriptionAgile": "Der Malus für Mehrfachangriffe mit dieser Waffe ist beim zweiten Angriff während deines Zuges nur -4 statt -5 und -8 statt -10 beim dritten und allen folgenden Angriffen während desselben Zuges.",
     "TraitDescriptionAir": "Effekte mit dieser Kategorie manipulieren die Luft oder zaubern sie herbei. Eine Manipulation hat im Vakuum oder einem Bereich ohne Luft keinen Effekt. Kreaturen dieser Kategorie bestehen hauptsächlich aus Luft oder besitzen eine magische Verbindung zu diesem Element.",
     "TraitDescriptionAiuvarin": "Kreaturen mit dieser Kategorie haben die vielseitige Herkunft Aiuvarin gewählt. Aiuvarini sind eine gemischte Abstammung, bei der ein Elternteil Elfischer Abstammung entspringt. Talente mit dieser Kategorie können nur von Aiuvarini gewählt werden.",
-    "TraitDescriptionAlchemical": "Alchemistische Gegenstände werden durch die Reaktionen alchemistischer Reagenzien angetrieben. Alchemistische Gegenstände sind nicht magisch und strahlen auch keine magische Aura aus.",
+    "TraitDescriptionAlchemical": "Alchemical items are powered by reactions of alchemical reagents. Unless otherwise noted, alchemical items aren't magical and don't radiate a magical aura. Alchemical creatures are partially powered by alchemical reactions.",
     "TraitDescriptionAlchemist": "Eine Fähigkeit der Klasse des Alchemisten.",
     "TraitDescriptionAmp": "Eine Verstärkung ist eine besondere Gedankenform, welche die Eigenschaften deiner Mentalen Zaubertricks modifiziert. Mentale Zaubertricks können über eigene Verstärkungen verfügen; Talente der Kategorie Verstärkung liefern alternative Verstärkungen, die anstelle der normalen Verstärkungen genutzt werden können.",
     "TraitDescriptionAmphibious": "Eine amphibische Kreatur kann Wasser und Luft atmen, auch außerhalb ihrer bevorzugten Umgebung - meistens unbegrenzt, mindestens aber mehrere Stunden lang. Diese Kreaturen verfügen oft über eine Bewegungsrate für Schwimmen. Ihre Hieb- und Wuchtangriffe erleiden nicht den üblichen Malus für Angriffe unter Wasser von -2.",
@@ -4097,7 +4114,7 @@
     "TraitDescriptionAngel": "Diese Familie von Celestischen besteht aus Boten und Kriegern. Die meisten Engel sind Heilig, haben Dunkelsicht und Schwäche gegen Unheiliges.",
     "TraitDescriptionAnimal": "Ein Tier ist eine Kreatur mit vergleichsweise niedriger Intelligenz. Üblicherweise ist der Intelligenzmodifikator von Tieren nicht besser als −4. Tiere können keine Sprachen sprechen und können für intelligenzbasierende Fertigkeiten keinen Kompetenzgrad von Geübt oder besser erreichen.",
     "TraitDescriptionAnimist": "This indicates abilities from the animist class.",
-    "TraitDescriptionApex": "Wenn du einem Gegenstand der Kategorie Apex Resonanz verleihst, verbessert er einen deiner Attributsmodifikatoren entweder um 1 oder auf insgesamt +4, sollte dies der höhere Wert sein. Dies verleiht dir die Vorteile des neuen Attributsmodifikators, solange die Resonanz währt. Ein Apexgegenstand verleiht diesen Vorteil nur mit dem ersten Mal, zu dem er während einer Periode von 24 Stunden mit Resonanz aufgeladen wird. Solltest du bereits einem Apexgegenstand Resonanz verliehen haben und während der Wirkungszeit einem zweiten Apexgegenstand Resonanz verleihen, erhältst du nicht die Erhöhung des Attributsmodifikators, wohl aber eventuelle andere Effekte, die sich aus der Resonanz ergeben.",
+    "TraitDescriptionApex": "<p>When you Invest an Item that has the apex trait, it improves one of your attributes, either increasing the attribute's modifier by 1 or to a total of +4, whichever would give you a higher value. This gives you all the benefits of the new attribute modifier until the investiture ends. For example, in addition to increasing rolls you make using the attribute, increasing your Intelligence lets you become trained in an additional skill and learn a new language, and increasing your Constitution gives you more Hit Points.</p><p>An apex item grants this benefit only the first time it's invested within a 24-hour period, and you can benefit from only one apex item at a time. If you attempt to invest an apex item when you already have one invested, you don't gain the attribute modifier increase, though you do gain any other effects of Investing the Item.</p>",
     "TraitDescriptionAphorite": "Aphoriten sind Ebenenabkömmlinge, deren Herkunft auf die rechtschaffene Stadt der Ebene von Axis zurückgeht.",
     "TraitDescriptionApparition": "<p>Apparitions are spiritual entities who generally lack the power, cohesiveness, or attachments to enter or affect the physical world. Unlike a ghost or phantom, an apparition does not need to have ever been a living creature and could be the spiritual memory of a particularly meaningful location or event. Apparitions are reliant on animists to interact with other people and things, and generally can't be targeted or affected by spells and abilities other than those of the animist they are attuned to. Animist feats and abilities that affect spirits affect apparitions only if they specifically say so.</p><p> Animist abilities with the apparition trait involve one or more of your apparitions acting alongside you. You must be attuned to at least one apparition to use an apparition ability, and some abilities might state in their requirements more specifically which apparition you must be attuned to. Typically, you're assumed to always attune to your apparitions during your daily preparations, but in some rare circumstances or as a result of certain animist abilities, your apparitions might be dispersed or separated from you for a time; you aren't attuned to dispersed apparitions.</p>",
     "TraitDescriptionAquadynamic": "Diese Rüstung wurde für den Unterwassereinsatz konzipiert, ist stromlinienförmig gestaltet und verfügt an strategischen Stellen über Auftrieb verleihendes Material. Der Rüstungsmalus auf Würfe für Akrobatik oder Athletik kommt im Wasser oder ähnlicher Flüssigkeit nicht zur Anwendung.",
@@ -4171,7 +4188,7 @@
     "TraitDescriptionContract": "Ein Vertrag ist ein Gegenstand, der auf magische Weise eine Vereinbarung zwischen mehreren Parteien herstellt und normalerweise magische Vorteile gewährt.",
     "TraitDescriptionCriticalFusion": "Kritische Fusion ist eine Eigenschaft für Kombinationswaffen. Sie verleiht dir zwei zusätzliche Optionen für die Kritischen Spezialisierungseffekte, wenn du die Nahkampfform der Kombinationswaffe nutzt, um Nahkampfangriffe auszuführen, während die Fernkampfwaffe geladen ist. Wenn du einen der beiden Effekte nutzt, ersetzt du die normalen Kritischen Spezialisierungseffekte der Waffe. Wenn die Fernkampfwaffe eine Feuerwaffe ist, kannst du sie als erstes entladen, um einen lauten Knall und Erschütternd zu erschaffen, und nutzt die Kritischen Spezialisierungseffekte der Feuerwaffe anstelle der Kritischen Spezialisierungseffekte der aufgeführten Nahkampfwaffengruppe. Zweitens kannst du entscheiden, eine Fernkampfwaffe zu entladen, um das Momentum des Kritischen Treffers zu erhöhen, oder um auf einen Gegner zu schießen, während du im Nahkampf angreifst, wodurch du zusätzlich 2 Schaden für jeden Waffenschadenswürfel verursachst. Beide Optionen entladen die Fernkampfwaffe, was normalerweise bedeutet, dass du sie nachladen musst, bevor du sie erneut abfeuern kannst.",
     "TraitDescriptionCurse": "Ein Fluch ist ein Effekt, der ein langfristiges Leiden auf eine Kreatur legt. Flüche sind immer magisch und meisten das Ergebnis einer Falle oder eines Zaubers.",
-    "TraitDescriptionCursebound": "Zauber dieser Kategorie erhöhen die Stärke deines Mystikerfluches, wenn du sie wirkst. In der Regel besitzen nur Offenbarungszauber diese Kategorie. Du kannst keine Zauber dieser Kategorie wirken, wenn du keinen Mystikerfluch besitzt.",
+    "TraitDescriptionCursebound": "Spells with this trait increase the severity of your oracular curse when cast. Usually, only revelation spells have this trait. You can't cast a cursebound spell if you don't have an oracular curse. A cursebound ability that allows a defense uses your spell attack modifier or spell DC unless noted otherwise.",
     "TraitDescriptionCursed": "Ein Gegenstand dieser Kategorie ist verflucht und bringt dem Besitzer Ärger. Ein Flucht wird beim Identifizieren des Gegenstandes nicht entdeckt (ein Kritischer Erfolg enthüllt Präsenz und Art des Fluches). Verfluchte Gegenstände können nicht abgelegt werden, wenn sie erstmal ausgelöst oder mit Resonanz belegt wurden. Der Gegenstand kann nur entfernt werden, wenn der Fluch gebrochen wird.",
     "TraitDescriptionDaemon": "Die Daimonen sind eine Familie von Scheusalen von der trostlosen Ebene Abaddon. Die meisten Daimonen sind unrettbar Unheilig. Üblicherweise haben sie Dunkelsicht und Schwäche gegen Heiliges.",
     "TraitDescriptionDarkness": "Dunkelheitseffekte löschen nichtmagisches Licht im Wirkungsbereich und können schwächerem magischen Licht entgegenwirken (siehe GRW Seite 459). In der Regel musst du deine Dunkelheitmagie direkt auf die Lichtmagie wirken, um sie aufzuheben, allerdings versuchen einige Dunkelheitzauber automatisch, Licht entgegenzuwirken.",
@@ -4292,7 +4309,7 @@
     "TraitDescriptionIntegrated": "Dieser Schild wurde so konstruiert, dass er eine Waffe enthält; diese Waffe erscheint angebracht, kann aber nicht vom Schild entfernt werden.",
     "TraitDescriptionIntelligent": "Ein Gegenstand dieser Kategorie ist intelligent und besitzt einen eigenen Willen und Persönlichkeit, sowie mehrere Spielwerte, über die die meisten Gegenstände nicht verfügen. Intelligente Gegenstände können mit normalen Mitteln nicht hergestellt werden und haben stets den Seltenheitsgrad Selten oder Einzigartig.",
     "TraitDescriptionInventor": "Dies kennzeichnet eine Fähigkeit der Klasse Erfinder.",
-    "TraitDescriptionInvested": "Ein Charakter kann nur 10 magische Gegenstände tragen, die die Eigenschaft 'Resonanz aufgebaut' haben. Keiner der magischen Effekte des Gegenstands gilt, wenn keine Resonanz aufgebaut wurde, noch kann er aktiviert werden, obwohl der Charakter immer noch alle normalen Vorteile durch das Tragen des physischen Gegenstands erhält (wie ein Hut, der Regen von seinem Kopf abhält).",
+    "TraitDescriptionInvested": "A character can invest only 10 magical items that have the invested trait. None of the magical effects of the item apply if the character hasn't invested it, nor can it be activated, though the character still gains any normal benefits from wearing the physical item (like a hat keeping rain off their head).",
     "TraitDescriptionInvestigator": "Eine Fähigkeit der Ermittlerklasse.",
     "TraitDescriptionJousting": "Diese Waffe ist für den berittenen Kampf geeignet, mit einem Geschirr oder ähnlichen Vorrichtungen. Wenn du beritten bist und dich mit deiner Aktion vor dem Angriff mindestens 10 Fuß/3 m bewegt hast, fügst du mit deinem Schadenswurf für diesen Angriff einen Situationsbonus in Höhe der Anzahl der Schadenswürfel der Waffe hinzu. Außerdem kannst du diese Waffe einhändig führen, während du beritten bist, der Schadenswürfel ändert sich zu dem aufgeführten Wert.",
     "TraitDescriptionKashrishi": "Eine beleibte Abstammung, die bezeichnende Kristallhörner tragen und innewohnende psychische Fähigkeiten besitzen.",
@@ -4319,7 +4336,7 @@
     "TraitDescriptionMetal": "Effekte dieser Kategorie beschwören oder manipulieren Metall. Metallmanipulierende Effekte besitzen keine Wirkung in Bereichen ohne Metall. Kreaturen dieser Kategorie bestehen hauptsächlich aus Metall oder haben eine Verbindung zu magischem Metall.",
     "TraitDescriptionMindless": "Die mentalen Eigenschaften einer geistlosen Kreatur sind entweder programmiert oder rudimentär. Die meisten ihrer mentalen Attributsmodifikatoren, wenn nicht sogar alle, betragen −5. Sie haben Immunität gegen mentale Effekte.",
     "TraitDescriptionMindshift": "Eine Handlung mit dieser Kategorie kann stets so modifiziert werden, dass sie die rohe Kraft deines Verstandes nutzt. Wenn du diese Handlung nutzt, kannst du den mit ihr verursachten Schaden durch Mentalen Schaden ersetzen (dies verleiht der Handlung die Kategorie Mental und ersetzt geforderte Rettungswürfe durch Willenswürfe, während sie Schadenskategorien verliert, die sie nicht länger verursacht).",
-    "TraitDescriptionMinion": "Schergen sind Kreaturen, die direkt einer anderen Kreatur dienen. Eine Kreatur dieser Kategorie kann nur 2 Aktionen pro Zug und keine Reaktionen ausführen. Dein Scherge agiert im Kampf während deines Zuges einmal pro Runde, sofern du eine Aktion aufwendest, um ihm Befehle zu geben. Im Falle eines Tiergefährten nutzt du Tier anweisen; im Falle eines Schergen, der ein Effekt eines Zaubers oder magischen Gegenstandes ist, z.B. ein beschworener Diener, nutzt du die Aktion Zauber aufrechterhalten oder Aktivierung aufrechterhalten; sofern nicht anders spezifiziert, gibst du verbale Befehle (die genutzte Aktion besitzt die Kategorien Hörbar und Konzentration). Sollte ein Scherge keine Befehle erhalten, nutzt er Aktionen nur, um sich zu verteidigen oder um offenkundigen Schaden zu entkommen. Sollte ein Scherge 1 Minute lang keine Anweisungen erhalten, verhalten sich intelligente Schergen, wie sie möchten, folgen Tiere ihren Instinkten und bleiben geistlose Schergen tatenlos.",
+    "TraitDescriptionMinion": "<p>Minions are creatures that directly serve another creature. Your minion acts on your turn in combat, once per turn, when you spend an action to issue it commands. For an animal companion, you Command an Animal; for a minion that's a spell or magic item effect, like a summoned minion, you Sustain the effect; if not otherwise specified, you issue a verbal command as a single action with the auditory and concentrate traits. If given no commands, minions use no actions except to defend themselves or to escape obvious harm. If left unattended for long enough, typically 1 minute, mindless minions usually don't act, animals follow their instincts, and sapient minions act how they please. You can have a maximum of four minions under your control.</p><p>A minion has only 2 actions and 0 reactions per turn, though certain conditions (such as slowed or quickened) or abilities might give them a reaction that they can use. Alterations to a minion's actions occur when they gain their actions for the round. A minion can't control other creatures.</p>",
     "TraitDescriptionMinotaur": "Minotauren sind gehörnte, bovine Humanoide und Meister der Irrgärten und Rätsel.",
     "TraitDescriptionMisfortune": "Ein Unglückseffekt wirkt sich nachteilig darauf aus, wie du würfelst. Ein Wurf kann nie von mehr als einem Unglückseffekt betroffen sein. Sollten mehrere Unglückseffekte wirken würden, so wählt der\nSL den schlechtesten aus und wendet ihn an. Sollte derselbe Wurf von einem Glücks- und einem Unglückseffekt betroffen sein, so heben sie einander auf und du würfelst normal.",
     "TraitDescriptionMissive": "Dieses magische Schriftstück muss hergestellt und geschrieben werden, ehe man es aktivieren kann. Alle Sendschreiben haben die Kategorien Sendschreiben und Verbrauchsgegenstand. Sie werden oft aus Papier oder Pergament hergestellt, aber auch anderes dünnes, transportables Material, das beschrieben oder bedruckt werden kann, reicht aus. Nach der Herstellung ist ein Sendschreiben ein leeres Blatt, bis eine Botschaft darauf geschrieben wurde und so die Magie fertiggestellt wird. ",
@@ -4429,15 +4446,14 @@
     "TraitDescriptionSpellheart": "Zauberherzen sind permanente Gegenstände, die ähnlich wie Talismane funktionieren. Du befestigst ein Zauberherz mit der Aktivität Zauberherz befestigen (diese entspricht ansonsten der Aktivität Talisman befestigen). Die Begrenzung auf einen Talisman pro Gegenstand gilt weiterhin, wobei hier die Begriffe Talisman und Zauberherz austauschbar sind - ein Gegenstand kann einen Talisman oder ein Zauberherz erhalten, nicht beides. Die Regeln zu Talismanen und ihrer Befestigung findest du im Grundregelwerk auf Seite 596. Wirkst du mittels eines Zauberherzens einen Zaubertrick, kannst du deinen eigenen Zauberangriffswurf oder Zauber-SG nutzen, sollte dieser höher sein. Zur Herstellung eines Zauberherzens sind die Zauber erforderlich, welche das fragliche Zauberherz wirken kann. So erfordert z.B. ein Mächtiger Kranz der Fünf Federn die Zauber Luftwandeln, Sturmböe und Windwand.",
     "TraitDescriptionSpellshape": "Zauber modifizierende Aktionen verändern die Eigenschaften deiner Zaubersprüche. Du musst eine Aktion der Kategorie Zaubermodifizierend direkt vor dem Zauberspruch, den du verändern willst, einsetzen. Wenn du direkt danach eine andere Aktion (einschließlich freier Aktionen und Reaktionen) als das Wirken eines Zaubers verwendest, verlierst du die Vorteile der Zauber modifizierenden Aktion. Der Vorteil geht auch verloren, wenn dein Zug endet, bevor du den Zauberspruch gewirkt hast. Alle zusätzlichen Effekte, die durch eine Zaubermodifizierende Aktion hinzugefügt werden, sind Teil der Wirkung des Zaubers, nicht der Zauber modifizierenden Aktion selbst.",
     "TraitDescriptionSpirit": "Effekte dieser Kategorie können auf Kreaturen mit Seelenessenz einwirken und möglicherweise Seelenschaden verursachen. Eine Kreatur mit dieser Kategorie wird durch ihre spirituelle Essenz definiert und besitzt oftmals keine materielle Gestalt.",
-    "TraitDescriptionSplash": "Wenn du eine Wurfwaffe dieser Kategorie verwendet, addierst du nicht deinen Stärkemodifikator auf den Schadenswurf. Scheitert der Angriff, gelingt er oder erzielst du gar einen Kritischen Erfolg, so erleiden alle Kreaturen innerhalb von 1,50 m Entfernung zum Ziel (das Ziel eingeschlossen) den aufgeführten Flächenschaden (alchemistisch). Das Ziel des Angriffes erleidet den Flächenschaden (alchemistisch) auch bei einem Fehlschlag, nicht aber bei einem Kritischen Fehlschlag. Addiere den Ausgangsschaden und den Flächenschaden (alchemistisch) zusammen, ehe die Schwächen oder Resistenzen des Zieles zur Anwendung kommen. Bei einem Kritischen Treffer wird der Flächenschaden (alchemistisch) nicht multipliziert.",
+    "TraitDescriptionSplash": "Some weapons and effects, such as alchemical bombs, have the splash trait. When you use a weapon or effect with the splash trait, you don't add your Strength modifier to the damage roll. A splash weapon or effect deals any listed splash damage to the target on a failure, success, or critical success, and to all other creatures within 5 feet of the target on a success or critical success. On a critical failure, the weapon or effect misses entirely, dealing no damage. Add splash damage together with the initial damage against the target before applying the target's resistance or weakness. You don't multiply splash damage on a critical hit.",
     "TraitDescriptionSplash10": "Wenn du eine Wurfwaffe mit der Eigenschaft \"Spritzschaden\" benutzt, addierst du deinen Stärke-Modifikator nicht zum Schadenswurf. Wenn ein Angriff mit einer Flächenschaden-Waffe fehlschlägt, erfolgreich ist oder kritisch erfolgreich ist, erleiden alle Kreaturen im Umkreis von 10 Fuß um das Ziel (einschließlich des Ziels) den aufgeführten Flächenschaden (alchemistisch). Bei einem Fehlschlag (aber nicht bei einem kritischen Fehlschlag) erleidet das Ziel des Angriffs trotzdem den Flächenschaden (alchemistisch). Addieren Sie den Flächenschaden (alchemistisch) zusammen mit dem ursprünglichen Schaden gegen das Ziel, bevor Sie die Schwächen oder Resistenzen des Ziels anwenden. Bei einem kritischen Treffer wird der Flächenschaden (alchemistisch) nicht multipliziert.",
     "TraitDescriptionSprite": "Eine Familie sehr kleiner geflügelter Feen mit einer starken Verbindung zu Naturmagie.",
     "TraitDescriptionStaff": "Dieser magische Gegenstand enthält Zauber eines gemeinsamen Themas und gestattet einem Zauberkundigen, weitere Zauber zu wirken, indem er den Stecken vorbereitet.",
     "TraitDescriptionStance": "Eine Haltung ist eine allgemeine Kampfstrategie, die du verfolgst, indem zu eine Handlung der Kategorie Haltung nutzt, bis du bewusstlos wirst, ihre Voraussetzungen nicht länger erfüllst, die Begegnung endet oder du eine neue Haltung nutzt. Hast du eine Haltungshandlung genutzt, kannst du für 1 Runde keine weitere Haltungshandlung einsetzen. Du kannst eine Haltung nur im Begegnungsmodus einnehmen und nutzen.",
     "TraitDescriptionSteam": "Gegenstände dieser Kategorie werden von Maschinen angetrieben, welche Wasser kochen, um Dampf zu produzieren und ihre Komponenten anzutreiben.",
     "TraitDescriptionStrix": "Strigae sind vogelartige Humanoide mit dunklen Flügeln und langen Krallen. Sie neigen dazu, in isolierten Gemeinschaften zu leben.",
-    "TraitDescriptionStructure": "Ein Gegenstand, der der Kategorie Bauwerk angehört, bringt ein magisches Gebäude oder eine Konstruktion anderer Art hervor, wenn er aktiviert wird. Der Gegenstand muss auf einem Stück Boden aktiviert werden, auf dem sich keine anderen Bauwerke befinden. Das Bauwerk passt sich dem vorhandenen natürlichen Gelände an und nimmt eine Struktur an, die die örtlichen Gegebenheiten erfüllt. Es gleicht kleine Elemente wie Teiche oder Felsspitzen aus, kann jedoch nicht auf Wasser oder anderen nicht festen Oberflächen errichtet werden. Bei Aktivierung auf Schnee, Sanddünen oder anderen weichen Oberflächen mit einem irgendwo unterhalb befindlichen Grund reicht das Fundament des Bauwerks (falls vorhanden) bis auf diesen festen Boden herab. Wenn ein Gegenstand mit diesem Merkmal auf einer soliden, aber instabilen Oberfläche, wie einem Sumpf oder einem von Beben heimgesuchten Gebiet, aktiviert wird, führe jeden Tag einen @Check[flat|dc:3]{Einfachen Wurf} aus. Bei einem Fehlschlag beginnt das Bauwerk zu versinken oder zusammenzubrechen. Das Bauwerk beschädigt im Moment seines Erscheinens keine Kreaturen im Gebiet, und es kann nicht in einer Menschenmenge erschaffen werden, oder in einem Gebiet, in dem sich anderweitig zahlreiche Wesen aufhalten. Jede Kreatur, die bei Aktivierung des Gegenstands versehentlich darin gefangen wird, landet unversehrt im fertiggestellten Bauwerk und hat grundsätzlich einen freien Fluchtweg zur Verfügung. Wenn die Aktivierung endet, wird eine Kreatur innerhalb des Bauwerks nicht verletzt und landet gefahrlos auf dem Boden, sollte sie sich auf einer höhergelegenen Etage des Gebildes befunden haben.",
-    "TraitDescriptionSubjectiveGravity": "Auf Ebenen dieser Kategorie können alle Massekörper grob dieselbe Anziehungskraft besitzen, sofern eine nichtgeistlose Kreatur dies wünscht.",
+    "TraitDescriptionStructure": "A spell, item activation, or ability with the structure trait creates a magical building or other structure. The structure must be created on a plot of land free of other structures. The structure adapts to the natural terrain, adopting the structural requirements for being built there. The structure adjusts around small features such as ponds or spires of rock, but it can't be created on water or other nonsolid surfaces. If created on snow, sand dunes, or other soft surfaces with a solid surface underneath, the structure's foundation (if any) reaches the solid ground. If the structure is on a solid but unstable surface, such as a swamp or an area plagued by tremors, roll a @Check[flat|dc:3] each day; on a failure, the structure begins to sink or collapse.</p><p>The structure doesn't harm creatures within the area when it appears, and it can't be created within a crowd or in a densely populated area. Any creature inadvertently caught inside the structure when it's created ends up unharmed inside the complete structure and always has a clear path of escape. A creature inside the structure when the effect ends isn't harmed, and it lands harmlessly on the ground if it was on an upper level of the structure",
     "TraitDescriptionSubtle": "Ein Zauber dieser Kategorie kann ohne Anrufungen gewirkt werden und hat keine offensichtlichen Manifestationen.",
     "TraitDescriptionSuli": "Eine Unterart der Qariniabkömmlinge, welche eine Vermischung der Elemente verkörpert; stammen meistens von Dschanni ab.",
     "TraitDescriptionSurki": "Surkis sind eine unterirdisch lebende, insektenartige Abstammung, welche Umgebungsmagie absorbiert und einzigartige Anpassungen entwickelt.",
@@ -4667,7 +4683,10 @@
     "TraitInvested": "Resonanz",
     "TraitInvestigator": "Ermittler",
     "TraitJousting": "Reiter",
+    "TraitJoustingD4": "Jousting d4",
     "TraitJoustingD6": "Reiterwaffe W6",
+    "TraitJoustingD8": "Jousting d8",
+    "TraitJoustingD10": "Jousting d10",
     "TraitKaiju": "Kaiju",
     "TraitKami": "Kami",
     "TraitKashrishi": "Kaschrischi",
@@ -5505,7 +5524,7 @@
       "anchoring": {
         "Name": "Verankernd",
         "Note": {
-          "criticalSuccess": "Wenn du bei einem Gegner mit der Waffe des Verankerns einen Kritischen Treffer erzielst, wirkt die Waffe @UUID[Compendium.pf2e.spells-srd.Item.ksLCg62cLOojw3gN]{Planare Fessel} auf das Ziel (@Check[will|dc:27]{Willenswurf}, @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken}-Modifikator [[/r 1d20+17 #Entgegenwirken]]{+17})."
+          "criticalSuccess": "If you critically hit a target with an anchoring weapon, the weapon casts @UUID[Compendium.pf2e.spells-srd.Item.ksLCg62cLOojw3gN]{Dimensional Anchor} on the target (@Check[will|dc:27|name:Anchoring Rune], counteract modifier [[/r 1d20+17 # Anchoring Rune Counteract Check]]{+17})."
         }
       },
       "ashen": {
@@ -5630,8 +5649,8 @@
       "greaterAnchoring": {
         "Name": "Stark Verankernd",
         "Note": {
-          "criticalSuccess": "Wenn du bei einem Gegner mit einer Waffe des Starken Verankerns einen Kritischen Treffer erzielst, wirkt die Waffe @UUID[Compendium.pf2e.spells-srd.Item.ksLCg62cLOojw3gN]{Planare Fessel} auf dem 8. Grad auf das Ziel (@Check[will|dc:38]{Willenswurf}, @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken}-Modifikator [[/r 1d20+28 #Entgegenwirken]]{+28}). Gelingt dem Ziel gegen diesen Zauber ein Kritischer Erfolg bei seinem Willenswurf, wirkt die <em>Planare Fessel</em> dennoch für 1 Runde, statt gar keine Wirkung zu zeigen.",
-          "success": "Wenn du den Gegner mit der Waffe triffst, aber keinen Kritischen Treffer erzielst, wird das Ziel dennoch für 1 Runde von einer @UUID[Compendium.pf2e.spells-srd.Item.ksLCg62cLOojw3gN]{Planaren Fessel} des 4. Grades betroffen, ohne dass ihm ein Rettungswurf zusteht (dabei gilt der @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken}-Modifikator [[/r 1d20+28 #Entgegenwirken]]{+28})."
+          "criticalSuccess": "When you critically hit a target with a weapon with the anchoring rune, the weapon casts 8th-rank @UUID[Compendium.pf2e.spells-srd.Item.ksLCg62cLOojw3gN]{Dimensional Anchor} on the target (@Check[will|dc:38|name:Greater Anchoring Rune], counteract modifier [[/r 1d20+28 #Greater Anchoring Rune Counteract Check]]{+28}), except that if the target critically succeeds at its Will save, instead of having no effect, the <em>dimensional anchor</em> lasts for 1 round.",
+          "success": "When you hit a target with the weapon but don't critically hit, the target is affected by 4th-rank @UUID[Compendium.pf2e.spells-srd.Item.ksLCg62cLOojw3gN]{Dimensional Anchor} for 1 round without a save (counteract modifier [[/r 1d20+28 #Greater Anchoring Rune Counteract Check]]{+28})."
         }
       },
       "greaterAshen": {
