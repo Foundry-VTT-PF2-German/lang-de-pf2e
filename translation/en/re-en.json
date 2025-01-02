@@ -657,12 +657,13 @@
         "Label": "Special"
       },
       "Trigger": {
-        "Label": "Trigger"
+        "Label": "Trigger",
+        "TargetedByAStrike": "You are targeted by a Strike"
       }
     },
     "GenericLabel": {
       "ItemVs": {
-        "DeathVoid": "{Item} vs. Death and Void effects",
+        "DeathVoid": "{item} vs. Death and Void effects",
         "Fear": "{item} vs. fear"
       },
       "PreviousAction": {
@@ -696,6 +697,7 @@
         "DamageFromSwornCreatures": "damage from sworn creature kind",
         "DraconicBreathWeapons": "draconic breath weapons",
         "EnemyStrikes": "enemy Strikes",
+        "FallDamage": "fall damage",
         "HolyBludgeoningPiercingSlashing": "holy bludgeoning, piercing and slashing damage",
         "ImpulseFireFrom": "impulse fire from {origin}",
         "IncorporealCreatures": "incorporeal creatures",
@@ -837,6 +839,7 @@
           "Faydhaan": "Faydhaan",
           "Fish": "Fish",
           "Fox": "Fox",
+          "Fungus": "Fungus",
           "Gancanagh": "Gancanagh",
           "Gimmerling": "Gimmerling",
           "Gosreg": "Gosreg",
@@ -872,7 +875,7 @@
           "Plant": "Plant",
           "PorcupineGiant": "Giant Porcupine",
           "Pukwudgie": "Pukwudgie",
-          "RacoonDog": "Racoon Dog",
+          "RacoonDog": "Raccoon Dog",
           "RajaKrodha": "Raja-Krodha",
           "Raktavarna": "Raktavarna",
           "Rat": "Rat",
@@ -890,6 +893,7 @@
           "Vidileth": "Vidileth",
           "Vilderavn": "Vilderavn",
           "Voidworm": "Voidworm",
+          "Wasp": "Wasp",
           "WingedHumanoid": "Winged Humanoid",
           "Wolf": "Wolf",
           "WolfDire": "Dire Wolf",
@@ -1962,6 +1966,12 @@
           "CriticalNote": "If you critically succeed at a blowgun Strike using a poisoned dart, the target's initial save against the poison is one degree of success worse than the creature rolls; this is a misfortune effect.",
           "StealthNote": "In addition, if you make a blowgun Strike while @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} or @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Undetected}, you don't automatically become @UUID[Compendium.pf2e.conditionitems.Item.1wQY3JYyhMYeeV2G]{Observed}. Instead, immediately attempt a @Check[stealth|against:perception] check against the Perception DC of the target. If you succeed, you don't become observed, and are hidden (if you were undetected, you still become hidden rather than remaining undetected)."
         },
+        "DebilitatingBomb": {
+          "AttackRollNote": "The target must succed at a @Check[fortitude|against:class], or suffer one of the following effects: dazzled, deafened, off-guard, or take a -5 foot status penalty to Speeds. @UUID[Compendium.pf2e.feat-effects.Item.VTJ8D23sOIfApEt3]{Effect: Debilitating Bomb}",
+          "SpeedPenalty": {
+            "Label": "-5 foot Speed Penalty"
+          }
+        },
         "ExpandedSplash": {
           "Note": "The splash damage affects all creatures within 10 feet of the target instead of 5 feet."
         },
@@ -1978,6 +1988,7 @@
           }
         },
         "ResearchField": {
+          "AdvancedVials": "Advanced Vials",
           "Bomber": {
             "FieldBenefit": "When throwing an alchemical bomb with the splash trait, you can choose to deal splash damage to only your primary target instead of the usual splash area.",
             "FieldVials": {
@@ -1987,11 +1998,15 @@
           },
           "Chirurgeon": {
             "FieldVials": {
-              "Description": "Your versatile vials can be used to heal a living creature @Damage[(ternary(gte(@actor.level,18),4,ternary(gte(@actor.level,12),3,ternary(gte(@actor.level,4),2,1))))d6[healing]] Hit Points. A creature can drink the vial for this benefit, or you can throw the vial at a willing creature within 20 feet as an Interact action to heal that creature. In either case, a vial used this way loses the acid and splash traits and gains the coagulant and healing traits, plus the elixir trait if a creature drinks it."
+              "Description": "Your versatile vials can be used to heal a living creature @Damage[(ternary(gte(@item.level,18),4,ternary(gte(@item.level,12),3,ternary(gte(@item.level,4),2,1))))d6[healing]] Hit Points. A creature can drink the vial for this benefit, or you can throw the vial at a willing creature within 20 feet as an Interact action to heal that creature. In either case, a vial used this way loses the acid and splash traits and gains the coagulant and healing traits, plus the elixir trait if a creature drinks it."
             }
           },
+          "FieldBenefit": "Field Benefit",
           "FieldVials": "Field Vials",
           "Mutagenist": {
+            "FieldBenefit": {
+              "Description": "When you use a mutagen, you gain a number of temporary Hit Points equal to your Intelligence modifier (minimum 0) plus half your level. These temporary Hit Points last for 1 minute or until the mutagen's duration expires, whichever comes first. You can't gain temporary HP from drinking a mutagen again for 1 minute."
+            },
             "FieldVials": {
               "Description": "You can drink the contents of one your versatile vials to suppress the drawback you take from one mutagen currently affecting you until the beginning of your next turn. A vial used this way loses the acid, bomb, and splash traits and gains the elixir trait. If you have more than one drawback due to @UUID[Compendium.pf2e.feats-srd.Item.jSkJIWPfSZZzvYzq]{Combine Elixirs} or a similar ability, drinking the vial suppresses one drawback of your choice."
             }
@@ -3157,6 +3172,9 @@
         "ForgeBlessedShot": {
           "Note": "Ignore your target's @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} condition, as well as your target's lesser, standard, and greater cover."
         },
+        "HeroesCall": {
+          "DescriptionAlteration": "If you Cast the Spell when you have half or fewer Hit Points, you also gain temporary Hit Points equal to twice your level."
+        },
         "KneelForNoGod": {
           "Note": "When you roll a success against a divine effect, you get a critical success instead."
         },
@@ -3385,6 +3403,18 @@
         },
         "PhantomShroud": {
           "StrikeLabel": "Ghostly Hand"
+        },
+        "PharasminVisor": {
+          "PierceTheNight": "Pierce the Night",
+          "RevealTheUnseen": "Reveal the Unseen",
+          "SeeThroughDeath": "See Through Death"
+        },
+        "PreyMutagen": {
+          "TimelyDodge": {
+            "GreaterDescription": "You dart aside, gaining a +3 circumstance bonus to AC, then Step after the Strike resolves.",
+            "MajorDescription": "You dart aside, gaining a +4 circumstance bonus to AC, then Step after the Strike resolves.",
+            "ModerateDescription": "You dart aside, gaining a +2 circumstance bonus to AC, then Step after the Strike resolves."
+          }
         },
         "RhinoShot": {
           "CriticalSuccess": "The target must critically succeed at a @Check[fortitude|dc:19|name:Rhino Shot|traits:conjuration,consumable,magical|showDC:all] save or be knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.",
@@ -4342,6 +4372,10 @@
         "EvergreenVitality": "Evergreen Vitality",
         "GraspingBranch": "Grasping Branch",
         "OverwhelmingPerfume": "Overwhelming Perfume",
+        "RollOptionLabel": {
+          "First": "Mantle of the Unwavering Heart — First ability",
+          "Second": "Mantle of the Unwavering Heart — Second ability"
+        },
         "ToweringTrunk": "Towering Trunk",
         "UnyieldingWill": "Unyielding Will"
       },
@@ -4714,6 +4748,7 @@
         "Cantrip": "Select a cantrip.",
         "CantripOrNonCantrip": "Select cantrip or non-cantrip spell.",
         "ClassDCAbilityScore": "Select the class DC's key attribute.",
+        "ClassFeat": "Select a class feat.",
         "Color": "Select a Color.",
         "ConsciousMind": "Select a conscious mind.",
         "CreatureSize": "Select a creature size.",
@@ -4723,6 +4758,7 @@
         "DeitysDomain": "Select a deity's domain.",
         "DieSize": "Select a die size.",
         "DragonBreathWeapon": "Select a dragon's breath weapon.",
+        "Effect": "Select an effect.",
         "Element": "Select an element.",
         "EnergyType": "Select an energy type.",
         "EquipmentVariety": "Select an item variety.",
@@ -5290,6 +5326,18 @@
           "RollOptionLabel": {
             "First": "Mantle of the Frozen Heart — First ability",
             "Second": "Mantle of the Frozen Heart — Second ability"
+          }
+        },
+        "MagmaHeart": {
+          "Label": {
+            "EnlargingEruption": "Enlarging Eruption",
+            "FieryGrasp": "Fiery Grasp",
+            "HeartOfFire": "Heart of Fire",
+            "WarmingFlames": "Warming Flames"
+          },
+          "RollOptionLabel": {
+            "First": "Mantle of the Magma Heart — First ability",
+            "Second": "Mantle of the Magma Heart — Second ability"
           }
         }
       },
@@ -5923,7 +5971,12 @@
       },
       "WeaponInfusion": {
         "Melee": "Melee Infusion",
-        "Ranged": "Ranged Infusion"
+        "Ranged": "Ranged Infusion",
+        "RangedSuboptions": {
+          "100Volley": "100 ft., Volley 30ft.",
+          "50Propulsive": "50 ft., Propulsive",
+          "20Thrown": "20 ft., Thrown"
+        }
       },
       "WellspringMage": {
         "CriticalSuccess": "You temporarily recover an expended spell slot of any rank of your choice. The temporary spell slot lasts for 1 minute, and if you don't use it by then, you experience an immediate @UUID[Compendium.pf2e.rollable-tables.RollTable.N0pDFNCffTe2Du39]{Wellspring Surge}.",
