@@ -1429,6 +1429,10 @@
         }
       ]
     },
+    "Anchoring Arrow": {
+      "name": "Anchoring Arrow",
+      "description": "<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p>You can prevent demonic foes from fleeing your wrath via teleportation. Make a bow Strike against a demon. In addition to the normal effects of the Strike, the target must attempt a @Check[will|against:class] save against your class DC.</p>\n<hr />\n<p><strong>Critical Success</strong> The target avoids any additional effect.</p>\n<p><strong>Success</strong> The target takes a –5 circumstance penalty to all their movement Speeds for 1 round as arcane coils of magic meddle with their mobility.</p>\n<p><strong>Failure</strong> As success, but a –5 foot circumstance penalty for 1 minute. While the target is affected by this, Anchoring Arrow attempts to counteract any teleportation effect that would move the target, or any effect that would transport the target to a different plane. The arrow has a counteract rank of 7th and a [[/gmr 1d20+20 @Counteract]]{+20} modifier to the roll.</p>\n<p><strong>Critical Failure</strong> As failure, except a –10 foot circumstance penalty, and the duration is 10 minutes.</p>"
+    },
     "Anchoring Aura": {
       "name": "Anchoring Aura",
       "description": "<p>Your aura hampers fiends' teleportation. Your aura attempts to counteract teleportation spells cast by fiends within 15 feet, using the spell rank and DC of your devotion spells.</p>",
@@ -1613,12 +1617,7 @@
     },
     "Animalistic Resistance": {
       "name": "Animalistic Resistance",
-      "description": "<p>Your animalistic connections help you resist natural afflictions. You gain a +2 circumstance bonus to saves to resist diseases and poisons.</p>",
-      "rules": {
-        "0": {
-          "label": "Animalistic Resistance (vs. disease and poison)"
-        }
-      }
+      "description": "<p>Your animalistic connections help you resist natural afflictions. You gain a +2 circumstance bonus to saves to resist diseases and poisons.</p>"
     },
     "Animate Net": {
       "name": "Animate Net",
@@ -5724,7 +5723,12 @@
     },
     "Chemical Contagion": {
       "name": "Chemical Contagion",
-      "description": "<p>Your injury poisons can spray onto creatures. You gain the toxicologist alchemist's @UUID[Compendium.pf2e.classfeatures.Item.tnqyQrhrZeDtDvcO]{Greater Field Discovery}.</p>"
+      "description": "<p>Your injury poisons can spray onto creatures. You gain the toxicologist alchemist's @UUID[Compendium.pf2e.classfeatures.Item.tnqyQrhrZeDtDvcO]{Greater Field Discovery}.</p>",
+      "prerequisites": [
+        {
+          "value": "Poisoner Dedication"
+        }
+      ]
     },
     "Chemical Purification": {
       "name": "Chemical Purification",
@@ -6151,6 +6155,10 @@
     "Cognitive Loophole": {
       "name": "Cognitive Loophole",
       "description": "<p><strong>Trigger</strong> Your turn ends.</p>\n<p><strong>Requirements</strong> You are currently affected by a mental effect.</p>\n<hr />\n<p>You can find a loophole in a mental effect to temporarily overcome it. Until the end of your next turn, you ignore a single mental effect. You can suppress a particular effect using Cognitive Loophole only once. You can't use Cognitive Loophole to suppress an effect you chose to have affect you.</p>\n<hr />\n<p><strong>Special</strong> You can use this reaction even if the mental effect is preventing you from using reactions.</p>"
+    },
+    "Cold Iron Stomach": {
+      "name": "Cold Iron Stomach",
+      "description": "<p>You have steeled yourself against potent odors. Whenever you gain the @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened} condition, you reduce the value of that condition by 1; if this reduces the value to 0, you avoid becoming sickened entirely. You gain a +2 circumstance bonus to all saving throws against olfactory and poison effects created by demons or environmental hazards associated with the Outer Rifts (including all environmental hazards found in Tanglebriar).</p>"
     },
     "Cold Minded": {
       "name": "Cold Minded",
@@ -7881,12 +7889,7 @@
     },
     "Debilitating Bomb": {
       "name": "Debilitating Bomb",
-      "description": "<p>You can add a crystalline additive to an alchemical bomb to have it undermine your enemy. Choose @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled}, @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened}, @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}, or a –5-foot status penalty to Speeds. If the attack with the bomb hits, in addition to the bomb's normal effects, the target must succeed at a @Check[fortitude|against:class] saving throw or take that effect until the start of your next turn. Use your class DC for this saving throw, even if someone else throws the bomb.</p>",
-      "rules": {
-        "1": {
-          "text": "If your bomb hits, the target must succed at a Fortitude save against your Class DC, or suffer one of the following @UUID[Compendium.pf2e.feats-srd.Item.sv4LeEbkOJyLen10]{effects}"
-        }
-      }
+      "description": "<p>You can add a crystalline additive to an alchemical bomb to have it undermine your enemy. Choose @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled}, @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened}, @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}, or a –5-foot status penalty to Speeds. If the attack with the bomb hits, in addition to the bomb's normal effects, the target must succeed at a @Check[fortitude|against:class] saving throw or take that effect until the start of your next turn. Use your class DC for this saving throw, even if someone else throws the bomb.</p>"
     },
     "Debilitating Dichotomy": {
       "name": "Debilitating Dichotomy",
@@ -8269,6 +8272,19 @@
     "Demolitionist Dedication": {
       "name": "Demolitionist Dedication",
       "description": "<p>You know how to set explosives to cause the maximum possible damage to buildings and other structures. You become trained in Engineering Lore or become an expert in it if you were already trained. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.vvYsE7OiSSCXhPdr]{Set Explosives} action.</p>\n<p><strong>Special</strong> You can't select another dedication feat until you've gained two other feats from the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.Mk7ECwe1a971WyWl]{Demolitionist} archetype.</p>"
+    },
+    "Demon Hunter": {
+      "name": "Demon Hunter",
+      "description": "<p>The demons of Tanglebriar have long haunted your dreams, just as they have long threatened Kyonin. You have not only studied these fiendish foes well, but have trained extensively to battle the hordes of demons that serve Treerazer and are particularly adept at striking desperate melee blows against them.</p>\n<p>When you make your daily preparations, choose one kind of demon, such as succubus, omox, shemhazian, or Treerazer. For the remainder of the day, the first time you hit one of those specific demons in a round with a melee Strike, you also deal 1d6 additional spirit damage. At 13th level, the extra damage increases to 2d6 additional spirit damage, and at 17th level, the extra damage increases to 3d6 spirit damage.</p>",
+      "prerequisites": [
+        {
+          "value": "expert in Religion or Demon Lore"
+        }
+      ]
+    },
+    "Demon Slayer": {
+      "name": "Demon Slayer",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You can deliver a melee blow to a demon that creates an explosion of holy light to try to finish the demon off. In addition to the normal damage from your melee Strike, you also inflict @Damage[10d6[spirit]] damage to the demon. The demon can resist this additional damage with a @Check[fortitude|against:class|basic] save against your class DC. If the demon is slain by this strike, it explodes in a blast of holy light that fills a @Template[type:emanation|distance:30]. All creatures in this area that have the demon trait take @Damage[10d6[spirit]] damage and must attempt a @Check[fortitude|against:class] save against your class DC.</p>\n<hr />\n<p><strong>Critical Success</strong> The demon takes no damage.</p>\n<p><strong>Success</strong> The demon takes half damage.</p>\n<p><strong>Failure</strong> The demon takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round.</p>\n<p><strong>Critical Failure</strong> The demon takes full damage and is permanently @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded}.</p>"
     },
     "Demon's Hair": {
       "name": "Demon's Hair",
@@ -14592,12 +14608,7 @@
         {
           "value": "expert in Crafting"
         }
-      ],
-      "rules": {
-        "0": {
-          "label": "Gadget Specialist"
-        }
-      }
+      ]
     },
     "Galvanize Spell": {
       "name": "Galvanize Spell",
@@ -16922,7 +16933,16 @@
     },
     "Heroes' Call": {
       "name": "Heroes' Call",
-      "description": "<p>The songs of ancient heroes echo through your mind and quicken your pulse, especially in dire straits. You gain @UUID[Compendium.pf2e.spells-srd.Item.KqvqNAfGIE5a9wSv]{Heroism} as a 3rd-rank innate occult spell that you can cast once per day. If you Cast the Spell when you have half or fewer Hit Points, you also gain temporary Hit Points equal to twice your level.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.BHnunYPROBG5lxv4]{Effect: Heroes' Call}</p>"
+      "description": "<p>The songs of ancient heroes echo through your mind and quicken your pulse, especially in dire straits. You gain @UUID[Compendium.pf2e.spells-srd.Item.KqvqNAfGIE5a9wSv]{Heroism} as a 3rd-rank innate occult spell that you can cast once per day. If you Cast the Spell when you have half or fewer Hit Points, you also gain temporary Hit Points equal to twice your level.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.BHnunYPROBG5lxv4]{Effect: Heroes' Call}</p>",
+      "rules": {
+        "2": {
+          "value": {
+            "1": {
+              "text": "@UUID[Compendium.pf2e.feat-effects.Item.BHnunYPROBG5lxv4]{Effect: Heroes' Call}"
+            }
+          }
+        }
+      }
     },
     "Heroic Defiance": {
       "name": "Heroic Defiance",
@@ -25465,7 +25485,7 @@
     },
     "Plentiful Snares": {
       "name": "Plentiful Snares",
-      "description": "<p>You can prepare incredible numbers of snares each day out of simple ingredients. Double the number of prepared snares granted by Snarecrafter Dedication.</p>",
+      "description": "<p>You can prepare incredible numbers of snares each day out of simple ingredients. Double the number of prepared snares granted by @UUID[Compendium.pf2e.feats-srd.Item.4MUbwilvb9dI0X59]{Snarecrafter Dedication}.</p>",
       "prerequisites": [
         {
           "value": "Snarecrafter Dedication"
@@ -25555,6 +25575,24 @@
       "prerequisites": [
         {
           "value": "Runelord Dedication"
+        }
+      ]
+    },
+    "Political Acumen": {
+      "name": "Political Acumen",
+      "description": "<p>You have spent years following the political maneuvering and secret alliances of elves in Iadara. You gain a +2 circumstance bonus to Perception checks made to @UUID[Compendium.pf2e.actionspf2e.Item.1xRFPTFtWtGJ9ELw]{Sense Motive} against other elves and to your Perception DC against Lies spoken by agents of Tanglebriar.</p>",
+      "prerequisites": [
+        {
+          "value": "trained in Perception"
+        }
+      ]
+    },
+    "Political Virtuoso": {
+      "name": "Political Virtuoso",
+      "description": "<p>Your mastery of the politics of your home nation is profound. Your circumstance bonus from @UUID[Compendium.pf2e.feats-srd.Item.h3h6QWv1m3MOpx66]{Political Acumen} becomes +4 instead of +2.</p>",
+      "prerequisites": [
+        {
+          "value": "Political Acumen"
         }
       ]
     },
@@ -30237,6 +30275,10 @@
         }
       ]
     },
+    "Shame the Sin": {
+      "name": "Shame the Sin",
+      "description": "<p><strong>Frequency</strong> once per hour</p>\n<p><strong>Trigger</strong> You critically hit a demon with a Strike.</p>\n<hr />\n<p>Your conviction against the sins that all demons grow from is so strong that you can force a demon to suffer from its sins when you strike a sound blow against them. In addition to doing the normal damage for your critical hit, the demon also suffers the effects of its special vulnerability. If the demon has no special vulnerability, it instead takes an additional @Damage[1d6[mental]] damage. This increases to @Damage[2d6[mental]] damage at 13th level and to @Damage[3d6[mental]] damage at 17th level.</p>"
+    },
     "Shameless Request": {
       "name": "Shameless Request",
       "description": "<p>You can downplay the consequences or outrageousness of your requests using sheer brazenness and charm. When you Request something, you reduce any DC increases for making an outrageous request by 2, and if you roll a critical failure for your Request, you get a failure instead. While this means you can never cause your target to reduce their attitude toward you by making a Request, they eventually tire of requests, even though they still have a positive attitude toward you.</p>",
@@ -30912,7 +30954,7 @@
     },
     "Signature Spell Expansion": {
       "name": "Signature Spell Expansion",
-      "description": "<p>Your innate connection to magic lets you cast more spells with greater freedom. You gain two additional signature spells, each of which must have a minimum level of 3rd or lower.</p>"
+      "description": "<p>Your innate connection to magic lets you cast more spells with greater freedom. You gain two additional signature spells, each of which must have a base rank of 3rd or lower.</p>"
     },
     "Signature Spell Expansion (Psychic)": {
       "name": "Signature Spell Expansion (Psychic)",
@@ -31649,12 +31691,7 @@
         {
           "value": "Snare Crafting"
         }
-      ],
-      "rules": {
-        "0": {
-          "label": "Snare Crafting"
-        }
-      }
+      ]
     },
     "Snare Hopping": {
       "name": "Snare Hopping",
@@ -31687,16 +31724,11 @@
         {
           "value": "Snare Crafting"
         }
-      ],
-      "rules": {
-        "0": {
-          "label": "Snare Crafting"
-        }
-      }
+      ]
     },
     "Snarecrafter Dedication": {
       "name": "Snarecrafter Dedication",
-      "description": "<p>You have studied the art of crafting snares and laying traps, and few have shown more talent in these arts than you. You gain the Snare Crafting feat. When you set a snare, the DC of any saving throw it requires uses the higher of your class DC or the snare's DC. If a snare normally takes 1 minute to Craft, you can Craft it with 3 Interact actions instead.</p>\n<p>Each day during your daily preparations, you can prepare four snares from your formula book for quick deployment (increasing to six snares if you're a master in Crafting and eight if you're legendary). Snares prepared in this way don't cost you any resources to Craft.</p>\n<p>When you increase your proficiency rank in Crafting to expert, master, or legendary, add three additional snare formulas to your formula book. The snares must be of your level or lower.</p>\n<hr />\n<p><strong>Special</strong> Rangers can adapt snare crafting techniques to create snares from natural materials. If you are a ranger, you can use Survival instead of Crafting for all prerequisites and functions of feats from this archetype. (This includes using Survival to Craft a snare.)</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.G9Fzy5ZK4KtAmcFb]{Snarecrafter}</p>",
+      "description": "<p>You have studied the art of crafting snares and laying traps, and few have shown more talent in these arts than you. You gain the @UUID[Compendium.pf2e.feats-srd.Item.DMetdzt1VJL2Y62i]{Snare Crafting} feat. When you set a snare, the DC of any saving throw it requires uses the higher of your class DC or the snare's DC. If a snare normally takes 1 minute to Craft, you can Craft it with 3 Interact actions instead.</p>\n<p>Each day during your daily preparations, you can prepare four snares from your formula book for quick deployment (increasing to six snares if you're a master in Crafting and eight if you're legendary). Snares prepared in this way don't cost you any resources to Craft.</p>\n<p>When you increase your proficiency rank in Crafting to expert, master, or legendary, add three additional snare formulas to your formula book. The snares must be of your level or lower.</p>\n<hr />\n<p><strong>Special</strong> Rangers can adapt snare crafting techniques to create snares from natural materials. If you are a ranger, you can use Survival instead of Crafting for all prerequisites and functions of feats from this archetype. (This includes using Survival to Craft a snare.)</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.G9Fzy5ZK4KtAmcFb]{Snarecrafter}</p>",
       "prerequisites": [
         {
           "value": "trained in Crafting"
@@ -34372,6 +34404,15 @@
       "name": "Swaggering Initiative",
       "description": "<p><strong>Trigger</strong> You are about to roll initiative.</p>\n<hr />\n<p>You swagger readily into any fight. You gain a +2 circumstance bonus to your initiative roll and can Interact to draw a weapon. If you are the first to act in combat, you gain @UUID[Compendium.pf2e.feat-effects.Item.uBJsxCzNhje8m8jj]{Panache}.</p>"
     },
+    "Swamp Stealth": {
+      "name": "Swamp Stealth",
+      "description": "<p><strong>Requirements</strong> You are in a swamp environment near an environmental feature that would allow you to @UUID[Compendium.pf2e.actionspf2e.Item.ust1jJSCZQUhBZIz]{Take Cover}.</p>\n<hr />\n<p>In swamplands, you are particularly skilled at quickly hiding behind bits of underbrush or foliage, or moving quietly through murky water. You Take Cover and then use that cover to @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa]{Hide}.</p>",
+      "prerequisites": [
+        {
+          "value": "expert in Stealth"
+        }
+      ]
+    },
     "Swap Investment": {
       "name": "Swap Investment",
       "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>Your time as a Pathfinder has taught you how to improvise, and you've learned to make use of the resources you find in the field. You Invest a magic item and remove a previously invested item. The previous item no longer counts against your limit of 10 invested items.</p>",
@@ -36062,6 +36103,10 @@
         }
       ]
     },
+    "Traditional Ways": {
+      "name": "Traditional Ways",
+      "description": "<p>You are a fervent follower of the long-standing elven traditions established when your people returned to Kyonin. You gain a +2 circumstance bonus to Nature, Society, and Lore skill checks related to Kyonin or the elves that live there, as well as a +1 circumstance bonus to saves against enchantment effects that would force you to act against your will.</p>"
+    },
     "Tragic Lament": {
       "name": "Tragic Lament",
       "description": "<p><strong>Trigger</strong> A creature you're aware of critically succeeds on a Strike against you and would deal damage to you.</p>\n<p><strong>Frequency</strong> once per 10 minutes</p>\n<hr />\n<p>You dramatically cry out in poetic verse about the tragedies that led to your doom at this very moment, instilling guilt in your attacker. The Strike deals normal damage rather than critical damage as your foe relents on their attack at the last moment as they're moved by your words, though other effects that happen on a critical hit still occur. The creature that made the triggering Strike must then succeed on a @Check[will|against:class] save against your Class DC or be @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 round by guilt at its actions against you.</p>",
@@ -36232,6 +36277,10 @@
     "Tree's Ward": {
       "name": "Tree's Ward",
       "description": "<p>You've lived among trees for so long they recognize your presence and seek to protect you from harm. You can cast @UUID[Compendium.pf2e.spells-srd.Item.K9gI08enGtmih5X1]{Protector Tree} as a primal innate spell once per day.</p>"
+    },
+    "Treehealer": {
+      "name": "Treehealer",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You can undo the effect of demonic corruption in plants. By spending 10 minutes in contact with a tree that's been corrupted by demonic presence, you can restore the tree to its original health. This does not prevent that tree from becoming corrupted again in the future. Alternatively, you can spend 10 minutes in contact with a creature with the plant trait. At the end of this time, you restore @Damage[7d8+56[healing]] Hit Points to that creature and heal half that amount of your own Hit Points. Additionally, you can attempt to counteract any one curse or disease afflicting that plant creature as if you had cast @UUID[Compendium.pf2e.spells-srd.Item.SUKaxVZW2TlM8lu0]{Cleanse Affliction} heightened to 7th rank. Your counteract rank for this is 7, and your counteract check is equal to your Will save or your spell attack modifier, whichever is higher.</p>"
     },
     "Treespeech": {
       "name": "Treespeech",
@@ -36837,7 +36886,7 @@
     },
     "Ubiquitous Snares": {
       "name": "Ubiquitous Snares",
-      "description": "<p>You can prepare a seemingly impossible number of snares in advance, and you're ready to spring them on unsuspecting foes. Double the number of prepared snares from Snare Specialist.</p>",
+      "description": "<p>You can prepare a seemingly impossible number of snares in advance, and you're ready to spring them on unsuspecting foes. Double the number of prepared snares from @UUID[Compendium.pf2e.feats-srd.Item.0haS0qXR9xTYKoTG]{Snare Specialist}.</p>",
       "prerequisites": [
         {
           "value": "Snare Specialist"
