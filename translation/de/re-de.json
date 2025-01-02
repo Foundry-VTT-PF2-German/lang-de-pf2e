@@ -657,12 +657,13 @@
         "Label": "Speziell"
       },
       "Trigger": {
-        "Label": "Auslöser"
+        "Label": "Auslöser",
+        "TargetedByAStrike": "You are targeted by a Strike"
       }
     },
     "GenericLabel": {
       "ItemVs": {
-        "DeathVoid": "{Item} gg. Todes- und Leereneffekte",
+        "DeathVoid": "{item} vs. Death and Void effects",
         "Fear": "{item} gg. Furcht"
       },
       "PreviousAction": {
@@ -696,6 +697,7 @@
         "DamageFromSwornCreatures": "damage from sworn creature kind",
         "DraconicBreathWeapons": "Drachenodemwaffen",
         "EnemyStrikes": "Gegnerische Angriffe",
+        "FallDamage": "fall damage",
         "HolyBludgeoningPiercingSlashing": "Heiliger Hieb-, Stich- und Wuchtschaden",
         "ImpulseFireFrom": "Feuerimpuls von {origin}",
         "IncorporealCreatures": "Körperlose Kreaturen",
@@ -837,6 +839,7 @@
           "Faydhaan": "Faydhaan",
           "Fish": "Fisch",
           "Fox": "Fuchs",
+          "Fungus": "Fungus",
           "Gancanagh": "Gancanagh",
           "Gimmerling": "Gimmerling",
           "Gosreg": "Gosreg",
@@ -872,7 +875,7 @@
           "Plant": "Plant",
           "PorcupineGiant": "Riesenstachelschwein",
           "Pukwudgie": "Pukwudgie",
-          "RacoonDog": "Marderhund",
+          "RacoonDog": "Raccoon Dog",
           "RajaKrodha": "Raja-Krodha",
           "Raktavarna": "Raktawarna",
           "Rat": "Ratte",
@@ -890,6 +893,7 @@
           "Vidileth": "Vidileth",
           "Vilderavn": "Rabenritter",
           "Voidworm": "Limbuswurm",
+          "Wasp": "Wasp",
           "WingedHumanoid": "Geflügelter Humanoider",
           "Wolf": "Wolf",
           "WolfDire": "Schreckenswolf",
@@ -1962,6 +1966,12 @@
           "CriticalNote": "Solltest du mit einem von dir vergifteten und mit einem Blasrohr verschossenen Blasrohrpfeil einen Kritischen Treffer landen, so wird das Ergebnis des Rettungswurfes des Zieles gegen das Gift als einen Schritt schlechter behandelt; dies ist ein Effekt der Kategorie Unglück.",
           "StealthNote": "Wenn du einen Blasrohrangriff ausführst, während du @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Versteckt} oder @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Unentdeckt} bist, wirst du außerdem nicht automatisch @UUID[Compendium.pf2e.conditionitems.Item.1wQY3JYyhMYeeV2G]{Beobachtet}. Versuche stattdessen sofort, einen Wurf für @Check[stealth|against:perception]{Heimlichkeit} gegen den Wahrnehmungs-SG des Ziels zu bestehen. Wenn du erfolgreich bist, wirst du nicht Beobachtet und bist Versteckt (wenn du Unentdeckt warst, wirst du trotzdem Versteckt, anstatt Unentdeckt zu bleiben)."
         },
+        "DebilitatingBomb": {
+          "AttackRollNote": "The target must succed at a @Check[fortitude|against:class], or suffer one of the following effects: dazzled, deafened, off-guard, or take a -5 foot status penalty to Speeds. @UUID[Compendium.pf2e.feat-effects.Item.VTJ8D23sOIfApEt3]{Effect: Debilitating Bomb}",
+          "SpeedPenalty": {
+            "Label": "-5 foot Speed Penalty"
+          }
+        },
         "ExpandedSplash": {
           "Note": "Der Flächenschaden betrifft alle Kreaturen innerhalb von 10 Fuß/3 m Entfernung zum Ziel statt 5 Fuß/1,50 m."
         },
@@ -1978,6 +1988,7 @@
           }
         },
         "ResearchField": {
+          "AdvancedVials": "Advanced Vials",
           "Bomber": {
             "FieldBenefit": "Wenn du eine alchemistische Bombe der Kategorie Flächenschaden wirfst, kannst du den Flächenschaden nur deinem Hauptziel zufügen statt allen im üblichen Radius.",
             "FieldVials": {
@@ -1987,11 +1998,15 @@
           },
           "Chirurgeon": {
             "FieldVials": {
-              "Description": "Deine Vielseitigen Phiolen können benutzt werden, um lebenden Kreaturen TP zu heilen (@Damage[(ternary(gte(@actor.level,18),4,ternary(gte(@actor.level,12),3,ternary(gte(@actor.level,4),2,1))))d6[healing]]). Eine Kreatur kann eine deiner Phiolen austrinken und wird um eine Anzahl an Trefferpunkten geheilt, die dem normalen Schaden der Phiole entspricht. Alternativ kannst du eine Phiole mit einer Aktion der Kategorie Interagieren auf eine maximal 20 Fuß/6 m entfernte Kreatur werfen, um sie zu heilen. In beiden Fällen verliert die Phiole die Kategorien Alchemistischer Flächenschaden und Säure und erlangt die Kategorien Gerinnung und Heilung; sollte eine Kreatur die Phiole austrinken, erhält sie zudem die Kategorie Elixier."
+              "Description": "Your versatile vials can be used to heal a living creature @Damage[(ternary(gte(@item.level,18),4,ternary(gte(@item.level,12),3,ternary(gte(@item.level,4),2,1))))d6[healing]] Hit Points. A creature can drink the vial for this benefit, or you can throw the vial at a willing creature within 20 feet as an Interact action to heal that creature. In either case, a vial used this way loses the acid and splash traits and gains the coagulant and healing traits, plus the elixir trait if a creature drinks it."
             }
           },
+          "FieldBenefit": "Field Benefit",
           "FieldVials": "Phiolenoptionen",
           "Mutagenist": {
+            "FieldBenefit": {
+              "Description": "When you use a mutagen, you gain a number of temporary Hit Points equal to your Intelligence modifier (minimum 0) plus half your level. These temporary Hit Points last for 1 minute or until the mutagen's duration expires, whichever comes first. You can't gain temporary HP from drinking a mutagen again for 1 minute."
+            },
             "FieldVials": {
               "Description": "Du kannst eine deiner Vielseitigen Phiolen austrinken, um die gegenwärtig auf dich wirkenden Nachteile eines Mutagens bis zum Beginn deines nächsten Zuges zu unterdrücken. In diesem Fall verliert die Phiole die Kategorien Alchemistischer Flächenschaden, Bombe und Säure und erhält die Kategorie Elixier. Solltest du unter den Nachteilen durch @UUID[Compendium.pf2e.feats-srd.Item.jSkJIWPfSZZzvYzq]{Elixiere kombinieren} leiden, entscheidest du beim Trinken, welcher Nachteil unterdrückt wird."
             }
@@ -3157,6 +3172,9 @@
         "ForgeBlessedShot": {
           "Note": "Du ignorierst sowohl den Zustand @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Verborgen} deines Ziels, als auch schwache, normale und starke Deckung des Ziels."
         },
+        "HeroesCall": {
+          "DescriptionAlteration": "If you Cast the Spell when you have half or fewer Hit Points, you also gain temporary Hit Points equal to twice your level."
+        },
         "KneelForNoGod": {
           "Note": "Wenn du gegen einen Göttlichen Effekt einen Erfolg würfelst, erhältst du stattdessen einen kritischen Erfolg."
         },
@@ -3385,6 +3403,18 @@
         },
         "PhantomShroud": {
           "StrikeLabel": "Geisterhand"
+        },
+        "PharasminVisor": {
+          "PierceTheNight": "Pierce the Night",
+          "RevealTheUnseen": "Reveal the Unseen",
+          "SeeThroughDeath": "See Through Death"
+        },
+        "PreyMutagen": {
+          "TimelyDodge": {
+            "GreaterDescription": "You dart aside, gaining a +3 circumstance bonus to AC, then Step after the Strike resolves.",
+            "MajorDescription": "You dart aside, gaining a +4 circumstance bonus to AC, then Step after the Strike resolves.",
+            "ModerateDescription": "You dart aside, gaining a +2 circumstance bonus to AC, then Step after the Strike resolves."
+          }
         },
         "RhinoShot": {
           "CriticalSuccess": "Das Ziel muss einen @Check[fortitude|dc:19|traits:conjuration,consumable,magical|showDC:all]{Zähigkeitswurf} mit einem Kritischen Erfolg ablegen oder es wird umgeworfen und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}.",
@@ -4342,6 +4372,10 @@
         "EvergreenVitality": "Immergrünes Leben",
         "GraspingBranch": "Greifender Ast",
         "OverwhelmingPerfume": "Überwältigender Duft",
+        "RollOptionLabel": {
+          "First": "Mantle of the Unwavering Heart — First ability",
+          "Second": "Mantle of the Unwavering Heart — Second ability"
+        },
         "ToweringTrunk": "Turmhoher Stamm",
         "UnyieldingWill": "Unerschütterlicher Wille"
       },
@@ -4714,6 +4748,7 @@
         "Cantrip": "Wähle einen Zaubertrick",
         "CantripOrNonCantrip": "Wähle Zaubertrick oder Zauber.",
         "ClassDCAbilityScore": "Wähle das Attribut deines Klassen-SG.",
+        "ClassFeat": "Select a class feat.",
         "Color": "Wähle eine Farbe.",
         "ConsciousMind": "Wähle einen Bewussten Verstand.",
         "CreatureSize": "Wähle eine Kreaturengröße.",
@@ -4723,6 +4758,7 @@
         "DeitysDomain": "Wähle eine Domäne der Gottheit.",
         "DieSize": "Wähle eine Würfelgröße",
         "DragonBreathWeapon": "Wähle die Odemwaffe eines Drachen.",
+        "Effect": "Select an effect.",
         "Element": "Wähle ein Element.",
         "EnergyType": "Wähle einen Energietyp.",
         "EquipmentVariety": "Wähle eine Gegenstands-Variante",
@@ -5290,6 +5326,18 @@
           "RollOptionLabel": {
             "First": "Mantel des Frostherzens - Erste Fähigkeit",
             "Second": "Mantel des Frostherzens - Zweite Fähigkeit"
+          }
+        },
+        "MagmaHeart": {
+          "Label": {
+            "EnlargingEruption": "Enlarging Eruption",
+            "FieryGrasp": "Fiery Grasp",
+            "HeartOfFire": "Heart of Fire",
+            "WarmingFlames": "Warming Flames"
+          },
+          "RollOptionLabel": {
+            "First": "Mantle of the Magma Heart — First ability",
+            "Second": "Mantle of the Magma Heart — Second ability"
           }
         }
       },
@@ -5923,7 +5971,12 @@
       },
       "WeaponInfusion": {
         "Melee": "Nahkampfinfusion",
-        "Ranged": "Fernkampfinfusion"
+        "Ranged": "Fernkampfinfusion",
+        "RangedSuboptions": {
+          "100Volley": "100 ft., Volley 30ft.",
+          "50Propulsive": "50 ft., Propulsive",
+          "20Thrown": "20 ft., Thrown"
+        }
       },
       "WellspringMage": {
         "CriticalSuccess": "Du erlangst vorübergehend einen von dir an diesem Tag bereits genutzten Zauberplatz eines Grades deiner Wahl zurück. Solltest du den Zauberplatz nicht binnen 1 Minute nutzen, kommt es zu einem @UUID[Compendium.pf2e.rollable-tables.RollTable.N0pDFNCffTe2Du39]{Urquellschub}.",
