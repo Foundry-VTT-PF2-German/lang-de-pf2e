@@ -1167,7 +1167,7 @@
       "items": {
         "action->Spiked Pitfall": {
           "name": "Fallgrube mit Speerspitzen",
-          "description": "<p><strong>Auslöser</strong> Eine Kreatur tritt auf die Abdeckung einer Grube</p>\n<hr />\n<p><strong>Effekt</strong> Die auslösende Kreatur stürzt in die Grube und trifft auf dem Weg zum Boden auf mehrere angespitzte, aus den Grubenwänden ragende Holzpflöcke. Dies fügt ihr @Damage[5[bludgeoning]]{5 Punkte Wuchtschaden} durch den Sturz selbst zu (mangels nutzbarer Ränder kann der SC keinen Wurf für @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Halt ergreifen} ablegen); der stürzende SC muss ferner einen @Check[reflex|dc:26|traits:damaging-effect]{Reflexwurf} ablegen:</p>\n<p><strong>Kritischer Erfolg</strong> Der Charakter spießt sich auf keinem der Pflöcke auf und erleidet keinen weiteren Schaden.</p>\n<p><strong>Erfolg</strong> Der Charakter erleidet durch die Pflöcke @Damage[(2d10+11)[piercing]{2W10+11 Punkte Stichschaden}.</p>\n<p><strong>Fehlschlag</strong> Der Charakter erleidet durch die Pflöcke @Damage[(4d10+22)[piercing]]{4W10+11 Punkte Stichschaden}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Der Charakter erleidet durch die Pflöcke @Damage[(4d10+22)[piercing],2d6[bleed]]{4W10+22 Punkte Stichschaden plus 2W6 Punkte Blutungsschaden}. Solange dieser Blutungsschaden währt, besitzt der SC zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 2} aufgrund der Schmerzen.</p>"
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur tritt auf die Abdeckung einer Grube</p>\n<hr />\n<p><strong>Effekt</strong> Die auslösende Kreatur stürzt in die Grube und trifft auf dem Weg zum Boden auf mehrere angespitzte, aus den Grubenwänden ragende Holzpflöcke. Dies fügt ihr @Damage[5[bludgeoning]|options:fall-damage]{5 Punkte Wuchtschaden} durch den Sturz selbst zu (mangels nutzbarer Ränder kann der SC keinen Wurf für @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Halt ergreifen} ablegen); der stürzende SC muss ferner einen @Check[reflex|dc:26|traits:damaging-effect]{Reflexwurf} ablegen:</p>\n<p><strong>Kritischer Erfolg</strong> Der Charakter spießt sich auf keinem der Pflöcke auf und erleidet keinen weiteren Schaden.</p>\n<p><strong>Erfolg</strong> Der Charakter erleidet durch die Pflöcke @Damage[(2d10+11)[piercing]{2W10+11 Punkte Stichschaden}.</p>\n<p><strong>Fehlschlag</strong> Der Charakter erleidet durch die Pflöcke @Damage[(4d10+22)[piercing]]{4W10+11 Punkte Stichschaden}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Der Charakter erleidet durch die Pflöcke @Damage[(4d10+22)[piercing],2d6[bleed]]{4W10+22 Punkte Stichschaden plus 2W6 Punkte Blutungsschaden}. Solange dieser Blutungsschaden währt, besitzt der SC zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 2} aufgrund der Schmerzen.</p>"
         }
       }
     },
@@ -1435,7 +1435,7 @@
       "items": {
         "action->Collapse": {
           "name": "Collapse",
-          "description": "<p><strong>Trigger</strong> A Small or larger creature walks into either 5-foot-square at the westernmost end of the building</p>\n<hr />\n<p><strong>Effect</strong> The triggering creature falls and takes @Damage[50[bludgeoning]] damage, then an additional @Damage[10d6[bludgeoning]] damage as they and the building's falling timbers \"land\" in a devastating crash at area <strong>A1</strong>. The creature can use the @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge} reaction to avoid falling.</p>"
+          "description": "<p><strong>Trigger</strong> A Small or larger creature walks into either 5-foot-square at the westernmost end of the building</p>\n<hr />\n<p><strong>Effect</strong> The triggering creature falls and takes @Damage[50[bludgeoning]|options:fall-damage] damage, then an additional @Damage[10d6[bludgeoning]] damage as they and the building's falling timbers \"land\" in a devastating crash at area <strong>A1</strong>. The creature can use the @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge} reaction to avoid falling.</p>"
         }
       }
     },
@@ -1839,7 +1839,7 @@
       "items": {
         "action->Collapse": {
           "name": "Collapse",
-          "description": "<p><strong>Trigger</strong> One Large, two Medium, or three Small creatures move onto the rope bridge</p>\n<p><strong>Effect</strong> The bridge collapses and creatures on the bridge fall 30 feet, taking @Damage[15[bludgeoning]] damage. The triggering creatures can attempt a @Check[reflex|dc:18] save to @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge} to avoid falling.</p>"
+          "description": "<p><strong>Trigger</strong> One Large, two Medium, or three Small creatures move onto the rope bridge</p>\n<p><strong>Effect</strong> The bridge collapses and creatures on the bridge fall 30 feet, taking @Damage[15[bludgeoning]|options:fall-damage] damage. The triggering creatures can attempt a @Check[reflex|dc:18] save to @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge} to avoid falling.</p>"
         }
       }
     },
@@ -6571,7 +6571,7 @@
       "items": {
         "action->Tear Free": {
           "name": "Tear Free",
-          "description": "<p><strong>Trigger</strong> A creature climbs across the chasm without knowing which of the loops are rigged</p>\n<p><strong>Effect</strong> The loops rip free, dropping the climber 20 feet into the chasm below and dealing @Damage[10[bludgeoning]] damage. The falling creature can use the @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge} reaction to avoid falling if it succeeds at a @Check[flat|dc:11]; failure indicates that the edge @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} rips away as well.</p>"
+          "description": "<p><strong>Trigger</strong> A creature climbs across the chasm without knowing which of the loops are rigged</p>\n<p><strong>Effect</strong> The loops rip free, dropping the climber 20 feet into the chasm below and dealing @Damage[10[bludgeoning]|options:fall-damage] damage. The falling creature can use the @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge} reaction to avoid falling if it succeeds at a @Check[flat|dc:11]; failure indicates that the edge @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} rips away as well.</p>"
         }
       }
     },
@@ -9075,7 +9075,7 @@
       "items": {
         "action->Floor Collapse": {
           "name": "Floor Collapse",
-          "description": "<p><strong>Trigger</strong> A Small or larger creature enters the marked portion of the map</p>\n<hr />\n<p><strong>Effect</strong> The triggering creature falls, taking @Damage[20[bludgeoning]]{20} damage from the fall plus @Damage[3d6[piercing]] damage (@Check[reflex|dc:22|basic]) from the stalagmites. A creature can @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge} to avoid falling, or succeed at a @Check[athletics|dc:20] check to climb out of the chasm.</p>"
+          "description": "<p><strong>Trigger</strong> A Small or larger creature enters the marked portion of the map</p>\n<hr />\n<p><strong>Effect</strong> The triggering creature falls, taking @Damage[20[bludgeoning]|options:fall-damage]{20} damage from the fall plus @Damage[3d6[piercing]] damage (@Check[reflex|dc:22|basic]) from the stalagmites. A creature can @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge} to avoid falling, or succeed at a @Check[athletics|dc:20] check to climb out of the chasm.</p>"
         }
       }
     },
