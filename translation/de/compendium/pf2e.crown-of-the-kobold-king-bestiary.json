@@ -1,0 +1,1055 @@
+{
+  "label": "Die Krone des Koboldkönigs Bestiarium",
+  "entries": {
+    "Albino Giant Bat": {
+      "name": "Albinoriesenfledermaus",
+      "blurb": "Riesenfledermausvariante",
+      "items": {
+        "strike-melee->Fangs": {
+          "name": "Biss"
+        },
+        "strike-melee->Wings": {
+          "name": "Flügel"
+        },
+        "action->Echolocation (Precise) 40 feet": {
+          "name": "Echolot (genau) 40 Fuß/12 m",
+          "description": "<p>Eine Fledermaus kann ihr Gehör als genauen Sinn mit der aufgeführten Reichweite nutzen.</p>"
+        },
+        "action->Wing Thrash": {
+          "name": "Flügelschlag",
+          "description": "<p><strong>Auslöser</strong> Ein angrenzender Gegner fügt der Riesenfledermaus Schaden zu.</p>\n<hr />\n<p><strong>Effekt</strong> Die Fledermaus führt einen oder zwei Flügelangriffe gegen die auslösende Kreatur und eine weitere angrenzende Kreatur aus.</p>"
+        }
+      }
+    },
+    "Ashen Guardian": {
+      "name": "Aschewächter",
+      "blurb": "Schattenvarianten",
+      "publicNotes": "<p>Die mysteriösen, als Schatten bekannten Untoten lauern an dunklen Orten und nähren sich von jenen, die sich zu weit vom Licht entfernen. Wer mit Schatten verhandelt – meistens indem er sie mit einer leuchtenden Waffe auf Abstand hält, könnte große Geheimnisse erfahren, sind sie doch ideale Spione.</p>",
+      "items": {
+        "strike-melee->Shadow Hand": {
+          "name": "Schattenhand"
+        },
+        "action->Light Vulnerability": {
+          "name": "Empfindlichkeit gegen Licht",
+          "description": "<p>Ein Gegenstand, welcher magisches Licht abgibt (z.B. durch den Zauber @UUID[Compendium.pf2e.spells-srd.Item.WBmvzNDfpwka3qT4]{Licht}), wird als magisch behandelt, wenn er dazu benutzt wird, um den Schatten anzugreifen.</p>"
+        },
+        "action->Shadow Spawn": {
+          "name": "Schattenbrut",
+          "description": "<p>Wird der Schatten einer Kreatur mittels Schatten stehlen entfernt, so wird er zu einer @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.clzHAfegb9Rn6DOe]{Schattenbrut} unter dem Befehl des Schattens, der ihn erschaffen hat. Diese Schattenbrut besitzt nicht die Fähigkeit Schatten stehlen und besitzt dauerhaft und unheilbar den Zustand @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 2}. Sollte die Kreatur, deren Schatten zur Schattenbrut gemacht wurde, sterben, wird die Schattenbrut zu einem richtigen, selbstständigen Schatten. Sollte sich die Kreatur vom Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos} befreien können, kehrt ihr Schatten zu ihr zurück und die Existenz der Schattenbrut endet.</p>"
+        },
+        "action->Slink in Shadows": {
+          "name": "In Schatten eintauchen",
+          "description": "<p>Der Schatten kann sich im Schatten einer Kreatur oder Gegenstandes @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa]{Verstecken} oder dort sein @UUID[Compendium.pf2e.actionspf2e.Item.VMozDqMMuK5kpoX4]{Schleichen} beenden.</p>"
+        },
+        "action->Steal Shadow": {
+          "name": "Schatten stehlen",
+          "description": "<p><strong>Anforderungen</strong> Der Schatten hat mit seiner vorangegangenen Handlung eine lebende Kreatur mit einem Schattenhandangriff getroffen</p>\n<hr />\n<p><strong>Effekt</strong> Der Schatten zieht am Schatten des Ziels und verleiht der Kreatur den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 1}. Dieser Zustand ist kumulativ mit anderen Zustandswerten für Kraftlos, welche der Schatten zufügt (maximal Kraftlos 4). Sollte der Zustandswert hierbei auf Kraftlos 3 oder mehr steigen, wird der Schatten des Ziels vom Körper getrennt (siehe Schattenbrut). Der Zustandswert für Kraftlos sinkt jede Stunde um 1.</p>"
+        }
+      }
+    },
+    "Avalanche Doors": {
+      "name": "Schmettertor",
+      "description": "<p>Die Doppeltür ist eine falsche Tür – wird die Falle ausgelöst, stürzt sie wie eine Zugbrücke nach vorn, um jene zu zerschmettern, die vor ihr stehen.</p>",
+      "disable": "<p>@Check[thievery|dc:22]{Diebeskunst (Geübt)}, um den Auslöser zu blockieren und die Tür zu fixieren.</p>",
+      "hpDetails": "BW 25",
+      "stealth": "<p>(Experte)</p>",
+      "items": {
+        "action->Topple Forward": {
+          "name": "Niederschmettern",
+          "description": "<p><strong>Auslöser</strong> Jemand versucht die Tür zu öffnen oder die Tür erleidet genug Schaden, um den Zustand Beschädigt zu erhalten</p>\n<hr />\n<p><strong>Effekt</strong> Die schwere Metalldoppeltür besitzt verborgene Scharniere an der Unterseite und wird mittels Sprungfedern auf Spannung gehalten, sodass sie wie eine Zugbrücke nach vorn schlägt, um alle Kreaturen in einem Feld mit 10 Fuß/3 m Seitenlänge vor der Tür zu zerschmettern. Alle Kreaturen im Wirkungsbereich müssen einen @Check[reflex|dc:21]{einfachen Reflexwurf} ablegen.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur springt zur Seite und erleidet keinen Schaden – sie landet auf einem Feld ihrer Wahl, welches zum Wirkungsbereich angrenzt.</p>\n<p><strong>Erfolg</strong> Die Kreatur erleidet @Damage[3d8[bludgeoning]]{3W8 Punkte Wuchtschaden} und wird auf ein zum Wirkungsbereich angrenzendes Feld gestoßen.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet @Damage[6d8[bludgeoning]]{6W8 Punkte Wuchtschaden}, wird auf ein zum Wirkungsbereich angrenzendes Feld gestoßen und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erleidet @Damage[12d8[bludgeoning]]{12W8 Punkte Wuchtschaden} und erhält den Zustand Liegend. Die schwere Tür pinnt die Kreatur an den Boden und verleiht ihr den Zustand @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Bewegungsunfähig} (@UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Entkommen}, SG 22). Eine bewegungsfähige Kreatur kann mit einem Wurf für @Check[athletics|dc:22]{Athletik} zum @UUID[Compendium.pf2e.actionspf2e.Item.SjmKHgI7a5Z9JzBx]{Gewaltsam öffnen} die Tür soweit anheben, dass eine bewegungsunfähige Kreatur in Sicherheit kriechen kann.</p>"
+        }
+      }
+    },
+    "Charge of the Spear Legion": {
+      "name": "Ansturm der Speerlegion",
+      "description": "<p>Wird die Falle ausgelöst, kippt der Boden unvermittelt auf einer Wippachse weg, sodass Kreaturen im Raum auf die doppelte Speerreihe im Westen zustolpern, während die Statuen im Osten auf einem Schienensystem ebenfalls nach Westen losrutschen.</p>",
+      "disable": "<p>@Check[thievery|dc:20]{Diebeskunst}, um die auslösende Druckplatte nahe der Nordtür zu deaktivieren.</p>",
+      "reset": "<p>Nach einer Minute kippt der Boden zurück in die Ausgangsposition und die Falle setzt sich zurück.</p>",
+      "stealth": "<p>(Experte)</p>",
+      "items": {
+        "action->Shift Sideways": {
+          "name": "Kippender Boden",
+          "description": "<p><strong>Auslöser</strong> Eine Kleine oder größere Kreatur nähert sich der Doppeltür nach Bereich <strong>D9</strong> auf 15 Fuß/4,50 m oder weniger</p>\n<hr />\n<p><strong>Effekt</strong> Der ganze Raum kippt weg auf einer Wippachse; die westliche Seite senkt sich, die östliche Seite hebt sich dagegen, sodass nach Westen ein 45°-Gefälle entsteht. Alle Kreaturen im Raum erhalten den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend} und rutschen auf die Westwand zu (eine an die Nord- oder Südwand angrenzende Kreatur kann einen Wurf zum @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Halt ergreifen} gegen SG 20 ablegen, um sich festzuhalten) und erleiden @Damage[(2d6 + 5)[piercing]]{2W6+5 Punkte Stichschaden} (@Check[reflex|dc:20|basic]{einfacher Reflexwurf}) durch die Steinspeere. Zugleich setzen sich die kriegshammerführenden Statuen im Osten auf einem Schienen- und Kettensystem in Richtung der Westwand in Bewegung; jede Kreatur in der Falle ist Ziel eines Rutschende-Statue-Angriffs.</p>"
+        },
+        "strike-melee->Sliding Statue": {
+          "name": "Rutschende Statue"
+        }
+      }
+    },
+    "Cilios": {
+      "name": "Cilios",
+      "blurb": "Wächtermumien-Variante",
+      "hpDetails": "Leerenheilung",
+      "languages": "plus eine uralte, tote Sprache",
+      "publicNotes": "<p>Die meisten Mumien werden von grausamen, egoistischen Meistern erschaffen, damit sie als Wächter dienen und ihre Grüfte vor Eindringlingen beschützen. Die traditionelle Erschaffungsmethode einer Wächtermumie ist ein anstrengender, sadistischer Prozess, welcher längst vor dem Tod des fraglichen Kandidaten in Gang gesetzt wird. Das Opfer wird rituell ausgehungert und mit fremdartigen Gewürzen, Konservierungsmitteln und Toxinen gefüttert, welche das Austrocknen des Fleisches beschleunigen sollen. Das Opfer kann sich nicht bewegen, ist sich der letzten Phasen des Prozesses aber schmerzhaft bewusst. – Dabei werden seine nun nutzlosen Eingeweide extrahiert, ehe es in Begräbnisschleier gewickelt und dann in einem nekromantisch verzauberten Sarkophag bestattet wird. Dort soll es fortan auf Eindringlinge in der potentiell fernen Zukunft warten. Es gibt noch andere Methoden, welche bereits Verstorbene zur Schaffung untoter Wächter nutzen, aber die Schöpfer solcher übler Untoter halten die Ergebnisse oftmals für im Vergleich unterlegen. In ihren Augen sind die Schmerzen und die Agonie des Todes durch Mumifizierung ein essentieller Schritt des Prozesses.</p>\n<p>Unabhängig davon, wie eine Wächtermumie geschaffen wurde, ist sie mehr als nur körperliche Hüllen aus Fleisch und Knochen – sie behalten fragmentierte, verzerrte Versionen ihrer Persönlichkeiten mit gerade genug Erinnerungen an ihre alten Leben, um ihren untoten Zorn und ihren Neid auf die Lebenden zu befeuern. Diese brennende Wut steigt nur noch, während sie jahrhundertelang in einer Gruft darauf warten, endlich handeln zu können. Werden Wächtermumien also von Grabräubern oder Abenteurern geweckt, kann in der Regel nichts sie davon abhalten, ein ruhmvolles Massaker anrichten zu wollen.</p>\n<hr />\n<p>In vielen Kulturen werden die Toten zur Bestattung mumifiziert. Untote Mumien werden allerdings mittels finsterer Rituale erschaffen, die in der Regel ewig wachsame Hüter hervorbringen sollen.</p>",
+      "items": {
+        "strike-melee->Fist": {
+          "name": "Faust"
+        },
+        "action->Despair": {
+          "name": "Verzweiflung",
+          "description": "<p>30 Fuß/9 m. Lebende Kreaturen erhalten innerhalb dieser Aura den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}. Sie können sich nicht von dieser Furcht erholen, solange sie in der Aura verweilen, verlieren den Zustand aber nach ihrem Verlassen augenblicklich. Betritt eine Kreatur erstmals die Aura, muss sie einen @Check[will|dc:22]{einfachen Willenswurf} ablegen (bei dem der Malus aus Verängstigt bereits zum Tragen kommt); bei einem Fehlschlag erhält sie für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt}. Im Anschluss ist die Kreatur für 24 Stunden gegen diesen weiteren Effekt immun.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.1bOSJ2LbEC28aI9f]{Effekt: Verzweiflung}</p>"
+        },
+        "action->Blinding Rot": {
+          "name": "Blendende Fäule",
+          "description": "<p>Cilios‘ Faustangriffe setzen jene, denen er Schaden zufügt, der Blendenden Fäule aus. Diese Krankheit und der von ihr verursachte Schaden können nicht geheilt werden, bis der Fluch gebrochen wurde. Eine durch Blendende Fäule getötete Kreatur zerfällt zu Staub und kann nur mit einem Ritual @UUID[Compendium.pf2e.spells-srd.Item.kqhPt9344UkcGVYO]{Auferstehung} des 7. Grades oder ähnlich starker Magie ins Leben zurückgeholt werden.</p>\n<hr />\n<p><strong>Rettungswurf</strong> @Check[fortitude|dc:22]{Zähigkeitswurf}</p>\n<p><strong>Phase 1</strong> Erkrankt ohne Symptome (1 Minute)</p>\n<p><strong>Phase 2</strong> @Damage[4d6[void]]{4W6 Punkte Leerenschaden} und @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet} (1 Tag)</p>\n<p><strong>Phase 3</strong> @Damage[4d6[void]]{4W6 Punkte Leerenschaden} und @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind} (1 Tag)</p>"
+        }
+      }
+    },
+    "Dark Talon Kobold": {
+      "name": "Dunkelklauenkobold",
+      "blurb": "Kobold-Schurke",
+      "skillSpecialCrafting": {
+        "0": {
+          "label": "Fallen"
+        }
+      },
+      "items": {
+        "weapon->Flying Talon": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.ucz1WdBA0Ma34OsS]\n<p>This weapon consists of a three-pronged barbed hook attached to a length of chain. It can be used as a melee weapon to stab at foes or hurled as a ranged weapon. Some kobolds are particularly fond of using flying talons, especially as a sort of badge of office above those who serve them.</p>"
+        },
+        "strike-melee->Flying Talon": {
+          "name": "Fliegende Klaue"
+        },
+        "strike-ranged->Flying Talon": {
+          "name": "Fliegende Klaue"
+        },
+        "action->No Retreat": {
+          "name": "Kein Rückzug",
+          "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<p><strong>Anforderungen</strong> Der Dunkelklauenkobold ist zu wenigstens einem Gegner angrenzend und besitzt weniger als 12 TP</p>\n<hr />\n<p><strong>Effekt</strong> Die Dunkelklaue kreischt zornig und erlangt @Damage[2d6[healing]]{2W6 TP} zurück.</p>"
+        },
+        "action->Sneak Attack": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>A Dark Talon kobold deals an additional 1d6 precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
+        }
+      }
+    },
+    "Darkmantle": {
+      "name": "Düstermantel",
+      "publicNotes": "<p>Diese dunkelblauen oder schwarzen molluskenartigen Kreaturen ähneln Oktopussen, besitzen aber nur sechs Tentakel, die alle mit einer dicken, ledrigen Hülle verbunden sind. Düstermäntel sind keine besonders guten Kletterer, können sich aber wunderbar festklammern und so tagelang unter einer Höhlendecke hängen, so sie geduldig auf Beute warten – bemerken sie Beute unter sich, überfallen sie sie mit verwirrender Dunkelheit. Ein von der Decke hängender Düstermantel, der seine roten Knollenaugen zu Schlitzen zusammenpresst, sieht aus wie ein Tropfstein. Die bevorzugte Jagdmethode der Kreaturen funktioniert am besten bei Wesen ohne Dunkelsicht, daher frequentieren sie oberirdische Ruinen oder Höhlen sehr nahe der Oberfläche. Spüren sie Beute, setzen sie zuerst Dunkelheit ein und lassen sich dann mit flatternden Bewegungen fallen, um die Beute mit ihren Tentakeln zu packen und zu quetschen. Trotz ihrer Gestalt sind ihre Leiber eher wie dickes Leder oder sogar Gummi – sie können mit ihren dornenförmigen Körpern keinen Schaden verursachen, allein indem sie sich auf andere Kreaturen herabfallen lassen.</p>\n<p>Der Lebenszyklus eines Düstermantels ist eher kurz – binnen Monaten erreichen die Jungen die Geschlechtsreife und nach wenigen Jahren sterben sie schon an Altersschwäche. Entsprechend folgt Generation rasch auf Generation und passen sie sich im Laufe der Jahre vergleichsweise schnell an neue Umgebungen an. In aquatischen Höhlen könnten z.B. Düstermäntel hausen, welche schwimmen statt zu fliegen, während Düstermäntel in eisigen Höhlen eine weiße oder fahle Färbung besitzen und vielleicht verhüllenden Nebel statt Dunkelheit hervorbringen. In den tiefsten Winkeln der Finsterlande sollen angeblich gewaltige Düstermäntel hausen, die mehrere menschengroße Opfer gleichzeitig ersticken können – ihre Dunkelheit ist so mächtig, dass selbst Dunkelsicht sie nicht mehr durchdringen kann, während sie selbst davon nicht behindert werden.</p>",
+      "items": {
+        "strike-melee->Tentacles": {
+          "name": "Tentakel"
+        },
+        "action->Tremorsense (Precise) 60 feet": {
+          "name": "<Compendium> (Genau) 60 Fuß/18 m"
+        },
+        "action->Constrict": {
+          "description": "<p>@Damage[1d8[bludgeoning]]{1W8 Wuchtschaden}, @Check[fortitude|dc:17|basic]{einfacher Zähigkeitswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
+        },
+        "action->Shed Darkness": {
+          "name": "Dunkelheit absondern",
+          "description": "<p>Der Düstermantel sondert aus seinen Körperfalten einen tintenschwarzen Tropfen ab; er kann diesen großen Tropfen bis zu 30 Fuß/9 m weit schleudern oder bis zu 120 Fuß/36 m senkrecht fallen lassen (jenseits dieser Entfernung verdunstet der Tropfen ohne Effekte, wenn er keine Oberfläche trifft). Wo der Tropfen landet, zerplatzt er zu einer @Template[burst|distance:10]{10 Fuß/3 m-Explosion} aus Dunkelheit; kein Licht kann in den Wirkungsbereich eindringen oder diesen verlassen; alle nichtmagischen Lichtquellen geben einfach kein Licht ab, wenn sie sich im Wirkungsbereich befinden, selbst wenn ihr Lichtradius normalerweise darüber hinausreichen würde. Die Dunkelheit unterdrückt zudem magisches Licht des maximal 1. Grad, wirkt aber nicht gegen Lichteffekte des 2. Grades oder höher. Von außen erscheint sie als Kugel aus reiner Dunkelheit. Der Düstermantel kann diese Fähigkeit erst nach 24 Stunden erneut einsetzen.</p>"
+        }
+      }
+    },
+    "Dismemberment Table": {
+      "name": "Dismemberment Table",
+      "acDetails": "18 when broken",
+      "blurb": "Variant animated object",
+      "items": {
+        "strike-melee->Blade": {
+          "name": "Blade"
+        },
+        "strike-melee->Strap": {
+          "name": "Strap"
+        },
+        "action->Construct Armor (Hardness 8)": {
+          "name": "Construct Armor (Hardness 8)",
+          "description": "<p>Like normal objects, an animated armor has Hardness. This Hardness reduces any damage it takes by an amount equal to the Hardness. Once an animated armor is reduced to less than half its Hit Points, or immediately upon being damaged by a critical hit, its construct armor breaks and its Armor Class is reduced to 18.</p>"
+        },
+        "action->Haunted": {
+          "name": "Haunted",
+          "description": "<p>The dismemberment table is powered by unquiet spirits, and it takes damage from vitality energy as if it were undead. Vitality energy bypasses the table's hardness.</p>"
+        },
+        "action->Disabling Strike": {
+          "name": "Disabling Strike",
+          "description": "<p>The dismemberment table attempts a blade Strike on a single target that it has @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}. If this Strike hits, the blade cuts deep into one of the target's limbs. The target must attempt a @Check[fortitude|dc:22] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature suffers no additional effect.</p>\n<p><strong>Success</strong> The creature takes @Damage[1d6[bleed]] damage.</p>\n<p><strong>Failure</strong> The creature takes @Damage[2d6[bleed]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}. This clumsy condition ends once the creature is restored to full Hit Points.</p>\n<p><strong>Critical Failure</strong> As failure, but @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2}.</p>"
+        }
+      }
+    },
+    "Drazmorg The Damned": {
+      "name": "Drazmorg The Damned",
+      "blurb": "Male variant wight necromancer",
+      "hpDetails": "void healing",
+      "items": {
+        "spellcastingEntry->Arcane Prepared Spells": {
+          "name": "Arcane Prepared Spells"
+        },
+        "spell->Vampiric Touch": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.N1Z1oLPdBxaSgrEE]\nVampiric Touch"
+        },
+        "spell->False Life": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.8ViwItUgwT4lOvvb]\nFalse Life"
+        },
+        "spell->Spectral Hand": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.rthC6dGm3nNrt1xN]\nSpectral Hand"
+        },
+        "spell->Chill Touch": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.mAMEt4FFbdqoRnkN]\nChill Touch",
+          "target": "1 living or undead creature"
+        },
+        "spell->Light": {
+          "target": "1 object of 1 Bulk or less, either unattended or possessed by you or a willing ally"
+        },
+        "spell->Mage Hand": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.pwzdSlJgYqN7bs2w]\nMage Hand"
+        },
+        "spell->Ray of Enfeeblement": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.J7Y7tl0bbdz7TcCc]\nRay of Enfeeblement"
+        },
+        "strike-melee->Claw": {
+          "name": "Claw"
+        },
+        "action->Final Spite": {
+          "name": "Final Spite",
+          "description": "<p><strong>Trigger</strong> The wight is reduced to 0 Hit Points.</p>\n<hr />\n<p><strong>Effect</strong> The wight makes a Strike before being destroyed. It doesn't gain any temporary HP from drain life on this Strike.</p>"
+        },
+        "action->Drain Life": {
+          "name": "Drain Life",
+          "description": "<p>When the wight damages a living creature with its claw Strike, the wight gains [[/r 3 #Temporary Hit Points]]{3 temporary Hit Points} and the creature must succeed at a @Check[fortitude|dc:25] save or become @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}. Further damage dealt by the wraith increases the amount of drain by 1 on a failed save to a maximum of drained 4.</p>"
+        },
+        "action->Raise Bone Wall": {
+          "name": "Raise Bone Wall",
+          "description": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Requirements</strong> Drazmorg is in the Lower Vault of Droskar's Crucible</p>\n<hr />\n<p><strong>Effect</strong> Drazmorg draws upon the necromantic energy that infuses the area and causes a tangled wall of bones to rise from the ground. The wall is 5 feet thick, 10 feet wide, and 10 feet tall; once created, it's permanent until Drazmorg uses this ability again, whereupon a previously created bone wall (such as the one at area <strong>G2</strong>) crumbles. The bone wall has AC 10, Hardness 10, and 25 Hit Points. It's immune to critical hits and precision damage, and it heals damage to itself at a rate of @Damage[2d6[healing]]{2d6 Hit Points} at the end of a round. Everything on each side of the wall has greater cover from creatures on the opposite side, and the wall can't be moved through. A destroyed section of the wall of bones can be moved through freely and no longer heals damage. A creature caught in a space when a bone wall is created must attempt a @Check[reflex|dc:25|traits:damaging-effect] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected, and the bone wall fails to form in any square occupied by that creature.</p>\n<p><strong>Success</strong> The creature is forced into an adjacent square of its choice as the bone wall forms in its previous space.</p>\n<p><strong>Failure</strong> As success, but the creature is also knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>\n<p><strong>Critical Failure</strong> As failure, but the creature also takes @Damage[4d6[piercing],4d6[bludgeoning]]{4d6 piercing and 4d6 bludgeoning damage} from the force of being struck by the bone wall.</p>"
+        },
+        "action->Wight Spawn": {
+          "name": "Wight Spawn",
+          "description": "<p>A living humanoid slain by a wight's claw Strike rises as a @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.DBTbqI9QQRtlJwWh]{Wight Spawn} after [[/gmr 1d4 #Wight Spawn Transformation]]{1d4 rounds}. This wight spawn is under the command of the wight that killed it. It doesn't have Drain Life or Wight Spawn and becomes @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2} for as long as it is a wight spawn. If the creator of the wight spawn dies, the wight spawn becomes a full-fledged, autonomous wight; it regains its free will, gains Drain Life and Wight Spawn, and is no longer clumsy.</p>"
+        },
+        "lore->Academia Lore": {
+          "name": "Academia Lore"
+        }
+      }
+    },
+    "Edgrin Galesong": {
+      "name": "Edgrin Sturmsang",
+      "blurb": "Halblingischer Barde",
+      "items": {
+        "spellcastingEntry->Occult Spontaneous Spells": {
+          "name": "Spontane Okkulte Zauber"
+        },
+        "spellcastingEntry->Bard Composition Spells": {
+          "name": "Kompositionszauber"
+        },
+        "spell->Alarm": {
+          "requirements": "3 gp silver bell focus"
+        },
+        "spell->Dancing Lights": {
+          "name": "Tanzende Lichter",
+          "description": "<p>Du erschaffst bis zu vier schwebende Lichter in einem Abstand von nicht mehr als 10 Fuß/3 Meter voneinander. Jedes erhellt seine Umgebung wie eine @UUID[Compendium.pf2e.equipment-srd.8Jdw4yAzWYylGePS]{Fackel}. Erhältst du den Zauber aufrecht, darfst du eine beliebige Anzahl der Lichter bis zu 60 Fuß/18 m weit bewegen. Dabei muss jedes Licht innerhalb von 120 Fuß/36 m Reichweite von dir und innerhalb von 10 Fuß/3 m von den anderen Lichtern bleiben. Ansonsten erlischt es.</p>"
+        },
+        "spell->Inspire Courage": {
+          "name": "<Compendium>"
+        },
+        "spell->Mage Hand": {
+          "name": "<Compendium>"
+        },
+        "spell->Soothe": {
+          "target": "1 bereitwillige lebendige Kreatur"
+        },
+        "equipment->Broken Lute": {
+          "name": "Zerbrochene Laute"
+        },
+        "equipment->Dirty Clothes": {
+          "name": "Verdreckte Kleidung"
+        },
+        "strike-melee->Fist": {
+          "name": "Faust"
+        },
+        "action->Bardic Lore": {
+          "name": "Bardenwissen",
+          "description": "<p>Edgrin kann zu jedem beliebigen Thema Würfe zum @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Wissen abrufen} mit einem Modifikator von +7 ablegen.</p>"
+        },
+        "lore->Bardic Lore": {
+          "name": "Bardenwissen"
+        }
+      }
+    },
+    "Explosive Crystal Spheres": {
+      "name": "Explosive Crystal Spheres",
+      "description": "<p>Shimmering, glyph-graven, two-foot-diameter crystalline spheres shimmer and condense in the air, launching with explosive force at intruders.</p>",
+      "disable": "<p>@Check[thievery|dc:25] (expert) to locate and deface tiny activation runes located at one of the six locations that spawn crystal spheres, or @Check[arcana|dc:28] (expert) or @Check[occultism|dc:28] (expert) to manipulate the magical energy at one of those locations to render the spheres inert, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (3rd level; counteract DC 22) to counteract one of the crystal sphere spawn points</p>",
+      "hpDetails": "BT 27",
+      "routine": "<p>(6 actions) On each of the trap's actions, a crystal sphere that hasn't yet taken an action during the turn either flies 25 feet toward the closest creature in the Outer Ring (if no creature is within 25 feet), or it attacks a visible creature within 25 feet (the crystal spheres can sense targets via darkvision). If a crystal sphere attacks a target, that target takes @Damage[1d6[force]] damage (@Check[reflex|dc:24|basic]) as the sphere hits them and bursts. A creature can be attacked by multiple spheres in a turn, but a sphere always targets the closest target. Once a sphere attacks and bursts, it vanishes but respawns at its spawn point at the start of the next turn and continues its routine. A sphere that has been destroyed or had its spawn point disabled vanishes and doesn't continue to respawn and attack, and the trap loses 1 action for each sphere destroyed or disabled in this way.</p>",
+      "stealth": "<p>(expert)</p>",
+      "items": {
+        "action->Manifest Crystal Sphere": {
+          "name": "Manifest Crystal Sphere",
+          "description": "<p><strong>Trigger</strong> Three or more creatures remain in the Outer Ring for 6 seconds or longer;</p>\n<p><strong>Effect</strong> Six spheres of crystal, each measuring 2 feet in diameter, manifest from thin air and begin quickly floating toward intruders. A sphere manifests at each of the points on the map indicated with a small numeral (labeled 1 through 6); the trap then rolls initiative.</p>"
+        }
+      }
+    },
+    "Falling Debris": {
+      "name": "Falling Debris",
+      "description": "<p>A net filled with stones and a small anvil crashes down on someone who steps into the room.</p>",
+      "disable": "<p>@Check[thievery|dc:17] to disarm the trap through a cracked-open door, or <span class=\"action-glyph\">3</span> Interact to open the door slowly without triggering the trap</p>",
+      "items": {
+        "action->Drop Debris": {
+          "name": "Drop Debris",
+          "description": "<p><strong>Trigger</strong> A creature opens the door without taking care to avoid triggering the trap;</p>\n<p><strong>Effect</strong> The net drops a dozen hefty stones and a small but quite hard anvil onto the creature, inflicting @Damage[3d6[bludgeoning]] damage (@Check[reflex|dc:17|basic]). The sound of this trap going off alerts Gurtlekep in area <strong>C8</strong>.</p>"
+        }
+      }
+    },
+    "Foolish Hunter": {
+      "name": "Vertrottelter Jäger",
+      "items": {
+        "backpack->Hip flasks": {
+          "name": "Flachmänner",
+          "description": "<p>Gefüllt mit billigem Bier und Wein</p>"
+        },
+        "strike-melee->Dagger": {
+          "name": "Dolch"
+        },
+        "strike-ranged->Shortbow": {
+          "name": "Kurzbogen"
+        },
+        "action->Slightly Drunk": {
+          "name": "Angetrunken",
+          "description": "<p>Wenn die SC den Jägern zum ersten Mal begegnen, sind sie angetrunken und erhalten einen Malus von -1 auf alle Würfe, bis sie wieder nüchtern sind.</p>"
+        },
+        "lore->Hunting Lore": {
+          "name": "Kenntnis (Jagd)"
+        }
+      }
+    },
+    "Grick": {
+      "name": "Grick",
+      "languages": "kann keine Sprache sprechen",
+      "publicNotes": "<p>Die wurmartigen Gricks terrorisieren die Höhlen und Tunnel, in denen sie hausen. Sie lauern nahe stark bereister unterirdischer Passagen oder unterirdischer Städte auf die Gelegenheit, aus der Dunkelheit heraus ihre Beute zu packen. Gricks verzehren ihre Beute nur selten vor Ort, sondern schleppen sie in ihre Nester in engen Bauten oder hoch oben auf Felsvorsprüngen in einer Höhle, wo sie sie dann in kleinen Happen nach Belieben fressen.</p>\n<p>Die Ursprünge der Gricks sind unbekannt. Auch wenn diese Kreaturen über rudimentäre Intelligenz verfügen, besitzen sie keine nennenswerten Gesellschaftsstrukturen. Man trifft meistens nur einen Grick allein an. Selbst in den unglücklichen Fällen, in denen Reisende auf mehrere Gricks stoßen, scheinen sie nicht zusammenzuarbeiten oder zu kommunizieren. Stattdessen greift jeder ein individuelles Ziel an und zieht sich mit seiner Beute zurück, sobald es ihm gelingt, sie zu überwinden. Diese fähigen Räuber verfügen über eine seltsam waffenresistente Haut, was sie für den Unvorbereiteten besonders gefährlich macht. Viele junge Abenteurer sind schon Gricks zum Opfer gefallen, weil sie ihnen ohne magische Waffen keinen Schaden zufügen können. Wer mit Gricks vertraut ist (insbesondere Morlocks, Xulgathen und Zwerge), kennt für diesen Fall die beste Strategie: Rückzug und auf mächtigere oder magische Verstärkung warten.</p>\n<p>Gricks verlassen sich auf ihre dunkle Färbung und Kletterkünste, um ungesehen zu bleiben, bis sie bereit sind, aus dem Hinterhalt zuzuschlagen. Wird die Nahrung in einer Region rar, sind Gricks bereits an die Oberfläche gereist, um in der Wildnis nach Beute zu suchen. Dies erfolgt aber nur aus Notwendigkeit, bis sie Eingänge zu anderen unterirdischen Verstecken finden. Diese Kreaturen bevorzugen die Dunkelheit und die Annehmlichkeit einer Decke über dem Kopf; sie meiden den freien Himmel und strengen sich sehr an, in der Deckung von Bäumen, tiefhängenden Wolken oder Gebäuden zwischen ihnen und der leeren Kluft über ihren Köpfen zu bleiben.</p>\n<p>Manche Gesellschaften der Finsterlande versuchen, Gricks als Wachen oder sogar Lasttiere zu rekrutieren, doch ihre – wenn auch bestenfalls bescheidene – Intelligenz genügt, um dem stur zu widerstehen und sogar „Ausbildungsversuche“ abzulehnen. Die meisten schaffen es maximal, einen Grick als Wächter zufrieden zu stellen, indem sie ihn unter angenehmen Bedingungen gutgefüttert halten.</p>",
+      "skillSpecialStealth": {
+        "0": {
+          "label": "in felsigem Gelände"
+        }
+      },
+      "items": {
+        "strike-melee->Jaws": {
+          "name": "Biss"
+        },
+        "strike-melee->Tentacle": {
+          "name": "Tentakel"
+        },
+        "action->Gripping Tentacle": {
+          "name": "Zugreifender Tentakel",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur innerhalb des Angriffsradius des Gricks nutzt eine Bewegungsaktion oder verlässt ein Feld im Rahmen ihrer Bewegungsaktion.</p>\n<hr />\n<p><strong>Effekt</strong> Der Grick führt einen Tentakelangriff gegen das Ziel aus. Sollte er einen Kritischen Treffer landen und der Auslöser eine Bewegungsaktion gewesen sein, so unterbricht der Grick diese Aktion.</p>"
+        }
+      }
+    },
+    "Grimbal": {
+      "name": "Grimbal",
+      "blurb": "Zwergischer Geist",
+      "hpDetails": "Leerenheilung, Wiederkehr",
+      "items": {
+        "strike-melee->Ghostly Hand": {
+          "name": "Geisterhafte Hand"
+        },
+        "action->Site Bound": {
+          "name": "Ortsgebunden"
+        },
+        "action->Rejuvenation": {
+          "name": "Wiederkehr",
+          "description": "<p>Werden Grimbals Körper und Kopf (Bereich <strong>F4</strong>) wiedervereint, kann Grimbals Seele ins Jenseits weiterziehen.</p>\n<hr />\n<Compendium>"
+        },
+        "action->Drain Mind": {
+          "name": "Intellekt rauben",
+          "description": "<p>Fügt Grimbal einer lebenden Kreatur mit seinem Geisterhaften Handangriff Schaden zu, erlangt der Geist 5 Temporäre Trefferpunkte und muss die Kreatur einen @Check[will|dc:24]{einfachen Willenswurf} ablegen; bei Misslingen erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 1}. Weiterer Schaden durch den Geist erhöht bei misslungenen Rettungswürfen den Zustandswert (maximal Benommen 4). Erlangt eine betroffene Kreatur eine volle Nachtruhe, reduziert dies den Zustandswert um 1.</p>"
+        }
+      }
+    },
+    "Gurtlekep": {
+      "name": "Gurtlekep",
+      "blurb": "Male kobold lookout",
+      "skillSpecialCrafting": {
+        "0": {
+          "label": "traps"
+        }
+      },
+      "items": {
+        "equipment->Thieves' Tools": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.zvLyCVD8g2PdHJAc]\nThieves' Tools",
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.zvLyCVD8g2PdHJAc]\n<p>You need thieves' tools to Pick Locks or Disable Devices (of some types) using the Thievery skill.</p>\n<p>If your thieves' tools are broken, you can repair them by replacing the lock picks with @UUID[Compendium.pf2e.equipment-srd.Item.Sw7MBLASN3xK4Y44]{Replacement Picks} appropriate to your tools; this doesn't require using the Repair action.</p>"
+        },
+        "consumable->Healing Potion (Minor)": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.2RuepCemJhrpKKao]\n<p>A healing potion is a vial of a ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a healing potion, you regain @Damage[1d8[healing]] Hit Points.</p>"
+        },
+        "strike-melee->Shortsword": {
+          "name": "Kurzschwert"
+        },
+        "strike-ranged->Dagger": {
+          "name": "Dolch"
+        },
+        "action->Knife 'n Run": {
+          "name": "Knife 'n Run",
+          "description": "<p><strong>Requirements</strong> Gurtlekep is adjacent to at least one enemy and holds a dagger in a hand</p>\n<hr />\n<p><strong>Effect</strong> Gurtlekep Strides up to his Speed plus 5 feet and then attempts a ranged Strike with his held dagger. He must end this movement in a space that isn't adjacent to any enemy.</p>"
+        },
+        "action->Sneak Attack": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>Gurtlekep deals an additional 1d6 precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
+        }
+      }
+    },
+    "Hymmir Urath": {
+      "name": "Hymmir Urath",
+      "blurb": "Male human barbarian ghoul",
+      "hpDetails": "void healing",
+      "items": {
+        "strike-melee->Jaws": {
+          "name": "Jaws"
+        },
+        "strike-melee->Claw": {
+          "name": "Claw"
+        },
+        "action->Consume Flesh": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.ixPqVlqLaYTB1b23]\nConsume Flesh",
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.ixPqVlqLaYTB1b23]\n<p><strong>Requirements</strong> The ghoul is adjacent to the corpse of a creature that died within the last hour.</p>\n<hr />\n<p><strong>Effect</strong> The ghoul devours a chunk of the corpse and regains @Damage[3d6[healing]] Hit Points.</p>\n<p>It can regain Hit Points from any given corpse only once.</p>"
+        },
+        "action->Ghoul Fever": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.N7UV5CZXtcoxDxCF]\nGhoul Fever",
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.N7UV5CZXtcoxDxCF]\n<p><strong>Saving Throw</strong> @Check[fortitude|dc:22]</p>\n<hr />\n<p><strong>Stage 1</strong> carrier with no ill effect (1 day)</p>\n<p><strong>Stage 2</strong> @Damage[2d6[void]] damage and regains half as many Hit Points from all healing (1 day)</p>\n<p><strong>Stage 3</strong> as stage 2 (1 day)</p>\n<p><strong>Stage 4</strong> @Damage[2d6[void]] damage and gains no benefit from healing (1 day)</p>\n<p><strong>Stage 5</strong> as stage 4 (1 day)</p>\n<p><strong>Stage 6</strong> dead, and rises as a @UUID[Compendium.pf2e.pathfinder-bestiary.Actor.LHHgGSs0ELCR4CYK]{Ghoul} the next midnight.</p>"
+        },
+        "action->Gnaw and Chew": {
+          "name": "Gnaw and Chew",
+          "description": "<p><strong>Requirements</strong> Hymmir is in a hungry rage</p>\n<hr />\n<p><strong>Effect</strong> Hymmir attempts a jaws Strike. If he hits, he chews at his target and inflicts an additional 1d6 slashing damage. Hymmir regains @Damage[3d6[healing]] Hit Points.</p>"
+        },
+        "action->Hungry Rage": {
+          "name": "Hungry Rage",
+          "description": "<p><strong>Trigger</strong> Hymmir damages a living creature with his jaws Strike</p>\n<hr />\n<p><strong>Effect</strong> The taste of flesh and blood throws Hymmir into a violent rage. He gains 9 temporary Hit Points, deals an additional 2 damage with melee Strikes, and takes a -1 penalty to AC for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.z3uyCMBddrPK5umr]{Effect: Rage}</p>"
+        },
+        "action->Paralysis": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.FW4KAUHb7r8WkxUc]\nParalysis",
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.FW4KAUHb7r8WkxUc]\n<p>Any living, non-elf creature hit by a ghoul's attack must succeed at a @Check[fortitude|dc:22] save or become @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}. It can attempt a new save at the end of each of its turns, and the DC cumulatively decreases by 1 on each such save.</p>"
+        },
+        "action->Swift Leap": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.UU1Fp3PRuTFONjC9]\nSwift Leap"
+        }
+      }
+    },
+    "Id Ooze": {
+      "name": "Id Ooze",
+      "languages": "(can't speak any language); telepathy 60 ft",
+      "publicNotes": "<p>Not all oozes are mindless predators capable of little more than ambushing and consuming prey. The id ooze is a thinking, calculating creature with the capacity to carry out complex plots and plans-not always to secure a meal. Left to its own devices, an id ooze is just as content to spend decades or even centuries in introspective philosophical pursuits as it is to crawl through the underground rivers and moist caverns it prefers to call home.</p>\n<p>An id ooze can derive sustenance from the consumption of organic material, but without easy access to plants or animals to eat, they can subsist in a state of semi-hibernation for centuries while slowly absorbing residual psychic energies in locations that have been host to powerful emotions, such as long-standing temples that once hosted generations of worshippers, settlements that endured horrific wars or devastating disasters, or even just the home of a powerful occult spellcaster whose thoughts left marks upon the walls long after they moved on.</p>\n<p>An id ooze prefers water but is equally at home on land. The slimy creature appears as a patch of water until it attacks, when its gelatinous body piles up on itself to form a single pseudopod that strikes like an angry snake.</p>",
+      "skillSpecialStealth": {
+        "0": {
+          "label": "in moist areas"
+        }
+      },
+      "items": {
+        "spellcastingEntry->Occult Innate Spells": {
+          "name": "Occult Innate Spells"
+        },
+        "spell->Hypnotic Pattern": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.K2WpC3FFoHrqX9Q5]\nHypnotic Pattern"
+        },
+        "strike-melee->Pseudopod": {
+          "name": "Pseudopod"
+        },
+        "action->Telepathy 60 feet": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.kdhbPaBMK1d1fpbA]\nTelepathy 60 feet"
+        },
+        "action->Id Ooze Acid": {
+          "name": "Id Ooze Acid",
+          "description": "<p>An id ooze's acid damages only metal and organic materials, not stone.</p>"
+        },
+        "action->Manipulate Ooze": {
+          "name": "Manipulate Ooze",
+          "description": "<p><strong>Frequency</strong> once per turn</p>\n<p><strong>Effect</strong> The id ooze manipulates the senses and impulses within a mindless ooze of the id ooze's level or lower within 30 feet, issuing it telepathic orders to undertake a specific action. The orders must be simple, such as a directive to attack a specific target in preference to another, or to hold ground in a spot to protect a location, or even to adjust its positioning and body to form crude shapes or symbols. A manipulated ooze performs the direction to the best of its ability on its next turn, after which it returns to its normal behavior.</p>"
+        },
+        "action->Motion Sense 60 feet": {
+          "name": "Motion Sense 60 feet",
+          "description": "<p>An id ooze can sense nearby creatures through vibration and air or water movement.</p>"
+        },
+        "action->Puddled Ambush": {
+          "name": "Puddled Ambush",
+          "description": "<p><strong>Trigger</strong> A creature enters or interacts with a space occupied by an id ooze</p>\n<p><strong>Requirements</strong> Initiative hasn't yet been rolled</p>\n<p><strong>Effect</strong> The id ooze automatically notices the creature, then makes a pseudopod Strike against one creature adjacent to itself before rolling initiative.</p>"
+        },
+        "action->Constrict": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.g26YiEIfSHCpLocV]\n<p>@Damage[(1d4+8)[bludgeoning],1d6[acid]]{1d4+8 bludgeoning plus 1d6 acid}, @Check[fortitude|dc:25|basic]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
+        }
+      }
+    },
+    "Jekkajak": {
+      "name": "Jekkajak",
+      "blurb": "Female kobold sorcerer",
+      "items": {
+        "spellcastingEntry->Divine Spontaneous Spells": {
+          "name": "Divine Spontaneous Spells"
+        },
+        "spellcastingEntry->Sorcerer Bloodline Spells": {
+          "name": "Sorcerer Bloodline Spells"
+        },
+        "spell->Sound Burst": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.wzLkNU3AAqOSKFPR]\nSound Burst"
+        },
+        "spell->Ray of Enfeeblement": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.J7Y7tl0bbdz7TcCc]\nRay of Enfeeblement"
+        },
+        "equipment->Hat of Disguise (Greater)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.WPSp5MLb0VOfmUqH]\nHat of Disguise (Greater)",
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.WPSp5MLb0VOfmUqH]\n<p>This ordinary-looking hat allows you to cloak yourself in illusions.</p>\n<p><strong>Activate</strong> <span class=\"action-glyph\">2</span> Interact</p>\n<p><strong>Frequency</strong> any number of times per day</p>\n<hr />\n<p><strong>Effect</strong> The hat casts a 2nd-rank @UUID[Compendium.pf2e.spells-srd.Item.i35dpZFI7jZcRoBo]{Illusory Disguise} spell on you. While setting up the disguise, you can magically alter the hat to appear as a comb, ribbon, helm, or other piece of headwear.</p>"
+        },
+        "strike-melee->Heartripper Blade": {
+          "name": "Heartripper Blade"
+        },
+        "action->Smoky Retreat": {
+          "name": "Smoky Retreat",
+          "description": "<p><strong>Frequency</strong> once per hour</p>\n<p><strong>Requirements</strong> Jekkajak is adjacent to at least one enemy</p>\n<hr />\n<p><strong>Effect</strong> Jekkajak squeals in fright as she exhales a noxious cloud of stinking smoke. This smoke fills a @Template[emanation|distance:10] around her and grants concealment to all creatures within the smoke. In addition, any non-kobold starting their turn in the smoke must succeed at a @Check[fortitude|dc:21] save or become @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} by the foul smoke (or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure). Once created, the cloud of smoke is immobile and persists for 3 rounds. Jekkajak can move up to her Speed, but she must end her movement in a space that isn't adjacent to any enemies. This is a 2nd-rank spell that requires a somatic component.</p>"
+        }
+      }
+    },
+    "Kapmek": {
+      "name": "Kapmek",
+      "blurb": "Koboldischer Schlurkausbilder",
+      "items": {
+        "consumable->Black Adder Venom": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.ScclzFrjyB0YJlrb]\n<p>Adder venom is a simple but effective way to enhance a weapon.</p>\n<hr />\n<p><strong>Activate</strong> <span class=\"action-glyph\">2</span> Interact (Injury)</p>\n<p><strong>Saving Throw</strong> @Check[fortitude|dc:18]</p>\n<p><strong>Maximum Duration</strong> 3 rounds</p>\n<p><strong>Stage 1</strong> @Damage[1d8[poison]] damage (1 round)</p>\n<p><strong>Stage 2</strong> @Damage[1d10[poison]] damage (1 round)</p>\n<p><strong>Stage 3</strong> @Damage[2d6[poison]] damage (1 round)</p>"
+        },
+        "strike-melee->Hatchet": {
+          "name": "Beil"
+        },
+        "strike-ranged->Hatchet": {
+          "name": "Beil"
+        },
+        "strike-ranged->Crossbow": {
+          "name": "Armbrust"
+        },
+        "action->Hurried Retreat": {
+          "name": "Hastiger Rückzug",
+          "description": "<p><strong>Requirements</strong> Kapmek is adjacent to at least one enemy.</p>\n<hr />\n<p><strong>Effect</strong> Kapmek Strides up to his Speed plus 5 feet and gains a +2 circumstance bonus to AC against reactions triggered by this movement. He must end this movement in a space that's not adjacent to any enemy.</p>"
+        },
+        "action->Quick Poison Dip": {
+          "name": "Schnelles Armbrustbolzenvergiften",
+          "description": "<p><strong>Auslöser</strong> Kapmek lädt seine Armbrust, während er eine Anwendung Gift mit sich führt</p>\n<hr />\n<p><strong>Effekt</strong> Beim Laden der Armbrust kann Kapmek den Armbrustbolzen als Teil der Nachladehandlung in das mitgeführte Gift tauchen.</p>"
+        },
+        "action->Sneak Attack": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>Kapmek deals an additional 1d6 precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
+        }
+      }
+    },
+    "Kerrdremak": {
+      "name": "Kerrdremak",
+      "blurb": "Koboldischer Hexer",
+      "items": {
+        "spellcastingEntry->Divine Prepared Spells": {
+          "name": "Vorbereitete Göttliche Zauber"
+        },
+        "spellcastingEntry->Hex Cantrips": {
+          "name": "Hexerei-Zaubertricks"
+        },
+        "spell->Ray of Enfeeblement": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.J7Y7tl0bbdz7TcCc]\nRay of Enfeeblement"
+        },
+        "strike-melee->Dagger": {
+          "name": "Dolch"
+        },
+        "action->Whispering Retreat": {
+          "name": "Wispernder Rückzug",
+          "description": "<p><strong>Anforderungen</strong> Kerrdremak ist zu wenigstens einem Gegner angrenzend</p>\n<hr />\n<p><strong>Effekt</strong> Kerrdremak wispert leise und ein angrenzender Gegner muss einen @Check[will|dc:17]{Willenswurf} ablegen; bei Misslingen erhält das Ziel den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}, da es eine Stimme hinter sich flüstern hört, sie wisse, wann das Ziel sterben werde. Im Anschluss ist das Ziel für 1 Stunde vorübergehend gegen diese Fähigkeit immun. Kerrdremak nutzt dann Laufen; diese Bewegung löst bei Verängstigten Kreaturen keine Reaktionen aus. Er muss diese Bewegung auf einem Feld beenden, das zu keinem Gegner angrenzend ist.</p>"
+        }
+      }
+    },
+    "Kieragan Skross": {
+      "name": "Kieragan Skross",
+      "blurb": "Greater herexen",
+      "hpDetails": "void healing",
+      "items": {
+        "spellcastingEntry->Divine Prepared Spells": {
+          "name": "Divine Prepared Spells"
+        },
+        "spellcastingEntry->Cleric Domain Spells": {
+          "name": "Cleric Domain Spells"
+        },
+        "spell->Commanding Lash": {
+          "requirements": "Your most recent action dealt damage to a target."
+        },
+        "equipment->Defiled Religious Symbol of Droskar": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.plplsXJsqrdqNQVI]\nDefiled Religious Symbol of Droskar",
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.plplsXJsqrdqNQVI]\n<p>This piece of wood or silver is emblazoned with an image representing a deity. Some divine spellcasters, such as clerics, can use a religious symbol of their deity as a divine focus to use certain abilities and cast some spells. A religious symbol must be held in one hand to use it.</p>"
+        },
+        "strike-melee->Light Hammer": {
+          "name": "Light Hammer"
+        },
+        "strike-ranged->Light Hammer": {
+          "name": "Light Hammer"
+        },
+        "action->Final Blasphemy": {
+          "name": "Final Blasphemy",
+          "description": "<p>When the herexen is destroyed, it explodes in a wave of void energy with the effects of a 3-action 4th-rank @UUID[Compendium.pf2e.spells-srd.Item.wdA52JJnsuQWeyqz]{Harm} spell (@Check[fortitude|dc:26|basic]).</p>\n<p>The herexen is destroyed, so it doesn't gain any Hit Points from this use of <em>harm</em>, and it doesn't need to have any <em>harm</em> spells remaining to use this ability.</p>"
+        },
+        "action->Heretic's Smite": {
+          "name": "Heretic's Smite",
+          "description": "<p>While wielding the favored weapon of its former deity (such as a dagger for an ex-Pharasmin herexen), the herexen's Strikes deal an additional @Damage[2d6[spirit]] damage against creatures that can cast divine spells.</p>"
+        }
+      }
+    },
+    "King Merlokrep": {
+      "name": "König Merlokrep",
+      "blurb": "Koboldischer König",
+      "skillSpecialCrafting": {
+        "0": {
+          "label": "Fallen"
+        }
+      },
+      "items": {
+        "spellcastingEntry->Arcane Spontaneous Spells": {
+          "name": "Spontane Arkane Zauber"
+        },
+        "spell->Hideous Laughter": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.tlSE7Ly8vi1Dgddv]\nHideous Laughter"
+        },
+        "spell->Dancing Lights": {
+          "name": "Tanzende Lichter",
+          "description": "<p>Du erschaffst bis zu vier schwebende Lichter in einem Abstand von nicht mehr als 10 Fuß/3 Meter voneinander. Jedes erhellt seine Umgebung wie eine @UUID[Compendium.pf2e.equipment-srd.8Jdw4yAzWYylGePS]{Fackel}. Erhältst du den Zauber aufrecht, darfst du eine beliebige Anzahl der Lichter bis zu 60 Fuß/18 m weit bewegen. Dabei muss jedes Licht innerhalb von 120 Fuß/36 m Reichweite von dir und innerhalb von 10 Fuß/3 m von den anderen Lichtern bleiben. Ansonsten erlischt es.</p>"
+        },
+        "spell->Feather Fall": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.TTwOKGqmZeKSyNMH]\nFeather Fall"
+        },
+        "spell->Magic Missile": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.gKKqvLohtrSJj3BM]\nMagic Missile"
+        },
+        "treasure->Gold Horn Bangles": {
+          "name": "Goldene Hornreifen"
+        },
+        "treasure->Gold Lip Ring": {
+          "name": "Goldene Lippenringe"
+        },
+        "treasure->Red and Gold Satin Cloak": {
+          "name": "Rot-goldener Samtumhang",
+          "description": "<p>übergroßer rot-goldener Samtumhang, auf den recht kunstfrei ein Golddrache gemalt wurde.</p>"
+        },
+        "strike-melee->Battle Axe": {
+          "name": "Streitaxt"
+        },
+        "action->Imperious Retreat": {
+          "name": "Hochherrschaftlicher Rückzug",
+          "description": "<p><strong>Anforderungen</strong> König Merlokrep ist zu wenigstens einem Gegner angrenzend</p>\n<hr />\n<p><strong>Effekt</strong> König Merlokrep peitscht seinen fabulösen Samtumhang in das Gesicht einer angrenzenden Kreatur und legt einen Wurf für @Check[intimidation|defense:will]{Einschüchtern} gegen den WIL-SG dieser Kreatur ab. Bei Erfolg wird die Kreatur durch die Handlung derart abgelenkt und beschämt, dass sie bis zum Ende des nächsten Zuges des Koboldkönigs den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} erhält. König Merlokrep nutzt dann Laufen und bewegt sich um bis zu seine Bewegungsrate, wobei er einen Situationsbonus von +2 auf seine RK gegen Reaktionen erhält, die durch diese Bewegung ausgelöst werden. Er muss diese Bewegung auf einem Feld beenden, das zu keinem Gegner angrenzend ist.</p>"
+        },
+        "action->Signature Spells": {
+          "name": "Signaturzauber",
+          "description": "<p>König Merlokrep kann jeden seiner Signaturzauber (Feuerball, Magie bannen und Kraftgeschoss) frei als erhöhte Version wirken.</p>"
+        },
+        "action->Rise From Death": {
+          "name": "Rückkehr von den Toten",
+          "description": "<p>Sollte König Merlokrep getötet werden, erstrahlt seine Krone noch heller im widerlichen Gelb; dieses Licht sickert in den toten Leib des Kobolds und strahlt dann aus ihm heraus, während die Leiche zu zucken beginnt. Sollte die Krone 3 Runden lang auf seinem Kopf verbleiben, erhebt sich König Merlokrep als ein untoter Koboldkönig – dies bringt ihn wieder auf volle Trefferpunkte und verleiht ihm die Kategorie Untoter (samt Leerenheilung und Empfindlichkeit gegen Lebensschaden). Wurde der untote König besiegt, bleibt er zerstört – die absorbierte Energie des Dritten Siegels gestattet ihm nur einmal die Rückkehr von den Toten. Sollte die Krone entfernt werden, ehe 3 Runden verstrichen sind, verblasst das Licht und verpufft die absorbierte Energie harmlos.</p>"
+        },
+        "action->Sneak Attack": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>King Merlokrep deals an additional 1d6 precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
+        },
+        "lore->Mining Lore": {
+          "name": "Mining Lore"
+        }
+      }
+    },
+    "Lekmek": {
+      "name": "Lekmek",
+      "blurb": "Male kobold bully",
+      "skillSpecialCrafting": {
+        "0": {
+          "label": "Traps"
+        }
+      },
+      "items": {
+        "strike-melee->Greatpick": {
+          "name": "Greatpick"
+        },
+        "action->Bark Command": {
+          "name": "Bark Command",
+          "description": "<p><strong>Requirements</strong> Lekmek hasn't attempted a Strike on this turn yet</p>\n<hr />\n<p><strong>Effect</strong> Lekmek barks a command to a lower-level kobold within 30 feet. That kobold can immediately take a Stride or Strike action.</p>"
+        },
+        "action->False Retreat": {
+          "name": "False Retreat",
+          "description": "<p><strong>Requirements</strong> Lekmek is adjacent to at least one enemy</p>\n<hr />\n<p><strong>Effect</strong> Lekmek Strides, as if he were attempting to run away but is actually attempting to open a foe up for an attack. If Lekmek's Stride triggers a reaction, he can attempt a greatpick Strike (using his highest attack modifier) on the creature that takes this reaction. If he does so, Lekmek gains a +1 circumstance bonus on his attack roll.</p>"
+        },
+        "lore->Mining Lore": {
+          "name": "Mining Lore"
+        }
+      }
+    },
+    "Lodestone Trap": {
+      "name": "Lodestone Trap",
+      "description": "<p>The magical lodestone discharges bolts of electricity that also magnetize metal in the room.</p>",
+      "disable": "<p>@Check[thievery|dc:18] to unhook the pressure plates from the trap, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (2nd level, counteract DC 18) to counteract the trap</p>",
+      "hpDetails": "BT 15",
+      "reset": "<p>At the end of a round in which there are no creatures standing on the floor or stuck to the lodestone, the trap deactivates. The vargouilles return to their alcoves, and the doors close. The trap resets automatically after 1 minute.</p>",
+      "routine": "<p>(1 action) On its initiative, the trap exerts a strong magnetic pull on the doors, causing the north and west doors to open if they're closed, or causing the south and east doors to close if they're open. A character can open or close a door against this pull with a successful @Check[athletics|dc:18] check to @UUID[Compendium.pf2e.actionspf2e.Item.SjmKHgI7a5Z9JzBx]{Force Open} the door. At the same time, any character in the room who wears primarily metal armor must attempt a @Check[reflex|dc:18] save (characters in medium metal armor suffer a -1 circumstance penalty to this save, and characters in heavy metal armor suffer a -2 circumstance penalty).</p>\n<hr />\n<p><strong>Critical Success</strong> The PC is unaffected.</p>\n<p><strong>Success</strong> The PC resists the pull but treats the room as difficult terrain.</p>\n<p><strong>Failure</strong> The PC treats the room as difficult terrain and is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}. A PC who's already prone suffers a critical failure instead.</p>\n<p><strong>Critical Failure</strong> As failure, but the PC is also pulled 5 feet toward the lodestone. A PC who is adjacent to the lodestone instead becomes stuck to it and is @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} as long as the trap continues its routine (escape DC 18).</p>",
+      "items": {
+        "action->Magneto-Electric Pulse": {
+          "name": "Magneto-Electric Pulse",
+          "description": "<p><strong>Trigger</strong> A single Medium or two or more Small creatures end their turn inside the room.</p>\n<p><strong>Effect</strong> A pulse of electricity discharges from the lodestone to strike all four doors, with smaller arcs of electricity lancing out to strike all creatures in the room. The south and east doors slam shut, while the north and west doors fly open, releasing two vargouilles into the room. All creatures in the room take @Damage[2d6[electricity]] damage (@Check[reflex|dc:18|basic]). The trap then rolls initiative.</p>"
+        }
+      }
+    },
+    "Loose Slab": {
+      "name": "Loose Slab",
+      "description": "<p>The stone slab tears free from its track with the ear-piercing sound of failing metal.</p>",
+      "disable": "<p>@Check[crafting|dc:20] (expert) to shore up the track so that it functions as intended, or @Check[thievery|dc:18] (trained) to wedge the slab in place to immobilize it</p>",
+      "stealth": "<p>(trained)</p>",
+      "items": {
+        "action->Falling Slab": {
+          "name": "Falling Slab",
+          "description": "<p><strong>Trigger</strong> A creature attempts to move the slab;</p>\n<p><strong>Effect</strong> The slab rips free from its track and falls, slamming down in one direction while it kicks up twisted metal debris in the other. All creatures adjacent to the slab take 3d6 bludgeoning and @Damage[3d6[piercing]] damage (@Check[reflex|dc:20|basic]).</p>"
+        }
+      }
+    },
+    "Narlynark": {
+      "name": "Narlynark",
+      "blurb": "Male kobold druid",
+      "items": {
+        "spellcastingEntry->Primal Prepared Spells": {
+          "name": "Primal Prepared Spells"
+        },
+        "spell->Burning Hands": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.y6rAdMK6EFlV6U0t]\nBurning Hands"
+        },
+        "consumable->Wand of Spider Climb (Level 2)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.vJZ49cgi8szuQXAD]\nWand of Spider Climb (Level 2)",
+          "consumableSpellName": "Spider Climb",
+          "consumableSpellDescription": "<p>Tiny clinging hairs sprout across the creature's hands and feet, offering purchase on nearly any surface. The target gains a climb Speed equal to its Speed.</p>\n<hr />\n<p><strong>Heightened (5th)</strong> The duration increases to 1 hour.</p>",
+          "consumableSpellTarget": "1 creature",
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.vJZ49cgi8szuQXAD]\n<p>@UUID[Compendium.pf2e.spells-srd.Item.5KobTMrZeZxuXMgl]{Gecko Grip}</p>\n<hr />\n<p>This baton is about a foot long and contains a single spell. The appearance typically relates to the spell within.</p>\n<p><strong>Activate</strong> Cast a Spell</p>\n<p><strong>Frequency</strong> once per day, plus overcharge</p>\n<hr />\n<p><strong>Effect</strong> You Cast the Spell at the indicated level.</p>\n<p><strong>Craft Requirements</strong> Supply a listed-level casting of the spell.</p>\n<hr />\n<p><em>Note: To create a scroll or wand of a specific spell, drag the spell from the compendium or compendium browser into the inventory of a PC, NPC, or loot actor.</em></p>"
+        },
+        "strike-melee->Sickle": {
+          "name": "Sickle"
+        },
+        "action->Wild Retreat": {
+          "name": "Wild Retreat",
+          "description": "<p><strong>Frequency</strong> once per hour</p>\n<p><strong>Requirements</strong> Narlynark is adjacent to at least one enemy;</p>\n<hr />\n<p><strong>Effect</strong> Narlynark shrieks in terror, a sound that quickly transitions from a kobold cry to the shrill cry of a bird. A pair of feathery wings grows from his back and his feet turn into bird talons. As he leaps into the air to flee, his talons lash out-one adjacent enemy of Narlynark's choice takes @Damage[(3d6 + 6)[slashing]] damage (@Check[reflex|dc:22|basic]). Narlynark can then fly up to 35 feet away. He must end his movement in a space that isn't adjacent to any enemies, and if he doesn't end the movement on the ground, he falls to the ground as his wings vanish and his feet return to normal.</p>"
+        }
+      }
+    },
+    "Obscured Pitfalls": {
+      "name": "Obscured Pitfalls",
+      "description": "<p>A layer of disembodied eyes obscures a pitfall in the floor that's either deep enough for a human to fall into, or narrow enough to cause a painful fall.</p>",
+      "disable": "<p>This hazard can't be disabled, merely avoided.</p>",
+      "stealth": "<p>Either DC 18 or 0 if the eyes covering an area that obscures a pitfall are destroyed.</p>",
+      "items": {
+        "action->Pitfall": {
+          "name": "Pitfall",
+          "description": "<p><strong>Trigger</strong> A creature walks into a large pit's square;</p>\n<p><strong>Effect</strong> The triggering creature falls into the pit but can attempt a @Check[reflex|dc:18] save to @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge} to avoid falling. On a failure, a creature falls 20 feet into an eye-filled pit. The eyes cushion the fall so the 20-foot fall inflicts only @Damage[5[bludgeoning]|options:fall-damage] damage, but they also completely obscure vision; a character is effectively blind as long as they remain in the pit. The walls of the pit are slick, though a character can @UUID[Compendium.pf2e.actionspf2e.Item.pprgrYQ1QnIDGZiy]{Climb} them with a successful @Check[athletics|dc:25] check.</p>"
+        },
+        "action->Trip": {
+          "name": "Trip",
+          "description": "<p><strong>Trigger</strong> A creature walks into a small pit's square;</p>\n<p><strong>Effect</strong> The triggering creature must succeed at a @Check[reflex|dc:18] save or fall @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} (on a critical failure, the creature also twists its ankle and becomes @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} until it receives any amount of healing).</p>"
+        }
+      }
+    },
+    "Pendulum Blades": {
+      "name": "Pendulum Blades",
+      "description": "<p>Several swinging pendulums mounted with razor-sharp blades extend from the ceiling and slice into the room below.</p>",
+      "disable": "<p>@Check[thievery|dc:20] to jam the gears and prevent the trap from being activated</p>",
+      "stealth": "<p>(expert)</p>",
+      "items": {
+        "action->Swinging Blades": {
+          "name": "Swinging Blades",
+          "description": "<p><strong>Trigger</strong> This trap must be manually activated by a creature adjacent to the southwest gear stack;</p>\n<p><strong>Effect</strong> Blades swing down to strike at all creatures in area <strong>F2</strong> before wrenching to a frozen halt against the opposite walls. All creatures in the central part of this room take @Damage[(6d6 + 3)[slashing]] damage (@Check[reflex|dc:20|basic]).</p>"
+        }
+      }
+    },
+    "Phantom Mold": {
+      "name": "Phantom Mold",
+      "description": "<p>A burst of pale gray spores sprays into the air.</p>",
+      "disable": "<p>@Check[survival|dc:18] to remove the mold without triggering the spores</p>",
+      "stealth": "<p>(expert)</p>",
+      "items": {
+        "action->Spore Burst": {
+          "name": "Spore Burst",
+          "description": "<p><strong>Trigger</strong> The moldy books are moved or the mold takes any damage;</p>\n<p><strong>Effect</strong> All creatures within 10 feet of the mold patch are exposed to phantom mold spores.</p>"
+        },
+        "action->Phantom Mold Spores": {
+          "name": "Phantom Mold Spores",
+          "description": "<p>Any penalties to Perception from this poison persist for 1 hour after the poison's duration ends (this effect can be removed before then by any effect that neutralizes poison);</p>\n<p><strong>Saving Throw</strong> @Check[fortitude|dc:18];</p>\n<p><strong>Maximum Duration</strong> 4 rounds;</p>\n<p><strong>Stage 1</strong> @Damage[1d6[poison]] damage;</p>\n<p><strong>Stage 2</strong> @Damage[1d6[poison]] damage, and the victim takes a -1 status penalty on visual Perception checks as strange shadows and flittering movement appear in their peripheral vision;</p>\n<p><strong>Stage 3</strong> as stage 2, but a -2 status penalty.</p>"
+        }
+      }
+    },
+    "Pit of Toil": {
+      "name": "Grube der Mühsal",
+      "description": "<p>Zwischen den sich abmühenden, geisterhaften Gestalten von Zwergen beginnt der Leib einer lebenden Kreatur in der Grube zu schmerzen, als hätte sie zahllose Stunden Schwerstarbeit hinter sich.</p>",
+      "disable": "<p>@Check[crafting|dc:21]{Handwerkskunst} (Experte), um die Grube mit Kunstfertigkeit zu beschämen, oder @Check[religion|dc:18]{Religionskunde} (Geübt), um den Spuk zu exorzieren.</p>",
+      "routine": "<p>(1 Aktion; Göttlich, Nekromantie) Während die Zwerge ihren Sprechgesang aufrechterhalten und nach den Lebenden greifen, erfüllt die Grube alle lebenden Kreaturen in ihrem Gebiet mit den Schmerzen, unter denen ein Körper nach Stunden ständiger Mühsal leidet. Jede lebende Kreatur in der Grube muss einen @Check[fortitude|dc:18|traits:divine,necromancy,damaging-effect]{Zähigkeitswurf} ablegen:</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur erleidet keine Auswirkungen und ist fortan gegen diese Gefahr immun.</p>\n<p><strong>Erfolg</strong> Die Kreatur erleidet keine Auswirkungen.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet @Damage[2d6[void]]{2W6 Punkte Leerenschaden} und erhält 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 1}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erleidet @Damage[4d6[void]]{4W6 Punkte Leerenschaden} und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Erschöpft}.</p>",
+      "items": {
+        "action->Invite Toil": {
+          "name": "Schließ dich uns an",
+          "description": "<p><strong>Auslöser</strong> Eine lebende Kreatur betritt die Grube</p>\n<hr />\n<p><strong>Effekt</strong> Die zwergischen Formen beginnen mit einem Sprechgesang auf Zwergisch, um den Neuankömmling zu ermutigen, sich ihnen anzuschließen, während sie mit kalten, körperlosen Händen nach ihm greifen. Die Grube der Mühsal würfelt sodann ihre Initiative aus.</p>"
+        }
+      }
+    },
+    "Spike Thrower": {
+      "name": "Spike Thrower",
+      "description": "<p>Slats in the ceiling open and pepper the chamber below with long, metal spikes fired from the spring-loaded tubes.</p>",
+      "disable": "<p>@Check[thievery|dc:18] to jam the gears and prevent the trap from being activated</p>",
+      "stealth": "<p>(expert)</p>",
+      "items": {
+        "action->Throw Spikes": {
+          "name": "Throw Spikes",
+          "description": "<p><strong>Trigger</strong> This trap must be manually activated by a creature adjacent to the southwest gear stack;</p>\n<p><strong>Effect</strong> The spike thrower makes a ranged attack against each creature in the central part of area <strong>F2</strong>.</p>"
+        },
+        "strike-melee->Spike": {
+          "name": "Spike"
+        }
+      }
+    },
+    "Tallow Guardian": {
+      "name": "Talgwächter",
+      "publicNotes": "<p>Ein Talgwächter erscheint in der Regel als Talg- oder Wachsmasse von vage humanoider Gestalt. Seine Oberfläche ist beständig dabei, zu schmelzen, an seinem Leib hinabzulaufen und sich auszuhärten, um von der Hauptmasse wieder absorbiert zu werden. Sein Gesicht scheint stets unmittelbar davor zu stehen, zu einem formlosen Klumpen zu zerschmelzen, wobei das beunruhigende Konstrukt seine Umgebung aber problemlos sehen kann.</p>",
+      "items": {
+        "strike-melee->Fist": {
+          "name": "Faust"
+        },
+        "action->Molten Wax": {
+          "name": "Geschmolzenes Wachs",
+          "description": "<p>Der vom Talgwächter verursachte Anhaltende Feuerschaden entspringt Tropfen aus geschmolzenem heißem Talg oder Wachs, die an seinen Gegnern klebenbleiben. Diese Tropfen kühlen automatisch nach 4 Runden aus (oder sofort, sollte die Kreatur Kälteschaden erleiden). Mit Auskühlen des Talgs endet auch der Anhaltende Feuerschaden.</p>"
+        },
+        "action->Melt": {
+          "name": "Schmelzen",
+          "description": "<p>Erleidet ein Talgwächter Feuerschaden, schmilzt er leicht und wird schwerer zu beschädigen. Bis zum Ende seines nächsten Zuges steigen seine Resistenzen gegen Hieb- und Stichschaden auf jeweils 10 und seine Resistenz gegen Wuchtschaden auf 5.</p>"
+        },
+        "action->Slowed by Cold": {
+          "name": "Durch Kälte verlangsamt",
+          "description": "<p>Erleidet ein Talgwächter Kälteschaden, verliert er die Vorteile seiner Fähigkeit Schmelzen und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}.</p>"
+        },
+        "action->Encase": {
+          "name": "Wachshülle",
+          "description": "<p>Der Talgwächter versucht, eine maximal Mittelgroße Kreatur, die er in den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} versetzt hat, in seinen Leib hineinzuziehen. Er legt einen Wurf für @Check[athletics|defense:reflex]{Athletik} gegen den REF-SG der gegriffenen Kreatur ab. Bei Erfolg umschließt er die Kreatur mit seinem Körper. Eine umschlossene Kreatur besitzt die Zustände @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} und @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1} und muss den Atem anhalten, um nicht zu ersticken. Sie erleidet @Damage[2d6[fire]]{2W6 Punkte Feuerschaden} durch das geschmolzene heiße Wachs des Talgwächters, wenn sie eingehüllt wird und dann am Ende jedes Zuges, den sie eingehüllt ist.</p>\n<p>Ein Talgwächter kann nur eine Kreatur eingehüllt halten; sollte er eine neue Kreatur einhüllen, wird eine bisher eingehüllte Kreatur aus seinem Körper auf ein angrenzendes Feld ihrer Wahl ausgeworfen.</p>\n<p>Eine eingehüllte Kreatur kann mit einem Wurf zum @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Entkommen} gegen SG 22 freibrechen. Eine eingehüllte Kreatur kann den Talgwächter angreifen, aber nur mit Waffenlosen Angriffen oder Waffen mit maximal Leichter Last. Gegen solche Angriffe besitzt der Talgwächter den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß}. Erleidet der Talgwächter 7 oder mehr Punkte Hieb- oder Wuchtschaden durch eine eingehüllte Kreatur, windet die Kreatur sich frei. Eine freigekommene Kreatur kann sofort atmen und verlässt die Angriffsfläche des Talgwächters, nimmt aber weiterhin @Damage[1d6[persistent,fire]]{1W6 Punkte Anhaltenden Feuerschaden} durch das an ihrem Leib haftende Geschmolzene Wachs.</p>\n<p>Wird ein Talgwächter zerstört, wird eine von ihm eingehüllte Kreatur automatisch freigegeben, während sein Körper zu einem formlosen Haufen Talg zusammenfällt.</p>"
+        }
+      }
+    },
+    "The Disciples": {
+      "name": "The Disciples",
+      "blurb": "Variant unrisen",
+      "hpDetails": "void healing",
+      "languages": "(can't speak any language)",
+      "publicNotes": "<p>An unrisen is a mangled conglomeration of splintered bones, decaying organs, and rotting flesh, created when a ritual such as resurrect goes catastrophically wrong. Immense care must be taken, for if the ritual is a critical failure, an unrisen can be the result—as many a ritualist has learned to their horror.</p>\n<p>Unrisen are barely intelligent, aware only of the agony constantly inflicted by their flawed creation and their resentment for the living. They tend to attack the casters involved in the botched ritual first before lashing out at everyone else around them. Though an unrisen's twisted form is unrecognizable as the intended target of the resurrection, its wordless howls are often disturbingly similar to the deceased's voice. If an unrisen is destroyed before it can rise again, it's reduced to a handful of metallic blue-green salts referred to as essential salts.</p>",
+      "items": {
+        "strike-melee->Jaws": {
+          "name": "Jaws"
+        },
+        "strike-melee->Claw": {
+          "name": "Claw"
+        },
+        "action->Lifesense 30 feet": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.sebk9XseMCRkDqRg]\nLifesense 30 feet"
+        },
+        "action->Rise Again": {
+          "name": "Rise Again",
+          "description": "<p>If the Disciples is reduced to 0 Hit Points by means other than fire damage, disintegration, or its resurrection vulnerability, it returns to unlife at the start of its next turn. It has 45 Hit Points and is @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} in the space in which it was destroyed. The Disciples can't be returned by this ability again for 1 hour.</p>"
+        },
+        "action->Agonized Howl": {
+          "name": "Agonized Howl",
+          "description": "<p>The unrisen howls in pain at its cursed existence. Creatures within a @Template[emanation|distance:30] take @Damage[6d8[mental]] damage (@Check[will|dc:25|basic]). The unrisen can't use Agonized Howl again for [[/br 1d4 #Recharge Agonized Howl]]{1d4 rounds}.</p>"
+        },
+        "action->Awful Approach": {
+          "name": "Awful Approach",
+          "description": "<p>The unrisen reshapes its grotesque form to move swiftly. It Strides twice. Any living creature that can see the unrisen during this movement must succeed at a @Check[fortitude|dc:22] save or be @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure). This is a mental and visual effect. The unrisen can't use Awful Approach again for [[/br 1d4 #Recharge Awful Approach]]{1d4 rounds}.</p>"
+        }
+      }
+    },
+    "The Last Crucible": {
+      "name": "The Last Crucible",
+      "description": "<p>Magically hardened sheets of obsidian drop down over the room's exits while the machinery within taps into wells of magma to begin spewing lava-and monsters-into the maze.</p>",
+      "disable": "<p>@Check[thievery|dc:28] (expert) to disable the main pressure plate at area <strong>H4a</strong> and deactivate the trap entirely (this causes the obsidian walls to retract up into the ceiling as well), @Check[thievery|dc:25] (trained) to disable one of the three lava spouts, or @Check[athletics|dc:28] (trained) to @UUID[Compendium.pf2e.actionspf2e.Item.SjmKHgI7a5Z9JzBx]{Force Open} a fallen obsidian wall</p>",
+      "hpDetails": "BT 29 to smash a 5-ft-sq hole in the wall; Spout H 13; Spout HP 20 (BT 10)",
+      "reset": "<p>The Last Crucible deactivates and resets 10 minutes after it has no target creatures (because the creatures either left area <strong>H4</strong> or died). Any thoqquas that still live sense the magma river at area <strong>H6</strong> and eventually make their way north to that area to swim away.</p>",
+      "routine": "<p>(3 actions) The trap loses 1 action per disabled spout each turn. On each action, a different spout located at one of the three areas marked <strong>H4c</strong> spews a gout of lava at the closest non-thoqqua target in its line of sight; these spouts use magical sensors that have darkvision and a Perception DC of 25. Originally, agents of the abbot would come through here after the trap was triggered, deactivate it, and clean out the hardened blobs of lava and dead bodies that remained, but the amount of time it would take for this trap to clog tunnels with cooled lava makes tracking that slow accretion over the course of this adventure unnecessary.</p>",
+      "stealth": "<p>(expert)</p>",
+      "items": {
+        "action->Drop the Wall": {
+          "name": "Drop the Wall",
+          "description": "<p><strong>Trigger</strong> Four or more Small or larger creatures walk onto the pressure plate at area <strong>H4a</strong>;</p>\n<hr />\n<p><strong>Effect</strong> A magically hardened sheet of obsidian drops down like a portcullis in the western and northern entrances to this room that lead to areas <strong>H3</strong> and <strong>H5</strong>, respectively. Any creatures standing in one of these squares takes @Damage[(4d6 + 4)[bludgeoning]] damage from the falling wall (@Check[reflex|dc:24|basic]) and then decides what side of the wall they want to be on. At the same moment, four thoqquas that have spent centuries in hibernation awaken and emerge from vents into area <strong>H4b</strong>. The trap then rolls initiative, as do the thoqquas.</p>"
+        },
+        "strike-melee->Lava Gout": {
+          "name": "Lava Gout",
+          "description": "<p>This attack has no multiple attack penalty.</p>"
+        }
+      }
+    },
+    "Thoqqua": {
+      "name": "Thoqqua",
+      "languages": "(kann keine Sprache sprechen)",
+      "publicNotes": "<p>Thoqquas sind zänkische Kreaturen aus Feuer und Schlacke. Ihre Körper erzeugen unglaubliche Hitze, die ihnen ermöglicht, sich durch die meisten Oberflächen zu graben oder zu schmelzen, solides Felsgestein eingeschlossen. Thoqquas sind Einheimische der weiten Aschewüsten und Lavafelder der Ebene des Feuers. Dort verzehren sie Erze und Mineralien, welche ihre schmelzofenartigen Leiber dann zu Panzerplatten schmelzen, die den Kreaturen ihre gerüstete Gestalt verleihen.</p>\n<p>Das vorderste Segment des Leibes dieser Kreaturen verjüngt sich zu einem geraden, hornartigen Schnabel, der mit sengender Hitze glüht. Dampf und Rauch dringen ständig zischend aus ihren Gelenken und aus der Ferne können Thoqquas mit seltsamen, metallischen Konstrukten verwechselt werden. Erwachsene Thoqquas sind 1,50 m lang und wiegen 200 Pfund.</p>\n<p>Sich einem Thoqqua zu nähern, ist gefährlich – diese Kreaturen greifen ohne nachzudenken an, wenn sie sich erschrecken oder frustriert sind. Kreaturen, die sich sofort aus ihrem Territorium vertreiben lassen, werden von ihnen nach und nach als Teil ihres Reviers und ihres Eigentums erachtet und sogar von ihnen bewacht. Mephiten scheinen diese seltsamen Überlegungen der Thoqquas zu verstehen und gehen zuweilen Handel mit den Magmawürmern ein. Die Mephiten behaupten, dass die berggroßen Ahnen der heutigen Thoqquas Diener der Elementarherrscher waren und die ersten Vulkane auf den noch jungen Welten der Materiellen Ebene gegraben hätten. Diese „Ahnenwürmer“ hätten sich dann in die Kerne der Welten zurückgezogen, wo ihre Hitze die Planeten noch heute erwärme. Auf der Materiellen Ebene kommen Thoqquas in der Nähe von Vulkanen zusammen – dabei hängt es aber vom einzelnen Thoqqua ab, ob er einen mineralienreichen Futterplatz oder eine heilige Stätte verteidigt oder ihm der Ort einfach nur angenehm ist.</p>",
+      "skillSpecialStealth": {
+        "0": {
+          "label": "in Lava"
+        }
+      },
+      "items": {
+        "strike-melee->Beak": {
+          "name": "Schnabel"
+        },
+        "action->Molten Body": {
+          "name": "Lavaleib",
+          "description": "<p>Der Leib eines Thoqquas ist heiß genug, um Stein zu schmelzen. Wer einen Thoqqua in den Zustand Gegriffen versetzt, von einem Thoqqua in den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} versetzt wird oder dem ein Kritischer Fehlschlag bei einem Nahkampfangriff mit einem Waffenlosen Angriff oder einer Waffe der Eigenschaft Agil unterläuft, der erleidet @Damage[1d4[fire]]{1W4 Feuerschaden} (@Check[reflex|dc:15|basic]{einfacher Reflexwurf})</p>"
+        },
+        "action->Reactive Thrash": {
+          "name": "Reaktives Dreschen",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur innerhalb des Angriffsradius des Thoqquas trifft ihn mit einem Nahkampfangriff</p>\n<hr />\n<p><strong>Effekt</strong> Der Thoqqua wirft sich instinktiv dem Angriff entgegen, glühend heiße Schuppen voran. Der Angreifer muss einen @Check[reflex|dc:15]{Reflexwurf} ablegen.</p>\n<p><strong>Kritischer Erfolg</strong> Der Angreifer ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Der Angreifer erleidet @Damage[1d4[fire]]{1W4 Punkte Feuerschaden}.</p>\n<p><strong>Fehlschlag</strong> Der Angreifer erleidet @Damage[2d4[fire]]{2W4 Punkte Feuerschaden}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie beim Fehlschlag, aber die zum Angriff genutzte Waffe erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.6dNUvdb1dhToNDj3]{Beschädigt}, außer sie besteht aus Metall, besitzt mehr als 10 Härte oder ist immun oder resistent gegen Feuer.</p>"
+        },
+        "action->Critical Ignition": {
+          "name": "Entflammender Kritischer Treffer",
+          "description": "<p>Bei einem Kritischen Treffer mit einem Körperangriff verursacht ein Thoqqua zusätzliche @Damage[1d6[persistent,fire]]{1W6 Punkte Anhaltenden Feuerschaden}.</p>"
+        },
+        "action->Starving": {
+          "name": "Ausgehungerte Thoqquas",
+          "description": "<p>Ein Thoqqua ernährt sich von einer Kombination aus rohem Gestein, Erz und Hitze. Wird ihm dies verweigert, verhungert er zwar nicht, verliert er aber seine Panzerung, da er seine Panzerplatten absorbieren muss. Die RK eines ausgehungerten Thoqquas wird um 2 reduziert, allerdings erhält er auch einen Situationsbonus von +1 auf alle Angriffswürfe.</p>"
+        }
+      }
+    },
+    "Toxic Furnace": {
+      "name": "Toxic Furnace",
+      "description": "<p>The smoking furnace begins to hiss and click, and its vents swivel and adjust to spew toxic fumes in the direction of intruders.</p>",
+      "disable": "<p>@Check[thievery|dc:25] (trained) to render one of the vents useless, or @Check[athletics|dc:25] to wrench and bend a vent until it no longer functions</p>",
+      "hpDetails": "Furnace BT 28, Vent Hardness 10, Vent HP 18 (BT 9)",
+      "reset": "<p>The trap resets after 1 minute, during which it sees no creatures to target.</p>",
+      "routine": "<p>(3 actions) The trap loses 1 action for each disabled vent. On each of the trap's actions, a vent spews a gout of boiling toxin at a living creature in sight of it. It can't target a single creature more than once per round, so if there aren't enough viable targets for all 3 actions, the trap loses those unspent actions.</p>",
+      "stealth": "<p>(expert)</p>",
+      "items": {
+        "action->Spew Toxins": {
+          "name": "Spew Toxins",
+          "description": "<p><strong>Trigger</strong> A visible living creature enters the room, or a Stealthy creature fails to remain @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} from the toxic furnace with a @Check[stealth|dc:25] check (the trap's sensors have darkvision and lifesense);</p>\n<p><strong>Effect</strong> One of the toxic furnace's vents swivels to aim at the triggering creature and then spews a gout of boiling toxin at the target. The toxic furnace then rolls initiative.</p>"
+        },
+        "strike-ranged->Boiling Toxin": {
+          "name": "Boiling Toxin"
+        }
+      }
+    },
+    "Trapped Elevator": {
+      "name": "Trapped Elevator",
+      "description": "<p>An oversized cauldron rigged as an elevator suddenly drops 30 feet if it's overloaded.</p>",
+      "disable": "<p>@Check[thievery|dc:18] (trained) to lock the releasing mechanisms in place, or @Check[crafting|dc:20] to rig additional supports for the cauldron (this activity requires 10 minutes of work)</p>",
+      "reset": "<p>Creatures can still fall down the shaft even after the cauldron is released, but the cauldron must be reset manually.</p>",
+      "stealth": "<p>(expert)</p>",
+      "items": {
+        "action->Release the Cauldron": {
+          "name": "Release the Cauldron",
+          "description": "<p><strong>Trigger</strong> More than one Medium or more than two Small creatures are inside the cauldron when it is activated to lower;</p>\n<p><strong>Effect</strong> The cauldron releases from its anchor points on the chains and drops 30 feet to area <strong>E1</strong>; any creatures within take 15 points of bludgeoning damage in the fall. A creature can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge} to avoid falling by clinging to a chain.</p>"
+        }
+      }
+    },
+    "Ulizmila's Cauldron": {
+      "name": "Ulizmila's Cauldron",
+      "acDetails": "(13 when broken); construct armor",
+      "publicNotes": "<p>While Ulizmila is long gone, her animated cauldron remains a dangerous guardian of the hut. The mindless construct lurches to life and attacks anyone who dares to enter, pursuing intruders all the way to the clearing's edge before returning to its place inside the hut. When the cauldron attacks, it \"bites\" at enemies by snapping at them with its hinged lid while its inner surfaces swiftly heat up to cook anything Small it can \"gulp\" down.</p>\n<hr />\n<p>Granted a semblance of life through the use of rituals or other strange magic, animated objects take many forms and serve a variety of uses. A few examples of typical animated objects are listed below. Many of these creatures serve as guardians, surprising unsuspecting adventurers when they suddenly attack. Others serve as idle distractions for the exceptionally rich, simple servants created to handle odd jobs, and the like.</p>",
+      "items": {
+        "strike-melee->Lid": {
+          "name": "Lid"
+        },
+        "action->Construct Armor (Hardness 9)": {
+          "name": "Construct Armor (Hardness 9)",
+          "description": "<p>Like normal objects, an animated object has Hardness. This Hardness reduces any damage it takes by an amount equal to the Hardness. Once an animated object is reduced to less than half its Hit Points, or immediately upon being damaged by a critical hit, its construct armor breaks and its Armor Class is reduced to the listed value.</p>"
+        },
+        "action->Swallow Whole": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.uJSseLa57HZYSMUu]\n<p>Small, @Damage[2d6[fire]], Rupture 3</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
+        }
+      }
+    },
+    "Unsafe Stairs": {
+      "name": "Unsichere Treppe",
+      "description": "<p>Die wacklige Treppe ächzt und die Stufen biegen sich alarmierend durch, sobald eine Kreatur der Kategorie Klein oder größer sie hinaufsteigt.</p>",
+      "disable": "<p>@Check[crafting|dc:16]{Handwerkskunst}, um rasch Stützen zu basteln, damit die Treppe nicht einstürzt.</p>",
+      "items": {
+        "action->Collapse": {
+          "name": "Einsturz",
+          "description": "<p><strong>Auslöser</strong> Eine Kleine oder größere Kreatur tritt auf die Stufen</p>\n<hr />\n<p><strong>Effekt</strong> Lege im Fall einer Kleinen Kreatur einen @Check[flat|dc:8]{Einfachen Wurf} oder im Fall einer Mittelgroßen oder mehrerer Kleiner Kreaturen einen @Check[flat|dc:16]{Einfachen Wurf} ab. Bei einem Fehlschlag bricht die Treppe zusammen. Alle Kreaturen auf der Treppe stürzen und erleiden @Damage[(2d6 + 3)[bludgeoning]]{2W6+3 Punkte Wuchtschaden} durch herabfallende Trümmer (@Check[reflex|dc:16|basic]{einfacher Reflexwurf}).</p>"
+        }
+      }
+    },
+    "Vargouille": {
+      "name": "Vargouille",
+      "publicNotes": "<p>Vargouillen sind Aasfresser aus den Sümpfen Abaddons, wo sie den fremdartigen Himmel auf der Suche nach frischen Seelen zum Quälen heimsuchen. In diesem daimonischen Albraumreich erfüllen sie eine Funktion ähnlich der von Raben der Geiern, wobei sie sich zusätzlich daran erfreuen, Leid und Verzweiflung zu verursachen, wie es reinen Aasvögeln nie möglich wäre. Eine Vargouille ist größer als ein Menschenkopf – meistens erreicht sie eine Höhe von 30 bis 50 cm und eine Flügelspannweite von 38 bis 88 cm. Vargouillen sind keine Einheimischen der Materiellen Ebene, können dort aber dennoch angetroffen werden, wo sie auf Friedhöfen, uralten Schlachtfeldern oder anderswo hausen, wo Tod und Verwesung nachhallen.</p>",
+      "items": {
+        "strike-melee->Bite": {
+          "name": "Biss"
+        },
+        "action->Tenacious Wounds": {
+          "name": "Verfluchte Wunden",
+          "description": "<p>Eine Kreatur, welche durch eine Vargouille Giftschaden erleidet, muss einen @Check[fortitude|dc:18]{Zähigkeitswurf} ablegen; bei Misslingen wird sie verflucht. Die verfluchte Kreatur kann Trefferpunkte nur mittels Magie zurückerlangen. Wer einen Zauber wirkt, um die Kreatur zu heilen, muss dabei einen Wurf zum @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken} gegen SG 18 bestehen, sonst hat die Heilung keinen Effekt. Der Entgegenwirkengrad der Vargouille entspricht ihrer Kreaturenstufe. Eine verfluchte Kreatur kann einmal am Tag einen neuen Zähigkeitswurf gegen SG 18 (meistens im Rahmen ihrer täglichen Vorbereitungen) ablegen, um den Fluch zu brechen. Der Fluch endet automatisch, sollte die Kreatur auf ihr Trefferpunktemaximum geheilt werden.</p>"
+        },
+        "action->Vargouille's Kiss": {
+          "name": "Kuss der Vargouille",
+          "description": "<p><strong>Anforderungen</strong> Die Vargouille ist angrenzend zu einer @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Bewusstlosen}, @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmten} oder bereitwilligen Kreatur</p>\n<hr />\n<p><strong>Effekt</strong> Die Vargouille presst ihre Lippen auf den Mund der humanoiden Kreaturen in einer Parodie eines liebevollen Kusses; die Kreatur muss einen Rettungswurf ablegen, bei Misslingen beginnt ihre Verwandlung in eine Vargouille. Die aus dieser Krankheit resultierenden Zustände Benommen, Bewusstlos und Kränkelnd verbessern sich nicht von allein, bis die Krankheit kuriert wurde. Die Krankheit geht nicht die jeweils nächste Phase, solange das Opfer sich in Sonnenlicht oder dem Wirkungsbereich eines Lichtzaubers des wenigstens 3. Grades befindet.</p>\n<table><tr><td>\n<p><strong>Rettungswurf</strong> @Check[fortitude|dc:18]{Zähigkeitswurf}</p>\n<p><strong>Phase 1</strong> Keine Effekte (2 Stunden)</p>\n<p><strong>Phase 2</strong> Haarausfall, @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1} (2 Stunden)</p>\n<p><strong>Phase 3</strong> Ohren werden länger und verformen sich zu Schwingen, Zähne werden scharf und krumm, @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 1} (2 Stunden)</p>\n<p><strong>Phase 4</strong> wie <strong>Phase 3</strong>, aber das Opfer erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Bewusstlos} (2 Stunden)</p>\n<p><strong>Phase 5</strong> Tod; der Kopf des Opfers verwandelt sich in eine neue Vargouille, löst sich vom Kopf und fliegt davon, um das Böse zu verbreiten.</p>\n</td></tr></table>"
+        },
+        "action->Vargouille's Shriek": {
+          "name": "Kreischen der Vargouille",
+          "description": "<p>Die Vargouille reißt den Kiefer weit auf und stößt ein nervenzerfetzendes Kreischen aus. Alle Kreaturen innerhalb von 60 Fuß/18 m, die die Vargouille sehen und hören können, müssen einen @Check[fortitude|dc:15]{einfachen Zähigkeitswurf} ablegen:</p>\n<p><strong>Erfolg</strong> Die Kreatur ist nicht betroffen und vorübergehend für 24 Stunden gegen diese Fähigkeit immun.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält bis zum Ende ihres nächsten Zuges den Zustand @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erhält den Zustand Gelähmt. Ihr steht zum Ende jedes ihrer Züge ein neuer Rettungswurf zu; der SG sinkt dabei kumulativ mit jedem neuen Rettungswurf um 1.</p>"
+        }
+      }
+    },
+    "Ygrik": {
+      "name": "Ygrik",
+      "blurb": "Male kobold jailer",
+      "skillSpecialCrafting": {
+        "0": {
+          "label": "traps"
+        }
+      },
+      "items": {
+        "weapon->Flying Talon": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.ucz1WdBA0Ma34OsS]\n<p>This weapon consists of a three-pronged barbed hook attached to a length of chain. It can be used as a melee weapon to stab at foes or hurled as a ranged weapon. Some kobolds are particularly fond of using flying talons, especially as a sort of badge of office above those who serve them.</p>"
+        },
+        "equipment->Keys": {
+          "name": "Keys",
+          "gmNote": "<p>To prisoner cages</p>"
+        },
+        "strike-melee->Flying Talon": {
+          "name": "Flying Talon"
+        },
+        "strike-ranged->Flying Talon": {
+          "name": "Flying Talon"
+        },
+        "action->Intimidating Retreat": {
+          "name": "Intimidating Retreat",
+          "description": "<p><strong>Requirements</strong> Ygrik is adjacent to at least one enemy and at least one ally;</p>\n<p><strong>Effect</strong> Ygrik commands an adjacent ally to fight harder and threatens dire punishment if the ally fails to obey; that ally gains a +1 circumstance bonus to its next melee Strike attack roll, as long as that attack is made before the start of Ygrik's next turn. Ygrik then Strides up to his Speed and gains a +2 circumstance bonus to AC against reactions triggered by this movement. He must end this movement in a space that isn't adjacent to any enemy.</p>"
+        },
+        "action->Sneak Attack": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>Ygrik deals an additional 1d6 precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
+        }
+      }
+    }
+  },
+  "mapping": {
+    "acDetails": "system.attributes.ac.details",
+    "blurb": "system.details.blurb",
+    "description": {
+      "converter": "translateActorDescription",
+      "path": "system.details.description"
+    },
+    "disable": "system.details.disable",
+    "hpDetails": "system.attributes.hp.details",
+    "items": {
+      "converter": "translateActorItems",
+      "path": "items"
+    },
+    "languages": "system.details.languages.details",
+    "name": {
+      "converter": "translateDualLanguage",
+      "path": "name"
+    },
+    "portrait": {
+      "converter": "updateActorImage",
+      "path": "img"
+    },
+    "publicNotes": {
+      "converter": "translateActorDescription",
+      "path": "system.details.publicNotes"
+    },
+    "reset": "system.details.reset",
+    "routine": "system.details.routine",
+    "skillSpecialCrafting": {
+      "converter": "translateSkillSpecial",
+      "path": "system.skills.crafting.special"
+    },
+    "skillSpecialStealth": {
+      "converter": "translateSkillSpecial",
+      "path": "system.skills.stealth.special"
+    },
+    "source": {
+      "converter": "translateSource",
+      "path": "system.details.publication.title"
+    },
+    "stealth": "system.attributes.stealth.details",
+    "tokenImage": {
+      "converter": "updateTokenImage",
+      "path": "prototypeToken.texture.src"
+    },
+    "tokenName": {
+      "converter": "translateTokenName",
+      "path": "prototypeToken.name"
+    }
+  }
+}
