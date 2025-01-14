@@ -1,0 +1,823 @@
+{
+  "label": "Blood Lords Bestarium",
+  "entries": {
+    "Arboreal Snag": {
+      "name": "Totholzhirte",
+      "hpDetails": "Leerenheilung",
+      "publicNotes": "<p>Baumhirten können wie fast alle anderen lebenden Kreaturen ebenfalls zu Untoten werden – da sie aber nicht über Fleisch oder Knochen verfügen, manifestiert sich ihr Untod auf andere Weise. Wenn ein Baumhirte zuckend als Untoter erwacht, dann oft als Totholzhirte, als blattloser, skelettähnlicher toter Baum, der nun seinen Wald heimsucht und alle lebenden Kreaturen angreift, die er zu fassen bekommt. Totholzhirten sind Geistlos und schwer zu kontrollieren, werden aber von manchen Nekromanten als Wächter des Waldes eingesetzt.</p>\n<p>Während viele Baumhirten gern lange Zeit unbeweglich auf der Stelle verharren, sind Totholzhirten oft ruhelos und streifen durch die Regionen, die sie als ihre Reiche betrachten. Manchmal kann man ein solches Reich anhand der totgeprügelten Waldtiere oder des zertrampelten Unterholzes auf dem Boden erkennen, wobei Waldkreaturen sehr schnell lernen, das Gebiet gänzlich zu meiden. Es dauert nicht lange, bis eine von einem Totholzhirten heimgesuchte Region zu einer kranken Ödnis wird und die Einheimischen sie als verflucht oder heimgesucht abstempeln.</p>",
+      "skillSpecialStealth": {
+        "0": {
+          "label": "In Wäldern"
+        }
+      },
+      "items": {
+        "strike-melee->Branch": {
+          "name": "Ast"
+        },
+        "strike-melee->Root": {
+          "name": "Wurzel"
+        },
+        "strike-ranged->Rock": {
+          "name": "Felsen"
+        },
+        "action->Axe Vulnerability": {
+          "name": "Schwäche gegen Äxte",
+          "description": "<p>Durch Äxte erleidet ein Totholzhirte 5 zusätzliche Schadenspunkte.</p>"
+        },
+        "action->Putrid Sap": {
+          "name": "Stinkendes Harz",
+          "description": "<p>Erleidet der Totholzhirte Stichschaden, spritzt Übelkeit erregender, grüner Eiter aus der Wunde. Kreaturen innerhalb von 10 Fuß/3 m Entfernung zum Totholzhirten müssen einen @Check[fortitude|dc:20]{Zähigkeitswurf} ablegen; bei Misslingen erhält eine Kreatur den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1} (bzw. @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 2} bei einem Kritischen Fehlschlag). Unabhängig vom Ergebnis des Rettungswurfes ist die Kreatur sodann 1 Stunde lang vorübergehend gegen diese Fähigkeit immun.</p>"
+        }
+      }
+    },
+    "Azmakian Effigy": {
+      "name": "Azmakisches Bildnis",
+      "publicNotes": "<p>Xar-Azmak, der Dämonenherrscher des Rostes, wurde vor langer Zeit von Dispater zerstört. Einige Waffen seiner abyssalen Legionen existieren aber noch immer. Die berüchtigtsten sind Azmakische Bildnisse, furchtbare dämonische Konstrukte, die nach Xar-Azmaks Abbild geformt wurden.</p>\n<p>Ein Azmakisches Abbild besteht zwar aus Eisen, ist aber von einer dicken Rostschicht überzogen, deren Flocken sich ablösen, wenn das Konstrukt sich bewegt und kämpft. Das Bildnis stürmt auf mächtigen Hufen ins Getümmel, um Gegner auf seinen langen, gebogenen Hörnern aufzuspießen. Der bestbekannteste Angriff des Bildnisses lässt sogar die mutigsten Krieger erzittern, dabei handelt es sich um einen furchtbaren Rostodem, welcher selbst legendäre magische Waffen zu nutzlosem Schrott reduzieren kann. Weise Abenteurer bemühen sich, ein Bildnis mit Abstand zu bekämpfen, allerdings sind diese Konstrukte obendrein überraschend schnell und imstande, die meisten Gegner einzuholen!</p>\n<p>Man glaubt das Geheimnis zur Herstellung Azmakischer Bildnisse verloren, jedoch könnten Bibliotheken im Abyss und in den Heiligtümern von Scheusalanbetern und Paktierern die erforderlichen Rituale und Ingredienzien enthalten. Xar-Azmak hat einst tausende von Bildnissen befehligt. Die meisten, die seinen Tod überstanden haben, waren danach in der Hölle gestrandet, wo sie von Dispaters Streitkräften gejagt und schließlich zerstört wurden. Ein paar wenige aber haben ihre Dienste Xar-Azmaks treuen Dienern auf Golarion angetragen und so diese Reinigungswelle überstanden. Mit Xar-Azmaks Ende ging auch das Wissen weitestgehend verloren, wie man diese Konstrukte repariert. Findet man eines der letzten Bildnisse, weist es meistens Beschädigungen auf, die seine Funktion beeinträchtigen könnten.</p>",
+      "items": {
+        "strike-melee->Horn": {
+          "name": "Horn"
+        },
+        "strike-melee->Hoof": {
+          "name": "Huf"
+        },
+        "action->Breath Weapon": {
+          "name": "Odemwaffe",
+          "description": "<p>Das Azmakische Bildnis atmet einen @Template[cone|distance:15]{15 Fuß/4,50 m-Kegel} aus verrostendem Gas aus. Das Gas fügt dem höchststufigsten Metallgegenstand jeder Kreatur im Wirkungsbereich jeweils @Damage[2d6[untyped]]{2W6 Schadenspunkte} zu und ignoriert dabei die Härte der Gegenstände (@Check[fortitude|dc:22|basic]{einfacher Zähigkeitswurf}); nicht am Leib oder in Händen getragene Gegenstände im Wirkungsbereich erhalten diesen Schaden automatisch. Das Bildnis kann diese Fähigkeit dann [[/br 1d4 #Runden]]{1W4 Runden} lang nicht erneut benutzen.</p>"
+        },
+        "action->Powerful Charge": {
+          "name": "Mächtiger Sturmangriff",
+          "description": "<p>Das Azmakische Bildnis nutzt zweimal Laufen und führt dann einen Hornangriff aus. Sofern es sich wenigstens 20 Fuß/6 m weit von seinem Ausgangspunkt entfernt hat, steigt der Schaden auf @Damage[(3d10+10)[piercing]]{3W10+10 Punkte}.</p>"
+        }
+      }
+    },
+    "Bloodshroud": {
+      "name": "Blutschleier",
+      "hpDetails": "Leerenheilung",
+      "publicNotes": "<p>Während des Krieges zwischen Geb und Nex haben Nekromanten gefährliche magische Experimente auf der Suche nach möglichen Vorteilen über ihre Gegner durchgeführt. Eines befasste sich mit der Frage, wie man vielleicht die Essenz eines Vampirnebels destillieren könnte, um einen schützenden Grabesschleier für eine Armee untoter Magi zu erschaffen.</p>",
+      "items": {
+        "spellcastingEntry->Arcane Innate Spells": {
+          "name": "Immanente Arkane Zauber"
+        },
+        "spell->Disintegrate": {
+          "target": "1 Kreatur oder 1 nicht mitgeführter Gegenstand"
+        },
+        "spell->Scorching Ray": {
+          "name": "<Compendium>"
+        },
+        "strike-melee->Greatsword": {
+          "name": "Zweihänder"
+        },
+        "strike-melee->Claw": {
+          "name": "Klaue"
+        },
+        "action->Lifesense 60 feet": {
+          "name": "<Compendium> 60 Fuß/18 m"
+        },
+        "action->Bloodshift": {
+          "name": "Blutsprung",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur innerhalb von 30 Fuß/9 m Entfernung zum Blutschleier erleidet Schaden</p>\n<hr />\n<p><strong>Effekt</strong> Der Blutschleier transportiert sich und die von ihm getragenen Gegenstände auf ein unbelegtes Feld angrenzend zur auslösenden Kreatur.</p>"
+        },
+        "action->Sanguine Shroud": {
+          "name": "Blutiger Schleier",
+          "description": "<p>Der Blutschleier ist von einem Schleier aus fließendem Blut umgeben. Sollte eine Kreatur dem Blutschleier mit einem Nahkampfangriff Schaden zufügen oder ihn berühren, so muss die Kreatur einen @Check[fortitude|dc:30]{Zähigkeitswurf} ablegen. Alle Temporären Trefferpunkte, die der Blutschleier durch diese Fähigkeit erlangt, währen 1 Stunde.</p>\n<p><strong>Kritischer Erfolg</strong> Wie beim Erfolg, aber die Kreatur wird vorübergehend 24 Stunden lang gegen diese Fähigkeit immun.</p>\n<p><strong>Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 1} und erleidet @Damage[2d6[bleed]]{2W6 Punkte Blutungsschaden}. Der Blutschleier erhält 15 Temporäre Trefferpunkte.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie beim Fehlschlag, aber die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 2} und der Blutschleier erlangt 25 Temporäre Trefferpunkte.</p>"
+        },
+        "action->Spellstrike": {
+          "name": "Zauberschlag",
+          "description": "<p><strong>Häufigkeit</strong> Bis zur Neuaufladung</p>\n<hr />\n<p><strong>Effekt</strong> Der Blutschleier leitet einen Angriff, der 1 oder 2 Aktionen zum Wirken benötigt und einen Angriffswurf erfordert, durch einen Klauen- oder Zweihänderangriff. Die Zaubereffekte treten nicht sofort ein, sondern sind Teil des Angriffs. Der Blutschleier führt einen Nahkampfangriff mit einer Waffe oder Klaue aus. Der Zauber ist mit dem Angriff verbunden; nutze das Ergebnis des Angriffswurfes zur Bestimmung der Effekte des Angriffes und des Zaubers. Dies zählt hinsichtlich des Malus für Mehrfachangriffe des Blutschleiers als zwei Angriffe; der Malus wird aber erst nach dem Zauberschlag angerechnet. Wenn der Blutschleier Blutsprung nutzt, lädt dies seinen Zauberschlag automatisch wieder auf.</p>"
+        }
+      }
+    },
+    "Charghar": {
+      "name": "Charghar",
+      "hpDetails": "Leerenheilung",
+      "publicNotes": "<p>In Geb weitverbreitete urbane Legenden warnen vor den rachsüchtigen Geistern jener, die bei lebendigem Leibe gekocht wurden. Diese Wesen werden kollektiv als Charghars bezeichnet. Viele Gebbiten verspeisen Leute, ohne sie zuerst zu kochen, allerdings gibt es manche Untote, die sich nach Jahrhunderten derselben Ernährungsweise langweilen. Ebenso leben in Geb einige Kannibalen; entweder sind es unterdrückte Bürger, die aus Not ihre Nachbarn und Verwandten kochen und verzehren, oder Salonlöwen, für die es die aktuelle Mode darstellt. Egal aus welchen Gründen Leute gekocht werden, können dabei rachsüchtige Untote entstehen, die nun an Orten der Nahrungszubereitung lauern und Köche zu Sorglosigkeit und gefährlichen Fehlern verleiten.</p>\n<p>Charghars haben geisterhafte, humanoide Gestalten. Ihre körperlichen Manifestationen erscheinen dagegen größtenteils, wie nachdem sie gekocht wurden – verbrannte, blutige Kadaver, um die herum körperliche Fleischbrocken schweben, oder Haufen gekochter Knochen.</p>",
+      "items": {
+        "strike-melee->Ghostly Cookware": {
+          "name": "Geisterhaftes Kochgeschirr"
+        },
+        "action->Lifesense 60 Feet": {
+          "name": "<Compendium> 60 Fuß/18 m"
+        },
+        "action->Malevolent Mishaps": {
+          "name": "Bösartige Unfälle",
+          "description": "<p>10 Fuß/3 m. Der Charghar verursacht rund um sich herum Unsicherheit und Tollpatschigkeit. Jede Kreatur, die ihren Zug in der Aura beginnt, muss einen @Check[will|dc:21]{Willenswurf} ablegen:</p>\n<p><strong>Erfolg</strong> Die Kreatur ist vorübergehend 1 Minute lang gegen diese Fähigkeit immun.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält bis zum Beginn ihres nächsten Zuges die Zustände @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 1} und @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 1}. Im Fall einer lebenden Kreatur nutzt der Charghar seine Fähigkeit Furcht säen.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie beim Fehlschlag, aber @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 2} und @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 2}.</p>"
+        },
+        "action->Create Spawn": {
+          "name": "Brut erschaffen",
+          "description": "<p>Wird ein Humanoider von einem Charghar getötet und unbeerdigt in der Nähe eines Ofens, Kessels, Herds oder ähnlichen Gegenstandes zurückgelassen, so erhebt er sich mit dem nächsten Sonnenaufgang als Charghar mit freiem Willen.</p>"
+        },
+        "action->Impart Fears": {
+          "name": "Furcht säen",
+          "description": "<p>Wird eine lebende Kreatur vom Geisterhaften Kochgeschirr eines Charghars getroffen oder misslingt ihr ein Rettungswurf gegen Bösartige Unfälle, so muss sie einen @Check[will|dc:21]{Willenswurf} ablegen. Eine von Furcht säen betroffene Kreatur kann jeden Tag einen neuen Rettungswurf ablegen, um den Effekt zu entfernen.</p>\n<p><strong>Erfolg</strong> Die Kreatur ist 24 Stunden lang temporär gegen diese Fähigkeit immun.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}, wann immer sie etwas zu sich nimmt oder eine Handlung nutzt, um Essen oder Trinken zuzubereiten.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie beim Fehlschlag, aber @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2}; die Kreatur kann ihren Zustandswert für Verängstigt aber nicht unter 1 reduzieren.</p>"
+        },
+        "lore->Cooking Lore": {
+          "name": "Kenntnis (Kochen)"
+        }
+      }
+    },
+    "Chattering Jaws": {
+      "name": "Klappernde Kiefer",
+      "publicNotes": "<p>Klappernde Kiefer dienen normalerweise keinem anderen Zweck als Leuten die Nerven zu rauben, indem sie mit den Zähnen klappern. Manche klappern nur in regulären Intervallen, um die Zeit anzuzeigen.</p>\n<hr />\n<p>Belebte Knochen werden meistens mit Untoten verwechselt, sind tatsächlich aber geistlose Konstrukte ohne Verbindungen zur Nekromantie.</p>",
+      "items": {
+        "strike-melee->Jaws": {
+          "name": "Biss"
+        },
+        "action->Incessant Chattering": {
+          "name": "Lautes Zähneklappern",
+          "description": "<p>Die Kiefer klappern immer zu einer vorherbestimmten Zeit, z.B. zu bestimmten Tageszeiten oder auf einen Auslöser hin, z.B. weil sie eine Kreatur innerhalb von 30 Fuß/9 m Entfernung bemerken. Während dieser Zeit kann das Zähneklappern automatisch von allen Kreaturen innerhalb von 60 Fuß/18 m gehört werden.</p>"
+        },
+        "action->Gnashing Rage": {
+          "name": "Knirschender Zorn",
+          "description": "<p>Wird ein Klappernder Kiefer zerstört, erhalten alle anderen Belebten Knochen innerhalb von 30 Fuß/9 m Entfernung, die ihn sehen oder hören können, 1 Minute lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Beschleunigt 1}. Die Belebten Knochen können diese zusätzliche Aktion für Angriff oder Laufen nutzen.</p>"
+        }
+      }
+    },
+    "Cobblebone Swarm": {
+      "name": "Pflasterknochenschwarm",
+      "hpDetails": "Leerenheilung",
+      "publicNotes": "<p>Die Nekromanten-Architekten von Graujammer haben beim Bau der Stadt einen furchtbaren Prozess genutzt, um Fleisch und Seelen von den meisten verbauten Knochen zu lösen, während die modernen Baumeister diese grauenvolle, aber effiziente Magie nicht mehr kennen. Wenn von Spuk heimgesuchte Knochen neben gewöhnlichen Materialien verarbeitet werden, kann das dazu führen, dass Ziegel und Pflastersteine mit nekromantischer Energie erfüllt werden. Sofern kein Exorzismus an diesen Steinen durchgeführt wird, sitzen die verwirrten Geister fest und ihre Identitäten und Erinnerungen vermischen sich miteinander. Nach mehreren Jahren können sie Pflasterknochenschwärme ausbilden, bösartige, heimgesuchte Amalgame aus Ziegelsteinen und Knochen. Diese rachsüchtigen Kreaturen beschwören geisterhafte Geräusche, um Opfer in schmale Gassen oder dunkle steinerne Keller zu locken, wo sie sie zu Tode prügeln und ihre Überreste unter Bergen von Knochen und Ziegeln bedecken.</p>\n<p>Pflasterknochenschwärme wurden bereits mit Pflastersteinschwärmen verwechselt, doch die Bürger von Graujammer wissen, dass sie nach nahen Erscheinungen oder Knochenornamenten Ausschau halten müssen, die sich bewegen, wenn man nicht hinsieht. – Dies sind sichere Anzeichen für Pflasterknochenschwärme und eine Warnung, dass man vielleicht besser einen anderen Weg zu seinem Ziel wählen sollte.</p>",
+      "items": {
+        "spellcastingEntry->Occult Innate Spells": {
+          "name": "Immanente Okkulte Zauber"
+        },
+        "action->Hatred for Secret Doors": {
+          "name": "Hass auf Geheimtüren",
+          "description": "<p>Pflasterknochenschwärme hassen Geheimtüren, Trickschubladen und alles, was versteckte Räume verbirgt, da es sie an die Jahre oder Jahrzehnte erinnert, die sie im Stein eingesperrt verbracht haben. Sie erhalten einen Kompetenzbonus von +5 auf Würfe für Athletik zum @UUID[Compendium.pf2e.actionspf2e.Item.SjmKHgI7a5Z9JzBx]{Gewaltsam öffnen} von Geheimtüren.</p>"
+        },
+        "action->Jutting Bones": {
+          "name": "Herausragende Knochen",
+          "description": "<p>Die Angriffsfläche des Pflasterknochenschwarms ist Schwieriges Gelände.</p>"
+        },
+        "action->Lifesense 40 Feet": {
+          "name": "<Compendium> 40 Fuß/12 m"
+        },
+        "action->Phantasmal Pummeling": {
+          "name": "Phantomprügel",
+          "description": "<p>Jeder Gegner innerhalb der Angriffsfläche des Pflasterknochenschwarms erleidet @Damage[1d6[bludgeoning],1d6[void]]{1W6 Punkte Wucht- und 1W6 Punkte Leerenschaden} (@Check[reflex|dc:17|basic]{einfacher Reflexwurf}).</p>"
+        },
+        "action->Settlement Bound": {
+          "name": "Ortschaftsgebunden",
+          "description": "<p>Ein typischer Pflasterknochenschwarm kann die Ortschaft, in der er entstanden ist, nicht verlassen. Entfernt er sich weiter als 1 Meile/1,5 km von der Ortsgrenze, zerfällt er in seine Komponenten und erwacht nur dann wieder zum Unleben, wenn seine Stücke in die Ortschaft zurückgebracht werden. Manche Schwärme sind stattdessen aber auch an bestimmte Gebäude, Straßen oder Stadtteile gebunden.</p>"
+        }
+      }
+    },
+    "Creeping Crone": {
+      "name": "Schlurfende Vettel",
+      "hpDetails": "Leerenheilung",
+      "publicNotes": "<p>Vetteln sind weder unsterblich noch gegen Alterung immun – wird eine Vettel nicht durch fremde Hand oder einen Unfall getötet, stirbt sie irgendwann an Altersschwäche. Stirbt eine Vettel in Agonie oder voller Zorn, kann sie sich als Hexenfeuer wiedererheben. Stirbt sie aber durch Altersschwäche, könnte sie als untote Kreatur zurückkehren, als Schlurfende Vettel. Eine Schlurfende Vettel hat weitaus mehr verloren als ihr Leben: Sie kann nicht mehr Teil eines Zirkels sein, was ihr eine der herausragendsten Fähigkeiten einer lebenden Vettel raubt. Ihre einstigen Artgenossen sind vielleicht imstande, den faulenden Leib einer Schlurfenden Vettel zu ignorieren oder ihren Hunger nach Fleisch, doch das Fehlen der Zirkelfähigkeit macht sie zu einer Ausgestoßenen unter den Vetteln.</p>",
+      "items": {
+        "spellcastingEntry->Occult Prepared Spells": {
+          "name": "Vorbereitete Okkulte Zauber"
+        },
+        "spell->Tongues": {
+          "name": "<Compendium>"
+        },
+        "spell->See Invisibility": {
+          "name": "<Compendium>"
+        },
+        "spell->Tree Shape": {
+          "name": "<Compendium>"
+        },
+        "spell->Dancing Lights": {
+          "name": "Tanzende Lichter",
+          "description": "<p>Du erschaffst bis zu vier schwebende Lichter in einem Abstand von nicht mehr als 10 Fuß/3 Meter voneinander. Jedes erhellt seine Umgebung wie eine @UUID[Compendium.pf2e.equipment-srd.8Jdw4yAzWYylGePS]{Fackel}. Erhältst du den Zauber aufrecht, darfst du eine beliebige Anzahl der Lichter bis zu 60 Fuß/18 m weit bewegen. Dabei muss jedes Licht innerhalb von 120 Fuß/36 m Reichweite von dir und innerhalb von 10 Fuß/3 m von den anderen Lichtern bleiben. Ansonsten erlischt es.</p>"
+        },
+        "spell->Magic Missile": {
+          "name": "<Compendium>"
+        },
+        "spell->Pass Without Trace": {
+          "name": "<Compendium>"
+        },
+        "spell->Ray of Enfeeblement": {
+          "name": "<Compendium>"
+        },
+        "spell->Unseen Servant": {
+          "name": "<Compendium>"
+        },
+        "weapon->Walking Stick": {
+          "name": "Gehstock",
+          "description": "<p>Dieser verzerrte und grob wirkende Zauberstecken ist mit grässlichen Totenkopf- und Knochenmotiven verziert. Solange du diesen Zauberstecken führst, erhältst du einen Situationsbonus von +2 auf Fertigkeitswürfe zum Identifizieren von Nekromantie.</p>\n<hr />\n<p><strong>Aktivierung</strong> Zauber wirken</p>\n<p><strong>Effekt</strong> Du wendest die erforderliche Anzahl an Ladungen des Steckens auf, um einen Zauber von seiner Liste zu wirken.</p>\n<ul>\n<li><strong>Zaubertrick</strong> @UUID[Compendium.pf2e.spells-srd.Item.mAMEt4FFbdqoRnkN]{Macht der Leere}</li>\n<li><strong>Grad 1</strong> @UUID[Compendium.pf2e.spells-srd.Item.k34hDOfIIMAxNL4a]{Finstere Tentakel}, @UUID[Compendium.pf2e.spells-srd.Item.J7Y7tl0bbdz7TcCc]{Schwächen}</li>\n<li><strong>Grad 2</strong> @UUID[Compendium.pf2e.spells-srd.Item.xRgU9rrhmGAgG4Rc]{Friedvolle Ruhe}, @UUID[Compendium.pf2e.spells-srd.Item.fZPCv2VHuM2yPbC8]{Taubheit verursachen}</li>\n<li><strong>Grad 3</strong> @UUID[Compendium.pf2e.spells-srd.Item.VosLNn2M8S7JH67D]{Blindheit verursachen}, @UUID[Compendium.pf2e.spells-srd.Item.N1Z1oLPdBxaSgrEE]{Vampirschmaus}</li>\n<li><strong>Grad 4</strong> @UUID[Compendium.pf2e.spells-srd.Item.eexkxcqnkXazsGfK]{Entkräftung}, @UUID[Compendium.pf2e.spells-srd.Item.k34hDOfIIMAxNL4a]{Finstere Tentakel}</li>\n</ul>\n<hr />\n<p><strong>Herstellungsvoraussetzungen</strong> Jeweils ein Wirken jedes aufgeführten Zaubers mit dem aufgeführten Grad.</p>",
+          "rules": {
+            "0": {
+              "label": "Zauberstecken der Nekromantie (Nekromantiezauber identifizieren)"
+            }
+          }
+        },
+        "strike-melee->Walking Stick": {
+          "name": "Gehstock"
+        },
+        "strike-melee->Claw": {
+          "name": "Klaue"
+        },
+        "action->Stick Support": {
+          "name": "Gehstockabhängig",
+          "description": "<p>Sollte eine Schlurfende Vettel ihren Gehstock verlieren, wird ihre Bewegungsrate am Boden auf 5 Fuß/1,50 m reduziert (dies betrifft nicht eventuelle andere Bewegungsarten), bis sie ihren Gehstock zurückerlangt oder einen neuen fertigt.</p>"
+        },
+        "action->Change Shape": {
+          "description": "<p>Die Schlurfende Vettel nimmt das Aussehen einer Mittelgroßen Humanoiden an; ihr Gehstock passt sich an dieses neue Äußere an. Dies hat keine Wirkung auf ihre Bewegungsrate oder ihre Angriffe, könnte aber die Schadensart ihrer Angriffe (meistens zu Wuchtschaden) verändern.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.ChangeShape]</p>"
+        },
+        "action->Discipline the Righteous": {
+          "name": "Leviten lesen",
+          "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<p><strong>Auslöser</strong> Die Schlurfende Vettel landet mit ihrem Gehstockangriff einen Kritischen Treffer bei einer Kreatur guter Gesinnung</p>\n<hr />\n<p><strong>Effekt</strong> Das Ziel erleidet @Damage[2d8[bleed]]{2W8 Blutungsschaden}.</p>"
+        },
+        "action->Walking Stick": {
+          "name": "Gehstock",
+          "description": "<p>Eine Schlurfende Vettel kann 1 Tag aufwenden, um ihren Gehstock zu einem <em>+2 Zauberstecken der Nekromantie des Starken Schadens</em> zu verzaubern. Anstelle materieller Komponenten nutzt sie eine Fokuskomponente, wenn sie mit dem Gehstock einen okkulten Zauber wirkt. Die Magie des Gehstocks funktioniert nur für die Schlurfende Vettel, die ihn erschaffen hat, für jeden anderen ist es ein normaler Gehstock. Sollte die Schlurfende Vettel einen neuen Gehstock verzaubern, verliert der vorherige alle Kräfte.</p>"
+        }
+      }
+    },
+    "Floating Femur": {
+      "name": "Schwebendes Femur",
+      "publicNotes": "<p>Schwebende Femora können heftige Schläge austeilen. Sie dienen auch als sehr praktische Waffe, wenn man sie denn ergreifen kann.</p>\n<hr />\n<p>Belebte Knochen werden meistens mit Untoten verwechselt, sind tatsächlich aber geistlose Konstrukte ohne Verbindungen zur Nekromantie.</p>",
+      "items": {
+        "strike-melee->Femur Head": {
+          "name": "Oberschenkelkopf"
+        },
+        "action->Gotcha!": {
+          "name": "Erwischt!",
+          "description": "<p>Wird ein Schwebendes Femur @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen}, erstarrt es. Nachdem das Femur durch eine Kreatur in den Zustand Gegriffen oder @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Gebunden} versetzt wurde, kann es 1 Minute lang nicht handeln, während die festhaltende Kreatur das Femur wie eine <em>+1 Keule</em> mit der Kategorie Tödlich W10 führen kann. Nach dieser Zeit wird das Femur wieder handlungsfähig und verhält sich in der Regel gegenüber jeder Kreatur sehr aggressiv, die es als Waffe benutzt hat.</p>"
+        }
+      }
+    },
+    "Ghostly Mob": {
+      "name": "Geisterhafter Haufen",
+      "hpDetails": "16 Felder, Leerenheilung, Wiederkehr",
+      "publicNotes": "<p>Führt eine grauenhafte Tragödie zu vielen Todesfällen, könnten sich die rastlosen Seelen der zahlreichen Opfer als ein Geisterhafter Haufen erheben. Wie anderen Geistern ist auch den Angehörigen eines Geisterhaften Haufens oftmals nicht klar, dass sie tot sind. Die im Haufen gefangenen Geister könnten sogar versuchen, ihre früheren Leben wieder aufzunehmen, auch wenn ihre Erinnerungen bruchstückhaft und ihre Körper substanzlos sind. Werden die Geister mit ihrem wahren Zustand konfrontiert, reagieren sie voller Leid und Verzweiflung mit Gewalt.</p>",
+      "speed": "Truppbewegung",
+      "items": {
+        "action->Site Bound": {
+          "name": "Ortsgebunden",
+          "description": "<p>Ein Geisterhafter Haufen kann sich nicht weit von dem Ort entfernen, an dem die Kreaturen gestorben sind, aus deren rastlosen Seelen er besteht; in der Regel beträgt diese Entfernung 240 Fuß/72 m</p>\n<hr />\n<Compendium>"
+        },
+        "action->Rejuvenation": {
+          "name": "Wiederkehr",
+          "description": "<p>Wird ein Geisterhafter Haufen zerstört, bildet er sich nach [[/br 2d4 #Tage]]{2W4 Tagen} vollgeheilt neu. Ein Geisterhafter Haufen kann dann dauerhaft zerstört werden, wenn jemand den Grund für seine Existenz herausfindet und die Bedingungen schafft, dass der Haufen seine Ruhe findet.</p>\n<hr />\n<Compendium>"
+        },
+        "action->Troop Defenses": {
+          "description": "<p><strong>Schwellenwerte</strong> 70 (12 Felder), 35 (8 Felder)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
+        },
+        "action->Clutching Hands": {
+          "name": "Zupackende Hände",
+          "description": "<p><span class=\"action-glyph\">1</span> bis <span class=\"action-glyph\">3</span></p>\n<p><strong>Häufigkeit</strong> Einmal pro Runde</p>\n<hr />\n<p><strong>Effekt</strong> Der Trupp greift Gegner innerhalb von 5 Fuß/1,50 m an (@Check[reflex|dc:25|basic]){einfacher Reflexwurf}); der Schaden hängt von der Anzahl der genutzten Aktionen ab:</p>\n<p><span class=\"action-glyph\">1</span> @Damage[(1d6+3)[void]]{1W6+3 Leerenschaden}</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(3d6+6)[void]]{3W6+6 Leerenschaden}</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(4d6+9)[void]]{4W6+9 Leerenschaden}</p>"
+        },
+        "action->Frightful Chorus": {
+          "name": "Gräulicher Gesang",
+          "description": "<p>Der Geisterhafte Haufen heult vor Pein und zwingt jede lebende Kreatur in einer @Template[emanation|distance:30]{30 Fuß/9 m-Ausstrahlung} zu einem @Check[will|dc:25]{Willenswurf}; bei Misslingen erhält eine Kreatur den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2} (bzw. @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 3} bei einem Kritischen Fehlschlag). Unabhängig vom Ergebnis ist die Kreatur dann 1 Minute lang gegen diese Fähigkeit des Trupps immun.</p>"
+        },
+        "action->Troop Movement": {
+          "name": "Truppbewegung",
+          "description": "<p>Wenn der Geisterhafte Haufen Laufen nutzt, Formiert er sich zuerst als Freie Aktion in einem Bereich von 20x20 Fuß/ 6x6 m (abzüglich fehlender Felder) und bewegt sich dann. Dies funktioniert wie die Fortbewegung einer Gigantischen Kreatur; sollte der Geisterhafte Haufen z.B. mit einem seiner Felder Schwieriges Gelände betreten, gelten die zusätzlichen Bewegungskosten für den ganzen Trupp.</p>"
+        },
+        "lore->Local Lore": {
+          "name": "Kenntnis (Lokal)"
+        }
+      }
+    },
+    "Ghoul Antipaladin": {
+      "name": "Ghul-Antipaladin",
+      "acDetails": "31 mit erhobenem Schild",
+      "hpDetails": "Leerenheilung",
+      "publicNotes": "<p>Die Kirche des Kabriri erwählt nur die gläubigsten und gefährlichsten Ghule als Beschützer ihrer Bibliotheken mit ihren Werken voller Geheimnissen.</p>",
+      "items": {
+        "spellcastingEntry->Divine Focus Spells": {
+          "name": "Göttliche Fokuszauber"
+        },
+        "spell->Touch of Corruption": {
+          "name": "<Compendium>"
+        },
+        "armor->Full Plate": {
+          "description": "<Compendium>"
+        },
+        "strike-melee->Jaws": {
+          "name": "Biss"
+        },
+        "strike-melee->Claw": {
+          "name": "Klaue"
+        },
+        "strike-melee->Flail": {
+          "name": "Flegel"
+        },
+        "strike-ranged->Heavy Crossbow": {
+          "name": "Schwere Armbrust"
+        },
+        "action->Destructive Vengeance": {
+          "name": "Gnadenlose Vergeltung",
+          "description": "<p><strong>Auslöser</strong> Der Ghul-Antipaladin erleidet durch einen maximal 15 Fuß/4,50 m entfernten Gegner Schaden</p>\n<hr />\n<p><strong>Effekt</strong> Der Ghul-Antipaladin erhöht seinen erlittenen Schaden um @Damage[3d6[untyped]]{3W6 Punkte} und fügt der auslösenden Kreatur 3W6 Schadenspunkte zu; wenn er diese Reaktion nutzt, wählt er jedes Mal, ob sie @Damage[3d6[spirit]]{Seelenschaden} oder @Damage[3d6[void]]{Leerenschaden} verursacht. Ferner fügt er mit seinen Angriffen gegen die auslösende Kreatur bis zum Ende seines Zuges zusätzliche 4 Schadenspunkte der gewählten Kategorie zu. Erleidet ein Gegner durch diese Reaktion des Ghul-Antipaladins Schaden, so erleidet er ferner @Damage[4[persistent,spirit]]{4 Punkte Anhaltenden Seelenschaden}; dies betrifft nur den Schaden, den die auslösende Kreatur durch die Reaktion erleidet, nicht den Schaden, den der Antipaladin mit seinen Folgeschäden ggf. verursacht.</p>"
+        },
+        "action->Consume Flesh": {
+          "name": "Fleisch verzehren",
+          "description": "<p><strong>Anforderungen</strong> Der Ghul-Antipaladin befindet sich angrenzend zu einer Kreatur, die innerhalb der letzten Stunde gestorben ist.</p>\n<hr />\n<p><strong>Effekt</strong> Der Antipaladin verzehrt einen Teil der Leiche und erlangt @Damage[4d6[healing]]{4W6 Trefferpunkte} zurück.</p>\n<p>Er kann dies pro Leiche nur einmal tun.</p>"
+        },
+        "action->Ghoul Fever": {
+          "name": "Ghulfieber",
+          "description": "<p><strong>Rettungswurf</strong> @Check[fortitude|dc:27]{Zähigkeitswurf}</p>\n<p><strong>Phase 1</strong> Überträger ohne nachteilige Nebenwirkungen (1 Tag)</p>\n<p><strong>Phase 2</strong> @Damage[2d6[void]]{2W6 Punkte Leerenschaden} und erlangt durch Heilung nur die Hälfte an Trefferpunkten (1 Tag)</p>\n<p><strong>Phase 3</strong> Wie Phase 2 (1 Tag)</p>\n<p><strong>Phase 4</strong> @Damage[2d6[void]]{2W6 Punkte Leerenschaden} und erlangt keine Vorteile mehr durch Heilung (1 Tag)</p>\n<p><strong>Phase 5</strong> Wie Phase 4 (1 Tag)</p>\n<p><strong>Phase 6</strong> Tot, erhebt sich zur nächsten Mitternacht als @UUID[Compendium.pf2e.pathfinder-bestiary.Actor.LHHgGSs0ELCR4CYK]{Ghul}</p>"
+        },
+        "action->Paralysis": {
+          "name": "Lähmung",
+          "description": "<p>Wird eine lebende, nichtelfische Kreatur vom Angriff eines Ghuls getroffen, muss sie einen @Check[fortitude|dc:25]{Zähigkeitswurf} ablegen; bei Misslingen erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt}. Der Kreatur steht am Ende jedes ihrer Züge ein neuer Rettungswurf zu; der SG sinkt kumulativ mit jedem dieser Rettungswürfe um 1.</p>"
+        },
+        "action->Swift Leap": {
+          "name": "Schneller Sprung",
+          "description": "<p>Der Ghul-Antipaladin legt im Sprung maximal seine halbe Bewegungsrate zurück. Diese Bewegung löst keine Reaktionen aus.</p>"
+        },
+        "lore->Kabriri Lore": {
+          "name": "Kenntnis (Kabriri)"
+        }
+      }
+    },
+    "Ghoul Razorclaw": {
+      "name": "Ghul-Schlitzer",
+      "hpDetails": "Leerenheilung",
+      "publicNotes": "<p>Ghulassassinen, welche das Eintauchen ihrer Klauen in geschmolzenes Adamant überleben, verwandeln sich in Schlitzer.</p>",
+      "items": {
+        "equipment->Thieves' Tools (Infiltrator)": {
+          "name": "<Compendium>",
+          "description": "<p>Du brauchst Diebeswerkzeug, zum @UUID[Compendium.pf2e.actionspf2e.Item.2EE4aF4SZpYf0R6H]{Schlösser knacken} oder @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Mechanismus ausschalten} (für manche Arten) mittels Diebeskunst. Ein Infiltratoren-Diebeswerkzeug gewährt dir einen Gegenstandsbonus von +1 auf Würfe zum Schlösser Knacken oder Mechanismus ausschalten.</p>\n<p>Wenn dein Diebeswerkzeug kaputt geht, kannst du es reparieren, indem du die Dietriche mit zu deinem Diebeswerkzeug passenden @UUID[Compendium.pf2e.equipment-srd.Item.BznmPaRjI4Orb0IH]{Ersatzdietrichen} ersetzt. Dazu musst du keine Reparieren Handlung ausführen.</p>\n<p>Wenn du dein Diebeswerkzeug trägst, kannst du es als Teil der Aktion ziehen und ersetzen, die es verwendet.</p>"
+        },
+        "consumable->Shadow Essence": {
+          "name": "<Compendium>",
+          "description": "<Compendium>"
+        },
+        "strike-melee->Jaws": {
+          "name": "Biss"
+        },
+        "strike-melee->Claw": {
+          "name": "Klaue"
+        },
+        "strike-ranged->Composite Shortbow": {
+          "name": "Kompositkurzbogen"
+        },
+        "action->Deny Advantage": {
+          "name": "Vorteil verweigern",
+          "description": "<p>Der Schlitzer ist gegenüber Kreaturen der maximal 13. Stufen nicht @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß}, sollten sie ihm gegenüber den Zustand @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Versteckt} oder @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Unentdeckt} besitzen, ihn Flankieren oder @UUID[Compendium.pf2e.classfeatures.Item.w6rMqmGzhUahdnA7]{Überraschungsangriff} nutzen.</p>"
+        },
+        "action->Adamantine Edges": {
+          "name": "Adamantklauen",
+          "description": "<p>Die Klauen des Ghuls wurden in Adamant getaucht und verfügen nun über einen entsprechenden Überzug. Der Schlitzer behandelt von seinem Klauenangriff getroffene Gegenstände, als besäßen sie nur die halbe Härte. Er behandelt von seinem Klauenangriff getroffene Kreaturen, als besäßen sie nur die halbe Resistenz gegen Körperlichen Schaden.</p>"
+        },
+        "action->Consume Flesh": {
+          "name": "Fleisch verzehren",
+          "description": "<p><strong>Anforderungen</strong> Der Ghul befindet sich angrenzend zu einer Kreatur, die innerhalb der letzten Stunde gestorben ist.</p>\n<hr />\n<p><strong>Effekt</strong> Der Ghul verzehrt einen Teil der Leiche und erlangt @Damage[7d6[healing]]{7W6 Trefferpunkte} zurück.</p>\n<p>Er kann dies pro Leiche nur einmal tun.</p>"
+        },
+        "action->Ghoul Fever": {
+          "name": "Ghulfieber",
+          "description": "<p><strong>Rettungswurf</strong> @Check[fortitude|dc:31]{Zähigkeitswurf}</p>\n<p><strong>Phase 1</strong> Überträger ohne nachteilige Nebenwirkungen (1 Tag)</p>\n<p><strong>Phase 2</strong> @Damage[4d6[void]]{4W6 Punkte Leerenschaden} und erlangt durch Heilung nur die Hälfte an Trefferpunkten (1 Tag)</p>\n<p><strong>Phase 3</strong> Wie Phase 2 (1 Tag)</p>\n<p><strong>Phase 4</strong> @Damage[4d6[void]]{4W6 Punkte Leerenschaden} und erlangt keine Vorteile mehr durch Heilung (1 Tag)</p>\n<p><strong>Phase 5</strong> Wie Phase 4 (1 Tag)</p>\n<p><strong>Phase 6</strong> Tot, erhebt sich zur nächsten Mitternacht als @UUID[Compendium.pf2e.pathfinder-bestiary.Actor.LHHgGSs0ELCR4CYK]{Ghul}</p>"
+        },
+        "action->Paralysis": {
+          "name": "Lähmung",
+          "description": "<p>Wird eine lebende, nichtelfische Kreatur vom Angriff eines Ghuls getroffen, muss sie einen @Check[fortitude|dc:31]{Zähigkeitswurf} ablegen; bei Misslingen erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt}. Der Kreatur steht am Ende jedes ihrer Züge ein neuer Rettungswurf zu; der SG sinkt kumulativ mit jedem dieser Rettungswürfe um 1.</p>"
+        },
+        "action->Sneak Attack": {
+          "description": "<p>Der Ghul-Schlitzer fügt @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} angetroffenen Kreaturen zusätzlich 3W6 Punkte Präzisionsschaden zu.</p>"
+        },
+        "action->Surprise Attacker": {
+          "name": "Überraschender Angreifer",
+          "description": "<p>In der ersten Kampfrunde besitzen Kreaturen, die noch nicht gehandelt haben, gegenüber dem Ghul-Schlitzer den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß}.</p>"
+        },
+        "action->Swift Leap": {
+          "name": "Schneller Sprung",
+          "description": "<p>Der Ghul-Schlitzer legt im Sprung maximal seine halbe Bewegungsrate zurück. Diese Bewegung löst keine Reaktionen aus.</p>"
+        },
+        "lore->Underworld Lore": {
+          "name": "Kenntnis (Unterwelt)"
+        }
+      }
+    },
+    "Grave Hag": {
+      "name": "Grabesvettel",
+      "publicNotes": "<p>Die rothäutigen Grabesvetteln hausen in der Regel auf Friedhöfen, in Mausoleen und an anderen Begräbnisstätten. Im Gegensatz zu den meisten anderen Vetteln können sie kein schönes Äußeres annehmen, daher verbergen sie sich vor den Augen der meisten anderen. Allerdings erachten sie ein Leben als Jäger in den Schatten von Grabsteinen als armselig und elendig, viel lieber hausen sie in Landstrichen, wo nekromantische Magie weitverbreitet und der Untod nichts Ungewöhnliches ist. Jene, die dieses Ziel erreichen, sind in der Regel fähige Nekromanten und geben sich gern als Gelehrte aus. Als ewige Intrigantinnen umgeben sie sich mit Schergen, die sie aussenden, damit sie ihnen Leichen für finstere Rituale bringen.</p>\n<hr />\n<p>Vetteln sind in ihren Fähigkeiten überraschend verschieden und können zudem in allen möglichen Geländearten angetroffen werden.</p>",
+      "saveDetails": "+1 Zustandsbonus auf RW gg. Magie",
+      "items": {
+        "spellcastingEntry->Occult Innate Spells": {
+          "name": "Immanente Okkulte Zauber"
+        },
+        "spell->Cloudkill": {
+          "name": "<Compendium>"
+        },
+        "spell->Vampiric Touch": {
+          "name": "<Compendium>"
+        },
+        "spell->Death Knell (At Will)": {
+          "name": "<Compendium> (beliebig oft)"
+        },
+        "spell->Animate Dead": {
+          "name": "<Compendium>"
+        },
+        "strike-melee->Claw": {
+          "name": "Klaue"
+        },
+        "strike-ranged->Grave Ray": {
+          "name": "Grabesstrahl"
+        },
+        "action->Coven": {
+          "name": "Zirkel",
+          "description": "<p>Eine Grabesvettel bereichert ihren Zirkel um die Zauber @UUID[Compendium.pf2e.spells-srd.Item.wdA52JJnsuQWeyqz]{Leid}, @UUID[Compendium.pf2e.spells-srd.Item.xlRv8vCTHh1NeMpw]{Untotstellen} und das Ritual @UUID[Compendium.pf2e.spells-srd.Item.gsYEuWv04XTDxe91]{Geist herbeirufen}.</p>"
+        },
+        "action->Sacrifice Ally": {
+          "name": "Verbündeten opfern",
+          "description": "<p><strong>Auslöser</strong> Die Grabesvettel ist zu einem Verbündeten angrenzend und das Ziel eines Angriffes oder Effektes, der ihr einen Reflexwurf abverlangt.</p>\n<hr />\n<p><strong>Effekt</strong> Der auslösende Effekt wird auf den Verbündeten umgelenkt, dieser ist nun das Ziel des Effektes.</p>"
+        },
+        "action->Curse of the Grave": {
+          "name": "Fluch des Grabes",
+          "description": "<p>Die Grabesvettel benennt eine maximal 30 Fuß/9 m von ihr entfernte Kreatur; diese Kreatur muss einen @Check[will|dc:28]{Willenswurf} ablegen, bei Misslingen unterliegt sie einem Grabesfluch in Höhe der Stufe der Vettel. Der Fluch währt, solange die Vettel lebt, kann aber von ihr vorzeitig aufgehoben werden (eine Rückgabe von Gegenständen hilft nicht). Unabhängig vom Ergebnis des Rettungswurfes ist das Ziel sodann vorübergehend gegen den Fluch des Grabes dieser Vettel für 24 Stunden immun.</p></p>\n<hr />\n<p><strong>Effekt</strong> Du wirst von untoten Kreaturen der Stufe des Fluchs gejagt. Jede Nacht musst du einen @Check[flat|dc:15]{Einfachen Wurf} durchführen. Bei einem Fehlschlag manifestiert sich ein körperloser Untoter, der dich die ganze Nacht hindurch schikaniert und bedrängt, sich zurückzieht, bevor er großen Schaden nehmen kann und dich dadurch daran hindert, eine ganze Nacht lang auszuruhen. Immer wenn du einen Friedhof oder einen anderen Bereich betrittst, in dem Leichen begraben sind, musst du den gleichen einfachen Wurf bestehen, oder ein Körper belebt sich als körperlicher Untoter (normalerweise ein Skelett oder ein Zombie), um dich anzugreifen.</p>\n<p>Diese Untoten sind nur vorübergehend und existieren nur, um dich zu bedrängen; wenn du die Kontrolle über die Untoten übernimmst, weiterziehst oder ihren Angriffen auf andere Weise ausweichst, lösen sich die körperlosen Untoten auf und die körperliche Untote kollabieren zu gewöhnlichen Leichen. Der Fluch kann beseitigt werden, indem man die gestohlenen Gegenstände an ihre Ruhestätte zurückbringt.</p>"
+        },
+        "action->Grave Impressions": {
+          "name": "Grabesimpressionen",
+          "description": "<p>Die Vettel wählt eine lebende Kreatur innerhalb von 30 Fuß/9 m Entfernung als Ziel und überwältigt sie mit Eindrücken und Gefühlen, lebendig begraben zu sein. Das Ziel legt einen @Check[fortitude|dc:28]{Zähigkeitswurf} ab; im Anschluss ist es vorübergehend gegen die Grabesimpressionen dieser Grabesvettel für 24 Stunden immun.</p>\n<p><strong>Kritischer Erfolg</strong> Das Ziel ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Das Ziel erhält für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt}.</p>\n<p><strong>Fehlschlag</strong> Das Ziel erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Bewusstlos}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Das Ziel erhält den Zustand Bewusstlos und kann 1 Stunde lang nicht geweckt werden.</p>"
+        },
+        "action->Grave's Grip": {
+          "name": "Grabesgriff",
+          "description": "<p>Kreaturen, die von der Grabesvettel in den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} oder @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Gebunden} versetzt werden, erleiden einen Situationsmalus von -1 auf Rettungswürfe gegen die Fähigkeiten und Zauber der Grabesvettel.</p>"
+        },
+        "action->Undead Mien": {
+          "name": "Visage des Untodes",
+          "description": "<p>Eine Grabesvettels erscheint magischen Effekten gegenüber eine Untote zu sein.</p>"
+        }
+      }
+    },
+    "Necrohulk Flailer": {
+      "name": "Kadaverkolossdrescher",
+      "hpDetails": "Leerenheilung, Regeneration 15 (Deaktiviert durch Säure)",
+      "publicNotes": "<p>Zusätzliche Gliedmaßen, peitschende Tentakel und gummiartige Leiber sind unter den Mutanten der Manaöde weitverbreitet. Angehende Kadaverkolosserschaffer kombinieren gerne Teile von mehreren Mutanten dieser Art, um schlaksige, aber machtvolle Krieger zu erschaffen.</p>\n<hr />\n<p>Die fremdartigen und furchtbaren Energien, die mit den Winden der Manaöde reisen und ihren Boden durchströmen, führen zu unerwarteten Veränderungen und Mutationen der dort Lebenden. Diese Mutanten haben in der Regel keine Möglichkeiten, dem Leben am Existenzminimum zu entkommen, da sie nirgends erwünscht sind. Im Königreich Nex im Norden begegnet man ihnen mit Misstrauen und auch die Zwerge des westlichen Alkenstern sehen sie lieber gehen als kommen. Überraschenderweise ist oftmals die Untotennation Geb im Süden die beste Hoffnung auf eine Zukunft unter Leuten, die ebenfalls ungewöhnlich aussehen.</p>\n<p>Wer dann aber nach Geb flieht oder dorthin gelockt wird, um sich niederzulassen, muss oft erkennen, dass er auf falsche Versprechungen hereingefallen ist. So mancher Nekromant hat einfach keine Lust mehr, immer dieselben langweiligen Humanoiden zu beleben und sieht in mutiertem Fleisch neues, frisches Potenzial. Ein Mutant, der nicht vorsichtig ist, könnte sich daher schneller in einem Labor oder einer Krypta als Versuchssubjekt wiederfinden als ihm lieb sein kann.</p>\n<p>Die geschäftstüchtigen Zwielichtsgelehrten von Yleds Mortuarium entwickeln bizarre Kombinationen aus Alchemie und Nekromantie, um die Mutationen ihrer Opfer selbst nach der Reanimation aufrechtzuerhalten. Die resultierenden Kadaverkolosse sind im Grunde geistlos und benötigen eine ständige Zufuhr an Chemikalien, um ihre Macht zu erhalten. Sie sind aber auch mächtig genug, um die extrem schwierigen Prozesse lohnend zu machen. Die als Batterien bezeichneten Behälter mit den alchemistischen Flüssigkeiten, die sie am Unleben erhalten, sind vielleicht der schwierigste Teil der Animation eines Kadaverkolosses, während der leichteste Teil darin besteht, die Batterie direkt ins Fleisch der Kreatur zu vernähen.</p>\n<p>Yleds Armeen umfassen eine wachsende Anzahl an Kadaverkolossen. Nicht nur, weil diese Titanen beängstigend effektive Kämpfer auf dem Schlachtfeld abgeben, sondern auch weil Mutanten instinktive Abneigung hervorrufen und damit strategisch wertvolle Auswirkungen auf die Moral lebender Gegner entfalten. Es passiert zwar ab und an, dass Kadaverkolosse, trunken von den sie erhaltenden chemischen Mixturen, in Yled Amok laufen, doch im Allgemeinen werden sie von den Nekromanten der Armee unter Kontrolle gehalten.</p>",
+      "items": {
+        "strike-melee->Tentacle": {
+          "name": "Tentakel"
+        },
+        "strike-melee->Fist": {
+          "name": "Faust"
+        },
+        "action->Alchemical Cartridge": {
+          "name": "Alchemistische Batterie",
+          "description": "<p>Kritische Treffer lassen die Batterie aufreißen. Der erste Kritische Treffer kostet den Kadaverkoloss seine Regeneration. Mit dem zweiten Kritischen Treffer erleidet er @Damage[15[persistent,acid]]{15 Punkte anhaltenden Säureschaden}, der nicht geheilt werden kann, bis die Batterie wieder an ihrem Platz festgenäht wurde.</p>"
+        },
+        "action->Regeneration 15 (Deactivated by Acid)": {
+          "name": "<Compendium> 15 (Deaktiviert durch Säure)"
+        },
+        "action->Alchemical Amplification": {
+          "name": "Alchemistische Beschleunigung",
+          "description": "<p><strong>Häufigkeit</strong> Einmal pro Stunde</p>\n<hr />\n<p><strong>Effekt</strong> Der Kadaverkoloss nutzt die alchemistischen Mixturen in seinem Leib, um sich zu beschleunigen. Er erhält für [[/br 1d4 #Runden]]{1W4 Runden} den Zustand @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Beschleunigt}. Er kann diese zusätzliche Aktion für Angreifen, Laufen oder Schritt nutzen.</p>"
+        },
+        "action->Constrict": {
+          "description": "<p>@Damage[6d6[bludgeoning]]{6W6 Wuchtschaden}, @Check[fortitude|dc:32|basic]{einfacher Zähigkeitswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
+        },
+        "action->Tentacle Storm": {
+          "name": "Tentakelsturm",
+          "description": "<p>Der Kadaverkolossdrescher führt vier Tentakelangriffe aus; jeder muss gegen ein anderes Ziel erfolgen. Diese Angriffe zählen gegen seinen Malus für Mehrfachangriffe, der Malus steigt aber erst nach dem letzten dieser Angriffe.</p>"
+        }
+      }
+    },
+    "Necrohulk Smasher": {
+      "name": "Kadaverkolossbrecher",
+      "hpDetails": "Leerenheilung, Regeneration 15 (Deaktiviert durch Säure)",
+      "publicNotes": "<p>Mutanten von unglaublicher Stärke ergeben die mächtigsten Kadaverkolosse. Diese Kadaverkolossbrecher sind eine derartig angeschwollene Masse biologisch und alchemistisch verbesserter Muskeln, dass sie sich ihren Weg problemlos durch die feindlichen Reihen prügeln können.</p>\n<hr />\n<p>Die fremdartigen und furchtbaren Energien, die mit den Winden der Manaöde reisen und ihren Boden durchströmen, führen zu unerwarteten Veränderungen und Mutationen der dort Lebenden. Diese Mutanten haben in der Regel keine Möglichkeiten, dem Leben am Existenzminimum zu entkommen, da sie nirgends erwünscht sind. Im Königreich Nex im Norden begegnet man ihnen mit Misstrauen und auch die Zwerge des westlichen Alkenstern sehen sie lieber gehen als kommen. Überraschenderweise ist oftmals die Untotennation Geb im Süden die beste Hoffnung auf eine Zukunft unter Leuten, die ebenfalls ungewöhnlich aussehen.</p>\n<p>Wer dann aber nach Geb flieht oder dorthin gelockt wird, um sich niederzulassen, muss oft erkennen, dass er auf falsche Versprechungen hereingefallen ist. So mancher Nekromant hat einfach keine Lust mehr, immer dieselben langweiligen Humanoiden zu beleben und sieht in mutiertem Fleisch neues, frisches Potenzial. Ein Mutant, der nicht vorsichtig ist, könnte sich daher schneller in einem Labor oder einer Krypta als Versuchssubjekt wiederfinden als ihm lieb sein kann.</p>\n<p>Die geschäftstüchtigen Zwielichtsgelehrten von Yleds Mortuarium entwickeln bizarre Kombinationen aus Alchemie und Nekromantie, um die Mutationen ihrer Opfer selbst nach der Reanimation aufrechtzuerhalten. Die resultierenden Kadaverkolosse sind im Grunde geistlos und benötigen eine ständige Zufuhr an Chemikalien, um ihre Macht zu erhalten. Sie sind aber auch mächtig genug, um die extrem schwierigen Prozesse lohnend zu machen. Die als Batterien bezeichneten Behälter mit den alchemistischen Flüssigkeiten, die sie am Unleben erhalten, sind vielleicht der schwierigste Teil der Animation eines Kadaverkolosses, während der leichteste Teil darin besteht, die Batterie direkt ins Fleisch der Kreatur zu vernähen.</p>\n<p>Yleds Armeen umfassen eine wachsende Anzahl an Kadaverkolossen. Nicht nur, weil diese Titanen beängstigend effektive Kämpfer auf dem Schlachtfeld abgeben, sondern auch weil Mutanten instinktive Abneigung hervorrufen und damit strategisch wertvolle Auswirkungen auf die Moral lebender Gegner entfalten. Es passiert zwar ab und an, dass Kadaverkolosse, trunken von den sie erhaltenden chemischen Mixturen, in Yled Amok laufen, doch im Allgemeinen werden sie von den Nekromanten der Armee unter Kontrolle gehalten.</p>",
+      "items": {
+        "strike-melee->Fist": {
+          "name": "Faust"
+        },
+        "strike-ranged->Rock": {
+          "name": "Fels"
+        },
+        "action->Alchemical Cartridge": {
+          "name": "Alchemistische Batterie",
+          "description": "<p>Kritische Treffer lassen die Batterie aufreißen. Der erste Kritische Treffer kostet den Kadaverkoloss seine Regeneration. Mit dem zweiten Kritischen Treffer erleidet er @Damage[15[persistent,acid]]{15 Punkte anhaltenden Säureschaden}, der nicht geheilt werden kann, bis die Batterie wieder an ihrem Platz festgenäht wurde.</p>"
+        },
+        "action->Regeneration 15 (Deactivated by Acid)": {
+          "name": "<Compendium> 15 (Deaktiviert durch Säure)"
+        },
+        "action->Alchemical Amplification": {
+          "name": "Alchemistische Beschleunigung",
+          "description": "<p><strong>Häufigkeit</strong> Einmal pro Stunde</p>\n<hr />\n<p><strong>Effekt</strong> Der Kadaverkoloss nutzt die alchemistischen Mixturen in seinem Leib, um sich zu beschleunigen. Er erhält für [[/br 1d4 #Runden]]{1W4 Runden} den Zustand @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Beschleunigt}. Er kann diese zusätzliche Aktion für Angreifen, Laufen oder Schritt nutzen.</p>"
+        },
+        "action->Rend": {
+          "description": "<p>Faust</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Rend]</p>"
+        },
+        "action->Smashing Blow": {
+          "name": "Schmetternder Schlag",
+          "description": "<p>Der Kadaverkolossbrecher führt einen Faustangriff aus. Trifft er, prügelt er das Ziel in den Boden oder eine nahe Wand. Das Ziel erleidet zusätzlich @Damage[6d10[bludgeoning]]{6W10 Punkte Wuchtschaden} in Abhängigkeit von einem @Check[fortitude|dc:33]{Zähigkeitswurf}:</p>\n<p><strong>Kritischer Erfolg</strong> Das Ziel erleidet nur den halben zusätzlichen Schaden.</p>\n<p><strong>Erfolg</strong> Das Ziel erleidet nur den halben zusätzlichen Schaden und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1}.</p>\n<p><strong>Fehlschlag</strong> Das Ziel erleidet den vollen zusätzlichen Schaden und die Zustände @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 3} und @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Das Ziel erleidet den doppelten zusätzlichen Schaden und die Zustände Betäubt 3 und Liegend.</p>"
+        }
+      }
+    },
+    "Necromunculus": {
+      "name": "Nekromunkulus",
+      "languages": "(kann nicht sprechen); Verbindung zum untoten Meister",
+      "publicNotes": "<p>Ein Nekromunkulus ist ein winziger untoter Diener, der nur von einer untoten Kreatur erschaffen werden kann. Diese sind in Geb weitverbreitet, wo sich untote Zauberwerker und Genies seit zahllosen Jahren den nekromantischen Handwerkskünsten widmen und wo man einen großen Bedarf an fraglos loyalen Dienern hat, die schlauer als normale untote Schergen sind.</p>\n<p>Nekromukuli ähneln HomunkuliMHB, allerdings gibt es einige beachtliche Unterschiede zwischen diesen Untoten und ihren Konstrukt-Namensvettern. Ein Nekromunkulus mag seinem Meister gegenüber loyal sein, hasst zugleich aber auch aus vollem Herzen alle Untoten – sich selbst eingeschlossen. Sollte er sich selbst überlassen sein, beginnt er zu planen, wie er jeden Untoten töten und fressen könnte, mit dem er regulär interagieren muss, auch wenn er sich gar nicht nähren muss. Dies schließt auch seinen Meister nicht aus. Ein Nekromunkulus kann nicht freiwillig diesem Drang nachgeben, solange er einem anderen Befehl folgen muss, daher achten ihre Schöpfer sehr darauf, dass sie ständig Aufgaben haben, die sie beschäftigen.</p>\n<p>Trotz ihrer kannibalischen Gelüste sind Nekromunkuli zunehmend beliebt unter Gebs untoten Nekromanten. Jeder Schöpfer möchte wissen, ob man seinem wunderbar verräterischem Diener noch mehr Kräfte oder Persönlichkeit verleihen kann. Zudem können sich Möchtegern-Blutherren an ihnen bestens in Spionage und logischem Denken üben.</p>\n<p>Nekromunkuli ähneln skelettierten, gnomischen Humanoiden mit ledrigen Schwingen. Sie bestehen aus einer Mixtur aus Schlamm, Knochenmehl, Wacholderöl, ein paar Blutstropfen eines noch lebenden Säugetiers und einem Pfund Fleisch, Blut oder Knochen eines anderen freiwilligen, intelligenten Untoten – wobei der Prozess in der Regel den Freiwilligen zerstört.</p>",
+      "items": {
+        "strike-melee->Claw": {
+          "name": "Klaue"
+        },
+        "action->Undead Master Link": {
+          "name": "Verbindung zum untoten Meister",
+          "description": "<p>Ein Nekromunkulus kann nicht sprechen, ist aber telepathisch mit seinem untoten Schöpfer verbunden. Er kann über diese Verbindung Informationen weitergeben, auf das Wissen seines Meisters zurückgreifen und alles mitteilen, was er hört. Die Reichweite beträgt 1.500 Fuß/450 m. Sollte der Nekromunkulus zerstört werden, erhält der Meister @Damage[2d10[mental]]{2W10 Punkte Mentalen Schaden}. Sollte der Meister getötet werden, wird der Nekromunkulus Geistlos und zieht ziellos umher auf der Suche nach Untoten, die er angreifen und fressen kann.</p>"
+        },
+        "action->Stupefying Touch": {
+          "name": "Benommen machende Berührung",
+          "description": "<p>Erleidet eine Kreatur durch den Klauenangriff eines Nekromunkulus Schaden, muss sie einen @Check[will|dc:15]{Willenswurf} ablegen; bei Misslingen erhält sie 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 1}.</p>"
+        }
+      }
+    },
+    "Phalanx of Phalanges": {
+      "name": "Phalangenphalanx",
+      "publicNotes": "<p>Eine Phalangenphalanx besteht aus hunderten von Finger- und Zehenknochen, die in unheimlicher Synchronität über den Boden klappern.</p>\n<hr />\n<p>Belebte Knochen werden meistens mit Untoten verwechselt, sind tatsächlich aber geistlose Konstrukte ohne Verbindungen zur Nekromantie.</p>",
+      "items": {
+        "action->Predetermined Path": {
+          "name": "Vorherbestimmter Pfad",
+          "description": "<p>Eine Phalangenphalanx kennt einen maximal 100 Fuß/30 m langen Pfad über ebenes Gelände, den ihr Erschaffer festlegt. Die Phalangenphalanx kann keine anderen Handlungen ausführen, als sich auf diesem Pfad entlangzubewegen oder mittels Zahllose Glieder Kreaturen in ihrem Weg anzugreifen. Sollte sie auf ihrem Weg aufgehalten werden oder Schaden erleiden, verliert sie die Orientierung und verfällt dauerhaft in einen Berserkerrausch – dann greift sie nahe Kreaturen nach besten Kräften an.</p>"
+        },
+        "action->Countless Digits": {
+          "name": "Zahllose Glieder",
+          "description": "<p>Jede Kreatur innerhalb der Angriffsfläche der Phalangenphalanx erleidet @Damage[1d6[piercing]]{1W6 Stichschaden} (bzw. @Damage[(1d6+2)[piercing]]{1W6+2 Punkte}, sollte der Schwarm sich im Berserkerrausch befinden) (@Check[reflex|dc:17|basic]{einfacher Reflexwurf}). Bei einem Kritischen Fehlschlag wird die Kreatur durch den Schwarm an eine Oberfläche gepinnt und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Bewegungsunfähig}, bis ihr ein Wurf zum @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Entkommen} gegen SG 17 gelingt oder eine andere Kreatur 2 Aktionen der Kategorie Interagieren nutzt, um die sie festhaltenden Knochen fortzuwischen.</p>"
+        }
+      }
+    },
+    "Pyrogeist": {
+      "name": "Flammengespenst",
+      "hpDetails": "Leerenheilung",
+      "publicNotes": "<p>Flammengespenster entstehen aus Brandstiftern, die in den von ihnen gelegten Feuern ums Leben kommen. Sie sind lodernde, herumwirbelnde Infernos aus geisterhaften Flammen, welche keine Hitze abgeben und nur lebenden Kreaturen Schaden zufügen. Da sie davon besessen sind, ihre Qualen mit den Lebenden zu teilen, suchen sie die Stätte ihres Todes heim, bis was auch immer sie nicht vergeben können, berichtigt wurde und sie zur letzten Ruhe legt. Flammengespenster können keine Brände mehr legen, nutzen aber gern ihre entsetzlichen illusionären Fähigkeiten und telekinetischen Kräfte, um ihre Opfer dazu zu bringen, sich selbst in Brand zu stecken.</p>",
+      "items": {
+        "spellcastingEntry->Divine Innate Spells": {
+          "name": "Immanente Göttliche Zauber"
+        },
+        "spell->Illusory Scene (At Will)": {
+          "name": "<Compendium> (beliebig oft)"
+        },
+        "spell->Telekinetic Haul (At Will)": {
+          "name": "<Compendium> (beliebig oft)"
+        },
+        "spell->Telekinetic Maneuver (At Will)": {
+          "name": "<Compendium> (beliebig oft)"
+        },
+        "spell->Mage Hand": {
+          "name": "<Compendium>"
+        },
+        "strike-melee->Ghastly Flames": {
+          "name": "Geisterhafte Flammen"
+        },
+        "action->+1 Status to All Saves vs. Vitality": {
+          "name": "+1 Zustandsbonus auf RW gg. Leben"
+        },
+        "action->Rejuvenation": {
+          "name": "Wiederkehr",
+          "description": "<p>Wird ein Flammengespenst zerstört, bildet es sich am Ort der Zerstörung vollgeheilt nach [[/br 2d4 #Tage]]{2W4 Tagen} neu. Das Flammengespenst kann nur dauerhaft zerstört werden, wenn jemand den Grund für seine Existenz erkennt und korrigiert, was immer der Seele die Ruhe verweigert.</p>\n<hr />\n<Compendium>"
+        },
+        "action->Breath Weapon": {
+          "name": "Odemwaffe",
+          "description": "<p>Ein Flammengespenst kann einen @Template[cone|distance:30]{30 Fuß/9 m-Kegel} geisterhaften Feuers speien, welches @Damage[10d6[void]]{10W6 Leerenschaden} verursacht (@Check[fortitude|dc:29|basic]{einfacher Zähigkeitswurf}). Misslingt einer Kreatur der Rettungswurf, erleidet sie zudem @Damage[1d6[persistent,void]]{1W6 Punkte Anhaltenden Leerenchaden} und unterliegt den Effekten von @UUID[Compendium.pf2e.spells-srd.Item.HRb2doyaLtaoCfi3]{Feenfeuer}, solange dieser Anhaltende Schaden währt.</p>"
+        },
+        "action->Pyrokinetic Whirlwind": {
+          "name": "Pyrokinetischer Wirbelwind",
+          "description": "<p>Das Flammengespenst verwandelt sich in einen 40 Fuß/12 m hohen Wirbel aus geisterhaften Flammen, welche es alles in einer @Template[burst|distance:10]{10 Fuß/3 m-Explosion} zu verbrennen scheinen. Eine Kreatur im Wirkungsbereich erleidet @Damage[(2d12 + 20)[void]]{2W12+20 Leerenschaden} (@Check[fortitude|dc:29|basic]{einfacher Zähigkeitswurf}).</p>"
+        },
+        "action->Soul Consumption": {
+          "name": "Seele verschlingen",
+          "description": "<p>Die Seele einer Kreatur, welche durch den Schaden des Pyrokinetischen Wirbelwindes des Flammengespenstes stirbt, wird im Flammengespenst festgesetzt, als unterläge sie den Effekten von Seelenfalle. Dieser Effekt währt, bis das Flammengespenst zerstört wird oder die Seele freigesetzt wird. Die Seele bleibt gefangen, egal ob das Flammengespenst Pyrokinetischen Wirbelwird erneut einsetzt oder nicht. Ein Flammengespenst kann stets nur eine Seele auf diese Weise gefangen halten.</p>"
+        }
+      }
+    },
+    "Rust Hag": {
+      "name": "Rostvettel",
+      "publicNotes": "<p>Rostvetteln haben ein Händchen für Technik. Sie hausen in ausgeräumten und aufgegebenen Fabriken, verlassenen Mietskasernen und an anderen Stätten des urbanen Verfalls.</p>\n<hr />\n<p>Vetteln sind in ihren Fähigkeiten überraschend verschieden und können zudem in allen möglichen Geländearten angetroffen werden.</p>",
+      "saveDetails": "+1 Zustandsbonus auf RW gg. Magie",
+      "items": {
+        "strike-melee->Claw": {
+          "name": "Klaue"
+        },
+        "strike-ranged->Ghost Touch Arquebus": {
+          "name": "Geisterberührende Arkebuse"
+        },
+        "strike-ranged->Flintlock Pistol": {
+          "name": "Steinschlosspistole"
+        },
+        "action->Coven": {
+          "name": "Zirkel",
+          "description": "<p>Eine Rostvettel bereichert ihren Zirkel um die Zauber @UUID[Compendium.pf2e.spells-srd.Item.lKcsmeOrgHtK4xQa]{Beschwörung eines Konstruktes}, @UUID[Compendium.pf2e.spells-srd.Item.B3eLlbaPxOYHcs1o]{Fluch der Verlorenen Zeit} und @UUID[Compendium.pf2e.spells-srd.Item.0fYE64odlKqISzft]{Rostgriff}.</p>"
+        },
+        "action->Change Shape": {
+          "description": "<p>Die Rostvettel kann das Aussehen einer beliebigen Mittelgroßen Humanoiden annehmen. Dies hat keine Wirkung auf ihre Bewegungsrate oder ihre Angriffe, könnte aber die Schadensart ihrer Angriffe (meistens zu Wuchtschaden) verändern.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.ChangeShape]</p>"
+        },
+        "action->Hagshot": {
+          "name": "Vettelschuss",
+          "description": "<p>Jede Feuerwaffe erhält in den Händen einer Rostvettel die Vorteile der Runen <em>+1 des Schadens</em> und <em>@UUID[Compendium.pf2e.equipment-srd.Item.JQdwHECogcTzdd8R]{Geister berührend}</em> und funktioniert unabhängig davon, wie sehr verrostet sie sein mag. Landet eine Rostvettel mit einer Feuerwaffe einen Kritischen Treffer, muss das Ziel einen @Check[fortitude|dc:26]{Zähigkeitswurf} ablegen; bei Misslingen erhält es den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1}.</p>"
+        },
+        "action->Rusting Touch": {
+          "name": "Rosthand",
+          "description": "<p>Die Berührung einer Rostvettel lässt Metall rapide rosten und zerfallen. Trifft sie mit ihrer Klaue, fügt sie einem Metallgegenstand in Händen oder am Leib des Zieles @Damage[2d6[untyped]]{2W6 Schadenspunkte} (bei einem Kritischen Treffer verdoppelt) zu. Sollte niemand einen berührten Gegenstand halten oder tragen, so erleidet der Gegenstand diesen Schaden automatisch. Nutzt eine Kreatur Schildblock mit einem Metallschild gegen den Klauenangriff der Vettel, so erhält der Schild automatisch den Zustand Beschädigt; kein anderer Gegenstand wird durch den Angriff rostig. Gegenstände aus Himmelsmetallen wie Adamant oder Orichalcum sind gegen diese Fähigkeit immun.</p>"
+        }
+      }
+    },
+    "Scrabbling Ribcage": {
+      "name": "Huschender Brustkorb",
+      "publicNotes": "<p>Die Rippen eines Huschenden Brustkorbes sind entweder mit einem Sternum oder einer Wirbelsäule verbunden, aber nicht mit beiden, so dass die Rippen wie Beine funktionieren können.</p>\n<hr />\n<p>Belebte Knochen werden meistens mit Untoten verwechselt, sind tatsächlich aber geistlose Konstrukte ohne Verbindungen zur Nekromantie.</p>",
+      "items": {
+        "strike-melee->Jagged Ribs": {
+          "name": "Spitze Rippen"
+        },
+        "action->Scrabble": {
+          "name": "Huschen",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur bewegt sich weg von dem Huschenden Brustkorb oder eine vom Huschenden Brustkorb in den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} oder @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Gebunden} versetzte Kreatur kann @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Entkommen}</p>\n<hr />\n<p><strong>Effekt</strong> Der Brustkorb nutzt Laufen oder Klettern. Diese Bewegung löst keine Reaktionen aus.</p>"
+        },
+        "action->Constrict": {
+          "description": "<p>@Damage[1d8[bludgeoning]]{1W8 Wuchtschaden}, @Check[fortitude|dc:17|basic]{einfacher Zähigkeitswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
+        },
+        "action->Skittering Rush": {
+          "name": "Eiliges Huschen",
+          "description": "<p>Der Huschende Brustkorb nutzt Laufen oder Klettern zweimal, wobei seine Bewegungsrate für diese Bewegung um 10 Fuß/3 m steigt.</p>"
+        }
+      }
+    },
+    "Shadowforged Guardian": {
+      "name": "Schattengeschmiedeter Wächter",
+      "publicNotes": "<p>Schattengeschmiedete Wächter werden auf komplizierte und gefährliche Weise erschaffen, indem Schattenenergien aus dem Grau abgesogen und an ein physisches Skelett aus Holz und Metall gebunden werden. Die ersten dieser Wächter wurden vor Jahrtausenden in Nidal geschaffen und ähnelten in der Regel Darstellungen der Schutzgottheit dieses Landes, Zon-Kuthon. Schattengeschmiedete Wächter sind hochbegehrt; leider kann aber nur jene Person einem Wächter Befehle geben, die im Augenblick seiner Erschaffung ein spezielles Wort oder einen Satz spricht. Jene, die die geheime Anleitung zur Herstellung dieser Konstrukte kennen, bewachen das Geheimnis mit Argusaugen und nur wenige Schattenzauberer lassen sich dazu herbei, dieser Wächter für andere anzufertigen – und verlangen dafür einen hohen Preis.</p>",
+      "speed": "Fliegen 30 Fuß/9 m in Dämmerlicht",
+      "items": {
+        "strike-melee->Claw": {
+          "name": "Klaue"
+        },
+        "action->Eager Shadows": {
+          "name": "Eilende Schatten",
+          "description": "<p>Nachdem der Schattengeschmiedete Wächter seine Initiative gewürfelt hat, erhöht er während der ersten Kampfrunde alle seine Bewegungsraten um 30 Fuß/9 m.</p>"
+        },
+        "action->Induction Word": {
+          "name": "Befehlswort",
+          "description": "<p>Jeder Schattengeschmiedete Wächter wird mit einem bestimmten Wort oder einem kurzen Satz während seiner Herstellung durch seinen Hersteller aktiviert. Wenn er dieses Aktivierungswort vernimmt, werden seine Funktionen zurückgesetzt. Sollte der Wächter eine Kreatur innerhalb von 30 Fuß/9 m Entfernung das Befehlswort aussprechen hören, muss er einen @Check[will|dc:26]{Willenswurf} ablegen; bei Misslingen erhält er den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1}(bzw. @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 3} bei einem Kritischen Fehlschlag). Unabhängig vom Ergebnis dieses Rettungswurfes ist der Wächter sodann immun gegen das Befehlswort bis zum Ende seines nächsten Zuges.</p>"
+        },
+        "action->Twilight Aura": {
+          "name": "Zwielichtaura",
+          "description": "<p>30 Fuß/9 m. Die Präsenz des Schattengeschmiedeten Wächters dämpft das Licht und erhellt Schatten zu einem fremdartigen Zwielicht. Licht kann im Wirkungsbereich nicht stärker werden als Dämmerlicht, während Schatten zugleich zu Dämmerlicht erhellt werden. Die Zwielichtaura legt automatischen einen Wurf zum Entgegenwirken gegen jeden magischen Effekt der Kategorie Licht oder Dunkelheit ab, der in die Aura gebracht oder darin erschaffen wird (@UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken} [[/r 1d20+21 #Entgegenwirken]]{+21}, 5. Grad). Solange der Wächter sich im Dämmerlicht befindet, erhält er eine Bewegungsrate für Fliegen von 30 Fuß/9 m.</p>"
+        },
+        "action->Shadow Breath": {
+          "name": "Schattenatem",
+          "description": "<p>Der Schattengeschmiedete Wächter stößt einen @Template[cone|distance:30]{30 Fuß/9 m-Kegel} aus wirbelnden Schatten aus seinem Mund aus. Alle Kreaturen im Wirkungsbereich müssen einen @Check[fortitude|dc:29]{Zähigkeitswurf} ablegen. Der Wächter kann [[/br 1d4 #Runden]]{1W4 Runden} lang diese Fähigkeit nicht erneut nutzen.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erhält bis zum Ende ihres nächsten Zuges den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 1}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält 1 Stunde lang den Zustand Kraftlos 1 und 1 Minute lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erhält 1 Stunde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 2} und 1 Minute lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 2}.</p>"
+        }
+      }
+    },
+    "Skull Fairy": {
+      "name": "Schädelfee",
+      "publicNotes": "<p>Schädelfeen sind boshafte Wesen, die aus den Köpfen jener entspringen, die nach Kontakt mit den bösen Energien der Schattenebene sterben. Sie sind keine Feenwesen, werden aber seit jeher von den meisten Unkundigen aufgrund ihrer kleinen, geflügelten Gestalten und ihrer Neigung zu böswilligem Schabernack als Feen eingestuft und so hat sich die Bezeichnung „Schädelfee“ eingebürgert.</p>\n<p>Nachdem eine Schädelfee aus dem Schädel des Verstorbenen hervorgebrochen ist, sucht sie sich ein Opfer, welches sie seines Schädels berauben kann. Schädelfeen genießen nichts mehr als das entsetzliche Geräusch beim Abreißen eines Kopfes vom Leib. Oftmals trägt eine Schädelfee den Totenschädel ihres jüngsten Opfers wie eine Kappe auf dem übergroßen, knollenförmigen Kopf. Schädelfeen bringen erbeutete Köpfe in abgelegene Höhlen, wo sie sorgsam das Fleisch abtragen und die Schädel zur Schau stellen. Falls eine Schädelfee das Bedürfnis nach einer neuen Kopfbedeckung spürt, höhlt sie einen frischen Schädel aus und platziert den alten an einem Ehrenplatz.</p>\n<p>Eine Gruppe aus genau drei Schädelfeen, von denen jede wenigstens 13 Jahre alt ist, wird weitaus mächtiger als ihre einzelgängerischen oder jüngeren Artgenossen. Die Angehörigen eines solchen Zirkels werden stärker und viel intelligenter – und fokussieren sich in weitaus höherem Maßstab auf die Verbreitung des Bösen und des Chaos, auch wenn alles, bei dem es nicht darum geht, jemandem den Kopf abzuschrauben, für Schädelfeen eher demotivierend ist. Stößt eine Schädelfee zu einem Zirkel, erhält sie die Anpassungen für EliteKreaturen und erlangt oft auch mächtigere immanente Zauber. Ein Zirkel aus Schädelfeen hat meistens Zugang zu Stinkende Wolke und Unauffindbarkeit, es gibt aber auch andere Möglichkeiten. Eine Schädelfee kann sich nur einem Zirkel anschließen, der ausschließlich aus anderen Schädelfeen besteht.</p>",
+      "items": {
+        "spellcastingEntry->Primal Innate Spells": {
+          "name": "Immanente Naturzauber"
+        },
+        "spell->Mage Hand": {
+          "name": "<Compendium>"
+        },
+        "strike-melee->Fist": {
+          "name": "Faust"
+        },
+        "action->Coven": {
+          "name": "Zirkel",
+          "description": "<p>Eine Schädelfee fügt den Zaubern ihres Zirkels @UUID[Compendium.pf2e.spells-srd.Item.GKpEcy9WId6NJvtx]{Stinkende Wolke} und @UUID[Compendium.pf2e.spells-srd.Item.EoKBlgf6Smt8opaU]{Unauffindbarkeit} hinzu.</p>"
+        },
+        "action->Shadowy Pop": {
+          "name": "Schattenhaftes Platzen",
+          "description": "<p>Wird eine Schädelfee getötet, explodiert sie ähnlich wie eine Seifenblase und hinterlässt schattenhaftes, stinkendes Gewebe. Jede Kreatur innerhalb von 5 Fuß/1,50 m Entfernung muss einen @Check[fortitude|dc:18]{Zähigkeitswurf} ablegen; bei Misslingen erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 2} (bzw. @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 3} bei einem Kritischen Fehlschlag).</p>"
+        },
+        "action->Skull Twist": {
+          "name": "Schädel abschrauben",
+          "description": "<p><strong>Anforderungen</strong> Die letzte Handlung der Schädelfee war ein erfolgreicher Angriff gegen eine Kreatur mit einem Schädel</p>\n<hr />\n<p><strong>Effekt</strong> Die Schädelfee zerrt am Hals der Kreatur und raubt ihr die Orientierung. Die Kreatur muss einen @Check[fortitude|dc:20]{Zähigkeitswurf} ablegen; bei Misslingen erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1} (bzw. @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 3} bei einem Kritischen Fehlschlag).</p>"
+        },
+        "action->Terminal Tug": {
+          "name": "Schädel abreißen",
+          "description": "<p>Die Schädelfee versucht, einer angrenzenden Kreatur im Zustand @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{Sterbend} den Kopf abzureißen. Das Ziel muss einen @Check[fortitude|dc:20]{Zähigkeitswurf} ablegen; bei Misslingen stirbt es und die Schädelfee erlangt 10 Temporäre Trefferpunkte, welche 1 Stunde währen.</p>"
+        }
+      }
+    },
+    "Tombstone Troll": {
+      "name": "Grabsteintroll",
+      "hpDetails": "Regeneration 5 (Deaktiviert durch Feuer, Leben oder Säure)",
+      "publicNotes": "<p>Wenn ein Troll sich dank seiner Regeneration von lebensbedrohlichen Wunden erholt, die ihm mittels Nekromantie oder Negativer Energie zugefügt wurden, kann es passieren, dass die finsteren Energien seine übernatürlichen Regenerationskräfte infizieren. Die Kräfte, die den Troll ansonsten getötet hätten, werden zu einem Teil seiner fremdartigen Physiologie. Ein solcher Troll ist kein Untoter, doch die Kräfte in ihm fressen an seinem Leib und seiner Seele und verwandeln ihn in eine verschrumpelte Parodie seines früheren Selbst.</p>\n<p>Diese sogenannten „Grabsteintrolle“ ähneln kleinen, vertrockneten Trollen mit vom Hunger aufgequollenen Bäuchen, denen man problemlos ansehen kann, dass sie krank sind. Ihre Zähne, Haare und Fingernägel verfaulen und fallen aus, nur um sich alle paar Tage in einem endlosen, schmerzhaften Kreislauf zu regenerieren, der obendrein widerlich anzusehen ist.</p>\n<p>Andere Trolle meiden und verachten Grabsteintrolle, die ihre Namen von der Angewohnheit haben, dass sie Gräber auf der Suche nach Mahlzeiten öffnen, die sich nicht mehr wehren können. Grabsteintrolle gehen Konfrontationen aller Art aus dem Weg, insbesondere falls ihr Grabraub ihnen Probleme mit mächtigen lokalen Untoten einbringen könnte. Sie legen ihre Verstecke meistens unterirdisch an, wo sie dann in ihren Friedhofsbauten tagelang damit beschäftigt sind, sich durch die Erde zu graben, um nahe Leichen zu erreichen. Ein cleverer Troll achtet darauf, dass man an der Oberfläche seine Anwesenheit möglichst nicht bemerkt und maximal hier und dort der Boden leicht einsackt.</p>\n<p>Sobald ein Grabsteintroll auf einem Friedhof keine leichte Beute mehr findet, macht er sich mitten in der Nacht auf den Weg, um sich ein neues Jagdrevier zu suchen. Falls der Weg dorthin lang oder schwierig ist, könnte ihn sein Hunger dazu treiben, die Lebenden anzugreifen.</p>",
+      "items": {
+        "strike-melee->Jaws": {
+          "name": "Biss"
+        },
+        "strike-melee->Claw": {
+          "name": "Klaue"
+        },
+        "action->Regeneration 5 (Deactivated by Acid, Fire, or Vitality)": {
+          "name": "<Compendium> 5 (Deaktiviert durch Feuer, Leben oder Säure)"
+        },
+        "action->Death Feast": {
+          "name": "Leichenschmaus",
+          "description": "<p><strong>Anforderungen</strong> Die letzte Handlung des Trolls war ein Bissangriff, der einer lebenden Kreatur oder einer Leiche Schaden zugefügt hat</p>\n<hr />\n<p><strong>Effekt</strong> Der Troll fügt dem Ziel @Damage[1d6[bleed]]{1W6 Punkte Blutungsschaden} zu, während er ihm ein mundgerechtes Stück Fleisch aus dem Leib reißt, dieses verschlingt und in Negative Energie umwandelt. Sein Biss- und Klauenangriff verursachen jeweils 1 zusätzlichen Punkte Leerenschaden; dies währt 1 Minute lang, endet aber vorzeitig, sollte er innerhalb dieser Zeit seinen Grabesodem einsetzen.</p>"
+        },
+        "action->Grave Breath": {
+          "name": "Grabesodem",
+          "description": "<p><strong>Anforderungen</strong> Der Troll ist nach der Nutzung von Leichenschmaus mit Leerenenergie aufgequollen</p>\n<hr />\n<p><strong>Effekt</strong> Der Troll atmet einen @Template[cone|distance:15]{15 Fuß/4,50 m-Kegel} aus stinkendem, die Seele gefrierendem Gas aus. Jede lebende Kreatur im Wirkungsbereich erleidet @Damage[2d6[void]]{2W6 Leerenschaden} (@Check[fortitude|dc:14|basic]{einfacher Zähigkeitswurf}; bei einem Fehlschlag erhält die Kreatur zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1}). Der Troll kann seinen Grabesodem erst wieder nutzen, nachdem er Leichenschmaus eingesetzt hat.</p>"
+        },
+        "action->Rend": {
+          "description": "<p>Klaue</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Rend]</p>"
+        }
+      }
+    },
+    "Virulak Necromancer": {
+      "name": "Virulak-Nekromant",
+      "hpDetails": "Leerenheilung",
+      "publicNotes": "<p>Virulak-Nekromanten sind oft von den Interaktionen zwischen Gift und Untod fasziniert und testen Toxine zuweilen an sich selbst, noch häufiger aber an hilflosen lebenden Opfern. Dieser Virulak-Nekromant war früher ein Zauberer, betrachtet seine Blutlinie aber nun als irrelevant.</p>\n<hr />\n<p>Stirbt eine Kreatur durch Gift, erhebt sie sich zuweilen als Virulak wieder – als ein von tödlichem Gift erfüllter Untoter. Die meisten Virulaki sind Einzelgänger, die sich an einen entsetzlich schmerzhaften Tod erinnern. Zuweilen sorgt eine Massenvergiftung für zahlreiche, gleichzeitige Todesfälle, wodurch die Wahrscheinlichkeit steigt, dass sich mehrere Virulaki zugleich erheben und als gefährlicher Haufen zusammenarbeiten. Ganze Dörfer könnten sich als Virulaki wieder erheben, wenn sie gezwungen waren, sich von verdorbener Nahrung zu ernähren oder jemand die Dorfbewohner vorsätzlich vergiftet hat.</p>\n<p>Virulaki behalten ihre Intelligenz und Erinnerungen über den Tod hinaus. Das Erlebnis ihres furchtbaren, leiderfüllten Ablebens verwandelt sie aber in verbitterte Verhöhnungen ihrer früheren Persönlichkeiten. Gift tropft von ihren Fingerkuppen und verfestigt sich zu gehärteten Klauen. Virulaki sind für ihren zynischen und ironischen Sinn für Humor bekannt. Sie lieben es, gute Laune zu verderben und den Ruf anderer zu zerstören und so psychologische Attacken auszuteilen, die das Gift in ihrem Blut widerspiegeln.</p>",
+      "items": {
+        "spellcastingEntry->Arcane Spontaneous Spells": {
+          "name": "Spontane Arkane Zauber"
+        },
+        "spell->Vampiric Touch": {
+          "name": "<Compendium>"
+        },
+        "spell->False Life": {
+          "name": "<Compendium>"
+        },
+        "spell->Gentle Repose": {
+          "name": "<Compendium>"
+        },
+        "spell->Spectral Hand": {
+          "name": "<Compendium>"
+        },
+        "spell->Chill Touch": {
+          "name": "<Compendium>",
+          "target": "1 lebende oder untote Kreatur"
+        },
+        "spell->Mage Hand": {
+          "name": "<Compendium>"
+        },
+        "spell->Ray of Enfeeblement": {
+          "name": "<Compendium>"
+        },
+        "spell->True Strike": {
+          "name": "<Compendium>"
+        },
+        "strike-melee->Claw": {
+          "name": "Klaue"
+        },
+        "action->Uncanny Necromancy": {
+          "name": "Verblüffende Nekromantie",
+          "description": "<p>Der Virulak-Nekromant kann nach Belieben @UUID[Compendium.pf2e.spells-srd.Item.8ViwItUgwT4lOvvb]{Falsches Leben}, @UUID[Compendium.pf2e.spells-srd.Item.k34hDOfIIMAxNL4a]{Finstere Tentakel} und @UUID[Compendium.pf2e.spells-srd.Item.N1Z1oLPdBxaSgrEE]{Vampirgriff} auf einen beliebigen, ihm möglichen Grad erhöhen, ohne diese Zauber auf höheren Graden kennen zu müssen.</p>"
+        },
+        "action->Undead Virulence": {
+          "name": "Virulakgift",
+          "description": "<p><strong>Rettungswurf</strong> @Check[fortitude|dc:25]{Zähigkeitswurf}</p>\n<p><strong>Maximale Wirkungsdauer</strong> 6 Runden</p>\n<p><strong>Phase 1</strong> @Damage[2d8[poison]]{2W8 Giftschaden} (1 Runde)</p>\n<p><strong>Phase 2</strong> @Damage[3d8[poison]]{3W8 Giftschaden} (1 Runde)</p>\n<p><strong>Phase 3</strong> @Damage[4d8[poison]]{4W8 Giftschaden} (1 Runde)</p>"
+        },
+        "action->Venomous Gaze": {
+          "name": "Giftiger Blick",
+          "description": "<p>Der Virulak nimmt Blickkontakt zu einer maximal 30 Fuß/9 m entfernten Kreatur auf. Das Ziel ist seiner Fähigkeit Virulakgift ausgesetzt.</p>"
+        }
+      }
+    },
+    "Virulak Villager": {
+      "name": "Virulak-Dorfbewohner",
+      "hpDetails": "Leerenheilung",
+      "publicNotes": "<p>Ein Bauerndorf, dessen Bewohner sich nach einer Massenvergiftung als Untote wieder erhoben haben, könnte aus der Ferne völlig unauffällig wirken – die Dorfbewohner gehen ihren Alltagsroutinen nach und bieten so eine unheimliche Szenerie für jede lebende Kreatur, die ihr Dorf betritt. Virulak-Dorfbewohner ziehen es vor, mit zahlenmäßiger Überlegenheit anzugreifen, doch für unerfahrene oder ahnungslose Reisende mag schon ein einzelner Dorfbewohner ein Problem darstellen.</p>\n<hr />\n<p>Stirbt eine Kreatur durch Gift, erhebt sie sich zuweilen als Virulak wieder – als ein von tödlichem Gift erfüllter Untoter. Die meisten Virulaki sind Einzelgänger, die sich an einen entsetzlich schmerzhaften Tod erinnern. Zuweilen sorgt eine Massenvergiftung für zahlreiche, gleichzeitige Todesfälle, wodurch die Wahrscheinlichkeit steigt, dass sich mehrere Virulaki zugleich erheben und als gefährlicher Haufen zusammenarbeiten. Ganze Dörfer könnten sich als Virulaki wieder erheben, wenn sie gezwungen waren, sich von verdorbener Nahrung zu ernähren oder jemand die Dorfbewohner vorsätzlich vergiftet hat.</p>\n<p>Virulaki behalten ihre Intelligenz und Erinnerungen über den Tod hinaus. Das Erlebnis ihres furchtbaren, leiderfüllten Ablebens verwandelt sie aber in verbitterte Verhöhnungen ihrer früheren Persönlichkeiten. Gift tropft von ihren Fingerkuppen und verfestigt sich zu gehärteten Klauen. Virulaki sind für ihren zynischen und ironischen Sinn für Humor bekannt. Sie lieben es, gute Laune zu verderben und den Ruf anderer zu zerstören und so psychologische Attacken auszuteilen, die das Gift in ihrem Blut widerspiegeln.</p>",
+      "items": {
+        "strike-melee->Claw": {
+          "name": "Klaue"
+        },
+        "action->Mob Mentality": {
+          "name": "Mob-Mentalität",
+          "description": "<p>Solange der Dorfbewohner und seine Verbündeten nicht in der Unterzahl sind, ist er gegen Furcht immun.</p>"
+        },
+        "action->Lingering Ichor": {
+          "name": "Spritzender Gifteiter",
+          "description": "<p><strong>Auslöser</strong> Der Virulak erleidet Hieb- oder Stichschaden durch einen Nahkampfangriff</p>\n<hr />\n<p><strong>Effekt</strong> Die Kreatur, welche den auslösenden Angriff geführt hat, erleidet @Damage[3[persistent,poison]]{3 Anhaltenden Giftschaden}.</p>"
+        },
+        "action->Undead Virulence": {
+          "name": "Virulakgift",
+          "description": "<p><strong>Rettungswurf</strong> @Check[fortitude|dc:19]{Zähigkeitswurf}</p>\n<p><strong>Maximale Wirkungsdauer</strong> 6 Runden</p>\n<p><strong>Phase 1</strong> @Damage[1d10[poison]]{1W10 Giftschaden} (1 Runde)</p>\n<p><strong>Phase 2</strong> @Damage[1d12[poison]]{1W12 Giftschaden} (1 Runde)</p>\n<p><strong>Phase 3</strong> @Damage[2d10[poison]]{2W10 Giftschaden} (1 Runde)</p>"
+        }
+      }
+    }
+  },
+  "mapping": {
+    "acDetails": "system.attributes.ac.details",
+    "hpDetails": "system.attributes.hp.details",
+    "items": {
+      "converter": "translateActorItems",
+      "path": "items"
+    },
+    "languages": "system.details.languages.details",
+    "name": {
+      "converter": "translateDualLanguage",
+      "path": "name"
+    },
+    "portrait": {
+      "converter": "updateActorImage",
+      "path": "img"
+    },
+    "publicNotes": {
+      "converter": "translateActorDescription",
+      "path": "system.details.publicNotes"
+    },
+    "saveDetails": "system.attributes.allSaves.value",
+    "skillSpecialStealth": {
+      "converter": "translateSkillSpecial",
+      "path": "system.skills.stealth.special"
+    },
+    "source": {
+      "converter": "translateSource",
+      "path": "system.details.publication.title"
+    },
+    "speed": "system.attributes.speed.details",
+    "tokenImage": {
+      "converter": "updateTokenImage",
+      "path": "prototypeToken.texture.src"
+    },
+    "tokenName": {
+      "converter": "translateTokenName",
+      "path": "prototypeToken.name"
+    }
+  }
+}
