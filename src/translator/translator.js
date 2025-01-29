@@ -395,8 +395,10 @@ class Translator {
             }
 
             // Add the item slug if not already included
-            if (!arr[index].system.slug || arr[index].system.slug === "") {
-                arr[index].system.slug = this.sluggify(itemName);
+            if (arr[index].system) {
+                if (!arr[index].system.slug || arr[index].system.slug === "") {
+                    arr[index].system.slug = this.sluggify(itemName);
+                }
             }
         });
 
