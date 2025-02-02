@@ -299,7 +299,7 @@
         },
         "action->Breath Weapon": {
           "name": "Odemwaffe",
-          "description": "<p>Belmazog spuckt eine Säurefontäne aus, die in einem @Template[cone|distance:30]{Kegel von 30 Fuß/9 m} @Damage[10d6[acid]|options:area-damage]{10W6 Punkte Säureschaden} verursacht (@Check[reflex|dc:28|basic]{einfacher Reflexwurf}). Belmazog kann die Odemwaffe danach [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht anwenden.</p>"
+          "description": "<p>Belmazog spuckt eine Säurefontäne aus, die in einem @Template[cone|distance:30]{Kegel von 30 Fuß/9 m} @Damage[10d6[acid]|options:area-damage]{10W6 Punkte Säureschaden} verursacht (@Check[reflex|dc:28|basic|options:area-effect]{einfacher Reflexwurf}). Belmazog kann die Odemwaffe danach [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht anwenden.</p>"
         },
         "action->Drowning Drone": {
           "name": "Übertönendes Quaken",
@@ -743,7 +743,7 @@
           "name": "Unsichtbarkeit (beliebig oft)"
         },
         "spell->Detect Alignment (Constant) (Good Only)": {
-          "name": "Gesinnung entdecken (Ständig) (nur Gutes)"
+          "name": "Gesinnung entdecken (ständig, nur Gutes)"
         },
         "spell->Phantom Pain (At Will)": {
           "name": "Phantomschmerz (beliebig oft)"
@@ -1125,7 +1125,7 @@
           "name": "Immanente Arkane Zauber"
         },
         "spell->True Seeing (Constant)": {
-          "name": "Wahrer Blick (Ständig)"
+          "name": "Wahrer Blick (ständig)"
         },
         "strike-melee->Jaws": {
           "name": "Biss"
@@ -1138,7 +1138,7 @@
         },
         "action->Breath Weapon": {
           "name": "Odemwaffe",
-          "description": "<p>Das Konstrukt kann eine von zwei Odemwaffen einsetzen. Danach kann es seine Odemwaffe [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht erneut benutzen.</p>\n<ul>\n<li><strong>Flamme</strong> (Arkan, Feuer, Hervorrufung) Ein Feuerstoß verursacht bei allen Kreaturen in einem @Template[cone|distance:60]{Kegel von 60 Fuß/18 m} @Damage[15d10[fire]]{15W10 Feuerschaden} (@Check[reflex|dc:45|basic]). Dieser Feuerschaden beschädigt keine Objekte oder Konstrukte.</li>\n<li><strong>Schwächegas</strong> (Arkan, Nekromantie) Eine Wolke aus golden funkelndem Gas zwingt jede Kreatur in einem @Template[cone|distance:60]{Kegel von 60 Fuß/18 m} einen @Check[fortitude|dc:45]{Zähigkeitswurf} abzulegen; der Effekt hält 1 Minute lang an.<br />\n<strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.<br />\n<strong>Erfolg</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 2}.<br />\n<strong>Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 5}.<br />\n<strong>Kritischer Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 8}.</li>\n</ul>"
+          "description": "<p>Das Konstrukt kann eine von zwei Odemwaffen einsetzen. Danach kann es seine Odemwaffe [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht erneut benutzen.</p>\n<ul>\n<li><strong>Flamme</strong> (Arkan, Feuer, Hervorrufung) Ein Feuerstoß verursacht bei allen Kreaturen in einem @Template[cone|distance:60]{Kegel von 60 Fuß/18 m} @Damage[15d10[fire]|options:area-damage]{15W10 Feuerschaden} (@Check[reflex|dc:45|basic|options:area-effect]{einfacher Reflexwurf}). Dieser Feuerschaden beschädigt keine Objekte oder Konstrukte.</li>\n<li>\n<p><strong>Schwächegas</strong> (Arkan, Nekromantie) Eine Wolke aus golden funkelndem Gas zwingt jede Kreatur in einem @Template[cone|distance:60]{Kegel von 60 Fuß/18 m} einen @Check[fortitude|dc:45|options:area-effect]{Zähigkeitswurf} abzulegen; der Effekt hält 1 Minute lang an.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 2}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 5}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 8}.</p>\n</li>\n</ul>"
         },
         "action->Reverberating Revenge": {
           "name": "Widerhallende Rache",
@@ -2727,7 +2727,7 @@
         },
         "action->Breath Weapon": {
           "name": "Odemwaffe",
-          "description": "<p>Dahaks Manifestation stößt einen Kegel Drachensturmenergie aus. Dieser verursacht jeweils @Damage[5d6[acid],5d6[cold],5d6[electricity],5d6[fire],5d6[poison]|options:area-damage]{5W6 Punkte Elektrizitäts-, Feuer-, Gift-, Kälte- und Säureschaden} in einem @Template[cone|distance:60]{60 Fuß/18 m-Kegel} (@Check[reflex|dc:46|basic|traits:fire,acid,cold,electricity,poison]{einfacher Reflexwurf}). Sie kann diese Fähigkeit alle [[/gmr 1d4 #Runden]]{1W4 Runden} nutzen.</p>"
+          "description": "<p>Dahaks Manifestation stößt einen Kegel Drachensturmenergie aus. Dieser verursacht jeweils @Damage[5d6[acid],5d6[cold],5d6[electricity],5d6[fire],5d6[poison]|options:area-damage]{5W6 Punkte Elektrizitäts-, Feuer-, Gift-, Kälte- und Säureschaden} in einem @Template[cone|distance:60]{60 Fuß/18 m-Kegel} (@Check[reflex|dc:46|basic|traits:fire,acid,cold,electricity,poison|options:area-effect]{einfacher Reflexwurf}). Sie kann diese Fähigkeit alle [[/gmr 1d4 #Runden]]{1W4 Runden} nutzen.</p>"
         },
         "action->Draconic Frenzy": {
           "name": "Drakonische Raserei",
@@ -2919,11 +2919,11 @@
         },
         "action->Dragonstorm Breath": {
           "name": "Drachensturmodem",
-          "description": "<p>Dahaks Avatar atmet Drachensturmenergie in einem @Template[cone|distance:60]{60 Fuß/18 m-Kegel} aus; der Odem verursacht @Damage[5d6[acid],5d6[cold],5d6[electricity],5d6[fire],5d6[poison]|options:area-damage]{5W6 Elektrizitäts-, 5W6 Feuer-, 5W6 Gift-, 5W6 Kälte- und 5W6 Säureschaden} (@Check[reflex|dc:48|basic|traits:fire,acid,cold,electricity,poison]). Er kann seinen Odem nur alle [[/gmr 1d4 #Runden]]{1W4 Runden} einsetzen.</p>"
+          "description": "<p>Dahaks Avatar atmet Drachensturmenergie in einem @Template[cone|distance:60]{60 Fuß/18 m-Kegel} aus; der Odem verursacht @Damage[5d6[acid],5d6[cold],5d6[electricity],5d6[fire],5d6[poison]|options:area-damage]{5W6 Elektrizitäts-, 5W6 Feuer-, 5W6 Gift-, 5W6 Kälte- und 5W6 Säureschaden} (@Check[reflex|dc:48|basic|traits:fire,acid,cold,electricity,poison|options:area-effect]). Er kann seinen Odem nur alle [[/gmr 1d4 #Runden]]{1W4 Runden} einsetzen.</p>"
         },
         "action->Focused Breath Weapon": {
           "name": "Konzentrierte Odemwaffe",
-          "description": "<p>Dahaks Avatar atmet Energie auf einer @Template[line|distance:90]{90 Fuß/27 m-Linie} aus, welche 12W12 Schadenpunkte verursacht (@Check[reflex|dc:44|basic]{einfacher Reflexwurf}). Der Avatar wählt beim Angriff zwischen @Damage[12d12[acid]|options:area-damage]{Säure}, @Damage[12d12[cold]|options:area-damage]{Kälte}, @Damage[12d12[electricity]|options:area-damage]{Elektrizität}, @Damage[12d12[fire]|options:area-damage]{Feuer} oder @Damage[12d12[poison]|options:area-damage]{Gift} als Schaden. Der Avatar kann seine Konzentrierte Odemwaffe 2 Runden lang nicht einsetzen; beim nächsten Einsatz muss er eine andere Schadensart wählen.</p>"
+          "description": "<p>Dahaks Avatar atmet Energie auf einer @Template[line|distance:90]{90 Fuß/27 m-Linie} aus, welche 12W12 Schadenpunkte verursacht (@Check[reflex|dc:44|basic|options:area-effect]{einfacher Reflexwurf}). Der Avatar wählt beim Angriff zwischen @Damage[12d12[acid]|options:area-damage]{Säure}, @Damage[12d12[cold]|options:area-damage]{Kälte}, @Damage[12d12[electricity]|options:area-damage]{Elektrizität}, @Damage[12d12[fire]|options:area-damage]{Feuer} oder @Damage[12d12[poison]|options:area-damage]{Gift} als Schaden. Der Avatar kann seine Konzentrierte Odemwaffe 2 Runden lang nicht einsetzen; beim nächsten Einsatz muss er eine andere Schadensart wählen.</p>"
         },
         "lore->Dragon Lore": {
           "name": "Kenntnis (Drachen)"
@@ -3148,7 +3148,7 @@
         },
         "action->Hair Barrage": {
           "name": "Stachelhaarbeschuss",
-          "description": "<p>Die Tarantel zuckt heftig mit ihren Beinen und verschleudert Stachelhaare in einem @Template[cone|distance:15]{15 Fuß/4,50 m-Kegel}. Diese verursachen @Damage[4d6[piercing]|traits:area-damage]{4W6 Punkte Stichschaden} (@Check[reflex|dc:25|basic]{einfacher Reflexwurf}).</p>"
+          "description": "<p>Die Tarantel zuckt heftig mit ihren Beinen und verschleudert Stachelhaare in einem @Template[cone|distance:15]{15 Fuß/4,50 m-Kegel}. Diese verursachen @Damage[4d6[piercing]|options:area-damage]{4W6 Punkte Stichschaden} (@Check[reflex|dc:25|basic|options:area-effect]{einfacher Reflexwurf}).</p>"
         },
         "action->Knockdown": {
           "name": "Niederwerfen"
@@ -4609,7 +4609,7 @@
           "target": "1 bereitwillige Kreatur oder bis zu 8 bereitwillige Kreaturen, die sich bei den Händen nehmen"
         },
         "spell->Air Walk (Constant)": {
-          "name": "Luftwandeln (Ständig)"
+          "name": "Luftwandeln (ständig)"
         },
         "spell->Dimension Door (At Will)": {
           "name": "Dimensionstür (beliebig oft)"
