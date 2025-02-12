@@ -474,6 +474,9 @@ class Translator {
 
     // For default icons, update the image if included in the media path
     updateImage(type, value, dataObject, translatedCompendium) {
+        if (!translatedCompendium) {
+            return value;
+        }
         // Get image source based on type
         let imageSource = "";
         if (type === "portrait") {
