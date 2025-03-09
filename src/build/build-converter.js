@@ -52,9 +52,16 @@ const readSystemMap = (filename) => {
             continue;
         }
         for (const grandchild of readdirSync(folderPath + "/" + child)) {
-            const featData = readJSONFile(folderPath + "/" + child + "/" + grandchild);
-            result.set(featData.name.toLowerCase().trim(), featData);
-            continue;
+            if (grandchild.includes(".json")) {
+                const featData = readJSONFile(folderPath + "/" + child + "/" + grandchild);
+                result.set(featData.name.toLowerCase().trim(), featData);
+                continue;
+            }
+            for (const grandgrandchild of readdirSync(folderPath + "/" + child + "/" + grandchild)) {
+                const featData = readJSONFile(folderPath + "/" + child + "/" + grandchild + "/" + grandgrandchild);
+                result.set(featData.name.toLowerCase().trim(), featData);
+                continue;
+            }
         }
     }
     return result;
