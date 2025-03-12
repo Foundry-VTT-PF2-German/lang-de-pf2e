@@ -341,13 +341,13 @@
           "success": "Das Ziel erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Entkräftet 2} bis zum Beginn deines nächsten Zuges."
         },
         "Lesser": {
-          "success": "The target that takes damage becomes @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} until the start of your next turn."
+          "success": "Das Ziel erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos}1} bis zum Beginn deines nächsten Zuges."
         },
         "Major": {
-          "success": "The target that takes damage becomes @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} until the start of your next turn."
+          "success": "Das Ziel erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 2} bis zum Beginn deines nächsten Zuges."
         },
         "Moderate": {
-          "success": "The target that takes damage becomes @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} until the start of your next turn."
+          "success": "Das Ziel erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 1} bis zum Beginn deines nächsten Zuges."
         }
       },
       "GooGrenade": {
@@ -2665,7 +2665,7 @@
         },
         "RetributiveStrike": "Vergeltender Angriff",
         "Security": {
-          "Description": "You can cast _shields of the spirit_ using 2 actions instead of 1. If you do, you can choose one ally in your champion's aura to gain a spirit shield that accompanies it. For 1 minute, that ally gains the benefits of _shields of the spirit_, even while the ally isn't in your champion's aura and even if your shield isn't raised. If you create another companion shield, any previous one ends."
+          "Description": "Du kannst beim Wirken von _Schilde der Seele_ 2 Aktionen statt 1 Aktion aufwenden. In diesem Fall kannst du einen Verbündeten innerhalb deiner Streiteraura wählen, welcher einen Seelenschild erlangt. Dieser Verbündete erhält 1 Minute lang die Vorteile von _Schilde der Seele_, selbst wenn er deine Streiteraura verlassen sollte und sogar, wenn du deinen Schild nicht Gehoben haben solltest. Falls du einen weiteren Seelenschild erschaffst, endet die Wirkung des vorherigen."
         },
         "TargetReaction": "Ziel hat deine Streiterreaktion ausgelöst",
         "UnimpededStep": {
@@ -4252,11 +4252,11 @@
         "Unstable": {
           "FailureNote": "Du kannst keine weiteren instabilen Aktionen nutzen. Als Schöpfer der Innovation kannst du 10 Minuten aufwenden und deine Innovation überarbeiten und Anpassungen an ihr vornehmen, um sie wieder funktionsfähig zu machen, so dass du sie daraufhin wieder für instabile Aktionen verwenden kannst.",
           "FlatCheck": {
-            "CriticalFailure": "The innovation becomes incapable of being used for further unstable actions, and you also take @Damage[(floor(@actor.level / 2))[@actor.flags.pf2e.inventor.explode]|immutable|name:PF2E.SpecificRule.Inventor.Innovation.MalfunctionDamage] damage. @UUID[Compendium.pf2e.feat-effects.Item.olpkQDGDzmYZCvQH]{Effect: Unstable Check Failure}",
+            "CriticalFailure": "Deine Innovation kann nicht mehr für weitere instabile Aktionen verwendet werden und du erleidest außerdem @Damage[(floor(@actor.level / 2))[@actor.flags.pf2e.inventor.explode]|immutable|name:PF2E.SpecificRule.Inventor.Innovation.MalfunctionDamage]. @UUID[Compendium.pf2e.feat-effects.Item.olpkQDGDzmYZCvQH]{Effekt: Instabil Wurf Fehlschlag}",
             "Failure": "Deine Innovation kann nicht mehr für weitere instabile Aktionen verwendet werden. @UUID[Compendium.pf2e.feat-effects.Item.olpkQDGDzmYZCvQH]{Effekt: Instabil Wurf Fehlschlag}",
             "Label": "Instabil-Prüfung"
           },
-          "Note": "When you take an unstable action, attempt a @Check[flat|dc:resolve(ternary(lt(@actor.skills.crafting.rank,4),15,13))|options:unstable-check|name:PF2E.SpecificRule.Inventor.Unstable.FlatCheck.Label|showDC:all] immediately after applying its effects.",
+          "Note": "Wenn du eine instabile Aktion durchführst, musst du unmittelbar nach der Anwendung der Effekte einen @Check[flat|dc:resolve(ternary(lt(@actor.skills.crafting.rank,4),15,13))|options:unstable-check|name:PF2E.SpecificRule.Inventor.Unstable.FlatCheck.Label|showDC:all]{Einfachen Wurf} ablegen.",
           "Stable": "Stabil",
           "UnstableFunction": {
             "Label": "Aktiviere Instabil Funktionen"
