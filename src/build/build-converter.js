@@ -58,9 +58,21 @@ const readSystemMap = (filename) => {
                 continue;
             }
             for (const grandgrandchild of readdirSync(folderPath + "/" + child + "/" + grandchild)) {
-                const featData = readJSONFile(folderPath + "/" + child + "/" + grandchild + "/" + grandgrandchild);
-                result.set(featData.name.toLowerCase().trim(), featData);
-                continue;
+                if (grandgrandchild.includes(".json")) {
+                    const featData = readJSONFile(folderPath + "/" + child + "/" + grandchild + "/" + grandgrandchild);
+                    result.set(featData.name.toLowerCase().trim(), featData);
+                    continue;
+                }
+
+                for (const grandgrandgrandchild of readdirSync(
+                    folderPath + "/" + child + "/" + grandchild + "/" + grandgrandchild
+                )) {
+                    const featData = readJSONFile(
+                        folderPath + "/" + child + "/" + grandchild + "/" + grandgrandchild + "/" + grandgrandgrandchild
+                    );
+                    result.set(featData.name.toLowerCase().trim(), featData);
+                    continue;
+                }
             }
         }
     }
@@ -262,6 +274,11 @@ export const convertDeities = (deitiesTranslated) => {
     const i18nFile = readJSONFile("./translation/de/de.json");
     const weapons = i18nFile.PF2E.Weapon.Base;
     const domains = i18nFile.PF2E.Item.Deity.Domain;
+    //Sonderlogik alte Domänen
+    domains.Nothingness = domains.Void;
+    domains.Dragon = domains.Wyrmkin;
+    domains.Disorientation = domains.Delirium;
+    //Ende Sonderlogik alte Domänen
     const deitiesMap = readSystemMap("deities");
     const equipmentMap = new Map([...readSystemMap("equipment")].map(([key, value]) => [sluggify(key), value]));
     const journalsMap = readSystemMap("journals");
@@ -286,11 +303,24 @@ export const convertDeities = (deitiesTranslated) => {
                 const journalPage = journalsMap
                     .get("domains")
                     .pages.filter((dom) => dom.name.replace(" Domain", "") === domain);
+                //Sonderlogik alte Domänen
+                let domName = domain.toLowerCase();
+                if (domName === "nothingness") {
+                    domName = "void";
+                }
+                if (domName === "dragon") {
+                    domName = "wyrmkin";
+                }
+                if (domName === "disorientation") {
+                    domName = "delirium";
+                }
+                //Ende Sonderlogik alte Domänen
+
                 if (journalPage.length === 1) {
                     const link = `@UUID[Compendium.pf2e.journals.JournalEntry.${domainJournalId}.JournalEntryPage.${journalPage[0]._id}]`;
-                    return [domains[domain].Label, { name: domain.toLowerCase(), link: link }];
+                    return [domains[domain].Label, { name: domName, link: link }];
                 }
-                return [domains[domain].Label, { name: domain.toLowerCase() }];
+                return [domains[domain].Label, { name: domName }];
             })
             .sort()
     );
