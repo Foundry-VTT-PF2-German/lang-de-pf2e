@@ -60,7 +60,16 @@
     },
     "Effect: -2 circumstance penalty to attack rolls made with this attack until healed": {
       "name": "Effect: -2 circumstance penalty to attack rolls made with this attack until healed",
-      "description": "<p><strong>Effect applied by @UUID[Compendium.pf2e.criticaldeck.JournalEntry.HERWPcFlzK2FTPLJ]{Critical Fumble Deck #47}</strong></p>\n<p>-2 circumstance penalty to attack rolls made with this attack until healed</p>"
+      "description": "<p><strong>Effect applied by @UUID[Compendium.pf2e.criticaldeck.JournalEntry.HERWPcFlzK2FTPLJ]{Critical Fumble Deck #47}</strong></p>\n<p>-2 circumstance penalty to attack rolls made with this attack until healed</p>",
+      "rules": {
+        "1": {
+          "choices": {
+            "types": {
+              "label": "weapon"
+            }
+          }
+        }
+      }
     },
     "Effect: -2 circumstance penalty to attack rolls until healed": {
       "name": "Effect: -2 circumstance penalty to attack rolls until healed",
@@ -68,7 +77,16 @@
     },
     "Effect: -2 circumstance penalty to attack rolls with this weapon": {
       "name": "Effect: -2 circumstance penalty to attack rolls with this weapon",
-      "description": "<p><strong>Effect applied by @UUID[Compendium.pf2e.criticaldeck.JournalEntry.EP333dUdoJ8xdkzq]{Critical Fumble Deck #5}, @UUID[Compendium.pf2e.criticaldeck.JournalEntry.YRY6c3WdBEuKiOCv]{Critical Fumble Deck #42}</strong></p>\n<p>-2 circumstance penalty to attack rolls with this weapon</p>"
+      "description": "<p><strong>Effect applied by @UUID[Compendium.pf2e.criticaldeck.JournalEntry.EP333dUdoJ8xdkzq]{Critical Fumble Deck #5}, @UUID[Compendium.pf2e.criticaldeck.JournalEntry.YRY6c3WdBEuKiOCv]{Critical Fumble Deck #42}</strong></p>\n<p>-2 circumstance penalty to attack rolls with this weapon</p>",
+      "rules": {
+        "1": {
+          "choices": {
+            "types": {
+              "label": "weapon"
+            }
+          }
+        }
+      }
     },
     "Effect: -2 circumstance penalty to checks and saving throws until healed": {
       "name": "Effect: -2 circumstance penalty to checks and saving throws until healed",
@@ -100,7 +118,18 @@
     },
     "Effect: Ancestral Might": {
       "name": "Effect: Ancestral Might",
-      "description": "<p>Granted by @UUID[Compendium.pf2e.journals.JournalEntry.BSp4LUSaOmUyjBko.JournalEntryPage.quxPxuMub8k6abzN]{Ancestral Might}</p>\n<p>You gain a +2 status bonus to checks based on the attributes that are boosted by your ancestry (ignoring free boosts). If your ancestry only grants free boosts, select one attribute to gain the bonus to instead.</p>"
+      "description": "<p>Granted by @UUID[Compendium.pf2e.journals.JournalEntry.BSp4LUSaOmUyjBko.JournalEntryPage.quxPxuMub8k6abzN]{Ancestral Might}</p>\n<p>You gain a +2 status bonus to checks based on the attributes that are boosted by your ancestry (ignoring free boosts). If your ancestry only grants free boosts, select one attribute to gain the bonus to instead.</p>",
+      "rules": {
+        "1": {
+          "choices": {
+            "predicate": {
+              "label": {
+                "not": "ancestral-might:first-boost:{choice|value}"
+              }
+            }
+          }
+        }
+      }
     },
     "Effect: Aquatic Combat": {
       "name": "Effect: Aquatic Combat",
@@ -136,7 +165,16 @@
     },
     "Effect: Daring Attempt": {
       "name": "Effect: Daring Attempt",
-      "description": "<p>Granted by @UUID[Compendium.pf2e.journals.JournalEntry.BSp4LUSaOmUyjBko.JournalEntryPage.jHn1m1r95YgMQSvM]{Daring Attempt}</p>\n<p>Select one untrained skill. You are trained in that skill.</p>"
+      "description": "<p>Granted by @UUID[Compendium.pf2e.journals.JournalEntry.BSp4LUSaOmUyjBko.JournalEntryPage.jHn1m1r95YgMQSvM]{Daring Attempt}</p>\n<p>Select one untrained skill. You are trained in that skill.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "predicate": {
+              "label": "skill:{choice|value}:rank:0"
+            }
+          }
+        }
+      }
     },
     "Effect: Dazzled until end of your next turn": {
       "name": "Effect: Dazzled until end of your next turn",
@@ -156,7 +194,16 @@
     },
     "Effect: Disarm (Success)": {
       "name": "Effect: Disarm (Success)",
-      "description": "<p>Granted by @UUID[Compendium.pf2e.actionspf2e.Item.Dt6B1slsBy8ipJu9]{Disarm}</p>\n<p>You take a –2 circumstance penalty to attacks using the targeted item. Further attempts to Disarm you gain a +2 circumstance bonus.</p>"
+      "description": "<p>Granted by @UUID[Compendium.pf2e.actionspf2e.Item.Dt6B1slsBy8ipJu9]{Disarm}</p>\n<p>You take a –2 circumstance penalty to attacks using the targeted item. Further attempts to Disarm you gain a +2 circumstance bonus.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "predicate": {
+              "label": "item:equipped"
+            }
+          }
+        }
+      }
     },
     "Effect: Endure the Onslaught": {
       "name": "Effect: Endure the Onslaught",

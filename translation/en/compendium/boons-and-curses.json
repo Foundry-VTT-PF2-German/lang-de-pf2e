@@ -315,7 +315,16 @@
     },
     "Effect: Torag's Repairs": {
       "name": "Effect: Torag's Repairs",
-      "description": "<p>Granted by @UUID[Compendium.pf2e.boons-and-curses.Item.e7Y4jKHQ3ptbSuxc]{Torag - Minor Boon}</p>\n<p>The item's Hardness doubles.</p>"
+      "description": "<p>Granted by @UUID[Compendium.pf2e.boons-and-curses.Item.e7Y4jKHQ3ptbSuxc]{Torag - Minor Boon}</p>\n<p>The item's Hardness doubles.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "types": {
+              "label": "armor"
+            }
+          }
+        }
+      }
     },
     "Erastil - Major Boon": {
       "name": "Erastil - Major Boon",
@@ -479,7 +488,35 @@
     },
     "Gruhastha - Moderate Boon": {
       "name": "Gruhastha - Moderate Boon",
-      "description": "<p>The Keeper speeds your path toward learning new talents. You become permanently trained in two additional skills of your choice. Additionally, you can select a skill you are already trained in and permanently increase your proficiency rank in that skill, following the usual rules for skill increases.</p>"
+      "description": "<p>The Keeper speeds your path toward learning new talents. You become permanently trained in two additional skills of your choice. Additionally, you can select a skill you are already trained in and permanently increase your proficiency rank in that skill, following the usual rules for skill increases.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "predicate": {
+              "label": "skill:{choice|value}:rank:0"
+            }
+          }
+        },
+        "1": {
+          "choices": {
+            "predicate": {
+              "label": "skill:{choice|value}:rank:0"
+            }
+          }
+        },
+        "2": {
+          "choices": {
+            "predicate": {
+              "label": {
+                "gte": [
+                  "skill:{choice|value}:rank",
+                  1
+                ]
+              }
+            }
+          }
+        }
+      }
     },
     "Gruhastha - Moderate Curse": {
       "name": "Gruhastha - Moderate Curse",

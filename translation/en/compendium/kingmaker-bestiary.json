@@ -319,10 +319,30 @@
       "tokenName": "Amiri",
       "items": {
         "heritage->Versatile Heritage": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.heritages.Item.hFBwsVcSnNCJoimo]\nVersatile Heritage"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.heritages.Item.hFBwsVcSnNCJoimo]\nVersatile Heritage",
+          "rules": {
+            "0": {
+              "choices": {
+                "filter": {
+                  "label": "item:level:1"
+                }
+              }
+            }
+          }
         },
         "lore->Warfare Lore": {
           "name": "Warfare Lore"
+        },
+        "feat->Natural Ambition": {
+          "rules": {
+            "0": {
+              "choices": {
+                "filter": {
+                  "label": "item:level:1"
+                }
+              }
+            }
+          }
         },
         "consumable->Elixir of Life (Lesser)": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.TZUskLT7yvP7N2co]\n<p><strong>Activate</strong> <span class=\"action-glyph\">A</span> Interact</p>\n<p>Elixirs of life accelerate a living creatures natural healing processes and immune system. Upon drinking this elixir, you regain @Damage[(3d6+6)[healing]] Hit Points and gain +1 item bonus to saving throws against diseases and poisons for 10 minutes.</p>\n<p>@UUID[Compendium.pf2e.equipment-effects.Item.lPRuIRbu0rHBkoKY]{Effect: Elixir of Life}</p>"
@@ -345,10 +365,30 @@
       "tokenName": "Amiri",
       "items": {
         "heritage->Versatile Heritage": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.heritages.Item.hFBwsVcSnNCJoimo]\nVersatile Heritage"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.heritages.Item.hFBwsVcSnNCJoimo]\nVersatile Heritage",
+          "rules": {
+            "0": {
+              "choices": {
+                "filter": {
+                  "label": "item:level:1"
+                }
+              }
+            }
+          }
         },
         "lore->Warfare Lore": {
           "name": "Warfare Lore"
+        },
+        "feat->Natural Ambition": {
+          "rules": {
+            "0": {
+              "choices": {
+                "filter": {
+                  "label": "item:level:1"
+                }
+              }
+            }
+          }
         },
         "weapon->Bastard Sword": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.6KWYmeRMxsQfWhhJ]\n<p>This broad-bladed sword, sometimes called the hand-and-a-half sword, has a longer grip so it can be held in one hand or used with two hands to provide extra piercing or slashing power.</p>"
@@ -358,6 +398,20 @@
         },
         "consumable->Elixir of Life (Moderate)": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.c21stU5rhN4F2fZl]\n<p><strong>Activate</strong> <span class=\"action-glyph\">A</span> Interact</p>\n<p>Elixirs of life accelerate a living creature's natural healing processes and immune system. Upon drinking this elixir, you regain @Damage[(5d6+12)[healing]] Hit Points and gain +2 item bonus to saving throws against diseases and poisons for 10 minutes.</p>\n<p>@UUID[Compendium.pf2e.equipment-effects.Item.lPRuIRbu0rHBkoKY]{Effect: Elixir of Life}</p>"
+        },
+        "feat->Untrained Improvisation": {
+          "rules": {
+            "0": {
+              "value": {
+                "brackets": {
+                  "text": {
+                    "end": 6,
+                    "value": "floor(@actor.level / 2)"
+                  }
+                }
+              }
+            }
+          }
         },
         "feat->Fast Recovery": {
           "rules": {
@@ -373,6 +427,21 @@
           "rules": {
             "0": {
               "text": "While using Survival to Subsist, if you roll any result worse than a success, you get a success. You can also provide subsistence living for multiple creatures."
+            }
+          }
+        },
+        "feat->Intimidating Prowess": {
+          "rules": {
+            "0": {
+              "value": {
+                "brackets": {
+                  "text": {
+                    "end": 4,
+                    "start": 3,
+                    "value": "round(@actor.abilities.str.mod / 3)"
+                  }
+                }
+              }
             }
           }
         },
@@ -1275,6 +1344,21 @@
               "label": "First Attack war action against ambushed opponent"
             }
           }
+        },
+        "campaignFeature->Sharpshooter": {
+          "rules": {
+            "2": {
+              "value": {
+                "brackets": {
+                  "text": {
+                    "end": 8,
+                    "start": 1,
+                    "value": -2
+                  }
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -1851,7 +1935,20 @@
       "tokenName": "Ekundayo",
       "items": {
         "feat->Specialty Crafting (Woodworking)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.feats-srd.Item.QLeMH5mQgh28sa5o]\nSpecialty Crafting (Woodworking)"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.feats-srd.Item.QLeMH5mQgh28sa5o]\nSpecialty Crafting (Woodworking)",
+          "rules": {
+            "1": {
+              "value": {
+                "brackets": {
+                  "text": {
+                    "end": 4,
+                    "start": 3,
+                    "value": 2
+                  }
+                }
+              }
+            }
+          }
         },
         "heritage->Skilled Heritage": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.heritages.Item.zVf0Hlp5xG0Q7kmc]\nSkilled Heritage"
@@ -1864,6 +1961,17 @@
         },
         "lore->Hunting Lore": {
           "name": "Hunting Lore"
+        },
+        "feat->General Training": {
+          "rules": {
+            "0": {
+              "choices": {
+                "filter": {
+                  "label": "item:level:1"
+                }
+              }
+            }
+          }
         },
         "weapon->Alchemist's Fire (Lesser)": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.yd3kEK21YknZLlcT]\n<p><strong>Activate</strong> <span class=\"action-glyph\">A</span> Strike</p>\n<p>Alchemist's fire is a combination of volatile liquids that ignite when exposed to air. Alchemist's fire deals 1d8 fire damage, 1 persistent fire damage, and 1 fire splash damage.</p>"
@@ -1889,7 +1997,20 @@
       "tokenName": "Ekundayo",
       "items": {
         "feat->Specialty Crafting (Woodworking)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.feats-srd.Item.QLeMH5mQgh28sa5o]\nSpecialty Crafting (Woodworking)"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.feats-srd.Item.QLeMH5mQgh28sa5o]\nSpecialty Crafting (Woodworking)",
+          "rules": {
+            "1": {
+              "value": {
+                "brackets": {
+                  "text": {
+                    "end": 4,
+                    "start": 3,
+                    "value": 2
+                  }
+                }
+              }
+            }
+          }
         },
         "heritage->Skilled Heritage": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.heritages.Item.zVf0Hlp5xG0Q7kmc]\nSkilled Heritage"
@@ -1902,6 +2023,17 @@
         },
         "lore->Hunting Lore": {
           "name": "Hunting Lore"
+        },
+        "feat->General Training": {
+          "rules": {
+            "0": {
+              "choices": {
+                "filter": {
+                  "label": "item:level:1"
+                }
+              }
+            }
+          }
         },
         "weapon->Alchemist's Fire (Lesser)": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.yd3kEK21YknZLlcT]\n<p><strong>Activate</strong> <span class=\"action-glyph\">A</span> Strike</p>\n<p>Alchemist's fire is a combination of volatile liquids that ignite when exposed to air. Alchemist's fire deals 1d8 fire damage, 1 persistent fire damage, and 1 fire splash damage.</p>"
@@ -1929,6 +2061,17 @@
         "backpack->Bag of Holding (Type I)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.jaEEvuQ32GjAa8jy]\nBag of Holding (Type I)",
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.jaEEvuQ32GjAa8jy]\n<p>Though it appears to be a cloth sack decorated with panels of richly colored silk or stylish embroidery, a <em>bag of holding</em> opens into an extradimensional space larger than its outside dimensions. The Bulk held inside the bag doesn't change the Bulk of the <em>bag of holding</em> itself. The amount of Bulk the bag's extradimensional space can hold depends on its type.</p>\n<p>You can Interact with the <em>bag of holding</em> to put items in or remove them just like a mundane sack. Though the bag can hold a great amount of material, an object still needs to be able to fit through the opening of the sack to be stored inside.</p>\n<p>If the bag is overloaded or broken, it ruptures and is ruined, causing the items inside to be lost forever. If it's turned inside out, the items inside spill out unharmed, but the bag must be put right before it can be used again. A living creature placed inside the bag has enough air for 10 minutes before it begins to suffocate, and it can attempt to Escape against a DC of 13. An item inside the bag provides no benefits unless it's retrieved first. An item in the bag can't be detected by magic that detects only things on the same plane.</p>\n<p><strong>Capacity</strong> 25 Bulk</p>"
+        },
+        "feat->Natural Ambition": {
+          "rules": {
+            "0": {
+              "choices": {
+                "filter": {
+                  "label": "item:level:1"
+                }
+              }
+            }
+          }
         },
         "feat->Trackless Step": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.classfeatures.Item.PeZi7E9lI4vz8EGY]\nTrackless Step"
@@ -4016,7 +4159,20 @@
         },
         "feat->Specialty Crafting (Alchemy)": {
           "name": "Specialty Crafting (Alchemy)",
-          "description": "<p>Your training focused on Crafting one particular kind of item. You gain a +1 circumstance bonus to Crafting checks to Craft alchemical items. If you are a master in Crafting, this bonus increases to +2.</p>\n<hr />\n<p><strong>Sample Items</strong> Alchemical Items such as Elixirs</p>\n<p>If it's unclear whether the specialty applies, the GM decides. Some specialties might apply only partially. For example, if you were making a morningstar and had specialty in woodworking, the GM might give you half your bonus because the item requires both blacksmithing and woodworking.</p>"
+          "description": "<p>Your training focused on Crafting one particular kind of item. You gain a +1 circumstance bonus to Crafting checks to Craft alchemical items. If you are a master in Crafting, this bonus increases to +2.</p>\n<hr />\n<p><strong>Sample Items</strong> Alchemical Items such as Elixirs</p>\n<p>If it's unclear whether the specialty applies, the GM decides. Some specialties might apply only partially. For example, if you were making a morningstar and had specialty in woodworking, the GM might give you half your bonus because the item requires both blacksmithing and woodworking.</p>",
+          "rules": {
+            "0": {
+              "value": {
+                "brackets": {
+                  "text": {
+                    "end": 4,
+                    "start": 3,
+                    "value": 2
+                  }
+                }
+              }
+            }
+          }
         },
         "weapon->Acid Flask (Moderate)": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.SgtqZxt26BdjUmEB]\n<p><strong>Activate</strong> <span class=\"action-glyph\">A</span> Strike</p>\n<p>This flask filled with corrosive acid deals 1 acid damage, 2d6 persistent acid damage, and 2 acid splash damage. You gain a +1 item bonus to attack rolls.</p>"
@@ -4635,7 +4791,20 @@
       "tokenName": "Linzi",
       "items": {
         "feat->Specialty Crafting (Artistry)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.feats-srd.Item.QLeMH5mQgh28sa5o]\nSpecialty Crafting (Artistry)"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.feats-srd.Item.QLeMH5mQgh28sa5o]\nSpecialty Crafting (Artistry)",
+          "rules": {
+            "1": {
+              "value": {
+                "brackets": {
+                  "text": {
+                    "end": 4,
+                    "start": 3,
+                    "value": 2
+                  }
+                }
+              }
+            }
+          }
         },
         "lore->Art Lore": {
           "name": "Art Lore"
@@ -4687,7 +4856,20 @@
       "tokenName": "Linzi",
       "items": {
         "feat->Specialty Crafting (Artistry)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.feats-srd.Item.QLeMH5mQgh28sa5o]\nSpecialty Crafting (Artistry)"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.feats-srd.Item.QLeMH5mQgh28sa5o]\nSpecialty Crafting (Artistry)",
+          "rules": {
+            "1": {
+              "value": {
+                "brackets": {
+                  "text": {
+                    "end": 4,
+                    "start": 3,
+                    "value": 2
+                  }
+                }
+              }
+            }
+          }
         },
         "lore->Art Lore": {
           "name": "Art Lore"
@@ -4731,7 +4913,20 @@
         },
         "feat->Virtuosic Performer (Strings)": {
           "name": "Virtuosic Performer (Strings)",
-          "description": "<p>You have exceptional talent with one type of performance. You gain a +1 circumstance bonus when playing a string instrument. If you are a master in Performance, this bonus increases to +2.</p>\n<hr />\n<p><strong>Example performances</strong> Fiddle, harp, lute, viol</p>\n<p>If it's unclear whether the specialty applies, the GM decides.</p>"
+          "description": "<p>You have exceptional talent with one type of performance. You gain a +1 circumstance bonus when playing a string instrument. If you are a master in Performance, this bonus increases to +2.</p>\n<hr />\n<p><strong>Example performances</strong> Fiddle, harp, lute, viol</p>\n<p>If it's unclear whether the specialty applies, the GM decides.</p>",
+          "rules": {
+            "0": {
+              "value": {
+                "brackets": {
+                  "text": {
+                    "end": 4,
+                    "start": 3,
+                    "value": 2
+                  }
+                }
+              }
+            }
+          }
         },
         "equipment->Choker of Elocution (Sylvan)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.TacKaUs8cIddqiCU]\nChoker of Elocution (Sylvan)",
@@ -5123,7 +5318,23 @@
     "Narlmarch Hunters": {
       "name": "Narlmarch Hunters",
       "description": "<p>This army is a band of hunters and trappers who have gathered into a ragtag group of archers led by Mayor Loy Rezbin.</p>",
-      "items": {}
+      "items": {
+        "campaignFeature->Sharpshooter": {
+          "rules": {
+            "2": {
+              "value": {
+                "brackets": {
+                  "text": {
+                    "end": 8,
+                    "start": 1,
+                    "value": -2
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     },
     "Ngara": {
       "name": "Ngara",
@@ -7176,10 +7387,27 @@
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spell-effects.Item.qkwb5DD3zmKwvbk0]\n<p>Granted by @UUID[Compendium.pf2e.spells-srd.Item.aAbfKn8maGjJjk2W]{Mystic Armor}</p>\n<p>You ward yourself with shimmering magical energy, gaining a +1 item bonus to AC and a maximum Dexterity modifier of +5. While wearing mage armor, you use your unarmored proficiency to calculate your AC.</p>",
           "rules": {
             "0": {
-              "label": "Mage Armor"
+              "label": "Mage Armor",
+              "value": {
+                "brackets": {
+                  "text": {
+                    "end": 5,
+                    "value": 1
+                  }
+                }
+              }
             },
             "1": {
-              "label": "Mage Armor"
+              "label": "Mage Armor",
+              "value": {
+                "brackets": {
+                  "text": {
+                    "end": 7,
+                    "start": 4,
+                    "value": 1
+                  }
+                }
+              }
             },
             "2": {
               "label": "Mage Armor"
@@ -8361,7 +8589,21 @@
           "name": "Divine Focus Spells"
         },
         "feat->Deity (Sarenrae)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.classfeatures.Item.DutW12WMFPHBoLTH]\nDeity (Sarenrae)"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.classfeatures.Item.DutW12WMFPHBoLTH]\nDeity (Sarenrae)",
+          "rules": {
+            "0": {
+              "choices": {
+                "filter": {
+                  "label": {
+                    "or": [
+                      "item:category:deity",
+                      "item:category:pantheon"
+                    ]
+                  }
+                }
+              }
+            }
+          }
         },
         "feat->Divine Spellcasting (Cleric)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.classfeatures.Item.AvNbdGSOTWNRgcxs]\nDivine Spellcasting (Cleric)"
@@ -8433,6 +8675,17 @@
           "consumableSpellTarget": "1 willing living creature or 1 undead",
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.wrDmWkGxmwzYtfiA]\n<p>@UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal}</p>\n<hr />\n<p>This baton is about a foot long and contains a single spell. The appearance typically relates to the spell within.</p>\n<p><strong>Activate</strong> Cast a Spell</p>\n<p><strong>Frequency</strong> once per day, plus overcharge</p>\n<hr />\n<p><strong>Effect</strong> You Cast the Spell at the indicated level.</p>\n<p><strong>Craft Requirements</strong> Supply a listed-level casting of the spell.</p>\n<hr />\n<p><em>Note: To create a scroll or wand of a specific spell, drag the spell from the compendium or compendium browser into the inventory of a PC, NPC, or loot actor.</em></p>"
         },
+        "feat->Natural Ambition": {
+          "rules": {
+            "0": {
+              "choices": {
+                "filter": {
+                  "label": "item:level:1"
+                }
+              }
+            }
+          }
+        },
         "feat->Domain Initiate (Fire)": [
           {
             "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.feats-srd.Item.hT4INKGtly4QY8KN]\nDomain Initiate (Fire)",
@@ -8486,7 +8739,21 @@
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.feats-srd.Item.vtCrMziYxNyj8kP7]\nCelestial Wings"
         },
         "feat->Deity (Sarenrae)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.classfeatures.Item.DutW12WMFPHBoLTH]\nDeity (Sarenrae)"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.classfeatures.Item.DutW12WMFPHBoLTH]\nDeity (Sarenrae)",
+          "rules": {
+            "0": {
+              "choices": {
+                "filter": {
+                  "label": {
+                    "or": [
+                      "item:category:deity",
+                      "item:category:pantheon"
+                    ]
+                  }
+                }
+              }
+            }
+          }
         },
         "feat->Divine Spellcasting (Cleric)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.classfeatures.Item.AvNbdGSOTWNRgcxs]\nDivine Spellcasting (Cleric)"
@@ -8686,7 +8953,16 @@
       "tokenName": "Valerie",
       "items": {
         "heritage->Versatile Heritage": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.heritages.Item.hFBwsVcSnNCJoimo]\nVersatile Heritage"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.heritages.Item.hFBwsVcSnNCJoimo]\nVersatile Heritage",
+          "rules": {
+            "0": {
+              "choices": {
+                "filter": {
+                  "label": "item:level:1"
+                }
+              }
+            }
+          }
         },
         "lore->Warfare Lore": {
           "name": "Warfare Lore"
@@ -8718,7 +8994,16 @@
       "tokenName": "Valerie",
       "items": {
         "heritage->Versatile Heritage": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.heritages.Item.hFBwsVcSnNCJoimo]\nVersatile Heritage"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.heritages.Item.hFBwsVcSnNCJoimo]\nVersatile Heritage",
+          "rules": {
+            "0": {
+              "choices": {
+                "filter": {
+                  "label": "item:level:1"
+                }
+              }
+            }
+          }
         },
         "lore->Warfare Lore": {
           "name": "Warfare Lore"
@@ -8736,14 +9021,54 @@
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.EkZVXMdtqTTgahiJ]\nRing of Energy Resistance (Fire)",
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.EkZVXMdtqTTgahiJ]\n<p>This ring grants you resistance 5 against one type of energy damage: acid, cold, electricity, fire, or sonic. Each ring is crafted to protect against a particular type of energy damage, and its design usually embodies the type of energy it protects the wearer from in some way. For instance, a <em>ring of fire resistance</em> might be capped with a ruby, whereas a <em>ring of cold resistance</em> features a sapphire instead.</p>"
         },
+        "feat->Natural Ambition": {
+          "rules": {
+            "0": {
+              "choices": {
+                "filter": {
+                  "label": "item:level:1"
+                }
+              }
+            }
+          }
+        },
         "feat->Power Attack": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.feats-srd.Item.2xk4jdwcCfmasYfT]\nPower Attack"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.feats-srd.Item.2xk4jdwcCfmasYfT]\nPower Attack",
+          "rules": {
+            "0": {
+              "value": {
+                "brackets": {
+                  "text": {
+                    "end": 9,
+                    "value": {
+                      "diceNumber": 1
+                    }
+                  }
+                }
+              }
+            }
+          }
         },
         "feat->Quick Shield Block (Fighter)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.feats-srd.Item.pRqcm5P2ZFihSpVI]\nQuick Shield Block (Fighter)"
         },
         "feat->Shield Warden (Fighter)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.feats-srd.Item.5vXc2s2siR1ihpBT]\nShield Warden (Fighter)"
+        },
+        "feat->Intimidating Prowess": {
+          "rules": {
+            "0": {
+              "value": {
+                "brackets": {
+                  "text": {
+                    "end": 4,
+                    "start": 3,
+                    "value": "round(@actor.abilities.str.mod / 3)"
+                  }
+                }
+              }
+            }
+          }
         },
         "effect->Effect: Paizo Adjustment": {
           "name": "Effect: Paizo Adjustment",

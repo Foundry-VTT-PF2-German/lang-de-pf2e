@@ -322,7 +322,16 @@
         {
           "value": "Advanced Element Control"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:tag:kineticist-kinetic-gate"
+            }
+          }
+        }
+      }
     },
     "Additional Circus Trick": {
       "name": "Additional Circus Trick",
@@ -344,7 +353,16 @@
     },
     "Additional Ikon": {
       "name": "Additional Ikon",
-      "description": "<p>Your story has grown rich enough that three ikons can't contain its full complexity. You gain a fourth ikon, which can be of any type.</p>"
+      "description": "<p>Your story has grown rich enough that three ikons can't contain its full complexity. You gain a fourth ikon, which can be of any type.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:tag:exemplar-ikon"
+            }
+          }
+        }
+      }
     },
     "Additional Lore": {
       "name": "Additional Lore",
@@ -386,7 +404,18 @@
     },
     "Adopted Ancestry": {
       "name": "Adopted Ancestry",
-      "description": "<p>You're fully immersed in another ancestry's culture and traditions, whether born into them, earned through rite of passage, or bonded through a deep friendship or romance. Choose a common ancestry or another ancestry to which you have access. You can select ancestry feats from the ancestry you chose, in addition to your character's own ancestry, as long as the ancestry feats don't require any physiological feature that you lack, as determined by the GM.</p>"
+      "description": "<p>You're fully immersed in another ancestry's culture and traditions, whether born into them, earned through rite of passage, or bonded through a deep friendship or romance. Choose a common ancestry or another ancestry to which you have access. You can select ancestry feats from the ancestry you chose, in addition to your character's own ancestry, as long as the ancestry feats don't require any physiological feature that you lack, as determined by the GM.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": {
+                "not": "item:slug:{actor|system.details.ancestry.trait}"
+              }
+            }
+          }
+        }
+      }
     },
     "Adrenaline Rush": {
       "name": "Adrenaline Rush",
@@ -581,7 +610,21 @@
     },
     "Advanced General Training": {
       "name": "Advanced General Training",
-      "description": "<p>Over the long course of your adventuring life, your adaptability has let you pick up numerous useful abilities. You gain a general feat of 7th level or lower. You must meet the feat's prerequisites.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat multiple times, choosing a different feat each time.</p>"
+      "description": "<p>Over the long course of your adventuring life, your adaptability has let you pick up numerous useful abilities. You gain a general feat of 7th level or lower. You must meet the feat's prerequisites.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat multiple times, choosing a different feat each time.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": {
+                "lte": [
+                  "item:level",
+                  7
+                ]
+              }
+            }
+          }
+        }
+      }
     },
     "Advanced Glory": {
       "name": "Advanced Glory",
@@ -1354,7 +1397,21 @@
         {
           "value": "sneak attack 2d6"
         }
-      ]
+      ],
+      "rules": {
+        "1": {
+          "value": {
+            "brackets": {
+              "text": {
+                "end": 10,
+                "value": {
+                  "diceNumber": 2
+                }
+              }
+            }
+          }
+        }
+      }
     },
     "Anarchic Arcana": {
       "name": "Anarchic Arcana",
@@ -1432,7 +1489,16 @@
     },
     "Ancestral Paragon": {
       "name": "Ancestral Paragon",
-      "description": "<p>Whether through instinct, study, or magic, you feel a deeper connection to your ancestry. You gain a 1st-level ancestry feat.</p>"
+      "description": "<p>Whether through instinct, study, or magic, you feel a deeper connection to your ancestry. You gain a 1st-level ancestry feat.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:level:1"
+            }
+          }
+        }
+      }
     },
     "Ancestral Suspicion": {
       "name": "Ancestral Suspicion",
@@ -1900,7 +1966,27 @@
     },
     "Arcane Communication": {
       "name": "Arcane Communication",
-      "description": "<p>You can deliver silent messages. You gain touch telepathy, allowing you to communicate silently and mentally with any creature you're touching, as long as you share a language.</p>\n<p><strong>Enhancement</strong> You can send your messages even further. Your telepathy gains a range of 10 feet, but you still have to share a language with your target.</p>"
+      "description": "<p>You can deliver silent messages. You gain touch telepathy, allowing you to communicate silently and mentally with any creature you're touching, as long as you share a language.</p>\n<p><strong>Enhancement</strong> You can send your messages even further. Your telepathy gains a range of 10 feet, but you still have to share a language with your target.</p>",
+      "rules": {
+        "0": {
+          "value": {
+            "predicate": {
+              "text": {
+                "not": "enhancement:arcane-communication"
+              }
+            }
+          }
+        },
+        "1": {
+          "value": {
+            "predicate": {
+              "text": {
+                "not": "enhancement:arcane-communication"
+              }
+            }
+          }
+        }
+      }
     },
     "Arcane Dragonblood": {
       "name": "Arcane Dragonblood",
@@ -1922,7 +2008,27 @@
         {
           "value": "low-light vision"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "value": {
+            "predicate": {
+              "text": {
+                "not": "enhancement:arcane-eye"
+              }
+            }
+          }
+        },
+        "1": {
+          "value": {
+            "predicate": {
+              "text": {
+                "not": "enhancement:arcane-eye"
+              }
+            }
+          }
+        }
+      }
     },
     "Arcane Fists": {
       "name": "Arcane Fists",
@@ -1939,7 +2045,27 @@
     },
     "Arcane Safeguards": {
       "name": "Arcane Safeguards",
-      "description": "<p>The magic powering you makes it difficult for outside magic to affect you. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.XeZwXzR1KBlJF770]{Resist Magic} reaction.</p>\n<p><strong>Enhancement</strong> Your safeguards improve. When you Resist Magic, you gain a number of temporary Hit Points equal to the spell rank of the triggering effect.</p>"
+      "description": "<p>The magic powering you makes it difficult for outside magic to affect you. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.XeZwXzR1KBlJF770]{Resist Magic} reaction.</p>\n<p><strong>Enhancement</strong> Your safeguards improve. When you Resist Magic, you gain a number of temporary Hit Points equal to the spell rank of the triggering effect.</p>",
+      "rules": {
+        "1": {
+          "value": {
+            "predicate": {
+              "text": {
+                "not": "enhancement:arcane-safeguards"
+              }
+            }
+          }
+        },
+        "2": {
+          "value": {
+            "predicate": {
+              "text": {
+                "not": "enhancement:arcane-safeguards"
+              }
+            }
+          }
+        }
+      }
     },
     "Arcane School Spell": {
       "name": "Arcane School Spell",
@@ -2000,7 +2126,26 @@
     },
     "Arcane Tattoos": {
       "name": "Arcane Tattoos",
-      "description": "<p><strong>Access</strong> Varisian ethnicity or New Thassilon nationality</p>\n<hr />\n<p>You have tattoos on your body corresponding to one of the ancient Thassilonian schools of magic. Choose one of the following schools of magic: abjuration (@UUID[Compendium.pf2e.spells-srd.Item.TVKNbcgTee19PXZR]{Shield}), conjuration (@UUID[Compendium.pf2e.spells-srd.Item.uZK2BYzPnxUBnDjr]{Tangle Vine}), enchantment (@UUID[Compendium.pf2e.spells-srd.Item.4gBIw4IDrSfFHik4]{Daze}), evocation (@UUID[Compendium.pf2e.spells-srd.Item.kBhaPuzLUSwS6vVf]{Electric Arc}), illusion (@UUID[Compendium.pf2e.spells-srd.Item.atlgGNI1E1Ox3O3a]{Ghost Sound}), necromancy (@UUID[Compendium.pf2e.spells-srd.Item.mAMEt4FFbdqoRnkN]{Void Warp}), or transmutation (@UUID[Compendium.pf2e.spells-srd.Item.AUctDF2fqPZN2w4W]{Sigil}). You can cast the associated cantrip (listed in parentheses) as an innate arcane spell at will.</p>"
+      "description": "<p><strong>Access</strong> Varisian ethnicity or New Thassilon nationality</p>\n<hr />\n<p>You have tattoos on your body corresponding to one of the ancient Thassilonian schools of magic. Choose one of the following schools of magic: abjuration (@UUID[Compendium.pf2e.spells-srd.Item.TVKNbcgTee19PXZR]{Shield}), conjuration (@UUID[Compendium.pf2e.spells-srd.Item.uZK2BYzPnxUBnDjr]{Tangle Vine}), enchantment (@UUID[Compendium.pf2e.spells-srd.Item.4gBIw4IDrSfFHik4]{Daze}), evocation (@UUID[Compendium.pf2e.spells-srd.Item.kBhaPuzLUSwS6vVf]{Electric Arc}), illusion (@UUID[Compendium.pf2e.spells-srd.Item.atlgGNI1E1Ox3O3a]{Ghost Sound}), necromancy (@UUID[Compendium.pf2e.spells-srd.Item.mAMEt4FFbdqoRnkN]{Void Warp}), or transmutation (@UUID[Compendium.pf2e.spells-srd.Item.AUctDF2fqPZN2w4W]{Sigil}). You can cast the associated cantrip (listed in parentheses) as an innate arcane spell at will.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": {
+                "or": [
+                  "item:slug:shield",
+                  "item:slug:tanglevine",
+                  "item:slug:daze",
+                  "item:slug:electric-arc",
+                  "item:slug:ghost-sound",
+                  "item:slug:chill-touch",
+                  "item:slug:sigil"
+                ]
+              }
+            }
+          }
+        }
+      }
     },
     "Archaeologist Dedication": {
       "name": "Archaeologist Dedication",
@@ -2208,7 +2353,21 @@
         {
           "value": "Lepidstadt Surgeon Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "value": {
+            "brackets": {
+              "text": {
+                "end": 3,
+                "value": {
+                  "dieSize": "d6"
+                }
+              }
+            }
+          }
+        }
+      }
     },
     "Artillerist Dedication": {
       "name": "Artillerist Dedication",
@@ -2322,7 +2481,21 @@
         {
           "value": "trained in at least one skill"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "predicate": {
+              "label": {
+                "gte": [
+                  "skill:{choice|value}:rank",
+                  1
+                ]
+              }
+            }
+          }
+        }
+      }
     },
     "Assured Identification": {
       "name": "Assured Identification",
@@ -2588,7 +2761,27 @@
     },
     "Automaton Armament": {
       "name": "Automaton Armament",
-      "description": "<p>You've been provided a body part designed for combat. You gain either a claw or pincer unarmed attack. The claw deals 1d4 slashing damage, is in the brawling group, and has the agile, finesse, and unarmed traits. The pincer deals 1d6 piercing damage, is in the brawling group, and has the grapple and unarmed traits. Your body can be reconfigured; you can select this feat at any level, and you can retrain into or out of this feat or change the type of attack you gain.</p>\n<p><strong>Enhancement</strong> Your attacking part is reinforced. Increase the damage die of the unarmed attack you gain from this feat by one step (from 1d4 to 1d6, or from 1d6 to 1d8).</p>"
+      "description": "<p>You've been provided a body part designed for combat. You gain either a claw or pincer unarmed attack. The claw deals 1d4 slashing damage, is in the brawling group, and has the agile, finesse, and unarmed traits. The pincer deals 1d6 piercing damage, is in the brawling group, and has the grapple and unarmed traits. Your body can be reconfigured; you can select this feat at any level, and you can retrain into or out of this feat or change the type of attack you gain.</p>\n<p><strong>Enhancement</strong> Your attacking part is reinforced. Increase the damage die of the unarmed attack you gain from this feat by one step (from 1d4 to 1d6, or from 1d6 to 1d8).</p>",
+      "rules": {
+        "5": {
+          "value": {
+            "predicate": {
+              "text": {
+                "not": "enhancement:automaton-armament"
+              }
+            }
+          }
+        },
+        "6": {
+          "value": {
+            "predicate": {
+              "text": {
+                "not": "enhancement:automaton-armament"
+              }
+            }
+          }
+        }
+      }
     },
     "Automaton Lore": {
       "name": "Automaton Lore",
@@ -2688,7 +2881,16 @@
         {
           "value": "You have a versatile heritage"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:ancestry:yaoguai"
+            }
+          }
+        }
+      }
     },
     "Awesome Blow": {
       "name": "Awesome Blow",
@@ -2861,7 +3063,16 @@
         {
           "value": "Charisma +2"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:tag:bard-muse"
+            }
+          }
+        }
+      }
     },
     "Bardic Lore": {
       "name": "Bardic Lore",
@@ -2944,7 +3155,16 @@
         {
           "value": "Wizard Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Bard Spellcasting": {
       "name": "Basic Bard Spellcasting",
@@ -2971,7 +3191,16 @@
         {
           "value": "Sorcerer Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Bloodline Spell": {
       "name": "Basic Bloodline Spell",
@@ -2989,7 +3218,16 @@
         {
           "value": "Inventor Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Captivator Spellcasting": {
       "name": "Basic Captivator Spellcasting",
@@ -3025,7 +3263,16 @@
         {
           "value": "Alchemist Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Deduction": {
       "name": "Basic Deduction",
@@ -3034,7 +3281,16 @@
         {
           "value": "Investigator Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Devotion": {
       "name": "Basic Devotion",
@@ -3043,7 +3299,16 @@
         {
           "value": "Champion Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "1": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Dogma": {
       "name": "Basic Dogma",
@@ -3052,7 +3317,16 @@
         {
           "value": "Cleric Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Druid Spellcasting": {
       "name": "Basic Druid Spellcasting",
@@ -3079,7 +3353,16 @@
         {
           "value": "Swashbuckler Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Fury": {
       "name": "Basic Fury",
@@ -3088,7 +3371,16 @@
         {
           "value": "Barbarian Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "1": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Glory": {
       "name": "Basic Glory",
@@ -3097,7 +3389,16 @@
         {
           "value": "Exemplar Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "1": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Hunter's Trick": {
       "name": "Basic Hunter's Trick",
@@ -3106,7 +3407,16 @@
         {
           "value": "Ranger Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "1": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Kata": {
       "name": "Basic Kata",
@@ -3115,11 +3425,29 @@
         {
           "value": "Monk Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "1": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Lesson": {
       "name": "Basic Lesson",
-      "description": "<p>Your patron grants you a special lesson, revealing a hidden facet of its nature. Choose a basic lesson. You gain its associated hex, and your familiar learns the associated spell.</p>"
+      "description": "<p>Your patron grants you a special lesson, revealing a hidden facet of its nature. Choose a basic lesson. You gain its associated hex, and your familiar learns the associated spell.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:tag:witch-lesson"
+            }
+          }
+        }
+      }
     },
     "Basic Magus Spellcasting": {
       "name": "Basic Magus Spellcasting",
@@ -3137,7 +3465,16 @@
         {
           "value": "Fighter Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "1": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Martial Magic": {
       "name": "Basic Martial Magic",
@@ -3146,7 +3483,16 @@
         {
           "value": "Magus Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Modification": {
       "name": "Basic Modification",
@@ -3164,7 +3510,16 @@
         {
           "value": "Bard Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Mysteries": {
       "name": "Basic Mysteries",
@@ -3173,7 +3528,16 @@
         {
           "value": "Oracle Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Oracle Spellcasting": {
       "name": "Basic Oracle Spellcasting",
@@ -3230,7 +3594,16 @@
         {
           "value": "Gunslinger Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Skysage Divination": {
       "name": "Basic Skysage Divination",
@@ -3275,7 +3648,16 @@
         {
           "value": "Summoner Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Thaumaturgy": {
       "name": "Basic Thaumaturgy",
@@ -3284,7 +3666,16 @@
         {
           "value": "Thaumaturge Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Thoughtform": {
       "name": "Basic Thoughtform",
@@ -3293,7 +3684,16 @@
         {
           "value": "Psychic Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Trickery": {
       "name": "Basic Trickery",
@@ -3302,7 +3702,16 @@
         {
           "value": "Rogue Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Wilding": {
       "name": "Basic Wilding",
@@ -3311,7 +3720,16 @@
         {
           "value": "Druid Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Witch Spellcasting": {
       "name": "Basic Witch Spellcasting",
@@ -3329,7 +3747,16 @@
         {
           "value": "Witch Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "1": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Basic Wizard Spellcasting": {
       "name": "Basic Wizard Spellcasting",
@@ -4417,7 +4844,19 @@
     },
     "Bone Missile": {
       "name": "Bone Missile",
-      "description": "<p>You can remove your ribs to use them as arrows or bolts. When you draw a rib, you lose @Damage[(ternary(gte(@actor.level,19),4,ternary(gte(@actor.level,12),3,2)))[untyped]] HP, and the projectile deals 2 extra void damage if you Strike with it before the end of your next turn. The HP loss and extra damage both increase to 3 at 12th level and 4 at 19th level. Your rib cage magically replenishes, and any rib you draw crumbles to dust after being used for a Strike or at the end of your next turn, whichever comes first.</p>"
+      "description": "<p>You can remove your ribs to use them as arrows or bolts. When you draw a rib, you lose @Damage[(ternary(gte(@actor.level,19),4,ternary(gte(@actor.level,12),3,2)))[untyped]] HP, and the projectile deals 2 extra void damage if you Strike with it before the end of your next turn. The HP loss and extra damage both increase to 3 at 12th level and 4 at 19th level. Your rib cage magically replenishes, and any rib you draw crumbles to dust after being used for a Strike or at the end of your next turn, whichever comes first.</p>",
+      "rules": {
+        "1": {
+          "value": {
+            "brackets": {
+              "text": {
+                "end": 11,
+                "value": 2
+              }
+            }
+          }
+        }
+      }
     },
     "Bone Spikes": {
       "name": "Bone Spikes",
@@ -5503,7 +5942,25 @@
         {
           "value": "Angelkin, Lawbringer, Musetouched, or another lineage feat associated with celestials"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": {
+                "or": [
+                  "item:slug:clear-mind",
+                  "item:slug:sure-footing",
+                  "item:slug:share-life",
+                  "item:slug:revealing-light",
+                  "item:slug:humanoid-form",
+                  "item:slug:everlight"
+                ]
+              }
+            }
+          }
+        }
+      }
     },
     "Celestial Mercy": {
       "name": "Celestial Mercy",
@@ -5889,7 +6346,16 @@
         {
           "value": "worshipper of Lamashtu"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:ancestry:goblin"
+            }
+          }
+        }
+      }
     },
     "Chromotherapy": {
       "name": "Chromotherapy",
@@ -7407,7 +7873,16 @@
     },
     "Crossblooded Evolution": {
       "name": "Crossblooded Evolution",
-      "description": "<p>Odd interactions in your bloodline provide you with unexpected effects. Choose another @UUID[Compendium.pf2e.classfeatures.Item.2goYo6VNbwC6aKF1]{Bloodline}. You know the blood magic effect of that bloodline. If the blood magic effect has a variable effect based on a choice you would have made at 1st level (such as the elemental bloodline's elemental influence), you make that decision when you take this feat.</p>"
+      "description": "<p>Odd interactions in your bloodline provide you with unexpected effects. Choose another @UUID[Compendium.pf2e.classfeatures.Item.2goYo6VNbwC6aKF1]{Bloodline}. You know the blood magic effect of that bloodline. If the blood magic effect has a variable effect based on a choice you would have made at 1st level (such as the elemental bloodline's elemental influence), you make that decision when you take this feat.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:tag:sorcerer-bloodline"
+            }
+          }
+        }
+      }
     },
     "Crossbow Ace": {
       "name": "Crossbow Ace",
@@ -7565,7 +8040,16 @@
     },
     "Cultural Adaptability": {
       "name": "Cultural Adaptability",
-      "description": "<p>During your adventures, you've honed your ability to adapt to the culture of the predominant ancestry around you. You gain the @UUID[Compendium.pf2e.feats-srd.Item.ihN8gkHSdPG9Trte]{Adopted Ancestry} general feat, and you also gain one 1st-level ancestry feat from the ancestry you chose for the Adopted Ancestry feat.</p>"
+      "description": "<p>During your adventures, you've honed your ability to adapt to the culture of the predominant ancestry around you. You gain the @UUID[Compendium.pf2e.feats-srd.Item.ihN8gkHSdPG9Trte]{Adopted Ancestry} general feat, and you also gain one 1st-level ancestry feat from the ancestry you chose for the Adopted Ancestry feat.</p>",
+      "rules": {
+        "1": {
+          "choices": {
+            "filter": {
+              "label": "item:level:1"
+            }
+          }
+        }
+      }
     },
     "Culvert's Collapse": {
       "name": "Culvert's Collapse",
@@ -7912,7 +8396,20 @@
         {
           "value": "weapon specialization"
         }
-      ]
+      ],
+      "rules": {
+        "2": {
+          "value": {
+            "brackets": {
+              "text": {
+                "end": 10,
+                "start": 8,
+                "value": 4
+              }
+            }
+          }
+        }
+      }
     },
     "Deadly Aspect": {
       "name": "Deadly Aspect",
@@ -9196,7 +9693,16 @@
         {
           "value": "Advanced Revelation"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:trait:focus"
+            }
+          }
+        }
+      }
     },
     "Diverse Recognition": {
       "name": "Diverse Recognition",
@@ -9703,7 +10209,23 @@
         {
           "value": "Tian-Dan ethnicity"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": {
+                "or": [
+                  "item:slug:acid-splash",
+                  "item:slug:electric-arc",
+                  "item:slug:produce-flame",
+                  "item:slug:ray-of-frost"
+                ]
+              }
+            }
+          }
+        }
+      }
     },
     "Dragon Stance": {
       "name": "Dragon Stance",
@@ -10673,7 +11195,21 @@
         {
           "value": "Stonebound Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "1": {
+          "choices": {
+            "filter": {
+              "label": {
+                "lte": [
+                  "item:level",
+                  1
+                ]
+              }
+            }
+          }
+        }
+      }
     },
     "Elemental Explosion": {
       "name": "Elemental Explosion",
@@ -10781,7 +11317,16 @@
     },
     "Elf Atavism": {
       "name": "Elf Atavism",
-      "description": "<p>Your elven blood runs particularly strong, granting you features far more elven than those of a typical aiuvarin. You may also have been raised among elves, steeped in your elven ancestors' heritage. You gain the benefits of the elf heritage of your elven parent or ancestors. You typically can't select a heritage that depends on or improves an elven feature you don't have. For example, you couldn't take the @UUID[Compendium.pf2e.heritages.Item.Nd9hdX8rdYyRozw8]{Ancient Elf} heritage unless your non-elf ancestry also has a lifespan measured in multiple centuries. In these cases, at the GM's discretion, you might gain a different benefit.</p>\n<hr />\n<p><strong>Special</strong> You can take this feat only at 1st level, and you can't retrain out of this feat or into this feat.</p>"
+      "description": "<p>Your elven blood runs particularly strong, granting you features far more elven than those of a typical aiuvarin. You may also have been raised among elves, steeped in your elven ancestors' heritage. You gain the benefits of the elf heritage of your elven parent or ancestors. You typically can't select a heritage that depends on or improves an elven feature you don't have. For example, you couldn't take the @UUID[Compendium.pf2e.heritages.Item.Nd9hdX8rdYyRozw8]{Ancient Elf} heritage unless your non-elf ancestry also has a lifespan measured in multiple centuries. In these cases, at the GM's discretion, you might gain a different benefit.</p>\n<hr />\n<p><strong>Special</strong> You can take this feat only at 1st level, and you can't retrain out of this feat or into this feat.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:ancestry:elf"
+            }
+          }
+        }
+      }
     },
     "Elf Step": {
       "name": "Elf Step",
@@ -11258,7 +11803,27 @@
     },
     "Energy Beam": {
       "name": "Energy Beam",
-      "description": "<p>You can channel your core's power through the magical gem that serves as your eye. You gain an energy beam ranged unarmed attack that deals 1d4 fire damage. The energy beam has a range increment of 20 feet. On a critical hit, the target takes persistent fire damage equal to the number of weapon damage dice. Your eye beam does not add critical specialization effects.</p>\n<p><strong>Enhancement</strong> You channel greater power. Increase the damage die of your energy beam by one step, from 1d4 to 1d6.</p>"
+      "description": "<p>You can channel your core's power through the magical gem that serves as your eye. You gain an energy beam ranged unarmed attack that deals 1d4 fire damage. The energy beam has a range increment of 20 feet. On a critical hit, the target takes persistent fire damage equal to the number of weapon damage dice. Your eye beam does not add critical specialization effects.</p>\n<p><strong>Enhancement</strong> You channel greater power. Increase the damage die of your energy beam by one step, from 1d4 to 1d6.</p>",
+      "rules": {
+        "3": {
+          "value": {
+            "predicate": {
+              "text": {
+                "not": "enhancement:energy-beam"
+              }
+            }
+          }
+        },
+        "4": {
+          "value": {
+            "predicate": {
+              "text": {
+                "not": "enhancement:energy-beam"
+              }
+            }
+          }
+        }
+      }
     },
     "Energy Blessed": {
       "name": "Energy Blessed",
@@ -12523,7 +13088,22 @@
         {
           "value": "your entity is a demon"
         }
-      ]
+      ],
+      "rules": {
+        "1": {
+          "value": {
+            "brackets": {
+              "text": {
+                "end": 13,
+                "start": 8,
+                "value": {
+                  "diceNumber": 1
+                }
+              }
+            }
+          }
+        }
+      }
     },
     "Exult in Violence": {
       "name": "Exult in Violence",
@@ -13417,7 +13997,25 @@
         {
           "value": "Grimspawn, Pitborn, Hellspawn, or another lineage feat associated with fiends"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": {
+                "or": [
+                  "item:slug:paranoia",
+                  "item:slug:shatter",
+                  "item:slug:disguise-magic",
+                  "item:slug:see-the-unseen",
+                  "item:slug:false-vitality",
+                  "item:slug:invisibility"
+                ]
+              }
+            }
+          }
+        }
+      }
     },
     "Fiendish Strikes": {
       "name": "Fiendish Strikes",
@@ -14974,7 +15572,16 @@
     },
     "General Training": {
       "name": "General Training",
-      "description": "<p>Your adaptability manifests in your mastery of a range of useful abilities. You gain a 1st-level general feat. You must meet the feat's prerequisites, but if you select this feat during character creation, you can select the feat later in the process in order to determine which prerequisites you meet.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat multiple times, choosing a different feat each time.</p>"
+      "description": "<p>Your adaptability manifests in your mastery of a range of useful abilities. You gain a 1st-level general feat. You must meet the feat's prerequisites, but if you select this feat during character creation, you can select the feat later in the process in order to determine which prerequisites you meet.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat multiple times, choosing a different feat each time.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:level:1"
+            }
+          }
+        }
+      }
     },
     "General's Gambit": {
       "name": "General's Gambit",
@@ -16001,7 +16608,16 @@
     },
     "Greater Lesson": {
       "name": "Greater Lesson",
-      "description": "<p>Your patron grants you greater knowledge. Choose a greater or basic lesson. You gain its associated hex, and your familiar learns the associated spell.</p>"
+      "description": "<p>Your patron grants you greater knowledge. Choose a greater or basic lesson. You gain its associated hex, and your familiar learns the associated spell.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:tag:witch-lesson"
+            }
+          }
+        }
+      }
     },
     "Greater Magical Edification": {
       "name": "Greater Magical Edification",
@@ -16480,7 +17096,76 @@
     },
     "Hag Magic": {
       "name": "Hag Magic",
-      "description": "<p>Through your heritage, you can replicate a hag's magic. Choose one common spell of 4th rank or lower from those available to a coven, including the spells contributed to a coven by a hag of your mother's type. You can cast this spell once per day as a 4th-rank occult innate spell.</p>\n<p>Spells available to all covens are @UUID[Compendium.pf2e.spells-srd.Item.41TZEjhO6D1nWw2X]{Augury}, @UUID[Compendium.pf2e.spells-srd.Item.vLA0q0WOK2YPuJs6]{Charm}, @UUID[Compendium.pf2e.spells-srd.Item.HXhWYJviWalN5tQ2]{Clairaudience}, @UUID[Compendium.pf2e.spells-srd.Item.zvKWclOZ7A53DObE]{Clairvoyance}, @UUID[Compendium.pf2e.spells-srd.Item.yM3KTTSAIHhyuP14]{Dream Message}, and @UUID[Compendium.pf2e.spells-srd.Item.i35dpZFI7jZcRoBo]{Illusory Disguise}. The eligible spells granted by the most prominent types of hag are:</p>\n<p><strong>Cuckoo Hag</strong> @UUID[Compendium.pf2e.spells-srd.Item.Uqj344bezBq3ESdq]{Nightmare}, @UUID[Compendium.pf2e.spells-srd.Item.8Umt1AzYfFbC4fui]{Spellwrack}</p>\n<p><strong>Iron Hag</strong> @UUID[Compendium.pf2e.spells-srd.Item.gPvtmKMRpg9I9D7H]{Earthbind}, @UUID[Compendium.pf2e.spells-srd.Item.8Umt1AzYfFbC4fui]{Spellwrack}</p>\n<p><strong>Sea Hag</strong> @UUID[Compendium.pf2e.spells-srd.Item.2qGqa33E4GPUCbMV]{Humanoid Form}, @UUID[Compendium.pf2e.spells-srd.Item.z2mfh3oPnfYqXflY]{Mariner's Curse}, @UUID[Compendium.pf2e.spells-srd.Item.Seaah9amXg70RKw2]{Water Walk}</p>\n<p><strong>Sweet Hag</strong> @UUID[Compendium.pf2e.spells-srd.Item.vLA0q0WOK2YPuJs6]{Charm}, @UUID[Compendium.pf2e.spells-srd.Item.JyxTmqjYYn63V5LY]{Honeyed Words}, @UUID[Compendium.pf2e.spells-srd.Item.KSAEhNfZyXMO7Z7V]{Outcast's Curse}</p>"
+      "description": "<p>Through your heritage, you can replicate a hag's magic. Choose one common spell of 4th rank or lower from those available to a coven, including the spells contributed to a coven by a hag of your mother's type. You can cast this spell once per day as a 4th-rank occult innate spell.</p>\n<p>Spells available to all covens are @UUID[Compendium.pf2e.spells-srd.Item.41TZEjhO6D1nWw2X]{Augury}, @UUID[Compendium.pf2e.spells-srd.Item.vLA0q0WOK2YPuJs6]{Charm}, @UUID[Compendium.pf2e.spells-srd.Item.HXhWYJviWalN5tQ2]{Clairaudience}, @UUID[Compendium.pf2e.spells-srd.Item.zvKWclOZ7A53DObE]{Clairvoyance}, @UUID[Compendium.pf2e.spells-srd.Item.yM3KTTSAIHhyuP14]{Dream Message}, and @UUID[Compendium.pf2e.spells-srd.Item.i35dpZFI7jZcRoBo]{Illusory Disguise}. The eligible spells granted by the most prominent types of hag are:</p>\n<p><strong>Cuckoo Hag</strong> @UUID[Compendium.pf2e.spells-srd.Item.Uqj344bezBq3ESdq]{Nightmare}, @UUID[Compendium.pf2e.spells-srd.Item.8Umt1AzYfFbC4fui]{Spellwrack}</p>\n<p><strong>Iron Hag</strong> @UUID[Compendium.pf2e.spells-srd.Item.gPvtmKMRpg9I9D7H]{Earthbind}, @UUID[Compendium.pf2e.spells-srd.Item.8Umt1AzYfFbC4fui]{Spellwrack}</p>\n<p><strong>Sea Hag</strong> @UUID[Compendium.pf2e.spells-srd.Item.2qGqa33E4GPUCbMV]{Humanoid Form}, @UUID[Compendium.pf2e.spells-srd.Item.z2mfh3oPnfYqXflY]{Mariner's Curse}, @UUID[Compendium.pf2e.spells-srd.Item.Seaah9amXg70RKw2]{Water Walk}</p>\n<p><strong>Sweet Hag</strong> @UUID[Compendium.pf2e.spells-srd.Item.vLA0q0WOK2YPuJs6]{Charm}, @UUID[Compendium.pf2e.spells-srd.Item.JyxTmqjYYn63V5LY]{Honeyed Words}, @UUID[Compendium.pf2e.spells-srd.Item.KSAEhNfZyXMO7Z7V]{Outcast's Curse}</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": {
+                "or": [
+                  "item:slug:augury",
+                  "item:slug:charm",
+                  "item:slug:clairaudience",
+                  "item:slug:clairvoyance",
+                  "item:slug:dream-message",
+                  "item:slug:illusory-disguise",
+                  {
+                    "and": [
+                      "feat:brine-may",
+                      {
+                        "or": [
+                          "item:slug:humanoid-form",
+                          "item:slug:water-walk"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "and": [
+                      "feat:callow-may",
+                      {
+                        "or": [
+                          "item:slug:honeyed-words",
+                          "item:slug:outcasts-curse"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "and": [
+                      {
+                        "or": [
+                          "feat:dream-may",
+                          "feat:veil-may"
+                        ]
+                      },
+                      "item:slug:nightmare"
+                    ]
+                  },
+                  {
+                    "and": [
+                      "feat:slag-may",
+                      "item:slug:earthbind"
+                    ]
+                  },
+                  {
+                    "and": [
+                      "feat:snow-may",
+                      "item:slug:solid-fog"
+                    ]
+                  },
+                  {
+                    "and": [
+                      "feat:virga-may",
+                      "item:slug:hydraulic-torrent"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
     },
     "Hag's Sight": {
       "name": "Hag's Sight",
@@ -18827,7 +19512,27 @@
     },
     "Integrated Armament": {
       "name": "Integrated Armament",
-      "description": "<p>Your mechanical body houses a weapon or shield that you can quickly draw and stow, leaving you prepared for combat at all times.</p>\n<p>You can use a 1-minute activity, which has the manipulate trait, to integrate a single, one-handed weapon or shield into one of your arms. You can draw or stow this item as an Interact action. Creatures don't automatically see this integrated item when it's stowed and must actively @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seek} in order to find it. They take a –2 circumstance penalty to any checks to do so. While you are wielding the item, it can't be Disarmed and you can't drop or Release it; you must Interact to store the weapon and free that hand. A creature determined to retrieve the item can do so, but it requires either 1 minute to remove it or extreme violence to your arm—such as physically removing portions of the limb. You can only have one integrated armament at a time, though you can use the 1-minute activity to replace the item or swap the arm in which it's stored.</p>\n<p><strong>Enhancement</strong> Your body has more space for integration. You can now either integrate two one-handed weapons, a one-handed weapon and a shield, or a single two-handed weapon which is split across both arms. You can use a single Interact action to draw or store both integrated armaments. When you draw a single weapon, you can choose to hold it with either one hand or both hands.</p>"
+      "description": "<p>Your mechanical body houses a weapon or shield that you can quickly draw and stow, leaving you prepared for combat at all times.</p>\n<p>You can use a 1-minute activity, which has the manipulate trait, to integrate a single, one-handed weapon or shield into one of your arms. You can draw or stow this item as an Interact action. Creatures don't automatically see this integrated item when it's stowed and must actively @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seek} in order to find it. They take a –2 circumstance penalty to any checks to do so. While you are wielding the item, it can't be Disarmed and you can't drop or Release it; you must Interact to store the weapon and free that hand. A creature determined to retrieve the item can do so, but it requires either 1 minute to remove it or extreme violence to your arm—such as physically removing portions of the limb. You can only have one integrated armament at a time, though you can use the 1-minute activity to replace the item or swap the arm in which it's stored.</p>\n<p><strong>Enhancement</strong> Your body has more space for integration. You can now either integrate two one-handed weapons, a one-handed weapon and a shield, or a single two-handed weapon which is split across both arms. You can use a single Interact action to draw or store both integrated armaments. When you draw a single weapon, you can choose to hold it with either one hand or both hands.</p>",
+      "rules": {
+        "0": {
+          "value": {
+            "predicate": {
+              "text": {
+                "not": "enhancement:integrated-armament"
+              }
+            }
+          }
+        },
+        "1": {
+          "value": {
+            "predicate": {
+              "text": {
+                "not": "enhancement:integrated-armament"
+              }
+            }
+          }
+        }
+      }
     },
     "Intense Implement": {
       "name": "Intense Implement",
@@ -19290,7 +19995,16 @@
         {
           "value": "Student of Perfection Dedication, or you've trained with a champion of the Challenge of Sky and Heaven"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:trait:monk"
+            }
+          }
+        }
+      }
     },
     "Jalmeri Rakshasa Magic": {
       "name": "Jalmeri Rakshasa Magic",
@@ -19616,7 +20330,16 @@
         {
           "value": "Constitution +2"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:tag:kineticist-kinetic-gate"
+            }
+          }
+        }
+      }
     },
     "Kip Up": {
       "name": "Kip Up",
@@ -19990,7 +20713,16 @@
         {
           "value": "You have a versatile heritage."
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:ancestry:awakened-animal"
+            }
+          }
+        }
+      }
     },
     "Laughing Kholo": {
       "name": "Laughing Kholo",
@@ -21306,7 +22038,27 @@
     },
     "Magical Resistance": {
       "name": "Magical Resistance",
-      "description": "<p>Your animating magic provides some defense. Choose one of the following energy damage types: cold, electricity, or sonic. You gain resistance 5 to that damage type.</p>\n<p><strong>Enhancement</strong> You tap deeper into your animating magic, and your resistances improve. Choose one of the following benefits: you gain resistance 5 to the remaining two damage types from the above list, or your chosen resistance increases to a value equal to 1 + half your level.</p>"
+      "description": "<p>Your animating magic provides some defense. Choose one of the following energy damage types: cold, electricity, or sonic. You gain resistance 5 to that damage type.</p>\n<p><strong>Enhancement</strong> You tap deeper into your animating magic, and your resistances improve. Choose one of the following benefits: you gain resistance 5 to the remaining two damage types from the above list, or your chosen resistance increases to a value equal to 1 + half your level.</p>",
+      "rules": {
+        "1": {
+          "value": {
+            "predicate": {
+              "text": {
+                "not": "enhancement:magical-resistance"
+              }
+            }
+          }
+        },
+        "2": {
+          "value": {
+            "predicate": {
+              "text": {
+                "not": "enhancement:magical-resistance"
+              }
+            }
+          }
+        }
+      }
     },
     "Magical Scholastics": {
       "name": "Magical Scholastics",
@@ -21409,7 +22161,16 @@
     },
     "Major Lesson": {
       "name": "Major Lesson",
-      "description": "<p>Your patron grants you even greater secrets. Choose a major, greater, or basic lesson. You gain its associated hex, and your familiar learns the associated spell.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat a second time if you're 14th level or higher, and a third time if you're 18th level or higher. Choose a different lesson each time.</p>"
+      "description": "<p>Your patron grants you even greater secrets. Choose a major, greater, or basic lesson. You gain its associated hex, and your familiar learns the associated spell.</p>\n<hr />\n<p><strong>Special</strong> You can select this feat a second time if you're 14th level or higher, and a third time if you're 18th level or higher. Choose a different lesson each time.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:tag:witch-lesson"
+            }
+          }
+        }
+      }
     },
     "Make 'Em Sweat": {
       "name": "Make 'Em Sweat",
@@ -22447,7 +23208,43 @@
         {
           "value": "budding speaker centaur heritage or Speaker in Training"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": {
+                "or": [
+                  {
+                    "and": [
+                      "centaur-speaker:faithspeaker",
+                      {
+                        "or": [
+                          "item:slug:angel-form",
+                          "item:slug:daemon-form",
+                          "item:slug:demon-form",
+                          "item:slug:devil-form"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "and": [
+                      "centaur-speaker:greenspeaker",
+                      {
+                        "or": [
+                          "item:slug:elemental-form",
+                          "item:slug:plant-form"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
     },
     "Mesmerizing Gaze": {
       "name": "Mesmerizing Gaze",
@@ -22524,7 +23321,25 @@
         {
           "value": "Aeonbound"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": {
+                "or": [
+                  "item:slug:calm",
+                  "item:slug:dispel magic",
+                  "item:slug:lock",
+                  "item:slug:mending",
+                  "item:slug:shape-wood",
+                  "item:slug:translate"
+                ]
+              }
+            }
+          }
+        }
+      }
     },
     "Meticulous Restorer": {
       "name": "Meticulous Restorer",
@@ -23058,7 +23873,21 @@
         {
           "value": "master in Religion or your deity's divine skill"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": {
+                "or": [
+                  "item:category:deity",
+                  "item:category:pantheon"
+                ]
+              }
+            }
+          }
+        }
+      }
     },
     "Mortification": {
       "name": "Mortification",
@@ -23146,7 +23975,23 @@
     },
     "Multifarious Muse": {
       "name": "Multifarious Muse",
-      "description": "<p>Your muse doesn't fall into a single label. Choose a type of muse other than that of your own. You gain a 1st-level feat that requires that muse, and your muse is now also a muse of that type, allowing you to take feats with the other muse as a prerequisite. You don't gain any of the other effects of the muse you chose.</p>\n<hr />\n<p><strong>Special</strong> You can take this feat multiple times. Each time you do, you must choose a different type of muse other than that of your own.</p>"
+      "description": "<p>Your muse doesn't fall into a single label. Choose a type of muse other than that of your own. You gain a 1st-level feat that requires that muse, and your muse is now also a muse of that type, allowing you to take feats with the other muse as a prerequisite. You don't gain any of the other effects of the muse you chose.</p>\n<hr />\n<p><strong>Special</strong> You can take this feat multiple times. Each time you do, you must choose a different type of muse other than that of your own.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:tag:bard-muse"
+            }
+          }
+        },
+        "1": {
+          "choices": {
+            "filter": {
+              "label": "item:level:1"
+            }
+          }
+        }
+      }
     },
     "Multilingual": {
       "name": "Multilingual",
@@ -23186,7 +24031,16 @@
     },
     "Multitalented": {
       "name": "Multitalented",
-      "description": "<p>You've learned to split your focus between multiple classes with ease. You gain a 2nd-level multiclass dedication feat, even if you normally couldn't take another dedication feat until you take more feats from your current archetype.</p>\n<p>If you have the aiuvarin versatile heritage, you don't need to meet the feat's attribute modifier prerequisites.</p>"
+      "description": "<p>You've learned to split your focus between multiple classes with ease. You gain a 2nd-level multiclass dedication feat, even if you normally couldn't take another dedication feat until you take more feats from your current archetype.</p>\n<p>If you have the aiuvarin versatile heritage, you don't need to meet the feat's attribute modifier prerequisites.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:level:2"
+            }
+          }
+        }
+      }
     },
     "Mummy Dedication": {
       "name": "Mummy Dedication",
@@ -23544,7 +24398,16 @@
     },
     "Natural Ambition": {
       "name": "Natural Ambition",
-      "description": "<p>You were raised to be ambitious and always reach for the stars, leading you to progress quickly in your chosen field. You gain a 1st-level class feat for your class. You must meet the prerequisites, but you can select the feat later in the character creation process in order to determine which prerequisites you meet.</p>"
+      "description": "<p>You were raised to be ambitious and always reach for the stars, leading you to progress quickly in your chosen field. You gain a 1st-level class feat for your class. You must meet the prerequisites, but you can select the feat later in the character creation process in order to determine which prerequisites you meet.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:level:1"
+            }
+          }
+        }
+      }
     },
     "Natural Conduit": {
       "name": "Natural Conduit",
@@ -23595,7 +24458,23 @@
     },
     "Natural Skill": {
       "name": "Natural Skill",
-      "description": "<p>Your ingenuity allows you to learn a wide variety of skills. You gain the trained proficiency rank in two skills of your choice.</p>"
+      "description": "<p>Your ingenuity allows you to learn a wide variety of skills. You gain the trained proficiency rank in two skills of your choice.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "predicate": {
+              "label": "skill:{choice|value}:rank:0"
+            }
+          }
+        },
+        "2": {
+          "choices": {
+            "predicate": {
+              "label": "skill:{choice|value}:rank:0"
+            }
+          }
+        }
+      }
     },
     "Natural Swimmer": {
       "name": "Natural Swimmer",
@@ -24411,7 +25290,19 @@
         {
           "value": "Acrobat, Celebrity, Dandy, or Gladiator Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "value": {
+            "brackets": {
+              "text": {
+                "start": 1,
+                "value": 3
+              }
+            }
+          }
+        }
+      }
     },
     "Opportune Backstab": {
       "name": "Opportune Backstab",
@@ -24496,7 +25387,16 @@
     },
     "Order Explorer": {
       "name": "Order Explorer",
-      "description": "<p>You have learned the secrets of another druidic order, passing whatever rites of initiation that order requires and gaining access to its secrets. Choose an order other than your own. You gain a 1st-level feat that lists that order as a prerequisite, and you are now a member of that order for the purpose of meeting feat prerequisites. If you commit acts anathema to your new order, you lose all feats and abilities requiring that order but retain your other druid feats and abilities. You don't gain any of the other benefits of the order you chose.</p>\n<hr />\n<p><strong>Special</strong> You can take this feat multiple times. Each time you do, you must choose a different order other than your own.</p>"
+      "description": "<p>You have learned the secrets of another druidic order, passing whatever rites of initiation that order requires and gaining access to its secrets. Choose an order other than your own. You gain a 1st-level feat that lists that order as a prerequisite, and you are now a member of that order for the purpose of meeting feat prerequisites. If you commit acts anathema to your new order, you lose all feats and abilities requiring that order but retain your other druid feats and abilities. You don't gain any of the other benefits of the order you chose.</p>\n<hr />\n<p><strong>Special</strong> You can take this feat multiple times. Each time you do, you must choose a different order other than your own.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:tag:druid-order"
+            }
+          }
+        }
+      }
     },
     "Order Magic": {
       "name": "Order Magic",
@@ -25031,7 +25931,32 @@
     },
     "Parallel Breakthrough": {
       "name": "Parallel Breakthrough",
-      "description": "<p>You expand your mind beyond your area of psychic specialty. You gain a 1st-level psi cantrip for a conscious mind other than your own; this can be either the unique surface cantrip or one of the common cantrips and the accompanying amp. If you choose a common cantrip, you also gain the special benefit granted by that conscious mind when casting the cantrip without an amp. You don't gain any other benefits of that conscious mind, such as additional spells known.</p>"
+      "description": "<p>You expand your mind beyond your area of psychic specialty. You gain a 1st-level psi cantrip for a conscious mind other than your own; this can be either the unique surface cantrip or one of the common cantrips and the accompanying amp. If you choose a common cantrip, you also gain the special benefit granted by that conscious mind when casting the cantrip without an amp. You don't gain any other benefits of that conscious mind, such as additional spells known.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": {
+                "or": [
+                  "item:slug:daze",
+                  "item:slug:detect-magic",
+                  "item:slug:figment",
+                  "item:slug:frostbite",
+                  "item:slug:guidance",
+                  "item:slug:ignition",
+                  "item:slug:message",
+                  "item:slug:phase-bolt",
+                  "item:slug:shield",
+                  "item:slug:telekinetic-hand",
+                  "item:slug:telekinetic-projectile",
+                  "item:slug:warp-step",
+                  "item:trait:psychic"
+                ]
+              }
+            }
+          }
+        }
+      }
     },
     "Paralyzing Jewel": {
       "name": "Paralyzing Jewel",
@@ -25435,7 +26360,16 @@
         {
           "value": "expert in at least one saving throw"
         }
-      ]
+      ],
+      "rules": {
+        "1": {
+          "choices": {
+            "predicate": {
+              "label": "save:{choice|value}:rank:2"
+            }
+          }
+        }
+      }
     },
     "Performance Weapon Expert": {
       "name": "Performance Weapon Expert",
@@ -28279,7 +29213,27 @@
     },
     "Reinforced Chassis": {
       "name": "Reinforced Chassis",
-      "description": "<p>Your body is designed to be particularly resilient. Your chassis is made from reinforced armor plating that grants a +3 item bonus to AC with a Dexterity cap of +1. If you are at least 5th level, the item bonus increases to +4 and at 10th level it increases to +5. You can never wear other armor or remove your chassis; however, you still don't become @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued} from sleeping. You can etch armor runes onto your chassis.</p>\n<p><strong>Enhancement</strong> Your chassis becomes difficult to overcome. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.uOlyklPCUWLtCaYI]{Chassis Deflection} reaction.</p>"
+      "description": "<p>Your body is designed to be particularly resilient. Your chassis is made from reinforced armor plating that grants a +3 item bonus to AC with a Dexterity cap of +1. If you are at least 5th level, the item bonus increases to +4 and at 10th level it increases to +5. You can never wear other armor or remove your chassis; however, you still don't become @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued} from sleeping. You can etch armor runes onto your chassis.</p>\n<p><strong>Enhancement</strong> Your chassis becomes difficult to overcome. You gain the @UUID[Compendium.pf2e.actionspf2e.Item.uOlyklPCUWLtCaYI]{Chassis Deflection} reaction.</p>",
+      "rules": {
+        "2": {
+          "value": {
+            "predicate": {
+              "text": {
+                "not": "enhancement:reinforced-chassis"
+              }
+            }
+          }
+        },
+        "3": {
+          "value": {
+            "predicate": {
+              "text": {
+                "not": "enhancement:reinforced-chassis"
+              }
+            }
+          }
+        }
+      }
     },
     "Rejoice in Solstice Storm": {
       "name": "Rejoice in Solstice Storm",
@@ -29266,7 +30220,16 @@
         {
           "value": "Dexterity +2"
         }
-      ]
+      ],
+      "rules": {
+        "3": {
+          "choices": {
+            "filter": {
+              "label": "item:trait:skill"
+            }
+          }
+        }
+      }
     },
     "Roiling Mudslide": {
       "name": "Roiling Mudslide",
@@ -29503,7 +30466,16 @@
     },
     "Runtsage": {
       "name": "Runtsage",
-      "description": "<p>Unlike most of your kind, who dismiss goblins as embarrassments or expendable annoyances, you have studied the methodology behind their irresponsible and incomprehensible actions. You gain the @UUID[Compendium.pf2e.feats-srd.Item.ihN8gkHSdPG9Trte]{Adopted Ancestry} general feat and must select goblin as the feat's chosen ancestry. You also gain one 1st-level goblin ancestry feat.</p>"
+      "description": "<p>Unlike most of your kind, who dismiss goblins as embarrassments or expendable annoyances, you have studied the methodology behind their irresponsible and incomprehensible actions. You gain the @UUID[Compendium.pf2e.feats-srd.Item.ihN8gkHSdPG9Trte]{Adopted Ancestry} general feat and must select goblin as the feat's chosen ancestry. You also gain one 1st-level goblin ancestry feat.</p>",
+      "rules": {
+        "1": {
+          "choices": {
+            "filter": {
+              "label": "item:level:1"
+            }
+          }
+        }
+      }
     },
     "Rupture Stomp": {
       "name": "Rupture Stomp",
@@ -29994,6 +30966,11 @@
       "description": "<p>The long and complicated history of your bloodline manifests in your ability to draw power from more planar sources than most other nephilim. Choose one nephilim lineage feat that you do not already possess; you gain that feat and all of its benefits, even if you already took a lineage feat at 1st level.</p>",
       "rules": {
         "0": {
+          "choices": {
+            "filter": {
+              "label": "item:trait:lineage"
+            }
+          },
           "prompt": "Pick a lineage feat"
         }
       }
@@ -30242,7 +31219,16 @@
         {
           "value": "Exemplar Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "1": {
+          "choices": {
+            "filter": {
+              "label": "item:tag:exemplar-ikon"
+            }
+          }
+        }
+      }
     },
     "Second Shield": {
       "name": "Second Shield",
@@ -30267,7 +31253,16 @@
     },
     "Secondary Adaptation": {
       "name": "Secondary Adaptation",
-      "description": "<p>You've continued to adapt to the rigors of your environment by continuing your metamorphosis, even as an adult. Choose one surki heritage that you don't already have; you gain that heritage and its benefits.</p>"
+      "description": "<p>You've continued to adapt to the rigors of your environment by continuing your metamorphosis, even as an adult. Choose one surki heritage that you don't already have; you gain that heritage and its benefits.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:ancestry:surki"
+            }
+          }
+        }
+      }
     },
     "Secondary Detonation Array": {
       "name": "Secondary Detonation Array",
@@ -31840,7 +32835,16 @@
         {
           "value": "trained in at least one skill and expert in at least one skill"
         }
-      ]
+      ],
+      "rules": {
+        "4": {
+          "choices": {
+            "filter": {
+              "label": "item:trait:skill"
+            }
+          }
+        }
+      }
     },
     "Skill Mastery (Rogue)": {
       "name": "Skill Mastery (Rogue)",
@@ -31852,7 +32856,16 @@
         {
           "value": "trained in at least one skill and expert in at least one skill"
         }
-      ]
+      ],
+      "rules": {
+        "4": {
+          "choices": {
+            "filter": {
+              "label": "item:trait:skill"
+            }
+          }
+        }
+      }
     },
     "Skill Training": {
       "name": "Skill Training",
@@ -31861,7 +32874,16 @@
         {
           "value": "Intelligence +1"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "predicate": {
+              "label": "skill:{choice|value}:rank:0"
+            }
+          }
+        }
+      }
     },
     "Skilled Climber": {
       "name": "Skilled Climber",
@@ -33334,7 +34356,16 @@
         {
           "value": "Animist Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Spiritual Disruption": {
       "name": "Spiritual Disruption",
@@ -34993,7 +36024,16 @@
     },
     "Surki Weapon Familiarity": {
       "name": "Surki Weapon Familiarity",
-      "description": "<p>Surki weapons favor utility and practicality over grace and brutality. You have familiarity with picks, light hammers, sickles, scythes, and one additional common weapon of your choice from the axe or hammer group—for the purposes of proficiency, you treat any of these that are martial weapons as simple weapons and any that are advanced weapons as martial weapons.</p>\n<p>At 5th level, whenever you get a critical hit with one of these weapons, you get its critical specialization effect.</p>"
+      "description": "<p>Surki weapons favor utility and practicality over grace and brutality. You have familiarity with picks, light hammers, sickles, scythes, and one additional common weapon of your choice from the axe or hammer group—for the purposes of proficiency, you treat any of these that are martial weapons as simple weapons and any that are advanced weapons as martial weapons.</p>\n<p>At 5th level, whenever you get a critical hit with one of these weapons, you get its critical specialization effect.</p>",
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:rarity:common"
+            }
+          }
+        }
+      }
     },
     "Surprise Attack": {
       "name": "Surprise Attack",
@@ -36111,7 +37151,16 @@
         {
           "value": "Charisma +2"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:tag:thaumaturge-implement"
+            }
+          }
+        }
+      }
     },
     "Thaumaturge's Demesne": {
       "name": "Thaumaturge's Demesne",
@@ -36384,7 +37433,16 @@
         {
           "value": "Kineticist Dedication"
         }
-      ]
+      ],
+      "rules": {
+        "0": {
+          "choices": {
+            "filter": {
+              "label": "item:category:class"
+            }
+          }
+        }
+      }
     },
     "Through the Needle's Eye": {
       "name": "Through the Needle's Eye",
@@ -36471,7 +37529,21 @@
         {
           "value": "Tiger Stance"
         }
-      ]
+      ],
+      "rules": {
+        "1": {
+          "value": {
+            "brackets": {
+              "text": {
+                "end": 13,
+                "value": {
+                  "diceNumber": 2
+                }
+              }
+            }
+          }
+        }
+      }
     },
     "Tiger Stance": {
       "name": "Tiger Stance",
@@ -37945,7 +39017,15 @@
       "description": "<p>Your work as an investigator makes you familiar with the criminal element. You might be a criminal yourself, or you might have gained an understanding of how they operate from the outside. You become trained in Underworld Lore, and you gain your Pursue a Lead investigation bonus to Thievery checks to investigate a case (such as checks to @UUID[Compendium.pf2e.actionspf2e.Item.RDXXE7wMrSPCLv5k]{Steal} a clue from a suspect or Pick a Lock to open a safe with damning documents).</p>",
       "rules": {
         "0": {
-          "label": "Pursue a Lead (Underworld Investigator)"
+          "label": "Pursue a Lead (Underworld Investigator)",
+          "value": {
+            "brackets": {
+              "text": {
+                "end": 8,
+                "value": 1
+              }
+            }
+          }
         }
       }
     },
@@ -38870,7 +39950,21 @@
     },
     "Vicious Swing": {
       "name": "Vicious Swing",
-      "description": "<p>You unleash a particularly powerful attack that clobbers your foe but leaves you a bit unsteady. Make a melee Strike. This counts as two attacks when calculating your multiple attack penalty. If this Strike hits, you deal an extra die of weapon damage. If you're at least 10th level, increase this to two extra dice, and if you're at least 18th level, increase it to three extra dice.</p>"
+      "description": "<p>You unleash a particularly powerful attack that clobbers your foe but leaves you a bit unsteady. Make a melee Strike. This counts as two attacks when calculating your multiple attack penalty. If this Strike hits, you deal an extra die of weapon damage. If you're at least 10th level, increase this to two extra dice, and if you're at least 18th level, increase it to three extra dice.</p>",
+      "rules": {
+        "0": {
+          "value": {
+            "brackets": {
+              "text": {
+                "end": 9,
+                "value": {
+                  "diceNumber": 1
+                }
+              }
+            }
+          }
+        }
+      }
     },
     "Vicious Vengeance": {
       "name": "Vicious Vengeance",
