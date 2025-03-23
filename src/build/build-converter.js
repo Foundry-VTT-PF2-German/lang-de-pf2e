@@ -1,6 +1,7 @@
 import { readdirSync } from "fs";
 import { getConfigParameter, readJSONFile } from "../helper/src/build/config-helper.js";
 import { sluggify } from "../helper/src/util/utilities.js";
+import { resolvePath } from "path-value";
 
 const BLACKLIST_PREFIX = "block:";
 
@@ -85,6 +86,39 @@ export const convertJournals = (journalObject) => {
 
     const featsTranslated = readJSONFile("./translation/de/compendium/pf2e.feats-srd.json");
 
+    // Build list of domains
+    const deitiesMap = readSystemMap("deities");
+    const domains = {};
+    for (const [deityKey, deityData] of deitiesMap) {
+        for (const type of ["primary", "alternate"]) {
+            if (resolvePath(deityData, `system.domains.${type}`).exists) {
+                for (const deityDomain of deityData.system.domains[type]) {
+                    // Start Sonderlogik alte Domänen
+                    let domainName = deityDomain;
+                    if (domainName === "void") {
+                        domainName = "nothingness";
+                    }
+                    if (domainName === "wyrmkin") {
+                        domainName = "dragon";
+                    }
+                    if (domainName === "delirium") {
+                        domainName = "disorientation";
+                    }
+                    // Ende Sonderlogik alte Domänen
+                    domains[domainName] = domains[domainName] || {
+                        deity: { primary: [], alternate: [] },
+                        pantheon: { primary: [], alternate: [] },
+                        covenant: { primary: [], alternate: [] },
+                    };
+                    domains[domainName][deityData.system.category][type].push(
+                        `@UUID[Compendium.pf2e.deities.Item.${deityData._id}]`
+                    );
+                }
+            }
+        }
+    }
+    //console.warn(domains);
+
     const recursiveJournalHandling = (object) => {
         if (Array.isArray(object)) {
             for (const innerObject of object) {
@@ -92,6 +126,38 @@ export const convertJournals = (journalObject) => {
             }
         } else if (typeof object === "object" && object !== null) {
             if (object.text) {
+                // Domain conversion
+                object.text = object.text.replaceAll(/<([^<> ]+) domain>/g, (match, domName) => {
+                    let result = "";
+                    if (domains[domName]) {
+                        result += "<hr />";
+                        // Add deities
+                        for (const type of ["deity", "covenant", "pantheon"]) {
+                            if (
+                                domains[domName][type].primary.length > 0 ||
+                                domains[domName][type].alternate.length > 0
+                            ) {
+                                if (type === "deity") {
+                                    result += `<h2>Gottheiten</h2>\n`;
+                                } else if (type === "covenant") {
+                                    result += `<h2>Bündnisse</h2>\n`;
+                                } else {
+                                    result += `<h2>Pantheons</h2>\n`;
+                                }
+                            }
+                            if (domains[domName][type].primary.length > 0) {
+                                result += `<p>${domains[domName][type].primary.join(", ")}</p>\n`;
+                            }
+                            if (domains[domName][type].alternate.length > 0) {
+                                result += `<p><em>Alternative Domänen</em></p>\n`;
+                                result += `<p>${domains[domName][type].alternate.join(", ")}</p>\n`;
+                            }
+                        }
+                    }
+                    return result;
+                });
+
+                // Archetype conversion
                 object.text = object.text.replaceAll(/<([^<>]*)>/g, (match, featsString) => {
                     const startingPoints = featsString.split(";");
                     const feats = [];
