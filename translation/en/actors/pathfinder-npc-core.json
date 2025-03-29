@@ -35,7 +35,7 @@
         },
         "action->Divine Protection": {
           "name": "Divine Protection",
-          "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p><strong>Effect</strong> The abbot beseeches their deity to protect someone in their charge, attempting a @Check[religion|dc:25] check. If it succeeds, a divine @UUID[Compendium.pf2e.spells-srd.8xRzLhwGL7Dgy3EZ]{Sanctuary} spell affects one of the abbot's allies within 60 feet. The Will DC is 17.</p>"
+          "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p><strong>Effect</strong> The abbot beseeches their deity to protect someone in their charge, attempting a @Check[religion|dc:25] check. If it succeeds, a divine @UUID[Compendium.pf2e.spells-srd.Item.8xRzLhwGL7Dgy3EZ]{Sanctuary} spell affects one of the abbot's allies within 60 feet. The Will DC is 17.</p>"
         }
       }
     },
@@ -237,7 +237,7 @@
         },
         "action->Linguistic Mastery": {
           "name": "Linguistic Mastery",
-          "description": "<p>The translator gains a +5 circumstance bonus to skill checks involving translating or deciphering languages. If the translator rolls a critical failure on a check to Decipher Writing, they get a failure instead.</p>"
+          "description": "<p>The translator gains a +5 circumstance bonus to skill checks involving translating or deciphering languages. If the translator rolls a critical failure on a check to @UUID[Compendium.pf2e.actionspf2e.Item.d9gbpiQjChYDYA2L]{Decipher Writing}, they get a failure instead.</p>"
         },
         "action->Translation Specialist": {
           "name": "Translation Specialist",
@@ -317,11 +317,7 @@
         "action->Apprentice's Ambition": {
           "name": "Apprentice's Ambition",
           "description": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Requirements</strong> A direct superior is supervising the apprentice</p>\n<hr />\n<p><strong>Effect</strong> The apprentice gains a +2 circumstance bonus to attack rolls, damage rolls, saving throws, and skill checks until the end of their next turn.</p>",
-          "rules": {
-            "0": {
-              "label": "Supervised by a direct superior"
-            }
-          }
+          "selfEffect": "Effect: Apprentice's Ambition"
         },
         "lore->Geography Lore": {
           "name": "Geography Lore"
@@ -399,21 +395,20 @@
       "name": "Arrester Squadron",
       "publicNotes": "<p>These guards have been extensively trained to perform complex maneuvers together. They are sent to capture accused criminals believed to be especially dangerous (whether due to their own abilities or due to their allies).</p>\n<hr />\n<p>Larger societies rely on those with the authority and the ability to interpret and enforce laws. Some carry out these duties fairly, but others are harsh and cruel, imposing severe punishments on anyone unable to pay for clemency.</p>",
       "speed": "troop movement",
-      "tokenName": "Arrestor Squadron",
       "items": {
         "action->Troop Defenses": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 135 (4 segments), 90 (3 segments), 45 (2 segments);</p>\n<p>Troops are composed of many individuals, represented by four \"segments\" on a battle grid. Each segment is 10 feet on each side and as tall as the individual members of the troop. Segments must remain contiguous. Each one has to share at least 5 feet of one of its edges with another segment—being adjacent on a diagonal isn't sufficient! You can measure flanking, cover, and the like using the center of any segment.</p>\n<p>A troop has two Hit Point thresholds in its HP entry and loses segments as it crosses thresholds. Typically, the higher threshold is at 2/3 of the troop's maximum Hit Points and the lower is at 1/3 of its maximum. Once the troop drops below the higher threshold, it loses one segment, leaving three segments (12 squares) remaining and setting the first threshold as the troop's new maximum Hit Points. This repeats when the troop drops below the lower threshold, leaving two segments (8 squares). At 0 Hit Points, the troop disperses entirely, with the few remaining members surrendering, @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing}, or easily dispatched, as determined by the GM. Typically the creature who caused the troop to lose a segment decides which to remove, or the GM decides when a specific creature wasn't responsible. To restore lost segments and maximum Hit Points, a troop needs to spend downtime to use long-term treatment on casualties or recruit new members to replace the fallen.</p>\n<p>Troops are typically immune to non-damaging effects that target a single creature, such as a charm spell or the @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} action. An ability that can target 5 or more creatures can target an entire segment, increasing to two segments if it can target 10 or more creatures and to the entire troop if it can target 20 or more creatures. An ability that affects all creatures in a certain range affects all segments in range (make any checks or saves separately for each segment). As examples, an 8thrank charm spell (with 10 targets) can affect two segments, and an ability that Demoralizes all creatures within 30 feet of you would affect all segments that are fully within that range. A non-damaging ability that would prevent a segment from acting, cause them to flee, or otherwise make them unable to function as part of the troop for a round or more removes the segment entirely. The troop loses a number of HP required to bring it to the next threshold. If an ability both deals damage and has a non-damaging effect, apply the damage then the rest of the effect.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 90 (3 segments), 45 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Troop Movement": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.MXI6zwrvbQNIv7ji]\n<p>Whenever a troop moves, you move one of its segments and the other segments follow behind it. At the end of the movement, you can group the other segments adjacent to the one you moved as you see fit, provided none of them moves farther than the moving segment. If you choose not to move the troop any distance, you can instead reshape the position of all the segments as long as one stays in place.</p>"
         },
         "action->Coordinated Step": {
           "name": "Coordinated Step",
-          "description": "<p>The arrester squadron @UUID[Compendium.pf2e.actionspf2e.Item.UHpkTuCtyaPqiCAB]{Steps} twice.</p>"
+          "description": "<p>The arrester squadron Steps twice.</p>"
         },
         "action->Fire Longbows!": {
           "name": "Fire Longbows!",
-          "description": "<p>The arrester squadron fire a coordinated volley with their longbows against each enemy in a @Template[type:burst|distance:10] within 150 feet that deals @Damage[3d8[piercing]] damage with a @Check[reflex|dc:23|basic] save. When the arresters are reduced to 2 or fewer segments, this area decreases to a @Template[type:burst|distance:5].</p>"
+          "description": "<p>The arrester squadron fire a coordinated volley with their longbows against each enemy in a @Template[type:burst|distance:10] within 150 feet that deals @Damage[3d8[piercing]|options:area-damage] damage with a @Check[reflex|dc:23|basic|options:area-effect] save. When the arresters are reduced to 2 or fewer segments, this area decreases to a @Template[type:burst|distance:5].</p>"
         },
         "action->Seize Them!": {
           "name": "Seize Them!",
@@ -498,8 +493,8 @@
           "name": "Nimble Dodge",
           "description": "<p><strong>Trigger</strong> The assassin is targeted with a melee or ranged attack by an attacker they can see.</p>\n<hr />\n<p><strong>Effect</strong> The assassin gains a +2 circumstance bonus to AC against the triggering attack.</p>"
         },
-        "action->Assassin’s Poison": {
-          "name": "Assassin’s Poison",
+        "action->Assassin's Poison": {
+          "name": "Assassin's Poison",
           "description": "<p><strong>Requirements</strong> The assassin is wielding a piercing or slashing weapon and has a free hand</p>\n<hr />\n<p><strong>Effect</strong> The assassin applies a poison to the weapon. That poison's DC is increased to 24 if it was lower.</p>"
         },
         "action->Quick Draw": {
@@ -581,8 +576,8 @@
         "lore->Academia Lore": {
           "name": "Academia Lore"
         },
-        "lore->one additional Lore": {
-          "name": "one additional Lore"
+        "lore->One Additional Lore": {
+          "name": "One Additional Lore"
         }
       }
     },
@@ -638,7 +633,8 @@
           "description": "<p>When the troop rolls initiative using Deception or Stealth, they can use Stand and Deliver! as a free action.</p>"
         },
         "action->Troop Defenses": {
-          "name": "Troop Defenses"
+          "name": "Troop Defenses",
+          "description": "<p><strong>Thresholds</strong> 80 (3 segments), 40 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Chop 'em Down!": {
           "name": "Chop 'em Down!",
@@ -799,17 +795,17 @@
         },
         "action->Stab it! Stab it! Stab it!": {
           "name": "Stab it! Stab it! Stab it!",
-          "description": "<p>The big boss goblin picks a target they can see within 30 feet and orders any allied goblins to attack. A single goblin with a lower level than the big boss goblin that is adjacent to the target can immediately use their reaction to Strike the target. In addition, until the start of the big boss goblin's next turn, their attacks against that target deal 1 additional damage dice as the big boss goblin leads them.</p>"
+          "description": "<p>The big boss goblin picks a target they can see within 30 feet and orders any allied goblins to attack. A single goblin with a lower level than the big boss goblin that is adjacent to the target can immediately use their reaction to Strike the target. In addition, until the start of the big boss goblin's next turn, their attacks against that target deal 1 additional damage dice as the big boss goblin leads them.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.Sv99eNoXedd9Zw26]{Effect: Stab it! Stab it! Stab it!}</p>"
         }
       }
     },
     "Bill-Band": {
       "name": "Bill-Band",
-      "hpDetails": " (4 segments); Thresholds 60 (3 segments), 30 (2 segments)",
+      "hpDetails": "(4 segments); Thresholds 60 (3 segments), 30 (2 segments)",
       "publicNotes": "<p>Boisterous collectives of thrill-seeking halflings join in bill-bands to engage in spirited competitions and lively sports. They foster a sense of camaraderie among their members while leaving a trail of chaos in their wake.</p>\n<hr />\n<p>Halflings thrive on simple pleasures—having a pint at the pub or warming their feet by the hearth.</p>",
       "saveDetails": "+3 status vs. Intimidation checks",
       "senses": "keen eyes",
-      "speed": " overwhelming scrum, troop movement",
+      "speed": "overwhelming scrum, troop movement",
       "items": {
         "action->Keen Eyes": {
           "name": "Keen Eyes",
@@ -819,7 +815,7 @@
           "name": "+3 status vs. Intimidation checks"
         },
         "action->Troop Defenses": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p>Troops are composed of many individuals, represented by four \"segments\" on a battle grid. Each segment is 10 feet on each side and as tall as the individual members of the troop. Segments must remain contiguous. Each one has to share at least 5 feet of one of its edges with another segment—being adjacent on a diagonal isn't sufficient! You can measure flanking, cover, and the like using the center of any segment.</p>\n<p>A troop has two Hit Point thresholds in its HP entry and loses segments as it crosses thresholds. Typically, the higher threshold is at 2/3 of the troop's maximum Hit Points and the lower is at 1/3 of its maximum. Once the troop drops below the higher threshold, it loses one segment, leaving three segments (12 squares) remaining and setting the first threshold as the troop's new maximum Hit Points. This repeats when the troop drops below the lower threshold, leaving two segments (8 squares). At 0 Hit Points, the troop disperses entirely, with the few remaining members surrendering, @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing}, or easily dispatched, as determined by the GM. Typically the creature who caused the troop to lose a segment decides which to remove, or the GM decides when a specific creature wasn't responsible. To restore lost segments and maximum Hit Points, a troop needs to spend downtime to use long-term treatment on casualties or recruit new members to replace the fallen.</p>\n<p>Troops are typically immune to non-damaging effects that target a single creature, such as a charm spell or the @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} action. An ability that can target 5 or more creatures can target an entire segment, increasing to two segments if it can target 10 or more creatures and to the entire troop if it can target 20 or more creatures. An ability that affects all creatures in a certain range affects all segments in range (make any checks or saves separately for each segment). As examples, an 8thrank charm spell (with 10 targets) can affect two segments, and an ability that Demoralizes all creatures within 30 feet of you would affect all segments that are fully within that range. A non-damaging ability that would prevent a segment from acting, cause them to flee, or otherwise make them unable to function as part of the troop for a round or more removes the segment entirely. The troop loses a number of HP required to bring it to the next threshold. If an ability both deals damage and has a non-damaging effect, apply the damage then the rest of the effect.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 60 (3 segments), 30 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Troop Movement": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.MXI6zwrvbQNIv7ji]\n<p>Whenever a troop moves, you move one of its segments and the other segments follow behind it. At the end of the movement, you can group the other segments adjacent to the one you moved as you see fit, provided none of them moves farther than the moving segment. If you choose not to move the troop any distance, you can instead reshape the position of all the segments as long as one stays in place.</p>"
@@ -836,8 +832,8 @@
           "name": "Overwhelming Scrum",
           "description": "<p>The bill-band swarms in and around other creatures. They can move into other creatures' spaces, and other creatures can move into their spaces. The bill-band's spaces are difficult terrain to other creatures.</p>"
         },
-        "action->Stick It to ’Em!": {
-          "name": "Stick It to ’Em!",
+        "action->Stick It to 'Em!": {
+          "name": "Stick It to 'Em!",
           "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The bill-band swings barely coordinated fists and feet at each enemy in their space and in a @Template[type:emanation|distance:5], with a @Check[reflex|dc:19|basic] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[1d6[bludgeoning]] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d6+4)[bludgeoning]] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(3d6+6)[bludgeoning]] damage</p>"
         }
       }
@@ -905,7 +901,6 @@
     "Bleachling Survivor": {
       "name": "Bleachling Survivor",
       "publicNotes": "<p>It is almost unheard of for gnomes to survive the horrendous sickness known as the Bleaching, but those few who do are permanently altered. Having lived through the worst disease known to their kind, bleachling survivors often emerge jaded and reckless, traveling to seek out mind-bending experiences and heady thrills that will awaken something in them again. Though their experiences may toughen them, they are not unfriendly. Most try to help others they meet during their travels who might not be as unshakable.</p>\n<hr />\n<p>Because their ancestors came from the First World, gnomes are intrinsically linked to the realm of the fey and crave the mystical and unpredictable. They seek to create daring works of art, voyage to new places, and have experiences they've never had before. Otherwise, they could fall victim to the terrible gnomish illness known as the Bleaching, which not only drains them of their color but of their spirits as well.</p>",
-      "tokenName": "Gnome Philomath",
       "items": {
         "strike-melee->Dagger": {
           "name": "Dagger"
@@ -1235,7 +1230,7 @@
         },
         "action->Champion's Aura": {
           "name": "Champion's Aura",
-          "description": "<p>15 feet. Any follower of Rovagug in the aura knows the champion is a champion of Rovagug. Enemies in the aura take a –1 circumstance penalty to saves against fear, and an enemy that ends its turn in the aura can't reduce the value of its frightened condition below 1. The aura can be suppressed or resumed with a single action, which has the concentrate trait, and ends if the champion falls @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}.</p>"
+          "description": "<p>15 feet. Any follower of Rovagug in the aura knows the champion is a champion of Rovagug. Enemies in the aura take a –1 circumstance penalty to saves against fear, and an enemy that ends its turn in the aura can't reduce the value of its @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} condition below 1. The aura can be suppressed or resumed with a single action, which has the concentrate trait, and ends if the champion falls @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}.</p>"
         },
         "action->Destructive Vengeance": {
           "name": "Destructive Vengeance",
@@ -1270,12 +1265,12 @@
         "strike-ranged->Crossbow": {
           "name": "Crossbow"
         },
-        "action->Champion’s Aura": {
-          "name": "Champion’s Aura",
+        "action->Champion's Aura": {
+          "name": "Champion's Aura",
           "description": "<p>15 feet.</p>\n<p>Any follower of Shelyn in the aura knows the champion is a champion of Shelyn. At the end of the champion's turn, each ally in the aura reduces its @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} value by 1. The aura can be suppressed or resumed with a single action, which has the concentrate trait, and ends if the champion falls @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}.</p>"
         },
-        "action->Champion’s Courage": {
-          "name": "Champion’s Courage",
+        "action->Champion's Courage": {
+          "name": "Champion's Courage",
           "description": "<p>When the champion becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened}, they reduce the condition value by 1 (to a minimum of 0).</p>"
         },
         "action->Liberating Step": {
@@ -1404,7 +1399,7 @@
           "description": "<p>City guards can spend 1 minute to designate a single creature for whom they have a physical description as their quarry. They gain a +2 circumstance bonus to Perception checks against their quarry.</p>"
         },
         "action->Troop Defenses": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 75 (4 segments), 50 (3 segments), 25 (2 segments);</p>\n<p>Troops are composed of many individuals, represented by four \"segments\" on a battle grid. Each segment is 10 feet on each side and as tall as the individual members of the troop. Segments must remain contiguous. Each one has to share at least 5 feet of one of its edges with another segment—being adjacent on a diagonal isn't sufficient! You can measure flanking, cover, and the like using the center of any segment.</p>\n<p>A troop has two Hit Point thresholds in its HP entry and loses segments as it crosses thresholds. Typically, the higher threshold is at 2/3 of the troop's maximum Hit Points and the lower is at 1/3 of its maximum. Once the troop drops below the higher threshold, it loses one segment, leaving three segments (12 squares) remaining and setting the first threshold as the troop's new maximum Hit Points. This repeats when the troop drops below the lower threshold, leaving two segments (8 squares). At 0 Hit Points, the troop disperses entirely, with the few remaining members surrendering, @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing}, or easily dispatched, as determined by the GM. Typically the creature who caused the troop to lose a segment decides which to remove, or the GM decides when a specific creature wasn't responsible. To restore lost segments and maximum Hit Points, a troop needs to spend downtime to use long-term treatment on casualties or recruit new members to replace the fallen.</p>\n<p>Troops are typically immune to non-damaging effects that target a single creature, such as a charm spell or the @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} action. An ability that can target 5 or more creatures can target an entire segment, increasing to two segments if it can target 10 or more creatures and to the entire troop if it can target 20 or more creatures. An ability that affects all creatures in a certain range affects all segments in range (make any checks or saves separately for each segment). As examples, an 8thrank charm spell (with 10 targets) can affect two segments, and an ability that Demoralizes all creatures within 30 feet of you would affect all segments that are fully within that range. A non-damaging ability that would prevent a segment from acting, cause them to flee, or otherwise make them unable to function as part of the troop for a round or more removes the segment entirely. The troop loses a number of HP required to bring it to the next threshold. If an ability both deals damage and has a non-damaging effect, apply the damage then the rest of the effect.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 50 (3 segments), 25 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Troop Movement": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.MXI6zwrvbQNIv7ji]\n<p>Whenever a troop moves, you move one of its segments and the other segments follow behind it. At the end of the movement, you can group the other segments adjacent to the one you moved as you see fit, provided none of them moves farther than the moving segment. If you choose not to move the troop any distance, you can instead reshape the position of all the segments as long as one stays in place.</p>"
@@ -1497,7 +1492,7 @@
           "description": "<p>At the start of each of its turns, the conscript squad must succeed at a @Check[will|dc:10] save or be @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} that turn.</p>"
         },
         "action->Troop Defenses": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p>Troops are composed of many individuals, represented by four \"segments\" on a battle grid. Each segment is 10 feet on each side and as tall as the individual members of the troop. Segments must remain contiguous. Each one has to share at least 5 feet of one of its edges with another segment—being adjacent on a diagonal isn't sufficient! You can measure flanking, cover, and the like using the center of any segment.</p>\n<p>A troop has two Hit Point thresholds in its HP entry and loses segments as it crosses thresholds. Typically, the higher threshold is at 2/3 of the troop's maximum Hit Points and the lower is at 1/3 of its maximum. Once the troop drops below the higher threshold, it loses one segment, leaving three segments (12 squares) remaining and setting the first threshold as the troop's new maximum Hit Points. This repeats when the troop drops below the lower threshold, leaving two segments (8 squares). At 0 Hit Points, the troop disperses entirely, with the few remaining members surrendering, @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing}, or easily dispatched, as determined by the GM. Typically the creature who caused the troop to lose a segment decides which to remove, or the GM decides when a specific creature wasn't responsible. To restore lost segments and maximum Hit Points, a troop needs to spend downtime to use long-term treatment on casualties or recruit new members to replace the fallen.</p>\n<p>Troops are typically immune to non-damaging effects that target a single creature, such as a charm spell or the @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} action. An ability that can target 5 or more creatures can target an entire segment, increasing to two segments if it can target 10 or more creatures and to the entire troop if it can target 20 or more creatures. An ability that affects all creatures in a certain range affects all segments in range (make any checks or saves separately for each segment). As examples, an 8thrank charm spell (with 10 targets) can affect two segments, and an ability that Demoralizes all creatures within 30 feet of you would affect all segments that are fully within that range. A non-damaging ability that would prevent a segment from acting, cause them to flee, or otherwise make them unable to function as part of the troop for a round or more removes the segment entirely. The troop loses a number of HP required to bring it to the next threshold. If an ability both deals damage and has a non-damaging effect, apply the damage then the rest of the effect.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 36 (3 segments), 18 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Troop Movement": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.MXI6zwrvbQNIv7ji]\n<p>Whenever a troop moves, you move one of its segments and the other segments follow behind it. At the end of the movement, you can group the other segments adjacent to the one you moved as you see fit, provided none of them moves farther than the moving segment. If you choose not to move the troop any distance, you can instead reshape the position of all the segments as long as one stays in place.</p>"
@@ -1587,14 +1582,14 @@
           "description": "<p>A corn leshy throng is arranged in rows of stalks to envelop foes, stretching upward to block their vision. It can move into other creatures' spaces, and other creatures can move into its squares.</p>\n<p>When a Medium or smaller creature attempts to enter any of the corn leshy throng's spaces, it must attempt a @Check[survival|dc:20] check. If the creature fails, it gets turned around—all the throng's squares are greater difficult terrain for it until the end of this turn. A creature needs to attempt this check only the first time in a round it attempts to enter one of the throng's squares.</p>"
         },
         "action->Troop Defenses": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p>Troops are composed of many individuals, represented by four \"segments\" on a battle grid. Each segment is 10 feet on each side and as tall as the individual members of the troop. Segments must remain contiguous. Each one has to share at least 5 feet of one of its edges with another segment—being adjacent on a diagonal isn't sufficient! You can measure flanking, cover, and the like using the center of any segment.</p>\n<p>A troop has two Hit Point thresholds in its HP entry and loses segments as it crosses thresholds. Typically, the higher threshold is at 2/3 of the troop's maximum Hit Points and the lower is at 1/3 of its maximum. Once the troop drops below the higher threshold, it loses one segment, leaving three segments (12 squares) remaining and setting the first threshold as the troop's new maximum Hit Points. This repeats when the troop drops below the lower threshold, leaving two segments (8 squares). At 0 Hit Points, the troop disperses entirely, with the few remaining members surrendering, @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing}, or easily dispatched, as determined by the GM. Typically the creature who caused the troop to lose a segment decides which to remove, or the GM decides when a specific creature wasn't responsible. To restore lost segments and maximum Hit Points, a troop needs to spend downtime to use long-term treatment on casualties or recruit new members to replace the fallen.</p>\n<p>Troops are typically immune to non-damaging effects that target a single creature, such as a charm spell or the @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} action. An ability that can target 5 or more creatures can target an entire segment, increasing to two segments if it can target 10 or more creatures and to the entire troop if it can target 20 or more creatures. An ability that affects all creatures in a certain range affects all segments in range (make any checks or saves separately for each segment). As examples, an 8thrank charm spell (with 10 targets) can affect two segments, and an ability that Demoralizes all creatures within 30 feet of you would affect all segments that are fully within that range. A non-damaging ability that would prevent a segment from acting, cause them to flee, or otherwise make them unable to function as part of the troop for a round or more removes the segment entirely. The troop loses a number of HP required to bring it to the next threshold. If an ability both deals damage and has a non-damaging effect, apply the damage then the rest of the effect.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 36 (3 segments), 18 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Troop Movement": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.MXI6zwrvbQNIv7ji]\n<p>Whenever a troop moves, you move one of its segments and the other segments follow behind it. At the end of the movement, you can group the other segments adjacent to the one you moved as you see fit, provided none of them moves farther than the moving segment. If you choose not to move the troop any distance, you can instead reshape the position of all the segments as long as one stays in place.</p>"
         },
         "action->Verdant Burst": {
           "name": "Verdant Burst",
-          "description": "<p>When the gourd leshy witch dies, a burst of primal energy explodes from their body, restoring @Damage[3d8[healing, vitality]|shortLabel] Hit Points to each plant creature in a @Template[type:emanation|distance:30]. This area immediately fills with stalks of corn, becoming difficult terrain. If the terrain is not a viable environment for these plants, they wither after 24 hours.</p>"
+          "description": "<p>When the corn leshy throng dies, a burst of primal energy explodes from their body, restoring @Damage[3d8[healing,vitality]|shortLabel] Hit Points to each plant creature in a @Template[type:emanation|distance:30]. This area immediately fills with stalks of corn, becoming difficult terrain. If the terrain is not a viable environment for these plants, they wither after 24 hours.</p>"
         },
         "action->Boxing Ears": {
           "name": "Boxing Ears",
@@ -1666,7 +1661,7 @@
         },
         "action->Pointed Joke": {
           "name": "Pointed Joke",
-          "description": "<p>The court jester can use Performance instead of Intimidation to @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize}.</p>"
+          "description": "<p>The court jester can use Performance instead of Intimidation to [[/act demoralize statistic=performance]].</p>"
         },
         "action->No Peeking!": {
           "name": "No Peeking!",
@@ -1682,7 +1677,7 @@
       "name": "Courtesan",
       "languages": "plus two additional languages",
       "publicNotes": "<p>Courtesans are high-class entertainers and professional companions, paid in favors and privileges for the honor of their company. These trendsetting socialites levy their clout to consort with those above their station, maneuvering connections to build exclusive clientele and climb the social ladder. A courtesan's discretion and mobility among the different ranks of society make their friendship well worth the price.</p>\n<hr />\n<p>The denizens of a noble court are the most powerful people in a civilization, primed with wealth, station, and authority above the common people.</p>",
-      "senses": " (+13 to Sense Motive)",
+      "senses": "(+13 to Sense Motive)",
       "items": {
         "treasure->Jewelry": {
           "name": "Jewelry"
@@ -1706,7 +1701,7 @@
         },
         "action->Beguiling Presence": {
           "name": "Beguiling Presence",
-          "description": "<p>10 feet.</p>\n<p>Creatures in the area that can observe the courtesan take a –2 status penalty on their Will DC against the courtesan's attempts to make a Request of them.</p>"
+          "description": "<p>10 feet.</p>\n<p>Creatures in the area that can observe the courtesan take a –2 status penalty on their Will DC against the courtesan's attempts to make a [[/act request]] of them.</p>"
         },
         "action->Cutting Remarks": {
           "name": "Cutting Remarks",
@@ -1959,8 +1954,8 @@
           "name": "Plant Empathy",
           "description": "<p>The dedicated druid can ask questions of, receive answers from, and use the Diplomacy skill with plants and fungus.</p>"
         },
-        "action->Nature’s Patient Healing": {
-          "name": "Nature’s Patient Healing",
+        "action->Nature's Patient Healing": {
+          "name": "Nature's Patient Healing",
           "description": "<p><strong>Requirements</strong> The dedicated druid is in a natural environment</p>\n<hr />\n<p><strong>Effect</strong> The dedicated druid camouflages themself to blend in with the surrounding area, sprouting leaves or covering themself with scree. They gain concealment until the end of their next turn, they can [[/act hide options=natures-patient-healing]] with a +4 circumstance bonus, and they recover @Damage[4d8[untyped]] Hit Points. If the druid moves or otherwise leaves their space, these benefits end.</p>"
         }
       }
@@ -1992,12 +1987,12 @@
           "name": "Deific Reactions",
           "description": "<p>At the start of each of their turns, the deific champion gains an additional reaction they can only use to make a Reactive Strike or to Shield Block.</p>"
         },
-        "action->Champion’s Aura": {
-          "name": "Champion’s Aura",
+        "action->Champion's Aura": {
+          "name": "Champion's Aura",
           "description": "<p>15 feet.</p>\n<p>Any follower of Iomedae in the aura knows the champion is a champion of Iomedae. At the end of the champion's turn, each ally in the aura reduces its @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} value by 1. The aura can be suppressed or resumed with a single action, which has the concentrate trait, and ends if the champion falls @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}.</p>"
         },
-        "action->Champion’s Courage": {
-          "name": "Champion’s Courage",
+        "action->Champion's Courage": {
+          "name": "Champion's Courage",
           "description": "<p>When the champion becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened}, they reduce the condition value by 1 (to a minimum of 0).</p>"
         },
         "action->Exalted Retributive Strike": {
@@ -2036,7 +2031,7 @@
         },
         "action->Mark of Fate": {
           "name": "Mark of Fate",
-          "description": "<p>A creature that slays the deific vessel must succeed at a @Check[will|dc:35] save or be visibly marked as anathema to Urgathoa. It gains weakness 10 to unholy and takes a –2 circumstance penalty to Charisma-based skill checks against followers of Urgathoa. Creatures attempting to @UUID[Compendium.pf2e.actionspf2e.plBGdZhqq5JBl1D8]{Gather Information} about or @UUID[Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD]{Track} the marked creature gain a +2 circumstance bonus to their checks.</p>\n<p>The mark can't be hidden and can be removed only by participating in an atone ritual led by a worshipper of Urgathoa who is 12th level or higher.</p>\n<hr />\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.yHI1DhZkAyqwRpDh]{Effect: Mark of Fate}</p>"
+          "description": "<p>A creature that slays the deific vessel must succeed at a @Check[will|dc:35] save or be visibly marked as anathema to Urgathoa. It gains weakness 10 to unholy and takes a –2 circumstance penalty to Charisma-based skill checks against followers of Urgathoa. Creatures attempting to @UUID[Compendium.pf2e.actionspf2e.Item.plBGdZhqq5JBl1D8]{Gather Information} about or @UUID[Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD]{Track} the marked creature gain a +2 circumstance bonus to their checks.</p>\n<p>The mark can't be hidden and can be removed only by participating in an atone ritual led by a worshipper of Urgathoa who is 12th level or higher.</p>\n<hr />\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.yHI1DhZkAyqwRpDh]{Effect: Mark of Fate}</p>"
         },
         "action->Limited Lifespan": {
           "name": "Limited Lifespan",
@@ -2072,7 +2067,7 @@
           "description": "<p>The deluded mob is severely disconnected from reality. Diplomacy checks to @UUID[Compendium.pf2e.actionspf2e.Item.OX4fy22hQgUHDr0q]{Make an Impression} or otherwise sway their worldview automatically fail.</p>"
         },
         "action->Troop Defenses": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p>Troops are composed of many individuals, represented by four \"segments\" on a battle grid. Each segment is 10 feet on each side and as tall as the individual members of the troop. Segments must remain contiguous. Each one has to share at least 5 feet of one of its edges with another segment—being adjacent on a diagonal isn't sufficient! You can measure flanking, cover, and the like using the center of any segment.</p>\n<p>A troop has two Hit Point thresholds in its HP entry and loses segments as it crosses thresholds. Typically, the higher threshold is at 2/3 of the troop's maximum Hit Points and the lower is at 1/3 of its maximum. Once the troop drops below the higher threshold, it loses one segment, leaving three segments (12 squares) remaining and setting the first threshold as the troop's new maximum Hit Points. This repeats when the troop drops below the lower threshold, leaving two segments (8 squares). At 0 Hit Points, the troop disperses entirely, with the few remaining members surrendering, @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing}, or easily dispatched, as determined by the GM. Typically the creature who caused the troop to lose a segment decides which to remove, or the GM decides when a specific creature wasn't responsible. To restore lost segments and maximum Hit Points, a troop needs to spend downtime to use long-term treatment on casualties or recruit new members to replace the fallen.</p>\n<p>Troops are typically immune to non-damaging effects that target a single creature, such as a charm spell or the @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} action. An ability that can target 5 or more creatures can target an entire segment, increasing to two segments if it can target 10 or more creatures and to the entire troop if it can target 20 or more creatures. An ability that affects all creatures in a certain range affects all segments in range (make any checks or saves separately for each segment). As examples, an 8thrank charm spell (with 10 targets) can affect two segments, and an ability that Demoralizes all creatures within 30 feet of you would affect all segments that are fully within that range. A non-damaging ability that would prevent a segment from acting, cause them to flee, or otherwise make them unable to function as part of the troop for a round or more removes the segment entirely. The troop loses a number of HP required to bring it to the next threshold. If an ability both deals damage and has a non-damaging effect, apply the damage then the rest of the effect.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 50 (3 segments), 25 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Troop Movement": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.MXI6zwrvbQNIv7ji]\n<p>Whenever a troop moves, you move one of its segments and the other segments follow behind it. At the end of the movement, you can group the other segments adjacent to the one you moved as you see fit, provided none of them moves farther than the moving segment. If you choose not to move the troop any distance, you can instead reshape the position of all the segments as long as one stays in place.</p>"
@@ -2160,7 +2155,7 @@
         },
         "action->Sin Sense": {
           "name": "Sin Sense",
-          "description": "<p>A demonbane warrior automatically learns all weaknesses of a demon they've identified by Recalling Knowledge.</p>"
+          "description": "<p>A demonbane warrior automatically learns all weaknesses of a demon they've identified by @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Recalling Knowledge}.</p>"
         },
         "action->Demonbane": {
           "name": "Demonbane",
@@ -2247,8 +2242,8 @@
         "lore->Academia Lore": {
           "name": "Academia Lore"
         },
-        "lore->one additional Lore": {
-          "name": "one additional Lore"
+        "lore->One Additional Lore": {
+          "name": "One Additional Lore"
         }
       }
     },
@@ -2574,25 +2569,29 @@
       "name": "Dwarf Battalion",
       "hpDetails": "(4 segments); Thresholds 70 (3 segments), 35 (2 segments)",
       "publicNotes": "<p>Dwarven soldiers make formidable units, capable of holding their own against most enemies. In combat, a dwarf battalion is a well-oiled machine, unleashing coordinated attacks against foes.</p>\n<hr />\n<p>From the dwarven perspective, most things in life are best done correctly, and that means taking one's time. Dwarves are a focused and intentional people, taking years or even decades to ply their trades, doing their best to make every detail perfect. The patience and dedication required for such tasks pays off, and many dwarves become experts in their respective field, trade, or area of focus. Many dwarves uphold traditions, and since dwarven origins trace back to underground life, many still hone skills focused on life underground.</p>",
-      "speed": " troop movement",
+      "speed": "troop movement",
       "items": {
+        "action->Dwarven Doughtiness": {
+          "name": "Dwarven Doughtiness",
+          "description": "<p>Dwarves are often calm and collected in the face of imminent danger. At the end of the battalion's turn, reduce its @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} condition by 2 instead of 1.</p>"
+        },
         "action->Troop Defenses": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p>Troops are composed of many individuals, represented by four \"segments\" on a battle grid. Each segment is 10 feet on each side and as tall as the individual members of the troop. Segments must remain contiguous. Each one has to share at least 5 feet of one of its edges with another segment—being adjacent on a diagonal isn't sufficient! You can measure flanking, cover, and the like using the center of any segment.</p>\n<p>A troop has two Hit Point thresholds in its HP entry and loses segments as it crosses thresholds. Typically, the higher threshold is at 2/3 of the troop's maximum Hit Points and the lower is at 1/3 of its maximum. Once the troop drops below the higher threshold, it loses one segment, leaving three segments (12 squares) remaining and setting the first threshold as the troop's new maximum Hit Points. This repeats when the troop drops below the lower threshold, leaving two segments (8 squares). At 0 Hit Points, the troop disperses entirely, with the few remaining members surrendering, @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing}, or easily dispatched, as determined by the GM. Typically the creature who caused the troop to lose a segment decides which to remove, or the GM decides when a specific creature wasn't responsible. To restore lost segments and maximum Hit Points, a troop needs to spend downtime to use long-term treatment on casualties or recruit new members to replace the fallen.</p>\n<p>Troops are typically immune to non-damaging effects that target a single creature, such as a charm spell or the @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} action. An ability that can target 5 or more creatures can target an entire segment, increasing to two segments if it can target 10 or more creatures and to the entire troop if it can target 20 or more creatures. An ability that affects all creatures in a certain range affects all segments in range (make any checks or saves separately for each segment). As examples, an 8thrank charm spell (with 10 targets) can affect two segments, and an ability that Demoralizes all creatures within 30 feet of you would affect all segments that are fully within that range. A non-damaging ability that would prevent a segment from acting, cause them to flee, or otherwise make them unable to function as part of the troop for a round or more removes the segment entirely. The troop loses a number of HP required to bring it to the next threshold. If an ability both deals damage and has a non-damaging effect, apply the damage then the rest of the effect.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 70 (3 segments), 35 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Troop Movement": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.MXI6zwrvbQNIv7ji]\n<p>Whenever a troop moves, you move one of its segments and the other segments follow behind it. At the end of the movement, you can group the other segments adjacent to the one you moved as you see fit, provided none of them moves farther than the moving segment. If you choose not to move the troop any distance, you can instead reshape the position of all the segments as long as one stays in place.</p>"
         },
         "action->Bombing Barrage": {
           "name": "Bombing Barrage",
-          "description": "<p>he dwarf battalion draws alchemical bombs, then hurls them at distant foes. This volley is a @Template[type:burst|distance:10] within 60 feet that deals @Damage[3d6[@item.flags.pf2e.rulesSelections.bombingBarrage]] damage with a @Check[reflex|dc:21|basic] save. The damage is either acid, fire, or electricity damage, depending on which type of bombs the battalion used. When the dwarf battalion is reduced to 2 or fewer segments, this area decreases to a @Template[type:burst|distance:5].</p>"
+          "description": "<p>he dwarf battalion draws alchemical bombs, then hurls them at distant foes. This volley is a @Template[type:burst|distance:10] within 60 feet that deals @Damage[3d6[@item.flags.pf2e.rulesSelections.bombingBarrage]|options:area-damage] damage with a @Check[reflex|dc:21|basic|options:area-effect] save. The damage is either acid, fire, or electricity damage, depending on which type of bombs the battalion used. When the dwarf battalion is reduced to 2 or fewer segments, this area decreases to a @Template[type:burst|distance:5].</p>"
         },
         "action->Coordinated Pummel": {
           "name": "Coordinated Pummel",
-          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The dwarf battalion unleashes a storm of warhammer blows against each enemy in a @Template[type:emanation|distance:5] (@Check[reflex|dc:21|basic] save). The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[1d8[bludgeoning]] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d8+5)[bludgeoning]] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(3d8+5)[bludgeoning]] damage</p>"
+          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The dwarf battalion unleashes a storm of warhammer blows against each enemy in a @Template[type:emanation|distance:5] (@Check[reflex|dc:21|basic|options:area-effect] save). The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[1d8[bludgeoning]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d8+5)[bludgeoning]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(3d8+5)[bludgeoning]|options:area-damage] damage</p>"
         },
         "action->Dwarven War Song": {
           "name": "Dwarven War Song",
-          "description": "<p>The battalion joins together to sing a traditional song of battle. Each enemy in a @Template[type:emanation|distance:30] must succeed at a @Check[will|dc:23] save or be @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure). Each enemy is then temporarily immune for 10 minutes.</p>"
+          "description": "<p>The battalion joins together to sing a traditional song of battle. Each enemy in a @Template[type:emanation|distance:30] must succeed at a @Check[will|dc:23|inflicts:frightened] save or be @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure). Each enemy is then temporarily immune for 10 minutes.</p>"
         },
         "action->Shields Up!": {
           "name": "Shields Up!",
@@ -2626,7 +2625,7 @@
         },
         "action->Dwarven Doughtiness": {
           "name": "Dwarven Doughtiness",
-          "description": "<p>Dwarves are often calm and collected in the face of imminent danger. At the end of the general's turn, reduce its frightened condition by 2 instead of 1.</p>"
+          "description": "<p>Dwarves are often calm and collected in the face of imminent danger. At the end of the general's turn, reduce its @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} condition by 2 instead of 1.</p>"
         },
         "action->Reactive Strike": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.W7SbTykXrNwxDzJc]\n<p>The dwarf general gains an additional reaction at the beginning of each of their turns that they can use only for a Reactive Strike.</p>\n<p>@Localize[PF2E.NPC.Abilities.Glossary.ReactiveStrike]</p>"
@@ -2681,11 +2680,11 @@
         },
         "action->Temper Armament": {
           "name": "Temper Armament",
-          "description": "<p>The smith spends 1 day tempering a single suit of metallic armor, metallic shield, or metallic weapon. Tempering armor or a shield increases its Hardness by 1. Tempering a weapon grants the weapon a +1 circumstance bonus to damage rolls. Regardless of the item, the tempering remains for 3 days, after which item is temporarily immune to further tempering for 1 week as the technique would otherwise damage it.</p>"
+          "description": "<p>The smith spends 1 day tempering a single suit of metallic armor, metallic shield, or metallic weapon. Tempering armor or a shield increases its Hardness by 1. Tempering a weapon grants the weapon a +1 circumstance bonus to damage rolls. Regardless of the item, the tempering remains for 3 days, after which item is temporarily immune to further tempering for 1 week as the technique would otherwise damage it.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.ERBJL8rBEURa05N8]{Effect: Temper Armament}</p>"
         },
         "action->Crack the Shell": {
           "name": "Crack the Shell",
-          "description": "<p>The dwarf smith makes a Strike to break a creature's defenses. If the Strike hits and the creature is wearing armor with Hardness 9 or lower, the armor is broken. This Strike doesn't further damage armor that's already broken.</p>"
+          "description": "<p>The dwarf smith makes a Strike to break a creature's defenses. If the Strike hits and the creature is wearing armor with Hardness 9 or lower, the armor is @UUID[Compendium.pf2e.conditionitems.Item.6dNUvdb1dhToNDj3]{Broken}. This Strike doesn't further damage armor that's already broken.</p>"
         }
       }
     },
@@ -2763,7 +2762,7 @@
         },
         "action->Third Contingent Sequencer": {
           "name": "Third Contingent Sequencer",
-          "description": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> A creature attacks or uses a spell or ability that would affect the eldritch emeritus</p>\n<hr />\n<p><strong>Effect</strong> A masterpiece of complex spellwork instantly takes shape, casting @UUID[Compendium.pf2e.spells-srd.Fire Shield]{Fire Shield}, @UUID[Compendium.pf2e.spells-srd.WPXzPl7YbMEIGWfi]{Mislead}, and @UUID[Compendium.pf2e.spells-srd.2BV2yYPfVJ5zirZt]{Mountain Resilience} on the eldritch emeritus, each as an 8th-rank arcane spell.</p>"
+          "description": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> A creature attacks or uses a spell or ability that would affect the eldritch emeritus</p>\n<hr />\n<p><strong>Effect</strong> A masterpiece of complex spellwork instantly takes shape, casting @UUID[Compendium.pf2e.spells-srd.Item.YrzBLPLd3r9m6t1p]{Fire Shield}, @UUID[Compendium.pf2e.spells-srd.Item.WPXzPl7YbMEIGWfi]{Mislead}, and @UUID[Compendium.pf2e.spells-srd.Item.2BV2yYPfVJ5zirZt]{Mountain Resilience} on the eldritch emeritus, each as an 8th-rank arcane spell.</p>"
         },
         "action->Didactic Arcanism": {
           "name": "Didactic Arcanism",
@@ -2796,7 +2795,7 @@
         },
         "action->Vigilance": {
           "name": "Vigilance",
-          "description": "<p>A court guard gains a +1 circumstance bonus on Perception checks to @UUID[Compendium.pf2e.actionspf2e.Item.1xRFPTFtWtGJ9ELw]{Sense Motive} and @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seek} creatures, and if they succeed, they get a critical success instead.</p>"
+          "description": "<p>A court guard gains a +1 circumstance bonus on Perception checks to [[/act sense-motive]] and [[/act seek]] creatures, and if they succeed, they get a critical success instead.</p>"
         },
         "action->+1 Status vs. mental effects": {
           "name": "+1 Status vs. mental effects"
@@ -2807,7 +2806,7 @@
         },
         "action->Avenge the Fallen": {
           "name": "Avenge the Fallen",
-          "description": "<p><strong>Frequency</strong> once per round</p>\n<p><strong>Requirements</strong> The guard is within 30 feet of the creature they were guarding, and that creature is either dying or died since the guard's last turn</p>\n<hr />\n<p><strong>Effect</strong> The guard Strikes the creature that damaged their ally. They roll the attack roll twice and use the higher result.</p>",
+          "description": "<p><strong>Frequency</strong> once per round</p>\n<p><strong>Requirements</strong> The guard is within 30 feet of the creature they were guarding, and that creature is either @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{Dying} or died since the guard's last turn</p>\n<hr />\n<p><strong>Effect</strong> The guard Strikes the creature that damaged their ally. They roll the attack roll twice and use the higher result.</p>",
           "selfEffect": "Effect: Avenge the Fallen"
         },
         "action->Dancing Blade": {
@@ -2894,7 +2893,7 @@
       "name": "Envoy",
       "languages": "plus two additional languages",
       "publicNotes": "<p>Envoys are guests of a given court, representing the interests of another court or organization. Some envoys stay in one place so long they're practically considered locals, though those with whom they parley are swiftly reminded where their loyalty lies.</p>\n<hr />\n<p>The denizens of a noble court are the most powerful people in a civilization, primed with wealth, station, and authority above the common people.</p>",
-      "senses": " (+13 to Sense Motive)",
+      "senses": "(+13 to Sense Motive)",
       "items": {
         "treasure->Signet Ring": {
           "name": "Signet Ring"
@@ -2969,7 +2968,7 @@
         },
         "action->Behead": {
           "name": "Behead",
-          "description": "<p><strong>Requirements</strong> The executioner is adjacent to a dying creature or a creature specifically prepared for a killing blow</p>\n<hr />\n<p><strong>Effect</strong> The executioner Strikes the creature with their greataxe. On a hit, in addition to taking damage, the target must attempt a @Check[fortitude|dc:23] save or be reduced to 0 HP and become dying 1. If the creature was already dying (including if it was reduced to 0 HP by the Strike's damage), the creature's dying value increases by 1, in addition to any increase from the Strike. On a critical failure, the creature dies instantly. If the executioner's Strike was a critical hit, the target uses the outcome one degree of success worse than the result of their saving throw.</p>"
+          "description": "<p><strong>Requirements</strong> The executioner is adjacent to a dying creature or a creature specifically prepared for a killing blow</p>\n<hr />\n<p><strong>Effect</strong> The executioner Strikes the creature with their greataxe. On a hit, in addition to taking damage, the target must attempt a @Check[fortitude|dc:23] save or be reduced to 0 HP and become @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{Dying 1}. If the creature was already dying (including if it was reduced to 0 HP by the Strike's damage), the creature's dying value increases by 1, in addition to any increase from the Strike. On a critical failure, the creature dies instantly. If the executioner's Strike was a critical hit, the target uses the outcome one degree of success worse than the result of their saving throw.</p>"
         },
         "action->Intimidating Strike": {
           "name": "Intimidating Strike",
@@ -3094,7 +3093,7 @@
         },
         "action->Pack Attack": {
           "name": "Pack Attack",
-          "description": "<p>The hound’s Strikes deal 2d6 extra damage to creatures within the reach of at least two of the hound’s allies.</p>"
+          "description": "<p>The hound's Strikes deal 2d6 extra damage to creatures within the reach of at least two of the hound's allies.</p>"
         },
         "action->Drag": {
           "name": "Drag",
@@ -3321,9 +3320,9 @@
         "strike-ranged->Fishing Line": {
           "name": "Fishing Line"
         },
-        "action->Fishhoked": {
-          "name": "Fishhoked",
-          "description": "<p>While it has persistent bleed damage from the fisher's fishing line Strike, a creature has a fishhook embedded in it. The creature can't move farther away from the fisher (though it can move laterally). The fisher can reel the creature in as a single action with the attack and manipulate trait, attempting an Athletics check against the creature's Fortitude DC. On a success, the creature takes @Damage[2d4[slashing]] damage and is pulled 10 feet closer to the fisher (double the damage and distance on a critical success).</p>"
+        "action->Fishhooked": {
+          "name": "Fishhooked",
+          "description": "<p>While it has persistent bleed damage from the fisher's fishing line Strike, a creature has a fishhook embedded in it. The creature can't move farther away from the fisher (though it can move laterally). The fisher can reel the creature in as a single action with the attack and manipulate trait, attempting an @Check[athletics|against:fortitude] check against the creature's Fortitude DC. On a success, the creature takes @Damage[2d4[slashing]] damage and is pulled 10 feet closer to the fisher (double the damage and distance on a critical success).</p>"
         },
         "lore->Fishing Lore": {
           "name": "Fishing Lore"
@@ -3365,8 +3364,8 @@
           "name": "Dramatic Entrance",
           "description": "<p><strong>Trigger</strong> The flamboyant thief rolls initiative</p>\n<hr />\n<p><strong>Effect</strong> The flamboyant thief draws all eyes to them. They attempt a @Check[performance|defense:will] check, comparing the result against the Will DC of any number of creatures within 120 feet. Each creature the thief succeeds against is @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fascinated} with the thief until the end of the thief's next turn.</p>"
         },
-        "action->I Say When I’m Here": {
-          "name": "I Say When I’m Here",
+        "action->I Say When I'm Here": {
+          "name": "I Say When I'm Here",
           "description": "<p>When any detection, revelation, or scrying magic would reveal the flamboyant thief, the thief becomes aware of it and can attempt to counteract the magic with a counteract rank of 8th level and using their Stealth as their counteract modifier.</p>"
         },
         "action->Nimble Dodge": {
@@ -3460,17 +3459,17 @@
           "description": "<p>While using Survival to Subsist, if the forager rolls any result worse than a success, they get a success. On a success, they can provide subsistence living for themselves and four additional creatures, and on a critical success, they can take care of twice as many creatures as on a success.</p>",
           "rules": {
             "1": {
-              "text": "While using Survival to Subsist, if the forager rolls any result worse than a success, they get a success. On a success, they can provide subsistence living for themselves and four additional creatures, and on a critical success, they can take care of twice as many creatures as on a success."
+              "text": "While using Survival to [[/act subsist statistic=survival]], if the forager rolls any result worse than a success, they get a success. On a success, they can provide subsistence living for themselves and four additional creatures, and on a critical success, they can take care of twice as many creatures as on a success."
             }
           }
         },
         "action->Natural Specialist": {
           "name": "Natural Specialist",
-          "description": "<p>For encounters involving Nature or Survival, the forager is a 3rdlevel challenge.</p>"
+          "description": "<p>For encounters involving Nature or Survival, the forager is a 3rd-level challenge.</p>"
         },
         "action->Local Poison": {
           "name": "Local Poison",
-          "description": "<p>The forager coats their dagger in a diluted, locally sourced poison. Until the end of their turn, Strikes with their dagger deal an additional <code>@Damage[2[persistent,poison]] damage</code>.</p>"
+          "description": "<p>The forager coats their dagger in a diluted, locally sourced poison. Until the end of their turn, Strikes with their dagger deal an additional 2 persistent poison damage.</p>"
         },
         "lore->Local Lore": {
           "name": "Local Lore"
@@ -3481,12 +3480,13 @@
       "name": "Forlorn Artist",
       "languages": "one regional language",
       "publicNotes": "<p>Forlorn elves, who spend their lives among shorter-lived peoples, often grow morose from constant loss. Some channel this melancholy into their art.</p>\n<hr />\n<p>Elves' long lives give them centuries to delve into studies, artistry, or exploration.</p>",
+      "saveDetails": "+1 circumstance vs. emotion effects",
+      "senses": "(+9 to notice unusual artwork)",
       "skillSpecialCrafting": {
         "0": {
           "label": "to create or evaluate visual art"
         }
       },
-      "speed": "+1 circumstance vs. emotion effects",
       "items": {
         "spellcastingEntry->Arcane Innate Spells": {
           "name": "Arcane Innate Spells"
@@ -3500,12 +3500,19 @@
         "strike-melee->Fist": {
           "name": "Fist"
         },
+        "action->+2 Bonus on Perception to Notice Unusual Artwork": {
+          "name": "+2 Bonus on Perception to Notice Unusual Artwork"
+        },
         "action->Art Specialist": {
           "name": "Art Specialist",
           "description": "<p>For encounters involving crafting or evaluating art, the forlorn artist is a 4th-level challenge.</p>"
         },
         "action->+1 Circumstance vs. emotion effects": {
           "name": "+1 Circumstance vs. emotion effects"
+        },
+        "action->Flick Ink": {
+          "name": "Flick Ink",
+          "description": "<p><strong>Trigger</strong> The artist is targeted with a melee or ranged Strike by a creature within 15 feet</p>\n<hr />\n<p><strong>Effect</strong> The artist flings ink in the attacker's eyes. The attacker must succeed at a @Check[reflex|dc:18|options:inflicts:blinded] save or be @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded}. This takes effect before the attacker targets the artist. The blindness lasts until the end of the target's next turn, but the creature can Interact to rub its eyes to attempt a new save to end the condition.</p>"
         },
         "action->Cry of Ages": {
           "name": "Cry of Ages",
@@ -3586,8 +3593,8 @@
           "name": "Social Specialist",
           "description": "<p>For social encounters involving gaming or gambling, the gambling companion is a 5th-level challenge</p>"
         },
-        "action->Gamer’s Guidance": {
-          "name": "Gamer’s Guidance",
+        "action->Gamer's Guidance": {
+          "name": "Gamer's Guidance",
           "description": "<p>When the gambling companion successfully Aids a skill check related to games or gambling, the ally rolls twice and takes the higher result instead of gaining the usual bonus.</p>"
         },
         "action->Distracting Trick": {
@@ -3666,7 +3673,7 @@
         },
         "action->Surprise Attacker": {
           "name": "Surprise Attacker",
-          "description": "<p>On the first round of combat, creatures that haven't acted are off-guard to the gang leader.</p>"
+          "description": "<p>On the first round of combat, creatures that haven't acted are @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} to the gang leader.</p>"
         },
         "action->Brutal Rally": {
           "name": "Brutal Rally",
@@ -3715,7 +3722,7 @@
         },
         "action->Stop in the Name of the Law!": {
           "name": "Stop in the Name of the Law!",
-          "description": "<p>The gendarme Strides twice and then Demoralizes. On a success, the target is slowed with a value equal to its frightened value until it is no longer frightened.</p>"
+          "description": "<p>The gendarme Strides twice and then [[/act demoralize]]{Demoralizes}. On a success, the target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed} with a value equal to its @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} value until it is no longer frightened.</p>"
         },
         "lore->Legal Lore": {
           "name": "Legal Lore"
@@ -3747,11 +3754,11 @@
         },
         "action->Following Spell": {
           "name": "Following Spell",
-          "description": "<p><strong>Frequency</strong> once per round</p>\n<p><strong>Requirements</strong> The globetrotting scholar's last action was a successful Strike</p>\n<hr />\n<p><strong>Effect</strong> The globetrotting scholar immediately casts @UUID[Compendium.pf2e.spells-srd.MPxbKoR54gkYkqLO]{Gouging Claw}, @UUID[Compendium.pf2e.spells-srd.6DfLZBl8wKIV03Iq]{Ignition}, or @UUID[Compendium.pf2e.spells-srd.uZK2BYzPnxUBnDjr]{Tangle Vine} at the target of the Strike.</p>"
+          "description": "<p><strong>Frequency</strong> once per round</p>\n<p><strong>Requirements</strong> The globetrotting scholar's last action was a successful Strike</p>\n<hr />\n<p><strong>Effect</strong> The globetrotting scholar immediately casts @UUID[Compendium.pf2e.spells-srd.Item.MPxbKoR54gkYkqLO]{Gouging Claw}, @UUID[Compendium.pf2e.spells-srd.Item.6DfLZBl8wKIV03Iq]{Ignition}, or @UUID[Compendium.pf2e.spells-srd.Item.uZK2BYzPnxUBnDjr]{Tangle Vine} at the target of the Strike.</p>"
         },
         "action->Magnificent…!": {
           "name": "Magnificent…!",
-          "description": "<p>The globetrotting scholar enthusiastically describes certain features of whatever dread horror they are currently facing, pointing out the weaknesses of a creature within 30 feet. The globetrotting scholar and all allies that can hear or see them gain a +1 status bonus to attack and damage rolls against that creature until the beginning of the globetrotting scholar's next turn. The scholar deals an extra 3d6 precision damage with their weapon and unarmed Strikes that hit that creature during the same duration.</p>"
+          "description": "<p>The globetrotting scholar enthusiastically describes certain features of whatever dread horror they are currently facing, pointing out the weaknesses of a creature within 30 feet. The globetrotting scholar and all allies that can hear or see them gain a +1 status bonus to attack and damage rolls against that creature until the beginning of the globetrotting scholar's next turn. The scholar deals an extra 3d6 precision damage with their weapon and unarmed Strikes that hit that creature during the same duration.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.OBzvZ9LoZLiPyHEW]{Effect: Magnificent…!}</p>"
         }
       }
     },
@@ -3809,8 +3816,10 @@
     "Gnome Philomath": {
       "name": "Gnome Philomath",
       "publicNotes": "<p>The innate gnomish inclination to revel in new experiences leads gnome philomaths to delve as deeply as they can into the multitudes of knowledge contained within a library. These shrewd observers have encyclopedic memories and tend to surround themselves with piles of documents and trinkets pertaining to whatever subject currently holds their attention. As their interests branch from one topic to the next, a gnome philomath files away their discoveries to be referenced again another day.</p>\n<hr />\n<p>Because their ancestors came from the First World, gnomes are intrinsically linked to the realm of the fey and crave the mystical and unpredictable. They seek to create daring works of art, voyage to new places, and have experiences they've never had before. Otherwise, they could fall victim to the terrible gnomish illness known as the Bleaching, which not only drains them of their color but of their spirits as well.</p>",
-      "tokenName": "Bleachling Survivor",
       "items": {
+        "spellcastingEntry->Primal Innate Spells": {
+          "name": "Primal Innate Spells"
+        },
         "strike-melee->Staff": {
           "name": "Staff"
         },
@@ -3827,7 +3836,13 @@
         },
         "action->Mind if I Borrow That?": {
           "name": "Mind if I Borrow That?",
-          "description": "<p>The gnome philomath designates a single item within their sight as an item of interest to their studies. They then gain a +2 circumstance bonus to @UUID[Compendium.pf2e.actionspf2e.Item.Dt6B1slsBy8ipJu9]{Disarm} or @UUID[Compendium.pf2e.actionspf2e.Item.RDXXE7wMrSPCLv5k]{Steal} that item. They can only designate one item at a time in this way. If they use Mind if I Borrow That? to designate a new item of interest, they lose the bonus with the previous item.</p>"
+          "description": "<p>The gnome philomath designates a single item within their sight as an item of interest to their studies. They then gain a +2 circumstance bonus to [[/act disarm options=mind-if-i-borrow-that]] or [[/act steal options=mind-if-i-borrow-that]] that item. They can only designate one item at a time in this way. If they use Mind if I Borrow That? to designate a new item of interest, they lose the bonus with the previous item.</p>"
+        },
+        "lore->History Lore": {
+          "name": "History Lore"
+        },
+        "lore->One Additional Lore": {
+          "name": "One Additional Lore"
         }
       }
     },
@@ -3848,9 +3863,12 @@
         "strike-melee->Cleaver": {
           "name": "Cleaver"
         },
+        "strike-melee->Jaws": {
+          "name": "Jaws"
+        },
         "action->Good Enough to Eat": {
           "name": "Good Enough to Eat",
-          "description": "<p>The goblin chef can turn otherwise inedible items into meals for others. They can provide food for any number of creatures without using the Subsist downtime activity as long as garbage is readily available. A non-goblin who eats the goblin chef's food must attempt a @Check[fortitude|dc:14] save. On a failure, they suffer an upset stomach for 1 day; if they attempt to willingly ingest anything else during that period, they must first succeed at a @Check[flat|dc:4] or the action is disrupted.</p>"
+          "description": "<p>The goblin chef can turn otherwise inedible items into meals for others. They can provide food for any number of creatures without using the @UUID[Compendium.pf2e.actionspf2e.Item.49y9Ec4bDii8pcD3]{Subsist} downtime activity as long as garbage is readily available. A non-goblin who eats the goblin chef's food must attempt a @Check[fortitude|dc:14] save. On a failure, they suffer an upset stomach for 1 day; if they attempt to willingly ingest anything else during that period, they must first succeed at a @Check[flat|dc:4] or the action is disrupted.</p>"
         },
         "action->Kitchen Specialist": {
           "name": "Kitchen Specialist",
@@ -3879,22 +3897,22 @@
           "description": "<p>30 feet. The goblin get gang's disharmonious chorus of disturbing lyrics makes it difficult to concentrate. Any creature performing a concentrate action in the area must succeed at a @Check[will|dc:19] save or the action is lost. On a critical success, the creature is temporarily immune for 1 minute.</p>"
         },
         "action->Troop Defenses": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p>Troops are composed of many individuals, represented by four \"segments\" on a battle grid. Each segment is 10 feet on each side and as tall as the individual members of the troop. Segments must remain contiguous. Each one has to share at least 5 feet of one of its edges with another segment—being adjacent on a diagonal isn't sufficient! You can measure flanking, cover, and the like using the center of any segment.</p>\n<p>A troop has two Hit Point thresholds in its HP entry and loses segments as it crosses thresholds. Typically, the higher threshold is at 2/3 of the troop's maximum Hit Points and the lower is at 1/3 of its maximum. Once the troop drops below the higher threshold, it loses one segment, leaving three segments (12 squares) remaining and setting the first threshold as the troop's new maximum Hit Points. This repeats when the troop drops below the lower threshold, leaving two segments (8 squares). At 0 Hit Points, the troop disperses entirely, with the few remaining members surrendering, @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing}, or easily dispatched, as determined by the GM. Typically the creature who caused the troop to lose a segment decides which to remove, or the GM decides when a specific creature wasn't responsible. To restore lost segments and maximum Hit Points, a troop needs to spend downtime to use long-term treatment on casualties or recruit new members to replace the fallen.</p>\n<p>Troops are typically immune to non-damaging effects that target a single creature, such as a charm spell or the @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} action. An ability that can target 5 or more creatures can target an entire segment, increasing to two segments if it can target 10 or more creatures and to the entire troop if it can target 20 or more creatures. An ability that affects all creatures in a certain range affects all segments in range (make any checks or saves separately for each segment). As examples, an 8thrank charm spell (with 10 targets) can affect two segments, and an ability that Demoralizes all creatures within 30 feet of you would affect all segments that are fully within that range. A non-damaging ability that would prevent a segment from acting, cause them to flee, or otherwise make them unable to function as part of the troop for a round or more removes the segment entirely. The troop loses a number of HP required to bring it to the next threshold. If an ability both deals damage and has a non-damaging effect, apply the damage then the rest of the effect.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 60 (3 segments), 30 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Troop Movement": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.MXI6zwrvbQNIv7ji]\n<p>Whenever a troop moves, you move one of its segments and the other segments follow behind it. At the end of the movement, you can group the other segments adjacent to the one you moved as you see fit, provided none of them moves farther than the moving segment. If you choose not to move the troop any distance, you can instead reshape the position of all the segments as long as one stays in place.</p>"
         },
         "action->Goblins Bound and Goblins Swing!": {
           "name": "Goblins Bound and Goblins Swing!",
-          "description": "<p>The troop's members throw a barrage of burning torches. Each creature in a @Template[type:burst|distance:10] within 30 feet of the troop takes @Damage[2d8[fire]] damage with a @Check[reflex|dc:20|basic] save. When the troop is reduced to 2 or fewer segments, this area decreases to a @Template[type:burst|distance:5].</p>"
+          "description": "<p>Goblins have difficulty staying in formation, especially during combat. The goblin get gang can take a move action only if it has used at least one action to Goblins Slash and Goblins Scar! this turn or if there are no conscious enemies adjacent to it.</p>"
         },
         "action->Goblins Burn and Goblins Char!": {
           "name": "Goblins Burn and Goblins Char!",
-          "description": "<p>The troop's members throw a barrage of burning torches. Each creature in a @Template[type:burst|distance:10] within 30 feet of the troop takes @Damage[2d8[fire]] damage with a @Check[reflex|dc:20|basic] save. When the troop is reduced to 2 or fewer segments, this area decreases to a @Template[type:burst|distance:5].</p>"
+          "description": "<p>The troop's members throw a barrage of burning torches. Each creature in a @Template[type:burst|distance:10] within 30 feet of the troop takes @Damage[2d8[fire]|options:area-damage] damage with a @Check[reflex|dc:20|basic|options:area-effect] save. When the troop is reduced to 2 or fewer segments, this area decreases to a @Template[type:burst|distance:5].</p>"
         },
         "action->Goblins Slash and Goblins Scar!": {
           "name": "Goblins Slash and Goblins Scar!",
-          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The goblin get gang uses dogslicers, horsechoppers, and burning torches to attack each enemy in a @Template[type:emanation|distance:5], with a @Check[reflex|dc:20|basic] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[1d6[slashing], 1d6[fire]] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(1d6+6)[slashing], 1d6[fire]] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(1d6+9)[slashing], 1d6[fire]] damage</p>"
+          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The goblin get gang uses dogslicers, horsechoppers, and burning torches to attack each enemy in a @Template[type:emanation|distance:5], with a @Check[reflex|dc:20|basic|options:area-effect] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[1d6[slashing],1d6[fire]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(1d6+6)[slashing],1d6[fire]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(1d6+9)[slashing],1d6[fire]|options:area-damage] damage</p>"
         }
       }
     },
@@ -3924,10 +3942,10 @@
         },
         "action->Fireworks Barrage": {
           "name": "Fireworks Barrage",
-          "description": "<p><strong>Requirements</strong> The goblin scavenger has a free hand</p>\n<hr />\n<p><strong>Effect</strong> The goblin scavenger draws a bundle of fireworks and launches them toward a point within 60 feet, where they explode, dealing @Damage[1d10[fire], 1d10[sonic]] damage in a @Template[type:burst|distance:10]. Every creature in the area must attempt a @Check[reflex|dc:21] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected. The goblin scavenger realizes that's because a firework fell at their feet and takes @Damage[2[fire]] damage when it explodes in their face.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} and @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} for 1 round.</p>\n<p><strong>Critical Failure</strong> As failure, except the creature is also @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>"
+          "description": "<p><strong>Requirements</strong> The goblin scavenger has a free hand</p>\n<hr />\n<p><strong>Effect</strong> The goblin scavenger draws a bundle of fireworks and launches them toward a point within 60 feet, where they explode, dealing @Damage[1d10[fire],1d10[sonic]|options:area-damage] damage in a @Template[type:burst|distance:10]. Every creature in the area must attempt a @Check[reflex|dc:21|options:area-effect,damaging-effect] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected. The goblin scavenger realizes that's because a firework fell at their feet and takes @Damage[2[fire]] damage when it explodes in their face.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} and @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} for 1 round.</p>\n<p><strong>Critical Failure</strong> As failure, except the creature is also @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>"
         },
-        "action->One Person’s Junk": {
-          "name": "One Person’s Junk",
+        "action->One Person's Junk": {
+          "name": "One Person's Junk",
           "description": "<p>The goblin scavenger intuitively knows how to make use of junk. When they use a weapon with the goblin trait or an improvised weapon, they do an additional die of damage (already included in the Strikes above).</p>"
         }
       }
@@ -4003,7 +4021,7 @@
         },
         "action->Verdant Burst": {
           "name": "Verdant Burst",
-          "description": "<p>When the gourd leshy witch dies, a burst of primal energy explodes from their body, restoring @Damage[4d8[healing, vitality]|shortLabel] Hit Points to each plant creature in a @Template[type:emanation|distance:30]. This area immediately fills with gourds, becoming difficult terrain. If the terrain is not a viable environment for these plants, they wither after 24 hours.</p>"
+          "description": "<p>When the gourd leshy witch dies, a burst of primal energy explodes from their body, restoring @Damage[4d8[healing,vitality]|shortLabel] Hit Points to each plant creature in a @Template[type:emanation|distance:30]. This area immediately fills with gourds, becoming difficult terrain. If the terrain is not a viable environment for these plants, they wither after 24 hours.</p>"
         },
         "action->Change Shape": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.eQM5hQ1W3d1uen97]\n<p>The gourd leshy witch transforms into a Small gourd. This ability otherwise uses the effects of one with plants.</p>"
@@ -4068,7 +4086,7 @@
         },
         "action->Twisting Fear": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\nTwisting Fear",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>The grand inquisitor's Strikes deal an extra 3d6 precision damage to frightened creatures.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>The grand inquisitor's Strikes deal an extra 3d6 precision damage to @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} creatures.</p>"
         }
       }
     },
@@ -4094,11 +4112,11 @@
         },
         "action->Forbidden Palm": {
           "name": "Forbidden Palm",
-          "description": "<p><strong>Requirements</strong> The grandmaster has at least 1 Focus Point</p>\n<hr />\n<p><strong>Effect</strong> The grandmaster casts touch of death (spending 1 Focus Point as normal). Any time the target attempts a Fortitude save against this touch of death, the grandmaster takes 40 damage and is permanently @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}. If the target gets a critical success, it's @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}; if it gets a success or failure the stunned condition it gains is increased by 1, and any damage it takes is increased by 40.</p>"
+          "description": "<p><strong>Requirements</strong> The grandmaster has at least 1 Focus Point</p>\n<hr />\n<p><strong>Effect</strong> The grandmaster casts @UUID[Compendium.pf2e.spells-srd.Item.Ovvflf5aFbmBxqq8]{Touch of Death} (spending 1 Focus Point as normal). Any time the target attempts a Fortitude save against this <em>touch of death</em>, the grandmaster takes @Damage[40] damage and is permanently @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}. If the target gets a critical success, it's @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}; if it gets a success or failure the stunned condition it gains is increased by 1, and any damage it takes is increased by 40.</p>"
         },
         "action->One-Millimeter Punch": {
           "name": "One-Millimeter Punch",
-          "description": "<p>The grandmaster makes a single, carefully controlled unarmed Strike that deals 2 additional dice of damage, or 4 additional dice if the grandmaster spent 3 actions. If this damages the target, the grandmaster can choose to make the target attempt a @Check[fortitude|dc:38] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is pushed back 5 feet.</p>\n<p><strong>Failure</strong> The target is pushed back 10 feet.</p>\n<p><strong>Critical Failure</strong> The target is pushed back 10 feet for each action the grandmaster spent on One-Millimeter Punch.</p>"
+          "description": "<p><span class=\"action-glyph\">2</span> or <span class=\"action-glyph\">3</span></p>\n<p>The grandmaster makes a single, carefully controlled unarmed Strike that deals 2 additional dice of damage, or 4 additional dice if the grandmaster spent 3 actions. If this damages the target, the grandmaster can choose to make the target attempt a @Check[fortitude|dc:38] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is pushed back 5 feet.</p>\n<p><strong>Failure</strong> The target is pushed back 10 feet.</p>\n<p><strong>Critical Failure</strong> The target is pushed back 10 feet for each action the grandmaster spent on One-Millimeter Punch.</p>"
         },
         "action->Powerful Fists": {
           "name": "Powerful Fists",
@@ -4250,7 +4268,7 @@
         },
         "action->Sworn Duty": {
           "name": "Sworn Duty",
-          "description": "<p>While within the guild or presiding over guild business, the guildmaster gains a +2 circumstance bonus to weapon attack rolls and deals an additional [[/r {2d6}]]{2d6 damage} on a successful weapon attack.</p>"
+          "description": "<p>While within the guild or presiding over guild business, the guildmaster gains a +2 circumstance bonus to weapon attack rolls and deals an additional 2d6 damage on a successful weapon attack.</p>"
         },
         "lore->Architecture Lore": {
           "name": "Architecture Lore"
@@ -4352,8 +4370,8 @@
       "publicNotes": "<p>Renowned for their culinary expertise, halfling head chefs navigate the complex world of high cuisine with flavorful creations and fiery tempers.</p>\n<hr />\n<p>Halflings thrive on simple pleasures—having a pint at the pub or warming their feet by the hearth.</p>",
       "senses": "+15 to smell and taste); keen eyes",
       "items": {
-        "equipment->Chef’s Hat": {
-          "name": "Chef’s Hat"
+        "equipment->Chef's Hat": {
+          "name": "Chef's Hat"
         },
         "consumable->Herbs and Spices": {
           "name": "Herbs and Spices"
@@ -4571,7 +4589,7 @@
           "description": "<p>Effects that target only animals or only humanoids might not work on the cavalry brigade, subject to the GM's discretion.</p>"
         },
         "action->Troop Defenses": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p>Troops are composed of many individuals, represented by four \"segments\" on a battle grid. Each segment is 10 feet on each side and as tall as the individual members of the troop. Segments must remain contiguous. Each one has to share at least 5 feet of one of its edges with another segment—being adjacent on a diagonal isn't sufficient! You can measure flanking, cover, and the like using the center of any segment.</p>\n<p>A troop has two Hit Point thresholds in its HP entry and loses segments as it crosses thresholds. Typically, the higher threshold is at 2/3 of the troop's maximum Hit Points and the lower is at 1/3 of its maximum. Once the troop drops below the higher threshold, it loses one segment, leaving three segments (12 squares) remaining and setting the first threshold as the troop's new maximum Hit Points. This repeats when the troop drops below the lower threshold, leaving two segments (8 squares). At 0 Hit Points, the troop disperses entirely, with the few remaining members surrendering, @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing}, or easily dispatched, as determined by the GM. Typically the creature who caused the troop to lose a segment decides which to remove, or the GM decides when a specific creature wasn't responsible. To restore lost segments and maximum Hit Points, a troop needs to spend downtime to use long-term treatment on casualties or recruit new members to replace the fallen.</p>\n<p>Troops are typically immune to non-damaging effects that target a single creature, such as a charm spell or the @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} action. An ability that can target 5 or more creatures can target an entire segment, increasing to two segments if it can target 10 or more creatures and to the entire troop if it can target 20 or more creatures. An ability that affects all creatures in a certain range affects all segments in range (make any checks or saves separately for each segment). As examples, an 8thrank charm spell (with 10 targets) can affect two segments, and an ability that Demoralizes all creatures within 30 feet of you would affect all segments that are fully within that range. A non-damaging ability that would prevent a segment from acting, cause them to flee, or otherwise make them unable to function as part of the troop for a round or more removes the segment entirely. The troop loses a number of HP required to bring it to the next threshold. If an ability both deals damage and has a non-damaging effect, apply the damage then the rest of the effect.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 70 (3 segments), 35 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Troop Movement": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.MXI6zwrvbQNIv7ji]\n<p>Whenever a troop moves, you move one of its segments and the other segments follow behind it. At the end of the movement, you can group the other segments adjacent to the one you moved as you see fit, provided none of them moves farther than the moving segment. If you choose not to move the troop any distance, you can instead reshape the position of all the segments as long as one stays in place.</p>"
@@ -4603,7 +4621,7 @@
           "description": "<p>Effects that target only animals or only humanoids might not work on the cavalry brigade, subject to the GM's discretion.</p>"
         },
         "action->Troop Defenses": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p>Troops are composed of many individuals, represented by four \"segments\" on a battle grid. Each segment is 10 feet on each side and as tall as the individual members of the troop. Segments must remain contiguous. Each one has to share at least 5 feet of one of its edges with another segment—being adjacent on a diagonal isn't sufficient! You can measure flanking, cover, and the like using the center of any segment.</p>\n<p>A troop has two Hit Point thresholds in its HP entry and loses segments as it crosses thresholds. Typically, the higher threshold is at 2/3 of the troop's maximum Hit Points and the lower is at 1/3 of its maximum. Once the troop drops below the higher threshold, it loses one segment, leaving three segments (12 squares) remaining and setting the first threshold as the troop's new maximum Hit Points. This repeats when the troop drops below the lower threshold, leaving two segments (8 squares). At 0 Hit Points, the troop disperses entirely, with the few remaining members surrendering, @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing}, or easily dispatched, as determined by the GM. Typically the creature who caused the troop to lose a segment decides which to remove, or the GM decides when a specific creature wasn't responsible. To restore lost segments and maximum Hit Points, a troop needs to spend downtime to use long-term treatment on casualties or recruit new members to replace the fallen.</p>\n<p>Troops are typically immune to non-damaging effects that target a single creature, such as a charm spell or the @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} action. An ability that can target 5 or more creatures can target an entire segment, increasing to two segments if it can target 10 or more creatures and to the entire troop if it can target 20 or more creatures. An ability that affects all creatures in a certain range affects all segments in range (make any checks or saves separately for each segment). As examples, an 8thrank charm spell (with 10 targets) can affect two segments, and an ability that Demoralizes all creatures within 30 feet of you would affect all segments that are fully within that range. A non-damaging ability that would prevent a segment from acting, cause them to flee, or otherwise make them unable to function as part of the troop for a round or more removes the segment entirely. The troop loses a number of HP required to bring it to the next threshold. If an ability both deals damage and has a non-damaging effect, apply the damage then the rest of the effect.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 90 (3 segments), 45 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Troop Movement": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.MXI6zwrvbQNIv7ji]\n<p>Whenever a troop moves, you move one of its segments and the other segments follow behind it. At the end of the movement, you can group the other segments adjacent to the one you moved as you see fit, provided none of them moves farther than the moving segment. If you choose not to move the troop any distance, you can instead reshape the position of all the segments as long as one stays in place.</p>"
@@ -4723,7 +4741,7 @@
         },
         "action->Restorative Channel": {
           "name": "Restorative Channel",
-          "description": "<p>The high priest can sacrifice one prepared heal spell to instead cast @UUID[Compendium.pf2e.spells-srd.Item.SUKaxVZW2TlM8lu0]{Cleanse Affliction}, @UUID[Compendium.pf2e.spells-srd.Item.EfFMLVbmkBWmzoLF]{Clear Mind}, @UUID[Compendium.pf2e.spells-srd.Item.Et8RSCLx8w7uOLvo]{Sound Body}, or @UUID[Compendium.pf2e.spells-srd.Item.BCuHKrDeJ4eq53M6]{Sure Footing} at the same spell rank.</p>"
+          "description": "<p>The high priest can sacrifice one prepared @UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal} spell to instead cast @UUID[Compendium.pf2e.spells-srd.Item.SUKaxVZW2TlM8lu0]{Cleanse Affliction}, @UUID[Compendium.pf2e.spells-srd.Item.EfFMLVbmkBWmzoLF]{Clear Mind}, @UUID[Compendium.pf2e.spells-srd.Item.Et8RSCLx8w7uOLvo]{Sound Body}, or @UUID[Compendium.pf2e.spells-srd.Item.BCuHKrDeJ4eq53M6]{Sure Footing} at the same spell rank.</p>"
         },
         "lore->Boneyard Lore": {
           "name": "Boneyard Lore"
@@ -4760,7 +4778,7 @@
         },
         "action->Lucky Momentum": {
           "name": "Lucky Momentum",
-          "description": "<p><strong>Requirements</strong> The high roller's last action was a critical success</p>\n<hr />\n<p><strong>Effect</strong> The high roller either Strides twice or attempts a Strike that deals an additional <code>@Damage[4d6[precision]]</code> damage and deals half damage on a failure (but not a critical failure).</p>"
+          "description": "<p><strong>Requirements</strong> The high roller's last action was a critical success</p>\n<hr />\n<p><strong>Effect</strong> The high roller either Strides twice or attempts a Strike that deals an additional 4d6 precision damage and deals half damage on a failure (but not a critical failure).</p>"
         },
         "action->Royal Flush Flurry": {
           "name": "Royal Flush Flurry",
@@ -4778,7 +4796,7 @@
       "speed": "troop movement ",
       "items": {
         "action->Troop Defenses": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p>Troops are composed of many individuals, represented by four \"segments\" on a battle grid. Each segment is 10 feet on each side and as tall as the individual members of the troop. Segments must remain contiguous. Each one has to share at least 5 feet of one of its edges with another segment—being adjacent on a diagonal isn't sufficient! You can measure flanking, cover, and the like using the center of any segment.</p>\n<p>A troop has two Hit Point thresholds in its HP entry and loses segments as it crosses thresholds. Typically, the higher threshold is at 2/3 of the troop's maximum Hit Points and the lower is at 1/3 of its maximum. Once the troop drops below the higher threshold, it loses one segment, leaving three segments (12 squares) remaining and setting the first threshold as the troop's new maximum Hit Points. This repeats when the troop drops below the lower threshold, leaving two segments (8 squares). At 0 Hit Points, the troop disperses entirely, with the few remaining members surrendering, @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing}, or easily dispatched, as determined by the GM. Typically the creature who caused the troop to lose a segment decides which to remove, or the GM decides when a specific creature wasn't responsible. To restore lost segments and maximum Hit Points, a troop needs to spend downtime to use long-term treatment on casualties or recruit new members to replace the fallen.</p>\n<p>Troops are typically immune to non-damaging effects that target a single creature, such as a charm spell or the @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} action. An ability that can target 5 or more creatures can target an entire segment, increasing to two segments if it can target 10 or more creatures and to the entire troop if it can target 20 or more creatures. An ability that affects all creatures in a certain range affects all segments in range (make any checks or saves separately for each segment). As examples, an 8thrank charm spell (with 10 targets) can affect two segments, and an ability that Demoralizes all creatures within 30 feet of you would affect all segments that are fully within that range. A non-damaging ability that would prevent a segment from acting, cause them to flee, or otherwise make them unable to function as part of the troop for a round or more removes the segment entirely. The troop loses a number of HP required to bring it to the next threshold. If an ability both deals damage and has a non-damaging effect, apply the damage then the rest of the effect.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 60 (3 segments), 30 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Troop Movement": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.MXI6zwrvbQNIv7ji]\n<p>Whenever a troop moves, you move one of its segments and the other segments follow behind it. At the end of the movement, you can group the other segments adjacent to the one you moved as you see fit, provided none of them moves farther than the moving segment. If you choose not to move the troop any distance, you can instead reshape the position of all the segments as long as one stays in place.</p>"
@@ -5090,7 +5108,7 @@
         },
         "action->Unavoidable Question": {
           "name": "Unavoidable Question",
-          "description": "<p><strong>Frequency</strong> once per turn</p>\n<hr />\n<p><strong>Effect</strong> The inspector Demoralizes a creature and asks a question. On a success, the next Strike the inspector attempts against that target deals an additional <code>@Damage[1d6[precision]] </code>precision damage. If the target spends an action on their next turn to answer the question, either truthfully or by succeeding at a @Check[deception|dc:25] check, they are temporarily immune to the inspector's Unavoidable Question for 1 minute.</p>"
+          "description": "<p><strong>Frequency</strong> once per turn</p>\n<hr />\n<p><strong>Effect</strong> The inspector [[/act demoralize]]{Demoralizes} a creature and asks a question. On a success, the next Strike the inspector attempts against that target deals an additional 1d6 precision damage. If the target spends an action on their next turn to answer the question, either truthfully or by succeeding at a @Check[deception|dc:25] check, they are temporarily immune to the inspector's Unavoidable Question for 1 minute.</p>"
         },
         "lore->Legal Lore": {
           "name": "Legal Lore"
@@ -5124,7 +5142,7 @@
         },
         "action->Torment": {
           "name": "Torment",
-          "description": "<p>The interrogator's Strikes deal an additional 1d8 mental damage to frightened creatures.</p>"
+          "description": "<p>The interrogator's Strikes deal an additional 1d8 mental damage to @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} creatures.</p>"
         }
       }
     },
@@ -5135,8 +5153,8 @@
         "weapon->+1 Striking Handwraps of Mighty Blows": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.FNDq4NFSN0g2HKWO]\n+1 Striking Handwraps of Mighty Blows"
         },
-        "armor->Mummer’s Costume": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.dDIPA1WE9ESF67EB]\nMummer’s Costume"
+        "armor->Mummer's Costume": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.dDIPA1WE9ESF67EB]\nMummer's Costume"
         },
         "equipment->Ceremonial Skull Mask": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.2c5pF6q5XkjLn8MU]\nCeremonial Skull Mask"
@@ -5468,8 +5486,8 @@
         "strike-melee->Gauntlet": {
           "name": "Gauntlet"
         },
-        "action->Knight’s Courage": {
-          "name": "Knight’s Courage",
+        "action->Knight's Courage": {
+          "name": "Knight's Courage",
           "description": "<p>Any time the knight gains the @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} condition, they reduce its value by 1.</p>"
         },
         "action->Shield Block": {
@@ -5594,18 +5612,18 @@
         },
         "action->Coiled Leap": {
           "name": "Coiled Leap",
-          "description": "<p>The leaping thief Leaps up to 10 feet vertically or 30 feet horizontally.</p>"
+          "description": "<p>The leaping thief @UUID[Compendium.pf2e.actionspf2e.Item.d5I6018Mci2SWokk]{Leaps} up to 10 feet vertically or 30 feet horizontally.</p>"
         },
         "action->Sneak Attack": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>The leaping thief deals an extra 1d6 precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
         },
         "action->Stealthy Pad": {
           "name": "Stealthy Pad",
-          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The leaping thief Steps, then Hides or Sneaks, ignoring difficult terrain for this movement.</p>"
+          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The leaping thief Steps, then [[/act hide]]{Hides} or [[/act sneak]]{Sneaks}, ignoring difficult terrain for this movement.</p>"
         },
         "action->Unexpected Angle": {
           "name": "Unexpected Angle",
-          "description": "<p>When the leaping thief successfully Tumbles Through a foe's space or Leaps to a position higher than a foe, the foe is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against the next attack the leaping thief makes before the end of their turn.</p>"
+          "description": "<p>When the leaping thief successfully [[/act tumble-through]]{Tumbles Through} a foe's space or @UUID[Compendium.pf2e.actionspf2e.Item.d5I6018Mci2SWokk]{Leaps} to a position higher than a foe, the foe is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against the next attack the leaping thief makes before the end of their turn.</p>"
         }
       }
     },
@@ -5685,7 +5703,7 @@
           "description": "<p>These soldiers have been extensively trained to hold their ground no matter the situation. If any effect would force the line infantry to move, reduce the distance by 5 feet. Any time they would be affected by the @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} condition, the line infantry is instead @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 2} for the same duration.</p>"
         },
         "action->Troop Defenses": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p>Troops are composed of many individuals, represented by four \"segments\" on a battle grid. Each segment is 10 feet on each side and as tall as the individual members of the troop. Segments must remain contiguous. Each one has to share at least 5 feet of one of its edges with another segment—being adjacent on a diagonal isn't sufficient! You can measure flanking, cover, and the like using the center of any segment.</p>\n<p>A troop has two Hit Point thresholds in its HP entry and loses segments as it crosses thresholds. Typically, the higher threshold is at 2/3 of the troop's maximum Hit Points and the lower is at 1/3 of its maximum. Once the troop drops below the higher threshold, it loses one segment, leaving three segments (12 squares) remaining and setting the first threshold as the troop's new maximum Hit Points. This repeats when the troop drops below the lower threshold, leaving two segments (8 squares). At 0 Hit Points, the troop disperses entirely, with the few remaining members surrendering, @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing}, or easily dispatched, as determined by the GM. Typically the creature who caused the troop to lose a segment decides which to remove, or the GM decides when a specific creature wasn't responsible. To restore lost segments and maximum Hit Points, a troop needs to spend downtime to use long-term treatment on casualties or recruit new members to replace the fallen.</p>\n<p>Troops are typically immune to non-damaging effects that target a single creature, such as a charm spell or the @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} action. An ability that can target 5 or more creatures can target an entire segment, increasing to two segments if it can target 10 or more creatures and to the entire troop if it can target 20 or more creatures. An ability that affects all creatures in a certain range affects all segments in range (make any checks or saves separately for each segment). As examples, an 8thrank charm spell (with 10 targets) can affect two segments, and an ability that Demoralizes all creatures within 30 feet of you would affect all segments that are fully within that range. A non-damaging ability that would prevent a segment from acting, cause them to flee, or otherwise make them unable to function as part of the troop for a round or more removes the segment entirely. The troop loses a number of HP required to bring it to the next threshold. If an ability both deals damage and has a non-damaging effect, apply the damage then the rest of the effect.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 64 (3 segments), 32 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Troop Movement": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.MXI6zwrvbQNIv7ji]\n<p>Whenever a troop moves, you move one of its segments and the other segments follow behind it. At the end of the movement, you can group the other segments adjacent to the one you moved as you see fit, provided none of them moves farther than the moving segment. If you choose not to move the troop any distance, you can instead reshape the position of all the segments as long as one stays in place.</p>"
@@ -5779,7 +5797,7 @@
         },
         "action->Prompt Poultice": {
           "name": "Prompt Poultice",
-          "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p><strong>Effect</strong> The local herbalist quickly mixes together a potent healing salve with the most precious ingredients from their medicine bag. They create a temporary lesser elixir of life. This elixir remains potent for 1 round before becoming sour and useless.</p>"
+          "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p><strong>Effect</strong> The local herbalist quickly mixes together a potent healing salve with the most precious ingredients from their medicine bag. They create a temporary @UUID[Compendium.pf2e.equipment-srd.Item.TZUskLT7yvP7N2co]{lesser elixir of life}. This elixir remains potent for 1 round before becoming sour and useless.</p>"
         }
       }
     },
@@ -5815,7 +5833,7 @@
         },
         "action->Elusive Hunter": {
           "name": "Elusive Hunter",
-          "description": "<p>The lucky courser can @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa]{Hide} and @UUID[Compendium.pf2e.actionspf2e.Item.VMozDqMMuK5kpoX4]{Sneak} in any natural terrain and in lesser cover from allies.</p>"
+          "description": "<p>The lucky courser can [[/act hide]] and [[/act sneak]] in any natural terrain and in lesser cover from allies.</p>"
         },
         "action->Feline Skirmish": {
           "name": "Feline Skirmish",
@@ -5892,8 +5910,8 @@
         }
       }
     },
-    "Mage Kiler": {
-      "name": "Mage Kiler",
+    "Mage Killer": {
+      "name": "Mage Killer",
       "publicNotes": "<p>Whenever high command needs an enemy spellcaster taken off the board in the midst of battle, they send in a mage killer.</p>\n<hr />\n<p>Whether they're hired to wage war, protect a caravan, or infiltrate an impenetrable fortress, there's ample work for mercenaries all over Golarion.</p>",
       "skillSpecialAthletics": {
         "0": {
@@ -6143,7 +6161,7 @@
       "publicNotes": "<p>Some bands of experienced soldiers have storied reputations, their rolls filled with legendary warriors. Others are whispered of for their cruel deeds and opportunistic betrayals.</p>\n<hr />\n<p>Whether they're hired to wage war, protect a caravan, or infiltrate an impenetrable fortress, there's ample work for mercenaries all over Golarion.</p>",
       "items": {
         "action->Troop Defenses": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p>Troops are composed of many individuals, represented by four \"segments\" on a battle grid. Each segment is 10 feet on each side and as tall as the individual members of the troop. Segments must remain contiguous. Each one has to share at least 5 feet of one of its edges with another segment—being adjacent on a diagonal isn't sufficient! You can measure flanking, cover, and the like using the center of any segment.</p>\n<p>A troop has two Hit Point thresholds in its HP entry and loses segments as it crosses thresholds. Typically, the higher threshold is at 2/3 of the troop's maximum Hit Points and the lower is at 1/3 of its maximum. Once the troop drops below the higher threshold, it loses one segment, leaving three segments (12 squares) remaining and setting the first threshold as the troop's new maximum Hit Points. This repeats when the troop drops below the lower threshold, leaving two segments (8 squares). At 0 Hit Points, the troop disperses entirely, with the few remaining members surrendering, @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing}, or easily dispatched, as determined by the GM. Typically the creature who caused the troop to lose a segment decides which to remove, or the GM decides when a specific creature wasn't responsible. To restore lost segments and maximum Hit Points, a troop needs to spend downtime to use long-term treatment on casualties or recruit new members to replace the fallen.</p>\n<p>Troops are typically immune to non-damaging effects that target a single creature, such as a charm spell or the @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} action. An ability that can target 5 or more creatures can target an entire segment, increasing to two segments if it can target 10 or more creatures and to the entire troop if it can target 20 or more creatures. An ability that affects all creatures in a certain range affects all segments in range (make any checks or saves separately for each segment). As examples, an 8thrank charm spell (with 10 targets) can affect two segments, and an ability that Demoralizes all creatures within 30 feet of you would affect all segments that are fully within that range. A non-damaging ability that would prevent a segment from acting, cause them to flee, or otherwise make them unable to function as part of the troop for a round or more removes the segment entirely. The troop loses a number of HP required to bring it to the next threshold. If an ability both deals damage and has a non-damaging effect, apply the damage then the rest of the effect.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 120 (3 segments), 60 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Troop Movement": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.MXI6zwrvbQNIv7ji]\n<p>Whenever a troop moves, you move one of its segments and the other segments follow behind it. At the end of the movement, you can group the other segments adjacent to the one you moved as you see fit, provided none of them moves farther than the moving segment. If you choose not to move the troop any distance, you can instead reshape the position of all the segments as long as one stays in place.</p>"
@@ -6251,7 +6269,7 @@
         },
         "action->Versatile Performance": {
           "name": "Versatile Performance",
-          "description": "<p>The mime can use Performance instead of Diplomacy to @UUID[Compendium.pf2e.actionspf2e.Item.OX4fy22hQgUHDr0q]{Make an Impression}, instead of Intimidation to @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize}, and instead of Deception to Impersonate.</p>"
+          "description": "<p>The mime can use Performance instead of Diplomacy to [[/act make-an-impression statistic=performance]], instead of Intimidation to [[/act demoralize statistic=performance]], and instead of Deception to [[/act impersonate statistic=performance]].</p>"
         },
         "action->Mimic Assault": {
           "name": "Mimic Assault",
@@ -6278,7 +6296,7 @@
         },
         "action->Piton Pin": {
           "name": "Piton Pin",
-          "description": "<p><strong>Requirements</strong> The miner has their hammer in hand</p>\n<hr />\n<p><strong>Effect</strong> The miner Interacts to draw a piton, then hammers it into a creature to pin them in place, attempting an Athletics check against the target's Reflex DC. On a hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} until it removes the piton with a successful @Check[athletics|dc:10] check made as an Interact action.</p>"
+          "description": "<p><strong>Requirements</strong> The miner has their hammer in hand</p>\n<hr />\n<p><strong>Effect</strong> The miner Interacts to draw a piton, then hammers it into a creature to pin them in place, attempting an @Check[athletics|against:reflex] check against the target's Reflex DC. On a hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} until it removes the piton with a successful @Check[athletics|dc:10] check made as an Interact action.</p>"
         },
         "lore->Mining Lore": {
           "name": "Mining Lore"
@@ -6336,7 +6354,7 @@
     },
     "Mixed Martial Artist": {
       "name": "Mixed Martial Artist",
-      "publicNotes": "<p>These fighters combine the takedowns of a wrestler with aggressive stances and unorthodox blows, ensuring that contenders won’t know what hit them.</p>\n<hr />\n<p>Martial artists strive to master the art of hand-to-hand fighting.</p>",
+      "publicNotes": "<p>These fighters combine the takedowns of a wrestler with aggressive stances and unorthodox blows, ensuring that contenders won't know what hit them.</p>\n<hr />\n<p>Martial artists strive to master the art of hand-to-hand fighting.</p>",
       "items": {
         "strike-melee->Fist": {
           "name": "Fist"
@@ -6366,9 +6384,6 @@
             },
             "2": {
               "label": "Elbow Knockout Stance"
-            },
-            "3": {
-              "label": "Stance Shift"
             }
           }
         },
@@ -6449,7 +6464,7 @@
         },
         "action->Tremor": {
           "name": "Tremor",
-          "description": "<p>The mountain guardian stomps on natural earth or stone, causing a localized tremor. All creatures in a @Template[type:burst|distance:10] within 30 feet take @Damage[3d10[bludgeoning]] damage with a @Check[fortitude|dc:24|basic] save. A creature that critically fails is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}. Earth and stone in the area is difficult terrain until the start of the mountain guardian's next turn.</p>"
+          "description": "<p>The mountain guardian stomps on natural earth or stone, causing a localized tremor. All creatures in a @Template[type:burst|distance:10] within 30 feet take @Damage[3d10[bludgeoning]|options:area-damage] damage with a @Check[fortitude|dc:24|basic|options:area-effect] save. A creature that critically fails is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}. Earth and stone in the area is difficult terrain until the start of the mountain guardian's next turn.</p>"
         }
       }
     },
@@ -6598,12 +6613,7 @@
         },
         "action->Navigator's Edge": {
           "name": "Navigator's Edge",
-          "description": "<p>The navigator deals an additional [[/r {1d6}]]{1d6 weapon damage} when on a ship.</p>",
-          "rules": {
-            "0": {
-              "label": "Fighting on a ship"
-            }
-          }
+          "description": "<p>The navigator deals an additional 1d6 weapon damage when on a ship.</p>"
         },
         "lore->Sailing Lore": {
           "name": "Sailing Lore"
@@ -6678,7 +6688,7 @@
         },
         "action->Noble's Ruse": {
           "name": "Noble's Ruse",
-          "description": "<p><strong>Frequency</strong> Once per round</p>\n<hr />\n<p><strong>Effect</strong> The noble @UUID[Compendium.pf2e.actionspf2e.Item.QNAVeNKtHA0EUw4X]{Feints}. On a success, the noble Strikes the target.</p>"
+          "description": "<p><strong>Frequency</strong> Once per round</p>\n<hr />\n<p><strong>Effect</strong> The noble [[/act feint]]{Feints}. On a success, the noble Strikes the target.</p>"
         },
         "action->Sneak Attack": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>The noble deals an additional 1d6 precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
@@ -6770,7 +6780,6 @@
     "Orc Agriculturist": {
       "name": "Orc Agriculturist",
       "publicNotes": "<p>In the severe lands orcs occupy, there are no lush fields blooming with crops. An orc farmer must be tough and just as adept at foraging as planting and harvesting.</p>\n<hr />\n<p>Orcs have a strict moral code encompassing valor and accomplishment, and they cast out those unwilling to follow it. For the last few generations, orcs have been trying to erase the narratives around their culture as being solely focused on war and violence. They invite other races and adventuring parties inside their holds so they may experience the truth of who the orcs are.</p>",
-      "tokenName": "Orc Gamekeeper",
       "items": {
         "weapon->Pitchfork (as longspear)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.aXuJh4i8HqSu6NYV]\nPitchfork (as longspear)"
@@ -6810,7 +6819,6 @@
     "Orc Gamekeeper": {
       "name": "Orc Gamekeeper",
       "publicNotes": "<p>Gamekeepers live on the outskirts of the hold, usually remaining solitary and tending to animals they've captured. Every part of a trapped animal can be useful for making supplies or trading.</p>\n<hr />\n<p>Orcs have a strict moral code encompassing valor and accomplishment, and they cast out those unwilling to follow it. For the last few generations, orcs have been trying to erase the narratives around their culture as being solely focused on war and violence. They invite other races and adventuring parties inside their holds so they may experience the truth of who the orcs are.</p>",
-      "tokenName": "Orc Agriculturist",
       "items": {
         "strike-ranged->Bola": {
           "name": "Bola"
@@ -6833,12 +6841,12 @@
     },
     "Orc Skullcrushers": {
       "name": "Orc Skullcrushers",
-      "acDetails": "(4 segments) Thresholds 80 (3 segments), 40 (2 segments)",
+      "acDetails": "(4 segments); Thresholds 80 (3 segments), 40 (2 segments)",
       "publicNotes": "<p>Orc warriors search for more effective weapons and tactics—most physical, but some magical. As they fought back against the undead on their borders, they formed bands of skullcrushers to crush hordes of skeletons.</p>\n<hr />\n<p>Orcs have a strict moral code encompassing valor and accomplishment, and they cast out those unwilling to follow it. For the last few generations, orcs have been trying to erase the narratives around their culture as being solely focused on war and violence. They invite other races and adventuring parties inside their holds so they may experience the truth of who the orcs are.</p>",
-      "speed": " troop movement",
+      "speed": "troop movement",
       "items": {
         "action->Troop Defenses": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p>Troops are composed of many individuals, represented by four \"segments\" on a battle grid. Each segment is 10 feet on each side and as tall as the individual members of the troop. Segments must remain contiguous. Each one has to share at least 5 feet of one of its edges with another segment—being adjacent on a diagonal isn't sufficient! You can measure flanking, cover, and the like using the center of any segment.</p>\n<p>A troop has two Hit Point thresholds in its HP entry and loses segments as it crosses thresholds. Typically, the higher threshold is at 2/3 of the troop's maximum Hit Points and the lower is at 1/3 of its maximum. Once the troop drops below the higher threshold, it loses one segment, leaving three segments (12 squares) remaining and setting the first threshold as the troop's new maximum Hit Points. This repeats when the troop drops below the lower threshold, leaving two segments (8 squares). At 0 Hit Points, the troop disperses entirely, with the few remaining members surrendering, @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing}, or easily dispatched, as determined by the GM. Typically the creature who caused the troop to lose a segment decides which to remove, or the GM decides when a specific creature wasn't responsible. To restore lost segments and maximum Hit Points, a troop needs to spend downtime to use long-term treatment on casualties or recruit new members to replace the fallen.</p>\n<p>Troops are typically immune to non-damaging effects that target a single creature, such as a charm spell or the @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} action. An ability that can target 5 or more creatures can target an entire segment, increasing to two segments if it can target 10 or more creatures and to the entire troop if it can target 20 or more creatures. An ability that affects all creatures in a certain range affects all segments in range (make any checks or saves separately for each segment). As examples, an 8thrank charm spell (with 10 targets) can affect two segments, and an ability that Demoralizes all creatures within 30 feet of you would affect all segments that are fully within that range. A non-damaging ability that would prevent a segment from acting, cause them to flee, or otherwise make them unable to function as part of the troop for a round or more removes the segment entirely. The troop loses a number of HP required to bring it to the next threshold. If an ability both deals damage and has a non-damaging effect, apply the damage then the rest of the effect.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 80 (3 segments), 40 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Troop Movement": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.MXI6zwrvbQNIv7ji]\n<p>Whenever a troop moves, you move one of its segments and the other segments follow behind it. At the end of the movement, you can group the other segments adjacent to the one you moved as you see fit, provided none of them moves farther than the moving segment. If you choose not to move the troop any distance, you can instead reshape the position of all the segments as long as one stays in place.</p>"
@@ -7055,7 +7063,7 @@
         },
         "action->Agonizing Drive": {
           "name": "Agonizing Drive",
-          "description": "<p>The penitent ignores the penalty to attack rolls from being frightened and gains a status bonus to damage rolls equal to their frightened value.</p>"
+          "description": "<p>The penitent ignores the penalty to attack rolls from being @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} and gains a status bonus to damage rolls equal to their frightened value.</p>"
         },
         "action->Repentant Defiance": {
           "name": "Repentant Defiance",
@@ -7072,7 +7080,7 @@
       "publicNotes": "<p>A proper phalanx formation requires the simultaneous use of spear and shield in order to attack enemies near and far while defending each other. Impressive amounts of teamwork are not only beneficial but essential to the survival of the troop</p>\n<hr />\n<p>A military serves to defend and fight on behalf of nations and can be trained and deployed in various ways.</p>",
       "items": {
         "action->Troop Defenses": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p>Troops are composed of many individuals, represented by four \"segments\" on a battle grid. Each segment is 10 feet on each side and as tall as the individual members of the troop. Segments must remain contiguous. Each one has to share at least 5 feet of one of its edges with another segment—being adjacent on a diagonal isn't sufficient! You can measure flanking, cover, and the like using the center of any segment.</p>\n<p>A troop has two Hit Point thresholds in its HP entry and loses segments as it crosses thresholds. Typically, the higher threshold is at 2/3 of the troop's maximum Hit Points and the lower is at 1/3 of its maximum. Once the troop drops below the higher threshold, it loses one segment, leaving three segments (12 squares) remaining and setting the first threshold as the troop's new maximum Hit Points. This repeats when the troop drops below the lower threshold, leaving two segments (8 squares). At 0 Hit Points, the troop disperses entirely, with the few remaining members surrendering, @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing}, or easily dispatched, as determined by the GM. Typically the creature who caused the troop to lose a segment decides which to remove, or the GM decides when a specific creature wasn't responsible. To restore lost segments and maximum Hit Points, a troop needs to spend downtime to use long-term treatment on casualties or recruit new members to replace the fallen.</p>\n<p>Troops are typically immune to non-damaging effects that target a single creature, such as a charm spell or the @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} action. An ability that can target 5 or more creatures can target an entire segment, increasing to two segments if it can target 10 or more creatures and to the entire troop if it can target 20 or more creatures. An ability that affects all creatures in a certain range affects all segments in range (make any checks or saves separately for each segment). As examples, an 8thrank charm spell (with 10 targets) can affect two segments, and an ability that Demoralizes all creatures within 30 feet of you would affect all segments that are fully within that range. A non-damaging ability that would prevent a segment from acting, cause them to flee, or otherwise make them unable to function as part of the troop for a round or more removes the segment entirely. The troop loses a number of HP required to bring it to the next threshold. If an ability both deals damage and has a non-damaging effect, apply the damage then the rest of the effect.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 66 (3 segments), 33 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Troop Movement": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.MXI6zwrvbQNIv7ji]\n<p>Whenever a troop moves, you move one of its segments and the other segments follow behind it. At the end of the movement, you can group the other segments adjacent to the one you moved as you see fit, provided none of them moves farther than the moving segment. If you choose not to move the troop any distance, you can instead reshape the position of all the segments as long as one stays in place.</p>"
@@ -7294,7 +7302,7 @@
         },
         "action->Fiery Rhetoric": {
           "name": "Fiery Rhetoric",
-          "description": "<p>The upstart rattles off talking points at an enemy within 30 feet. The target takes a –2 status penalty to Perception and Will saves for 1 minute.</p>"
+          "description": "<p>The upstart rattles off talking points at an enemy within 30 feet. The target takes a –2 status penalty to Perception and Will saves for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.Sekb8YSa36xlqcgk]{Effect: Fiery Rhetoric}</p>"
         },
         "action->Retort": {
           "name": "Retort",
@@ -7418,13 +7426,13 @@
         },
         "action->Nuanced Spin": {
           "name": "Nuanced Spin",
-          "description": "<p>The propagandist phrases everything loosely and vaguely enough that, though it's always misleading, none of it is false. The propagandist can use Diplomacy instead of Deception to @UUID[Compendium.pf2e.actionspf2e.Item.GkmbTGfg8KcgynOA]{Create a Diversion} or @UUID[Compendium.pf2e.actionspf2e.Item.QNAVeNKtHA0EUw4X]{Feint}, and instead of Intimidation to @UUID[Compendium.pf2e.actionspf2e.Item.tHCqgwjtQtzNqVvd]{Coerce}. A creature attempting to @UUID[Compendium.pf2e.actionspf2e.Item.1xRFPTFtWtGJ9ELw]{Sense Motive} against the propagandist gets a result one degree of success worse than they rolled.</p>"
+          "description": "<p>The propagandist phrases everything loosely and vaguely enough that, though it's always misleading, none of it is false. The propagandist can use Diplomacy instead of Deception to @UUID[Compendium.pf2e.actionspf2e.Item.GkmbTGfg8KcgynOA]{Create a Diversion} or [[/act feint statistic=diplomacy]], and instead of Intimidation to [[/act coerce statistic=diplomacy]]. A creature attempting to @UUID[Compendium.pf2e.actionspf2e.Item.1xRFPTFtWtGJ9ELw]{Sense Motive} against the propagandist gets a result one degree of success worse than they rolled.</p>"
         },
         "action->Perception +12 to Sense Motive": {
           "name": "Perception +12 to Sense Motive"
         },
-        "action->NO Hard Feelings": {
-          "name": "NO Hard Feelings",
+        "action->No Hard Feelings": {
+          "name": "No Hard Feelings",
           "description": "<p>The propagandist offers amnesty and other benefits to all who choose to join them. All enemies who can hear the propagandist must attempt a @Check[will|dc:19] save. If any of the propagandist's allies is currently benefiting from one of the propagandist's bard composition spells, any enemy who is aware of that takes a –2 circumstance penalty to the save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature sees through the propagandist's pitch and is temporarily immune for 24 hours.</p>\n<p><strong>Success</strong> The creature is unaffected.</p>\n<p><strong>Failure</strong> The creature's conviction stumbles. Until the end of its next turn, the creature must succeed at a @Check[flat|dc:5] to target the propagandist with a hostile action.</p>\n<p><strong>Critical Failure</strong> The creature finds the propagandist's offer too good to pass up, switching sides in the combat and instantly gaining any benefits the propagandist is currently granting their allies. At the end of each of its turns, the creature can attempt another @Check[will|dc:19] save to snap out of it and rejoin their allies.</p>"
         },
         "lore->Legal Lore": {
@@ -7506,11 +7514,12 @@
         "spellcastingEntry->Cleric Domain Spells": {
           "name": "Cleric Domain Spells"
         },
-        "spell->Blight (Doesn’t Require Secondary Casters)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.7yWXx3qC4eFNHhxD]\nBlight (Doesn’t Require Secondary Casters)"
+        "spell->Blight (Doesn't Require Secondary Casters)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.7yWXx3qC4eFNHhxD]\nBlight (Doesn't Require Secondary Casters)"
         },
         "action->Troop Defenses": {
-          "name": "Troop Defenses"
+          "name": "Troop Defenses",
+          "description": "<p><strong>Thresholds</strong> 130 (3 segments), 65 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Troop Movement": {
           "name": "Troop Movement",
@@ -7558,7 +7567,7 @@
     },
     "Reckless Scientist": {
       "name": "Reckless Scientist",
-      "publicNotes": "<p>It’s the reckless scientist’s job to break the rules of reality, no matter the cost.</p>\n<hr />\n<p>Villains pursue selfish and cruel goals, trampling over anyone in their way.</p>",
+      "publicNotes": "<p>It's the reckless scientist's job to break the rules of reality, no matter the cost.</p>\n<hr />\n<p>Villains pursue selfish and cruel goals, trampling over anyone in their way.</p>",
       "saveDetails": "+1 status to all saves vs. poison",
       "items": {
         "armor->Work Coat": {
@@ -7709,7 +7718,7 @@
         },
         "action->Verdant Burst": {
           "name": "Verdant Burst",
-          "description": "<p>When the root leshy groundskeeper dies, a burst of primal energy explodes from their body, restoring @Damage[1d4[healing, vitality]|shortLabel] Hit Points to each plant creature in a @Template[type:emanation|distance:30]. This area immediately fills with roots and vines, becoming difficult terrain. If the terrain is not a viable environment for these plants, they wither after 24 hours.</p>"
+          "description": "<p>When the root leshy groundskeeper dies, a burst of primal energy explodes from their body, restoring @Damage[1d4[healing,vitality]|shortLabel] Hit Points to each plant creature in a @Template[type:emanation|distance:30]. This area immediately fills with roots and vines, becoming difficult terrain. If the terrain is not a viable environment for these plants, they wither after 24 hours.</p>"
         },
         "action->Change Shape": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.eQM5hQ1W3d1uen97]\n<p>The root leshy groundskeeper transforms into a Small root vegetable. This ability otherwise uses the effects of one with plants.</p>"
@@ -7849,12 +7858,7 @@
         },
         "action->Sage's Analysis": {
           "name": "Sage's Analysis",
-          "description": "<p>The sage studies a creature, attempting an Arcana, Nature, Occultism, Religion, or Society check against the creature's @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Recall Knowledge} DC. On a success, the sage gains a +2 circumstance bonus to attack rolls and AC against that creature and deals an additional [[/r {2d6}]]{2d6 damage} to the creature with weapon attacks.</p>\n<p>These benefits last for 1 minute or until the sage uses this ability again.</p>",
-          "rules": {
-            "0": {
-              "label": "Target is subject of Sage's Analysis"
-            }
-          }
+          "description": "<p>The sage studies a creature, attempting an @Check[arcana], @Check[nature], @Check[occultism], @Check[religion], or @Check[society] check against the creature's Recall Knowledge DC. On a success, the sage gains a +2 circumstance bonus to attack rolls and AC against that creature and deals an additional 2d6 damage to the creature with weapon attacks.</p>\n<p>These benefits last for 1 minute or until the sage uses this ability again.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.pdEXnJrIHIEX9NM4]{Effect: Sage's Analysis}</p>"
         }
       }
     },
@@ -7999,7 +8003,7 @@
         },
         "action->Expanded Splash": {
           "name": "Expanded Splash",
-          "description": "<p>The siegebreaker’s grenades deal splash damage in a 10-foot radius</p>"
+          "description": "<p>The siegebreaker's grenades deal splash damage in a 10-foot radius</p>"
         },
         "action->Quick Grenadier": {
           "name": "Quick Grenadier",
@@ -8082,7 +8086,7 @@
         },
         "action->Smith's Fury": {
           "name": "Smith's Fury",
-          "description": "<p>The smith deals an additional [[/r {1d6}]]{1d6 damage} when they hit with a weapon they created.</p>"
+          "description": "<p>The smith deals an additional 1d6 damage when they hit with a weapon they created.</p>"
         },
         "lore->Smithy Lore": {
           "name": "Smithy Lore"
@@ -8154,7 +8158,7 @@
         },
         "action->Haunting Spirits": {
           "name": "Haunting Spirits",
-          "description": "<p>The spirits bound by a spirit binder swirl around, lashing out at their foes. An enemy that enters or starts its turn in the aura must succeed at a @Check[will|dc:27|options:area-effect,damaging-effect] save or take @Damage[3d6[spirit]|options:area-damage] damage and be @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (double damage and @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure).</p>"
+          "description": "<p>30 feet. The spirits bound by a spirit binder swirl around, lashing out at their foes. An enemy that enters or starts its turn in the aura must succeed at a @Check[will|dc:27|options:area-effect,damaging-effect] save or take @Damage[3d6[spirit]|options:area-damage] damage and be @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (double damage and @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure).</p>"
         },
         "action->Spirit Scrying": {
           "name": "Spirit Scrying",
@@ -8187,9 +8191,9 @@
         "strike-melee->Fist": {
           "name": "Fist"
         },
-        "action->Spirit’s Interference": {
-          "name": "Spirit’s Interference",
-          "description": "<p>The spirit priest calls out to a local spirit to assault the priest's enemies. The spirit unleashes a blast of rocks, attacks with a set of vines, or uses some other appropriate part of the environment to attack all creatures in a @Template[type:burst|distance:10] within 30 feet of the priest. The attack deals @Damage[6d6[bludgeoning]] damage with a @Check[reflex|dc:18|basic] save. The spirit priest can't use Spirit's Interference for [[/gmr 1d4 #rounds]]{1d4 rounds}. The GM might have this ability deal a different damage type based on the local spirits, such as fire damage when calling on a fire spirit.</p>"
+        "action->Spirit's Interference": {
+          "name": "Spirit's Interference",
+          "description": "<p>The spirit priest calls out to a local spirit to assault the priest's enemies. The spirit unleashes a blast of rocks, attacks with a set of vines, or uses some other appropriate part of the environment to attack all creatures in a @Template[type:burst|distance:10] within 30 feet of the priest. The attack deals @Damage[6d6[bludgeoning]|options:area-damage] damage with a @Check[reflex|dc:18|basic|options:area-effect] save. The spirit priest can't use Spirit's Interference for [[/gmr 1d4 #rounds]]{1d4 rounds}. The GM might have this ability deal a different damage type based on the local spirits, such as fire damage when calling on a fire spirit.</p>"
         },
         "action->Spiritual Edge": {
           "name": "Spiritual Edge",
@@ -8258,7 +8262,7 @@
         },
         "action->Inspiring Aura": {
           "name": "Inspiring Aura",
-          "description": "<p>60 feet. The standard bearer and each ally in the aura who can see their battle standard gains a +1 status bonus to initiative rolls and saves against fear effects. Each time an affected creature gains the frightened condition, reduce the frightened value by 1.</p>"
+          "description": "<p>60 feet. The standard bearer and each ally in the aura who can see their battle standard gains a +1 status bonus to initiative rolls and saves against fear effects. Each time an affected creature gains the @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} condition, reduce the frightened value by 1.</p>"
         },
         "action->Signal the Advance!": {
           "name": "Signal the Advance!",
@@ -8296,7 +8300,7 @@
         },
         "action->Distracting Drone": {
           "name": "Distracting Drone",
-          "description": "<p><strong>Requirements</strong> The street musician is playing their instrument</p>\n<hr />\n<p><strong>Effect</strong> The street musician attempts a Performance check compared to the Will DC of an observer within 30 feet. On a success, the target is @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fascinated} by the street musician and @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} for 1 round.</p>"
+          "description": "<p><strong>Requirements</strong> The street musician is playing their instrument</p>\n<hr />\n<p><strong>Effect</strong> The street musician attempts a @Check[type:performance|against:will] check compared to the Will DC of an observer within 30 feet. On a success, the target is @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fascinated} by the street musician and @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} for 1 round.</p>"
         },
         "action->Sneak Attack": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>The street musician deals an additional 1d4 precision damage to offguard creatures. This increases to 1d6 against creatures @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} due to the street musician's @UUID[Compendium.pf2e.actionspf2e.Item.QNAVeNKtHA0EUw4X]{Feint} or distracting drone.</p>",
@@ -8378,7 +8382,8 @@
         },
         "action->Medical Malpractice": {
           "name": "Medical Malpractice",
-          "description": "<p>The surgeon attempts a Medicine check against the Fortitude DC of one living creature they can see within 60 feet.</p>\n<p>On a success, the surgeon's melee Strikes deal an extra 1d6 precision damage against that creature (2d6 on a critical success) until 1 minute passes or the surgeon critically hits that creature, whichever comes first.</p>\n<p>Using this action again ends any previous one. A surgeon can target an individual creature no more than once per day with this ability.</p>"
+          "description": "<p>The surgeon attempts a @Check[medicine|against:fortitude] check against the Fortitude DC of one living creature they can see within 60 feet.</p>\n<p>On a success, the surgeon's melee Strikes deal an extra 1d6 precision damage against that creature (2d6 on a critical success) until 1 minute passes or the surgeon critically hits that creature, whichever comes first.</p>\n<p>Using this action again ends any previous one. A surgeon can target an individual creature no more than once per day with this ability.</p>",
+          "selfEffect": "Effect: Medical Malpractice"
         }
       }
     },
@@ -8600,7 +8605,7 @@
         },
         "action->Therapeutic Care": {
           "name": "Therapeutic Care",
-          "description": "<p>When Treating Wounds, the therapeutic healer can treat up to four targets. If they succeed at a DC 20 check to @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Treat Wounds}, they can also reduce the value of one clumsy, enfeebled, or stupefied condition affecting a single patient by 1. They can reduce a drained or doomed condition instead if they succeed at a DC 30 check. This can't reduce permanent doomed conditions.</p>"
+          "description": "<p>When Treating Wounds, the therapeutic healer can treat up to four targets. If they succeed at a DC 20 check to @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Treat Wounds}, they can also reduce the value of one @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy}, @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled}, or @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied} condition affecting a single patient by 1. They can reduce a @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained} or @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed} condition instead if they succeed at a DC 30 check. This can't reduce permanent doomed conditions.</p>"
         },
         "action->+2 to Sense Motive": {
           "name": "+2 to Sense Motive"
@@ -8674,7 +8679,7 @@
         },
         "action->Scurry": {
           "name": "Scurry",
-          "description": "<p>The toady Strides, then can Hide. They can attempt to Hide from creatures without cover or being @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed}, but at a –2 circumstance penalty.</p>"
+          "description": "<p>The toady Strides, then can [[/act hide]]. They can attempt to Hide from creatures without cover or being @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed}, but at a –2 circumstance penalty.</p>"
         },
         "action->Throw Cargo": {
           "name": "Throw Cargo",
@@ -8732,7 +8737,7 @@
         },
         "action->Healing Bomb": {
           "name": "Healing Bomb",
-          "description": "<p>The tonic merchant quickly crafts a @UUID[Compendium.pf2e.equipment-srd.ktjFOp3U0wQD9t0Z]{Antidote (Lesser)}, @UUID[Compendium.pf2e.equipment-srd.UqinuuCWePTYGhVO]{Antiplague (Lesser)}, or @UUID[Compendium.pf2e.equipment-srd.hDLbR56Id2OtU318]{Elixir of Life (Minor)} and lobs it at a willing or @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious} ally within 30 feet. The elixir affects the ally as though they imbibed it.</p>\n<p>The tonic merchant can use the rarest materials in their toolkit to improve the item to a @UUID[Compendium.pf2e.equipment-srd.AJ1dC7EtTIfBey0M]{Antidote (Moderate)}, @UUID[Compendium.pf2e.equipment-srd.biRbqKo2C97XLfQ0]{Antiplague (Moderate)}, or @UUID[Compendium.pf2e.equipment-srd.TZUskLT7yvP7N2co]{Elixir of Life (Lesser)}. Afterward, they must spend 10 minutes gathering new ingredients before they can do so again.</p>"
+          "description": "<p>The tonic merchant quickly crafts a @UUID[Compendium.pf2e.equipment-srd.Item.ktjFOp3U0wQD9t0Z]{Antidote (Lesser)}, @UUID[Compendium.pf2e.equipment-srd.Item.UqinuuCWePTYGhVO]{Antiplague (Lesser)}, or @UUID[Compendium.pf2e.equipment-srd.Item.hDLbR56Id2OtU318]{Elixir of Life (Minor)} and lobs it at a willing or @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious} ally within 30 feet. The elixir affects the ally as though they imbibed it.</p>\n<p>The tonic merchant can use the rarest materials in their toolkit to improve the item to a @UUID[Compendium.pf2e.equipment-srd.Item.AJ1dC7EtTIfBey0M]{Antidote (Moderate)}, @UUID[Compendium.pf2e.equipment-srd.Item.biRbqKo2C97XLfQ0]{Antiplague (Moderate)}, or @UUID[Compendium.pf2e.equipment-srd.Item.TZUskLT7yvP7N2co]{Elixir of Life (Lesser)}. Afterward, they must spend 10 minutes gathering new ingredients before they can do so again.</p>"
         },
         "lore->Mercantile Lore": {
           "name": "Mercantile Lore"
@@ -8912,7 +8917,7 @@
         },
         "action->Versatile Performance": {
           "name": "Versatile Performance",
-          "description": "<p>The traveling actor can use Performance instead of Diplomacy to @UUID[Compendium.pf2e.actionspf2e.Item.OX4fy22hQgUHDr0q]{Make an Impression} and instead of Intimidation to @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize}.</p>"
+          "description": "<p>The traveling actor can use Performance instead of Diplomacy to [[/act make-an-impression statistic=performance]] and instead of Intimidation to [[/act demoralize statistic=performance]].</p>"
         },
         "action->Overacted Strike": {
           "name": "Overacted Strike",
@@ -8946,13 +8951,13 @@
           "name": "Path of the Faithful",
           "description": "<p>The pilgrim can evangelize their religious teachings to use their Religion modifier instead of Diplomacy to [[/act gather-information skill=religion]] or [[/act make-an-impression skill=religion]].</p>"
         },
-        "action->Traveler’s Lesson": {
-          "name": "Traveler’s Lesson",
+        "action->Traveler's Lesson": {
+          "name": "Traveler's Lesson",
           "description": "<p>Creatures that engage in conversation with the traveling priest gain a +2 circumstance bonus to all Recall Knowledge checks and Gather Information checks for 4 hours related to any topics discussed with the traveling priest.</p>"
         },
-        "action->Messenger’s Amnesty": {
-          "name": "Messenger’s Amnesty",
-          "description": "<p>A traveling priest with a message to deliver is continually protected by a DC 25 @UUID[Compendium.pf2e.spells-srd.8xRzLhwGL7Dgy3EZ]{Sanctuary} spell. If the traveling priest breaks the <em>sanctuary</em>, the effect returns if the traveling priest ceases hostility for 10 minutes.</p>"
+        "action->Messenger's Amnesty": {
+          "name": "Messenger's Amnesty",
+          "description": "<p>A traveling priest with a message to deliver is continually protected by a DC 25 @UUID[Compendium.pf2e.spells-srd.Item.8xRzLhwGL7Dgy3EZ]{Sanctuary} spell. If the traveling priest breaks the <em>sanctuary</em>, the effect returns if the traveling priest ceases hostility for 10 minutes.</p>"
         },
         "action->Blessing of Travel": {
           "name": "Blessing of Travel",
@@ -9164,7 +9169,7 @@
         },
         "action->Spiny Burst": {
           "name": "Spiny Burst",
-          "description": "<p>TWhen the tumbleweed leshy courier dies, a burst of primal energy explodes from their body, restoring @Damage[2d8[healing, vitality]|shortLabel] Hit Points to each plant creature in a @Template[type:emanation|distance:30]. This area immediately fills with brambles and thistles, becoming difficult terrain. Any creature that moves through the area takes @Damage[1[piercing]] damage per square traversed. If the terrain is not a viable environment for these plants, they wither after 24 hours.</p>"
+          "description": "<p>TWhen the tumbleweed leshy courier dies, a burst of primal energy explodes from their body, restoring @Damage[2d8[healing,vitality]|shortLabel] Hit Points to each plant creature in a @Template[type:emanation|distance:30]. This area immediately fills with brambles and thistles, becoming difficult terrain. Any creature that moves through the area takes @Damage[1[piercing]] damage per square traversed. If the terrain is not a viable environment for these plants, they wither after 24 hours.</p>"
         },
         "action->Change Shape": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.eQM5hQ1W3d1uen97]\n<p>The tumbleweed leshy courier transforms into a Small tumbleweed. This ability otherwise uses the effects of one with plants. Additionally, when the leshy uses their Change Shape ability, they still have a Speed of 10 feet for the purpose of travel during exploration mode.</p>"
@@ -9199,7 +9204,7 @@
         },
         "action->Tunnel Travel": {
           "name": "Tunnel Travel",
-          "description": "<p>Narrow spaces aren’t difficult terrain for the tunnel viper, and the viper can Squeeze at 5 feet per round (or 10 feet on a critical success).</p>"
+          "description": "<p>Narrow spaces aren't difficult terrain for the tunnel viper, and the viper can Squeeze at 5 feet per round (or 10 feet on a critical success).</p>"
         }
       }
     },
@@ -9222,7 +9227,7 @@
         },
         "action->Greased Palms": {
           "name": "Greased Palms",
-          "description": "<p>Money talks, and no one knows that better than the unsanctioned sheriff. A creature that pays the sheriff at least 5 gp gains a +2 status bonus to Gather Information in the sheriff's settlement for the next 24 hours.</p>"
+          "description": "<p>Money talks, and no one knows that better than the unsanctioned sheriff. A creature that pays the sheriff at least 5 gp gains a +2 status bonus to @UUID[Compendium.pf2e.actionspf2e.Item.plBGdZhqq5JBl1D8]{Gather Information} in the sheriff's settlement for the next 24 hours.</p>"
         },
         "action->+2 to Sense Motive": {
           "name": "+2 to Sense Motive"
@@ -9308,7 +9313,7 @@
         },
         "action->Battle Scarred": {
           "name": "Battle Scarred",
-          "description": "<p>The first time each day the veteran noble would be reduced to 0 HP, they remain at 1 HP and are enfeebled 2 for the rest of the day.</p>"
+          "description": "<p>The first time each day the veteran noble would be reduced to 0 HP, they remain at 1 HP and are @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} for the rest of the day.</p>"
         },
         "action->Noble Pride": {
           "name": "Noble Pride",
@@ -9342,7 +9347,7 @@
         },
         "action->Into the Fray": {
           "name": "Into the Fray",
-          "description": "<p>The veteran war horse Strides then Demoralizes an adjacent Medium or smaller creature. When it does, [[/act demoralize]] loses the auditory trait and gains the visual trait, and it doesn't take a penalty for the veteran war horse not speaking a language.</p>"
+          "description": "<p>The veteran war horse Strides then [[/act demoralize]]{Demoralizes} an adjacent Medium or smaller creature. When it does, Demoralize loses the auditory trait and gains the visual trait, and it doesn't take a penalty for the veteran war horse not speaking a language.</p>"
         }
       }
     },
@@ -9398,7 +9403,7 @@
         },
         "action->Pain Training": {
           "name": "Pain Training",
-          "description": "<p>The warmonger treats the value of any drained, dying, enfeebled, sickened, and wounded conditions affecting them as 1 lower. The warmonger still has the condition and must remove it normally.</p>"
+          "description": "<p>The warmonger treats the value of any @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained}, @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{Dying}, @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled}, @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened}, and @UUID[Compendium.pf2e.conditionitems.Item.Yl48xTdMh3aeQYL2]{Wounded} conditions affecting them as 1 lower. The warmonger still has the condition and must remove it normally.</p>"
         },
         "action->Patch and Set": {
           "name": "Patch and Set",
@@ -9410,7 +9415,8 @@
         },
         "action->Sight Prey": {
           "name": "Sight Prey",
-          "description": "<p>The warmonger singles out one enemy to bring down with ranged attacks until the end of the current turn. The warmonger's ranged Strikes against that creature gain a +1 circumstance bonus to the attack roll and deal an extra 3d6 precision damage. Each time the warmonger hits that creature with a ranged Strike, the creature takes a –10-foot penalty to its Speeds for 1 minute and falls 20 feet if it's flying.</p>"
+          "description": "<p>The warmonger singles out one enemy to bring down with ranged attacks until the end of the current turn. The warmonger's ranged Strikes against that creature gain a +1 circumstance bonus to the attack roll and deal an extra 3d6 precision damage. Each time the warmonger hits that creature with a ranged Strike, the creature takes a –10-foot penalty to its Speeds for 1 minute and falls 20 feet if it's flying.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.WK55ybwI2Tn5OW5x]{Effect: Sight Prey (Speed Penalty)}</p>",
+          "selfEffect": "Effect: Sight Prey"
         },
         "action->War Cry": {
           "name": "War Cry",
@@ -9475,7 +9481,7 @@
         },
         "action->Arcane Watch": {
           "name": "Arcane Watch",
-          "description": "<p>The watchmage can either Investigate or @UUID[Compendium.pf2e.actionspf2e.Item.TiNDYUGlMmxzxBYU]{Search} while using the Detect Magic exploration activity.</p>"
+          "description": "<p>The watchmage can either @UUID[Compendium.pf2e.actionspf2e.Item.EwgTZBWsc8qKaViP]{Investigate} or @UUID[Compendium.pf2e.actionspf2e.Item.TiNDYUGlMmxzxBYU]{Search} while using the Detect Magic exploration activity.</p>"
         },
         "action->Counter Escape": {
           "name": "Counter Escape",
@@ -9508,7 +9514,7 @@
           "description": "<p>Invisibility can't make anything undetected or unnoticed to the watchmage squadron.</p>"
         },
         "action->Troop Defenses": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 180 (4 segments); 120 (3 segments), 60 (2 segments);</p>\n<p>Troops are composed of many individuals, represented by four \"segments\" on a battle grid. Each segment is 10 feet on each side and as tall as the individual members of the troop. Segments must remain contiguous. Each one has to share at least 5 feet of one of its edges with another segment—being adjacent on a diagonal isn't sufficient! You can measure flanking, cover, and the like using the center of any segment.</p>\n<p>A troop has two Hit Point thresholds in its HP entry and loses segments as it crosses thresholds. Typically, the higher threshold is at 2/3 of the troop's maximum Hit Points and the lower is at 1/3 of its maximum. Once the troop drops below the higher threshold, it loses one segment, leaving three segments (12 squares) remaining and setting the first threshold as the troop's new maximum Hit Points. This repeats when the troop drops below the lower threshold, leaving two segments (8 squares). At 0 Hit Points, the troop disperses entirely, with the few remaining members surrendering, @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing}, or easily dispatched, as determined by the GM. Typically the creature who caused the troop to lose a segment decides which to remove, or the GM decides when a specific creature wasn't responsible. To restore lost segments and maximum Hit Points, a troop needs to spend downtime to use long-term treatment on casualties or recruit new members to replace the fallen.</p>\n<p>Troops are typically immune to non-damaging effects that target a single creature, such as a charm spell or the @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} action. An ability that can target 5 or more creatures can target an entire segment, increasing to two segments if it can target 10 or more creatures and to the entire troop if it can target 20 or more creatures. An ability that affects all creatures in a certain range affects all segments in range (make any checks or saves separately for each segment). As examples, an 8thrank charm spell (with 10 targets) can affect two segments, and an ability that Demoralizes all creatures within 30 feet of you would affect all segments that are fully within that range. A non-damaging ability that would prevent a segment from acting, cause them to flee, or otherwise make them unable to function as part of the troop for a round or more removes the segment entirely. The troop loses a number of HP required to bring it to the next threshold. If an ability both deals damage and has a non-damaging effect, apply the damage then the rest of the effect.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 120 (3 segments), 60 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Troop Movement": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.MXI6zwrvbQNIv7ji]\n<p>Whenever a troop moves, you move one of its segments and the other segments follow behind it. At the end of the movement, you can group the other segments adjacent to the one you moved as you see fit, provided none of them moves farther than the moving segment. If you choose not to move the troop any distance, you can instead reshape the position of all the segments as long as one stays in place.</p>"
@@ -9572,7 +9578,7 @@
     },
     "Woodland Scouts": {
       "name": "Woodland Scouts",
-      "hpDetails": " (4 segments); Thresholds 80 (3 segments), 40 (2 segments)",
+      "hpDetails": "(4 segments); Thresholds 80 (3 segments), 40 (2 segments)",
       "publicNotes": "<p>Elves of the forest or jungle take advantage of the terrain, operating in units that seemingly appear from the trees themselves.</p>\n<hr />\n<p>Elves' long lives give them centuries to delve into studies, artistry, or exploration.</p>",
       "skillSpecialStealth": {
         "0": {
@@ -9582,14 +9588,14 @@
       "speed": "forest passage, troop movement",
       "items": {
         "action->Troop Defenses": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p>Troops are composed of many individuals, represented by four \"segments\" on a battle grid. Each segment is 10 feet on each side and as tall as the individual members of the troop. Segments must remain contiguous. Each one has to share at least 5 feet of one of its edges with another segment—being adjacent on a diagonal isn't sufficient! You can measure flanking, cover, and the like using the center of any segment.</p>\n<p>A troop has two Hit Point thresholds in its HP entry and loses segments as it crosses thresholds. Typically, the higher threshold is at 2/3 of the troop's maximum Hit Points and the lower is at 1/3 of its maximum. Once the troop drops below the higher threshold, it loses one segment, leaving three segments (12 squares) remaining and setting the first threshold as the troop's new maximum Hit Points. This repeats when the troop drops below the lower threshold, leaving two segments (8 squares). At 0 Hit Points, the troop disperses entirely, with the few remaining members surrendering, @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing}, or easily dispatched, as determined by the GM. Typically the creature who caused the troop to lose a segment decides which to remove, or the GM decides when a specific creature wasn't responsible. To restore lost segments and maximum Hit Points, a troop needs to spend downtime to use long-term treatment on casualties or recruit new members to replace the fallen.</p>\n<p>Troops are typically immune to non-damaging effects that target a single creature, such as a charm spell or the @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} action. An ability that can target 5 or more creatures can target an entire segment, increasing to two segments if it can target 10 or more creatures and to the entire troop if it can target 20 or more creatures. An ability that affects all creatures in a certain range affects all segments in range (make any checks or saves separately for each segment). As examples, an 8thrank charm spell (with 10 targets) can affect two segments, and an ability that Demoralizes all creatures within 30 feet of you would affect all segments that are fully within that range. A non-damaging ability that would prevent a segment from acting, cause them to flee, or otherwise make them unable to function as part of the troop for a round or more removes the segment entirely. The troop loses a number of HP required to bring it to the next threshold. If an ability both deals damage and has a non-damaging effect, apply the damage then the rest of the effect.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 80 (3 segments), 40 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Troop Movement": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.MXI6zwrvbQNIv7ji]\n<p>Whenever a troop moves, you move one of its segments and the other segments follow behind it. At the end of the movement, you can group the other segments adjacent to the one you moved as you see fit, provided none of them moves farther than the moving segment. If you choose not to move the troop any distance, you can instead reshape the position of all the segments as long as one stays in place.</p>"
         },
         "action->Among the Trees": {
           "name": "Among the Trees",
-          "description": "<p><strong>Requirements</strong> Every square the woodland scouts occupy is in forest terrain</p>\n<hr />\n<p><strong>Effect</strong> The woodland scouts disperse among the trees. They @UUID[Compendium.pf2e.actionspf2e.Item.ust1jJSCZQUhBZIz]{Take Cover} and then use that cover to Hide, attempting a Stealth check.</p>"
+          "description": "<p><strong>Requirements</strong> Every square the woodland scouts occupy is in forest terrain</p>\n<hr />\n<p><strong>Effect</strong> The woodland scouts disperse among the trees. They @UUID[Compendium.pf2e.actionspf2e.Item.ust1jJSCZQUhBZIz]{Take Cover} and then use that cover to [[/act hide]], attempting a Stealth check.</p>"
         },
         "action->Forest Passage": {
           "name": "Forest Passage",
@@ -9597,15 +9603,15 @@
         },
         "action->Longbow Barrage": {
           "name": "Longbow Barrage",
-          "description": "<p>The scouts draw or reload their longbows, then send forth a flurry of arrows. This barrage is a @Template[type:burst|distance:10] within 100 feet that deals @Damage[3d8[piercing]] damage with a @Check[reflex|dc:24|basic] save. If the scouts are @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} or undetected, this deals an additional 2d6 precision damage. When the troop is reduced to 2 or fewer segments, this area decreases to a @Template[type:burst|distance:5].</p>"
+          "description": "<p>The scouts draw or reload their longbows, then send forth a flurry of arrows. This barrage is a @Template[type:burst|distance:10] within 100 feet that deals @Damage[3d8[piercing]|options:area-damage] damage with a @Check[reflex|dc:24|basic|options:area-effect] save. If the scouts are @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} or undetected, this deals an additional 2d6 precision damage. When the troop is reduced to 2 or fewer segments, this area decreases to a @Template[type:burst|distance:5].</p>"
         },
         "action->Stealthy Formation": {
           "name": "Stealthy Formation",
-          "description": "<p>If the scouts become @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} or undetected, they remain so until they take a hostile action.</p>"
+          "description": "<p>If the scouts become @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} or @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Undetected}, they remain so until they take a hostile action.</p>"
         },
         "action->Thicket of Blades": {
           "name": "Thicket of Blades",
-          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The scouts engage in a coordinated melee attack against each enemy in a @Template[type:emanation|distance:5], with a @Check[reflex|dc:24|basic] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[(1d8+3)[slashing]] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d8+6)[slashing]] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(3d8+9)[slashing]] damage</p>"
+          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The scouts engage in a coordinated melee attack against each enemy in a @Template[type:emanation|distance:5], with a @Check[reflex|dc:24|basic|options:area-effect] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[(1d8+3)[slashing]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d8+6)[slashing]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(3d8+9)[slashing]|options:area-damage] damage</p>"
         },
         "lore->Forest Lore": {
           "name": "Forest Lore"
