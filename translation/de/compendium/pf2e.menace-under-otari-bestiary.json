@@ -1,6 +1,24 @@
 {
   "label": "Bedrohung unter Otari Bestiarium",
   "entries": {
+    "Animated Armor (BB)": {
+      "name": "Belebte Rüstung (EB)",
+      "acDetails": "(nach Verlust der Konstruktpanzerung 13), Konstruktpanzerung",
+      "publicNotes": "<p>Mittels Ritualen oder anderer seltsamer Magie können Gegenstände mit Leben erfüllt und zu Belebten Gegenständen gemacht werden. Diese Gegenstände bewegen sich, arbeiten und kämpfen, ganz wie es ihnen ihre Schöpfer befehlen. Meistens sollen sie wachen oder niedere Arbeiten verrichten.</p>\n<p>Belebte Rüstungen fungieren oft als Wächter, werden an manchen hochspezialisierten Kriegerakademien aber auch als Trainingspartner eingesetzt. Man begegnet ihnen meistens in Magierlaboratorien und uralten Gewölben.</p>",
+      "tokenName": "Belebte Rüstung",
+      "items": {
+        "strike-melee->Longsword": {
+          "name": "Langschwert"
+        },
+        "strike-melee->Armored Fist": {
+          "name": "Gepanzerte Faust"
+        },
+        "action->Construct Armor": {
+          "name": "Konstruktpanzerung",
+          "description": "<p>Die Belebte Rüstung reduziert jeden erlittenen Schaden um 9. Sollte sie aber durch einen Kritischen Treffer Schaden erleiden oder sollten ihre TP unter 10 fallen, so verliert sie ihre Konstruktpanzerung. Ihre RK sinkt auf 13 und sie verliert die beschriebene Schadensreduzierung.</p>"
+        }
+      }
+    },
     "Basilisk (BB)": {
       "name": "Basilisk (EB)",
       "publicNotes": "<p>Ein Basilisk ist ein achtbeiniges Reptil, das mit seinem Blick Kreaturen in Stein verwandeln kann.</p>",
@@ -16,6 +34,23 @@
         "action->Petrifying Gaze": {
           "name": "Versteinernder Blick",
           "description": "<p>Der Basilisk starrt eine maximal 30 Fuß/9 m weit entfernte Kreatur in seinem Sichtbereich an. Die Kreatur muss einen @Check[fortitude|dc:22]{Zähigkeitswurf} ablegen.</p>\n<p>Sollte der Rettungswurf misslingen und die Kreatur noch nicht durch Verlangsamender Blick oder diese Fähigkeit den Zustand Verlangsamt erhalten haben, erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}. Andernfalls erhält sie bei einem misslungenem Rettungswurf permanent den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dTwPJuKgBQCMxixg]{Versteinert}.</p>\n<p>Sollte eine derart versteinerte Kreatur mit frischem Basiliskenblut bestrichen werden, wird sie augenblicklich entsteinert. Ein Basilisk enthält genug Blut, um 2 Kreaturen auf diese Weise zu bestreichen.</p>"
+        }
+      }
+    },
+    "Boar (BB)": {
+      "name": "Wildschwein (EB)",
+      "publicNotes": "<p>Die übellaunigen und zähen Wildschweine sind weitaus gefährlicher als Hausschweine. Diese Allesfresser werden stark gejagt, da ihr Fleisch als Delikatesse gilt. Sie greifen Humanoide zur Selbstverteidigung an oder während der Paarungszeit in den Wintermonaten, in denen Männchen gut 2,5 cm an Schwarte ansetzen. Diese dient dem Schutz ihrer Organe bei der Abwehr von Konkurrenten. In manchen Kulturen werden Wildschweine aber auch auf möglichst große Aggression trainiert, um als Kriegsbestien und Wächter dienen zu können. Wenn solche Wildschweine in die Wildnis entkommen können, werden sie oft zu wahren Schrecken der Region.</p>",
+      "tokenName": "Wildschwein",
+      "items": {
+        "strike-melee->Tusk": {
+          "name": "Hauer"
+        },
+        "action->Ferocity": {
+          "description": "<p>Wird das Wildschwein auf 0 TP reduziert, kann er seine Reaktion nutzen, um bei 1 TP und bei Bewusstsein zu bleiben. Es erhält allerdings den Zustand @UUID[Compendium.pf2e.conditionitems.Item.Yl48xTdMh3aeQYL2]{Verwundet 1} (bzw. erhöht seinen Zustandswert für Verwundet um 1, sollte es bereits diesen Zustand besitzen). Das Wildschwein kann diese Fähigkeit nicht einsetzen, sollte es bereits den Zustand Verwundet 3 besitzen.</p>"
+        },
+        "action->Boar Charge": {
+          "name": "Wildschweinsturmangriff",
+          "description": "<p>Das Wildschwein nutzt zweimal Laufen und führt dann einen Hauerangriff aus. So lange es sich wenigstens 20 Fuß/6 m weit fortbewegt, erhält es einen Situationsbonus von +2 auf den Angriffswurf.</p>"
         }
       }
     },
@@ -91,7 +126,6 @@
     "Caligni Hunter (BB)": {
       "name": "Caligni-Jäger (EB)",
       "publicNotes": "<p>Die Calignis hausen in unterirdischen Städten, und sie genießen die Gelegenheit, nachts an die Oberfläche zu kriechen, um Ressourcen zu stehlen, Oberflächenbewohner zu beschatten oder einfach nur Unfug zu treiben.</p>",
-      "senses": "Dunkelsicht",
       "tokenName": "Caligni-Jäger",
       "items": {
         "spellcastingEntry->Occult Innate Spells": {
