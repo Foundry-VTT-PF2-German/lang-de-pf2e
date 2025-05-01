@@ -344,6 +344,11 @@
         "spell->Blood Vendetta": {
           "requirements": "You can bleed"
         },
+        "spell->Produce Flame": {
+          "name": "Produce Flame",
+          "description": "<p>A small ball of flame appears in the palm of your hand, and you lash out with it either in melee or at range. Make a spell attack roll against your target's AC. This is normally a ranged attack, but you can also make a melee attack against a creature in your unarmed reach.</p>\n<p>On a success, you deal 2d4 fire damage. On a critical success, the target takes double damage and @Damage[(@item.level)d4[persistent,fire]] damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> Increase the damage by 1d4 and the persistent damage on a critical hit by 1d4.</p>",
+          "target": "1 creature"
+        },
         "spell->True Strike": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.Gb7SeieEvd0pL2Eh]\nTrue Strike"
         },
@@ -535,7 +540,7 @@
     },
     "Cultist Troop": {
       "name": "Cultist Troop",
-      "hpDetails": "(16 squares); Thresholds 60 (12 squares), 30 (8 squares);",
+      "hpDetails": "(16 squares); Thresholds 60 (3 segments), 30 (2 segments);",
       "speed": "troop movement",
       "items": {
         "action->Troop Defenses": {
@@ -1242,7 +1247,7 @@
     },
     "Hryngar Breccia Squad": {
       "name": "Hryngar Breccia Squad",
-      "hpDetails": "Thresholds 100 (12 squares), 50 (8 squares)",
+      "hpDetails": "Thresholds 100 (3 segments), 50 (2 segments)",
       "publicNotes": "<p>A hryngar breccia squad is a group of hryngar martial combatants armed with melee weapons and steel shields. Though more likely to be encountered near large hryngar settlements, these strike forces see wide use throughout the Darklands. Hryngar breccia squads often serve as military units, mercenary companies, city patrols, and caravan guards. Like all warriors, the favored combat methods of a hryngar breccia squad change by location, often due to surrounding environment and popular equipment.</p>\n<hr />\n<p>Deep under the surface of Golarion, dwarves still dwell in the darkness. Once abandoned by their kin who were obsessed with reaching the surface, these dwarves have found that by working harder than their brethren, they can build a society far greater than anything under the sun. Droskar, Master of the Dark Furnace, teaches them that toiling for their masters, who in turn toil for their masters above, will lead all of them to become stronger than ever. Every hryngar knows that their labor defines them, and brings them glory in the eyes of Droskar and their peers. Exhaustion at the end of the work day is an honor, proof of their worth in society.</p>\n<h2>Rift Jumpers</h2>\n<p>Hryngar breccia squads that specialize in spelunking are known as Rift Jumpers, named for their reckless leaps into perilous chasms. They swap their shields and warhammers for light picks and train with their climbing equipment until it serves as an extension of their body. Rift Jumpers lose the Raise Shields, Shield Block, and Push Back actions, and gain a climb Speed of 20 feet.</p>",
       "saveDetails": "+2 status to all saves vs. magic",
       "speed": "troop movement",
@@ -1262,7 +1267,7 @@
         },
         "action->General Melee": {
           "name": "General Melee",
-          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The hryngar breccia squad engages in a coordinated attack with its melee weapons against each enemy within 5 feet (@Check[reflex|dc:28|basic] save). The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[(1d8+6)[bludgeoning]] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d8+10)[bludgeoning]] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(3d8+14)[bludgeoning]] damage</p>"
+          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The hryngar breccia squad engages in a coordinated attack with its melee weapons against each enemy in a @Template[emanation|distance:5] (@Check[reflex|dc:28|basic] save). The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[(1d8+6)[bludgeoning]] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d8+10)[bludgeoning]] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(3d8+14)[bludgeoning]] damage</p>"
         },
         "action->Raise Shields": {
           "name": "Raise Shields",
@@ -1953,6 +1958,9 @@
       "blurb": "Variant Giant Crab",
       "publicNotes": "<p>Crabs are scavenging crustaceans known for their hard shells and iconic sideways gait. They use their claws to defend themselves, hunt, and fight other crabs for territory. When confronted with threats from outside their species, most crabs prefer to flee, but when retreat isn't possible, they clamp on to their foes as tightly as they can.</p>\n<p>The statistics presented here represent giant crabs that live close to the water's surface. Crabs that live deeper underwater often exhibit more extreme adaptations to their environment. Crabs who live in the depths where little light reaches gain darkvision and cold resistance, and those adapted to the most hostile reaches of the deep sea can detect nearby creatures through subtle shifts in ocean currents.</p>\n<p>These skittering creatures are prized for their delicious meat, but their size makes them dangerous targets for harvesting.</p>",
       "items": {
+        "condition->Clumsy": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]\n<p>Your movements become clumsy and inexact. Clumsy always includes a value. You take a status penalty equal to the condition value to Dexterity-based checks and DCs, including AC, Reflex saves, ranged attack rolls, and skill checks using Acrobatics, Stealth, and Thievery.</p>"
+        },
         "strike-melee->Claw": {
           "name": "Claw"
         },
@@ -2397,7 +2405,7 @@
         },
         "action->Troop Defenses": {
           "name": "Troop Defenses",
-          "description": "<p><strong>Thresholds</strong> 60 (12 squares), 30 (8 squares)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
+          "description": "<p><strong>Thresholds</strong> 60 (3 segments), 30 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Grave Tide": {
           "name": "Grave Tide",
@@ -3037,6 +3045,11 @@
         "spell->Mage Hand": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.pwzdSlJgYqN7bs2w]\nMage Hand"
         },
+        "spell->Produce Flame": {
+          "name": "Produce Flame",
+          "description": "<p>A small ball of flame appears in the palm of your hand, and you lash out with it either in melee or at range. Make a spell attack roll against your target's AC. This is normally a ranged attack, but you can also make a melee attack against a creature in your unarmed reach.</p>\n<p>On a success, you deal 2d4 fire damage. On a critical success, the target takes double damage and @Damage[(@item.level)d4[persistent,fire]] damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> Increase the damage by 1d4 and the persistent damage on a critical hit by 1d4.</p>",
+          "target": "1 creature"
+        },
         "equipment->Blacksmith Tools (Sterling)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.0QgniSjpzksm5riV]\nBlacksmith Tools (Sterling)",
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.0QgniSjpzksm5riV]\n<p>You need these tools to create items from raw materials with the Craft skill. Sterling artisan's tools give you a +1 item bonus to the check.</p>\n<p>Different sets are needed for different work, as determined by the GM; for example, blacksmith's tools differ from woodworker's tools. If you wear your artisan's tools, you can draw and replace them as part of the action that uses them.</p>",
@@ -3258,7 +3271,7 @@
     },
     "Xulgath Ravening": {
       "name": "Xulgath Ravening",
-      "hpDetails": "Thresholds 48 (12 squares), 24 (8 squares)",
+      "hpDetails": "Thresholds 48 (3 segments), 24 (2 segments)",
       "publicNotes": "<p>Strength and hunger drive most xulgath societies, reinforced by the tenets of their abyssal patron Zevgavizeb. A powerful leader can seize control of a xulgath community and direct their followers to fight as a unit, but formation fighting isn't something most xulgaths practice. This mob mentality often results in overzealous warriors tripping over or even biting each other. Suitably, these mobs have earned the name \"ravenings,\" a term also used when describing Zevgavizeb's carnivorous rampages and referring to the millennia of xulgath infighting and social decline.</p>\n<h2>The Power of Suggestion</h2>\n<p>Xulgath ravening are most common in clutches controlled by spiritual leaders using some combination of cult behavior, group ritual, and even a little enchantment magic. By convincing participants that they're possessed by Zevgavizeb or a similar force, the leader then identifies a target and hopes for the best. Instilling secular doubt or incapacitating the leader can shatter a ravening's focus, causing its members to scatter or even turn on their leader.</p>",
       "speed": "troop movement",
       "items": {
@@ -3268,7 +3281,7 @@
         },
         "action->Troop Defenses": {
           "name": "Troop Defenses",
-          "description": "<p><strong>Thresholds</strong> 48 (12 squares), 24 (8 squares)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
+          "description": "<p><strong>Thresholds</strong> 48 (3 segments), 24 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Fang and Claw": {
           "name": "Fang and Claw",

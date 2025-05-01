@@ -252,6 +252,24 @@
         }
       }
     },
+    "Dust Bunny Swarm": {
+      "name": "Dust Bunny Swarm",
+      "publicNotes": "<p>Dust bunnies in particular are prone to swarming. This can occur when a large number are left alone for a long period of time and are then disturbed by adventurers or a returning wizard. Other times, a singular dust bunny familiar grows in such numbers (and they will rapidly reproduce!) that a wizard cannot hope to keep them all placated with food and attention. In this situation, they will unionize in rebellion against their master.</p>\n<p>It is paramount that you do not allow a dust bunny to multiply, for once a swarm has formed, they are nigh impossible to get rid of. While relatively easy to disperse and unlikely to kill anyone, they will re-form within the week unless the area is immaculately cleaned.</p>",
+      "items": {
+        "action->Cloud of Allergens": {
+          "name": "Cloud of Allergens",
+          "description": "<p><strong>Trigger</strong> The swarm rolls initiative</p>\n<hr />\n<p><strong>Effect</strong> The dust bunnies stir, kicking up a cloud in a @Template[type:burst|distance:15] centered on the swarm that lasts for 1 minute. Creatures who enter or start their turn in this cloud must attempt a @Check[fortitude|dc:16] save or take a –1 circumstance penalty to skill checks that have the concentration trait and all Perception checks as their sensory organs become impaired.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.pVd4mbG2u8Y1mqgL]{Effect: Cloud of Allergens}</p>"
+        },
+        "action->Dust to Dust": {
+          "name": "Dust to Dust",
+          "description": "<p>When a dust bunny swarm is destroyed, it re-forms after [[/gmr 2d4 #days]]{2d4 days} in the area in which it was destroyed unless the location has been significantly cleaned of all dust and debris.</p>"
+        },
+        "action->Pummeling Dust": {
+          "name": "Pummeling Dust",
+          "description": "<p>Each enemy in the swarm's space takes @Damage[1d6[bludgeoning]] damage with a @Check[reflex|dc:16|basic] save. A creature that fails its save cannot use reactions for 1 round as they sneeze uncontrollably.</p>"
+        }
+      }
+    },
     "Edolpho Phinelli": {
       "name": "Edolpho Phinelli",
       "blurb": "Male half-elf charlatan",
@@ -354,7 +372,7 @@
         },
         "action->Battle Cry": {
           "name": "Battle Cry",
-          "description": "<p><strong>Trigger</strong> The Brass Dragon rolls initiative.</p>\n<hr />\n<p><strong>Effect</strong> The Brass Dragon roars out a mighty challenge and attempts to Demoralize a creature it can see.</p>"
+          "description": "<p><strong>Trigger</strong> The Brass Dragon rolls initiative.</p>\n<hr />\n<p><strong>Effect</strong> The Brass Dragon roars out a mighty challenge and attempts to [[/act demoralize]] a creature it can see.</p>"
         },
         "action->Bravo's Determination": {
           "name": "Bravo's Determination",
@@ -806,6 +824,36 @@
         }
       }
     },
+    "Rt5rrmn": {
+      "name": "Rt5rrmn",
+      "languages": "(can't speak any language)",
+      "publicNotes": "<p>The rt5rrmn is a catlike creature that loves to purr at those they encounter, convincing others to pamper them instead of fight. It would rather be friends than enemies, but if spooked it will viciously attack whoever is in its sights. If they aren't able to make friends, the rt5rrmn will quickly grow defensive, and leap to attack.</p>",
+      "privateNotes": "<p><em>Note - Paizo did not provide an attack modifier for any of the attacks. We used the moderate Strike Attack Bonus for the creature level (GM Core pg. 120).</em></p>",
+      "items": {
+        "strike-melee->b9000": {
+          "name": "b9000"
+        },
+        "strike-melee->g7ujik": {
+          "name": "g7ujik"
+        },
+        "action->But I'm Adorable": {
+          "name": "But I'm Adorable",
+          "description": "<p><strong>Trigger</strong> An enemy targets the rt5rrmn with a melee attack</p>\n<hr />\n<p><strong>Effect</strong> The rt5rrmn erkijs, the vibrating sound convincing the enemy to stop hurting it. The target must attempt a @Check[will|dc:26] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected, ignoring the seduction of the erkij.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fascinated} by the rt5rrmn's erkij until the end of the rt5rrmn's next turn.</p>\n<p><strong>Failure</strong> As success, and the target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} as it focuses on the rt5rrmn's erkij.</p>\n<p><strong>Critical Failure</strong> As failure, but the target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 2}.</p>"
+        },
+        "action->Extra Reverberation": {
+          "name": "Extra Reverberation",
+          "description": "<p>If the rt5rrmn is targeted with an ability that restores Hit Points, it gains an additional use of But I'm Adorable that lasts until the end of its next turn.</p>"
+        },
+        "action->Rt5rrmn Yyumn": {
+          "name": "Rt5rrmn Yyumn",
+          "description": "<p><strong>Saving Throw</strong> @Check[fortitude|dc:24]</p>\n<p><strong>Maximum Duration</strong> 1 week</p>\n<p><strong>Stage 1</strong> @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (1 hour)</p>\n<p><strong>Stage 2</strong> sickened 1 and the creature can't reduce its sickened value below 1 (1 day)</p>\n<p><strong>Stage 3</strong> @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} and the creature can't reduce its sickened value below 1 (1 day)</p>"
+        },
+        "action->Yidsfh": {
+          "name": "Yidsfh",
+          "description": "<p>The rt5rrmn Strides and then makes two g7ujik Strikes at a single target. Both count toward its multiple attack penalty, but the penalty increases only after both attacks are made. The rt5rrmn must be able to move at least half its Speed to yidsfh.</p>"
+        }
+      }
+    },
     "Squirrelwind": {
       "name": "Squirrelwind",
       "speed": "swiftness",
@@ -1118,6 +1166,7 @@
       "converter": "updateActorImage",
       "path": "img"
     },
+    "privateNotes": "system.details.privateNotes",
     "publicNotes": {
       "converter": "translateActorDescription",
       "path": "system.details.publicNotes"
@@ -1145,5 +1194,8 @@
       "converter": "translateTokenName",
       "path": "prototypeToken.name"
     }
+  },
+  "folders": {
+    "Foolish Housekeeping and Other Articles": "Foolish Housekeeping and Other Articles"
   }
 }
