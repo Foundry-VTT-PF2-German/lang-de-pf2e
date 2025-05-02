@@ -6,12 +6,12 @@
       "publicNotes": "<p>Abbots are often the heads of religious institutions less focused on spellcasting, such as orphanages, religious schools, or charities.</p>\n<hr />\n<p>Religions inspire devout individuals to uphold their tenets.</p>",
       "skillSpecialDiplomacy": {
         "0": {
-          "label": "Members of Own Faith"
+          "label": "With Members of Own Faith"
         }
       },
       "items": {
-        "weapon->Griffon Cane": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.FVjTuBCIefAgloUU]\nGriffon Cane"
+        "weapon->Griffon Cane (Functions as a Staff)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.FVjTuBCIefAgloUU]\nGriffon Cane (Functions as a Staff)"
         },
         "equipment->Religious Symbol of Abadar": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.upzjwQ96cZG0Xlmx]\nReligious Symbol of Abadar"
@@ -31,7 +31,7 @@
         },
         "action->True Faith": {
           "name": "True Faith",
-          "description": "<p>The abbot uses lessons from scripture to foil others trying to deceive them. They can use their Religion modifier to [[/act sense-motive skill=religion]] instead of Perception, and their Religion DC instead of their Perception DC against attempts to Lie to them.</p>"
+          "description": "<p>The abbot uses lessons from scripture to foil others trying to deceive them. They can use their Religion modifier to [[/act sense-motive skill=religion]] instead of Perception, and their Religion DC instead of their Perception DC against attempts to @UUID[Compendium.pf2e.actionspf2e.Item.ewwCglB7XOPLUz72]{Lie} to them.</p>"
         },
         "action->Divine Protection": {
           "name": "Divine Protection",
@@ -220,8 +220,8 @@
       "languages": "two other common or uncommon languages",
       "publicNotes": "<p>Many societies recognize aiuvarins' skills as adept translators.</p>\n<hr />\n<p>Elves' long lives give them centuries to delve into studies, artistry, or exploration.</p>",
       "items": {
-        "weapon->Quill Pen (functions as a dart)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.Tt4Qw64fwrxhr5gT]\nQuill Pen (functions as a dart)"
+        "weapon->Quill Pen (Functions as a Dart)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.Tt4Qw64fwrxhr5gT]\nQuill Pen (Functions as a Dart)"
         },
         "equipment->Book of Translations": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.w4Hd6nunVVqw3GWj]\nBook of Translations"
@@ -259,8 +259,8 @@
         }
       },
       "items": {
-        "armor->Leather Apron": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.zBYEU9E7034ENCmh]\nLeather Apron"
+        "armor->Leather Apron (Functions as Padded Armor)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.zBYEU9E7034ENCmh]\nLeather Apron (Functions as Padded Armor)"
         },
         "equipment->Mortar and Pestle": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.LmIpYZ1lS2UDGXvU]\nMortar and Pestle"
@@ -426,6 +426,7 @@
     "Artillerist": {
       "name": "Artillerist",
       "publicNotes": "<p>The maintenance and operation of a siege weapon is the highest form of art for the artillerist. They are second to none in terms of reliability and speed due to years of experience and training. Their mastery is such that they often construct smaller models of their preferred weapon to mount on their shoulders. Many will insist this is in case of an emergency, but they often truly enjoy crafting, designing, and perfecting their personal piece of artillery. Traditionally, artillerists are used on both side of a siege. Massive weapons are both fired towards the walls and from the walls. In such battles, artillerists are invaluable. However, artillerists are seen in other places outside of massive wars. For example, artillerists are often employed on ships to manage their cannons and harpoons.</p>\n<hr />\n<p>Although relatively uncommon across much of Golarion, the frequently eccentric but undeniably brilliant minds who create elaborate devices of clockwork, gunpowder, and steam often loom much larger in the public eye than their numbers would suggest.</p>",
+      "senses": "(+10 if the artillerist is crewing a siege weapon)",
       "skillSpecialCrafting": {
         "0": {
           "label": "for siege weapons"
@@ -454,6 +455,10 @@
         "action->Siege Shield": {
           "name": "Siege Shield",
           "description": "<p>While adjacent to a siege weapon, the artillerist gains a +1 circumstance bonus to AC.</p>"
+        },
+        "action->Siege Weapons Expert": {
+          "name": "Siege Weapons Expert",
+          "description": "<p>The artillerist gains a +2 bonus to @Check[perception|options:siege-weapon] if the artillerist is crewing a siege weapon. Additionally, they gain a +2 bonus to @Check[engineering-lore|options:siege-weapon] and @Check[explosive-lore|options:siege-weapon] for siege weapons.</p>"
         },
         "action->Bombard": {
           "name": "Bombard",
@@ -638,7 +643,7 @@
         },
         "action->Chop 'em Down!": {
           "name": "Chop 'em Down!",
-          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The bandits make a coordinated attack with their axes against each enemy in a 5-foot emanation with a @Check[reflex|dc:22|basic] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[(1d6+3)[slashing]] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d6+9)[slashing]] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(3d6+9)[slashing]] damage</p>"
+          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The bandits make a coordinated attack with their axes against each enemy in a @Template[emanation|distance:5] with a @Check[reflex|dc:22|basic|options:area-effect] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[(1d6+3)[slashing]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d6+9)[slashing]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(3d6+9)[slashing]|options:area-damage] damage</p>"
         },
         "action->Forest Passage": {
           "name": "Forest Passage",
@@ -646,7 +651,7 @@
         },
         "action->Launch Slings!": {
           "name": "Launch Slings!",
-          "description": "<p>The bandits draw or reload their slings, then launch a volley of sling bullets. This is a 10-foot burst within 50 feet that deals @Damage[(2d6+4)[bludgeoning]] damage with a @Check[reflex|dc:22|basic] save. When the troop is reduced to 2 or fewer segments, this area decreases to a 5-foot burst.</p>"
+          "description": "<p>The bandits draw or reload their slings, then launch a volley of sling bullets. This is a @Template[burst|distance:10] within 50 feet that deals @Damage[(2d6+4)[bludgeoning]|options:area-damage] damage with a @Check[reflex|dc:22|basic|options:area-effect] save. When the troop is reduced to 2 or fewer segments, this area decreases to a @Template[burst|distance:5].</p>"
         },
         "action->Stand and Deliver!": {
           "name": "Stand and Deliver!",
@@ -710,6 +715,9 @@
         "action->Primal Roar": {
           "name": "Primal Roar",
           "description": "<p>The eidolon attempts to @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} each enemy within 30 feet; these Demoralize attempts don't take any penalty for not sharing a language.</p>"
+        },
+        "action->Rend": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.3JOi2cMcGhT3eze1]\n<p>Claw</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Rend]</p>"
         },
         "action->Scent of Blood": {
           "name": "Scent of Blood",
@@ -809,10 +817,10 @@
       "items": {
         "action->Keen Eyes": {
           "name": "Keen Eyes",
-          "description": "<p>The halfling gains a +2 circumstance bonus when using the @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seek} action to find @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} or undetected creatures within 30 feet of them. Whenever the halfling targets a creature that is @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} or hidden from them, reduce the DC of the flat check to 3 for a concealed target or 9 for a hidden one.</p>"
+          "description": "<p>The halfling gains a +2 circumstance bonus when using the @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seek} action to find @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} or @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Undetected} creatures within 30 feet of them. Whenever the halfling targets a creature that is @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} or hidden from them, reduce the DC of the flat check to @Check[flat|dc:3] for a concealed target or @Check[flat|dc:9] for a hidden one.</p>"
         },
-        "action->+3 status vs. Intimidation checks": {
-          "name": "+3 status vs. Intimidation checks"
+        "action->+3 Status vs. Intimidation Checks": {
+          "name": "+3 Status vs. Intimidation Checks"
         },
         "action->Troop Defenses": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 60 (3 segments), 30 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
@@ -822,11 +830,11 @@
         },
         "action->Down to Our Level": {
           "name": "Down to Our Level",
-          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The bill-band deliberately gets under the feet of their opponents, proving they are greater than the sum of their parts. The bill-band attempts to @UUID[Compendium.pf2e.actionspf2e.Item.ge56Lu1xXVFYUnLP]{Trip} all creatures in or adjacent to their space. They roll one Athletics check and compare the result to the Reflex DC of each target.</p>"
+          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The bill-band deliberately gets under the feet of their opponents, proving they are greater than the sum of their parts. The bill-band attempts to [[/act trip]] all creatures in or adjacent to their space. They roll one Athletics check and compare the result to the Reflex DC of each target.</p>"
         },
         "action->Firecracker Salvo": {
           "name": "Firecracker Salvo",
-          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The bill-band launches a barrage of lit firecrackers that, upon impact, burst into light and sound. Each creature in a @Template[type:burst|distance:10] within 60 feet takes @Damage[1d12[sonic]] damage with a @Check[reflex|dc:19|basic] save. A creature that fails its save is also @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round. When the bill-band is reduced to 2 or fewer segments, this area decreases to a @Template[type:burst|distance:5].</p>"
+          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The bill-band launches a barrage of lit firecrackers that, upon impact, burst into light and sound. Each creature in a @Template[type:burst|distance:10] within 60 feet takes @Damage[1d12[sonic]|options:area-damage] damage with a @Check[reflex|dc:19|basic|options:area-effect] save. A creature that fails its save is also @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round. When the bill-band is reduced to 2 or fewer segments, this area decreases to a @Template[type:burst|distance:5].</p>"
         },
         "action->Overwhelming Scrum": {
           "name": "Overwhelming Scrum",
@@ -834,7 +842,10 @@
         },
         "action->Stick It to 'Em!": {
           "name": "Stick It to 'Em!",
-          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The bill-band swings barely coordinated fists and feet at each enemy in their space and in a @Template[type:emanation|distance:5], with a @Check[reflex|dc:19|basic] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[1d6[bludgeoning]] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d6+4)[bludgeoning]] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(3d6+6)[bludgeoning]] damage</p>"
+          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The bill-band swings barely coordinated fists and feet at each enemy in their space and in a @Template[type:emanation|distance:5], with a @Check[reflex|dc:19|basic|options:area-effect] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[1d6[bludgeoning]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d6+4)[bludgeoning]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(3d6+6)[bludgeoning]|options:area-damage] damage</p>"
+        },
+        "lore->Sports Lore": {
+          "name": "Sports Lore"
         }
       }
     },
@@ -890,7 +901,7 @@
         },
         "action->Twisted Faith": {
           "name": "Twisted Faith",
-          "description": "<p>When attempting a Religion skill check, the blasphemer can roll Deception instead, so long as they have an intelligent creature around as a witness. If the creature is a follower of the blasphemer's faith, the blasphemer receives a +2 circumstance bonus to the check.</p>"
+          "description": "<p>When attempting a Religion skill check, the blasphemer can roll @Check[deception] instead, so long as they have an intelligent creature around as a witness. If the creature is a follower of the blasphemer's faith, the blasphemer receives a +2 circumstance bonus to the check.</p>"
         },
         "action->False Blessing": {
           "name": "False Blessing",
@@ -985,7 +996,6 @@
     "Bone Scavenger": {
       "name": "Bone Scavenger",
       "publicNotes": "<p>Kholos have a strong connection to their ancestors, often using their bones as art and weapons to further honor them. Bone scavengers are sent to the fields after a battle to collect the bones of their fellow allies. They often eschew the pack hunting techniques of other kholos, spreading out among their foes when encountered in groups.</p>\n<hr />\n<p>These pragmatic hunters have earned a very poor reputation for their brutality in battle and worship of demons. While many kholos live up to the terrible stories of their ferocity and cannibalism, others are scavengers and trappers just trying to get by. Many of their cultural traditions are misunderstood by other ancestries, and some kholos play into the fear provoked in those who believe the twisted tales about their people. Kholos are often criticized for their lack of honor in battle, but a kholo understands honor doesn't bring you back home alive, nor does honor put food on the table. Ambushes, feints, and deceptions that lead to fewer kholo deaths and a quicker victory are simply the logical thing to do.</p>",
-      "senses": "low-light vision",
       "items": {
         "strike-melee->Dagger": {
           "name": "Dagger"
@@ -998,7 +1008,11 @@
         },
         "action->Bone Armor": {
           "name": "Bone Armor",
-          "description": "<p><strong>Trigger</strong> The bone scavenger takes bludgeoning damage</p>\n<hr />\n<p><strong>Effect</strong> The bone scavenger angles their makeshift armor to absorb some of the blow, causing shards of bone to splinter outward. All adjacent creatures take @Damage[2d4[piercing]] damage (@Check[reflex|dc:16|basic] save).</p>"
+          "description": "<p><strong>Trigger</strong> The bone scavenger takes bludgeoning damage</p>\n<hr />\n<p><strong>Effect</strong> The bone scavenger angles their makeshift armor to absorb some of the blow, causing shards of bone to splinter outward. All adjacent creatures take @Damage[2d4[piercing]|options:area-damage] damage (@Check[reflex|dc:16|basic|options:area-effect] save).</p>"
+        },
+        "action->Rugged Travel": {
+          "name": "Rugged Travel",
+          "description": "<p>A kholo ignores the first square of difficult terrain they move into each time they Step or Stride.</p>"
         }
       }
     },
@@ -1084,9 +1098,12 @@
         "action->+1 Circumstance to All Saves vs. Traps": {
           "name": "+1 Circumstance to All Saves vs. Traps"
         },
+        "action->+1 AC vs. Traps": {
+          "name": "+1 AC vs. Traps"
+        },
         "action->Deny Advantage": {
           "name": "Deny Advantage",
-          "description": "<p>The burglar isn't off-guard to creatures of 4th level or lower that are @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden}, @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Undetected}, flanking, or using @UUID[Compendium.pf2e.classfeatures.Item.w6rMqmGzhUahdnA7]{Surprise Attack}.</p>"
+          "description": "<p>The burglar isn't @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} to creatures of 4th level or lower that are @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden}, @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Undetected}, flanking, or using @UUID[Compendium.pf2e.classfeatures.Item.w6rMqmGzhUahdnA7]{Surprise Attack}.</p>"
         },
         "action->Nimble Dodge": {
           "name": "Nimble Dodge",
@@ -1230,7 +1247,7 @@
         },
         "action->Champion's Aura": {
           "name": "Champion's Aura",
-          "description": "<p>15 feet. Any follower of Rovagug in the aura knows the champion is a champion of Rovagug. Enemies in the aura take a –1 circumstance penalty to saves against fear, and an enemy that ends its turn in the aura can't reduce the value of its @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} condition below 1. The aura can be suppressed or resumed with a single action, which has the concentrate trait, and ends if the champion falls @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}.</p>"
+          "description": "<p>15 feet. Any follower of @UUID[Compendium.pf2e.deities.Item.Bhxji0kxIbMKqdkw]{Rovagug} in the aura knows the champion is a champion of Rovagug. Enemies in the aura take a –1 circumstance penalty to saves against fear, and an enemy that ends its turn in the aura can't reduce the value of its @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} condition below 1. The aura can be suppressed or resumed with a single action, which has the concentrate trait, and ends if the champion falls @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}.</p>"
         },
         "action->Destructive Vengeance": {
           "name": "Destructive Vengeance",
@@ -1267,7 +1284,7 @@
         },
         "action->Champion's Aura": {
           "name": "Champion's Aura",
-          "description": "<p>15 feet.</p>\n<p>Any follower of Shelyn in the aura knows the champion is a champion of Shelyn. At the end of the champion's turn, each ally in the aura reduces its @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} value by 1. The aura can be suppressed or resumed with a single action, which has the concentrate trait, and ends if the champion falls @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}.</p>"
+          "description": "<p>15 feet.</p>\n<p>Any follower of @UUID[Compendium.pf2e.deities.Item.gxwmzxUWBOhdgFSN]{Shelyn} in the aura knows the champion is a champion of Shelyn. At the end of the champion's turn, each ally in the aura reduces its @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} value by 1. The aura can be suppressed or resumed with a single action, which has the concentrate trait, and ends if the champion falls @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}.</p>"
         },
         "action->Champion's Courage": {
           "name": "Champion's Courage",
@@ -1275,7 +1292,7 @@
         },
         "action->Liberating Step": {
           "name": "Liberating Step",
-          "description": "<p><strong>Trigger</strong> An enemy damages, grabs, or restrains the champion's ally, and both are in the champion's aura</p>\n<hr />\n<p><strong>Effect</strong> The champion frees an ally from restraint. If the trigger was an ally taking damage, the ally gains resistance 10 to all damage against the triggering damage.</p>\n<p>The ally can attempt to break free of effects grabbing, restraining, immobilizing, or paralyzing them. They either attempt a new save against one such effect that allows a save or attempt to @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} from one effect as a free action. Whether or not it needed to escape, the ally can then Step as a free action if it's able to move.</p>"
+          "description": "<p><strong>Trigger</strong> An enemy damages, grabs, or restrains the champion's ally, and both are in the champion's aura</p>\n<hr />\n<p><strong>Effect</strong> The champion frees an ally from restraint. If the trigger was an ally taking damage, the ally gains resistance 10 to all damage against the triggering damage.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.n6vsjGq2CDZDW3U1]{Effect: Liberating Step}</p>\n<p>The ally can attempt to break free of effects grabbing, @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restraining}, @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilizing}, or @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzing} them. They either attempt a new save against one such effect that allows a save or attempt to @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} from one effect as a free action. Whether or not it needed to escape, the ally can then Step as a free action if it's able to move.</p>"
         },
         "action->Blessed Weapon": {
           "name": "Blessed Weapon",
@@ -1374,7 +1391,7 @@
         },
         "action->Live to Tell the Tale": {
           "name": "Live to Tell the Tale",
-          "description": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> The chronicler would gain the dying condition</p>\n<hr />\n<p><strong>Effect</strong> The chronicler instead falls @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious} for [[/gmr 1d4 #hours]]{1d4 hours} or until they regain 1 Hit Point.</p>"
+          "description": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> The chronicler would gain the @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{Dying} condition</p>\n<hr />\n<p><strong>Effect</strong> The chronicler instead falls @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious} for [[/gmr 1d4 #hours]]{1d4 hours} or until they regain 1 Hit Point.</p>"
         },
         "action->Scroll Mastery": {
           "name": "Scroll Mastery",
@@ -1593,11 +1610,11 @@
         },
         "action->Boxing Ears": {
           "name": "Boxing Ears",
-          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The corn leshy throng lashes out with hardened ears of corn to attack each enemy in its space and in a @Template[type:emanation|distance:5], with a @Check[reflex|dc:18|basic] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[1d6[bludgeoning]] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d6+4)[bludgeoning]] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(2d6+8)[bludgeoning]] damage</p>"
+          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The corn leshy throng lashes out with hardened ears of corn to attack each enemy in its space and in a @Template[type:emanation|distance:5], with a @Check[reflex|dc:18|basic|options:area-effect] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[1d6[bludgeoning]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d6+4)[bludgeoning]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(2d6+8)[bludgeoning]|options:area-damage] damage</p>"
         },
         "action->Kernel Barrage": {
           "name": "Kernel Barrage",
-          "description": "<p>The throng's members fling a bombardment of corn kernels. Each creature in a @Template[type:cone|distance:30] takes @Damage[2d6[bludgeoning]] damage with a @Check[reflex|dc:18|basic] save. When the throng is reduced to 2 or fewer segments, this area decreases to a @Template[type:cone|distance:15].</p>"
+          "description": "<p>The throng's members fling a bombardment of corn kernels. Each creature in a @Template[type:cone|distance:30] takes @Damage[2d6[bludgeoning]|options:area-damage] damage with a @Check[reflex|dc:18|basic|options:area-effect] save. When the throng is reduced to 2 or fewer segments, this area decreases to a @Template[type:cone|distance:15].</p>"
         }
       }
     },
@@ -1709,7 +1726,10 @@
         },
         "action->Words of Encouragement": {
           "name": "Words of Encouragement",
-          "description": "<p>The courtesan praises the performance of one ally who can hear them. The targeted ally ignores any circumstance and status penalties they have until the start of the courtesan's next turn. The target then becomes temporarily immune to this ability for 10 minutes.</p>"
+          "description": "<p>The courtesan praises the performance of one ally who can hear them. The targeted ally ignores any circumstance and status penalties they have until the start of the courtesan's next turn. The target then becomes temporarily immune to this ability for 10 minutes.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.GPcmgpyTtPoXu5N1]{Effect: Words of Encouragement}</p>"
+        },
+        "lore->Art Lore": {
+          "name": "Art Lore"
         }
       }
     },
@@ -1765,7 +1785,7 @@
         },
         "action->Deny Advantage": {
           "name": "Deny Advantage",
-          "description": "<p>The crime kingpin isn't off-guard to creatures of 12th level or lower that are @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden}, @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Undetected}, flanking, or using @UUID[Compendium.pf2e.classfeatures.Item.w6rMqmGzhUahdnA7]{Surprise Attack}.</p>"
+          "description": "<p>The crime kingpin isn't @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} to creatures of 12th level or lower that are @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden}, @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Undetected}, flanking, or using @UUID[Compendium.pf2e.classfeatures.Item.w6rMqmGzhUahdnA7]{Surprise Attack}.</p>"
         },
         "action->Kingpin's Presence": {
           "name": "Kingpin's Presence",
@@ -1981,7 +2001,7 @@
         },
         "action->Blessed Shield": {
           "name": "Blessed Shield",
-          "description": "<p>In the deific champion's hands, a shield gains the moderate reinforcing rune, giving it Hardness 8, 84 HP, and BT 42.</p>"
+          "description": "<p>In the deific champion's hands, a shield gains the <em>@UUID[Compendium.pf2e.equipment-srd.Item.bvROhtzAez0KP7Vt]{moderate reinforcing rune}</em>, giving it Hardness 8, 84 HP, and BT 42.</p>"
         },
         "action->Deific Reactions": {
           "name": "Deific Reactions",
@@ -1989,7 +2009,7 @@
         },
         "action->Champion's Aura": {
           "name": "Champion's Aura",
-          "description": "<p>15 feet.</p>\n<p>Any follower of Iomedae in the aura knows the champion is a champion of Iomedae. At the end of the champion's turn, each ally in the aura reduces its @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} value by 1. The aura can be suppressed or resumed with a single action, which has the concentrate trait, and ends if the champion falls @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}.</p>"
+          "description": "<p>15 feet.</p>\n<p>Any follower of @UUID[Compendium.pf2e.deities.Item.eErEiVmBqltYXFJ6]{Iomedae} in the aura knows the champion is a champion of Iomedae. At the end of the champion's turn, each ally in the aura reduces its @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} value by 1. The aura can be suppressed or resumed with a single action, which has the concentrate trait, and ends if the champion falls @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}.</p>"
         },
         "action->Champion's Courage": {
           "name": "Champion's Courage",
@@ -1997,7 +2017,7 @@
         },
         "action->Exalted Retributive Strike": {
           "name": "Exalted Retributive Strike",
-          "description": "<p><strong>Trigger</strong> An enemy damages the deific champion's ally, and both are in the deific champion's aura</p>\n<hr />\n<p><strong>Effect</strong> The ally gains resistance 14 to all damage against the triggering damage. If the enemy is within reach, the deific champion makes a melee Strike against it. Each ally in the champion's aura can spend a reaction to Strike the target with a –5 penalty.</p>"
+          "description": "<p><strong>Trigger</strong> An enemy damages the deific champion's ally, and both are in the deific champion's aura</p>\n<hr />\n<p><strong>Effect</strong> The ally gains resistance 14 to all damage against the triggering damage. If the enemy is within reach, the deific champion makes a melee Strike against it. Each ally in the champion's aura can spend a reaction to Strike the target with a –5 penalty.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.KzwcLwJ4c6hon0pu]{Effect: Exalted Retributive Strike}</p>"
         },
         "action->Will Not Fall": {
           "name": "Will Not Fall",
@@ -2005,7 +2025,7 @@
         },
         "action->Will Not Falter": {
           "name": "Will Not Falter",
-          "description": "<p><strong>Effect</strong> The deific champion declares their devotion to their deity and their cause. They Stride, then make a melee Strike. If the Strike hits an enemy, all allies within their champion's aura gain a +2 status bonus to attack rolls and saving throws against fear until the start of the deific champion's next turn.</p>"
+          "description": "<p><strong>Effect</strong> The deific champion declares their devotion to their deity and their cause. They Stride, then make a melee Strike. If the Strike hits an enemy, all allies within their champion's aura gain a +2 status bonus to attack rolls and saving throws against fear until the start of the deific champion's next turn.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.N402OXwxrqVkcK87]{Effect: Will Not Falter}</p>"
         }
       }
     },
@@ -2029,29 +2049,32 @@
         "strike-melee->Decaying Frost Fist": {
           "name": "Decaying Frost Fist"
         },
+        "strike-ranged->Grave Pulse": {
+          "name": "Grave Pulse"
+        },
         "action->Mark of Fate": {
           "name": "Mark of Fate",
-          "description": "<p>A creature that slays the deific vessel must succeed at a @Check[will|dc:35] save or be visibly marked as anathema to Urgathoa. It gains weakness 10 to unholy and takes a –2 circumstance penalty to Charisma-based skill checks against followers of Urgathoa. Creatures attempting to @UUID[Compendium.pf2e.actionspf2e.Item.plBGdZhqq5JBl1D8]{Gather Information} about or @UUID[Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD]{Track} the marked creature gain a +2 circumstance bonus to their checks.</p>\n<p>The mark can't be hidden and can be removed only by participating in an atone ritual led by a worshipper of Urgathoa who is 12th level or higher.</p>\n<hr />\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.yHI1DhZkAyqwRpDh]{Effect: Mark of Fate}</p>"
+          "description": "<p>A creature that slays the deific vessel must succeed at a @Check[will|dc:35] save or be visibly marked as anathema to @UUID[Compendium.pf2e.deities.Item.22n3N47sqbqbDxbp]{Urgathoa}. It gains weakness 10 to unholy and takes a –2 circumstance penalty to Charisma-based skill checks against followers of Urgathoa. Creatures attempting to @UUID[Compendium.pf2e.actionspf2e.Item.plBGdZhqq5JBl1D8]{Gather Information} about or @UUID[Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD]{Track} the marked creature gain a +2 circumstance bonus to their checks.</p>\n<p>The mark can't be hidden and can be removed only by participating in an atone ritual led by a worshipper of Urgathoa who is 12th level or higher.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.yHI1DhZkAyqwRpDh]{Effect: Mark of Fate}</p>"
         },
         "action->Limited Lifespan": {
           "name": "Limited Lifespan",
-          "description": "<p>The deific vessel takes 25 damage at the end of its turn if it Cast a Spell, used Borrow Time, or made a Strike that turn. This damage ignores resistance.</p>"
+          "description": "<p>The deific vessel takes @Damage[25[untyped]] damage at the end of its turn if it Cast a Spell, used Borrow Time, or made a Strike that turn. This damage ignores resistance.</p>"
         },
         "action->Shattered Vessel": {
           "name": "Shattered Vessel",
-          "description": "<p>When the deific vessel dies, the divine power barely contained within their form explodes outward, dealing @Damage[6d8[spirit]] damage to each creature in a @Template[type:emanation|distance:30] with a @Check[reflex|dc:33|basic] save.</p>"
+          "description": "<p>When the deific vessel dies, the divine power barely contained within their form explodes outward, dealing @Damage[6d8[spirit]|options:area-damage] damage to each creature in a @Template[type:emanation|distance:30] with a @Check[reflex|dc:33|basic|options:area-effect] save.</p>"
         },
         "action->Void Tendrils": {
           "name": "Void Tendrils",
-          "description": "<p>30 feet.</p>\n<p>When a creature in the aura would be healed by a vitality effect, the healing is reduced by 15 and the deific vessel regains 15 Hit Points.</p>"
+          "description": "<p>30 feet.</p>\n<p>When a creature in the aura would be healed by a vitality effect, the healing is reduced by 15 and the deific vessel regains @Damage[15[healing]] Hit Points.</p>"
         },
         "action->Borrow Time": {
           "name": "Borrow Time",
-          "description": "<p>The vessel chooses two different creatures in their void tendrils aura. Each one must be either undead or the vessel themself. One target loses 25 HP and the other regains that many HP. If a target is unwilling, it can negate the transfer with a successful @Check[fortitude|dc:39] save.</p>"
+          "description": "<p>The vessel chooses two different creatures in their void tendrils aura. Each one must be either undead or the vessel themself. One target loses @Damage[25[untyped]] HP and the other regains that many HP. If a target is unwilling, it can negate the transfer with a successful @Check[fortitude|dc:39] save.</p>"
         },
         "action->Grave Chill": {
           "name": "Grave Chill",
-          "description": "<p>The vessel's unarmed attacks and scythe gain the <em>+2 decaying frost greater striking</em> runes when used by the vessel, and their Strikes gain the death trait.</p>"
+          "description": "<p>The vessel's unarmed attacks and scythe gain the <em>+2 @UUID[Compendium.pf2e.equipment-srd.Item.fyiW23MFe8p06KL5]{Decaying} @UUID[Compendium.pf2e.equipment-srd.Item.M5M1WJ5KzbYfRGsY]{Frost} greater striking</em> runes when used by the vessel, and their Strikes gain the death trait.</p>"
         },
         "lore->Undead Lore": {
           "name": "Undead Lore"
@@ -2106,8 +2129,8 @@
         "consumable->Wall Charge": {
           "name": "Wall Charge"
         },
-        "backpack->Bag of explosives": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.3lgwjrFEsQVKzhh7]\nBag of explosives"
+        "backpack->Bag of Explosives": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.3lgwjrFEsQVKzhh7]\nBag of Explosives"
         },
         "strike-melee->Light Mace": {
           "name": "Light Mace"
@@ -2133,7 +2156,7 @@
         },
         "action->Wall Charge": {
           "name": "Wall Charge",
-          "description": "<p>The demolitionist plants a powerful wall charge on a flat surface such as a door or wall. Once the charge is planted, it explodes after 1 minute, dealing @Damage[60[fire]] damage to the surface and ignoring up to 15 of the surface's Hardness. The explosive also deals @Damage[5d6[fire]|options:area-damage] damage to creatures within 30 feet of the explosive with a @Check[reflex|dc:25|basic|options:area-effect] save.</p>"
+          "description": "<p>The demolitionist plants a powerful wall charge on a flat surface such as a door or wall. Once the charge is planted, it explodes after 1 minute, dealing @Damage[60[fire]] damage to the surface and ignoring up to 15 of the surface's Hardness. The explosive also deals @Damage[5d6[fire]|options:area-damage] damage to creatures within @Template[burst|distance:30]{30 feet} of the explosive with a @Check[reflex|dc:25|basic|options:area-effect] save.</p>"
         },
         "lore->Explosive Lore": {
           "name": "Explosive Lore"
@@ -2400,7 +2423,9 @@
     },
     "Driver": {
       "name": "Driver",
+      "acDetails": "+6 status to all defenses while driving",
       "publicNotes": "<p>With daring and charm, a driver is a professional operator of mechanical vehicles. Their skill and recklessness give them a reputation that puts even the quickest horse riders to shame. A driver's vehicle becomes an extension of themselves, allowing the driver to perform near-impossible feats of maneuverability. Drivers have other tricks up their sleeve, as their charm is undeniable. When needed, they can talk, lie, or frighten their way out of a bumpy situation in and out of a vehicle.</p>\n<hr />\n<p>Although relatively uncommon across much of Golarion, the frequently eccentric but undeniably brilliant minds who create elaborate devices of clockwork, gunpowder, and steam often loom much larger in the public eye than their numbers would suggest.</p>",
+      "saveDetails": "+6 status to all defenses while driving",
       "items": {
         "strike-melee->Crowbar": {
           "name": "Crowbar"
@@ -2417,11 +2442,14 @@
         },
         "action->Express Driver": {
           "name": "Express Driver",
-          "description": "<p>A driver can attempt a Driving Lore check to increase a vehicle's travel Speed when calculating the value for a day. The DC is determined by the GM but is typically based on the vehicle's piloting DC or the difficulty of traversing the environment, whichever is harder. On a success, increase the vehicle's travel Speed by half.</p>"
+          "description": "<p>A driver can attempt a @Check[driving-lore] check to increase a vehicle's travel Speed when calculating the value for a day. The DC is determined by the GM but is typically based on the vehicle's piloting DC or the difficulty of traversing the environment, whichever is harder. On a success, increase the vehicle's travel Speed by half.</p>"
         },
         "action->Skilled Driver": {
           "name": "Skilled Driver",
           "description": "<p>The driver gains a +10 circumstance bonus to any skill check involved in driving a vehicle, and is considered a master in the skill for such checks. This bonus also applies to any initiative roll while the driver is piloting a vehicle.</p>"
+        },
+        "action->+6 Status to All Defenses While Driving": {
+          "name": "+6 Status to All Defenses While Driving"
         },
         "action->Vehicle Block": {
           "name": "Vehicle Block",
@@ -2464,11 +2492,11 @@
         },
         "action->Spotlight Ready": {
           "name": "Spotlight Ready",
-          "description": "<p>When performing for crowds of 10 or more, the dromaar lorekeeper gains a +2 circumstance bonus to their Performance checks.</p>"
+          "description": "<p>When performing for crowds of 10 or more, the dromaar lorekeeper gains a +2 circumstance bonus to their @Check[performance|options:spotlight-ready] checks.</p>"
         },
         "action->Final Tale": {
           "name": "Final Tale",
-          "description": "<p>When the lorekeeper dies, they utter a brief but poignant final story that shakes those nearby to their core. Each creature in a @Template[type:emanation|distance:10] must succeed at a @Check[will|dc:20] save or be @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} for 1 round.</p>"
+          "description": "<p>When the lorekeeper dies, they utter a brief but poignant final story that shakes those nearby to their core. Each creature in a @Template[type:emanation|distance:10] must succeed at a @Check[will|dc:20|options:inflicts:paralyzed] save or be @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} for 1 round.</p>"
         },
         "lore->Orc Lore": {
           "name": "Orc Lore"
@@ -2540,8 +2568,8 @@
       "name": "Drunkard",
       "publicNotes": "<p>Every tavern has one-that person who drinks a little too much and starts a fight. While many drunkards are relatively harmless, a few have a hair trigger, and when they're set off come, no one-even the drunkard themself-can tell you what started the row.</p>\n<hr />\n<p>Countless adventures begin in a tavern or a pub. Maybe it's because such places attract the risk-prone, or maybe it's because everyone needs a little liquid courage before they decide to take on a group of rampaging ogres.</p>",
       "items": {
-        "armor->Drunkard's Outfit": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.zBYEU9E7034ENCmh]\nDrunkard's Outfit"
+        "armor->Drunkard's Outfit (Functions as Padded Armor)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.zBYEU9E7034ENCmh]\nDrunkard's Outfit (Functions as Padded Armor)"
         },
         "equipment->Pewter Mug": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.wRSS5vP8ltrThsoC]\nPewter Mug"
@@ -2558,7 +2586,8 @@
         },
         "action->Drunken Rage": {
           "name": "Drunken Rage",
-          "description": "<p><strong>Requirements</strong> The drunkard is drunk, and isn't @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued} or raging</p>\n<hr />\n<p><strong>Effect</strong> The drunkard flies into a drunken rage. They gain 6 temporary Hit Points that last until the drunken rage ends. While raging, they deal 4 additional damage with melee attacks and take a –1 penalty to AC. The drunkard can't use concentrate actions except @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seek}. The rage lasts for 1 minute, until the drunkard falls @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}, or until the drunkard sobers up. The drunkard can't voluntarily stop raging. Once the rage ends, the drunkard can't gain temporary HP from this action for 1 minute.</p>\n<hr />\n<p>@UUID[Compendium.pf2e.feat-effects.Item.z3uyCMBddrPK5umr]{Effect: Rage}</p>"
+          "description": "<p><strong>Requirements</strong> The drunkard is drunk, and isn't @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued} or raging</p>\n<hr />\n<p><strong>Effect</strong> The drunkard flies into a drunken rage. They gain 6 temporary Hit Points that last until the drunken rage ends. While raging, they deal 4 additional damage with melee attacks and take a –1 penalty to AC. The drunkard can't use concentrate actions except @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seek}. The rage lasts for 1 minute, until the drunkard falls @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}, or until the drunkard sobers up. The drunkard can't voluntarily stop raging. Once the rage ends, the drunkard can't gain temporary HP from this action for 1 minute.</p>",
+          "selfEffect": "Effect: Rage"
         },
         "lore->Alcohol Lore": {
           "name": "Alcohol Lore"
@@ -2591,7 +2620,7 @@
         },
         "action->Dwarven War Song": {
           "name": "Dwarven War Song",
-          "description": "<p>The battalion joins together to sing a traditional song of battle. Each enemy in a @Template[type:emanation|distance:30] must succeed at a @Check[will|dc:23|inflicts:frightened] save or be @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure). Each enemy is then temporarily immune for 10 minutes.</p>"
+          "description": "<p>The battalion joins together to sing a traditional song of battle. Each enemy in a @Template[type:emanation|distance:30] must succeed at a @Check[will|dc:23|options:inflicts:frightened] save or be @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure). Each enemy is then temporarily immune for 10 minutes.</p>"
         },
         "action->Shields Up!": {
           "name": "Shields Up!",
@@ -2656,8 +2685,8 @@
         }
       },
       "items": {
-        "armor->Leather Apron (functions as padded armor)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.zBYEU9E7034ENCmh]\nLeather Apron (functions as padded armor)"
+        "armor->Leather Apron (Functions as Padded Armor)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.zBYEU9E7034ENCmh]\nLeather Apron (Functions as Padded Armor)"
         },
         "equipment->Artisan's Toolkit (blacksmithing)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.y34yjumCFakrbtdw]\nArtisan's Toolkit (blacksmithing)"
@@ -2696,9 +2725,8 @@
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.Yr9yCuJiAlFh3QEB]\nSteel Shield (Modular Prostheses Only)",
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.Yr9yCuJiAlFh3QEB]\n<p>The dynamo can alternatively transform a hand into a steel shield with Hardness 8, HP 72, and BT 36.</p>"
         },
-        "armor->Steel Plating": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.pRoikbRo5HFW6YUB]\nSteel Plating",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.pRoikbRo5HFW6YUB]\n<p>Functions as @UUID[Compendium.pf2e.equipment-srd.Item.pRoikbRo5HFW6YUB]{Half Plate}.</p>"
+        "armor->Steel Plating (Functions as Half Plate)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.pRoikbRo5HFW6YUB]\nSteel Plating (Functions as Half Plate)"
         },
         "equipment->Artisan's Toolkit (Blacksmithing)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.y34yjumCFakrbtdw]\nArtisan's Toolkit (Blacksmithing)"
@@ -3073,7 +3101,7 @@
         },
         "action->Think Fast!": {
           "name": "Think Fast!",
-          "description": "<p>The expedition leader has a hand free</p>\n<hr />\n<p><strong>Effect</strong> The expedition leader scoops up a handful of rubble and throws it. Each creature in a @Template[type:cone|distance:15] must succeed at a @Check[reflex|dc:27] save or be @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} and @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} until the start of the expedition leader's next turn.</p>"
+          "description": "<p><strong>Requirements</strong> The expedition leader has a hand free</p>\n<hr />\n<p><strong>Effect</strong> The expedition leader scoops up a handful of rubble and throws it. Each creature in a @Template[type:cone|distance:15] must succeed at a @Check[reflex|dc:27] save or be @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} and @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} until the start of the expedition leader's next turn.</p>"
         },
         "lore->Scouting Lore": {
           "name": "Scouting Lore"
@@ -3233,7 +3261,7 @@
         },
         "action->Fence's Feint": {
           "name": "Fence's Feint",
-          "description": "<p>The fence @UUID[Compendium.pf2e.actionspf2e.Item.QNAVeNKtHA0EUw4X]{Feints}, then can Step. If the feint succeeds, the target is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against the fence's melee attacks until the end of the fence's next turn (or to all melee attacks on a critical success).</p>"
+          "description": "<p>The fence [[/act feint]]{Feints}, then can Step. If the feint succeeds, the target is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against the fence's melee attacks until the end of the fence's next turn (or to all melee attacks on a critical success).</p>"
         },
         "action->Quick Rummage": {
           "name": "Quick Rummage",
@@ -3436,8 +3464,8 @@
         "equipment->Pouches": {
           "name": "Pouches"
         },
-        "equipment->Wicker Basket": {
-          "name": "Wicker Basket"
+        "equipment->Wicker Baskets": {
+          "name": "Wicker Baskets"
         },
         "strike-melee->Dagger": {
           "name": "Dagger"
@@ -3456,12 +3484,7 @@
         },
         "action->Expert Subsistence": {
           "name": "Expert Subsistence",
-          "description": "<p>While using Survival to Subsist, if the forager rolls any result worse than a success, they get a success. On a success, they can provide subsistence living for themselves and four additional creatures, and on a critical success, they can take care of twice as many creatures as on a success.</p>",
-          "rules": {
-            "1": {
-              "text": "While using Survival to [[/act subsist statistic=survival]], if the forager rolls any result worse than a success, they get a success. On a success, they can provide subsistence living for themselves and four additional creatures, and on a critical success, they can take care of twice as many creatures as on a success."
-            }
-          }
+          "description": "<p>While using Survival to [[/act subsist statistic=survival]], if the forager rolls any result worse than a success, they get a success. On a success, they can provide subsistence living for themselves and four additional creatures, and on a critical success, they can take care of twice as many creatures as on a success.</p>"
         },
         "action->Natural Specialist": {
           "name": "Natural Specialist",
@@ -3619,9 +3642,6 @@
         "strike-melee->Club": {
           "name": "Club"
         },
-        "strike-ranged->Club": {
-          "name": "Club"
-        },
         "strike-ranged->Arbalest": {
           "name": "Arbalest"
         },
@@ -3631,11 +3651,11 @@
         },
         "action->Move It!": {
           "name": "Move It!",
-          "description": "<p>The gamekeeper can Hustle for 30 minutes longer and is not affected by difficult terrain while in their territory.</p>"
+          "description": "<p>The gamekeeper can @UUID[Compendium.pf2e.actionspf2e.Item.JuqmIAnkL9hVGai8]{Hustle} for 30 minutes longer and is not affected by difficult terrain while in their territory.</p>"
         },
         "action->Sic 'Em!": {
           "name": "Sic 'Em!",
-          "description": "<p><strong>Trigger</strong> An animal within 60 feet of the gamekeeper is killed</p>\n<hr />\n<p><strong>Effect</strong> The gamekeeper stokes the ire of the wild. Until the end of the gamekeeper's next turn, they and all animals in a @Template[type:emanation|distance:60] gain a +1 status bonus to attack rolls and a +2 status bonus to damage rolls.</p>"
+          "description": "<p><strong>Trigger</strong> An animal within 60 feet of the gamekeeper is killed</p>\n<hr />\n<p><strong>Effect</strong> The gamekeeper stokes the ire of the wild. Until the end of the gamekeeper's next turn, they and all animals in a @Template[type:emanation|distance:60] gain a +1 status bonus to attack rolls and a +2 status bonus to damage rolls.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.o1VvOndRq2pNhSeK]{Effect: Sic 'Em!}</p>"
         },
         "action->Leader of the Pack": {
           "name": "Leader of the Pack",
@@ -3769,11 +3789,11 @@
         "spellcastingEntry->Primal Prepared Spells": {
           "name": "Primal Prepared Spells"
         },
-        "weapon->Trowel (functions as a sickle)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.ynnBwzkzsR6B73iO]\nTrowel (functions as a sickle)"
+        "weapon->Trowel (Functions as a Sickle)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.ynnBwzkzsR6B73iO]\nTrowel (Functions as a Sickle)"
         },
-        "consumable->Seeds (functions as sling bullets)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.MKSeXwUm56c15MZa]\nSeeds (functions as sling bullets)"
+        "consumable->Seeds (Functions as Sling Bullets)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.MKSeXwUm56c15MZa]\nSeeds (Functions as Sling Bullets)"
         },
         "strike-melee->Trowel": {
           "name": "Trowel"
@@ -3851,11 +3871,11 @@
       "publicNotes": "<p>Goblins eat almost anything. Though they'll survive on raw or little-cooked meat, some prefer searing or frying their food first—or better yet, pickling it! A goblin chef can make anything edible (at least to a goblin).</p>\n<hr />\n<p>Goblins can be found across Golarion, sometimes threatening taller humanoids (whom they refer to as \"longshanks\") and sometimes redeeming harmful history by working alongside others.</p>",
       "saveDetails": "+2 circumstance bonus against ingested poisons",
       "items": {
-        "weapon->Cleaver (functions as dogslicer)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.olwngGXM3hpgoLEP]\nCleaver (functions as dogslicer)"
+        "weapon->Cleaver (Functions as Dogslicer)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.olwngGXM3hpgoLEP]\nCleaver (Functions as Dogslicer)"
         },
-        "armor->Leather Apron (functions as leather armor)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA]\nLeather Apron (functions as leather armor)"
+        "armor->Leather Apron (Functions as Leather Armor)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA]\nLeather Apron (Functions as Leather Armor)"
         },
         "consumable->Pickles": {
           "name": "Pickles"
@@ -4007,8 +4027,8 @@
         "spell->Speak with Plants (Gourds Only) (Constant)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.qvwIwJ9QBihy8R0t]\nSpeak with Plants (Gourds Only) (Constant)"
         },
-        "weapon->+1 Broom (functions as a staf)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.FVjTuBCIefAgloUU]\n+1 Broom (functions as a staf)"
+        "weapon->+1 Broom (Functions as a Staff)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.FVjTuBCIefAgloUU]\n+1 Broom (Functions as a Staff)"
         },
         "strike-melee->Broom": {
           "name": "Broom"
@@ -4019,16 +4039,19 @@
         "strike-ranged->Dagger": {
           "name": "Dagger"
         },
+        "strike-melee->Fist": {
+          "name": "Fist"
+        },
         "action->Verdant Burst": {
           "name": "Verdant Burst",
           "description": "<p>When the gourd leshy witch dies, a burst of primal energy explodes from their body, restoring @Damage[4d8[healing,vitality]|shortLabel] Hit Points to each plant creature in a @Template[type:emanation|distance:30]. This area immediately fills with gourds, becoming difficult terrain. If the terrain is not a viable environment for these plants, they wither after 24 hours.</p>"
         },
         "action->Change Shape": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.eQM5hQ1W3d1uen97]\n<p>The gourd leshy witch transforms into a Small gourd. This ability otherwise uses the effects of one with plants.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.eQM5hQ1W3d1uen97]\n<p>The gourd leshy witch transforms into a Small gourd. This ability otherwise uses the effects of @UUID[Compendium.pf2e.spells-srd.Item.dileJ0Yxqg76LMvu]{One with Plants}.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.ChangeShape]</p>"
         },
         "action->Short Flight": {
           "name": "Short Flight",
-          "description": "<p><strong>Frequency</strong> once per round</p>\n<p><strong>Requirements</strong> The gourd leshy witch is wielding a broom</p>\n<hr />\n<p><strong>Effect</strong> The gourd leshy hops on their broom, which briefly takes flight. The witch Flies 20 feet (or 40 feet if they spend 2 actions), though they must end this movement on solid ground or fall at the end of their turn.</p>"
+          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">2</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<p><strong>Requirements</strong> The gourd leshy witch is wielding a broom</p>\n<hr />\n<p><strong>Effect</strong> The gourd leshy hops on their broom, which briefly takes flight. The witch Flies 20 feet (or 40 feet if they spend 2 actions), though they must end this movement on solid ground or fall at the end of their turn.</p>"
         },
         "action->Sweeping Spell": {
           "name": "Sweeping Spell",
@@ -4149,7 +4172,7 @@
         },
         "action->Alchemical Embalming": {
           "name": "Alchemical Embalming",
-          "description": "<p>The grave robber carries alchemical vials of specially prepared embalming fluid meant to hinder pursuit by anyone who interrupts their grave-robbing. A creature hit by a grave robber's embalming flask takes a –10-foot penalty to all its Speeds for 1 round. On a critical hit from an embalming flask, the target is also @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} for 1 minute.</p>\n<hr />\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.HVGl2hSrfqHE4OZ2]{Effect: Alchemical Embalming}</p>"
+          "description": "<p>The grave robber carries alchemical vials of specially prepared embalming fluid meant to hinder pursuit by anyone who interrupts their grave-robbing. A creature hit by a grave robber's embalming flask takes a –10-foot penalty to all its Speeds for 1 round. On a critical hit from an embalming flask, the target is also @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.HVGl2hSrfqHE4OZ2]{Effect: Alchemical Embalming}</p>"
         },
         "lore->Underworld Lore": {
           "name": "Underworld Lore"
@@ -4226,11 +4249,11 @@
         },
         "action->Guide's Warning": {
           "name": "Guide's Warning",
-          "description": "<p><strong>Trigger</strong> The guide is about to roll a Perception or Survival check to determine their initiative</p>\n<hr />\n<p><strong>Effect</strong> The guide visually or audibly warns allies, granting them a +1 circumstance bonus to their initiative rolls. This bonus increases to +2 if the guide was Scouting. Depending on how the guide warns allies, this action has the auditory or visual trait.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.UiISDbCjK6AUDsll]{Effect: Guide's Warning}</p>"
+          "description": "<p><strong>Trigger</strong> The guide is about to roll a Perception or Survival check to determine their initiative</p>\n<hr />\n<p><strong>Effect</strong> The guide visually or audibly warns allies, granting them a +1 circumstance bonus to their initiative rolls. This bonus increases to +2 if the guide was @UUID[Compendium.pf2e.actionspf2e.Item.kV3XM0YJeS2KCSOb]{Scouting}. Depending on how the guide warns allies, this action has the auditory or visual trait.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.UiISDbCjK6AUDsll]{Effect: Guide's Warning}</p>"
         },
         "action->Guiding Words": {
           "name": "Guiding Words",
-          "description": "<p>The guide points out a weakness of a creature within 30 feet. Until the start of the guide's next turn, the guide and all allies that can hear the guiding words gain a +1 circumstance bonus to attack rolls against that creature, and the guide's Strikes deal an extra 1d4 precision damage to that creature.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.uqjx1bwYduHwwC7d]{Effect: Guiding Words}</p>"
+          "description": "<p>The guide points out a weakness of a creature within 30 feet. Until the start of the guide's next turn, the guide and all allies that can hear the guiding words gain a +1 circumstance bonus to attack rolls against that creature, and the guide's Strikes deal an extra 1d4 precision damage to that creature.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.wxu8CmL75ZxhCJmG]{Effect: Guiding Words (Guide)}</p>"
         },
         "lore->Scouting Lore": {
           "name": "Scouting Lore"
@@ -4261,6 +4284,10 @@
         },
         "strike-melee->Fist": {
           "name": "Fist"
+        },
+        "action->Craft Specialist": {
+          "name": "Craft Specialist",
+          "description": "<p>For encounters involving matters of crafting or architecture, the guildmaster is a 12th-level challenge.</p>"
         },
         "action->Call to Action": {
           "name": "Call to Action",
@@ -4397,7 +4424,7 @@
         },
         "action->Keen Eyes": {
           "name": "Keen Eyes",
-          "description": "<p>The halfling gains a +2 circumstance bonus when using the @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seek} action to find @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} or undetected creatures within 30 feet of them. Whenever the halfling targets a creature that is @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} or hidden from them, reduce the DC of the flat check to 3 for a concealed target or 9 for a hidden one.</p>"
+          "description": "<p>The halfling gains a +2 circumstance bonus when using the @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seek} action to find @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} or @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Undetected} creatures within 30 feet of them. Whenever the halfling targets a creature that is @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} or hidden from them, reduce the DC of the flat check to @Check[flat|dc:3] for a concealed target or @Check[flat|dc:9] for a hidden one.</p>"
         },
         "action->Dash of Spice": {
           "name": "Dash of Spice",
@@ -4442,7 +4469,7 @@
         },
         "action->Keen Eyes": {
           "name": "Keen Eyes",
-          "description": "<p>The halfling gains a +2 circumstance bonus when using the @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seek} action to find @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} or undetected creatures within 30 feet of them. Whenever the halfling targets a creature that is @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} or hidden from them, reduce the DC of the flat check to 3 for a concealed target or 9 for a hidden one.</p>"
+          "description": "<p>The halfling gains a +2 circumstance bonus when using the @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seek} action to find @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} or @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Undetected} creatures within 30 feet of them. Whenever the halfling targets a creature that is @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} or hidden from them, reduce the DC of the flat check to @Check[flat|dc:3] for a concealed target or @Check[flat|dc:9] for a hidden one.</p>"
         },
         "action->Distracting Escape": {
           "name": "Distracting Escape",
@@ -4450,7 +4477,7 @@
         },
         "action->Hidden Pockets": {
           "name": "Hidden Pockets",
-          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The smuggler Interacts to draw an item of light Bulk @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} in one of their @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} pockets. The pockets can store up to four objects of light Bulk. For most smugglers, these items are arsenic, a lesser elixir of life, a lesser smoke ball, and a thieves' toolkit. The smuggler can refill the pockets over the course of 1 minute.</p>"
+          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The smuggler Interacts to draw an item of light Bulk concealed in one of their hidden pockets. The pockets can store up to four objects of light Bulk. For most smugglers, these items are @UUID[Compendium.pf2e.equipment-srd.Item.OIirLySQDLZgT15S]{Arsenic}, an @UUID[Compendium.pf2e.equipment-srd.Item.TZUskLT7yvP7N2co]{Elixir of Life (Lesser)}, a @UUID[Compendium.pf2e.equipment-srd.Item.MoBlVd36uD9xVvZC]{Smoke Ball (Lesser)}, and a @UUID[Compendium.pf2e.equipment-srd.Item.zvLyCVD8g2PdHJAc]{Thieves' Toolkit}. The smuggler can refill the pockets over the course of 1 minute.</p>"
         },
         "action->Sneak Attack": {
           "name": "Sneak Attack",
@@ -4488,7 +4515,7 @@
         },
         "action->Keen Eyes": {
           "name": "Keen Eyes",
-          "description": "<p>The halfling gains a +2 circumstance bonus when using the @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seek} action to find @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} or undetected creatures within 30 feet of them. Whenever the halfling targets a creature that is @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} or hidden from them, reduce the DC of the flat check to 3 for a concealed target or 9 for a hidden one.</p>"
+          "description": "<p>The halfling gains a +2 circumstance bonus when using the @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seek} action to find @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} or @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Undetected} creatures within 30 feet of them. Whenever the halfling targets a creature that is @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} or hidden from them, reduce the DC of the flat check to @Check[flat|dc:3] for a concealed target or @Check[flat|dc:9] for a hidden one.</p>"
         },
         "action->Tale Specialist": {
           "name": "Tale Specialist",
@@ -4500,11 +4527,11 @@
         },
         "action->Mesmerizing Tale": {
           "name": "Mesmerizing Tale",
-          "description": "<p>The yarnspinner weaves a long-winded but captivating narrative that enchants those nearby. Any creature that's in a @Template[type:emanation|distance:20] or starts its turn in the aura must attempt a @Check[will|dc:24] save. The Mesmerizing Tale lasts until the end of the yarnspinner's next turn, but can be Sustained. The first time the yarnspinner Sustains the aura on subsequent rounds, the aura expands by 10 feet, to a maximum of 60 feet.</p>"
+          "description": "<p>The yarnspinner weaves a long-winded but captivating narrative that enchants those nearby. Any creature that's in a @Template[type:emanation|distance:20] or starts its turn in the aura must attempt a @Check[will|dc:24] save. The Mesmerizing Tale lasts until the end of the yarnspinner's next turn, but can be Sustained. The first time the yarnspinner Sustains the aura on subsequent rounds, the aura expands by 10 feet, to a maximum of 60 feet.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected, and is temporarily immune for 24 hours.</p>\n<p><strong>Success</strong> The creature is unaffected.</p>\n<p><strong>Failure</strong> The creature becomes @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fascinated} with the yarnspinner until the start of its next turn, and must spend all its actions to move closer to the yarnspinner and listen to the tale.</p>"
         },
         "action->Resonant Weapons": {
           "name": "Resonant Weapons",
-          "description": "<p>If the yarnspinner's Mesmerizing Tale aura is active or they have cast a spell within the last round, their Strikes with magic weapons deal an additional @Damage[2d10[sonic]] damage.</p>"
+          "description": "<p>If the yarnspinner's Mesmerizing Tale aura is active or they have cast a spell within the last round, their Strikes with magic weapons deal an additional 2d10 sonic damage.</p>"
         },
         "lore->History Lore": {
           "name": "History Lore"
@@ -4729,11 +4756,11 @@
         },
         "action->Steward of the Faithful": {
           "name": "Steward of the Faithful",
-          "description": "<p>30 feet.</p>\n<p>Each ally in the aura who worships Pharasma gains resistance 5 to void and a +1 status bonus to Will saves, Diplomacy checks, and Medicine checks.</p>"
+          "description": "<p>30 feet.</p>\n<p>Each ally in the aura who worships @UUID[Compendium.pf2e.deities.Item.QZD0u1jxwz0kj8uI]{Pharasma} gains resistance 5 to void and a +1 status bonus to Will saves, Diplomacy checks, and Medicine checks.</p>"
         },
         "action->Unshakable Faith": {
           "name": "Unshakable Faith",
-          "description": "<p>During a religious debate, clash of church politics, or similar conflict, the high priest gains a +4 circumstance bonus to Perception check to @UUID[Compendium.pf2e.actionspf2e.Item.1xRFPTFtWtGJ9ELw]{Sense Motive} and to their Perception DC against attempt to lie to them.</p>"
+          "description": "<p>During a religious debate, clash of church politics, or similar conflict, the high priest gains a +4 circumstance bonus to Perception check to @UUID[Compendium.pf2e.actionspf2e.Item.1xRFPTFtWtGJ9ELw]{Sense Motive} and to their Perception DC against attempt to @UUID[Compendium.pf2e.actionspf2e.Item.ewwCglB7XOPLUz72]{Lie} to them.</p>"
         },
         "action->Healing Hands": {
           "name": "Healing Hands",
@@ -4803,11 +4830,11 @@
         },
         "action->Coordinated Strikes": {
           "name": "Coordinated Strikes",
-          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The battalion thrusts their spears at each enemy in a @Template[type:emanation|distance:5] with a @Check[reflex|dc:21|basic] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[(1d6+2)[slashing]] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d6+5)[slashing]] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(3d12+7)[slashing]] damage</p>"
+          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The battalion thrusts their spears at each enemy in a @Template[type:emanation|distance:5] with a @Check[reflex|dc:21|basic|options:area-effect] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[(1d6+2)[slashing]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d6+5)[slashing]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(3d12+7)[slashing]|options:area-damage] damage</p>"
         },
         "action->Focused Volley": {
           "name": "Focused Volley",
-          "description": "<p>The hobgoblin battalion's archers draw or reload their crossbows, then launch a ranged attack in the form of a volley. This volley is a @Template[type:burst|distance:10] within 120 feet that deals @Damage[2d8[piercing]] damage with a @Check[reflex|dc:21|basic] save. When the hobgoblin battalion is reduced to 2 or fewer segments, this area is reduced to a @Template[type:burst|distance:5].</p>"
+          "description": "<p>The hobgoblin battalion's archers draw or reload their crossbows, then launch a ranged attack in the form of a volley. This volley is a @Template[type:burst|distance:10] within 120 feet that deals @Damage[2d8[piercing]|options:area-damage] damage with a @Check[reflex|dc:21|basic|options:area-effect] save. When the hobgoblin battalion is reduced to 2 or fewer segments, this area is reduced to a @Template[type:burst|distance:5].</p>"
         },
         "action->Perfect Formation": {
           "name": "Perfect Formation",
@@ -4835,6 +4862,10 @@
         },
         "strike-ranged->Crossbow": {
           "name": "Crossbow"
+        },
+        "action->Arcane Magic Sense": {
+          "name": "Arcane Magic Sense",
+          "description": "<p>The hobgoblin spellbreaker can detect the source of any arcane magic within range as an imprecise sense.</p>"
         },
         "action->Shatter Spell": {
           "name": "Shatter Spell",
@@ -4877,8 +4908,11 @@
         "spellcastingEntry->Primal Prepared Spells": {
           "name": "Primal Prepared Spells"
         },
-        "strike-melee->Staff of Healing": {
-          "name": "Staff of Healing"
+        "weapon->+1 Striking Staff of Healing": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.3OkOKxCee9WruGU5]\n+1 Striking Staff of Healing"
+        },
+        "strike-melee->Staff": {
+          "name": "Staff"
         },
         "strike-melee->Fist": {
           "name": "Fist"
@@ -4889,11 +4923,11 @@
         },
         "action->Cleansing Earth": {
           "name": "Cleansing Earth",
-          "description": "<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p><strong>Effect</strong> The humanitarian blesses the land and their allies. In a @Template[type:emanation|distance:30], plants grow and become difficult terrain. Additionally, all allies in the emanation gain 20 temporary Hit Points and can ignore the difficult terrain. These effects last for 1 minute.</p>"
+          "description": "<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p><strong>Effect</strong> The humanitarian blesses the land and their allies. In a @Template[type:emanation|distance:30], plants grow and become difficult terrain. Additionally, all allies in the emanation gain 20 temporary Hit Points and can ignore the difficult terrain. These effects last for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.wLQEa9xChzWEc7Mn]{Effect: Cleansing Earth}</p>"
         },
         "action->Primal Staff": {
           "name": "Primal Staff",
-          "description": "<p>A staff wielded by the humanitarian hermit gains the parry, reach, and trip traits, and Strikes with it deal an additional @Damage[2d8[vitality]] damage.</p>"
+          "description": "<p>A staff wielded by the humanitarian hermit gains the parry, reach, and trip traits, and Strikes with it deal an additional 2d8 vitality damage.</p>"
         },
         "action->Steady Spellcasting": {
           "name": "Steady Spellcasting",
@@ -4914,20 +4948,12 @@
         "strike-melee->Dagger": {
           "name": "Dagger"
         },
-        "strike-ranged->Dagger": {
-          "name": "Dagger"
-        },
         "strike-ranged->Composite Longbow": {
           "name": "Composite Longbow"
         },
         "action->Expert Subsistence": {
           "name": "Expert Subsistence",
-          "description": "<p>While using Survival to Subsist, if the hunter rolls any result worse than a success, they get a success. On a success, they can provide subsistence living for themselves and 16 additional creatures, and on a critical success, they can take care of twice as many creatures as on a success.</p>",
-          "rules": {
-            "1": {
-              "text": "While using Survival to Subsist, if the forager rolls any result worse than a success, they get a success. On a success, they can provide subsistence living for themselves and 16 additional creatures, and on a critical success, they can take care of twice as many creatures as on a success."
-            }
-          }
+          "description": "<p>While using Survival to [[/act subsist statistic=survival]], if the hunter rolls any result worse than a success, they get a success. On a success, they can provide subsistence living for themselves and 16 additional creatures, and on a critical success, they can take care of twice as many creatures as on a success.</p>"
         },
         "action->Forest Walker": {
           "name": "Forest Walker",
@@ -4935,7 +4961,7 @@
         },
         "action->On the Hunt": {
           "name": "On the Hunt",
-          "description": "<p>The hunter designates one creature they're observing or tracking as their prey.</p>\n<p>The hunter gains a +2 circumstance bonus to Perception checks to @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seek} the prey and to Survival checks to @UUID[Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD]{Track} the prey.</p>\n<p>The first time the hunter hits the designated prey in a round, they deal an additional 1d4 precision damage. These effects last until the poacher uses On the Hunt again.</p>"
+          "description": "<p>The hunter designates one creature they're observing or tracking as their prey.</p>\n<p>The hunter gains a +2 circumstance bonus to Perception checks to [[/act seek]] the prey and to Survival checks to [[/act track]] the prey.</p>\n<p>The first time the hunter hits the designated prey in a round, they deal an additional 1d4 precision damage. These effects last until the poacher uses On the Hunt again.</p>"
         },
         "lore->Forest Lore": {
           "name": "Forest Lore"
@@ -5165,11 +5191,12 @@
         "strike-melee->Tail": {
           "name": "Tail"
         },
-        "strike-melee->Claws": {
-          "name": "Claws"
+        "strike-melee->Claw": {
+          "name": "Claw"
         },
         "strike-ranged->Spectral Roar": {
-          "name": "Spectral Roar"
+          "name": "Spectral Roar",
+          "description": "<p><span class=\"action-glyph\">2</span></p>"
         },
         "action->Deep Breath": {
           "name": "Deep Breath",
@@ -5177,7 +5204,8 @@
         },
         "action->Don Mask": {
           "name": "Don Mask",
-          "description": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<hr />\n<p><strong>Effect</strong> The mummer dons a ceremonial skull mask, calling an ancestral spirit to come to their aid. The spirit answers with a spell the mummer can cast as a primal innate spell (5th rank, DC 27) as part of the Don Mask activity. The mummer also gains a primal boon that lasts for 1 minute. After the minute is over or the mask is removed, the spell and boon end if either is still active, and the mummer is @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}. The most common legendary spirits the masks can invoke are:</p>\n<ul>\n<li><strong>Fiery Akkarok</strong> (tyrannosaurus mask); <strong>Spell</strong> @UUID[Compendium.pf2e.spells-srd.Item.ZxHC7V7HtjUsB8zH]{Blazing Bolt} (3-action version); <strong>Boon</strong> The mummer's melee Strikes deal an additional @Damage[2d6[fire]] damage.</li>\n<li><strong>Hazi Zephyr-Borne</strong> (griffon or iruxi mask); <strong>Spell</strong> @UUID[Compendium.pf2e.spells-srd.Item.it4ZsAi6XgvGcodc]{Wall of Wind}; <strong>Boon</strong> The mummer gains a fly Speed of 20 feet.</li>\n<li><strong>King of Storms</strong> (roc or horned dragon mask); <strong>Spell</strong> @UUID[Compendium.pf2e.spells-srd.Item.xxWhyl81w3ckslAU]{Howling Blizzard}; <strong>Boon</strong> The mummer gains the Reactive Strike reaction that can be used only with their tail.</li>\n<li><strong>Nessek, the Wave Dancer</strong> (mosasaur mask); <strong>Spell</strong> @UUID[Compendium.pf2e.spells-srd.Item.xFp4EwVcYwSG336t]{Slither}; <strong>Boon</strong> The mummer's claw Strikes deal an additional @Damage[2d4[persistent,bleed]] damage.</li>\n<li>\n<p><strong>Zalok, Who was Called to Black Harbor</strong> (naga or spinosaurus mask); <strong>Spell</strong> @UUID[Compendium.pf2e.spells-srd.Item.Y3G6Y6EDgCY0s3fq]{Hydraulic Torrent}; Boon The mummer gains a +10-foot status bonus to their land Speed and swim Speed.</p>\n</li>\n</ul>"
+          "description": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<hr />\n<p><strong>Effect</strong> The mummer dons a ceremonial skull mask, calling an ancestral spirit to come to their aid. The spirit answers with a spell the mummer can cast as a primal innate spell (5th rank, DC 27) as part of the Don Mask activity. The mummer also gains a primal boon that lasts for 1 minute. After the minute is over or the mask is removed, the spell and boon end if either is still active, and the mummer is @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}. The most common legendary spirits the masks can invoke are:</p>\n<ul>\n<li>\n<p><strong>Fiery Akkarok</strong> (tyrannosaurus mask)</p>\n<ul>\n<li><strong>Spell</strong> @UUID[Compendium.pf2e.spells-srd.Item.ZxHC7V7HtjUsB8zH]{Blazing Bolt} (3-action version)</li>\n<li><strong>Boon</strong> The mummer's melee Strikes deal an additional 2d6 fire damage.</li>\n</ul>\n</li>\n<li>\n<p><strong>Hazi Zephyr-Borne</strong> (griffon or iruxi mask)</p>\n<ul>\n<li><strong>Spell</strong> @UUID[Compendium.pf2e.spells-srd.Item.it4ZsAi6XgvGcodc]{Wall of Wind}</li>\n<li><strong>Boon</strong> The mummer gains a fly Speed of 20 feet.</li>\n</ul>\n</li>\n<li>\n<p><strong>King of Storms</strong> (roc or horned dragon mask)</p>\n<ul>\n<li><strong>Spell</strong> @UUID[Compendium.pf2e.spells-srd.Item.xxWhyl81w3ckslAU]{Howling Blizzard}</li>\n<li><strong>Boon</strong> The mummer gains the @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.W7SbTykXrNwxDzJc]{Reactive Strike} reaction that can be used only with their tail.</li>\n</ul>\n</li>\n<li>\n<p><strong>Nessek, the Wave Dancer</strong> (mosasaur mask)</p>\n<ul>\n<li><strong>Spell</strong> @UUID[Compendium.pf2e.spells-srd.Item.xFp4EwVcYwSG336t]{Slither}</li>\n<li><strong>Boon</strong> The mummer's claw Strikes deal an additional 2d4 persistent bleed damage.</li>\n</ul>\n</li>\n<li>\n<p><strong>Zalok, Who was Called to Black Harbor</strong> (naga or spinosaurus mask)</p>\n<ul>\n<li><strong>Spell</strong> @UUID[Compendium.pf2e.spells-srd.Item.Y3G6Y6EDgCY0s3fq]{Hydraulic Torrent}</li>\n<li><strong>Boon</strong> The mummer gains a +10-foot status bonus to their land Speed and swim Speed.</li>\n</ul>\n</li>\n</ul>",
+          "selfEffect": "Effect: Don Mask"
         },
         "action->Starry Presence": {
           "name": "Starry Presence",
@@ -5246,7 +5274,7 @@
         },
         "action->Jinxed Call": {
           "name": "Jinxed Call",
-          "description": "<p>The jinx eater gives an eerie croak. Each non-tengu in a @Template[type:emanation|distance:30] must succeed at a @Check[will|dc:21] save or be @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} for 1 round (or 1 minute on a critical failure). Regardless of the results, each creature is then temporarily immune to Jinxed Call for 1 minute.</p>"
+          "description": "<p>The jinx eater gives an eerie croak. Each non-tengu in a @Template[type:emanation|distance:30] must succeed at a @Check[will|dc:21|options:inflicts:clumsy] save or be @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} for 1 round (or 1 minute on a critical failure). Regardless of the results, each creature is then temporarily immune to Jinxed Call for 1 minute.</p>"
         },
         "action->Sneak Attack": {
           "name": "Sneak Attack",
@@ -5308,7 +5336,6 @@
     "Juggernaut": {
       "name": "Juggernaut",
       "publicNotes": "<p>The heavy suit of mechanical metal armor a juggernaut wears is custom-built and highly complex and specialized to its wearer. Other creatures can't make use of the armor unless they have similar skill and customize it thoroughly.</p>\n<hr />\n<p>Although relatively uncommon across much of Golarion, the frequently eccentric but undeniably brilliant minds who create elaborate devices of clockwork, gunpowder, and steam often loom much larger in the public eye than their numbers would suggest.</p>",
-      "senses": "darkvision",
       "items": {
         "armor->Juggernaut Armor": {
           "name": "Juggernaut Armor"
@@ -5340,7 +5367,7 @@
         },
         "action->Energy Projector": {
           "name": "Energy Projector",
-          "description": "<p>A juggernaut carries a powerful cannon-like projectile weapon that requires two hands to wield and deals @Damage[14d6[@actor.flags.pf2e.powerSource]|options:area-damage] damage to all creatures in its area with a DC 31 basic save; the damage type, area, and save are based on the armor's power source, as listed below. Once activated, Energy Projector can't be used again for [[/gmr 1d4 #Recharge be used]]{1d4 rounds}.</p>\n<ul>\n<li><strong>Cold</strong> @Template[type:cone|distance:30] of cold (@Check[reflex|basic|dc:31|options:area-effect|traits:cold])</li>\n<li><strong>Electricity</strong> @Template[type:line|distance:60] of electricity (@Check[reflex|basic|dc:31|options:area-effect|traits:electricity])</li>\n<li><strong>Fire</strong> @Template[type:cone|distance:30] of fire (@Check[reflex|basic|dc:31|options:area-effect|traits:fire])</li>\n<li><strong>Poison</strong> @Template[type:cone|distance:30] of poison gas (@Check[fortitude|basic|dc:31|options:area-effect|traits:poison])</li>\n</ul>"
+          "description": "<p>A juggernaut carries a powerful cannon-like projectile weapon that requires two hands to wield and deals @Damage[14d6[@actor.flags.pf2e.powerSource]|options:area-damage] damage to all creatures in its area with a DC 31 basic save; the damage type, area, and save are based on the armor's power source, as listed below. Once activated, Energy Projector can't be used again for [[/gmr 1d4 #Recharge Energy Projector]]{1d4 rounds}.</p>\n<ul>\n<li><strong>Cold</strong> @Template[type:cone|distance:30] of cold (@Check[reflex|basic|dc:31|options:area-effect|traits:cold])</li>\n<li><strong>Electricity</strong> @Template[type:line|distance:60] of electricity (@Check[reflex|basic|dc:31|options:area-effect|traits:electricity])</li>\n<li><strong>Fire</strong> @Template[type:cone|distance:30] of fire (@Check[reflex|basic|dc:31|options:area-effect|traits:fire])</li>\n<li><strong>Poison</strong> @Template[type:cone|distance:30] of poison gas (@Check[fortitude|basic|dc:31|options:area-effect|traits:poison])</li>\n</ul>"
         },
         "action->Jump Jets": {
           "name": "Jump Jets",
@@ -5405,7 +5432,6 @@
     "Kholo Outrider": {
       "name": "Kholo Outrider",
       "publicNotes": "<p>Many kholo packs are semi-nomadic, staying in one place until they're pushed out by others, or the local resources begin to grow sparse. Before moving the pack elsewhere, the leaders send out a single kholo to blaze a trail and ensure a safe route to their next destination. These outriders are masters of the wilderness and fight better when they're alone.</p>\n<hr />\n<p>These pragmatic hunters have earned a very poor reputation for their brutality in battle and worship of demons. While many kholos live up to the terrible stories of their ferocity and cannibalism, others are scavengers and trappers just trying to get by. Many of their cultural traditions are misunderstood by other ancestries, and some kholos play into the fear provoked in those who believe the twisted tales about their people. Kholos are often criticized for their lack of honor in battle, but a kholo understands honor doesn't bring you back home alive, nor does honor put food on the table. Ambushes, feints, and deceptions that lead to fewer kholo deaths and a quicker victory are simply the logical thing to do.</p>",
-      "senses": "low-light vision",
       "items": {
         "strike-melee->Hatchet": {
           "name": "Hatchet"
@@ -5436,7 +5462,6 @@
     "Kholo Pragmatist": {
       "name": "Kholo Pragmatist",
       "publicNotes": "<p>Due to their aggressive lifestyle, kholo warriors rarely live to an old age. When a kholo pragmatist enters a fight, they would prefer to see another battle, so they use any possible advantage they can get to survive. They keep foes at a distance with their longspears have developed techniques to better block attacks with the weapon. If the tide of battle turns against them, kholo pragmatists will run or surrender if it's the most practical option.</p>\n<hr />\n<p>These pragmatic hunters have earned a very poor reputation for their brutality in battle and worship of demons. While many kholos live up to the terrible stories of their ferocity and cannibalism, others are scavengers and trappers just trying to get by. Many of their cultural traditions are misunderstood by other ancestries, and some kholos play into the fear provoked in those who believe the twisted tales about their people. Kholos are often criticized for their lack of honor in battle, but a kholo understands honor doesn't bring you back home alive, nor does honor put food on the table. Ambushes, feints, and deceptions that lead to fewer kholo deaths and a quicker victory are simply the logical thing to do.</p>",
-      "senses": "low-light vision",
       "items": {
         "strike-melee->Longspear": {
           "name": "Longspear"
@@ -5532,7 +5557,7 @@
         },
         "action->Pick Smash": {
           "name": "Pick Smash",
-          "description": "<p>The kobold earth diver smashes their pick into the ground, sending debris exploding in a @Template[type:emanation|distance:5]. All creatures and unattended objects in range take @Damage[3d6[bludgeoning]] damage with a @Check[reflex|dc:20|basic] save. A creature that is @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} by an earth diver's Sinkhole takes an additional @Damage[1d6[bludgeoning]] damage.</p>"
+          "description": "<p>The kobold earth diver smashes their pick into the ground, sending debris exploding in a @Template[type:emanation|distance:5]. All creatures and unattended objects in range take @Damage[3d6[bludgeoning]|options:area-damage] damage with a @Check[reflex|dc:20|basic|options:area-effect] save. A creature that is @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} by an earth diver's Sinkhole takes an additional @Damage[1d6[bludgeoning]] damage.</p>"
         },
         "lore->Geology Lore": {
           "name": "Geology Lore"
@@ -5542,7 +5567,6 @@
     "Kobold Egg Guardian": {
       "name": "Kobold Egg Guardian",
       "publicNotes": "<p>Kobold egg guardians are some of the best warriors in a tribe, tasked with protecting the next generation. They pledge to give their lives to protect the tribe's eggs, though not before exhausting all their tricks.</p>\n<hr />\n<p>Kobolds are drawn to beings and objects of power, establishing their communities near them. Once a warren has been formed, the resident kobolds construct traps and set up ambushes to deter interlopers.</p>",
-      "senses": "darkvision",
       "items": {
         "strike-melee->Longspear": {
           "name": "Longspear"
@@ -5589,14 +5613,14 @@
         },
         "action->Booby-Trapped": {
           "name": "Booby-Trapped",
-          "description": "<p>A kobold trapper protects items in their backpack with a booby trap. This booby trap requires a successful @Check[perception|dc:18] check to notice, and two successful @Check[thievery|dc:15] checks to disable.</p>\n<p>Accessing the backpack without disabling the trap destroys its contents, and splinters explode in a @Template[type:burst|distance:10] centered on the backpack, dealing @Damage[3d6[piercing]] damage (@Check[reflex|dc:15|basic] save).</p>"
+          "description": "<p>A kobold trapper protects items in their backpack with a booby trap. This booby trap requires a successful @Check[perception|dc:18] check to notice, and two successful @Check[thievery|dc:15] checks to disable.</p>\n<p>Accessing the backpack without disabling the trap destroys its contents, and splinters explode in a @Template[type:burst|distance:10] centered on the backpack, dealing @Damage[3d6[piercing]|options:area-damage] damage (@Check[reflex|dc:15|basic|options:area-effect] save).</p>"
         },
         "action->+1 Circumstance to All Defenses vs. Traps": {
           "name": "+1 Circumstance to All Defenses vs. Traps"
         },
         "action->Construct Trap": {
           "name": "Construct Trap",
-          "description": "<p>The kobold trapper creates a rudimentary trap on a surface in an adjacent square. The trap activates the next time a creature moves adjacent to it. The creature takes 2d6 bludgeoning, piercing, or slashing damage (determined by the trapper when the trap is constructed) with a @Check[reflex|dc:18|basic] save. On a failure, the creature also takes a –5 status penalty to all Speeds for 1 minute. The trap is destroyed when activated or after 8 hours, whichever comes first. A trapper typically carries enough raw materials to make six traps each day.</p>"
+          "description": "<p>The kobold trapper creates a rudimentary trap on a surface in an adjacent square. The trap activates the next time a creature moves adjacent to it. The creature takes 2d6 @Damage[2d6[bludgeoning]]{bludgeoning}, @Damage[2d6[piercing]]{piercing}, or @Damage[2d6[slashing]]{slashing} damage (determined by the trapper when the trap is constructed) with a @Check[reflex|dc:18|basic] save. On a failure, the creature also takes a –5 status penalty to all Speeds for 1 minute. The trap is destroyed when activated or after 8 hours, whichever comes first. A trapper typically carries enough raw materials to make six traps each day.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.lhgGLGL8phfu0bOL]{Effect: Construct Trap}</p>"
         }
       }
     },
@@ -5644,7 +5668,7 @@
         },
         "action->Break Legs!": {
           "name": "Break Legs!",
-          "description": "<p>The legbreaker makes a maul Strike against an adjacent creature. If it hits, the creature is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} and becomes @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} for 1 minute. As long as this clumsy condition lasts, the creature also takes a –5-foot penalty to its Speeds and has weakness 5 to the legbreaker's Strikes.</p>"
+          "description": "<p>The legbreaker makes a maul Strike against an adjacent creature. If it hits, the creature is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} and becomes @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} for 1 minute. As long as this clumsy condition lasts, the creature also takes a –5-foot penalty to its Speeds and has weakness 5 to the legbreaker's Strikes.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.zOaP4yGwbFOszxeJ]{Effect: Break Legs!}</p>"
         },
         "action->Rushing Strike": {
           "name": "Rushing Strike",
@@ -5652,12 +5676,7 @@
         },
         "action->Stampeding Shove": {
           "name": "Stampeding Shove",
-          "description": "<p>The legbreaker Shoves a creature, gaining a +2 circumstance bonus to their Athletics check if the target is @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}. If the @UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Shove} succeeds, the target takes @Damage[2d10[bludgeoning]] damage (double damage on a critical success).</p>",
-          "rules": {
-            "1": {
-              "label": "Target is Prone"
-            }
-          }
+          "description": "<p>The legbreaker [[/act shove options=stampeding-shove]]{Shoves} a creature, gaining a +2 circumstance bonus to their Athletics check if the target is @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}. If the Shove succeeds, the target takes @Damage[2d10[bludgeoning]] damage (double damage on a critical success).</p>"
         }
       }
     },
@@ -5729,8 +5748,8 @@
       "name": "Loan Shark",
       "publicNotes": "<p>Loan sharks lend money to those in need but charge high interest. If there's ever an issue with repayment, they'll send their gang to ensure clients pay in full.</p>\n<hr />\n<p>In the underbelly of society, the lawless reign supreme.</p>",
       "items": {
-        "weapon->Dragon-Headed Cane": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.FVjTuBCIefAgloUU]\nDragon-Headed Cane"
+        "weapon->Dragon-Headed Cane (Functions as a Staff)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.FVjTuBCIefAgloUU]\nDragon-Headed Cane (Functions as a Staff)"
         },
         "strike-melee->Dragon-Headed Cane": {
           "name": "Dragon-Headed Cane"
@@ -5748,11 +5767,11 @@
         },
         "action->Never off the Hook": {
           "name": "Never off the Hook",
-          "description": "<p>60 feet.</p>\n<p>Creatures in the aura who owe the loan shark money take a –3 circumstance penalty to their Will DC against the loan shark's attempts to @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} or @UUID[Compendium.pf2e.actionspf2e.Item.tHCqgwjtQtzNqVvd]{Coerce} them and can't reduce their @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} value below 1 while in the aura.</p>"
+          "description": "<p>60 feet.</p>\n<p>Creatures in the aura who owe the loan shark money take a –3 circumstance penalty to their Will DC against the loan shark's attempts to [[/act demoralize]] or [[/act coerce]] them and can't reduce their @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} value below 1 while in the aura.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.pZ0Vr0Pe3LHe4ptx]{Effect: Owe Money}</p>"
         },
         "action->Interest is Due!": {
           "name": "Interest is Due!",
-          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The loan shark commands an ally within 30 feet to attack a creature who owes the loan shark money. The ally can use a reaction to Strike the debtor, dealing an additional @Damage[1d6[mental]] damage.</p>"
+          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The loan shark commands an ally within 30 feet to attack a creature who owes the loan shark money. The ally can use a reaction to Strike the debtor, dealing an additional 1d6 mental damage.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.T13bc44lsaOUjJa9]{Effect: Interest is Due!}</p>"
         },
         "lore->Accounting Lore": {
           "name": "Accounting Lore"
@@ -5771,8 +5790,8 @@
         "equipment->Cooking Pot": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.Yf7maiRDmmHAyF82]\nCooking Pot"
         },
-        "equipment->Medicine Bag": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.s1vB3HdXjMigYAnY]\nMedicine Bag"
+        "equipment->Medicine Bag (Functions as a Healer's Toolkit)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.s1vB3HdXjMigYAnY]\nMedicine Bag (Functions as a Healer's Toolkit)"
         },
         "strike-melee->Staff": {
           "name": "Staff"
@@ -5789,11 +5808,11 @@
         },
         "action->Natural Medicine": {
           "name": "Natural Medicine",
-          "description": "<p>The herbalist can use Nature instead of Medicine to @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Treat Wounds} or Administer First Aid, and gains a +3 circumstance bonus to the check if they're in the wilderness with access to fresh herbal ingredients.</p>"
+          "description": "<p>The herbalist can use Nature instead of Medicine to @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Treat Wounds} or @UUID[Compendium.pf2e.actionspf2e.Item.MHLuKy4nQO2Z4Am1]{Administer First Aid}, and gains a +3 circumstance bonus to the check if they're in the wilderness with access to fresh herbal ingredients.</p>"
         },
         "action->Saving Touch": {
           "name": "Saving Touch",
-          "description": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Trigger</strong> An ally close enough for the herbalist to reach with a Stride is reduced to 0 Hit Points</p>\n<hr />\n<p><strong>Effect</strong> The herbalist Strides until adjacent to the ally and Administers First Aid to that ally.</p>"
+          "description": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Trigger</strong> An ally close enough for the herbalist to reach with a Stride is reduced to 0 Hit Points</p>\n<hr />\n<p><strong>Effect</strong> The herbalist Strides until adjacent to the ally and @UUID[Compendium.pf2e.actionspf2e.Item.MHLuKy4nQO2Z4Am1]{Administers First Aid} to that ally.</p>"
         },
         "action->Prompt Poultice": {
           "name": "Prompt Poultice",
@@ -6014,6 +6033,13 @@
       "publicNotes": "<p>A master of disguise uses costuming, makeup, and minor illusions to deceive. Some conceal their identity for years, infiltrating organizations under deep cover.</p>\n<hr />\n<p>In the underbelly of society, the lawless reign supreme.</p>",
       "senses": "(+21 to Sense Motive)",
       "items": {
+        "equipment->Disguise Kit (Elite)": {
+          "rules": {
+            "0": {
+              "label": "Elite Disguise Kit (Impersonate)"
+            }
+          }
+        },
         "strike-melee->Dagger": {
           "name": "Dagger"
         },
@@ -6036,11 +6062,11 @@
         },
         "action->Double Take": {
           "name": "Double Take",
-          "description": "<p>If the master of disguise and the creature they're Impersonating are in each others' presence, the genuine creature must Lie if they're vouching for their own identity, and are treated as though they were Impersonating themself if someone Seeks in an attempt to pierce their disguise. The genuine creature can use their Deception modifier, Diplomacy modifier, or a +15 modifier, whichever is highest.</p>"
+          "description": "<p>If the master of disguise and the creature they're @UUID[Compendium.pf2e.actionspf2e.Item.AJstokjdG6iDjVjE]{Impersonating} are in each others' presence, the genuine creature must @UUID[Compendium.pf2e.actionspf2e.Item.ewwCglB7XOPLUz72]{Lie} if they're vouching for their own identity, and are treated as though they were Impersonating themself if someone @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seeks} in an attempt to pierce their disguise. The genuine creature can use their Deception modifier, Diplomacy modifier, or a +15 modifier, whichever is highest.</p>"
         },
         "action->Impeccable Disguise": {
           "name": "Impeccable Disguise",
-          "description": "<p>The master of disguise creates a disguise and Impersonates. They gain a +5 status bonus to Deception checks to Impersonate or to tell a Lie that helps them maintain their disguise. When a spell or magical effect tries to read their mind, detect whether they're lying, or reveal their identity, they can attempt a Deception check against the spell or effect's DC. If they succeed, the effect reveals information appropriate to their cover identity or nothing (the GM determines which).</p>"
+          "description": "<p>The master of disguise creates a disguise and Impersonates. They gain a +5 status bonus to Deception checks to [[/act impersonate]] or to tell a [[/act lie]] that helps them maintain their disguise. When a spell or magical effect tries to read their mind, detect whether they're lying, or reveal their identity, they can attempt a @Check[deception] check against the spell or effect's DC. If they succeed, the effect reveals information appropriate to their cover identity or nothing (the GM determines which).</p>"
         },
         "action->Shocking Reveal": {
           "name": "Shocking Reveal",
@@ -6126,9 +6152,8 @@
         }
       },
       "items": {
-        "weapon->Heavy Wrench": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.9iDqOLNFKxiTcFKE]\nHeavy Wrench",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.9iDqOLNFKxiTcFKE]\n<p>Functions as a mace.</p>"
+        "weapon->Heavy Wrench (Functions as a Mace)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.9iDqOLNFKxiTcFKE]\nHeavy Wrench (Functions as a Mace)"
         },
         "strike-melee->Heavy Wrench": {
           "name": "Heavy Wrench"
@@ -6149,7 +6174,7 @@
         },
         "action->Risky Upgrade": {
           "name": "Risky Upgrade",
-          "description": "<p>The mechanic pushes a mechanical device, siege weapon, or vehicle pasts its regular limits with a temporary upgrade chosen from the list below. An item can have only one risky upgrade at a time. If an item has an upgrade at the start of the mechanic's turn, the mechanic must attempt a @Check[flat|dc:5]. (These flat checks continue even if the mechanic is dead or otherwise can't take turns.) On a failure, the item explodes, dealing damage equal to the item's level to all adjacent creatures and ending the upgrade.</p>\n<ul>\n<li><strong>Overheat Weapons</strong> If the item would deal damage, it deals an additional 1d6 fire damage. This increases to 2d6 if the item is 8th level or higher.</li>\n<li><strong>Pressured Plating</strong> The item gains a +3 status bonus to its Hardness and gains temporary Hit Points equal to double its level that last for 10 minutes.</li>\n<li>\n<p><strong>Propelled Boost</strong> If the item has a Speed, the item gains a +15-foot status bonus to Speed.</p>\n</li>\n</ul>"
+          "description": "<p>The mechanic pushes a mechanical device, siege weapon, or vehicle pasts its regular limits with a temporary upgrade chosen from the list below. An item can have only one risky upgrade at a time. If an item has an upgrade at the start of the mechanic's turn, the mechanic must attempt a @Check[flat|dc:5]. (These flat checks continue even if the mechanic is dead or otherwise can't take turns.) On a failure, the item explodes, dealing damage equal to the item's level to all adjacent creatures and ending the upgrade.</p>\n<ul>\n<li><strong>Overheat Weapons</strong> If the item would deal damage, it deals an additional 1d6 fire damage. This increases to 2d6 if the item is 8th level or higher.</li>\n<li><strong>Pressured Plating</strong> The item gains a +3 status bonus to its Hardness and gains temporary Hit Points equal to double its level that last for 10 minutes.</li>\n<li><strong>Propelled Boost</strong> If the item has a Speed, the item gains a +15-foot status bonus to Speed.</li>\n</ul>"
         },
         "lore->Engineering Lore": {
           "name": "Engineering Lore"
@@ -6583,11 +6608,11 @@
         },
         "action->Never Lost": {
           "name": "Never Lost",
-          "description": "<p>The natural scientist can always tell true north and gains a +4 circumstance bonus to Survival checks to Sense Direction. They don't take a –2 item penalty to the check if they don't have a compass.</p>"
+          "description": "<p>The natural scientist can always tell true north and gains a +4 circumstance bonus to Survival checks to [[/act sense-direction]]. They don't take a –2 item penalty to the check if they don't have a compass.</p>"
         },
         "action->Trained Observer": {
           "name": "Trained Observer",
-          "description": "<p>The natural scientist is accustomed to blending into their surroundings and taking notes, giving them a +2 circumstance bonus to Gather Information.</p>"
+          "description": "<p>The natural scientist is accustomed to blending into their surroundings and taking notes, giving them a +2 circumstance bonus to [[/act gather-information]].</p>"
         },
         "lore->Scouting Lore": {
           "name": "Scouting Lore"
@@ -6693,8 +6718,8 @@
         "action->Sneak Attack": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>The noble deals an additional 1d6 precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
         },
-        "lore->Gambling Lore": {
-          "name": "Gambling Lore"
+        "lore->Games Lore": {
+          "name": "Games Lore"
         }
       }
     },
@@ -6784,8 +6809,8 @@
         "weapon->Pitchfork (as longspear)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.aXuJh4i8HqSu6NYV]\nPitchfork (as longspear)"
         },
-        "consumable->Poisonous herb": {
-          "name": "Poisonous herb"
+        "consumable->Poisonous Herb": {
+          "name": "Poisonous Herb"
         },
         "strike-melee->Pitchfork": {
           "name": "Pitchfork"
@@ -6805,11 +6830,11 @@
         },
         "action->Herbal Poison": {
           "name": "Herbal Poison",
-          "description": "<p>The agriculturalist quickly turns some of their supplies of poisonous herbs into an herbal poison, then applies it to a melee weapon or piece of ammunition in their possession. The next successful attack with a weapon poisoned this way deals an additional @Damage[1d6[poison]] damage. The applied poison fades after its damage is applied to an attack or 1 minute passes, whichever happens first.</p>"
+          "description": "<p>The agriculturalist quickly turns some of their supplies of poisonous herbs into an herbal poison, then applies it to a melee weapon or piece of ammunition in their possession. The next successful attack with a weapon poisoned this way deals an additional 1d6 poison damage. The applied poison fades after its damage is applied to an attack or 1 minute passes, whichever happens first.</p>"
         },
         "action->Poison Detector": {
           "name": "Poison Detector",
-          "description": "<p>The orc agriculturalist attempts a Farming Lore or Nature check to determine whether an object is poison or has been poisoned. The DC is the poison's DC (if any), or the standard DC of the poison's level. On a critical success, they also learn the number and types of poison involved.</p>"
+          "description": "<p>The orc agriculturalist attempts a @Check[farming-lore] or @Check[nature] check to determine whether an object is poison or has been poisoned. The DC is the poison's DC (if any), or the standard DC of the poison's level. On a critical success, they also learn the number and types of poison involved.</p>"
         },
         "lore->Farming Lore": {
           "name": "Farming Lore"
@@ -6828,6 +6853,10 @@
         },
         "strike-melee->Fist": {
           "name": "Fist"
+        },
+        "action->Insistent Command": {
+          "name": "Insistent Command",
+          "description": "<p>When the gamekeeper rolls a success to [[/act command-an-animal]], they get a critical success instead; if they roll a critical failure, they get a failure instead.</p>"
         },
         "action->Play Chicken": {
           "name": "Play Chicken",
@@ -6858,11 +6887,11 @@
         },
         "action->Crush Skulls": {
           "name": "Crush Skulls",
-          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The skullcrushers smash their mauls and clubs against each enemy in a @Template[type:emanation|distance:5], with a @Check[reflex|dc:22|basic] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[1d12[bludgeoning]] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(1d12+8)[bludgeoning]] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(2d12+8)[bludgeoning]] damage</p>"
+          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The skullcrushers smash their mauls and clubs against each enemy in a @Template[type:emanation|distance:5], with a @Check[reflex|dc:22|basic|options:area-effect] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[1d12[bludgeoning]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(1d12+8)[bludgeoning]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(2d12+8)[bludgeoning]|options:area-damage] damage</p>"
         },
         "action->Sacred Salvo": {
           "name": "Sacred Salvo",
-          "description": "<p>The skullcrushers fling a fusillade of sling bullets enchanted with life energy intended to destroy undead. This barrage is a @Template[type:burst|distance:10] within 50 feet that deals @Damage[3d6[bludgeoning]] damage plus @Damage[1d6[vitality]] damage to undead, with a @Check[reflex|dc:22|basic] save. When the troop is reduced to 2 or fewer segments, this area decreases to a @Template[type:burst|distance:5].</p>"
+          "description": "<p>The skullcrushers fling a fusillade of sling bullets enchanted with life energy intended to destroy undead. This barrage is a @Template[type:burst|distance:10] within 50 feet that deals @Damage[3d6[bludgeoning]|options:area-damage] damage plus @Damage[1d6[vitality]|options:area-damage] damage to undead, with a @Check[reflex|dc:22|basic|options:area-effect] save. When the troop is reduced to 2 or fewer segments, this area decreases to a @Template[type:burst|distance:5].</p>"
         }
       }
     },
@@ -6872,6 +6901,9 @@
       "items": {
         "strike-melee->Bo Staff": {
           "name": "Bo Staff"
+        },
+        "strike-melee->Fist": {
+          "name": "Fist"
         },
         "strike-ranged->Composite Longbow": {
           "name": "Composite Longbow"
@@ -7003,15 +7035,19 @@
     "Peerless Healer": {
       "name": "Peerless Healer",
       "publicNotes": "<p>Peerless healers are legendary, blending divine and natural medicine. Often pillars in their respective communities, they see to the health of the populace.</p>\n<hr />\n<p>The world is a dangerous place. Thankfully, there are those who devote their lives to easing the pain and suffering of others.</p>",
+      "saveDetails": "+2 status vs. poison and disease",
       "items": {
         "spellcastingEntry->Divine Spontaneous Spells": {
           "name": "Divine Spontaneous Spells"
         },
+        "weapon->+1 Striking Staff of Healing (Greater)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.XSwEE8wjHr6UXzpw]\n+1 Striking Staff of Healing (Greater)"
+        },
         "strike-melee->Fist": {
           "name": "Fist"
         },
-        "strike-melee->Staff of Healing (Greater)": {
-          "name": "Staff of Healing (Greater)"
+        "strike-melee->Staff": {
+          "name": "Staff"
         },
         "action->Doctor's Hand": {
           "name": "Doctor's Hand",
@@ -7019,7 +7055,7 @@
         },
         "action->Healing Echo": {
           "name": "Healing Echo",
-          "description": "<p><strong>Trigger</strong> The peerless healer restores Hit Points to an ally using heal</p>\n<hr />\n<p><strong>Effect</strong> One willing creature within 30 feet who didn't benefit from the triggering spell regains Hit Points equal to half the healing granted. The peerless healer can't use Healing Echo again for [[/gmr 1d4 #Recharge Healing Echo]]{1d4 rounds}.</p>"
+          "description": "<p><strong>Trigger</strong> The peerless healer restores Hit Points to an ally using @UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal}</p>\n<hr />\n<p><strong>Effect</strong> One willing creature within 30 feet who didn't benefit from the triggering spell regains Hit Points equal to half the healing granted. The peerless healer can't use Healing Echo again for [[/gmr 1d4 #Recharge Healing Echo]]{1d4 rounds}.</p>"
         },
         "action->Medical Specialist": {
           "name": "Medical Specialist",
@@ -7045,10 +7081,6 @@
         "equipment->Religious Symbol of Calistria": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.plplsXJsqrdqNQVI]\nReligious Symbol of Calistria"
         },
-        "effect->Effect: Repentant Defiance": {
-          "name": "Effect: Repentant Defiance",
-          "description": "<p>The penitent then gains resistance 3 to physical damage until the start of their next turn.</p>"
-        },
         "strike-melee->Whip": {
           "name": "Whip"
         },
@@ -7067,7 +7099,7 @@
         },
         "action->Repentant Defiance": {
           "name": "Repentant Defiance",
-          "description": "<p>The penitent Strikes, then increases their own frightened value by 2 and deals @Damage[3[slashing]] damage to themselves, bypassing resistance. The penitent then gains resistance 3 to physical damage until the start of their next turn.</p>",
+          "description": "<p>The penitent Strikes, then increases their own @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} value by 2 and deals @Damage[3[slashing]] damage to themselves, bypassing resistance. The penitent then gains resistance 3 to physical damage until the start of their next turn.</p>",
           "selfEffect": "Effect: Repentant Defiance"
         },
         "lore->Calistria Lore": {
@@ -7121,12 +7153,7 @@
         },
         "action->Bedside Manner": {
           "name": "Bedside Manner",
-          "description": "<p>A physician has a +4 circumstance bonus to Diplomacy checks to @UUID[Compendium.pf2e.actionspf2e.Item.OX4fy22hQgUHDr0q]{Make an Impression} on or make a Request of a diseased, poisoned, or wounded creature.</p>",
-          "rules": {
-            "0": {
-              "label": "Target is diseased, poisoned, or wounded"
-            }
-          }
+          "description": "<p>A physician has a +4 circumstance bonus to Diplomacy checks to [[/act make-an-impression options=bedside-manner]] on or make a [[/act request options=bedside-manner]] of a diseased, poisoned, or wounded creature.</p>"
         },
         "action->Doctor's Hand": {
           "name": "Doctor's Hand",
@@ -7142,8 +7169,8 @@
       "name": "Pilgrim of Irori",
       "publicNotes": "<p>Pilgrims traverse the lands spurred on by some holy reason, be it to visit a sacred place or follow a prophetic vision.</p>\n<hr />\n<p>Religions inspire devout individuals to uphold their tenets.</p>",
       "items": {
-        "weapon->Walking Stick": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.FVjTuBCIefAgloUU]\nWalking Stick"
+        "weapon->Walking Stick (Functions as a Staff)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.FVjTuBCIefAgloUU]\nWalking Stick (Functions as a Staff)"
         },
         "equipment->Religious Symbol of Irori": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.plplsXJsqrdqNQVI]\nReligious Symbol of Irori"
@@ -7159,7 +7186,7 @@
         },
         "action->Ambulatory Oration": {
           "name": "Ambulatory Oration",
-          "description": "<p>Creatures that engage in conversation with the pilgrim gain a +1 circumstance bonus to all Recall Knowledge checks and Gather Information checks for 4 hours related to any topics discussed with the pilgrim.</p>"
+          "description": "<p>Creatures that engage in conversation with the pilgrim gain a +1 circumstance bonus to all @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Recall Knowledge} checks and @UUID[Compendium.pf2e.actionspf2e.Item.plBGdZhqq5JBl1D8]{Gather Information} checks for 4 hours related to any topics discussed with the pilgrim.</p>"
         },
         "action->Path of the Faithful": {
           "name": "Path of the Faithful",
@@ -7205,6 +7232,7 @@
     "Plague Doctor": {
       "name": "Plague Doctor",
       "publicNotes": "<p>These healers, often seen wearing distinctive masks and burning powders to defend against airborne plagues, are as much feared as they are respected. To see a plague doctor signals that disease has infested the land—and that it might have already taken hold.</p>\n<hr />\n<p>The world is a dangerous place. Thankfully, there are those who devote their lives to easing the pain and suffering of others.</p>",
+      "saveDetails": "+2 circumstance to all saves vs. disease",
       "items": {
         "spellcastingEntry->Divine Prepared Spells": {
           "name": "Divine Prepared Spells"
@@ -7255,20 +7283,15 @@
         },
         "action->Expert Subsistence": {
           "name": "Expert Subsistence",
-          "description": "<p>While using Survival to Subsist, if the poacher rolls any result worse than a success, they get a success. On a success, they can provide subsistence living for themselves and four additional creatures, and on a critical success, they can take care of twice as many creatures as on a success.</p>",
-          "rules": {
-            "1": {
-              "text": "While using Survival to Subsist, if the poacher rolls any result worse than a success, they get a success. On a success, they can provide subsistence living for themselves and four additional creatures, and on a critical success, they can take care of twice as many creatures as on a success."
-            }
-          }
+          "description": "<p>While using Survival to [[/act subsist statistic=survival]], if the poacher rolls any result worse than a success, they get a success. On a success, they can provide subsistence living for themselves and four additional creatures, and on a critical success, they can take care of twice as many creatures as on a success.</p>"
         },
         "action->Snare Crafting": {
           "name": "Snare Crafting",
-          "description": "<p>The poacher can use the Crafting skill to create the following snares:</p>\n<ul>\n<li>@UUID[Compendium.pf2e.equipment-srd.Item.AFX1V0Go9DqPWBlN]{Alarm Snare}</li>\n<li>@UUID[Compendium.pf2e.equipment-srd.Item.Km4lSOsyrip5q6iD]{Hampering Snare}</li>\n<li>@UUID[Compendium.pf2e.equipment-srd.Item.oplQpQSTyTvHDDtq]{Marking Snare}</li>\n<li>@UUID[Compendium.pf2e.equipment-srd.Item.XcD8p1o71tPohZWT]{Signaling Snare}</li>\n</ul>\n<p>The poacher can create four snares each day without paying for the materials, using 3 Interact actions to set up each snare.</p>"
+          "description": "<p>The poacher knows how to craft the following snares:</p>\n<ul>\n<li>@UUID[Compendium.pf2e.equipment-srd.Item.AFX1V0Go9DqPWBlN]{Alarm Snare}</li>\n<li>@UUID[Compendium.pf2e.equipment-srd.Item.Km4lSOsyrip5q6iD]{Hampering Snare}</li>\n<li>@UUID[Compendium.pf2e.equipment-srd.Item.oplQpQSTyTvHDDtq]{Marking Snare}</li>\n<li>@UUID[Compendium.pf2e.equipment-srd.Item.XcD8p1o71tPohZWT]{Signaling Snare}</li>\n</ul>\n<p>The poacher can create up to four snares each day without paying for the materials, using 3 Interact actions to deploy a snare. The snare becomes inert after 24 hours.</p>"
         },
         "action->On the Hunt": {
           "name": "On the Hunt",
-          "description": "<p>The poacher designates one creature they're observing or tracking as their prey.</p>\n<p>The poacher gains a +2 circumstance bonus to Perception checks to @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seek} the prey and to Survival checks to @UUID[Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD]{Track} the prey.</p>\n<p>The first time the poacher hits the designated prey in a round, they deal an additional 1d4 precision damage. These effects last until the poacher uses On the Hunt again.</p>"
+          "description": "<p>The poacher designates one creature they're observing or tracking as their prey. The poacher gains a +2 circumstance bonus to Perception checks to [[/act seek]] the prey and to Survival checks to [[/act track]] the prey. The first time the poacher hits the designated prey in a round, they deal an additional 1d4 precision damage. These effects last until the poacher uses On the Hunt again.</p>"
         }
       }
     },
@@ -7459,8 +7482,8 @@
           "name": "Pouch of Rocks (10)",
           "description": "<p>This pouch contains 10 rocks.</p>"
         },
-        "equipment->Manifesto": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.z1okOYtNVnpBNj9F]\nManifesto"
+        "equipment->Manifesto (Functions as a Religious Text)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.z1okOYtNVnpBNj9F]\nManifesto (Functions as a Religious Text)"
         },
         "equipment->Robes": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.ilbLQNy6TbBPW7sQ]\nRobes"
@@ -7531,14 +7554,13 @@
         },
         "action->Wild Swing": {
           "name": "Wild Swing",
-          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The members of the mob wildly swing their weapons in a chaotic attack at each enemy in a @Template[type:emanation|distance:5] with a @Check[reflex|dc:25|basic] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[(1d12+2)[slashing]] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d12+9)[slashing]] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(3d12+9)[slashing]] damage</p>"
+          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The members of the mob wildly swing their weapons in a chaotic attack at each enemy in a @Template[type:emanation|distance:5] with a @Check[reflex|dc:25|basic|options:area-effect] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[(1d12+2)[slashing]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d12+9)[slashing]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(3d12+9)[slashing]|options:area-damage] damage</p>"
         }
       }
     },
     "Razzle Dazzler": {
       "name": "Razzle Dazzler",
       "publicNotes": "<p>The razzle dazzler is a particularly beguiling sort of entertainer who specializes in delighting with illusions and showy displays. Whether with their illusory double or some well-timed fireworks, they are exceptionally good at keeping their audiences focused on one display to distract from the secrets that make their magic possible.</p>\n<hr />\n<p>Because their ancestors came from the First World, gnomes are intrinsically linked to the realm of the fey and crave the mystical and unpredictable. They seek to create daring works of art, voyage to new places, and have experiences they've never had before. Otherwise, they could fall victim to the terrible gnomish illness known as the Bleaching, which not only drains them of their color but of their spirits as well.</p>",
-      "senses": "low-light vision",
       "items": {
         "spellcastingEntry->Arcane Spontaneous Spells": {
           "name": "Arcane Spontaneous Spells"
@@ -7654,13 +7676,11 @@
         }
       },
       "items": {
-        "weapon->Heavy Wrench": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.9iDqOLNFKxiTcFKE]\nHeavy Wrench",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.9iDqOLNFKxiTcFKE]\n<p>Functions as a mace.</p>"
+        "weapon->Heavy Wrench (Functions as a Mace)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.9iDqOLNFKxiTcFKE]\nHeavy Wrench (Functions as a Mace)"
         },
-        "armor->Flight Suit": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA]\nFlight Suit",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA]\n<p>Functions as leather armor.</p>"
+        "armor->Flight Suit (Functions as Leather Armor)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA]\nFlight Suit (Functions as Leather Armor)"
         },
         "equipment->Artisan's Toolkit (Rocketry)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.y34yjumCFakrbtdw]\nArtisan's Toolkit (Rocketry)"
@@ -7680,7 +7700,7 @@
         },
         "action->Explosive Liftoff": {
           "name": "Explosive Liftoff",
-          "description": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Requirements</strong> The rocketeer is standing on a horizontal surface</p>\n<hr />\n<p><strong>Effect</strong> The rocketeer unleashes the full strength of their jets to launch themself into the air, dealing @Damage[7d6[fire]] and bludgeoning damage to all creatures in a @Template[type:emanation|distance:15] with a @Check[reflex|dc:24|basic|options:area-effect] save. The rocketeer Flies twice, straight up into the air.</p>"
+          "description": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Requirements</strong> The rocketeer is standing on a horizontal surface</p>\n<hr />\n<p><strong>Effect</strong> The rocketeer unleashes the full strength of their jets to launch themself into the air, dealing @Damage[7d6[fire],7d6[bludgeoning]|options:area-damage] damage to all creatures in a @Template[type:emanation|distance:15] with a @Check[reflex|dc:24|basic|options:area-effect] save. The rocketeer Flies twice, straight up into the air.</p>"
         },
         "action->Mid-air Collision": {
           "name": "Mid-air Collision",
@@ -7699,7 +7719,6 @@
       "name": "Root Leshy Groundskeeper",
       "languages": "speak with plants (root vegetables only)",
       "publicNotes": "<p>Hardy root leshies have the strength and stamina to dig furrows for planting seeds over long hours. Though they're humble even among leshies, they can be extremely stubborn even against powerful adversaries.</p>\n<hr />\n<p>Nature spirits inhabit bodies made of plants or fungi, blooming from primal magic to become the small people called leshies. They come in a truly immense number of diverse shapes and sizes, more so than most peoples of Golarion. This variety of forms means a leshy could have a place in nearly any type of setting for any type of story.</p>",
-      "senses": "speak with plants (root vegetables only)",
       "items": {
         "spellcastingEntry->Primal Innate Spells": {
           "name": "Primal Innate Spells"
@@ -7707,8 +7726,8 @@
         "spell->Speak with Plants (root vegetables only)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.qvwIwJ9QBihy8R0t]\nSpeak with Plants (root vegetables only)"
         },
-        "weapon->Shovel (functions as pick)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.6I4YJAQUbTAqbpsI]\nShovel (functions as pick)"
+        "weapon->Shovel (Functions as Pick)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.6I4YJAQUbTAqbpsI]\nShovel (Functions as Pick)"
         },
         "strike-melee->Shovel": {
           "name": "Shovel"
@@ -7721,7 +7740,7 @@
           "description": "<p>When the root leshy groundskeeper dies, a burst of primal energy explodes from their body, restoring @Damage[1d4[healing,vitality]|shortLabel] Hit Points to each plant creature in a @Template[type:emanation|distance:30]. This area immediately fills with roots and vines, becoming difficult terrain. If the terrain is not a viable environment for these plants, they wither after 24 hours.</p>"
         },
         "action->Change Shape": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.eQM5hQ1W3d1uen97]\n<p>The root leshy groundskeeper transforms into a Small root vegetable. This ability otherwise uses the effects of one with plants.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.eQM5hQ1W3d1uen97]\n<p>The root leshy groundskeeper transforms into a Small root vegetable. This ability otherwise uses the effects of @UUID[Compendium.pf2e.spells-srd.Item.dileJ0Yxqg76LMvu]{One with Plants}.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.ChangeShape]</p>"
         },
         "action->Root in Place": {
           "name": "Root in Place",
@@ -7743,21 +7762,19 @@
         "strike-melee->Fist": {
           "name": "Fist"
         },
+        "strike-ranged->Club": {
+          "name": "Club"
+        },
         "strike-ranged->Sling": {
           "name": "Sling"
         },
         "action->Brutal Beating": {
           "name": "Brutal Beating",
-          "description": "<p>The ruffian's brutality shakes foes' confidence.</p>\n<p>When the ruffian deals damage on a critical hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}, and the ruffian can push the target up to 10 feet.</p>",
-          "rules": {
-            "0": {
-              "text": "<p class='compact-text'><strong>{item|name}</strong> The ruffian's brutality shakes foes' confidence.</p>\n<p class='compact-text'>When the ruffian deals damage on a critical hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}, and the ruffian can knock the target up to 10 feet away (this is forced movement).</p>"
-            }
-          }
+          "description": "<p>The ruffian's brutality shakes foes' confidence.</p>\n<p>When the ruffian deals damage on a critical hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}, and the ruffian can push the target up to 10 feet.</p>"
         },
         "action->Combat Grab": {
           "name": "Combat Grab",
-          "description": "<p><strong>Trigger</strong> The ruffian has one hand free</p>\n<hr />\n<p><strong>Effect</strong> The ruffian makes a melee Strike while keeping one hand free. If this Strike hits, the ruffian Grabs the target using their free hand. The creature remains @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} until the end of the ruffian's next turn or until it Escapes, whichever comes first.</p>"
+          "description": "<p><strong>Trigger</strong> The ruffian has one hand free</p>\n<hr />\n<p><strong>Effect</strong> The ruffian makes a melee Strike while keeping one hand free. If this Strike hits, the ruffian Grabs the target using their free hand. The creature remains @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} until the end of the ruffian's next turn or until it @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escapes}, whichever comes first.</p>"
         },
         "action->Sneak Attack": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>The ruffian deals an extra 1d6 precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
@@ -8084,6 +8101,10 @@
         "strike-melee->Fist": {
           "name": "Fist"
         },
+        "action->Smithing Specialist": {
+          "name": "Smithing Specialist",
+          "description": "<p>For encounters involving smithing or other crafting tasks, the smith is a 6th-level challenge.</p>"
+        },
         "action->Smith's Fury": {
           "name": "Smith's Fury",
           "description": "<p>The smith deals an additional 1d6 damage when they hit with a weapon they created.</p>"
@@ -8222,22 +8243,14 @@
         },
         "action->Noble's Ally": {
           "name": "Noble's Ally",
-          "description": "<p>The spy has positioned themself to seem a trusted ally, gaining a +2 circumstance bonus to @UUID[Compendium.pf2e.actionspf2e.Item.plBGdZhqq5JBl1D8]{Gather Information} or to @UUID[Compendium.pf2e.actionspf2e.Item.OX4fy22hQgUHDr0q]{Make an Impression} among the nobles of that court.</p>",
-          "rules": {
-            "1": {
-              "label": "To Make an Impression"
-            },
-            "2": {
-              "label": "To Gather Information"
-            }
-          }
+          "description": "<p>The spy has positioned themself to seem a trusted ally, gaining a +2 circumstance bonus to [[/act gather-information options=nobles-ally]] or to [[/act make-an-impression options=nobles-ally]] among the nobles of that court.</p>"
         },
         "action->Hidden Blade": {
           "name": "Hidden Blade",
-          "description": "<p><strong>Frequency</strong> Once per round.</p>\n<hr />\n<p><strong>Effect</strong> The spy draws a weapon and then Strikes with it. The target of the strike is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against the attack.</p>"
+          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The spy draws a weapon and then Strikes with it. The target of the strike is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against the attack.</p>"
         },
         "action->Sneak Attack": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>The spy deals an additional 2d6 precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>The spy deals an extra 2d6 precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
         },
         "lore->Local Court Lore": {
           "name": "Local Court Lore"
@@ -8316,8 +8329,8 @@
       "name": "Subaquatic Marauder",
       "publicNotes": "<p>A new breed of pirate, these raiders strike at unsuspecting ships from beneath the cover of the waves. The bulky, reinforced diving suits they wear also serve as armor and clockwork mechanisms augment their strength.</p>\n<hr />\n<p>Adventurers may need passage on a swift vessel, or they might face danger from raiders at sea or in coastal settlements.</p>",
       "items": {
-        "armor->Diving Suit (functions as half plate)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.pRoikbRo5HFW6YUB]\nDiving Suit (functions as half plate)"
+        "armor->Diving Suit (Functions as Half Plate)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.pRoikbRo5HFW6YUB]\nDiving Suit (Functions as Half Plate)"
         },
         "equipment->Chain (30 feet)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.V78itAtTHI4ugy0P]\nChain (30 feet)",
@@ -8353,8 +8366,8 @@
         "weapon->Scalpel": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.nOFcCidD5AwVZWTv]\nScalpel"
         },
-        "weapon->Bonesaw": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.NIsxR5zXtVa3PuyU]\nBonesaw"
+        "weapon->Bonesaw (Functions as a Temple Sword)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.NIsxR5zXtVa3PuyU]\nBonesaw (Functions as a Temple Sword)"
         },
         "equipment->Healer's Tools": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.s1vB3HdXjMigYAnY]\nHealer's Tools",
@@ -8396,6 +8409,9 @@
         "strike-melee->Longspear": {
           "name": "Longspear"
         },
+        "strike-melee->Jaws": {
+          "name": "Jaws"
+        },
         "strike-ranged->Alchemical Bomb": {
           "name": "Alchemical Bomb"
         },
@@ -8415,7 +8431,7 @@
         },
         "action->Chittering Terror": {
           "name": "Chittering Terror",
-          "description": "<p>The swarm voice chitters, creating a terrifying din, and encourages their allies to join in. Each enemy within 30 feet must succeed at a @Check[will|dc:19] save or be @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure). An enemy takes a –2 circumstance penalty to its save if it's adjacent to one or more ratfolk allied with the swarm voice. Regardless of the result of a creature's save, it's then temporarily immune for 1 hour.</p>"
+          "description": "<p>The swarm voice chitters, creating a terrifying din, and encourages their allies to join in. Each enemy within @Template[emanation|distance:30]{30 feet} must succeed at a @Check[will|dc:19|options:inflicts:frightened] save or be @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure). An enemy takes a –2 circumstance penalty to its save if it's adjacent to one or more ratfolk allied with the swarm voice. Regardless of the result of a creature's save, it's then temporarily immune for 1 hour.</p>"
         },
         "action->Swarming": {
           "name": "Swarming",
@@ -8545,8 +8561,8 @@
         }
       }
     },
-    "Tengu Blacksmith": {
-      "name": "Tengu Blacksmith",
+    "Tengu Bladesmith": {
+      "name": "Tengu Bladesmith",
       "languages": "plus two others",
       "publicNotes": "<p>With the tengu diaspora spreading across much of Golarion, their knowledge and tradition of blade crafting has been passed through the generations to those who show interest and aptitude. Many tengu bladesmiths have experience as warriors; others learn their sword craft to improve their knowledge and understanding of the weapons they produce.</p>\n<hr />\n<p>Originally hailing from the continent of Tian Xia, tengu have spread across the globe. Though some staunchly uphold traditions, gazing at the sky from the tallest mountaintops, other tengu remain on the ground, adapting and blending into the societies in which they settle.</p>",
       "skillSpecialCrafting": {
@@ -8570,15 +8586,15 @@
         },
         "action->Swirling Blade": {
           "name": "Swirling Blade",
-          "description": "<p>The tengu bladesmith Interacts to draw a weapon in the sword group, then attempts to @UUID[Compendium.pf2e.actionspf2e.Item.Dt6B1slsBy8ipJu9]{Disarm} a weapon held by a foe within reach. The weapon the tengu bladesmith draws gains the disarm trait for this attempt.</p>"
+          "description": "<p>The tengu bladesmith Interacts to draw a weapon in the sword group, then attempts to [[/act disarm]] a weapon held by a foe within reach. The weapon the tengu bladesmith draws gains the disarm trait for this attempt.</p>"
         },
         "lore->Tengu Lore": {
           "name": "Tengu Lore"
         }
       }
     },
-    "Theraputic Healer": {
-      "name": "Theraputic Healer",
+    "Therapeutic Healer": {
+      "name": "Therapeutic Healer",
       "languages": "two additional humanoid languages",
       "publicNotes": "<p>Some healers feel great empathy for their charges and take great pains to help shoulder their allies' burdens both in and out of combat.</p>\n<hr />\n<p>The world is a dangerous place. Thankfully, there are those who devote their lives to easing the pain and suffering of others.</p>",
       "senses": "+16 to Sense Motive",
@@ -8586,8 +8602,8 @@
         "spellcastingEntry->Occult Spontaneous Spells": {
           "name": "Occult Spontaneous Spells"
         },
-        "spellcastingEntry->Occult Focus Spells": {
-          "name": "Occult Focus Spells"
+        "spellcastingEntry->Bard Composition Spells": {
+          "name": "Bard Composition Spells"
         },
         "strike-melee->Staff": {
           "name": "Staff"
@@ -8605,7 +8621,7 @@
         },
         "action->Therapeutic Care": {
           "name": "Therapeutic Care",
-          "description": "<p>When Treating Wounds, the therapeutic healer can treat up to four targets. If they succeed at a DC 20 check to @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Treat Wounds}, they can also reduce the value of one @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy}, @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled}, or @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied} condition affecting a single patient by 1. They can reduce a @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained} or @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed} condition instead if they succeed at a DC 30 check. This can't reduce permanent doomed conditions.</p>"
+          "description": "<p>When @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Treating Wounds}, the therapeutic healer can treat up to four targets. If they succeed at a DC 20 check to Treat Wounds, they can also reduce the value of one @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy}, @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled}, or @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied} condition affecting a single patient by 1. They can reduce a @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained} or @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed} condition instead if they succeed at a DC 30 check. This can't reduce permanent doomed conditions.</p>"
         },
         "action->+2 to Sense Motive": {
           "name": "+2 to Sense Motive"
@@ -8702,7 +8718,7 @@
         },
         "action->Hazard Spotter": {
           "name": "Hazard Spotter",
-          "description": "<p>Even if the tomb raider isn't Searching, they get a check to find traps that normally require them to be Searching.</p>"
+          "description": "<p>Even if the tomb raider isn't @UUID[Compendium.pf2e.actionspf2e.Item.TiNDYUGlMmxzxBYU]{Searching}, they get a check to find traps that normally require them to be Searching.</p>"
         },
         "action->Trick Attack": {
           "name": "Trick Attack",
@@ -8765,7 +8781,7 @@
         },
         "action->Torch Combatant": {
           "name": "Torch Combatant",
-          "description": "<p>A torchbearer is adept at attacking with torches and deals @Damage[1[persistent,fire]] damage when they critically hit with a @UUID[Compendium.pf2e.equipment-srd.Item.8Jdw4yAzWYylGePS]{Torch}.</p>"
+          "description": "<p>A torchbearer is adept at attacking with torches and deals 1 persistent fire damage when they critically hit with a @UUID[Compendium.pf2e.equipment-srd.Item.8Jdw4yAzWYylGePS]{Torch}.</p>"
         },
         "lore->Architecture Lore": {
           "name": "Architecture Lore"
@@ -8859,12 +8875,7 @@
         },
         "action->Expert Subsistence": {
           "name": "Expert Subsistence",
-          "description": "<p>While using Survival to Subsist, if the tracker rolls any result worse than a success, they get a success. On a success, they can provide subsistence living for themselves and 8 additional creatures, and on a critical success, they can take care of twice as many creatures as on a success.</p>",
-          "rules": {
-            "1": {
-              "text": "While using Survival to Subsist, if the tracker rolls any result worse than a success, they get a success. On a success, they can provide subsistence living for themselves and 8 additional creatures, and on a critical success, they can take care of twice as many creatures as on a success."
-            }
-          }
+          "description": "<p>While using Survival to [[/act subsist statistic=survival]], if the tracker rolls any result worse than a success, they get a success. On a success, they can provide subsistence living for themselves and 8 additional creatures, and on a critical success, they can take care of twice as many creatures as on a success.</p>"
         },
         "action->Master Tracker": {
           "name": "Master Tracker",
@@ -8872,7 +8883,7 @@
         },
         "action->On the Hunt": {
           "name": "On the Hunt",
-          "description": "<p>The tracker designates one creature they're observing or tracking as their prey.</p>\n<p>The tracker gains a +2 circumstance bonus to Perception checks to @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seek} the prey and to Survival checks to @UUID[Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD]{Track} the prey.</p>\n<p>The first time the tracker hits the designated prey in a round, they deal an additional 1d4 precision damage. These effects last until the poacher uses On the Hunt again.</p>"
+          "description": "<p>The tracker designates one creature they're observing or tracking as their prey.</p>\n<p>The tracker gains a +2 circumstance bonus to Perception checks to [[/act seek]] the prey and to Survival checks to [[/act track]] the prey.</p>\n<p>The first time the tracker hits the designated prey in a round, they deal an additional 1d4 precision damage. These effects last until the poacher uses On the Hunt again.</p>"
         },
         "lore->Forest Lore": {
           "name": "Forest Lore"
@@ -8953,7 +8964,7 @@
         },
         "action->Traveler's Lesson": {
           "name": "Traveler's Lesson",
-          "description": "<p>Creatures that engage in conversation with the traveling priest gain a +2 circumstance bonus to all Recall Knowledge checks and Gather Information checks for 4 hours related to any topics discussed with the traveling priest.</p>"
+          "description": "<p>Creatures that engage in conversation with the traveling priest gain a +2 circumstance bonus to all @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Recall Knowledge} checks and @UUID[Compendium.pf2e.actionspf2e.Item.plBGdZhqq5JBl1D8]{Gather Information} checks for 4 hours related to any topics discussed with the traveling priest.</p>"
         },
         "action->Messenger's Amnesty": {
           "name": "Messenger's Amnesty",
@@ -8961,7 +8972,7 @@
         },
         "action->Blessing of Travel": {
           "name": "Blessing of Travel",
-          "description": "<p>If the traveling priest takes an action with the move trait, their Strikes deal an extra @Damage[2d8[spirit]] damage until the end of their turn.</p>"
+          "description": "<p>If the traveling priest takes an action with the move trait, their Strikes deal an extra 2d8 spirit damage until the end of their turn.</p>"
         },
         "action->Zealous Rush": {
           "name": "Zealous Rush",
@@ -9029,7 +9040,7 @@
         },
         "action->Natural Disguise": {
           "name": "Natural Disguise",
-          "description": "<p>The camoufleur can use their disguise kit to disguise a creature or object as natural flora. A creature gains a +2 item bonus to Stealth checks while in a natural environment until its next daily preparations or until its disguise is ruined, whichever comes first. An object in a natural environment can be found only by actively searching (using the @UUID[Compendium.pf2e.actionspf2e.Item.TiNDYUGlMmxzxBYU]{Search} activity while exploring or the @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seek} action in an encounter) and uses the camoufleur's Stealth DC.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.ppYqbg4erAFt8C9W]{Effect: Natural Disguise}</p>"
+          "description": "<p>The camoufleur can use their @UUID[Compendium.pf2e.equipment-srd.Item.Jvp0x2Sc82WVpExT]{Disguise Kit} to disguise a creature or object as natural flora. A creature gains a +2 item bonus to Stealth checks while in a natural environment until its next daily preparations or until its disguise is ruined, whichever comes first. An object in a natural environment can be found only by actively searching (using the @UUID[Compendium.pf2e.actionspf2e.Item.TiNDYUGlMmxzxBYU]{Search} activity while exploring or the @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seek} action in an encounter) and uses the camoufleur's Stealth DC.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.ppYqbg4erAFt8C9W]{Effect: Natural Disguise}</p>"
         }
       }
     },
@@ -9058,7 +9069,7 @@
         },
         "action->Hunter of Virtue": {
           "name": "Hunter of Virtue",
-          "description": "<p>Whenever the tripkee fiend keeper critically hits an unholy creature, they reduce the value of their stupefied condition by 1.</p>"
+          "description": "<p>Whenever the tripkee fiend keeper critically hits an unholy creature, they reduce the value of their @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied} condition by 1.</p>"
         },
         "action->Bounce Cruuk": {
           "name": "Bounce Cruuk",
@@ -9066,7 +9077,8 @@
         },
         "action->Harness Wickedness": {
           "name": "Harness Wickedness",
-          "description": "<p>The tripkee fiend keeper isn't stupefied</p>\n<hr />\n<p><strong>Effect</strong> The tripkee fiend keeper allows a portion of the fiendish power they have absorbed to flow through their body. For the next minute, the tripkee fiend keeper's Strikes deal an additional die of damage and gain the unholy trait. The tripkee fiend keeper also gains 10 temporary Hit Points, a +5-foot status bonus to Speed for the duration, and weakness 5 to holy. At the end of the duration, the tripkee fiend keeper is @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 hour.</p>"
+          "description": "<p>The tripkee fiend keeper isn't stupefied</p>\n<hr />\n<p><strong>Effect</strong> The tripkee fiend keeper allows a portion of the fiendish power they have absorbed to flow through their body. For the next minute, the tripkee fiend keeper's Strikes deal an additional die of damage and gain the unholy trait. The tripkee fiend keeper also gains 10 temporary Hit Points, a +5-foot status bonus to Speed for the duration, and weakness 5 to holy. At the end of the duration, the tripkee fiend keeper is @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 hour.</p>",
+          "selfEffect": "Effect: Harness Wickedness"
         }
       }
     },
@@ -9098,7 +9110,7 @@
         },
         "action->Hurl Net": {
           "name": "Hurl Net",
-          "description": "<p><strong>Requirements</strong> The scout is wielding a net in two hands</p>\n<hr />\n<p><strong>Effect</strong> The scout makes a [[/r 1d20+9]]{ranged Strike} (with a +9 modifier) against a Medium or smaller creature within 20 feet. On a hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} and takes a –10-foot circumstance penalty to its Speeds. On a critical hit, the creature is @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} instead. The DC to [[/act escape dc=16]]{Escape} the net is 16. A creature adjacent to the target can Interact with the net to remove it.</p>"
+          "description": "<p><strong>Requirements</strong> The scout is wielding a net in two hands</p>\n<hr />\n<p><strong>Effect</strong> The scout makes a ranged Strike (with a [[/r 1d20+9 #Hurl Net]]{+9} modifier) against a Medium or smaller creature within 20 feet. On a hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} and takes a –10-foot circumstance penalty to its Speeds. On a critical hit, the creature is @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} instead. The DC to [[/act escape dc=16]]{Escape} the net is 16. A creature adjacent to the target can Interact with the net to remove it.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.q2D1QBalqBQfKzTc]{Effect: Hurl Net}</p>"
         }
       }
     },
@@ -9157,8 +9169,8 @@
         "strike-melee->Dagger": {
           "name": "Dagger"
         },
-        "strike-melee->First": {
-          "name": "First"
+        "strike-melee->Fist": {
+          "name": "Fist"
         },
         "strike-ranged->Crossbow": {
           "name": "Crossbow"
@@ -9167,12 +9179,15 @@
           "name": "Tumbling Traveler",
           "description": "<p>The tumbleweed leshy courier gains a +10-foot circumstance bonus to Speed while traveling during exploration mode.</p>"
         },
+        "action->Nimble Dodge": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.wCnsRCHvtZkZTmO0]\n<p><strong>Trigger</strong> The tumbleweed leshy courier is targeted with an attack by an attacker they can see</p>\n<hr />\n<p><strong>Effect</strong> The leshy gains a +2 circumstance bonus to AC against the triggering attack.</p>"
+        },
         "action->Spiny Burst": {
           "name": "Spiny Burst",
-          "description": "<p>TWhen the tumbleweed leshy courier dies, a burst of primal energy explodes from their body, restoring @Damage[2d8[healing,vitality]|shortLabel] Hit Points to each plant creature in a @Template[type:emanation|distance:30]. This area immediately fills with brambles and thistles, becoming difficult terrain. Any creature that moves through the area takes @Damage[1[piercing]] damage per square traversed. If the terrain is not a viable environment for these plants, they wither after 24 hours.</p>"
+          "description": "<p>When the tumbleweed leshy courier dies, a burst of primal energy explodes from their body, restoring @Damage[2d8[healing,vitality]|shortLabel] Hit Points to each plant creature in a @Template[type:emanation|distance:30]. This area immediately fills with brambles and thistles, becoming difficult terrain. Any creature that moves through the area takes @Damage[1[piercing]] damage per square traversed. If the terrain is not a viable environment for these plants, they wither after 24 hours.</p>"
         },
         "action->Change Shape": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.eQM5hQ1W3d1uen97]\n<p>The tumbleweed leshy courier transforms into a Small tumbleweed. This ability otherwise uses the effects of one with plants. Additionally, when the leshy uses their Change Shape ability, they still have a Speed of 10 feet for the purpose of travel during exploration mode.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.eQM5hQ1W3d1uen97]\n<p>The tumbleweed leshy courier transforms into a Small tumbleweed. This ability otherwise uses the effects of @UUID[Compendium.pf2e.spells-srd.Item.dileJ0Yxqg76LMvu]{One with Plants}. Additionally, when the leshy uses their Change Shape ability, they still have a Speed of 10 feet for the purpose of travel during exploration mode.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.ChangeShape]</p>"
         }
       }
     },
@@ -9192,7 +9207,7 @@
         },
         "action->Running Reload": {
           "name": "Running Reload",
-          "description": "<p>The tunnel viper Strides, Steps, or Sneaks, then Interacts to reload.</p>"
+          "description": "<p>The tunnel viper Strides, Steps, or @UUID[Compendium.pf2e.actionspf2e.Item.VMozDqMMuK5kpoX4]{Sneaks}, then Interacts to reload.</p>"
         },
         "action->Swarming": {
           "name": "Swarming",
@@ -9200,11 +9215,11 @@
         },
         "action->Tunnel Fighter": {
           "name": "Tunnel Fighter",
-          "description": "<p>The tunnel viper deals an additional 1d6 precision damage to creatures that are Squeezing or in difficult terrain due to narrow spaces.</p>"
+          "description": "<p>The tunnel viper deals an additional 1d6 precision damage to creatures that are @UUID[Compendium.pf2e.actionspf2e.Item.kMcV8e5EZUxa6evt]{Squeezing} or in difficult terrain due to narrow spaces.</p>"
         },
         "action->Tunnel Travel": {
           "name": "Tunnel Travel",
-          "description": "<p>Narrow spaces aren't difficult terrain for the tunnel viper, and the viper can Squeeze at 5 feet per round (or 10 feet on a critical success).</p>"
+          "description": "<p>Narrow spaces aren't difficult terrain for the tunnel viper, and the viper can @UUID[Compendium.pf2e.actionspf2e.Item.kMcV8e5EZUxa6evt]{Squeeze} at 5 feet per round (or 10 feet on a critical success).</p>"
         }
       }
     },
@@ -9260,7 +9275,7 @@
         },
         "action->Pickpocket": {
           "name": "Pickpocket",
-          "description": "<p>The urchin can @UUID[Compendium.pf2e.actionspf2e.Item.RDXXE7wMrSPCLv5k]{Steal} of @UUID[Compendium.pf2e.actionspf2e.Item.ijZ0DDFpMkWqaShd]{Palm an Object} that's closely guarded without taking the usual -5 penalty. They can @UUID[Compendium.pf2e.actionspf2e.Item.RDXXE7wMrSPCLv5k]{Steal} objects that would be extremely noticable or time-consuming to remove (like worn shoes, armor, or actively wielded objects).</p>"
+          "description": "<p>For an urchin, the DC to [[/act steal]] or [[/act palm-an-object]] isn't increased by 5 for an item that's closely guarded. They can Steal objects that would be extremely noticeable or time-consuming to remove (like worn shoes, armor, or actively wielded objects).</p>"
         }
       }
     },
@@ -9636,11 +9651,11 @@
         },
         "action->In Balance": {
           "name": "In Balance",
-          "description": "<p>Whenever the woolly wrangler rolls a success on a Recall Knowledge check using Nature or Mountain Lore, they get a critical success instead.</p>"
+          "description": "<p>Whenever the woolly wrangler rolls a success on a @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Recall Knowledge} check using Nature or Mountain Lore, they get a critical success instead.</p>"
         },
         "action->Uneven Footing": {
           "name": "Uneven Footing",
-          "description": "<p>While the woolly wrangler is mounted on a Huge or Gargantuan creature, the ground near the mount shakes and buckles. Squares in the aura are difficult terrain for Medium or smaller creatures.</p>"
+          "description": "<p>10 feet.</p>\n<p>While the woolly wrangler is mounted on a Huge or Gargantuan creature, the ground near the mount shakes and buckles. Squares in the aura are difficult terrain for Medium or smaller creatures.</p>"
         },
         "action->Wrangling Whip": {
           "name": "Wrangling Whip",
@@ -9698,7 +9713,7 @@
         },
         "action->Swear Vengeance": {
           "name": "Swear Vengeance",
-          "description": "<p><strong>Trigger</strong> A creature the zealot can see damages a follower of Asmodeus other than the zealot</p>\n<hr />\n<p><strong>Effect</strong> The zealot is affected by a @UUID[Compendium.pf2e.spells-srd.Item.Gb7SeieEvd0pL2Eh]{Sure Strike} spell. If the zealot makes an attack roll against anyone other than the triggering creature, the <em>sure strike</em> ends with no effect.</p>"
+          "description": "<p><strong>Trigger</strong> A creature the zealot can see damages a follower of @UUID[Compendium.pf2e.deities.Item.QRkcFciCOmFoxF1B]{Asmodeus} other than the zealot</p>\n<hr />\n<p><strong>Effect</strong> The zealot is affected by a @UUID[Compendium.pf2e.spells-srd.Item.Gb7SeieEvd0pL2Eh]{Sure Strike} spell. If the zealot makes an attack roll against anyone other than the triggering creature, the <em>sure strike</em> ends with no effect.</p>"
         },
         "action->Channel Smite": {
           "name": "Channel Smite",
@@ -9706,7 +9721,7 @@
         },
         "action->Deadly Simplicity": {
           "name": "Deadly Simplicity",
-          "description": "<p>The zealot's mace deals 1d8 damage instead of 1d6.</p>"
+          "description": "<p>The zealot deals 1d8 damage with their mace instead of 1d6.</p>"
         }
       }
     }

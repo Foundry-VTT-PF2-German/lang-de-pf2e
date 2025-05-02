@@ -596,7 +596,7 @@
         },
         "action->Memory Maelstrom": {
           "name": "Memory Maelstrom",
-          "description": "<p>The arboreal archive tries to overwhelm foes with a surge of information it has absorbed over its long life. This surge deals @Damage[5d6[mental]] damage to each enemy within @Template[emanation|distance:40]{40 feet}, who must attempt a @Check[will|dc:32|traits:damaging-effect] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature maintains its composure, takes no damage, and is temporarily immune to Memory Maelstrom for 1 minute.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1} and takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 3}.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage, is @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} for [[/br 2d4 #Duration Confusion]]{2d4 rounds}, and is stunned 3.</p>"
+          "description": "<p>The arboreal archive tries to overwhelm foes with a surge of information it has absorbed over its long life. This surge deals @Damage[5d6[mental]|options:area-damage] damage to each enemy within @Template[emanation|distance:40]{40 feet}, who must attempt a @Check[will|dc:32|options:area-effect,damaging-effect] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature maintains its composure, takes no damage, and is temporarily immune to Memory Maelstrom for 1 minute.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1} and takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 3}.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage, is @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} for [[/gmr 2d4 #Confusion Duration]]{2d4 rounds}, and is stunned 3.</p>"
         },
         "lore->Forest Lore (applies to the arboreal archive's territory)": {
           "name": "Forest Lore (applies to the arboreal archive's territory)"
@@ -1296,7 +1296,7 @@
         },
         "action->Hurl Net": {
           "name": "Hurl Net",
-          "description": "<p><strong>Requirements</strong> The cecaelia is holding a net in two appendages.</p>\n<hr />\n<p><strong>Effect</strong> The cecaelia hurls their net, attempting to hamper a foe. The cecaelia makes a ranged Strike (with a [[/r 1d20+15 #Hurl Net]]{+15} modifier) against a Medium or smaller creature within 20 feet.</p>\n<p>On a hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} and takes a -10-foot circumstance penalty to its Speeds. On a critical hit, the creature is @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}. The DC to @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} the net is 16. A creature adjacent to the target can Interact with the net to remove it from the target.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.q2D1QBalqBQfKzTc]{Effect: Hurl Net}</p>"
+          "description": "<p><strong>Requirements</strong> The cecaelia is holding a net in two appendages.</p>\n<hr />\n<p><strong>Effect</strong> The cecaelia hurls their net, attempting to hamper a foe. The cecaelia makes a ranged Strike (with a [[/r 1d20+15 #Hurl Net]]{+15} modifier) against a Medium or smaller creature within 20 feet.</p>\n<p>On a hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} and takes a -10-foot circumstance penalty to its Speeds. On a critical hit, the creature is @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}. The DC to [[/act escape dc=16]]{Escape} the net is 16. A creature adjacent to the target can Interact with the net to remove it from the target.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.q2D1QBalqBQfKzTc]{Effect: Hurl Net}</p>"
         },
         "action->Ink Cloud": {
           "name": "Ink Cloud",
@@ -2641,7 +2641,8 @@
         },
         "action->Ectoplasmic Form": {
           "name": "Ectoplasmic Form",
-          "description": "<p>An elder wyrmwraith can push through the ectoplasmic veil to temporarily assume a physical form made of ectoplasm. The elder wyrmwraith loses the incorporeal trait for [[/gmr 1d4 #Duration Physical Form]]{1d4 rounds}, though they can return to their incorporeal form as a free action before then. Once this ability ends, the elder wyrmwraith can't use this ability again for [[/gmr 1d4 #Recharge Ectoplasmatic Form]]{1d4 rounds}. While in their ectoplasmic form, the elder wyrmwraith's AC increases to 52 and they gain [[/r 125 #Temporary Hit Points]]{125 temporary Hit Points}. They lose their immunity to precision damage and all of their resistances. Their melee Strikes deal slashing and piercing damage, respectively, instead of void damage.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.QMcmhifNQOPguv2t]{Effect: Ectoplasmic Form (Physical)}</p>"
+          "description": "<p>An elder wyrmwraith can push through the ectoplasmic veil to temporarily assume a physical form made of ectoplasm. The elder wyrmwraith loses the incorporeal trait for [[/gmr 1d4 #Duration Physical Form]]{1d4 rounds}, though they can return to their incorporeal form as a free action before then. Once this ability ends, the elder wyrmwraith can't use this ability again for [[/gmr 1d4 #Recharge Ectoplasmatic Form]]{1d4 rounds}. While in their ectoplasmic form, the elder wyrmwraith's AC increases to 52 and they gain 125 temporary Hit Points. They lose their immunity to precision damage and all of their resistances. Their melee Strikes deal slashing and piercing damage, respectively, instead of void damage.</p>",
+          "selfEffect": "Effect: Ectoplasmic Form (Physical)"
         },
         "action->Phase Lurch": {
           "name": "Phase Lurch",
@@ -5658,6 +5659,11 @@
         "spell->Magic Fang": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.EE7Q5BHIrfWNCPtT]\nMagic Fang"
         },
+        "spell->Produce Flame": {
+          "name": "Produce Flame",
+          "description": "<p>A small ball of flame appears in the palm of your hand, and you lash out with it either in melee or at range. Make a spell attack roll against your target's AC. This is normally a ranged attack, but you can also make a melee attack against a creature in your unarmed reach.</p>\n<p>On a success, you deal 2d4 fire damage. On a critical success, the target takes double damage and @Damage[(@item.level)d4[persistent,fire]] damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> Increase the damage by 1d4 and the persistent damage on a critical hit by 1d4.</p>",
+          "target": "1 creature"
+        },
         "spell->Tanglefoot": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.uZK2BYzPnxUBnDjr]\nTanglefoot"
         },
@@ -7206,6 +7212,11 @@
         "spell->Light": {
           "target": "1 object of 1 Bulk or less, either unattended or possessed by you or a willing ally"
         },
+        "spell->Produce Flame": {
+          "name": "Produce Flame",
+          "description": "<p>A small ball of flame appears in the palm of your hand, and you lash out with it either in melee or at range. Make a spell attack roll against your target's AC. This is normally a ranged attack, but you can also make a melee attack against a creature in your unarmed reach.</p>\n<p>On a success, you deal 2d4 fire damage. On a critical success, the target takes double damage and @Damage[(@item.level)d4[persistent,fire]] damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> Increase the damage by 1d4 and the persistent damage on a critical hit by 1d4.</p>",
+          "target": "1 creature"
+        },
         "strike-melee->Jaws": {
           "name": "Jaws"
         },
@@ -7777,7 +7788,7 @@
         },
         "action->Troop Defenses": {
           "name": "Troop Defenses",
-          "description": "<p><strong>Thresholds</strong> 160 (12 squares), 80 (8 squares)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
+          "description": "<p><strong>Thresholds</strong> 160 (3 segments), 80 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Blazing Admonition": {
           "name": "Blazing Admonition",
@@ -8191,6 +8202,11 @@
         "spell->Burning Hands": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.y6rAdMK6EFlV6U0t]\nBurning Hands"
         },
+        "spell->Produce Flame": {
+          "name": "Produce Flame",
+          "description": "<p>A small ball of flame appears in the palm of your hand, and you lash out with it either in melee or at range. Make a spell attack roll against your target's AC. This is normally a ranged attack, but you can also make a melee attack against a creature in your unarmed reach.</p>\n<p>On a success, you deal 2d4 fire damage. On a critical success, the target takes double damage and @Damage[(@item.level)d4[persistent,fire]] damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> Increase the damage by 1d4 and the persistent damage on a critical hit by 1d4.</p>",
+          "target": "1 creature"
+        },
         "spell->Purify Food and Drink (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.qXTB7Ec9yYh5JPPV]\nPurify Food and Drink (At Will)",
           "target": "1 cubic foot of contaminated food or water"
@@ -8513,6 +8529,11 @@
         },
         "spell->Humanoid Form (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.2qGqa33E4GPUCbMV]\nHumanoid Form (At Will)"
+        },
+        "spell->Produce Flame": {
+          "name": "Produce Flame",
+          "description": "<p>A small ball of flame appears in the palm of your hand, and you lash out with it either in melee or at range. Make a spell attack roll against your target's AC. This is normally a ranged attack, but you can also make a melee attack against a creature in your unarmed reach.</p>\n<p>On a success, you deal 2d4 fire damage. On a critical success, the target takes double damage and @Damage[(@item.level)d4[persistent,fire]] damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> Increase the damage by 1d4 and the persistent damage on a critical hit by 1d4.</p>",
+          "target": "1 creature"
         },
         "strike-melee->Scimitar": {
           "name": "Scimitar"
@@ -8940,6 +8961,11 @@
         },
         "spell->Flaming Sphere (At Will) (See Unstable Magic)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.2ZdHjnpEQJuqOYSG]\nFlaming Sphere (At Will) (See Unstable Magic)"
+        },
+        "spell->Produce Flame": {
+          "name": "Produce Flame",
+          "description": "<p>A small ball of flame appears in the palm of your hand, and you lash out with it either in melee or at range. Make a spell attack roll against your target's AC. This is normally a ranged attack, but you can also make a melee attack against a creature in your unarmed reach.</p>\n<p>On a success, you deal 2d4 fire damage. On a critical success, the target takes double damage and @Damage[(@item.level)d4[persistent,fire]] damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> Increase the damage by 1d4 and the persistent damage on a critical hit by 1d4.</p>",
+          "target": "1 creature"
         },
         "strike-melee->Arcane Tendril": {
           "name": "Arcane Tendril"
@@ -9910,7 +9936,7 @@
         },
         "action->Troop Defenses": {
           "name": "Troop Defenses",
-          "description": "<p><strong>Thresholds</strong> 60 (12 squares), 30 (8 squares)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
+          "description": "<p><strong>Thresholds</strong> 60 (3 segments), 30 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Grave Tide": {
           "name": "Grave Tide",
@@ -10167,11 +10193,11 @@
         },
         "action->Troop Defenses": {
           "name": "Troop Defenses",
-          "description": "<p><strong>Threshold</strong> 120 (12 squares), 60 (8 squares)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
+          "description": "<p><strong>Threshold</strong> 120 (3 segments), 60 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Hurl Javelins!": {
           "name": "Hurl Javelins!",
-          "description": "<p>The troop's members throw a volley of javelins. Each creature in a @Template[burst|distance:10] within 30 feet of the troop takes @Damage[(2d6+10)[piercing]] damage (@Check[reflex|dc:26|basic] save).</p>\n<p>When the troop is reduced to 8 or fewer squares, this area decreases to a @Template[burst|distance:5].</p>"
+          "description": "<p>The troop's members throw a volley of javelins. Each creature in a @Template[burst|distance:10] within 30 feet of the troop takes @Damage[(2d6+10)[piercing]] damage (@Check[reflex|dc:26|basic] save).</p>\n<p>When the troop is reduced to 2 or fewer segments, this area decreases to a @Template[burst|distance:5].</p>"
         },
         "action->Lower Spears!": {
           "name": "Lower Spears!",
@@ -11716,7 +11742,7 @@
         },
         "action->Troop Defenses": {
           "name": "Troop Defenses",
-          "description": "<p><strong>Thresholds</strong> 160 (12 squares), 80 (8 squares)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
+          "description": "<p><strong>Thresholds</strong> 160 (3 segments), 80 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Aim as One": {
           "name": "Aim as One",
@@ -11728,7 +11754,7 @@
         },
         "action->Strike as One": {
           "name": "Strike as One",
-          "description": "<p><span class=\"action-glyph\">A</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The garrison makes a melee attack against each enemy within 5 feet (@Check[reflex|dc:30|basic] save). The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">A</span> @Damage[2d8[slashing]] damage.</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(3d8+10)[slashing]] damage.</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(4d8+13)[slashing]] damage.</p>"
+          "description": "<p><span class=\"action-glyph\">A</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The garrison makes a melee attack against each enemy in a @Template[emanation|distance:5] (@Check[reflex|dc:30|basic] save). The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">A</span> @Damage[2d8[slashing]] damage.</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(3d8+10)[slashing]] damage.</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(4d8+13)[slashing]] damage.</p>"
         },
         "action->Troop Movement": {
           "name": "Troop Movement",
@@ -12555,6 +12581,11 @@
         "spell->Magic Missile": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.gKKqvLohtrSJj3BM]\nMagic Missile"
         },
+        "spell->Produce Flame": {
+          "name": "Produce Flame",
+          "description": "<p>A small ball of flame appears in the palm of your hand, and you lash out with it either in melee or at range. Make a spell attack roll against your target's AC. This is normally a ranged attack, but you can also make a melee attack against a creature in your unarmed reach.</p>\n<p>On a success, you deal 2d4 fire damage. On a critical success, the target takes double damage and @Damage[(@item.level)d4[persistent,fire]] damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> Increase the damage by 1d4 and the persistent damage on a critical hit by 1d4.</p>",
+          "target": "1 creature"
+        },
         "spell->Ray of Enfeeblement": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.J7Y7tl0bbdz7TcCc]\nRay of Enfeeblement"
         },
@@ -12716,6 +12747,11 @@
         "spell->Magic Missile": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.gKKqvLohtrSJj3BM]\nMagic Missile"
         },
+        "spell->Produce Flame": {
+          "name": "Produce Flame",
+          "description": "<p>A small ball of flame appears in the palm of your hand, and you lash out with it either in melee or at range. Make a spell attack roll against your target's AC. This is normally a ranged attack, but you can also make a melee attack against a creature in your unarmed reach.</p>\n<p>On a success, you deal 2d4 fire damage. On a critical success, the target takes double damage and @Damage[(@item.level)d4[persistent,fire]] damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> Increase the damage by 1d4 and the persistent damage on a critical hit by 1d4.</p>",
+          "target": "1 creature"
+        },
         "spell->Ray of Enfeeblement": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.J7Y7tl0bbdz7TcCc]\nRay of Enfeeblement"
         },
@@ -12852,6 +12888,11 @@
         },
         "spell->Magic Missile": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.gKKqvLohtrSJj3BM]\nMagic Missile"
+        },
+        "spell->Produce Flame": {
+          "name": "Produce Flame",
+          "description": "<p>A small ball of flame appears in the palm of your hand, and you lash out with it either in melee or at range. Make a spell attack roll against your target's AC. This is normally a ranged attack, but you can also make a melee attack against a creature in your unarmed reach.</p>\n<p>On a success, you deal 2d4 fire damage. On a critical success, the target takes double damage and @Damage[(@item.level)d4[persistent,fire]] damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> Increase the damage by 1d4 and the persistent damage on a critical hit by 1d4.</p>",
+          "target": "1 creature"
         },
         "spell->Ray of Enfeeblement": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.J7Y7tl0bbdz7TcCc]\nRay of Enfeeblement"
@@ -13659,7 +13700,8 @@
         },
         "action->Ectoplasmic Form": {
           "name": "Ectoplasmic Form",
-          "description": "<p>A wyrmwraith can push through the ectoplasmic veil to temporarily assume a physical form made of ectoplasm. The wyrmwraith loses the incorporeal trait for [[/gmr 1d4 #Duration Physical Form]]{1d4 rounds}, though they can return to their incorporeal form as a free action before then. Once this ability ends, the wyrmwraith can't use this ability again for [[/gmr 1d4 #Recharge Ectoplasmatic Form]]{1d4 rounds}. While in their ectoplasmic form, the wyrmwraith's AC increases to 43 and they gain [[/r 100 #Temporary Hit Points]]{100 temporary Hit Points}. They lose their immunity to precision damage and all of their resistances. Their melee Strikes deal slashing and piercing damage, respectively, instead of void damage.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.QMcmhifNQOPguv2t]{Effect: Ectoplasmic Form (Physical)}</p>"
+          "description": "<p>A wyrmwraith can push through the ectoplasmic veil to temporarily assume a physical form made of ectoplasm. The wyrmwraith loses the incorporeal trait for [[/gmr 1d4 #Duration Physical Form]]{1d4 rounds}, though they can return to their incorporeal form as a free action before then. Once this ability ends, the wyrmwraith can't use this ability again for [[/gmr 1d4 #Recharge Ectoplasmatic Form]]{1d4 rounds}. While in their ectoplasmic form, the wyrmwraith's AC increases to 43 and they gain 100 temporary Hit Points. They lose their immunity to precision damage and all of their resistances. Their melee Strikes deal slashing and piercing damage, respectively, instead of void damage.</p>",
+          "selfEffect": "Effect: Ectoplasmic Form (Physical)"
         },
         "action->Phase Lurch": {
           "name": "Phase Lurch",
