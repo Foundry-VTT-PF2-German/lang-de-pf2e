@@ -736,9 +736,12 @@
         "MagicalSilver": "Magisches Silber",
         "MagicalSilverWeapons": "Magische Silberwaffen",
         "MagicalWeaponsBrightLight": "Helles Licht verströmende Waffen",
+        "MagicalWood": "magical wood",
+        "NonMagicalAttacks": "Nichtmagische Angriffe",
         "NonWeapons": "Nicht-Waffen",
         "PersistentPoison": "Anhaltender Giftschaden",
         "PhysicalRangedAttacks": "Physische Fernkampfangriffe",
+        "PhysicalWeaponsOnly": "physical (weapons only)",
         "RangedWeaponAttacks": "Angriffe mit Fernkampfwaffen",
         "Spirits": "Geister",
         "Treerazer": "Treerazer",
@@ -1076,6 +1079,16 @@
           "TargetWear": "Ziel trägt Fulvias Ring"
         }
       },
+      "IruxiMaskedMummer": {
+        "DonMask": {
+          "Akkarok": "Fiery Akkarok",
+          "Hazi": "Hazi Zephyr-Borne",
+          "KingOfStorms": "King of Storms",
+          "Nessek": "Nessek, the Wave Dancer",
+          "Prompt": "Select an ancestral spirit.",
+          "Zalok": "Zalok, Who was Called to Black Harbor"
+        }
+      },
       "Ivarsa": {
         "ArcaneCascade": {
           "Note": "While in this stance, Ivarsa's melee Strikes deal @Damage[(4[splash])[fire]]{4 splash fire} damage to foes adjacent to her target."
@@ -1288,7 +1301,17 @@
       "TongueOfFlame": {
         "DescriptionAddendum": "When the despot casts <em>charm</em>, <em>diabolic edict</em>, <em>enthrall</em>, or <em>floating flame</em>, either a target takes @Damage[(@item.rank)[fire]] damage, or the despot gains a +2 status bonus to Deception checks for 1 round."
       },
+      "ToothFairy": {
+        "ToothTug": {
+          "Note": "Du musst erfolgreich einen @Check[flat|dc:5|showDC:all]{Einfachen Wurf} bestehen um einen Zauber zu wirken, es sei denn er hat die Kategorie Subtil."
+        }
+      },
       "TreerazerPlantAttack": "Eine Pflanze angreifen",
+      "TroffFrostknuckles": {
+        "IcicleStance": {
+          "AboveTarget": "Icicle Stance — Above Target"
+        }
+      },
       "Tyrafdir": {
         "DeceptiveJaws": "Täuschender Biss"
       },
@@ -2077,7 +2100,7 @@
           "Prompt": "Wähle ein Forschungsgebiet.",
           "Toxicologist": {
             "FieldBenefit": {
-              "RollOptionLabel": "Toxikologe — Forschungsvorteil"
+              "RollOptionLabel": "Toxikologe — Verursache Säure- statt Giftschaden"
             },
             "FieldVials": {
               "Description": "Du kannst den Inhalt einer Vielseitigen Phiole auf eine Waffe oder ein Geschoss als Verwundungsgift auftragen. Addiere den Ausgangsschaden der Vielseitigen Phiole auf den Schaden des ersten erfolgreichen Angriffes mit der vergifteten Waffe oder Munition. Am Ende deines aktuellen Zuges wird die Substanz wirkungslos."
@@ -2344,6 +2367,9 @@
         "Ligneous": {
           "ToggleLabel": "Wooden Rage"
         },
+        "RenewedVigor": {
+          "Prompt": "Hast du diese Runde eine Angriffsaktion genutzt?"
+        },
         "Spirit": {
           "NegativeDamage": "Leerenschaden",
           "PositiveDamage": "Lebensschaden",
@@ -2494,6 +2520,16 @@
           "IdeaformToggle": "Werde zur Ideenform"
         }
       },
+      "CampfireChronicler": {
+        "OfferStory": {
+          "ChoiceLabels": {
+            "BaseBenefit": "Armor Class and Will saves",
+            "FlickeringStories": "Gain the concealed condition",
+            "IlluminatingStories": "Bonus to Recall Knowledge checks",
+            "RagingStories": "Additional melee fire damage"
+          }
+        }
+      },
       "CapeOfJustice": {
         "Toggle": "Target is your designated offender"
       },
@@ -2632,7 +2668,7 @@
           "Iniquity": "Jeder Gegner innerhalb deiner Streiteraura (ausgenommen die auslösende Kreatur) erleidet die Hälfte des Schadens, den du der auslösenden Kreatur zufügst.",
           "Justice": "Jeder Verbündete innerhalb deiner Streiteraura, in dessen Nahkampfangriffsradius sich das Ziel befindet, kann eine Reaktion nutzen, um einen Angriff gegen das Ziel mit einem Malus von -5 zu führen.",
           "Liberation": "Neben den Effekten, mit denen dein Befreiender Schritt deinen einen Verbündeten betrifft, können du und alle anderen Verbündeten innerhalb deiner Streiteraura als Freie Aktion einen Schritt ausführen. Diesen Vorteil erhaltet ihr auch dann, wenn der von Befreiender Schritt profitierende Verbündete sich nicht bewegen kann.",
-          "Obedience": "Jeder Gegner innerhalb deiner Streiteraura muss sich entscheiden, entweder auf die Knie fallen (und den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend} erhalten) oder Mentalen Schaden erleiden. Diese Kreaturen erleiden nur minimalen Schaden (in der Regel @Damage[ternary(gte(@actor.level,19),6,ternary(gte(@actor.level,16),5,ternary(gte(@actor.level,12),4,ternary(gte(@actor.level,11),3)[mental]] Schadenspunkte), die erlittenen Effekte können durch nichts modifiziert werden, das deinen Gnadenlosen Befehl verändert. Z.B. könnte das Talent Gnadenlose Folgen den Schaden für andere als die auslösende Kreatur nicht in Anhaltenden Mentalen Schaden umwandeln.",
+          "Obedience": "Jeder Gegner innerhalb deiner Streiteraura muss sich entscheiden, entweder auf die Knie fallen (und den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend} erhalten) oder Mentalen Schaden erleiden. Diese Kreaturen erleiden nur minimalen Schaden (in der Regel @Damage[(ternary(gte(@actor.level,19),6,ternary(gte(@actor.level,16),5,ternary(gte(@actor.level,12),4,ternary(gte(@actor.level,11),3)))))[mental]] Schadenspunkte), die erlittenen Effekte können durch nichts modifiziert werden, das deinen Gnadenlosen Befehl verändert. Z.B. könnte das Talent Gnadenlose Folgen den Schaden für andere als die auslösende Kreatur nicht in Anhaltenden Mentalen Schaden umwandeln.",
           "Redemption": "Verweigert sich der Gegner, so kannst du dir und allen Verbündeten innerhalb deiner Streiteraura (den auslösenden Verbündeten eingeschlossen), die Schadensresistenz verleihen; in diesem Fall fällt die Resistenz bei jedem um 2 geringer aus. @UUID[Compendium.pf2e.feat-effects.Item.GFLiTESBmoyQ3sLx]{Effekt: Erhebung (Läuterung)}"
         },
         "EvilDamage": "Seelenschaden",
@@ -2668,10 +2704,14 @@
           "Description": "Du kannst anstelle eines Nahkampfangriffes mit einer Fernkampfwaffe einen Fernkampfangriff im Rahmen von Vergeltender Angriff führen. Der Gegner muss sich innerhalb deiner Streiteraura und innerhalb der Reichweite der Waffe befinden, muss sich aber nicht in deinem Nahkampfangriffsradius befinden. Du kannst zudem Vergeltende Nahkampfangriffe auf größere Entfernung führen: Befindet sich der die Reaktion auslösende Gegner maximal 5 Fuß/1,50 m außerhalb deines Angriffsradius, kannst du als Teil der Reaktion die Aktion Schritt nutzen, um den Gegner in deinen Angriffsradius zu bekommen, ehe du einen Vergeltenden Nahkampfangriff ausführst."
         },
         "RelentlessReaction": {
-          "Grandeur": "Der Gegner erleidet zudem @Damage[(@actor.abilities.cha.mod)[persistent,spirit]] Schaden und \nkann sich von diesem Anhaltenden Schaden nicht erholen, solange er unter dem Effekt deines durch Licht der Herrlichkeit ausgelösten Enthüllenden Lichts steht.",
-          "Iniquity": "Erleidet ein Gegner durch deine Gnadenlose Vergeltung Schaden, nimmt er zudem @Damage[(@actor.abilities.cha.mod)[persistent,spirit]] Schaden.",
+          "Grandeur": "Der Gegner erleidet zudem @Damage[(@actor.abilities.cha.mod)[persistent,spirit]|traits:holy] Schaden und \nkann sich von diesem Anhaltenden Schaden nicht erholen, solange er unter dem Effekt deines durch Licht der Herrlichkeit ausgelösten Enthüllenden Lichts steht.",
+          "Iniquity": "Erleidet ein Gegner durch deine Gnadenlose Vergeltung Schaden, nimmt er zudem @Damage[(@actor.abilities.cha.mod)[persistent,spirit]|traits:unholy] Schaden.",
           "Liberation": "Du strafst jene, die deine Verbündeten in Ketten legen wollen. Sollte der auslösende Gegner Effekte \nnutzen, welche deinem Verbündeten den Zustand @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Bewegungsunfähig}, @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Gebunden}, @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} oder @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt} verleiht, wenn du Befreienden Schritt einsetzt, erleidet dieser Gegner @Damage[(@actor.abilities.cha.mod)[persistent,spirit]] Schaden.",
-          "ObedienceRedemption": "Sollte ein Gegner sich deinem Gnadenlosen Befehl verweigern, erleidet er @Damage[(@actor.abilities.cha.mod)[persistent,spirit]] Schaden."
+          "LiberationHoly": "Du strafst jene, die deine Verbündeten in Ketten legen wollen. Sollte der auslösende Gegner Effekte \nnutzen, welche deinem Verbündeten den Zustand @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Bewegungsunfähig}, @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Gebunden}, @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} oder @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt} verleiht, wenn du Befreienden Schritt einsetzt, erleidet dieser Gegner @Damage[(@actor.abilities.cha.mod)[persistent,spirit]|traits:holy] Schaden.",
+          "LiberationUnholy": "Du strafst jene, die deine Verbündeten in Ketten legen wollen. Sollte der auslösende Gegner Effekte \nnutzen, welche deinem Verbündeten den Zustand @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Bewegungsunfähig}, @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Gebunden}, @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} oder @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt} verleiht, wenn du Befreienden Schritt einsetzt, erleidet dieser Gegner @Damage[(@actor.abilities.cha.mod)[persistent,spirit]|traits:unholy] Schaden.",
+          "ObedienceRedemption": "Sollte ein Gegner sich deinem Gnadenlosen Befehl verweigern, erleidet er @Damage[(@actor.abilities.cha.mod)[persistent,spirit]] Schaden.",
+          "ObedienceRedemptionHoly": "Sollte ein Gegner sich deinem Gnadenlosen Befehl verweigern, erleidet er @Damage[(@actor.abilities.cha.mod)[persistent,spirit]|traits:holy] Schaden.",
+          "ObedienceUnholy": "Sollte ein Gegner sich deinem Gnadenlosen Befehl verweigern, erleidet er @Damage[(@actor.abilities.cha.mod)[persistent,spirit]|traits:unholy] Schaden."
         },
         "RetributiveStrike": "Vergeltender Angriff",
         "Security": {
@@ -2992,6 +3032,7 @@
       },
       "Conditions": {
         "Sickened": {
+          "AllowEatOrDrink": "Wenn du den Zustand Kränkelnd hast, kannst du essen und trinken.",
           "Reduce": {
             "criticalSuccess": "Wenn dir bei einem Zähigkeitswurf zum Reduzieren des Zustandswertes für @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd} ein kritischer Erfolg gelingt, senkst du ihn um 3.",
             "success": "Wenn dir ein Zähigkeitswurf zum Reduzieren des Zustandswertes für @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd} gelingt, senkst du ihn um 2."
@@ -3205,6 +3246,7 @@
           "MageArmor": "Schuppige Haut mit Mystische Rüstung"
         }
       },
+      "Driving": "Driving",
       "Druid": {
         "DruidicOrder": {
           "Prompt": "Wähle einen Druidenorden."
@@ -3328,7 +3370,7 @@
           "Note": "Du erhältst bei erfolgreichen Würfen für Athletik zum Klettern oder Schwimmen einen Gegenstandsbonus von +5 Fuß/1,50 m auf die zurückgelegte Distanz."
         },
         "BlackScorpionStingmace": {
-          "BlackScorpionVenomNote": "<p>Bei einem Kritischen Treffer ist das Ziel dem Gift eines Schwarzen Skorpions ausgesetzt.</p>\n<p><strong>Gift eines Schwarzen Skorpions</strong> (Gift)</p>\n<p><strong>Rettungswurf</strong> @Check[fortitude|dc:36]{Zähigkeitswurf}</p>\n<p><strong>Maximale Wirkungsdauer</strong> 6 Runden</p>\n<p><strong>Phase 1</strong> @Damage[2d12[poison]]{2W12 Punkte Giftschaden} und @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 2} (1 Runde)</p>\n<p><strong>Phase 2</strong> @Damage[3d12[poison]]{3W12 Punkte Giftschaden}, Unbeholfen 2 und @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1} (1 Runde)</p>\n<p><strong>Phase 3</strong> @Damage[4d12[poison]]{4W12 Punkte Giftschaden}, @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 4} und @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 2} (1 Runde)</p>"
+          "BlackScorpionVenomNote": "<p>Bei einem Kritischen Treffer ist das Ziel dem Gift eines Schwarzen Skorpions ausgesetzt.</p>\n<p><strong>Gift eines Schwarzen Skorpions</strong> (Gift)</p>\n<p><strong>Rettungswurf</strong> @Check[fortitude|dc:36]{Zähigkeitswurf}</p>\n<p><strong>Maximaldauer</strong> 6 Runden</p>\n<p><strong>Phase 1</strong> @Damage[2d12[poison]]{2W12 Punkte Giftschaden} und @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 2} (1 Runde)</p>\n<p><strong>Phase 2</strong> @Damage[3d12[poison]]{3W12 Punkte Giftschaden}, Unbeholfen 2 und @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1} (1 Runde)</p>\n<p><strong>Phase 3</strong> @Damage[4d12[poison]]{4W12 Punkte Giftschaden}, @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 4} und @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 2} (1 Runde)</p>"
         },
         "BloodDrinkerBlade": {
           "Label": "Blood-Drinker Blade — Drink Life"
@@ -3524,6 +3566,10 @@
         "RootBoots": {
           "GripGround": "Root Boots — Grip the Ground",
           "WoodenSurfaceLabel": "Root Boots — Wooden Surface"
+        },
+        "SashOfBooks": {
+          "Label": "Sash of Books",
+          "Note": "Regardless of the result, you gain a +1 circumstance bonus to attack rolls against the creature and to your AC and saving throws against attacks and effects from the creature for 1 minute. @UUID[Compendium.pf2e.equipment-effects.Item.P3lpqXMd5FbUF57c]{Effect: Sash of Books (Bonus)}"
         },
         "ScapularOfShields": {
           "CriticalImmunityLabel": "Activate Scapular of Shields to gain critical immunity.",
@@ -3998,11 +4044,18 @@
       },
       "Geomancer": {
         "AttunementShift": "Einstimmungswechsel",
+        "Dedication": {
+          "Label": "Geomancer Dedication"
+        },
+        "SpeakForTheGravelands": {
+          "GravelandsLabel": "Gravelands"
+        },
         "TerrainAttunement": {
           "Aquatic": "Du erhältst eine Bewegungsrate für Schwimmen entsprechend deiner Bewegungsrate an Land. Stehst du hingegen auf einer festen Oberfläche, folgen vorübergehend auftauchende Wellen deinen Bewegungen, sodass du deine Bewegungsrate für Schwimmen (sofern vorhanden) als deine Bewegungsrate an Land nutzen kannst. Dieser Effekt hält 1 Runde an.",
           "Arctic": "Feinde müssen einen @Check[fortitude]{Zähigkeitswurf} ablegen. Bei einem Fehlschlag erhalten sie für 2 Runden einen Zustandsmalus von -5 Fuß/1,50 m (bzw. -10 Fuß/3 m bei einem Kritischen Fehlschlag) auf ihre Bewegungsraten.",
           "Desert": "Feinde müssen einen @Check[fortitude]{Zähigkeitswurf} ablegen. Bei einem Fehlschlag erhalten sie den Zustand @UUID[Compendium.pf2e.conditionitems.HL2l2VRSaQHu9lUw]{Erschöpft}, bis sie Wasser trinken oder eine andere hydrierende Flüssigkeit zu sich nehmen.",
           "Forest": "Äste und Ranken legen sich deinen Gegnern gezielt in den Weg. Deine Feinde müssen daher einen @Check[reflex]{Reflexwurf} ablegen; bei einem Fehlschlag erleidet ein Gegner für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.i3OJZU2nk64Df3xm]{Unbeholfen 1} (bzw. @UUID[Compendium.pf2e.conditionitems.i3OJZU2nk64Df3xm]{Unbeholfen 2} bei einem Kritischen Fehlschlag).",
+          "Gravelands": "You gain a +1 status bonus to saving throws against the spells and abilities of haunts and undead creatures for 1 round.",
           "Label": "Geländeeinstimmung",
           "Mountain": "Du gewinnst für 1 Runde Resistenz gegen körperlichen Schaden (außer Adamant) entsprechend des Zaubergrades.",
           "Plains": "Du erhältst für 1 Runde Temporäre Trefferpunkte in Höhe des Zaubergrades.",
@@ -4318,6 +4371,9 @@
         "Trigger": "Deine Beute befindet sich in deinem Angriffsradius und will sich von dir entfernen."
       },
       "Kineticist": {
+        "ConductiveSphere": {
+          "RollOptionLabel": "Angriff mit einem Metallobjekt"
+        },
         "GateAttenuator": "Portalstärker",
         "Impulse": {
           "CriticalBlast": {
@@ -4417,6 +4473,12 @@
         "SecondAttempt": "2. Versuch",
         "ThirdAttempt": "3. Versuch",
         "WeaknessType": "Art der Schwäche"
+      },
+      "LepidstadtSurgeon": {
+        "Dedication": {
+          "StabilizeNote": "When you successfully Administer First Aid to stabilize a dying creature that doesn't yet have the @UUID[Compendium.pf2e.conditionitems.Item.Yl48xTdMh3aeQYL2]{Wounded} condition, it regains @Damage[(2d8 + 10*max(0,(@actor.system.skills.medicine.rank - 2)))[healing]] Hit Points.",
+          "StopBleedingNote": "When you successfully Administer First Aid to stop bleeding, the target rolls the flat check (with lowered DC for an assisted recovery) twice and takes the better result; this is a fortune effect. @UUID[Compendium.pf2e.feat-effects.Item.45nzYsMBTP6PIxDN]{Effect: Lepidstadt Surgeon Dedication (Stop Bleeding)}"
+        }
       },
       "Leshy": {
         "Seedpod": {
@@ -5166,6 +5228,10 @@
           "Title": "Reflection of Water"
         }
       },
+      "RevealingLight": {
+        "Description": "Eine Kreatur, die von Enthüllendes Licht betroffen ist, wird @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet}. Wenn die Kreatur @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Unsichtbar} war, wird sie stattdessen @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Verborgen}. Wenn die Kreatur bereits aus einem anderen Grund Verborgen war, ist sie nicht mehr Verborgen.",
+        "Label": "Enthüllendes Licht"
+      },
       "RivethunInvoker": {
         "InvokeOffense": {
           "Label": "Angriff der Geister"
@@ -5251,7 +5317,9 @@
       },
       "SaveCriticalFailureToFailure": {
         "FailureHalfDamage": {
-          "Will": "Solltest du bei einem Willenswurf einen Kritischen Fehlschlag landen, zählt dieser als normaler Fehlschlag. Scheitert dir ein Willenswurf gegen einen schadenerzeugenden Effekt, erleidest du nur halben Schaden."
+          "Fortitude": "Misslingt dir ein Zähigkeitswurf gegen einen Schadenseffekt, erleidest du nur halben Schaden.",
+          "Reflex": "Misslingt dir ein Reflexwurf gegen einen Schadenseffekt, erleidest du nur halben Schaden.",
+          "Will": "Solltest du bei einem Willenswurf gegen einen schadenerzeugenden Effekt einen Fehlschlag landen, erleidest du nur halben Schaden."
         }
       },
       "SaveSuccessToCriticalSuccess": {

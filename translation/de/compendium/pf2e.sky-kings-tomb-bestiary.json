@@ -344,6 +344,11 @@
         "spell->Blood Vendetta": {
           "requirements": "Du bist in der Lage zu bluten"
         },
+        "spell->Produce Flame": {
+          "name": "Flammen erzeugen",
+          "description": "<p>Ein kleiner Ball aus Flammen erscheint in deiner Handfläche. Du kannst damit Nahkampf- oder Fernkampfangriffe durchführen. Führe einen Zauberangriffswurf gegen die RK des Zieles aus. Für gewöhnlich ist dies ein Fernkampfangriff, aber du darfst auch einen Angriff gegen eine Kreatur innerhalb deines Waffenlosen Angriffsradius durchführen.</p>\n<p><strong>Erfolg</strong> Du verursachst 2W4 Punkte Feuerschaden. Bei einem kritischen Erfolg erleidet das Ziel doppelten Schaden sowie 1W4 Punkte Anhaltenden Feuerschaden.</p>\n<hr />\n<p><strong>Erhöhung (+1)</strong> Der Schaden erhöht sich um 1W4. Der anhaltende Schaden bei einem Kritischen Erfolg erhöht sich um 1W4.</p>\n<p><strong>Gradabhängiger Anhaltender Feuerschaden:</strong> @Damage[(@item.level)d4[persistent,fire]]</p>",
+          "target": "1 Kreatur"
+        },
         "spell->True Strike": {
           "name": "<Compendium>"
         },
@@ -535,7 +540,7 @@
     },
     "Cultist Troop": {
       "name": "Kultistentrupp",
-      "hpDetails": "(16 Felder); Schwellen 60 (12 Felder), 30 (8 Felder)",
+      "hpDetails": "(16 Felder); Schwellen 60 (3 Segmente), 30 (2 Segmente)",
       "speed": "Truppbewegung",
       "items": {
         "action->Troop Defenses": {
@@ -1242,7 +1247,7 @@
     },
     "Hryngar Breccia Squad": {
       "name": "Hryngar-Schindertrupp",
-      "hpDetails": "Schwellen 100 (12 Felder), 50 (8 Felder)",
+      "hpDetails": "Schwellen 100 (3 Segmente), 50 (2 Segmente)",
       "publicNotes": "<p>Ein Hryngar-Schindertrupp ist eine Gruppe von hryngarischen Kämpfern, die mit Nahkampfwaffen und Stahlschilden bewaffnet sind. Obwohl diese Angriffstrupps eher in der Nähe großer hryngarischer Siedlungen anzutreffen sind, werden sie überall in den Finsterlanden eingesetzt. Hryngar-Schindertrupps dienen oft als Militäreinheiten, Söldnerkompanien, Stadtpatrouillen und Karawanenwachen. Wie bei allen Kriegern variieren die bevorzugten Kampfmethoden der Hryngar-Schindertrupps je nach Einsatzort, oft aufgrund der Umgebung und der gängigen Ausrüstung.</p>\n<hr />\n<p>Tief unter der Oberfläche von Golarion leben die Zwerge noch immer in der Dunkelheit. Einst von ihren Verwandten im Stich gelassen, die besessen davon waren, die Oberfläche zu erreichen, haben diese Zwerge herausgefunden, dass sie durch härtere Arbeit als die ihrer Brüder eine Gesellschaft aufbauen können, die weit größer ist als alles andere unter der Sonne. Droskar, der Meister der Dunklen Esse, lehrt sie, dass sie durch die Arbeit für ihre Meister, die wiederum für ihre Meister an der Oberfläche arbeiten, stärker werden als je zuvor. Jeder Hryngar weiß, dass ihn seine Arbeit ausmacht und ihm in den Augen von Droskar und seinesgleichen Ruhm einbringt. Die Erschöpfung am Ende des Arbeitstages ist eine Ehre, ein Beweis für seinen Wert in der Gesellschaft.</p>\n<h2>Kluftspringer</h2>\n<p>Hryngar-Schindertrupps, die sich auf Höhlenforschung spezialisiert haben, sind nach ihren waghalsigen Sprüngen in gefährliche Abgründe als Kluftspringer bekannt. Sie tauschen ihre Schilde und Kriegshämmer gegen leichte Spitzhacken aus und trainieren mit ihrer Kletterausrüstung, bis sie ihnen wie eine Verlängerung ihres Körpers vorkommt. Kluftspringer verlieren die Aktionen Schilde heben, Schildblock und Zurückdrängen; sie erhalten die Bewegungsrate zum Klettern von 20 Fuß/6 m.</p>",
       "saveDetails": "+2 Zustandsbonus auf RW gg. Magie",
       "speed": "Truppbewegung",
@@ -1262,7 +1267,7 @@
         },
         "action->General Melee": {
           "name": "Koordinierter Nahkampf",
-          "description": "<p><strong>Häufigkeit</strong> Einmal pro Runde</p>\n<hr />\n<p><strong>Effekt</strong> Der Hryngar-Schindertrupp führt einen koordinierten Angriff mit seinen Nahkampfwaffen gegen jeden Feind im Umkreis von 5 Fuß/1,50 m aus (@Check[reflex|dc:28|basic]{einfacher Reflexwurf}). Der Schaden hängt von der Anzahl der Aktionen ab.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[(1d8+6)[bludgeoning]]{1W8+6 Wuchtschaden}</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d8+10)[bludgeoning]]{2W8+10 Wuchtschaden}</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(3d8+14)[bludgeoning]]{3W8+14 Wuchtschaden}</p> "
+          "description": "<p><strong>Häufigkeit</strong> Einmal pro Runde</p>\n<hr />\n<p><strong>Effekt</strong> Der Hryngar-Schindertrupp führt einen koordinierten Angriff mit seinen Nahkampfwaffen gegen jeden Feind in einer @Template[emanation|distance:5]{5 Fuß/1,50 m Ausstrahlung} aus (@Check[reflex|dc:28|basic]{einfacher Reflexwurf}). Der Schaden hängt von der Anzahl der Aktionen ab.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[(1d8+6)[bludgeoning]]{1W8+6 Wuchtschaden}</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d8+10)[bludgeoning]]{2W8+10 Wuchtschaden}</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(3d8+14)[bludgeoning]]{3W8+14 Wuchtschaden}</p> "
         },
         "action->Raise Shields": {
           "name": "Schilde heben",
@@ -1953,6 +1958,9 @@
       "blurb": "Riesenkrabben-Variante",
       "publicNotes": "<p>Krabben sind aasfressende Krustentiere, die für ihren harten Panzer und den ikonischen seitwärts gerichteten Gang bekannt sind. Ihre starken Scheren verwenden sie zum Jagen, zur Selbstverteidigung oder um andere Krabben gewaltsam aus ihrem Territorium zu werfen. Bei Konfrontationen mit Bedrohungen außerhalb ihrer Gattung entscheiden sich die meisten Krabben jedoch für die Flucht. Ist ein Rückzug hingegen nicht möglich, klammern sie sich so fest an ihren Angreifer wie sie nur können.</p>\n<p>Die im Anschluss aufgeführten Spielwerte entsprechen denen einer Riesenkrabbe, die nahe der Wasseroberfläche haust. Tiefer unter dem Wasser lebende Krabben weisen hingegen häufig sehr außergewöhnliche Anpassungen an ihre Umwelt auf. Die in den tiefsten Meeresgründen beheimateten Krabben haben aufgrund der äußerst geringen Lichteinstrahlung in dieser Umgebung Dunkelsicht und Kälteresistenzen entwickelt. Diese Exemplare haben zudem eine spezifische Wahrnehmung ausgebildet, mit denen sie sich an die extrem feindlich gesinnte Umwelt anpassen. Sie können herannahende Kreaturen durch feinste Veränderungen der Meeresströmungen wahrnehmen.</p>\n<p>Die flinken Kreaturen werden vor allem für ihr schmackhaftes Fleisch geschätzt, wenngleich ihre Größe für die Jäger durchaus eine ernstzunehmende Bedrohung darstellen kann.</p>",
       "items": {
+        "condition->Clumsy": {
+          "description": "<Compendium>"
+        },
         "strike-melee->Claw": {
           "name": "Klaue"
         },
@@ -2397,7 +2405,7 @@
         },
         "action->Troop Defenses": {
           "name": "Truppverteidigung",
-          "description": "<p><strong>Schwellenwerte</strong>60 (12 Felder), 30 (8 Felder)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
+          "description": "<p><strong>Schwellenwerte</strong>60 (3 Segmente), 30 (2 Segmente)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Grave Tide": {
           "name": "Grabeswelle",
@@ -3037,6 +3045,11 @@
         "spell->Mage Hand": {
           "name": "<Compendium>"
         },
+        "spell->Produce Flame": {
+          "name": "Flammen erzeugen",
+          "description": "<p>Ein kleiner Ball aus Flammen erscheint in deiner Handfläche. Du kannst damit Nahkampf- oder Fernkampfangriffe durchführen. Führe einen Zauberangriffswurf gegen die RK des Zieles aus. Für gewöhnlich ist dies ein Fernkampfangriff, aber du darfst auch einen Angriff gegen eine Kreatur innerhalb deines Waffenlosen Angriffsradius durchführen.</p>\n<p><strong>Erfolg</strong> Du verursachst 2W4 Punkte Feuerschaden. Bei einem kritischen Erfolg erleidet das Ziel doppelten Schaden sowie 1W4 Punkte Anhaltenden Feuerschaden.</p>\n<hr />\n<p><strong>Erhöhung (+1)</strong> Der Schaden erhöht sich um 1W4. Der anhaltende Schaden bei einem Kritischen Erfolg erhöht sich um 1W4.</p>\n<p><strong>Gradabhängiger Anhaltender Feuerschaden:</strong> @Damage[(@item.level)d4[persistent,fire]]</p>",
+          "target": "1 Kreatur"
+        },
         "equipment->Blacksmith Tools (Sterling)": {
           "name": "<Compendium>",
           "description": "<Compendium>",
@@ -3252,13 +3265,13 @@
         },
         "action->Dark Naga Venom": {
           "name": "Düsternagagift",
-          "description": "<p><strong>Rettungswurf</strong> @Check[fortitude|dc:25]{Zähigkeitswurf}</p>\n<p><strong>Maximale Wirkungsdauer</strong> 5 Minuten</p>\n<p><strong>Phase 1</strong> @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1} (1 Runde)</p>\n<p><strong>Phase 2</strong> @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 2} (1 Runde)</p>\n<p><strong>Phase 3</strong> @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Bewusstlos} ohne Wahrnehmungswurf zum Aufwachen ([[/gmr 1d4+1 #Minuten]]{1W4+1 Minuten})</p>"
+          "description": "<p><strong>Rettungswurf</strong> @Check[fortitude|dc:25]{Zähigkeitswurf}</p>\n<p><strong>Maximaldauer</strong> 5 Minuten</p>\n<p><strong>Phase 1</strong> @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1} (1 Runde)</p>\n<p><strong>Phase 2</strong> @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 2} (1 Runde)</p>\n<p><strong>Phase 3</strong> @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Bewusstlos} ohne Wahrnehmungswurf zum Aufwachen ([[/gmr 1d4+1 #Minuten]]{1W4+1 Minuten})</p>"
         }
       }
     },
     "Xulgath Ravening": {
       "name": "Xulgathen-Amokhorde",
-      "hpDetails": "Schwellen 48 (12 Felder), 24 (8 Felder)",
+      "hpDetails": "Schwellen 48 (3 Segmente), 24 (2 Segmente)",
       "publicNotes": "<p>Stärke und Hunger treiben die meisten Gesellschaften der Xulgathen an und werden noch verstärkt durch die Lehren ihres Dämonenherrschers Zevgavizeb. Ein mächtiger Anführer kann die Kontrolle über einen Xulgathenstamm an sich reißen und seine Anhänger anweisen, als Einheit zu kämpfen, aber der Kampf in Formation ist nichts, was die meisten Xulgathen praktizieren. Diese Mob-Mentalität führt oft dazu, dass übereifrige Krieger übereinander stolpern oder sich sogar gegenseitig beißen. Passenderweise haben sich diese Banden den Namen „Amokhorde“ erworben, ein Begriff, der auch bei der Beschreibung von Zevgavizebs fleischfressenden Amokläufen verwendet wird und sich auf die jahrtausendelangen Kämpfe und den sozialen Niedergang der Xulgathen bezieht.</p>\n<h2>Die Macht der Einflüsterung</h2>\n<p>Eine Xulgathen-Amokhorde kommt am häufigsten in Gegenden vor, die von spirituellen Führern kontrolliert werden, die eine Kombination aus Kultverhalten, Gruppenritualen und sogar ein wenig Verzauberungsmagie einsetzen. Indem er die Teilnehmer davon überzeugt, dass sie von Zevgavizeb oder einer ähnlichen Macht besessen sind, wählt der Anführer ein Ziel aus und hofft auf das Beste. Wenn man weltliche Zweifel aufkommen lässt oder den Anführer kampfunfähig macht, kann das die Konzentration der Amokhorde erschüttern und dazu führen, dass sich die Mitglieder zerstreuen oder sogar gegen ihren Anführer wenden.</p>",
       "speed": "Truppbewegung",
       "items": {
@@ -3268,7 +3281,7 @@
         },
         "action->Troop Defenses": {
           "name": "Truppverteidigung",
-          "description": "<p><strong>Schwellenwerte</strong>48 (12 Felder), 24 (8 Felder)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
+          "description": "<p><strong>Schwellenwerte</strong>48 (3 Segmente), 24 (2 Segmente)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Fang and Claw": {
           "name": "Zähne und Klauen",

@@ -1681,7 +1681,7 @@
         },
         "action->Troop Defenses": {
           "name": "Truppverteidigung",
-          "description": "<p><strong>Schwellenwert</strong> 220 (12 Felder), 110 (8 Felder)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
+          "description": "<p><strong>Schwellenwert</strong> 220 (3 Segmente), 110 (2 Segmente)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
         },
         "action->Frightful Battle Cry": {
           "name": "Furchteinflößender Schlachtruf",
@@ -1689,7 +1689,7 @@
         },
         "action->Ghostly Blades": {
           "name": "Geisterklingen",
-          "description": "<p><span class=\"action-glyph\">1</span> bis <span class=\"action-glyph\">3</span></p>\n<p><strong>Häufigkeit</strong> Einmal pro Runde</p>\n<hr />\n<p><strong>Effekt</strong> Die Letzte Wache führt einen koordinierten Angriff mit ihren Geisterhaften Elfischen Krummschwertern gegen jeden Gegner im Umkreis von 5 Fuß/1,50 m (@Check[reflex|dc:40|basic]{einfacher Reflexwurf}). Der Schaden hängt von der Anzahl der aufgewendeten Aktionen ab.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[(1d8+2)[slashing],1d8[void]]{1W8+2 Hieb- und 1W8 Leerenschaden}</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d8+14)[slashing],2d8[void]]{2W8+14 Hieb- und 2W8 Leerenschaden}</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(3d8+14)[slashing],3d8[void]]{3W8+14 Hieb- und 3W8 Leerenschaden}</p>"
+          "description": "<p><span class=\"action-glyph\">1</span> bis <span class=\"action-glyph\">3</span></p>\n<p><strong>Häufigkeit</strong> Einmal pro Runde</p>\n<hr />\n<p><strong>Effekt</strong> Die Letzte Wache führt einen koordinierten Angriff mit ihren Geisterhaften Elfischen Krummschwertern gegen jeden Gegner in einer @Template[emanation|distance:5]{5 Fuß/1,50 m Ausstrahlung} (@Check[reflex|dc:40|basic]{einfacher Reflexwurf}). Der Schaden hängt von der Anzahl der aufgewendeten Aktionen ab.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[(1d8+2)[slashing],1d8[void]]{1W8+2 Hieb- und 1W8 Leerenschaden}</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d8+14)[slashing],2d8[void]]{2W8+14 Hieb- und 2W8 Leerenschaden}</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(3d8+14)[slashing],3d8[void]]{3W8+14 Hieb- und 3W8 Leerenschaden}</p>"
         },
         "action->Spectral Charge": {
           "name": "Geisterhafter Sturmangriff",
@@ -2729,6 +2729,11 @@
         "spell->Pass Without Trace": {
           "name": "<Compendium>"
         },
+        "spell->Produce Flame": {
+          "name": "Flammen erzeugen",
+          "description": "<p>Ein kleiner Ball aus Flammen erscheint in deiner Handfläche. Du kannst damit Nahkampf- oder Fernkampfangriffe durchführen. Führe einen Zauberangriffswurf gegen die RK des Zieles aus. Für gewöhnlich ist dies ein Fernkampfangriff, aber du darfst auch einen Angriff gegen eine Kreatur innerhalb deines Waffenlosen Angriffsradius durchführen.</p>\n<p><strong>Erfolg</strong> Du verursachst 2W4 Punkte Feuerschaden. Bei einem kritischen Erfolg erleidet das Ziel doppelten Schaden sowie 1W4 Punkte Anhaltenden Feuerschaden.</p>\n<hr />\n<p><strong>Erhöhung (+1)</strong> Der Schaden erhöht sich um 1W4. Der anhaltende Schaden bei einem Kritischen Erfolg erhöht sich um 1W4.</p>\n<p><strong>Gradabhängiger Anhaltender Feuerschaden:</strong> @Damage[(@item.level)d4[persistent,fire]]</p>",
+          "target": "1 Kreatur"
+        },
         "spell->Tanglefoot": {
           "name": "<Compendium>"
         },
@@ -2838,6 +2843,11 @@
         },
         "spell->Magic Missile": {
           "name": "<Compendium>"
+        },
+        "spell->Produce Flame": {
+          "name": "Flammen erzeugen",
+          "description": "<p>Ein kleiner Ball aus Flammen erscheint in deiner Handfläche. Du kannst damit Nahkampf- oder Fernkampfangriffe durchführen. Führe einen Zauberangriffswurf gegen die RK des Zieles aus. Für gewöhnlich ist dies ein Fernkampfangriff, aber du darfst auch einen Angriff gegen eine Kreatur innerhalb deines Waffenlosen Angriffsradius durchführen.</p>\n<p><strong>Erfolg</strong> Du verursachst 2W4 Punkte Feuerschaden. Bei einem kritischen Erfolg erleidet das Ziel doppelten Schaden sowie 1W4 Punkte Anhaltenden Feuerschaden.</p>\n<hr />\n<p><strong>Erhöhung (+1)</strong> Der Schaden erhöht sich um 1W4. Der anhaltende Schaden bei einem Kritischen Erfolg erhöht sich um 1W4.</p>\n<p><strong>Gradabhängiger Anhaltender Feuerschaden:</strong> @Damage[(@item.level)d4[persistent,fire]]</p>",
+          "target": "1 Kreatur"
         },
         "strike-melee->Claw": {
           "name": "Klaue"
@@ -3332,7 +3342,7 @@
         },
         "action->Urveth Venom": {
           "name": "Urvethgift",
-          "description": "<p><strong>Rettungswurf</strong> @Check[fortitude|dc:37]{Zähigkeitswurf}</p>\n<p><strong>Maximale Wirkungsdauer</strong> 6 Runden</p>\n<p><strong>Phase 1</strong> @Damage[3d6[void],2d6[poison]]{3W6 Leerenschaden und 2W6 Giftschaden} (1 Runde)</p>\n<p><strong>Phase 2</strong> @Damage[3d6[void],2d6[poison]]{3W6 Leerenschaden und 2W6 Giftschaden} und @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 2} (1 Runde)</p>\n<p><strong>Phase 3</strong> @Damage[3d6[void],2d6[poison]]{3W6 Leerenschaden und 2W6 Giftschaden} und @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 4} (1 Runde)</p>"
+          "description": "<p><strong>Rettungswurf</strong> @Check[fortitude|dc:37]{Zähigkeitswurf}</p>\n<p><strong>Maximaldauer</strong> 6 Runden</p>\n<p><strong>Phase 1</strong> @Damage[3d6[void],2d6[poison]]{3W6 Leerenschaden und 2W6 Giftschaden} (1 Runde)</p>\n<p><strong>Phase 2</strong> @Damage[3d6[void],2d6[poison]]{3W6 Leerenschaden und 2W6 Giftschaden} und @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 2} (1 Runde)</p>\n<p><strong>Phase 3</strong> @Damage[3d6[void],2d6[poison]]{3W6 Leerenschaden und 2W6 Giftschaden} und @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 4} (1 Runde)</p>"
         },
         "lore->Shadow Plane Lore": {
           "name": "Kenntnis (Das Grau)"
