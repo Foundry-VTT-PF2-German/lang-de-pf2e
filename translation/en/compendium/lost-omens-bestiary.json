@@ -697,7 +697,7 @@
         },
         "action->Bombard": {
           "name": "Bombard",
-          "description": "<p>The clockwork cannoneer launches an explosive shot up to a range of 200 feet that explodes in a @Template[burst|distance:20]. Creatures within the burst take @Damage[5d10[bludgeoning]] damage (@Check[reflex|dc:36|basic]).</p>"
+          "description": "<p>The clockwork cannoneer launches an explosive shot up to a range of 200 feet that explodes in a @Template[burst|distance:20]. Creatures within the burst take @Damage[5d10[bludgeoning]|options:area-damage] damage (@Check[reflex|dc:36|basic|options:area-effect]).</p>"
         },
         "action->Muzzleburn": {
           "name": "Muzzleburn",
@@ -744,6 +744,38 @@
         "action->Fire Pin": {
           "name": "Fire Pin",
           "description": "<p><strong>Trigger</strong> A creature Ebeshra can see begins to use a teleportation effect or an effect that would move any number of targets to a different plane</p>\n<hr />\n<p><strong>Effect</strong> Ebeshra hurls a crystal at the triggering creature. The triggering creature and all creatures within 50 feet of the creature take @Damage[16d8[piercing]] damage (@Check[reflex|dc:45|basic|traits:abjuration,divine,environmental,kaiju,hazard] save) and additional effects based on the result of their save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The effect is counteracted, and the creature can't use teleportation effects or planar travel effects for 1 minute.</p>\n<p><strong>Failure</strong> As success, but for 1 day instead of 1 minute.</p>\n<p><strong>Critical Failure</strong> As success, but for 1 week instead of 1 minute. Additionally, the creature becomes pinned under the crystal and must succeed at 3 total DC 45 checks to @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} from under the crystal.</p>"
+        }
+      }
+    },
+    "Crystal Xorn": {
+      "name": "Crystal Xorn",
+      "acDetails": "all-around vision",
+      "publicNotes": "<p>These squat, rotund elementals have three legs, three arms, three eyes, and one massive maw, which they fill with the gems and metals they find so delicious.</p>\n<hr />\n<p>Earth elementals make excellent bodyguards for adventuresome spelunkers and are ideal protectors of important subterranean locations such as vaults and treasuries.</p>",
+      "speed": "earth glide",
+      "items": {
+        "strike-melee->Jaw": {
+          "name": "Jaw"
+        },
+        "strike-melee->Claw": {
+          "name": "Claw"
+        },
+        "action->Tremorsense (Imprecise) 60 feet": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.j2wsK6IsW5yMW1jW]\nTremorsense (Imprecise) 60 feet"
+        },
+        "action->Claw Frenzy": {
+          "name": "Claw Frenzy",
+          "description": "<p>The xorn makes three claw Strikes; no more than two can be against the same target. These attacks count toward the xorn's multiple attack penalty, but the penalty doesn't increase until after all the attacks have been made.</p>"
+        },
+        "action->Crystal Corruption": {
+          "name": "Crystal Corruption",
+          "description": "<p>This affliction's sickened, slowed, and paralyzed conditions can't be removed until this affliction is removed.</p>\n<p>A creature affected by crystal corruption slowly turns into crystal until it is petrified. Creatures with both the earth and elemental traits instead become carriers and suffer no ill effects aside from gaining the vulnerability to sonic.</p>\n<p><strong>Saving Throw</strong> @Check[fortitude|dc:22]</p>\n<hr />\n<p><strong>Stage 1</strong> @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (1 hour)</p>\n<p><strong>Stage 2</strong> vulnerable 5 sonic and sickened 1 (1 day)</p>\n<p><strong>Stage 3</strong> vulnerable 5 sonic and @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} (1 day)</p>\n<p><strong>Stage 4</strong> vulnerable 10 sonic and @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} (1 day)</p>\n<p><strong>Stage 5</strong> vulnerable 10 sonic and the creature is permanently @UUID[Compendium.pf2e.conditionitems.Item.dTwPJuKgBQCMxixg]{Petrified}.</p>"
+        },
+        "action->Earth Glide": {
+          "name": "Earth Glide",
+          "description": "<p>The xorn can Burrow through any earthen matter, including rock. When it does so, the xorn moves at its full burrow Speed, leaving no tunnels or signs of its passing.</p>"
+        },
+        "lore->Geology Lore": {
+          "name": "Geology Lore"
         }
       }
     },
@@ -1028,7 +1060,7 @@
         },
         "action->Blasting Breath": {
           "name": "Blasting Breath",
-          "description": "<p>Fafnheir exhales a cataclysmic firestorm laced with lightning and hurricane-strength winds, dealing @Damage[20d6[fire]] damage in a @Template[cone|distance:90] (@Check[reflex|dc:48|basic] save). Additionally, Fafnheir deals @Damage[10d6[electricity]]{10d6} additional electricity damage to one creature within the area of Blasting Breath of Fafnheir's choice, determined by the same basic Reflex save. Creatures in the area must also attempt a @Check[fortitude|dc:48|name:Resist Winds|traits:damaging-effect] save to resist the powerful winds and deafening thunderclaps of the breath. Creatures that fail experience the effects of @UUID[Compendium.pf2e.spells-srd.Item.g8QqHpv2CWDwmIm1]{Gust of Wind}, affecting Large or smaller creatures as normal. Finally, creatures that fail their Fortitude save become @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} for 1 minute (permanently deafened on a critical failure).</p>"
+          "description": "<p>Fafnheir exhales a cataclysmic firestorm laced with lightning and hurricane-strength winds, dealing @Damage[20d6[fire]|options:area-damage] damage in a @Template[cone|distance:90] (@Check[reflex|dc:48|basic|options:area-effect] save). Additionally, Fafnheir deals @Damage[10d6[electricity]|options:area-damage]{10d6} additional electricity damage to one creature within the area of Blasting Breath of Fafnheir's choice, determined by the same basic Reflex save. Creatures in the area must also attempt a @Check[fortitude|dc:48|name:Resist Winds|options:damaging-effect] save to resist the powerful winds and deafening thunderclaps of the breath. Creatures that fail experience the effects of @UUID[Compendium.pf2e.spells-srd.Item.g8QqHpv2CWDwmIm1]{Gust of Wind}, affecting Large or smaller creatures as normal. Finally, creatures that fail their Fortitude save become @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} for 1 minute (permanently deafened on a critical failure).</p>"
         },
         "action->Boiling Blood": {
           "name": "Boiling Blood",
@@ -3204,7 +3236,7 @@
         },
         "action->Acid Spew": {
           "name": "Acid Spew",
-          "description": "<p>Somnalu jets acid from its skin, dousing all creatures in a @Template[line|distance:60|width:15]{15-foot-wide, 60-foot-long line}. Each creature in this area takes @Damage[10d8[acid]] damage (@Check[reflex|dc:33|basic] save). It can't use this ability again for [[/gmr 1d4 #Recharge Acid Spew]]{1d4 rounds}.</p>"
+          "description": "<p>Somnalu jets acid from its skin, dousing all creatures in a @Template[line|distance:60|width:15]{15-foot-wide, 60-foot-long line}. Each creature in this area takes @Damage[10d8[acid]|options:area-damage] damage (@Check[reflex|dc:33|basic|options:area-effect] save). It can't use this ability again for [[/gmr 1d4 #Recharge Acid Spew]]{1d4 rounds}.</p>"
         },
         "action->Caustic Trench": {
           "name": "Caustic Trench",
@@ -3328,7 +3360,7 @@
         },
         "action->Accursed Shriek": {
           "name": "Accursed Shriek",
-          "description": "<p>The Spectral Devil unleashes a terrifying whinny in a @Template[cone|distance:30] that deals @Damage[5d10[sonic]] damage. Each creature in the area must attempt a @Check[reflex|dc:29] save.</p>\n<p>The Spectral Devil can't use Accursed Shriek for [[/gmr 1d4 #Recharge Accursed Shriek]]{1d4 rounds}.</p>\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} by the eerie noise.</p>\n<p><strong>Critical Failure</strong> The creature takes full damage, is frightened 2, and becomes cursed. The victim's mind echoes with the sound of the whinny, impairing concentration. The cursed creature is @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2} until the curse is removed.</p>"
+          "description": "<p>The Spectral Devil unleashes a terrifying whinny in a @Template[cone|distance:30] that deals @Damage[5d10[sonic]|options:area-damage] damage. Each creature in the area must attempt a @Check[reflex|dc:29|options:area-effect,damaging-effect] save.</p>\n<p>The Spectral Devil can't use Accursed Shriek for [[/gmr 1d4 #Recharge Accursed Shriek]]{1d4 rounds}.</p>\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} by the eerie noise.</p>\n<p><strong>Critical Failure</strong> The creature takes full damage, is frightened 2, and becomes cursed. The victim's mind echoes with the sound of the whinny, impairing concentration. The cursed creature is @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2} until the curse is removed.</p>"
         },
         "action->Trample": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.UNah0bxXxkcZjxO3]\n<p>Medium or smaller, Ghostly Hoof, @Check[reflex|dc:26|basic]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Trample]</p>"
