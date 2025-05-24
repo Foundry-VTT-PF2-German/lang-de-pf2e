@@ -119,7 +119,7 @@
         },
         "action->Alchemical Rupture": {
           "name": "Alchemical Rupture",
-          "description": "<p>When an alchemical golem takes physical damage from a critical hit or is affected by a @UUID[Compendium.pf2e.spells-srd.Item.1xbFBQDRs0hT5xZ9]{Shatter} spell, one glass chamber within its body shatters, spewing alchemical liquid in a @Template[emanation|distance:5]{5-foot emanation}.</p>\n<p>Roll on the alchemical chambers list to determine which one shatters-on a roll of 1-5, creatures in the area take 10d6 damage of the appropriate type (@Check[reflex|dc:28|basic]). On a roll of 6, creatures must instead save against the sickness effect.</p>\n<table class=\"pf2e\">\n<thead>\n<tr>\n<th>[[/gmr 1d6 #Alchemical Rupture]]</th>\n<th>Alchemical Effect</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td>\n<p>@Damage[10d6[acid]] damage @Check[reflex|dc:28|basic|traits:acid]</p>\n</td>\n</tr>\n<tr>\n<td>2</td>\n<td>@Damage[10d6[cold]] damage @Check[reflex|dc:28|basic|traits:cold]</td>\n</tr>\n<tr>\n<td>3</td>\n<td>@Damage[10d6[electricity]] damage @Check[reflex|dc:28|basic|traits:electricity]</td>\n</tr>\n<tr>\n<td>4</td>\n<td>@Damage[10d6[fire]] damage @Check[reflex|dc:28|basic|traits:fire]</td>\n</tr>\n<tr>\n<td>5</td>\n<td>@Damage[10d6[poison]] damage @Check[reflex|dc:28|basic|traits:poison]</td>\n</tr>\n<tr>\n<td>6</td>\n<td>Sickness: @Check[fortitude|dc:26|name:Alchemical Sickness|traits:disease] save or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure)</td>\n</tr>\n</tbody>\n</table>"
+          "description": "<p>When an alchemical golem takes physical damage from a critical hit or is affected by a @UUID[Compendium.pf2e.spells-srd.Item.1xbFBQDRs0hT5xZ9]{Shatter} spell, one glass chamber within its body shatters, spewing alchemical liquid in a @Template[emanation|distance:5]{5-foot emanation}.</p>\n<p>Roll on the alchemical chambers list to determine which one shatters-on a roll of 1-5, creatures in the area take 10d6 damage of the appropriate type (@Check[reflex|dc:28|basic|options:area-effect]). On a roll of 6, creatures must instead save against the sickness effect.</p>\n<table class=\"pf2e\">\n<thead>\n<tr>\n<th>[[/gmr 1d6 #Alchemical Rupture]]</th>\n<th>Alchemical Effect</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td>\n<p>@Damage[10d6[acid]|options:area-damage] damage @Check[reflex|dc:28|basic|options:area-effect|traits:acid]</p>\n</td>\n</tr>\n<tr>\n<td>2</td>\n<td>@Damage[10d6[cold]|options:area-damage] damage @Check[reflex|dc:28|basic|options:area-effect|traits:cold]</td>\n</tr>\n<tr>\n<td>3</td>\n<td>@Damage[10d6[electricity]|options:area-damage] damage @Check[reflex|dc:28|basic|options:area-effect|traits:electricity]</td>\n</tr>\n<tr>\n<td>4</td>\n<td>@Damage[10d6[fire]|options:area-damage] damage @Check[reflex|dc:28|basic|options:area-effect|traits:fire]</td>\n</tr>\n<tr>\n<td>5</td>\n<td>@Damage[10d6[poison]|options:area-damage] damage @Check[reflex|dc:28|basic|options:area-effect|traits:poison]</td>\n</tr>\n<tr>\n<td>6</td>\n<td>Sickness: @Check[fortitude|dc:26|name:Alchemical Sickness|options:area-effect|traits:disease] save or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure)</td>\n</tr>\n</tbody>\n</table>"
         },
         "action->Golem Antimagic": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.r34QDwKiWZoVymJa]\nGolem Antimagic",
@@ -2032,83 +2032,6 @@
         "action->Vicious Wounds": {
           "name": "Vicious Wounds",
           "description": "<p>On a successful jaws or claw Strike, the ceustodaemon viciously tears into its victim as similar wounds appear on its own body. The target takes an extra [[/r {1d6}]]{1d6 amount of damage}, and the ceustodaemon takes the same extra damage.</p>\n<p>If this extra damage to the target is doubled, due to a critical hit, the ceustodaemon takes double damage as well.</p>"
-        }
-      }
-    },
-    "Choral": {
-      "name": "Choral",
-      "languages": "tongues",
-      "publicNotes": "<p>Choral angels are incredible singers who fill the halls of Nirvana with pious chants and sacred hymns. They form from the souls of talented bards and other performers. While they shy away from conflict, they occasionally brave the mortal realm to deliver good omens and auspicious messages. Choral angels often serve the goddess Shelyn, but they can also serve other good deities and empyreal lords.</p>\n<hr />\n<p>The celestial hosts of angels are messengers and warriors, divided into choirs based on their abilities and purviews. The majority of angels are neutral good and live in Nirvana, the plane of virtue and enlightenment. However, some angels, including several angelic deities, have different alignments, and some even dwell on other planes. Regardless of alignment, angels remain benevolent messengers possessed with magical auras to aid their allies.</p>",
-      "saveDetails": "+1 status to all saves vs. magic",
-      "items": {
-        "spellcastingEntry->Divine Innate Spells": {
-          "name": "Divine Innate Spells"
-        },
-        "spell->Divine Decree (See Harmonize)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.sX2o0HH4RjJDAZ8C]\nDivine Decree (See Harmonize)"
-        },
-        "spell->Tongues (Constant)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.SwUiVavHKMWG7t5K]\nTongues (Constant)"
-        },
-        "spell->Heroism (See Harmonize)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.KqvqNAfGIE5a9wSv]\nHeroism (See Harmonize)"
-        },
-        "spell->Remove Curse": {
-          "name": "Remove Curse",
-          "description": "<p>Your touch grants a reprieve to a cursed creature. You attempt to counteract one curse afflicting the target. If the curse comes from a cursed item or other external source, a success indicates that the target creature can rid itself of the cursed item, but it doesn't remove the curse from the item.</p>",
-          "target": "1 creature"
-        },
-        "spell->Remove Disease": {
-          "name": "Remove Disease",
-          "description": "<p>Healing magic purges disease from a creature's body. You attempt to counteract one disease afflicting the target.</p>",
-          "target": "1 creature"
-        },
-        "spell->Calm Emotions (See Harmonize)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.b515AZlB0sridKSq]\nCalm Emotions (See Harmonize)"
-        },
-        "spell->Invisibility (At Will) (Self Only)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.XXqE1eY3w3z6xJCB]\nInvisibility (At Will) (Self Only)",
-          "target": "self"
-        },
-        "spell->Remove Fear (At Will)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.EfFMLVbmkBWmzoLF]\nRemove Fear (At Will)",
-          "target": "1 creature"
-        },
-        "spell->Sound Burst": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.wzLkNU3AAqOSKFPR]\nSound Burst"
-        },
-        "spell->Sound Burst (At Will)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.wzLkNU3AAqOSKFPR]\nSound Burst (At Will)"
-        },
-        "spell->Sound Burst (See Harmonize)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.wzLkNU3AAqOSKFPR]\nSound Burst (See Harmonize)"
-        },
-        "spell->Counter Performance (At Will)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.WILXkjU5Yq3yw10r]\nCounter Performance (At Will)"
-        },
-        "spell->Inspire Competence": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.f0Z5mqGA6Yu79B8x]\nInspire Competence"
-        },
-        "spell->Inspire Courage": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.IAjvwqgiDr3qGYxY]\nInspire Courage"
-        },
-        "strike-melee->Fist": {
-          "name": "Fist"
-        },
-        "strike-ranged->Piercing Hymn": {
-          "name": "Piercing Hymn"
-        },
-        "action->Harmonizing Aura": {
-          "name": "Harmonizing Aura",
-          "description": "<p>20 feet. Allies in the area gain a +2 status bonus to sonic damage rolls and a +1 status bonus to AC and all saves against sonic and auditory effects. Enemies in the area take a -2 status bonus to sonic damage rolls and a -1 status bonus to AC and all saves against sonic and auditory effects.</p>"
-        },
-        "action->Deafening Aria": {
-          "name": "Deafening Aria",
-          "description": "<p>On a critical hit with piercing hymn, the target is @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} for one minute.</p>"
-        },
-        "action->Harmonize": {
-          "name": "Harmonize",
-          "description": "<p>The choral angel adds its harmony to a choral angel ally within its harmonizing aura.</p>\n<p>The ally can cast @UUID[Compendium.pf2e.spells-srd.Item.b515AZlB0sridKSq]{Calm} or @UUID[Compendium.pf2e.spells-srd.Item.KqvqNAfGIE5a9wSv]{Heroism} on its next turn in place of its 3rd-rank @UUID[Compendium.pf2e.spells-srd.Item.wzLkNU3AAqOSKFPR]{Noise Blast} or heighten its 3rd-rank @UUID[Compendium.pf2e.spells-srd.Item.wzLkNU3AAqOSKFPR]{Noise Blast} by 1 level.</p>\n<p>If five different choral angels use Harmonize on the same choral angel ally, it can instead cast @UUID[Compendium.pf2e.spells-srd.Item.sX2o0HH4RjJDAZ8C]{Divine Decree} in place of its 3rd-rank @UUID[Compendium.pf2e.spells-srd.Item.wzLkNU3AAqOSKFPR]{Noise Blast}.</p>"
         }
       }
     },
