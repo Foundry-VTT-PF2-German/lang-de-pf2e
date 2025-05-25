@@ -968,7 +968,7 @@
     },
     "Lantern Beam": {
       "name": "Lantern Beam",
-      "description": "<p><strong>Requirements</strong> Your lantern light is shining</p>\n<hr />\n<p><strong>Effect</strong> Your lenses focus your light into a searing beam. You deal @Damage[((max(5,ceil(@actor.level/2)))d4)[fire]] damage to all creatures in a @Template[line|distance:30], with a @Check[reflex|against:class-spell|basic] saving throw against the higher of your class DC or spell DC. Your lantern light then extinguishes, and you can't use this ability or use your lantern light again for [[/r 1d4 #Recharge Lantern Beam]]{1d4 rounds}. At 11th level and every two levels thereafter, the damage increases by 1d4.</p>"
+      "description": "<p><strong>Requirements</strong> Your lantern light is shining</p>\n<hr />\n<p><strong>Effect</strong> Your lenses focus your light into a searing beam. You deal @Damage[((max(5,ceil(@actor.level/2)))d4)[fire]|options:area-damage] damage to all creatures in a @Template[line|distance:30], with a @Check[reflex|against:class-spell|basic|options:area-effect] saving throw against the higher of your class DC or spell DC. Your lantern light then extinguishes, and you can't use this ability or use your lantern light again for [[/r 1d4 #Recharge Lantern Beam]]{1d4 rounds}. At 11th level and every two levels thereafter, the damage increases by 1d4.</p>"
     },
     "Lantern Strobe": {
       "name": "Lantern Strobe",
@@ -1112,8 +1112,7 @@
     },
     "Offer Story": {
       "name": "Offer Story",
-      "description": "<p>You share a story of your travels with a creature within 30 feet. You gain the blessing of Isthralei as a +1 status bonus to AC and Will saves until the end of your next turn. On their next turn, the creature you shared a story with can take a single action, which has the auditory, concentrate, linguistic, and mental traits, to respond with their own story to gain the same benefits until the end of the following turn.</p>",
-      "selfEffect": "Effect: Offer Story"
+      "description": "<p>You share a story of your travels with a creature within 30 feet. You gain the blessing of Isthralei as a +1 status bonus to AC and Will saves until the end of your next turn. On their next turn, the creature you shared a story with can take a single action, which has the auditory, concentrate, linguistic, and mental traits, to respond with their own story to gain the same benefits until the end of the following turn.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.dzYnksinvWvfgBVt]{Effect: Offer Story}</p>"
     },
     "Once Bitten": {
       "name": "Once Bitten",
@@ -1209,7 +1208,7 @@
     },
     "Primal Howl": {
       "name": "Primal Howl",
-      "description": "<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p><strong>Effect</strong> Your animal companion screeches and howls, empowered with natural magic. All creatures in a @Template[cone|distance:30] take @Damage[(floor(@actor.level/2))d6[sonic]] damage for every 2 levels your companion has, with a @Check[fortitude|against:spell|basic] save against your spell DC. Creatures that fail become @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}, and creatures that critically fail become @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}. The fright is an emotion, fear, and mental effect.</p>"
+      "description": "<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p><strong>Effect</strong> Your animal companion screeches and howls, empowered with natural magic. All creatures in a @Template[cone|distance:30] take @Damage[(floor(@actor.level/2))d6[sonic]|options:area-damage] damage for every 2 levels your companion has, with a @Check[fortitude|against:spell|basic|options:area-effect] save against your spell DC. Creatures that fail become @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}, and creatures that critically fail become @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}. The fright is an emotion, fear, and mental effect.</p>"
     },
     "Primal Roar": {
       "name": "Primal Roar",
@@ -1749,7 +1748,7 @@
     },
     "Telekinetic Assault": {
       "name": "Telekinetic Assault",
-      "description": "<p>Your ghost unleashes a flurry of emotions, causing small objects and debris to fly about in a @Template[emanation|distance:20], dealing @Damage[1d6[bludgeoning]] for every 2 levels the ghost has (basic Reflex save). This uses a trained DC using the ghost's Charisma modifier or an expert DC if the ghost is specialized.</p>"
+      "description": "<p>Your ghost unleashes a flurry of emotions, causing small objects and debris to fly about in a @Template[emanation|distance:20], dealing @Damage[1d6[bludgeoning]|options:area-damage] for every 2 levels the ghost has (@Check[reflex|basic|options:area-effect] save). This uses a trained DC using the ghost's Charisma modifier or an expert DC if the ghost is specialized.</p>"
     },
     "Tell Me More": {
       "name": "Tell Me More",
@@ -1774,7 +1773,7 @@
     },
     "Thermal Eruption": {
       "name": "Thermal Eruption",
-      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p><strong>Effect</strong> You concentrate your thermal energy and explode it outward. All creatures in a @Template[emanation|distance:20] take @Damage[14d6[fire]] damage with a basic Reflex save. Afterward, you lose all effects of the Dormant Eruption feat until your next daily preparations.</p>"
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p><strong>Effect</strong> You concentrate your thermal energy and explode it outward. All creatures in a @Template[emanation|distance:20] take @Damage[14d6[fire]|options:area-damage] damage with a basic Reflex save. Afterward, you lose all effects of the Dormant Eruption feat until your next daily preparations.</p>"
     },
     "Thoughtful Reload": {
       "name": "Thoughtful Reload",
