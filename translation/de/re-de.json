@@ -767,6 +767,16 @@
           "Note": "Wenn Abstalar den Zauber <em>Heilung</em> wirkt, um eine einzelne Kreatur außer sich selbst zu heilen, erhält er Trefferpunkte in Höhe des Zaubergrads des Heilungszaubers zurück (@Damage[@item.rank[vitality,healing])."
         }
       },
+      "AeonStoneSwarm": {
+        "AeonResonance": {
+          "Defensive": "Defensive",
+          "DefensiveResistance": "Defensive Resonance",
+          "Illumination": "Illumination",
+          "IlluminationColor": "Illumination Resonance",
+          "Sensory": "Sensory",
+          "Subterfuge": "Subterfuge"
+        }
+      },
       "AlchemicalGolem": {
         "Sickness": "Krankheit"
       },
@@ -881,6 +891,7 @@
           "Fox": "Fuchs",
           "Fungus": "Fungus",
           "Gancanagh": "Gancanagh",
+          "Ghost": "Ghost",
           "Gimmerling": "Gimmerling",
           "Gosreg": "Gosreg",
           "Gourd": "Kürbis",
@@ -923,6 +934,7 @@
           "Scorpion": "Skorpion",
           "SeaSerpent": "Seeschlange",
           "Shark": "Hai",
+          "Skeleton": "Skeleton",
           "SnappingFlytrap": "Schnappfliegenfalle",
           "Spider": "Spinne",
           "Succubus": "Sukkubus",
@@ -938,7 +950,8 @@
           "WingedHumanoid": "Geflügelter Humanoider",
           "Wolf": "Wolf",
           "WolfDire": "Schreckenswolf",
-          "Yaoguai": "Yaoguai"
+          "Yaoguai": "Yaoguai",
+          "Zombie": "Zombie"
         },
         "Label": "Aktuelle Gestalt"
       },
@@ -1126,6 +1139,16 @@
       "MinotaurHuntedFear": {
         "Demoralize": "Ziel ist in Labyrinth oder ähnlicher schwer zu navigierender Struktur",
         "Survival": "Um sich nicht zu verirren"
+      },
+      "MixedMartialArtist": {
+        "StanceShift": {
+          "CrossElbow": "Cross Elbow",
+          "ElbowKnockoutStance": "Elbow Knockout Stance",
+          "GrapplingLimb": "Grappling Limb",
+          "SecureGrappleStance": "Secure Grapple Stance",
+          "ThrashingBarrageStance": "Thrashing Barrage Stance",
+          "ThrashingFist": "Thrashing Fist"
+        }
       },
       "ModularProstheses": {
         "GaffHook": "Gaff Hook",
@@ -2820,6 +2843,9 @@
           "gunslinger": {
             "Description": "Du hast deine Sinne geschärft und gelernt, auf Details zu achten. Dein Kompetenzgrad für Wahrnehmung steigt auf Meister."
           },
+          "investigator": {
+            "Description": "Through your adventures, you've developed keen awareness and attention to detail. Your proficiency rank in Perception increases to master."
+          },
           "ranger": {
             "Description": "Du hast deine Sinne geschärft und gelernt, auf Details zu achten. Dein Kompetenzgrad für Wahrnehmung steigt auf Meister."
           },
@@ -3589,6 +3615,9 @@
         "Sparkler": {
           "CriticalHitNote": "Bei einem Kritischen Treffer erhält das Ziel für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet}.",
           "StrikeLabel": "Wunderkerze"
+        },
+        "SpellguardShield": {
+          "RollOptionLabel": "Block spell that targets you"
         },
         "SplitheadBow": {
           "HealingLabel": "Vielpfeilbogen - Heilung"
@@ -5506,6 +5535,14 @@
         "OwlEyes": "Eulenaugen",
         "Wings": "Schwingen"
       },
+      "SpellEffectAugmentedBody": {
+        "AblativePlating": "Ablative Plating",
+        "ClockworkArm": "Clockwork Arm",
+        "ClockworkFist": "Clockwork Fist",
+        "Prompt": "Select an augmentation.",
+        "SpinedFingertips": "Spined Fingertips",
+        "SpringLoadedLegs": "Spring-Loaded Legs"
+      },
       "SpellEffectBoneFlense": {
         "Label": "Bone Flense"
       },
@@ -5516,6 +5553,12 @@
         "Prompt": "Wähle eine Evolution",
         "Sight": "Dämmersicht und Dunkelsicht",
         "Speed": "Zustandsbonus von +20 Fuß/6 m auf die Bewegungsrate"
+      },
+      "SpellEffectFieryBody": {
+        "Note": "The attacker takes @Damage[(ternary(gte(@item.level,9),4,3))d6[fire]] damage."
+      },
+      "SpellEffectFurnaceBody": {
+        "Note": "The attacker takes @Damage[3d6[fire]] damage."
       },
       "SpellEffectGluttonsJaw": {
         "Text": "Wenn du triffst und Schaden verursachst, erhältst du [[/r (ceil(@item.level/2))d6 #Temporäre Trefferpunkte]]{Temporäre Trefferpunkte}."
@@ -5781,7 +5824,7 @@
         "RockslideSpell": "Der Zauber wandelt innerhalb des Wirkungsbereiches eine Anzahl 5 Fuß/1,50 m-Felder entsprechend des Zaubergrads zu Schwierigem Gelände um. Diese Felder müssen sich auf der Erdoberfläche befinden. Der Zauber erhält die Kategorie Erde.",
         "SafeguardSpell": "Solltest du als nächste Handlung einen Zauber mit einem Flächeneffekt wirken, so bist du von dem Zauber nicht betroffen, selbst wenn du dich in seinem Wirkungsbereich befindest.",
         "ScintillatingSpell": "Sofern du als nächste Handlung einen Zauber wirkst, der nicht die Kategorie Dunkel besitzt, über keine Wirkungsdauer verfügt und von Kreaturen einen Reflexwurf verlangt, explodiert der Zauber in strahlenden Lichtern neben seinen sonstigen Effekten. Jede Kreatur, deren Reflexwurf misslingt, erhält 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet} (bzw. 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind} im Fall eines Kritischen Fehlschlages).",
-        "SecondaryDetonationArray": "Sofern du als nächste Handlung einen Zauber wirkst, der Schaden verursacht, keine Wirkungsdauer besitzt und auf eine Fläche einwirkt, erscheint innerhalb des Wirkungsbereiches ein Kreis aus glühenden Runen in einer @Template[burst|distance:5]{5 Fuß/1,50 m Explosion}. Zu Beginn deines nächsten Zuges explodiert der Kreis und fügt jeder Kreatur innerhalb des Kreises 1W6 Kraftschaden (@Damage[(@item.level)d6[force]]) pro Grad des Zaubers zu (@Check[reflex|against:spell]{einfacher Reflexwurf} gegen deinen Zauber-SG). Sollte der Zauber eine andere Art von Schaden verursachen, so verursacht die Explosion stattdessen diese Schadensart (@Damage[(@item.level)d6[@actor.flags.pf2e.spellshape.arrayDamage]], oder eine der verursachten Schadensarten nach deiner Wahl, sollte der Zauber mehrere Schadensarten verursachen können).",
+        "SecondaryDetonationArray": "If your next action is to Cast a Spell that deals damage, has no duration, and affects an area, a glowing magic circle appears in a @Template[burst|distance:5] within that area. At the beginning of your next turn, the circle detonates, dealing @Damage[(@item.level)d6[force]|options:area-damage] damage to all creatures within the circle, with a @Check[reflex|against:spell|options:area-effect,damaging-effect]. If the spell dealt a different type of damage, the circle deals @Damage[(@item.level)d6[@actor.flags.pf2e.spellshape.arrayDamage]|options:area-damage]{this type of damage instead} (or one type of your choice if the spell could deal multiple types of damage)",
         "SeneschalSpell": "Sofern du als nächste Handlung einen Zauber wirkst und dein Schützling nicht weiter als 30 Fuß/9 m entfernt ist, kannst du den Zauber stattdessen von deinem Schützling ausgehen lassen. Diese Kreatur kann ihre Reaktion nutzen, um grob die Anrufungen des Zaubers zu vollenden, wodurch der Zauber dich betreffend die Kategorie Subtil erlangt (aber nicht für deinen Schützling), da die Manifestation allein um deinen Schützling herum erscheint.",
         "SinbladedSpell": "If you either succeed on your attack roll or the target fails its saving throw against the spell, you deal @Damage[(@item.rank)[bleed]] damage to the target.",
         "SnowdriftSpell": "Wähle eine Kreatur am Boden, die von dem Zauber betroffen ist. Jedes Feld am Boden unter und angrenzend zu dieser Kreatur füllt sich mit knöchelhohem Schnee. Diese Felder sind bis zum Beginn deines nächsten Zuges Schwieriges Gelände. Eine Kreatur kann Interagieren nutzen, um ein Feld vom Schnee zu räumen. Der Schnee in einem Feld schmilzt, sollte das Feld einem Feuereffekt ausgesetzt werden.",
@@ -6023,6 +6066,11 @@
         "Water": "Wasser"
       },
       "Tengu": {
+        "TenguFan": {
+          "GustOfWind": "You can cast the 1st-rank @UUID[Compendium.pf2e.spells-srd.Item.g8QqHpv2CWDwmIm1]{Gust of Wind} spell by activating your tengu feather fan. @Check[fortitude|against:class-spell|traits:air] save.",
+          "LightningBolt": "You can cast the 5th-rank @UUID[Compendium.pf2e.spells-srd.Item.9AAkVUCwF6WVNNY2]{Lightning Bolt} spell by activating your tengu feather fan. @Check[reflex|against:class-spell|basic|traits:electricity] save.",
+          "WallOfWind": "You can cast the 3rd-rank @UUID[Compendium.pf2e.spells-srd.Item.it4ZsAi6XgvGcodc]{Wall of Wind} spell by activating your tengu feather fan. @Check[fortitude|against:class-spell|traits:air]{Fortitude saving throw} save."
+        },
         "WeaponFamiliarity": {
           "Prompt1": "Wähle eine Waffe aus der Schwerter-Gruppe.",
           "Prompt2": "Wähle eine zweite Waffe aus der Schwerter-Gruppe."
@@ -6125,6 +6173,7 @@
         "Cane": "Nutze Stock beidhändig",
         "Katana": "Nutze Katana beidhändig",
         "Khakkhara": "Nutze Khakkhara beidhändig",
+        "MusketStaff": "Use Musket Staff Two-Handed",
         "OrcSkewermaul": "Use Orc Skewermaul Two-Handed",
         "ReinforcedStock": "Nutze Verstärkten Schaft beidhändig",
         "RhokaSword": "Nutze Rhoka-Schwert beidhändig",
@@ -6399,6 +6448,35 @@
       "Yaoguai": {
         "AwakenedYaoguai": {
           "Prompt": "Wähle eine yaoguaische Herkunft."
+        },
+        "LegendaryMonster": {
+          "Effect": "@UUID[Compendium.pf2e.feat-effects.Item.ELCODoiGDBEqRAtT]{Effect: Legendary Monster}",
+          "Options": {
+            "Damage": "Additional spirit damage",
+            "Enlarge": "4th rank Enlarge",
+            "Fly": "Fly Speed"
+          },
+          "Prompt": "Choose an additional benefit",
+          "RollOptionLabel": "Use Legendary Monster",
+          "Text": {
+            "Damage": "Your spiritual power erupts to punish your enemies. You deal an additional 1d4 spirit damage with all Strikes and attack spells, and your Strikes and attack spells gain the spirit trait.",
+            "Description": "Once per day when you Unleash Yaoguai Might, you can gain one of the following additional benefits, which persists for 1 minute or until you Change Shape again.",
+            "Enlarge": "Your body grows to impossible heights. Your Enlarge effect is heightened to 4th rank.",
+            "Fly": "You can leap off the air itself. You gain the effects of the *fly* spell.",
+            "Frequency": "You can Unleash Yaoguai Might any number of times per day.",
+            "Title": "**Legendary Monster**"
+          }
+        },
+        "UnleashYaoguaiMight": {
+          "BornOfAnimal": "**Animal** Your hide thickens, granting a +1 circumstance bonus to AC.",
+          "BornOfCelestial": "**Celestial** You recover some of your celestial perfection, granting you and all allies within 15 feet a +1 status bonus to attack rolls.",
+          "BornOfElements": "**Elements** You're surrounded in wind and dust, granting concealment each round that you spend at least 1 action that has the move trait. You can't use this concealment to Hide or Sneak, as normal for sources of obvious concealment.",
+          "BornOfItem": "**Object ** Your skin transmutes partially into an inorganic substance, granting resistance 5 to your choice of bludgeoning, piercing, or slashing.",
+          "BornOfVegetation": "**Vegetation** You trigger an accelerated growth, gaining fast healing 5.",
+          "Description": "As you enter your yaoguai form, you draw upon your internal magic to assume an even greater form. When you Change Shape to enter your yaoguai form, you can spend an additional action to gain the effects of Enlarge and an additional effect based on your heritage. This effect persists for 1 minute or until you Change Shape again.",
+          "Effect": "@UUID[Compendium.pf2e.feat-effects.Item.OBsItGQScxHyUcmR]{Effect: Unleash Yaoguai Might}",
+          "Frequency": "**Frequency** once per day",
+          "UsedMoveAction": "Used action that has the move trait."
         }
       },
       "Zombie": {
