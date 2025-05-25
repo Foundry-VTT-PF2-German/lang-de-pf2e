@@ -697,7 +697,7 @@
         },
         "action->Bombard": {
           "name": "Bombardieren",
-          "description": "<p>Der Mechanische Kanonier feuert einen explosiven Schuss mit einer Reichweite von bis zu 200 Fuß/60 m ab, der in einem @Template[burst|distance:20]{20 Fuß/6 m-Radius} explodiert. Kreaturen innerhalb der Explosion nehmen @Damage[5d10[bludgeoning]]{5W10 Punkte Wuchtschaden} (@Check[reflex|dc:36|basic]{einfacher Reflexwurf}).</p>"
+          "description": "<p>The clockwork cannoneer launches an explosive shot up to a range of 200 feet that explodes in a @Template[burst|distance:20]. Creatures within the burst take @Damage[5d10[bludgeoning]|options:area-damage] damage (@Check[reflex|dc:36|basic|options:area-effect]).</p>"
         },
         "action->Muzzleburn": {
           "name": "Mündungsfeuer",
@@ -744,6 +744,38 @@
         "action->Fire Pin": {
           "name": "Anker abfeuern",
           "description": "<p><strong>Auslöser</strong> Eine Kreatur, die Ebeschra sehen kann, beginnt einen Teleportationseffekt oder einen anderen Effekt, der eine Anzahl an Zielen auf eine andere Ebene transportieren würde</p>\n<hr />\n<p><strong>Effekt</strong> Ebeschra schleudert einen Kristall auf die auslösende Kreatur. Diese Kreatur und alle Kreaturen innerhalb von @Template[emanation|distance:50]{50 Fuß/15 m} zu dieser Kreatur nehmen @Damage[16d8[piercing]]{16W8 Punkte Stichschaden} (@Check[reflex|dc:45|basic|traits:abjuration,divine,environmental,kaiju,hazard]{einfacher Reflexwurf}) und zusätzliche Effekte basierend auf dem Ergebnis des Wurfs.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur wird nicht betroffen.</p>\n<p><strong>Erfolg</strong> Dem Effekt wurde entgegengewirkt und die Kreatur kann den Teleportations- oder Ebenenreisen-Effekt für 1 Minute nicht mehr nutzen.</p>\n<p><strong>Fehlschlag</strong> Wie Erfolg, aber für 1 Tag anstelle von 1 Minute.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie Erfolg, aber für 1 Woche anstelle von 1 Minute. Zusätzlich gilt die Kreatur als unter dem Kristall gehalten und muss drei erfolgreiche Würfe gegen SG 45 ablegen, um dem Kristall zu [[/act escape dc=45]].</p>"
+        }
+      }
+    },
+    "Crystal Xorn": {
+      "name": "Crystal Xorn",
+      "acDetails": "all-around vision",
+      "publicNotes": "<p>These squat, rotund elementals have three legs, three arms, three eyes, and one massive maw, which they fill with the gems and metals they find so delicious.</p>\n<hr />\n<p>Earth elementals make excellent bodyguards for adventuresome spelunkers and are ideal protectors of important subterranean locations such as vaults and treasuries.</p>",
+      "speed": "earth glide",
+      "items": {
+        "strike-melee->Jaw": {
+          "name": "Jaw"
+        },
+        "strike-melee->Claw": {
+          "name": "Claw"
+        },
+        "action->Tremorsense (Imprecise) 60 feet": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.j2wsK6IsW5yMW1jW]\nTremorsense (Imprecise) 60 feet"
+        },
+        "action->Claw Frenzy": {
+          "name": "Claw Frenzy",
+          "description": "<p>The xorn makes three claw Strikes; no more than two can be against the same target. These attacks count toward the xorn's multiple attack penalty, but the penalty doesn't increase until after all the attacks have been made.</p>"
+        },
+        "action->Crystal Corruption": {
+          "name": "Crystal Corruption",
+          "description": "<p>This affliction's sickened, slowed, and paralyzed conditions can't be removed until this affliction is removed.</p>\n<p>A creature affected by crystal corruption slowly turns into crystal until it is petrified. Creatures with both the earth and elemental traits instead become carriers and suffer no ill effects aside from gaining the vulnerability to sonic.</p>\n<p><strong>Saving Throw</strong> @Check[fortitude|dc:22]</p>\n<hr />\n<p><strong>Stage 1</strong> @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (1 hour)</p>\n<p><strong>Stage 2</strong> vulnerable 5 sonic and sickened 1 (1 day)</p>\n<p><strong>Stage 3</strong> vulnerable 5 sonic and @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} (1 day)</p>\n<p><strong>Stage 4</strong> vulnerable 10 sonic and @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} (1 day)</p>\n<p><strong>Stage 5</strong> vulnerable 10 sonic and the creature is permanently @UUID[Compendium.pf2e.conditionitems.Item.dTwPJuKgBQCMxixg]{Petrified}.</p>"
+        },
+        "action->Earth Glide": {
+          "name": "Earth Glide",
+          "description": "<p>The xorn can Burrow through any earthen matter, including rock. When it does so, the xorn moves at its full burrow Speed, leaving no tunnels or signs of its passing.</p>"
+        },
+        "lore->Geology Lore": {
+          "name": "Geology Lore"
         }
       }
     },
@@ -1028,7 +1060,7 @@
         },
         "action->Blasting Breath": {
           "name": "Verwüstender Odem",
-          "description": "<p>Fafnheir stößt einen katastrophalen Feuersturm aus, der mit Blitzen und orkanartigen Winden gespickt ist und in einem @Template[cone|distance:90]{90 Fuß/27 m Kegel} @Damage[20d6[fire]]{20W6 Feuerschaden} verursacht (@Check[reflex|dc:48|basic]{einfacher Reflexwurf}). Außerdem fügt Fafnheir einer einzelnen Kreatur seiner Wahl innerhalb des Wirkungsbereiches seines Verwüstenden Odems zusätzlich @Damage[10d6[electricity]]{10W6 Elektrizitätsschaden} zu, der durch denselben Rettungswurf bestätigt wird. Kreaturen innerhalb des Wirkungsbereiches müssen zudem einen erfolgreichen @Check[fortitude|dc:48|traits:damaging-effect]{Zähigkeitswurf} ablegen, um den mächtigen Winden und ohrenbetäubenden Donnerschlägen von Fafnheirs Odems zu widerstehen. Bei einem Fehlschlag wird die betroffene Kreatur von den Effekten des Zaubers @UUID[Compendium.pf2e.spells-srd.Item.g8QqHpv2CWDwmIm1]{Windstoß} erfasst, wobei Kreaturen der Größenkategorie Groß oder kleiner wie üblich davon beeinflusst werden. Außerdem erleiden Kreaturen mit einem Fehlschlag bei ihrem Zähigkeitswurf für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Taub}; bei einem Kritischen Fehlschlag erleidet die Kreatur den Zustand Taub permanent.</p>"
+          "description": "<p>Fafnheir exhales a cataclysmic firestorm laced with lightning and hurricane-strength winds, dealing @Damage[20d6[fire]|options:area-damage] damage in a @Template[cone|distance:90] (@Check[reflex|dc:48|basic|options:area-effect] save). Additionally, Fafnheir deals @Damage[10d6[electricity]|options:area-damage]{10d6} additional electricity damage to one creature within the area of Blasting Breath of Fafnheir's choice, determined by the same basic Reflex save. Creatures in the area must also attempt a @Check[fortitude|dc:48|name:Resist Winds|options:damaging-effect] save to resist the powerful winds and deafening thunderclaps of the breath. Creatures that fail experience the effects of @UUID[Compendium.pf2e.spells-srd.Item.g8QqHpv2CWDwmIm1]{Gust of Wind}, affecting Large or smaller creatures as normal. Finally, creatures that fail their Fortitude save become @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} for 1 minute (permanently deafened on a critical failure).</p>"
         },
         "action->Boiling Blood": {
           "name": "Siedendes Blut",
@@ -3204,7 +3236,7 @@
         },
         "action->Acid Spew": {
           "name": "Säure speien",
-          "description": "<p>Somnalu stößt eine Säurefontäne aus seiner Haut aus, die sämtliche Kreaturen in einer @Template[line|distance:60|width:15]{15 Fuß/4,50 m breiten und 60 Fuß/18 m langen Linie} einhüllt. Jede Kreatur, die sich innerhalb des Wirkungsbereiches befindet, erleidet @Damage[10d8[acid]]{10W8 Säureschaden} (@Check[reflex|dc:33|basic]{einfacher Reflexwurf}). Anschließend kann Somnalu diese Fähigkeit [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht erneut nutzen.</p>"
+          "description": "<p>Somnalu jets acid from its skin, dousing all creatures in a @Template[line|distance:60|width:15]{15-foot-wide, 60-foot-long line}. Each creature in this area takes @Damage[10d8[acid]|options:area-damage] damage (@Check[reflex|dc:33|basic|options:area-effect] save). It can't use this ability again for [[/gmr 1d4 #Recharge Acid Spew]]{1d4 rounds}.</p>"
         },
         "action->Caustic Trench": {
           "name": "Säuregraben",
@@ -3328,7 +3360,7 @@
         },
         "action->Accursed Shriek": {
           "name": "Furchtbares Kreischen",
-          "description": "<p>Der Geisterteufel stößt ein furchterregendes Wiehern in einem @Template[cone|distance:30]{Kegel von 30 Fuß/9 m} aus, das @Damage[5d10[sonic]]{5W10 Schallschaden} verursacht. Jede Kreatur innerhalb des Wirkungsbereiches muss einen @Check[reflex|dc:29]{Reflexwurf} ablegen. Der Geisterteufel kann seine Fähigkeit Furchtbares Kreischen anschließend für [[/gmr 1d4 #Runden]]{1W4 Runden} nicht erneut einsetzen.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist vom Effekt dieser Fähigkeit nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erleidet den halben Schaden.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet den vollen Schaden sowie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2} durch das ohrenbetäubende Gekreische.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erleidet den vollen Schaden sowie den Zustand Verängstigt 2; zudem ist sie Verflucht. Das Echo des schrecklichen Gewiehers des Geisterteufels hallt im Geist der Kreatur wider und stört ihre Konzentrationsfähigkeiten. Die verfluchte Kreatur leidet so lange am Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 2}, bis der Fluch gebrochen wurde.</p>"
+          "description": "<p>The Spectral Devil unleashes a terrifying whinny in a @Template[cone|distance:30] that deals @Damage[5d10[sonic]|options:area-damage] damage. Each creature in the area must attempt a @Check[reflex|dc:29|options:area-effect,damaging-effect] save.</p>\n<p>The Spectral Devil can't use Accursed Shriek for [[/gmr 1d4 #Recharge Accursed Shriek]]{1d4 rounds}.</p>\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} by the eerie noise.</p>\n<p><strong>Critical Failure</strong> The creature takes full damage, is frightened 2, and becomes cursed. The victim's mind echoes with the sound of the whinny, impairing concentration. The cursed creature is @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2} until the curse is removed.</p>"
         },
         "action->Trample": {
           "description": "<p>Mittelgroß oder kleiner, Geisterhafter Huf, @Check[reflex|dc:26|basic]{einfacher Reflexwurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Trample]</p>"
