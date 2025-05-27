@@ -1445,9 +1445,8 @@
       "name": "Combat Engineer",
       "publicNotes": "<p>Be it a bridge to get a battalion across a river, watchtowers to pierce the fog of war, or fortifications to secure territory, armies have always needed those who can build. The combat engineer is a soldier specializing in these sorts of constructions.</p>\n<hr />\n<p>A military serves to defend and fight on behalf of nations and can be trained and deployed in various ways.</p>",
       "items": {
-        "weapon->Entrenching Tool": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.6I4YJAQUbTAqbpsI]\nEntrenching Tool",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.6I4YJAQUbTAqbpsI]\n<p>Functions as a pick.</p>"
+        "weapon->Entrenching Tool (Functions as a Pick)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.6I4YJAQUbTAqbpsI]\nEntrenching Tool (Functions as a Pick)"
         },
         "strike-melee->Entrenching Tool": {
           "name": "Entrenching Tool"
@@ -1503,6 +1502,8 @@
     "Conscript Squad": {
       "name": "Conscript Squad",
       "publicNotes": "<p>Not all soldiers are on the battlefield by choice. Often armed with modified farm implements, conscripts are usually poorly trained and poorly organized. In the heat of battle, they're prone to misunderstand or disobey orders, causing casualties on both sides.</p>\n<hr />\n<p>A military serves to defend and fight on behalf of nations and can be trained and deployed in various ways.</p>",
+      "saveDetails": "–2 circumstance to all saves vs. fear",
+      "speed": "troop movement",
       "items": {
         "action->–2 Circumstance to All Saves vs. Fear": {
           "name": "–2 Circumstance to All Saves vs. Fear"
@@ -4628,6 +4629,7 @@
     "Heavy Cavalry": {
       "name": "Heavy Cavalry",
       "publicNotes": "<p>A charging band of knights, mounted upon heavy warhorses and clad in steel plate, is a sight to be feared on the battlefield. The weight of their armor, however, makes them ill-suited to extended overland maneuvers. Squads of squires are needed to tend to horses, repair armor, and otherwise support the heavy cavalry group between battles. Despite these limitations, their ability to crash through enemy lines makes them an invaluable tool for professional armies.</p>\n<hr />\n<p>A military serves to defend and fight on behalf of nations and can be trained and deployed in various ways.</p>",
+      "speed": "troop movement",
       "items": {
         "action->Mounted Troop": {
           "name": "Mounted Troop",
@@ -4645,7 +4647,7 @@
         },
         "action->Thunder of Hooves": {
           "name": "Thunder of Hooves",
-          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The heavy cavalry Strides. At the end of their movement, the cavalry can either attempt an Athletics check to @UUID[Compendium.pf2e.actionspf2e.Item.ge56Lu1xXVFYUnLP]{Trip} each adjacent enemy or an Intimidation check to @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} each enemy within 30 feet. Roll only once and compare the result to each enemy's Reflex DC (for Trip) or Will DC (for Demoralize).</p>"
+          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The heavy cavalry Strides. At the end of their movement, the cavalry can either attempt an Athletics check to [[/act trip]] each adjacent enemy or an Intimidation check to [[/act demoralize]] each enemy within 30 feet. Roll only once and compare the result to each enemy's Reflex DC (for Trip) or Will DC (for Demoralize).</p>"
         },
         "action->Trample": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.UNah0bxXxkcZjxO3]\n<p>Medium or smaller, @Damage[(2d8+7)[bludgeoning]], @Check[reflex|dc:22|basic]; creatures that fail the save are also knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Trample]</p>"
@@ -4659,11 +4661,11 @@
       "name": "Hellknight Cavalry Brigade",
       "hpDetails": "troop defenses",
       "publicNotes": "<p>A Hellknight cavalry brigade consists of several Hellknights and a single field-maralictor, all wearing the distinctive armor of their order and wielding lances. The maralictor speaks for the brigade, questioning travelers the brigade encounters and barking orders. A Hellknight brigade is typically based at a keep or other fortification controlling an area measured by a day's ride in every direction—about 25 miles. Farther-ranging missions are possible but require substantial logistical support.</p>\n<hr />\n<p>A military serves to defend and fight on behalf of nations and can be trained and deployed in various ways.</p>",
-      "speed": "troop movement",
+      "speed": "trailblazing stride, troop movement",
       "items": {
         "action->Mounted Troop": {
           "name": "Mounted Troop",
-          "description": "<p>Effects that target only animals or only humanoids might not work on the cavalry brigade, subject to the GM's discretion.</p>"
+          "description": "<p>Effects that target only animals or only humanoids might not work on the Hellknight cavalry brigade, subject to the GM's discretion.</p>"
         },
         "action->Troop Defenses": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 90 (3 segments), 45 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
@@ -4679,8 +4681,8 @@
           "name": "Lance Charge",
           "description": "<p>The brigade Strides twice with a +10-foot circumstance bonus to its Speed. If it moves at least 10 feet, the brigade deals @Damage[(3d8+14)[piercing]|options:area-damage] damage with a @Check[reflex|dc:26|basic|options:area-effect] save to each enemy in a @Template[type:emanation|distance:10] at the end of its movement.</p>"
         },
-        "action->Swing from the Saddle": {
-          "name": "Swing from the Saddle",
+        "action->Stab from the Saddle": {
+          "name": "Stab from the Saddle",
           "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The brigade engages in a coordinated lance attack against each enemy in a @Template[type:emanation|distance:10] with a @Check[reflex|dc:23|basic|options:area-effect] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[(1d6+3)[piercing]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d6+10)[piercing]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(3d6+14)[piercing]|options:area-damage] damage</p>"
         },
         "action->Trailblazing Stride": {
@@ -4992,6 +4994,7 @@
     },
     "Infantry Soldier": {
       "name": "Infantry Soldier",
+      "acDetails": "(20 with shield raised)",
       "publicNotes": "<p>Though low on the military hierarchy, infantry are still highly disciplined warriors, challenging for any ordinary person to face in combat.</p>\n<hr />\n<p>A military serves to defend and fight on behalf of nations and can be trained and deployed in various ways.</p>",
       "items": {
         "strike-melee->Shortsword": {
@@ -5733,6 +5736,7 @@
     "Line Infantry": {
       "name": "Line Infantry",
       "publicNotes": "<p>Infantry are the backbone of most armies. These professional soldiers, marked by matching uniforms, straightforward tactics, and the drive to follow well-practiced orders, make up the bulk of most military forces—but are often considered the most expendable.</p>\n<hr />\n<p>A military serves to defend and fight on behalf of nations and can be trained and deployed in various ways.</p>",
+      "speed": "troop movement",
       "items": {
         "action->No Retreat": {
           "name": "No Retreat",
@@ -5977,6 +5981,7 @@
     "Mage Knight": {
       "name": "Mage Knight",
       "publicNotes": "<p>Though many spellcasters prefer to defend themselves with magic, some recognize that there's no substitute for a suit of steel. Mage knights defy the stereotype that spellcasters are frail, delicate, and passive and instead choose to hold their own in close-quarter combat.</p>\n<hr />\n<p>A military serves to defend and fight on behalf of nations and can be trained and deployed in various ways.</p>",
+      "saveDetails": "(Reflex +16 against damaging effects)",
       "items": {
         "spellcastingEntry->Arcane Prepared Spells": {
           "name": "Arcane Prepared Spells"
@@ -7111,6 +7116,7 @@
     "Phalanx Formation": {
       "name": "Phalanx Formation",
       "publicNotes": "<p>A proper phalanx formation requires the simultaneous use of spear and shield in order to attack enemies near and far while defending each other. Impressive amounts of teamwork are not only beneficial but essential to the survival of the troop</p>\n<hr />\n<p>A military serves to defend and fight on behalf of nations and can be trained and deployed in various ways.</p>",
+      "speed": "troop movement",
       "items": {
         "action->Troop Defenses": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.EawOw47nHueUPnYc]\n<p><strong>Thresholds</strong> 66 (3 segments), 33 (2 segments)</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.TroopDefenses]</p>"
@@ -7128,7 +7134,7 @@
         },
         "action->Spears Out!": {
           "name": "Spears Out!",
-          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The phalanx formation thrusts their longspears out in all directions, striking all unfortunate enough to be near them. Each enemy in a @Template[type:emanation|distance:10] must attempt a @Check[reflex|dc:21|basic] save.</p>\n<p>The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[(1d8+2)[piercing]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d8+5)[piercing]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(3d8+5)[piercing]|options:area-damage] damage</p>"
+          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The phalanx formation thrusts their longspears out in all directions, striking all unfortunate enough to be near them. Each enemy in a @Template[type:emanation|distance:10] must attempt a @Check[reflex|dc:21|basic|options:area-effect] save.</p>\n<p>The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[(1d8+2)[piercing]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d8+5)[piercing]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(3d8+5)[piercing]|options:area-damage] damage</p>"
         },
         "lore->Warfare Lore": {
           "name": "Warfare Lore"
