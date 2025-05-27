@@ -1110,7 +1110,7 @@
     "Breath of Despair": {
       "name": "Atem der Verzweiflung",
       "description": "<p>Die steinernen Gesichter an den Wänden scheinen einzuatmen und dann Tentakel aus Finsternis auszuatmen, welche jenen Schaden zufügen sollen, welche die Gruft schänden wollen.</p>",
-      "disable": "<p>@Check[thievery|dc:23] (expert) to disarm the trap's sensors in the chamber floor, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (3rd rank; counteract DC 23) to counteract the faces. Breaking one of the faces on the walls reduces the trap's save DC, attack rolls, and its total actions by 1 per broken face; if all four faces are destroyed, the trap is disabled.</p>",
+      "disable": "<p>@Check[thievery|dc:23]{Diebeskunst} (Experte), um Druckplatten im Boden zu entschärfen; oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (3. Grad; Entgegenwirken-SG 23), um den Gesichtern @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenzuwirken}. Wird eines der Gesichter in den Zustand Beschädigt versetzt, reduziert dies den SG des Rettungswurfes gegen die Falle, ihre Angriffswürfe und die Gesamtanzahl ihrer Aktionen jeweils um 1; sollten alle vier Gesichter zerstört werden, ist die Falle ausgeschaltet.</p>",
       "hpDetails": "Tp für jedes Gesicht, 4 Gesichter",
       "reset": "<p>Die Falle setzt sich nach 1 Minute zurück</p>",
       "routine": "<p>(4 Aktionen) Die Falle verliert 1 Aktion pro Zug pro ausgeschaltetem Gesicht. Mit jeder Aktion speit ein anderes Gesicht aus seinem Mund einen zuckenden Odem der Dunkelheit auf ein Ziel in Bereich C2. Eine Kreatur kann dabei pro Runde nur einmal zum Ziel werden; sollten sich weniger als vier Kreaturen im Raum befinden, kann die Falle nicht alle vier Aktionen voll ausnutzen.</p>",
@@ -2247,7 +2247,7 @@
     "Explosion Bear": {
       "name": "Explodierender Bär",
       "description": "<p>Eine unsichtbare Rune auf dem Bären lässt ihn explodieren, wenn er zerstört wird. Er explodiert ferner, sollte er seinen Tanz vollenden können, während jemand im Raum ist.</p>",
-      "disable": "<p>@Check[thievery|dc:48|traits:action:disable-a-device|name:Erase the Rune] (legendary) to erase the rune without triggering the explosion (the DC is increased to @Check[thievery|dc:51|traits:action:disable-a-device|name:Erase the Rune] while the bear is moving), @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (10th rank, counteract DC 39) to counteract the rune, or Nyrissa says the words \"Good bear\" to the trap before it finishes its dance.</p>",
+      "disable": "<p>@Check[thievery|dc:48|traits:action:disable-a-device]{Diebeskunst} (Legende), um die Rune auszulöschen, ohne die Explosion auszulösen (@Check[thievery|dc:51|traits:action:disable-a-device|]{Diebeskunst} der SG steigt, während sich der Bär bewegt); @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (10. Grad, Entgegenwirken-SG 39), um der Rune @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenzuwirken}; Nyrissa sagt zu der Falle „Braver Bär“, ehe der Bär seinen Tanz beendet.</p>",
       "stealth": "<p>(Legende)</p>",
       "items": {
         "action->Fireball": {
@@ -2874,7 +2874,7 @@
     "Glyph of Warding (Kingmaker)": {
       "name": "Glyphe der Abwehr (Königsmacher)",
       "description": "<p>Eine Glyphe in Form einer Sanduhr leuchtet lila auf, dann scheint rasch der Sand herauszulaufen, wie ein Symbol dafür, dass plötzlich die Zeit abgelaufen ist.</p>",
-      "disable": "<p>@Check[thievery|dc:34] (trained) to remove the glyph without triggering it, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (7th rank, counteract DC 34) to counteract the glyph.</p>",
+      "disable": "<p>@Check[thievery|dc:34]{Diebeskunst} (Geübt), um die Glyphe zu entfernen, ohne den Effekt auszulösen, oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (7. Grad, Entgegenwirken-SG 34), um der Glyphe @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenzuwirken}.</p>",
       "stealth": "<p>(Geübt)</p>",
       "items": {
         "action->Release Spell": {
@@ -3682,7 +3682,7 @@
         },
         "action->Apocalyptic Shriek": {
           "name": "Apokalpytisches Kreischen",
-          "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p><strong>Effect</strong> The immense mandragora emits a devastating shriek. Each non-mandragora creature within @Template[emanation|distance:30]{30 feet} must attempt a @Check[will|dc:42|options:area-effect,damaging-effect] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} and takes @Damage[8d8[mental]|options:area-damage] damage.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} and takes @Damage[16d8[mental]|options:area-damage] damage.</p>\n<p><strong>Critical Failure</strong> The creature is sickened 2, @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1}, and takes @Damage[150[mental]|options:area-damage] damage. As long as the creature remains sickened, this slowed condition value can't be reduced below 1.</p>"
+          "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p><hr />\n<hr />\n<p><strong>Effekt</strong> Der Mandragoragigant stößt ein verheerendes Kreischen aus. Jede Nichtmandragora innerhalb von @Template[emanation|distance:30]{30 Fuß/9 m} muss einen @Check[will|dc:42|options:area-effect,damaging-effect]{Willenswurf} ablegen:</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1} und erleidet @Damage[8d8[mental]|options:area-damage]{8W8 Punkte Mentalen Schaden}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 2} und erleidet @Damage[16d8[mental]|options:area-damage]{16W8 Punkte Mentalen Schaden}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erhält die Zustände Kränkelnd 2 und @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1} und erleidet @Damage[150[mental]|options:area-damage]{150 Punkte Mentalen Schaden}. Solange der Zustand Kränkelnd anhält, kann der Zustandswert für Verlangsamt nicht unter 1 reduziert werden.</p>"
         },
         "action->Blood Drain": {
           "name": "Blut saugen",
@@ -4876,13 +4876,13 @@
     "Locking Alarm": {
       "name": "Türalarm",
       "description": "<p>Jeder Versuch, die Tür zu öffnen ohne zuerst das Symbol von Yhidothrus (Ein Stundenglas) mit einer Fingerspitze auf die Tür zu zeichnen, lässt ein magisches Zeichen grün aufleuchten, verschließt die Tür und löst den Alarm aus.</p>",
-      "disable": "<p>@Check[thievery|dc:32] (expert) to bypass the magical triggers on the door, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (5th rank, counteract DC 29) to counteract the alarm.</p>",
+      "disable": "<p>@Check[thievery|dc:32]{Diebeskunst} (Experte), um die magischen Auslöser auf der Tür zu umgehen, oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (Grad 5, @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken} SG 29), um dem Alarm entgegenzuwirken.</p>",
       "reset": "<p>Der <em>Türalarm</em> setzt sich nach einer Minute zurück.</p>",
       "stealth": "<p>(Meister)</p>",
       "items": {
         "action->Lock and Shriek": {
           "name": "Schließen und Schreien",
-          "description": "<p><strong>Trigger</strong> A creature attempts to open or affect the door</p>\n<p><strong>Effect</strong> The religious symbol of Yhidothrus glows green on the door, sealing it shut while simultaneously shrieking like a tormented soul. This howl is audible in areas <strong>D1-D4</strong> and is loud enough in area <strong>D2</strong> to rouse the bodaks.</p>\n<p>While the door remains locked, a @Check[athletics|dc:32] check can Force it Open, or a @Check[thievery|dc:32] check can Pick the Lock. The lock can also be removed with @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (5th rank, counteract DC 29).</p>\n<p>Once triggered, the alarm continues to shriek and the door remains locked until the hazard is disabled or the door is destroyed or opened. Tracing Yhidothrus's hourglass-shaped religious symbol on either side of the door with a fingertip disables the alarm and the locking ward.</p>"
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur versucht die Tür zu öffnen oder mit ihr zu interagieren</p>\n<hr />\n<p><strong>Effekt</strong> Auf der Tür leuchtet grün das religiöse Symbol von Yhidothrus auf, die Tür wird verschlossen und schreit gleichzeitig wie eine gequälte Seele auf. Der Schrei ist in den Bereichen <strong>D1-D4</strong> hörbar und laut genug, um die Bodaks in Bereich <strong>D2</strong> aufzuwecken.</p>\n<p>Solange die Tür verschlossen bleibt, kann sie mittels eines Fertigkeitswurfes für @Check[athletics|dc:32]{Athletik} zum Gewaltsam geöffnet werden, mit einem Fertigkeitswurf für @Check[thievery|dc:32]{Diebeskunst} kann das Schloss geknackt werden. Zudem kann der Türalarm mittels @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (Grad 5, @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken} SG 29) entfernt werden. Wurde der Alarm einmal ausgelöst, geht das Geschrei weiter und die Tür bleibt verschlossen, bis die Gefahr ausgeschaltet oder die Tür zerstört oder geöffnet wird. Wird das Stundenglas von Yhidothrus mit einer Fingerspitze auf egal welche Seite der Tür gezeichnet, wird der Alarm ausgeschaltet und der Auslöser entschärft.</p>"
         }
       }
     },
@@ -5944,7 +5944,7 @@
     "Nyrissa's Tempest": {
       "name": "Nyrissas Sturm",
       "description": "<p>Am Himmel ziehen sich unvermittelt dunkle Wolken zusammen. Wenige Augenblicke später beginnen Blitze und Windhosen, die Landschaft in Stücke zu reißen.</p>",
-      "disable": "<p>@Check[nature|dc:42] (master) to note the magical nature of the storm and to perform a quick ritual and prayer to the fey spirits of the region to cause the tempest to disperse, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (9th rank, counteract DC 36) to counteract the tempest immediately.</p>",
+      "disable": "<p>@Check[nature|dc:42]{Naturkunde} (Meister), um das magische Wesen des Sturmes zu bemerken und ein schnelles Ritual und Gebete an die Feengeister der Region zu richten, damit sich der Sturm auflöst, oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (9. Grad, Entgegenwirken-SG 36), um dem Sturm sofort @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenzuwirken}.</p>",
       "routine": "<p>(4 Aktionen) Ist den SC der Wurf für Überlebenskunst gelungen, um einen Unterschlupf zu finden, muss der SL einen @Check[flat|dc:16]{Einfachen Wurf} ablegen; misslingt dieser, führt der Sturm gar keine Aktionen aus. Andernfalls nutzt der Sturm die folgenden vier Aktionen während seines Zuges; würfle sie zufällig mit [[/gmr 1d4]]{1W4} aus. Mit jeder Folgerunde wird die Anzahl der Aktionen des Sturmes um 1 reduziert; verfügt er über keine Aktionen mehr, endet die Gefahr.</p>\n<ul>\n<li><strong>1 Donnerschlag</strong> Ein Donnerhall fährt durch die Region. Schutzlose Armeen müssen einen Moralwurf gegen SG 30 ablegen; bei einem Misserfolg steigt der Zustandswert der Armee für Erschüttert um 1. Schutzlose SC erleiden @Damage[10d6[sonic]]{10W6 Punkte Schallschaden} (@Check[fortitude|dc:38|basic]{einfacher Zähigkeitswurf}).</li>\n<li>\n<strong>2 Blitzschlag</strong> Der Sturm nutzt die Reaktion Tobender Sturm als einzelne Aktion.</li>\n<li><p><strong>3 Tornado</strong> Ein Tornado bildet sich und erfasst einen SC; dieser muss einen @Check[fortitude|dc:38]{Zähigkeitswurf} ablegen:</p>\n<p><strong>Kritischer Erfolg</strong> Der SC entkommt ohne Schaden zu nehmen.</p>\n<p><strong>Erfolg</strong> Der SC erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend} und erleidet @Damage[8d6[bludgeoning]]{8W6 Punkte Wuchtschaden}.</p>\n<p><strong>Fehlschlag</strong> Der SC wird durch die Luft geschleudert, erleidet @Damage[8d6[bludgeoning]]{8W6 Punkte Wuchtschaden} und stürzt dann 1W6 x 10 Fuß/3 m, erleidet entsprechenden Sturzschaden und erhält den Zustand Liegend.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie beim Fehlschlag, aber @Damage[8d6[bludgeoning]]{8W6 Punkte Wuchtschaden} und Sturzhöhe [[/r 10*(2d8) #Sturzhöhe]]{2W8 x 10 Fuß}/[[/r 3*(2d8) #Sturzhöhe]]{2W8 x 3 m}.</p>\n</li>\n<li><strong>4 Neue Kräfte Windstöße</strong> fahren durch den Bereich, verursachen aber keine Schäden. Lege einen @Check[flat|dc:11]{Einfachen Wurf} ab; bei einem Erfolg wird die Anzahl der Aktionen des Sturmes in der nächsten Runde nicht um 1 reduziert.</li>\n</ul>",
       "stealth": "<p>(Experte)</p>",
       "items": {
@@ -6014,7 +6014,7 @@
     "Orb Blast Trap": {
       "name": "Energiekugeln",
       "description": "<p>Fünf Kugeln verschießen Energiegeschosse den Gang entlang, sobald eine zweite Kreatur dessen Mitte erreicht.</p>",
-      "disable": "<p>@Check[thievery|dc:48] (master) to deactivate the trap entirely before it triggers, @Check[thievery|dc:45] (expert) to deactivate one of the glimmering orbs after the trap rolls initiative, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (9th rank; counteract DC 41) to deactivate the trap entirely.</p>",
+      "disable": "<p>@Check[thievery|dc:48]{Diebeskunst} (Meister), um die Falle vor dem Auslösen zu deaktivieren; @Check[thievery|dc:45]{Diebeskunst} (Experte), um eine der Leuchtkugeln zu deaktivieren, nachdem die Falle ihre Initiative ausgewürfelt hat, oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (9. Grad; @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken} SG 41), um die ganze Falle auszuschalten.</p>",
       "hpDetails": "Kugel-TP",
       "reset": "<p>Hat die Falle keine Kreaturen als Ziel, deaktiviert sie sich nach 1 Runde und setzt sich automatisch nach 1 Minute zurück.</p>",
       "routine": "<p>(5 Aktionen) Fünf energetisch aufgeladene Kugeln nutzen jeweils eine Aktion für einen Energiegeschossangriff gegen ein jeweils anderes Ziel im Gang (ein Ziel kann maximal einmal pro Runde von der Falle beschossen werden). Die Falle erhält keinen Malus für Mehrfachangriffe. Jede Kugel, die zerstört oder ausgeschaltet wird, reduziert die Anzahl der Aktionen der Falle um 1.</p>",
@@ -6340,7 +6340,7 @@
     "Praise of Yog-Sothoth": {
       "name": "Lobpreisungen an Yog-Sothoth",
       "description": "<p>Magische Schriftzeichen bilden Aussprüche auf Aklo, welche betäubende Kälte zufügen, wenn sie nicht korrekt laut ausgesprochen werden.</p>",
-      "disable": "<p>@Check[occultism|dc:47] (master) or @Check[religion|dc:49] (master) three times in a row to successfully speak aloud the esoteric phrases as they appear (this causes the trap to deactivate for 1 hour, although the phrases continue to appear during this time), or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (9th rank, counteract DC 38).</p>",
+      "disable": "<p>@Check[occultism|dc:47] {Okkultismus} (Meister), oder @Check[religion|dc:49]{Religionskunde} (Meister), dreimal in Folge, um die erscheinenden esoterischen Aussprüche erfolgreich laut auszusprechen (dies deaktiviert die Falle für 1 Stunde, wobei die Symbole weiterhin Sätze ausformen), oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (9. Grad, @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken} SG 38).</p>",
       "reset": "<p>Die Falle deaktiviert sich, wenn sie 1 Runde lang keine Zielkreaturen hatte, und setzt sich nach 1 Minute dann zurück.</p>",
       "routine": "<p>(1 Aktion) Die Falle füllt den ganzen Bereich <strong>B4</strong> mit zusätzlichen Kältestößen. Alle Kreaturen in Bereich <strong>B4</strong> erleiden @Damage[12d6[cold]]{12W6 Punkte Kälteschaden} (@Check[fortitude|dc:41|basic]{einfacher Zähigkeitswurf}, plus bei einem Kritischen Fehlschlag für 1 Minute der Zustand @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Bewegungsunfähig}).</p>",
       "stealth": "<p>(Legende) um die Symbole als magische Falle zu erkennen</p>",
@@ -6812,7 +6812,7 @@
         },
         "action->Inveigled": {
           "name": "Bezaubert",
-          "description": "<p>Sepoko has been inveigled by the naga Ngara. This effect can be removed with @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (6th rank; counteract DC 31).</p>"
+          "description": "<p>Sepoko wurde von der Naga Ngara mit dem Ritual Hilfsbereitschaft erwecken verzaubert. Dieser Effekt kann mittels @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (6. Grad; @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken} SG 31) aufgehoben werden.</p>"
         },
         "action->Swamp Stride": {
           "name": "Sumpfmarsch",
@@ -7014,7 +7014,7 @@
     "Spiral Seal": {
       "name": "Spiralsiegel",
       "description": "<p>Eine an Pharasmas religiöses Symbol erinnernde Spirale ist in den Steinboden gehauen.</p>",
-      "disable": "<p>@Check[occultism|dc:37] (master) or @Check[religion|dc:40] (master) to unmake the Spiral Seal through occult ritual or prayer performed as a 10 minute activity with the Concentrate trait, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (9th rank, counteract DC 40) to counteract the Spiral Seal.</p>",
+      "disable": "<p>@Check[occultism|dc:37]{Okkultismus} (Meister), oder @Check[religion|dc:40]{Religionskunde} (Meister), um das Spiralsiegel mittels okkulter Rituale oder Gebete als 10minütige Aktivität der Kategorie Konzentration zu brechen, oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (9. Grad, @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken} SG 40), um dem Spiralsiegel entgegenzuwirken.</p>",
       "hpDetails": "Erholung",
       "items": {
         "action->Backlash": {
@@ -7131,7 +7131,7 @@
     "Stygian Fires": {
       "name": "Stygische Feuer",
       "description": "<p>Eiskalte schwarze Flammen brechen aus den beiden Quarzaltären und erfüllen den Raum mit betäubendem schwarzem Feuer, das Erinnerungen und Gefühle ebenso fortbrennt, wie es Fleisch und Knochen versengt.</p>",
-      "disable": "<p>@Check[thievery|dc:30] (master) to sever the links between the door and the lanterns, @Check[religion|dc:35] (master) to use prayer to deactivate the divine magic, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (6th rank; counteract DC 30) to counteract the trap</p>",
+      "disable": "<p>@Check[thievery|dc:30]{Diebeskunst} (Meister), um die Verbindungen zwischen der Tür und den Laternen zu durchtrennen; @Check[religion|dc:35]{Religionskunde} (Meister), um die göttliche Magie mittels Gebeten auszuschalten; oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (6. Grad; @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken} SG 30), um die Falle zu bannen.</p>",
       "reset": "<p>Die Falle setzt sich 1 Minute nach Schließen der Doppeltür nach Bereich <strong>E3</strong> zurück.</p>",
       "stealth": "<p>(Meister)</p>",
       "items": {
@@ -7321,7 +7321,7 @@
     "Test of Endurance": {
       "name": "Prüfung der Ausdauer",
       "description": "<p>Der Raum füllt sich mit eisigen Winden, die rasch das Fleisch vereisen und die Knochen bis ins Mark erzittern lassen.</p>",
-      "disable": "<p>@Check[thievery|dc:33] (master) to adjust the wheel's mechanisms so that it won't trigger the Test of Endurance, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (7th rank, counteract DC 31) to counteract the trap's magic.</p>",
+      "disable": "<p>@Check[thievery|dc:33]{Diebeskunst} (Meister), um den Mechanismus des Rades so zu manipulieren, dass die Falle nicht ausgelöst wird, oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (7. Grad, @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken} SG 31), um der Magie der Fall entgegenzuwirken.</p>",
       "reset": "<p>Die Falle setzt sich automatisch zurück.</p>",
       "stealth": "<p>(Meister)</p>",
       "items": {
@@ -7334,7 +7334,7 @@
     "Test of Strength": {
       "name": "Prüfung der Stärke",
       "description": "<p>Die Stufen kippen weg und bilden einen Abhang, so dass alle bisher platzierten Felsen nach Norden zurückrollen.</p>",
-      "disable": "<p>@Check[thievery|dc:37] (expert) to disable the hidden hinges for one of the steps, thereby locking all four steps into place</p>",
+      "disable": "<p>@Check[thievery|dc:37]{Diebeskunst} (Experte), um die versteckten Angeln einer Stufe zu blockieren und so alle vier Stufen in ihrer aktuellen Position zu fixieren.</p>",
       "reset": "<p>Die Falle setzt sich 24 Stunden, nachdem sie die Tür geöffnet hat, wieder zurück. Nachdem die Falle Felsen hat losrollen lassen, setzt sie sich automatisch zurück.</p>",
       "stealth": "<p>(Experte)</p>",
       "items": {
@@ -7351,7 +7351,7 @@
     "Test of Tactics": {
       "name": "Prüfung der Strategie",
       "description": "<p>Obskure magische, in den Siegeln der 16 Krieger verborgene Runen binden zwei Derghodaimonen in die Wände dieses Ganges.</p>",
-      "disable": "<p>@Check[thievery|dc:37] (expert) to remove a set of runes linked to one bound derghodaemon, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (7th rank, counteract DC 31) to counteract the trap's magic.</p>",
+      "disable": "<p>@Check[thievery|dc:37]{Diebeskunst} (Experte) um die mit einem Derghodaimonen verbundenen Runen auszulöschen, oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (7. Grad, @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken} SG 31), um der Magie der Falle entgegenzuwirken.</p>",
       "reset": "<p>Sollte wenigstens ein @UUID[Compendium.pf2e.pathfinder-bestiary-2.Actor.oKogG9AwUZ9iBsm3]{Derghodaimon} überleben, setzt sich die Falle nach 1 Stunde zurück; überlebende Derghodaimonen werden dann vollständig geheilt und verschmelzen wieder mit dem Boden.</p>",
       "stealth": "<p>(Experte)</p>",
       "items": {
@@ -7710,7 +7710,7 @@
         },
         "action->Lonely Dirge": {
           "name": "Einsamer Grabgesang",
-          "description": "<p>The Lonely Warrior's funeral dirge is somewhat different from the standard cairn wight dirge: its droning, unnerving chant forces living creatures within @Template[emanation|distance:50]{50 feet} to attempt a @Check[will|dc:24] save. The Lonely Warrior can't chant a new Lonely Dirge for [[/gmr 1d4 #rounds]]{1d4 rounds}.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} by gnawing pangs of loneliness until the end of its next turn.</p>\n<p><strong>Failure</strong> The target is stupefied 1 for 1 hour.</p>\n<p><strong>Critical Failure</strong> The target is stupefied 1 for 24 hours and takes a -2 status penalty to saves against drain life.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.8ecPVgMeWDxc4jI4]{Effect: Funereal Dirge}</p>"
+          "description": "<p><p>Der Grabgesang des Einsamen Kriegers unterscheidet sich leicht von dem eines gewöhnlichen Grabschreckens: Sein eintöniger, entnervender Sprechgesang zwingt jede lebende Kreatur innerhalb von @Template[emanation|distance:50]{50 Fuß/15 m Entfernung} zu einem @Check[will|dc:24]{Willenswurf}. Der Einsame Krieger kann diese Fähigkeit dann [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.</p>\n<p><strong>Kritischer Erfolg</strong> Das Ziel ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Das Ziel erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 1} aufgrund tiefer Einsamkeit bis zum Ende seines nächsten Zuges.</p>\n<p><strong>Fehlschlag</strong> Das Ziel erhält den Zustand Benommen 1 für 1 Stunde.</p>\n<p><strong>Kritischer Fehlschlag</strong> Das Ziel erhält den Zustand Benommen 1 für 24 Stunden und erleidet einen Zustandsmalus von -2 auf Rettungswürfe gegen Lebenskraft entziehen.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.8ecPVgMeWDxc4jI4]{Effekt: Grabgesang}</p>"
         }
       }
     },
@@ -8306,7 +8306,7 @@
         },
         "action->Ogre Spider Venom": {
           "name": "Ogerspinnengift",
-          "description": "<p><strong>Saving Throw</strong> @Check[fortitude|dc:22]</p>\n<hr />\n<p><strong>Maximum Duration</strong> 6 rounds</p>\n<p><strong>Stage 1</strong> @Damage[1d6[poison]] damage (1 round)</p>\n<p><strong>Stage 2</strong> 1d6 poison damage, @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}, and @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} (1 round)</p>\n<p><strong>Stage 3</strong> @Damage[2d6[poison]] damage, clumsy 1, and off-guard (1 round)</p>\n<p><strong>Stage 4</strong> 2d6 poison and @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} (1 round).</p>"
+          "description": "<p><strong>Rettungswurf</strong> @Check[fortitude|dc:22]{Zähigkeitswurf}</p>\n<p><strong>Maximaldauer</strong> 6 Runden</p>\n<p><strong>Phase 1</strong> @Damage[1d6[poison]]{1W6 Punkte Giftschaden} (1 Runde)</p>\n<p><strong>Phase 2</strong> @Damage[1d6[poison]]{1W6 Punkte Giftschaden}, @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 1} und @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} (1 Runde)</p>\n<p><strong>Phase 3</strong> @Damage[2d6[poison]]{2W6 Punkte Giftschaden}, Unbeholfen 1 und Auf dem Falschen Fuß (1 Runde)</p>\n<p><strong>Phase 4</strong> @Damage[2d6[poison]] und @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt} (1 Runde).</p>"
         }
       }
     },
@@ -8978,7 +8978,7 @@
     },
     "Void Pit": {
       "name": "Grube der Leere",
-      "disable": "<p>@Check[thievery|dc:48] (legendary) to deactivate the pit's magical link to outer space or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (10th rank, counteract DC 44)</p>",
+      "disable": "<p>@Check[thievery|dc:48]{Diebeskunst} (Legende), um die magische Verbindung der Grube zum Weltall zu deaktivieren, oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (10. Grad, @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken} SG 44)</p>",
       "reset": "<p>Die Grube der Leere setzt sich augenblicklich zurück.</p>",
       "stealth": "<p>oder @UUID[Compendium.pf2e.spells-srd.Item.gpzpAAAJ1Lza2JVl]{Magie entdecken}</p>",
       "items": {
