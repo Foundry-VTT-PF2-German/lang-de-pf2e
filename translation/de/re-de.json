@@ -2844,7 +2844,7 @@
             "Description": "Du hast deine Sinne geschärft und gelernt, auf Details zu achten. Dein Kompetenzgrad für Wahrnehmung steigt auf Meister."
           },
           "investigator": {
-            "Description": "Through your adventures, you've developed keen awareness and attention to detail. Your proficiency rank in Perception increases to master."
+            "Description": "Im Rahmen deiner Abenteuer hast du deine Sinne geschärft und gelernt, auf kleinste Details zu achten. Dein Kompetenzgrad für Wahrnehmung steigt auf Meister."
           },
           "ranger": {
             "Description": "Du hast deine Sinne geschärft und gelernt, auf Details zu achten. Dein Kompetenzgrad für Wahrnehmung steigt auf Meister."
@@ -5555,7 +5555,7 @@
         "Speed": "Zustandsbonus von +20 Fuß/6 m auf die Bewegungsrate"
       },
       "SpellEffectFieryBody": {
-        "Note": "The attacker takes @Damage[(ternary(gte(@item.level,9),4,3))d6[fire]] damage."
+        "Note": "Der Angreifer erhält Feuerschaden (@Damage[(ternary(gte(@item.level,9),4,3))d6[fire]])."
       },
       "SpellEffectFurnaceBody": {
         "Note": "The attacker takes @Damage[3d6[fire]] damage."
@@ -5824,7 +5824,7 @@
         "RockslideSpell": "Der Zauber wandelt innerhalb des Wirkungsbereiches eine Anzahl 5 Fuß/1,50 m-Felder entsprechend des Zaubergrads zu Schwierigem Gelände um. Diese Felder müssen sich auf der Erdoberfläche befinden. Der Zauber erhält die Kategorie Erde.",
         "SafeguardSpell": "Solltest du als nächste Handlung einen Zauber mit einem Flächeneffekt wirken, so bist du von dem Zauber nicht betroffen, selbst wenn du dich in seinem Wirkungsbereich befindest.",
         "ScintillatingSpell": "Sofern du als nächste Handlung einen Zauber wirkst, der nicht die Kategorie Dunkel besitzt, über keine Wirkungsdauer verfügt und von Kreaturen einen Reflexwurf verlangt, explodiert der Zauber in strahlenden Lichtern neben seinen sonstigen Effekten. Jede Kreatur, deren Reflexwurf misslingt, erhält 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet} (bzw. 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind} im Fall eines Kritischen Fehlschlages).",
-        "SecondaryDetonationArray": "If your next action is to Cast a Spell that deals damage, has no duration, and affects an area, a glowing magic circle appears in a @Template[burst|distance:5] within that area. At the beginning of your next turn, the circle detonates, dealing @Damage[(@item.level)d6[force]|options:area-damage] damage to all creatures within the circle, with a @Check[reflex|against:spell|options:area-effect,damaging-effect]. If the spell dealt a different type of damage, the circle deals @Damage[(@item.level)d6[@actor.flags.pf2e.spellshape.arrayDamage]|options:area-damage]{this type of damage instead} (or one type of your choice if the spell could deal multiple types of damage)",
+        "SecondaryDetonationArray": "Sofern du als nächste Handlung einen Zauber wirkst, der Schaden verursacht, keine Wirkungsdauer besitzt und auf eine Fläche einwirkt, erscheint innerhalb des Wirkungsbereiches ein Kreis aus glühenden Runen in einer @Template[burst|distance:5]{5 Fuß/1,50 m Explosion}. Zu Beginn deines nächsten Zuges explodiert der Kreis und fügt jeder Kreatur innerhalb des Kreises 1W6 Kraftschaden (@Damage[(@item.level)d6[force]|options:area-damage]) pro Grad des Zaubers zu (@Check[reflex|against:spell|options:area-effect,damaging-effect]{einfacher Reflexwurf} gegen deinen Zauber-SG). Sollte der Zauber eine andere Art von Schaden verursachen, so verursacht die Explosion stattdessen diese Schadensart (@Damage[(@item.level)d6[@actor.flags.pf2e.spellshape.arrayDamage]|options:area-damage], oder eine der verursachten Schadensarten nach deiner Wahl, sollte der Zauber mehrere Schadensarten verursachen können).",
         "SeneschalSpell": "Sofern du als nächste Handlung einen Zauber wirkst und dein Schützling nicht weiter als 30 Fuß/9 m entfernt ist, kannst du den Zauber stattdessen von deinem Schützling ausgehen lassen. Diese Kreatur kann ihre Reaktion nutzen, um grob die Anrufungen des Zaubers zu vollenden, wodurch der Zauber dich betreffend die Kategorie Subtil erlangt (aber nicht für deinen Schützling), da die Manifestation allein um deinen Schützling herum erscheint.",
         "SinbladedSpell": "If you either succeed on your attack roll or the target fails its saving throw against the spell, you deal @Damage[(@item.rank)[bleed]] damage to the target.",
         "SnowdriftSpell": "Wähle eine Kreatur am Boden, die von dem Zauber betroffen ist. Jedes Feld am Boden unter und angrenzend zu dieser Kreatur füllt sich mit knöchelhohem Schnee. Diese Felder sind bis zum Beginn deines nächsten Zuges Schwieriges Gelände. Eine Kreatur kann Interagieren nutzen, um ein Feld vom Schnee zu räumen. Der Schnee in einem Feld schmilzt, sollte das Feld einem Feuereffekt ausgesetzt werden.",
@@ -6067,9 +6067,9 @@
       },
       "Tengu": {
         "TenguFan": {
-          "GustOfWind": "You can cast the 1st-rank @UUID[Compendium.pf2e.spells-srd.Item.g8QqHpv2CWDwmIm1]{Gust of Wind} spell by activating your tengu feather fan. @Check[fortitude|against:class-spell|traits:air] save.",
-          "LightningBolt": "You can cast the 5th-rank @UUID[Compendium.pf2e.spells-srd.Item.9AAkVUCwF6WVNNY2]{Lightning Bolt} spell by activating your tengu feather fan. @Check[reflex|against:class-spell|basic|traits:electricity] save.",
-          "WallOfWind": "You can cast the 3rd-rank @UUID[Compendium.pf2e.spells-srd.Item.it4ZsAi6XgvGcodc]{Wall of Wind} spell by activating your tengu feather fan. @Check[fortitude|against:class-spell|traits:air]{Fortitude saving throw} save."
+          "GustOfWind": "Du kannst den Zauber @UUID[Compendium.pf2e.spells-srd.Item.g8QqHpv2CWDwmIm1]{Windstoß} (1. Grad) durch Aktivierung deines Federfächers wirken. Rettungswurf: @Check[fortitude|against:class-spell|traits:air]{Zähigkeitswurf}.",
+          "LightningBolt": "Du kannst den Zauber @UUID[Compendium.pf2e.spells-srd.Item.9AAkVUCwF6WVNNY2]{Blitzstrahl} (5. Grad) durch Aktivierung deines Federfächers wirken. Rettungswurf: @Check[reflex|against:class-spell|basic|traits:electricity]{einfacher Reflexwurf}.",
+          "WallOfWind": "Du kannst den Zauber @UUID[Compendium.pf2e.spells-srd.Item.it4ZsAi6XgvGcodc]{Windwand} (3. Grad) durch Aktivierung deines Federfächers wirken. Rettungswurf: @Check[fortitude|against:class-spell|traits:air]{Zähigkeitswurf}."
         },
         "WeaponFamiliarity": {
           "Prompt1": "Wähle eine Waffe aus der Schwerter-Gruppe.",
@@ -6450,33 +6450,33 @@
           "Prompt": "Wähle eine yaoguaische Herkunft."
         },
         "LegendaryMonster": {
-          "Effect": "@UUID[Compendium.pf2e.feat-effects.Item.ELCODoiGDBEqRAtT]{Effect: Legendary Monster}",
+          "Effect": "@UUID[Compendium.pf2e.feat-effects.Item.ELCODoiGDBEqRAtT]{Effekt: Legendäres Monster}",
           "Options": {
-            "Damage": "Additional spirit damage",
-            "Enlarge": "4th rank Enlarge",
-            "Fly": "Fly Speed"
+            "Damage": "Zusätzlicher Seelenschaden",
+            "Enlarge": "Kreatur vergrößern (Grad 4)",
+            "Fly": "Bewegungsrate für Fliegen"
           },
-          "Prompt": "Choose an additional benefit",
-          "RollOptionLabel": "Use Legendary Monster",
+          "Prompt": "Wähle einen zusätzlichen Vorteil",
+          "RollOptionLabel": "Nutze Legendäres Monster",
           "Text": {
-            "Damage": "Your spiritual power erupts to punish your enemies. You deal an additional 1d4 spirit damage with all Strikes and attack spells, and your Strikes and attack spells gain the spirit trait.",
-            "Description": "Once per day when you Unleash Yaoguai Might, you can gain one of the following additional benefits, which persists for 1 minute or until you Change Shape again.",
-            "Enlarge": "Your body grows to impossible heights. Your Enlarge effect is heightened to 4th rank.",
-            "Fly": "You can leap off the air itself. You gain the effects of the *fly* spell.",
-            "Frequency": "You can Unleash Yaoguai Might any number of times per day.",
-            "Title": "**Legendary Monster**"
+            "Damage": "Deine Seelenenergie bricht aus, um deine Feinde zu bestrafen. Du verursachst zusätzliche 1W4 Punkte Seelenschaden mit allen Angriffen und Angriffszaubern, und deine Angriffe und Angriffszauber erhalten die Kategorie Seele.",
+            "Description": "Einmal am Tag, wenn du Entfesseln der Yaoguaimacht benutzt, kannst du einen der folgenden zusätzlichen Effekte erhalten, der 1 Minute lang bestehen bleibt, sofern du nicht früher deine Gestalt erneut wechselst.",
+            "Enlarge": "Dein Körper wird unvorstellbar groß. Dein Effekt von Kreatur vergrößern wird auf den 4. Grad erhöht.",
+            "Fly": "Du kannst von der Luft selbst abspringen. Du erhältst die Effekte des Zaubers Fliegen.",
+            "Frequency": "Du kannst Entfesseln der Yaoguaimacht beliebig oft am Tag einsetzen.",
+            "Title": "**Legendäres Monster**"
           }
         },
         "UnleashYaoguaiMight": {
-          "BornOfAnimal": "**Animal** Your hide thickens, granting a +1 circumstance bonus to AC.",
-          "BornOfCelestial": "**Celestial** You recover some of your celestial perfection, granting you and all allies within 15 feet a +1 status bonus to attack rolls.",
-          "BornOfElements": "**Elements** You're surrounded in wind and dust, granting concealment each round that you spend at least 1 action that has the move trait. You can't use this concealment to Hide or Sneak, as normal for sources of obvious concealment.",
-          "BornOfItem": "**Object ** Your skin transmutes partially into an inorganic substance, granting resistance 5 to your choice of bludgeoning, piercing, or slashing.",
-          "BornOfVegetation": "**Vegetation** You trigger an accelerated growth, gaining fast healing 5.",
-          "Description": "As you enter your yaoguai form, you draw upon your internal magic to assume an even greater form. When you Change Shape to enter your yaoguai form, you can spend an additional action to gain the effects of Enlarge and an additional effect based on your heritage. This effect persists for 1 minute or until you Change Shape again.",
-          "Effect": "@UUID[Compendium.pf2e.feat-effects.Item.OBsItGQScxHyUcmR]{Effect: Unleash Yaoguai Might}",
-          "Frequency": "**Frequency** once per day",
-          "UsedMoveAction": "Used action that has the move trait."
+          "BornOfAnimal": "**Tier** Deine Haut wird dicker und verleiht dir einen Situationsbonus von +1 auf deine RK.",
+          "BornOfCelestial": "**Himmlischer** Du erhältst einen Teil deiner himmlischen Perfektion zurück, was dir und allen Verbündeten innerhalb von 15 Fuß/4,50 m einen Situationsbonus von +1 auf Angriffswürfe verleiht.",
+          "BornOfElements": "**Elementar** Du wirst von Wind und Staub umwirbelt, was dir in jeder Runde, in der du mindestens 1 Handlung der Kategorie Bewegung ausführst, Tarnung verleiht. Du kannst diese Tarnung nicht benutzen, um dich zu Verstecken oder zu Schleichen, wie es für Quellen offensichtlicher Tarnung normal ist.",
+          "BornOfItem": "**Gegenstand** Deine Haut wird teilweise zu anorganischer Materie, was dir Resistenz 5 gegen Hieb-, Stich- oder Wuchtschaden (deine Wahl) verleiht.",
+          "BornOfVegetation": "**Vegetation** Du löst schnelleres Wachstum aus, was dir Schnelle Heilung 5 verleiht.",
+          "Description": "Wenn du in deine Yaoguaigestalt wechselst, schöpfst du aus deiner eigenen Magie, um eine noch stärkere Gestalt anzunehmen. Wenn du deine Gestalt wechselst, um deine Yaoguaigestalt anzunehmen, kannst du eine zusätzliche Handlung ausgeben, um die Effekte des Zaubers Kreatur vergrößern plus einen von deiner Herkunft abhängigen Effekt zu erhalten. Diese Effekte halten 1 Minute lang an oder bis du wieder deine Gestalt wechselst, so dies zuerst geschieht.",
+          "Effect": "@UUID[Compendium.pf2e.feat-effects.Item.OBsItGQScxHyUcmR]{Effekt: Entfesseln der Yaoguaimacht}",
+          "Frequency": "**Häufigkeit** Einmal am Tag",
+          "UsedMoveAction": "Die genutzte Aktion hat die Kategorie Bewegung."
         }
       },
       "Zombie": {
