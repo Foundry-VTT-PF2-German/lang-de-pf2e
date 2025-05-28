@@ -3,4 +3,5 @@
 * Fertigstellung Übersetzung zu Göttliche Geheimnisse
 * Übersetzung Königsmacher Bestiarium
 * Übersetzung Mythische Monster Bestiarium
+* Übersetzung der Monster aus dem Ulisses Special "Monster aus Tian Xia"
 * Solltet ihr veraltete Einträge, falsche Formatierungen oder ähnliche Fehler finden, dann meldet sie gerne als Issue auf unserer GitHub-Projektseite.
