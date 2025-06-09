@@ -58,6 +58,34 @@ function AACreateItemNameProxy(item, realName) {
     });
 }
 
+// Patch spell range function - thanks to Kromko from the russian localization for the coding
+// Required, because the pf2 system currently checks spell range based on thetext in the range field
+// This updates the system's logic to match the localized ranges
+
+function patchSpellRange() {
+    libWrapper?.register(
+        "lang-de-pf2e",
+        "CONFIG.PF2E.Item.documentClasses.spell.prototype.isMelee",
+        function (wrapped) {
+            return game.pf2e.system.sluggify(this.system.range.value) === "berührung" || wrapped();
+        },
+        "MIXED"
+    );
+
+    libWrapper?.register(
+        "lang-de-pf2e",
+        "CONFIG.PF2E.Item.documentClasses.spell.prototype.isRanged",
+        function (wrapped) {
+            const res = wrapped();
+            if (res) return res;
+            const slug = game.pf2e.system.sluggify(this.system.range.value);
+            const rangeFeet = Math.floor(Math.abs(Number(/^(\d+)-(fuß|ft|feet)(?!\w)/.exec(slug)?.at(1))));
+            return Number.isInteger(rangeFeet) ? { increment: null, max: rangeFeet } : null;
+        },
+        "MIXED"
+    );
+}
+
 Hooks.once("babele.init", () => {
     if (game.babele) {
         game.settings.register("lang-de-pf2e", "dual-language-names", {
@@ -163,6 +191,8 @@ Hooks.once("babele.init", () => {
         });
 
         hookOnAutoAnimations();
+
+        patchSpellRange();
     }
 });
 
