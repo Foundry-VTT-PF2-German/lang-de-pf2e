@@ -119,6 +119,9 @@ Hooks.once("babele.init", () => {
                     game.langDePf2e.getMapping("heightening", true)
                 );
             },
+            translateRange: (data) => {
+                return game.langDePf2e.translateValue("range", data);
+            },
             translateRules: (data, translation) => {
                 return game.langDePf2e.translateRules(data, translation);
             },

@@ -399,6 +399,10 @@ export const convertDeities = (deitiesTranslated) => {
     );
     // Loop through translated deity description entries and add details section
     Object.keys(deitiesTranslated.entries).forEach((deityName) => {
+        if (!deitiesMap.has(deityName.toLowerCase())) {
+            console.warn(`Keine Daten zu ${deityName} gefunden.`)
+            return;
+        }
         const deityAttributes = deitiesMap.get(deityName.toLowerCase()).system.attribute;
         const deityDomains = deitiesMap.get(deityName.toLowerCase()).system.domains;
         const deityFont = deitiesMap.get(deityName.toLowerCase()).system.font;
