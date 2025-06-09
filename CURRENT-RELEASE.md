@@ -1,7 +1,5 @@
-## v6.12.4.0
-* Da es noch einige weitere Releases des PF2-Systems gab, haben wir uns dazu entschieden noch ein weiteres Release für Foundry 12 zu veröffentlichen
-* Fertigstellung Übersetzung zu Göttliche Geheimnisse
-* Übersetzung Königsmacher Bestiarium
-* Übersetzung Mythische Monster Bestiarium
-* Übersetzung der Monster aus dem Ulisses Special "Monster aus Tian Xia"
+## v7.1.1.0
+* Update auf Foundry 13 und PF2 7.1.1
+* Die Änderungen aus dem Remaster des Schatzhorts sind enthalten, allerdings im ersten Schritt auf Englisch. Eine Übersetzung der Änderungen erfolgt sukzessive
+* Wir haben die Übersetzung von Reichweiten entfernt. Das PF2-System nutzt derzeit die Reichweiten in Textform für systemseitige Unterstützungen (z.B. Berücksichtigung des Flankiert-Malus bei Berührungsangriffen und durch eine Übersetzung dieser Texte funktionieren die Automatisierungen nicht mehr korrekt)
 * Solltet ihr veraltete Einträge, falsche Formatierungen oder ähnliche Fehler finden, dann meldet sie gerne als Issue auf unserer GitHub-Projektseite.
