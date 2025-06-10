@@ -77,7 +77,7 @@ class Translator {
                 ? path.concat(`/portraits/`)
                 : path.concat(`/${imageType}/`);
             const images = {};
-            await FilePicker.browse("data", imagePath).then((picker) =>
+            await foundry.applications.apps.FilePicker.implementation.browse("data", imagePath).then((picker) =>
                 picker.files.forEach((file) => {
                     const actorName = file.split("\\").pop().split("/").pop().replace(".webp", "");
 
