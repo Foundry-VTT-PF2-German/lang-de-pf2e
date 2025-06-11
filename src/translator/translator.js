@@ -455,6 +455,19 @@ class Translator {
         return data;
     }
 
+    // Translate the various table results for a rollable table
+    translateTableResults(tableResults, translation) {
+        if (translation) {
+            for (let i = 0; i < tableResults.length; i++) {
+                const range = tableResults[i].range.join("-");
+                if (translation[range]) {
+                    this.dynamicMerge(tableResults[i], translation[range], this.getMapping("tableResult", true));
+                }
+            }
+        }
+        return tableResults;
+    }
+
     // Use a unique token name if provided, otherwise use the translated actor name
     translateTokenName(data, translation, translationObject) {
         return translation ?? translationObject.name ?? data;
