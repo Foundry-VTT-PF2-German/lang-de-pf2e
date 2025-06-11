@@ -134,6 +134,9 @@ Hooks.once("babele.init", () => {
             translateAdventureScenes: (data, translation) => {
                 return game.langDePf2e.translateArrayOfObjects(data, translation, "adventureScene");
             },
+            translateAdventureTables: (data, translation) => {
+                return game.langDePf2e.translateArrayOfObjects(data, translation, "adventureTable");
+            },
             translateDualLanguage: (data, translation) => {
                 return game.langDePf2e.translateDualLanguage(data, translation);
             },
@@ -169,6 +172,9 @@ Hooks.once("babele.init", () => {
                     translation,
                     game.langDePf2e.getMapping("item", true)
                 );
+            },
+            translateTableResults: (data, translation) => {
+                return game.langDePf2e.translateTableResults(data, translation);
             },
             translateTiles: (data, translation) => {
                 return game.langDePf2e.dynamicArrayMerge(data, translation, game.langDePf2e.getMapping("tile", true));

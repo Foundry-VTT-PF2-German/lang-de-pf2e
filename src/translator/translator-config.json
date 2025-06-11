@@ -88,7 +88,19 @@
                 "tokens": { "path": "tokens", "converter": "translateTokens" }
             }
         },
+        "adventureTable": {
+            "entryType": "RollTable",
+            "mappingEntries": {
+                "name": "name",
+                "description": "description",
+                "results": { "path": "results", "converter": "translateTableResults" }
+            }
+        },
         "rule": { "entryType": "Item", "mappingEntries": { "label": "label", "prompt": "prompt", "text": "text" } },
+        "tableResult": {
+            "entryType": "RollTable",
+            "mappingEntries": { "name": "name", "description": "description", "text": "text" }
+        },
         "token": {
             "entryType": "Actor",
             "mappingEntries": { "name": "name", "items": { "path": "delta.items", "converter": "translateActorItems" } }
