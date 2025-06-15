@@ -497,7 +497,7 @@
         },
         "action->Bright Release": {
           "name": "Strahlendes Ende",
-          "description": "<p>Sobald ein Leuchtwandler auf 0 TP fällt, verglüht er in einem Lichtstrahl und erlangt das flammende Ende, das ihm bei seinem Tod verwehrt wurde. Diese Flamme fügt jeder Kreatur innerhalb von @Template[emanation|distance:20]{20 Fuß/6 m} Entfernung @Damage[10d6[fire]]{10W6 Punkte Feuerschaden} (@Check[reflex|dc:25|basic]{einfacher Reflexwurf}) zu. Kreaturen, die einen Fehlschlag erzielen, erhalten für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet} (bzw. @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind} für 1 Minute bei einem Kritischen Fehlschlag).</p>"
+          "description": "<p>When a bright walker is reduced to 0 Hit Points, they flash out in a burst of light, obtaining the blazing end they were denied at death. This blaze deals @Damage[10d6[fire]|options:area-damage] damage (@Check[reflex|dc:25|basic|options:area-effect] save) to creatures within @Template[emanation|distance:20]{20 feet}.</p>\n<p>Creatures who fail this save are also @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 minute (@UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for 1 minute on a critical failure).</p>"
         },
         "action->Light Aura": {
           "name": "Leuchtaura",
@@ -595,7 +595,7 @@
         },
         "action->Death Flame": {
           "name": "Todesflamme",
-          "description": "<p>Stirbt der Verteidiger, so explodiert er in einer glühendweißen Flamme. Alle Kreaturen in einem @Template[burst|distance:20]{Explosionsradius von 20 Fuß/6 m} erleiden @Damage[6d10[fire]]{6W10 Punkte Feuerschaden} (@Check[reflex|dc:26|basic]{einfacher Reflexwurf}). Seine Ausrüstung und Schätze sind davon nicht betroffen und verbleiben auf einem Haufen im Feld seines Todes.</p>"
+          "description": "<p>When the caligni defender dies, their body combusts in a flash of white-hot flame. All creatures in a @Template[burst|distance:20] take @Damage[6d10[fire]|options:area-damage] damage (@Check[reflex|dc:26|basic|options:area-effect] save). Their gear and treasure are unaffected by the flames and are left in a pile where they died.</p>"
         },
         "action->Black Smear Poison": {
           "name": "Schwarze Schmiere",
@@ -854,7 +854,7 @@
         },
         "action->Death Light": {
           "name": "Todeslicht",
-          "description": "<p><strong>Voraussetzungen</strong> Das Leichenlicht befindet sich in einer Leiche.</p>\n<hr />\n<p><strong>Effekt</strong> Das Leichenlicht strahlt aus Mund und Augen einen krankmachenden, blauen Lichtstrahl in einem @Template[cone|distance:20]{20 Fuß/6 m-Kegel}. Jede lebende Kreatur in diesem Bereich muss einen @Check[fortitude|dc:18|traits:damaging-effect]{Zähigkeitswurf} ablegen. Falls wenigstens 1 Kreatur der Rettungswurf misslingt, erlangt das Leichenlicht @Damage[2d6[healing]]{2W6 TP} wieder; sollte es über das Maximum hinausgehende TP erlangen, erlangt es diese als Temporäre TP für 1 Minute. Das Leichenlicht kann diese Fähigkeit erst [[/gmr 1d4 #Runden]]{1W4 Runden} später wieder nutzen.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erleidet @Damage[1d6[void]]{1W6 Punkte Leerenschaden}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet @Damage[2d6[void]]{2W6 Punkte Leerenschaden} und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erleidet @Damage[4d6[void]]{4W6 Punkte Leerenschaden} und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 3}.</p>"
+          "description": "<p><strong>Prerequisites</strong> The corpselight is in a corpse</p>\n<hr />\n<p><strong>Effect</strong> The corpselight emits a sickly blue beam of light from its mouth and eyes in a @Template[cone|distance:20]. All living creatures in this area must attempt a @Check[fortitude|dc:18|options:area-effect,damaging-effect] saving throw. If at least 1 creature fails its save, the corpselight regains @Damage[2d6[healing]] Hit Points, gaining any that exceed its maximum as temporary Hit Points that last for 1 minute.</p>\n<p>The corpselight can't use again for [[/gmr 1d4 #Recharge Death Light]]{1d4 rounds}.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes @Damage[1d6[void]|options:area-damage] damage.</p>\n<p><strong>Failure</strong> The creature takes @Damage[2d6[void]|options:area-damage] damage and is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[4d6[void]|options:area-damage] damage and is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3}.</p>"
         }
       }
     },
@@ -1508,7 +1508,7 @@
         },
         "action->Death Shadows": {
           "name": "Todesschatten",
-          "description": "<p>Wenn Dulac stirbt, wird ihre Leiche in einer Explosion eisiger Schatten zerstört. Alle Kreaturen innerhalb eines @Template[burst|distance:20]{Explosionsradius von 20 Fuß/6 m} erleiden @Damage[8d8[cold]]{8W8 Punkte Kälteschaden} (@Check[reflex|dc:28|basic]{einfacher Reflexwurf}). Ihre Ausrüstung und Schätze sind davon nicht betroffen und bleiben in dem Feld zurück, wo sie gestorben ist.</p>"
+          "description": "<p>When Dulac dies, her body is destroyed in a burst of chilling shadows. All creatures in a @Template[burst|distance:20] take @Damage[8d8[cold]|options:area-damage] damage (@Check[reflex|dc:28|basic|options:area-effect] save).</p>\n<p>Dulac's gear and treasure are unaffected by the shadows and are left in a pile where she died.</p>"
         },
         "action->Opportune Step": {
           "name": "Opportuner Schritt",
@@ -1685,7 +1685,7 @@
         },
         "action->Death Motes": {
           "name": "Todesfunken",
-          "description": "<p>Stirbt Galudu, so explodiert ihr Körper in hellen Funken magischer Energie. Alle Kreaturen in einem @Template[burst|distance:20]{Explosionsradius von 20 Fuß/6 m} erleiden @Damage[12d6[force]]{12W6 Punkte Kraftschaden} (@Check[reflex|dc:30|basic]{einfacher Reflexwurf}). Ihre Ausrüstung ist davon nicht betroffen und verbleibt auf einem Haufen im Feld ihres Todes.</p>"
+          "description": "<p>When Galudu dies, her body explodes into brilliant motes of magical energy. All creatures in a @Template[burst|distance:20] take @Damage[12d6[force]|options:area-damage] damage (@Check[reflex|dc:30|basic|options:area-effect] save). Galudu's gear is unaffected by the explosion and is left in a pile where she died.</p>"
         },
         "action->Opportune Step": {
           "name": "Opportuner Schritt",
@@ -2686,7 +2686,7 @@
         },
         "action->Death Flame": {
           "name": "Todeslicht",
-          "description": "<p>Stirbt Nox, verbrennt sein Körper in weißem Licht. Alle Kreaturen innerhalb eines @Template[burst|distance:20]{20 Fuß/6 m Explosionsradius} müssen einen einfachen @Check[reflex|dc:21|basic]{Zähigkeitswurf} ablegen; bei Misslingen erhält eine Kreatur @Damage[5d6[fire]]{5W6 Punkte Feuerschaden}. Nox‘ Ausrüstung und Schätze liegen auf einem Haufen, wo er gestorben ist.</p>"
+          "description": "<p>When Nox dies, their body combusts in a flash of white-hot flame that deals @Damage[5d6[fire]|options:area-damage] damage to creatures in a @Template[burst|distance:20] (@Check[reflex|dc:21|basic|options:area-effect] save). Nox's gear and treasure are unaffected by the flames and are left in a pile where they died.</p>"
         },
         "action->Intense Performer": {
           "name": "Leidenschaftlicher Künstler",
@@ -2878,7 +2878,7 @@
         },
         "action->Death Flame": {
           "name": "Todesflamme",
-          "description": "<p>Wenn Padli stirbt, explodiert seine Leiche in einem Aufblitzen weißglühender Flammen. Alle Kreaturen in einem @Template[burst|distance:20]{Explosionsradius von 20 Fuß/6 m} erleiden @Damage[6d10[fire]]{6W10 Punkte Feuerschaden} (@Check[reflex|dc:28|basic]{einfacher Reflexwurf}). Seine Ausrüstung bleibt davon unbetroffen und liegt dann auf einem Haufen in dem Feld, wo er gestorben ist.</p>"
+          "description": "<p>When Padli dies, his body combusts in a flash of white-hot flame. All creatures in a @Template[burst|distance:20] take @Damage[6d10[fire]|options:area-damage] damage (@Check[reflex|dc:28|basic|options:area-effect] save).</p>\n<p>His gear is unaffected by the flames and is left in a pile where he died.</p>"
         },
         "action->Occult Ward": {
           "name": "Okkulter Schutz",
