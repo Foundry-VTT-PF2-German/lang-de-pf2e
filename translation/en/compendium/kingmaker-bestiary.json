@@ -198,12 +198,6 @@
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.EkZVXMdtqTTgahiJ]\nRing of Energy Resistance (Cold)",
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.EkZVXMdtqTTgahiJ]\n<p>This ring grants you resistance 5 against one type of energy damage: acid, cold, electricity, fire, or sonic. Each ring is crafted to protect against a particular type of energy damage, and its design usually embodies the type of energy it protects the wearer from in some way. For instance, a <em>ring of fire resistance</em> might be capped with a ruby, whereas a <em>ring of cold resistance</em> features a sapphire instead.</p>"
         },
-        "strike-melee->Jaws": {
-          "name": "Jaws"
-        },
-        "strike-melee->Claw": {
-          "name": "Claw"
-        },
         "action->Tiger Empathy": {
           "name": "Tiger Empathy",
           "description": "<p>Alasen can communicate with felines.</p>"
@@ -2147,7 +2141,7 @@
         },
         "action->Fireball Breath": {
           "name": "Fireball Breath",
-          "description": "<p>The flame drake expels a ball of flame to a range of 180 feet that explodes in a @Template[burst|distance:20]. Creatures in the burst take @Damage[9d6[fire]] damage (@Check[reflex|dc:26|basic] save).</p>\n<p>The flame drake can't use Fireball Breath again for [[/gmr 1d6 #Recharge Fireball Breath]]{1d6 rounds}.</p>"
+          "description": "<p>The flame drake expels a ball of flame to a range of 180 feet that explodes in a @Template[burst|distance:20]. Creatures in the burst take @Damage[9d6[fire]|options:area-damage] damage (@Check[reflex|dc:26|basic|options:area-effect] save).</p>\n<p>The flame drake can't use Fireball Breath again for [[/gmr 1d6 #Recharge Fireball Breath]]{1d6 rounds}.</p>"
         },
         "action->Speed Surge": {
           "name": "Speed Surge",
@@ -2445,7 +2439,7 @@
         },
         "action->Fearsome Blizzard": {
           "name": "Fearsome Blizzard",
-          "description": "<p>Fionn exhales a swirling blizzard of snow and ice that chills the soul as surely as it freezes flesh. All living creatures within @Template[emanation|distance:60]{60 feet} of Fionn must attempt a @Check[fortitude|dc:33] save. Fionn can't use Fearsome Blizzard for [[/gmr 1d4 #Recharge Fearsome Blizzard]]{1d4 rounds}.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes @Damage[5d8[cold]] damage.</p>\n<p><strong>Failure</strong> The creature takes @Damage[10d8[cold]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}; the frightened effect has the emotion, fear, and mental traits.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[20d8[cold]] damage, is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}, and is @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} as long as they remain frightened. The frightened and fleeing effects have the emotion, fear, and mental traits.</p>"
+          "description": "<p>Fionn exhales a swirling blizzard of snow and ice that chills the soul as surely as it freezes flesh. All living creatures within @Template[emanation|distance:60]{60 feet} of Fionn must attempt a @Check[fortitude|dc:33|options:area-effect,damaging-effect] save. Fionn can't use Fearsome Blizzard for [[/gmr 1d4 #Recharge Fearsome Blizzard]]{1d4 rounds}.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes @Damage[5d8[cold]|options:area-damage] damage.</p>\n<p><strong>Failure</strong> The creature takes @Damage[10d8[cold]|options:area-damage] damage and is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}; the frightened effect has the emotion, fear, and mental traits.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[20d8[cold]|options:area-damage] damage, is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}, and is @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} as long as they remain frightened. The frightened and fleeing effects have the emotion, fear, and mental traits.</p>"
         },
         "lore->Fey Lore": {
           "name": "Fey Lore"
@@ -2685,12 +2679,6 @@
         },
         "armor->Chain Shirt": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.MPcM4Wt6KmWE2kGL]\n<p>Sometimes called a hauberk, this is a long shirt constructed of the same metal rings as chainmail. However, it is much lighter than chainmail and protects only the torso, upper arms, and upper legs of its wearer.</p>"
-        },
-        "strike-melee->Jaws": {
-          "name": "Jaws"
-        },
-        "strike-melee->Claw": {
-          "name": "Claw"
         },
         "strike-ranged->Oathbow": {
           "name": "Oathbow",
@@ -4143,7 +4131,7 @@
         },
         "action->Chill Breath": {
           "name": "Chill Breath",
-          "description": "<p>The frost giant breathes out a @Template[cone|distance:15|damaging:yes]{15-foot cone} of freezing moisture that quickly condenses into ice, dealing @Damage[9d6[cold]|options:area-damage] damage. Each creature in the cone must attempt a @Check[reflex|dc:41|basic|options:area-effect] save.</p>\n<p>A creature that fails its save is also @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} and takes @Damage[2d6[cold]] damage at the end of each of its turns until it gets free (Escape DC 41).</p>\n<p>The giant can't use Chill Breath again for [[/gmr 1d4 #Recharge Chill Breath]]{1d4 rounds}.</p>"
+          "description": "<p>The frost giant breathes out a @Template[cone|distance:15|damaging:yes]{15-foot cone} of freezing moisture that quickly condenses into ice, dealing @Damage[9d6[cold]|options:area-damage] damage. Each creature in the cone must attempt a @Check[reflex|dc:41|basic|options:area-effect] save.</p>\n<p>A creature that fails its save is also @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} and takes @Damage[2d6[cold]] damage at the end of each of its turns until it gets free ([[/act escape dc=41]]).</p>\n<p>The giant can't use Chill Breath again for [[/gmr 1d4 #Recharge Chill Breath]]{1d4 rounds}.</p>"
         },
         "action->Hatchet Onslaught": {
           "name": "Hatchet Onslaught",
@@ -4195,7 +4183,7 @@
         },
         "action->Chill Breath": {
           "name": "Chill Breath",
-          "description": "<p>The frost giant breathes out a @Template[cone|distance:15|damaging:yes]{15-foot cone} of freezing moisture that quickly condenses into ice, dealing @Damage[7d6[cold]|options:area-damage] damage. Each creature in the cone must attempt a @Check[reflex|dc:36|basic|options:area-effect] save.</p>\n<p>A creature that fails its save is also @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} and takes @Damage[2d6[cold]] damage at the end of each of its turns until it gets free (Escape DC 36).</p>\n<p>The giant can't use Chill Breath again for [[/gmr 1d4 #Recharge Chill Breath]]{1d4 rounds}.</p>"
+          "description": "<p>The frost giant breathes out a @Template[cone|distance:15|damaging:yes]{15-foot cone} of freezing moisture that quickly condenses into ice, dealing @Damage[7d6[cold]|options:area-damage] damage. Each creature in the cone must attempt a @Check[reflex|dc:36|basic|options:area-effect] save.</p>\n<p>A creature that fails its save is also @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} and takes @Damage[2d6[cold]] damage at the end of each of its turns until it gets free ([[/act escape dc=36]]).</p>\n<p>The giant can't use Chill Breath again for [[/gmr 1d4 #Recharge Chill Breath]]{1d4 rounds}.</p>"
         },
         "action->Ice Stride": {
           "name": "Ice Stride",
@@ -4232,7 +4220,7 @@
         },
         "action->Devastating Blast": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.IxJbFJ8dG5RbZWBD]\nDevastating Blast",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.IxJbFJ8dG5RbZWBD]\n<p>The graveknight unleashes a @Template[cone|distance:30] of energy. Creatures in the area take @Damage[8d12[cold]] damage (@Check[reflex|dc:34|basic] save). The graveknight can use this ability once every [[/gmr 1d4 #Recharge Devastating Blast]]{1d4 rounds}.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.IxJbFJ8dG5RbZWBD]\n<p>The graveknight unleashes a @Template[cone|distance:30] of energy. Creatures in the area take @Damage[8d12[cold]|options:area-damage] damage (@Check[reflex|dc:34|basic|options:area-effect] save). The graveknight can use this ability once every [[/gmr 1d4 #Recharge Devastating Blast]]{1d4 rounds}.</p>"
         },
         "action->Graveknight's Curse": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.5dbzWZbiTyPKgwKS]\nGraveknight's Curse",
@@ -4393,7 +4381,7 @@
         },
         "action->Devastating Blast": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.IxJbFJ8dG5RbZWBD]\nDevastating Blast",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.IxJbFJ8dG5RbZWBD]\n<p>The graveknight unleashes a @Template[cone|distance:30] of energy. Creatures in the area take @Damage[9d12[electricity]] damage (@Check[reflex|dc:37|basic] save). The graveknight can use this ability once every [[/gmr 1d4 #Recharge Devastating Blast]]{1d4 rounds}.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.IxJbFJ8dG5RbZWBD]\n<p>The graveknight unleashes a @Template[cone|distance:30] of energy. Creatures in the area take @Damage[9d12[electricity]|options:area-damage] damage (@Check[reflex|dc:37|basic|options:area-effect] save). The graveknight can use this ability once every [[/gmr 1d4 #Recharge Devastating Blast]]{1d4 rounds}.</p>"
         },
         "action->Graveknight's Curse": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.5dbzWZbiTyPKgwKS]\nGraveknight's Curse",
@@ -4439,18 +4427,6 @@
       "blurb": "Male human werewolf",
       "languages": "wolf empathy",
       "items": {
-        "strike-melee->Jaws": {
-          "name": "Jaws"
-        },
-        "strike-melee->Claw": {
-          "name": "Claw"
-        },
-        "strike-melee->Fist": {
-          "name": "Fist"
-        },
-        "strike-melee->Wolf Jaws": {
-          "name": "Wolf Jaws"
-        },
         "action->Wolf Empathy": {
           "name": "Wolf Empathy",
           "description": "<p>Kundal can communicate with lupines.</p>"
@@ -4460,7 +4436,12 @@
           "description": "<p><strong>Requirement</strong> Kundal rolled Stealth for Initiative, and it's the first round of combat.</p>\n<hr />\n<p><strong>Effect</strong> Kundal Strides up to his speed and then attempts a jaws Strike and a claw Strike against a single adjacent target. Apply his multiple attack penalty to each Strike normally.</p>"
         },
         "action->Change Shape": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.eQM5hQ1W3d1uen97]\n<p>Human with fist +16 for 1d4+7 bludgeoning, or wolf with Speed 40 feet and jaws with Knockdown.</p>\n<p>@Localize[PF2E.NPC.Abilities.Glossary.ChangeShape]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.eQM5hQ1W3d1uen97]\n<p>Human with fist +16 for 1d4+7 bludgeoning, or wolf with Speed 40 feet and jaws with Knockdown.</p>\n<p>@Localize[PF2E.NPC.Abilities.Glossary.ChangeShape]</p>",
+          "rules": {
+            "2": {
+              "text": "@Localize[PF2E.NPC.Abilities.Glossary.Knockdown]"
+            }
+          }
         },
         "action->Curse of the Werewolf": {
           "name": "Curse of the Werewolf",
@@ -9238,7 +9219,7 @@
         },
         "action->Mind-Numbing Breath": {
           "name": "Mind-Numbing Breath",
-          "description": "<p>The whimwyrm exhales a @Template[cone|distance:40] of sparkling magenta mist. Creatures within the area must attempt a @Check[will|dc:38] save as their minds are overwhelmed by a sudden riot of false (and typically unpleasant) memories, taking @Damage[10d12[mental]] damage depending on their save. The whimwyrm can't use mind-numbing breath for [[/gmr 1d4 #rounds]]{1d4 rounds}.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature becomes outlined in sparkling dust, negating any @UUID[Compendium.pf2e.spells-srd.Item.XXqE1eY3w3z6xJCB]{Invisibility} it has in effect for 1 round and takes no damage.</p>\n<p><strong>Success</strong> The creature takes half damage, and its invisibility is negated for 2 rounds.</p>\n<p><strong>Failure</strong> The creature takes full damage, is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 minute, and its invisibility is negated for 1 minute.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage, is @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for 1 round, dazzled for 1 minute, and its invisibility is negated for 1 minute.</p>"
+          "description": "<p>The whimwyrm exhales a @Template[cone|distance:40] of sparkling magenta mist. Creatures within the area must attempt a @Check[will|dc:38|options:area-effect,damaging-effect] save as their minds are overwhelmed by a sudden riot of false (and typically unpleasant) memories, taking @Damage[10d12[mental]|options:area-damage] damage depending on their save. The whimwyrm can't use mind-numbing breath for [[/gmr 1d4 #Recharge Mind-Numbing Breath]]{1d4 rounds}.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature becomes outlined in sparkling dust, negating any @UUID[Compendium.pf2e.spells-srd.Item.XXqE1eY3w3z6xJCB]{Invisibility} it has in effect for 1 round and takes no damage.</p>\n<p><strong>Success</strong> The creature takes half damage, and its invisibility is negated for 2 rounds.</p>\n<p><strong>Failure</strong> The creature takes full damage, is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 minute, and its invisibility is negated for 1 minute.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage, is @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for 1 round, dazzled for 1 minute, and its invisibility is negated for 1 minute.</p>"
         }
       }
     },
