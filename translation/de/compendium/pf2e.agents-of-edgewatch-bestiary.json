@@ -1,85 +1,85 @@
 {
-  "label": "agents-of-edgewatch-bestiary",
+  "label": "Die Klippenwacht",
   "entries": {
     "Acidic Poison Cloud Trap": {
-      "name": "Acidic Poison Cloud Trap",
-      "description": "<p>Five nozzles hidden across the apartment's ceiling spew thick clouds of acidic poison from a reinforced tank behind the wall.</p>",
-      "disable": "<p>@Check[thievery|dc:35|name:Block One Nozzle|traits:action:disable-a-device] (expert) to block one of the nozzles or @Check[thievery|dc:40|name:Shut Off the Tank|traits:action:disable-a-device] (master) to shut off the tank. The trap deactivates after 5 rounds, once the tank is empty.</p>",
-      "hpDetails": "to destroy a nozzle; <strong>Tank Hardness</strong> 20; <strong>TankHP</strong> 100 (BT 50) to damage the tank enough to stop it from spewing gas",
-      "routine": "<p>(1 action) When it's triggered, the trap has five active nozzles, but at the end of its turn each round, one random nozzle deactivates. On the trap's turn, the active nozzles emit a cloud of acidic poison gas that expands to fill the apartment. The cloud deals @Damage[1d6[acid]] damage and @Damage[1d6[poison]] damage per active nozzle to each creature and object in the room (@Check[fortitude|dc:33|basic|name:Spew Cloud|traits:poison] save). Unattended objects automatically fail saves to avoid the damage.</p>",
-      "stealth": "<p>(master)</p>",
+      "name": "Giftige Säurewolke",
+      "description": "<p>Fünf verborgene Düsen in der Wohnungsdecke speien dichte, säurehaltige Giftwolken aus; das Gift kommt aus einem hinter der Wand versteckten, verstärkten Tank.</p>",
+      "disable": "<p>@Check[thievery|dc:35|traits:action:disable-a-device]{Diebeskunst} (Experte), um eine Düse zu verstopfen, oder @Check[thievery|dc:40|traits:action:disable-a-device]{Diebeskunst} (Meister), um den Tank zu schließen. Die Falle deaktiviert sich nach 5 Runden, sowie der Tank leer ist.</p>",
+      "hpDetails": "zum Zerstören einer Düse; <strong>Tank-Härte</strong> 20; <strong>Tank-TP</strong> 100 (BW 50), um dem Tank genug Schaden zuzufügen, dass er kein Gas mehr ausstößt",
+      "routine": "<p> (1 Aktion) Wird die Falle ausgelöst, verfügt sie über fünf aktive Düsen. Am Ende ihres Zuges deaktiviert sich eine zufällig bestimmte Düse. Ist die Falle am Zug, stoßen die aktiven Düsen eine säurehaltige Giftwolke aus, welche langsam die Wohnung füllt. Die Wolke verursacht bei jeder Kreatur und jedem Gegenstand im Raum @Damage[1d6[acid],1d6[poison]]{1W6 Punkte Säureschaden und 1W6 Punkte Giftschaden} pro aktiver Düse (@Check[fortitude|dc:33|basic|traits:poison]{Zähigkeitswurf}). Nicht am Leib oder in Händen getragene Gegenstände scheitern automatisch bei diesem Rettungswurf gegen den Schaden.</p>",
+      "stealth": "<p>(Meister)</p>",
       "items": {
         "action->Spew Cloud": {
-          "name": "Spew Cloud",
-          "description": "<p><strong>Trigger</strong> Twelve seconds have passed since the door to the apartment was opened</p>\n<hr />\n<p><strong>Effect</strong> The trap rolls initiative.</p>"
+          "name": "Giftwolke versprühen",
+          "description": "<p><strong>Auslöser</strong> Seit Öffnung der Wohnungstür sind 12 Sekunden verstrichen</p>\n<hr />\n<p><strong>Effekt</strong> Die Falle würfelt ihre Initiative.</p>"
         }
       }
     },
     "Agent of the Gray Queen": {
-      "name": "Agent of the Gray Queen",
-      "languages": "telepathy 100 feet",
-      "saveDetails": "+1 status to all saves vs. magic",
+      "name": "Diener der Grauen Königin",
+      "languages": "Telepathie 100 Fuß/30 m",
+      "saveDetails": "+1 Zustandsbonus auf RW gg. Magie",
       "items": {
         "spellcastingEntry->Divine Innate Spells": {
-          "name": "Divine Innate Spells"
+          "name": "Immanente Göttliche Zauber"
         },
         "spell->Discern Location": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.CeSh8QcVnqP5OlLj]\nDiscern Location"
+          "name": "<Compendium>"
         },
         "spell->Finger of Death": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.Z9OrRXKgAPv6Hn5l]\nFinger of Death",
-          "target": "1 living creature"
+          "name": "<Compendium>",
+          "target": "1 Kreatur"
         },
         "spell->Plane Shift": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.5bTt2CvYHPvaR7QQ]\nPlane Shift",
-          "target": "1 willing creature, or up to 8 willing creatures joining hands"
+          "name": "<Compendium>",
+          "target": "1 bereitwillige Kreatur oder bis zu 8 bereitwillige Kreaturen, die sich bei den Händen nehmen"
         },
         "spell->True Seeing (Constant)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.uqlxMQQeSGWEVjki]\nTrue Seeing (Constant)"
+          "name": "<Compendium> (ständig)"
         },
         "spell->Dimension Door": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.VlNcjmYyu95vOUe8]\nDimension Door"
+          "name": "<Compendium>"
         },
         "spell->Dimension Door (At Will)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.VlNcjmYyu95vOUe8]\nDimension Door (At Will)"
+          "name": "<Compendium> (beliebig oft)"
         },
         "spell->Detect Alignment (At Will) (Good Only)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.QnTtGCAvdWRU4spv]\nDetect Alignment (At Will) (Good Only)"
+          "name": "<Compendium> (beliebig oft; nur Gute Gesinnungen)"
         },
         "strike-melee->Jaws": {
-          "name": "Jaws"
+          "name": "Biss"
         },
         "strike-melee->Claw": {
-          "name": "Claw"
+          "name": "Klaue"
         },
         "strike-melee->Tail": {
-          "name": "Tail"
+          "name": "Schwanz"
         },
         "action->Telepathy 100 feet": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.kdhbPaBMK1d1fpbA]\nTelepathy 100 feet"
+          "name": "<Compendium> 100 Fuß/30 m"
         },
         "action->Lifesense 30 feet": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.sebk9XseMCRkDqRg]\nLifesense 30 feet"
+          "name": "<Compendium> 30 Fuß/9 m"
         },
         "action->Displacement": {
-          "name": "Displacement",
-          "description": "<p>An astradaemon bends light, appearing shifted from its true position, though still in the same space.</p>\n<p>Creatures targeting the astradaemon must attempt a @Check[flat|dc:11] check, as if the astradaemon were hidden, even though it remains observed.</p>\n<p>Effects such as the @UUID[Compendium.pf2e.feats-srd.Item.y2XeMe1F18lIyo59]{Blind-Fight} feat and halfling's @UUID[Compendium.pf2e.ancestryfeatures.Item.y1EmCv2cEb5hXBwx]{Keen Eyes} that apply on the flat check against hidden creatures also apply against a displaced astradaemon.</p>"
+          "name": "Standort vortäuschen",
+          "description": "<p>Ein Astradaimon biegt das Licht und scheint zugleich an seinem Platz und nicht dort zu sein. Wer den Astradaimon zum Ziel machen will, muss einen @Check[flat|dc:11]{Einfachen Wurf} ablegen, als besäße der Astradaimon den Zustand Versteckt, selbst wenn er beobachtet wird. Effekte wie das Talent @UUID[Compendium.pf2e.feats-srd.Item.y2XeMe1F18lIyo59]{Blind kämpfen} und die @UUID[Compendium.pf2e.ancestryfeatures.Item.y1EmCv2cEb5hXBwx]{Scharfen Augen} eines Halblings kommen gegen die Fähigkeit Standort vortäuschen zur Anwendung.</p>"
         },
         "action->Soul Siphon": {
-          "name": "Soul Siphon",
-          "description": "<p>30 feet. An astradaemon draws power from the souls of the recently slain. If a Small or larger living creature dies within its aura, the astradaemon gains 5 temporary Hit Points and a +1 status bonus to attack and damage rolls for 1 round, unless the creature was slain by an astradaemon's Devour Soul ability.</p>\n<p>Incorporeal undead and living spirits traveling outside the body take @Damage[1d8[force]] damage each round within the daemon's aura from the spiritual pressure as the astradaemon pulls in fragments of their soul.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.SjrM6XVTLySToS12]{Effect: Soul Siphon}</p>"
+          "name": "Seelenzehrer",
+          "description": "<p>30 Fuß/9 m. Ein Astradaimon erlangt Kraft aus den Seelen der jüngst Getöteten. Sollte eine wenigstens Kleine Kreatur innerhalb dieser Aura sterben, erlangt der Astradaimon 5 Temporäre Trefferpunkt und einen Zustandsbonus von +1 auf Angriffs- und Schadenswürfe für 1 Runde, außer die Kreatur wurde durch die Fähigkeit Seele verschlingen getötet. Körperlose Untote und lebende Geister, die außerhalb des Körpers unterwegs sind, erleiden innerhalb der Aura jede Runde @Damage[1d8[force]]{1W8 Punkte Kraftschaden} durch den spirituellen Druck und den Umstand, dass der Astradaimon ihren Seelen Splitter entreißt.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.SjrM6XVTLySToS12]{Effekt: Seelenzehrer}</p>"
         },
         "action->Essence Drain": {
-          "name": "Essence Drain",
-          "description": "<p>When an astradaemon hits with its claw, jaws, or tail, it drains the target's spiritual and vital essences.</p>\n<p>The target takes @Damage[2d10[void]] damage and the astradaemon regains an equal number of Hit Points. The target must succeed at a @Check[fortitude|dc:37|traits:damaging-effect] save or become @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 1} and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}.</p>\n<p>If the target was already drained or doomed, it instead increases both conditions' value by 1, to a maximum of 4.</p>"
+          "name": "Lebenskraftentzug",
+          "description": "<p>Trifft ein Astradaimon mit Biss-, Klauen- oder Schwanzangriff, entzieht er die spirituelle und Lebensessenz des Zieles. Das Ziel erleidet @Damage[2d10[void]]{2W10 Punkte Leerenschaden}, während der Astradaimon dieselbe Anzahl an Trefferpunkten zurückerlangt. Das Ziel muss einen @Check[fortitude|dc:37|traits:damaging-effect]{Zähigkeitswurf} ablegen; bei Misslingen erhält es die Zustände @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 1} und @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Todgeweiht 1}; sollte er einen oder beide dieser Zustände bereits besitzen, steigt der jeweilige Zustandswert um 1 (bis auf maximal 4).</p>"
         },
         "action->Mortal Shell": {
-          "name": "Mortal Shell",
-          "description": "<p><strong>Requirements</strong> The astradaemon has killed a Large or smaller creature with Overtake Soul within the past 24 hours and that creature is within the daemon's reach</p>\n<hr />\n<p><strong>Effect</strong> The astradaemon takes over and wears the body of their victim. This automatically creates a disguise to allow the astradaemon to Impersonate the target creature. The body has a number of Hit Points equal to 3 times the level of the creature. Any damage targeting the astradaemon damages the body first. Once the body is reduced to 0 Hit Points, it's destroyed and forces the astradaemon out, back to the daemon's normal form. If the astradaemon takes any spirit damage while wearing the body, the damage is dealt to the astradaemon directly and it must succeed at a @Check[flat|dc:5] check or be forced out of the body. Additionally, @UUID[Compendium.pf2e.spells-srd.Item.ihbRf964JDXztcy3]{Disjunction} and @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} can force the astradaemon out of the body with a successful counteract check against DC 41.</p>\n<p>While wearing the disguise, the astradaemon's attacks use the reach of the body it inhabits, and its size changes to match that of the creature whose soul it consumed. Additionally, the astradaemon is @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2} and @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 4} while wearing the disguise. (These penalties haven't been incorporated into this stat block.)</p>"
+          "name": "Sterbliche Hülle",
+          "description": "<p><strong>Anforderungen</strong> Der Astradaimon hat innerhalb der letzten 24  Stunden mittels Seele rauben eine maximal Große Kreatur getötet, welche sich innerhalb seines Angriffsradius befindet</p>\n<hr />\n<p><strong>Effekt</strong> Der Astradaimon übernimmt den Körper seines Opfers und trägt diesen wie eine Hülle. Dies erschafft automatisch eine Verkleidung, welche dem Astradaimon ermöglicht, sich als die Zielkreatur auszugeben. Der Körper besitzt eine Anzahl an Trefferpunkten in Höhe der dreifachen Stufe der Kreatur. Erleidet der Astradaimon Schaden, betrifft dieser zuerst den Körper, solange es kein guter Schaden ist. Wird der Körper auf 0 TP reduziert, ist er verbraucht und zerstört, so dass der Daimon in seine normale Gestalt zurückgezwungen wird. Sollte der Astradaimon guten Schaden erleiden, betrifft dieser ihn direkt und muss er einen @Check[flat|dc:5]{Einfachen Wurf} ablegen; bei Misslingen wird er aus dem Körper gezwungen. Ferner können @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} und @UUID[Compendium.pf2e.spells-srd.Item.ihbRf964JDXztcy3]{Magischen Gegenstand stören} den Astradaimonen mit einem Wurf zum @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken} gegen SG 41 aus dem Körper zwingen.</p>\n<p>Während der Astradaimon seine sterbliche Hülle trägt, nutzt er deren Angriffsradius und nimmt er die Größenkategorie des übernommenen Körpers an. Er besitzt dabei die Zustände @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 4} und @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 2}. (Diese Mali sind nicht in den Spielwerten oben enthalten.)</p>"
         },
         "action->Overtake Soul": {
-          "name": "Overtake Soul",
-          "description": "<p><strong>Requirements</strong> The astradaemon hasn't used an action with the attack trait yet this turn.</p>\n<hr />\n<p><strong>Effect</strong> The astradaemon draws out and consumes the soul of a living creature it has @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}. The creature must succeed at a @Check[fortitude|dc:39|traits:damaging-effect] save or instantly die. If it dies, the astradaemon gains 10 temporary Hit Points.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.xiOi7btey4AS6jhe]{Effect: Overtake Soul}</p>"
+          "name": "Seele rauben",
+          "description": "<p><strong>Anforderungen</strong> Der Astradaimon hat bisher keine Handlung der Kategorie Offensiv in diesem Zug genutzt</p>\n<hr />\n<p><strong>Effekt</strong> Der Astradaimon entreißt einer lebenden Kreatur, die er in den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} versetzt hat, die Seele und verzehrt sie. Die Kreatur muss einen @Check[fortitude|dc:39|traits:damaging-effect]{Zähigkeitswurf} ablegen; bei Misslingen stirbt sie sofort. Stirbt sie, erlangt der Astradaimon 10 Temporäre Trefferpunkte. Überlebt sie, ist sie für 1  Minute vorübergehend gegen diese Fähigkeit immun.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.xiOi7btey4AS6jhe]{Effekt: Seele rauben}</p>"
         }
       }
     },
@@ -123,74 +123,74 @@
           "description": "<p>Der Agradaimon gewinnt @Damage[15[untyped]]{15 Trefferpunkte} zurück, während ein für ihn sichtbarer Eingeschworener Fanatiker seiner Wahl 15 Trefferpunkte verliert (die Anzahl der verlorenen Trefferpunkte kann durch keinen Effekt verringert werden). Stirbt ein Eingeschworener Fanatiker des Agradaimons auf diese Weise, explodiert sein Körper und verursacht @Damage[9d10[fire]]{9W10 Punkte Feuerschaden} in einem Umkreis von @Template[emanation|distance:20]{20 Fuß/6 m} (@Check[reflex|dc:41|basic]{einfacher Reflexwurf}).</p>"
         },
         "action->Rend": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.3JOi2cMcGhT3eze1]\n<p>Claw</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Rend]</p>"
+          "description": "<p>Klaue</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Rend]</p>"
         }
       }
     },
     "Alchemical Horror": {
-      "name": "Alchemical Horror",
+      "name": "Alchemistischer Schrecken",
       "items": {
         "strike-melee->Jaws": {
-          "name": "Jaws"
+          "name": "Biss"
         },
         "strike-melee->Pseudopod": {
-          "name": "Pseudopod"
+          "name": "Scheingliedmaße"
         },
         "action->Alchemical Reaction": {
-          "name": "Alchemical Reaction",
-          "description": "<p><strong>Trigger</strong> The alchemical horror takes damage from an alchemical bomb</p>\n<hr />\n<p><strong>Effect</strong> The volatile substances that compose the alchemical horror froth outward as they react with the bomb. The bomb's full effects affect creatures in every space within 15 feet of the alchemical horror, and splash damage affects creatures 5 feet beyond that.</p>"
+          "name": "Alchemistische Reaktion",
+          "description": "<p><strong>Auslöser</strong> Der Alchemistische Schrecken erleidet Schaden durch eine alchemistische Bombe</p>\n<hr />\n<p><strong>Effekt</strong> Die explosiven Substanzen, aus denen sich der Alchemistische Schrecken zusammensetzt, reagieren mit der Bombe. Die vollständigen Effekte der Bombe betreffen alle Kreaturen innerhalb von 15 Fuß/4,50 m Entfernung zum Alchemistischen Schrecken. Kreaturen in den nächsten 5 Fuß/1,50 m erleiden den Flächenschaden.</p>"
         },
         "action->Wavesense (Imprecise) 30 feet": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.VdSMQ6yRZ3YXNXHL]\nWavesense (Imprecise) 30 feet"
+          "name": "<Compendium> (Ungenau) 60 Fuß/18 m"
         },
         "action->Alchemical Torrent": {
-          "name": "Alchemical Torrent",
-          "description": "<p>The alchemical horror spews a torrent of alchemical fluids in a @Template[cone|distance:30] that deals @Damage[20d6[acid]|options:area-damage] damage to creatures in the area (@Check[reflex|dc:43|basic|options:area-effect] save).</p>\n<p>The alchemical horror can't use this ability again for [[/gmr 1d4 #Recharge Alchemical Torrent]]{1d4 rounds}.</p>"
+          "name": "Alchemistische Welle",
+          "description": "<p>Der Alchemistische Schrecken speit alchemistische Flüssigkeiten in einem @Template[cone|distance:30]{30 Fuß/9 m-Kegel}, welcher @Damage[20d6[acid]|options:area-damage]{20W6 Punkte Säureschaden} bei betroffenen Kreaturen verursachen (@Check[reflex|dc:43|basic|options:area-effect]{einfacher REF}).</p>\n<p>Der Alchemistische Schrecken kann diese Fähigkeit erst nach 1W4 Runden erneut einsetzen.</p>"
         },
         "action->Swallow Whole": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.uJSseLa57HZYSMUu]\n<p>Large, @Damage[(4d12+18)[bludgeoning]] damage, Rupture 40</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
+          "description": "<p>Groß, @Damage[(4d12+18)[bludgeoning]]{4W12+18 Punkte Wuchtschaden}, Befreien 40</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
         }
       }
     },
     "Alchemist Aspirant": {
-      "name": "Alchemist Aspirant",
+      "name": "Möchtegern-Alchemist",
       "items": {
         "weapon->Acid Flask (Moderate)": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.SgtqZxt26BdjUmEB]\n<p><strong>Activate</strong> <span class=\"action-glyph\">A</span> Strike</p>\n<p>This flask filled with corrosive acid deals 1 acid damage, 2d6 persistent acid damage, and 2 acid splash damage. You gain a +1 item bonus to attack rolls.</p>"
+          "description": "<Compendium>"
         },
         "weapon->Alchemist's Fire (Moderate)": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.gWr4q4HiyGhETA8H]\n<p><strong>Activate</strong> <span class=\"action-glyph\">A</span> Strike</p>\n<p>Alchemist's fire is a combination of volatile liquids that ignite when exposed to air. Alchemist's fire deals 2d8 fire damage, 2 persistent fire damage, and 2 fire splash damage. You gain a +1 item bonus to attack rolls.</p>"
+          "description": "<Compendium>"
         },
         "weapon->Tanglefoot Bag (Moderate)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.evBPzM1VsuYcoenn]\nTanglefoot Bag (Moderate)",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.evBPzM1VsuYcoenn]\n<p><strong>Activate</strong> <span class=\"action-glyph\">1</span> Strike</p>\n<hr />\n<p>A tanglefoot bag is filled with sticky substances. When you hit a creature with a tanglefoot bag, that creature takes a -15-foot status penalty to its Speeds for 1 minute. You gain a +1 item bonus to attack rolls, and the Escape DC is 19.</p>\n<p>On a critical hit, a creature in contact with a solid surface becomes stuck to the surface and @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} for 1 round, and a creature flying via wings has its wings tangled, causing it to fall safely to the ground and become unable to Fly again for 1 round. Tanglefoot bags are not effective when used on a creature that is in water.</p>\n<p>The target can end any effects by Escaping or spending a total of 3 actions to carefully remove the sticky substances. These Interact actions don't have to be consecutive, and other creatures can provide the actions as well.</p>"
+          "name": "<Compendium>",
+          "description": "<Compendium>"
         },
         "armor->+1 Studded Leather Armor": {
-          "name": "+1 Studded Leather Armor",
-          "description": "<p>This leather armor is reinforced with metal studs and sometimes small metal plates, providing most of the flexibility of leather armor with more robust protection.</p>"
+          "name": "+1 Beschlagene Lederrüstung",
+          "description": "<p>Diese Lederrüstung ist mit Metallnieten und manchmal sogar kleinen Metallplatten verstärkt, so kombiniert sie die Flexibilität einer Lederrüstung mit der stärkeren Schutzwirkung von Metall.</p>"
         },
         "equipment->Alchemist Goggles": {
-          "name": "Alchemist Goggles",
-          "description": "<p>These brass goggles are engraved with flame patterns and have thick, heavy lenses.</p>\n<p>While worn, they give you a +1 item bonus to Crafting checks to Craft alchemical items and a +1 item bonus to attack rolls with alchemical bombs.</p>\n<p>You can also ignore lesser cover when making Strikes with alchemical bombs.</p>",
+          "name": "Alchemistenbrille",
+          "description": "<p>Diese Messingbrille ist mit gravierten Flammenmustern geschmückt und hat dicke, schwere Gläser. Solange du sie trägst, verleiht sie dir einen Gegenstandsbonus von +1 auf Fertigkeitswürfe auf Handwerkskunst auf Alchemistische Gegenstände Herstellen und einen Gegenstandsbonus von +1 auf Angriffswürfe mit alchemistischen Bomben. Zudem kannst du Schwache Deckung ignorieren, wenn du mit Alchemistischen Bomben Angriffsaktionen ausführst.</p>",
           "rules": {
             "0": {
-              "label": "Alchemist Goggles (craft alchemical items)"
+              "label": "Alchemistenbrille (alchemistische Gegenstände herstellen)"
             },
             "1": {
-              "label": "Alchemist Goggles (alchemical bombs)"
+              "label": "Alchemistenbrille (Alchemistische Bomben)"
             }
           }
         },
         "equipment->Alchemist's Tools": {
-          "name": "Alchemist's Tools",
-          "description": "<p>This mobile collection of vials and chemicals can be used for simple alchemical tasks.</p>"
+          "name": "Alchemistenwerkzeuge",
+          "description": "<p>Diese transportable Ansammlung an Messbechern und Chemikalien kann für einfache alchemistische Arbeiten verwendet werden.</p>"
         },
         "equipment->Formula Book": {
-          "name": "Formula Book",
-          "description": "<p>A formula book holds the formulas necessary to make items other than the common equipment from this chapter; alchemists typically get one for free. Each formula book can hold the formulas for up to 100 different items. Formulas can also appear on parchment sheets, tablets, and almost any other medium; there's no need for you to copy them into a specific book as long as you can keep them on hand to reference them.</p>\n<p>Contains formulas for the following:</p>\n<ul>\n<li>@UUID[Compendium.pf2e.equipment-srd.Item.SgtqZxt26BdjUmEB]{Acid Flask (Moderate)}</li>\n<li>@UUID[Compendium.pf2e.equipment-srd.Item.gWr4q4HiyGhETA8H]{Alchemist's Fire (Moderate)}</li>\n<li>@UUID[Compendium.pf2e.equipment-srd.Item.XWkeL34yJK6t5qUE]{Antidote (Greater)}</li>\n<li>@UUID[Compendium.pf2e.equipment-srd.Item.oCuwJ9IUDAuzsUwa]{Bravo's Brew (Moderate)}</li>\n<li>@UUID[Compendium.pf2e.equipment-srd.Item.c21stU5rhN4F2fZl]{Elixir of Life (Moderate)}</li>\n<li>@UUID[Compendium.pf2e.equipment-srd.Item.evBPzM1VsuYcoenn]{Tanglefoot Bag (Moderate)}</li>\n<li>@UUID[Compendium.pf2e.equipment-srd.Item.WL4O32qFifxnMj0H]{Wyvern Poison}</li>\n</ul>"
+          "name": "Formelbuch",
+          "description": "<p>Ein Formelbuch enthält die Anleitungen, welche nötig sind um etwas anderes als die gewöhnlichen Gegenstände in den Kernregeln Spieler herzustellen. Alchemisten erhalten ihr erstes Formelbuch normalerweise umsonst. Jedes Formelbuch kann Anleitungen für bis zu 100 verschiedene Gegenstände enthalten. Anleitungen werden auch auf Pergamenten, Tafeln und allen möglichen anderen Dingen niedergeschrieben, du musst sie nicht in ein spezielles Buch abschreiben, um sie benutzen zu können, sondern sie lediglich zur Hand haben und ansehen, wenn du etwas Bestimmtes herstellen willst.</p>\n<p>Enthält die folgenden Formeln:</p>\n<ul>\n<li>@UUID[Compendium.pf2e.equipment-srd.Item.SgtqZxt26BdjUmEB]{Säureflasche, Durchschnittliche}</li>\n<li>@UUID[Compendium.pf2e.equipment-srd.Item.gWr4q4HiyGhETA8H]{Alchemistenfeuer, Durchschnittliches}</li>\n<li>@UUID[Compendium.pf2e.equipment-srd.Item.XWkeL34yJK6t5qUE]{Gegengift, Starkes}</li>\n<li>@UUID[Compendium.pf2e.equipment-srd.Item.oCuwJ9IUDAuzsUwa]{Draufgängerbräu, Durchschnittliches}</li>\n<li>@UUID[Compendium.pf2e.equipment-srd.Item.c21stU5rhN4F2fZl]{Lebenselixier, Durchschnittliches}</li>\n<li>@UUID[Compendium.pf2e.equipment-srd.Item.evBPzM1VsuYcoenn]{Klebstoffbombe, Durchschnittliche}</li>\n<li>@UUID[Compendium.pf2e.equipment-srd.Item.WL4O32qFifxnMj0H]{Wyverngift}</li>\n</ul>"
         },
         "consumable->Wyvern Poison (Applied to Rapier)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.WL4O32qFifxnMj0H]\nWyvern Poison (Applied to Rapier)",
+          "name": "<Compendium> (aufgetragen auf Rapier)",
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.WL4O32qFifxnMj0H]\n<p>Properly harvested and preserved, the poison from a wyvern's sting is effective and direct.</p>\n<hr />\n<p><strong>Activate</strong> <span class=\"action-glyph\">2</span> Interact (Injury)</p>\n<p><strong>Saving Throw</strong> @Check[fortitude|dc:26]</p>\n<p><strong>Maximum Duration</strong> 6 rounds</p>\n<p><strong>Stage 1</strong> @Damage[5d6[poison]] damage (1 round)</p>\n<p><strong>Stage 2</strong> @Damage[6d6[poison]] damage (1 round)</p>\n<p><strong>Stage 3</strong> @Damage[8d6[poison]] damage (1 round)</p>"
         },
         "consumable->Elixir of Life (Moderate)": {
