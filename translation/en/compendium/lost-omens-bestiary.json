@@ -441,15 +441,6 @@
         "spellcastingEntry->Primal Innate Spells": {
           "name": "Primal Innate Spells"
         },
-        "spell->Chilling Spray": {
-          "name": "Chilling Spray",
-          "description": "<p>A cone of icy shards bursts from your spread hands and coats the targets in a layer of frost. You deal 2d4 cold damage to creatures in the area; they must each attempt a Reflex save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and takes a –5-foot status penalty to its Speeds for 2 rounds.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and takes a –10-foot status penalty to its Speeds for 2 rounds.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 2d4.</p>"
-        },
-        "spell->Frostbite": {
-          "name": "Frostbite",
-          "description": "<p>An orb of biting cold coalesces around your target, freezing its body. The target takes 2d4 cold damage with a basic Fortitude save. On a critical failure, the target also gains weakness 1 to bludgeoning until the start of your next turn.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.DdqWMj7cuf4S1bgr]{Spell Effect: Frostbite}</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1d4 and the weakness on a critical failure increases by 1.</p>",
-          "target": "1 creature"
-        },
         "action->Troop Defenses": {
           "name": "Troop Defenses"
         },
@@ -462,7 +453,7 @@
         },
         "action->Icy Japes": {
           "name": "Icy Japes",
-          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The beirans descend on their prey, biting and clawing at each enemy in a @Template[type:emanation|distance:5], with a @Check[reflex|dc:17|basic] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[1d6[slashing]] damage plus @Damage[1[cold]] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d6+2)[slashing]] damage plus @Damage[1d4[cold]] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(2d6+5)[cold]] damage plus @Damage[1d4[cold]] damage</p>"
+          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The beirans descend on their prey, biting and clawing at each enemy in a @Template[type:emanation|distance:5], with a @Check[reflex|dc:17|basic|options:damaging-effect] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[1d6[slashing],1[cold]]{1d6 slashing damage plus 1 cold damage}</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d6+2)[slashing]1d4[cold]]{2d6+2 slashing damage plus 1d4 cold damage}</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(2d6+5)[cold],[1d4[cold]]{2d6+5 cold damage plus 1d4 cold damage}</p>"
         }
       }
     },
@@ -522,59 +513,6 @@
       "items": {
         "spellcastingEntry->Divine Innate Spells": {
           "name": "Divine Innate Spells"
-        },
-        "spell->Dull Ambition": {
-          "name": "Dull Ambition",
-          "description": "<p>You curse the target to fail in all avenues of its life that require drive and ambition, as it inadvertently undermines its own goals at every turn. The effect is based on the target's Will save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> For 1 hour, the target rolls twice and uses the lower result on initiative rolls.</p>\n<p><strong>Failure</strong> For 1 day, the target rolls twice and uses the lower result on initiative rolls and any check to determine the success of a downtime activity.</p>\n<p><strong>Critical Failure</strong> As failure, but the duration is unlimited.</p>",
-          "target": "1 creature"
-        },
-        "spell->Crisis of Faith": {
-          "name": "Crisis of Faith",
-          "description": "<p>You assault the target's faith, riddling the creature with doubt and mental turmoil that deal 6d6 mental damage, or 6d8 mental damage if it can cast divine spells. The effects are determined by its Will save.</p>\n<p>To many deities, casting this spell on a follower of your own deity without significant cause is anathema.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes half damage.</p>\n<p><strong>Failure</strong> The target takes full damage; if the target can cast divine spells, it's @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 round.</p>\n<p><strong>Critical Failure</strong> The target takes double damage, is @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 round, and can't cast divine spells for 1 round.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 2d6 (or by 2d8 if the target is a divine spellcaster).</p>",
-          "target": "1 creature"
-        },
-        "spell->Dispel Magic": [
-          {
-            "name": "Dispel Magic",
-            "description": "<p>You unravel the magic behind a spell or effect. Attempt a counteract check against the target. If you successfully counteract a magic item, the item becomes a mundane item of its type for 10 minutes. This doesn't change the item's non-magical properties. If the target is an artifact or similar item, you automatically fail.</p>",
-            "target": "1 spell effect or unattended magic item",
-            "id": "SIJiatjnKQhuMOUG"
-          },
-          {
-            "name": "Dispel Magic",
-            "description": "<p>You unravel the magic behind a spell or effect. Attempt a counteract check against the target. If you successfully counteract a magic item, the item becomes a mundane item of its type for 10 minutes. This doesn't change the item's non-magical properties. If the target is an artifact or similar item, you automatically fail.</p>",
-            "target": "1 spell effect or unattended magic item",
-            "id": "ivp0yBu1W9gxqxYA"
-          }
-        ],
-        "spell->Silence": {
-          "name": "Silence",
-          "description": "<p>The target makes no sound, preventing creatures from noticing it using hearing alone. The target can't use sonic attacks, nor can it use actions with the auditory trait. This prevents it from casting spells due to the magical words involved in casting, with the exception of subtle spells.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.mmJNE57hC7G3SPae]{Spell Effect: Silence}</p>\n<hr />\n<p><strong>Heightened (4th)</strong> The spell creates an aura in a 10-foot emanation around the touched creature, silencing all sound in or passing through it. While within the aura, creatures are subject to the same effects as the target. Depending upon the position of the effect, a creature might notice the lack of sound reaching it (blocking off the noise coming from a party, for example).</p>",
-          "target": "1 willing creature"
-        },
-        "spell->Command": {
-          "name": "Command",
-          "description": "<p>You shout a command that's hard to ignore. You can command the target to approach you, run away (as if it had the @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} condition), release what it's holding, drop @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}, or stand in place. It can't @UUID[Compendium.pf2e.actionspf2e.Item.A72nHGUtNXgY5Ey9]{Delay} or take any reactions until it has obeyed your command. The effects depend on the target's Will save.</p>\n<hr />\n<p><strong>Success</strong> The creature is unaffected.</p>\n<p><strong>Failure</strong> For the first action on its next turn, the creature must use a single action to do as you command.</p>\n<p><strong>Critical Failure</strong> The target must use all its actions on its next turn to obey your command.</p>\n<hr />\n<p><strong>Heightened (5th)</strong> You can target up to 10 creatures.</p>",
-          "target": "1 creature"
-        },
-        "spell->Detect Magic": {
-          "name": "Detect Magic",
-          "description": "<p>You send out a pulse that registers the presence of magic. You receive no information beyond the presence or absence of magic. You can choose to ignore magic you're fully aware of, such as the magic items and ongoing spells of you and your allies. You detect illusion magic only if that magic's effect has a lower rank than the rank of your <em>detect magic</em> spell. However, items that have an illusion aura but aren't deceptive in appearance (such as an @UUID[Compendium.pf2e.equipment-srd.Item.bikFUFRLwfdvX2x2]{Invisibility Potion}) typically are detected normally.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> You learn the rank or level of the most powerful magical effect the spell detects, as determined by the GM.</p>\n<p><strong>Heightened (4th)</strong> As 3rd rank, but you also pinpoint the source of the highest-rank magic. Like for an imprecise sense, you don't learn the exact location, but can narrow down the source to within a 5-foot cube (or the nearest if larger than that).</p>"
-        },
-        "spell->Divine Lance": {
-          "name": "Divine Lance",
-          "description": "<p>You unleash a beam of divine energy. Make a ranged spell attack against the target's AC. On a hit, the target takes 2d4 spirit damage (double damage on a critical hit).</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1d4.</p>",
-          "target": "1 creature"
-        },
-        "spell->Enfeeble": {
-          "name": "Enfeeble",
-          "description": "<p>You sap the target's strength, depending on its Fortitude save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} until the start of your next turn.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} for 1 minute.</p>\n<p><strong>Critical Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 3} for 1 minute.</p>",
-          "target": "1 creature"
-        },
-        "spell->Sigil": {
-          "name": "Sigil",
-          "description": "<p>You harmlessly place your unique magical sigil, which is about 1 square inch in size, on the targeted creature or object. The mark can be visible or invisible, and you can change it from one state to another by using an Interact action to touch the target. The mark can be scrubbed or scraped off with 5 minutes of work. If it's on a creature, it fades naturally over the course of a week. The time before the mark fades increases depending on your heightened rank.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> The sigil instead fades after 1 month.</p>\n<p><strong>Heightened (5th)</strong> The sigil instead fades after 1 year.</p>\n<p><strong>Heightened (7th)</strong> The sigil never fades.</p>",
-          "target": "1 creature or object"
         },
         "weapon->Gavel": {
           "name": "Gavel",
@@ -685,7 +623,7 @@
         },
         "action->Lunar Burst": {
           "name": "Lunar Burst",
-          "description": "<p>The bul-gae releases a blast of otherworldly frost that deals @Damage[6d8[cold]] damage to each creature in a @Template[emanation|distance:10] (@Check[reflex|dc:34|basic] save). On a critical failure, a creature also becomes @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 2} for 1 round. After using this ability, the bul-gae's flames heat up and they can't use Lunar Burst again until after they've used their Solar Flare reaction.</p>"
+          "description": "<p>The bul-gae releases a blast of otherworldly frost that deals @Damage[6d8[cold]|options:area-damage] damage to each creature in a @Template[emanation|distance:10] (@Check[reflex|dc:34|basic|options:area-effect] save). On a critical failure, a creature also becomes @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 2} for 1 round. After using this ability, the bul-gae's flames heat up and they can't use Lunar Burst again until after they've used their Solar Flare reaction.</p>"
         },
         "action->Shadow Leap": {
           "name": "Shadow Leap",
@@ -1295,100 +1233,6 @@
         "spellcastingEntry->Occult Spontaneous Spells": {
           "name": "Occult Spontaneous Spells"
         },
-        "spell->Invoke Spirits": {
-          "name": "Invoke Spirits",
-          "description": "<p>Ragged apparitions of the dead rise to stalk the living. They deal 2d4 mental damage and 2d4 void damage to each living creature in the area, with a basic Will save. Additionally, creatures that critically fail the save are @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} and are @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} for 1 round.</p>\n<p>On subsequent rounds, the first time you Sustain the Spell each round, you can move the area up to 30 feet within the range of the spell. Living creatures in the new area must attempt saves with the same effects as above, except that critically failing doesn't make them flee.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The mental damage and void damage each increase by 1d4.</p>"
-        },
-        "spell->Shadow Blast": {
-          "name": "Shadow Blast",
-          "description": "<p>You shape the shadow substance of the Netherworld into a blast. Choose acid, bludgeoning, cold, electricity, fire, force, piercing, slashing, sonic, or spirit damage, and choose a @Template[cone|distance:30], a @Template[burst|distance:15] within 120 feet, or a @Template[line|distance:50]. The blast deals 6d8 damage of the type you chose to each creature in the area (@Damage[(@item.rank+1)d8[acid]], @Damage[(@item.rank+1)d8[bludgeoning]], @Damage[(@item.rank+1)d8[cold]], @Damage[(@item.rank+1)d8[electricity]], @Damage[(@item.rank+1)d8[fire]], @Damage[(@item.rank+1)d8[force]], @Damage[(@item.rank+1)d8[piercing]], @Damage[(@item.rank+1)d8[slashing]], @Damage[(@item.rank+1)d8[sonic]], or @Damage[(@item.rank+1)d8[spirit]]).</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1d8.</p>"
-        },
-        "spell->Telekinetic Haul": {
-          "name": "Telekinetic Haul",
-          "description": "<p>You move the target up to 20 feet, potentially suspending it in midair. When you Sustain the Spell, you can do so again, or you can shift your telekinetic focus to a different eligible target within range, moving it instead.</p>",
-          "target": "1 unattended object of up to 80 Bulk with no dimension longer than 20 feet"
-        },
-        "spell->Confusion": {
-          "name": "Confusion",
-          "description": "<p>You befuddle your target with strange impulses, causing it to act randomly. The effects are determined by the target's Will save. You can Dismiss the spell.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target babbles incoherently and is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} for 1 minute. It can attempt a new save at the end of each of its turns to end the confusion.</p>\n<p><strong>Critical Failure</strong> The target is Confused for 1 minute, with no save to end early.</p>\n<hr />\n<p><strong>Heightened (8th)</strong> You can target up to 10 creatures.</p>",
-          "target": "1 creature"
-        },
-        "spell->Translocate": {
-          "name": "Translocate",
-          "description": "<p>You instantly transport yourself and any items you're wearing and holding from your current space to an unoccupied space within range you can see. If this would bring another creature with you—even if you're carrying it in an extradimensional container—the spell is lost.</p>\n<hr />\n<p><strong>Heightened (5th)</strong> The range increases to 1 mile. You don't need to be able to see your destination, as long as you have been there in the past and know its relative location and distance from you. You are then temporarily immune for 1 hour.</p>"
-        },
-        "spell->Vision of Death": {
-          "name": "Vision of Death",
-          "description": "<p>You force the target to see a vision of its own death. It takes 8d6 mental damage with a Will save. If the target is reduced to 0 HP by this spell, its vision becomes reality and kills it instantly.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes half damage and is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Failure</strong> The target takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}.</p>\n<p><strong>Critical Failure</strong> The target takes double damage, is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 4} and is @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} for as long as it's frightened.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 2d6.</p>",
-          "target": "1 living creature"
-        },
-        "spell->Locate": {
-          "name": "Locate",
-          "description": "<p>You learn the direction to the target (if you picked a specific object, such as \"my mother's sword\") or the nearest target (if you picked a type of object, such as \"swords\"). If the target is a specific object, you must have observed it directly with your own senses. If it's a type of object, you still need to have an accurate mental image of the type of object. If there's lead or running water between you and the target, this spell can't locate the object. This means you might find a type of object farther away if the nearest one is behind lead or running water.</p>\n<hr />\n<p><strong>Heightened (5th)</strong> You can target a specific creature or ancestry instead of an object, but you must have met or seen up close the creature or ancestry you want to target.</p>",
-          "target": "1 specific object or type of object"
-        },
-        "spell->Paralyze": {
-          "name": "Paralyze",
-          "description": "<p>You block the target's motor impulses before they can leave its mind, threatening to freeze the target in place. The target must attempt a Will save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} for 1 round.</p>\n<p><strong>Critical Failure</strong> The target is Paralyzed for 4 rounds. At the end of each of its turns, it can attempt a new Will save to reduce the remaining duration by 1 round, or end it entirely on a critical success.</p>\n<hr />\n<p><strong>Heightened (7th)</strong> You can target up to 10 creatures.</p>",
-          "target": "1 creature"
-        },
-        "spell->Paranoia": {
-          "name": "Paranoia",
-          "description": "<p>You cause the target to see all other creatures as dire threats. The target is stricken by intense paranoia toward all creatures around it and must attempt a Will save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target believes everyone it sees is a potential threat. It becomes @UUID[Compendium.pf2e.conditionitems.Item.I1ffBVISxLr2gC4u]{Unfriendly} to all creatures to which it wasn't already hostile, even those that were previously allies. It treats no one as an ally. The spell ends after 1 round.</p>\n<p><strong>Failure</strong> As success, but the effect lasts 1 minute.</p>\n<p><strong>Critical Failure</strong> As failure, except the target believes that everyone it sees is a mortal enemy. It uses its reactions and free actions against everyone, regardless of whether they were previously its allies, as determined by the GM. It otherwise acts as rationally as it normally does and likely prefers to attack creatures that are actively attacking or hindering it over those leaving it alone.</p>\n<hr />\n<p><strong>Heightened (6th)</strong> You can target up to 5 creatures.</p>",
-          "target": "1 creature"
-        },
-        "spell->Stupefy": {
-          "name": "Stupefy",
-          "description": "<p>You dull the target's mind, depending on its Will save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} until the start of your next turn.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2} for 1 minute.</p>\n<p><strong>Critical Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 3} for 1 minute.</p>",
-          "target": "1 creature"
-        },
-        "spell->Telekinetic Maneuver": {
-          "name": "Telekinetic Maneuver",
-          "description": "<p>With a rush of telekinetic power, you move a foe or something they carry. You can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Dt6B1slsBy8ipJu9]{Disarm}, @UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Shove}, @UUID[Compendium.pf2e.actionspf2e.Item.lOE4yjUnETTdaf2T]{Reposition}, or @UUID[Compendium.pf2e.actionspf2e.Item.ge56Lu1xXVFYUnLP]{Trip} the target using a spell attack roll instead of an Athletics check.</p>",
-          "target": "1 creature"
-        },
-        "spell->Daze": {
-          "name": "Daze",
-          "description": "<p>You push into the target's mind and daze it with a mental jolt. The jolt deals 1d6 mental damage, with a basic Will save. If the target critically fails the save, it is also @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The damage increases by 1d6.</p>",
-          "target": "1 creature"
-        },
-        "spell->Figment": {
-          "name": "Figment",
-          "description": "<p>You create a simple illusory sound or vision. A sound adds the auditory trait to the spell and the sound can't include intelligible words or elaborate music. A vision adds the visual trait, can be no larger than a 5-foot cube, and is clearly crude and undetailed if viewed from within 15 feet. When you Cast or Sustain the Spell, you can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.GkmbTGfg8KcgynOA]{Create a Diversion} with the illusion, gaining a +2 circumstance bonus to your Deception check. If the attempt fails against a creature, that creature disbelieves the <em>figment</em>.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.2Hg3a06gZCSnUgSA]{Spell Effect: Figment}</p>"
-        },
-        "spell->Force Barrage": {
-          "name": "Force Barrage",
-          "description": "<p>You fire a shard of solidified magic toward a creature that you can see. It automatically hits and deals 1d4+1 force damage. For each additional action you use when Casting the Spell, increase the number of shards you shoot by one, to a maximum of three shards for 3 actions. You choose the target for each shard individually. If you shoot more than one shard at the same target, combine the damage before applying bonuses or penalties to damage, resistances, weaknesses, and so forth.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> You fire one additional shard with each action you spend.</p>",
-          "target": "1 creature"
-        },
-        "spell->Ill Omen": {
-          "name": "Ill Omen",
-          "description": "<p>The target is struck with misfortune, which throws it off balance. The target must attempt a Will save.</p>\n<p><strong>Success</strong> The target is unaffected.</p>\n<p><strong>Failure</strong> The first time during the duration that the target attempts an attack roll or skill check, it must roll twice and use the worse result.</p>\n<p><strong>Critical Failure</strong> Every time during the duration that the target attempts an attack roll or skill check, it must roll twice and use the worse result.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.AmsVO5Q6078mEvNt]{Spell Effect: Ill Omen}</p>",
-          "target": "1 creature"
-        },
-        "spell->Item Facade": {
-          "name": "Item Facade",
-          "description": "<p>You make the target object look and feel as though it were in much better or worse physical condition. When you cast this spell, decide whether you want to make the object look decrepit or perfect. An item made to look decrepit appears @UUID[Compendium.pf2e.conditionitems.Item.6dNUvdb1dhToNDj3]{Broken} and shoddy. An intact item made to look better appears as though it's brand new and highly polished or well maintained. A Broken item appears to be intact and functional. Destroyed items can't be affected by this spell. A creature that Interacts with the item can attempt to disbelieve the illusion.</p>\n<hr />\n<p><strong>Heightened (2nd)</strong> The duration is 24 hours.</p>\n<p><strong>Heightened (3rd)</strong> The duration is unlimited.</p>",
-          "target": "1 object no more than 10 feet by 10 feet by 10 feet"
-        },
-        "spell->Phantasmal Minion": {
-          "name": "Phantasmal Minion",
-          "description": "<p>You summon a @UUID[Compendium.pf2e.pathfinder-bestiary.Actor.j7NNPfZwD19BwSEZ]{Phantasmal Minion}. The minion is roughly the shape of a humanoid. You can choose to have it be @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Invisible} or have an ephemeral appearance, but it's obviously a magical effect, not a real creature.</p>"
-        },
-        "spell->Shield": {
-          "name": "Shield",
-          "description": "<p>You raise a magical shield of force. This counts as using the Raise a Shield action, giving you a +1 circumstance bonus to AC until the start of your next turn, but it doesn't require a hand to use.</p>\n<p>While the spell is in effect, you can use the @UUID[Compendium.pf2e.feats-srd.Item.jM72TjJ965jocBV8]{Shield Block} reaction with your magic shield. The shield has Hardness 5. You can use the spell's reaction to reduce damage from any spell or magical effect, even if it doesn't deal physical damage. After you use Shield Block, the spell ends and you can't cast it again for 10 minutes.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Jemq5UknGdMO7b73]{Spell Effect: Shield}</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.QF6RDlCoTvkVHRo4]{Effect: Shield Immunity}</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The shield's Hardness increases by 5.</p>"
-        },
-        "spell->Telekinetic Hand": {
-          "name": "Telekinetic Hand",
-          "description": "<p>You create a floating, magical hand, either invisible or ghostlike, that grasps the target object and levitates it slowly up to 20 feet in any direction. When you Sustain the spell, you can move the object an additional 20 feet. If the object is in the air when the spell ends, the object falls.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> You can target an unattended object with a Bulk of 1 or less.</p>\n<p><strong>Heightened (5th)</strong> The range increases to 60 feet, and you can target an unattended object with a Bulk of 1 or less.</p>\n<p><strong>Heightened (7th)</strong> The range increases to 60 feet, and you can target an unattended object with a Bulk of 2 or less.</p>",
-          "target": "1 unattended object of light Bulk or less"
-        },
-        "spell->Telekinetic Projectile": {
-          "name": "Telekinetic Projectile",
-          "description": "<p>You hurl a loose, unattended object that is within range and that has 1 Bulk or less at the target. Make a spell attack roll against the target. If you hit, you deal 2d6 bludgeoning, piercing, or slashing damage—as appropriate for the object you hurled. No specific traits or magic properties of the hurled item affect the attack or the damage.</p>\n<hr />\n<p><strong>Critical Success</strong> You deal double damage.</p>\n<p><strong>Success</strong> You deal full damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1d6.</p>",
-          "target": "1 creature"
-        },
         "strike-melee->Fist": {
           "name": "Fist"
         },
@@ -1519,7 +1363,7 @@
         },
         "action->Drown in Ichor": {
           "name": "Drown in Ichor",
-          "description": "<p>The fleshforged dreadnought releases a wave of caustic fluid from vents in its sides. Creatures within a @Template[emanation|distance:20] take @Damage[8d6[acid]] damage (@Check[reflex|dc:40|basic]). Creatures who fail their saves also take @Damage[3d6[persistent,acid]] damage.</p>"
+          "description": "<p>The fleshforged dreadnought releases a wave of caustic fluid from vents in its sides. Creatures within a @Template[emanation|distance:20] take @Damage[8d6[acid]|options:area-damage] damage (@Check[reflex|dc:40|basic|options:area-effect]). Creatures who fail their saves also take @Damage[3d6[persistent,acid]] damage.</p>"
         },
         "action->Trample": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.UNah0bxXxkcZjxO3]\n<p>Huge or smaller, battering ram, @Check[reflex|dc:44|basic]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Trample]</p>"
@@ -1648,7 +1492,7 @@
         },
         "action->Hammer Storm": {
           "name": "Hammer Storm",
-          "description": "<p>The Grand Defender unleashes a volley of warhammers that deal @Damage[12d8[bludgeoning]] damage in a @Template[cone|distance:50] (@Check[reflex|dc:36|basic] save). The Grand Defender can exclude any number of squares from the cone's area, preventing damage to creatures in those squares. Creatures that critically fail their save are pushed 10 feet away from the Grand Defender and knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}. The storm creates 24 Medium @UUID[Compendium.pf2e.equipment-srd.Item.rXt4629QSg7KDTgJ]{warhammers} that persist after the attack and can be used by creatures. The Grand Defender can't use Hammer Storm for [[/gmr 1d4 #Recharge Hammer Storm]]{1d4 rounds}.</p>"
+          "description": "<p>The Grand Defender unleashes a volley of warhammers that deal @Damage[12d8[bludgeoning]|options:area-damage] damage in a @Template[cone|distance:50] (@Check[reflex|dc:36|basic|options:area-effect] save). The Grand Defender can exclude any number of squares from the cone's area, preventing damage to creatures in those squares. Creatures that critically fail their save are pushed 10 feet away from the Grand Defender and knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}. The storm creates 24 Medium @UUID[Compendium.pf2e.equipment-srd.Item.rXt4629QSg7KDTgJ]{warhammers} that persist after the attack and can be used by creatures. The Grand Defender can't use Hammer Storm for [[/gmr 1d4 #Recharge Hammer Storm]]{1d4 rounds}.</p>"
         }
       }
     },
@@ -1970,7 +1814,7 @@
         },
         "action->Empty Wail": {
           "name": "Empty Wail",
-          "description": "<p>The imperfect automaton utters a mournful cry in a @Template[cone|distance:30]. The cry deals @Damage[4d6[mental]] damage to all creatures in the area (@Check[will|dc:22] save). The imperfect automaton can't use its Empty Wail again for [[/gmr 1d4 #Recharge Empty Wail]]{1d4 rounds}.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for [[/gmr 1d4+1 #rounds]]{1d4+1 rounds}.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is stupefied 1 for 1d4+1 rounds and @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>"
+          "description": "<p>The imperfect automaton utters a mournful cry in a @Template[cone|distance:30]. The cry deals @Damage[4d6[mental]|options:area-damage] damage to all creatures in the area (@Check[will|dc:22|options:area-effect,damaging-effect] save). The imperfect automaton can't use its Empty Wail again for [[/gmr 1d4 #Recharge Empty Wail]]{1d4 rounds}.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for [[/gmr 1d4+1 #rounds]]{1d4+1 rounds}.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is stupefied 1 for 1d4+1 rounds and @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>"
         },
         "action->Impassioned Strikes": {
           "name": "Impassioned Strikes",
@@ -2020,7 +1864,7 @@
         },
         "action->Floodwaters": {
           "name": "Floodwaters",
-          "description": "<p>Waters rush forth in a @Template[line|distance:60], dealing @Damage[4d6[bludgeoning]] damage (@Check[reflex|dc:25|basic] save). Creatures that fail the save and aren't @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} by the imugi are pushed 10 feet away.</p>"
+          "description": "<p>Waters rush forth in a @Template[line|distance:60], dealing @Damage[4d6[bludgeoning]|options:area-damage] damage (@Check[reflex|dc:25|basic|options:area-effect] save). Creatures that fail the save and aren't @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} by the imugi are pushed 10 feet away.</p>"
         },
         "action->Storm Veil": {
           "name": "Storm Veil",
@@ -2402,7 +2246,7 @@
         },
         "action->Horrific Speed": {
           "name": "Horrific Speed",
-          "description": "<p>Kothogaz is permanently @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened 1}. It can use this extra action to Stride or Strike.</p>"
+          "description": "<p>Kothogaz is permanently @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened}. It can use this extra action to Stride or Strike.</p>"
         },
         "action->Noxious Aura": {
           "name": "Noxious Aura",
@@ -2594,7 +2438,7 @@
         },
         "action->Funnel": {
           "name": "Funnel",
-          "description": "<p>The kun inhales violently, sucking in heat and all creatures in the water in a @Template[cone|distance:60]. Creatures take @Damage[10d8[cold]] damage and must attempt a @Check[fortitude|dc:33] save. The kun can't Funnel again for [[/gmr 1d4 #Recharge Funnel]]{1d4 rounds}.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is pulled 30 feet toward the kun.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is pulled 60 feet toward the kun.</p>"
+          "description": "<p>The kun inhales violently, sucking in heat and all creatures in the water in a @Template[cone|distance:60]. Creatures take @Damage[10d8[cold]|options:area-damage] damage and must attempt a @Check[fortitude|dc:33|options:area-effect,damaging-effect] save. The kun can't Funnel again for [[/gmr 1d4 #Recharge Funnel]]{1d4 rounds}.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is pulled 30 feet toward the kun.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is pulled 60 feet toward the kun.</p>"
         },
         "action->Heart of Darkness": {
           "name": "Heart of Darkness",
@@ -2611,7 +2455,7 @@
       "senses": "+26 vs. traps",
       "items": {
         "consumable->Explosive Ammunition": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.rKknk8odXDBpON5l]\n<p><strong>Activate</strong> <span class=\"action-glyph\">A</span> Interact</p>\n<p>This piece of ammunition is coated in gritty black soot. When activated <em>explosive ammunition</em> hits a target, the missile explodes in a @Template[burst|distance:10], dealing @Damage[6d6[fire]] damage to each creature in the area (including the target). Each creature must attempt a @Check[reflex|dc:25|basic] save.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.rKknk8odXDBpON5l]\n<p><strong>Activate</strong> <span class=\"action-glyph\">A</span> Interact</p>\n<p>This piece of ammunition is coated in gritty black soot. When activated <em>explosive ammunition</em> hits a target, the missile explodes in a @Template[burst|distance:10], dealing @Damage[6d6[fire]|options:area-damage] damage to each creature in the area (including the target). Each creature must attempt a @Check[reflex|dc:25|basic|options:area-effect] save.</p>"
         },
         "consumable->Freezing Ammunition": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.Xnmx6SJ6OkJOfYxF]\n<p><strong>Activate</strong> <span class=\"action-glyph\">1</span> Interact</p>\n<p>This chilly ammunition is dark blue and cold to the touch. When activated freezing ammunition hits a target, the target must succeed at a @Check[fortitude|dc:19] save or be slowed 1 for 1 round by the intense cold (slowed 1 for 1 minute on a critical failure).</p>"
@@ -2662,50 +2506,6 @@
       "items": {
         "spellcastingEntry->Primal Innate Spells": {
           "name": "Primal Innate Spells"
-        },
-        "spell->Blindness": {
-          "name": "Blindness",
-          "description": "<p>You blind the target. The effect is determined by the target's Fortitude save. The target then becomes temporarily immune for 1 minute.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} until its next turn begins.</p>\n<p><strong>Failure</strong> The target is Blinded for 1 minute.</p>\n<p><strong>Critical Failure</strong> The target is Blinded permanently.</p>",
-          "target": "1 creature"
-        },
-        "spell->Darkness": [
-          {
-            "name": "Darkness",
-            "description": "<p>You create a shroud of darkness that prevents light from penetrating or emanating within the area. Light does not enter the area and any non-magical light sources, such as a torch or lantern, do not emanate any light while inside the area, even if their light radius would extend beyond the darkness. This also suppresses magical light of your darkness spell's rank or lower. Light can't pass through, so creatures in the area can't see outside. From outside, it appears as a globe of pure darkness.</p>\n<hr />\n<p><strong>Heightened (4th)</strong> Even creatures with darkvision (but not greater darkvision) can barely see through the darkness. They treat targets seen through the darkness as @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed}.</p>",
-            "id": "hOd7GbK8LgzUhmeA"
-          },
-          {
-            "name": "Darkness",
-            "description": "<p>You create a shroud of darkness that prevents light from penetrating or emanating within the area. Light does not enter the area and any non-magical light sources, such as a torch or lantern, do not emanate any light while inside the area, even if their light radius would extend beyond the darkness. This also suppresses magical light of your darkness spell's rank or lower. Light can't pass through, so creatures in the area can't see outside. From outside, it appears as a globe of pure darkness.</p>\n<hr />\n<p><strong>Heightened (4th)</strong> Even creatures with darkvision (but not greater darkvision) can barely see through the darkness. They treat targets seen through the darkness as @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed}.</p>",
-            "id": "cCXIjjYuMVR0qyr8"
-          }
-        ],
-        "spell->Dispel Magic": {
-          "name": "Dispel Magic",
-          "description": "<p>You unravel the magic behind a spell or effect. Attempt a counteract check against the target. If you successfully counteract a magic item, the item becomes a mundane item of its type for 10 minutes. This doesn't change the item's non-magical properties. If the target is an artifact or similar item, you automatically fail.</p>",
-          "target": "1 spell effect or unattended magic item"
-        },
-        "spell->Floating Flame": {
-          "name": "Floating Flame",
-          "description": "<p>You create a fire that burns without fuel and moves to your commands. The flame deals 3d6 fire damage to each creature in the square in which it appears, with a basic Reflex save. When you Sustain this spell, you can levitate the flame up to 10 feet. It then deals damage to each creature whose space it shared at any point during its flight. This uses the same damage and save, and you roll the damage once each time you Sustain. A given creature can take damage from floating flame only once per round.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1d6.</p>"
-        },
-        "spell->Detect Magic": {
-          "name": "Detect Magic",
-          "description": "<p>You send out a pulse that registers the presence of magic. You receive no information beyond the presence or absence of magic. You can choose to ignore magic you're fully aware of, such as the magic items and ongoing spells of you and your allies. You detect illusion magic only if that magic's effect has a lower rank than the rank of your <em>detect magic</em> spell. However, items that have an illusion aura but aren't deceptive in appearance (such as an @UUID[Compendium.pf2e.equipment-srd.Item.bikFUFRLwfdvX2x2]{Invisibility Potion}) typically are detected normally.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> You learn the rank or level of the most powerful magical effect the spell detects, as determined by the GM.</p>\n<p><strong>Heightened (4th)</strong> As 3rd rank, but you also pinpoint the source of the highest-rank magic. Like for an imprecise sense, you don't learn the exact location, but can narrow down the source to within a 5-foot cube (or the nearest if larger than that).</p>"
-        },
-        "spell->Ignition": {
-          "name": "Ignition",
-          "description": "<p>You snap your fingers and point at a target, which begins to smolder. Make a spell attack roll against the target's AC, dealing 2d4 fire damage on a hit. If the target is within your melee reach, you can choose to make a melee spell attack with the flame instead of a ranged spell attack, which increases all the spell's damage dice to d6s.</p>\n<hr />\n<p><strong>Critical Success</strong> The target takes double damage and 1d4 persistent fire damage.</p>\n<p><strong>Success</strong> The target takes full damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The initial damage increases by 1d4 and the persistent fire damage on a critical hit increases by 1d4.</p>\n<p>@Damage[(@item.rank)d4[persistent,fire]]{Scaling Persistent Fire Damage}</p>\n<p>@Damage[(@item.rank)d6[persistent,fire]]{Scaling Persistent Fire Damage (Melee)}</p>",
-          "target": "1 creature"
-        },
-        "spell->Prestidigitation": {
-          "name": "Prestidigitation",
-          "description": "<p>The simplest magic does your bidding. You can perform simple magical effects for as long as you Sustain the spell. Each time you Sustain the spell, you can choose one of four options.</p>\n<ul>\n<li><strong>Cook</strong> Cool, warm, or flavor 1 pound of nonliving material.</li>\n<li><strong>Lift</strong> Slowly lift an unattended object of light Bulk or less 1 foot off the ground.</li>\n<li><strong>Make</strong> Create a temporary object of negligible Bulk, made of congealed magical substance. The object looks crude and artificial and is extremely fragile-it can't be used as a tool, weapon, or locus or cost for a spell.</li>\n<li><strong>Tidy</strong> Color, clean, or soil an object of light Bulk or less. You can affect an object of 1 Bulk with 10 rounds of concentration, and a larger object at 1 minute per Bulk.</li>\n</ul>\n<p><em>Prestidigitation</em> can't deal damage or cause adverse conditions. Any actual change to an object (beyond what is noted above) persists only as long as you Sustain the spell.</p>",
-          "target": "1 object (cook, lift, or tidy only)"
-        },
-        "spell->Shield": {
-          "name": "Shield",
-          "description": "<p>You raise a magical shield of force. This counts as using the Raise a Shield action, giving you a +1 circumstance bonus to AC until the start of your next turn, but it doesn't require a hand to use.</p>\n<p>While the spell is in effect, you can use the @UUID[Compendium.pf2e.feats-srd.Item.jM72TjJ965jocBV8]{Shield Block} reaction with your magic shield. The shield has Hardness 5. You can use the spell's reaction to reduce damage from any spell or magical effect, even if it doesn't deal physical damage. After you use Shield Block, the spell ends and you can't cast it again for 10 minutes.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Jemq5UknGdMO7b73]{Spell Effect: Shield}</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.QF6RDlCoTvkVHRo4]{Effect: Shield Immunity}</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The shield's Hardness increases by 5.</p>"
         },
         "weapon->Shortbow": {
           "name": "Shortbow",
@@ -2900,7 +2700,7 @@
         },
         "action->Fulminate": {
           "name": "Fulminate",
-          "description": "<p><strong>Requirements</strong> The Melfesh Monster has created a spore cloud, and the cloud is within range of one of the Melfesh Monster's fire abilities</p>\n<hr />\n<p><strong>Effect</strong> The Melfesh Monster targets the cloud with one of its abilities with the fire trait. The spore cloud explodes, dealing @Damage[4d10[fire]] damage and @Damage[4[persistent,fire]] damage in a @Template[burst|distance:40] originating from a single square within the cloud (@Check[reflex|dc:24|basic] save).</p>"
+          "description": "<p><strong>Requirements</strong> The Melfesh Monster has created a spore cloud, and the cloud is within range of one of the Melfesh Monster's fire abilities</p>\n<hr />\n<p><strong>Effect</strong> The Melfesh Monster targets the cloud with one of its abilities with the fire trait. The spore cloud explodes, dealing @Damage[4d10[fire],4[persistent,fire]|options:area-damage]{4d10 fire damage and 4 persistent fire damage} in a @Template[burst|distance:40] originating from a single square within the cloud (@Check[reflex|dc:24|basic|options:area-effect] save).</p>"
         },
         "action->Spore Cloud": {
           "name": "Spore Cloud",
@@ -3373,8 +3173,8 @@
         }
       }
     },
-    "Quantium Golem (Acid)": {
-      "name": "Quantium Golem (Acid)",
+    "Quantium Golem": {
+      "name": "Quantium Golem",
       "publicNotes": "<p>The long war between Nex and Geb spawned many animate weapons, but while a citizen of Quantium might run screaming from any product of the fleshforges, they barely bat an eyelash at the ground-shaking stomp of the two titanic, deadly constructs that stride outside their city walls. Crafted by the wizard-king Nex ages ago after a devastating attack by Geb's undead forces, including the harrowing benthic reaver, the Quantium golems are meant to protect the capital in case of Nex's absence. These twin golems ceaselessly keep vigil over the city, ready to cut down any invaders that menace Quantium.</p>\n<p>Twenty feet tall and crafted from a supernaturally smooth material, the two guardians are a matched set, one of crimson and one of emerald. Wielding swords the size of giants, the guardians relentlessly destroy anything that threatens the city, particularly any undead that might invade the country from Geb. With the mythic Crux of Nex as a power supply, the golems are inexhaustible and nearly indestructible.</p>",
       "senses": "defender's link",
       "items": {
@@ -3408,50 +3208,7 @@
         },
         "action->Lambent Beam": {
           "name": "Lambent Beam",
-          "description": "<p>The Quantium golem's eyes take on a brilliant glow and it unleashes an arc of destruction dealing @Damage[10d6[fire],10d6[acid]]{10d6 fire damage and 10d6 acid damage} to creatures in a @Template[line|distance:120] (@Check[reflex|dc:42|basic]). The Quantium golem can't use Lambent Beam for [[/gmr 1d4 #Recharge Lambent Beam]]{1d4 rounds}.</p>"
-        },
-        "action->Twin Defenders": {
-          "name": "Twin Defenders",
-          "description": "<p>The Quantium golems were created by Nex as a matched set: one of crimson and one of emerald, each a unique entity. The crimson golem is imbued with blazing fire and crackling lightning; its eye beam and Lambent Beam abilities deal fire and electricity damage. The emerald golem is charged with caustic power and flame; its eye beam and Lambent Beam abilities deal acid and fire damage.</p>"
-        }
-      }
-    },
-    "Quantium Golem (Electricity)": {
-      "name": "Quantium Golem (Electricity)",
-      "publicNotes": "<p>The long war between Nex and Geb spawned many animate weapons, but while a citizen of Quantium might run screaming from any product of the fleshforges, they barely bat an eyelash at the ground-shaking stomp of the two titanic, deadly constructs that stride outside their city walls. Crafted by the wizard-king Nex ages ago after a devastating attack by Geb's undead forces, including the harrowing benthic reaver, the Quantium golems are meant to protect the capital in case of Nex's absence. These twin golems ceaselessly keep vigil over the city, ready to cut down any invaders that menace Quantium.</p>\n<p>Twenty feet tall and crafted from a supernaturally smooth material, the two guardians are a matched set, one of crimson and one of emerald. Wielding swords the size of giants, the guardians relentlessly destroy anything that threatens the city, particularly any undead that might invade the country from Geb. With the mythic Crux of Nex as a power supply, the golems are inexhaustible and nearly indestructible.</p>",
-      "senses": "defender's link",
-      "items": {
-        "weapon->Bastard Sword": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.6KWYmeRMxsQfWhhJ]\n<p>This broad-bladed sword, sometimes called the hand-and-a-half sword, has a longer grip so it can be held in one hand or used with two hands to provide extra piercing or slashing power.</p>"
-        },
-        "strike-melee->Bastard Sword": {
-          "name": "Bastard Sword"
-        },
-        "strike-ranged->Eye Beam": {
-          "name": "Eye Beam"
-        },
-        "action->Defender's Link": {
-          "name": "Defender's Link",
-          "description": "<p>Each Quantium golem automatically knows the Hit Points, conditions, afflictions, and location of the other.</p>"
-        },
-        "action->Lifesense 120 feet": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.sebk9XseMCRkDqRg]\nLifesense 120 feet"
-        },
-        "action->Golem Antimagic": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.r34QDwKiWZoVymJa]\nGolem Antimagic",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.r34QDwKiWZoVymJa]\n<p>Harmed by sonic (@Damage[9d10[untyped]], @Damage[3d10[untyped]] from areas or persistent damage); healed by fire (area @Damage[3d10[healing]] HP); slowed by cold</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.GolemAntimagic]</p>"
-        },
-        "action->Paired Reconstruction": {
-          "name": "Paired Reconstruction",
-          "description": "<p>When reduced to 0 HP, the Quantium golem is destroyed; however, it magically reforms 24 hours later at full HP and free of all conditions and afflictions unless its twin golem is also destroyed.</p>"
-        },
-        "action->Vulnerable to Banishment": {
-          "name": "Vulnerable to Banishment",
-          "description": "<p>Casting a @UUID[Compendium.pf2e.spells-srd.Item.bay4AfSu2iIozNNW]{Banishment} spell on a Quantium golem disrupts its connection to the Crux of Nex. If targeted by such a spell, the golem is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} and @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for [[/gmr 1d4 #rounds]]{1d4 rounds}.</p>"
-        },
-        "action->Lambent Beam": {
-          "name": "Lambent Beam",
-          "description": "<p>The Quantium golem's eyes take on a brilliant glow and it unleashes an arc of destruction dealing @Damage[10d6[fire],10d6[electricity]]{10d6 fire damage and 10d6 electricity damage} to creatures in a @Template[line|distance:120] (@Check[reflex|dc:42|basic]). The Quantium golem can't use Lambent Beam for [[/gmr 1d4 #Recharge Lambent Beam]]{1d4 rounds}.</p>"
+          "description": "<p>The Quantium golem's eyes take on a brilliant glow and it unleashes an arc of destruction dealing @Damage[10d6[fire]|options:area-damage] damage to creatures in a @Template[line|distance:120] (@Check[reflex|dc:42|basic|options:area-effect]). The Quantium golem can't use Lambent Beam for [[/gmr 1d4 #Recharge Lambent Beam]]{1d4 rounds}.</p>"
         },
         "action->Twin Defenders": {
           "name": "Twin Defenders",
@@ -3515,7 +3272,7 @@
     },
     "Shroudwing": {
       "name": "Shroudwing",
-      "languages": "can’t speak any language",
+      "languages": "can't speak any language",
       "publicNotes": "<p>These unsettling birds are thick-bodied, long-legged creatures standing 4 to 5 feet tall with an 8-foot wingspan. They possess black feathers, clouded white eyes, and a menacing obsidian bill hooked at the tip like a curled claw. Sometimes called soul-eater crows, shroudwings are carrion feeders known to roam graveyards and sites of collective death, absorbing lingering spirits and consuming the decaying corpses. They can be found digging up grave sites, shoveling the earth and breaking into caskets or tombs with their massive, hooked beaks, as well as lurking at execution sites, burial mounds, or feeding on travelers' corpses left behind on roadsides.</p>\n<p>Due to their size, shape, and propensity for burial grounds, it isn't uncommon for a shroudwing to be mistaken for a grieving widow when seen at a distance—only when an unfortunate creature gets close enough does it discover the danger it's in. Though not predatory or outright aggressive, shroudwings are exceptionally territorial; they'll protect and defend both their feeding site as well as their nesting area from anyone who might trespass upon it.</p>\n<p>While many might know these unusual birds by name and sight, even more know the shroudwing by sound. When threatened, the shroudwing emits a haunting, fear-inducing death rattle that can be heard for miles. They prefer nesting in covered brush, and their mating season occurs in the winter months. Shroudwings have a particular fondness for the collection of skulls and have been known to decorate nests with them as well as to use them in mating rituals, with the male presenting the female with the freshest and cleanest skull it can find.</p>",
       "senses": "darkvision",
       "items": {
@@ -3664,7 +3421,7 @@
         },
         "action->Light Shatter": {
           "name": "Light Shatter",
-          "description": "<p>The solar ibis detonates its halo, sending shards of burning light in all directions that deal @Damage[6d8[fire]] damage to all creatures in a @Template[emanation|distance:20] (@Check[reflex|dc:22|basic] save). The shards deal an extra @Damage[6d8[spirit]] damage against fiends and undead.</p>\n<p>The solar ibis can't use Light Shatter again for [[/gmr 1d4 #Recharge Light Shatter]] rounds, and its Blinding Halo is extinguished during this time. The halo is restored automatically once the 1d4 rounds have passed.</p>"
+          "description": "<p>The solar ibis detonates its halo, sending shards of burning light in all directions that deal @Damage[6d8[fire]|options:area-damage] damage to all creatures in a @Template[emanation|distance:20] (@Check[reflex|dc:22|basic|options:area-effect] save). The shards deal an extra @Damage[6d8[spirit]|options:area-damage] damage against fiends and undead.</p>\n<p>The solar ibis can't use Light Shatter again for [[/gmr 1d4 #Recharge Light Shatter]] rounds, and its Blinding Halo is extinguished during this time. The halo is restored automatically once the 1d4 rounds have passed.</p>"
         }
       }
     },
@@ -3979,7 +3736,7 @@
       "items": {
         "action->Lightning Blast": {
           "name": "Lightning Blast",
-          "description": "<p><strong>Trigger</strong> A creature takes a hostile action against Ebeshra, produces a visible area effect, or flies within 120 feet of Ebeshra</p>\n<hr />\n<p><strong>Effect</strong> Ebeshra unleashes a @Template[line|distance:240] of electricity toward the triggering creature. Creatures in the line take @Damage[16d8[electricity]] damage (@Check[reflex|dc:42|basic|traits:divine,electricity,environmental,evocation,kaiju,hazard] save). The electricity creates a static field in all squares that the line passed through and all adjacent squares. For 1 round, any creatures that enter a space in the static field take @Damage[4d8[electricity]] damage (@Check[reflex|dc:38|basic|name:Static Field|traits:divine,electricity,environmental,evocation,kaiju,hazard] save).</p>"
+          "description": "<p><strong>Trigger</strong> A creature takes a hostile action against Ebeshra, produces a visible area effect, or flies within 120 feet of Ebeshra</p>\n<hr />\n<p><strong>Effect</strong> Ebeshra unleashes a @Template[line|distance:240] of electricity toward the triggering creature. Creatures in the line take @Damage[16d8[electricity]|options:area-damage] damage (@Check[reflex|dc:42|basic|options:area-effect] save). The electricity creates a static field in all squares that the line passed through and all adjacent squares. For 1 round, any creatures that enter a space in the static field take @Damage[4d8[electricity]|options:area-damage] damage (@Check[reflex|dc:38|basic|name:Static Field|options:area-effect] save).</p>"
         }
       }
     },
@@ -4613,9 +4370,8 @@
     },
     "Torn Quartet": {
       "name": "Torn Quartet",
-      "languages": "can’t speak any language",
+      "languages": "can't speak any language",
       "senses": "darkvision",
-      "tokenName": "SK Actor",
       "items": {
         "strike-melee->Limb": {
           "name": "Limb"
@@ -4824,39 +4580,9 @@
         }
       },
       "speed": "canal walker",
-      "tokenName": "SK Actor",
       "items": {
         "spellcastingEntry->Primal Innate Spells": {
           "name": "Primal Innate Spells"
-        },
-        "spell->Control Water": {
-          "name": "Control Water",
-          "description": "<p>By imposing your will upon the water, you can raise or lower the level of water in the chosen area by 10 feet. Creatures that have the water trait and that are in the area when you Cast the Spell must attempt a Fortitude save, with the effects of the @UUID[Compendium.pf2e.spells-srd.Item.WsUwpfmhKrKwoIe3]{Slow} spell.</p>\n<p><strong>Area</strong> 50 feet long by 50 feet wide</p>"
-        },
-        "spell->Hydraulic Torrent": {
-          "name": "Hydraulic Torrent",
-          "description": "<p>A swirling torrent of water manifests along a straight line, battering creatures and unattended objects in its path and possibly pushing them away from you. The torrent deals 8d6 bludgeoning damage. Each creature in the area must attempt a basic Fortitude save; unattended objects automatically fail. Creatures and objects that fail are also knocked back 5 feet (10 feet on a critical failure).</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 2d6.</p>"
-        },
-        "spell->Mirage": {
-          "name": "Mirage",
-          "description": "<p>You create an illusion that causes natural terrain to look, sound, feel, and smell like a different kind of terrain. This doesn't disguise any structures or creatures in the area.</p>\n<p>Any creature that touches the illusion or uses the @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seek} action to examine it can attempt to disbelieve your illusion.</p>\n<hr />\n<p><strong>Heightened (5th)</strong> Your image can also disguise structures or create illusory structures (but still doesn't disguise creatures).</p>"
-        },
-        "spell->Aqueous Orb": {
-          "name": "Aqueous Orb",
-          "description": "<p>A sphere of water 10 feet in diameter forms in an unoccupied space in range, either on the ground or on the surface of a liquid.</p>\n<p>When you Cast this Spell and each time you Sustain it, you can roll the orb, moving it up to 10 feet along the ground or the surface of a liquid.</p>\n<p>The orb can move through the spaces of any creatures or obstacles that wouldn't stop the flow of water. It extinguishes non-magical fires it moves through of its size or smaller, and it attempts to counteract any magical fires it moves through. If it fails to counteract a given fire, it can't counteract that fire for the duration of the spell.</p>\n<p>The orb can engulf Large or smaller creatures it moves through, and it can contain as many creatures as fit in its space. The orb can try to engulf the same creature only once per turn, even if you roll it onto a creature's space more than once. Any Large or smaller creature whose space the orb tries to move through can attempt a Reflex save.</p>\n<hr />\n<p><strong>Success</strong> The creature can either let the orb pass (remaining in its space or moving out of the orb's path into a space of the creature's choice) or allow itself to be pushed in front of the orb to the end of the orb's movement.</p>\n<p><strong>Failure</strong> The creature is engulfed in the orb. It moves along with the orb and must hold its breath or begin suffocating (unless it can breathe in water). An engulfed Medium or smaller creature and anyone trying to affect that creature follow the normal rules for aquatic battles. An engulfed Large creature is usually big enough that parts of it stick out from the water, and it can reach out of the water. The creature can get free either by Swimming with a successful @Check[athletics|traits:action:swim|dc:10] check or by @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escaping} against your spell DC. A freed creature exits the orb's space and can immediately breathe.</p>\n<p><strong>Critical Failure</strong> As failure, but the creature can't Swim to get free.</p>"
-        },
-        "spell->Slow": {
-          "name": "Slow",
-          "description": "<p>You dilate the flow of time around the target, slowing its actions.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 round.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 minute.</p>\n<p><strong>Critical Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 2} for 1 minute.</p>\n<hr />\n<p><strong>Heightened (6th)</strong> You can target up to 10 creatures.</p>",
-          "target": "1 creature"
-        },
-        "spell->Mist": {
-          "name": "Mist",
-          "description": "<p>You call forth a cloud of mist. All creatures within the mist become @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed}, and all creatures outside the mist become concealed to creatures within it. You can Dismiss the cloud.</p>"
-        },
-        "spell->Vanishing Tracks": {
-          "name": "Vanishing Tracks",
-          "description": "<p>You obscure the tracks you leave behind. The DC of checks to Track you gains a +4 status bonus or is equal to your spell DC, whichever results in a higher DC.</p>\n<hr />\n<p><strong>Heightened (2nd)</strong> The duration increases to 8 hours.</p>\n<p><strong>Heightened (4th)</strong> The duration increases to 8 hours. The spell has a range of 20 feet and an area of a 20-foot-emanation, affecting up to 10 creatures of your choice within that area.</p>"
         },
         "strike-melee->Jaws": {
           "name": "Jaws"
@@ -4880,7 +4606,7 @@
         },
         "action->Vorvorak Bile": {
           "name": "Vorvorak Bile",
-          "description": "<p><strong>Saving Throw</strong> @Check[fortitude|dc:28]</p>\n<p><strong>Maximum Duration</strong> 6 rounds</p>\n<p><strong>Stage 1</strong> 2d8 poison and @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (2 rounds)</p>\n<p><strong>Stage 2</strong> 3d8 poison and @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} (2 rounds)</p>\n<p><strong>Stage 3</strong> 4d8 poison and @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 3} (2 rounds)</p>"
+          "description": "<p><strong>Saving Throw</strong> @Check[fortitude|dc:28]</p>\n<p><strong>Maximum Duration</strong> 6 rounds</p>\n<p><strong>Stage 1</strong> @Damage[2d8[poison]] and @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (2 rounds)</p>\n<p><strong>Stage 2</strong> @Damage[3d8[poison]] and @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} (2 rounds)</p>\n<p><strong>Stage 3</strong> @Damage[4d8[poison]] and @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 3} (2 rounds)</p>"
         }
       }
     },

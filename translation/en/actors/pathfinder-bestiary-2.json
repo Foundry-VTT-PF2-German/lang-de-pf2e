@@ -223,10 +223,38 @@
         },
         "action->Shadow Doubles": {
           "name": "Shadow Doubles",
-          "description": "<p>(1 to 3 actions)</p>\n<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p><strong>Effect</strong> For each action spent to use this ability, the ankou creates one shadowy duplicate of themself anywhere within 60 feet of themself. Shadow doubles have the same statistics as an ankou, but they have the summoned trait, have 84 Hit Points, can't use Shadow Doubles or innate spells, and have an attack bonus of +25 for their Strikes. A shadow double that attempts a saving throw against a light effect can't get a result better than failure. Each double remains for 1 round, until it's reduced to 0 Hit Points, or until it moves further than 120 feet from the ankou, whichever comes first. Each round thereafter, the ankou can spend a single action that has the concentrate trait to extend the duration of surviving duplicates by 1 round, to a maximum duration of 1 minute. The ankou can see through the eyes of all of the shadow doubles at once. A character who @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seeks} can identify an ankou as real or a shadow double with a successful @Check[perception|dc:39] check.</p>"
+          "description": "<p>(1 to 3 actions)</p>\n<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p><strong>Effect</strong> For each action spent to use this ability, the ankou creates one @UUID[Compendium.pf2e.pathfinder-bestiary-2.Actor.2JCCY55vijSJF6vu]{shadowy duplicate} of themself anywhere within 60 feet of themself. Shadow doubles have the same statistics as an ankou, but they have the summoned trait, have 84 Hit Points, can't use Shadow Doubles or innate spells, and have an attack bonus of +25 for their Strikes. A shadow double that attempts a saving throw against a light effect can't get a result better than failure. Each double remains for 1 round, until it's reduced to 0 Hit Points, or until it moves further than 120 feet from the ankou, whichever comes first. Each round thereafter, the ankou can spend a single action that has the concentrate trait to extend the duration of surviving duplicates by 1 round, to a maximum duration of 1 minute. The ankou can see through the eyes of all of the shadow doubles at once. A character who @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seeks} can identify an ankou as real or a shadow double with a successful @Check[perception|dc:39] check.</p>"
         },
         "action->Sneak Attack": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>An ankou's Strikes deal an additional 2d6 precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
+        }
+      }
+    },
+    "Ankou Shadow Double": {
+      "name": "Ankou Shadow Double",
+      "languages": "telepathy 100 feet",
+      "publicNotes": "<p>Ankous are shadowy killers who serve powerful fey creatures, or even the Eldest- the demigods of the First World. Amid the courts of the Eldest or of powerful fey rulers, these sinister assassins lurk overhead as they await the call to action-implied threats akin to deadly weapons hung as decor in a royal hall. Ankous never speak aloud; when they feel the need to communicate at all, they do so in a telepathic whisper directly into a victim's mind. While an ankou's body is made of strange, fleshy material, their claws and the cruel hooks on their wings are made of razor-sharp cold iron, a quality that makes them much feared among other fey. A typical ankou is 10 feet tall and has an 8-foot wingspan but weighs less than 80 pounds.</p>\n<p>While most ankous serve powerful masters, some of these murderous fey are left to their own devices and serve none but their own capricious, cruel whims. In some cases, their master may have been slain, while in others the ankou may have been released from service for any number of reasons. An ankou left to indulge their own whims unrestrained is often the most dangerous ankou of them all!</p>",
+      "tokenName": "Ankou",
+      "items": {
+        "strike-melee->Claw": {
+          "name": "Claw"
+        },
+        "strike-melee->Wing": {
+          "name": "Wing"
+        },
+        "action->Telepathy 100 feet": {
+          "name": "Telepathy 100 feet"
+        },
+        "action->Lifesense 120 feet": {
+          "name": "Lifesense 120 feet"
+        },
+        "action->Saving throws against Light effects": {
+          "name": "Saving throws against Light effects",
+          "description": "<p>A shadow double that attempts a saving throw against a light effect can't get a result better than failure.</p>"
+        },
+        "action->Sneak Attack": {
+          "name": "Sneak Attack",
+          "description": "<p>An ankou's Strikes deal an additional 2d6 precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
         }
       }
     },
@@ -559,7 +587,7 @@
         },
         "action->Holy Beam": {
           "name": "Holy Beam",
-          "description": "<p>The bastion archon releases a blinding beam of holy light in a @Template[line|distance:500] that deals @Damage[20d6[spirit]] damage to non-archons in the area, with a @Check[reflex|dc:38|traits:damaging-effect] save.</p>\n<p>The bastion archon can't use Holy Beam again for [[/gmr 1d4 #Recharge Holy Beam]]{1d4 rounds}.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for [[/gmr 1d4 #rounds]]{1d4 rounds}.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is blinded permanently.</p>"
+          "description": "<p>The bastion archon releases a blinding beam of holy light in a @Template[line|distance:500] that deals @Damage[20d6[spirit]|options:area-damage] damage to non-archons in the area, with a @Check[reflex|dc:38|options:area-effect,damaging-effect] save.</p>\n<p>The bastion archon can't use Holy Beam again for [[/gmr 1d4 #Recharge Holy Beam]]{1d4 rounds}.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for [[/gmr 1d4 #rounds]]{1d4 rounds}.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is blinded permanently.</p>"
         }
       }
     },
@@ -1055,7 +1083,7 @@
       },
       "items": {
         "equipment->Net": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.T8EopYZLT137CsdW]\n<p>You can use a net either on its own or attached to a rope. When attached to a rope, you can use the net to @UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]{Grapple} a Medium or smaller creature up to 10 feet away (instead of only adjacent creatures). You can continue to Grapple to keep your hold on the target so long as the target remains within 10 feet and you continue to hold the net. The @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} creature gains a +2 circumstance bonus to @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} unless you are adjacent to them, and it can attempt a @Check[athletics|dc:16|traits:action:force-open] check to @UUID[Compendium.pf2e.actionspf2e.Item.SjmKHgI7a5Z9JzBx]{Force Open} the net entirely. Once the target is no longer grabbed, the net is unwieldy until refolded as a Concentrate action that requires two hands; if used without being refolded, Grapple checks made with the net take a -2 penalty.</p>\n<p>When the net is unattached, you can attempt a ranged attack roll against a Medium or smaller creature within 20 feet. On a hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} and takes a -10-foot circumstance penalty to its Speeds until it Escapes, and on a critical hit, it's also @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} until it Escapes. The Escape DC is 16. A creature adjacent to the target can @UUID[Compendium.pf2e.actionspf2e.Item.pvQ5rY2zrtPI614F]{Interact} to remove the net.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.T8EopYZLT137CsdW]\n<p>You can use a net either on its own or attached to a rope. When attached to a rope, you can use the net to @UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]{Grapple} a Medium or smaller creature up to 10 feet away (instead of only adjacent creatures). You can continue to Grapple to keep your hold on the target so long as the target remains within 10 feet and you continue to hold the net. The @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} creature gains a +2 circumstance bonus to @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} unless you are adjacent to them, and it can attempt a @Check[athletics|dc:16|traits:action:force-open] check to @UUID[Compendium.pf2e.actionspf2e.Item.SjmKHgI7a5Z9JzBx]{Force Open} the net entirely. Once the target is no longer grabbed, the net is unwieldy until refolded as a Concentrate action that requires two hands; if used without being refolded, Grapple checks made with the net take a -2 penalty.</p>\n<p>When the net is unattached, you can attempt a ranged attack roll against a Medium or smaller creature within 20 feet. On a hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} and takes a -10-foot circumstance penalty to its Speeds until it Escapes, and on a critical hit, it's also @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} until it Escapes. The Escape DC is 16 ([[/act escape dc=16]]). A creature adjacent to the target can @UUID[Compendium.pf2e.actionspf2e.Item.pvQ5rY2zrtPI614F]{Interact} to remove the net.</p>"
         },
         "strike-melee->Spear": {
           "name": "Spear"
@@ -1771,7 +1799,7 @@
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.g26YiEIfSHCpLocV]\n<p>@Damage[2d12[bludgeoning],2d6[acid]]{2d12 bludgeoning plus 2d6 acid}, @Check[fortitude|dc:33|basic]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
         },
         "action->Engulf": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.zU3Ovaet4xQ5Gmvy]\n<p>DC 33, @Damage[4d10[acid]] damage, Escape DC 33, Rupture 20</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Engulf]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.zU3Ovaet4xQ5Gmvy]\n<p>DC 33, @Damage[4d10[acid]] damage, [[/act escape dc=33]], Rupture 20</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Engulf]</p>"
         }
       }
     },
@@ -3150,7 +3178,7 @@
         },
         "action->Destructive Harmonics": {
           "name": "Destructive Harmonics",
-          "description": "<p>The destrachan emits a harsh sonic cry that deals @Damage[9d6[sonic]] damage (@Check[reflex|dc:26|basic] save) in either a @Template[cone|distance:60] or a @Template[burst|distance:30].</p>\n<p>It can't use Destructive Harmonics again for [[/gmr 1d4 #Recharge Destructive Harmonics]]{1d4 rounds}.</p>"
+          "description": "<p>The destrachan emits a harsh sonic cry that deals @Damage[9d6[sonic]|options:area-damage] damage (@Check[reflex|dc:26|basic|options:area-effect] save) in either a @Template[cone|distance:60] or a @Template[burst|distance:30].</p>\n<p>It can't use Destructive Harmonics again for [[/gmr 1d4 #Recharge Destructive Harmonics]]{1d4 rounds}.</p>"
         },
         "action->Painful Harmonics": {
           "name": "Painful Harmonics",
@@ -3822,7 +3850,7 @@
         },
         "action->Noxious Burst": {
           "name": "Noxious Burst",
-          "description": "<p>Toxic materials and churning rubbish within the filth fire's body explode in one of three ways. The filth fire chooses the effect, but it can't make the same choice twice in a row.</p>\n<ul>\n<li><strong>Fiery Beam</strong> (evocation, fire, primal) The filth fire expels a @Template[line|distance:30] of flame that deals @Damage[3d6[fire]] damage with a @Check[reflex|dc:21|basic|traits:evocation,fire,primal|overrideTraits:true] save.</li>\n<li><strong>Shrapnel Blast</strong> (evocation, primal) The filth fire shoots jagged rubbish out in a @Template[emanation|distance:5] that deals @Damage[2d12[piercing]] damage with a @Check[reflex|dc:21|basic|traits:evocation,primal|overrideTraits:true] save.</li>\n<li><strong>Toxic Fumes</strong> (evocation, poison, primal) The filth fire belches a @Template[cone|distance:15] of toxic smoke that deals @Damage[2d6[poison]] damage (@Check[fortitude|dc:21|basic|traits:evocation,poison,primal|overrideTraits:true] save). A creature that fails is also @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure).</li>\n</ul>"
+          "description": "<p>Toxic materials and churning rubbish within the filth fire's body explode in one of three ways. The filth fire chooses the effect, but it can't make the same choice twice in a row.</p>\n<ul>\n<li><strong>Fiery Beam</strong> (evocation, fire, primal) The filth fire expels a @Template[line|distance:30] of flame that deals @Damage[3d6[fire]|options:area-damage] damage with a @Check[reflex|dc:21|basic|options:area-effect|traits:evocation,fire,primal|overrideTraits:true] save.</li>\n<li><strong>Shrapnel Blast</strong> (evocation, primal) The filth fire shoots jagged rubbish out in a @Template[emanation|distance:5] that deals @Damage[2d12[piercing]|options:area-damage] damage with a @Check[reflex|dc:21|basic|options:area-effect|traits:evocation,primal|overrideTraits:true] save.</li>\n<li><strong>Toxic Fumes</strong> (evocation, poison, primal) The filth fire belches a @Template[cone|distance:15] of toxic smoke that deals @Damage[2d6[poison]|options:area-damage] damage (@Check[fortitude|dc:21|basic|options:area-effect|traits:evocation,poison,primal|overrideTraits:true] save). A creature that fails is also @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure).</li>\n</ul>"
         }
       }
     },
@@ -4086,7 +4114,7 @@
         },
         "action->Envelop": {
           "name": "Envelop",
-          "description": "<p><strong>Requirements</strong> The giant amoeba begins its turn with a target its size or smaller @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}</p>\n<hr />\n<p><strong>Effect</strong> The giant amoeba maintains the @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.Tkd8sH4pwFIPzqTr]{Grab} and extends pseudopods to surround the creature and pull it inside the amoeba's body. This thereafter has the same effect as if the amoeba had @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.zU3Ovaet4xQ5Gmvy]{Engulfed} the creature (DC 17, @Damage[1d6[acid]] damage, Escape DC 17, Rupture 3).</p>"
+          "description": "<p><strong>Requirements</strong> The giant amoeba begins its turn with a target its size or smaller @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}</p>\n<hr />\n<p><strong>Effect</strong> The giant amoeba maintains the @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.Tkd8sH4pwFIPzqTr]{Grab} and extends pseudopods to surround the creature and pull it inside the amoeba's body. This thereafter has the same effect as if the amoeba had @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.zU3Ovaet4xQ5Gmvy]{Engulfed} the creature (DC 17, @Damage[1d6[acid]] damage, [[/act escape dc=17]], Rupture 3).</p>"
         },
         "action->Weak Acid": {
           "name": "Weak Acid",
@@ -4773,7 +4801,7 @@
       },
       "items": {
         "equipment->Net": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.T8EopYZLT137CsdW]\n<p>You can use a net either on its own or attached to a rope. When attached to a rope, you can use the net to Grapple a Medium or smaller creature up to 10 feet away (instead of only adjacent creatures). You can continue to Grapple to keep your hold on the target so long as the target remains within 10 feet and you continue to hold the net. The grabbed creature gains a +2 circumstance bonus to Escape unless you are adjacent to them, and it can attempt a @Check[athletics|dc:16|traits:action:force-open] check to Force Open the net entirely. Once the target is no longer grabbed, the net is unwieldy until refolded as a Concentrate action that requires two hands; if used without being refolded, Grapple checks made with the net take a -2 penalty.</p>\n<p>When the net is unattached, you can attempt a ranged attack roll against a Medium or smaller creature within 20 feet. On a hit, the target is off-guard and takes a -10- foot circumstance penalty to its Speeds until it Escapes, and on a critical hit, it's also immobilized until it Escapes. The Escape DC is 16. A creature adjacent to the target can Interact to remove the net.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.T8EopYZLT137CsdW]\n<p>You can use a net either on its own or attached to a rope. When attached to a rope, you can use the net to Grapple a Medium or smaller creature up to 10 feet away (instead of only adjacent creatures). You can continue to Grapple to keep your hold on the target so long as the target remains within 10 feet and you continue to hold the net. The grabbed creature gains a +2 circumstance bonus to Escape unless you are adjacent to them, and it can attempt a @Check[athletics|dc:16|traits:action:force-open] check to Force Open the net entirely. Once the target is no longer grabbed, the net is unwieldy until refolded as a Concentrate action that requires two hands; if used without being refolded, Grapple checks made with the net take a -2 penalty.</p>\n<p>When the net is unattached, you can attempt a ranged attack roll against a Medium or smaller creature within 20 feet. On a hit, the target is off-guard and takes a -10- foot circumstance penalty to its Speeds until it Escapes, and on a critical hit, it's also immobilized until it Escapes. The Escape DC is 16 ([[/act escape dc=16]]). A creature adjacent to the target can Interact to remove the net.</p>"
         },
         "strike-melee->Sickle": {
           "name": "Sickle"
@@ -5136,7 +5164,7 @@
         },
         "action->Icy Demise": {
           "name": "Icy Demise",
-          "description": "<p>When an ice golem is destroyed, its body explodes in a blast of frigid air and razor-sharp ice, dealing @Damage[2d6[slashing],2d6[cold]]{2d6 slashing damage and 2d6 cold damage} to creatures in a @Template[emanation|distance:20], with a @Check[reflex|dc:19|basic] save.</p>"
+          "description": "<p>When an ice golem is destroyed, its body explodes in a blast of frigid air and razor-sharp ice, dealing @Damage[2d6[slashing],2d6[cold]|options:area-damage]{2d6 slashing damage and 2d6 cold damage} to creatures in a @Template[emanation|distance:20], with a @Check[reflex|dc:19|basic|options:area-effect] save.</p>"
         },
         "action->Vulnerable to Endure Elements": {
           "name": "Vulnerable to Endure Elements",
@@ -5191,7 +5219,7 @@
         },
         "action->Explosion": {
           "name": "Explosion",
-          "description": "<p>When the icewyrm dies, it explodes, dealing @Damage[8d6[cold]] damage to each creature in a @Template[emanation|distance:10] (@Check[reflex|dc:27|basic] save).</p>"
+          "description": "<p>When the icewyrm dies, it explodes, dealing @Damage[8d6[cold]|options:area-damage] damage to each creature in a @Template[emanation|distance:10] (@Check[reflex|dc:27|basic|options:area-effect] save).</p>"
         },
         "action->Breath Weapon": {
           "name": "Breath Weapon",
@@ -5560,7 +5588,7 @@
         },
         "action->Expel Infestation": {
           "name": "Expel Infestation",
-          "description": "<p>The isqulug expels larvae from the hivemind in its head in a @Template[cone|distance:30]. Creatures in this area take @Damage[6d10[piercing]] damage as the swarm feeds on their flesh (@Check[reflex|dc:30|basic] save). Any creature that takes damage is exposed to isqulugia.</p>\n<p>The isqulug becomes @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for [[/gmr 1d4 #Stupified Duration]]{1d4 rounds}, during which it can't Expel Infestation.</p>"
+          "description": "<p>The isqulug expels larvae from the hivemind in its head in a @Template[cone|distance:30]. Creatures in this area take @Damage[6d10[piercing]|options:area-damage] damage as the swarm feeds on their flesh (@Check[reflex|dc:30|basic|options:area-effect] save). Any creature that takes damage is exposed to isqulugia.</p>\n<p>The isqulug becomes @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for [[/gmr 1d4 #Stupified Duration]]{1d4 rounds}, during which it can't Expel Infestation.</p>"
         },
         "action->Isqulugia": {
           "name": "Isqulugia",
@@ -5942,7 +5970,7 @@
         },
         "action->Volcanic Eruption": {
           "name": "Volcanic Eruption",
-          "description": "<p>The volcano on the lerritan's back erupts and sends lava bombs raining down in a @Template[emanation|distance:30], dealing @Damage[12d12[fire]] damage.</p>\n<p>Each creature in the area must attempt a @Check[reflex|dc:46|traits:damaging-effect] saving throw. The lava globules quickly cool into heavy stones, transforming the area into greater difficult terrain for non-lerritans.</p>\n<p>The lerritan can't use for [[/gmr 1d4 #rounds]]{1d4 rounds}.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage and is @UUID[Compendium.pf2e.conditionitems.Item.D5mg6Tc7Jzrj6ro7]{Encumbered} for 1 round.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} (Escape DC 46).</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is encased in a rocky crust with lava on the inside. The creature is @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} (Escape DC 46), can't breathe, takes @Damage[3d12[persistent,fire]] damage, and can't recover from this persistent fire damage until freed.</p>"
+          "description": "<p>The volcano on the lerritan's back erupts and sends lava bombs raining down in a @Template[emanation|distance:30], dealing @Damage[12d12[fire]] damage.</p>\n<p>Each creature in the area must attempt a @Check[reflex|dc:46|traits:damaging-effect] saving throw. The lava globules quickly cool into heavy stones, transforming the area into greater difficult terrain for non-lerritans.</p>\n<p>The lerritan can't use for [[/gmr 1d4 #rounds]]{1d4 rounds}.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage and is @UUID[Compendium.pf2e.conditionitems.Item.D5mg6Tc7Jzrj6ro7]{Encumbered} for 1 round.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} ([[/act escape dc=46]]).</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is encased in a rocky crust with lava on the inside. The creature is @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} ([[/act escape dc=46]]), can't breathe, takes @Damage[3d12[persistent,fire]] damage, and can't recover from this persistent fire damage until freed.</p>"
         }
       }
     },
@@ -6361,7 +6389,7 @@
         },
         "action->Magma Tomb": {
           "name": "Magma Tomb",
-          "description": "<p>Once per day, the dragon can spit a molten boulder at a target within 120 feet. This deals @Damage[12d6[fire],5d12[bludgeoning]]{12d6 fire damage and 5d12 bludgeoning damage}, with a @Check[reflex|dc:42|basic] save. If the creature fails its save, it's encased in magma that instantly cools and has Hardness 10, HP 40, and BT 20. The encased creature can't breathe and is @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} (Escape DC 42).</p>"
+          "description": "<p>Once per day, the dragon can spit a molten boulder at a target within 120 feet. This deals @Damage[12d6[fire],5d12[bludgeoning]]{12d6 fire damage and 5d12 bludgeoning damage}, with a @Check[reflex|dc:42|basic] save. If the creature fails its save, it's encased in magma that instantly cools and has Hardness 10, HP 40, and BT 20. The encased creature can't breathe and is @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} ([[/act escape dc=42]]).</p>"
         },
         "action->Volcanic Purge": {
           "name": "Volcanic Purge",
@@ -6473,7 +6501,7 @@
         },
         "action->Magma Tomb": {
           "name": "Magma Tomb",
-          "description": "<p>Once per day, the dragon can spit a molten boulder at a target within 120 feet. This deals @Damage[12d6[fire],5d12[bludgeoning]]{12d6 fire damage and 5d12 bludgeoning damage}, with a @Check[reflex|dc:42|basic] save. If the creature fails its save, it's encased in magma that instantly cools and has Hardness 10, HP 40, and BT 20. The encased creature can't breathe and is @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} (Escape DC 42).</p>"
+          "description": "<p>Once per day, the dragon can spit a molten boulder at a target within 120 feet. This deals @Damage[12d6[fire],5d12[bludgeoning]]{12d6 fire damage and 5d12 bludgeoning damage}, with a @Check[reflex|dc:42|basic] save. If the creature fails its save, it's encased in magma that instantly cools and has Hardness 10, HP 40, and BT 20. The encased creature can't breathe and is @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} ([[/act escape dc=42]]).</p>"
         },
         "action->Volcanic Purge": {
           "name": "Volcanic Purge",
@@ -9231,7 +9259,7 @@
         },
         "action->Discharge": {
           "name": "Discharge",
-          "description": "<p>The shocker lizard releases a blast of lightning from its body. Creatures within a @Template[emanation|distance:10] take @Damage[3d6[electricity]] damage (@Check[reflex|dc:18|basic] save).</p>\n<p>The shocker lizard can't use Discharge for [[/gmr 1d4 #rounds]]{1d4 rounds}.</p>"
+          "description": "<p>The shocker lizard releases a blast of lightning from its body. Creatures within a @Template[emanation|distance:10] take @Damage[3d6[electricity]|options:area-damage] damage (@Check[reflex|dc:18|basic|options:area-effect] save).</p>\n<p>The shocker lizard can't use Discharge for [[/gmr 1d4 #Recharge Discharge]]{1d4 rounds}.</p>"
         },
         "action->Shocking Burst": {
           "name": "Shocking Burst",
@@ -9640,7 +9668,7 @@
         },
         "action->Hurl Blade": {
           "name": "Hurl Blade",
-          "description": "<p>The spiral centurion hurls one of its blades with an angled spin to ensure a swooping flight path. The blade deals @Damage[6d6[slashing]] damage to each creature in a @Template[line|distance:40] (@Check[reflex|dc:30|basic] save).</p>\n<p>At the start of the spiral centurion's next turn, the blade swoops around and returns along the same flight path, again dealing @Damage[6d6[slashing]] damage (@Check[reflex|dc:30|basic] save) to each creature along the same line.</p>"
+          "description": "<p>The spiral centurion hurls one of its blades with an angled spin to ensure a swooping flight path. The blade deals @Damage[6d6[slashing]|options:area-damage] damage to each creature in a @Template[line|distance:40] (@Check[reflex|dc:30|basic|options:area-effect] save).</p>\n<p>At the start of the spiral centurion's next turn, the blade swoops around and returns along the same flight path, again dealing 6d6 slashing damage (DC 30 basic Reflex save) to each creature along the same line.</p>"
         },
         "action->Rev Up": {
           "name": "Rev Up",
@@ -9822,7 +9850,7 @@
         },
         "action->Explosive Rebirth": {
           "name": "Explosive Rebirth",
-          "description": "<p>When killed, the star archon explodes in a blinding flash of holy energy that deals @Damage[12d6[fire]] damage and @Damage[12d6[spirit]] damage to anything in a @Template[emanation|distance:100], with a @Check[reflex|dc:40|basic] save.</p>\n<p>A non-archon creature that sees the explosion and critically fails its save is permanently @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} as well.</p>\n<p>The slain star archon reincarnates [[/gmr 1d4 #rounds]]{1d4 rounds} later as a shield archon.</p>"
+          "description": "<p>When killed, the star archon explodes in a blinding flash of holy energy that deals @Damage[12d6[fire],12d6[spirit]|options:area-damage]{12d6 fire damage and 12d6 spirit damage} to anything in a @Template[emanation|distance:100], with a @Check[reflex|dc:40|basic|options:area-effect] save.</p>\n<p>A non-archon creature that sees the explosion and critically fails its save is permanently @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} as well.</p>\n<p>The slain star archon reincarnates [[/gmr 1d4 #rounds]]{1d4 rounds} later as a shield archon.</p>"
         },
         "action->Retributive Strike": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.IQtb58p4EaeUzTN1]\n<p><strong>Damage Reduction</strong> 21</p>\n<p>A star archon can also make a Retributive Strike by throwing its starknife, and the enemy and ally can be within 60 feet instead of 15 feet.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.RetributiveStrike]</p>"
@@ -10394,7 +10422,7 @@
         },
         "action->Lightning Blast": {
           "name": "Lightning Blast",
-          "description": "<p>The thunderbird spreads their wings and blasts their foe with thunderous bolts of lightning. Each creature in a @Template[emanation|distance:30] takes @Damage[6d6[electricity]] damage and @Damage[6d6[sonic]] damage (@Check[reflex|dc:30|basic] save). The thunderbird can't use Lightning Blast for [[/gmr 1d4 #Recharge Lightning Blast]]{1d4 rounds}.</p>"
+          "description": "<p>The thunderbird spreads their wings and blasts their foe with thunderous bolts of lightning. Each creature in a @Template[emanation|distance:30] takes @Damage[6d6[electricity],6d6[sonic]|options:area-damage]{6d6 electricity damage and 6d6 sonic damage} (@Check[reflex|dc:30|basic|options:area-effect] save). The thunderbird can't use Lightning Blast for [[/gmr 1d4 #Recharge Lightning Blast]]{1d4 rounds}.</p>"
         },
         "action->Stormflight": {
           "name": "Stormflight",
@@ -11017,7 +11045,7 @@
         },
         "action->Freezing Breath": {
           "name": "Freezing Breath",
-          "description": "<p>The umonlee breathes a cone of extremely cold air that damages its prey and can freeze them to the ground. Its breath deals @Damage[12d8[cold]] damage to creatures in the @Template[cone|distance:50] (@Check[reflex|dc:38|traits:damaging-effect] save).</p>\n<p>The umonlee can't use Freezing Breath again for [[/gmr 1d4 #Recharge Freezing Breath]]{1d4 rounds}.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage and is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 round.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 round. If the creature is standing on the ground, it's @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} as thick ice forms around it, and it can't recover from being slowed. The creature remains immobilized and slowed 1 until it manages to @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} (DC 36) or deal 30 damage to the ice, which has weakness 10 to fire.</p>\n<p><strong>Critical Failure</strong> As failure, except the creature takes double damage and the ice holding it in place requires 60 damage to break.</p>"
+          "description": "<p>The umonlee breathes a cone of extremely cold air that damages its prey and can freeze them to the ground. Its breath deals @Damage[12d8[cold]|options:area-damage] damage to creatures in the @Template[cone|distance:50] (@Check[reflex|dc:38|options:area-effect,damaging-effect] save).</p>\n<p>The umonlee can't use Freezing Breath again for [[/gmr 1d4 #Recharge Freezing Breath]]{1d4 rounds}.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage and is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 round.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 round. If the creature is standing on the ground, it's @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} as thick ice forms around it, and it can't recover from being slowed. The creature remains immobilized and slowed 1 until it manages to @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} (DC 36) or deal 30 damage to the ice, which has weakness 10 to fire.</p>\n<p><strong>Critical Failure</strong> As failure, except the creature takes double damage and the ice holding it in place requires 60 damage to break.</p>"
         },
         "action->Greater Constrict": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.OmV6E3aELvq9CkK1]\n<p>@Damage[(2d10+8)[bludgeoning]] damage, @Check[fortitude|dc:36|basic]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.GreaterConstrict]</p>"
@@ -11076,7 +11104,7 @@
         },
         "action->Necrotic Decay": {
           "name": "Necrotic Decay",
-          "description": "<p>When an urdefhan dies, its invisible flesh quickly rots away and sublimates into a foul-smelling gas that fills a @Template[emanation|distance:5] around the body.</p>\n<p>This gas deals @Damage[5d6[void]] damage to creatures in this area as their flesh curdles and rots as well (@Check[fortitude|dc:21|basic] save).</p>"
+          "description": "<p>When an urdefhan dies, its invisible flesh quickly rots away and sublimates into a foul-smelling gas that fills a @Template[emanation|distance:5] around the body.</p>\n<p>This gas deals @Damage[5d6[void]|options:area-damage] damage to creatures in this area as their flesh curdles and rots as well (@Check[fortitude|dc:21|basic|options:area-effect] save).</p>"
         },
         "action->Stoke the Fervent": {
           "name": "Stoke the Fervent",
@@ -11113,7 +11141,7 @@
         },
         "action->Necrotic Decay": {
           "name": "Necrotic Decay",
-          "description": "<p>When an urdefhan dies, its invisible flesh quickly rots away and sublimates into a foul-smelling gas that fills a @Template[emanation|distance:5] around the body.</p>\n<p>This gas deals @Damage[3d6[void]] damage to creatures in this area as their flesh curdles and rots as well (@Check[fortitude|dc:17|basic] save).</p>"
+          "description": "<p>When an urdefhan dies, its invisible flesh quickly rots away and sublimates into a foul-smelling gas that fills a @Template[emanation|distance:5] around the body.</p>\n<p>This gas deals @Damage[3d6[void]|options:area-damage] damage to creatures in this area as their flesh curdles and rots as well (@Check[fortitude|dc:17|basic|options:area-effect] save).</p>"
         },
         "action->Ravenous Attack": {
           "name": "Ravenous Attack",
@@ -12207,7 +12235,7 @@
         },
         "action->Entombing Breath": {
           "name": "Entombing Breath",
-          "description": "<p>The zomok blasts forth a @Template[cone|distance:60] of earth and gravel, dealing @Damage[17d6[bludgeoning]] damage (@Check[reflex|dc:34|basic] save); @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} creatures take a -2 circumstance penalty to this saving throw. Creatures touching the ground that fail their saves take a 10-foot circumstance penalty to their Speeds and are @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} (Escape DC 34) on a critical failure.</p>\n<p>The zomok can't use Entombing Breath again for [[/gmr 1d4 #Recharge Entombing Breath]]{1d4 rounds}.</p>\n<p>The bodies of creatures slain by Entombing Breath instantly decompose and are destroyed-they can be restored to life only by a 7th-rank or higher spell or ritual that restores life. The creature's equipment is unharmed but buried under 5 feet of earth.</p>"
+          "description": "<p>The zomok blasts forth a @Template[cone|distance:60] of earth and gravel, dealing @Damage[17d6[bludgeoning]|options:area-damage] damage (@Check[reflex|dc:34|basic|options:area-effect] save); @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} creatures take a -2 circumstance penalty to this saving throw. Creatures touching the ground that fail their saves take a 10-foot circumstance penalty to their Speeds and are @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} ([[/act escape dc=34]]) on a critical failure.</p>\n<p>The zomok can't use Entombing Breath again for [[/gmr 1d4 #Recharge Entombing Breath]]{1d4 rounds}.</p>\n<p>The bodies of creatures slain by Entombing Breath instantly decompose and are destroyed-they can be restored to life only by a 7th-rank or higher spell or ritual that restores life. The creature's equipment is unharmed but buried under 5 feet of earth.</p>"
         },
         "action->Forest Step": {
           "name": "Forest Step",
