@@ -287,7 +287,7 @@
         },
         "action->Dive-bomb": {
           "name": "Sturzflugeinschlag",
-          "description": "<p><strong>Anforderungen</strong> Der Chaosfalke nutzt Fliegen</p>\n<hr />\n<p><strong>Effekt</strong> Der Chaosfalke fliegt zweimal gerade nach unten. Wenn er am Ende dieser Bewegung den Boden oder ein ähnlich festes Objekt erreicht, zertrümmert seine Landung diese Oberfläche in scharfe Splitter und Tropfen aus geschmolzenem Stein, die allen anderen Kreaturen innerhalb von @Template[emanation|distance:20]{20 Fuß/6 m} @Damage[4d6[fire],3d8[piercing]]{4W6 Feuerschaden und 3W8 Stichschaden} (@Check[reflex|dc:26|basic]{einfacher Reflexwurf}) zufügen.</p>"
+          "description": "<p><strong>Anforderungen</strong> Der Chaosfalke nutzt Fliegen</p>\n<hr />\n<p><strong>Effekt</strong> Der Chaosfalke fliegt zweimal gerade nach unten. Wenn er am Ende dieser Bewegung den Boden oder ein ähnlich festes Objekt erreicht, zertrümmert seine Landung diese Oberfläche in scharfe Splitter und Tropfen aus geschmolzenem Stein, die allen anderen Kreaturen innerhalb von @Template[emanation|distance:20]{20 Fuß/6 m} @Damage[4d6[fire],3d8[piercing]|options:area-damage]{4W6 Feuerschaden und 3W8 Stichschaden} (@Check[reflex|dc:26|basic|options:area-effect]{einfacher Reflexwurf}) zufügen.</p>"
         },
         "action->Flash Storm": {
           "name": "Blitzsturm",
@@ -741,7 +741,7 @@
         },
         "action->Hexdust Wind": {
           "name": "Magiefresserstaub",
-          "description": "<p>Mit ein paar heftigen Flügelschlägen stößt die Magiefressermotte magischen Schuppenstaub in einem @Template[cone|distance:30]{30 Fuß/9 m-Kegel} aus. Dieser verursacht @Damage[10d6[untyped]]{10W6 Schaden} der Art, gegen die die Magiefressermotte immun ist (@Check[fortitude|dc:23|basic]{einfacher Zähigkeitswurf}). Sie kann [[/gmr 1d4 #Runden]]{1W4 Runden} lang keinen Magiefresserstaub mehr einsetzen</p>"
+          "description": "<p>Mit ein paar heftigen Flügelschlägen stößt die Magiefressermotte magischen Schuppenstaub in einem @Template[cone|distance:30]{30 Fuß/9 m-Kegel} aus. Dieser verursacht @Damage[10d6[untyped]|options:area-damage]{10W6 Schaden} der Art, gegen die die Magiefressermotte immun ist (@Check[fortitude|dc:23|basic|options:area-effect]{einfacher Zähigkeitswurf}). Sie kann [[/gmr 1d4 #Runden]]{1W4 Runden} lang keinen Magiefresserstaub mehr einsetzen</p>"
         }
       }
     },
@@ -981,7 +981,7 @@
         },
         "action->Launch Metal": {
           "name": "Metall abschießen",
-          "description": "<p>Der Gecko stößt das an seinem Körper befestigte Metall in alle Richtungen ab und fügt allen Kreaturen in einer @Template[emanation|distance:10]{10 Fuß/3 m-Ausstrahlung} @Damage[2d6[bludgeoning]]{2W6 Wuchtschaden} zu (@Check[reflex|dc:17|basic]{einfacher Reflexwurf}). Der Gecko kann [[/gmr 1d4 #Runden]]{1W4 Runden} lang kein Metall mehr abschießen.</p>"
+          "description": "<p>Der Gecko stößt das an seinem Körper befestigte Metall in alle Richtungen ab und fügt allen Kreaturen in einer @Template[emanation|distance:10]{10 Fuß/3 m-Ausstrahlung} @Damage[2d6[bludgeoning]|options:area-damage]{2W6 Wuchtschaden} zu (@Check[reflex|dc:17|basic|options:area-effect]{einfacher Reflexwurf}). Der Gecko kann [[/gmr 1d4 #Runden]]{1W4 Runden} lang kein Metall mehr abschießen.</p>"
         },
         "action->Repel": {
           "name": "Abstoßen",
@@ -1231,7 +1231,7 @@
         },
         "action->Petty Whispers": {
           "name": "Gemeines Geflüster",
-          "description": "<p>Der Spottchor nimmt die Stimmen seiner Feinde an, verbreitet Lügen und Spott unter vermeintlichen Verbündeten und reißt vertraute Freunde auseinander. Kreaturen in einer @Template[emanation|distance:60]{60 Fuß/18 m-Ausstrahlung} des Spottchors müssen einen @Check[will|dc:37]{Willenswurf} versuchen. Der Spottchor kann 1 Minute lang kein Geflüster mehr einsetzen.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen und ist 1 Tag lang vorübergehend immun.</p>\n<p><strong>Erfolg</strong> Wie Fehlschlag, aber die Kreatur nimmt halben Schaden und ist nicht Verwirrt.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält @Damage[12d10[mental]]{12W10 Mentalen Schaden} und für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Verwirrt}. Sie kann am Ende jeder ihrer Runden einen neuen Rettungswurf ablegen, um den Zustand Verwirrt zu beenden.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erhält @Damage[15d10[mental]]{15W10 Mentalen Schaden} und für 1 Minute den Zustand Verwirrt; sie kann keinen RW ablegen, um den Zustand früher zu beenden.</p>"
+          "description": "<p>Der Spottchor nimmt die Stimmen seiner Feinde an, verbreitet Lügen und Spott unter vermeintlichen Verbündeten und reißt vertraute Freunde auseinander. Kreaturen in einer @Template[emanation|distance:60]{60 Fuß/18 m-Ausstrahlung} des Spottchors müssen einen @Check[will|dc:37|options:area-effect,damaging-effect]{Willenswurf} versuchen. Der Spottchor kann 1 Minute lang kein Geflüster mehr einsetzen.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen und ist 1 Tag lang vorübergehend immun.</p>\n<p><strong>Erfolg</strong> Wie Fehlschlag, aber die Kreatur nimmt halben Schaden und ist nicht Verwirrt.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält @Damage[12d10[mental]|options:area-damage]{12W10 Mentalen Schaden} und für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Verwirrt}. Sie kann am Ende jeder ihrer Runden einen neuen Rettungswurf ablegen, um den Zustand Verwirrt zu beenden.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erhält @Damage[15d10[mental]|options:area-damage]{15W10 Mentalen Schaden} und für 1 Minute den Zustand Verwirrt; sie kann keinen RW ablegen, um den Zustand früher zu beenden.</p>"
         }
       }
     },
@@ -1591,7 +1591,7 @@
         },
         "action->Enzymic Vent": {
           "name": "Enzyme entlüften",
-          "description": "<p>Der Himmelsfischer stößt fleischfressende Enzyme in die Luft aus, die in einer Ausstrahlung von @Template[emanation|distance:20]{20 Fuß/6 m } @Damage[3d6[persistent,acid],3d6[bleed]]{3W6 Punkte Anhaltenden Säureschaden und 3W6 Punkte Anhaltenden Blutungsschaden} verursachen (@Check[reflex|dc:25|basic]{einfacher Reflexwurf}). Er kann [[/gmr 1d4 #Runden]]{1W4 Runden} lang kein Enzyme entlüften mehr einsetzen.</p>"
+          "description": "<p>Der Himmelsfischer stößt fleischfressende Enzyme in die Luft aus, die in einer Ausstrahlung von @Template[emanation|distance:20]{20 Fuß/6 m } @Damage[3d6[persistent,acid],3d6[bleed]|options:area-damage]{3W6 Punkte Anhaltenden Säureschaden und 3W6 Punkte Anhaltenden Blutungsschaden} verursachen (@Check[reflex|dc:25|basic|options:area-effect]{einfacher Reflexwurf}). Er kann [[/gmr 1d4 #Runden]]{1W4 Runden} lang kein Enzyme entlüften mehr einsetzen.</p>"
         },
         "action->Jet": {
           "name": "Luftstoß",
@@ -1762,7 +1762,7 @@
         },
         "action->Petrify Vapor": {
           "name": "Versteinerter Dunst",
-          "description": "<p>Die Steinfledermaus atmet versteinerndes Gas in einem @Template[cone|distance:15]{15-Fuß/4,50 m-Kegel} aus, das zu dünn ist, um Kreaturen in der Umgebung zu schaden. Es versteinert jedoch die Umgebungsfeuchtigkeit und lässt eine Flut von winzigen Steinen auf alle Kreaturen in den Feldern direkt unter dem Kegel herabregnen. Die fallenden Steine verursachen @Damage[4d6[bludgeoning]]{4W6 Wuchtschaden} (@Check[reflex|dc:20|basic]{einfacher Reflexwurf}). Die Steinfledermaus kann Versteinerten Dunst [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht mehr einsetzen.</p>"
+          "description": "<p>Die Steinfledermaus atmet versteinerndes Gas in einem @Template[cone|distance:15]{15-Fuß/4,50 m-Kegel} aus, das zu dünn ist, um Kreaturen in der Umgebung zu schaden. Es versteinert jedoch die Umgebungsfeuchtigkeit und lässt eine Flut von winzigen Steinen auf alle Kreaturen in den Feldern direkt unter dem Kegel herabregnen. Die fallenden Steine verursachen @Damage[4d6[bludgeoning]|options:area-damage]{4W6 Wuchtschaden} (@Check[reflex|dc:20|basic|options:area-effect]{einfacher Reflexwurf}). Die Steinfledermaus kann Versteinerten Dunst [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht mehr einsetzen.</p>"
         },
         "action->Stone Feast": {
           "name": "Steinmahl",
@@ -1998,7 +1998,7 @@
         },
         "action->Hellfire Blast": {
           "name": "Höllenfeuer",
-          "description": "<p>Der Thruneosaurus fokussiert schwefelhaltiges Höllenfeuer auf eine von drei Arten. Der Thruneosaurus wählt den Effekt, kann aber nicht in zwei aufeinanderfolgenden Runden die gleiche Wahl treffen.</p>\n<ul>\n<li><strong>Erstickende Dämpfe</strong> (Gift, Göttlich, Unheilig) Der Thruneosaurus stößt einen @Template[cone|distance:60]{60 Fuß/18 m-Kegel} aus schwefelhaltigem Rauch aus, der @Damage[6d8[poison]]{6W8 Giftschaden} (@Check[fortitude|dc:38|traits:divine,poison,unholy|basic]{einfacher Zähigkeitswurf}) verursacht. Kreaturen, die ihren Rettungswurf nicht bestehen, erhalten den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 2}.</li>\n<li><strong>Feuriger Strahl</strong> (Feuer, Göttlich, Unheilig) Eine @Template[line|distance:120]{120 Fuß/36 m} lange Linie höllischer Flammen bricht aus den Augen des Thruneosaurus hervor und verursacht @Damage[6d10[fire]]{6W10 Feuerschaden} (@Check[reflex|dc:38|traits:divine,fire,unholy|basic]{einfacher Reflexwurf}).</li>\n<li><strong>Glühende Sonne</strong> (Feuer, Göttlich, Unheilig) Der Thruneosaurus entzündet eine Kugel aus Höllenfeuer zwischen seinen Hörnern, die Hitze in einem Radius von @Template[emanation|distance:30]{30 Fuß/9 m} ausstrahlt und @Damage[2d8[persistent,fire]]{2W8 Anhaltenden Feuerschaden} verursacht.</li>\n</ul>"
+          "description": "<p>Der Thruneosaurus fokussiert schwefelhaltiges Höllenfeuer auf eine von drei Arten. Der Thruneosaurus wählt den Effekt, kann aber nicht in zwei aufeinanderfolgenden Runden die gleiche Wahl treffen.</p>\n<ul>\n<li><strong>Erstickende Dämpfe</strong> (Gift, Göttlich, Unheilig) Der Thruneosaurus stößt einen @Template[cone|distance:60]{60 Fuß/18 m-Kegel} aus schwefelhaltigem Rauch aus, der @Damage[6d8[poison]|options:area-damage]{6W8 Giftschaden} (@Check[fortitude|dc:38|traits:divine,poison,unholy|basic|options:area-effect]{einfacher Zähigkeitswurf}) verursacht. Kreaturen, die ihren Rettungswurf nicht bestehen, erhalten den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 2}.</li>\n<li><strong>Feuriger Strahl</strong> (Feuer, Göttlich, Unheilig) Eine @Template[line|distance:120]{120 Fuß/36 m} lange Linie höllischer Flammen bricht aus den Augen des Thruneosaurus hervor und verursacht @Damage[6d10[fire]|options:area-damage]{6W10 Feuerschaden} (@Check[reflex|dc:38|traits:divine,fire,unholy|basic|options:area-effect]{einfacher Reflexwurf}).</li>\n<li><strong>Glühende Sonne</strong> (Feuer, Göttlich, Unheilig) Der Thruneosaurus entzündet eine Kugel aus Höllenfeuer zwischen seinen Hörnern, die Hitze in einem Radius von @Template[emanation|distance:30]{30 Fuß/9 m} ausstrahlt und @Damage[2d8[persistent,fire]]{2W8 Anhaltenden Feuerschaden} verursacht.</li>\n</ul>"
         },
         "action->Swallow Whole": {
           "description": "<p>Riesig, @Damage[(3d12+10)[bludgeoning]]{3W12+10 Wuchtschaden}, Befreien 40</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
@@ -2086,7 +2086,7 @@
         },
         "action->Noxious Exhalation": {
           "name": "Giftiger Atem",
-          "description": "<p>Der Tyrafdir spuckt aus allen seinen Mündern einen giftigen Nebel aus, der sich in einer @Template[emanation|distance:20]{20 Fuß/6 m-Ausstrahlung} ausbreitet und Kreaturen innerhalb des Wirkungsbereiches @Damage[4d10[poison]]{4W10 Giftschaden} zufügt (@Check[reflex|dc:24|basic]{einfacher Reflexwurf}). Jede Kreatur, die einen Fehlschlag bei diesem Rettungswurf erleidet, muss einen @Check[will|dc:24]{Willenswurf} ablegen; bei einem Fehlschlag erleidet sie 24 Stunden lang eine Schwäche gegen Mentalen Schaden 10 und einen Malus von –1 auf Willenswürfe. Der Tyrafdir kann [/br 1d4 #Runden]]{1W4 Runden} lang keinen Giftigen Atem mehr einsetzen.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.G1pvduwOVRz4YFUF]{Effekt: Giftiger Atem}</p>"
+          "description": "<p>Der Tyrafdir spuckt aus allen seinen Mündern einen giftigen Nebel aus, der sich in einer @Template[emanation|distance:20]{20 Fuß/6 m-Ausstrahlung} ausbreitet und Kreaturen innerhalb des Wirkungsbereiches @Damage[4d10[poison]|options:area-damage]{4W10 Giftschaden} zufügt (@Check[reflex|dc:24|basic|options:area-effect]{einfacher Reflexwurf}). Jede Kreatur, die einen Fehlschlag bei diesem Rettungswurf erleidet, muss einen @Check[will|dc:24]{Willenswurf} ablegen; bei einem Fehlschlag erleidet sie 24 Stunden lang eine Schwäche gegen Mentalen Schaden 10 und einen Malus von –1 auf Willenswürfe. Der Tyrafdir kann [/br 1d4 #Runden]]{1W4 Runden} lang keinen Giftigen Atem mehr einsetzen.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.G1pvduwOVRz4YFUF]{Effekt: Giftiger Atem}</p>"
         }
       }
     },
@@ -2105,7 +2105,7 @@
         },
         "action->Focused Reflection": {
           "name": "Fokussierte Reflexion",
-          "description": "<p><strong>Anforderungen</strong> Der Reflektierende Mullschwarm ist in hellem Licht</p>\n<hr />\n<p><strong>Effekt</strong> Der Schwarm dreht sich gleichzeitig, um das Licht in einem bogenförmigen Strahl zu bündeln, der allen Kreaturen in einem Kegel von @Template[cone|distance:30]{30 Fuß/9 m} (@Check[reflex|dc:30|basic]{einfacher Reflexwurf}) @Damage[(6d12)[fire]]{6W12 Feuerschaden}  zufügt. Eine Kreatur, deren Rettungswurf misslingt, erhält außerdem für 1 Runde (oder 1 Minute bei einem Kritischen Fehlschlag) den Zustand @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind}. Der Schwarm kann [[/gmr 1d4 #Runden]]{1W4 Runden} lang keine Fokussierte Reflexion mehr einsetzen.</p>"
+          "description": "<p><strong>Anforderungen</strong> Der Reflektierende Mullschwarm ist in hellem Licht</p>\n<hr />\n<p><strong>Effekt</strong> Der Schwarm dreht sich gleichzeitig, um das Licht in einem bogenförmigen Strahl zu bündeln, der allen Kreaturen in einem Kegel von @Template[cone|distance:30]{30 Fuß/9 m} (@Check[reflex|dc:30|basic|options:area-effect]{einfacher Reflexwurf}) @Damage[(6d12)[fire]|options:area-damage]{6W12 Feuerschaden}  zufügt. Eine Kreatur, deren Rettungswurf misslingt, erhält außerdem für 1 Runde (oder 1 Minute bei einem Kritischen Fehlschlag) den Zustand @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind}. Der Schwarm kann [[/gmr 1d4 #Runden]]{1W4 Runden} lang keine Fokussierte Reflexion mehr einsetzen.</p>"
         },
         "action->Swarming Bites": {
           "name": "Beißender Schwarm",
@@ -2193,7 +2193,7 @@
         },
         "action->Erupting Jump": {
           "name": "Ausbrechender Sprung",
-          "description": "<p>Der Hüter zieht einen Lavastrom hervor und springt dann von der erstarrenden Masse, während sie abkühlt. Der Hüter @UUID[Compendium.pf2e.actionspf2e.Item.d5I6018Mci2SWokk]{Springen} bis zum Doppelten seiner Bewegungsrate. Wenn er landet, fügt die Wucht des Aufpralls allen Kreaturen innerhalb einer @Template[emanation|distance:15]{15 Fuß/4,50 m-Ausstrahlung} @Damage[6d12[bludgeoning]]{6W12 Wuchtschaden} (@Check[fortitude|dc:42|basic]{einfacher Zähigkeitswurf}) zu. Bei einem Kritischen Fehlschlag wird die Kreatur außerdem 10 Fuß/3 m vom Hüter weggestoßen.</p>"
+          "description": "<p>Der Hüter zieht einen Lavastrom hervor und springt dann von der erstarrenden Masse, während sie abkühlt. Der Hüter @UUID[Compendium.pf2e.actionspf2e.Item.d5I6018Mci2SWokk]{Springen} bis zum Doppelten seiner Bewegungsrate. Wenn er landet, fügt die Wucht des Aufpralls allen Kreaturen innerhalb einer @Template[emanation|distance:15]{15 Fuß/4,50 m-Ausstrahlung} @Damage[6d12[bludgeoning]|options:area-damage]{6W12 Wuchtschaden} (@Check[fortitude|dc:42|basic|options:area-effect]{einfacher Zähigkeitswurf}) zu. Bei einem Kritischen Fehlschlag wird die Kreatur außerdem 10 Fuß/3 m vom Hüter weggestoßen.</p>"
         },
         "action->Obsidian Cage": {
           "name": "Obsidiankäfig",
@@ -2331,7 +2331,7 @@
         },
         "action->I Am The Tide": {
           "name": "Ich bin die Flut",
-          "description": "<p>Der Hüter schafft drei Linien aus rauschendem Wasser, jede @Template[line|distance:120|width:10]{10 Fuß/3 m breit und 120 Fuß/36 m lang}. Kreaturen im Bereich nehmen @Damage[18d8[bludgeoning]]{18W8 Wuchtschaden} (@Check[fortitude|dc:45|basic]{einfacher Zähigkeitswurf}). Der Hüter kann entweder schieben oder ziehen, und alle Kreaturen, die diesen Rettungswurf nicht bestehen, bewegen sich bis zu 40 Fuß/12 m in die gewählte Richtung. Der Hüter kann Ich bin die Flut [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht mehr einsetzen.</p>"
+          "description": "<p>Der Hüter schafft drei Linien aus rauschendem Wasser, jede @Template[line|distance:120|width:10]{10 Fuß/3 m breit und 120 Fuß/36 m lang}. Kreaturen im Bereich nehmen @Damage[18d8[bludgeoning]|options:area-damage]{18W8 Wuchtschaden} (@Check[fortitude|dc:45|basic|options:area-effect]{einfacher Zähigkeitswurf}). Der Hüter kann entweder schieben oder ziehen, und alle Kreaturen, die diesen Rettungswurf nicht bestehen, bewegen sich bis zu 40 Fuß/12 m in die gewählte Richtung. Der Hüter kann Ich bin die Flut [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht mehr einsetzen.</p>"
         },
         "action->What Lurks Beneath": {
           "name": "Was darunter lauert",
@@ -2418,9 +2418,6 @@
         "strike-melee->Hatchet": {
           "name": "Kriegsbeil"
         },
-        "strike-melee->Antler": {
-          "name": "Geweih"
-        },
         "strike-ranged->Hatchet": {
           "name": "Kriegsbeil"
         },
@@ -2463,9 +2460,6 @@
         "strike-melee->Trident": {
           "name": "Dreizack"
         },
-        "strike-melee->Jaws": {
-          "name": "Biss"
-        },
         "strike-ranged->Trident": {
           "name": "Dreizack"
         },
@@ -2486,7 +2480,7 @@
         },
         "action->Fish Fork": {
           "name": "Fischgabel",
-          "description": "<p><strong>Anforderungen</strong> Der Werhai hat bei seiner letzten Aktion in diesem Zug mit einem Dreizack einen Kritischen Treffer erzielt</p>\n<hr />\n<p><strong>Effekt</strong> Der Werhai gräbt seinen Dreizack tief in sein Ziel und spießt es auf, bevor es einen gewaltigen Biss einsteckt. Das Ziel des Angriffs wird @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} (@UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Entkommen} SG 18) und erhält @Damage[1d4[bleed]]{1W4 Blutungsschaden}, und der Werhai versucht einen Bissangriff gegen es. Der Werhai kann seinen Dreizack nicht benutzen, solange er eine Kreatur damit Gegriffen hat, aber er kann den Dreizack mit einer einzigen Aktion mit der Kategorie Handhaben frei ziehen.</p>"
+          "description": "<p><strong>Anforderungen</strong> Der Werhai hat bei seiner letzten Aktion in diesem Zug mit einem Dreizack einen Kritischen Treffer erzielt</p>\n<hr />\n<p><strong>Effekt</strong> Der Werhai gräbt seinen Dreizack tief in sein Ziel und spießt es auf, bevor es einen gewaltigen Biss einsteckt. Das Ziel des Angriffs wird @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} ([[/act escape dc=18]]) und erhält @Damage[1d4[bleed]]{1W4 Blutungsschaden}, und der Werhai versucht einen Bissangriff gegen es. Der Werhai kann seinen Dreizack nicht benutzen, solange er eine Kreatur damit Gegriffen hat, aber er kann den Dreizack mit einer einzigen Aktion mit der Kategorie Handhaben frei ziehen.</p>"
         },
         "action->Moon Frenzy": {
           "name": "Mondraserei"

@@ -25,7 +25,7 @@
         },
         "action->Forge Breath": {
           "name": "Schmiedeodem",
-          "description": "<p>Der Verfluchte Schmiedeschand atmet eine Wolke aus heißem Ruß, Asche und glühenden Funken aus. Er wählt, ob dies ein @Template[cone|distance:30]{30 Fuß/9 m-Kegel} oder eine auf ihn zentrierte @Template[burst|distance:20]{20 Fuß/6 m-Explosion} sein soll. Der Effekt währt im Wirkungsbereich für [[/gmr 1d4 #Runden]]{1W4 Runden}. Kreaturen, welche den Wirkungsbereich betreten oder darin ihren Zug beginnen, erleiden @Damage[12d6[fire]]{12W6 Punkte Feuerschaden} (@Check[reflex|dc:36|basic]{einfacher Reflexwurf}). Eine Kreatur, deren Rettungswurf fehlschlägt, erhält zudem für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind}. Kreaturen innerhalb der Wolke besitzen den Zustand @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Verborgen}, wenn auch nicht dem Schmiedeschand selbst gegenüber. Der Verfluchte Schmiedeschand kann diese Fähigkeit erst wieder nutzen, wenn er Einatmen genutzt hat.</p>"
+          "description": "<p>Der Verfluchte Schmiedeschand atmet eine Wolke aus heißem Ruß, Asche und glühenden Funken aus. Er wählt, ob dies ein @Template[cone|distance:30]{30 Fuß/9 m-Kegel} oder eine auf ihn zentrierte @Template[burst|distance:20]{20 Fuß/6 m-Explosion} sein soll. Der Effekt währt im Wirkungsbereich für [[/gmr 1d4 #Runden]]{1W4 Runden}. Kreaturen, welche den Wirkungsbereich betreten oder darin ihren Zug beginnen, erleiden @Damage[12d6[fire]|options:area-damage]{12W6 Punkte Feuerschaden} (@Check[reflex|dc:36|basic|options:area-effect]{einfacher Reflexwurf}). Eine Kreatur, deren Rettungswurf fehlschlägt, erhält zudem für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind}. Kreaturen innerhalb der Wolke besitzen den Zustand @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Verborgen}, wenn auch nicht dem Schmiedeschand selbst gegenüber. Der Verfluchte Schmiedeschand kann diese Fähigkeit erst wieder nutzen, wenn er Einatmen genutzt hat.</p>"
         },
         "action->Inflate Bellows": {
           "name": "Einatmen",
@@ -600,7 +600,7 @@
           "description": "<p><strong>Anforderungen</strong> Der Kristall hat eine Kreatur umhüllt.</p>\n<p><strong>Effekt</strong> Die umhüllte Kreatur muss einen erfolgreichen @Check[fortitude|dc:28|name:Kristallisieren]{Zähigkeitswurf} durchführen oder sie erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}, bis sie nicht mehr umhüllt ist. Wenn die Kreatur bereits den Zustand Verlangsamt hat, erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dTwPJuKgBQCMxixg]{Versteinert}, da sie sich in Kristall verwandelt. Danach wird sie vom Fleischfressenden Kristall auf den Boden abgesondert. Nach [[/gmr 1d4 #Stunden]]{1W4 Stunden} zersplittert das Opfer und ein neuer Fleischfressender Kristall entsteht aus den Überresten.</p>"
         },
         "action->Engulf": {
-          "description": "<p>@Check[reflex|dc:28|traits:damaging-effect]{Reflexwurf}, @Damage[2d6[slashing]]{2W6 Hiebschaden}, @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Entkommen} SG 28, Befreien 25 (nur Wuchtschaden).</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Engulf]</p>"
+          "description": "<p>@Check[reflex|dc:28|traits:damaging-effect]{Reflexwurf}, @Damage[2d6[slashing]]{2W6 Hiebschaden}, [[/act escape dc=28]], Befreien 25 (nur Wuchtschaden).</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Engulf]</p>"
         },
         "action->Freeze": {
           "name": "Erstarren",
@@ -870,7 +870,7 @@
         },
         "action->Magma Splash": {
           "name": "Magmablut",
-          "description": "<p>Wenn ein Dalos Schaden durch einen Nahkampfangriff erleidet, spritzt Magma aus der offenen Wunde und bleibt an umstehenden Kreaturen haften. Jede Kreatur in einer @Template[emanation|distance:10]{Ausstrahlung von 10 Fuß/3 m} muss einen @Check[reflex|dc:31|traits:damaging-effect]{Reflexwurf} ablegen. Bei einem Fehlschlag erleidet die Kreatur @Damage[3d6[persistent,fire]]{3W6 Punkte Anhaltenden Feuerschaden}, während das heiße Gestein an ihnen klebt und langsam abkühlt. Der SG, um diesen Anhaltenden Schaden zu beenden, sinkt jede Runde nach der Ersten um 5, da das Magma abkühlt.</p>"
+          "description": "<p>Wenn ein Dalos Schaden durch einen Nahkampfangriff erleidet, spritzt Magma aus der offenen Wunde und bleibt an umstehenden Kreaturen haften. Jede Kreatur in einer @Template[emanation|distance:10]{Ausstrahlung von 10 Fuß/3 m} muss einen @Check[reflex|dc:31|options:area-effect,damaging-effect]{Reflexwurf} ablegen. Bei einem Fehlschlag erleidet die Kreatur @Damage[3d6[persistent,fire]|options:area-damage]{3W6 Punkte Anhaltenden Feuerschaden}, während das heiße Gestein an ihnen klebt und langsam abkühlt. Der SG, um diesen Anhaltenden Schaden zu beenden, sinkt jede Runde nach der Ersten um 5, da das Magma abkühlt.</p>"
         },
         "action->Volcanic Heat": {
           "name": "Vulkanhitze",
@@ -886,7 +886,7 @@
         },
         "action->Lava Bomb": {
           "name": "Lavabombe",
-          "description": "<p>Ein Dalos kann eine vulkanische Eruption aus seinem Kopf ausstoßen, und damit eine Masse geschmolzenen Felsens bis zu 100 Fuß/30 m weit schleudern. Diese Lavabombe verursacht bei jeder Kreatur in einem @Template[burst|distance:20]{Radius von 20 Fuß/6 m} @Damage[6d8[fire],6d8[bludgeoning]]{6W8 Punkte Feuerschaden und 6W8 Punkte Wuchtschaden} (@Check[reflex|dc:33|basic]{einfacher Reflexwurf}). Der Dalos kann danach Lavabombe [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.</p>"
+          "description": "<p>Ein Dalos kann eine vulkanische Eruption aus seinem Kopf ausstoßen, und damit eine Masse geschmolzenen Felsens bis zu 100 Fuß/30 m weit schleudern. Diese Lavabombe verursacht bei jeder Kreatur in einem @Template[burst|distance:20]{Radius von 20 Fuß/6 m} @Damage[6d8[fire],6d8[bludgeoning]|options:area-damage]{6W8 Punkte Feuerschaden und 6W8 Punkte Wuchtschaden} (@Check[reflex|dc:33|basic|options:area-effect]{einfacher Reflexwurf}). Der Dalos kann danach Lavabombe [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.</p>"
         },
         "action->Throw Rock": {
           "name": "Felsen werfen"
@@ -1519,7 +1519,7 @@
         },
         "action->Forge Breath": {
           "name": "Schmiedeodem",
-          "description": "<p>Der Schmiedeschand atmet eine Wolke aus Ruß, Asche und glühenden Funken aus. Dies betrifft entweder einen @Template[cone|distance:30]{Kegel von 30 Fuß/9 m} oder eine @Template[burst|distance:20]{Explosion von 20 Fuß/6 m} um den Schmiedeschand und hält [[/gmr 1d4 #Runden]]{1W4 Runden} lang an. Jede Kreatur, die sich in das betroffene Gebiet bewegt oder ihren Zug darin beginnt, nimmt @Damage[6d6[fire]]{6W6 Feuerschaden} (@Check[reflex|dc:21|basic]{einfacher Reflexwurf}). Kreaturen, deren Rettungswurf fehlschlägt, erhalten zudem 1 Minute lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind}. Kreaturen in der Wolke sind @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Verborgen}, allerdings nicht vor dem Schmiedeschand.</p>\n<p>Der Schmiedeschand kann Schmiedeodem nicht wieder einsetzen bis er Einatmen genutzt hat.</p>"
+          "description": "<p>Der Schmiedeschand atmet eine Wolke aus Ruß, Asche und glühenden Funken aus. Dies betrifft entweder einen @Template[cone|distance:30]{Kegel von 30 Fuß/9 m} oder eine @Template[burst|distance:20]{Explosion von 20 Fuß/6 m} um den Schmiedeschand und hält [[/gmr 1d4 #Runden]]{1W4 Runden} lang an. Jede Kreatur, die sich in das betroffene Gebiet bewegt oder ihren Zug darin beginnt, nimmt @Damage[6d6[fire]|options:area-damage]{6W6 Feuerschaden} (@Check[reflex|dc:21|basic|options:area-effect]{einfacher Reflexwurf}). Kreaturen, deren Rettungswurf fehlschlägt, erhalten zudem 1 Minute lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind}. Kreaturen in der Wolke sind @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Verborgen}, allerdings nicht vor dem Schmiedeschand.</p>\n<p>Der Schmiedeschand kann Schmiedeodem nicht wieder einsetzen bis er Einatmen genutzt hat.</p>"
         },
         "action->Inflate Bellows": {
           "name": "Einatmen",
@@ -2222,7 +2222,7 @@
         },
         "action->Weapon Supremacy": {
           "name": "Waffenüberlegenheit",
-          "description": "<p>Inizra ist permanent im Zustand @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Beschleunigt 1}. Sie kann ihre zusätzliche Aktion aber nur zum Angriff nutzen.</p>"
+          "description": "<p>Inizra ist permanent im Zustand @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Beschleunigt}. Sie kann ihre zusätzliche Aktion aber nur zum Angriff nutzen.</p>"
         },
         "lore->Hermea Lore": {
           "name": "Kenntnis (Hermea)"
@@ -2685,7 +2685,7 @@
         },
         "action->Necrotic Pulse": {
           "name": "Nekrotischer Impuls",
-          "description": "<p>Jede Kreatur innerhalb einer @Template[emanation|distance:10]{10 Fuß/3 m-Ausstrahlung} muss einen @Check[fortitude|dc:32|name:Necrotic Pulse]{Zähigkeitswurf} ablegen; bei Misslingen erleidet sie @Damage[1d6[persistent,void]]{1W6 Punkte Anhaltenden Leerenschaden} und den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1} für 1 Minute, da ihr Fleisch und ihre Knochen vorübergehend altern und welken.</p>\n<p>Der Golem kann diese Fähigkeit alle [[/gmr 1d4 #Runden]]{1W4 Runden} einsetzen.</p>"
+          "description": "<p>Jede Kreatur innerhalb einer @Template[emanation|distance:10]{10 Fuß/3 m-Ausstrahlung} muss einen @Check[fortitude|dc:32|options:area-effect,damaging-effect]{Zähigkeitswurf} ablegen; bei Misslingen erleidet sie @Damage[1d6[persistent,void]|options:area-damage]{1W6 Punkte Anhaltenden Leerenschaden} und den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1} für 1 Minute, da ihr Fleisch und ihre Knochen vorübergehend altern und welken.</p>\n<p>Der Golem kann diese Fähigkeit alle [[/gmr 1d4 #Runden]]{1W4 Runden} einsetzen.</p>"
         }
       }
     },
@@ -3037,7 +3037,7 @@
         },
         "action->Explosive Breath": {
           "name": "Explosiver Odem",
-          "description": "<p>Wenn Mengkare seine Odemwaffe einsetzt, kann er anstelle eines Kegels auch eine explosive Flammenkugel ausstoßen. In diesem Fall platziert er die Kugel auf eine Ecke eines Feldes innerhalb von 60 Fuß/18 m. Die Kugel detoniert sofort und fügt allen Kreaturen innerhalb einer @Template[burst|distance:30]{Explosion von 30 Fuß/9 m Radius} @Damage[24d6[fire]]{24W6 Punkte Feuerschaden} zu (@Check[reflex|dc:48|basic|name:Explosive Orb|traits:fire]{einfacher Reflexwurf}). Eine Kreatur, deren Rettungswurf kritisch fehlschlägt, gerät in Brand und nimmt [[/r 4d6[persistent,fire]]]{4W6 Punkte Anhaltenden Feuerschaden}.</p>"
+          "description": "<p>Wenn Mengkare seine Odemwaffe einsetzt, kann er anstelle eines Kegels auch eine explosive Flammenkugel ausstoßen. In diesem Fall platziert er die Kugel auf eine Ecke eines Feldes innerhalb von 60 Fuß/18 m. Die Kugel detoniert sofort und fügt allen Kreaturen innerhalb einer @Template[burst|distance:30]{Explosion von 30 Fuß/9 m Radius} @Damage[24d6[fire]|options:area-damage]{24W6 Punkte Feuerschaden} zu (@Check[reflex|dc:48|basic|options:area-effect|traits:fire]{einfacher Reflexwurf}). Eine Kreatur, deren Rettungswurf kritisch fehlschlägt, gerät in Brand und nimmt [[/r 4d6[persistent,fire]]]{4W6 Punkte Anhaltenden Feuerschaden}.</p>"
         }
       }
     },
@@ -4193,7 +4193,7 @@
         },
         "action->Obliteration Beam": {
           "name": "Vernichtungsstrahl",
-          "description": "<p><strong>Anforderungen</strong> Der Seelengebundene Aluum verfügt über eine durch seinen Immanenten Zauber <em>@UUID[Compendium.pf2e.spells-srd.Item.GYmXvS9NJ7QwfWGg]{Seelenfalle}</em> gebundene Seele</p>\n<p><strong>Effekt</strong> Der Seelengebundene Aluum transformiert die Essenz der Seele in rohe magische Kraft und kanalisiert sie so in eine @Template[line|distance:30]{Linie von 30 Fuß/9 m}, die @Damage[20d6[force]]{20W6 Kraftschaden} verursacht (@Check[reflex|dc:38|basic]{einfacher Reflexwurf}). Der verbleibenden Bruchstücke der Seele werden ins Große Jenseits entlassen. Danach kann der Seelengebundene Aluum den Vernichtungsstrahl [[/r 1d4 #Runden]]{1W4 Runden} lang nicht einsetzen.</p>"
+          "description": "<p><strong>Anforderungen</strong> Der Seelengebundene Aluum verfügt über eine durch seinen Immanenten Zauber @UUID[Compendium.pf2e.spells-srd.Item.GYmXvS9NJ7QwfWGg]{Seelenfalle} gebundene Seele</p>\n<hr />\n<p><strong>Effekt</strong> Der Seelengebundene Aluum transformiert die Essenz der Seele in rohe magische Kraft und kanalisiert sie so in eine @Template[line|distance:30]{Linie von 30 Fuß/9 m}, die @Damage[20d6[force]|options:area-damage]{20W6 Kraftschaden} verursacht (@Check[reflex|dc:38|basic|options:area-effect]{einfacher Reflexwurf}). Der verbleibenden Bruchstücke der Seele werden ins Große Jenseits entlassen. Danach kann der Seelengebundene Aluum den Vernichtungsstrahl [[/r 1d4 #Runden]]{1W4 Runden} lang nicht einsetzen.</p>"
         },
         "action->Paralyzing Force": {
           "name": "Lähmende Kraft",
@@ -5015,7 +5015,7 @@
         },
         "action->Firebleed": {
           "name": "Brennendes Blut",
-          "description": "<p><strong>Auslöser</strong> Xotani erleidet Schaden</p>\n<p><strong>Effekt</strong> Aus Xotanis Wunde bricht Magma in einem @Template[cone|distance:30]{Kegel von 30 Fuß/9 m} hervor und verursacht @Damage[6d8[fire],6d8[persistent,fire]]{6W8 Punkte Feuerschaden und 6W8 Punkte Anhaltenden Feuerschaden} (@Check[reflex|dc:42|basic]{einfacher Reflexwurf}).</p>"
+          "description": "<p><strong>Auslöser</strong> Xotani erleidet Schaden</p>\n<hr />\n<p><strong>Effekt</strong> Aus Xotanis Wunde bricht Magma in einem @Template[cone|distance:30]{Kegel von 30 Fuß/9 m} hervor und verursacht @Damage[6d8[fire],6d8[persistent,fire]|options:area-damage]{6W8 Punkte Feuerschaden und 6W8 Punkte Anhaltenden Feuerschaden} (@Check[reflex|dc:42|basic|options:area-effect]{einfacher Reflexwurf}).</p>"
         },
         "action->Frightful Presence": {
           "description": "<p>@Template[emanation|distance:300]{300 Fuß/90 m} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}, @Check[will|dc:39|traits:aura,fear,emotion,mental]{Willenswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
@@ -5058,7 +5058,7 @@
         },
         "action->Explosion": {
           "name": "Explosion",
-          "description": "<p>Wenn eine Xotanibrut stirbt, explodiert sie und fügt jeder Kreatur in einer @Template[emanation|distance:30]{Ausstrahlung von 30 Fuß/9 m} @Damage[15d8[fire]]{15W8 Feuerschaden} zu (@Check[reflex|dc:39|basic]{einfacher Reflexwurf}).</p>"
+          "description": "<p>Wenn eine Xotanibrut stirbt, explodiert sie und fügt jeder Kreatur in einer @Template[emanation|distance:30]{Ausstrahlung von 30 Fuß/9 m} @Damage[15d8[fire]|options:area-damage]{15W8 Feuerschaden} zu (@Check[reflex|dc:39|basic|options:area-effect]{einfacher Reflexwurf}).</p>"
         },
         "action->Frightful Presence": {
           "description": "<p>@Template[emanation|distance:60]{60 Fuß/18 m} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}, @Check[will|dc:36|traits:aura,fear,emotion,mental]{Willenswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
