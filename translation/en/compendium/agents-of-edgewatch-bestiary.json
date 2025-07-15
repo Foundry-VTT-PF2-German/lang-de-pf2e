@@ -120,7 +120,7 @@
         },
         "action->Proven Devotion": {
           "name": "Proven Devotion",
-          "description": "<p>The agradaemon regains @Damage[15[untyped]] Hit Points, and a pledged fanatic of the agradaemon's choice that it can see loses 15 Hit Points (no effects apply that would decrease this Hit Point loss).</p>\n<p>A pledged creature that dies in this way explodes and deals @Damage[9d10[fire]] damage in a @Template[emanation|distance:20] (@Check[reflex|dc:41|basic] save).</p>"
+          "description": "<p>The agradaemon regains @Damage[15[untyped]] Hit Points, and a pledged fanatic of the agradaemon's choice that it can see loses 15 Hit Points (no effects apply that would decrease this Hit Point loss).</p>\n<p>A pledged creature that dies in this way explodes and deals @Damage[9d10[fire]|options:area-damage] damage in a @Template[emanation|distance:20] (@Check[reflex|dc:41|basic|options:area-effect] save).</p>"
         },
         "action->Rend": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.3JOi2cMcGhT3eze1]\n<p>Claw</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Rend]</p>"
@@ -1019,7 +1019,7 @@
       "items": {
         "action->Scalding Spray": {
           "name": "Scalding Spray",
-          "description": "<p><strong>Trigger</strong> Weight is placed on one of the squares marked with \"T\" on the map, triggering a pressure plate</p>\n<hr />\n<p><strong>Effect</strong> The fountains spray boiling water across their own squares and the 10-foot-by-20-foot area between them (marked with dotted lines), dealing @Damage[(4d6+4)[fire]] damage to any creatures in the area (@Check[reflex|dc:22|basic] save).</p>"
+          "description": "<p><strong>Trigger</strong> Weight is placed on one of the squares marked with \"T\" on the map, triggering a pressure plate</p>\n<hr />\n<p><strong>Effect</strong> The fountains spray boiling water across their own squares and the 10-foot-by-20-foot area between them (marked with dotted lines), dealing @Damage[(4d6+4)[fire]|options:area-damage] damage to any creatures in the area (@Check[reflex|dc:22|basic|options:area-effect] save).</p>"
         }
       }
     },
@@ -3464,7 +3464,7 @@
     "Inky Tendrils": {
       "name": "Inky Tendrils",
       "description": "<p>Six giant tentacles reach up from the ink lake, grabbing any foes in reach and dragging them underwater.</p>",
-      "disable": "<p>@Check[athletics|dc:48|name:Disable Athletics] (legendary) or @Check[athletics|dc:45|name:Disable Acrobatics]{Acrobatics} (master) to tie one tentacle into a knot, rendering it useless, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (8th rank; counteract DC 44) to counteract one tentacle.</p>\n<p>The death of the Daemonic Rumormonger permanently dispels all the inky tendrils.</p>",
+      "disable": "<p>@Check[athletics|dc:48|name:Disable Athletics] (legendary) or @Check[acrobatics|dc:45|name:Disable Acrobatics] (master) to tie one tentacle into a knot, rendering it useless, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (8th rank; counteract DC 44) to counteract one tentacle.</p>\n<p>The death of the Daemonic Rumormonger permanently dispels all the inky tendrils.</p>",
       "routine": "<p>(6 actions) The hazard loses 1 action for every tentacle that is disabled or destroyed. The tentacles can combine their actions to use the hazard's Inky Imitator ability. A broken tentacle can still Strike, but it can't Grab. This hazard takes no multiple attack penalty.</p>",
       "items": {
         "strike-melee->Tentacle": {
@@ -4010,7 +4010,7 @@
       "disable": "<p>@Check[thievery|dc:29|name:Deactivate Panel|traits:action:disable-a-device] (expert) to deactivate the panel, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic};(4th level; counteract DC 22) to counteract the panel's magic</p>",
       "hpDetails": "<strong>Bar Hardness</strong> 15, <strong>Bar HP</strong> 40 (BT 20)",
       "reset": "<p>The trap deactivates and resets 1 minute after there are no creatures touching the iron bars.</p>",
-      "routine": "<p>(1 action) The trap pulls up to four creatures that have already triggered its Magnetize the Living ability toward one of the far corners of the room, possibly pressing them into the iron bars. If all the iron bars between an affected creature and the magnetic panel remain intact, the creature takes @Damage[(2d10+10)[bludgeoning]] damage with a @Check[fortitude|dc:25]{DC 25 basic Fortitude} save and is restrained on a failure ([[/act escape dc=23]]).</p>\n<p>If an iron bar has been broken, the creature takes @Damage[(1d10+5)[bludgeoning]] damage instead, and if two consecutive bars have been broken the creature takes no damage (but might still be restrained on a failed save).</p>",
+      "routine": "<p>(1 action) The trap pulls up to four creatures that have already triggered its Magnetize the Living ability toward one of the far corners of the room, possibly pressing them into the iron bars. If all the iron bars between an affected creature and the magnetic panel remain intact, the creature takes @Damage[(2d10+10)[bludgeoning]] damage with a @Check[fortitude|dc:25|basic|options:inflicts:restrained] save and is @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} on a failure ([[/act escape dc=23]]).</p>\n<p>If an iron bar has been broken, the creature takes @Damage[(1d10+5)[bludgeoning]] damage instead, and if two consecutive bars have been broken the creature takes no damage (but might still be restrained on a failed save).</p>",
       "stealth": "<p>(expert)</p>",
       "items": {
         "action->Magnetize the Living": {
@@ -6099,7 +6099,7 @@
         },
         "action->Retch of Foulness": {
           "name": "Retch of Foulness",
-          "description": "<p>The sordesdaemon exhales a spray of sewage that deals @Damage[8d6[acid]] damage and @Damage[8d6[poison]] damage in a @Template[cone|distance:30] (@Check[fortitude|dc:40|basic] save).</p>\n<p>It can't use Retch of Foulness again for [[/gmr 1d4 #Recharge Retch of Foulness]]{1d4 rounds}.</p>"
+          "description": "<p>The sordesdaemon exhales a spray of sewage that deals @Damage[8d6[acid],8d6[poison]|options:area-damage]{8d6 acid damage and 8d6 poison damage} in a @Template[cone|distance:30] (@Check[fortitude|dc:40|basic|options:area-effect] save).</p>\n<p>It can't use Retch of Foulness again for [[/gmr 1d4 #Recharge Retch of Foulness]]{1d4 rounds}.</p>"
         }
       }
     },
@@ -6300,7 +6300,7 @@
         },
         "action->Psychokinetic Trumpet": {
           "name": "Psychokinetic Trumpet",
-          "description": "<p>The teraphant lets out a loud trumpet that deals @Damage[8d8[mental]] damage (@Check[will|dc:27|basic] save) in a @Template[cone|distance:30]. A creature that fails its save is also pushed 15 feet (30 feet on a critical failure).</p>\n<p>If a pushed creatures strikes a solid barrier, it takes @Damage[3d6[bludgeoning]] damage and stops.</p>\n<p>The teraphant can't use Psychokinetic Trumpet again for [[/gmr 1d4 #Recharge Psychokinetic Trumpet]]{1d4 rounds}.</p>"
+          "description": "<p>The teraphant lets out a loud trumpet that deals @Damage[8d8[mental]|options:area-damage] damage (@Check[will|dc:27|basic|options:area-effect,inflicts:forced-movement] save) in a @Template[cone|distance:30]. A creature that fails its save is also pushed 15 feet (30 feet on a critical failure).</p>\n<p>If a pushed creatures strikes a solid barrier, it takes @Damage[3d6[bludgeoning]] damage and stops.</p>\n<p>The teraphant can't use Psychokinetic Trumpet again for [[/gmr 1d4 #Recharge Psychokinetic Trumpet]]{1d4 rounds}.</p>"
         },
         "action->Trample": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.UNah0bxXxkcZjxO3]\n<p>Large or smaller, foot, @Check[reflex|dc:27|basic]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Trample]</p>"

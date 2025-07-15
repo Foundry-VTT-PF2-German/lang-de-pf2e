@@ -453,7 +453,7 @@
         },
         "action->Icy Japes": {
           "name": "Icy Japes",
-          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The beirans descend on their prey, biting and clawing at each enemy in a @Template[type:emanation|distance:5], with a @Check[reflex|dc:17|basic|options:damaging-effect] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[1d6[slashing],1[cold]]{1d6 slashing damage plus 1 cold damage}</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d6+2)[slashing]1d4[cold]]{2d6+2 slashing damage plus 1d4 cold damage}</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(2d6+5)[cold],[1d4[cold]]{2d6+5 cold damage plus 1d4 cold damage}</p>"
+          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The beirans descend on their prey, biting and clawing at each enemy in a @Template[type:emanation|distance:5], with a @Check[reflex|dc:17|basic|options:area-effect] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[1d6[slashing],1[cold]|options:area-damage]{1d6 slashing damage plus 1 cold damage}</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d6+2)[slashing],1d4[cold]|options:area-damage]{2d6+2 slashing damage plus 1d4 cold damage}</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(2d6+5)[cold],1d4[cold]|options:area-damage]{2d6+5 cold damage plus 1d4 cold damage}</p>"
         }
       }
     },
@@ -619,7 +619,7 @@
         },
         "action->Solar Flare": {
           "name": "Solar Flare",
-          "description": "<p><strong>Trigger</strong> The bul-gae takes damage</p>\n<hr />\n<p><strong>Effect</strong> The bul-gae releases a solar flare in a @Template[emanation|distance:30]. Each creature in the area takes @Damage[6d8[fire]] damage (@Check[reflex|dc:34|basic] save). On a critical failure, a creature also takes @Damage[2d10[persistent,fire]] damage. After using this ability, the bul-gae's flames cool, and they can't use Solar Flare again until after they've used their Lunar Burst ability.</p>"
+          "description": "<p><strong>Trigger</strong> The bul-gae takes damage</p>\n<hr />\n<p><strong>Effect</strong> The bul-gae releases a solar flare in a @Template[emanation|distance:30]. Each creature in the area takes @Damage[6d8[fire]|options:area-damage] damage (@Check[reflex|dc:34|basic|options:area-effect] save). On a critical failure, a creature also takes @Damage[2d10[persistent,fire]] damage. After using this ability, the bul-gae's flames cool, and they can't use Solar Flare again until after they've used their Lunar Burst ability.</p>"
         },
         "action->Lunar Burst": {
           "name": "Lunar Burst",
@@ -800,7 +800,7 @@
         },
         "action->Powder Blast": {
           "name": "Powder Blast",
-          "description": "<p>The clockwork cannoneer spews flames from one of its cannons, dealing @Damage[8d6[fire]] damage in a @Template[cone|distance:30] (@Check[reflex|dc:36|basic]). Those that fail the save also take @Damage[2d6[persistent,fire]] damage.</p>"
+          "description": "<p>The clockwork cannoneer spews flames from one of its cannons, dealing @Damage[8d6[fire]|options:area-damage] damage in a @Template[cone|distance:30] (@Check[reflex|dc:36|basic|options:area-effect]). Those that fail the save also take @Damage[2d6[persistent,fire]] damage.</p>"
         }
       }
     },
@@ -2270,7 +2270,7 @@
         },
         "action->Pox the Land": {
           "name": "Pox the Land",
-          "description": "<p>Kothogaz raises a pustule from the ground within 120 feet, which erupts in a @Template[burst|distance:10]{10-foot radius}, 200-foot-high cylinder of cloying filth. Creatures in the area must succeed at a @Check[reflex|dc:44|basic] save or take @Damage[6d10[poison]] damage. On a failure, they can't fly for 1 round (1 minute on a critical failure); flying creatures fall safely to the ground.</p>"
+          "description": "<p>Kothogaz raises a pustule from the ground within 120 feet, which erupts in a @Template[cylinder|distance:10]{10-foot radius}, 200-foot-high cylinder of cloying filth. Creatures in the area must succeed at a @Check[reflex|dc:44|basic|options:area-effect] save or take @Damage[6d10[poison]|options:area-damage] damage. On a failure, they can't fly for 1 round (1 minute on a critical failure); flying creatures fall safely to the ground.</p>"
         },
         "action->Suppurating Passage": {
           "name": "Suppurating Passage",
