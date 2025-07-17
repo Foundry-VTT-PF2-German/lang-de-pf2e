@@ -3331,7 +3331,7 @@
         },
         "action->Poison Spray": {
           "name": "Gift versprühen",
-          "description": "<p>Hakenzunge speit Gift in einer @Template[line|distance:80]{80 Fuß/24 m-Linie}, welches @Damage[15d6[poison]]{15W6 Punkte Giftschaden} verursacht (@Check[reflex|dc:34|basic]{einfacher Reflexwurf}). Im Falle eines Fehlschlages ist die Kreatur zudem dem Hakenzungengift ausgesetzt. Hakenzunge kann diese Fähigkeit [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht erneut nutzen.</p>"
+          "description": "<p>Hooktongue sprays poison from its throat in an @Template[line|distance:80] that deals @Damage[15d6[poison]|options:area-damage] damage (@Check[reflex|dc:34|basic|options:area-effect]). A creature that fails or critically fails this save is exposed to Hooktongue Venom as well. Hooktongue can't use Poison Spray again for [[/gmr 1d4 #Recharge Poison Spray]]{1d4 rounds}.</p>"
         },
         "action->Swallow Whole": {
           "description": "<p>Groß, @Damage[(2d10+10)[bludgeoning]]{2W10+10 Wuchtschaden}, Befreien 28</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
@@ -5736,7 +5736,7 @@
         },
         "action->Radiant Blast": {
           "name": "Strahlende Explosion",
-          "description": "<p>Der Strahlende Wächter entfesselt eine strahlende Energie in einem @Template[cone|distance:50]{Kegel mit 50 Fuß/15 m Radius}, die sämtlichen Kreaturen darin @Damage[10d12[force]]{10W12 Punkte Kraftschaden} zufügt (@Check[reflex|dc:38|basic]{einfacher Reflexwurf}). Im Anschluss kann der Strahlende Wächter seine Strahlende Explosion für [[/gmr 1d4 #Runden]]{1W4 Runden} nicht erneut einsetzen.</p>"
+          "description": "<p>The radiant warden releases a @Template[cone|distance:50] of bright energy that deals @Damage[10d12[force]|options:area-damage] damage (@Check[reflex|dc:38|basic|options:area-effect] save). The radiant warden can't use Radiant Blast for [[/gmr 1d4 #Recharge Radiant Blast]]{1d4 rounds}.</p>"
         },
         "action->Radiant Blow": {
           "name": "Strahlender Hieb",
@@ -7687,11 +7687,11 @@
         },
         "action->Drain Life": {
           "name": "Lebenskraft entziehen",
-          "description": "<p>Fügt der Einsame Krieger einer lebenden Kreatur mit einem Nahkampfangriff Schaden zu, mit einem Waffenlosen Angriff oder seiner gebundenen Waffe, so erlangt er 5 Temporäre Trefferpunkte, während die Kreatur einen @Check[fortitude|dc:21]{Zähigkeitswurf} ablegen muss; bei Misslingen erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 1}. Weiterer Schaden und weitere misslungene Rettungswürfe erhöhen den Zustandswert jeweils um 1 (bis maximal Ausgelaugt 4).</p>"
+          "description": "<p>When The Lonely Warrior damages a living creature with a melee Strike, using an unarmed attack or its bound weapon, The Lonely Warrior gains 5 temporary Hit Points and the creature must succeed at a @Check[fortitude|dc:21|options:inflicts:drained] save or become @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}. Further damage dealt by the cairn wraith increases the drained condition value by 1 on a failed save, to a maximum of drained 4.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.LRIYUFQ7FE9H4RWD]{Effect: Drain Life}</p>"
         },
         "action->Lonely Dirge": {
           "name": "Einsamer Grabgesang",
-          "description": "<p><p>Der Grabgesang des Einsamen Kriegers unterscheidet sich leicht von dem eines gewöhnlichen Grabschreckens: Sein eintöniger, entnervender Sprechgesang zwingt jede lebende Kreatur innerhalb von @Template[emanation|distance:50]{50 Fuß/15 m Entfernung} zu einem @Check[will|dc:24]{Willenswurf}. Der Einsame Krieger kann diese Fähigkeit dann [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.</p>\n<p><strong>Kritischer Erfolg</strong> Das Ziel ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Das Ziel erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 1} aufgrund tiefer Einsamkeit bis zum Ende seines nächsten Zuges.</p>\n<p><strong>Fehlschlag</strong> Das Ziel erhält den Zustand Benommen 1 für 1 Stunde.</p>\n<p><strong>Kritischer Fehlschlag</strong> Das Ziel erhält den Zustand Benommen 1 für 24 Stunden und erleidet einen Zustandsmalus von -2 auf Rettungswürfe gegen Lebenskraft entziehen.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.8ecPVgMeWDxc4jI4]{Effekt: Grabgesang}</p>"
+          "description": "<p>The Lonely Warrior's funeral dirge is somewhat different from the standard cairn wight dirge: its droning, unnerving chant forces living creatures within @Template[emanation|distance:50]{50 feet} to attempt a @Check[will|dc:24|options:area-effect,inflicts:stupefied] save. The Lonely Warrior can't chant a new Lonely Dirge for [[/gmr 1d4 #Recharge Lonely Dirge]]{1d4 rounds}.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} by gnawing pangs of loneliness until the end of its next turn.</p>\n<p><strong>Failure</strong> The target is stupefied 1 for 1 hour.</p>\n<p><strong>Critical Failure</strong> The target is stupefied 1 for 24 hours and takes a –2 status penalty to saves against drain life.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.8ecPVgMeWDxc4jI4]{Effect: Funereal Dirge}</p>"
         }
       }
     },
