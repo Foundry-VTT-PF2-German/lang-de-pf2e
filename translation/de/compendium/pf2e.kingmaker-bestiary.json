@@ -3331,7 +3331,7 @@
         },
         "action->Poison Spray": {
           "name": "Gift versprühen",
-          "description": "<p>Hakenzunge speit Gift in einer @Template[line|distance:80]{80 Fuß/24 m-Linie}, welches @Damage[15d6[poison]]{15W6 Punkte Giftschaden} verursacht (@Check[reflex|dc:34|basic]{einfacher Reflexwurf}). Im Falle eines Fehlschlages ist die Kreatur zudem dem Hakenzungengift ausgesetzt. Hakenzunge kann diese Fähigkeit [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht erneut nutzen.</p>"
+          "description": "<p>Hakenzunge speit Gift in einer @Template[line|distance:80]{80 Fuß/24 m-Linie}, welches @Damage[15d6[poison]|options:area-damage]{15W6 Punkte Giftschaden} verursacht (@Check[reflex|dc:34|basic|options:area-effect]{einfacher Reflexwurf}). Im Falle eines Fehlschlages ist die Kreatur zudem dem Hakenzungengift ausgesetzt. Hakenzunge kann diese Fähigkeit [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht erneut nutzen.</p>"
         },
         "action->Swallow Whole": {
           "description": "<p>Groß, @Damage[(2d10+10)[bludgeoning]]{2W10+10 Wuchtschaden}, Befreien 28</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
@@ -5736,7 +5736,7 @@
         },
         "action->Radiant Blast": {
           "name": "Strahlende Explosion",
-          "description": "<p>Der Strahlende Wächter entfesselt eine strahlende Energie in einem @Template[cone|distance:50]{Kegel mit 50 Fuß/15 m Radius}, die sämtlichen Kreaturen darin @Damage[10d12[force]]{10W12 Punkte Kraftschaden} zufügt (@Check[reflex|dc:38|basic]{einfacher Reflexwurf}). Im Anschluss kann der Strahlende Wächter seine Strahlende Explosion für [[/gmr 1d4 #Runden]]{1W4 Runden} nicht erneut einsetzen.</p>"
+          "description": "<p>Der Strahlende Wächter entfesselt eine strahlende Energie in einem @Template[cone|distance:50]{Kegel mit 50 Fuß/15 m Radius}, die sämtlichen Kreaturen darin @Damage[10d12[force]|options:area-damage]{10W12 Punkte Kraftschaden} zufügt (@Check[reflex|dc:38|basic|options:area-effect]{einfacher Reflexwurf}). Im Anschluss kann der Strahlende Wächter seine Strahlende Explosion für [[/gmr 1d4 #Runden]]{1W4 Runden} nicht erneut einsetzen.</p>"
         },
         "action->Radiant Blow": {
           "name": "Strahlender Hieb",
@@ -7687,11 +7687,11 @@
         },
         "action->Drain Life": {
           "name": "Lebenskraft entziehen",
-          "description": "<p>Fügt der Einsame Krieger einer lebenden Kreatur mit einem Nahkampfangriff Schaden zu, mit einem Waffenlosen Angriff oder seiner gebundenen Waffe, so erlangt er 5 Temporäre Trefferpunkte, während die Kreatur einen @Check[fortitude|dc:21]{Zähigkeitswurf} ablegen muss; bei Misslingen erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 1}. Weiterer Schaden und weitere misslungene Rettungswürfe erhöhen den Zustandswert jeweils um 1 (bis maximal Ausgelaugt 4).</p>"
+          "description": "<p>Fügt der Einsame Krieger einer lebenden Kreatur mit einem Nahkampfangriff Schaden zu, mit einem Waffenlosen Angriff oder seiner gebundenen Waffe, so erlangt er 5 Temporäre Trefferpunkte, während die Kreatur einen @Check[fortitude|dc:21|options:inflicts:drained]{Zähigkeitswurf} ablegen muss; bei Misslingen erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 1}. Weiterer Schaden und weitere misslungene Rettungswürfe erhöhen den Zustandswert jeweils um 1 (bis maximal Ausgelaugt 4).</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.LRIYUFQ7FE9H4RWD]{Effekt: Lebenskraft entziehen}</p>"
         },
         "action->Lonely Dirge": {
           "name": "Einsamer Grabgesang",
-          "description": "<p><p>Der Grabgesang des Einsamen Kriegers unterscheidet sich leicht von dem eines gewöhnlichen Grabschreckens: Sein eintöniger, entnervender Sprechgesang zwingt jede lebende Kreatur innerhalb von @Template[emanation|distance:50]{50 Fuß/15 m Entfernung} zu einem @Check[will|dc:24]{Willenswurf}. Der Einsame Krieger kann diese Fähigkeit dann [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.</p>\n<p><strong>Kritischer Erfolg</strong> Das Ziel ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Das Ziel erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 1} aufgrund tiefer Einsamkeit bis zum Ende seines nächsten Zuges.</p>\n<p><strong>Fehlschlag</strong> Das Ziel erhält den Zustand Benommen 1 für 1 Stunde.</p>\n<p><strong>Kritischer Fehlschlag</strong> Das Ziel erhält den Zustand Benommen 1 für 24 Stunden und erleidet einen Zustandsmalus von -2 auf Rettungswürfe gegen Lebenskraft entziehen.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.8ecPVgMeWDxc4jI4]{Effekt: Grabgesang}</p>"
+          "description": "<p><p>Der Grabgesang des Einsamen Kriegers unterscheidet sich leicht von dem eines gewöhnlichen Grabschreckens: Sein eintöniger, entnervender Sprechgesang zwingt jede lebende Kreatur innerhalb von @Template[emanation|distance:50]{50 Fuß/15 m Entfernung} zu einem @Check[will|dc:24|options:area-effect,inflicts:stupefied]{Willenswurf}. Der Einsame Krieger kann diese Fähigkeit dann [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.</p>\n<p><strong>Kritischer Erfolg</strong> Das Ziel ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Das Ziel erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 1} aufgrund tiefer Einsamkeit bis zum Ende seines nächsten Zuges.</p>\n<p><strong>Fehlschlag</strong> Das Ziel erhält den Zustand Benommen 1 für 1 Stunde.</p>\n<p><strong>Kritischer Fehlschlag</strong> Das Ziel erhält den Zustand Benommen 1 für 24 Stunden und erleidet einen Zustandsmalus von -2 auf Rettungswürfe gegen Lebenskraft entziehen.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.8ecPVgMeWDxc4jI4]{Effekt: Grabgesang}</p>"
         }
       }
     },
