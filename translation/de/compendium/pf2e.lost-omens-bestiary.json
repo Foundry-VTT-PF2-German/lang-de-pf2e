@@ -453,7 +453,7 @@
         },
         "action->Icy Japes": {
           "name": "Icy Japes",
-          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The beirans descend on their prey, biting and clawing at each enemy in a @Template[type:emanation|distance:5], with a @Check[reflex|dc:17|basic|options:damaging-effect] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[1d6[slashing],1[cold]]{1d6 slashing damage plus 1 cold damage}</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d6+2)[slashing]1d4[cold]]{2d6+2 slashing damage plus 1d4 cold damage}</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(2d6+5)[cold],[1d4[cold]]{2d6+5 cold damage plus 1d4 cold damage}</p>"
+          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The beirans descend on their prey, biting and clawing at each enemy in a @Template[type:emanation|distance:5], with a @Check[reflex|dc:17|basic|options:area-effect] save. The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[1d6[slashing],1[cold]|options:area-damage]{1d6 slashing damage plus 1 cold damage}</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(2d6+2)[slashing],1d4[cold]|options:area-damage]{2d6+2 slashing damage plus 1d4 cold damage}</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(2d6+5)[cold],1d4[cold]|options:area-damage]{2d6+5 cold damage plus 1d4 cold damage}</p>"
         }
       }
     },
@@ -619,7 +619,7 @@
         },
         "action->Solar Flare": {
           "name": "Sonneneruption",
-          "description": "<p><strong>Auslöser</strong> Der Bul-Gae nimmt Schaden</p>\n<hr />\n<p><strong>Effekt</strong> Der Bul-Gae setzt eine Sonneneruption mit einer @Template[emanation|distance:30]{Ausstrahlung von 30 Fuß/9 m} frei. Jede Kreatur im Bereich nimmt @Damage[6d8[fire]]{6W8 Feuerschaden} (@Check[reflex|dc:34|basic]{einfacher Reflexwurf}). Bei einem kritischen Fehlschlag nimmt eine Kreatur außerdem @Damage[2d10[persistent,fire]]{2W10 Anhaltenden Feuerschaden}. Nach dem Einsatz dieser Fähigkeit kühlen die Flammen des Bul-Gae ab und er kann Sonneneruption erst wieder einsetzen, nachdem er seine Fähigkeit Mondexplosion eingesetzt hat.</p>"
+          "description": "<p><strong>Auslöser</strong> Der Bul-Gae nimmt Schaden</p>\n<hr />\n<p><strong>Effekt</strong> Der Bul-Gae setzt eine Sonneneruption mit einer @Template[emanation|distance:30]{Ausstrahlung von 30 Fuß/9 m} frei. Jede Kreatur im Bereich nimmt @Damage[6d8[fire]|options:area-damage]{6W8 Feuerschaden} (@Check[reflex|dc:34|basic|options:area-effect]{einfacher Reflexwurf}). Bei einem kritischen Fehlschlag nimmt eine Kreatur außerdem @Damage[2d10[persistent,fire]]{2W10 Anhaltenden Feuerschaden}. Nach dem Einsatz dieser Fähigkeit kühlen die Flammen des Bul-Gae ab und er kann Sonneneruption erst wieder einsetzen, nachdem er seine Fähigkeit Mondexplosion eingesetzt hat.</p>"
         },
         "action->Lunar Burst": {
           "name": "Mondexplosion",
@@ -800,7 +800,7 @@
         },
         "action->Powder Blast": {
           "name": "Feuerstoß",
-          "description": "<p>Der Mechanische Kanonier speit Feuer aus einer seiner Kanonen und verursacht @Damage[8d6[fire]]{8W6 Punkte Feuerschaden} in einem @Template[cone|distance:30]{30 Fuß/9 m-Kegel} (@Check[reflex|dc:36|basic]{einfacher Reflexwurf}). Kreaturen, die einen Fehlschlag bei dem Rettungswurf erzielen, nehmen außerdem @Damage[2d6[persistent,fire]]{2W6 Punkte anhaltenden Feuerschaden}.</p>"
+          "description": "<p>Der Mechanische Kanonier speit Feuer aus einer seiner Kanonen und verursacht @Damage[8d6[fire]|options:area-damage]{8W6 Punkte Feuerschaden} in einem @Template[cone|distance:30]{30 Fuß/9 m-Kegel} (@Check[reflex|dc:36|basic|options:area-effect]{einfacher Reflexwurf}). Kreaturen, die einen Fehlschlag bei dem Rettungswurf erzielen, nehmen außerdem @Damage[2d6[persistent,fire]]{2W6 Punkte anhaltenden Feuerschaden}.</p>"
         }
       }
     },
@@ -2270,7 +2270,7 @@
         },
         "action->Pox the Land": {
           "name": "Das Land vergiften",
-          "description": "<p>Kothogaz erhebt innerhalb von 120 Fuß/36 m eine Pustel aus der Erde, welche in einem @Template[burst|distance:10]{10 Fuß/3 m Radius} und 200 Fuß/60 m hohen Zylinder aus widerlichem Dreck explodiert. Kreaturen in dem Bereich müssen einen @Check[reflex|dc:44|basic]{einfachen Reflexwurf} absolvieren oder erleiden @Damage[6d10[poison]]{6W10 Punkte Giftschaden}. Bei einem Fehlschlag können sie für eine Runde nicht Fliegen (bzw. 1 Minute bei einem Kritischen Fehlschlag); bereits fliegende Kreaturen Fallen sicher zu Boden.</p>"
+          "description": "<p>Kothogaz erhebt innerhalb von 120 Fuß/36 m eine Pustel aus der Erde, welche in einem @Template[cylinder|distance:10]{10 Fuß/3 m Radius} und 200 Fuß/60 m hohen Zylinder aus widerlichem Dreck explodiert. Kreaturen in dem Bereich müssen einen @Check[reflex|dc:44|basic|options:area-effect]{einfachen Reflexwurf} absolvieren oder erleiden @Damage[6d10[poison]|options:area-damage]{6W10 Punkte Giftschaden}. Bei einem Fehlschlag können sie für eine Runde nicht Fliegen (bzw. 1 Minute bei einem Kritischen Fehlschlag); bereits fliegende Kreaturen Fallen sicher zu Boden.</p>"
         },
         "action->Suppurating Passage": {
           "name": "Schwärende Bewegung",
