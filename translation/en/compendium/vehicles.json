@@ -18,6 +18,23 @@
         }
       }
     },
+    "Air Cycle": {
+      "name": "Air Cycle",
+      "crew": "1 pilot",
+      "description": "<p>This clockwork vehicle consists of a small wheeled platform under a pair of wings made with a light wooden frame covered by sturdy cloth. An air cycle must be launched from a high altitude, similar to a glider. Once airborne, however, the air cycle can be kept aloft and controlled using a system of pedals and steering handles to control its speed and direction. If you stop pedaling the air cycle, it functions as a glider.</p>",
+      "pilotingCheck": "Athletics (DC 21) or Piloting Lore (DC 19)",
+      "speed": "fly 25 feet (clockwork, wind)",
+      "items": {
+        "action->Aerial Launch": {
+          "name": "Aerial Launch",
+          "description": "<p>Air cycles can be carried into battle beneath a larger airship and dropped from higher altitudes.</p>"
+        },
+        "action->Wind-Up": {
+          "name": "Wind-Up",
+          "description": "<p>10 minutes of wind-up, 1 hour of operational time, [[/act disable-device dc=19]]{DC 19}, standby.</p>"
+        }
+      }
+    },
     "Airship": {
       "name": "Airship",
       "crew": "1 pilot, 5 other crew",
@@ -97,6 +114,31 @@
         }
       }
     },
+    "Armored Sleigh": {
+      "name": "Armored Sleigh",
+      "crew": "2 pilots, 8 crew",
+      "description": "<p>Designed to traverse frozen climates, armored sleighs are constructed from heavy oaken timbers covered with iron. These massive vehicles can readily traverse frozen and snow-covered ground while protecting the pilot and crew from the cold.</p>",
+      "pilotingCheck": "Driving Lore (DC 36) or Nature (DC 38 to DC 46, depending on pulling creatures)",
+      "speed": "the Speed of the slowest pulling creature (pulled by 4 Huge creatures)",
+      "items": {
+        "action->Space": {
+          "name": "Space",
+          "description": "<p>60 feet long, 30 feet wide, 20 feet high</p>"
+        },
+        "action->Ice Traverser": {
+          "name": "Ice Traverser",
+          "description": "<p>The armored sleigh ignores difficult terrain caused by ice or snow.</p>"
+        },
+        "action->Insulated": {
+          "name": "Insulated",
+          "description": "<p>Protections from the icy landscape are built into the front of this vehicle, providing sanctuary from the cold. The pilot and crew are protected from severe and extreme cold. The pilot also gains resistance 10 to all cold damage.</p>"
+        },
+        "action->Sluggish": {
+          "name": "Sluggish",
+          "description": "<p>This vehicle must move twice its length for each 90-degree turn it makes.</p>"
+        }
+      }
+    },
     "Atakebune": {
       "name": "Atakebune",
       "crew": "1 pilot, 8 rowers",
@@ -124,6 +166,27 @@
         "action->Wind-Up": {
           "name": "Wind-Up",
           "description": "<p>10 minutes of wind-up, 1 hour of operational time, DC 14, standby</p>"
+        }
+      }
+    },
+    "Backpack Balloon": {
+      "name": "Backpack Balloon",
+      "crew": "1 pilot",
+      "description": "<p>What appears to be a simple, if bulky, backpack conceals clockwork devices that can inflate two large balloons, carrying the backpack's wearer through the air for brief periods of time. In addition, propellers allow the pilot to move while airborne.</p>",
+      "pilotingCheck": "Athletics (DC 24) or Piloting Lore (DC 22)",
+      "speed": "fly 20 feet (alchemical, clockwork, wind)",
+      "items": {
+        "action->Deploy Balloons": {
+          "name": "Deploy Balloons",
+          "description": "<p>The pilot engages a lever that activates the clockwork components to launch two large tethered balloons and fill them with lighter-than-air gas. On the outside of the backpack is a small clockwork propeller. This allows the wearer to wind up and pilot the vehicle.</p>\n<p>This transformation lasts until the pilot disengages the balloons by using this activity again.</p>"
+        },
+        "action->Stowable": {
+          "name": "Stowable",
+          "description": "<p>By spending 10 minutes repacking, the backpack balloons can be stowed after the pilot has disengaged them.</p>"
+        },
+        "action->Wind-Up": {
+          "name": "Wind-Up",
+          "description": "<p>10 minutes of wind-up, 30 minutes of operational time, [[/act disable-device dc=22]]{DC 22}, standy</p>\n<hr />\n<p>For a clockwork to act, it must be wound with a unique key by another creature. This takes 1 minute. Once wound, it remains operational for the listed amount of time, usually 24 hours, after which time it becomes unaware of its surroundings and can't act until it's wound again. Some clockworks' abilities require them to spend some of their remaining operational time. They can't spend more than they have and shut down immediately once they have 0 time remaining. If it's unclear when a clockwork was last wound, most clockwork keepers wind all their clockworks at a set time, typically 8 a.m.</p>\n<p>A clockwork that lists standby in its wind-up entry can enter standby mode as a 3-action activity. Its operational time doesn't decrease in standby, but it can sense its surroundings (with a -2 penalty to Perception). It can't act, with one exception: when it perceives a creature, it can exit standby as a reaction (rolling initiative if appropriate).</p>\n<p>A creature can attempt to Disable a Device to wind a clockwork down (with a DC listed in the wind-up entry). For each success, the clockwork loses 1 hour of operational time. This can be done even if the clockwork is in standby mode.</p>"
         }
       }
     },
@@ -180,6 +243,27 @@
         }
       }
     },
+    "Battle Dirigible": {
+      "name": "Battle Dirigible",
+      "crew": "1 pilot, 9 crew",
+      "description": "<p>These heavily armored rigid airships are carried aloft by a series of massive gasbags carried within the framework of their hull, protected from damage by a hide and metal skin. Used to control the battlefield from the air, these airships carry both their own armaments as well as one or more gliders mounted on rails for quick deployment along the sides and top.</p>",
+      "pilotingCheck": "Arcana (DC 37), Crafting (DC 37), or Piloting Lore (DC 35)",
+      "speed": "fly 50 feet (alchemical, magical)",
+      "items": {
+        "action->Sluggish": {
+          "name": "Sluggish",
+          "description": "<p>This vehicle must move twice its length for each 90-degree turn it makes.</p>"
+        },
+        "action->Weapon Mounts": {
+          "name": "Weapon Mounts",
+          "description": "<p>This vehicle has four weapon mounts, one on each corner of the gondola. At purchase, these weapon mounts are initially empty. Installing or uninstalling a weapon into a mount requires 3 hours, a successful @Check[crafting|dc:35] check, and an appropriate weapon. Three of these weapon mounts can be equipped with Medium or smaller ranged siege weapons, and the fourth can be equipped with a Large or smaller ranged siege weapon.</p>"
+        },
+        "action->Space": {
+          "name": "Space",
+          "description": "<p>100 feet long, 50 feet wide, 50 feet high</p>"
+        }
+      }
+    },
     "Bone Ship": {
       "name": "Bone Ship",
       "crew": "1 pilot, 12 crew",
@@ -212,6 +296,27 @@
         }
       }
     },
+    "Caisson": {
+      "name": "Caisson",
+      "crew": "1 pilot",
+      "description": "<p>This heavily armored wagon is designed to transport black powder and other flammable munitions in and around combat zones. It has extra armor plating that increases its weight to several times that of an ordinary wagon. Due to this extra weight, the armored wagon is quite slow.</p>",
+      "pilotingCheck": "Driving Lore (DC 19) or Crafting (DC 21)",
+      "speed": "15 feet (clockwork)",
+      "items": {
+        "action->Sluggish": {
+          "name": "Sluggish",
+          "description": "<p>This vehicle must move twice its length for each 90-degree turn it makes.</p>"
+        },
+        "action->Wind-Up": {
+          "name": "Wind-Up",
+          "description": "<p>1 hour of wind-up, 6 hours of operational time, [[/act disable-device dc=19]]{DC 19}, standy</p>\n<hr />\n<p>For a clockwork to act, it must be wound with a unique key by another creature. This takes 1 minute. Once wound, it remains operational for the listed amount of time, usually 24 hours, after which time it becomes unaware of its surroundings and can't act until it's wound again. Some clockworks' abilities require them to spend some of their remaining operational time. They can't spend more than they have and shut down immediately once they have 0 time remaining. If it's unclear when a clockwork was last wound, most clockwork keepers wind all their clockworks at a set time, typically 8 a.m.</p>\n<p>A clockwork that lists standby in its wind-up entry can enter standby mode as a 3-action activity. Its operational time doesn't decrease in standby, but it can sense its surroundings (with a -2 penalty to Perception). It can't act, with one exception: when it perceives a creature, it can exit standby as a reaction (rolling initiative if appropriate).</p>\n<p>A creature can attempt to Disable a Device to wind a clockwork down (with a DC listed in the wind-up entry). For each success, the clockwork loses 1 hour of operational time. This can be done even if the clockwork is in standby mode.</p>"
+        },
+        "action->Space": {
+          "name": "Space",
+          "description": "<p>10 feet long, 10 feet wide, 8 feet high</p>"
+        }
+      }
+    },
     "Carriage": {
       "name": "Carriage",
       "crew": "1 pilot",
@@ -234,6 +339,27 @@
         "action->Iron Rim": {
           "name": "Iron Rim",
           "description": "<p>The cauldron provides its pilot with @UUID[Compendium.pf2e.other-effects.Item.I9lfZUiCwMiGogVi]{Standard Cover}, although this cover doesn't typically provide any bonus to Stealth checks, as a flying cauldron is both visible and suspicious.</p>"
+        }
+      }
+    },
+    "Cavern Crawler": {
+      "name": "Cavern Crawler",
+      "crew": "1 pilot, 3 crew",
+      "description": "<p>This massive undead vehicle is created by crafting a piloting and cargo compartment within the husk of a massive cave worm and then infusing the remains with void energy. This compartment has breathable air as well as sealable weapon ports. Designed specifically to burrow under and then behind enemy positions, cavern crawlers can attack enemies on their flank or bring supplies and reinforcements to troops deep behind enemy lines.</p>",
+      "pilotingCheck": "Arcana (DC 42) or Driving Lore (DC 40)",
+      "speed": "30 feet, burrow 30 feet (clockwork, magical)",
+      "items": {
+        "action->Space": {
+          "name": "Space",
+          "description": "<p>100 feet long, 30 feet wide, 30 feet high</p>"
+        },
+        "action->Tunnel": {
+          "name": "Tunnel",
+          "description": "<p>The cavern crawler can burrow through solid stone at a Speed of 15 feet. The pilot can choose to leave a tunnel.</p>"
+        },
+        "action->Swallow": {
+          "name": "Swallow",
+          "description": "<p>Two crew members each perform a 3-action activity on their turn to open the caravan crawler's mouth and eat a Huge or smaller creature adjacent to the vehicle, who must attempt a @Check[fortitude|dc:40] save. A creature can choose to fail. On a failure, the creature is swallowed by the cavern crawler, moved into the passenger bay, and knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}. This action fails if the passenger bay is full.</p>"
         }
       }
     },
@@ -397,6 +523,82 @@
         }
       }
     },
+    "Combat Catamaran": {
+      "name": "Combat Catamaran",
+      "crew": "2 pilot, 5 crew",
+      "description": "<p>This high-speed sailing ship is designed to track down fleeing vessels. When traveling downwind, the combat catamaran can deploy a pair of huge kite-like spinnakers that dramatically increase its speed.</p>",
+      "pilotingCheck": "Nature (DC 33) or Sailing Lore (DC 31)",
+      "speed": "swim 30 feet or 50 feet using spinnakers (wind)",
+      "items": {
+        "action->Space": {
+          "name": "Space",
+          "description": "<p>40 feet long, 40 feet wide, 80 feet high</p>"
+        },
+        "action->Deploy Spinnakers": {
+          "name": "Deploy Spinnakers",
+          "description": "<p>This vehicle has massive kite-like spinnakers. Deploying and retracting these spinnakers takes two crew members to each perform a 3-action activity on their turn. While the spinnakers are deployed, the weapons installed on the weapon mounts can't fire.</p>"
+        },
+        "action->Weapon Mounts": {
+          "name": "Weapon Mounts",
+          "description": "<p>This vehicle has 2 weapon mounts, with one on each of its hulls. At purchase, these weapon mounts are initially empty. Installing or uninstalling a weapon into a mount requires 1 day, a successful @Check[crafting|dc:31] check, and an appropriate weapon. The weapon mounts can be equipped with Huge or smaller ranged siege weapons.</p>"
+        }
+      }
+    },
+    "Combat Kite": {
+      "name": "Combat Kite",
+      "crew": "1 pilot",
+      "pilotingCheck": "Nature (DC 24) or Piloting Lore (DC 22)",
+      "speed": "fly 15 feet (magical, wind)",
+      "items": {
+        "action->Cargo Release": {
+          "name": "Cargo Release",
+          "description": "<p>The combat kite can carry a glider or up to 20 Bulk of materials. The glider or materials can be remotely released by Interacting with the magical tether.</p>"
+        }
+      }
+    },
+    "Combat Transport": {
+      "name": "Combat Transport",
+      "crew": "1 pilot, 3 crew",
+      "description": "<p>These massive vehicles incorporate multiple gas filled bladders and clockwork technology to quickly deploy troops in battle. With a large fuselage bracketed by equally large gas bladders, combat transports utilize both aft-mounted and bottom-mounted clockwork fans to move and hover.</p>",
+      "pilotingCheck": "Crafting (DC 36) or Piloting Lore (DC 34)",
+      "speed": "fly 40 feet (alchemical, clockwork, wind)",
+      "items": {
+        "action->Space": {
+          "name": "Space",
+          "description": "<p>80 feet long, 60 feet wide, 30 feet high</p>"
+        },
+        "action->Hover": {
+          "name": "Hover",
+          "description": "<p>Combat transports have a series of six large clockwork fans built into their flat under body. These fans can be activated when Stopping the vehicle to allow it to hover within 5 feet of the surface so that troops can be quickly deployed via forward and aft ramps, regardless of the nature of the terrain.</p>"
+        },
+        "action->Sluggish": {
+          "name": "Sluggish",
+          "description": "<p>This vehicle must move twice its length for each 90-degree turn it makes.</p>"
+        },
+        "action->Wind-Up": {
+          "name": "Wind-Up",
+          "description": "<p>30 minutes of wind-up, 3 hours of operational time, [[/act disable-device dc=34]]{DC 34}, standby</p>\n<hr />\n<p>For a clockwork to act, it must be wound with a unique key by another creature. This takes 1 minute. Once wound, it remains operational for the listed amount of time, usually 24 hours, after which time it becomes unaware of its surroundings and can't act until it's wound again. Some clockworks' abilities require them to spend some of their remaining operational time. They can't spend more than they have and shut down immediately once they have 0 time remaining. If it's unclear when a clockwork was last wound, most clockwork keepers wind all their clockworks at a set time, typically 8 a.m.</p>\n<p>A clockwork that lists standby in its wind-up entry can enter standby mode as a 3-action activity. Its operational time doesn't decrease in standby, but it can sense its surroundings (with a -2 penalty to Perception). It can't act, with one exception: when it perceives a creature, it can exit standby as a reaction (rolling initiative if appropriate).</p>\n<p>A creature can attempt to Disable a Device to wind a clockwork down (with a DC listed in the wind-up entry). For each success, the clockwork loses 1 hour of operational time. This can be done even if the clockwork is in standby mode.</p>"
+        }
+      }
+    },
+    "Cook's Caravan": {
+      "name": "Cook's Caravan",
+      "crew": "5 pilot, 25 crew",
+      "description": "<p>An army travels on its stomach, and this wagon train is designed to keep that stomach full. Composed of five heavy wagons connected via a series of flexible corridors, this caravan carries provisions and provides dining services for troops. The lead and middle wagons contain full-service galleys while the second and fourth wagons are stocked to the brim with foodstuffs. The last wagon in the caravan contains a boiler and scullery services for cleaning kitchen utensils and dishes. On the roof of each wagon is an herb garden to ensure a fresh supply for all meals, and mounted beneath all wagons are water and beer storage. Each cook's caravan carries enough supplies to feed its crew, passengers, 12 Large creatures, and 500 soldiers for a month before needing to be restocked.</p>",
+      "pilotingCheck": "Driving Lore (DC 40) or Nature (DC 42 to DC 45 depending on the pulling creatures)",
+      "speed": "the Speed of the slowest pulling creature (pulled by 12 Large creatures)",
+      "tokenName": "Battlecry! Vehicle",
+      "items": {
+        "action->Space": {
+          "name": "Space",
+          "description": "<p>100 feet long, 30 feet wide, 20 feet high</p>"
+        },
+        "action->Sluggish": {
+          "name": "Sluggish",
+          "description": "<p>This vehicle must move twice its length for each 90-degree turn it makes.</p>"
+        }
+      }
+    },
     "Cutter": {
       "name": "Cutter",
       "crew": "1 pilot, 3 crew",
@@ -456,6 +658,65 @@
         "action->Unstable Launch": {
           "name": "Unstable Launch",
           "description": "<p>When the pilot uses a 3-action activity to recklessly @UUID[Compendium.pf2e.actionspf2e.Item.uS3qDAgOkZ7b8ERL]{Drive} the firework pogo, it emits a burst of flames on launch that deals @Damage[3d6[fire]] damage to the pilot, the pogo itself, and each creature in a 10-foot radius (@Check[reflex|dc:19|basic] save).</p>"
+        }
+      }
+    },
+    "Floating Camouflage Blind": {
+      "name": "Floating Camouflage Blind",
+      "crew": "1 pilot",
+      "description": "<p>The floating camouflage blind comprises a wooden platform fastened to a pair of pontoons and is powered by a small clockwork motor. On this platform are four short walls, with a canvas cover providing protection from the elements. Typically, the outside of the blind is painted to blend in with any surrounding foliage. Floating camouflage blinds are often placed near the mouth of strategic waterways so that traffic can be stealthily monitored.</p>",
+      "pilotingCheck": "Crafting (DC 21) or Sailing Lore (DC 19",
+      "speed": "swim 10 feet (clockwork)",
+      "items": {
+        "action->Wind-Up": {
+          "name": "Wind-Up",
+          "description": "<p>10 minutes of wind-up, 1 hour of operational time, [[/act disable-device dc=19]]{DC 19}, standby</p>\n<hr />\n<p>For a clockwork to act, it must be wound with a unique key by another creature. This takes 1 minute. Once wound, it remains operational for the listed amount of time, usually 24 hours, after which time it becomes unaware of its surroundings and can't act until it's wound again. Some clockworks' abilities require them to spend some of their remaining operational time. They can't spend more than they have and shut down immediately once they have 0 time remaining. If it's unclear when a clockwork was last wound, most clockwork keepers wind all their clockworks at a set time, typically 8 a.m.</p>\n<p>A clockwork that lists standby in its wind-up entry can enter standby mode as a 3-action activity. Its operational time doesn't decrease in standby, but it can sense its surroundings (with a -2 penalty to Perception). It can't act, with one exception: when it perceives a creature, it can exit standby as a reaction (rolling initiative if appropriate).</p>\n<p>A creature can attempt to Disable a Device to wind a clockwork down (with a DC listed in the wind-up entry). For each success, the clockwork loses 1 hour of operational time. This can be done even if the clockwork is in standby mode.</p>"
+        }
+      }
+    },
+    "Flying Fortress": {
+      "name": "Flying Fortress",
+      "crew": "1 pilot, 25 crew",
+      "description": "<p>The ultimate battlefield command center, this massive skyborne castle serves as a platform for launching aerial assaults on land-based and sea-based enemy positions. By hovering over an enemy position, the flying fortress can lay waste to enemies who lack countering siege weapons by firing down on their frontline defenses.</p>",
+      "pilotingCheck": "Arcana (DC 42) or Piloting Lore (DC 40)",
+      "speed": "fly 30 feet (clockwork, magical, wind)",
+      "items": {
+        "action->Space": {
+          "name": "Space",
+          "description": "<p>70 feet long, 70 feet wide, 80 feet high</p>"
+        },
+        "action->Sluggish": {
+          "name": "Sluggish",
+          "description": "<p>This vehicle must move twice its length for each 90-degree turn it makes.</p>"
+        },
+        "action->Weapon Mounts": {
+          "name": "Weapon Mounts",
+          "description": "<p>This vehicle has eight weapon mounts, with two on each side of the fortress. At purchase, these weapon mounts are initially empty. Installing or uninstalling a weapon into a mount requires 1 day, a successful @Check[crafting|dc:40] check, and an appropriate weapon. These weapon mounts can be equipped with Huge or smaller ranged siege weapons.</p>"
+        }
+      }
+    },
+    "Flying Submersible": {
+      "name": "Flying Submersible",
+      "crew": "1 pilot, 3 crew",
+      "description": "<p>This tubular vehicle flies with the aid of a pair of large gas-inflated balloons. With a clockwork-powered aft propeller, the vehicle can move forward if there are no extreme headwinds. Upon landing in the water, the balloons are deflated and stowed within the vehicle, while the aft propeller continues to move it on the surface of the water. By filling a long ballast tank in the vehicle's keel, it can then submerge and travel underwater. The vehicle can stay submerged for only 1 hour until it must resurface to refresh its oxygen supply. The weapons of this vehicle are in a special compartment that allows them to be fired and reloaded underwater.</p>",
+      "pilotingCheck": "Athletics (DC 38), Piloting Lore (DC 38), Sailing Lore (DC 36)",
+      "speed": "swim 30 (alchemical, clockwork)",
+      "items": {
+        "action->Space": {
+          "name": "Space",
+          "description": "<p>60 feet long, 40 feet wide, 40 feet high</p>"
+        },
+        "action->Amphibious": {
+          "name": "Amphibious",
+          "description": "<p>This vehicle can land on water and then submerge up to a depth of 200 feet.</p>"
+        },
+        "action->Deploy Balloons": {
+          "name": "Deploy Balloons",
+          "description": "<p>The pilot engages a lever that activates the clockwork components to launch two massive tethered balloons and fill them with lighter-than-air gas. This grants the flying submersible a fly Speed of 30 but removes its swim Speed. This transformation lasts until the pilot disengages the balloons by performing this action again.</p>"
+        },
+        "action->Weapon Mounts": {
+          "name": "Weapon Mounts",
+          "description": "<p>This vehicle has two weapon mounts. At purchase, these weapon mounts are initially empty. Installing or uninstalling a weapon into a mount requires 1 day, a successful @Check[crafting|dc:36] check, and an appropriate weapon. The weapon mounts can be equipped with Huge or smaller ranged siege weapons.</p>"
         }
       }
     },
@@ -546,6 +807,69 @@
         }
       }
     },
+    "Ice Breaker": {
+      "name": "Ice Breaker",
+      "crew": "1 pilot, 25 crew",
+      "description": "<p>Colder oceans are often beset with heavy layers of sea ice, providing some kingdoms natural barriers to sea-based assaults and bombardments. To counter this, as well as to resupply troops in these areas, engineers designed massive steam-powered ice breakers. Powered by a dozen steam boilers lit with arcane flames, these ships can make their way through heavy ice fields that would crush most vessels, leaving an open channel behind them for other ships to follow.</p>",
+      "pilotingCheck": "Arcana (DC 42) or Sailing Lore (DC 40)",
+      "speed": "swim 40 feet or 20 feet in heavy ice (clockwork, magical)",
+      "items": {
+        "action->Space": {
+          "name": "Space",
+          "description": "<p>120 feet long, 40 feet wide, 50 feet high</p>"
+        },
+        "action->Ice Passage": {
+          "name": "Ice Passage",
+          "description": "<p>This vessel can move through sea ice up to 20 feet thick, leaving a path of open water behind it.</p>"
+        },
+        "action->Sluggish": {
+          "name": "Sluggish",
+          "description": "<p>This vehicle must move twice its length for each 90-degree turn it makes.</p>"
+        },
+        "action->Weapon Mounts": {
+          "name": "Weapon Mounts",
+          "description": "<p>This vehicle has eight weapon mounts; one each on the bow and stern, and three mounted on each side. At purchase, these weapon mounts are initially empty. Installing or uninstalling a weapon into a mount requires 1 day, a successful @Check[crafting|dc:40] check, and an appropriate weapon. The weapon mounts can be equipped with Huge or smaller ranged siege weapons.</p>"
+        }
+      }
+    },
+    "Iceboat": {
+      "name": "Iceboat",
+      "crew": "1 pilot, 1 crew",
+      "description": "<p>In addition to sailing across open water, this vessel can also travel at high speeds over frozen rivers, lakes, oceans, and fjords.</p>",
+      "pilotingCheck": "Nature (DC 24) or Sailing Lore (DC 22)",
+      "speed": "50 feet on ice (wind), swim 30 feet (wind)",
+      "items": {
+        "action->Ice Traverser": {
+          "name": "Ice Traverser",
+          "description": "<p>Ice is not difficult terrain for iceboats. However, they're unable to travel over land unless it's completely covered in ice.</p>"
+        },
+        "action->Steel Keel": {
+          "name": "Steel Keel",
+          "description": "<p>Iceboats have steel blades affixed to their keels and outriggers that enable them to travel over ice at tremendous speed.</p>"
+        }
+      }
+    },
+    "Ironclad": {
+      "name": "Ironclad",
+      "crew": "1 pilot, 19 crew",
+      "description": "<p>This heavy gunboat features solid hardwood timbers covered with thick iron plates riveted together to protect the portions of the vessel above the waterline. These timbers slope inboard at an angle to reduce the effectiveness of siege projectiles and cannon shots. The vessel is powered by a twin pair of propellers spun by steam from boilers that are magically fired, yielding glowing blue smoke through its twin pair of smokestacks. Ironclads are so formidable that a single one has been known to blockade an entire port by itself against more traditional wooden ships.</p>",
+      "pilotingCheck": "Arcana (DC 42) or Sailing Lore (DC 40)",
+      "speed": "swim 40 feet (magical)",
+      "items": {
+        "action->Space": {
+          "name": "Space",
+          "description": "<p>100 feet long, 60 feet wide, 20 feet high</p>"
+        },
+        "action->Sluggish": {
+          "name": "Sluggish",
+          "description": "<p>This vehicle must move twice its length for each 90-degree turn it makes.</p>"
+        },
+        "action->Weapon Mounts": {
+          "name": "Weapon Mounts",
+          "description": "<p>This vehicle has four weapon mounts, two on each side of the vehicle. At purchase, these weapon mounts are initially empty. Installing or uninstalling a weapon into a mount requires 1 day, a successful @Check[crafting|dc:40] check, and an appropriate weapon. The weapon mounts can be equipped with Huge or smaller ranged siege weapons.</p>"
+        }
+      }
+    },
     "Karakoa": {
       "name": "Karakoa",
       "crew": "1 pilot, 20 rowers",
@@ -570,12 +894,68 @@
         }
       }
     },
+    "Medical Wagon": {
+      "name": "Medical Wagon",
+      "crew": "1 pilot, 1 crew",
+      "description": "<p>Medical wagons are frequent sights near the battlefield. These wagons carry various mundane and magical medical supplies and are generally staffed by a medic. A small gurney is mounted in the back of the wagon for transporting personnel or for use as an emergency operating table.</p>",
+      "speed": "the Speed of the slowest pulling creature (pulled by 1 Large creature)",
+      "items": {
+        "action->Enhanced Medicinal Tools": {
+          "name": "Enhanced Medicinal Tools",
+          "description": "<p>When attempting a Medicine check inside a medical wagon, you gain a +2 item bonus.</p>"
+        }
+      }
+    },
+    "Mobile Command Post": {
+      "name": "Mobile Command Post",
+      "crew": "1 pilot, 9 crew",
+      "description": "<p>This utilitarian vehicle resembles a small encampment, complete with protective barriers, a kitchen, sleeping quarters, and partitioned offices, all mounted on ironclad timbers. Beneath these timbers is a series of cogs and wheels, enclosed by a solid chain track made of iron plates. These tracks enable the mobile command post to move over all types of terrain, albeit at a slow pace. Once in position, these tracks fold up, allowing the vehicle's base to rest on the ground while providing extra protection along the sides of the vehicle.</p>",
+      "pilotingCheck": "Arcana (DC 37), Crafting (DC 37), or Driving Lore (DC 35)",
+      "speed": "20 feet (clockwork, magical)",
+      "tokenName": "Battlecry! Vehicle",
+      "items": {
+        "action->Space": {
+          "name": "Space",
+          "description": "<p>90 feet long, 50 feet wide, 20 feet high</p>"
+        },
+        "action->Sluggish": {
+          "name": "Sluggish",
+          "description": "<p>This vehicle must move twice its length for each 90-degree turn it makes.</p>"
+        }
+      }
+    },
     "Mobile Inn": {
       "name": "Mobile Inn",
       "crew": "1 pilot",
       "description": "<p>A mobile inn is the next step up from an armored carriage, bringing the limited comforts of a simple (and cramped) inn stay to make long distance journeys more bearable for wealthy travelers. Essentially a tiny inn on wheels, powered by alchemical catalysts and a steam engine, the vehicle is equipped with a stove, storage cupboard, washbasin, table, two benches, and a compact sleeping loft large enough to accommodate four. It can be modified to accommodate a single passenger in significantly more comfort or to easily hold 5 passengers by stripping the accommodations.</p>",
       "pilotingCheck": "Driving Lore (DC 24) or Crafting (DC 26)",
       "speed": "Speed 30 feet (alchemical)"
+    },
+    "Necro Roamer": {
+      "name": "Necro Roamer",
+      "crew": "1 pilot, 2 crew",
+      "description": "<p>Favored by necromancers, this vehicle is a heavily fortified, armored wooden shed mounted on the legs of a dozen undead creatures.</p>",
+      "pilotingCheck": "Arcana (DC 36) or Driving Lore (DC 34)",
+      "speed": "30 feet (magical)",
+      "tokenName": "Battlecry! Vehicle",
+      "items": {
+        "action->Weapon Mounts": {
+          "name": "Weapon Mounts",
+          "description": "<p>This vehicle has two rooftop weapon mounts. At purchase, these weapon mounts are initially empty. Installing or uninstalling a weapon into a mount requires 1 day, a successful @Check[crafting|dc:36] check, and an appropriate weapon. These weapon mounts can be equipped with Large or smaller ranged siege weapons.</p>"
+        }
+      }
+    },
+    "Nighthawk": {
+      "name": "Nighthawk",
+      "crew": "1 pilot",
+      "pilotingCheck": "Athletics (DC 29) or Piloting Lore (DC 27)",
+      "speed": "fly 35 feet (wind)",
+      "items": {
+        "action->Aerial Launch": {
+          "name": "Aerial Launch",
+          "description": "<p>Nighthawks can be carried into battle beneath a larger airship and dropped from higher altitudes.</p>"
+        }
+      }
     },
     "Raft": {
       "name": "Raft",
@@ -697,6 +1077,45 @@
         }
       }
     },
+    "Siege Barge": {
+      "name": "Siege Barge",
+      "crew": "1 pilot, 4 crew",
+      "description": "<p>These special barges were designed to siege river and oceanside fortresses and enemy encampments. In addition to carrying two huge siege weapons and their crews, these barges also hold a variety of stones and other siege projectiles.</p>",
+      "pilotingCheck": "Nature (DC 41 to 46 depending on the pulling creatures) or Sailing Lore (DC 39)",
+      "speed": "the Speed of the slowest pulling creature (pulled by 4 Huge creatures)",
+      "items": {
+        "action->Space": {
+          "name": "Space",
+          "description": "<p>60 feet long, 30 feet wide, 20 feet high</p>"
+        },
+        "action->Sluggish": {
+          "name": "Sluggish",
+          "description": "<p>This vehicle must move twice its length for each 90-degree turn it makes.</p>"
+        },
+        "action->Weapon Mounts": {
+          "name": "Weapon Mounts",
+          "description": "<p>This vehicle has two weapon mounts. At purchase, these weapon mounts are initially empty. Installing or uninstalling a weapon into a mount requires 1 day, a successful @Check[crafting|dc:39] check, and an appropriate weapon. The weapon mounts can be equipped with Huge or smaller ranged siege weapons.</p>"
+        }
+      }
+    },
+    "Siege Dragon": {
+      "name": "Siege Dragon",
+      "crew": "1 pilot, 3 crew",
+      "description": "<p>Crafted to appear as a chunky adamantine dragon at a distance, this vehicle is designed to scare civilians and intimidate enemy armies on the battlefield below.</p>",
+      "pilotingCheck": "Arcana (DC 41), Crafting (DC 41), or Piloting Lore (DC 39)",
+      "speed": "40 fly 120 feet (clockwork, magical, wind)",
+      "tokenName": "Battlecry! Vehicle",
+      "items": {
+        "action->Frightful": {
+          "name": "Frightful",
+          "description": "<p>A creature who is within 100 feet of a siege dragon at the start of its turn must succeed a @Check[will|dc:39] save or become @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}. Regardless of the result of the saving throw, the creature is then temporarily immune to this effect for 24 hours.</p>"
+        },
+        "action->Weapon Mounts": {
+          "name": "Weapon Mounts",
+          "description": "<p>This vehicle has a weapon mount. At purchase, this weapon mount is initially empty. Installing or uninstalling a weapon into the mount requires 3 hours, a successful @Check[crafting|dc:39] check, and an appropriate weapon. The mount can be equipped with a Large or smaller ranged siege weapon.</p>"
+        }
+      }
+    },
     "Siege Tower": {
       "name": "Siege Tower",
       "crew": "1 pilot, 9 pushers",
@@ -711,6 +1130,19 @@
         "action->Tiered": {
           "name": "Tiered",
           "description": "<p>A siege tower has five levels. The bottom level houses the crew, and each higher level carries up to 10 passengers. The tiers are specifically meant to be protective and give those within the siege tower greater cover (or standard cover if the siege tower is broken). Each tier is connected to the one above it by a 7-foot ladder.</p>\n<p>The siege tower has a corvus at its highest tier: a vertical bridge that can be lowered to allow creatures to cross gaps. Lowering the corvus takes a total of 3 Interact actions. Moving the siege tower while the corvus is lowered is highly dangerous, especially for anyone on the corvus. When it's open, creatures in the top tier don't have cover from the side with the corvus, and creatures on the lowered corvus don't have cover except from below.</p>"
+        }
+      }
+    },
+    "Skimmer": {
+      "name": "Skimmer",
+      "crew": "1 pilot, 3 crew",
+      "description": "<p>This sleek vessel generally appears as a fast-moving catamaran. Using a pair of clockwork mechanisms, the main hulls can be lifted out of the water, with only the narrow blade of their keels remaining slightly below the surface, turning the skimmer into an even faster hydrofoil, doubling its normal speed.</p>",
+      "pilotingCheck": "Nature (DC 30) or Sailing Lore (DC 28)",
+      "speed": "swim 30 feet or 60 feet using hydrofoil (wind)",
+      "items": {
+        "action->Deploy Hydrofoil": {
+          "name": "Deploy Hydrofoil",
+          "description": "<p>The skimmer's hydrofoils are deployed by pulling a lever, doubling the vehicle's normal Speed. However, this makes the vehicle less maneuverable, and it must move twice its length for each 90-degree turn it makes while the hydrofoils are deployed. The pilot can take this action again to retract the hydrofoils and return the skimmer to its normal Speed and maneuverability.</p>"
         }
       }
     },
@@ -734,6 +1166,19 @@
       "pilotingCheck": "Arcana (DC 29), Nature (DC 29 to 37, depending on pulling creature), or Piloting Lore (DC 27)",
       "speed": "the fly Speed of the slowest pulling creature (pulled by 4 Large creatures, 2 Huge creatures, or 1 Gargantuan creature)",
       "tokenName": "Medium Sky Chariot"
+    },
+    "Sky Chariot, Armored": {
+      "name": "Sky Chariot, Armored",
+      "crew": "1 pilot, 2 crew",
+      "description": "<p>This open-air vehicle is constructed similar to a sleigh, with four wheels in the place of runners and a set of sweeping wings extending from its sides. The wooden body of the vehicle is armored to protect the occupants, who can fire handheld weapons over the gunwales to gain cover from ranged attacks.</p>",
+      "pilotingCheck": "Arcana (DC 34), Nature (DC 34 to 42 depending on the pulling creature), or Piloting Lore (DC 32)",
+      "speed": "the fly Speed of the slowest pulling creature (pulled by 6 Large creatures, 2 Huge creatures, or 1 Gargantuan creature)",
+      "items": {
+        "action->Alchemical Launcher": {
+          "name": "Alchemical Launcher",
+          "description": "<p>Two crew members each perform a 3-action activity on their turn to launch a massive alchemical concoction from the chariot. The concoction explodes on impact, dealing @Damage[10d6[fire]|options:area-damage] damage to each creature in a @Template[type:burst|distance:15] up to 50 feet away (@Check[reflex|dc:30|basic] save).</p>"
+        }
+      }
     },
     "Sled": {
       "name": "Sled",
@@ -833,6 +1278,34 @@
       "pilotingCheck": "Driving Lore (DC 19) or Crafting (DC 21)",
       "speed": "25 feet (alchemical)"
     },
+    "Steam Turtle": {
+      "name": "Steam Turtle",
+      "crew": "1 pilot, 3 crew",
+      "description": "<p>This heavily armored aquatic vehicle resembles a gargantuan sea turtle covered with steel plates. The steam turtle is designed for beach landings and assaults on port facilities. Once it disables enemy fortifications, it extends a long boarding gangplank for troops to disembark and deploy.</p>",
+      "pilotingCheck": "Crafting (DC 37) or Sailing Lore (DC 35)",
+      "speed": "swim 30 feet (alchemical)",
+      "items": {
+        "action->Space": {
+          "name": "Space",
+          "description": "<p>80 feet long, 50 feet wide, 40 feet high</p>"
+        },
+        "action->Sluggish": {
+          "name": "Sluggish",
+          "description": "<p>This vehicle must move twice its length for each 90-degree turn it makes.</p>"
+        },
+        "action->Release Steam": {
+          "name": "Release Steam",
+          "description": "<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p><strong>Effect</strong> Two crew members each perform a 3-action activity on their turn to release a massive buildup of steam around the vehicle, dealing @Damage[11d6[fire]|options:area-damage] damage to each creature in a @Template[type:emanation|distance:10] (@Check[reflex|dc:35|basic] save). The release mechanism stops working if the vehicle is broken.</p>"
+        }
+      }
+    },
+    "Steelstone Assault Engine": {
+      "name": "Steelstone Assault Engine",
+      "crew": "1 pilot, 5 crew",
+      "description": "<p>This steam-powered vehicle has eight sets of axles, each with a pair of huge, spiked metal wheels that are independently powered and can independently shift up and down. This enables the engine to maintain a constant speed even over difficult terrain. On top of the vehicle sits a rotating weapon mount outfitted with a steelstone cannon.</p>",
+      "pilotingCheck": "Crafting (DC 41) or Driving Lore (DC 39)",
+      "speed": "25 feet (alchemical, clockwork)"
+    },
     "Strider": {
       "name": "Strider",
       "crew": "1 pilot",
@@ -863,6 +1336,24 @@
         "action->Quaking Step": {
           "name": "Quaking Step",
           "description": "<p>The ground shakes with every step a titanic stomper takes. Whenever this vehicle moves, creatures on the ground within 20 feet of its movement path must attempt a @Check[reflex|dc:32|name:Stay standing]. On a failure, they are @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} for 1 round, and on a critical failure, they're knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>"
+        }
+      }
+    },
+    "Two-Person Submersible": {
+      "name": "Two-Person Submersible",
+      "crew": "1 pilot",
+      "description": "<p>This clockwork vehicle can travel just below the surface of the water for short periods of time to bypass enemy blockades or covertly land on enemy beaches.</p>",
+      "pilotingCheck": "Crafting (DC 18) or Sailing Lore (DC 16)",
+      "speed": "swim 20 feet (clockwork)",
+      "tokenName": "Two-person Submersible",
+      "items": {
+        "action->Wind-Up": {
+          "name": "Wind-Up",
+          "description": "<p>30 minutes of wind-up, 3 hour of operational time, [[/act disable-device dc=16]]{DC 16}, standby</p>\n<hr />\n<p>For a clockwork to act, it must be wound with a unique key by another creature. This takes 1 minute. Once wound, it remains operational for the listed amount of time, usually 24 hours, after which time it becomes unaware of its surroundings and can't act until it's wound again. Some clockworks' abilities require them to spend some of their remaining operational time. They can't spend more than they have and shut down immediately once they have 0 time remaining. If it's unclear when a clockwork was last wound, most clockwork keepers wind all their clockworks at a set time, typically 8 a.m.</p>\n<p>A clockwork that lists standby in its wind-up entry can enter standby mode as a 3-action activity. Its operational time doesn't decrease in standby, but it can sense its surroundings (with a -2 penalty to Perception). It can't act, with one exception: when it perceives a creature, it can exit standby as a reaction (rolling initiative if appropriate).</p>\n<p>A creature can attempt to Disable a Device to wind a clockwork down (with a DC listed in the wind-up entry). For each success, the clockwork loses 1 hour of operational time. This can be done even if the clockwork is in standby mode.</p>"
+        },
+        "action->Submersible": {
+          "name": "Submersible",
+          "description": "<p>This vehicle can travel just below the surface of the water.</p>"
         }
       }
     },
@@ -912,6 +1403,40 @@
       "crew": "1 pilot",
       "pilotingCheck": "Driving Lore (DC 15) or Nature (DC 17 to DC 25, depending on the pulling creature)",
       "speed": "the Speed of the slowest pulling creature (pulled by 2 Large creatures)"
+    },
+    "War Strider": {
+      "name": "War Strider",
+      "crew": "1 pilot, 5 crew",
+      "description": "<p>This massive steam-powered vehicle resembles a giant insect with six articulated legs topped with a bulbous turret capable of swiveling 360 degrees to bring its forward-mounted weapons to bear on enemies in any direction. It has weapon ports on either side of its head that give the appearance of eyes. With its long, mechanized legs, it can easily climb over obstacles and cross wide chasms.</p>",
+      "pilotingCheck": "Crafting (DC 40) or Driving Lore (DC 38)",
+      "speed": "30 feet (alchemical, clockwork), ignores difficult terrain",
+      "items": {
+        "action->Weapon Mounts": {
+          "name": "Weapon Mounts",
+          "description": "<p>This vehicle has two forward-mounted weapon mounts. At purchase, these weapon mounts are initially empty. Installing or uninstalling a weapon into a mount requires 1 day, a successful @Check[crafting|dc:37] check, and an appropriate weapon. The weapon mounts can be equipped with Huge or smaller ranged siege weapons.</p>"
+        },
+        "action->Long Stride": {
+          "name": "Long Stride",
+          "description": "<p>A war strider can bridge a gap as wide as 30 feet during a move action as long as it has sufficient movement remaining.</p>"
+        }
+      }
+    },
+    "War Wagon": {
+      "name": "War Wagon",
+      "crew": "1 pilot, 1 crew",
+      "description": "<p>Often adorned with spikes and other defensive countermeasures, a war wagon is an intimidating sight on any battlefield. It can carry both soldiers and a siege weapon.</p>",
+      "pilotingCheck": "Driving Lore (DC 24) or Nature (DC 26 to DC 34 depending on the pulling creatures",
+      "speed": "the Speed of the slowest pulling creature (pulled by 6 Large creatures)",
+      "items": {
+        "action->Weapon Mounts": {
+          "name": "Weapon Mounts",
+          "description": "<p>This vehicle has one weapon mount. At purchase, the weapon mount is initially empty. Installing or uninstalling a weapon into a mount requires 1 day, a successful @Check[crafting|dc:24] check, and an appropriate weapon. This weapon mount can be equipped with a Large or smaller ranged siege weapon.</p>"
+        },
+        "action->Countermeasures": {
+          "name": "Countermeasures",
+          "description": "<p>A creature that Strikes a war wagon with a non-reach melee weapon or unarmed attack takes @Damage[3d8[piercing]] damage (@Check[reflex|dc:24|basic] save).</p>"
+        }
+      }
     }
   },
   "mapping": {
@@ -946,5 +1471,8 @@
       "converter": "translateTokenName",
       "path": "prototypeToken.name"
     }
+  },
+  "folders": {
+    "Pathfinder Battlecry!": "Pathfinder Battlecry!"
   }
 }
