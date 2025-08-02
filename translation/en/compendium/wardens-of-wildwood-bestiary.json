@@ -58,7 +58,7 @@
         },
         "action->Timber!": {
           "name": "Timber!",
-          "description": "<p><strong>Trigger</strong> An arboreal sapling that is not @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} either becomes prone or is reduced to 0 HP</p>\n<hr />\n<p><strong>Effect</strong> The arboreal sapling topples over, dealing @Damage[2d6[bludgeoning]] damage to itself and to creatures in a @Template[line|distance:10] (@Check[reflex|dc:16|basic]). Creatures that critically fail the saving throw are also knocked prone.</p>"
+          "description": "<p><strong>Trigger</strong> An arboreal sapling that is not @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} either becomes prone or is reduced to 0 HP</p>\n<hr />\n<p><strong>Effect</strong> The arboreal sapling topples over, dealing @Damage[2d6[bludgeoning]|options:area-damage] damage to itself and to creatures in a @Template[line|distance:10] (@Check[reflex|dc:16|basic|options:area-effect,inflicts:prone]). Creatures that critically fail the saving throw are also knocked prone.</p>"
         }
       }
     },
@@ -321,7 +321,7 @@
       "name": "Bee-Induced Panic",
       "description": "<p>Enraged bees spread panic, causing the crowd to trample each other in a desperate attempt to escape.</p>",
       "disable": "<p>@Check[diplomacy|dc:22] (expert) to calm the panicked crowd and guide them to safety, @Check[medicine|dc:20] (trained) to attend to victims' injuries, or @Check[nature|dc:21] (expert) to instruct the crowd on how best to protect themselves from bees. Alternatively, a PC able to communicate with insects can instead attempt a @Check[diplomacy|dc:18] (trained) check to calm and redirect the bees. Three successful checks are required to completely disable the hazard. The hazard is automatically disabled after 5 rounds or once both swarms are defeated.</p>",
-      "routine": "<p>(one action) Panicked attendees suffer stings and accidentally injure one another in their fear and confusion. Increase the Casualties score by 1. This increases to [[/gmr 1d3 #Casualties]] if one swarm is stinging the crowd, and it increases to [[/gmr 1d3+1 #Casualties]] if both swarms are stinging the crowd.</p>"
+      "routine": "<p>(3 actions) Panicked attendees suffer stings and accidentally injure one another in their fear and confusion. Increase the Casualties score by 1. This increases to [[/gmr 1d3 #Casualties]] if one swarm is stinging the crowd, and it increases to [[/gmr 1d3+1 #Casualties]] if both swarms are stinging the crowd.</p>"
     },
     "Besieged Logging Crew": {
       "name": "Besieged Logging Crew",
@@ -885,7 +885,7 @@
         },
         "action->Spore Cloud": {
           "name": "Spore Cloud",
-          "description": "<p>A glitterspore unleashes a cloud of sparkling, hypnotic spores in a 60-foot-radius burst. Each creature in the area is exposed to spore rot and must succeed at a @Check[will|dc:26] save or be @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fascinated} for [[/gmr 1d4 #rounds]]{1d4 rounds}.</p>"
+          "description": "<p>A glitterspore unleashes a cloud of sparkling, hypnotic spores in a @Template[type:burst|distance:60]{60-foot-radius burst}. Each creature in the area is exposed to spore rot and must succeed at a @Check[will|dc:26|options:inflicts:fascinated] save or be @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fascinated} for [[/gmr 1d4 #rounds]]{1d4 rounds}.</p>"
         },
         "action->Spore Rot": {
           "name": "Spore Rot",
