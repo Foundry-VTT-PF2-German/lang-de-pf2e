@@ -96,12 +96,6 @@
         "spell->Truespeech (Constant)": {
           "name": "<Compendium> (ständig)"
         },
-        "strike-melee->Pipe": {
-          "name": "Pfeife"
-        },
-        "strike-ranged->Telekinetic Manipulation": {
-          "name": "Telekinetische Manipulation"
-        },
         "action->Recklessly Overconfident": {
           "name": "Halsbrecherisch Übermütig",
           "description": "<p>Der Unsterbliche Trickster weiß, dass er unsterblich ist, und geht Risiken ein, bei denen Fehlschläge besonders spektakulär sind. Würde dem Unsterblichen Trickster ein Wurf für Diebeskunst, Heimlichkeit oder Täuschung misslingen, so wird dies stets als Kritischer Fehlschlag behandelt.</p>"
@@ -409,7 +403,7 @@
         },
         "action->Undying Myth": {
           "name": "Unverwüstliche Legende",
-          "description": "<p><strong>Kosten</strong> Alle Mythenpunkte der Kreatur</p>\n<p><strong>Auslöser</strong> Die Kreatur würde sterben und hat mindestens 1 Mythenpunkt</p>\n<hr />\n<p><strong>Effekt</strong> Würde der Olifant von Jandelay sterben, solange er noch über wenigstens 1 Mythenpunkt verfügt, kann er augenblicklich alle seine verbliebenen Mythenpunkte aufwenden; er bleibt stehen und bei Bewusstsein und erlangt 50% seiner maximalen Trefferpunkte zurück.</p>"
+          "description": "<p><strong>Kosten</strong> Alle Mythenpunkte der Kreatur</p>\n<p><strong>Auslöser</strong> Die Kreatur würde sterben und hat mindestens 1 Mythenpunkt</p>\n<hr />\n<p><strong>Effekt</strong> Würde der Olifant von Jandelay sterben, solange er noch über wenigstens 1 Mythenpunkt verfügt, kann er augenblicklich alle seine verbliebenen Mythenpunkte aufwenden; er bleibt stehen und bei Bewusstsein und erlangt 50% seiner maximalen Trefferpunkte zurück (@Damage[(floor(@actor.system.attributes.hp.max/2))[healing]]).</p>"
         },
         "action->Brutal Drag": {
           "name": "Brutales Zerren",
@@ -431,7 +425,7 @@
         },
         "action->Trumpeting Blast": {
           "name": "Trompeten",
-          "description": "<p>Der Olifant von Jandelay stößt ein kakophonisches Trompeten aus. Jede Kreatur in einem @Template[cone|distance:120]{120 Fuß/36 m-Kegel} muss einen @Check[fortitude|dc:49]{Zähigkeitswurf} ablegen. Sollte der Olifant zudem 1 Mythenpunkt aufwenden, steigt der SG auf 51 und steigt der Schadenswürfel auf W12. Der Olifant kann Trompeten [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht erneut nutzen.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erleidet @Damage[7d10[sonic]]{7W10 Punkte Schallschaden} und erhält 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Taub}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet @Damage[14d10[sonic]]{14W10 Punkte Schallschaden} und erhält jeweils 2 Runden lang die Zustände Taub und @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erleidet @Damage[28d10[sonic]]{28W10 Punkte Schallschaden} und erhält für 2 Runden den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 2} und 4 Runden lang den Zustand Taub.</p>\n<hr />\n<p><strong>Anpassungen für Mythenpunkt:</strong> @Check[fortitude|dc:51]{Zähigkeitswurf}, <strong>Erfolg</strong> @Damage[7d12[sonic]]{7W12 Punkte Schallschaden}, <strong>Fehlschlag</strong> @Damage[14d12[sonic]]{14W12 Punkte Schallschaden}, <strong>Kritischer Fehlschlag</strong> @Damage[28d12[sonic]]{28W12 Punkte Schallschaden}</p>"
+          "description": "<p>Der Olifant von Jandelay stößt ein kakophonisches Trompeten aus. Jede Kreatur in einem @Template[cone|distance:120]{120 Fuß/36 m-Kegel} muss einen Zähigkeitswurf gegen SG 49 ablegen. Sollte der Olifant zudem 1 Mythenpunkt aufwenden, steigt der SG auf 51 und steigt der Schadenswürfel auf W12. Der Olifant kann Trompeten [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht erneut nutzen.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erleidet 7W10 Punkte Schallschaden und erhält 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Taub}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet 14W10 Punkte Schallschaden und erhält jeweils 2 Runden lang die Zustände Taub und @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erleidet 28W10 Punkte Schallschaden und erhält für 2 Runden den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 2} und 4 Runden lang den Zustand Taub.</p>\n<hr />\n<p><strong>Berechneter Schaden und Zähigkeitswurf:</strong> @Check[fortitude|dc:49|options:area-effect,damaging-effect,inflicts:deafened,inflicts:slowed]{Zähigkeitswurf} <strong>Erfolg</strong> @Damage[7d10[sonic]|options:area-damage], <strong>Fehlschlag</strong> @Damage[14d10[sonic]|options:area-damage], <strong>Kritischer Fehlschlag</strong> @Damage[28d10[sonic]|options:area-damage]</p>"
         }
       }
     },
@@ -560,7 +554,7 @@
         },
         "action->Undying Myth": {
           "name": "Unverwüstliche Legende",
-          "description": "<p><strong>Kosten</strong> Alle Mythenpunkte, über die Verex noch verfügt</p>\n<p><strong>Auslöser</strong> Was-einst-Verex-war würde sterben, verfügt aber noch über wenigstens 1 Mythenpunkt</p>\n<hr />\n<p><strong>Effekt</strong> Verex bleibt stehen und bei Bewusstsein und erlangt 50% seiner maximalen Trefferpunkte zurück.</p>"
+          "description": "<p><strong>Kosten</strong> Alle Mythenpunkte, über die Verex noch verfügt</p>\n<p><strong>Auslöser</strong> Was-einst-Verex-war würde sterben, verfügt aber noch über wenigstens 1 Mythenpunkt</p>\n<hr />\n<p><strong>Effekt</strong> Verex bleibt stehen und bei Bewusstsein und erlangt 50% seiner maximalen Trefferpunkte zurück (@Damage[(floor(@actor.system.attributes.hp.max/2))[healing]]).</p>"
         },
         "action->Battlefield Eruption": {
           "name": "Schlachtfeldausbruch",
