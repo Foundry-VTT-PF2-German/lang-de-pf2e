@@ -1313,6 +1313,7 @@
           "stupefied": "stupefied",
           "swarm-attacks": "swarm attacks",
           "swarm-mind": "swarm mind",
+          "time": "time",
           "trip": "trip",
           "unarmed-attacks": "unarmed attacks",
           "unconscious": "unconscious",
@@ -1830,6 +1831,7 @@
           "heavy-barding": "Heavy Barding",
           "light-barding": "Light Barding"
         },
+        "GradeOption": "{grade} (+{bonus}; resilient +{resilient})",
         "Rune": {
           "Resilient": {
             "Label": "Resilient Rune"
@@ -2372,6 +2374,11 @@
         "ShowTokenIcon": "Show token icon?",
         "Unidentified": "Unidentified?"
       },
+      "Equipment": {
+        "Category": {
+          "upgrade": "Upgrade"
+        }
+      },
       "FIELDS": {
         "category": {
           "label": "Category"
@@ -2460,6 +2467,11 @@
         "Hint": "Additional tags beyond traits to help classify an item"
       },
       "Physical": {
+        "FIELDS": {
+          "grade": {
+            "label": "Grade"
+          }
+        },
         "Attach": {
           "CraftingCheck": "Crafting Check",
           "Detach": {
@@ -2496,6 +2508,11 @@
           "NLight": "{light}L",
           "WithLight": "{bulk}, {light}L"
         },
+        "ChangeEquipmentSystem": {
+          "Title": "Change System",
+          "ToPathfinder": "Removing the {removedTrait} trait changes this {type} from Starfinder to Pathfinder. Your grade will be lost. Are you sure? Alternatively, you could swap it to {otherTrait}.",
+          "ToStarfinder": "Adding the {newTrait} trait changes this {type} from Pathfinder to Starfinder. All runes will be lost. Are you sure?"
+        },
         "Destroyed": "Destroyed",
         "FromSpell": {
           "CantripDeck5": "Cantrip Deck of {name} (5-pack)",
@@ -2511,6 +2528,8 @@
           "Material": "{material} {base}",
           "OneProperty": "{property1} {base}",
           "OnePropertyMaterial": "{property1} {material} {base}",
+          "Grade": "{grade} {base}",
+          "GradeMaterial": "{grade} {material} {base}",
           "Potency": "+{potency} {base}",
           "PotencyFourProperties": "+{potency} {property1} {property2} {property3} {property4} {base}",
           "PotencyFourPropertiesMaterial": "+{potency} {property1} {property2} {property3} {property4} {material} {base}",
@@ -2537,6 +2556,15 @@
           "ThreePropertiesMaterial": "{property1} {property2} {property3} {material} {base}",
           "TwoProperties": "{property1} {property2} {base}",
           "TwoPropertiesMaterial": "{property1} {property2} {material} {base}"
+        },
+        "Grade": {
+          "commercial": "Commercial",
+          "tactical": "Tactical",
+          "advanced": "Advanced",
+          "superior": "Superior",
+          "elite": "Elite",
+          "ultimate": "Ultimate",
+          "paragon": "Paragon"
         },
         "LevelLabel": "Item {level}",
         "OtherTag": {
@@ -2748,6 +2776,7 @@
         },
         "FromABP": "Automatic bonus progression has adjusted this weapon's {property} to {value}.",
         "FromMaterialAndRunes": "Precious materials and runes on this item have adjusted its {property} to {value}.",
+        "GradeOption": "{grade} (+{tracking}; {dice} damage dice)",
         "HandsLabel": "Hands",
         "MandatoryMelee": "This weapon has a trait that can only be used with melee weapons.",
         "MaterialAndRunes": {
@@ -2783,6 +2812,7 @@
         "ThrownUsage": {
           "Label": "Thrown Usage"
         },
+        "Tracking": "Tracking",
         "Twin": {
           "SecondPlus": "Twin 2nd+ Attack"
         }
@@ -2818,6 +2848,10 @@
         "Hint": "Place a waypoint while using drag measurement.",
         "Label": "Place Waypoint (Drag Measurement)"
       },
+      "OpenCompendiumBrowser": {
+        "Hint": "Open or close the compendium browser.",
+        "Label": "Toggle Compendium Browser"
+      },
       "TogglePartySheet": {
         "Hint": "Open or close the sheet of the active or (if a player) assigned party.",
         "Label": "Toggle Party Sheet"
@@ -2827,6 +2861,10 @@
     "KitWorldItem": "This item is not found in a Compendium and will not work in other worlds",
     "LackCastConsumableCapability": "{actor} lacks the proficiency to use {spell} and does not have the Trick Magic Item feat.",
     "LanguagesAdditional": "Additional Languages",
+    "LegalNotice": {
+      "Title": "Legal Notice",
+      "Text": "This system for Foundry Virtual Tabletop uses trademarks and copyrights owned by Paizo Inc., used under Paizo's Community Use Policy (<a href=\"https://paizo.com/community/communityuse\" target=\"_blank\">paizo.com/communityuse</a>). We are expressly prohibited from charging you to use or access this content. This system for FoundryVTT is not published, endorsed, or specifically approved by Paizo. For more information about Paizo Inc. and Paizo products, visit <a href=\"https://paizo.com/\" target=\"_blank\">paizo.com</a>."
+    },
     "Level1": "Level 1",
     "Level10": "Level 10",
     "Level11": "Level 11",
@@ -2855,10 +2893,6 @@
     "LevelLabel": "Level",
     "LevelN": "Level {level}",
     "LevelRange": "Levels {minLevel} — {level}",
-    "LicenseViewer": {
-      "Label": "Legal Notice",
-      "LandingPageText": "Use the tabs above to read the legal information"
-    },
     "ListPartsAnd": {
       "end": "{first}, and {second}",
       "middle": "{first}, {second}",
@@ -3488,6 +3522,10 @@
           "Message": "Delete Homebrew element <strong>{element}</strong>?",
           "Title": "Delete Homebrew Element?"
         },
+        "ClassTraits": {
+          "Hint": "Traits referring to individual classes",
+          "Name": "Class Traits"
+        },
         "CreatureTraits": {
           "Hint": "Traits that can be applied to any creature and some item types (e.g., Dragon, Gnome)",
           "Name": "Creature Traits"
@@ -3945,6 +3983,7 @@
     "Token": {
       "ActorLinkForced": "{type} actors cannot be unlinked.",
       "Appearance": "Appearance",
+      "Distance": "Distance: {distance}ft",
       "Flanking": "Flanking",
       "SecretDisposition": {
         "Label": "Secret Disposition",
@@ -4021,6 +4060,7 @@
     "TraitAmp": "Amp",
     "TraitAmphibious": "Amphibious",
     "TraitAnadi": "Anadi",
+    "TraitAnalog": "Analog",
     "TraitAndroid": "Android",
     "TraitAngel": "Angel",
     "TraitAnimal": "Animal",
@@ -4187,6 +4227,7 @@
     "TraitDescriptionAmp": "An amp is a special thoughtform that modifies the properties of your psi cantrips. Psi cantrips each have their own amp, and feats with the amp trait provide different amps you can apply to psi cantrips in place of their normal amps.",
     "TraitDescriptionAmphibious": "An amphibious creature can breathe in water and in air, even outside of its preferred environment, usually indefinitely but at least for hours. These creatures often have a swim Speed. Their bludgeoning and slashing unarmed Strikes don't take the usual –2 penalty for being underwater.",
     "TraitDescriptionAnadi": "A reclusive people from Garund who resemble spiders and can assume human forms.",
+    "TraitDescriptionAnalog": "This weapon eschews advanced electronics, computers systems, and electric power sources, but was manufactured and calibrated using advanced technology. This weapon is immune to abilities that target technology. Weapon runes don't function on this weapon unless this weapon also has the archaic trait.",
     "TraitDescriptionAndroid": "A synthetic humanoid ancestry created by artificial means. Most common in Numeria.",
     "TraitDescriptionAngel": "This family of celestials are messengers and warriors. Most angels are holy, have darkvision, and have a weakness to unholy.",
     "TraitDescriptionAnimal": "An animal is a creature with a relatively low intelligence. It typically doesn't have an Intelligence attribute modifier over –4, can't speak languages, and can't be trained in Intelligence-based skills.",
@@ -4204,7 +4245,7 @@
     "TraitDescriptionAstral": "Astral creatures are native to the Astral Plane. They can survive the basic environmental effects of the Astral Plane.",
     "TraitDescriptionAsura": "These lawful fiends are physical manifestations of divine accidents. Asuras typically have darkvision, immunity to curses, and a weakness to good.",
     "TraitDescriptionAthamaru": "Athamarus are fishlike aquatic humanoids.",
-    "TraitDescriptionAttached": "An attached weapon must be combined with another piece of gear to be used. The trait lists what type of item the weapon must be attached to. You must be wielding or wearing the item the weapon is attached to in order to attack with it. For example, shield spikes are attached to a shield, allowing you to attack with the spikes instead of a shield bash, but only if you're wielding the shield. An attached weapon is usually bolted onto or built into the item it's attached to, and typically an item can have only one weapon attached to it. An attached weapon can be affixed to an item with 10 minutes of work and a successful @Check[crafting|dc:10] check; this includes the time needed to remove the weapon from a previous item, if necessary. If an item is destroyed, its attached weapon can usually be salvaged.",
+    "TraitDescriptionAttached": "An attached weapon must be combined with another piece of gear to be used. The trait lists what type of item the weapon must be attached to. You must be wielding or wearing the item the weapon is attached to in order to attack with it. For example, shield spikes are attached to a shield, allowing you to attack with the spikes instead of a shield bash. An attached weapon is usually bolted onto or built into the item it's attached to, and typically an item can have only one weapon attached to it. An attached weapon can be affixed to an item with 10 minutes of work and a successful DC 10 Crafting check; this includes the time needed to remove the weapon from a previous item, if necessary. If an item is destroyed, its attached weapon can usually be salvaged.",
     "TraitDescriptionAttack": "An ability with this trait involves an attack. For each attack you make beyond the first on your turn, you take a multiple attack penalty.",
     "TraitDescriptionAuditory": "Auditory actions and effects rely on sound. An action with the auditory trait can be successfully performed only if the creature using the action can speak or otherwise produce the required sounds. A spell or effect with the auditory trait has its effect only if the target can hear it. This applies only to sound-based parts of the effect, as determined by the GM. This is different from a sonic effect, which still affects targets who can't hear it (such as deaf targets) as long as the effect itself makes sound.",
     "TraitDescriptionAura": "An aura is an emanation that continually ebbs out from you, affecting creatures within a certain radius. Aura can also refer to the magical signature of an item.",
@@ -4574,7 +4615,7 @@
     "TraitDescriptionTattoo": "A tattoo is a type of item that is drawn or cut into a creature's skin and usually takes the form of images or symbols.",
     "TraitDescriptionTea": "<p>Magic tea is a type of potion. It activates when you drink it, which uses it up. Magic tea has the potion and tea traits. When you craft a dose of magic tea, the raw materials you supply are in the form of unusual and costly tea leaves. The process of crafting magic tea includes infusing the leaves with magical reagents, purifying the water, and steeping the tea in the water, resulting in what's essentially a particularly delicious-tasting potion. You can activate magic tea with an Interact action as you drink it or feed it to another creature, as if it were a potion. You can also activate magic tea with a 10-minute activity that requires sterling tea ware (these artisan's tools can be shared by up to four people who take this activity simultaneously) to prepare the tea and then consume it or present it to someone during a short tea ceremony, after which the magic tea's effects begin; activating magic tea in this way enhances its effect, as detailed in each entry's Tea Ceremony.</p><p>Once you drink a dose of magic tea, you're temporarily immune to that particular type of magic tea for 24 hours.</p>",
     "TraitDescriptionTearing": "This weapon is edged with curved teeth that leave bleeding wounds. When you hit a creature with this weapon, it deals an additional 1 persistent bleed damage. This increases to 2 persistent bleed damage if the weapon has a greater striking rune.",
-    "TraitDescriptionTech": "Items with this trait are associated with the technology of Numeria.",
+    "TraitDescriptionTech": "Items with the tech trait can be crafted by anyone, but if they also have the magical trait, they are hybrid items and require the Machine Magic feat to craft.",
     "TraitDescriptionTelepathy": "A creature with telepathy can communicate mentally with creatures. This doesn't give any special access to their thoughts, and communicates no more information than normal speech would.",
     "TraitDescriptionTeleportation": "Teleportation effects allow you to instantaneously move from one point in space to another. Teleportation does not usually trigger reactions based on movement.",
     "TraitDescriptionTengu": "A creature with this trait is a member of the tengu ancestry. Tengus are humanoids who resemble crows. An ability with this trait can be used or selected only by tengus. An item with this trait is created and used by tengus.",
@@ -4775,6 +4816,17 @@
     "TraitIkon": "Ikon",
     "TraitIllusion": "Illusion",
     "TraitImplanted": "Implanted",
+    "TraitInstalledInAGrenadeLauncherOrTwoHandedWeaponWithAnUndermoundedGrenadeLauncher": "Installed in a grenade launcher or two-handed weapon with an undermounted grenade launcher",
+    "TraitInstalledInArmor": "Installed in armor",
+    "TraitInstalledInArmorWithTheEnergyShieldingUpgrade": "Installed in armor with the energy shielding upgrade",
+    "TraitInstalledInArmorWithTheExposedTrait": "Installed in armor with the exposed trait",
+    "TraitInstalledInAWeapon": "Installed in a weapon",
+    "TraitInstalledInAWeaponSight": "Installed in a weapon (sight)",
+    "TraitInstalledInAWeaponWithTheKickbackTrait": "Installed in a weapon with the kickback trait",
+    "TraitInstalledInOneHandedWeaponGrip": "Installed in one-handed weapon (grip)",
+    "TraitInstalledInRangedWeaponWithoutALoudener": "Installed in ranged weapon without a loudener",
+    "TraitInstalledInTwoHandedWeapon": "Installed in two-handed weapon",
+    "TraitInstalledOnAWeaponWithoutASilencer": "Installed on a weapon without a silencer",
     "TraitImpulse": "Impulse",
     "TraitIncapacitation": "Incapacitation",
     "TraitIncarnate": "Incarnate",
@@ -5117,6 +5169,9 @@
     "TraitTime": "Time",
     "TraitTitan": "Titan",
     "TraitTouched": "Touched",
+    "TraitTracking1": "Tracking +1",
+    "TraitTracking2": "Tracking +2",
+    "TraitTracking3": "Tracking +3",
     "TraitTraining": "Training",
     "TraitTranscendence": "Transcendence",
     "TraitTrap": "Trap",
