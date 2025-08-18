@@ -553,8 +553,8 @@
         "spellcastingEntry->Bard Composition Spells": {
           "name": "Bard Composition Spells"
         },
-        "treasure->Copy of a book that they wrote": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.G5WuYX1ghrZcJ1J1]\nCopy of a book that they wrote"
+        "treasure->Copy of a Book That They Wrote": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.G5WuYX1ghrZcJ1J1]\nCopy of a Book That They Wrote"
         },
         "strike-melee->Sword Cane": {
           "name": "Sword Cane"
@@ -1256,7 +1256,7 @@
         },
         "action->Fearsome Armament": {
           "name": "Fearsome Armament",
-          "description": "<p>The champion grants their greataxe the fearsome rune while they wield it.</p>"
+          "description": "<p>The champion grants their greataxe the @UUID[Compendium.pf2e.equipment-srd.Item.P6v2AtJw7AUwaDzf]{Fearsome} rune while they wield it.</p>"
         }
       }
     },
@@ -1539,7 +1539,7 @@
         },
         "action->Sow Doubt": {
           "name": "Sow Doubt",
-          "description": "<p>The conspiracist argues that their enemies have been hoodwinked into attacking them by nefarious powers. The conspiracist attempts a single @Check[deception|against:will] check against the Will DCs of all enemies that can hear them.</p>\n<hr />\n<p><strong>Critical Success</strong> The enemy fully believes the conspiracist, becoming @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2} for 1 minute. If the creature was already stupefied 2, they become controlled by the conspiracist until the end of the encounter.</p>\n<p><strong>Success</strong> The enemy has trouble disbelieving the conspiracist's logic, becoming @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 minute. If they're already stupefied 1, they become stupefied 2.</p>\n<p><strong>Failure</strong> The enemy is unconvinced, but a seed of doubt remains.</p>\n<p><strong>Critical Failure</strong> The enemy sees through the conspiracist's act, becoming immune to Sow Doubt for 24 hours.</p>"
+          "description": "<p>The conspiracist argues that their enemies have been hoodwinked into attacking them by nefarious powers. The conspiracist attempts a single @Check[deception|against:will|options:inflicts:stupefied,inflicts:controlled] check against the Will DCs of all enemies that can hear them.</p>\n<hr />\n<p><strong>Critical Success</strong> The enemy fully believes the conspiracist, becoming @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2} for 1 minute. If the creature was already stupefied 2, they become @UUID[Compendium.pf2e.conditionitems.Item.9qGBRpbX9NEwtAAr]{Controlled} by the conspiracist until the end of the encounter.</p>\n<p><strong>Success</strong> The enemy has trouble disbelieving the conspiracist's logic, becoming @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 minute. If they're already stupefied 1, they become stupefied 2.</p>\n<p><strong>Failure</strong> The enemy is unconvinced, but a seed of doubt remains.</p>\n<p><strong>Critical Failure</strong> The enemy sees through the conspiracist's act, becoming immune to Sow Doubt for 24 hours.</p>"
         },
         "lore->Conspiracy Lore": {
           "name": "Conspiracy Lore"
@@ -2091,6 +2091,8 @@
     "Deluded Mob": {
       "name": "Deluded Mob",
       "publicNotes": "<p>Pulled astray by lies, bribes, and propaganda, these desperate people are convinced to fight on their behalf of utter villains. Conspiracists, propagandists, masterminds, despots, and more take advantage of these mobs.</p>\n<hr />\n<p>Villains pursue selfish and cruel goals, trampling over anyone in their way.</p>",
+      "saveDetails": "victim complex",
+      "speed": "troop movement",
       "items": {
         "action->Irrational": {
           "name": "Irrational",
@@ -2108,7 +2110,7 @@
         },
         "action->Flail Desperately": {
           "name": "Flail Desperately",
-          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The deluded mob uses their fists, wooden planks, and anything else they can pick up to attack each enemy in a @Template[type:emanation|distance:5] with fervor, if not coordination (@Check[reflex|dc:18|basic|options:area-effect] save). The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[1d8[piercing]|options:area-damage] or @Damage[1d8[bludgeoning]|options:area-damage]{bludgeoning damage}</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(1d8+6)[piercing]|options:area-damage,action:cost:2] or @Damage[(1d8+6)[bludgeoning]|options:area-damage,action:cost:2]{bludgeoning damage}</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(2d8+6)[piercing]|options:area-damage,action:cost:3] or @Damage[(2d8+6)[bludgeoning]|options:area-damage,action:cost:3]{bludgeoning damage}</p>"
+          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The deluded mob uses their fists, wooden planks, and anything else they can pick up to attack each enemy in a @Template[type:emanation|distance:5] with fervor, if not coordination (@Check[reflex|dc:18|basic|options:area-effect] save). The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[1d8[untyped]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(1d8+6)[untyped]|options:area-damage,action:cost:2] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(2d8+6)[untyped]|options:area-damage,action:cost:3] damage</p>"
         },
         "action->Surrounded": {
           "name": "Surrounded",
@@ -2270,7 +2272,7 @@
         },
         "action->Paper Pusher": {
           "name": "Paper Pusher",
-          "description": "<p>The departmental chair has spent so much time dealing with bureaucracy recently that papers and forms have worked their way into the chair's spellcasting. If the departmental chair's next action is to @UUID[Compendium.pf2e.actionspf2e.Item.aBQ8ajvEBByv45yz]{Cast a Spell} that deals energy damage, the spell conjures a burst of sharp-edged paper instead. Change the damage type to slashing, and the spell deals an additional @Damage[1d6[persistent,bleed]] damage.</p>"
+          "description": "<p>The departmental chair has spent so much time dealing with bureaucracy recently that papers and forms have worked their way into the chair's spellcasting. If the departmental chair's next action is to Cast a Spell that deals energy damage, the spell conjures a burst of sharp-edged paper instead. Change the damage type to slashing, and the spell deals an additional 1d6 persistent bleed damage.</p>"
         },
         "lore->Academia Lore": {
           "name": "Academia Lore"
@@ -2792,11 +2794,11 @@
         "strike-melee->Fist": {
           "name": "Fist"
         },
-        "strike-melee->Arcane Beam": {
-          "name": "Arcane Beam"
-        },
         "strike-melee->Staff": {
           "name": "Staff"
+        },
+        "strike-ranged->Arcane Beam": {
+          "name": "Arcane Beam"
         },
         "action->Counterspell": {
           "name": "Counterspell",
@@ -3157,8 +3159,8 @@
         "equipment->Spellbook": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.FOWF5f0tCaApv9RE]\nSpellbook"
         },
-        "equipment->Late homework assignment": {
-          "name": "Late homework assignment"
+        "equipment->Late Homework Assignment": {
+          "name": "Late Homework Assignment"
         },
         "treasure->Textbooks": {
           "name": "Textbooks"
@@ -3439,15 +3441,17 @@
         "weapon->Fleshwarping Concoction": {
           "name": "Fleshwarping Concoction"
         },
-        "weapon->+1 Scalpel": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z]\n+1 Scalpel",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z]\n<p>Functions as a dagger.</p>"
+        "weapon->+1 Scalpel (Functions as a Dagger)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z]\n+1 Scalpel (Functions as a Dagger)"
         },
         "strike-melee->Scalpel": {
           "name": "Scalpel"
         },
         "strike-ranged->Scalpel": {
           "name": "Scalpel"
+        },
+        "strike-melee->Fist": {
+          "name": "Fist"
         },
         "strike-ranged->Fleshwarping Concoction": {
           "name": "Fleshwarping Concoction"
@@ -3458,7 +3462,7 @@
         },
         "action->Flesh Mutation": {
           "name": "Flesh Mutation",
-          "description": "<p>A creature made of flesh that's hit by a fleshwarping concoction Strike is subject to a random fleshwarping mutation determined by rolling [[/r 1d4 #Flesh Mutation]] and consulting the list below. The creature attempts a @Check[fortitude|dc:25] save at the end of each of its turns, ending the mutation on a success. A creature that becomes mutated is thereafter temporarily immune to flesh mutation for 1 day.</p>\n<p><strong>1 Spongy Flesh</strong> The creature has weakness 5 to physical damage.</p>\n<p><strong>2 Caustic Blood</strong> The creature takes @Damage[2d4[persistent,acid]] damage that can't be removed normally, but ends when the mutation does.</p>\n<p><strong>3 Sprouting Eyes</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled}, but also immune to flanking.</p>\n<p><strong>4 Mutated Mind</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused}. It can still recover as noted in the condition, but if it does it remains @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} until the mutation ends.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.5w675gmnZqbND0mt]{Effect: Flesh Mutation}</p>"
+          "description": "<p>A creature made of flesh that's hit by a fleshwarping concoction Strike is subject to a random fleshwarping mutation determined by rolling 1d4 and consulting the list below. The creature attempts a @Check[fortitude|dc:25] save at the end of each of its turns, ending the mutation on a success. A creature that becomes mutated is thereafter temporarily immune to flesh mutation for 1 day.</p>\n<p><strong>1 Spongy Flesh</strong> The creature has weakness 5 to physical damage.</p>\n<p><strong>2 Caustic Blood</strong> The creature takes 2d4 persistent acid damage that can't be removed normally, but ends when the mutation does.</p>\n<p><strong>3 Sprouting Eyes</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled}, but also immune to flanking.</p>\n<p><strong>4 Mutated Mind</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused}. It can still recover as noted in the condition, but if it does it remains @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} until the mutation ends.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.5w675gmnZqbND0mt]{Effect: Flesh Mutation}</p>"
         },
         "action->Restore My Masterpiece": {
           "name": "Restore My Masterpiece",
@@ -3720,7 +3724,7 @@
         },
         "action->Quick Draw": {
           "name": "Quick Draw",
-          "description": "<p>The gang leader @UUID[Compendium.pf2e.actionspf2e.Item.pvQ5rY2zrtPI614F]{Interacts} to draw a weapon, then Strikes with that weapon.</p>"
+          "description": "<p>The gang leader Interacts to draw a weapon, then Strikes with that weapon.</p>"
         },
         "action->Sneak Attack": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>The gang leader deals an extra 2d6 precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
@@ -3772,13 +3776,10 @@
         "spellcastingEntry->Arcane Prepared Spells": {
           "name": "Arcane Prepared Spells"
         },
-        "equipment->Notebook filled with Sketches of Wild Animlas and Ancient Ruins": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.FOWF5f0tCaApv9RE]\nNotebook filled with Sketches of Wild Animlas and Ancient Ruins"
+        "equipment->Notebook Filled with Sketches of Wild Animals and Ancient Ruins": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.FOWF5f0tCaApv9RE]\nNotebook Filled with Sketches of Wild Animals and Ancient Ruins"
         },
         "strike-melee->Frost Dagger": {
-          "name": "Frost Dagger"
-        },
-        "strike-ranged->Frost Dagger": {
           "name": "Frost Dagger"
         },
         "strike-melee->Fist": {
@@ -4077,7 +4078,7 @@
     "Grand Inquisitor": {
       "name": "Grand Inquisitor",
       "publicNotes": "<p>A grand inquisitor leads powerful governmental forces. They're often champions of oppressive empires or overzealous intelligence networks.</p>\n<hr />\n<p>Larger societies rely on those with the authority and the ability to interpret and enforce laws. Some carry out these duties fairly, but others are harsh and cruel, imposing severe punishments on anyone unable to pay for clemency.</p>",
-      "saveDetails": "+23 Reflex vs damaging effects",
+      "saveDetails": "+23 Reflex vs. damaging effects",
       "senses": "(+31 to Sense Motive)",
       "items": {
         "strike-melee->Scimitar": {
@@ -4724,7 +4725,7 @@
         },
         "action->Hunter's Precision": {
           "name": "Hunter's Precision",
-          "description": "<p>The hero hunter knows how to hunt and kill any game. While in this stance, all the hero hunter's Strikes deal an additional 2d8 precision damage, and the range increment for their ranged weapon Strikes is 20 feet longer than normal. If the hunter gets a critical hit with a weapon Strike, the target also takes @Damage[2d6[persistent,bleed]] damage.</p>",
+          "description": "<p>The hero hunter knows how to hunt and kill any game. While in this stance, all the hero hunter's Strikes deal an additional 2d8 precision damage, and the range increment for their ranged weapon Strikes is 20 feet longer than normal. If the hunter gets a critical hit with a weapon Strike, the target also takes 2d6 persistent bleed damage.</p>",
           "selfEffect": "Stance: Hunter's Precision"
         }
       }
@@ -5015,7 +5016,7 @@
     "Infernal Registrar": {
       "name": "Infernal Registrar",
       "publicNotes": "<p>The infernal registrar is a mortal representative of Hell's bureaucracy. They can access copies of all infernal contracts signed by a denizen of their world and can navigate the machinations of Hell's many devils. They can grant special access—for a price.</p>\n<hr />\n<p>Larger societies rely on those with the authority and the ability to interpret and enforce laws. Some carry out these duties fairly, but others are harsh and cruel, imposing severe punishments on anyone unable to pay for clemency.</p>",
-      "saveDetails": "+2 circumstance to all saves vs fear",
+      "saveDetails": "+2 circumstance to all saves vs. fear",
       "senses": "(+33 to Sense Motive)",
       "items": {
         "spellcastingEntry->Divine Innate Spells": {
@@ -5052,8 +5053,8 @@
           "name": "Technically Correct",
           "description": "<p>The infernal registrar uses their Legal Lore modifier on all Deception checks to [[/act lie statistic=legal-lore]]{Lie}.</p>"
         },
-        "action->+2 circumstance to all saves vs fear": {
-          "name": "+2 circumstance to all saves vs fear"
+        "action->+2 Circumstance to All Saves vs. Fear": {
+          "name": "+2 Circumstance to All Saves vs. Fear"
         },
         "action->A Favor for a Favor": {
           "name": "A Favor for a Favor",
@@ -5160,12 +5161,8 @@
       "name": "Interrogator",
       "publicNotes": "<p>Interrogators use pain and intimidation against prisoners and other helpless victims to force \"confessions.\"</p>\n<hr />\n<p>Villains pursue selfish and cruel goals, trampling over anyone in their way.</p>",
       "items": {
-        "weapon->War Razor": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.nOFcCidD5AwVZWTv]\n<p>A war razor is an exaggerated version of the barbers' tool. It is a brittle but extremely sharp weapon that is very easy to slip into a pocket or sleeve.</p>"
-        },
-        "armor->Leather Apron": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA]\nLeather Apron",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA]\n<p>Functions as leather armor.</p>"
+        "armor->Leather Apron (Functions as Leather Armor)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA]\nLeather Apron (Functions as Leather Armor)"
         },
         "strike-ranged->Dart": {
           "name": "Dart"
@@ -5178,7 +5175,7 @@
         },
         "action->Blood and Fear": {
           "name": "Blood and Fear",
-          "description": "<p>The interrogator Strikes with a slashing melee weapon. If they hit and deal damage, the target takes an additional 1d4 persistent bleed damage and is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (or 2d4 persistent bleed damage and @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical hit).</p>\n<p>Each of the interrogator's other enemies in a @Template[type:emanation|distance:30] around the target that witnesses the bloodshed must succeed at a @Check[will|dc:19|traits:emotion,fear,mental,visual] save or be frightened 1. The frightened part of this ability is an emotion, fear, mental, and visual effect.</p>"
+          "description": "<p>The interrogator Strikes with a slashing melee weapon. If they hit and deal damage, the target takes an additional 1d4 persistent bleed damage and is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (or 2d4 persistent bleed damage and @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical hit).</p>\n<p>Each of the interrogator's other enemies in a @Template[type:emanation|distance:30] around the target that witnesses the bloodshed must succeed at a @Check[will|dc:19|options:area-effect,inflicts:frightened|traits:emotion,fear,mental,visual] save or be frightened 1. The frightened part of this ability is an emotion, fear, mental, and visual effect.</p>"
         },
         "action->Hobble": {
           "name": "Hobble",
@@ -5254,8 +5251,8 @@
         "strike-ranged->Crossbow": {
           "name": "Crossbow"
         },
-        "action->+1 Bonus on Perception to Find concealed objects": {
-          "name": "+1 Bonus on Perception to Find concealed objects"
+        "action->+1 Bonus on Perception to Find Concealed Objects": {
+          "name": "+1 Bonus on Perception to Find Concealed Objects"
         },
         "action->Efficient Capture": {
           "name": "Efficient Capture",
@@ -5712,7 +5709,7 @@
         },
         "action->Methodical Research": {
           "name": "Methodical Research",
-          "description": "<p>When Searching through stacks of books, a librarian can find the answer to almost any question. This allows the librarian to use Library Lore in place of other lore skills, given enough time. The GM determines the DC of the check and the amount of time it takes (typically, a librarian can attempt three or four checks during 1 day of downtime).</p>"
+          "description": "<p>When @UUID[Compendium.pf2e.actionspf2e.Item.TiNDYUGlMmxzxBYU]{Searching} through stacks of books, a librarian can find the answer to almost any question. This allows the librarian to use Library Lore in place of other lore skills, given enough time. The GM determines the DC of the check and the amount of time it takes (typically, a librarian can attempt three or four checks during 1 day of downtime).</p>"
         },
         "action->Research Specialist": {
           "name": "Research Specialist",
@@ -6135,7 +6132,10 @@
         },
         "action->Scoundrel's Feint": {
           "name": "Scoundrel's Feint",
-          "description": "<p>When the mastermind successfully Feints, the target is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against the mastermind's melee attacks until the end of the mastermind's next turn. On a critical success, the target is off-guard against all melee attacks for that time, not just the mastermind's.</p>"
+          "description": "<p>When the mastermind successfully [[/act feint]]{Feints}, the target is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against the mastermind's melee attacks until the end of the mastermind's next turn. On a critical success, the target is off-guard against all melee attacks for that time, not just the mastermind's.</p>"
+        },
+        "action->Sneak Attack": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>The mastermind deals an extra 1d6 precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
         },
         "lore->Underworld Lore": {
           "name": "Underworld Lore"
@@ -6749,8 +6749,8 @@
       "languages": "up to 3 additional uncommon languages",
       "publicNotes": "<p>Academia rewards specialization, and so the universities and athenaeums of the Inner Sea are full to the brim of sunlight-deprived scholars who are the world experts in such obscure topics such as the migratory habits of bogwids or the folklore of pre-Choral Brevoy.</p>\n<hr />\n<p>True power comes from knowledge—the power to shape the growth of kingdoms by mere whispers, stay three steps ahead of adversaries, or even know which flora is best for creating untraceable poisons.</p>",
       "items": {
-        "treasure->Entirely too many books": {
-          "name": "Entirely too many books"
+        "treasure->Entirely Too Many Books": {
+          "name": "Entirely Too Many Books"
         },
         "strike-melee->Fist": {
           "name": "Fist"
@@ -6768,11 +6768,11 @@
         },
         "action->Idée Fixe": {
           "name": "Idée Fixe",
-          "description": "<p>Nothing gets between the obsessive researcher and their subject. If the obsessive researcher is targeted by a spell or ability with a Will save that would prompt them to give up, ignore, or divert course from the subject of their Narrow Lore (for example, using a suggestion to get a specialist in Jistkan artificing to give up a construct part), then the obsessive researcher can use their Narrow Lore skill in place of their Will save.</p>"
+          "description": "<p>Nothing gets between the obsessive researcher and their subject. If the obsessive researcher is targeted by a spell or ability with a Will save that would prompt them to give up, ignore, or divert course from the subject of their Narrow Lore (for example, using a @UUID[Compendium.pf2e.spells-srd.Item.qwlh6aDgi86U3Q7H]{Suggestion} to get a specialist in Jistkan artificing to give up a construct part), then the obsessive researcher can use their Narrow Lore skill in place of their Will save.</p>"
         },
         "action->Furious Harangue": {
           "name": "Furious Harangue",
-          "description": "<p>The researcher starts hectoring an enemy within 30 feet, upbraiding them for daring to interrupt such valuable research. The target must attempt a @Check[will|dc:15] save. On a failure, they are @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} (@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3} and @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} for 1 round on a critical failure). Regardless of the result of its save, the target is temporarily immune for 1 hour.</p>"
+          "description": "<p>The researcher starts hectoring an enemy within 30 feet, upbraiding them for daring to interrupt such valuable research. The target must attempt a @Check[will|dc:15|options:inflicts:frightened,inflicts:fleeing] save. On a failure, they are @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} (@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3} and @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} for 1 round on a critical failure). Regardless of the result of its save, the target is temporarily immune for 1 hour.</p>"
         },
         "lore->Academia Lore": {
           "name": "Academia Lore"
@@ -7637,9 +7637,8 @@
       "publicNotes": "<p>It's the reckless scientist's job to break the rules of reality, no matter the cost.</p>\n<hr />\n<p>Villains pursue selfish and cruel goals, trampling over anyone in their way.</p>",
       "saveDetails": "+1 status to all saves vs. poison",
       "items": {
-        "armor->Work Coat": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA]\nWork Coat",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA]\n<p>Functions as leather armor.</p>"
+        "armor->Work Coat (Functions as Leather Armor)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA]\nWork Coat (Functions as Leather Armor)"
         },
         "strike-melee->Sickle": {
           "name": "Sickle"
@@ -7856,8 +7855,9 @@
     },
     "Saboteur": {
       "name": "Saboteur",
-      "acDetails": "(20 vs. traps)",
+      "acDetails": "(19 vs. traps)",
       "publicNotes": "<p>Saboteurs excel at infiltration, using it to perform destructive acts.</p>\n<hr />\n<p>Villains pursue selfish and cruel goals, trampling over anyone in their way.</p>",
+      "saveDetails": "(+11 Reflex vs. traps)",
       "senses": "(+10 to find traps)",
       "skillSpecialCrafting": {
         "0": {
@@ -7920,7 +7920,7 @@
         },
         "action->Sage's Analysis": {
           "name": "Sage's Analysis",
-          "description": "<p>The sage studies a creature, attempting an @Check[arcana], @Check[nature], @Check[occultism], @Check[religion], or @Check[society] check against the creature's Recall Knowledge DC. On a success, the sage gains a +2 circumstance bonus to attack rolls and AC against that creature and deals an additional 2d6 damage to the creature with weapon attacks.</p>\n<p>These benefits last for 1 minute or until the sage uses this ability again.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.pdEXnJrIHIEX9NM4]{Effect: Sage's Analysis}</p>"
+          "description": "<p>The sage studies a creature, attempting an @Check[arcana], @Check[nature], @Check[occultism], @Check[religion], or @Check[society] check against the creature's @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Recall Knowledge} DC. On a success, the sage gains a +2 circumstance bonus to attack rolls and AC against that creature and deals an additional 2d6 damage to the creature with weapon attacks.</p>\n<p>These benefits last for 1 minute or until the sage uses this ability again.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.pdEXnJrIHIEX9NM4]{Effect: Sage's Analysis}</p>"
         }
       }
     },
@@ -8533,9 +8533,8 @@
       "languages": "up to 3 additional languages",
       "publicNotes": "<p>The passing of knowledge and traditions from generation to generation is a time-honored occupation. Teachers exist to strengthen their populations with literacy, history, and advanced sciences, but most of all with inspiration. Most teachers provide general knowledge so their students are well-rounded, but some are experts or even masters of a single discipline.</p>\n<hr />\n<p>True power comes from knowledge—the power to shape the growth of kingdoms by mere whispers, stay three steps ahead of adversaries, or even know which flora is best for creating untraceable poisons.</p>",
       "items": {
-        "weapon->Cane": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.FVjTuBCIefAgloUU]\nCane",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.FVjTuBCIefAgloUU]\n<p>Functions as a staff.</p>"
+        "weapon->Cane (Functions as Staff)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.FVjTuBCIefAgloUU]\nCane (Functions as Staff)"
         },
         "equipment->Textbook": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.w4Hd6nunVVqw3GWj]\nTextbook"
@@ -8552,7 +8551,7 @@
         },
         "action->Font of Knowledge": {
           "name": "Font of Knowledge",
-          "description": "<p>The teacher can attempt to Recall Knowledge on any general subject with a +10 modifier.</p>"
+          "description": "<p>The teacher can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Recall Knowledge} on any general subject with a +10 modifier.</p>"
         },
         "action->Inspirational Presence": {
           "name": "Inspirational Presence",
@@ -8725,8 +8724,8 @@
       "publicNotes": "<p>These minions perform the thankless tasks that keep their master's vile machine running. Whether out of loyalty or fear, a toady serves their boss faithfully.</p>\n<hr />\n<p>Villains pursue selfish and cruel goals, trampling over anyone in their way.</p>",
       "senses": "(+9 to eavesdrop)",
       "items": {
-        "treasure->Supplies for the boss": {
-          "name": "Supplies for the boss"
+        "treasure->Supplies for the Boss": {
+          "name": "Supplies for the Boss"
         },
         "strike-melee->Sap": {
           "name": "Sap"
@@ -8734,12 +8733,12 @@
         "strike-melee->Fist": {
           "name": "Fist"
         },
+        "action->+6 Bonus on Perception to Eavesdrop": {
+          "name": "+6 Bonus on Perception to Eavesdrop"
+        },
         "action->Master Sends Their Regards": {
           "name": "Master Sends Their Regards",
           "description": "<p>A toady can deliver a message from their boss to @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} using their boss's Intimidation modifier instead of their own.</p>"
-        },
-        "action->Perception +9 to Eavesdrop": {
-          "name": "Perception +9 to Eavesdrop"
         },
         "action->Human Shield": {
           "name": "Human Shield",
@@ -9471,8 +9470,8 @@
         "strike-ranged->Composite Longbow": {
           "name": "Composite Longbow"
         },
-        "action->Warfare Lore": {
-          "name": "Warfare Lore",
+        "action->War Ready": {
+          "name": "War Ready",
           "description": "<p>The warmonger can always roll Warfare Lore for initiative.</p>"
         },
         "action->Pain Training": {
@@ -9620,8 +9619,8 @@
         "consumable->Emerald Grasshopper (Affixed)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.3uhaf2YL9hmix3pe]\nEmerald Grasshopper (Affixed)"
         },
-        "backpack->Crimefighting Pouches": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.1pglC9PQx6yOgcKL]\nCrimefighting Pouches"
+        "backpack->Crimefighting Pouches (Function as Sleeves of Storage)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.1pglC9PQx6yOgcKL]\nCrimefighting Pouches (Function as Sleeves of Storage)"
         },
         "strike-melee->Longsword": {
           "name": "Longsword"
@@ -9646,7 +9645,7 @@
         },
         "action->Calculated Strike": {
           "name": "Calculated Strike",
-          "description": "<p>The wealthy vigilante makes a melee Strike. If the Strike hits, the vigilante can then @UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Shove} the target. This Shove uses the same multiple attack penalty as the Strike and doesn't count toward the vigilante's multiple attack penalty, but the vigilante must Stride after the pushed creature. If the Strike misses, the vigilante can Step up to three times, each of which must take it further from the target. The vigilante can Hide if, after the Steps, they have cover or concealment from the target.</p>"
+          "description": "<p>The wealthy vigilante makes a melee Strike. If the Strike hits, the vigilante can then [[/act shove]] the target. This Shove uses the same multiple attack penalty as the Strike and doesn't count toward the vigilante's multiple attack penalty, but the vigilante must Stride after the pushed creature. If the Strike misses, the vigilante can Step up to three times, each of which must take it further from the target. The vigilante can [[/act hide]] if, after the Steps, they have cover or concealment from the target.</p>"
         }
       }
     },
@@ -9732,6 +9731,9 @@
         "spellcastingEntry->Primal Prepared Spells": {
           "name": "Primal Prepared Spells"
         },
+        "weapon->+1 Striking Staff of Fire (Major)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.qx4Cq99vng6GhzEh]\n+1 Striking Staff of Fire (Major)"
+        },
         "strike-melee->Fist": {
           "name": "Fist"
         },
@@ -9740,7 +9742,7 @@
         },
         "action->Unyielding Purpose": {
           "name": "Unyielding Purpose",
-          "description": "<p><strong>Trigger</strong> The world ender would be reduced to 0 HP</p>\n<p><strong>Requirements</strong> The world ender has a volcanic eruption spell remaining</p>\n<hr />\n<p><strong>Effect</strong> The world ender refuses to let their destructive dream go unrealized, stabilizing at 1 HP just long enough to cast @UUID[Compendium.pf2e.spells-srd.Item.O7ZEqWjwdKyo2CUv]{Volcanic Eruption}, centered on themself. They die, immolated in the eruption.</p>"
+          "description": "<p><strong>Trigger</strong> The world ender would be reduced to 0 HP</p>\n<p><strong>Requirements</strong> The world ender has a @UUID[Compendium.pf2e.spells-srd.Item.O7ZEqWjwdKyo2CUv]{Volcanic Eruption} spell remaining</p>\n<hr />\n<p><strong>Effect</strong> The world ender refuses to let their destructive dream go unrealized, stabilizing at 1 HP just long enough to cast <em>volcanic eruption</em>, centered on themself. They die, immolated in the eruption.</p>"
         },
         "action->Monologue": {
           "name": "Monologue",

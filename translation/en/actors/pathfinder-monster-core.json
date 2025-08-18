@@ -1213,14 +1213,14 @@
         },
         "action->Entropy Sense": {
           "name": "Entropy Sense",
-          "description": "<p>An azureti can anticipate the most likely presence of a creature through a supernatural insight into chaotic probabilities and chance. This grants them the ability to sense creatures within the listed range. @UUID[Compendium.pf2e.spells-srd.Item.EoKBlgf6Smt8opaU]{Veil of Privacy} prevents a creature from being detected via entropy sense automatically (without a counteract check).</p>"
+          "description": "<p>An azuretzi can anticipate the most likely presence of a creature through a supernatural insight into chaotic probabilities and chance. This grants them the ability to sense creatures within the listed range. @UUID[Compendium.pf2e.spells-srd.Item.EoKBlgf6Smt8opaU]{Veil of Privacy} prevents a creature from being detected via entropy sense automatically (without a counteract check).</p>"
         },
         "action->Fast Healing 2": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.fJSNOw4zHGbIm4bZ]\nFast Healing 2"
         },
-        "action->Protean Anatomy": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.IOk0MRs3f9FrarKL]\nProtean Anatomy",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.IOk0MRs3f9FrarKL]\n<p>An azureti's vital organs shift and change shape and position constantly. Immediately after the azureti takes acid, electricity, or sonic damage, they gain the listed amount of resistance to that damage type. This lasts for 1 hour or until the next time the protean takes damage of one of the other types (in which case their resistance changes to match that type), whichever comes first.</p>\n<p>The azureti is immune to polymorph effects unless they're a willing target. If @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} or @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened}, the azureti automatically recovers at the end of their next turn as new sensory organs grow to replace the compromised ones.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.c6SiBB3mzV8lZUQr]{Effect: Protean Anatomy}</p>"
+        "action->Protean Anatomy 8": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.IOk0MRs3f9FrarKL]\nProtean Anatomy 8",
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.IOk0MRs3f9FrarKL]\n<p>An azuretzi's vital organs shift and change shape and position constantly. Immediately after the azuretzi takes acid, electricity, or sonic damage, they gain the listed amount of resistance to that damage type. This lasts for 1 hour or until the next time the protean takes damage of one of the other types (in which case their resistance changes to match that type), whichever comes first.</p>\n<p>The azuretzi is immune to polymorph effects unless they're a willing target. If @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} or @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened}, the azuretzi automatically recovers at the end of their next turn as new sensory organs grow to replace the compromised ones.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.c6SiBB3mzV8lZUQr]{Effect: Protean Anatomy}</p>"
         },
         "action->Spell Pilfer": {
           "name": "Spell Pilfer",
@@ -2424,7 +2424,7 @@
         },
         "action->Wind Strike": {
           "name": "Wind Strike",
-          "description": "<p>The cloud giant Strikes a creature with their ranseur, surrounded in a roar of rushing air. On a hit, the target takes an additional 4d8 bludgeoning damage and is @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} for 1 minute. Whether or not the Strike hits, each non-cloud giant within a @Template[emanation|distance:20], including the target of the Strike, is buffeted by roaring winds and must attempt a @Check[fortitude|dc:30] saving throw.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes @Damage[2d8[sonic]] damage.</p>\n<p><strong>Failure</strong> The creature takes @Damage[4d8[sonic]] damage and is deafened until the end of its next turn.</p>\n<p><strong>Critical Failure</strong> As failure, but double damage and also knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>"
+          "description": "<p>The cloud giant Strikes a creature with their ranseur, surrounded in a roar of rushing air. On a hit, the target takes an additional 4d8 bludgeoning damage and is @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} for 1 minute. Whether or not the Strike hits, each non-cloud giant within a @Template[emanation|distance:20], including the target of the Strike, is buffeted by roaring winds and must attempt a @Check[fortitude|dc:30|options:area-effect,damaging-effect,inflicts:deafened,inflicts:prone] saving throw.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes @Damage[2d8[sonic]|options:area-damage] damage.</p>\n<p><strong>Failure</strong> The creature takes @Damage[4d8[sonic]|options:area-damage] damage and is deafened until the end of its next turn.</p>\n<p><strong>Critical Failure</strong> As failure, but double damage and also knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>"
         }
       }
     },
@@ -4173,7 +4173,7 @@
         },
         "action->Boulder Roll": {
           "name": "Boulder Roll",
-          "description": "<p>The stonecaster conjures a rolling boulder that deals @Damage[5d6[bludgeoning]] damage to each creature in a @Template[line|distance:60] with a @Check[reflex|dc:21|basic] save.</p>\n<p>The stonecaster can't use Boulder Roll again for [[/gmr 1d4 #Recharge Boulder Roll]]{1d4 rounds}.</p>"
+          "description": "<p>The stonecaster conjures a rolling boulder that deals @Damage[5d6[bludgeoning]|options:area-damage] damage to each creature in a @Template[line|distance:60] with a @Check[reflex|dc:21|basic|options:area-effect] save.</p>\n<p>The stonecaster can't use Boulder Roll again for [[/gmr 1d4 #Recharge Boulder Roll]]{1d4 rounds}.</p>"
         },
         "action->Dwarven Doughtiness": {
           "name": "Dwarven Doughtiness",
@@ -4456,7 +4456,7 @@
         },
         "action->Surge": {
           "name": "Surge",
-          "description": "<p>The elemental tsunami momentarily expands to fill the area of its vortex. Creatures within the aura take @Damage[(5d12+6)[bludgeoning]] damage with a @Check[fortitude|dc:31|basic] save. A creature that fails this save is pushed 20 feet.</p>\n<p>The elemental tsunami then shrinks to its normal space and can't Surge again for [[/gmr 1d4 #Recharge Surge]]{1d4 rounds}.</p>"
+          "description": "<p>The elemental tsunami momentarily expands to fill the area of its vortex. Creatures within the aura take @Damage[(5d12+6)[bludgeoning]|options:area-damage] damage with a @Check[fortitude|dc:31|basic|options:area-effect,inflicts:forced-movement] save. A creature that fails this save is pushed 20 feet.</p>\n<p>The elemental tsunami then shrinks to its normal space and can't Surge again for [[/gmr 1d4 #Recharge Surge]]{1d4 rounds}.</p>"
         },
         "action->Push or Pull 10 feet": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.t6cx9FOODmeZQNYl]\nPush or Pull 10 feet",
@@ -5680,7 +5680,7 @@
         },
         "action->Frightful Moan": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.aiwlPSmNY9b6Psvd]\nFrightful Moan",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.aiwlPSmNY9b6Psvd]\n<p>The ghost laments its fate, forcing each living creature within @Template[emanation|distance:30]{30 feet} to attempt a @Check[will|dc:21] save. On a failure, a creature becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} (or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3} on a critical failure). On a success, a creature is temporarily immune to this ghost's frightful moan for 1 minute.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.aiwlPSmNY9b6Psvd]\n<p>The ghost laments its fate, forcing each living creature within @Template[emanation|distance:30]{30 feet} to attempt a @Check[will|dc:21|options:area-effect,inflicts:frightened] save. On a failure, a creature becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} (or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3} on a critical failure). On a success, a creature is temporarily immune to this ghost's frightful moan for 1 minute.</p>"
         },
         "lore->Dwelling Lore (applies to the place the ghost is bound to)": {
           "name": "Dwelling Lore (applies to the place the ghost is bound to)"
@@ -5707,7 +5707,7 @@
         },
         "action->Frightful Moan": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.aiwlPSmNY9b6Psvd]\nFrightful Moan",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.aiwlPSmNY9b6Psvd]\n<p>The ghost laments its fate, forcing each living creature within @Template[emanation|distance:30]{30 feet} to attempt a @Check[will|dc:29] save. On a failure, a creature becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} (or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3} on a critical failure). On a success, a creature is temporarily immune to this ghost's frightful moan for 1 minute.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.aiwlPSmNY9b6Psvd]\n<p>The ghost laments its fate, forcing each living creature within @Template[emanation|distance:30]{30 feet} to attempt a @Check[will|dc:29|options:area-effect,inflicts:frightened] save. On a failure, a creature becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} (or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3} on a critical failure). On a success, a creature is temporarily immune to this ghost's frightful moan for 1 minute.</p>"
         },
         "action->Telekinetic Assault": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.0K3vhX14UEPftqu8]\nTelekinetic Assault",
@@ -6240,7 +6240,7 @@
         },
         "action->Wasp Larva": {
           "name": "Wasp Larva",
-          "description": "<p><strong>Saving Throw</strong> @Check[fortitude|dc:21]</p>\n<hr />\n<p><strong>Stage 1</strong> carrier with no ill effect ([[/gmr 1d6 #days]]{1d6 days})</p>\n<p><strong>Stage 2</strong> @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} ([[/br 1d3 #days]]{1d3 days})</p>\n<p><strong>Stage 3</strong> [[/r {5d6}]]{5d6 damage}, larva emerges (disease ends)</p>"
+          "description": "<p><strong>Saving Throw</strong> @Check[fortitude|dc:21]</p>\n<hr />\n<p><strong>Stage 1</strong> carrier with no ill effect ([[/gmr 1d6 #days]]{1d6 days})</p>\n<p><strong>Stage 2</strong> @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} ([[/gmr 1d4 #days]]{1d4 days})</p>\n<p><strong>Stage 3</strong> @Damage[5d6[untyped]] damage, larva emerges (disease ends)</p>"
         }
       }
     },
@@ -8198,7 +8198,7 @@
         },
         "action->Wings of Flame": {
           "name": "Wings of Flame",
-          "description": "<p>The ifrit grows flaming wings from their back. They gain a fly Speed of 35 feet for 1 minute. The flames also create an aura in a @Template[emanation|distance:5] around the ifrit.</p>\n<p>Any creature that ends its turn in the aura takes @Damage[2d6[fire]] damage with a @Check[reflex|dc:25|basic] save.</p>"
+          "description": "<p>The ifrit grows flaming wings from their back. They gain a fly Speed of 35 feet for 1 minute. The flames also create an aura in a 5-foot emanation around the ifrit.</p>\n<p>Any creature that ends its turn in the aura takes @Damage[2d6[fire]|options:area-damage] damage with a @Check[reflex|dc:25|basic|options:area-effect] save.</p>"
         }
       }
     },
@@ -8708,8 +8708,8 @@
         "action->Fast Healing 10": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.fJSNOw4zHGbIm4bZ]\nFast Healing 10"
         },
-        "action->Protean Anatomy": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.IOk0MRs3f9FrarKL]\nProtean Anatomy",
+        "action->Protean Anatomy 25": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.IOk0MRs3f9FrarKL]\nProtean Anatomy 25",
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.IOk0MRs3f9FrarKL]\n<p>A keketar's vital organs shift and change shape and position constantly. Immediately after the keketar takes acid, electricity, or sonic damage, they gain the listed amount of resistance to that damage type. This lasts for 1 hour or until the next time the protean takes damage of one of the other types (in which case their resistance changes to match that type), whichever comes first.</p>\n<p>The keketar is immune to polymorph effects unless they're a willing target. If @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} or @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened}, the keketar automatically recovers at the end of their next turn as new sensory organs grow to replace the compromised ones.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.c6SiBB3mzV8lZUQr]{Effect: Protean Anatomy}</p>"
         },
         "action->Spatial Riptide": {
@@ -13618,7 +13618,7 @@
         },
         "action->Splintered Ground": {
           "name": "Splintered Ground",
-          "description": "<p>The skulltaker causes splintered bones to erupt from all solid surfaces in a @Template[emanation|distance:100], except for surfaces of worked stone. A creature moving through the bones takes @Damage[10[piercing],10[void]]{10 piercing damage and 10 void damage} for every 5 feet of movement.</p>\n<p>The first time each round a creature takes piercing damage from these splintered bones, it must succeed at a @Check[reflex|dc:40] save or take a –10-foot circumstance penalty to all Speeds for 10 minutes, or a –15-foot circumstance penalty for 24 hours on a critical failure.</p>\n<p>The bones remain in place until the skulltaker uses this action again or the bones are manually removed, which takes 10 minutes for each 5-foot square.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.86uYNsVXzYWxqLTV]{Effect: Splintered Ground}</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.hc7kR6quUE9ryRyj]{Effect: Splintered Ground (Critical Failure)}</p>"
+          "description": "<p>The skulltaker causes splintered bones to erupt from all solid surfaces in a @Template[emanation|distance:100], except for surfaces of worked stone. A creature moving through the bones takes @Damage[10[piercing],10[void]|options:area-damage]{10 piercing damage and 10 void damage} for every 5 feet of movement.</p>\n<p>The first time each round a creature takes piercing damage from these splintered bones, it must succeed at a @Check[reflex|dc:40|options:area-effect,damaging-effect] save or take a –10-foot circumstance penalty to all Speeds for 10 minutes, or a –15-foot circumstance penalty for 24 hours on a critical failure.</p>\n<p>The bones remain in place until the skulltaker uses this action again or the bones are manually removed, which takes 10 minutes for each 5-foot square.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.86uYNsVXzYWxqLTV]{Effect: Splintered Ground}</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.hc7kR6quUE9ryRyj]{Effect: Splintered Ground (Critical Failure)}</p>"
         },
         "action->Vitality Drain": {
           "name": "Vitality Drain",
@@ -14549,7 +14549,7 @@
         },
         "action->Infest Environs": {
           "name": "Infest Environs",
-          "description": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Requirements</strong> The terotricus is in a swamp or forested area</p>\n<hr />\n<p><strong>Effect</strong> The terotricus drains nutrients from nearby trees and undergrowth while simultaneously infesting them with fungal growth. All non-magical plant life (though not plant creatures) within a @Template[emanation|distance:60] withers and sprouts foul mold and slimy mushrooms, removing any cover and concealment provided by trees and undergrowth. In addition, the terotricus regains @Damage[200[healing]]{200 Hit Points} (this is a healing vitality effect).</p>"
+          "description": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Requirements</strong> The terotricus is in a swamp or forested area</p>\n<hr />\n<p><strong>Effect</strong> The terotricus drains nutrients from nearby trees and undergrowth while simultaneously infesting them with fungal growth. All non-magical plant life (though not plant creatures) within a @Template[emanation|distance:60] withers and sprouts foul mold and slimy mushrooms, removing any cover and concealment provided by trees and undergrowth. In addition, the terotricus regains @Damage[200[healing,vitality]]{200 Hit Points} (this is a healing vitality effect).</p>"
         },
         "action->Spore Blight": {
           "name": "Spore Blight",
@@ -15646,8 +15646,8 @@
         "action->Fast Healing 1": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.fJSNOw4zHGbIm4bZ]\nFast Healing 1"
         },
-        "action->Protean Anatomy": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.IOk0MRs3f9FrarKL]\nProtean Anatomy",
+        "action->Protean Anatomy 5": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.IOk0MRs3f9FrarKL]\nProtean Anatomy 5",
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.IOk0MRs3f9FrarKL]\n<p>A voidworm's vital organs shift and change shape and position constantly. Immediately after the voidworm takes acid, electricity, or sonic damage, they gains the listed amount of resistance to that damage type. This lasts for 1 hour or until the next time the voidworm takes damage of one of the other types (in which case its resistance changes to match that type), whichever comes first.</p>\n<p>The voidworm is immune to polymorph effects unless it is a willing target. If @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} or @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened}, the voidworm automatically recovers at the end of its next turn as new sensory organs grow to replace the compromised ones.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.c6SiBB3mzV8lZUQr]{Effect: Protean Anatomy}</p>"
         },
         "action->Change Shape": {
@@ -16160,7 +16160,7 @@
         },
         "action->Winter Breath": {
           "name": "Winter Breath",
-          "description": "<p>The witchwarg breathes a cloud of frost in a @Template[cone|distance:15] that deals @Damage[5d8[cold]] damage (@Check[reflex|dc:23|basic] save).</p>\n<p>The witchwarg can't use Winter Breath again for [[/gmr 1d4 #Recharge Winter Breath]]{1d4 rounds}.</p>"
+          "description": "<p>The witchwarg breathes a cloud of frost in a @Template[cone|distance:15] that deals @Damage[5d8[cold]|options:area-damage] damage (@Check[reflex|dc:23|basic|options:area-effect] save).</p>\n<p>The witchwarg can't use Winter Breath again for [[/gmr 1d4 #Recharge Winter Breath]]{1d4 rounds}.</p>"
         }
       }
     },
