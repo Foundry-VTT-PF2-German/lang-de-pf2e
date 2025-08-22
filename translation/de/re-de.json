@@ -88,6 +88,12 @@
     },
     "BattleForm": {
       "AberrantForm": {
+        "ChoiceSet": {
+          "Chuul": "Chuul",
+          "Gogiteth": "Gogiteth",
+          "Gug": "Gug",
+          "Otyugh": "Otyugh"
+        },
         "GugSqueezeNote": "Deine zahlreichen Gelenke erlauben es dir dich durch enge Stellen zu zwängen, als wärst du eine Mittelgroße Kreatur."
       },
       "AngelForm": {
@@ -971,7 +977,7 @@
           "ObjectTiny": "Winziger unbelebter Gegenstand",
           "Octopus": "Oktopus",
           "Oni": "Oni",
-          "Orc": "Orc",
+          "Orc": "Ork",
           "Owlbear": "Eulenbär",
           "Plant": "Plant",
           "PorcupineGiant": "Riesenstachelschwein",
@@ -1518,7 +1524,7 @@
       },
       "WyvernRider": {
         "WyvernsSwoop": {
-          "HigherElevation": "Began swoop at a higher elevation than the target"
+          "HigherElevation": "Beginne den Sturzflug in einer größeren Höhe als dein Ziel"
         }
       },
       "YetiNightmareGuardianRage": "Albtraumwächter Kampfrausch",
@@ -4600,9 +4606,9 @@
       "HuntPrey": {
         "FirstHitDamage": "Erster Treffer bei Jagdbeute",
         "FirstHitSwitch": "Trifft Jagdbeute zum ersten Mal in dieser Runde",
-        "SeekHuntedPrey": "To Seek Hunted Prey",
+        "SeekHuntedPrey": "Zum Suchen deiner Beute",
         "TargetHuntedPrey": "Ziel ist deine Jagdbeute",
-        "TrackHuntedPrey": "To Track Hunted Prey"
+        "TrackHuntedPrey": "Um den Spuren deiner Jagdbeute zu folgen"
       },
       "Ifrit": {
         "Lavasoul": {
@@ -5594,6 +5600,10 @@
           "Outwit": "Deine umfassend gemeisterten Fertigkeiten ermöglichen dir, deine Beute zu überwältigen. Sofern du den Kompetenzgrad Meister in Einschüchtern, Heimlichkeit, Täuschung oder der Fertigkeit besitzt, die du nutzt, um Wissen über deine Jagdbeute abzurufen, steigt der Situationsbonus bei Nutzung der fraglichen Fertigkeit gegen deine Jagdbeute von +2 auf +4. Solltest du den Kompetenzgrad Meister im Umgang mit deiner Rüstung besitzen, so steigt der Situationsbonus auf deine RK gegen Angriffe der Jagdbeute von +1 auf +2.",
           "Precision": "Deine Waffenmeisterschaft ermöglicht dir, die lebenswichtigen Regionen deiner Jagdbeute mehrfach zu treffen. Wenn du deine Jagdbeute zum zweiten Mal in einer Runde triffst, fügst du ihm ebenfalls 1W8 Punkte Präzisionsschaden zu. Mit der 19. Stufe verursacht dein zweiter Treffer bei deiner Jagdbeute in derselben Runde 2W8 Punkte Präzisionsschaden und der dritte Treffer 1W8 Punkte Präzisionsschaden."
         },
+        "TheHarderTheyFall": {
+          "CriticalSuccess": "On a critical success, your target takes @Damage[(ternary(gte(@actor.system.skills.athletics.rank,3),4,2))d8[bludgeoning]] damage.",
+          "Success": "On a success, your target takes @Damage[(ternary(gte(@actor.system.skills.athletics.rank,3),2,1))d8[bludgeoning]] damage."
+        },
         "Vindicator": {
           "BenefitsAddendum": "Du erhältst einen Zustandsbonus von +1 auf deine Zauberangriffswürfe gegen deine Jagdbeute und diese erleidet einen Zustandsmalus von -1 auf Rettungswürfe gegen deine göttlichen Zauber.",
           "SpellPenaltyAddendum": "Deine Jagdbeute erhält einen Zustandsmalus auf Rettungswürfe gegen deine göttlichen Zauber.",
@@ -5729,6 +5739,10 @@
         },
         "Racket": {
           "Prompt": "Wähle eine Schurkenkarriere."
+        },
+        "TheHarderTheyFall": {
+          "CriticalSuccess": "On a critical success, your target takes @Damage[1d6[bludgeoning],(((@actor.flags.pf2e.sneakAttackDamage.number)d(@actor.flags.pf2e.sneakAttackDamage.faces))[precision])[bludgeoning]] damage.",
+          "Success": "On a success, your target takes @Damage[1d6[bludgeoning]] damage."
         },
         "TrainSkill": {
           "Prompt": "Wähle eine Fertigkeit in der du Geübt bist."
@@ -6265,7 +6279,7 @@
         "PitchPerfectProjection": "If your next action this round is to Cast a Spell or use an action that creates an auditory effect with a range, increase that range by 30 feet.",
         "PortentousSpell": "Wenn deine nächste Handlung das Wirken eines Zaubers ist, erhält jede Kreatur, die versucht, eine Reaktion einzusetzen, die durch deine Handlung Zauber wirken ausgelöst wird, einen Situationsmalus von –2 auf Angriffswürfe und Fertigkeitswürfe im Rahmen ihrer Reaktion. Wenn weiterhin der Zauber einen Zauberangriffswurf beinhaltet oder einen Rettungswurf erfordert, erhalten Kreaturen, die du triffst, oder deren Rettungswurf misslingt, bis zum Beginn deines nächsten Zuges den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fasziniert}t von dir. @UUID[Compendium.pf2e.feat-effects.Item.klZVVIetJlR99cT6]{Effekt: Unheilvoller Zauber}",
         "PurifyingSpell": "Sofern du als nächste Handlung den Zauber Heilung auf eine einzelne lebende Kreatur wirkst, kannst du zusätzlich zu den normalen Effekten einer Krankheit oder Vergiftung entgegenwirken, unter der das Ziel leidet. In diesem Fall erlangt der Zauber Heilung die Kategorie Wasser.",
-        "QuickenedCasting": "If your next action is to cast a cantrip or a spell that is at least 2 ranks lower than the highest-rank spell slot you have, reduce the number of actions to cast it by 1 (minimum 1 action).",
+        "QuickenedCasting": "Sollte deine nächste Handlung das Wirken eines Zaubers oder Zaubertricks deiner Klasse sein, dessen Grad wenigstens 2 Grade niedriger ist als der höchste dir mögliche Zaubergrad, so reduziere die zum Wirken erforderliche Anzahl an Aktionen um 1 (Minimum 1 Aktion).",
         "ReachSpell": "Sofern deine nächste Handlung das Wirken eines Zaubers mit einer Reichweite ist, so steigt diese Reichweite um 30 Fuß/9 m. Sollte der Zauber die Reichweite Berührung besitzen, steigt seine Reichweite auf 30 Fuß/9 m.",
         "Remediate": "Sofern du als nächste Handlung 3 Aktionen zum Wirken von Heilung oder Leid aufwendest, um Kreaturen Schaden zuzufügen, kannst du die nachhallende Energie nutzen, um widerstreitende Kräfte auszugleichen. Du kannst den Zauber <em>Heilung</em> oder <em>Leid</em> einsetzen, um einen Wurf zum @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken} gegen einen Effekt der Kategorie Göttlich innerhalb des Wirkungsbereiches abzulegen. Der Zauber erzeugt ferner seine üblichen Effekte.",
         "ReverberatingSpell": "Der Zauber verursacht zusätzliche @Damage[1d8[sonic]]{1W8 Schallschaden}. Jede Kreatur, deren Rettungswurf gegen den Zauber misslingt, erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Taub} für 1 Runde (bzw. 1 Minute im Fall eines Kritischen Fehlschlages). Der Zauber erhält die Kategorie Schall.",
@@ -6650,7 +6664,7 @@
         "Katana": "Nutze Katana beidhändig",
         "Khakkhara": "Nutze Khakkhara beidhändig",
         "MusketStaff": "Use Musket Staff Two-Handed",
-        "OrcSkewermaul": "Use Orc Skewermaul Two-Handed",
+        "OrcSkewermaul": "Nutze den Orkischen Speerschlägel beidhändig",
         "ReinforcedStock": "Nutze Verstärkten Schaft beidhändig",
         "RhokaSword": "Nutze Rhoka-Schwert beidhändig",
         "Staff": "Nutze Kampfstab beidhändig",
