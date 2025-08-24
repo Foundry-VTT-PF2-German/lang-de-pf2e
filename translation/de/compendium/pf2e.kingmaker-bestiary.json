@@ -1880,6 +1880,23 @@
         },
         "weapon->Longsword": {
           "description": "<Compendium>"
+        },
+        "feat->Precision": {
+          "rules": {
+            "2": {
+              "value": {
+                "1": {
+                  "text": "@UUID[Compendium.pf2e.feat-effects.Item.mNk0KxsZMFnDjUA0]{Effekt: Geteilter Jägervorteil (Präzision)}"
+                },
+                "3": {
+                  "text": "@UUID[Compendium.pf2e.feat-effects.Item.Lt5iSfx8fxHSdYXz]{Effekt: Geteilter Jägervorteil (Präzision, Meisterhaft)}"
+                }
+              }
+            }
+          }
+        },
+        "action->Hunt Prey": {
+          "selfEffect": "Effekt: Jagdbeute"
         }
       }
     },
@@ -1931,6 +1948,23 @@
         },
         "feat->Trackless Step": {
           "name": "<Compendium>"
+        },
+        "feat->Precision": {
+          "rules": {
+            "2": {
+              "value": {
+                "1": {
+                  "text": "@UUID[Compendium.pf2e.feat-effects.Item.mNk0KxsZMFnDjUA0]{Effekt: Geteilter Jägervorteil (Präzision)}"
+                },
+                "3": {
+                  "text": "@UUID[Compendium.pf2e.feat-effects.Item.Lt5iSfx8fxHSdYXz]{Effekt: Geteilter Jägervorteil (Präzision, Meisterhaft)}"
+                }
+              }
+            }
+          }
+        },
+        "action->Hunt Prey": {
+          "selfEffect": "Effekt: Jagdbeute"
         }
       }
     },
@@ -1960,7 +1994,7 @@
         },
         "action->Surge": {
           "name": "Wasserstoß",
-          "description": "<p>Der Elementare Tsunami dehnt rasch seine Angriffsfläche aus, um den Wirkungsbereich seines Wasserwirbels auszufüllen. Kreaturen innerhalb der Ausstrahlung des Wasserwirbels erleiden @Damage[(6d12+8)[bludgeoning]]{6W12+9 Punkte Wuchtschaden} (@Check[fortitude|dc:34|basic]{einfacher Zähigkeitswurf}). Misslingt einer Kreatur dieser Rettungswurf, wird sie 20 Fuß/6 m weit gestoßen. Der Elementare Tsunami zieht sich dann wieder auf seine ursprüngliche Angriffsfläche zusammen.</p> \n<p>Erleidet eine Kreatur Schaden, wird sie Trüber Sieche ausgesetzt.</p>\n<p>Der Elementare Tsunami kann diese Fähigkeit erst nach [[/gmr 1d4 #Runden]]{1W4 Runden} wieder nutzen.</p>"
+          "description": "<p>Der Elementare Tsunami dehnt rasch seine Angriffsfläche aus, um den Wirkungsbereich seines Wasserwirbels auszufüllen. Kreaturen innerhalb der Ausstrahlung des Wasserwirbels erleiden @Damage[(6d12+8)[bludgeoning]|options:area-damage]{6W12+9 Punkte Wuchtschaden} (@Check[fortitude|dc:34|basic|options:area-effect,inflicts:forced-movement]{einfacher Zähigkeitswurf}). Misslingt einer Kreatur dieser Rettungswurf, wird sie 20 Fuß/6 m weit gestoßen. Der Elementare Tsunami zieht sich dann wieder auf seine ursprüngliche Angriffsfläche zusammen.</p> \n<p>Erleidet eine Kreatur Schaden, wird sie Trüber Sieche ausgesetzt.</p>\n<p>Der Elementare Tsunami kann diese Fähigkeit erst nach [[/gmr 1d4 #Runden]]{1W4 Runden} wieder nutzen.</p>"
         },
         "action->Push or Pull 10 feet": {
           "name": "Stoßen oder Ziehen 10 Fuß/3 m",
@@ -2834,7 +2868,7 @@
         },
         "action->Frightful Moan": {
           "name": "Unheimliches Stöhnen",
-          "description": "<p>Der Geist beklagt sein Schicksal und zwingt alle lebenden Kreaturen innerhalb von @Template[emanation|distance:30]{30 Fuß/9 m} zu einem @Check[will|dc:36]{Willenswurf}. Bei einem Fehlschlag erhält eine Kreatur den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2} (bzw. @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 3} bei einem Kritischen Fehlschlag). Bei einem Erfolg wird eine Kreatur vorübergehend gegen diese Fähigkeit dieses Geistes für 1 Minute immun.</p>"
+          "description": "<p>Der Geist beklagt sein Schicksal und zwingt alle lebenden Kreaturen innerhalb von @Template[emanation|distance:30]{30 Fuß/9 m} zu einem @Check[will|dc:36|options:area-effect,inflicts:frightened]{Willenswurf}. Bei einem Fehlschlag erhält eine Kreatur den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2} (bzw. @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 3} bei einem Kritischen Fehlschlag). Bei einem Erfolg wird eine Kreatur vorübergehend gegen diese Fähigkeit dieses Geistes für 1 Minute immun.</p>"
         },
         "action->Sneak Attack": {
           "description": "<p>Ein Geisterhafter Gardist fügt @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} betroffenen Kreaturen zusätzlich 3W6 Punkte Präzisionsschaden zu.</p>"
@@ -3887,7 +3921,7 @@
         },
         "action->Frightful Moan": {
           "name": "Unheimliches Stöhnen",
-          "description": "<p>Der Geist beklagt sein Schicksal und zwingt alle lebenden Kreaturen innerhalb von @Template[emanation|distance:30]{30 Fuß/9 m} zu einem @Check[will|dc:28]{Willenswurf}. Bei einem Fehlschlag erhält eine Kreatur den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2} (bzw. @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 3} bei einem Kritischen Fehlschlag). Bei einem Erfolg wird eine Kreatur vorübergehend gegen diese Fähigkeit dieses Geistes für 1 Minute immun.</p>"
+          "description": "<p>Der Geist beklagt sein Schicksal und zwingt alle lebenden Kreaturen innerhalb von @Template[emanation|distance:30]{30 Fuß/9 m} zu einem @Check[will|dc:28|options:area-effect,inflicts:frightened]{Willenswurf}. Bei einem Fehlschlag erhält eine Kreatur den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2} (bzw. @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 3} bei einem Kritischen Fehlschlag). Bei einem Erfolg wird eine Kreatur vorübergehend gegen diese Fähigkeit dieses Geistes für 1 Minute immun.</p>"
         },
         "action->Telekinetic Assault": {
           "name": "Telekinetischer Angriff",
@@ -6153,6 +6187,22 @@
         "action->Phantasmagoric Fog": {
           "name": "Wahnsinnsnebel",
           "description": "<p><strong>Rettungswurf</strong> @Check[will|dc:24]</p>\n<p><strong>Maximaldauer</strong> 6 Runden</p>\n<p><strong>Phase 1</strong> @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 1} (1 Runde)</p>\n<p><strong>Phase 2</strong> @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Verwirrt} und Benommen 1 (1 Runde)</p>\n<p><strong>Phase 3</strong> Verwirrt und @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 2} (1 Runde).</p>"
+        }
+      }
+    },
+    "Phantasmal Protagonist": {
+      "name": "Geisterhafter Hauptdarsteller",
+      "items": {
+        "strike-melee->Thematic Action - Hero": {
+          "name": "Thematische Aktion - Held"
+        },
+        "action->Thematic Action - Ally": {
+          "name": "Thematische Aktion - Verbündeter",
+          "description": "<p>Der Hauptdarsteller hat die Form eines erkennbaren Verbündeten. Seine thematische Aktion besteht darin, einer benachbarten Kreatur 4W4 Temporäre Trefferpunkte zu gewähren, die 1 Runde lang bestehen.</p>"
+        },
+        "action->Thematic Action - Villain": {
+          "name": "Thematische Aktion - Schurke",
+          "description": "<p>Der Hauptdarsteller nimmt die Gestalt eines berüchtigten Schurken an. Seine thematische Handlung besteht darin, ein benachbartes Ziel zu bedrängen und zu verspotten. Das Ziel muss einen Willenswurf erfolgreich ablegen; bei einem Fehlschlag ist es bis zum Ende deines nächsten Zuges @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} (bzw. erhält es den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1} bei einem Kritischen Fehlschlag).</p>"
         }
       }
     },

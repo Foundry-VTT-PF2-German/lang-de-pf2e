@@ -456,19 +456,19 @@
       }
     },
     "Bystander": {
-      "name": "Bystander",
-      "blurb": "Variant elite guard",
-      "publicNotes": "<p>Guards are rank-and-file members of a town watch or city guard, trained to look for trouble, take down criminals, and follow orders. They are a match for only the most fledgling of adventurers and criminals, but, given time, the settlement can usually muster them in numbers sufficient to neutralize most threats.</p>\n<hr />\n<p>Larger societies rely on those with the authority and the ability to interpret and enforce laws. In good-aligned societies, these officials carry out their duties fairly. In neutral and evil ones, these officials can be harsh and cruel (with an altered alignment to reflect this), imposing severe punishments on those who can't pay for mercy.</p>",
-      "senses": "(+11 to find concealed objects)",
+      "name": "Zuschauer",
+      "blurb": "Elite Wachenvariante",
+      "publicNotes": "<p>Wachen sind einfache Mitglieder einer Dorf - oder Stadtwache, die darauf trainiert sind, nach Ärger Ausschau zu halten, Kriminelle niederzuschlagen und Befehle zu befolgen. Sie sind nur für unerfahrene Abenteurer und Kriminelle eine wirkliche Herausforderung, aber mit der Zeit kann eine Ansiedlung sie meist in ausreichender Anzahl rekrutieren, um schließlich mit nahezu jeder Bedrohung fertig zu werden.</p>\n<hr />\n<p>Größere Gemeinschaften sind auf jene angewiesen, die befugt und in der Lage dazu sind, die Gesetze auszulegen und durchzusetzen. In Gut gesinnten Gesellschaften üben diese Beamten ihre Pflichten fair aus. In Neutralen und Bösen Gesellschaften können diese Beamten jedoch hart und grausam sein (mit entsprechend veränderter Gesinnung, welche dies widerspiegelt) und diejenigen übel bestrafen, die nicht für einen Straferlass zahlen können.</p>",
+      "senses": "(+11 um verborgene Gegenstände zu finden)",
       "items": {
         "spellcastingEntry->Primal Prepared Spells": {
-          "name": "Primal Prepared Spells"
+          "name": "Vorbereitete Naturzauber"
         },
         "strike-melee->Staff": {
-          "name": "Staff"
+          "name": "Kampfstab"
         },
         "strike-ranged->Sling": {
-          "name": "Sling"
+          "name": "Schleuder"
         }
       }
     },
@@ -1522,7 +1522,7 @@
         },
         "action->Frightful Moan": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.aiwlPSmNY9b6Psvd]\nFrightful Moan",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.aiwlPSmNY9b6Psvd]\n<p>The ghost laments its fate, forcing each living creature within @Template[emanation|distance:30]{30 feet} to attempt a @Check[will|dc:33] save. On a failure, a creature becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} (or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3} on a critical failure). On a success, a creature is temporarily immune to this ghost's frightful moan for 1 minute.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.aiwlPSmNY9b6Psvd]\n<p>The ghost laments its fate, forcing each living creature within @Template[emanation|distance:30]{30 feet} to attempt a @Check[will|dc:33|options:area-effect,inflicts:frightened] save. On a failure, a creature becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} (or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3} on a critical failure). On a success, a creature is temporarily immune to this ghost's frightful moan for 1 minute.</p>"
         },
         "action->Memory of Leaves": {
           "name": "Memory of Leaves",
@@ -1903,7 +1903,7 @@
         },
         "action->Withering Blast": {
           "name": "Withering Blast",
-          "description": "<p>Ruzadoya unleashes a @Template[cone|distance:30] of corruption. Creatures in the area take @Damage[8d12[void]] damage (@Check[fortitude|dc:34|basic] save).</p>\n<p>Ruzadoya can use this ability once every [[/gmr 1d4 #rounds]]{1d4 rounds}.</p>"
+          "description": "<p>Ruzadoya unleashes a @Template[cone|distance:30] of corruption. Creatures in the area take @Damage[8d12[void]|options:area-damage] damage (@Check[fortitude|dc:34|basic|options:area-effect] save).</p>\n<p>Ruzadoya can use this ability once every [[/gmr 1d4 #Recharge Withering Blast]]{1d4 rounds}.</p>"
         },
         "lore->Warfare Lore": {
           "name": "Warfare Lore"
@@ -2179,7 +2179,7 @@
         },
         "action->Lightning Blast": {
           "name": "Lightning Blast",
-          "description": "<p><strong>Requirements</strong> The stormdrinker is @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened} due to Absorb Shock</p>\n<hr />\n<p><strong>Effect</strong> The stormdrinker dismisses its Absorb Shock benefits to expel lightning in a @Template[line|distance:60], dealing @Damage[8d6[electricity]] damage (@Check[reflex|dc:25|basic] save).</p>"
+          "description": "<p><strong>Requirements</strong> The stormdrinker is @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened} due to Absorb Shock</p>\n<hr />\n<p><strong>Effect</strong> The stormdrinker dismisses its Absorb Shock benefits to expel lightning in a @Template[line|distance:60], dealing @Damage[8d6[electricity]|options:area-damage] damage (@Check[reflex|dc:25|basic|options:area-effect] save).</p>"
         },
         "action->Ring Bell": {
           "name": "Ring Bell",
