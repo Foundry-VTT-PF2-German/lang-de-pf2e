@@ -1,7 +1,15 @@
 import { convertDeities, convertJournals } from "./build-converter.js";
 import { build } from "../helper/src/build/build.js";
 
-const PATHS = ["module.json", "src/babele-register.js", "src/translator", "static", "translation/de", "LICENSE"];
+const PATHS = [
+    "module.json",
+    "src/babele-register.js",
+    "src/styles.css",
+    "src/translator",
+    "static",
+    "translation/de",
+    "LICENSE",
+];
 
 let targetFolder = process.argv[2];
 
