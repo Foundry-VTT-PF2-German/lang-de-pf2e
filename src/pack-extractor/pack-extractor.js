@@ -1,7 +1,11 @@
 import { readFileSync, writeFileSync } from "fs";
-import { getZipContentFromURL, writeFilesFromBlob } from "../helper/src/util/file-handler.js";
+import { getZipContentFromURL, saveFileWithDirectories, writeFilesFromBlob } from "../helper/src/util/file-handler.js";
 import { replaceProperties } from "../helper/src/util/utilities.js";
-import { buildItemDatabase, extractPackGroupList } from "../helper/src/pack-extractor/pack-extractor.js";
+import {
+    buildItemDatabase,
+    extractPackGroupList,
+    postExtractMessage,
+} from "../helper/src/pack-extractor/pack-extractor.js";
 import { PF2_DEFAULT_MAPPING } from "../helper/src/pack-extractor/constants.js";
 
 // Read config file
@@ -43,3 +47,20 @@ writeFilesFromBlob(
     CONFIG.filePaths.i18n,
     "i8n files"
 );
+
+// Extract and write i18n files for modules
+postExtractMessage("module localizations", true);
+for (const [moduleId, moduleData] of Object.entries(configFile.moduleLocalizations.modules ?? {})) {
+    const packs = await getZipContentFromURL(moduleData.url);
+
+    const i18nFile = packs.find((o) => `${o.path}${o.fileName}.${o.fileType}` === moduleData.i18nFile);
+    if (!i18nFile) {
+        console.warn(`${moduleId}: File not found`);
+    } else {
+        saveFileWithDirectories(
+            `${configFile.moduleLocalizations.savePath}/${moduleId}.json`,
+            JSON.stringify(JSON.parse(i18nFile.content), null, 2)
+        );
+        postExtractMessage(moduleId);
+    }
+}
