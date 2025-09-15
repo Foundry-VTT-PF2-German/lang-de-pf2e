@@ -1,260 +1,228 @@
 {
-    "pf2e-dailies": {
+    "pf2e-fc": {
+        "flat-config": {
+            "stupefied": {
+                "label": "Stupefied",
+                "note": "Spellcasting while Stupefied"
+            },
+            "manipulate": {
+                "label": "Manipulate",
+                "note": "Manipulate Actions while Grabbed"
+            },
+            "deafened": {
+                "label": "Deafened",
+                "note": "Auditory Actions while Deafened"
+            },
+            "deafened-spellcasting": {
+                "label": "Deafened - Spellcasting",
+                "note": "Non-subtle spells require incantations, and all speech has the auditory trait."
+            },
+            "target": {
+                "label": "Target",
+                "note": "Concealed/Hidden/Dazzled/Blinded/etc. Supports PF2e Visioner"
+            },
+            "light-level": {
+                "label": "Target - Light Level",
+                "note": "Dim Light/Darkness if origin lacks low-light/darkvision"
+            }
+        },
         "settings": {
-            "addedHighlight": {
-                "name": "Highlight Added Items",
-                "hint": "Temporary \"items\" added by the module will be highlighted in the character and familiar sheets."
+            "flat-check-in-message": {
+                "name": "Flat Check Buttons in Messages",
+                "hint": "Adds flat checks for supported conditions in chat messages."
             },
-            "partyMembers": {
-                "name": "Party Members Only",
-                "hint": "When a collection of players actors is retrieved in the module, should the module limits it to party members (if the character is member of any party) or all player owned actors?"
+            "flat-check-config": {
+                "name": "Flat Check Config"
             },
-            "menus": {
-                "customs": {
-                    "name": "Custom Dailies",
-                    "hint": "Register you own dailies with the module.",
-                    "label": "Register"
-                },
-                "homebrew": {
-                    "name": "Homebrew Settings",
-                    "hint": "Add your custom stuff for the module to use in some of its dailies.",
-                    "label": "Homebrew"
-                }
-            }
-        },
-        "animist": {
-            "spellcasting": {
-                "focus": "Vessel Spells"
-            }
-        },
-        "builtin": {
-            "dailies": {
-                "familiar": "Familiar Abilities",
-                "staves": "Prepare a Staff",
-                "thaumaturge-tome": "Thaumaturge Tome"
-            }
-        },
-        "charges": {
-            "label": "Charges",
-            "reset": {
-                "title": "Reset Staff Charges",
-                "content": "Are you sure you want to reset the staff charges to their maximum value (max: {max}) ?"
-            },
-            "error": {
-                "notEnough": "Cannot cast {spell} at {rank}: not enough charges."
-            }
-        },
-        "config": {
-            "filters": "Enabled Dailies",
-            "title": "{actor} - Daily Configs",
-            "animist": {
-                "lore": "Remove Lore Suffix",
-                "lores": "Show Lores Summary",
-                "spells": "Show Spells Summary",
-                "signatures": "Set Signature Spells"
-            }
-        },
-        "customs": {
-            "title": "Custom Dailies",
-            "list": {
-                "create": "Create Custom Daily",
-                "delete": "Delete Custom Daily",
-                "save": "Save Custom Daily"
-            },
-            "delete": {
-                "title": "Delete Custom Daily",
-                "content": "Are you sure you want to delete this daily ?"
-            },
-            "code": {
-                "saved": "Custom Daily was successfully saved."
-            },
-            "readonly": {
-                "flavor": "This daily is flagged as <em>read only</em> because it was created in a previous version of the module and is incompatible. If you decide to <a>unlock</a> it, make sure to update it to the current version data format before saving."
-            }
-        },
-        "dialog": {
-            "mind-weapon": {
-                "title": "Create Mind Weapon",
-                "flavor": "This character doesn't have a mind weapon in their inventory.<br>Please select one of the following options to create one.",
-                "yes": "Create",
-                "no": "Cancel",
-                "held-in-one-hand": "one-handed",
-                "held-in-two-hands": "two-handed",
-                "label": "A {hand} weapon that deals <strong>1{die}</strong> damage{hasTrait}",
-                "oneTrait": " and has the <strong>{trait1}</strong> trait",
-                "twoTraits": " and has the <strong>{trait1}</strong> and <strong>{trait2}</strong> traits"
-            }
-        },
-        "error": {
-            "incompatible": "There are custom dailies that are incompatible with the current version of <strong>PF2e Dailies</strong>.",
-            "unexpected": "An unexpected error occurred with the module <strong>PF2e Dailies</strong>. See the console (F12) for details."
-        },
-        "homebrew": {
-            "title": "Homebrew Settings",
-            "index": {
-                "familiar": "Familiar Abilities",
-                "animist": "Animist Apparitions"
-            },
-            "pack": "Compendium Pack",
-            "add": "Add Entry",
-            "delete": "Delete Entry",
-            "invalid": "<strong>{entry}</strong> isn't the ID of a compendium pack nor the UUID of a <strong>{type}</strong>",
-            "empty": "You must provide a compendium pack ID or the UUID of a <strong>{type}</strong>"
-        },
-        "interface": {
-            "title": "{actor} - Daily Preparation",
-            "config": "Config",
-            "noDailies": "This character doesn't have any daily",
-            "accept": "Accept",
-            "cancel": "Cancel",
-            "tooltip": {
-                "random": "This will be randomly selected",
-                "alert": "Click here to resolve",
-                "notify": "Purely informative entry",
-                "search": "Open the compendium browser",
-                "clear": "Clear selection",
-                "noSelect": "No options available",
-                "exists": "This feat is already present on the character"
-            },
-            "error": {
-                "empty": "Some required fields are empty."
-            },
-            "drop": {
-                "notes": {
-                    "ace": "Choose a single spell from the arcane, divine, occult, or primal list of 4th level or lower.<br>The spell can't have a cost, nor can its casting time be more than 10 minutes. The spell must be able to target a single creature, and you must be a valid target for it."
-                },
-                "error": {
-                    "wrongDataType": "Invalid data type dropped.",
-                    "wrongSource": "Only compendium or world items can be used.",
-                    "wrongData": "The dropped item does not have the right <strong>{type}</strong> ({require}).",
-                    "require": "require: <strong>{need}</strong>, has: <strong>{has}</strong>",
-                    "missing": "missing: <strong>{need}</strong>",
-                    "invalid": "invalid: <strong>{has}</strong>",
-                    "wrongTraits": "The dropped item traits mismatch with the filter's.",
-                    "exclude": "<strong>{item}</strong> was excluded from the selection.",
-                    "type": {
-                        "type": "type",
-                        "level": "level",
-                        "category": "category",
-                        "categories": "categories",
-                        "skills": "skills",
-                        "source": "source",
-                        "rarity": "rarity",
-                        "rank": "rank",
-                        "traditions": "traditions"
-                    },
-                    "none": "none"
+            "flat-check-auto-roll": {
+                "name": "Auto-Roll Flat Checks",
+                "hint": "Rolls any flat checks on a message automatically",
+                "choices": {
+                    "always": "Always",
+                    "user": "User Setting",
+                    "never": "Never"
                 }
             },
-            "staves": {
-                "empty": "Empty Slot",
-                "flexible": "Flexible Slot",
-                "group": {
-                    "prepared": "Has prepared a {type} for the day",
-                    "merged": "Has merged a {type} to their bonded weapon for the day",
-                    "bond": "Has prepared their bonded weapon for the day"
-                },
-                "staff": "Staff",
-                "type": "Category",
-                "bond": "Runelord Bond",
-                "mergedshift": "Merged with Makeshift Staff",
-                "merged": "Merged with Regular Staff",
-                "makeshift": "Makeshift Staff",
-                "regular": "Regular Staff"
+            "flat-check-auto-roll-user": {
+                "name": "Auto-Roll Flat Checks",
+                "hint": "User setting: Behaviour depends on the world setting"
             },
-            "rations": {
-                "yes": "Consume ({nb} remaining)",
-                "no": "Do not consume any",
-                "last": "Consume last available"
+            "flat-check-targer-marker": {
+                "name": "Show Flat Check on Token",
+                "hint": "Client setting: Shows flat check info on a token when targeting."
             },
-            "mindsmith": {
-                "missing": "Mind Weapon is missing"
+            "light-level-vis": {
+                "name": "Light Level Visualization",
+                "hint": "Client setting: Hold alt to highlight squares with no/dim light."
+            },
+            "delay-combat-tracker": {
+                "name": "Show Delay Button in Combat Tracker",
+                "hint": "Adds delay/return buttons to the default combat tracker."
+            },
+            "delay-token-hud": {
+                "name": "Show Delay Button in Token Hud",
+                "hint": "Adds delay/return buttons to the menu that appears when right-clicking a token."
+            },
+            "delay-return": {
+                "name": "Enable Return Button",
+                "hint": "Allows returning to initiative by pressing the delay button again."
+            },
+            "delay-prompt": {
+                "name": "Prompt for New Initiative",
+                "hint": "Lets the user select a combatant to delay their turn after. Can still return early anytime they want."
+            },
+            "delay-create-message": {
+                "name": "Delay/Return Creates Chat Message"
+            },
+            "token-hud-remove-combat-toggle": {
+                "name": "Remove Combat Toggle from Token Hud",
+                "hint": "Removes the 'Toggle Combat State' button for tokens in combat."
+            },
+            "pf2e-hud-enable": {
+                "name": "Modify PF2e HUD",
+                "hint": "Overrides PF2e HUDs delay handling with this modules implementation. Please report issue with this to me and not to PF2e HUD!"
+            },
+            "lifelink": {
+                "name": "Enable Life/Spirit Link Automation Buttons",
+                "hint": "Check the module readme for setup steps."
+            },
+            "lifelink-formular": {
+                "name": "Life Link Formular",
+                "hint": "Variant of life link damage absorption to use.",
+                "choices": {
+                    "apg": "Standard",
+                    "plus": "Oracles+ (Heightened (+2))"
+                }
+            },
+            "emanation-automation": {
+                "name": "Auto-Apply Emanation Effect Button"
+            },
+            "script-alt-roll-breakdown": {
+                "name": "Alternative Roll Breakdowns",
+                "hint": "Reveals circumstance/status/untyped roll modifiers (e.g. multi attack penalty) to players."
+            },
+            "script-toggle-shared-vision": {
+                "name": "Toggle Shared Vision in Combat",
+                "hint": "Automaticlly turns the \"Shared Party Vision\" metagame setting off when combat starts, and enables it again when combat ends. This will override that setting, so only enable if you want to use shared vision."
+            },
+            "headings": {
+                "flat": "Flat Check Buttons",
+                "delay": "Delay",
+                "lifelink": "Life Link",
+                "emanation-automation": "Emanation Automation",
+                "misc": "Miscellaneous"
+            },
+            "docs": {
+                "description": "For a description of each feature and more details on the settings, check the documentation:",
+                "button": "Open Docs"
             }
         },
-        "label": {
-            "ability": "Ability #{nb}",
-            "apparition": {
-                "first": "Primary Apparition",
-                "primary": "Primary #{nb} ",
-                "other": "Apparition #{nb}"
+        "delay": {
+            "return-to-initiative": "Return to initiative",
+            "delay": "Delay",
+            "delaying": "Delaying",
+            "errors": {
+                "combat-not-started": "No active combat",
+                "combatant-not-owned": "You do not own the current combatant",
+                "no-active-gm": "No GM connected"
             },
-            "expend": "Expend #{nb}",
-            "rune": "Property Rune",
-            "select": "Select {that}",
-            "mind-smith": "Mind Smith",
-            "mind-mental": "Mental Forge",
-            "mind-runic": "Runic Smithing"
-        },
-        "message": {
-            "changes": "Has made the following changes during their daily preparations.",
-            "noChanges": "Has made no changes during their daily preparations, you didn't even need to know about it really.",
-            "gained": "Gained the temporary {type}",
-            "groups": {
-                "apparition": "Has attuned with their apparitions",
-                "blade": "Imbued their spirit into their weapon",
-                "ceremonial": "Performed a ritual to create a ceremonial knife imbued with the spell",
-                "familiar": "Has selected the familiar abilities",
-                "feats": "Learned the feats",
-                "languages": "Learned to read and speak",
-                "mindsmith": "Has focused their mind into their weapon",
-                "resistances": "Gained the resistances",
-                "scrolls": "Created the temporary scrolls",
-                "skills": "Trained in the following skills",
-                "spells": "Is ready to use the spells",
-                "tactics": "Is prepared to apply the combat tactics",
-                "tome": "Studied their thaumaturgy tome"
+            "dialog": {
+                "delay-after": "Delay after:",
+                "confirm": "Delay",
+                "cancel": "Cancel"
             },
-            "rations": {
-                "used": "Consumed one of their {name} and has {nb} remaining.",
-                "last": "Consumed the last of their {name}.",
-                "almost": "Consumed one of their {name} and only has {nb} remaining."
+            "actions": {
+                "delay": "Delay",
+                "return": "Return"
             }
         },
-        "mindsmith": {
-            "weapon": {
-                "name": "Mind Weapon"
+        "emanation": {
+            "message-text": "Apply emanation effect",
+            "form-allies": "Allies",
+            "form-exclude-self": "Exclude Self",
+            "form-enemies": "Enemies",
+            "form-duration-title": "Will ask for effect duration when applying to support Lingering Composition",
+            "form-duration-prompt": "Prompt for effect duration",
+            "form-formatting-error": "Formatting error: Description contains no/multiple effect links.",
+            "form-fieldset-legend": "Automatic Emanation Effect",
+            "dialog-effect-title": "Emanation Effect"
+        },
+        "flat": {
+            "flat-check-label": "Flat Check: {label}",
+            "flat-check": "Flat Check",
+            "target-marker-dc": "DC {dc} - {label}",
+            "source": {
+                "blinded": "Blinded",
+                "darkness": "Darkness",
+                "hidden": "Hidden",
+                "dim-light": "Dim Light",
+                "dazzled": "Dazzled",
+                "concealed": "Concealed"
+            },
+            "message": {
+                "button-close": "Close",
+                "button-require-flat-check": "{count} targets require a flat check",
+                "tooltip-highest-dc": "If more than one flat check would ever cause or prevent the same thing, just roll once and use the highest DC.",
+                "reroll-hero-point": "Reroll using a hero point",
+                "reroll-new-result": "Reroll and keep the new result",
+                "reroll-lower-result": "Reroll and keep the lower result",
+                "reroll-higher-result": "Reroll and keep the higher result",
+                "button-reroll": "Reroll",
+                "button-cancel": "Cancel",
+                "grabbed": "Grabbed",
+                "deafened": "Deafened",
+                "stupefied": "Stupefied {value}",
+                "dc": "DC {value}"
+            },
+            "more-dialog": {
+                "stupefied": "Stupefied",
+                "value": "Value",
+                "custom": "Custom",
+                "dc": "DC",
+                "title": "More Flat Checks"
             }
         },
-        "retrain": {
-            "content": "Has exchanged the following {type}",
-            "hint": "Select which {type} you want to be replaced by <strong>{selected}</strong>",
-            "label": "Original {type}",
-            "title": "Exchange {type} - {name}",
-            "yes": "Exchange"
+        "life-link": {
+            "error-no-target": "No target actor",
+            "error-no-source": "No source actor",
+            "error-source-is-target": "Can't transfer damage to self!",
+            "no-hp-remaining": "No HP remaining to transfer.",
+            "life-link-cooldown-effect": "Life Link CD",
+            "hp-add": "{actor} +{hp} HP",
+            "hp-sub": "{actor} -{hp} HP",
+            "spirit-link-error-bad-actor": "Bad origin actor for Spirit Linked effect on {actor}! See module readme.",
+            "spirit-link-button": "{hp} HP to {actor}",
+            "spirit-link-message": "<strong>Spirit Link</strong><br>{link}",
+            "life-link-error-bad-actor": "Bad origin actor for Life Linked effect on {actor}! See module readme.",
+            "share-life-error-bad-actor": "Bad origin actor for Share Life effect on {actor}! See module readme.",
+            "damage-button": "{damage} to {actor}",
+            "share-life-damage-button": "(Share Life) {damage} to {actor}",
+            "life-link-damage-button": "(Life Link) {damage} to {actor}",
+            "damage-transfer-message": "<strong>Damage Transfer</strong><br>{buttons}"
         },
-        "sheet": {
-            "title": "Daily Preparations",
-            "charges": {
-                "label": "Charges",
-                "tooltip": "Reset charges to maximum (max: {max})"
+        "template": {
+            "buttons": {
+                "grabbed-concealed": "Grabbed<br>Concealed",
+                "hidden-invisible-confused": "Hidden<br>Invisible<br>Confused",
+                "dc": "DC {value}"
             },
-            "generate": {
-                "tooltip": "Generate Spellcasting Entry",
-                "confirm": "Spellcasting entry for <strong>{name}</strong> has been created."
+            "emanation-request": {
+                "effect": "Effect",
+                "duration": "Duration",
+                "rounds": "round(s)",
+                "targets": "Targets",
+                "apply": "Apply",
+                "cancel": "Cancel"
             },
-            "retrain": "Exchange {type}",
-            "tactic": "Tactic",
-            "unrested": "Rest Required",
-            "vessel": "Primary Vessel"
-        },
-        "spellEntry": {
-            "name": "Temporary Spells"
-        },
-        "staves": {
-            "spontaneous": {
-                "title": "Use Spontaneous slot",
-                "remaining": "remaining",
-                "must": "You must consume a spontaneous slot of <strong>{rank}</strong>{higher} from {from}?",
-                "would": "Would you like to consume a spontaneous spell slot of <strong>{rank}</strong>{higher} from {from}?",
-                "one": "<strong>{entry}</strong>",
-                "multi": "any of the following spellcasting entries",
-                "higher": " or higher ",
-                "yes": "Consume"
-            },
-            "error": {
-                "missing": "Couldn't retrieve the staff.",
-                "notEquipped": "You need to equip your {staff} to use it."
-            }
+            "message-config-check-types": "Check Types",
+            "emanation-area": "{origin}, {area} ft"
+        }
+    },
+    "PF2E": {
+        "RuleElement": {
+            "fc-ModifyFlatDC": "Modify Flat DC",
+            "fc-AddCheck": "Add Check",
+            "fc-TreatAs": "Treat Condition As"
         }
     }
 }
