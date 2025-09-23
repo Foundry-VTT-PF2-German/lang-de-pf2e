@@ -570,7 +570,7 @@
         "Type": "Art"
       },
       "Speed": {
-        "BaseLabel": "Grundbewegungsrate {type}",
+        "BaseLabel": "{value} Fuß Bewegungsrate {type}",
         "Plural": "Bewegung",
         "Label": "Bewegungsrate",
         "LabelFeet": "Bewegungsrate (Fuß)",
@@ -1054,10 +1054,13 @@
         "SourcesLabel": "Quellen",
         "Title": "Einstellungen Kompendienbrowser"
       },
-      "TabAction": "Aktionen",
+      "TabAbilities": "Fähigkeiten",
       "TabBestiary": "Monster",
       "TabCampaign": "Kampagne",
+      "TabEquipment": "Ausrüstung",
       "TabFeat": "Merkmale/Talente",
+      "TabHazard": "Gefahren",
+      "TabSpell": "Zauber",
       "TakeLabel": "Gegenstand nehmen",
       "Title": "Kompendienbrowser",
       "TraitsComponent": {
@@ -2696,7 +2699,10 @@
       "Spell": {
         "Area": "{size}-{unit} {shape}",
         "BaseValue": "Basis: {value}",
-        "Cast": "Wirken",
+        "Cast": {
+          "Noun": "Wirken",
+          "Verb": "wirken"
+        },
         "Cost": "Kosten",
         "Counteract": {
           "Hint": "Wenn du einem Leiden entgegenwirkst, so ist der SG den Spielwerten des Leidens zu entnehmen. Bei einem Zauber handelt es sich um den Zauber-SG des Zauberwirkers. Der SL kann auch einen SG aufgrund der Stufe eines Effektes bestimmen.",
@@ -2843,6 +2849,23 @@
     "ItemNotSupportedOnActor": "Gegenstand für Charakter nicht zugelassen",
     "ItemRemoveRuleElement": "Regelement löschen",
     "ItemTitle": "Ggstd.",
+    "ItemTransferDialog": {
+      "Button": {
+        "gift": "Geben",
+        "move": "Transfer",
+        "purchase": "Kaufen"
+      },
+      "Prompt": {
+        "gift": "Diesen Gegenstand {actor} geben?",
+        "move": "Diesen Gegenstand zu {actor} verschieben?",
+        "purchase": "Möchte {actor} diesen Gegenstand kaufen?"
+      },
+      "Title": {
+        "gift": "{item} geben",
+        "move": "{item} verschieben",
+        "purchase": "{item} kaufen"
+      }
+    },
     "ItemsLabel": "Gegenstände",
     "Keybinding": {
       "CycleTokenStack": {
@@ -3454,11 +3477,11 @@
         },
         "Name": "Automatik",
         "ReachEnforcement": {
-          "Corpses": "Leichen",
-          "Doors": "Türen",
+          "corpses": "Leichen",
+          "doors": "Türen",
           "Hint": "Setze Reichweitenregeln fest, wenn Spieler/innen versuchen mit bestimmten Objekten auf der Spieloberfläche zu interagieren.",
-          "Loot": "Beute",
-          "Merchants": "Händler",
+          "loot": "Beute",
+          "merchants": "Händler",
           "Name": "Reichweitenregeln"
         },
         "RemoveExpiredEffects": {
@@ -3514,12 +3537,12 @@
         "Hint": "Setze das Symbol zum Markieren toter Gegner.",
         "Name": "Todessymbol"
       },
-      "DragMeasurement": {
-        "Always": "Immer",
-        "Encounters": "Während Begegnungen",
-        "Hint": "Miss die beim Ziehen eines Tokens zurückgelegte Distanz, ohne dass du eine weitere Taste gedrückt halten musst. Wegpunkte werden durch Drücken der Taste „{key}“ platziert und durch Rechtsklick entfernt.",
-        "Name": "Distanzmessung beim Ziehen",
-        "Never": "Nie"
+      "DistanceDisplay": {
+        "Hint": "Zeigt die Entfernung zwischen dem der kontrollierten Spielfigur und den Spielfiguren, über die mit der Maus gefahren wird, an.",
+        "Name": "Entfernung zwischen Spielfiguren anzeigen",
+        "always": "Immer",
+        "encounters": "Während Begegnungen",
+        "never": "Nie"
       },
       "EnabledDisabled": {
         "Enabled": "Aktiviert",
@@ -4027,6 +4050,60 @@
     "TotalCoinage": "Gesamtmünzen",
     "TotalTreasure": "Gesamter Schatz",
     "TotalWealth": "Gesamtvermögen",
+    "TradeDialog": {
+      "Aborted": "{user} hat den Handel beendet: Keine Gegenstände wurden getauscht.",
+      "Acceptance": {
+        "Accepted": "{user} hat dein Angebot akzeptiert.",
+        "Accept": "Angebot annehmen",
+        "NotAccepted": "{user} hat dein Angebot nicht akzeptiert.",
+        "Rescind": "Annahme widerrufen"
+      },
+      "Error": {
+        "Engaged": "{user} ist aktuell in einen Handel verwickelt.",
+        "LoggedOut": "Handel beendet: {user} ist nicht mehr eingeloggt.",
+        "NotTrading": "Handel beendet: {user} handelt nicht mehr.",
+        "OutOfReach": "{self} und {trader} sind nicht in Reichweite zueinander.",
+        "SelectToken": "Wähle genau eine SC- oder NSC-Spielfigur aus, für die du handeln willst.",
+        "Timeout": "Handel beendet: Keine Reaktion von {user} nach {timeout} Sekunden.",
+        "Unavailable": "Handel beendet: {user} ist nicht mehr verfügbar."
+      },
+      "Gift": {
+        "Accepted": "{trader} hat deinen Gegenstand bekommen.",
+        "Declined": "{trader} hat deinen Gegenstand abgelehnt.",
+        "Prompt": {
+          "Content": "{trader} ({user}) möchte {quantity}x {item} an {self} geben.",
+          "Title": "Gegenstand/Gegenstände erhalten?"
+        },
+        "Received": "{self} hat einen Gegenstand von {trader} erhalten."
+      },
+      "ImgAlt": {
+        "Actor": "Bild von {actor}, repräsentiert {user}",
+        "Item": "Bild für {item}"
+      },
+      "Quantity": {
+        "Decrement": "Menge reduzieren",
+        "Increment": "Menge erhöhen",
+        "Label": "Anzahl von {item}"
+      },
+      "Receiving": "Erhalten: {list}",
+      "Request": {
+        "Declined": "{trader} ({user}) hat deinen Handel abgelehnt.",
+        "Requesting": "Handel mit {trader} anfragen...",
+        "Prompt": {
+          "Content": "{trader} ({user}) würde gerne mit {self} handeln.",
+          "Title": "Mit {trader} handeln?"
+        },
+        "MenuLabel": "Handel erbitten",
+        "Timeout": "Es gab keine Antwort innerhalb von 30 Sekunden von {user} für deine Handelsanfrage."
+      },
+      "Sending": "Senden: {list}",
+      "Success": {
+        "Finished": "{self} hat den Handel mit {trader} beendet.",
+        "NoItems": "Der Handel wurde ausgeführt, es wurden aber keine Gegenstände ausgetauscht."
+      },
+      "Title": "Handel mit {trader}",
+      "You": "Du"
+    },
     "TrainedSkillsLabel": "Geübte Fertigkeiten",
     "TraitAberration": "Aberration",
     "TraitAcid": "Säure",
@@ -5092,6 +5169,9 @@
     "TraitReload1Min": "Nachladen 1 Min",
     "TraitReload2": "Nachladen 2",
     "TraitRepeating": "Repetier",
+    "TraitResilient1": "Resilient +1",
+    "TraitResilient2": "Resilient +2",
+    "TraitResilient3": "Resilient +3",
     "TraitResonant": "Energieleiter",
     "TraitRevelation": "Offenbarung",
     "TraitRogue": "Schurke",
@@ -6257,6 +6337,10 @@
         "rules": "<p>Jemand anders trifft deine Entscheidungen für dich. Meistens wirst du in diesem Fall magisch befehligt oder beherrscht. Der Steuernde bestimmt dein Handeln und kann dich jede dir mögliche Handlung, darunter Angriffe, Reaktionen und sogar Verzögern, durchführen lassen. Der Steuernde muss in der Regel keine eigenen Aktionen aufwenden, wenn er dich steuert.</p>",
         "summary": "Jemand anders trifft deine Entscheidungen für dich."
       },
+      "cursebound": {
+        "name": "Fluchgebunden",
+        "rules": "<p>Dein Mystikerfluch zieht sich um dich zusammen, da dir göttliche Strafe widerfährt, wenn du zu tiefgreifend auf die Kräfte deines Mysteriums zurückgreifst. Der Zustand Fluchgebunden betrifft nur Kreaturen mit einem Mystikerfluch und weist stets einen Zustandswert auf. Dein spezifischer Mystikerfluch verleiht dir einzigartige negative Effekte abhängig von deinem Zustandswert für Fluchgebunden. Du kannst den Zustandswert für Fluchgebunden nur reduzieren (bzw. den Zustand letztendlich entfernen), indem du Fokus erneuern nutzt.</p>"
+      },
       "dazzled": {
         "name": "Geblendet",
         "rules": "<p>Deine Augen sind überstimuliert. Sollte Sicht dein einziger Genauer Sinn sein, erhalten alle Kreaturen und Gegenstände dir gegenüber den Zustand Verborgen.</p>>",
@@ -6502,9 +6586,7 @@
       "DepositSubtitle": "Verstaue Gegenstand",
       "EditLootLabel": "Beute konfigurieren?",
       "GMSupervisionError": "Ein SL muss online sein um mit {loot} zu interagieren.",
-      "Give": "Geben",
       "GiveMessage": "{giver} gibt {quantity} × {item} an {recipient}.",
-      "GiveSubtitle": "Gib Gegenstand",
       "HiddenWhenEmpty": {
         "Hint": "Token(s) dieses Akteurs ausblenden, wenn sein Inventar leer ist",
         "Label": "Versteckt, wenn leer"
@@ -6522,14 +6604,11 @@
       "MerchantDescription": "Erlaube Spielern, Gegenstände direkt von dem Bogen zu kaufen.",
       "MerchantLabel": "Händler",
       "MoveLoot": "Verschiebe Gegenstände",
-      "MoveLootMessage": "Wieviele Gegenstände möchtest du verschieben?",
       "MoveLootPopupTitle": "Anzahl Gegenstände",
       "PartyStash": "Die Gruppenbeute",
       "PermissionError": "Ein SL muss online sein um Beute aufzuheben oder zu verstauen.",
       "PlantMessage": "{planter} platziert {quantity}x {item} auf {corpse}s Überresten.",
       "PlantSubtitle": "Platziere Ggst.",
-      "Purchase": "Kaufen",
-      "PurchaseLootPrompt": "Möchte {buyer} den Gegenstand kaufen?",
       "PurchasePrice": "Kaufpreis",
       "Quantity": "Menge",
       "SellMessage": "{seller} verkauft {quantity} × {item} an {buyer}.",
@@ -6581,6 +6660,30 @@
   },
   "SIDEBAR": {
     "TabCombat": "Begegnungs-Tracker"
+  },
+  "TOKEN": {
+    "MOVEMENT": {
+      "ACTIONS": {
+        "deploy": {
+          "label": "Deploy"
+        },
+        "drive": {
+          "label": "Steuern"
+        },
+        "jump": {
+          "label": "Springen"
+        },
+        "travel": {
+          "label": "Reisen"
+        },
+        "walk": {
+          "label": "Laufen"
+        },
+        "blink": {
+          "label": "Teleportieren"
+        }
+      }
+    }
   },
   "TYPES": {
     "Actor": {
