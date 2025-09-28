@@ -4187,7 +4187,7 @@
     },
     "Blazing Spirit": {
       "name": "Blazing Spirit",
-      "description": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Trigger</strong> A creature damages you with a melee attack.</p>\n<p><strong>Requirements</strong> Your attuned apparition grants Battlegrounds Lore or Volcano Lore as an apparition skill.</p>\n<hr />\n<p>Your apparition grants fiery defenses. You gain resistance equal to your level against the triggering damage, and the triggering creature takes @Damage[1d6[fire],1[persistent,fire]]{1d6 fire damage and 1 persistent fire} damage. This damage increases to @Damage[2d6[fire],2[persistent,fire]]{2d6 fire damage and 2 persistent fire} damage at 12th level, and @Damage[3d6[fire],3[persistent,fire]]{3d6 fire damage and 3 persistent fire} damage at 18th level.</p>"
+      "description": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Trigger</strong> A creature damages you with a melee attack.</p>\n<p><strong>Requirements</strong> Your attuned apparition grants Battlegrounds Lore or Volcano Lore as an apparition skill.</p>\n<hr />\n<p>Your apparition grants fiery defenses. You gain resistance equal to your level against the triggering damage, and the triggering creature takes @Damage[(ternary(gte(@actor.level,18),3,ternary(gte(@actor.level,12),2,1)))d6[fire],(ternary(gte(@actor.level,18),3,ternary(gte(@actor.level,12),2,1)))[persistent,fire]] damage. This damage increases to 2d6 fire damage and 2 persistent fire damage at 12th level, and 3d6 fire damage and 3 persistent fire damage at 18th level.</p>"
     },
     "Blazing Streak": {
       "name": "Blazing Streak",
@@ -32011,7 +32011,7 @@
     },
     "Scholastic Identification": {
       "name": "Scholastic Identification",
-      "description": "<p>You have the knowledge needed to understand ancient texts and cultural artifacts.</p>\n<p>You can use Society when @UUID[Compendium.pf2e.actionspf2e.Item.d9gbpiQjChYDYA2L]{Deciphering Writing}, no matter the type of writing you are examining.</p>\n<p>You can also use Society to @UUID[Compendium.pf2e.actionspf2e.Item.eReSHVEPCsdkSL4G]{Identify Magic} when examining a magic item or location with cultural significance.</p>",
+      "description": "<p>You have the knowledge needed to understand ancient texts and cultural artifacts.</p>\n<p>You can use Society when [[/act decipher-writing skill=society]]{Deciphering Writing}, no matter the type of writing you are examining.</p>\n<p>You can also use Society to [[/act identify-magic skill=society]] when examining a magic item or location with cultural significance.</p>",
       "prerequisites": [
         {
           "value": "Archaeologist Dedication"
@@ -32654,7 +32654,7 @@
     },
     "Settlement Scholastics": {
       "name": "Settlement Scholastics",
-      "description": "<p>Your studies open up new horizons. You become an expert in a Lore skill about a specific settlement; if you were already trained in that Lore skill, you also become trained in the Lore skill for a different settlement of your choice. Choose a single common or uncommon language prevalent in that settlement. You learn that language.</p>\n<p><strong>Special</strong> You can take this feat multiple times. When you take this feat again, choose a different settlement.</p>",
+      "description": "<p>Your studies open up new horizons. Choose a specific settlement. You gain the @UUID[Compendium.pf2e.feats-srd.Item.BocFD2KV0qgUC76x]{Additional Lore} skill feat in the Lore skill for that settlement and learn a single common or uncommon language of your choice that's prevalent in that settlement.</p>\n<hr />\n<p><strong>Special</strong> You can take this feat multiple times. When you take this feat again, choose a different settlement.</p>",
       "prerequisites": [
         {
           "value": "Archaeologist Dedication"
