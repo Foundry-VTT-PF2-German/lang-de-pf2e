@@ -1764,120 +1764,120 @@
           "description": "<p>Die Zerrleiche führt 3 Angriffe mit ihren Beinen aus. Wenn mehr als ein Angriff dabei dasselbe Ziel trifft, wird der Schaden der Angriffe addiert, bevor die Schwächen und Widerstände des Ziels angewandt werden.</p>"
         },
         "action->Impaling Lunge": {
-          "name": "Impaling Lunge",
-          "description": "<p>The necrohusk Strides twice. If the necrohusk ends its movement within melee range of an enemy, it makes a leg Strike against that enemy. On a hit, the Strike deals an additional @Damage[1d6[bleed]].</p>"
+          "name": "Durchbohrender Ausfallschritt",
+          "description": "<p>Der Zerrleiche führt zwei Mal die Aktion Gehen aus. Wenn die Zerrleiche ihre Bewegung in Nahkampfreichweite zu einem Gegner beendet, führt sie einen Angriff mit ihren Beinen gegen den Gegner durch. Bei einem Treffer fügt dieser Angriff zusätzliche @Damage[1d6[bleed]]{1W6 Blutungsschaden} zu.</p>"
         },
         "action->Vile Innards": {
-          "name": "Vile Innards",
-          "description": "<p>The necrohusk spews some of its rotting insides when it makes an ichor spit Strike. On a critical hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}.</p>"
+          "name": "Finstere Innereien",
+          "description": "<p>Wenn die Zerrleiche Eiter spuckt, versprüht sie damit einen Teil ihrer verrottenden Innereien. Bei einem Kritischen Treffer erleidet das Ziel den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 2}.</p>"
         }
       }
     },
     "Oil Explosion": {
-      "name": "Oil Explosion",
-      "description": "The flammable oil catches flame and explodes, burning up in a ball of fire.",
-      "disable": "<p>@Check[survival|dc:25|name:Neutralize the oil|traits:hazard,environmental,fire] (trained) or @Check[crafting|dc:23|name:Neutralize the oil|traits:hazard,environmental,fire] to neutralize the oil without setting it alight</p>",
-      "stealth": "(trained)",
+      "name": "Ölexplosion",
+      "description": "Das entflammbare Öl fängt Feuer und explodiert in einem Feuerball.",
+      "disable": "<p>@Check[survival|dc:25|traits:hazard,environmental,fire]{Überlebenskunde} (Geübt) oder @Check[crafting|dc:23|traits:hazard,environmental,fire]{Handwerkskunst} um das Öl zu neutralisieren, ohne es in Brand zu setzen</p>",
+      "stealth": "(Geübt)",
       "items": {
         "action->Explode": {
-          "name": "Explode",
-          "description": "<p><strong>Trigger</strong> An open flame is brought into area <strong>A4</strong></p>\n<hr />\n<p><strong>Effect</strong> The oil on the walls explodes, dealing @Damage[(4d8+10)[fire]] damage to all creatures and objects in areas <strong>A4</strong> and <strong>A3</strong>(@Check[reflex|dc:21|traits:hazard,environmental,fire|basic]).</p>"
+          "name": "Explodieren",
+          "description": "<p><strong>Auslöser</strong> Eine offene Flamme wird in den Bereich <strong>N4</strong> gebracht</p>\n<hr />\n<p><strong>Effekt</strong>  Das Öl an den Wänden explodiert und fügt allen Kreaturen und Gegenständen in den Bereichen <strong>N4</strong> und <strong>N3</strong> @Damage[(4d8+10)[fire]]{4W8+10 Feuerschaden} zu (@Check[reflex|dc:21|traits:hazard,environmental,fire|basic]{einfacher Reflexwurf}).</p>"
         }
       }
     },
     "Pakano": {
       "name": "Pakano",
-      "acDetails": "(21 with shield raised)",
-      "blurb": "Male Kellid hunter",
+      "acDetails": "(21 mit erhobenem Schild)",
+      "blurb": "Kellidischer Jäger",
       "items": {
         "shield->Buckler": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.1k3AsSW7lpU0kEpY]\n<p>This very small shield is a favorite of duelists and quick, lightly armored warriors. It's typically made of steel and strapped to your forearm. You can Raise a Shield with your buckler as long as you have that hand free or are holding a light object that's not a weapon in that hand.</p>\n<table class=\"pf2e\">\n<thead>\n<tr>\n<th>Hardness</th>\n<th>HP</th>\n<th>BT</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>3</td>\n<td>6</td>\n<td>3</td>\n</tr>\n</tbody>\n</table>"
+          "description": "<Compendium>"
         },
         "strike-melee->Spear": {
-          "name": "Spear"
+          "name": "Speer"
         },
         "strike-ranged->Spear": {
-          "name": "Spear"
+          "name": "Speer"
         },
         "strike-ranged->Tallow Bomb": {
-          "name": "Tallow Bomb"
+          "name": "Talgbombe"
         },
         "action->Spurred by Death": {
-          "name": "Spurred by Death",
-          "description": "<p><strong>Trigger</strong> An ally within 30 feet reduces a creature to 0 HP</p>\n<hr />\n<p><strong>Effect</strong> Pakano Steps or Strides.</p>"
+          "name": "Vom Tod angespornt",
+          "description": "<p><strong>Auslöser</strong> Ein Verbündeter innerhalb vom 30 Fuß/9 m reduziert eine Kreatur auf 0 TP</p>\n<hr />\n<p><strong>Effekt</strong> Pakano nutzt Schritt oder Laufen.</p>"
         },
         "action->Hunt Prey": {
-          "name": "Hunt Prey",
-          "description": "<p>Pakano designates a single creature he can see and hear, or one he's Tracking, as his prey. He gains a +2 circumstance bonus to Perception checks to @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Seek} his prey and to Survival checks to @UUID[Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD]{Track} his prey.</p>\n<p>The first time Pakano hits his designated prey in a round, he deals an additional 1d8 precision damage. Pakano also ignores the penalty for making ranged attacks within his second range increment.</p>\n<p>These effects last until Pakano uses Hunt Prey again.</p>"
+          "name": "Jagdbeute",
+          "description": "<p>Pakano wählt eine einzelne Kreatur als seine Beute und konzentriert seine Angriffe auf sie. Er muss imstande sein, diese Beute zu sehen oder zu hören, oder während der Erkundung ihren Spuren folgen. Er erlangt einen Situationsbonus von +2 auf Wahrnehmungswürfe, wenn er seine Beute @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Suchen}, und auf Fertigkeitswürfe für Überlebenskunde, wenn er die Beute mittels @UUID[Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD]{Spuren folgen} jagt. Pakano ignoriert zudem den Malus auf Fernkampfangriffe, sollte sich seine Jagdbeute innerhalb der zweiten Entfernungsreichweite seiner Waffe befinden. Diese Effekte halten solange vor, bis Pakano Jagdbeute erneut nutzt.</p>"
         },
         "action->Spear Fighter": {
-          "name": "Spear Fighter",
-          "description": "<p>Pakano's spear has the parry weapon trait, and his Strikes with the spear deal an additional [[/r {1d6}]]{1d6 damage}. If he critically hits a creature with a spear, the creature is @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} until the start of Pakano's next turn.</p>",
+          "name": "Speerkämpfer",
+          "description": "<p>Pakanos Speer hat die Waffeneigenschaft Parade, und seine Angriffe mit dem Speer fügen @Damage[1d6]{1W6 zusätzlichen Schaden} zu. Wenn er mit dem Speer einen Kritischen Treffer erzielt, erhält die getroffene Kreatur zusätzlich bis zum Beginn von Pakanos nächstem Zug den Zustand @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 1}.</p>",
           "rules": {
             "0": {
-              "text": "If he critically hits a creature with a spear, the creature is @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} until the start of Pakano's next turn."
+              "text": "Wenn er mit dem Speer einen Kritischen Treffer erzielt, erhält die getroffene Kreatur zusätzlich bis zum Beginn von Pakanos nächstem Zug den Zustand @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 1}."
             }
           }
         }
       }
     },
     "Pakano (Level 12)": {
-      "name": "Pakano (Level 12)",
-      "blurb": "Male Kellid hunter",
+      "name": "Pakano (Stufe 12)",
+      "blurb": "Kellidischer Jäger",
       "skillSpecialStealth": {
         "0": {
-          "label": "in ice and snow"
+          "label": "in Eis und Schnee"
         }
       },
       "tokenName": "Pakano",
       "items": {
         "strike-melee->Jaws": {
-          "name": "Jaws"
+          "name": "Biss"
         },
         "action->Death Throes": {
-          "name": "Death Throes",
-          "description": "<p>When a frost worm dies, it explodes in a @Template[burst|distance:100] of searing cold blood. All creatures and objects in range take @Damage[10d8[cold]|options:area-damage] damage (@Check[reflex|dc:29|basic|options:area-effect] save).</p>"
+          "name": "Todeszuckungen",
+          "description": "<p>Beim Tod eines Frostwurms zerbirst dieser zu schneidend kaltem Blut im Wirkungsbereich einer @Template[burst|distance:100]{Explosion mit 100 Fuß/30 m Radius}. Sämtliche Kreaturen und Gegenstände innerhalb des Wirkungsbereiches erleiden @Damage[10d8[cold]|options:area-damage]{10W8 Kälteschaden} (@Check[reflex|dc:29|basic|options:area-effect]{einfacher Reflexwurf}).</p>"
         },
         "action->Human Cunning": {
-          "name": "Human Cunning",
-          "description": "<p>Pakano's allies are unaffected by his worm chill aura and Worm Trill, and his Freezing Blood affects random enemies instead of random creatures. His Death Throes, however, still affect all creatures and objects in a 100-foot burst.</p>"
+          "name": "Menschlicher Verstand",
+          "description": "<p>Pakanos Verbündete sind von seiner Wurmfrost-Aura und seinem Wurmkreischer nicht betroffen. Sein Gefrierendes Blut trifft zufällige Feinde statt zufälliger Kreaturen. Sein Todeszuckungen betreffen aber weiterhin alle Kreaturen und Gegenstände innerhalb von 100 Fuß/30 m.</p>"
         },
         "action->Worm Chill": {
-          "name": "Worm Chill",
-          "description": "<p>5 feet. A creature that enters or begins its turn in the emanation takes @Damage[3d6[cold]|options:area-damage] damage (@Check[reflex|dc:29|basic|options:area-effect]).</p>"
+          "name": "Wurmfrost",
+          "description": "<p>5 Fuß/1,50 m. Eine Kreatur, welche den Wirkungsbereich betritt oder ihren Zug darin beginnt, erleidet @Damage[3d6[cold]|options:area-damage]{3W6 Kälteschaden} (@Check[reflex|dc:29|basic|options:area-effect]{einfacher Reflexwurf})</p>"
         },
         "action->Worm Trill": {
-          "name": "Worm Trill",
-          "description": "<p>The frost worm emits a hypnotic trill. Each non-frost worm creature within 100 feet must attempt a @Check[will|dc:32] save. The effects of Worm Trill last for 1 round, but if the frost worm uses this ability again on subsequent rounds, it extends this duration by 1 round for any creature already affected.</p>\n<p><strong>Success</strong> The creature is unaffected and is immune to Worm Trill for 24 hours.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fascinated} by the frost worm.</p>\n<p><strong>Critical Failure</strong> As failure, but the fascinated condition doesn't end if the frost worm uses hostile actions against the creature.</p>"
+          "name": "Wurmkreischer",
+          "description": "<p>Der Frostwurm stößt ein hypnotisierendes Trillern aus. Jede Kreatur innerhalb einer Reichweite von 100 Fuß/30 m, die nicht der Gattung des Frostwurmes angehört, muss einen @Check[will|dc:32]{Willenswurf} ablegen. Die Effekte des Wurmkreischers halten 1 Runde lang an. Nutzt der Frostwurm die Fähigkeit aber in mehreren aufeinanderfolgenden Runden, dehnt sich die Wirkungsdauer um 1 Runde für jede bereits vom Effekt betroffene Kreatur aus.</p>\n<p><strong>Erfolg</strong> Die Kreatur wird vom Effekt nicht beeinflusst und ist zudem 24 Stunden lang immun gegen den Wurmkreischer.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fasziniert} gegenüber dem Frostwurm.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie beim Fehlschlag, der Zustand Fasziniert endet jedoch nicht, wenn der Frostwurm feindliche Aktionen gegenüber der Kreatur ausführt.</p>"
         },
         "action->Breath Weapon": {
-          "name": "Breath Weapon",
-          "description": "<p>The frost worm exhales a blast of frost, dealing @Damage[13d6[cold]|options:area-damage] damage to creatures in a @Template[cone|distance:50] (@Check[reflex|dc:32|basic|options:area-effect] save).</p>\n<p>It can't use Breath Weapon again for [[/gmr 1d4 #Recharge Breath Weapon]]{1d4 rounds}.</p>"
+          "name": "Odemwaffe",
+          "description": "<p>Der Frostwurm speit eine Welle des Frostes aus, die Kreaturen innerhalb des Wirkungsbereiches eines @Template[cone|distance:50]{50 Fuß/15 m Kegels} @Damage[13d6[cold]|options:area-damage]{13W6 Kälteschaden} zufügt (@Check[reflex|dc:32|basic|options:area-effect]{einfacher Reflexwurf}). Im Anschluss kann der Frostwurm seine Odemwaffe [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht nutzen.</p>"
         },
         "action->Freezing Blood": {
-          "name": "Freezing Blood",
-          "description": "<p><strong>Trigger</strong> The frost worm takes piercing or slashing damage</p>\n<hr />\n<p><strong>Effect</strong> The frost worm's freezing blood sprays out on a random creature within 10 feet of the frost worm. That creature takes @Damage[7d6[cold]] damage (@Check[reflex|dc:29|basic] save).</p>"
+          "name": "Gefrierendes Blut",
+          "description": "<p><strong>Auslöser</strong> Der Frostwurm erleidet Stichschaden oder Hiebschaden</p>\n<hr />\n<p><strong>Effekt</strong> Das gefrierende Blut des Frostwurmes spritzt aus ihm heraus auf eine zufällig bestimmte Kreatur innerhalb einer Reichweite von 10 Fuß/3 m zum Frostwurm. Diese Kreatur erleidet @Damage[7d6[cold]]{7W6 Kälteschaden} (@Check[reflex|dc:29|basic]{einfacher Reflexwurf}).</p>"
         },
         "lore->Mammoth Lord Lore": {
-          "name": "Mammoth Lord Lore"
+          "name": "Kenntnis [Mammutherren]"
         }
       }
     },
     "Pouncing Tiger Haunt": {
-      "name": "Pouncing Tiger Haunt",
-      "description": "<p>A cave painting of a great cat roars to life and leaps off the wall to attack.</p>",
-      "disable": "<p>@Check[nature|dc:18|name:Quell the Spirit|traits:hazard,haunt] (trained) or @Check[religion|dc:18|name:Quell the Spirit|traits:hazard,haunt] (trained) to quell the spirit</p>",
-      "reset": "<p>If the cave painting isn't destroyed, the haunt resets after 1 day.</p>",
-      "stealth": "<p>(trained)</p>",
+      "name": "Spuk des springenden Tigers",
+      "description": "<p>Eine Höhlenmalerei, die eine Raubkatze zeigt, erwacht zum Leben, springt von der Wand und greift an.</p>",
+      "disable": "<p>@Check[nature|dc:18|traits:hazard,haunt]{Naturkunde} (Geübt) oder @Check[religion|dc:18|traits:hazard,haunt]{Religionskunde} (Geübt), um den Geist zu bändigen.</p>",
+      "reset": "<p>Wenn die Höhlenmalerei nicht zerstört wird, setzt sich der Spuk nach 1 Tag zurück.</p>",
+      "stealth": "<p>(Geübt)</p>",
       "items": {
         "action->Tiger Slash": {
-          "name": "Tiger Slash",
-          "description": "<p><strong>Trigger</strong> A living creature approaches within 5 feet of the cave painting</p>\n<hr />\n<p><strong>Effect</strong> The haunt deals @Damage[4d8[slashing]] damage with semisolid claws (@Check[will|dc:18|basic]). On a failed save, the target is also @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} and @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} for 1 round (or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} and fleeing for 1 minute on a critical failure).</p>"
+          "name": "Tigerpranke",
+          "description": "<p><strong>Auslöser</strong> Eine lebende Kreatur kommt auf 5 Fuß/1,50 m oder weniger an die Höhlenmalerei heran</p>\n<hr />\n<p><strong>Effekt</strong>  Der Spuk verursacht mit halb-soliden Klauen @Damage[4d8[slashing]]{4W8 Hiebschaden} (@Check[will|dc:18|basic]einfacher Willenswurf}). Bei einem Fehlschlag beim Rettungswurf erhält das Ziel außerdem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1} und 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fliehend} (oder @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2} und Fliehend für 1 Minute bei einem Kritischen Fehlschlag).</p>"
         }
       }
     },
     "Punishing Altar": {
-      "name": "Punishing Altar",
+      "name": "Strafender Altar",
       "description": "Die Schale setzt eine Welle negativer Energie frei, wenn sich ein Lebewesen nähert, ohne ein religiöses Symbol von Venexus zu tragen.",
       "disable": "<p>@Check[thievery|dc:22|traits:hazard,magical,necromancy,void,trap]{Diebeskunst} (Experte), um die Schale zu entfernen, ohne die Magie auszulösen, oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (2. Grad, @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken} SG 20), um die Runen zu neutralisieren.</p>",
       "stealth": "(geübt), um zu bemerken, dass die Schale der Fokus einer magischen Falle ist",
@@ -1931,14 +1931,14 @@
       }
     },
     "Rockfall Ceiling": {
-      "name": "Rockfall Ceiling",
-      "description": "A load of rocks, held up by a rope pulley, is dropped on the cavern's lower level.",
-      "disable": "<p>@Check[thievery|dc:25|name:Pin the pulley in place|traits:hazard,mechanical,trap] (trained) to pin the pulley in place</p>",
-      "stealth": "(trained)",
+      "name": "Steinschlagdecke",
+      "description": "Eine Menge Steine, die von einem Seilzug gehalten wird, wird auf die untere Ebene der Höhle fallen gelassen.",
+      "disable": "<p>@Check[thievery|dc:25|traits:hazard,mechanical,trap]{Diebeskunst} (Geübt), um die Seilrolle zu blockieren</p>",
+      "stealth": "(Geübt)",
       "items": {
         "action->Drop Rocks": {
-          "name": "Drop Rocks",
-          "description": "<p><strong>Trigger</strong> A creature holding the rope pulley pulls it</p>\n<hr />\n<p><strong>Effect</strong> The net releases, dropping rocks on all creatures and objects in the lower half of area <strong>A15</strong>, dealing @Damage[(4d8+14)[bludgeoning]] damage (@Check[reflex|dc:26|traits:hazard,mechanical,trap|basic]). The area then becomes difficult terrain.</p>"
+          "name": "Steine fallen lassen",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur, die den Seilzug hält, zieht daran</p>\n<hr />\n<p><strong>Effekt</strong> Das Netz löst sich und lässt Steine auf alle Kreaturen und Gegenstände in der unteren Hälfte von Bereich <strong>N15</strong> fallen, die @Damage[(4d8+14)[bludgeoning]]{4W8+14 Wuchtschaden} verursachen (@Check[reflex|dc:26|traits:hazard,mechanical,trap|basic]{einfacher Reflexwurf}). Das Gebiet wird dann zu Schwierigem Gelände.</p>"
         }
       }
     },
@@ -1995,215 +1995,215 @@
       }
     },
     "Shattering Rune": {
-      "name": "Shattering Rune",
-      "description": "A magical rune is inscribed on the tarry earth at the entrance to the hut, buried beneath snow, with an @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Invisible} sensor that detects creatures within a 10-foot-radius sphere.",
-      "disable": "<p>@Check[thievery|dc:30|name:Erase the Rune|traits:hazard] (master) to erase the rune without triggering the sensor or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (5th rank; counteract DC 28) to dispel the rune</p>",
-      "stealth": "(master)",
+      "name": "Zerschmetternde Rune",
+      "description": "Eine magische Rune ist in die teerige Erde am Eingang der Hütte eingraviert, unter Schnee begraben, mit einem Unsichtbaren Sensor, der Kreaturen in einem Radius von 10 Fuß/3 m erfasst.",
+      "disable": "<p>@Check[thievery|dc:30|traits:hazard]{Diebeskunst} (Meister), um die Rune zu entfernen, ohne den Sensor auszulösen, oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (5. Grad; @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken} SG 28), um die Rune zu bannen</p>",
+      "stealth": "(Meister)",
       "items": {
         "action->Shattering Shockwave": {
-          "name": "Shattering Shockwave",
-          "description": "<p><strong>Trigger</strong> A Small or larger creature comes within 10 feet of the rune</p>\n<hr />\n<p><strong>Effect</strong> The rune unleashes a deafening peal of thunder that deals @Damage[10d8[sonic]] damage in a 20-foot burst (@Check[reflex|dc:30|basic]).</p>"
+          "name": "Zerschmetternde Schockwelle",
+          "description": "<p><strong>Auslöser</strong> Eine Kleine oder größere Kreatur nähert sich der Rune auf 10 Fuß/3 m</p>\n<hr />\n<p><strong>Effekt</strong> Die Rune entfesselt einen ohrenbetäubenden Donnerschlag, der in einer @Template[burst|distance:20]{20 Fuß/6-m-Explosion} @Damage[10d8[sonic]]{10W8 Schallschaden} verursacht (@Check[reflex|dc:30|basic]{einfacher Reflexwurf}).</p>"
         }
       }
     },
     "Skeletal Woolly Rhinoceros": {
-      "name": "Skeletal Woolly Rhinoceros",
-      "hpDetails": "void healing",
+      "name": "Skelletiertes Wollnashorn",
+      "hpDetails": "Leerenheilung",
       "items": {
         "strike-melee->Horn": {
           "name": "Horn"
         },
         "strike-melee->Foot": {
-          "name": "Foot"
+          "name": "Fuß"
         },
         "action->Rhinoceros Charge": {
-          "name": "Rhinoceros Charge",
-          "description": "<p>The rhino Strides twice, then makes a horn Strike. As long as the rhino moved at least 20 feet, the Strike's damage increases to @Damage[(3d12+5)[piercing]]. A Medium or smaller creature struck by this attack must succeed at a @Check[reflex|dc:22] save or be automatically Shoved back 5 feet and knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} by the force of the blow.</p>"
+          "name": "Nashornsturmangriff",
+          "description": "<p>Das Nashorn nutzt zwei Aktionen zum Laufen und führt anschließend einen Angriff mit seinem Horn aus. Sofern sich das Nashorn zumindest 20 Fuß/6 m weit bewegt hat, erhöht sich der Schaden dieses Angriffes auf @Damage[(3d12+5)[piercing]]{3W12+5 Stichschaden}. Jede Kreatur der Größenkategorie Mittelgroß oder kleiner, die von diesem Angriff getroffen wird, muss einen erfolgreichen @Check[reflex|dc:22]{Reflexwurf} ablegen, um nicht automatisch von der Stoßkraft 5 Fuß/1,50 m nach hinten Fortgestoßen zu werden und den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend} zu erhalten.</p>"
         },
         "action->Trample": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.UNah0bxXxkcZjxO3]\n<p>Medium or smaller, foot, @Check[reflex|dc:19|basic]</p>\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Trample]</p>"
+          "description": "<p>Mittelgroß oder kleiner, Fuß, @Check[reflex|dc:19|basic]{einfacher Reflexwurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Trample]</p>"
         }
       }
     },
     "Soul Draining Cage": {
-      "name": "Soul Draining Cage",
-      "description": "Necromantic runes inscribed on the cage bars and lock drain the vitality of living creatures who interact with the cage.",
-      "disable": "<p>@Check[thievery|dc:25|name:Drain the rune's power|traits:hazard,magical,necromancy,void,trap] (expert) to drain the runes' power harmlessly or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (3rd rank; counteract DC 22) to counteract the rune</p>",
-      "stealth": "<p>(expert) or @UUID[Compendium.pf2e.spells-srd.Item.gpzpAAAJ1Lza2JVl]{Detect Magic}</p>",
+      "name": "Seelenraubkäfig",
+      "description": "Nekromantische Runen, die in die Gitterstäbe und das Schloss des Käfigs eingraviert sind, entziehen den Lebewesen, die mit dem Käfig in Berührung kommen, Lebenskraft.",
+      "disable": "<p>@Check[thievery|dc:25|traits:hazard,magical,necromancy,void,trap]{Diebeskunst} (Experte), um die Kraft der Runen harmlos zu entziehen, oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (3. Grad; @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken} SG 22), um der Rune entgegenzuwirken</p>",
+      "stealth": "<p>(Experte) oder @UUID[Compendium.pf2e.spells-srd.Item.gpzpAAAJ1Lza2JVl]{Magie entdecken}</p>",
       "items": {
         "action->Soul Drain": {
-          "name": "Soul Drain",
-          "description": "<p><strong>Trigger</strong> A creature touches the cage bars, door, or lock directly or with a tool</p>\n<hr />\n<p><strong>Effect</strong> The trap deals @Damage[(4d8+18)[void]] damage to the triggering creature, creatures inside the cage, and all creatures adjacent to the cage (@Check[fortitude|dc:27|traits:hazard,trap|basic]). On a failed save, a creature is also @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}.</p>"
+          "name": "Seelenraub",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur berührt die Gitterstäbe, die Tür oder das Schloss des Käfigs direkt oder mit einem Werkzeug</p>\n<hr />\n<p><strong>Effekt</strong> Die Falle fügt der auslösenden Kreatur, den Kreaturen im Inneren des Käfigs und allen Kreaturen in der Nähe des Käfigs @Damage[(4d8+18)[void]]{4W8+18 Leerenschaden} zu (@Check[fortitude|dc:27|traits:hazard,trap|basic]{einfacher Zähigkeitswurf}). Bei einem Fehlschlag bei dem Rettungswurf erhält eine Kreatur zusätzlich den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 1}.</p>"
         }
       }
     },
     "Spectral Archers": {
-      "name": "Spectral Archers",
-      "description": "Ghostly soldiers wielding crossbows manifest within the towers that flank the gatehouse and rain bolts down upon intruders.",
-      "disable": "<p>@Check[intimidation|dc:31|traits:haunt,hazard] (expert) to cow the archers into fleeing or @Check[religion|dc:28|name:Banish the Spirits|traits:haunt,hazard] (expert) to temporarily banish the spirits</p>",
-      "reset": "The haunt vanishes permanently if the graveknights are destroyed. Otherwise, it returns after 1 hour.",
-      "stealth": "(expert)",
+      "name": "Spektrale Armbrustschützen",
+      "description": "Geisterhafte Soldaten mit Armbrüsten erscheinen in den Türmen, die das Torhaus flankieren, und lassen Bolzen auf Eindringlinge herabregnen.",
+      "disable": "<p>@Check[intimidation|dc:31|traits:haunt,hazard]{Einschüchtern} (Experte), um die Armbrustschützen in die Flucht zu schlagen oder @Check[religion|dc:28|traits:haunt,hazard]{Religionskunde} (Experte), um die Geister vorübergehend zu vertreiben</p>",
+      "reset": "Der Spuk verschwindet dauerhaft, wenn die Grabesritter vernichtet werden. Andernfalls kehrt er nach 1 Stunde zurück.",
+      "stealth": "(Experte)",
       "items": {
         "action->Rain of Bolts": {
-          "name": "Rain of Bolts",
-          "description": "<p><strong>Trigger</strong> A creature attacks the graveknights in area <strong>G1</strong> or enters the castle</p>\n<hr />\n<p><strong>Effect</strong> The haunt makes a spectral bolt Strike against the triggering creature, then rolls initiative.</p>"
+          "name": "Bolzenhagel",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur greift die Grabesritter in Bereich <strong>X1</strong> an oder betritt die Burg</p>\n<hr />\n<p><strong>Effekt</strong> Der Spuk führt einen Geisterbolzen-Angriff gegen die auslösende Kreatur durch und würfelt dann die Initiative.</p>"
         },
         "action->Routine": {
-          "name": "Routine",
-          "description": "<p>(1 action) The hazard fires one bolt at every creature in a 30-foot-by-30-foot area in front of the gate as 1 action. Because the spectral archers fire bolts continuously, the haunt can also use the Continuous Barrage free action (below) to fire bolts at each creature during that creature's turn.</p>"
+          "name": "Ablauf",
+          "description": "<p>(1 Aktion) Die Gefahr feuert als 1 Aktion einen Bolzen auf jede Kreatur in einem 30x30 Fuß/9x9 m großen Gebiet vor dem Tor ab. Da die Spektralen Armbrustschützen kontinuierlich Bolzen abfeuern, kann der Spuk auch die Freie Aktion Dauerfeuer (siehe unten) verwenden, um während des Zuges jeder Kreatur Bolzen auf diese Kreatur abzufeuern.</p>"
         },
         "action->Continuous Barrage": {
-          "name": "Continuous Barrage",
-          "description": "<p><strong>Trigger</strong> A creature in front of the gate finishes an action</p>\n<hr />\n<p><strong>Effect</strong> The haunt makes a spectral bolt Strike against the triggering creature.</p>"
+          "name": "Dauerbeschuss",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur vor dem Tor beendet eine Aktion</p>\n<hr />\n<p><strong>Effekt</strong> Die Spukerscheinung führt einen Geisterbolzen-Angriff gegen die auslösende Kreatur durch.</p>"
         },
         "strike-melee->Spectral Bolt": {
-          "name": "Spectral Bolt",
-          "description": "<p>No multiple attack penalty.</p>"
+          "name": "Geisterbolzen",
+          "description": "<p>kein Malus für Mehrfachangriffe</p>"
         }
       }
     },
     "Summer Hora": {
-      "name": "Summer Hora",
-      "languages": "speak with animals, speak with plants",
+      "name": "Sommerhora",
+      "languages": "Mit Tieren sprechen, Mit Pflanzen sprechen",
       "privateNotes": "<p>Summer horai appear constantly bathed in sunlight, with skin and clothing of red, orange, and yellow, like the sunlight of high summer.</p>\n<p>The Summer Hora is under the constant effects of @UUID[Compendium.pf2e.spells-srd.Item.BBvV7qoXGdw09q1C]{Speak with Animals} and @UUID[Compendium.pf2e.spells-srd.Item.qvwIwJ9QBihy8R0t]{Speak with Plants}.</p>",
       "items": {
         "spellcastingEntry->Primal Innate Spells": {
-          "name": "Primal Innate Spells"
+          "name": "Immanente Naturzauber"
         },
         "spell->Alarm": {
-          "requirements": "3 gp silver bell focus"
+          "requirements": "Fokus (Silberglocke im Wert von 3 GM)"
         },
         "spell->Know Direction": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.tXa5vOu5giBNCjdR]\nKnow Direction"
+          "name": "<Compendium>"
         },
         "spell->Light": {
-          "target": "1 object of 1 Bulk or less, either unattended or possessed by you or a willing ally"
+          "target": "1 Gegenstand von maximal 1 Last, den entweder niemand oder du oder ein bereitwilliger Verbündeter mit sich führt"
         },
         "spell->Pass Without Trace": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.zlnXpME1T2uvn8Lr]\nPass Without Trace"
+          "name": "<Compendium>"
         },
         "strike-melee->Solar Blade": {
-          "name": "Solar Blade"
+          "name": "Sonnenklinge"
         },
         "strike-ranged->Solar Ray": {
-          "name": "Solar Ray"
+          "name": "Sonnenstrahl"
         },
         "action->Summer Bound": {
-          "name": "Summer Bound",
-          "description": "<p>During the winter months, a summer hora can't take reactions, is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, and can't reduce their sickened condition below 1.</p>"
+          "name": "Sommergebunden",
+          "description": "<p>Während der Wintermonate kann die Sommerhora keine Reaktionen durchführen, unterliegt dem Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1} und kann den Wert dieses Zustands nicht unter 1 reduzieren.</p>"
         },
         "action->Solstice Dependent": {
-          "name": "Solstice Dependent",
-          "description": "<p>An hora is mystically bonded to a natural location with a simple astronomical calendar that marks the summer and winter solstice. If they aren't at that location at dawn when the sunlight touches the calendar, they become @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}, increasing the value by 1 for each missed day and reducing by 1 only when they witness dawn's light touch the calendar. Even on a cloudy day, there's enough sunlight to satisfy the hora's need. An hora can perform a 24-hour ritual to bond to a new location.</p>"
+          "name": "Abhängig von der Sonnenwende",
+          "description": "<p>Eine Hora ist auf mystische Weise durch einen einfachen astronomischen Kalender mit einem Ort verbunden. Dieser Kalender markiert die Sommer- und Wintersonnenwende. Wenn sie nicht an diesem Ort ist, wenn zur Dämmerung die Sonne den Kalender berührt, erleidet sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 1}. Dieser Wert erhöht sich pro weiterem verstrichenen Tag, an dem diese Bedingung nicht zutrifft, um 1. Er reduziert sich um 1 pro Tag, an dem diese Bedingung zutrifft. Selbst an einem wolkigen Tag gibt es genügend Licht, um dieses Bedürfnis zu befriedigen. Eine Hora kann ein 24stündiges Ritual durchführen, um sich an einen neuen Ort zu binden.</p>"
         },
         "action->Summer's Salvation": {
-          "name": "Summer's Salvation",
-          "description": "<p><strong>Trigger</strong> The summer hora or an ally within 30 feet that the summer hora can see fails a Perception check or saving throw</p>\n<hr />\n<p><strong>Effect</strong> If it's the month of the summer solstice, the hora's or ally's check retroactively gains a +4 status bonus, which can change the outcome from a critical failure to a failure or a failure to a success. If it's the month before or after the summer solstice, the check gains a retroactive +2 status bonus instead. In the other months except during the three winter solstice months, the check gains a retroactive +1 status bonus instead. During the winter solstice months, this ability has no effect. The summer hora can't use Summer's Fortune again for [[/gmr 1d4 #rounds]]{1d4 rounds}.</p>"
+          "name": "Heil des Sommers",
+          "description": "<p><strong>Auslöser</strong> Die Sommerhora oder ein Verbündeter innerhalb von 30 Fuß/9 m in Sichtlinie der Sommerhora erleidet einen Fehlschlag bei einem Wahrnehmungs- oder Rettungswurf</p>\n<hr />\n<p><strong>Effekt</strong> Wenn gerade der Monat der Sommersonnenwende ist, erhält der Wurf der Hora oder des Verbündeten rückwirkend einen Zustandsbonus von +4, welcher das Ergebnis von einem Kritischen Fehlschlag in eine Fehlschlag oder von einem Fehlschlag in einen Erfolg wandeln kann. Wenn es der Monat vor oder nach der Sommersonnenwende ist, beträgt dieser Bonus nur +2. In den anderen Monaten außerhalb den drei Monaten der Wintersonnenwende beträgt der Bonus nur +1. Während der drei Monate der Wintersonnenwende hat diese Fähigkeit keinen Effekt. Einmal eingesetzt, kann die Sommerhora diese Fähigkeit erst nach [[/gmr 1d4 #Runden]]{1W4 Runden} erneut verwenden.</p>"
         },
         "lore->Astronomy Lore": {
-          "name": "Astronomy Lore"
+          "name": "Kenntnis [Astronomie]"
         }
       }
     },
     "Summer Hora Queen": {
-      "name": "Summer Hora Queen",
-      "languages": "speak with animals, speak with plants",
+      "name": "Sommerhorakönigin",
+      "languages": "Mit Tieren sprechen, Mit Pflanzen sprechen",
       "privateNotes": "<p>Hora queens rule over wide stretches of land, nourishing and protecting native animals and plants. Most hora queens watch over their regions in pairs: one summer and one winter, or one autumn and one spring.</p>\n<p>The Summer Hora Queen is under the constant effects of @UUID[Compendium.pf2e.spells-srd.Item.BBvV7qoXGdw09q1C]{Speak with Animals} and @UUID[Compendium.pf2e.spells-srd.Item.qvwIwJ9QBihy8R0t]{Speak with Plants}.</p>",
       "items": {
         "spellcastingEntry->Primal Prepared Spells": {
-          "name": "Primal Prepared Spells"
+          "name": "Vorbereitete Naturzauber"
         },
         "spellcastingEntry->Primal Innate Spells": {
-          "name": "Primal Innate Spells"
+          "name": "Immanente Naturzauber"
         },
         "spell->Baleful Polymorph": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.dN8QBNuTiaBHCKUe]\nBaleful Polymorph"
+          "name": "<Compendium>"
         },
         "spell->Blanket Of Stars": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.m34WOIGZCEg1h76G]\nBlanket Of Stars"
+          "name": "<Compendium>"
         },
         "spell->Stone Tell": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.YIMampGpij4Y30yE]\nStone Tell"
+          "name": "<Compendium>"
         },
         "spell->True Seeing": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.uqlxMQQeSGWEVjki]\nTrue Seeing"
+          "name": "<Compendium>"
         },
         "spell->Tree Stride": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.F1qxaqsEItmBura2]\nTree Stride"
+          "name": "<Compendium>"
         },
         "spell->Speak with Plants (Constant)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.qvwIwJ9QBihy8R0t]\nSpeak with Plants (Constant)"
+          "name": "<Compendium> (ständig)"
         },
         "spell->Nondetection": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.EoKBlgf6Smt8opaU]\nNondetection"
+          "name": "<Compendium>"
         },
         "spell->Restore Senses": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.Et8RSCLx8w7uOLvo]\nRestore Senses",
-          "target": "1 creature"
+          "name": "<Compendium>",
+          "target": "1 Kreatur"
         },
         "spell->Speak with Animals (Constant)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.BBvV7qoXGdw09q1C]\nSpeak with Animals (Constant)"
+          "name": "<Compendium> (ständig)"
         },
         "spell->Tree Shape": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.dileJ0Yxqg76LMvu]\nTree Shape"
+          "name": "<Compendium>"
         },
         "spell->Alarm": {
-          "requirements": "3 gp silver bell focus"
+          "requirements": "Fokus (Silberglocke im Wert von 3 GM)"
         },
         "spell->Dancing Lights": {
-          "name": "Dancing Lights",
-          "description": "<p>You create up to four floating lights, no two of which are more than 10 feet apart. Each sheds light like a torch. When you Sustain the Spell, you can move any number of lights up to 60 feet. Each light must remain within 120 feet of you and within 10 feet of all others, or it winks out.</p>"
+          "name": "Tanzende Lichter",
+          "description": "<p>Du erschaffst bis zu vier schwebende Lichter in einem Abstand von nicht mehr als 10 Fuß/3 Meter voneinander. Jedes erhellt seine Umgebung wie eine @UUID[Compendium.pf2e.equipment-srd.8Jdw4yAzWYylGePS]{Fackel}. Erhältst du den Zauber aufrecht, darfst du eine beliebige Anzahl der Lichter bis zu 60 Fuß/18 m weit bewegen. Dabei muss jedes Licht innerhalb von 120 Fuß/36 m Reichweite von dir und innerhalb von 10 Fuß/3 m von den anderen Lichtern bleiben. Ansonsten erlischt es.</p>"
         },
         "spell->Know Direction": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.tXa5vOu5giBNCjdR]\nKnow Direction"
+          "name": "<Compendium>"
         },
         "spell->Light": {
-          "target": "1 object of 1 Bulk or less, either unattended or possessed by you or a willing ally"
+          "target": "1 Gegenstand von maximal 1 Last, den entweder niemand oder du oder ein bereitwilliger Verbündeter mit sich führt"
         },
         "spell->Longstrider": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.KcLVELhCUcKXxiKE]\nLongstrider"
+          "name": "<Compendium>"
         },
         "spell->Pass Without Trace": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.zlnXpME1T2uvn8Lr]\nPass Without Trace"
+          "name": "<Compendium>"
         },
         "spell->Tanglefoot": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.uZK2BYzPnxUBnDjr]\nTanglefoot"
+          "name": "<Compendium>"
         },
         "strike-melee->Solar Blade": {
-          "name": "Solar Blade"
+          "name": "Sonnenklinge"
         },
         "strike-ranged->Solar Ray": {
-          "name": "Solar Ray"
+          "name": "Sonnenstrahl"
         },
         "action->Summer Bound": {
-          "name": "Summer Bound",
-          "description": "<p>During the winter months, a summer hora can't take reactions, is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, and can't reduce their sickened condition below 1.</p>"
+          "name": "Sommergebunden",
+          "description": "<p>Während der Wintermonate kann die Sommerhora keine Reaktionen durchführen, unterliegt dem Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1} und kann den Wert dieses Zustands nicht unter 1 reduzieren.</p>"
         },
         "action->Tied to the Land": {
-          "name": "Tied to the Land",
-          "description": "<p>A summer hora queen is intrinsically tied to a specific region, such as a forest or hilly plain. For 3 months around the summer solstice, the environment is supernaturally resilient, allowing the queen to automatically attempt to counteract spells and rituals that would harm the environment, such as @UUID[Compendium.pf2e.spells-srd.Item.7yWXx3qC4eFNHhxD]{Blight}, with a +27 counteract modifier and a counteract rank of 7. For the 3 months around the winter solstice, however, her warded region becomes twisted or unhealthy unless a winter hora queen is present.</p>"
+          "name": "Landgebunden",
+          "description": "<p>Eine Sommerhorakönigin ist an eine spezielle Region wie einen Wald oder eine Hügellandschaft gebunden. Für die 3 Monate der Sommersonnenwende ist diese Umgebung besonders widerstandsfähig, was es der Königin erlaubt, Zaubern und Ritualen automatisch Entgegenzuwirken, so sie die Landschaft schädigen würden. Dies ist beispielsweise beim Ritual @UUID[Compendium.pf2e.spells-srd.Item.7yWXx3qC4eFNHhxD]{Dürre} der Fall. Ihr Entgegenwirkenmodifikator beträgt +27 und ihr Grad zum Entgegenwirken ist 7. Sollte die Sommerhorakönigin während der drei Monate der Wintersonnenwende nicht vor Ort sein, wird ihre Region verzerrt oder krank.</p>"
         },
         "action->Nymph's Beauty": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.kG4fDd16fYEFvmgy]\nNymph's Beauty",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.kG4fDd16fYEFvmgy]\n<p>30 feet. Creatures that start their turn in the aura must succeed at a @Check[will|dc:30] save or suffer an effect described in the nymph queen's entry.</p>\n<hr />\n<p>On a failed save, the creature is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} and @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} for 1 minute.</p>"
+          "name": "Nymphenschönheit",
+          "description": "<p>30 Fuß/9m. Beginnt eine Kreatur ihren Zug innerhalb der Aura, muss sie einen @Check[will|dc:30]{Willenswurf} ablegen</p>\n<p>Bei einem Fehlschlag erleidet die Kreatur 1 Minute lang die Zustände @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet} und @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß}.</p>"
         },
         "action->Change Shape": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.eXleBXdAemiEoHA8]\nChange Shape"
+          "name": "Gestalt wechseln"
         },
         "action->Focus Beauty": {
-          "name": "Focus Beauty",
-          "description": "<p>The hora queen focuses her beauty upon a target within her aura. The creature must attempt a Will save. On a failure, it is affected as if by the hora queen's nymph's beauty aura; if it was already affected by the aura, it's @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} until its sight is restored via restore senses or similar effect, or until the hora queen chooses to remove the effect using a single action, which has the concentrate trait. A hora queen can Focus Beauty on a given creature only once per turn.</p>"
+          "name": "Bezaubernde Schönheit",
+          "description": "<p>Die Horakönigin fokussiert ihre Schönheit auf ein Ziel innerhalb ihrer Aura. Die Kreatur muss einen @Check[will|dc:30]{Willenswurf} ablegen. Bei einem Fehlschlag ist sie von den Effekten der Aura Nymphenschönheit betroffen. Sollte sie bereits von diesen betroffen gewesen sein ist sie nun @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind}, bis dies mittels @UUID[Compendium.pf2e.spells-srd.Item.Et8RSCLx8w7uOLvo]{Gesunder Leib} oder einem ähnlichen Zauber behoben wurde, oder die Horakönigin diesen Effekt freiwillig mittels einer Aktion beendet. Diese Aktion verfügt über die Kategorie Konzentration. Bezaubernde Schönheit kann von der Horakönigin nur einmal pro Runde gegen eine Kreatur eingesetzt werden.</p>"
         },
         "action->Inspiration": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.IFQd4GiHlV33p7oK]\nInspiration",
+          "name": "Inspiration",
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.IFQd4GiHlV33p7oK]\n<p>A nymph queen can inspire a single intelligent creature by giving that creature a token of her favor, typically a lock of her hair. As long as the creature carries her token and remains in good standing with the nymph queen, the creature gains a +1 status bonus to all Crafting checks, Performance checks, and Will saves.</p>\n<p>If a nymph queen grants her Inspiration to a bard and the nymph queen is that bard's muse, the bard gains an additional benefit depending on their muse theme: for lore muse, the bard also gains a +1 status bonus to all Lore checks; for maestro muse, the status bonus to Performance checks increases to +2 for the purpose of determining the effects of compositions; for polymath muse, the bard gains a +4 status bonus to untrained skill checks; and for all other muses, the Will save bonus increases to +2 against fey.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.iSyyR4QVOaY6mxtg]{Effect: Nymph Queen's Inspiration}</p>"
         },
         "action->Summer's Salvation": {
-          "name": "Summer's Salvation",
-          "description": "<p><strong>Trigger</strong> The summer hora or an ally within 30 feet that the summer hora can see fails a Perception check, saving throw, attack roll, or skill check.</p>\n<hr />\n<p><strong>Effect</strong> If it's the month of the summer solstice, the hora's or ally's check retroactively gains a +4 status bonus, which can change the outcome from a critical failure to a failure or a failure to a success. If it's the month before or after the summer solstice, the check gains a retroactive +2 status bonus instead. In the other months except during the three winter solstice months, the check gains a retroactive +1 status bonus instead. During the winter solstice months, this ability has no effect. The summer hora can't use Summer's Fortune again for [[/gmr 1d4 #rounds]]{1d4 rounds}.</p>"
+          "name": "Heil des Sommers",
+          "description": "<p><strong>Auslöser</strong> Die Sommerhora oder ein Verbündeter innerhalb von 30 Fuß/9 m in Sichtlinie der Sommerhora erleidet einen Fehlschlag bei einem Angriffs-, Fertigkeits-, Wahrnehmungs- oder Rettungswurf</p>\n<hr />\n<p><strong>Effekt</strong> Wenn gerade der Monat der Sommersonnenwende ist, erhält der Wurf der Hora oder des Verbündeten rückwirkend einen Zustandsbonus von +4, welcher das Ergebnis von einem Kritischen Fehlschlag in eine Fehlschlag oder von einem Fehlschlag in einen Erfolg wandeln kann. Wenn es der Monat vor oder nach der Sommersonnenwende ist, beträgt dieser Bonus nur +2. In den anderen Monaten außerhalb den drei Monaten der Wintersonnenwende beträgt der Bonus nur +1. Während der drei Monate der Wintersonnenwende hat diese Fähigkeit keinen Effekt. Einmal eingesetzt, kann die Sommerhora diese Fähigkeit erst nach [[/gmr 1d4 #Runden]]{1W4 Runden} erneut verwenden.</p>"
         },
         "lore->Astronomy Lore": {
-          "name": "Astronomy Lore"
+          "name": "Kenntnis [Astronomie]"
         }
       }
     },
