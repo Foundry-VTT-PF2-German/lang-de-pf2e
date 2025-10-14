@@ -1565,55 +1565,55 @@
         },
         "action->Smoke Bomb Launcher": {
           "name": "Rauchbombenwerfer",
-          "description": "<p>The clockwork assassin launches a smoke bomb. A screen of thick, opaque smoke fills a @Template[burst|distance:10] within 60 feet of the clockwork assassin. Creatures within the area are concealed, and all other creatures are concealed to them. The smoke lasts for 1 minute or until dispersed by a strong wind.</p>"
+          "description": "<p>Der Mechanische Mörder schleudert ein Rauchbombe. In bis zu 60 Fuß/18 m Entfernung vom Mechanischen Mörder füllt ein dichter, undurchlässiger Rauchvorhang einen @Template[burst|distance:10]{10 Fuß/3 m durchmessenden Explosionsbereich}. Eine Kreatur, die sich innerhalb des Wirkungsbereiches befindet, gilt als @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Verborgen} und sämtliche andere Kreaturen erleiden gegenüber der Kreatur ebenfalls den Zustand Verborgen. Der Rauch hält 1 Minute lang an, sofern er nicht zuvor von einem starken Wind verweht wird.</p>"
         },
         "action->Sneak Attack": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>The clockwork assassin's Strikes deal an additional 3d6+4 precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
+          "description": "<p>Die Angriffe des Mechanischen Mörders verursachen gegen Kreaturen mit dem Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} zusätzlich 3W6+4 Präzisionsschaden.</p>"
         },
         "action->Unbalancing Blow": {
-          "name": "Unbalancing Blow",
-          "description": "<p>Creatures hit by the clockwork assassin's rapier hand Strike are @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} until the start of the clockwork assassin's next turn.</p>"
+          "name": "Gleichgewicht raubender Schlag",
+          "description": "<p>Kreaturen, die von einem Nahkampfangriff mit der Rapierhand des Mechanischen Mörders getroffen werden, erleiden bis zum Beginn der nächsten Runde des Mechanischen Mörders den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß}.</p>"
         }
       }
     },
     "Clockwork Poison Bomb": {
-      "name": "Clockwork Poison Bomb",
-      "description": "<p>A clockwork bomb releases gouts of poisonous smoke. The smoke issues forth from a single nozzle attached to two tanks of pressurized poison</p>",
-      "disable": "<p>Three [[/act disable-device dc=31]]{DC 31 Thievery} (expert) checks to @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device} to disable the latches that lock the nozzle in place, then one [[/act disable-device dc=35]]{DC 35 Thievery} (master) check to Disable a Device to turn off the nozzle; DCs decrease by 2 if Oggvurm is immobilized, paralyzed, unconscious, or dead</p>",
-      "hpDetails": "to ruin the nozzle (making it impossible to disable, in which case the only way to disarm the bomb is to destroy both its tanks); <strong>Tank Hardness</strong> 15; <strong>Tank HP</strong> 80 (BT 40) to destroy one of the tanks (both tanks must be destroyed to disarm the bomb",
-      "reset": "<p>The trap issues smoke for 3 minutes before its tanks run dry. The tanks must be replaced before the bomb can be reactivated.</p>",
+      "name": "Mechanische Giftbombe",
+      "description": "<p>Ein Mechanismus setzt stoßweise giftigen Rauch aus einem Ventil frei, das mit zwei unter Druck stehenden Tanks verbunden ist.</p>",
+      "disable": "<p>Drei Würfe für Diebeskunst zum [[/act disable-device dc=31]] (Experte), um das Ventil freizulegen, und ein Wurf für Diebeskunst zum [[/act disable-device dc=35]] (Meister), um das Ventil zu schließen; die SG sinken um 2, sofern Oggvorm Bewegungsunfähig, Bewusstlos, Gelähmt, Tot oder anderweitig kampfunfähig ist oder ihm der Harnisch mit der Bombe abgenommen wurde.</p>",
+      "hpDetails": "um das Ventil zu zerstören (es kann dann nicht mehr entschärft werden, in diesem Fall müssen beide Tankauslässe zerstört werden, um die Bombe zu entschärfen); <strong>Tank-Härte</strong> 15; <strong>Tank-TP</strong> 80 (BW 40), um einen der Tankauslässe zu zerstören (dies muss bei beiden Tanks ausgeführt werden).",
+      "reset": "<p>Die Falle stößt 3 Minuten lang Rauch aus, ehe die Tanks erschöpft sind. Ehe die Bombe reaktiviert werden kann, müssen die Tanks ersetzt, bzw. neu befüllt werden.</p>",
       "routine": "<p>(1 action) On its turn, the bomb spews forth a smoky gout of airborne @UUID[Compendium.pf2e.equipment-srd.Item.WvDbdESFJY6Be2u1]{Blackfinger Blight} poison. The cloud fills a 20-foot radius, or a 10-foot radius if only one tank remains intact. If the bomb is already in the center of a blackfinger blight cloud, the radius of that cloud increases by 20 feet (or 10 feet, if only one tank remains intact) instead.</p>",
       "stealth": "<p>Die Bombe nutzt Oggvorms Initiativewurf als Wurf für Heimlichkeit.</p>",
       "items": {
         "action->Poisonous Cloud": {
           "name": "Giftwolke",
-          "description": "<p><strong>Trigger</strong> The bomb is Activated, which requires 3 actions</p>\n<hr />\n<p><strong>Effect</strong> The bomb releases a smoky cloud of @UUID[Compendium.pf2e.equipment-srd.Item.WvDbdESFJY6Be2u1]{Blackfinger Blight} in a 20-foot radius. Creatures within the smoke are @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} from other creatures.</p>\n<p>Any creature that starts its turn in the smoke must roll a @Check[fortitude|dc:32|name:Blackfinger Blight|traits:contact,virulent] saving throw to avoid being afflicted by blackfinger blight poison.</p>\n<p>The cloud remains for 1 minute or until dispersed by strong winds.</p>"
+          "description": "<p><strong>Auslöser</strong> Die Bombe ist Aktiviert (zum Aktivieren benötigt Oggvorm 3 Aktionen)</p>\n<hr />\n<p><strong>Effekt</strong> Die Bombe stößt eine Rauchwolke der @UUID[Compendium.pf2e.equipment-srd.Item.WvDbdESFJY6Be2u1]{Schwarzfingerplage} in einem @Template[emanation|distance:20]{20 Fuß/6 m-Radius} aus. Kreaturen innerhalb des Rauches erhalten gegenüber anderen Kreaturen den Zustand @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Verborgen}. Jede Kreatur, die ihren Zug innerhalb der Wolke beginnt, muss einen @Check[fortitude|dc:32|traits:contact,virulent]{Zähigkeitswurf} ablegen, um nicht von der Schwarzfingerplage betroffen zu werden. Die Wolke währt 1 Minute lang, sofern sie nicht vorher von starken Winden verteilt wird.</p>"
         }
       }
     },
     "Cobbleswarm (AoE)": {
-      "name": "Cobbleswarm (AoE)",
+      "name": "Pflastersteinschwarm (AP KW)",
       "items": {
         "action->Precise Tremorsense 40 feet": {
-          "name": "Precise Tremorsense 40 feet",
-          "description": "<p>The cobbleswarm's tremorsense is a precise sense out to 40 feet and an imprecise sense out to 80 feet. The cobbleswarm can't sense anything beyond the range of its tremorsense.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Tremorsense]</p>"
+          "name": "Erschütterungssinn (Genau) 40 Fuß/12 m",
+          "description": "<p>Der Erschütterungssinn des Pflastersteinschwarms wird bis zu einer Reichweite von 40 Fuß/12 m als genauer Sinn und bis zu einer Reichweite von 80 Fuß/24 m als ungenauer Sinn behandelt. Der Pflastersteinschwarm kann mithilfe seines Erschütterungssinnes nichts wahrnehmen, dass sich außerhalb dieser Reichweite befindet.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Tremorsense]</p>"
         },
         "action->Clutching Cobbles": {
-          "name": "Clutching Cobbles",
-          "description": "<p>The cobbleswarm's space is difficult terrain.</p>"
+          "name": "Pflasterkletten",
+          "description": "<p>Der vom Pflastersteinschwarm belegte Bereich bildet Schwieriges Gelände.</p>"
         },
         "action->Grasping Bites": {
-          "name": "Grasping Bites",
-          "description": "<p>The cobbleswarm attempts an @Check[athletics] check and compares the result to the Fortitude DC of all creatures in its space.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature falls @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} and takes @Damage[1d6[bludgeoning]] damage, and is @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} by the cobbleswarm until the end of the cobbleswarm's next turn.</p>\n<p><strong>Success</strong> The creature falls prone, and is @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} by the cobbleswarm until the creature until the end of the cobbleswarm's next turn.</p>"
+          "name": "Niederreißende Bisse",
+          "description": "<p>Der Pflastersteinschwarm legt einen Fertigkeitswurf für @Check[athletics]{Athletik} ab und vergleicht das Ergebnis des Wurfes mit dem Zähigkeitswurf-SG sämtlicher Kreaturen in seiner Angriffsfläche.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}, wobei sie @Damage[1d6[bludgeoning]]{1W6 Wuchtschaden} erleidet. Zudem erleidet die Kreatur vom Pflastersteinschwarm bis zum Ende dessen nächsten Zuges den Zustand @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Gebunden}.</p>\n<p><strong>Erfolg</strong> Die Kreatur erhält den Zustand Liegend und durch den Pflastersteinschwarm bis zum Ende dessen nächsten Zuges den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen}.</p>"
         },
         "action->Pummeling Assault": {
-          "name": "Pummeling Assault",
-          "description": "<p>Each enemy in the cobbleswarm's space takes @Damage[2d4[bludgeoning]] damage (@Check[reflex|dc:17|basic] save).</p>"
+          "name": "Steinschlag",
+          "description": "<p> Jeder Gegner innerhalb der Angriffsfläche des Pflastersteinschwarms erleidet @Damage[2d4[bludgeoning]]{2W4 Wuchtschaden} (@Check[reflex|dc:17|basic]{einfacher REF}).</p>"
         }
       }
     },
     "Copper Hand Illusionist": {
-      "name": "Copper Hand Illusionist",
+      "name": "Illusionist der Kupferhände",
       "acDetails": "(mit Magierrüstung)",
       "items": {
         "spellcastingEntry->Prepared Arcane Spells": {
@@ -1632,7 +1632,7 @@
           "name": "+1 Dolch"
         },
         "equipment->Spellbook": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.FOWF5f0tCaApv9RE]\nSpellbook"
+          "name": "Zauberbuch"
         },
         "consumable->Healing Potion (Moderate)": {
           "description": "<Compendium>"
@@ -1641,12 +1641,12 @@
           "name": "Dolch"
         },
         "action->Sneak Attack": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>The Copper Hand illusionist deals 2d6 additional precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
+          "description": "<p>Der Illusionist fügt @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} angetroffenen Kreaturen zusätzlich 2W6 Punkte Präzisionsschaden zu.</p>"
         }
       }
     },
     "Copper Hand Rogue": {
-      "name": "Copper Hand Rogue",
+      "name": "Schurke der Kupferhände",
       "items": {
         "consumable->Black Adder Venom": {
           "description": "<Compendium>"
@@ -1658,12 +1658,12 @@
           "name": "Handarmbrust"
         },
         "action->Nimble Dodge": {
-          "name": "Nimble Dodge",
-          "description": "<p><strong>Trigger</strong> A creature targets the Copper Hand rogue with an attack, and the rogue can see the attacker</p>\n<hr />\n<p><strong>Effect</strong> The rogue dodges out of the way, gaining a +2 circumstance bonus to AC against the triggering attack.</p>"
+          "name": "Behändes Ausweichen",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur greift den Schurken an, wobei dieser den Angreifer sehen kann</p>\n<hr />\n<p><strong>Effekt</strong> Der Schurke weicht aus und erlangt einen Situationsbonus von +2 auf seine RK gegen den auslösenden Angriff.</p>"
         },
         "action->Poison Weapon": {
-          "name": "Poison Weapon",
-          "description": "<p>The rogue applies one of their black adder venom poisons to their wielded weapon. If their next attack with that weapon before the end of their next turn hits and deals damage, the target is afflicted with the poison.</p>"
+          "name": "Waffe vergiften",
+          "description": "<p>Der Schurke trägt auf eine seiner geführten Waffen eine Anwendung Schwarzviperngift auf. Sofern sein nächster Angriff mit dieser Waffe vor Ende seines nächsten Zuges trifft und Schaden verursacht, so wird das Ziel dem Gift ausgesetzt.</p>"
         },
         "action->Sneak Attack": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>The Copper Hand rogue deals 1d6 additional precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
@@ -1671,10 +1671,10 @@
       }
     },
     "Daemonic Infector": {
-      "name": "Daemonic Infector",
+      "name": "Daimonischer Infektor",
       "skillSpecialCrafting": {
         "0": {
-          "label": "when crafting poison"
+          "label": "Gift herstellen"
         }
       },
       "items": {
@@ -1708,24 +1708,24 @@
           "name": "Klaue"
         },
         "action->Combustible": {
-          "name": "Combustible",
-          "description": "<p>The first time each round that the Daemonic Infector takes fire damage, his fumes combust, dealing @Damage[30[fire]] damage to all other creatures within the area of his toxic fumes aura.</p>"
+          "name": "Entzündlich",
+          "description": "<p>Wenn der Daimonische Infektor erstmals in einer Runde Feuerschaden erleidet, entzünden sich seine Dämpfe und fügen allen anderen Kreaturen im Bereich seiner Giftige-Dämpfe-Aura @Damage[30[fire]]{30 Punkte Feuerschaden} zu.</p>"
         },
         "action->Toxic Fumes": {
-          "name": "Toxic Fumes",
-          "description": "<p>10 feet. A creature that enters or begins its turn within the aura must attempt a @Check[fortitude|dc:44] save.</p>\n<p>On a failed save, the creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, and on a critical failure, it's also @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} for 1 minute. In addition, creatures within the aura attempting a flat check to remove @UUID[Compendium.pf2e.conditionitems.Item.lDVqvLKA6eF3Df60]{Persistent Poison Damage} must roll twice and take the lower result.</p>"
+          "name": "Giftige Dämpfe",
+          "description": "<p>10 Fuß/3 m. Eine Kreatur, welche die Aura betritt oder in ihr ihren Zug beginnt, muss einen @Check[fortitude|dc:44]{Zähigkeitswurf} ablegen. Misslingt der Rettungswurf, erhält die Kreatur den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1} (plus im Fall eines Kritischen Fehlschlages den Zustand @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 1} für 1 Minute). Legt eine Kreatur innerhalb der Aura einen Einfachen Wurf ab, um Anhaltenden Giftschaden zu entfernen, muss sie zweimal würfeln und das schlechtere Ergebnis behalten.</p>"
         },
         "action->Breathe Death": {
-          "name": "Breathe Death",
-          "description": "<p>The Daemonic Infector exhales a @Template[line|distance:30] of concentrated fumes.</p>\n<p>Each creature in the area takes @Damage[12d10[poison]|options:area-damage] damage (@Check[fortitude|dc:44|basic|options:area-effect,inflicts:drained] save; on a critical failure the creature is also @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}).</p>\n<p>The Infector can't Breathe Death again for [[/gmr 1d4 #Recharge Breathe Death]]{1d4 rounds}.</p>"
+          "name": "Todesodem",
+          "description": "<p>Der Daimonische Infektor atmet eine @Template[line|distance:30]{30 Fuß/9 m-Linie} konzentrierter Dämpfe aus. Jede Kreatur im Wirkungsbereich erleidet @Damage[12d10[poison]|options:area-damage]{12W10 Punkte Giftschaden} (@Check[fortitude|dc:44|basic|options:area-effect,inflicts:drained]{einfacher ZÄH}); im Fall eines Kritischen Fehlschlages erhält die Kreatur zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 1}. Der Infektor kann diese Fähigkeit erst nach [[/gmr 1d4 #Runden]]{1W4 Runden} erneut einsetzen.</p>"
         },
         "action->Infector": {
-          "name": "Infector",
-          "description": "<p>The Daemonic targets a creature within 30 feet that's currently subject to a poison affliction. The poison affliction progresses to the next stage.</p>"
+          "name": "Infektor",
+          "description": "<p>Der Daimonische Infektor wählt eine Kreatur innerhalb von 30 Fuß/9 m als Ziel, welche gegenwärtig unter einer Vergiftung leidet. Das Gift schreitet in die nächste Phase.</p>"
         },
         "action->Steady Spellcasting": {
-          "name": "Steady Spellcasting",
-          "description": "<p>If a reaction would disrupt the Daemonic Infector's spellcasting action, he attempts a @Check[flat|dc:15] check. On a success, the action isn't disrupted.</p>"
+          "name": "Standhaftes Zauberwirken",
+          "description": "<p>Sollte eine Reaktion das Zauberwirken des Daimonischen Infektors unterbrechen, steht ihm ein @Check[flat|dc:15]{Einfacher Wurf} zu; bei Erfolg wird sein Zauber nicht unterbrochen.</p>"
         },
         "lore->Norgorber Lore": {
           "name": "Kenntnis [Norgorber]"
@@ -1733,7 +1733,7 @@
       }
     },
     "Daemonic Rumormonger": {
-      "name": "Daemonic Rumormonger",
+      "name": "Daimonischer Gerüchtemacher",
       "items": {
         "spellcastingEntry->Divine Innate Spells": {
           "name": "Immanente Göttliche Zauber"
@@ -1757,20 +1757,20 @@
           "name": "Zerbrochene Federkiele"
         },
         "action->Opportune Dodge": {
-          "name": "Opportune Dodge",
-          "description": "<p><strong>Trigger</strong> A creature critically fails a Strike against the Daemonic Rumormonger</p>\n<hr />\n<p><strong>Effect</strong> The Rumormonger dodges out of the way and uses his momentum to attack and move out of reach. He Strides up to 20 feet and can Strike at any point during this movement; this Strike counts toward the multiple attack penalty on his next turn.</p>"
+          "name": "Opportunes Ausweichen",
+          "description": "<p><strong>Auslöser</strong> Einer Kreatur unterläuft bei einem Angriff auf den Daimonischen Gerüchtemacher ein Kritischer Fehlschlag</p>\n<hr />\n<p><strong>Effekt</strong> Der Gerüchtemacher weicht dem Angriff aus und nutzt seinen Schwung, um selbst anzugreifen und sich dann aus dem Angriffsradius zu bewegen. Er nutzt Laufen, um sich maximal 20 Fuß/6 m weit zu bewegen; während dieser Fortbewegung kann er zu einem beliebigen Zeitpunkt einen Angriff führen. Dieser Angriff zählt in seinem nächsten Zug für seinen Malus für Mehrfachangriffe.</p>"
         },
         "action->Black Ink Delirium": {
-          "name": "Black Ink Delirium",
-          "description": "<p><strong>Saving Throw</strong> @Check[fortitude|dc:38]</p>\n<p><strong>Maximum Duration</strong> 4 rounds</p>\n<p><strong>Stage 1</strong> @Damage[3d6[poison]] damage and @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2} (1 round)</p>\n<p><strong>Stage 2</strong> @Damage[6d6[poison]] damage and @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} (1 round)</p>"
+          "name": "Schwarzes Tintendelirium",
+          "description": "<p><strong>Rettungswurf</strong> @Check[fortitude|dc:38]{Zähigkeitswurf}</p>\n<p><strong>Maximaldauer</strong> 4 Runden</p>\n<p><strong>Phase 1</strong> @Damage[3d6[poison]]{3W6 Giftschaden} und @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 2} (1 Runde)</p>\n<p><strong>Phase 2</strong> @Damage[6d6[poison]]{6W6 Giftschaden} und @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Verwirrt} (1 Runde)</p>"
         },
         "action->Breath of Lies": {
-          "name": "Breath of Lies",
-          "description": "<p>The Daemonic Rumormonger breathes a torrent of acidic sand and poisoned ink in an @Template[line|distance:80], dealing @Damage[6d12[acid],6d12[poison]|options:area-damage]{6d12 acid damage and 6d12 poison damage} and exposing victims to his black ink delirium.</p>\n<p>He can't use Breath of Lies again for [[/gmr 1d4 #Recharge Breath of Lies]]{1d4 rounds}.</p>"
+          "name": "Lügenodem",
+          "description": "<p> Der Daimonische Gerüchtemacher stößt einen Wirbel aus ätzendem Sand und giftiger Tinte auf einer @Template[line|distance:80]{80 Fuß/24 m-Linie} aus. Dies verursacht @Damage[6d12[acid],6d12[poison]|options:area-damage]{6W12 Säureschaden und 6W12 Giftschaden} und setzt die Opfer seinem Schwarzen Tintendelirium aus.</p>\n<p>Er kann diese Fähigkeit erst nach [[/gmr 1d4 #Runden]]{1W4 Runden} wieder nutzen.</p>"
         },
         "action->Whirling Slashes": {
-          "name": "Whirling Slashes",
-          "description": "<p>The Daemonic Rumormonger Strides up to his Speed. He can make up to three claw Strikes, each against a different target, at any points during this Stride. His multiple attack penalty applies as usual.</p>"
+          "name": "Klauenwirbel",
+          "description": "<p>Der Daimonische Gerüchtemacher nutzt Laufen und bewegt sich um bis zu seine Bewegungsrate. Er kann zu beliebigen Zeitpunkten während dieser Fortbewegung bis zu drei Klauenangriffe ausführen, wobei jeder Angriff ein anderes Ziel haben muss. Sein Malus für Mehrfachangriffe kommt normal zur Anwendung.</p>"
         },
         "lore->Engineering Lore": {
           "name": "Kenntnis [Ingenieurskunst]"
@@ -1778,7 +1778,7 @@
       }
     },
     "Daemonic Skinner": {
-      "name": "Daemonic Skinner",
+      "name": "Daimonische Häuterin",
       "items": {
         "spellcastingEntry->Divine Innate Spells": {
           "name": "Immanente Göttliche Zauber"
@@ -1802,51 +1802,51 @@
           "name": "Blutkette"
         },
         "action->Bloody Chain Aura": {
-          "name": "Bloody Chain Aura",
-          "description": "<p>20 feet. Chains of blood bind a bleeding creature to the Daemonic Skinner.</p>\n<p>Creatures in range that are taking @UUID[Compendium.pf2e.conditionitems.Item.lDVqvLKA6eF3Df60]{Persistent Bleed Damage} can't move out of the aura.</p>\n<p>The Skinner can have only one aura active at a time.</p>\n<p>She can switch her active aura as an Interact action.</p>"
+          "name": "Blutige Ketten",
+          "description": "<p>20 Fuß/6 m. Ketten aus Blut binden eine unter Blutungsschaden leidende Kreatur an die Daimonische Häuterin. Kreaturen innerhalb der Aura, welche unter Anhaltendem Blutungsschaden leiden, können den Wirkungsbereich der Aura nicht verlassen.</p>\n<p>Die Häuterin kann nur eine Aura aktiv haben; sie kann allerdings mit einer Aktion der Kategorie Interagieren zwischen ihren Auren wechseln.</p>"
         },
         "action->Spell Choke": {
-          "name": "Spell Choke",
-          "description": "<p><strong>Trigger</strong> A creature taking @UUID[Compendium.pf2e.conditionitems.Item.lDVqvLKA6eF3Df60]{Persistent Bleed Damage} within 30 feet of the Daemonic Skinner Casts a Spell with a verbal component or speaks</p>\n<hr />\n<p><strong>Effect</strong> The Skinner wills the triggering creature's blood to gush from their mouth and constrict their throat. The target's spell is disrupted.</p>\n<p>The target must succeed at a @Check[fortitude|dc:47] save or become @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}.</p>"
+          "name": "Zauber ersticken",
+          "description": "<p><strong>Auslöser</strong> Eine maximal 30 Fuß/9 m entfernte, unter Anhaltendem Blutungsschaden leidende Kreatur spricht oder wirkt einen Zauber mit einer verbalen Komponente</p>\n<hr />\n<p><strong>Effekt</strong> Die Häuterin lässt das Blut der auslösenden Kreatur aus ihrem Mund strömen und ihre Kehle verstopfen. Der Zauber des Zieles wird unterbrochen. Das Ziel muss zudem einen @Check[fortitude|dc:47]{Zähigkeitswurf} ablegen; bei Misslingen erhält es den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 2}.</p>"
         },
         "action->Transfusion Aura": {
-          "name": "Transfusion Aura",
-          "description": "<p>30 feet. Any time a creature in the aura takes @UUID[Compendium.pf2e.conditionitems.Item.lDVqvLKA6eF3Df60]{Persistent Bleed Damage}, the Daemonic Skinner regains the same number of Hit Points as the damage dealt.</p>\n<p>The Skinner can have only one aura active at a time.</p>\n<p>She can switch her active aura as an Interact action.</p>"
+          "name": "Transfusionsaura",
+          "description": "<p>30 Fuß/9 m. Erleidet eine Kreatur innerhalb der Aura Anhaltenden Blutungsschaden, erlangt die Daimonische Häuterin dieselbe Menge an Trefferpunkten zurück.</p>\n<p>Die Häuterin kann nur eine Aura aktiv haben; sie kann allerdings mit einer Aktion der Kategorie Interagieren zwischen ihren Auren wechseln.</p>"
         },
         "action->Bloody Sneak Attack": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\nBloody Sneak Attack",
+          "name": "Blutiger Hinterhältiger Angriff",
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>Any creature taking @UUID[Compendium.pf2e.conditionitems.Item.lDVqvLKA6eF3Df60]{Persistent Bleed Damage} is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against the Daemonic Skinner's attacks. When attacking an off-guard creature, the Skinner deals an additional 2d6 precision damage.</p>"
         },
         "action->Hook and Flay": {
-          "name": "Hook and Flay",
-          "description": "<p><strong>Requirements</strong> The Daemonic Skinner has a creature grabbed with her blood chain or a creature is affected by her bloody chain aura</p>\n<hr />\n<p><strong>Effect</strong> The Skinner pulls the creature into the nearest open adjacent square and makes a cleaver Strike against the creature.</p>"
+          "name": "An der Kette",
+          "description": "<p><strong>Anforderungen</strong> Die Daimonische Häuterin hat eine Kreatur mit ihrer Blutkette in den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} versetzt oder eine Kreatur ist von ihrer Aura der Blutigen Ketten betroffen</p>\n<hr />\n<p><strong>Effekt</strong> Die Häuterin zieht die Kreatur auf das nächste freie, zu ihr angrenzende Feld und führt einen Fleischerbeilangriff gegen sie aus.</p>"
         }
       }
     },
     "Dart Barrage": {
-      "name": "Dart Barrage",
-      "description": "<p>Four dart-loaded pipes hidden in the diagonal walls are connected to a pressure plate under the brass seal in the room's center.</p>",
-      "disable": "<p>@Check[thievery|dc:22|name:Disable Pressure Plate|traits:action:disable-a-device] (trained) to disable the pressure plate, or four @Check[thievery|dc:18|name:Plug Dart Launcher|traits:action:disable-a-device] (trained) checks to plug the dart launchers</p>",
-      "hpDetails": "(BT 30) to destroy the seal and disable the trap",
-      "reset": "<p>The trap runs out of darts after 4 rounds of firing and must be reset manually by dismantling the walls to reload the launchers. If at any point there are no longer more than two creatures placing weight on the floor, the trap ceases firing but remains armed, ready to resume firing its remaining darts once triggered again.</p>",
-      "routine": "<p>(4 actions) The trap loses 1 action for each disabled launcher. On each of the trap's actions, it fires one dart at a creature in the center of the room.</p>",
-      "stealth": "<p>(trained) or @Check[perception|dc:23|traits:action:seek] (trained) to notice scratches around the musical pipes and a slight give to the seal</p>",
+      "name": "Pfeilhagel",
+      "description": "<p>Vier geladene Röhren sind in den Luftschächten versteckt und mit einer Druckplatte unter dem Messingsiegel in der Raummitte verbunden.</p>",
+      "disable": "<p>@Check[thievery|dc:22|traits:action:disable-a-device]{Diebeskunst} (Geübt), um die Druckplatte zu entschärfen, oder vier Würfe für @Check[thievery|dc:18|traits:action:disable-a-device]{Diebeskunst} (Geübt), um die Luftschächte zu verstopfen</p>",
+      "hpDetails": "(BW 30), zum Zerstören des Siegels und Entschärfen der Falle",
+      "reset": "<p>Die Falle hat genug Munition für 4 Runden. Zum manuellen Rücksetzen müssen die Wände abgebaut und die Röhren neu bestückt werden. Sollten die Auslöservoraussetzungen nicht mehr gegeben sein, stellt die Falle den Beschuss ein, bleibt aber bereit, die Restmunition zu verschießen, sollten die Voraussetzungen wieder erfüllt werden.</p>",
+      "routine": "<p>(4 Aktionen) Die Falle verliert pro entschärfter Röhre 1 Aktion. Mit jeder Aktion verschießt sie einen Wurfpfeil auf eine Kreatur in der Mitte des Raumes.</p>",
+      "stealth": "<p>(Geübt) oder @Check[perception|dc:23|traits:action:seek]{Wahrnehmung} (Geübt), um Kratzer rund um die Luftschächte und eine leichte Erhöhung des Siegels zu bemerken.</p>",
       "items": {
         "action->Dart Volley": {
-          "name": "Dart Volley",
-          "description": "<p><strong>Trigger</strong> More than two Small or larger creatures step on the brass seal.</p>\n<hr />\n<p><strong>Effect</strong> The trap makes up to four dart Strikes against creatures standing on the seal, then rolls initiative.</p>"
+          "name": "Pfeilhagel",
+          "description": "<p><strong>Auslöser</strong> Mehr als zwei Kleine oder größere Kreaturen treten auf das Messingsiegel.</p>\n<hr />\n<p><strong>Effekt</strong> Die Falle führt bis zu vier Wurfpfeilangriffe gegen Kreaturen auf dem Siegel aus und würfelt dann ihre Initiative.</p>"
         },
         "strike-melee->Dart": {
           "name": "Wurfpfeil"
         },
         "action->No MAP": {
-          "name": "No MAP",
-          "description": "<p>Darts are unaffected by Multiple Attack Penalty</p>"
+          "name": "kein Malus für Mehrfachangriffe",
+          "description": "<p>Wurfpfeile sind vom Malus für Mehrfachangriffe nicht betroffen.</p>"
         }
       }
     },
     "Diobel Sweeper Chemist": {
-      "name": "Diobel Sweeper Chemist",
+      "name": "Straßenkehrer von Diobel-Chemiker",
       "items": {
         "weapon->Acid Flask (Moderate)": {
           "description": "<Compendium>"
@@ -1858,12 +1858,12 @@
           "name": "+1 Sichel des Schadens"
         },
         "equipment->Alchemist's Tools": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.4ftXXUCBHcf4b0MH]\nAlchemist's Tools",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.4ftXXUCBHcf4b0MH]\n<p>This mobile collection of vials and chemicals can be used for simple alchemical tasks.</p>"
+          "name": "<Compendium>",
+          "description": "<Compendium>"
         },
         "equipment->Formula Book": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.qCEOZ6109Yo34tRx]\nFormula Book",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.qCEOZ6109Yo34tRx]\n<p>A formula book holds the formulas necessary to make items other than the common equipment from this chapter; alchemists typically get one for free. Each formula book can hold the formulas for up to 100 different items. Formulas can also appear on parchment sheets, tablets, and almost any other medium; there's no need for you to copy them into a specific book as long as you can keep them on hand to reference them.</p>"
+          "name": "Formelbuch",
+          "description": "<Compendium>"
         },
         "strike-melee->Sickle": {
           "name": "Sichel"
@@ -1875,12 +1875,12 @@
           "name": "Durchschnittliches Alchemistenfeuer"
         },
         "action->Dirty Bomb": {
-          "name": "Dirty Bomb",
-          "description": "<p><strong>Requirements</strong> The chemist has at least one bomb in their possession</p>\n<hr />\n<p><strong>Effect</strong> The chemist adds a hasty mix of noxious substances to the bomb and makes a ranged Strike with it. If it hits and deals damage, the target must attempt a @Check[fortitude|dc:27] save or become @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2} for [[/gmr 1d6 #rounds]]{1d6 rounds}; if the result of the save is a critical failure, this increases to @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 3}. For the next 24 hours, the affected target takes a -2 circumstance penalty (-3 on a critical failure) to additional Fortitude saving throws against the same chemist's Crude Bombs.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.5ZK22sNW7o26aST0]{Effect: Dirty Bomb}</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.ryY6fdqpC5Ztnagd]{Effect: Dirty Bomb (Critical Failure)}</p>"
+          "name": "Schmutzige Bombe",
+          "description": "<p><strong>Anforderungen</strong> Der Chemiker verfügt über wenigstens eine Bombe</p>\n<hr />\n<p><strong>Effekt</strong> Der Chemiker fügt der Bombe hastig giftige Substanzen hinzu und führt dann mit ihr einen Fernkampfangriff aus. Trifft dieser und verursacht er Schaden, muss das Ziel einen @Check[fortitude|dc:27]{Zähigkeitswurf} ablegen; bei einem Fehlschlag erhält es für [[/gmr 1d6 #Runden]]{1W6 Runden} den Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 2} (bzw. @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 3} bei einem Kritischen Fehlschlag); ferner erhält es für die nächsten 24 Stunden einen Situationsmalus von -2 (bzw. -3 bei einem Kritischen Fehlschlag) auf weitere Rettungswürfe gegen Schmutzige Bomben dieses Chemikers.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.5ZK22sNW7o26aST0]{Effekt: Schmutzige Bombe}</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.ryY6fdqpC5Ztnagd]{Effekt: Schmutzige Bombe (Kritischer Fehlschlag)}</p>"
         },
         "action->Quick Brew": {
-          "name": "Quick Brew",
-          "description": "<p><strong>Requirements</strong> The chemist has their alchemist's tools, formula book, and a free hand</p>\n<hr />\n<p><strong>Effect</strong> The chemist creates a @UUID[Compendium.pf2e.equipment-srd.Item.SgtqZxt26BdjUmEB]{Moderate Acid Flask} or @UUID[Compendium.pf2e.equipment-srd.Item.gWr4q4HiyGhETA8H]{Alchemist's Fire} that they must use before the end of their next turn or else it becomes inert.</p>"
+          "name": "Schnelles Brauen",
+          "description": "<p><strong>Anforderungen</strong> Der Chemiker hat seine Alchemistenwerkzeuge, sein Formelbuch und eine freie Hand</p>\n<hr />\n<p><strong>Effekt</strong> Der Chemiker erzeugt eine @UUID[Compendium.pf2e.equipment-srd.Item.SgtqZxt26BdjUmEB]{Durchschnittliche Säureflasche} oder @UUID[Compendium.pf2e.equipment-srd.Item.gWr4q4HiyGhETA8H]{Alchemistenfeuer}, welche er vor Ende seines nächsten Zuges einsetzen muss (danach verliert das Produkt seine Wirksamkeit).</p>"
         },
         "lore->Alchemy Lore": {
           "name": "Kenntnis [Alchemie]"
@@ -1888,7 +1888,7 @@
       }
     },
     "Diobel Sweeper Tough": {
-      "name": "Diobel Sweeper Tough",
+      "name": "Straßenkehrer von Diobel-Schläger",
       "items": {
         "weapon->+1 Morningstar": {
           "name": "+1 Morgenstern"
@@ -1920,26 +1920,26 @@
           "name": "Frostphiole"
         },
         "action->Bullyrag Beatdown": {
-          "name": "Bullyrag Beatdown",
-          "description": "<p>Whenever the gang tough makes a successful melee Strike against a frightened creature, the Strike deals an extra weapon die of damage.</p>",
+          "name": "Verängstigte niederprügeln",
+          "description": "<p>Gelingt einem Bandenschläger ein Nahkampfangriff gegen ein Ziel mit dem Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt}, verursacht der Angriff zusätzlichen Schaden in Höhe eines Waffenschadenswürfels.</p>",
           "rules": {
             "1": {
-              "label": "Target is frightened"
+              "label": "Ziel ist verängstigt"
             }
           }
         },
         "action->Frightening Critical": {
-          "name": "Frightening Critical",
-          "description": "<p>When the gang tough's Strike with a bludgeoning weapon is a critical hit and deals damage, the target becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>",
+          "name": "Verängstigender Kritischer Treffer",
+          "description": "<p>Landet ein Bandenschläger mit einer Wuchtwaffe einen Kritischen Treffer und verursacht Schaden, so erhält das Ziel den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}.</p>",
           "rules": {
             "0": {
-              "text": "When the gang tough's Strike with a bludgeoning weapon is a critical hit and deals damage, the target becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}."
+              "text": "Landet ein Bandenschläger mit einer Wuchtwaffe einen Kritischen Treffer und verursacht Schaden, so erhält das Ziel den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}."
             }
           }
         },
         "action->Quick Bomber": {
-          "name": "Quick Bomber",
-          "description": "<p>The Diobel Sweeper tough Interacts to draw a bomb, then Strikes with it.</p>"
+          "name": "Schneller Bombenwerfer",
+          "description": "<p>Der Straßenkehrer nutzt Interagieren zum Hervorholen einer Bombe und führt dann einen Angriff mit ihr aus.</p>"
         },
         "lore->Gang Lore": {
           "name": "Kenntnis [eigene Bande]"
@@ -1947,9 +1947,9 @@
       }
     },
     "Dreadsong Dancer": {
-      "name": "Dreadsong Dancer",
+      "name": "Schreckensliedtänzer",
       "languages": "(kann keine Sprache sprechen)",
-      "saveDetails": "+2 status to all saves vs. composition spells",
+      "saveDetails": "+2 Zustandsbonus auf RW gg. Kompositionszauber",
       "items": {
         "spellcastingEntry->Innate Occult Spells": {
           "name": "Immanente Okkulte Zauber"
@@ -1967,19 +1967,19 @@
           "name": "Liederklinge"
         },
         "action->+2 Status to All Saves vs. Composition Spells": {
-          "name": "+2 Status to All Saves vs. Composition Spells"
+          "name": "+2 Zustandsbonus auf RW gg. Kompositionszauber"
         },
         "action->Jealous Musician": {
-          "name": "Jealous Musician",
-          "description": "<p><strong>Trigger</strong> A creature plays an instrument while Casting a Spell or casts a composition spell within 20 feet of the dreadsong dancer</p>\n<hr />\n<p><strong>Effect</strong> The dreadsong dancer Strides up to 20 feet and makes a songblade Strike against the triggering creature. If the Strike hits, the spell is disrupted.</p>"
+          "name": "Eifersüchtiger Musiker",
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur wirkt innerhalb einer Reichweite von 20 Fuß/6 m zum Schreckensliedtänzer einen Zauber der Kategorie Komposition oder spielt ein Instrument, während sie einen Zauber wirkt</p>\n<hr />\n<p><strong>Effekt</strong> Der Schreckensliedtänzer läuft bis zu 20 Fuß/6 m und führt einen Nahkampfangriff mit seiner Liederklinge gegen die auslösende Kreatur aus. Trifft der Angriff, wird der Zauber unterbrochen.</p>"
         },
         "action->Performance Anxiety": {
-          "name": "Performance Anxiety",
-          "description": "<p>A dreadsong dancer is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1} if they see or hear a creature critically succeed at a Performance check or at a saving throw against their Dreadsong.</p>\n<p>The dreadsong dancer is @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened 1} for 1 round if they see or hear a creature critically fail at a Performance check or a saving throw against their Dreadsong.</p>\n<p>They can use the extra action only to Stride or Strike.</p>"
+          "name": "Lampenfieber",
+          "description": "<p>Ein Schreckensliedtänzer, der beobachtet oder hört, wie eine Kreatur bei einem Fertigkeitswurf für Darbietung oder einem Rettungswurf gegen sein Schreckenslied einen Kritischen Erfolg erzielt, erleidet den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1}. Sieht oder hört ein Schreckensliedtänzer jedoch, wie eine Kreatur bei einem Fertigkeitswurf für Darbietung oder einem Rettungswurf gegen sein Schreckenslied einen Kritischen Fehlschlag erleidet, gewinnt dieser den Zustand @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Beschleunigt 1} für 1 Runde. Der Schreckensliedtänzer kann diese zusätzliche Aktion ausschließlich zum Laufen oder für einen Angriff nutzen.</p>"
         },
         "action->Dreadsong": {
-          "name": "Dreadsong",
-          "description": "<p>The dreadsong dancer whirls their howling songblades and cloaks themself in illusion magic. Each non-fiend creature in a @Template[emanation|distance:30] from the dreadsong dancer must attempt a @Check[will|dc:29] save.</p>\n<hr />\n<p><strong>Critical Success</strong> No effect, and the creature is temporarily immune for 24 hours. The dreadsong dancer is affected by their performance anxiety.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}, and the dreadsong dancer is @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Undetected} by the creature for 1 minute. The creature can't use Seek to find the dreadsong dancer.</p>\n<p><strong>Critical Failure</strong> As failure, but the creature can't reduce its frightened condition below 2 for 1 minute. In addition, the dreadsong dancer is affected by its performance anxiety.</p>"
+          "name": "Schreckenslied",
+          "description": "<p>Der Schreckensliedtänzer wirbelt seine heulenden Liederklingen und hüllt sich selbst in Illusionsmagie. Jede Kreatur, die nicht der Kategorie Scheusal angehört und sich innerhalb des Wirkungsbereiches einer @Template[emanation|distance:30]{Ausstrahlung von 30 Fuß/9 m} zum Schreckensliedtänzer befindet, muss einen @Check[will|dc:29]{Willenswurf} ablegen.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur wird vom Effekt der Fähigkeit nicht beeinflusst und ist vorübergehend für 24 Stunden dagegen immun. Der Schreckensliedtänzer erleidet die Effekte seines Lampenfiebers.</p>\n<p><strong>Erfolg</strong> Die Kreatur erleidet den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2} und der Schreckensliedtänzer gilt gegenüber dieser Kreatur 1 Minute lang als @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Unentdeckt}. Die Kreatur kann nicht die Aktion Suchen nutzen, um den Schreckensliedtänzer aufzuspüren.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie beim Fehlschlag, jedoch kann die Kreatur ihren Zustand Verängstigt 1 Minute lang nicht unter den Zustandsgrad 2 senken. Zusätzlich gewinnt der Schreckensliedtänzer die Effekte seines Lampenfiebers.</p>"
         },
         "action->Rend": {
           "description": "<p>Liederklinge</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Rend]</p>"
@@ -1999,21 +1999,21 @@
           "name": "Speien"
         },
         "action->Arrogant Taunts": {
-          "name": "Arrogant Taunts",
-          "description": "<p>The eberark utters crude insults and growls threateningly. Each creature within 30 feet must attempt a @Check[will|dc:27] save.</p>\n<p>The creature is then temporarily immune for 10 minutes.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} and @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} for 1 round.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 4} and paralyzed for [[/gmr 1d4 #rounds]]{1d4 rounds}.</p>"
+          "name": "Überheblicher Spott",
+          "description": "<p>Der Eberark gibt vulgäre Beleidigungen von sich und knurrt bedrohlich. Jede Kreatur innerhalb einer Reichweite von 30 Fuß/9 m muss einen @Check[will|dc:27]{Willenswurf} ablegen. Anschließend ist die Kreatur vorübergehend 10 Minuten lang gegen den Überheblichen Spott des Eberarks immun.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur wird vom Effekt nicht beeinflusst.</p>\n<p><strong>Erfolg</strong> Die Kreatur erleidet den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2} und @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt} für 1 Runde.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erleidet den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 4} und Gelähmt für [[/gmr 1d4 #Runden]]{1W4 Runden}.</p>"
         },
         "action->Incendiary Spit": {
-          "name": "Incendiary Spit",
-          "description": "<p>A creature hit by the eberark's spit becomes coated in a slippery, flammable oil.</p>\n<p>The creature must succeed at a @Check[reflex|dc:27] save or become @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2} for as long as they are coated in incendiary spit.</p>\n<p>Creatures affected by incendiary spit that take fire damage catch fire, taking @Damage[3d6[persistent,fire]] damage. Once this persistent fire damage ends, the spit has burned away.</p>"
+          "name": "Entflammbare Spucke",
+          "description": "<p>Eine Kreatur, die von der Spucke eines Eberarks getroffen wurde, wird von einem glibberigen, leicht entflammbaren Öl überzogen. Die Kreatur muss einen erfolgreichen @Check[reflex|dc:27]{Reflexwurf} ablegen, um nicht den Zustand @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 2} zu erleiden, solange sie in die Entflammbare Spucke des Eberarks gehüllt ist. Erleidet eine Kreatur, die von der Entflammbaren Spucke des Eberarks eingehüllt ist, Feuerschaden, so fängt diese Feuer und erleidet @Damage[3d6[persistent,fire]]{3W6 anhaltenden Feuerschaden}. Sobald der anhaltende Feuerschaden endet, ist auch die Entflammbare Spucke vollständig verbrannt. Die Entflammbare Spucke wird auf natürliche Weise nach einer Stunde abgetragen oder kann mithilfe von Seife und Wasser unter Aufwand einer Minute Arbeit abgewaschen werden.</p>"
         },
         "action->Trail of Flame": {
-          "name": "Trail of Flame",
-          "description": "<p>The eberark Strides twice, leaving a trail of magical fire behind it as it moves. Squares the eberark moves through catch fire, creating a 5-foot-tall wall of flame that burns for 1 round. The wall of flame conceals creatures and objects on the other side of it.</p>\n<p>Any creature that enters or starts its turn in the wall of flame takes @Damage[6d6[fire]] damage (@Check[reflex|dc:27|basic] save).</p>"
+          "name": "Flammenspur",
+          "description": "<p>Der Eberark nutzt zwei Aktionen zum Laufen und hinterlässt bei seiner Bewegung einen Pfad aus magischem Feuer. Sämtliche Felder, durch die sich der Eberark durchbewegt, fängt Feuer, wodurch eine 5 Fuß/1,50 Meter hohe Flammenwand entsteht, die 1 Runde lang brennt. Die Flammenwand verdeckt sämtliche Kreaturen und Gegenstände, die sich auf der anderen Seite befinden. Kreaturen, welche die Flammenwand betreten oder ihren Zug innerhalb der Wand beginnen, erleiden @Damage[6d6[fire]]{6W6 Feuerschaden} (@Check[reflex|dc:27|basic]{einfacher Reflexwurf}).</p>"
         }
       }
     },
     "Eunice": {
-      "name": "Eunice",
+      "name": "Euniz",
       "items": {
         "spellcastingEntry->Prepared Arcane Spells": {
           "name": "Vorbereitete Arkane Zauber"
@@ -2039,8 +2039,8 @@
       }
     },
     "Excorion": {
-      "name": "Excorion",
-      "hpDetails": "void healing",
+      "name": "Hautloser",
+      "hpDetails": "Leerenheilung",
       "items": {
         "strike-melee->Fist": {
           "name": "Faust"
@@ -2050,15 +2050,15 @@
           "description": "<p>1 Runde lang Zustand @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet}</p>"
         },
         "action->Vein Walker": {
-          "name": "Vein Walker",
-          "description": "<p>The excorion moves about by way of hundreds of pulsating blood vessels, which stretch from its body in dozens of tight, ropy bundles and anchor it to the ground. An excorion cannot be Tripped, Shoved, or otherwise forcibly moved except by magic, and the excorion ignores difficult terrain (but not greater difficult terrain).</p>"
+          "name": "Aderläufer",
+          "description": "<p>Der Hautlose bewegt sich mithilfe seiner hunderten pulsierenden Blutgefäßen fort, die sich in Dutzenden engen, seilartigen Bündeln aus seinem Körper strecken und ihn am Boden verankern. Ein Hautloser kann weder Zu Fall gebracht, Gestoßen oder auf andere Weise gewaltsam bewegt werden, außer durch Magie. Zudem ignoriert der Hautlose schwieriges Gelände, nicht jedoch sehr schwieriges Gelände.</p>"
         },
         "action->Bloody Handprint": {
-          "name": "Bloody Handprint",
-          "description": "<p>The excorion plants a magical handprint on the target, marking them as chosen for death. The excorion makes a fist Strike against an adjacent creature; this does not count toward the excorion's multiple attack penalty. On a hit, the attack does no damage, but the creature becomes observed to every excorion within 60 feet, even if an excorion's line of sight would be blocked by a wall or other obstacle. This effect lasts until the handprint is washed off, which requires water and spending 3 actions to fully clean off.</p>"
+          "name": "Blutiger Handabdruck",
+          "description": "<p>Der Hautlose hinterlässt einen magischen Handabdruck auf dem Ziel und markiert es dadurch als zum Tode verurteilt. Der Hautlose führt einen Nahkampfangriff mit seiner Faust gegen ein Ziel aus, das sich auf einem benachbarten Feld befindet. Dieser Angriff zählt nicht hinsichtlich des Malus für Mehrfachangriffe des Hautlosen. Bei einem Treffer fügt der Angriff dem Ziel zwar keinen Schaden zu, die Kreatur gilt jedoch gegenüber sämtlichen Hautlosen innerhalb einer Reichweite von 60 Fuß/18 Metern als Beobachtet. Dies gilt auch dann, wenn die Sichtlinie eines Hautlosen eigentlich durch eine Wand oder ein anderes Hindernis blockiert wird. Der Effekt hält so lange an, bis der Handabdruck abgewaschen wurde, wofür das Ziel Wasser sowie 3 Aktionen zum vollständigen Abwaschen sämtlicher Blutrückstände benötigt.</p>"
         },
         "action->Vital Transfusion": {
-          "name": "Vital Transfusion",
+          "name": "Belebende Transfusion",
           "description": "<p><strong>Requirements</strong> The excorion has at least 70 Hit Points</p>\n<hr />\n<p><strong>Effect</strong> The excorion sacrifices itself and transfers its bloody, vital energy to a willing living creature within 30 feet. The excorion is immediately destroyed, and the targeted living creature heals a number of HP equal to half the excorion's remaining HP at the time that it used this ability.</p>\n<p>The living creature is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} during its next turn as its body adjusts to the newly transfused blood and vital energy; the living creature also counts as an excorion for 1 minute for the purpose of seeing other excorions' Bloody Handprint marks.</p>"
         },
         "action->Vomit Blood": {
@@ -2121,8 +2121,8 @@
     },
     "Explosive Barrels": {
       "name": "Explosive Barrels",
-      "description": "<p>Wooden barrels marked with an oil-drop symbol catch fire and explode.</p>",
-      "disable": "<p>@Check[survival|dc:20|name:Smother the Flames] to smother the flames without rupturing the barrels</p>",
+      "description": "<p>Mit einem Öltropfen markierte Fässer fangen Feuer und explodieren.</p>",
+      "disable": "<p>@Check[survival|dc:20]{Überlebenskunst}, um die Flammen zu ersticken, ohne dabei die Fässer zu beschädigen</p>",
       "items": {
         "action->Explode": {
           "name": "Explode",
