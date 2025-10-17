@@ -115,6 +115,7 @@
     "ActionsActionsHeader": "Actions",
     "ActionsFreeActionsHeader": "Free Actions",
     "ActionsReactionsHeader": "Reactions",
+    "ActionWithDC": "{label} (DC {dc})",
     "Actor": {
       "ApplyDamage": {
         "AtFullHealth": "<actor>{actor}</actor> is already at full health.",
@@ -585,6 +586,10 @@
         }
       },
       "NPC": {
+        "BonusLabel": {
+          "modifier": "Attack Modifier",
+          "save": "Save DC"
+        },
         "Configure": {
           "Lootable": {
             "DefaultLootable": "Global Default (Lootable)",
@@ -918,17 +923,6 @@
       "worn-in-slot": "Worn (In Slot)"
     },
     "CastLabel": "Cast",
-    "CastingItemCreateDialog": {
-      "10thLevelWand": "10th level wands don't exist",
-      "cantripDeck5": "Cantrip Deck (5-pack)",
-      "itemTypeLabel": "Item type: ",
-      "label": "Create a spellcasting item from the dropped spell",
-      "scroll": "Scroll",
-      "spellLevelLabel": "Heightened Rank: ",
-      "submit": "Create item",
-      "title": "Create a spellcasting item",
-      "wand": "Wand"
-    },
     "Category": "Category",
     "CharacterDetails": "Character Details",
     "CharacterLevelLabel": "Level",
@@ -1988,6 +1982,10 @@
           "wand": "Wand"
         },
         "Plural": "Consumables",
+        "Spell": {
+          "Empty": "Empty",
+          "Label": "Embedded Spell"
+        },
         "Uses": {
           "AutoDestroy": "Destroy on Use",
           "Label": "Uses",
@@ -2660,6 +2658,7 @@
       "Rules": {
         "Apply": "Apply",
         "Close": "Close",
+        "CopyToClipboard": "Copy to Clipboard",
         "Edit": "Edit JSON",
         "Hint": {
           "Slug": "A stable, human-readable identifier: if set, it will remain in place even if the item is renamed.",
@@ -3156,7 +3155,6 @@
     "NPCNotesTitle": "Write any notes for this NPC here.",
     "NPCWeaponAddDamage": "Add Damage Partial",
     "NPCWeaponAttackEffect": "Additional Attack Effects",
-    "NPCWeaponAttackLabel": "Attack Modifier",
     "NPCWeaponDamageLabel": "Damage Formula",
     "Nationality": "Nationality",
     "NewLabel": "New",
@@ -3297,7 +3295,6 @@
     "ProficiencyLevel2": "Expert",
     "ProficiencyLevel3": "Master",
     "ProficiencyLevel4": "Legendary",
-    "ProficiencyRankLabel": "Prof",
     "ProgressBar": {
       "LoadingComplete": "Loading complete",
       "LoadingPack": "Loading {pack}"
@@ -3751,7 +3748,7 @@
           "Choices": {
             "ABPFundamentalPotency": "ABP: Allow Property Runes",
             "ABPRulesAsWritten": "ABP: Disallow Property Runes",
-            "noABP": "Do not use ABP"
+            "noABP": "Disabled"
           },
           "Hint": "Enable the Automatic Bonus Progression variant rule. Skill potency must currently be managed manually.",
           "Name": "Automatic Bonus Progression"
@@ -3773,9 +3770,17 @@
         },
         "Name": "Variant Rules",
         "Proficiency": {
-          "Hint": "Play with the proficiency without level variant from GM Core pg 85.",
+          "Hint": "Play with the Proficiency without Level variant from GM Core pg 85. If enabled, alternative proficiency bonuses can also be set (defaults recommended by GM Core).",
+          "Legend": "Proficiency without Level",
           "ModifiersHint": "Set the modifier value for each proficiency rank (proficiency without level only).",
-          "Name": "Proficiency without Level"
+          "Name": "Enabled",
+          "Rank": {
+            "Expert": "E",
+            "Legendary": "L",
+            "Master": "M",
+            "Trained": "T",
+            "Untrained": "U"
+          }
         },
         "Stamina": {
           "Hint": "Play with the stamina variant from Gamemastery Guide pg 200.",
@@ -3952,6 +3957,14 @@
     "SpellTraditionsLabel": "Traditions",
     "SpellUnlimitedLabel": "Unlimited",
     "SpellUsesLabel": "Uses",
+    "SpellcastingItemCreator": {
+      "CantripDeck5": "Cantrip Deck (5-pack)",
+      "ItemType": "Item type",
+      "Label": "Create an item from {name}",
+      "NoValidRanks": "No Valid Ranks",
+      "Title": "Creating Spellcasting Item",
+      "ViewItem": "View Item"
+    },
     "SpellcastingSettings": {
       "AutoHeightenDefault": "Default (Use Actor Level)",
       "AutoHeightenLabel": "Auto Heighten Rank",
@@ -4208,6 +4221,7 @@
     "TraitArchetype": "Archetype",
     "TraitArchon": "Archon",
     "TraitArdande": "Ardande",
+    "TraitArea": "Area",
     "TraitAreaDamage": "Area Damage",
     "TraitArtifact": "Artifact",
     "TraitAstral": "Astral",
@@ -4740,6 +4754,7 @@
     "TraitDescriptionTethered": "This weapon is attached to a length of rope or chain that allows you to retrieve it after it has left your hand. If you have a free hand (including if you've just thrown a two-handed tethered weapon and have a hand holding nothing but the weapon's tether), you can use an Interact action to pull the weapon back into your grasp after you have thrown it as a ranged attack or after it has been disarmed (unless it's being held by another creature).",
     "TraitDescriptionThaumaturge": "This indicates abilities from the thaumaturge class.",
     "TraitDescriptionThrown": "You can throw this weapon as a ranged attack. A thrown weapon adds your Strength modifier to damage just like a melee weapon does. When this trait appears on a melee weapon, it also includes the range increment.",
+    "TraitDescriptionTime": "Time creatures are natives of the Dimension of Time. They don't age, and while some might be driven by supernatural hungers, they don't need to eat or drink to survive. They can survive the basic environmental effects of the Dimension of Time.",
     "TraitDescriptionTitan": "Titans are enormous, primordial creatures of neargodlike power who predate the mortal races.",
     "TraitDescriptionTraining": "A training weapon is designed to be used when training an animal to participate in combat by identifying the target for the animal to attack. Striking a creature with a training weapon gives your animal companion or your bonded animal a +1 circumstance bonus to its next attack roll against that target.",
     "TraitDescriptionTranscendence": "Transcendence channels the might of an exemplar's divine spark through one of their ikons to surpass the mortal and enact a miraculous deed. Each ikon has an action with the transcendence trait, and using it is called Sparking Transcendence. To use the action, your divine spark must be empowering that ikon and you must have the ikon ready to use (typically holding a weapon ikon or wearing a worn ikon). Immediately after you Spark Transcendence, your divine spark is forcefully ejected from that ikon, coming to rest in another ikon of your choice. You can Spark Transcendence only once each round. As it comes from your divine spark, a transcendence action has the divine trait.",
