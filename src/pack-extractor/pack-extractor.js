@@ -82,7 +82,7 @@ for (const [moduleId, moduleData] of Object.entries(configFile.moduleLocalizatio
                 );
                 saveFileWithDirectories(
                     `${configFile.moduleLocalizations.savePathCompendium}/${extractedDB.fileName}`,
-                    JSON.stringify(extractedPack, null, 2)
+                    JSON.stringify(extractedPack.extractedPack, null, 2)
                 );
             }
         }
