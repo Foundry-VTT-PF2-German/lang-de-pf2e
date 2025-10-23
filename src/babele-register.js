@@ -105,6 +105,11 @@ Hooks.once("babele.init", () => {
             lang: "de",
             dir: "translation/de/compendium",
         });
+        game.babele.register({
+            module: "lang-de-pf2e",
+            lang: "de",
+            dir: "translation/de/modules/compendium",
+        });
 
         game.babele.registerConverters({
             normalizeName: (_data, translation) => {
