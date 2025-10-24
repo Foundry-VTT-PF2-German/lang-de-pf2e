@@ -5051,15 +5051,15 @@
         },
         "action->Combustible": {
           "name": "Combustible",
-          "description": "<p>The first time each round that a pickled punk takes fire damage, its fumes combust, dealing @Damage[5[fire]] damage to all other creatures within the area of its Suffocating Fumes aura.</p>"
+          "description": "<p>The first time each round that a pickled punk takes fire damage, its fumes combust, dealing @Damage[5[fire]|options:area-damage] damage to all other creatures within the area of its Suffocating Fumes aura.</p>"
         },
         "action->Suffocating Fumes": {
           "name": "Suffocating Fumes",
-          "description": "<p>5 feet. A creature that enters or begins its turn within the aura must attempt a @Check[fortitude|dc:14] save, or @Check[fortitude|dc:17] if the pickled punk is attached to the creature.</p>\n<p>On a failed save, the creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, and on a critical failure, it's also @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} for 1 minute.</p>"
+          "description": "<p>5 feet. A creature that enters or begins its turn within the aura must attempt a @Check[fortitude|dc:14|options:area-effect,inflicts:sickened,inflicts:enfeebled] save, or @Check[fortitude|dc:17|options:area-effect,inflicts:sickened,inflicts:enfeebled] if the pickled punk is attached to the creature.</p>\n<p>On a failed save, the creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, and on a critical failure, it's also @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} for 1 minute.</p>"
         },
         "action->Attach": {
           "name": "Attach",
-          "description": "<p>When a pickled punk hits a target larger than itself, it uses bizarre excretions to adhere to that creature. This is similar to Grabbing the creature, but the pickled punk is not off-guard, and it moves with that creature rather than holding it in place.</p>\n<p>Each turn while attached, the pickled punk automatically deals the damage from its jaws Strike to the creature to which it's attached. It also wriggles about, gaining a +2 circumstance bonus to AC as long as it's not also grabbed or restrained.</p>"
+          "description": "<p>When a pickled punk hits a target larger than itself, it uses bizarre excretions to adhere to that creature. This is similar to Grabbing the creature, but the pickled punk is not @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}, and it moves with that creature rather than holding it in place.</p>\n<p>Each turn while attached, the pickled punk automatically deals the damage from its jaws Strike to the creature to which it's attached. It also wriggles about, gaining a +2 circumstance bonus to AC as long as it's not also @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}.</p>"
         }
       }
     },
@@ -6280,7 +6280,7 @@
         },
         "action->Psychokinetic Trumpet": {
           "name": "Psychokinetic Trumpet",
-          "description": "<p>The teraphant lets out a loud trumpet that deals @Damage[8d8[mental]|options:area-damage] damage (@Check[will|dc:27|basic|options:area-effect,inflicts:forced-movement] save) in a @Template[cone|distance:30]. A creature that fails its save is also pushed 15 feet (30 feet on a critical failure).</p>\n<p>If a pushed creatures strikes a solid barrier, it takes @Damage[3d6[bludgeoning]] damage and stops.</p>\n<p>The teraphant can't use Psychokinetic Trumpet again for [[/gmr 1d4 #Recharge Psychokinetic Trumpet]]{1d4 rounds}.</p>"
+          "description": "<p>The teraphant lets out a loud trumpet that deals @Damage[8d8[mental]|options:area-damage] damage (@Check[will|dc:27|basic|options:area-effect,forced-movement] save) in a @Template[cone|distance:30]. A creature that fails its save is also pushed 15 feet (30 feet on a critical failure).</p>\n<p>If a pushed creatures strikes a solid barrier, it takes @Damage[3d6[bludgeoning]] damage and stops.</p>\n<p>The teraphant can't use Psychokinetic Trumpet again for [[/gmr 1d4 #Recharge Psychokinetic Trumpet]]{1d4 rounds}.</p>"
         },
         "action->Trample": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.UNah0bxXxkcZjxO3]\n<p>Large or smaller, foot, @Check[reflex|dc:27|basic]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Trample]</p>"
