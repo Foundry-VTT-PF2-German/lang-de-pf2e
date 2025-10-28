@@ -301,7 +301,7 @@
         },
         "action->Windstorm": {
           "name": "Windsturm",
-          "description": "<p>Der Tosende Sturmwind atmet als eine Einheit aus und erzeugt einen mächtigen Windsturm. Dieser Windsturm ist eine @Template[burst|distance:10]{10 Fuß/3 m-Explosion} innerhalb von 100 Fuß/30 m, der @Damage[(3d8+10)[bludgeoning]|options:area-damage]{3W8+10 Wuchtschaden} verursacht (@Check[reflex|dc:30|basic|options:area-effect,inflicts:forced-movement,inflicts:prone]{einfacher Reflexwurf}). Kreaturen, die ihren Rettungswurf nicht bestehen, werden 10 Fuß/3 m in eine zufällige Richtung geschleudert (und erhalten bei einem Kritischen Fehlschlag den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}). Wenn die Truppe auf 2 oder weniger Segmente reduziert wird, verringert sich dieser Bereich auf eine @Template[burst|distance:5]{5 Fuß/1,50 m-Explosion} und die Entfernung zum Zurückstoßen verringert sich auf 5 Fuß/1,50 m.</p>"
+          "description": "<p>The blustering gale exhales as a unit, creating a powerful windstorm. This windstorm is a @Template[burst|distance:10] within 100 feet that deals @Damage[(3d8+10)[bludgeoning]|options:area-damage] damage (@Check[reflex|dc:30|basic|options:area-effect,forced-movement,inflicts:prone] save). Creatures that fail their saving throw are pushed 10 feet in any direction (plus knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} on a critical failure). When the troop is reduced to 2 or fewer segments, this area decreases to a @Template[burst|distance:5] and the distance pushed decreases to 5 feet.</p>"
         }
       }
     },
@@ -1967,6 +1967,7 @@
     "Ore Louse": {
       "name": "Erzlaus",
       "publicNotes": "<p>Erzläuse sind sechsbeinige insektenartige Kreaturen, die entweder genau unter oder genau über der Wasseroberfläche schlafen. Sie besitzen ein ausgeprägtes Territorialverhalten gegenüber Fremden und sich selbst, sind zudem fähig, einen Eindringling durch die kleinen Wellen im Wasser zu entdecken. Aufgrund ihrer Ernährung besitzen Erzläuse unglaublich hartes Chitin, das mit Metall durchdrungen ist. Kannibalismus ist unter Erzläusen keine Seltenheit, wenn sie keine andere Beute aufspüren können.</p>\n<p>Obwohl es an der Grenze zur Ebene der Luft weitaus passendere Umgebungen für Erzläuse gibt, finden sich die Kreaturen oft dort, wo die Ebene der Erde auf die Ebene des Wassers trifft. Das stellte ein Geheimnis dar, das viele verwirrte - bis die Ebene des Metalls zwischen die Ebenen der Erde und des Wassers zurückkehrte. Ebenenforscher erkannten, dass Erzläuse dort vor der Trennung der Ebenen gejagt haben müssen. Auf der Ebene des Metalls tauchen Erzläuse oft in Schauergeschichten auf, in denen sie Elementare des Metalls zur Strecke bringen und auf grauenhafte Art verschlingen. Ihre Verbindung zu Ferrumnestra trägt zu ihrem schlechten Ruf bei.</p>",
+      "senses": "metal scent 30 feet",
       "speed": "Wasserlaufen",
       "items": {
         "strike-melee->Mandibles": {
@@ -1984,7 +1985,7 @@
         },
         "action->Consume Living Metal": {
           "name": "Lebendes Metall verzehren",
-          "description": "<p><strong>Anforderungen</strong> Die Erzlaus befindet sich in einem Feld, das an das einer Kreatur angrenzt, die innerhalb der vergangenen Stunde gestorben ist und die Kategorie Metall besitzt oder selbst eine Erzlaus war</p>\n<hr />\n<p><strong>Effekt</strong> Eine Erzlaus kann ihre Gesundheit wiederherstellen, indem sie die Überreste von Artgenossen oder von ehemals lebenden Metallkreaturen isst. Die Erzlaus hält ein Festmahl an der Leiche und erhält @Damage[3d6[healing]]{3W6 Trefferpunkte} zurück. Die Erzlaus kann von einer bestimmten Leiche nur einmal Trefferpunkte zurückgewinnen.</p>"
+          "description": "<p><strong>Requirements</strong> The ore louse is adjacent to a creature that died within the last hour and had the metal trait or was another ore louse</p>\n<hr />\n<p><strong>Effect</strong> An ore louse can replenish its health by eating the remains of its kin or a once-living metal creature. The ore louse feasts upon the corpse, regaining @Damage[3d6[healing]] Hit Points. The ore louse can regain Hit Points from a given corpse only once.</p>"
         },
         "action->Metal Snack": {
           "name": "Metallimbiss",
@@ -1992,7 +1993,7 @@
         },
         "action->Rust": {
           "name": "Verrosten",
-          "description": "<p>Die Angriffe einer Erzlaus lassen Metall schnell rosten und korrodieren. Wenn sie mit einem Mandibelangriff oder einem Angriff mit oxidierender Spucke auf einen metallenen Gegenstand Erfolg hat, den das Ziel trägt oder hält, fügt die Erzlaus diesem @Damage[3d6]{3W6 Punkte Schaden} zu (oder den doppelten Schaden bei einem Kritischen Treffer), unabhängig von der Härte des Gegenstands. Wenn die Erzlaus einen unbewachten metallenen Gegenstand trifft, erleidet der Gegenstand diesen Schaden automatisch. Wenn eine Kreatur die Reaktion Schildblock mit einem Metallschild gegen die Angriffe benutzt, zerbricht der Schild automatisch, aber kein weiterer Gegenstand erleidet durch diesen Angriff den Zustand Beschädigt.</p>"
+          "description": "<p>An ore louse's Strikes causes metal to rapidly rust and corrode. If it succeeds at a mandibles or oxidizing spit Strike, the ore louse deals @Damage[3d6[untyped]] damage (or double damage on a critical hit) to a metal item the target is wearing or holding, ignoring its Hardness. If the ore louse hits an unattended metal item, the item takes this damage automatically. If a creature uses the Shield Block reaction with a metal shield against the attacks, the shield is automatically broken, but no other item is rusted on that attack.</p>"
         },
         "action->Water Stride": {
           "name": "Wasserlaufen",
@@ -2113,7 +2114,7 @@
         },
         "action->Elephant Blast": {
           "name": "Elefantenstoß",
-          "description": "<p><strong>Voraussetzung</strong> Das Wolkenbild ist in Elefantenform</p>\n<hr />\n<p><strong>Effekt</strong> Das Wolkenbild stößt aus seinem wolkigen Rüssel einen @Template[cone|distance:30]{30 Fuß/9 m Kegel} aus Luft aus. Kreaturen in diesem Bereich müssen einen @Check[fortitude|dc:30|options:area-effect,inflicts:forced-movement]{Zähigkeitswurf} ablegen, um sich zu behaupten. Eine Kreatur, die in ein festes Objekt gestoßen wird, erleidet @Damage[4d10[bludgeoning]]{4W10 Wuchtschaden}.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur wird 20 Fuß/6 m weit gestoßen.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur wird 40 Fuß/12 m weit gestoßen.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur wird 40 Fuß/12 m weit gestoßen und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}.</p>"
+          "description": "<p><strong>Requirements</strong> The picture-in-clouds is in elephant shape</p>\n<hr />\n<p><strong>Effect</strong> The picture-in-clouds breathes out a @Template[cone|distance:30] of air from their cloudy trunk. Creatures in the area must attempt a @Check[fortitude|dc:30|options:area-effect,forced-movement] save to stand their ground. A creature pushed into a solid object stops moving and takes @Damage[4d10[bludgeoning]] damage.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is pushed 20 feet.</p>\n<p><strong>Failure</strong> The creature is pushed 40 feet.</p>\n<p><strong>Critical Failure</strong> The creature is pushed 40 feet and knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>"
         },
         "action->Feather Storm": {
           "name": "Federsturm",
