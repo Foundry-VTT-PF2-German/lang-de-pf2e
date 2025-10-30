@@ -155,6 +155,9 @@ Hooks.once("babele.init", () => {
                     game.langDePf2e.getMapping("heightening", true)
                 );
             },
+            translatePrerequisites: (data, translation) => {
+                return game.langDePf2e.translatePrerequisites(data, translation);
+            },
             translateRange: (data) => {
                 return game.langDePf2e.translateValue("range", data);
             },
