@@ -5051,15 +5051,15 @@
         },
         "action->Combustible": {
           "name": "Entflammbar",
-          "description": "<p>Nimmt ein Eingelegter Fötus erstmals in einer Runde Feuerschaden, entflammen die ihn umgebenden Dämpfe und fügen allen anderen Kreaturen innerhalb der Aura der Erstickenden Dämpfe jeweils @Damage[5[fire]]{5 Punkte Feuerschaden} zu.</p>"
+          "description": "<p>Nimmt ein Eingelegter Fötus erstmals in einer Runde Feuerschaden, entflammen die ihn umgebenden Dämpfe und fügen allen anderen Kreaturen innerhalb der Aura der Erstickenden Dämpfe jeweils @Damage[5[fire]|options:area-damage]{5 Punkte Feuerschaden} zu.</p>"
         },
         "action->Suffocating Fumes": {
           "name": "Erstickende Dämpfe",
-          "description": "<p>5 Fuß/1,50 m. Betritt eine Kreatur die Aura oder beginnt sie darin ihren Zug, muss sie einen @Check[fortitude|dc:14]{Zähigkeitswurf} (bzw. @Check[fortitude|dc:17]{Zähigkeit}, sollte sich der Eingelegte Fötus an der Kreatur festklammern) ablegen. Misslingt der Rettungswurf, erhält die Kreatur den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1} (plus @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 1} für 1 Minute im Fall eines Kritischen Fehlschlages).</p>"
+          "description": "<p>5 Fuß/1,50 m. Betritt eine Kreatur die Aura oder beginnt sie darin ihren Zug, muss sie einen @Check[fortitude|dc:14|options:area-effect,inflicts:sickened,inflicts:enfeebled]{Zähigkeitswurf} (bzw. @Check[fortitude|dc:17|options:area-effect,inflicts:sickened,inflicts:enfeebled]{Zähigkeitswurf}, sollte sich der Eingelegte Fötus an der Kreatur festklammern) ablegen. Misslingt der Rettungswurf, erhält die Kreatur den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1} (plus @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 1} für 1 Minute im Fall eines Kritischen Fehlschlages).</p>"
         },
         "action->Attach": {
           "name": "Festkleben",
-          "description": "<p>Trifft ein Eingelegter Fötus ein Ziel mit höherer Größenkategorie, nutzt er bizarre Körperflüssigkeiten, um sich an diese Kreatur festzukleben. Dies entspricht Ergreifen, allerdings erhält der Eingelegte Fötus nicht den Zustand Auf dem Falschen Fuß und bewegt sich mit der Zielkreatur, statt sie auf der Stelle festzuhalten. Während der Fötus festklebt, fügt er der Kreatur automatisch seinen Bissschaden zu. Da er zugleich in Bewegung auf seinem Ziel bleibt, erhält er einen Situationsbonus von +2 auf seine RK, solange er nicht den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} oder @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Gebunden} erhält.</p>"
+          "description": "<p>Trifft ein Eingelegter Fötus ein Ziel mit höherer Größenkategorie, nutzt er bizarre Körperflüssigkeiten, um sich an diese Kreatur festzukleben. Dies entspricht Ergreifen, allerdings erhält der Eingelegte Fötus nicht den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} und bewegt sich mit der Zielkreatur, statt sie auf der Stelle festzuhalten. Während der Fötus festklebt, fügt er der Kreatur automatisch seinen Bissschaden zu. Da er zugleich in Bewegung auf seinem Ziel bleibt, erhält er einen Situationsbonus von +2 auf seine RK, solange er nicht den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} oder @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Gebunden} erhält.</p>"
         }
       }
     },
@@ -6280,7 +6280,7 @@
         },
         "action->Psychokinetic Trumpet": {
           "name": "Psychokinetisches Trompeten",
-          "description": "<p>Der Terafant stößt ein lautes Tröten aus, das Kreaturen innerhalb eines @Template[cone|distance:30]{Kegels von 30 Fuß/9 m} @Damage[8d8[mental]|options:area-damage]{8W8 Mentalen Schaden} zufügt (@Check[will|dc:27|basic|options:area-effect,inflicts:forced-movement]{einfacher WIL}). Kreaturen, die bei ihrem Rettungswurf einen Fehlschlag erleiden, werden zudem 15 Fuß/4,50 Meter weit zurückgestoßen (30 Fuß/9 Meter bei einem Kritischen Fehlschlag). Wird eine Kreatur dabei gegen ein stabiles Hindernis gestoßen, erleidet diese @Damage[3d6[bludgeoning]]{3W6 Wuchtschaden} und verbleibt an dieser Stelle. Der Terafant kann die Fähigkeit Psychokinetisches Trompeten im Anschluss [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.</p>"
+          "description": "<p>Der Terafant stößt ein lautes Tröten aus, das Kreaturen innerhalb eines @Template[cone|distance:30]{Kegels von 30 Fuß/9 m} @Damage[8d8[mental]|options:area-damage]{8W8 Mentalen Schaden} zufügt (@Check[will|dc:27|basic|options:area-effect,forced-movement]{einfacher WIL}). Kreaturen, die bei ihrem Rettungswurf einen Fehlschlag erleiden, werden zudem 15 Fuß/4,50 Meter weit zurückgestoßen (30 Fuß/9 Meter bei einem Kritischen Fehlschlag). Wird eine Kreatur dabei gegen ein stabiles Hindernis gestoßen, erleidet diese @Damage[3d6[bludgeoning]]{3W6 Wuchtschaden} und verbleibt an dieser Stelle. Der Terafant kann die Fähigkeit Psychokinetisches Trompeten im Anschluss [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.</p>"
         },
         "action->Trample": {
           "description": "<p>Groß oder kleiner, Fuß, @Check[reflex|dc:27|basic]{REF}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Trample]</p>"
