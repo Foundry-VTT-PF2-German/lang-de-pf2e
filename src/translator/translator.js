@@ -405,6 +405,27 @@ class Translator {
         return data;
     }
 
+    /**
+     * translate prerequisites and converts incomplete translation objects into arrays
+     * @param {[{ value: String }]} data
+     * @param {[{ value: String }] | { [number]: { value: String } }} translation
+     * @returns {[{ value: String }]}
+     */
+    translatePrerequisites(data = [], translation = []) {
+        if (!Object.keys(translation).length) return data;
+        if (!Array.isArray(translation)) {
+            Object.entries(translation).forEach(([index, v]) => {
+                data[index] = v;
+            });
+        } else if (translation.length === data.length) return translation;
+        else {
+            translation.forEach((t, index) => {
+                data[index] = t;
+            });
+        }
+        return data;
+    }
+
     // Translates a specified value within an object using the dictionary
     translateObject(type, fieldName, sourceObject) {
         const translatedObject = {};
