@@ -790,6 +790,7 @@
         "ImpulseFireFrom": "impulse fire from {origin}",
         "IncorporealCreatures": "incorporeal creatures",
         "IngestedPoisons": "ingested poisons",
+        "InhaledPoisons": "inhaled poisons",
         "MagicalBludgeoning": "magical bludgeoning",
         "MagicalColdIron": "magical cold iron",
         "MagicalDuskwood": "magical duskwood",
@@ -839,11 +840,22 @@
           "Subterfuge": "Subterfuge"
         }
       },
+      "AethusasPrison": {
+        "EnergyImmunity": {
+          "Acid": "Immune to acid",
+          "Cold": "Immune to cold",
+          "Electricity": "Immune to electricity",
+          "Fire": "Immune to fire"
+        }
+      },
       "AlchemicalGolem": {
         "Sickness": "Sickness"
       },
       "AlchemicalGrenades": {
         "Label": "Alchemical Grenade"
+      },
+      "AmbushCopse": {
+        "RollOptionLabel": "Ambush Copse is hiding in Forests"
       },
       "AncientWisp": {
         "PinpointLight": "Pinpoint Light"
@@ -1291,6 +1303,9 @@
         "TargetMurderedPaleStranger": "Target Murdered Pale Stranger",
         "TargetNeverKilled": "Target has Never Killed"
       },
+      "PeacockPhoenix": {
+        "RadiantWing": "Radiant Wing"
+      },
       "PhantasmalProtagonist": {
         "AbilityLabel": "Phantasmal Protagonist"
       },
@@ -1410,6 +1425,11 @@
       "SkyDragon": {
         "DivineLightningGood": "Divine Lightning — Good Damage",
         "DivineLightningPositive": "Divine Lightning — Vitality Damage"
+      },
+      "Sykever": {
+        "ArmSpike": "Arm Spike",
+        "Bipedal": "Bipedal",
+        "Quadrupedal": "Quadrupedal"
       },
       "SoulfiredPot": {
         "CriticalHit": "Soulfired Pot Broken by a Critical Hit"
@@ -3137,6 +3157,9 @@
           "bard": {
             "Description": "You've developed keen awareness and attention to detail. Your proficiency rank for Perception increases to master."
           },
+          "commander": {
+            "Description": "You've developed the ability to see a scenario from every side. Your proficiency rank for Perception increases to master."
+          },
           "exemplar": {
             "Description": "Through your adventures, you've developed keen awareness and attention to detail, the better to watch over your wards and keep an eye out for monsters and other threats. Your proficiency rank for Perception increases to master."
           },
@@ -3153,6 +3176,9 @@
             "Description": "You've developed keen awareness and attention to detail. Your proficiency rank for Perception increases to master."
           },
           "swashbuckler": {
+            "Description": "Through your adventures, you've developed keen awareness and attention to detail. Your proficiency rank for Perception increases to master."
+          },
+          "thaumaturge": {
             "Description": "Through your adventures, you've developed keen awareness and attention to detail. Your proficiency rank for Perception increases to master."
           }
         },
@@ -3361,6 +3387,9 @@
         },
         "GloriousBanner": {
           "ToggleLabel": "Glorious Banner — Commander's banner in sight"
+        },
+        "ObservationalAnalysis": {
+          "RollOptionLabel": "Observational Analysis — Increase Combat Assessment bonus"
         },
         "Tactics": {
           "CryHavoc": {
@@ -3671,6 +3700,9 @@
         },
         "KneelForNoGod": {
           "Note": "When you roll a success against a divine effect, you get a critical success instead."
+        },
+        "MountainStrategy": {
+          "Note": "If any creature critically succeeds at an attack against you and deals damage to you, you gain your bonus to damage against that creature for 1 minute regardless of whether it has one of the listed traits. @UUID[Compendium.pf2e.feat-effects.Item.O7OO1kWFEFv6vl3E]{Effect: Mountain Strategy (Critically Hit)}"
         },
         "RockRunner": {
           "Note": "When you use the Acrobatics skill to Balance on narrow surfaces or uneven ground made of stone or earth, you aren't off-guard, and when you roll a success at one of these Acrobatics checks, you get a critical success instead."
@@ -6416,7 +6448,7 @@
         },
         "KnowledgeOfShapes": "You use @UUID[Compendium.pf2e.feats-srd.Item.BWomK7EVY0WXxWgh]{Reach Spell} or @UUID[Compendium.pf2e.feats-srd.Item.FoWO4RnHRwfEIC7Q]{Widen Spell} as a free action.",
         "LeyLineConduit": "You don't expend the prepared spell as you cast it.",
-        "Martyr": "You lose @Damage[(@item.rank)d8] Hit Points, which can't be reduced or mitigated in any way, and your ally regains an equal number of Hit Points. @UUID[Compendium.pf2e.feat-effects.Item.7ogytOgDmh4h2g5d]{Effect: Heroic Recovery}",
+        "Martyr": "You lose @Damage[(@item.rank)d8] Hit Points, which can't be reduced or mitigated in any way, and your ally regains an equal number of Hit Points.",
         "MelodiousSpell": "The spell gains the Subtle trait. The trait hides only the spell's spellcasting actions and manifestations, not its effects. As part of using Melodious Spell, you can choose to @UUID[Compendium.pf2e.actionspf2e.Item.GkmbTGfg8KcgynOA]{Create a Diversion}, @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize}, @UUID[Compendium.pf2e.actionspf2e.Item.EEDElIyin4z60PXx]{Perform}, or Request. If you do so, the spell you cast must have the auditory, emotion, sonic, or visual trait to gain the subtle trait.",
         "NonLethal": "If your next action is to Cast a Spell that deals damage and doesn't have the death or void trait, that spell gains the nonlethal trait.",
         "OstentatiousArrivalManifestEidolon": "All creatures except you in a @Template[type:emanation|distance:10] around the creature you summoned or manifested take @Damage[(@actor.level)d4[@actor.flags.pf2e.spellshape.arrivalDamage]|options:area-damage]. If the creature you summoned or manifested has the acid, cold, electricity, fire, sonic, or water trait, the damage is that type instead (or cold damage for the water trait). If the creature has more than one of these traits, you choose which damage type to deal.",
@@ -6798,6 +6830,11 @@
       "TrapFinder": {
         "DefendingLabel": "Trap Finder (defending against traps)",
         "SearchLabel": "Trap Finder (searching for traps)"
+      },
+      "TriangularTeeth": {
+        "Survival": {
+          "Label": "Triangular Teeth — Navigate Waters"
+        }
       },
       "TrinityGeodeLabel": "Trinity Geode",
       "TwinnedDefense": {

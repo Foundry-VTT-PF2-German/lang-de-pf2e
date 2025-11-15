@@ -201,7 +201,7 @@
     },
     "(Divine Warden) Divine Destruction": {
       "name": "(Divine Warden) Divine Destruction",
-      "description": "<p>When the divine warden is reduced to 0 HP, it erupts with divine energy in a @Template[emanation|distance:30], dealing @Damage[1d6[damageType]|options:area-damage] damage per level. This damage is either vitality or void, determined by the patron deity's divine font (chosen at the divine warden's creation if the deity offers a choice), and this ability gains the corresponding trait. Each creature in the area must attempt a @Check[will|dc:|options:area-effect,damaging-effect] save with the following outcomes.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature takes half damage.</p>\n<p><strong>Success</strong> The creature takes full damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and becomes temporarily cursed by the patron deity. The creature becomes @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 day; this is a curse effect that uses the Will save DC as the counteract DC.</p>\n<p><strong>Critical Failure</strong> As failure, except the creature becomes @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2}.</p>"
+      "description": "<p>When the divine warden is reduced to 0 HP, it erupts with divine energy in a @Template[type:emanation|distance:30], dealing @Damage[1d6[spirit]|options:area-damage] damage per level. Each creature in the area must attempt a @Check[will|dc:0] save with the following outcomes.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature takes half damage.</p>\n<p><strong>Success</strong> The creature takes full damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and becomes temporarily cursed by the patron deity. The creature becomes @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 day; this is a curse effect that uses the Will save DC as the counteract DC.</p>\n<p><strong>Critical Failure</strong> As failure, except the creature becomes @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2}.</p>"
     },
     "(Divine Warden) Divine Domain Spells": {
       "name": "(Divine Warden) Divine Domain Spells",
@@ -209,7 +209,7 @@
     },
     "(Divine Warden) Divine Innate Spells": {
       "name": "(Divine Warden) Divine Innate Spells",
-      "description": "<p>A divine warden whose patron deity has any alignment components gains @UUID[Compendium.pf2e.spells-srd.Item.qwZBXN6zBoB9BHXE]{Divine Lance} as an innate cantrip. A divine warden with a neutral patron deity instead gains @UUID[Compendium.pf2e.spells-srd.Item.4gBIw4IDrSfFHik4]{Daze} as an innate cantrip.</p>"
+      "description": "<p>A divine warden gains @UUID[Compendium.pf2e.spells-srd.Item.qwZBXN6zBoB9BHXE]{Divine Lance} as an innate cantrip.</p>"
     },
     "(Divine Warden) Faith Bound": {
       "name": "(Divine Warden) Faith Bound",
@@ -217,11 +217,15 @@
     },
     "(Divine Warden) Faithful Weapon": {
       "name": "(Divine Warden) Faithful Weapon",
-      "description": "<p>A divine warden always wields its patron deity's favored weapon. If the weapon is a ranged weapon, the divine warden automatically generates new ammunition with each attack. For a divine warden of 4th level or higher, the deity's favored weapon gains the effects of a <em>@UUID[Compendium.pf2e.equipment-srd.Item.DxCuJKynlnMQZHgp]{Striking}</em> rune while the divine warden wields it; at 12th level, these effects are of a <em>@UUID[Compendium.pf2e.equipment-srd.Item.KCQRFvUgbyclvOGi]{Greater Striking}</em> rune, and at 19th level, they're instead of a <em>@UUID[Compendium.pf2e.equipment-srd.Item.woxl2FrrgAcJDu0t]{Major Striking}</em> rune.</p>"
+      "description": "<p>A divine warden always wields its patron deity's favored weapon. If the weapon is a ranged weapon, the divine warden automatically generates new ammunition with each attack. For a divine warden of 4th level or higher, the deity's favored weapon gains the effects of a <em>striking rune</em> while the divine warden wields it; at 12th level, these effects are of a <em>greater striking rune</em>, and at 19th level, they're instead of a <em>major striking rune</em>.</p>"
     },
     "(Divine Warden) Instrument of Faith": {
       "name": "(Divine Warden) Instrument of Faith",
       "description": "<p>The divine warden is a beacon for its deity's faith. A cleric of the divine warden's patron deity can channel a @UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal} spell through a divine warden they can see within 60 feet. The cleric determines any targets or area for the spell as if they were standing in the divine warden's space.</p>"
+    },
+    "(Divine Warden) Sanctification": {
+      "name": "(Divine Warden) Sanctification",
+      "description": "<p>Divine wardens are often sanctified, gaining the holy or unholy traits as preferred by their deity. If the deity doesn't have a preference, the warden isn't sanctified.</p>"
     },
     "(Dragon) Change Shape": {
       "name": "(Dragon) Change Shape",
@@ -1124,6 +1128,26 @@
       "name": "(Skeleton) Skeleton of Roses",
       "description": "<p>Thick briars have grown through the skeleton's bones, covering it in red roses with inch-long thorns.</p>\n<p>The skeleton's unarmed melee Strikes deal additional piercing damage equal to 1/3 the skeleton's level (minimum 1 damage).</p>\n<p>At the end of each of its turns, if the skeleton has caused piercing damage with its thorns, it regains @Damage[(max(1,@actor.level))[healing]]{HP equal to its level} (minimum 1). Each time the skeleton regains HP in this way, another rose blossoms.</p>"
     },
+    "(Spawn of Rovagug) Absolute Regeneration": {
+      "name": "(Spawn of Rovagug) Absolute Regeneration",
+      "description": "<p>This functions as regeneration, though it requires very specific actions to be deactivated. A Spawn of Rovagug's regeneration is powerful enough to revive it even if slain by a death effect. If the Spawn fails a save against an effect that would kill it instantly, it rises from death 3 rounds later with 1 Hit Point. A Spawn can still be banished, imprisoned, or transported away as a means to save a region or kept in a state of dying by an effect that deals constant damage.</p>"
+    },
+    "(Spawn of Rovagug) Slumbering Armageddon": {
+      "name": "(Spawn of Rovagug) Slumbering Armageddon",
+      "description": "<p>Spawn of Rovagug can sleep for centuries in a regenerative hibernation. While slumbering, a Spawn doesn't need to eat, drink, or even breathe, and its resistances double in value. It can't be located by detection, revelation, or scrying effects, and for any saving throw, it uses the outcome one degree of success better than the result. With no outlet while the Spawn slumbers, its massive destructive energies turn outward and infect its surroundings, causing natural disasters of a type matching the Spawn to occur more frequently and with greater severity in a 1-mile emanation from the Spawn's resting place, increasing in radius by roughly a mile every decade the Spawn slumbers.</p>"
+    },
+    "(Spawning Soulrider) Celestial Flare": {
+      "name": "(Spawning Soulrider) Celestial Flare",
+      "description": "<p>Each enemy within 30 feet of the soulrider takes @Damage[2d6[spirit]] damage (@Check[will|dc:17|basic] save). Creatures that fail the save are @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for 1 round. The spawning soulrider can't use Celestial Flare again for 1 minute.</p>"
+    },
+    "(Spawning Soulrider) Fiendish Lunge": {
+      "name": "(Spawning Soulrider) Fiendish Lunge",
+      "description": "<p>The spawning soulrider Strides or Swims twice, making a tail Strike at any point during its movement. The Strike deals an additional @Damage[1d4[spirit]] damage.</p>"
+    },
+    "(Spawning Soulrider) Monitor Escape": {
+      "name": "(Spawning Soulrider) Monitor Escape",
+      "description": "<p>The soulrider's form blurs as it exploits loopholes in the multiverse. It teleports to an empty space within 60 feet.</p>"
+    },
     "(Sporeborn) Consume Biomatter": {
       "name": "(Sporeborn) Consume Biomatter",
       "description": "<p>If the sporeborn is adjacent to a helpless or @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious} creature, or a deceased creature who died in the past hour, the sporeborn can consume its flesh with mycelium tendrils to heal itself. This restores an amount of Hit Points equal to the sporeborn's level. If the creature is alive, the sporeborn deals damage equal to one of its unarmed attacks.</p>"
@@ -1191,6 +1215,26 @@
     "(Stargut Hydra) Skymetal Metamorphosis (Siccatite)": {
       "name": "(Stargut Hydra) Skymetal Metamorphosis (Siccatite)",
       "description": "<p>Each stargut hydra has at least one metamorphosis resulting from consuming a specific skymetal and internalizing its properties.</p>\n<p><strong>Siccatite</strong> After the stargut hydra takes fire damage, it becomes superheated, gaining immunity to fire and weakness 10 to cold. While superheated, cold damage can be used to cauterize a stump. After the stargut hydra takes cold damage, it becomes chilled, gaining immunity to cold and weakness 10 to fire.</p>"
+    },
+    "(Swarm Strider) Clinging Remnants": {
+      "name": "(Swarm Strider) Clinging Remnants",
+      "description": "<p>A swarm strider's melee Strikes and ranged Strikes made against targets within their weapon's first range increment deposit biting vermin on the target, dealing @Damage[1d4[persistent,piercing]] damage, increasing to 2d4 at 5th level, 3d4 at 10th level, 4d4 at 15th level, and 5d4 at 20th level.</p>"
+    },
+    "(Swarm Strider) Discorporate": {
+      "name": "(Swarm Strider) Discorporate",
+      "description": "<p>When the swarm strider is reduced to 0 HP, their constituent creatures collapse, scattering on the ground under their space and each adjacent square. If even one of the creatures gets away, the swarm strider can eventually re-form over 1d10 days (potentially longer in areas where there are few invertebrates).</p>\n<p>The scattered invertebrates must be destroyed within 1 round to destroy the swarm strider permanently. The invertebrates have a collective pool of HP, typically equal to 1/4 of the swarm strider's maximum HP, and the same AC, saves, immunities, resistances, and weaknesses as the swarm strider. The invertebrates can't take actions but they escape automatically once the round elapses. At the GM's discretion, clever means of trapping or eliminating the creatures might be sufficient to destroy the swarm strider.</p>"
+    },
+    "(Swarm Strider) Draw Bugs": {
+      "name": "(Swarm Strider) Draw Bugs",
+      "description": "<p>The swarm strider draws more arthropods from the environment around them to reconstitute some of their damaged body. They regain the listed number of HP, which is typically 5 HP, increasing to 10 at 5th level, 15 at 10th level, and 20 at 15th level. At the GM's discretion, the swarm strider doesn't recover HP in areas where there aren't enough arthropods to call to themselves.</p>"
+    },
+    "(Swarm Strider) Squirming Embrace": {
+      "name": "(Swarm Strider) Squirming Embrace",
+      "description": "<p>The swarm strider Strides. If they end their movement sharing a space with a creature, they deal @Damage[1d6[piercing]] damage to the creature, with a basic Reflex save. The save DC is the high spell DC for the swarm strider's level. The damage increases by 1d6 at 4th level and every 3 levels thereafter. The swarm strider can Burrow, Climb, Fly, or Swim instead of Striding if they have the corresponding movement type.</p>"
+    },
+    "(Swarm Strider) Swarm Shape": {
+      "name": "(Swarm Strider) Swarm Shape",
+      "description": "<p>The swarm strider collapses into a shapeless swarm of their constituent creatures. They drops all items in their possession. In this form, the swarm strider can't use attack actions and can't cast spells, but they can move through areas small enough for their constituent creatures to fit without having to Squeeze. They can use the same action to coalesce from their swarm shape back into their normal form.</p>"
     },
     "(Ulgrem-Axaan) Befouling Odor": {
       "name": "(Ulgrem-Axaan) Befouling Odor",
@@ -1279,7 +1323,7 @@
     },
     "(Vampire, Nosferatu Overlord) Air of Sickness": {
       "name": "(Vampire, Nosferatu Overlord) Air of Sickness",
-      "description": "<p>30 feet. A creature entering or starting its turn in the aura must attempt a @Check[fortitude|dc:] save with a moderate DC for the nosferatu's level. On a failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} and takes a -2 status penalty to saves made to resist diseases and remove the sickened condition for 1 hour.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.XSXMGb5h4Um6YXiT]{Effect: Air of Sickness}</p>"
+      "description": "<p>30 feet. A creature entering or starting its turn in the aura must attempt a @Check[fortitude|dc:|options:inflicts:sickened] save with a moderate DC for the nosferatu's level. On a failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} and takes a –2 status penalty to saves made to resist diseases and remove the sickened condition for 1 hour.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.XSXMGb5h4Um6YXiT]{Effect: Air of Sickness}</p>"
     },
     "(Vampire, Nosferatu Overlord) Divine Innate Spells": {
       "name": "(Vampire, Nosferatu Overlord) Divine Innate Spells",
@@ -1287,7 +1331,7 @@
     },
     "(Vampire, Nosferatu Overlord) Paralytic Fear": {
       "name": "(Vampire, Nosferatu Overlord) Paralytic Fear",
-      "description": "<p><strong>Requirements</strong> The nosferatu overlord's last action was a successful claw Strike</p>\n<hr />\n<p><strong>Effect</strong> The nosferatu drags the target of the Strike close and freezes its mind in terror. The target must attempt a @Check[will|dc:] save with a moderate DC for the nosferatu's level.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} by fear until the end of the nosferatu's next turn.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} and takes a -2 circumstance penalty to its Fortitude DC against the nosferatu's Drink Blood ability until the end of the nosferatu's next turn.</p>\n<p><strong>Critical Failure</strong> As failure, and the target is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}.</p>"
+      "description": "<p><strong>Requirements</strong> The nosferatu overlord's last action was a successful claw Strike</p>\n<hr />\n<p><strong>Effect</strong> The nosferatu drags the target of the Strike close and freezes its mind in terror. The target must attempt a @Check[will|dc:|options:inflicts:frightened,inflicts:immobilized,inflicts:restrained] save with a moderate DC for the nosferatu's level.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} by fear until the end of the nosferatu's next turn.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} and takes a –2 circumstance penalty to its Fortitude DC against the nosferatu's Drink Blood ability until the end of the nosferatu's next turn.</p>\n<p><strong>Critical Failure</strong> As failure, and the target is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}.</p>"
     },
     "(Vampire, Nosferatu Thrall) Fast Healing": {
       "name": "(Vampire, Nosferatu Thrall) Fast Healing",
@@ -1295,7 +1339,7 @@
     },
     "(Vampire, Nosferatu Thrall) Mindbound": {
       "name": "(Vampire, Nosferatu Thrall) Mindbound",
-      "description": "<p>A nosferatu master exerts a fierce hold over their thrall's mind. If any creature other than the thrall's master targets them with an effect that would give them the @UUID[Compendium.pf2e.conditionitems.Item.9qGBRpbX9NEwtAAr]{Controlled} condition, the thrall's master rolls a counteract check against it using their Dominate DC - 10 as the counteract check modifier.</p>"
+      "description": "<p>A nosferatu master exerts a fierce hold over their thrall's mind. If any creature other than the thrall's master targets them with an effect that would give them the @UUID[Compendium.pf2e.conditionitems.Item.9qGBRpbX9NEwtAAr]{Controlled} condition, the thrall's master rolls a counteract check against it using their Dominate DC – 10 as the counteract check modifier.</p>"
     },
     "(Vampire, Nosferatu Thrall) Mortal Shield": {
       "name": "(Vampire, Nosferatu Thrall) Mortal Shield",
@@ -1311,7 +1355,7 @@
     },
     "(Vampire, Nosferatu) Change Shape": {
       "name": "(Vampire, Nosferatu) Change Shape",
-      "description": "<p>The nosferatu transforms into a swarm of pale-gray rats. They gain a land Speed of 30 feet and a climb Speed of 10 feet, and they become Large. Each enemy in the swarm's space takes @Damage[2d10[piercing]] damage and must attempt a @Check[reflex|dc:|basic] save with a high DC for the creature's level. A creature that fails its save is exposed to plague of ancients.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.ChangeShape]</p>"
+      "description": "<p>The nosferatu transforms into a swarm of pale-gray rats. They gain a land Speed of 30 feet and a climb Speed of 10 feet, and they become Large. In this swarm form, the nosferatu can take an action to deal each enemy in the swarm's space @Damage[2d10[piercing]|options:area-damage] damage with a @Check[reflex|basic|options:area-effect] save, with a high DC for the nosferatu's level. A creature that fails its save is also exposed to plague of ancients.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.ChangeShape]</p>"
     },
     "(Vampire, Nosferatu) Command Thrall": {
       "name": "(Vampire, Nosferatu) Command Thrall",
@@ -1323,15 +1367,15 @@
     },
     "(Vampire, Nosferatu) Dominate": {
       "name": "(Vampire, Nosferatu) Dominate",
-      "description": "<p>The nosferatu can cast @UUID[Compendium.pf2e.spells-srd.Item.OsOhx3TGIZ7AhD0P]{Dominate} at will as a divine innate spell. Casting it requires staring into the target's eyes, giving the spell the visual trait (@Check[will|dc:]). The save DC uses a high DC for the nosferatu's level, and a creature that succeeds is temporarily immune to that nosferatu's Dominate for 24 hours. Fully destroying the nosferatu ends the domination, but merely reducing the nosferatu to 0 HP is insufficient to break the spell.</p>"
+      "description": "<p>The nosferatu can cast @UUID[Compendium.pf2e.spells-srd.Item.OsOhx3TGIZ7AhD0P]{Dominate} at will as a divine innate spell. Casting it requires staring into the target's eyes, giving the spell the visual trait. The save DC uses a high DC for the nosferatu's level, and a creature that succeeds is temporarily immune to that nosferatu's Dominate for 24 hours. Fully destroying the nosferatu ends the domination, but merely reducing the nosferatu to 0 HP is insufficient to break the spell.</p>"
     },
     "(Vampire, Nosferatu) Drink Blood": {
       "name": "(Vampire, Nosferatu) Drink Blood",
-      "description": "<p><strong>Requirements</strong> The nosferatu's last action was a successful fangs Strike</p>\n<hr />\n<p><strong>Effect</strong> The nosferatu sinks their fangs into the targeted creature to drink its blood. This requires an @Check[athletics|defense:fortitude] check against the creature's Fortitude DC. On a success, the creature becomes @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}, and the nosferatu regains HP equal to 10% of their maximum HP, gaining any excess HP as temporary Hit Points. Drinking Blood from a creature that's already drained doesn't restore any HP to the nosferatu, but increases the creature's drained condition value by 1. A nosferatu can also consume blood that's been emptied into a vessel for sustenance, but they gain no HP from doing so.</p>\n<p>The target creature's drained condition value decreases by 1 per week. A blood transfusion, which requires a successful @Check[medicine|dc:20] check and sufficient blood or a blood donor, reduces the drained value by 1 after 10 minutes.</p>"
+      "description": "<p><strong>Requirements</strong> The nosferatu's last action was a successful fangs Strike</p>\n<hr />\n<p><strong>Effect</strong> The nosferatu sinks their fangs into the targeted creature to drink its blood. This requires an @Check[athletics|against:fortitude] check against the creature's Fortitude DC. On a success, the creature becomes @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}, and the nosferatu regains HP equal to 10% of their maximum HP, gaining any excess HP as temporary Hit Points. Drinking Blood from a creature that's already drained doesn't restore any HP to the nosferatu but increases the creature's drained condition value by 1, killing the victim when it reaches @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 5}. A nosferatu can also consume blood that's been emptied into a vessel for sustenance, but they gain no HP from doing so.</p>\n<p>The target creature's drained condition value decreases by 1 per week. A blood transfusion, which requires a successful @Check[medicine|dc:20] check and sufficient blood or a blood donor, reduces the drained value by 1 after 10 minutes.</p>"
     },
     "(Vampire, Nosferatu) Nosferatu Vulnerabilities": {
       "name": "(Vampire, Nosferatu) Nosferatu Vulnerabilities",
-      "description": "<ul>\n<li><strong>Revulsion</strong> A nosferatu can't voluntarily come within 10 feet of brandished garlic or a brandished religious symbol of a non-evil deity. To brandish garlic or a religious symbol, a creature must Interact to do so for 1 round (similar to Raising a Shield). If the nosferatu involuntarily comes within 10 feet of an object of their revulsion, they gain the @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} condition, running from the object of their revulsion until they end an action beyond 10 feet. After 1 round of being exposed to the subject of their revulsion, a nosferatu can attempt a @Check[will|dc:25|traits:concentrate] save as a single action, which has the concentrate trait. On a success, they overcome their revulsions for [[/gmr 1d6 #Overcome Revulsions]]{1d6 rounds} (or 1 hour on a critical success).</li>\n<li><strong>Stake</strong> A magical wooden stake (such as one affected by a weapon potency rune, magic weapon, or similar magic) driven through the nosferatu's heart drops the nosferatu to 0 HP and prevents them from healing above 0 HP, even in their coffin. Staking a nosferatu requires 3 actions and works only if the nosferatu is @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}. If the stake is removed, the nosferatu can heal above 0 HP again, and if they're in their coffin, the 1-hour rest period begins once the stake is removed. If the nosferatu's head is severed and anointed with <em>@UUID[Compendium.pf2e.equipment-srd.Item.z9T4c1hXwOotsMCp]{Holy Water}</em> while the stake is in place, the nosferatu is destroyed.</li>\n<li><strong>Sunlight</strong> If exposed to direct sunlight, a nosferatu immediately becomes @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1}. The slowed value increases by 1 each time the nosferatu ends their turn in sunlight, and the condition ends when they're no longer in sunlight. If the nosferatu loses all their actions in this way, they're destroyed.</li>\n</ul>"
+      "description": "<ul>\n<li><strong>Revulsion</strong> A nosferatu can't voluntarily come within 10 feet of brandished garlic or a brandished religious symbol of a deity with a holy sanctification option. To brandish garlic or a religious symbol, a creature must Interact to do so for 1 round (similar to Raising a Shield). If the nosferatu involuntarily comes within 10 feet of an object of their revulsion, they gain the @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} condition, running from the object of their revulsion until they end an action beyond 10 feet. After 1 round of being exposed to the subject of their revulsion, a nosferatu can attempt a @Check[will|dc:25|traits:concentrate] save as a single action, which has the concentrate trait. On a success, they overcome their revulsions for [[/gmr 1d6 #rounds]]{1d6 rounds} (or 1 hour on a critical success).</li>\n<li><strong>Stake</strong> A magical wooden stake (such as one affected by a weapon <em>potency rune</em>, @UUID[Compendium.pf2e.spells-srd.Item.TFitdEOpQC4SzKQQ]{Runic Weapon}, or similar magic) driven through the nosferatu's heart drops the nosferatu to 0 HP and prevents them from healing above 0 HP, even in their coffin. Staking a nosferatu requires 3 actions and works only if the nosferatu is @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}. If the stake is removed, the nosferatu can heal above 0 HP again, and if they're in their coffin, the 1-hour rest period begins once the stake is removed. If the nosferatu's head is severed and anointed with @UUID[Compendium.pf2e.equipment-srd.Item.z9T4c1hXwOotsMCp]{Holy Water} while the stake is in place, the nosferatu is destroyed.</li>\n<li>\n<p><strong>Sunlight</strong> If exposed to direct sunlight, a nosferatu immediately becomes @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1}. The slowed value increases by 1 each time the nosferatu ends their turn in sunlight, and the condition ends when they're no longer in sunlight. If the nosferatu loses all their actions in this way, they're destroyed.</p>\n</li>\n</ul>"
     },
     "(Vampire, Nosferatu) Plague of Ancients": {
       "name": "(Vampire, Nosferatu) Plague of Ancients",
@@ -1339,7 +1383,7 @@
     },
     "(Vampire, Nosferatu) Plagued Coffin Restoration": {
       "name": "(Vampire, Nosferatu) Plagued Coffin Restoration",
-      "description": "<p>Unlike other undead, a nosferatu isn't destroyed at 0 HP. Instead, they disperse into an immense number of individual rats heading in every direction in an attempt to return to their coffin. If even a single rat reaches the coffin, the nosferatu can recover. A nosferatu regains their strength through resting in earth taken from the grave of a creature who died of plague. If their body rests in their earth-filled coffin for 1 hour, the nosferatu gains 1 HP, after which their fast healing begins to function normally. If the coffin doesn't contain this plagued grave dirt, they instead need to rest in their coffin for 1 day before they gain 1 HP and regain their fast healing.</p>"
+      "description": "<p>Unlike other undead, a nosferatu isn't destroyed at 0 HP. Instead, they disperse into an immense number of rats heading in every direction in an attempt to return to their coffin. If even a single rat reaches the coffin, the nosferatu can recover. A nosferatu regains their strength through resting in earth taken from the grave of a creature that died of plague. If their body rests in their earth-filled coffin for 1 hour, the nosferatu gains 1 HP, after which their fast healing begins to function normally. If the coffin doesn't contain this plagued grave dirt, they instead need to rest in their coffin for 1 day before they gain 1 HP and regain their fast healing.</p>"
     },
     "(Vampire, Strigoi Progenitor) Create Spawn": {
       "name": "(Vampire, Strigoi Progenitor) Create Spawn",
@@ -1631,6 +1675,9 @@
     }
   },
   "folders": {
+    "Planar Adaptations (Spawning Soulrider)": "Planar Adaptations (Spawning Soulrider)",
+    "Spawn of Rovagug": "Spawn of Rovagug",
+    "Swarm Strider": "Swarm Strider",
     "Spring-Heeled Jack": "Spring-Heeled Jack",
     "Halfling": "Halfling",
     "Blackfrost Dead": "Blackfrost Dead",
