@@ -4,8 +4,8 @@
       "IsSpecialized": "Ist der Begleiter spezialisiert?"
     },
     "SpecificRule": {
-      "Antelope": {
-        "EffectNote": "Deine Angriffe, die Kreaturen in Reichweite deiner Antilope verwunden, verursachen zusätzlich @Damage[(@actor.flags.pf2e.animalCompanion.antelopeSupportBenefit)d6[bleed]]."
+      "AirElemental": {
+        "EffectNote": "you are @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} to that creature until the start of your next turn."
       },
       "Ape": {
         "EffectNote": "Wenn du eine Kreatur in Reichweite deines Affen triffst und Schaden zufügst, wird diese ebenfalls @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}."
@@ -16,17 +16,11 @@
         },
         "EffectNote": "Angriffe, die eine Kreatur in Reichweite deiner Bacallia treffen, @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Blenden} sie ebenfalls bis zum Beginn deiner nächsten Runde."
       },
-      "Bear": {
-        "EffectNote": "Dein Bär verursacht zusätzlich @Damage[(@actor.flags.pf2e.animalCompanion.bearSupportBenefit)d8[slashing]] am Ziel."
-      },
       "Beetle": {
         "EffectNote": "Deine Angriffe fügen dem Ziel entweder den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} zu, oder bewegen es um 5 Fuß/1,50 m vom Käfer weg (dies ist eine erzwungene Bewegung). Das Ziel bestimmt, welcher Effekt auftritt."
       },
       "Bird": {
-        "EffectNote": "Kreaturen, die von dir getroffen, und von deinem Raubvogel bedroht werden, erhalten zusätzlich @Damage[(@actor.flags.pf2e.animalCompanion.birdSupportBenefit)d4[bleed]] und werden für die Dauer der Blutung @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet}."
-      },
-      "Boar": {
-        "EffectNote": "Deine Angriffe, die Kreaturen in Reichweite deines Wildschweins verwunden, verursachen zusätzlich @Damage[(@actor.flags.pf2e.animalCompanion.boarSupportBenefit)d6[bleed]]."
+        "EffectNote": "The target is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} until it removes the bleed damage."
       },
       "Cat": {
         "EffectNote": "Angriffe welche Kreaturen in Reichweite deiner Raubkatze treffen, versetzen sie ebenfalls @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf den Falschen Fuß}."
@@ -41,9 +35,6 @@
       },
       "Elk": {
         "EffectNote": "Wenn du eine Kreatur in Reichweite deines Elchs triffst und Schaden zufügst, wird diese ebenfalls @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}."
-      },
-      "FireElemental": {
-        "EffectNote": "Your Strikes that damage a creature  in your fire elemental's reach also deal @Damage[(actor.flags.pf2e.animalCompanion.fireElementalSupportBenefit)d6[persistent,fire]] damage."
       },
       "FlyingSquirrel": {
         "EffectNote": "If your Strike damages a creature in your giant flying squirrel's reach, that creature takes a –10-foot circumstance penalty to its Speeds. @UUID[Compendium.pf2e-animal-companions.AC-effects.Item.lACoOtINmUb1fTMY]{Effect: Flying Squirrel Support Benefit (Penalty)}"
@@ -98,24 +89,18 @@
       },
       "GrayBladeling": {
         "EffectNote": {
-          "Bleeding": "Your Strikes that damage a creature in your gray bladeling's reach also deal @Damage[(@actor.flags.pf2e.animalCompanion.grayBladelingSupportBenefit)[persistent,bleed]] damage.",
           "Frightened": "Target becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}"
         }
       },
       "HermitKrait": {
         "DefensiveCurl": {
           "DamageNote": "Du erleidest @Damage[2d6[persistent,poison]]{2W6 Anhaltenden Giftschaden}."
-        },
-        "EffectNote": "Your Strikes that damage a creature in your hermit krait's reach also deal @Damage[(@actor.flags.pf2e.animalCompanion.hermitKraitSupportBenefit)d6[persistent,poison]] damage."
+        }
       },
       "Hyena": {
         "EffectNote": "When you hit a creature in the hyena's reach with a Strike, the creature becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}."
       },
-      "Keulia": {
-        "EffectNote": "Your Strikes that damage a creature in your keulia's reach also deal @Damage[(@actor.flags.pf2e.animalCompanion.keuliaSupportBenefit)d6[bludgeoning]] damage."
-      },
       "MetalElemental": {
-        "EffectNote": "Your Strikes that damage a creature in your metal elemental's reach also deal @Damage[(@actor.flags.pf2e.animalCompanion.metalElementalSupportBenefit)d6[persistent,bleed]] damage.",
         "SpikedBunker": {
           "DamageNote": "You take @Damage[(@actor.flags.pf2e.rulesSelections.isSpecialized)d6[piercing]] damage."
         }
@@ -124,7 +109,8 @@
         "EffectNote": "If you hit and damage a creature adjacent to your mole, that creature is @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} until it moves from its current position."
       },
       "MonitorLizard": {
-        "EffectNote": "If your Strike damages a foe, any time the foe attempts an action with the manipulate trait until the end of your next turn, it must attempt a DC 5 Flat Check. @UUID[Compendium.pf2e-animal-companions.AC-effects.Item.eXABjTK48R1xCvOZ]{Effect: Monitor Lizard Support Benefit (Penalty)}"
+        "EffectNote": "If your Strike damages a foe, any time the foe attempts an action with the manipulate trait until the end of your next turn, it must attempt a DC 5 Flat Check. @UUID[Compendium.pf2e-animal-companions.AC-effects.Item.eXABjTK48R1xCvOZ]{Effect: Monitor Lizard Support Benefit (Penalty)}",
+        "ManipulateNote": "Attempt a @Check[flat|dc:5|showDC:all]. On a failure, the action is disrupted."
       },
       "Moth": {
         "EffectNote": "If you damage a Concealed or Hidden creature in your moth's reach with a Strike, that creature requires only a DC 3 Flat Check to target it if it's concealed, or DC 9 Flat Check if it's hidden. @UUID[Compendium.pf2e-animal-companions.AC-effects.Item.Db0Vtobv3v4Iybj5]{Effect: Moth Support Benefit (Penalty)}"
@@ -132,23 +118,20 @@
       "Pangolin": {
         "DefensiveCurl": {
           "DamageNote": "Du erleidest @Damage[2d6[bleed]]{2W6 Blutungsschaden}."
-        },
-        "EffectNote": "Your Strikes that damage a creature in your pangolin's reach also deal @Damage[(@actor.flags.pf2e.rulesSelections.pangolinSupportBenefit})d6[persistent,bleed]] damage."
+        }
       },
       "Rhinoceros": {
         "EffectNote": "The first creature within your rhino's reach that you hit and deal damage to before the start of your next turn becomes @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}."
       },
       "RidingDrake": {
-        "EffectNote": "Each time you Strike while riding the drake and hit a creature in the drake's reach, the creature takes @Damage[(@actor.flags.pf2e.rulesSelections.ridingDrakeSupportBenefit)d4[fire]] damage from the drake."
+        "Label": "Mounted on the Riding Drake"
       },
       "RidingTarantula": {
-        "EffectNote": "If you hit and deal damage to a creature your riding tarantula threatens, the target must succeed at a @Check[type:flat|dc:5] whenever it takes a concentrate action or that action is lost. @UUID[Compendium.pf2e-animal-companions.AC-effects.Item.crYJGMzeiXh8xve3]{Effect: Riding Tarantula Support Benefit (Penalty)}"
+        "EffectNote": "If you hit and deal damage to a creature your riding tarantula threatens, the target must succeed at a @Check[type:flat|dc:5] whenever it takes a concentrate action or that action is lost. @UUID[Compendium.pf2e-animal-companions.AC-effects.Item.crYJGMzeiXh8xve3]{Effect: Riding Tarantula Support Benefit (Penalty)}",
+        "ConcentrateNote": "Attempt a @Check[flat|dc:5|showDC:all]. On a failure, the action is disrupted."
       },
       "Roc": {
         "EffectNote": "Your Strikes that damage a creature that your roc threatens push the target 5 feet away from your roc."
-      },
-      "Scorpion": {
-        "EffectNote": "Your Strikes that damage a creature in your scorpion's reach also deal @Damage[(@actor.flags.pf2e.animalCompanion.scorpionSupportBenefit)d6[persistent,poison]] damage."
       },
       "SeveredHead": {
         "EffectNote": {
@@ -159,13 +142,14 @@
       "ShadowHound": {
         "EffectNote": "When you damage a creature with a Strike and that creature is within reach of your shadow hound, both you and your shadow hound become @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} to the creature."
       },
-      "Shotalashu": {
-        "EffectNote": "Each time you hit a creature in the shotalashu's reach with a Strike, the creature takes @Damage[(@actors.flags.pf2e.rulesSelections.shotalashuSupportBenefit)d6[mental]] damage from the shotalashu."
+      "SkeletalBirdOfPrey": {
+        "EffectNote": "When you damage a creature in the bird's reach with a Strike, that creature becomes @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}."
       },
       "SkeletalConstrictor": {
         "EffectNote": "Your Strikes that deal damage to the chosen creature make the target @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}."
       },
       "SkeletalMount": {
+        "Label": "Mounted on the Skeletal Mount",
         "EffectNote": {
           "CriticalSuccess": "Any creature damaged by the attack becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.",
           "Success": "Any creature damaged by the attack becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}."
@@ -177,26 +161,11 @@
       "TerrorBird": {
         "EffectNote": "Your Strikes that deal damage to the chosen creature make the target @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}."
       },
-      "Triceratops": {
-        "EffectNote": "Your Strikes that damage a prone creature in your triceratops's reach also deal  @Damage[(@actor.flags.pf2e.rulesSelections.triceratopsSupportBenefit)d8[persistent,bleed]] damage."
-      },
       "Tyrannosaurus": {
         "EffectNote": "If you hit and deal damage to a creature within your tyrannosaurus's reach, the creature is @Compendium[pf2e.conditionitems.Frightened]{Frightened 1}."
       },
-      "UlgremLurann": {
-        "EffectNote": "Each time you hit a creature in the Ulgrem-Lurann's reach with a Strike, the creature takes additional @Damage[(@actor.flags.pf2e.rulesSelections.ulgremLurannSupportBenefit)d4[piercing],(@actor.flags.pf2e.rulesSelections.ulgremLurannSupportBenefit)d4[electricity]] damage from the Ulgrem-Lurann."
-      },
       "UmbrellaMushroom": {
         "EffectNote": "Your Strikes that damage a creature within your umbrella mushroom's reach becomes @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}. This effect has the poison trait."
-      },
-      "UndeadBirdOfPrey": {
-        "EffectNote": "When you damage a creature in the bird's reach with a Strike, that creature becomes @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}."
-      },
-      "UndeadHand": {
-        "EffectNote": "Each time you hit a creature in the hand's reach with a Strike, the creature takes @Damage[(@actor.flags.pf2e.rulesSelections.undeadHandSupportBenefit)d6[bludgeoning]] damage."
-      },
-      "VampiricAnimal": {
-        "EffectNote": "Your Strikes that damage a creature in your vampiric animal's reach also deal  @Damage[(@actor.flags.pf2e.rulesSelections.vampiricAnimalSupportBenefit)d6[bleed]] damage."
       },
       "WarPig": {
         "EffectNote": "If you hit and deal damage to a creature within your war pig's reach, the creature is @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}."
@@ -204,36 +173,30 @@
       "WaterElemental": {
         "EffectNote": "Your  Strike that deals damage to a creature within your water elemental's reach, that creature becomes @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}."
       },
+      "WaterWraith": {
+        "EffectNote": "The creature is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled}."
+      },
       "Wolf": {
-        "EffectNote": {
-          "CriticalSuccess": "Your Strikes that damage creatures your wolf threatens give the target a –10-foot status penalty to its Speeds. @UUID[Compendium.pf2e-animal-companions.AC-effects.Item.6x4zqyWl3pQiE9lw]{Effect: Wolf Support Benefit (-10-foot penalty)}",
-          "Success": "Your Strikes that damage creatures your wolf threatens give the target a –5-foot status penalty to its Speeds. @UUID[Compendium.pf2e-animal-companions.AC-effects.Item.UhWenwf5XOlk9ZHY]{Effect: Wolf Support Benefit (-5-foot penalty)}"
-        }
+        "EffectNote": "The target a –5-foot status penalty to its Speeds (–10 on a critical success). @UUID[Compendium.pf2e-animal-companions.AC-effects.Item.UhWenwf5XOlk9ZHY]{Effect: Wolf Support Benefit Speed Penalty}"
       },
       "WoodElemental": {
-        "EffectNote": {
-          "CriticalSuccess": "If you hit with a Strike that deals damage to a creature in your wood elemental's reach, the creature takes a –10-foot circumstance penalty to its Speeds. @UUID[Compendium.pf2e-animal-companions.AC-effects.Item.FPqIVdqeegX6YATJ]{Effect: Wood Elemental Support Benefit (-10-foot penalty)}",
-          "Success": "If you hit with a Strike that deals damage to a creature in your wood elemental's reach, the creature takes a –5-foot circumstance penalty to its Speeds. @UUID[Compendium.pf2e-animal-companions.AC-effects.Item.U2mkebPNSs531ADL]{Effect: Wood Elemental Support Benefit (-5-foot penalty)}"
-        }
+        "EffectNote": "The target takes a –5-foot circumstance penalty to its Speeds for 1 minute (–10 on a critical success). @UUID[Compendium.pf2e-animal-companions.AC-effects.Item.U2mkebPNSs531ADL]{Effect: Wood Elemental Support Benefit Speed Penalty}"
       },
       "Wyvern": {
-        "EffectNote": "Deine Angriffe, die Kreaturen in Reichweite deines Wyvern verwunden, verursachen zusätzlich Anhaltenden Giftschaden (@Damage[(@actor.flags.pf2e.rulesSelections.wyvernSupportBenefit)d6[persistent,poison]])."
-      },
-      "ZombieCarrionBird": {
-        "EffectNote": "Each time you hit and deal damage to a creature that's within 10 feet of the zombie carrion bird, the creature takes an additional @Damage[(@actors.flags.pf2e.rulesSelections.zombieCarrionBirdSupportBenefit)d6[untyped]] damage."
-      },
-      "ZombieMount": {
-        "EffectNote": "Each time you Strike while riding the zombie mount and hit a creature in the zombie mount's reach, the creature takes @Damage[(actors.flags.pf2e.rulesSelections.zombieMountSupportBenefit)d4[@actor.flags.pf2e.rulesSelections.zombieMountDamage]] damage from the zombie mount."
-      },
-      "Zombie": {
-        "EffectNote": "Each time you hit a creature that's within 10 feet of the zombie and you deal damage, the creature takes an additional @Damage[(@actor.flags.pf2e.rulesSelections.zombieMountSupportBenefit)d6[untyped]] damage."
+        "DivingSkewer": {
+          "Note": "The target is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}."
+        },
+        "StingerPoison": {
+          "Label": "Stinger Poison"
+        }
       }
+    },
+    "UnarmedAttacks": {
+      "Bite": "Bite",
+      "Blade": "Blade",
+      "Claws": "Claws",
+      "Slam": "Slam",
+      "TailSlam": "Tail Slam"
     }
-  },
-  "UnarmedAttacks": {
-    "Bite": "Biss",
-    "Blade": "Klinge",
-    "Slam": "Hieb",
-    "TailSlam": "Schwanzschlag"
   }
 }
