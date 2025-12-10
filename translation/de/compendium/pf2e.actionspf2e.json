@@ -26,6 +26,10 @@
       "name": "Glückstreffer",
       "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<hr />\n<p><strong>Effekt</strong> Du greifst mit einer Fernkampfwaffe an und würfelst jeweils zweimal für Angriff und Schaden, wobei du das jeweils bessere Ergebnis verwendest. Der Angriff ignoriert Situationsmali auf den Angriffswurf und jeden Einfachen Wurf aufgrund des Zustandes @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Verborgen} oder @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Versteckt} beim Ziel.</p>"
     },
+    "Acrid Barrage": {
+      "name": "Acrid Barrage",
+      "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> Each enemy in your aura takes @Damage[ternary(gte(@actor.level, 18), 7, ternary(gte(@actor.level, 15), 6, 5))d6[acid]] damage and @Damage[2d6[persistent,acid]] damage with a @Check[reflex|against:class-spell|basic] save against your class DC or spell DC, whichever is higher. The initial damage increases to 6d6 at 15th level and 7d6 at 18th level.</p>"
+    },
     "Act Together": {
       "name": "Gemeinsames Handeln",
       "description": "<p><strong>Häufigkeit</strong> Einmal pro Runde</p>\n<hr />\n<p>Du und dein Eidolon handeln wie eine Person. Entweder du oder dein Eidolon führt eine Aktion oder Aktivität mit derselben Anzahl an Aktionen aus, wie du für Gemeinsames Handeln aufgewendet hast, während der andere eine einzelne Aktion nutzt.</p>\n<p>Beispiel: Du wendest 2 Aktionen für Gemeinsames Handeln auf. Nun könntest du @UUID[Compendium.pf2e.spells-srd.Item.y6rAdMK6EFlV6U0t]{Feueratem} wirken (2 Aktionen), während dein Eidolon einen Angriff ausführt (1 Aktion). Alternativ könnte dein Eidolon seine Odemwaffe einsetzen (2 Aktionen) und du könntest Laufen (1 Aktion).</p>\n<p>Mit dieser Handlung könnt ihr unterschiedliche Erkundungsaktivitäten beim Reisen nutzen wie z.B. @UUID[Compendium.pf2e.actionspf2e.Item.IE2nThCmoyhQA0Jn]{Unbemerkt bleiben}</p>"
@@ -206,6 +210,10 @@
       "name": "Aus fremdem Zauberbuch vorbereiten",
       "description": "<p>Solltest du ein arkaner Zauberkundiger sein, welcher seine Zauber aus einem Zauberbuch vorbereitet, so kannst du versuchen, einen Zauber aus dem Zauberbuch eines anderen vorzubereiten. Der SL setzt den SG des Fertigkeitswurfes basierend auf Zaubergrad und Seltenheit fest; der SG ist in der Regel etwas niedriger als der zum Erlernen des fraglichen Zaubers.</p>\n<p><strong>Erfolg</strong> Du bereitest den Zauber als Teil deiner normalen Zaubervorbereitungen vor.</p>\n<p><strong>Fehlschlag</strong> Du scheiterst beim Vorbereiten des Zaubers, behältst aber den fraglichen Zauberplatz und kannst darin einen anderen Zauber vorbereiten. Du kannst diesen Zauber erst wieder versuchen vorzubereiten, wenn du das nächste Mal Zauber vorbereitest.</p>"
     },
+    "Bounce Away": {
+      "name": "Bounce Away",
+      "description": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Trigger</strong> A melee Strike hits you and deals bludgeoning damage</p>\n<hr />\n<p><strong>Effect</strong> You gain resistance equal to your level to bludgeoning damage from the triggering Strike, then Stride up to half your Speed. You can Fly instead of Striding if you have a fly Speed.</p>"
+    },
     "Brandish the Gorgon's Gaze": {
       "name": "Brandish the Gorgon's Gaze",
       "description": "<p>You Raise your @UUID[Compendium.pf2e.classfeatures.Item.lJAQPRT2t8IABR4v]{Mirrored Aegis}, though it seems to lose some of its usual luster in favor of the dull sheen of stone. If you @UUID[Compendium.pf2e.feats-srd.Item.jM72TjJ965jocBV8]{Shield Block} a melee attack with the mirrored aegis before the beginning of your next turn, the gorgon's eyes upon it flash at the triggering creature, who must attempt a @Check[fortitude|against:exemplar|inflicts:slowed] save against your class DC. On a failure, they are @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 minute as their body partially petrifies. Regardless of the outcome, that creature is temporarily immune to this effect for 24 hours.</p>"
@@ -310,6 +318,11 @@
     "Change Tradition Focus": {
       "name": "Traditionsfokus wechseln",
       "description": "<p><strong>Anforderungen</strong> Du befindest dich in einem Duell und verfügst über den Kompetenzgrad Geübt in der Fertigkeit, die mit der magischen Tradition korrespondiert, auf welche du deinen Fokus ausrichten willst (Arkane Künste für Arkane Magie, Naturkunde für Naturmagie, Okkultismus für Okkulte Magie oder Religionskunde für Göttliche Magie).</p>\n<hr />\n<p>Du richtest deinen Traditionsfokus neu auf eine andere magische Tradition aus.</p>"
+    },
+    "Channel Draconic Essence": {
+      "name": "Channel Draconic Essence",
+      "description": "<p><strong>Requirements</strong> You aren't channeling draconic essence and you're holding or wearing your draconic gift</p>\n<hr />\n<p><strong>Effect</strong> You call down a portion of the magical essence of your draconic benefactor. A Medium spectral dragon that looks like your benefactor appears in any square within 30 feet. This spectral dragon can't be targeted by any attacks or spells and has no Hit Points, saving throws, or skills. It can occupy the same space as creatures and objects. While your spectral dragon is in your space, you gain a +1 status bonus to saves against sleep and paralysis.</p>\n<p>Channel Draconic Essence lasts until you Channel Draconic Essence again, you Dismiss the effect, the encounter ends, you fall @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}, or the spectral dragon is farther than 120 feet from you, whichever comes first.</p>",
+      "selfEffect": "Effect: Channel Draconic Essence"
     },
     "Channel Elements": {
       "name": "Elemente fokussieren",
@@ -580,6 +593,10 @@
       "name": "Drakonische Raserei",
       "description": "<p>Dein Eidolon führt (in beliebiger Reihenfolge) einen Angriff mit seinem primären Waffenlosen Angriff und zwei Angriffe mit seinem sekundären Waffenlosen Angriff aus. Landet es bei einem dieser Angriffe einen Kritischen Treffer bei einem Gegner, erlangt es sofort die Nutzung seiner Odemwaffe zurück.</p>"
     },
+    "Draconic Salvation": {
+      "name": "Draconic Salvation",
+      "description": "<p><strong>Trigger</strong> You critically fail a saving throw against an effect with the same tradition trait as your draconic benefactor (for instance, a divine spell if your benefactor is a diabolic dragon)</p>\n<p><strong>Requirements</strong> Your spectral dragon is in your space</p>\n<hr />\n<p><strong>Effect</strong> You improve your saving throw result by one degree of success, and Channel Draconic Essence ends.</p>"
+    },
     "Dragon Breath": {
       "name": "Drachenodem",
       "description": "<p><strong>Häufigkeit</strong> Einmal pro Stunde</p>\n<hr />\n<p><strong>Effekt</strong> Du atmest tief ein und stößt eine Odemlinie oder einen Odemkegel aus passend zu dem Drachen, mit dem du den Pakt geschlossen hast. Im Fall eines kegelförmigen Odems besitzt deine Odemwaffe einen @Template[cone|distance:30]{30 Fuß/9 m-Kegel}, im Falle einer Linie eine @Template[line|distance:60]{60 Fuß/18 m-Linie}. Sollte der Odem eine Explosion sein, so erzeugt deine Odemwaffe eine @Template[burst|distance:10]{10 Fuß/3 m-Explosion} innerhalb von 60 Fuß/18 m Entfernung. Unabhängig von der Form verursacht der Odem 1W6 Schadenspunkte pro Stufe, die Schadensart entspricht der des Odems des Drachen (@Check[reflex|against:class-spell|basic|options:area-effect]{einfacher Reflexwurf}, nutze deinen Klassen- oder Zauber-SG, sollten diese höher sein). Diese Handlung erhält dieselben Kategorien wie die Odemwaffe des Drachen, mit dem du den Pakt abgeschlossen hast.</p>\n<p><strong>Stufenabhängiger Schaden:</strong> @Damage[(@actor.level)d6|options:area-damage]</p>"
@@ -587,6 +604,10 @@
     "Dragon Breath (Dragon Form)": {
       "name": "Drachenodem (Drachengestalt)",
       "description": "<p>Du stößt tödliche magische Energie in einem Bereich aus und fügst jeder Kreatur in diesem Bereich @Damage[10d6[untyped]|options:area-damage]{10W6 Punkte Schaden} zu und sie müssen einen einfachen Rettungswurf gegen deinen Zauber-SG ausführen. Die Form, die Art des Schadens und die Art des Rettungswurfs entsprechen denen des gewählten Drachenodems. Wenn der gewählte Drachenodem mehr als eine Schadensart verursachen kann, wähle eine aus, wenn du Drachengestalt wirkst. Die Form ist ein @Template[cone|distance:30]{30 Fuß/9 m-Kegel} oder @Template[line|distance:100]{100 Fuß/30 m-Linie}. Nach der Nutzung kann Drachenodem [[/r 1d4 #Runden]]{1W4 Runden} lang nicht erneut eingesetzt werden. Drachenodem hat die gleiche Traditionskategorie wie die des Drachentyps und die Schadenskategorie entspricht der Art des verursachten Schadens, falls zutreffend.</p>"
+    },
+    "Dragon's Protection": {
+      "name": "Dragon's Protection",
+      "description": "<p><strong>Trigger</strong> An enemy you can see would reduce this spell's target to 0 Hit Points</p>\n<hr />\n<p><strong>Effect</strong> The dragon intercepts, preventing the spell's target from being knocked out; the spell's target remains at 1 Hit Point. As the dragon disappears, it flies over the triggering enemy and releases its retributive breath, dealing @Damage[5d4[spirit]] damage to it with a @Check[reflex|basic] save.</p>"
     },
     "Drain Bonded Item": {
       "name": "Gebundenen Gegenstand auszehren",
@@ -859,6 +880,10 @@
       "name": "Lager befestigen",
       "description": "<p>Du kannst Zeit aufwenden, um dein Lager zur Verteidigung zu befestigen; dies erfordert einen Fertigkeitswurf für Handwerkskunst, der SG des Wurfes ist meistens ein Geübter oder Experten-SG. Wer das Lager verteidigt oder bewacht, erhält einen Situationsbonus von +2 auf Initiativewürfe und Wahrnehmungswürfe, um Kreaturen zu suchen, welche sich ans Lager anschleichen wollen.</p>"
     },
+    "Fortify Focus": {
+      "name": "Fortify Focus",
+      "description": "<p><strong>Requirements</strong> You are touching your designated companion, and their focus pool isn't full</p>\n<hr />\n<p><strong>Effect</strong> Your companion regains 1 Focus Point.</p>"
+    },
     "Fracture Mountains": {
       "name": "Breche Berge!",
       "description": "<p>Deine Seele ist derart dicht, dass sie spürbare Kraft entfaltet. Führe mit dem @UUID[Compendium.pf2e.classfeatures.Item.jpS7wcMnBXK1rS4J]{Titanenbrecher} einen Nahkampfangriff aus; hinsichtlich deines Malus für Mehrfachangriffe zählt dies als zwei Angriffe. Triffst du, steigt der zusätzliche Seelenschaden durch die Immanenz deiner Ikone auf 4 Punkte plus einen zusätzlichen Waffenschadenswürfel.</p>\n<p>Mit der 10. Stufe steigt er auf 6 Punkte Seelenschaden plus zwei zusätzliche Waffenschadenswürfel und mit der 18. Stufe steigt er auf 8 Punkte und drei zusätzliche Würfel.</p>"
@@ -939,6 +964,10 @@
     "Harvest Heartsliver": {
       "name": "Herzsplitter ernten",
       "description": "<p><strong>Voraussetzungen</strong> Du bist innerhalb Kothogaz‘ Körper.</p>\n<hr />\n<p>Du versuchst einen Teil von Kothogaz‘ Körper zu stehlen. Lege einen Angriffswurf gegen SG 40 oder einen Wurf für @Check[acrobatics|dc:40]{Akrobatik}, @Check[athletics|dc:40]{Athletik}, @Check[medicine|dc:40]{Heilkunde}, @Check[nature|dc:40]{Naturkunde}, @Check[occultism|dc:40]{Okkultismus} oder @Check[religion|dc:40]{Religionskunde} ab.</p>\n<hr />\n<p><strong>Kritischer Erfolg</strong> Du stiehlst einen kleinen disharmonischen Herzsplitter, verstaust diesen an dir und kannst Kothogaz‘ Körper verlassen.</p>\n<p><strong>Erfolg</strong> Wie Kritischer Erfolg, aber du kannst den Körper nicht verlassen.</p>\n<p><strong>Fehlschlag</strong> Du nimmst den vollen Schaden von @UUID[Compendium.pf2e.lost-omens-monsters-of-myth-bestiary.Actor.RqdL0YzNF1dG163i]{Kothogaz}‘ @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.uJSseLa57HZYSMUu]{Verschlingen-Fähigkeit}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Du nimmst den doppelten Schaden und bist 1 Minute lang durch den Herzschlag der Kreatur @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Taub}.</p>"
+    },
+    "Haunting Visage": {
+      "name": "Haunting Visage",
+      "description": "<p><strong>Requirements</strong> Your eidolon is condensed.</p>\n<hr />\n<p>Your eidolon suddenly shifts itself into a terrifying shape of its choosing, rather than a simple mound, by closely controlling the positioning of its component bodies. The eidolon attempts to [[/act demoralize]] a creature within 15 feet; this Demoralize attempt loses the auditory trait, gains the visual trait, and the eidolon doesn't take a –4 circumstance penalty to the check if they don't share a language with their target. On a success or critical success, the target is additionally @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} for 1 round.</p>"
     },
     "Heaven Rains an Ending": {
       "name": "Der Tod regnet vom Himmel",
@@ -1525,6 +1554,10 @@
       "name": "Erkunden",
       "description": "<p>Ihr wendet Zeit auf, um ein bestimmtes Gebiet zu erkunden und auszuspähen. Auf diese Weise erfahrt ihr vieles über die Region, ungewöhnliche Merkmale und besondere Orte. Das Erkunden eines Hexfeldes erfordert genauso viele Hexfelderkundungsaktivitäten, wie zum Reisen durch das Feld erforderlich wären: 1 für offenes Gelände, 2 für Schwieriges und 3 für Sehr schwieriges Gelände. Das Nutzen von Straßen verringert die erforderliche Zeit nicht, da ihr euch auch außerhalb der Wege bewegen müsst. Sobald das Hexfeld erkundet wurde, könnt ihr das Feld kartografieren, um das Risiko zu reduzieren, euch dort zu verlaufen (siehe unten). Ihr findet automatisch alle besonderen Merkmal, die keinen Wurf erfordern, und könnt die passenden Würfe zum Finden verborgener Merkmale ablegen.</p>\n<p>Solltet ihr z.B. nach einer gut erkennbaren Felsformation im Hügelland suchen, würdet ihr 2 Hexfelderkundungsaktivitäten zum Erkunden nutzen und die Felsformation finden. Solltet ihr aber z.B. nach einem versteckten Tengukloster tief im Wald suchen, wären zunächst 2 Aktivitäten zum Erkunden nötig und dann ein Wahrnehmungswurf, um das Kloster zu finden.</p>"
     },
+    "Redistribute": {
+      "name": "Redistribute",
+      "description": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<p><strong>Trigger</strong> An enemy's Strike against your eidolon is a critical hit.</p>\n<hr />\n<p>Your eidolon rearranges its component bodies in response to a powerful blow, mitigating the worst of the damage they would have taken. The triggering critical hit becomes a hit. Your eidolon immediately switches forms, from condensed to dispersed or from dispersed to condensed.</p>"
+    },
     "Refocus": {
       "name": "Fokus erneuern",
       "description": "<p><strong>Anforderungen</strong> Du besitzt einen Fokusvorrat.</p>\n<hr />\n<p>Du verbringst 10 Minuten damit, bestimmte Handlungen zu vollziehen, um deine magische Verbindung zu erneuern. Dies gibt dir 1 Fokuspunkt zurück. Die nötigen Handlungen befinden sich in der Beschreibung des Klassenmerkmals oder Fähigkeit, die dir deine Fokuszauber verleiht. Für gewöhnlich überschneiden sie sich mit anderen Handlungen, die sich auf die Quelle deiner Fokuszauber beziehen. Zum Beispiel erneuern Kleriker mit Fokuszaubern von einer gut gesinnten Gottheit ihren Fokus meist dann, wenn sie die Wunden ihrer Verbündeten versorgen.</p>"
@@ -1751,6 +1784,19 @@
       "name": "Fortstoßen",
       "description": "<p><strong>Voraussetzungen</strong> Du musst wenigstens eine Hand frei haben. Das Ziel darf maximal eine Größenkategorie größer sein als du.</p>\n<hr />\n<p>Du stößt einen Gegner von dir fort. Lege einen Fertigkeitswurf für [[/act shove]]{Athletik} gegen den Zähigkeits-SG des Gegners ab.</p>\n<p><strong>Kritischer Erfolg</strong> Du stößt deinen Gegner bis zu 10 Fuß/3 m in gerader Linie von dir fort. Du kannst Laufen nutzen, um ihm zu folgen, musst dich aber um dieselbe Entfernung und in dieselbe Richtung bewegen.</p>\n<p><strong>Erfolg</strong> Du stößt deinen Gegner 5 Fuß/1,50 m fort. Du kannst Laufen nutzen, um ihm zu folgen, musst dich aber um dieselbe Entfernung und in dieselbe Richtung bewegen.</p>\n<p><strong>Kritischer Fehlschlag</strong> Du verlierst dein Gleichgewicht, stürzt zu Boden und erhältst den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}.</p>"
     },
+    "Sickening Assault": {
+      "name": "Sickening Assault",
+      "description": "<p><strong>Frequency</strong> once per minute</p>\n<p><strong>Requirements</strong> Your eidolon is dispersed.</p>\n<hr />\n<p>Your eidolon focuses on inflicting the most damage possible on its foes. If your eidolon's next action is to use @UUID[Compendium.pf2e.actionspf2e.Item.Wukpm200zHDuS85V]{Swarming Assault}, the number of damage dice of the Swarming Assault are doubled. Additionally, creatures that fail their Reflex save against that Swarming Assault are @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} (@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 4} on a critical failure).</p>",
+      "rules": {
+        "1": {
+          "value": {
+            "0": {
+              "text": "@Embed[Compendium.pf2e.actionspf2e.Item.x73LKNcaRwurr0fR inline]"
+            }
+          }
+        }
+      }
+    },
     "Sidestep Through Time": {
       "name": "Sidestep Through Time",
       "description": "<p><strong>Trigger</strong> You are about to attempt a Reflex saving throw against an area effect</p>\n<hr />\n<p><strong>Effect</strong> You slip through time to avoid a dangerous outcome. Teleport up to 10 feet in any direction. If this would take you outside of the area's effect, you don't need to attempt the Reflex save against it. You are then @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} for 1 round.</p>"
@@ -1816,8 +1862,8 @@
       "description": "<p><strong>Anforderungen</strong> Du führst eine geladene Feuerwaffe oder geladene Armbrust.</p>\n<hr />\n<p>Du führst einen kräftigen Rundumschlag aus, bei dem du mit deiner Waffe auf alle nahen Feinde einprügelst und deinen Schwung erhöhst, indem du sie abfeuerst. Alle zu dir angrenzenden Kreaturen erleiden 4W6 Wuchtschaden plus deinen Stärkemodifikator (@Damage[(4d6+@actor.abilities.str.mod)[bludgeoning]|options:area-damage]). Dieser Wuchtschaden erhöht sich auf 6W6, wenn deine Waffe eine Rune des Schadens besitzt (@Damage[(6d6+@actor.abilities.str.mod)[bludgeoning]|options:area-damage]), auf 8W6 bei einer Rune des Starken Schadens (@Damage[(8d6+@actor.abilities.str.mod)[bludgeoning]|options:area-damage]) und 10W6 bei einer Rune des Mächtigen Schadens (@Damage[(10d6+@actor.abilities.str.mod)[bludgeoning]|options:area-damage]). Effekte, die den Schaden deiner Feuerwaffenangriffe erhöhen, wie z.B. Waffenspezialisierung, kommen hierbei nicht zur Anwendung. Von diesem Angriff betroffene Kreaturen müssen einen @Check[reflex|against:gunslinger|basic|options:area-effect,forced-movement]{einfachen Reflexwurf} ablegen; bei einem Fehlschlag wird die jeweilige Kreatur zudem 10 Fuß/3 m weit in direkter Linie von dir fortgestoßen.</p>"
     },
     "Spirit Sanctification": {
-      "name": "Spirit Sanctification",
-      "description": "<p><strong>Cost</strong> 1 spirit wisp</p>\n<hr />\n<p><strong>Effect</strong> You immediately purify a spirit, which grants you a protective blessing before it departs. If your next action is to cast a halcyon spell, you gain a +1 status bonus to saving throws as well as resistance to void damage equal to the rank of the halcyon spell. These effects last for 1 round.</p>"
+      "name": "Geist reinigen",
+      "description": "<p><strong>Kosten</strong> 1 Geisterfunken</p>\n<hr />\n<p><strong>Effekt</strong> Du reinigst sofort einen Geist, der dir vor seinem Weggang eine schützende Segnung gewährt. Wenn deine nächste Aktion darin besteht, einen Harmonischen Zauber zu wirken, erhältst du einen Zustandsbonus von +1 auf Rettungswürfe und Resistenz gegen Leerenschaden in Höhe des Grades des Harmonischen Zaubers. Diese Effekte halten 1 Runde lang an.</p>"
     },
     "Spirit's Mercy": {
       "name": "Geistergnade",
@@ -1939,6 +1985,10 @@
       "name": "Ausschwärmen",
       "description": "<p><strong>Anforderung</strong> Dein Schwarm befindet sich in deinem Körper</p>\n<hr />\n<p><strong>Effekt</strong> Dein Schwarm schwärmt aus deinem Leib heraus auf ein zu dir angrenzendes Feld (seine Angriffsfläche kann sich mit der deinen überlappen). Er bleibt bis zum Ende deines nächsten Zuges von dir getrennt, du kannst den Effekt aber bis zu 1 Minute lang Aufrechterhalten. Der Effekt endet ferner, solltest du deinen Zug weiter als 60 Fuß/18 m vom Schwarm entfernt beenden. Wenn du Ausschwärmen nutzt und wann immer du den Effekt Aufrechterhältst, kannst du den Schwarm Laufen nutzen lassen.</p>"
     },
+    "Swarming Assault": {
+      "name": "Swarming Assault",
+      "description": "<p><strong>Requirements</strong> Your eidolon is dispersed.</p>\n<hr />\n<p>Your eidolon swarms over each creature occupying its space, biting, pecking, clawing, or making similar attacks with its component bodies. It deals @Damage[(ceil(@actor.level / 2))d6|options:area-damage] damage to each creature in the area, with a @Check[reflex|basic|options:area-effect] save against your spell DC. You choose each time your eidolon uses Swarming Assault whether it deals piercing or slashing damage. Your eidolon then can't use Swarming Assault again for the next [[/r 1d4 #Recharge Swarming Assault]]{1d4 rounds}.</p>\n<p>At 3rd level and every 2 levels thereafter, the damage increases by 1d6.</p>"
+    },
     "Swift Choreography": {
       "name": "Swift Choreography",
       "description": "<p><strong>Trigger</strong> An ally within 30 feet would become @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}, @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}, @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}, @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}, or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}</p>\n<hr />\n<p><strong>Effect</strong> You call out a quick reminder to your ally about a special move you'd suggested to them at some point in the past, allowing the ally to avoid the triggering effect completely.</p>"
@@ -2013,8 +2063,8 @@
       "description": "<p>Dein Geist entfesselt einen emotionalen Sturm, der kleine Hindernisse und Trümmer in einer @Template[emanation|distance:20]{20 Fuß/6 m-Ausstrahlung} umherfliegen lässt und @Damage[1d6[bludgeoning]|options:area-damage]{1W6 Punkte Wuchtschaden} pro 2 Stufen des Geistes verursacht (@Check[reflex|basic|options:area-effect]{einfacher Reflexwurf}). Nutze den SG für Geübt mit dem CH-Modifikator des Geistes (bzw. den SG für Experte, sollte der Geist spezialisiert sein).</p>"
     },
     "Tell Me More": {
-      "name": "Tell Me More",
-      "description": "<p><strong>Target</strong> one creature that shares a language you speak</p>\n<p><strong>Requirements</strong> You're not in combat</p>\n<hr />\n<p><strong>Effect</strong> Just batting your eyes and giving someone a familiar nudge can get them talking, ready to spill the beans about everything and everyone around them. You roll twice on all rolls to influence the target and use the better result.</p>"
+      "name": "Erzähl mir mehr",
+      "description": "<p><strong>Ziel</strong> Eine Kreatur, die eine Sprache spricht, die du kannst</p>\n<p><strong>Anforderungen</strong> Du bist nicht im Kampf</p>\n<hr />\n<p><strong>Effekt</strong> Nur das Blinzeln deiner Augen und eine vertrautes Nicken kann jeden in einen Redefluss versetzen, um jegliches über jeden und alles zu erzählen. Du rollst zweimal für Würfe um das Ziel zu Beeinflussen und behältst das bessere Ergebnis.</p>"
     },
     "Ten Paces": {
       "name": "Zehn Schritte",
@@ -2187,6 +2237,10 @@
     "Wind Them Up": {
       "name": "Angreifen und Stehlen",
       "description": "<p>Sollten deine Gegner deine Klinge parieren oder deinen Kugeln ausweichen? Hah! - Sie sollten besser auf ihre Geldbörsen achten. Führe einen Nahkampfangriff mit deiner Kombinationswaffe aus und lege dann einen Fertigkeitswurf für Diebeskunst zum @UUID[Compendium.pf2e.actionspf2e.Item.RDXXE7wMrSPCLv5k]{Stehlen} mit einem Malus von -5 ab, um deinem Ziel einen Gegenstand abzunehmen. Du kannst keine Dinge stehlen, die gut beschützt sind oder zum Entwenden hohen Zeitaufwand benötigen. Du benötigst dabei zum Stehlen keine freie Hand. Gelingt dein Wurf für Diebeskunst, erhält dein Ziel gegen deine Fernkampfangriffe bis zum Beginn deines nächsten Zuges den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß}. Zudem löst du keine Reaktionen aus, welche normalerweise durch Bewegung oder einen Fernkampfangriff ausgelöst werden. Diese Effekte treten auch dann ein, sollte dein Ziel keine Gegenstände besitzen, die du stehlen könntest.</p>"
+    },
+    "Winged Leap": {
+      "name": "Winged Leap",
+      "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> Your dragon companion Flies. If it doesn't normally have a fly Speed, it gains a fly Speed of 25 feet for this movement. If it isn't on solid ground at the end of this movement, it falls.</p>"
     },
     "Wish for Luck": {
       "name": "Glück erbitten",
