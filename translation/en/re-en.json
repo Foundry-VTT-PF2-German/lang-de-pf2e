@@ -8,11 +8,11 @@
       },
       "ExplosiveAmmunition": {
         "Greater": {
-          "Text": "The missile explodes in a @Template[burst|distance:10], dealing @Damage[10d6[fire]] damage to each creature in the area (including the target). Each creature must attempt a @Check[reflex|dc:30|basic|name:Explosive Ammunition] save.",
+          "Text": "The missile explodes in a @Template[burst|distance:10], dealing @Damage[10d6[fire]|options:area-damage] damage to each creature in the area (including the target). Each creature must attempt a @Check[reflex|dc:30|basic|name:Explosive Ammunition|options:area-effect] save.",
           "Title": "Explosive Ammunition (Greater)"
         },
         "Normal": {
-          "Text": "The missile explodes in a @Template[burst|distance:10], dealing @Damage[6d6[fire]] damage to each creature in the area (including the target). Each creature must attempt a @Check[reflex|dc:25|basic|name:Explosive Ammunition] save.",
+          "Text": "The missile explodes in a @Template[burst|distance:10], dealing @Damage[6d6[fire]|options:area-damage] damage to each creature in the area (including the target). Each creature must attempt a @Check[reflex|dc:25|basic|name:Explosive Ammunition|options:area-effect] save.",
           "Title": "Explosive Ammunition"
         }
       },
@@ -81,6 +81,7 @@
       "IncreasedReach5": "Reach increased by 5 feet",
       "InterruptAction": "On a hit, the target's action is interrupted.",
       "KnockProne": "On a hit, the target is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.",
+      "KnockProneCriticalHit": "On a critical hit, the target is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.",
       "ReduceHiddenCheck": "The DC of the flat check to target a @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} creature is only @Check[flat|dc:5]."
     },
     "Background": {
@@ -691,18 +692,25 @@
     "Dragon": {
       "Adamantine": "Adamantine Dragon",
       "Arcane": "Arcane Dragon",
+      "Barrage": "Barrage Dragon",
       "Black": "Black Dragon",
       "Blue": "Blue Dragon",
+      "Bog": "Bog Dragon",
       "Brass": "Brass Dragon",
       "Brine": "Brine Dragon",
       "Bronze": "Bronze Dragon",
+      "Cinder": "Cinder Dragon",
       "Cloud": "Cloud Dragon",
       "Conspirator": "Conspirator Dragon",
       "Copper": "Copper Dragon",
+      "Coral": "Coral Dragon",
       "Crystal": "Crystal Dragon",
+      "Delight": "Delight Dragon",
+      "Despair": "Despair Dragon",
       "Diabolic": "Diabolic Dragon",
       "Divine": "Divine Dragon",
       "Empyreal": "Empyreal Dragon",
+      "Executor": "Executor Dragon",
       "Forest": "Forest Dragon",
       "Fortune": "Fortune Dragon",
       "Gold": "Gold Dragon",
@@ -710,17 +718,32 @@
       "Horned": "Horned Dragon",
       "Magma": "Magma Dragon",
       "Mirage": "Mirage Dragon",
+      "Mocking": "Mocking Dragon",
+      "Oath": "Oath Dragon",
       "Occult": "Occult Dragon",
       "Omen": "Omen Dragon",
+      "Phase": "Phase Dragon",
       "Primal": "Primal Dragon",
       "Red": "Red Dragon",
+      "Requiem": "Requiem Dragon",
+      "Resurrection": "Resurrection Dragon",
+      "Rime": "Rime Dragon",
+      "Rune": "Rune Dragon",
+      "Sage": "Sage Dragon",
       "Sea": "Sea Dragon",
       "Silver": "Silver Dragon",
       "Sky": "Sky Dragon",
       "Sovereign": "Sovereign Dragon",
+      "Stormcrown": "Stormcrown Dragon",
+      "Time": "Time Dragon",
       "Umbral": "Umbral Dragon",
       "Underworld": "Underworld Dragon",
-      "White": "White Dragon"
+      "Vizier": "Vizier Dragon",
+      "Vorpal": "Vorpal Dragon",
+      "Wailing": "Wailing Dragon",
+      "Whisper": "Whisper Dragon",
+      "White": "White Dragon",
+      "Wish": "Wish Dragon"
     },
     "FeatDescription": {
       "Frequency": {
@@ -758,6 +781,10 @@
       "StrikeCount": {
         "First": "First Strike",
         "Second": "Second Strike"
+      },
+      "TargetNumber": {
+        "Multiple": "Multiple targets",
+        "Single": "Single target"
       }
     },
     "IWR": {
@@ -783,9 +810,11 @@
         "CrystalHazards": "crystal hazards",
         "DamageFromSwornCreatures": "damage from sworn creature kind",
         "DraconicBreathWeapons": "draconic breath weapons",
+        "ElementalInstinct": "damage dealt by instinct element creatures",
         "EnemyStrikes": "enemy Strikes",
         "FallDamage": "fall damage",
         "GasInhaled": "gases and other inhaled effects",
+        "HarvestBlood": "damage dealt by last Harvest Blood target",
         "HolyBludgeoningPiercingSlashing": "holy bludgeoning, piercing and slashing damage",
         "ImpulseFireFrom": "impulse fire from {origin}",
         "IncorporealCreatures": "incorporeal creatures",
@@ -875,6 +904,9 @@
         }
       },
       "BarghestFeed": "How many times has the Barghest fed?",
+      "Belimarius": {
+        "MythicAlteration": "This ability cannot be used until Belimarius ascends."
+      },
       "BladeMagus": {
         "ArcaneCascade": {
           "Note": "While in this stance, the Blade magi's melee Strikes deal @Damage[(4[splash])[force]]{4 splash force} damage to foes adjacent to the target."
@@ -1157,6 +1189,11 @@
           "Rehydrating": "Rehydrating"
         }
       },
+      "Grandmaster": {
+        "SuperQiBlast": {
+          "FirstCastQiBlast": "First cast of qi blast"
+        }
+      },
       "GrimReaper": {
         "InfuseWeapon": "If the Grim Reaper Strikes a creature with a weakness to any specific type of damage, the scythe's damage counts as that type of damage, in addition to slashing."
       },
@@ -1254,6 +1291,7 @@
       },
       "MixedMartialArtist": {
         "StanceShift": {
+          "ConstantFeintStance": "Constant Feint Stance",
           "CrossElbow": "Cross Elbow",
           "ElbowKnockoutStance": "Elbow Knockout Stance",
           "GrapplingLimb": "Grappling Limb",
@@ -1406,6 +1444,9 @@
         "CriticalHit": "Shell Broken by a Critical Hit"
       },
       "Shieldmarshal": {
+        "EquitableDefense": {
+          "ResistanceToggle": "Equitable Defense — Critical Hit Resistance"
+        },
         "LawbringerSpeedLabel": "Lawbringer — Moving Toward Target"
       },
       "ShockerLizard": {
@@ -3371,8 +3412,8 @@
           "Note": "You can target a second willing creature to heal the same amount from the spell. This creature can be outside of the spell's range, provided it's adjacent to the enemy you hit."
         },
         "SacredGround": {
-          "Harmful": "A creature that remains in the area for the entire 10 minutes regains @Damage[(@actor.level)[void,healing]]{Hit Points} equal to your level. This activity has the healing and void traits and heals undead creatures (or other creatures with void healing).",
-          "Healing": "A creature that remains in the area for the entire 10 minutes regains @Damage[(@actor.level)[vitality,healing]]{Hit Points} equal to your level. This activity has the healing and vitality traits and heals living creatures."
+          "Harmful": "A creature that remains in the area for the entire 10 minutes regains @Damage[(@actor.level)[void,healing]|traits:healing,void]{Hit Points} equal to your level. This activity has the healing and void traits and heals undead creatures (or other creatures with void healing).",
+          "Healing": "A creature that remains in the area for the entire 10 minutes regains @Damage[(@actor.level)[vitality,healing]|traits:healing,vitality]{Hit Points} equal to your level. This activity has the healing and vitality traits and heals living creatures."
         },
         "SapLife": {
           "Note": "When you cast a <em>harm</em> spell and damage at least one living creature, you regain @Damage[(@item.rank)[healing]] Hit Points."
@@ -3577,6 +3618,11 @@
           }
         }
       },
+      "DraconicAcolyte": {
+        "ChannelDraconicEssence": {
+          "InSpace": "Spectral Dragon is in your space"
+        }
+      },
       "DragonDisciple": {
         "DragonChoice": {
           "Black": "Black Dragon",
@@ -3632,6 +3678,9 @@
             "Will": "Tapping into the physiology of your draconic ancestor, you can exhale a torrent of energy in a @Template[line|distance:60], dealing @Damage[ceil(@actor.level/2)d6[@actor.flags.pf2e.dragonblood.damageType]|options:area-damage] damage. Each creature in the area must attempt a @Check[will|against:class-spell|basic]. You can't use this ability again for [[/r 1d4 #Recharge this ability]]{1d4 rounds}."
           }
         },
+        "HeartOfEarth": {
+          "RollOptionLabel": "Heart of Earth — Use precise tremorsense"
+        },
         "LingeringBreath": {
           "Description": "When you use Breath of the Dragon, the area of your breath becomes difficult terrain for 1 minute. In addition, a creature who fails or critically fails its saving throw takes @Damage[2d6[persistent,@actor.flags.pf2e.dragonblood.damageType]] damage of the same type"
         },
@@ -3639,6 +3688,21 @@
           "BracersOfArmor": "Scaly Hide w/ Bracers of Armor",
           "ExplorersClothing": "Scaly Hide w/ Explorer's Clothing",
           "MageArmor": "Scaly Hide w/ Mage Armor"
+        }
+      },
+      "Dragonet": {
+        "DragonetBreath": {
+          "Description": {
+            "Base": "You have developed your magical breath. You expel the dragonet breath associated with your heritage. Dragonet Breath gains the traits listed in parentheses, and the DC is your class DC or spell DC, whichever is higher. After you use Dragonet Breath, you can't use it again for [[/r 1d4 #Recharge Dragonet Breath]]{1d4 rounds}.",
+            "Fey": "**Fey Dragonet** (arcane, poison) You breathe a @Template[type:cone|distance:15] of euphoric gas. Each creature in the area must succeed at a @Check[fortitude|against:class-spell|options:area-effect,inflicts:stupefied|traits:arcane,poison] save or become @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 round.",
+            "HomingDrake": "**Homing Drake** (acid) You expel a @Template[type:line|distance:30] of caustic spittle that deals @Damage[(ceil(@actor.level/2))d4[acid]|options:area-damage] damage with a @Check[reflex|against:class-spell|basic|options:area-effect,damage:material:silver|traits:acid] save. At 3rd level and every 2 levels thereafter, the damage increases by 1d4.",
+            "HouseDrake": "**House Drake** (arcane, mental) You breathe out a cloud of silver mist in a @Template[type:cone|distance:15] that deals @Damage[(ceil(@actor.level/2))d4[mental]|options:area-damage] damage with a @Check[will|against:class-spell|options:area-effect|traits:arcane,mental] save. It counts as silver for the purpose of weaknesses. At 3rd level and every 2 levels thereafter, the damage increases by 1d4.",
+            "PearlDragonet": "**Pearl Dragonet** (arcane, curse) You breathe a @Template[type:cone|distance:15] of golden mist that alters the luck of creatures caught in it. Each time you use Dragonet Breath, decide if it gives good luck or bad luck. Any creature affected by your Dragonet Breath becomes temporarily immune to it for 1 hour. If your breath gives good luck, each creature in the area gains a +1 status bonus to its next attack roll or skill check before the start of your next turn. If your breath gives bad luck, each creature in the area must attempt a @Check[will|against:class-spell|options:area-effect|traits:arcane,curse] save. A creature that fails its save takes a –1 status penalty to its next attack roll or skill check before the start of your next turn. On a critical failure, the creature must instead roll twice and take the worse result on the check; this is a misfortune effect.",
+            "TidepoolDragonet": "**Tidepool Dragonet** (fire) You breathe a @Template[type:line|distance:15] of superheated gas that deals @Damage[(ceil(@actor.level/2))d4[fire]|options:area-damage] damage with a @Check[reflex|against:class-spell|basic|options:area-effect|traits:fire] save. At 3rd level and every 2 levels thereafter, the damage increases by 1d4. You can use your breath underwater even though it has the fire trait. If you do, it gains the water trait and emerges as a @Template[type:cone|distance:20] of boiling water."
+          }
+        },
+        "FeyDragonet": {
+          "WingColor": "Fey Dragonet — Wings match environment"
         }
       },
       "DragonForm": {
@@ -3875,6 +3939,9 @@
           "MatchingSuitPrompt": "Is the drawn card's suit related the check?",
           "WealOrWoePrompt": "Select Weal or Woe."
         },
+        "DragonEye": {
+          "Addendum": "When you cast _breathe fire_ at 3rd-rank or higher, creatures in the spell's area must attempt a @Check[will|basic] save instead of a basic Reflex save, and in addition to taking the spell's normal damage on a failure, they're @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}. This adds the emotion, fear, and mental traits to the spell."
+        },
         "DrakeRifle": {
           "CriticalSpecialization": "A drake rifle does not add critical specialization effects.",
           "Note": {
@@ -4002,6 +4069,12 @@
         "SashOfBooks": {
           "Label": "Sash of Books",
           "Note": "Regardless of the result, you gain a +1 circumstance bonus to attack rolls against the creature and to your AC and saving throws against attacks and effects from the creature for 1 minute. @UUID[Compendium.pf2e.equipment-effects.Item.P3lpqXMd5FbUF57c]{Effect: Sash of Books (Bonus)}"
+        },
+        "ScaldingGauntlet": {
+          "Basic": "A creature you grab or restrain while wearing the gauntlets must succeed at a @Check[fortitude|dc:26|options:damaging-effect,inflicts:sickened|showDC:all] save or take @Damage[2d6[persistent,fire]] damage and be @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} from the pain; it's temporarily immune to being sickened by <em>scalding gauntlets</em> for 1 hour.",
+          "Greater": "A creature you grab or restrain while wearing the gauntlets must succeed at a @Check[fortitude|dc:28|options:damaging-effect,inflicts:sickened|showDC:all] save or take @Damage[2d6[persistent,fire]] damage and be @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} from the pain; it's temporarily immune to being sickened by <em>scalding gauntlets</em> for 1 hour.",
+          "Major": "A creature you grab or restrain while wearing the gauntlets must succeed at a @Check[fortitude|dc:32|options:damaging-effect,inflicts:sickened|showDC:all] save or take @Damage[3d6[persistent,fire]] damage and be @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} from the pain; it's temporarily immune to being sickened by <em>scalding gauntlets</em> for 1 hour.",
+          "True": "A creature you grab or restrain while wearing the gauntlets must succeed at a @Check[fortitude|dc:36|options:damaging-effect,inflicts:sickened|showDC:all] save or take @Damage[4d6[persistent,fire]] damage and be @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} from the pain; it's temporarily immune to being sickened by <em>scalding gauntlets</em> for 1 hour."
         },
         "ScapularOfShields": {
           "CriticalImmunityLabel": "Activate Scapular of Shields to gain critical immunity.",
@@ -4391,6 +4464,10 @@
         "RiskySurgery": {
           "Note": "When you Treat Wounds, you can deal @Damage[1d8[slashing]] damage to your patient just before applying the effects of the Treat Wounds. If you do, gain a +2 circumstance bonus to your Medicine check to Treat Wounds, and if you roll a success, you get a critical success instead."
         },
+        "SkillfulTail": {
+          "Geniekin": "You were born with a tail, and with practice you've learned how to perform simple Interact actions with it, such as opening an unlocked door. Your tail can't perform actions that require fingers or significant manual dexterity, including any action that would require a check to accomplish, and you can't use it to hold items.",
+          "Nephilim": "You've always had a tail, but with practice, you've learned to use it for more than signaling your mood. You can perform simple Interact actions with your tail, such as opening an unlocked door. Your tail can't perform actions that require fingers or significant manual dexterity, including any action that would require a check to accomplish, and you can't use it to hold items."
+        },
         "SolarRejuvenation": {
           "Ghoran": "The warmth and light of the sun gives you life. If you rest outdoors for 10 minutes during the day, you regain Hit Points equal to your @Damage[(floor(@actor.level/2)*@actor.abilities.con.mod)[healing]]{Constitution modifier × half your level}. You gain this benefit in addition to any healing from @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Treat Wounds}.",
           "Leshy": "If you rest outdoors for 10 minutes during the day, you regain Hit Points equal to your @Damage[(floor(@actor.level/2)*@actor.abilities.con.mod)[healing]]{Constitution modifier × half your level}. You gain this benefit in addition to any healing from @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Treat Wounds}. Leshies whose plant nourishment does not rely on photosynthesis require a similarly suitable environment. For example, fungus leshies need dark, damp environments and a pile of decaying plant matter."
@@ -4642,6 +4719,14 @@
         "FinalShot": {
           "Note": "Regardless of your roll, after the attack you're @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} until the start of your next turn and @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.",
           "NoteFailure": "The weapon misfires."
+        },
+        "FleshWound": {
+          "ToggleLabel": "Flesh Wound — Reduce Strike damage"
+        },
+        "SwordAndPistol": {
+          "MeleeNote": "When you make a successful melee Strike against an enemy with your one-handed melee weapon, the next ranged Strike you make against that enemy with a one-handed firearm or one-handed crossbow doesn't trigger reactions that would trigger on a ranged attack but not a melee attack, such as Reactive Strike. This benefit is lost if not used by the end of your next turn.",
+          "RangedNote": "When you make a successful ranged Strike against an enemy within your reach with your one-handed firearm or one-handed crossbow, that enemy is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against your next melee attack with a one-handed melee weapon. This benefit is lost if not used by the end of your next turn.",
+          "RollOptionLabel": "Sword and Pistol — Enemy is within reach"
         },
         "Way": {
           "Prompt": "Select a way.",
@@ -4900,6 +4985,12 @@
         "Trigger": "Your prey is within reach and attempts to move away from you."
       },
       "Kineticist": {
+        "ConsumePower": {
+          "ResistanceToggle": "Consume Power — Resistance"
+        },
+        "DesertWind": {
+          "DamageToggle": "Desert Wind — Extra damage"
+        },
         "ExtendedKinesis": {
           "Proliferate": {
             "Title": "Proliferate",
@@ -4992,6 +5083,11 @@
         }
       },
       "Kobold": {
+        "DraconicParagon": {
+          "KoboldBreath": {
+            "Addendum": "Creatures that critically fail their save against your Kobold Breath take @Damage[3d4[persistent,damage]]."
+          }
+        },
         "DragonbloodParagon": {
           "Dracomancer": "Dracomancer",
           "KoboldBreath": {
@@ -5269,6 +5365,10 @@
         "Penalty": "Penalty"
       },
       "Monk": {
+        "DodgingRoll": {
+          "StepIn": "Step into effect's area",
+          "StepOut": "Step out of effect's area"
+        },
         "DragonRoar": {
           "Label": "First attack vs. frightened creature"
         },
@@ -6643,6 +6743,12 @@
         "RuptureDamage": "If the monster takes piercing or slashing damage equaling or exceeding the listed Rupture value from a single attack or spell, the swallowed creature cuts itself free."
       },
       "Swashbuckler": {
+        "ElegantBuckler": {
+          "RollOptionLabel": "Elegant Buckler — Using a buckler"
+        },
+        "ExtravagantParry": {
+          "Prompt": "Do you have a free hand or wield a parry weapon?"
+        },
         "Finisher": {
           "Basic": "Basic",
           "Bleeding": "Bleeding",
@@ -6669,7 +6775,7 @@
           "Note": "On a successful Feint, the target take a -2 circumstance penalty to attack rolls against you instead of any other effects that you would gain when you Feint. @UUID[Compendium.pf2e.feat-effects.Item.rflbFzV44Fd6aBLE]{Effect: Goading Feint}"
         },
         "Panache": "You gain @UUID[Compendium.pf2e.feat-effects.Item.uBJsxCzNhje8m8jj]{Panache}.",
-        "PanacheFailure": "You gain panache until the end of your next turn @UUID[Compendium.pf2e.feat-effects.Item.uBJsxCzNhje8m8jj]{Effect: Panache}",
+        "PanacheFailure": "You gain panache until the end of your next turn @UUID[Compendium.pf2e.feat-effects.Item.paKKHPds77fq5VTH]{Effect: Panache (Temporary)}",
         "Style": {
           "Prompt": "Select a style."
         },
