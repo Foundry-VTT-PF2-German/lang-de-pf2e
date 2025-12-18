@@ -8,11 +8,11 @@
       },
       "ExplosiveAmmunition": {
         "Greater": {
-          "Text": "Wenn aktivierte Starke Explosivmunition ein Ziel trifft, erzeugt das Geschoss eine @Template[burst|distance:10]{10 Fuß/3 m-Explosion} und verursacht dabei @Damage[10d6[fire]]{10W6 Punkte Feuerschaden} bei jeder Kreatur im Wirkungsbereich (das Ziel eingeschlossen). Jede Kreatur muss einen @Check[reflex|dc:30|basic|name:Explosivmunition]{einfachen Reflexwurf} ablegen.",
+          "Text": "Wenn aktivierte Starke Explosivmunition ein Ziel trifft, erzeugt das Geschoss eine @Template[burst|distance:10]{10 Fuß/3 m-Explosion} und verursacht dabei @Damage[10d6[fire]|options:area-damage]{10W6 Punkte Feuerschaden} bei jeder Kreatur im Wirkungsbereich (das Ziel eingeschlossen). Jede Kreatur muss einen @Check[reflex|dc:30|basic|options:area-effect]{einfachen Reflexwurf} ablegen.",
           "Title": "Starke Explosivmunition"
         },
         "Normal": {
-          "Text": "Wenn aktivierte Explosivmunition ein Ziel trifft, erzeugt das Geschoss eine @Template[burst|distance:10]{10 Fuß/3 m-Explosion} und verursacht dabei @Damage[6d6[fire]]{6W6 Punkte Feuerschaden} bei jeder Kreatur im Wirkungsbereich (das Ziel eingeschlossen). Jede Kreatur muss einen @Check[reflex|dc:25|basic|name:Explosivmunition]{einfachen Reflexwurf} ablegen.",
+          "Text": "Wenn aktivierte Explosivmunition ein Ziel trifft, erzeugt das Geschoss eine @Template[burst|distance:10]{10 Fuß/3 m-Explosion} und verursacht dabei @Damage[6d6[fire]|options:area-damage]{6W6 Punkte Feuerschaden} bei jeder Kreatur im Wirkungsbereich (das Ziel eingeschlossen). Jede Kreatur muss einen @Check[reflex|dc:25|basic|options:area-effect]{einfachen Reflexwurf} ablegen.",
           "Title": "Explosivmunition"
         }
       },
@@ -81,6 +81,7 @@
       "IncreasedReach5": "Angriffsradius erhöht sich um 5 Fuß/1,50 m",
       "InterruptAction": "Bei einem Treffer wird die Aktion des Ziels unterbrochen.",
       "KnockProne": "Bei einem Treffer erhält das Ziel den Status @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}.",
+      "KnockProneCriticalHit": "Bei einem Kritischen Treffer erhält das Ziel den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}.",
       "ReduceHiddenCheck": "Der SG des einfachen Wurfes um eine @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Versteckte} Kreatur anzuvisieren ist nur @Check[flat|dc:5]{5}."
     },
     "Background": {
@@ -691,18 +692,25 @@
     "Dragon": {
       "Adamantine": "Adamantdrache",
       "Arcane": "Arkaner Drache",
+      "Barrage": "Barrage Dragon",
       "Black": "Schwarzer Drache",
       "Blue": "Blauer Drache",
+      "Bog": "Bog Dragon",
       "Brass": "Messingdrache",
       "Brine": "Salzdrache",
       "Bronze": "Bronzedrache",
+      "Cinder": "Cinder Dragon",
       "Cloud": "Wolkendrache",
       "Conspirator": "Intrigendrache",
       "Copper": "Kupferdrache",
+      "Coral": "Coral Dragon",
       "Crystal": "Kristalldrache",
+      "Delight": "Delight Dragon",
+      "Despair": "Despair Dragon",
       "Diabolic": "Höllendrache",
       "Divine": "Göttlicher Drache",
       "Empyreal": "Himmelsdrache",
+      "Executor": "Executor Dragon",
       "Forest": "Walddrache",
       "Fortune": "Schatzdrache",
       "Gold": "Golddrache",
@@ -710,17 +718,32 @@
       "Horned": "Horndrache",
       "Magma": "Magmadrache",
       "Mirage": "Illusionsdrache",
+      "Mocking": "Mocking Dragon",
+      "Oath": "Oath Dragon",
       "Occult": "Okkulter Drache",
       "Omen": "Omendrache",
+      "Phase": "Phase Dragon",
       "Primal": "Naturdrache",
       "Red": "Roter Drache",
+      "Requiem": "Requiem Dragon",
+      "Resurrection": "Resurrection Dragon",
+      "Rime": "Rime Dragon",
+      "Rune": "Rune Dragon",
+      "Sage": "Sage Dragon",
       "Sea": "Seedrache",
       "Silver": "Silberdrache",
       "Sky": "Himmelsdrache",
       "Sovereign": "Herrscherdrache",
+      "Stormcrown": "Stormcrown Dragon",
+      "Time": "Time Dragon",
       "Umbral": "Zwielichtdrache",
       "Underworld": "Unterweltdrache",
-      "White": "Weißer Drache"
+      "Vizier": "Vizier Dragon",
+      "Vorpal": "Vorpal Dragon",
+      "Wailing": "Wailing Dragon",
+      "Whisper": "Whisper Dragon",
+      "White": "Weißer Drache",
+      "Wish": "Wish Dragon"
     },
     "FeatDescription": {
       "Frequency": {
@@ -758,6 +781,10 @@
       "StrikeCount": {
         "First": "Erster Angriff",
         "Second": "Zweiter Angriff"
+      },
+      "TargetNumber": {
+        "Multiple": "Mehrere Ziele",
+        "Single": "Ein Ziel"
       }
     },
     "IWR": {
@@ -783,9 +810,11 @@
         "CrystalHazards": "Mit Kristallen assoziierte Gefahren",
         "DamageFromSwornCreatures": "Schaden von Gegnern der eingeschworenen Kategorie",
         "DraconicBreathWeapons": "Drachenodemwaffen",
+        "ElementalInstinct": "Schaden, den Angriffe und Fähigkeiten elementarer Kreaturen deines gewählten Elements verursachen",
         "EnemyStrikes": "Gegnerische Angriffe",
         "FallDamage": "Fallschaden",
         "GasInhaled": "gases and other inhaled effects",
+        "HarvestBlood": "Schaden vom letzten mit Blut lecken angezielten Ziel erhalten",
         "HolyBludgeoningPiercingSlashing": "Heiliger Hieb-, Stich- und Wuchtschaden",
         "ImpulseFireFrom": "Feuerimpuls von {origin}",
         "IncorporealCreatures": "Körperlose Kreaturen",
@@ -875,6 +904,9 @@
         }
       },
       "BarghestFeed": "Wie oft hat der Barghest verzehrt?",
+      "Belimarius": {
+        "MythicAlteration": "This ability cannot be used until Belimarius ascends."
+      },
       "BladeMagus": {
         "ArcaneCascade": {
           "Note": "While in this stance, the Blade magi's melee Strikes deal @Damage[(4[splash])[force]]{4 splash force} damage to foes adjacent to the target."
@@ -1157,6 +1189,11 @@
           "Rehydrating": "Rehydrieren"
         }
       },
+      "Grandmaster": {
+        "SuperQiBlast": {
+          "FirstCastQiBlast": "First cast of qi blast"
+        }
+      },
       "GrimReaper": {
         "InfuseWeapon": "Sollte der Schnitter eine Kreatur mit einer Schwäche gegenüber einer bestimmten Schadensart angreifen, so zählt der Schaden der Sense neben Hiebschaden zusätzlich als Schaden der fraglichen Art."
       },
@@ -1254,6 +1291,7 @@
       },
       "MixedMartialArtist": {
         "StanceShift": {
+          "ConstantFeintStance": "Constant Feint Stance",
           "CrossElbow": "Cross Elbow",
           "ElbowKnockoutStance": "Elbow Knockout Stance",
           "GrapplingLimb": "Grappling Limb",
@@ -1406,6 +1444,9 @@
         "CriticalHit": "Shell Broken by a Critical Hit"
       },
       "Shieldmarshal": {
+        "EquitableDefense": {
+          "ResistanceToggle": "Zähne zusammenbeißen — Widerstand gegen kritische Treffer"
+        },
         "LawbringerSpeedLabel": "Gesetzeshüter - Bewegt sich auf das Ziel zu"
       },
       "ShockerLizard": {
@@ -1469,7 +1510,7 @@
       },
       "Tallusian": {
         "Rubble": {
-          "RollOptionLabel": "Tallusian is hiding in ruins"
+          "RollOptionLabel": "der Tallusier versteckt sich in Ruinen"
         }
       },
       "TheGreatFlood": {
@@ -3371,8 +3412,8 @@
           "Note": "Du kannst eine zweite, dazu bereite, Kreatur als Ziel wählen und ihr dieselbe Heilung zukommen lassen, die du durch den Zauber erlangt hast. Diese Kreatur kann außerhalb der Reichweite des Zaubers befinden, sofern sie zum getroffenen Ziel angrenzend ist."
         },
         "SacredGround": {
-          "Harmful": "Eine Kreatur die für die gesamte Zeit von 10 Minuten in dem Gebiet verbleibt, regeneriert Trefferpunkte in Höhe deiner Stufe (@Damage[(@actor.level)[void,healing]]). Diese Aktivität hat die Kategorie Heilung und Leere und heilt Untote Kreaturen (Oder andere Kreaturen mit Leerenheilung)",
-          "Healing": "Eine Kreatur die für die gesamte Zeit von 10 Minuten in dem Gebiet verbleibt, regeneriert Trefferpunkte in Höhe deiner Stufe (@Damage[(@actor.level)[vitality,healing]]). Diese Aktivität hat die Kategorie Heilung und Leben und heilt lebendige Kreaturen."
+          "Harmful": "Eine Kreatur die für die gesamte Zeit von 10 Minuten in dem Gebiet verbleibt, regeneriert Trefferpunkte in Höhe deiner Stufe (@Damage[(@actor.level)[void,healing]|traits:healing,void]). Diese Aktivität hat die Kategorie Heilung und Leere und heilt Untote Kreaturen (Oder andere Kreaturen mit Leerenheilung)",
+          "Healing": "Eine Kreatur die für die gesamte Zeit von 10 Minuten in dem Gebiet verbleibt, regeneriert Trefferpunkte in Höhe deiner Stufe (@actor.level)[vitality,healing]|traits:healing,vitality]). Diese Aktivität hat die Kategorie Heilung und Leben und heilt lebendige Kreaturen."
         },
         "SapLife": {
           "Note": "Wenn du <em>Leid</em> wirkst und wenigstens einer lebenden Kreatur Schaden zufügst, erhältst du @Damage[(@item.rank)[healing]|shortLabel] Trefferpunkte zurück."
@@ -3577,6 +3618,11 @@
           }
         }
       },
+      "DraconicAcolyte": {
+        "ChannelDraconicEssence": {
+          "InSpace": "Spectral Dragon is in your space"
+        }
+      },
       "DragonDisciple": {
         "DragonChoice": {
           "Black": "Schwarzer Drache",
@@ -3632,6 +3678,9 @@
             "Will": "Indem du die Physiologie deines drakonischen Vorfahren anzapfst, kannst du einen Schwall von Energie in einer @Template[line|distance:60]{Linie von 60 Fuß/18 m} ausstoßen, der @Damage[ceil(@actor.level/2)d6[@actor.flags.pf2e.dragonblood.damageType]|options:area-damage] Schadenspunkte verursacht. Jede Kreatur in diesem Gebiet muss einen @Check[will|against:class-spell|basic]{einfachen Willenswurf} ablegen. Du kannst diese Fähigkeit [[/r 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen."
           }
         },
+        "HeartOfEarth": {
+          "RollOptionLabel": "Heart of Earth — Use precise tremorsense"
+        },
         "LingeringBreath": {
           "Description": "Dein Drachenodem zerstört die Umgebung und lässt deine Feinde unter Schmerzen zurück. Wenn du Drachenodem einsetzt, wird das Wirkungsgebiet deines Odems für 1 Minute zu Schwierigem Gelände. Außerdem erleidet eine Kreatur, die bei ihrem Rettungswurf einen Fehlschlag oder Kritischen Fehlschlag erzielt, 2W6 Punkte Anhaltenden Schaden derselben Schadensart (@Damage[2d6[persistent,@actor.flags.pf2e.dragonblood.damageType]])."
         },
@@ -3639,6 +3688,21 @@
           "BracersOfArmor": "Schuppige Haut mit Kraftarmreifen",
           "ExplorersClothing": "Schuppige Haut mit Entdeckerkleidung",
           "MageArmor": "Schuppige Haut mit Mystische Rüstung"
+        }
+      },
+      "Dragonet": {
+        "DragonetBreath": {
+          "Description": {
+            "Base": "You have developed your magical breath. You expel the dragonet breath associated with your heritage. Dragonet Breath gains the traits listed in parentheses, and the DC is your class DC or spell DC, whichever is higher. After you use Dragonet Breath, you can't use it again for [[/r 1d4 #Recharge Dragonet Breath]]{1d4 rounds}.",
+            "Fey": "**Fey Dragonet** (arcane, poison) You breathe a @Template[type:cone|distance:15] of euphoric gas. Each creature in the area must succeed at a @Check[fortitude|against:class-spell|options:area-effect,inflicts:stupefied|traits:arcane,poison] save or become @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 round.",
+            "HomingDrake": "**Homing Drake** (acid) You expel a @Template[type:line|distance:30] of caustic spittle that deals @Damage[(ceil(@actor.level/2))d4[acid]|options:area-damage] damage with a @Check[reflex|against:class-spell|basic|options:area-effect,damage:material:silver|traits:acid] save. At 3rd level and every 2 levels thereafter, the damage increases by 1d4.",
+            "HouseDrake": "**House Drake** (arcane, mental) You breathe out a cloud of silver mist in a @Template[type:cone|distance:15] that deals @Damage[(ceil(@actor.level/2))d4[mental]|options:area-damage] damage with a @Check[will|against:class-spell|options:area-effect|traits:arcane,mental] save. It counts as silver for the purpose of weaknesses. At 3rd level and every 2 levels thereafter, the damage increases by 1d4.",
+            "PearlDragonet": "**Pearl Dragonet** (arcane, curse) You breathe a @Template[type:cone|distance:15] of golden mist that alters the luck of creatures caught in it. Each time you use Dragonet Breath, decide if it gives good luck or bad luck. Any creature affected by your Dragonet Breath becomes temporarily immune to it for 1 hour. If your breath gives good luck, each creature in the area gains a +1 status bonus to its next attack roll or skill check before the start of your next turn. If your breath gives bad luck, each creature in the area must attempt a @Check[will|against:class-spell|options:area-effect|traits:arcane,curse] save. A creature that fails its save takes a –1 status penalty to its next attack roll or skill check before the start of your next turn. On a critical failure, the creature must instead roll twice and take the worse result on the check; this is a misfortune effect.",
+            "TidepoolDragonet": "**Tidepool Dragonet** (fire) You breathe a @Template[type:line|distance:15] of superheated gas that deals @Damage[(ceil(@actor.level/2))d4[fire]|options:area-damage] damage with a @Check[reflex|against:class-spell|basic|options:area-effect|traits:fire] save. At 3rd level and every 2 levels thereafter, the damage increases by 1d4. You can use your breath underwater even though it has the fire trait. If you do, it gains the water trait and emerges as a @Template[type:cone|distance:20] of boiling water."
+          }
+        },
+        "FeyDragonet": {
+          "WingColor": "Fey Dragonet — Wings match environment"
         }
       },
       "DragonForm": {
@@ -3875,6 +3939,9 @@
           "MatchingSuitPrompt": "Is the drawn card's suit related the check?",
           "WealOrWoePrompt": "Select Weal or Woe."
         },
+        "DragonEye": {
+          "Addendum": "When you cast _breathe fire_ at 3rd-rank or higher, creatures in the spell's area must attempt a @Check[will|basic] save instead of a basic Reflex save, and in addition to taking the spell's normal damage on a failure, they're @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}. This adds the emotion, fear, and mental traits to the spell."
+        },
         "DrakeRifle": {
           "CriticalSpecialization": "Ein Drakagewehr fügt keine Kritischen Spezialisierungseffekte hinzu.",
           "Note": {
@@ -4002,6 +4069,12 @@
         "SashOfBooks": {
           "Label": "Sash of Books",
           "Note": "Regardless of the result, you gain a +1 circumstance bonus to attack rolls against the creature and to your AC and saving throws against attacks and effects from the creature for 1 minute. @UUID[Compendium.pf2e.equipment-effects.Item.P3lpqXMd5FbUF57c]{Effect: Sash of Books (Bonus)}"
+        },
+        "ScaldingGauntlet": {
+          "Basic": "Eine Kreatur, die du in den Zustand Gegriffen oder Gehalten versetzt, während du die Handschuhe trägst, muss einen @Check[fortitude|dc:26|options:damaging-effect,inflicts:sickened|showDC:all]{Zähigkeitswurf} bestehen oder erleidet @Damage[2d6[persistent,fire]]{2W6 Anhaltenden Feuerschaden} und durch den Schmerz den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1}; sie ist dann vorübergehend für 1 Stunde immun gegen diesen Effekt der <em>Verbrühenden Handschuhe</em>.",
+          "Greater": "Eine Kreatur, die du in den Zustand Gegriffen oder Gehalten versetzt, während du die Handschuhe trägst, muss einen @Check[fortitude|dc:28|options:damaging-effect,inflicts:sickened|showDC:all]{Zähigkeitswurf} bestehen oder erleidet @Damage[2d6[persistent,fire]]{2W6 Anhaltenden Feuerschaden} und durch den Schmerz den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1}; sie ist dann vorübergehend für 1 Stunde immun gegen diesen Effekt der <em>Verbrühenden Handschuhe</em>.",
+          "Major": "Eine Kreatur, die du in den Zustand Gegriffen oder Gehalten versetzt, während du die Handschuhe trägst, muss einen @Check[fortitude|dc:32|options:damaging-effect,inflicts:sickened|showDC:all]{Zähigkeitswurf} bestehen oder erleidet @Damage[3d6[persistent,fire]]{3W6 Anhaltenden Feuerschaden} und durch den Schmerz den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1}; sie ist dann vorübergehend für 1 Stunde immun gegen diesen Effekt der <em>Verbrühenden Handschuhe</em>.",
+          "True": "Eine Kreatur, die du in den Zustand Gegriffen oder Gehalten versetzt, während du die Handschuhe trägst, muss einen @Check[fortitude|dc:36|options:damaging-effect,inflicts:sickened|showDC:all]{Zähigkeitswurf} bestehen oder erleidet @Damage[4d6[persistent,fire]]{4W6 Anhaltenden Feuerschaden} und durch den Schmerz den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1}; sie ist dann vorübergehend für 1 Stunde immun gegen diesen Effekt der <em>Verbrühenden Handschuhe</em>."
         },
         "ScapularOfShields": {
           "CriticalImmunityLabel": "Activate Scapular of Shields to gain critical immunity.",
@@ -4391,6 +4464,10 @@
         "RiskySurgery": {
           "Note": "Wenn du die Handlung Wunden versorgen anwendest, kannst du deinem Patienten @Damage[1d8[slashing]]{1W8 Punkte Hiebschaden} zufügen, kurz bevor die Effekte von Wunden versorgen wirksam werden. Wenn du das tust, erhältst du einen Situationsbonus von +2 für deinen Fertigkeitswurf für Heilkunde, um Wunden zu versorgen. Wenn du einen Erfolg erzielst, erhältst du stattdessen einen Kritischen Erfolg."
         },
+        "SkillfulTail": {
+          "Geniekin": "Du wurdest mit einem Schwanz geboren und hast mit einiger Übung erlernt, ihn zu einfachen Handlungen der Art Interagieren zu nutzen - z.B. zum Öffnen einer unverschlossenen Tür. Du kannst mit ihm allerdings keine Handlungen ausführen, die Finger oder beachtliche Fingerfertigkeit erfordern würden; du kannst ihn nicht für Handlungen nutzen, die einen Fertigkeitswurf erfordern würden, und du kann mit ihm keine Gegenstände halten und tragen.",
+          "Nephilim": "Bereits seit deiner Geburt verfügst du über einen Schwanz und hast im Laufe der Zeit durch viel Übung gelernt, diesen für mehrere Zwecke zu nutzen, als damit nur deine Stimmung mitzuteilen. Du kannst mit deinem Schwanz einfache Aktionen der Kategorie Interagieren ausführen, wie eine nicht abgeschlossene Tür zu öffnen. Dein Schwanz ist jedoch nicht zu Handlungen fähig, die Finger oder Fingerfertigkeit erfordern - inklusive Aktionen, die einen Fertigkeitswurf erfordern. Zudem kannst du mit deinem Schwanz keine Gegenstände halten."
+        },
         "SolarRejuvenation": {
           "Ghoran": "Die Wärme und das Licht der Sonne spenden dir Lebensenergie. Wenn du dich tagsüber 10 Minuten lang im Freien aufhältst, erhältst du Trefferpunkte in Höhe deines Konstitutionsmodifikators x deiner halben Stufe zurück (@Damage[(floor(@actor.level/2)*@actor.abilities.con.mod)[healing]]). Du erhältst diesen Vorteil zusätzlich zu jeder Heilung durch @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Wunden versorgen}.",
           "Leshy": "Wenn du am Tag für 10 Minuten im Freien rastest, gewinnst du Trefferpunkte in Höhe deines KO-Modifikators x deiner halben Stufe zurück (@Damage[(floor(@actor.level/2)*@actor.abilities.con.mod)[healing]]). Du erhältst diesen Vorteil zusätzlich zu jeglicher Heilung durch @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Wunden versorgen}. Lesniks, deren pflanzliche Nahrungsquelle nicht auf Photosynthese beruht, benötigen eine andere passende Umgebung. Pilzlesniks brauchen zum Beispiel eine dunkle, feuchte Umgebung und einen Haufen verrottende Pflanzen."
@@ -4528,17 +4605,17 @@
       "Geomancer": {
         "AttunementShift": "Einstimmungswechsel",
         "Dedication": {
-          "Label": "Geomancer Dedication"
+          "Label": "Geomanten-Zugang"
         },
         "SpeakForTheGravelands": {
-          "GravelandsLabel": "Gravelands"
+          "GravelandsLabel": "Grablande"
         },
         "TerrainAttunement": {
           "Aquatic": "Du erhältst eine Bewegungsrate für Schwimmen entsprechend deiner Bewegungsrate an Land. Stehst du hingegen auf einer festen Oberfläche, folgen vorübergehend auftauchende Wellen deinen Bewegungen, sodass du deine Bewegungsrate für Schwimmen (sofern vorhanden) als deine Bewegungsrate an Land nutzen kannst. Dieser Effekt hält 1 Runde an.",
           "Arctic": "Feinde müssen einen @Check[fortitude]{Zähigkeitswurf} ablegen. Bei einem Fehlschlag erhalten sie für 2 Runden einen Zustandsmalus von -5 Fuß/1,50 m (bzw. -10 Fuß/3 m bei einem Kritischen Fehlschlag) auf ihre Bewegungsraten.",
           "Desert": "Feinde müssen einen @Check[fortitude]{Zähigkeitswurf} ablegen. Bei einem Fehlschlag erhalten sie den Zustand @UUID[Compendium.pf2e.conditionitems.HL2l2VRSaQHu9lUw]{Erschöpft}, bis sie Wasser trinken oder eine andere hydrierende Flüssigkeit zu sich nehmen.",
           "Forest": "Äste und Ranken legen sich deinen Gegnern gezielt in den Weg. Deine Feinde müssen daher einen @Check[reflex]{Reflexwurf} ablegen; bei einem Fehlschlag erleidet ein Gegner für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.i3OJZU2nk64Df3xm]{Unbeholfen 1} (bzw. @UUID[Compendium.pf2e.conditionitems.i3OJZU2nk64Df3xm]{Unbeholfen 2} bei einem Kritischen Fehlschlag).",
-          "Gravelands": "You gain a +1 status bonus to saving throws against the spells and abilities of haunts and undead creatures for 1 round.",
+          "Gravelands": "Du erhältst für 1 Runde einen Zustandsbonus von +1 auf Rettungswürfe gegen Zauber und Fähigkeiten von Spukerscheinungen und Untoten.",
           "Label": "Geländeeinstimmung",
           "Mountain": "Du gewinnst für 1 Runde Resistenz gegen körperlichen Schaden (außer Adamant) entsprechend des Zaubergrades.",
           "Plains": "Du erhältst für 1 Runde Temporäre Trefferpunkte in Höhe des Zaubergrades.",
@@ -4642,6 +4719,14 @@
         "FinalShot": {
           "Note": "Unabhängig vom Ergebnis erhältst du nach dem Angriff den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} bis zum Beginn deines nächsten Zuges sowie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1}.",
           "NoteFailure": "Die Waffe hat eine Fehlzündung."
+        },
+        "FleshWound": {
+          "ToggleLabel": "Fleischwunde - Reduziere Angriffsschaden"
+        },
+        "SwordAndPistol": {
+          "MeleeNote": "Führst du einen erfolgreichen Nahkampfangriff gegen einen Gegner mit deiner einhändigen Nahkampfwaffe aus, löst dein nächster Fernkampfangriff mit einer einhändigen Feuerwaffe oder einhändigen Armbrust gegen diesen Gegner keine Reaktionen aus, die ein Fernkampfangriff (aber kein Nahkampfangriff) auslösen würde, wie z. B. Reaktionsangriff. Diese Vorteile gehen verloren, wenn du sie nicht bis zum Ende deines nächsten Zuges genutzt hast.",
+          "RangedNote": "Wenn du einen erfolgreichen Fernkampfangriff gegen einen Gegner innerhalb deines Angriffsradius mit einer einhändigen Feuerwaffe oder einhändigen Armbrust führst, erhält dieser Gegner den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} gegen deinen nächsten Nahkampfangriff mit einer einhändigen Nahkampfwaffe.",
+          "RollOptionLabel": "Schwert und Pistole - Gegner ist innerhalb des Angriffsradius"
         },
         "Way": {
           "Prompt": "Wähle deinen Pfad.",
@@ -4900,6 +4985,12 @@
         "Trigger": "Deine Beute befindet sich in deinem Angriffsradius und will sich von dir entfernen."
       },
       "Kineticist": {
+        "ConsumePower": {
+          "ResistanceToggle": "Energie absorbieren — Resistenz"
+        },
+        "DesertWind": {
+          "DamageToggle": "Wüstenwind — Zusätzlicher Schaden"
+        },
         "ExtendedKinesis": {
           "Proliferate": {
             "Title": "Ausdehnen",
@@ -4992,6 +5083,11 @@
         }
       },
       "Kobold": {
+        "DraconicParagon": {
+          "KoboldBreath": {
+            "Addendum": "Creatures that critically fail their save against your Kobold Breath take @Damage[3d4[persistent,damage]]."
+          }
+        },
         "DragonbloodParagon": {
           "Dracomancer": "Drakomant",
           "KoboldBreath": {
@@ -5269,6 +5365,10 @@
         "Penalty": "Malus"
       },
       "Monk": {
+        "DodgingRoll": {
+          "StepIn": "Step into effect's area",
+          "StepOut": "Step out of effect's area"
+        },
         "DragonRoar": {
           "Label": "Erster Angriff gg. verängstigte Kreatur"
         },
@@ -6643,6 +6743,12 @@
         "RuptureDamage": "Nimmt das Monster von einem einzelnen Angriff oder Zauber Hieb- oder Stichschaden in Höhe des unter Befreien angegebenen Wertes oder darüber hinaus, kann sich die verschlungene Kreatur herausschneiden."
       },
       "Swashbuckler": {
+        "ElegantBuckler": {
+          "RollOptionLabel": "Elegant Buckler — Using a buckler"
+        },
+        "ExtravagantParry": {
+          "Prompt": "Do you have a free hand or wield a parry weapon?"
+        },
         "Finisher": {
           "Basic": "Grundlegend",
           "Bleeding": "Blutend",
@@ -6669,7 +6775,7 @@
           "Note": "Bei einer erfolgreichen Finte hast du, anstatt der anderen, üblichen, Effekte deiner Finte, die Wahl, ob das Ziel einen Situationsmalus von -2 auf seine Angriffe hinnehmen soll. @UUID[Compendium.pf2e.feat-effects.Item.rflbFzV44Fd6aBLE]{Effekt: Aufreizende Finte}"
         },
         "Panache": "Du erhältst @UUID[Compendium.pf2e.feat-effects.Item.uBJsxCzNhje8m8jj]{Elan}.",
-        "PanacheFailure": "Du erhältst Elan bis zum Ende deiner nächsten Runde @UUID[Compendium.pf2e.feat-effects.Item.uBJsxCzNhje8m8jj]{Effekt: Elan}",
+        "PanacheFailure": "Du erhältst Elan bis zum Ende deiner nächsten Runde @UUID[Compendium.pf2e.feat-effects.Item.paKKHPds77fq5VTH]{Effekt: Elan (temporär)}",
         "Style": {
           "Prompt": "Wähle eine Fasson."
         },
