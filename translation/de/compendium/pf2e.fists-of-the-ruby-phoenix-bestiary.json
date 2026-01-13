@@ -1,5 +1,5 @@
 {
-  "label": "Fists of the Ruby Phoenix Bestiarium",
+  "label": "Fists of the Ruby Phoenix",
   "entries": {
     "Angoyang": {
       "name": "Angoyang",
@@ -254,6 +254,81 @@
         }
       }
     },
+    "Desecrated Guardian": {
+      "name": "Entweihter Wächter",
+      "publicNotes": "<p>Im Laufe der Zeitalter wurden auf ganz Golarion zahllose Tempel zu Ehren lebender oder inzwischen vergessener Gottheiten erbaut und sind wieder zerfallen. Viele liegen unter Sand, Schnee oder Vegetation vergraben, um niemals wiedergefunden zu werden. An solchen Orten könnten sich die Seelen der Gläubigen mit der Tempelruine verbinden, um ein Wächterkonstrukt auszubilden – doch wo nichts mehr zu bewachen ist, werden diese Seelen oft von Bedauern erfüllt oder von Verachtung gegenüber den Lebenden, sie werden schal und oftmals bösartig. Diese „Entweihten Wächter“ lauern zuweilen jahrhundertelang auf Lebende und zerstören jeden Abenteurer, der auf sie stößt. Die massiven Schlangengestalten der mächtigsten Wächter bestehen aus mehreren Tempelgebäuden.</p>",
+      "skillSpecialStealth": {
+        "0": {
+          "label": "in Ruinen"
+        }
+      },
+      "items": {
+        "strike-melee->Jaws": {
+          "name": "Biss"
+        },
+        "strike-melee->Tail": {
+          "name": "Schwanz"
+        },
+        "action->Lifesense 60 feet": {
+          "name": "<Compendium> 60 Fuß/18 m"
+        },
+        "action->Attack of Opportunity (Tail only)": {
+          "name": "<Compendium> (Nur Schwanz)"
+        },
+        "action->Desecration Aura": {
+          "name": "Entweihte Aura",
+          "description": "<p>40 Fuß/12 m. Entweihte Wächter umgibt eine fast greifbare Bösartigkeit, die bei allen Übelkeit auslöst, welche nicht ähnlich finsteren Herzens sind. Nichtböse Charaktere, welche die Aura betreten, müssen einen @Check[will|dc:37]{Willenswurf} ablegen. Bei einem Fehlschlag erhält die Kreatur den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1} (bzw. @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 2} bei einem Kritischen Fehlschlag). Ferner muss jede nichtböse Kreatur, die innerhalb der Aura einen Zauber wirken will, einen @Check[flat|dc:5]{Einfachen Wurf} ablegen; bei Misslingen ist der Zauber verloren.</p>"
+        },
+        "action->Rebuild": {
+          "name": "Reparatur",
+          "description": "<p>Der Entweihte Wächter zieht Geröll aus der Umgebung zusammen, um seinen beschädigten Leib zu reparieren. Er erlangt @Damage[8d6[healing]]{8W6 Trefferpunkte} zurück; kann diese Fähigkeit aber nur nutzen, wenn passendes Material in Form von Felsen, Geröll, Bauschutt, Gebäudetrümmern o.ä. in der Nähe ist.</p>"
+        },
+        "action->Avalanche": {
+          "name": "Lawine",
+          "description": "<p>Der Entweihte Wächter peitscht mit seinem Schlangenleib um sich; dies führt zu Abgängen von Schnee, Felsen o.a. Teilen der Umgebung. Alle Kreaturen in einem @Template[cone|distance:60]{60 Fuß/18 m-Kegel} erleiden @Damage[12d10[bludgeoning]|options:area-damage]{12W10 Wuchtschaden} (@Check[reflex|dc:42|basic|options:area-effect]{einfacher Reflexwurf}). Er kann diese Fähigkeit [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht erneut nutzen.</p>"
+        },
+        "action->Coiled Rockslide": {
+          "name": "Hinterhältiger Felsrutsch",
+          "description": "<p>Sollte der Entweihte Wächter seinen Zug im Zustand Versteckt beginnen, kann er Trampeln (s.u.) nutzen und bleibt Versteckt, bis er alle seine Angriffe ausgeführt hat.</p>"
+        },
+        "action->Constrict": {
+          "description": "<p>@Damage[(2d8+18)[bludgeoning]]{2W8+18 Wuchtschaden}; @Check[fortitude|dc:39|basic]{einfacher Zähigkeitswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
+        },
+        "action->Swallow Whole": {
+          "description": "<p>Riesig, @Damage[(3d8+20)[bludgeoning]]{3W8+20 Wuchtschaden}, Befreien 45</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
+        },
+        "action->Trample": {
+          "description": "<p>Riesig oder kleiner, Schwanz, @Check[reflex|dc:37|basic]{einfacher Reflexwurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Trample]</p>"
+        }
+      }
+    },
+    "Dromornis": {
+      "name": "Dromornis",
+      "publicNotes": "<p>Dromornisse sind große, fleischfressende Laufvögel, die in Rudeln umherziehen und Beute aus dem Hinterhalt heraus anfallen. Ihre kurzen Stummelflügel mögen zwar lustig anzusehen sein, doch jedem, der von den kräftigen Schnäbeln getroffen wird, vergeht das Lachen. Diese Schnäbel können Fleisch und Sehnen von Knochen reißen, so dass ein Dromornis rasch auch große Säugetiere wie Rehe, Tapire und Primaten erlegen kann. Von besonders hungrigen oder aggressiven Dromornissen weiß man, dass sie auch Humanoide angreifen. Die kräftigen Beine der Vögel enden in scharfen Krallen, die im Kampf zwar weniger genutzt werden als der Schnabel, aber dennoch kleinere Kreaturen wie Nagetiere und Amphibien zertrampeln und in Stücke reißen können.</p>\n<p>Ein einzelner Dromornis ist bereits sehr gefährlich, doch ein Rudel kann ein Bärenrudel oder auch ein ganzes Dorf von Humanoiden auslöschen. Ein Rudel besteht in der Regel aus drei bis vier Erwachsenen und bis zu fünf Jungtieren, die alle zusammenarbeiten,  um größere Beute zur Strecke zu bringen. Das Rudel lauert auf Beute wie eine Anakonda, einen Büffel, ein Wildschwein oder – wenn der Hunger es zur Verzweiflung treibt – auch auf einen Dinosaurier und schlägt dann überraschend zu, als würde es von einem einzigen Verstand gelenkt. Dromornisse sind nicht sonderlich intelligent, aber dennoch für ihre einfallsreichen, wenn auch selbstgefährdenden Täuschungstaktiken bekannt – sie locken große Beute an, indem einer der Jungvögel als Köder fungiert.</p>\n<p>Man trifft diese Laufvögel in der Regel fern der Zivilisation in tropischen Dschungeln an. Manchmal lassen sie sich aber auch in Höhlen in den Bergen oder an Felsküsten nieder. Den meisten Betrachtern dürfte es schwerfallen, einen Dromornis vom anderen zu unterscheiden, während sie selbst ihre engen Familienstrukturen dank Pheromonen und Duftspuren aufrechterhalten, so dass sie erkennen, wenn ein fremder Dromornis sich dem Nest des Rudels nähert. Es kommt oft zu Streitigkeiten über Brutplätze; ein besonders begehrtes Nest könnte im Laufe des Jahres mehrere Besetzer haben. Kämpfe zwischen Rudeln sind schnell und chaotisch, voll furchterweckendem Gekreische und spritzendem Blut.</p>",
+      "items": {
+        "strike-melee->Beak": {
+          "name": "Schnabel"
+        },
+        "strike-melee->Talon": {
+          "name": "Kralle"
+        },
+        "action->Pack Ambush": {
+          "name": "Rudelhinterhalt",
+          "description": "<p><strong>Auslöser</strong> Ein anderer Dromornis innerhalb von 10 Fuß/3 m Entfernung nutzt die Aktion Laufen.</p>\n<hr />\n<p><strong>Effekt</strong> Der Dromornis nutzt Laufen und bewegt sich um maximal seine halbe Bewegungsrate fort.</p>"
+        },
+        "action->Pack Attack": {
+          "name": "Rudelangriff",
+          "description": "<p>Dromornisse kämpfen am besten, wenn ihre Artgenossen dabei sind. Ein Dromornis fügt jeder Kreatur zusätzlich 1W8 Schadenspunkte zu, die sich im Angriffsradius von wenigstens zweien seiner Verbündeten befindet.</p>"
+        },
+        "action->Rushing Attack": {
+          "name": "Eiliger Angriff",
+          "description": "<p>Der Dromornis nutzt Laufen mit einem Situationsbonus von +10 Fuß/3 m auf seine Bewegungsrate und führt am Ende der Bewegung einen Angriff aus.</p>"
+        },
+        "action->Trample": {
+          "description": "<p>Mittelgroß oder kleiner, Kralle, @Check[reflex|dc:26|basic]{einfacher Reflexwurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Trample]</p>"
+        }
+      }
+    },
     "Gumiho": {
       "name": "Gumiho",
       "publicNotes": "<p>Gumihos sind legendäre neunschwänzige, fuchsartige Kreaturen, die menschliche Gestalt annehmen, um mittels Charme und List ihre Beute in die Tiefen der Wälder zu locken. Dort geben sie sich dann zu erkennen und greifen an. Die grünäugigen Hundeartigen nutzen ihre scharfen Reißzähne, um ihren Opfern die Kehle herauszureißen, und verspeisen dann deren Lebern. Wer diesen Hinterhalt überlebt, erinnert sich an die unheimlichen grünen Augen des Gumihos und an ein seltsames, kugelförmiges Amulett an seinem Hals.</p>\n<p>Alten Legenden nach verwandelt sich ein Fuchs in einen Gumiho, wenn er eintausend Jahre alt wird; dann vervierfacht sich seine Größe, es wachsen ihm acht weitere Schwänze und er erlangt die Gabe des Gestaltwandels. Allerdings plagt ihn fortan auch ein unersättlicher Hunger nach Leber. Dieser Hunger ist derart eng mit seinen Kräften verbunden, dass ein Gumiho, der eintausend Tage lang keine Leber verspeist, seine Magie verliert und dauerhaft seine humanoide Gestalt behält - zudem verliert er auch sein böses Wesen!</p>",
@@ -410,6 +485,50 @@
         "action->Whip Tail": {
           "name": "Donnernder Schwanz",
           "description": "<p>Der Jaiban schlägt mit seinem Schwanz durch die Luft und erzeugt einen lauten Knall mit @Template[burst|distance:5]{5 Fuß/1,50 m-Explosionsradius} rund um die Ecke eines Feldes im Angriffsradius seines Schwanzangriffes. Jede Kreatur im Wirkungsbereich muss einen @Check[fortitude|dc:36]{Zähigkeitswurf} ablegen:</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 2}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 3}.</p>"
+        }
+      }
+    },
+    "Lophiithu": {
+      "name": "Lophiithu",
+      "languages": "Telepathie 100 Fuß/30 m, Wahre Sprache",
+      "publicNotes": "<p>Lophiithi hausen in den tiefsten Meeresgräben, wo weder Licht, Hoffnung, noch sterbliches Verstehen hinreichen. Sie erscheinen als Kreaturen aus aufgerissenen Mäulern mit ausgerenkten Kiefern, Resten fauligen Fleisches und Tentakeln mit leuchtenden Spitzen. Ihre extraplanaren Mäuler nehmen den weitaus größten Teil ihrer Leiber ein, so dass es keinen Platz für weitere Organe gibt. Verschlungene Beute wird zur Verdauung in den Mahlstrom transportiert.</p>",
+      "items": {
+        "spellcastingEntry->Innate Occult Spells": {
+          "name": "Immanente Okkulte Zauber"
+        },
+        "spell->Gate (At Will)": {
+          "name": "<Compendium> (beliebig oft)"
+        },
+        "spell->Tongues (Constant)": {
+          "name": "<Compendium> (ständig)"
+        },
+        "spell->Dancing Lights": {
+          "name": "Tanzende Lichter",
+          "description": "<p>Du erschaffst bis zu vier schwebende Lichter in einem Abstand von nicht mehr als 10 Fuß/3 Meter voneinander. Jedes erhellt seine Umgebung wie eine @UUID[Compendium.pf2e.equipment-srd.8Jdw4yAzWYylGePS]{Fackel}. Erhältst du den Zauber aufrecht, darfst du eine beliebige Anzahl der Lichter bis zu 60 Fuß/18 m weit bewegen. Dabei muss jedes Licht innerhalb von 120 Fuß/36 m Reichweite von dir und innerhalb von 10 Fuß/3 m von den anderen Lichtern bleiben. Ansonsten erlischt es.</p>"
+        },
+        "strike-melee->Jaws": {
+          "name": "Biss"
+        },
+        "strike-melee->Lure": {
+          "name": "Köder"
+        },
+        "action->Telepathy 100 feet": {
+          "name": "<Compendium> 100 Fuß/30 m"
+        },
+        "action->Beguiling Lure": {
+          "name": "Faszinierender Köder",
+          "description": "<p>Wird eine Kreatur vom Köder eines Lophiithus getroffen, muss sie einen @Check[will|dc:41|traits:illusion,mental,occult,visual]{Willenswurf} ablegen; bei einem Fehlschlag erhält sie 1 Minute lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fasziniert} durch den Köder. Bei einem Kritischen Fehlschlag kann die Kreatur keine Reaktionen nutzen, solange sie Fasziniert ist. Bei Erfolg ist die Kreatur vorübergehend 1 Stunde lang gegen diesen Effekt immun.</p>"
+        },
+        "action->Dimensional Swallow": {
+          "name": "Planares Verschlingen",
+          "description": "<p>Die Verdauungsorgane des Lophiithus existieren im Mahlstrom, egal wo sich sein Leib befindet. Der Lophiithu kann eine beliebige Anzahl Kreaturen beliebiger Größe verschlingen. Kreaturen können dem Magen des Lophiithus normal Entkommen. Wer sich stattdessen freischneidet, findet sich im Mahlstrom neben einem der Mägen des Lophiithus wieder. Stirbt der Lophiitu, entsteht ein Dimensionsriss, der das Maul mit dem Magen verbindet und in beide Richtungen genutzt werden kann, so dass eine verschlungene Kreatur auf ihre Ausgangsebene zurückkehren kann. Der Riss verschwindet nach 1 Minute.</p>"
+        },
+        "action->Lure Whip": {
+          "name": "Peitschenköder",
+          "description": "<p>Der Lophiithu führt einen Köderangriff gegen jede Kreatur innerhalb seines Angriffsradius aus. Diese Angriffe zählen den Malus für Mehrfachangriffe des Lophiitus, der Malus steigt aber erst nach diesen Angriffen.</p>"
+        },
+        "action->Swallow Whole": {
+          "description": "<p>Groß, @Damage[(3d12+10)[bludgeoning]]{3W12+10 Wuchtschaden}, Befreien 44 und Planares Verschlingen</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
         }
       }
     },
@@ -665,6 +784,86 @@
         }
       }
     },
+    "Shadow Yai": {
+      "name": "Schattengigant",
+      "hpDetails": "Regeneration 15 (deaktiviert durch Feuer oder Säure)",
+      "publicNotes": "<p>Oni, welche die Gestalt von Schattenriesen annehmen, sind als Schattengiganten bekannt. Viele gieren nach Musik und unternehmen große Bemühungen, um sich Barden oder andere fähige Unterhaltungskünstler zu sichern. Kleinere Wesen, die sich einem Schattengiganten nicht unterwerfen wollen, erleiden einen schmerzvollen, langgezogenen und seltsam schönen Tod, da ein Schattengigant, seinen Opfern melodische Schreie entlocken kann und so eine veritable Symphonie des Leids erzeugt. Für musikalisch begabte Individuen, die einen Schattengiganten begleiten, kann dies äußerst lukrativ sein, solange ihr Herr mit ihnen zufrieden ist.</p>",
+      "speed": "Schattengang",
+      "items": {
+        "spellcastingEntry->Innate Primal Spells": {
+          "name": "Immanente Naturzauber"
+        },
+        "spell->Shadow Walk": {
+          "name": "<Compendium>",
+          "target": "Du und bis zu 9 berührte bereitwillige Kreaturen"
+        },
+        "spell->Enthrall (At Will)": {
+          "name": "<Compendium> (beliebig oft)"
+        },
+        "spell->Invisibility (at will, self only)": {
+          "name": "<Compendium> (beliebig oft, nur selbst)"
+        },
+        "spell->Sound Burst": {
+          "name": "<Compendium>"
+        },
+        "strike-melee->Glaive": {
+          "name": "Glefe"
+        },
+        "strike-melee->Fist": {
+          "name": "Faust"
+        },
+        "strike-ranged->Sonic Missile": {
+          "name": "Schallgeschoss",
+          "rules": {
+            "0": {
+              "text": "Das Ziel erhält eine Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Taub}."
+            }
+          }
+        },
+        "action->Shadow Step": {
+          "name": "Schattengang",
+          "description": "<p><strong>Anforderungen</strong> Der Schattengigant befindet sich in einem Bereich mit Dämmerlicht oder Dunkelheit oder steht im Schatten eines wenigstens Großen Gegenstandes</p>\n<hr />\n<p><strong>Effekt</strong> Der Schattengigant teleportiert augenblicklich an einen maximal 60 Fuß/18 m entfernten, anderen Ort, welcher ebenfalls die Anforderungen erfüllt.</p>"
+        },
+        "action->Regeneration 15 (Deactivated by Acid or Fire)": {
+          "name": "Regeneration 15 (deaktiviert durch Säure oder Feuer)"
+        },
+        "action->Change Shape": {
+          "description": "<p>Der Schattengigant nimmt das Aussehen eines Schattenriesens an. Dies verändert seine Bewegungsrate, seinen Angriff und seinen Schaden nicht.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.ChangeShape]</p>"
+        },
+        "action->Shadow Touch": {
+          "name": "Schattenhand",
+          "description": "<p>Die Berührung eines Schattengiganten fügt nicht nur dem Körper des Zieles Schaden zu, sondern auch seiner spirituellen Essenz. Wird eine Kreatur vom Faustangriff des Schattengiganten getroffen, muss sie einen @Check[will|dc:36]{Willenswurf} ablegen.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erleidet @Damage[2d6[void]]{2W6 Leerenschaden}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 1} und erleidet @Damage[3d6[void]]{3W6 Punkte Leerenschaden}. So lange die Kreatur aufgrund dieser Fähigkeit den Zustand Ausgelaugt hat, kann sie nicht lauter sprechen als flüsternd. Sollte sie einen Zauber mit verbaler Komponente wirken wollen, muss sie einen Einfachen Wurf ablegen, bei Misslingen wird der Zauber unterbrochen (der SG ist 5 plus der Zustandswert für Ausgelaugt, z.B. bei Ausgelaugt 2 also SG 7).</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie beim Fehlschlag, aber die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 2} und erleidet @Damage[6d6[void]]{6W6 Leerenschaden}.</p>"
+        }
+      }
+    },
+    "Sigbin": {
+      "name": "Sigbin",
+      "languages": "(kann keine Sprache sprechen)",
+      "publicNotes": "<p>Sigbins ähneln hörnerlosen Ziegen mit extrem langen Schwänzen. Sie leben in Wäldern und machen Jagd auf die humanoiden Bewohner naher Dörfer, deren Blut sie trinken. Dabei beißen sie in die Schatten ihrer Opfer statt in deren Leiber. Dies erschöpft ein Opfer meistens derart, dass es nicht mehr weiterkann – und liegt es erst am Boden, versetzt ein Sigbin ihm den Todesstoß, indem es seine Zähne in die Brust des Opfers versenkt, um dessen Herz zu verschlingen.</p>\n<p>Sigbins umgibt ein Übelkeit erregender Gestank, daher verbergen sie sich zwischen anderen Nutztieren und an überwältigend stinkenden Orten. Sie können sich auch vor aller Augen verstecken, indem sie einfach stocksteif dastehen, allerdings funktioniert diese Fähigkeit nur gegenüber Erwachsenen und Alten – aus irgendeinem Grund können Kinder und junge Tiere auch unsichtbare Sigbins sehen. Viele glauben, dies läge daran, dass Kinder noch nicht durch die Grausamkeit der Welt verdorben und daher unschuldig genug seien, die tückischen Bestien erspähen zu können. Leider neigen die meisten Erwachsenen dazu, die Alarmschreie von Kindern zu ignorieren, da sie glauben, diese hätten eine überaktive Fantasie oder wollten nur Aufmerksamkeit, so dass Sigbins ungestört weiterhin auf die Jagd gehen können.</p>",
+      "items": {
+        "strike-melee->Claws": {
+          "name": "Klauen"
+        },
+        "strike-melee->Fangs": {
+          "name": "Biss"
+        },
+        "strike-melee->Tail": {
+          "name": "Schwanz"
+        },
+        "action->Stench": {
+          "name": "Gestank",
+          "description": "<p>30 Fuß/9 m. Betritt eine Kreatur diese Ausstrahlung, muss sie einen @Check[fortitude|dc:19]{Zähigkeitswurf} ablegen. Bei einem Fehlschlag erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1} (bzw. @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 2} bei einem Kritischen Fehlschlag). Innerhalb der Aura unterliegen Rettungswürfe, um sich vom Zustand Kränkelnd zu erholen, einem Situationsmalus von -2. Gelingt einer Kreatur der Rettungswurf, ist sie 1 Minute lang gegen den Gestank aller Sigbins immun.</p>"
+        },
+        "action->Unassuming Cloak": {
+          "name": "Deckmantel der Unauffälligkeit",
+          "description": "<p>Steht ein Sigbin völlig still, ist er kaum noch wahrzunehmen. Sofern der Sigbin sich während seines Zuges nicht bewegt oder angreift, erhält er den Zustand @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Unsichtbar}. Er bleibt unsichtbar, bis er sich bewegt oder eine feindselige Handlung ausführt. Kinder und junge Kreaturen wie z.B. Hundewelpen können einen Sigbin normal sehen, selbst wenn er eigentlich unsichtbar ist.</p>"
+        },
+        "action->Shadow Drain": {
+          "name": "Schattenbiss",
+          "description": "<p><strong>Anforderungen</strong> Der Sigbin ist @UUID[Compendium.pf2e.conditionitems.Item.9evPzg9E6muFcoSk]{Unbemerkt} gegenüber seinem Ziel.</p>\n<hr />\n<p><strong>Effekt</strong> Der Sigbin führt einen Bissangriff aus (im Gegensatz zu anderen Angriffen beendet dieser Biss eventuelle @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Unsichtbarkeit} nicht). Trifft der Sigbin, erleidet das Ziel durch den Angriff Nichttödlichen Schaden und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 1} (bzw. @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 2} bei einem Kritischen Treffer). Der Sigbin erlangt 15 Temporäre Trefferpunkte, die 1 Stunde lang währen.</p>"
+        }
+      }
+    },
     "Spirit Turtle": {
       "name": "Geisterschildkröte",
       "hpDetails": "Regeneration 25 (deaktiviert durch Kaltes Eisen oder Unheiligen Schaden)",
@@ -751,6 +950,55 @@
           "description": "<p>Eine Kreatur, die Kälteschaden durch einen Angriff oder die Aura des Sthira erleidet, muss einen @Check[fortitude|dc:42]{Zähigkeitswurf} ablegen. Eine Kreatur, die bereits Anhaltenden Kälteschaden durch Erfrierungen hat, ignoriert diesen Effekt.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen, und ist vorübergehend für 1 Stunde immun gegen diese Fähigkeit.</p>\n<p><strong>Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet @Damage[3d6[persistent,cold]]{3W6 Punkte Anhaltenden Kälteschaden}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie beim Fehlschlag, aber die Kreatur erhält auch den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 1}.</p>"
         }
       }
+    },
+    "Taiga Yai": {
+      "name": "Taigagigant",
+      "hpDetails": "Regeneration 15 (Deaktiviert durch Feuer)",
+      "languages": "Mit Tieren sprechen",
+      "publicNotes": "<p>Taigagiganten treten als Taigariesen auf. Meistens reisen sie allein und sehnen sich stets nach neuen Erfahrungen und Orten. Sie lieben die Natur in ihrer reinsten Form und zerstören freudig etablierte Zivilisationen, auf die sie stoßen, ehe sie weiterziehen.</p>",
+      "saveDetails": "+1 Zustandsbonus auf RW gg. Magie",
+      "items": {
+        "spellcastingEntry->Innate Primal Spells": {
+          "name": "Immanente Naturzauber"
+        },
+        "spell->Entangle (At Will)": {
+          "name": "<Compendium> (beliebig oft)"
+        },
+        "spell->Invisibility (at will, self only)": {
+          "name": "<Compendium> (beliebig oft, nur selbst)"
+        },
+        "spell->Speak with Animals (Constant)": {
+          "name": "<Compendium> (ständig)"
+        },
+        "strike-melee->Fist": {
+          "name": "Faust"
+        },
+        "strike-ranged->Acid Missile": {
+          "name": "Säuregeschoss",
+          "rules": {
+            "0": {
+              "text": "Das Ziel erhält für eine Runde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß}."
+            }
+          }
+        },
+        "strike-ranged->Shortbow": {
+          "name": "Kurzbogen"
+        },
+        "action->Botanic Interruption": {
+          "name": "Pflanzenschild",
+          "description": "<p><strong>Auslöser</strong> Der Taigagigant steht innerhalb von natürlichem Pflanzenwuchs oder Unterholz und ist das Ziel eines Nahkampfangriffes.</p>\n<hr />\n<p><strong>Effekt</strong> Der Taigagigant lädt die Pflanzen in seiner Nähe auf, so dass sie emporschießen und eine schützende Barriere bilden. Er erhält einen Situationsbonus von +2 auf seine RK gegen den auslösenden Angriffswurf. Sollte der Angriff fehlschlagen, muss der Angreifer einen @Check[reflex|dc:33]{Reflexwurf} ablegen; misslingt dieser Rettungswurf, erhält der Angreifer 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Bewegungsunfähig}, da Pflanzen ihn festhalten (bei einem Kritischen Fehlschlag erhält er zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}).</p>"
+        },
+        "action->Regeneration 15 (Deactivated by Fire)": {
+          "name": "Regeneration 15 (Deaktiviert durch Feuer)"
+        },
+        "action->Change Shape": {
+          "description": "<p>Der Taigagigant nimmt das Aussehen eines Taigariesen an; dies verändert seine Bewegungsrate, seinen Angriff und seinen Schaden nicht.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.ChangeShape]</p>"
+        },
+        "action->Return to Nature": {
+          "name": "Zurück zur Natur",
+          "description": "<p>Der Taigagigant befiehlt unterirdischen Pflanzenwurzeln, eine maximal 60 Fuß/18 m von ihm entfernte Kreatur unter die Erde zu zerren. Das Ziel muss einen @Check[fortitude|dc:35]{Zähigkeitswurf} ablegen; bei Misslingen erhält es [[/gmr 1d4 #Runden]]{1W4 Runden} lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Bewegungsunfähig}. Nach dieser Zeit ist es unter den Boden gezogen worden; es hat den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen}, beginnt zu ersticken und erleidet @Damage[4d6[bludgeoning]]{4W6 Wuchtschaden} pro Runde, die es unter der Erde verbringt. Zum Entkommen (egal ob während des Zustandes Bewegungsunfähig oder Gegriffen) muss der Kreatur ein Wurf zum [[/act escape dc=35]] gelingen; alternativ muss einem angrenzenden Verbündeten ein Wurf für @Check[athletics|dc:33]{Athletik} gelingen, um sie herauszuziehen.</p>"
+        }
+      }
     }
   },
   "mapping": {
@@ -774,6 +1022,7 @@
       "converter": "translateActorDescription",
       "path": "system.details.publicNotes"
     },
+    "saveDetails": "system.attributes.allSaves.value",
     "senses": "system.perception.details",
     "skillSpecialDeception": {
       "converter": "translateSkillSpecial",
