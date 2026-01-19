@@ -169,7 +169,7 @@
         },
         "action->Poison Stock": {
           "name": "Giftsortiment",
-          "description": "<p>Wenn der Schrank eine Kreatur mit seinem Giftflaschen-Angriff trifft, würfle mit [[/r 1d4]]{1W4}, um zu bestimmen, welches Gift auf die getroffene Kreatur spritzt:</p>\n<ol>\n<li>Nervengift (@UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 1})</li>\n<li>Schwächendes Gift (@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 1})</li>\n<li>Widerliches Gift (@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1})</li>\n<li>Vernebelter-Geist-Gift (@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 1}).</li>\n</ol>\n<p>Das Ziel muss einen @Check[fortitude|dc:24|traits:poison]{Zähigkeitswurf} ablegen.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erleidet @Damage[1d6[poison]]{1W6 Punkte Giftschaden}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet @Damage[2d6[poison]]{2W6 Punkte Giftschaden} und ist bis zum Ende ihres nächsten Zuges vom zugehörigen Zustand des ausgewürfelten Giftes betroffen.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erleidet @Damage[2d6[poison]]{2W6 Punkte Giftschaden} und ist für [[/gmr 1d4+1 #Runden]]{1W4+1 Runden} vom zugehörigen Zustand des ausgewürfelten Giftes betroffen.</p>"
+          "description": "<p>When the cabinet hits a creature with its poison bottle Strike, roll [[/gmr 1d4]] to determine what kind of poison splashes onto the struck creature:</p>\n<ol>\n<li>nerve poison (@UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1})</li>\n<li>weakening poison (@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1})</li>\n<li>noxious poison (@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1})</li>\n<li>clouded mind poison (@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}).</li>\n</ol>\n<p>The target must attempt a @Check[fortitude|dc:24|traits:poison] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes @Damage[1d6[poison]].</p>\n<p><strong>Failure</strong> The creature takes @Damage[2d6[poison]] and is afflicted with the rolled poison's associated condition until the end of its next turn.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[2d6[poison]] and is afflicted with the rolled poison's associated condition for [[/gmr 1d4+1 #Rounds]] rounds.</p>"
         }
       }
     },
@@ -723,13 +723,13 @@
     },
     "Dream-Poisoned Door": {
       "name": "Traumvergiftete Tür",
-      "description": "<p>Unheimliche Gestalten manifestieren sich in der Tür, wenn sie geöffnet wird, und beschwören eine Gruppe von vier @UUID[Compendium.pf2e.pathfinder-bestiary-2.Actor.Y9SDbANT1DWI1DKU]{Belebten Träumen}.</p>",
+      "description": "<p>Eerie shapes manifest within the doorway as it's opened, conjuring a group of four @UUID[Compendium.pf2e.pathfinder-monster-core-2.Actor.r3PNRpEir4BVjnCC]{Animate Dreams} into being.</p>",
       "disable": "<p>@Check[occultism|dc:30]{Okkultismus} (Experte), um sich auf die mystischen Energien zu konzentrieren und sie durch Meditation zu zerstreuen; @Check[thievery|dc:35]{Diebeskunst} (Meister), um Schutzrunen in die Türscharniere zu kratzen und die Manifestation der Träume zu verhindern; oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (6. Grad; @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenwirken} SG 30), um der Falle entgegenzuwirken.</p>",
       "stealth": "<p>(Meister)</p>",
       "items": {
         "action->Manifest Dream Guardians": {
           "name": "Traumwächter manifestieren",
-          "description": "<p><strong>Auslöser</strong> Die Tür wird geöffnet</p>\n<hr />\n<p><strong>Effekt</strong> Eine Gruppe von vier @UUID[Compendium.pf2e.pathfinder-bestiary-2.Actor.Y9SDbANT1DWI1DKU]{Belebten Träumen} manifestiert sich in dem Bereich hinter der Tür, die jeweils als vage walförmige, aber menschengroße Massen von Tentakeln erscheinen, durch die Luft schwimmen und die Eindringlinge sofort angreifen, bis zum Tod kämpfen und jeden verfolgen, der aus dem Tempel flieht.</p>"
+          "description": "<p><strong>Trigger</strong> The door is opened</p>\n<hr />\n<p><strong>Effect</strong> A group of four @UUID[Compendium.pf2e.gatewalkers-bestiary.Actor.l64HY5lbpITe0WHZ]{Animate Dreams} manifest in the area just beyond the door. These four animate dreams each appear as vaguely whale-shaped but human-sized masses of tendrils. They swim through the air and attack the intruders at once, fighting to the death and pursuing any who flee the temple.</p>"
         }
       }
     },
@@ -1394,51 +1394,6 @@
         }
       }
     },
-    "Kithangian": {
-      "name": "Kithangier",
-      "languages": "Mit Tieren sprechen, Telepathie 100 Fuß/30 m",
-      "publicNotes": "<p>Der Kithangier - eine schreckliche Mischung aus Pferd und Skorpion, auch bekannt als „Bestiendämon“ - ist ein übles Scheusal, welches aus den Seelen Sterblicher geboren wird, die zu Lebzeiten Tiere missbraucht und gequält haben. Kithangier streifen in der Regel durch wilde Gebiete, in denen es viele Tiere gibt, die sie quälen können, aber auch humanoide Siedlungen mit vielen Haustieren oder Viehbestand sind ein verlockendes Jagdgebiet. Bleibt ein Kithangier zu lange unbehelligt, hat seine Anwesenheit einen verderblichen Einfluss auf die örtliche Tierwelt, die dann teuflische Monstrositäten gebiert, bis der Dämon besiegt ist. Wenn er merkt, dass er von rachsüchtigen Druiden oder Dämonenjägern verfolgt wird, nimmt ein Kithangier die Gestalt eines unscheinbaren Tieres an, damit er seine Verfolger überraschen kann.</p>",
-      "saveDetails": "+1 Zustandsbonus auf RW gg. Magie",
-      "items": {
-        "spellcastingEntry->Divine Innate Spells": {
-          "name": "Immanente Göttliche Zauber"
-        },
-        "spell->Speak with Animals (Constant)": {
-          "name": "<Compendium> (ständig)"
-        },
-        "spell->Command (At Will, Animals Only)": {
-          "name": "<Compendium> (beliebig oft, nur Tiere)"
-        },
-        "strike-melee->Pincer": {
-          "name": "Zange"
-        },
-        "strike-melee->Stinger": {
-          "name": "Stachel"
-        },
-        "action->Telepathy 100 feet": {
-          "name": "<Compendium> 100 Fuß/30 m"
-        },
-        "action->Animal Kindness Vulnerability": {
-          "name": "Empfindlichkeit gegenüber Tierliebe",
-          "description": "<p>Kithangier empfinden Freundlichkeit gegenüber Tieren als abstoßend. Wenn ein Kithangier zum ersten Mal in einer Runde sieht, wie jemand eine Kreatur der Kategorie Tier heilt oder ihr auf andere Weise hilft, erleidet er @Damage[3d6[mental]]{3W6 Punkte Mentalen Schaden}.</p>"
-        },
-        "action->Animal Killer": {
-          "name": "Tiermörder",
-          "description": "<p>Die Nahkampfangriffe eines Kithangiers verursachen bei Tieren zusätzlich 2W6 Schadenspunkte.</p>"
-        },
-        "action->Change Shape": {
-          "description": "<p>Der Kithangier kann das Aussehen eines jeden Mittelgroßen oder Großen Tieres annehmen. Dies ändert weder seine Bewegungsrate noch die Angriffs- und Schadensmodifikatoren seiner Angriffe, aber es könnte die Schadensart seiner Angriffe verändern.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.ChangeShape]</p>"
-        },
-        "action->Kithangian Venom": {
-          "name": "Kithangiergift",
-          "description": "<p><strong>Rettungswurf</strong> @Check[fortitude|dc:25]{Zähigkeitswurf}</p>\n<p><strong>Maximaldauer</strong> 6 Runden</p>\n<p><strong>Phase 1</strong> @Damage[2d6[poison]]{2W6 Punkte Giftschaden} (2 Runden)</p>\n<p><strong>Phase 2</strong> @Damage[2d6[poison]]{2W6 Punkte Giftschaden} und @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1} (2 Runden)</p>\n<p><strong>Phase 3</strong> @Damage[3d6[poison]]{3W6 Punkte Giftschaden} und @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 2} (2 Runden)</p>"
-        },
-        "action->Rasping Tongues": {
-          "name": "Stachelzungen",
-          "description": "<p><strong>Häufigkeit</strong> Einmal pro Runde</p>\n<p><strong>Anforderungen</strong> Der Kithangier hat eine Kreatur in einer oder beiden Zangen @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen}</p>\n<hr />\n<p><strong>Effekt</strong> Stachelzungen schlängeln sich aus den Gesichtern in den Zangen des Kithangiers. Die Zungen graben sich in die gegriffenen Kreaturen ein und durchdringen ihren Geist mit eindringlichen psychischen Schreien. Jede gegriffene Kreatur erleidet @Damage[2d8[piercing],2d8[mental]]{2W8 Punkte Stichschaden und 2W8 Punkte Mentalen Schaden}. Eine Kreatur kann versuchen, sich gegen den mentalen Schaden zu wehren, indem sie einen @Check[will|dc:25|basic]{einfachen Willenswurf} ablegt.</p>"
-        }
-      }
-    },
     "Kvernknurr": {
       "name": "Fossegrim",
       "publicNotes": "<p>Fossegrimen sind schlaksige Feenriesen, die in Kaltwasserflüssen und Seen leben. Die blaue Haut der Fossegrimen ermöglicht es ihnen, sich in ihrer bevorzugten Umgebung zu tarnen, wo sie örtliche Müller und Bauern mit Sabotageakten an Wasserrädern und landwirtschaftlichen Geräten heimsuchen.</p>\n<p>Das markanteste Merkmal eines Fossegrims ist sein übergroßes Maul und die zwei Reihen axtartiger Zähne darin. Um zu fressen, braucht ein Fossegrim nur seinen Unterkiefer auszuklappen und ein gähnendes Portal zu öffnen, das fast so groß ist wie eine menschliche Eingangstür - praktisch, wenn man bedenkt, dass er am liebsten Menschen und ihresgleichen frisst.</p>\n<p>Ein See- oder Flussbett ist der perfekte Ort für einen Fossegrim, um nach einer großen Mahlzeit zu schlafen. Es ist auch ein gefährlicher Ort für verschluckte Beute, die das Glück hat, dem Bauch des Fossegrims zu entkommen. „Raus aus dem Bauch, rein ins Wasser“, heißt es in einem Dorf am See.</p>\n<p>Fossegrimen verabscheuen von Menschen verursachte Störungen in den Gewässern, in denen sie leben, selbst scheinbar harmlose wie Wasserräder. In ihrer Wut setzen die Fossegrimen ihre überdimensionalen Kiefer ein, um sich an solchen Maschinen festzubeißen. Wenn Stadtbewohner kommen, um ihre klemmende Mühle zu untersuchen, springt der Fossegrim aus seinem Versteck hervor und greift an, bevor er sich ein Opfer schnappt, um es ganz zu verspeisen. Leute, die mutig genug sind, einen Fossegrim anzugreifen, lernen bald, aus der Nähe zu kämpfen. Das schlaue Monster ist nämlich schnell genug, um Pfeile und Speere in seinem Maul zu fangen, bevor es die Waffen verschlingt.</p>",
@@ -1460,7 +1415,7 @@
         },
         "action->Frightening Bellow": {
           "name": "Verängstigendes Gebrüll",
-          "description": "<p><strong>Anforderungen</strong> Der Fossegrim hat keine Kreatur in seinem Maul @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen}</p>\n<hr />\n<p><strong>Effekt</strong> Der Fossegrim stößt einen tiefen, kehligen Schrei aus, um seine Feinde zu verscheuchen. Jede Kreatur im Umkreis von @Template[emanation|distance:60]{60 Fuß/18 m}, die kein Fossegrim ist, muss einen @Check[will|dc:20]{Willenswurf} ablegen und ist dann 24 Stunden lang vorübergehend immun gegen das Verängstigende Gebrüll \ndes Fossegrims.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erhält die Zustände Verängstigt 2 und @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fliehend}, so lange sie Verängstigt ist.</p>"
+          "description": "<p><strong>Requirements</strong> The kvernknurr doesn't have a creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} in its jaws</p>\n<hr />\n<p><strong>Effect</strong> The kvernknurr lets out a deep-throated shout to scare away its foes. Each non-kvernknurr creature within 60 feet must attempt a @Check[will|dc:20|options:inflicts:frightened,inflicts:fleeing] save, and then they are temporarily immune to that kvenknurr's Frightening Bellow for 24 hours.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}.</p>\n<p><strong>Critical Failure</strong> The creature is frightened 2 and is @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} as long as it remains frightened.</p>"
         },
         "action->Swallow Whole": {
           "description": "<p>Mittelgroß, @Damage[(1d6+5)[bludgeoning]]{1W6+5 Wuchtschaden}, Befreien 15</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
@@ -2030,7 +1985,7 @@
       "items": {
         "action->Swarming Bites": {
           "name": "Beißender Schwarm",
-          "description": "<p>Jeder Gegner innerhalb der Angriffsfläche des Schwarms erleidet @Damage[5d6[piercing]]{5W6 Punkte Stichschaden} (@Check[reflex|dc:23|basic]{einfacher Reflexwurf}). Bei einem Fehlschlag nimmt eine Kreatur zusätzlich @Damage[1d4[bleed]]{1W4 Punkte Blutungsschaden} und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 1}, solange sie den Blutungsschaden erleidet.</p>"
+          "description": "<p>Each enemy in the swarm's space takes @Damage[5d6[piercing]|options:area-damage] (@Check[reflex|dc:23|basic|options:area-effect,inflicts:clumsy]). A creature that fails the saving throw also takes @Damage[1d4[bleed]] and is @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} as long as it's taking bleed damage.</p>"
         }
       }
     },
