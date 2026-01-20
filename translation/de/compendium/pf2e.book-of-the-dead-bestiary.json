@@ -1,26 +1,6 @@
 {
   "label": "Das Buch der Toten",
   "entries": {
-    "Beetle Carapace": {
-      "name": "Käferchitinpanzer",
-      "hpDetails": "Leerenheilung",
-      "publicNotes": "<p>Diese nahezu intelligenzfreie Hülle wurde aus dem Exoskelett eines riesigen Hirschkäfers erschaffen und kann einen Feind mit seinen mächtigen Mandibeln in zwei Hälften schneiden. Der Unterleib dieses kriechenden Untoten ist leer und mehr als ein Nekromant hat diesen Raum bereits genutzt, um wertvolle Fracht zu verstecken.</p>\n<hr />\n<p>Unter den Toten gibt es nirgendwo sonst eine so große Anzahl noch eine so breite Vielfalt, wie bei den Skeletten. Während die meisten fast ausschließlich aus Knochen bestehen, haben einige noch ein paar Fetzen Fleisch, die ihnen bei der Fortbewegung helfen, wie z.B. Flügelmembranen.</p>",
-      "items": {
-        "strike-melee->Mandible": {
-          "name": "Mandibeln"
-        },
-        "strike-melee->Foot": {
-          "name": "Fuß"
-        },
-        "action->Abdomen Cache": {
-          "name": "Hinterleibsversteck",
-          "description": "<p>Der Hinterleib eines Käferchitinpanzers kann mit einem einfachen Scharnier versehen werden, das es ermöglicht, ihn zu öffnen und als Lagerraum zu nutzen. Der Unterleib kann bis zu einer Mittelgroßen oder kleineren Kreatur, einem Großen oder kleineren Schwarm oder einer ähnlichen Menge an Fracht Platz bieten. Der Käfer oder eine darin gelagerte Kreatur kann die Aktion Interagieren nutzen, um die Klappe zu öffnen. Wenn der Käferchitinpanzer einen Kritischen Treffer durch eine Waffe erleidet, die Wuchtschaden verursacht, lege einen @Check[flat|dc:10]{Einfachen Wurf} ab. Bei einem Fehlschlag wird das Hinterleibsversteck aufgebrochen und der Inhalt strömt aus dem Käferchitinpanzer heraus. Die Klappe kann auch gewaltsam geöffnet werden (@Check[athletics|dc:22]{Athletikwurf}).</p>"
-        },
-        "action->Constrict": {
-          "description": "<p>@Damage[(2d8+2)[piercing]]{2W8+2 Stichschaden}, @Check[fortitude|dc:24|basic]{einfacher Zähigkeitswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
-        }
-      }
-    },
     "Bhuta": {
       "name": "Bhuta",
       "hpDetails": "Leerenheilung",
@@ -569,7 +549,7 @@
       "description": "<p>Die Wand beult sich in der Form eines aufheulenden humanoiden Gesichtes aus und bildet Tentakel aus, welche nach nahen Kreaturen greifen. Diese Spukerscheinung entsteht, wenn ein Mordopfer vor oder nach seinem Tod in einer Wand eingemauert wird.</p>",
       "disable": "<p>@Check[occultism|dc:17]{Okkultismus} (Geübt), um den Geist zu schwächen, @Check[athletics|dc:18]{Athletik} (Geübt), um den Geist in die Wand zurück zu zwingen, oder @Check[diplomacy|dc:19]{Diplomatie} (Geübt) um den Geist zu beruhigen; insgesamt sind zwei erfolgreiche Fertigkeitswürfe beliebiger Kombination erforderlich.</p>",
       "reset": "<p>Die Spukerscheinung deaktiviert sich 1 Minute, nachdem alle Kreaturen den Wirkungsbereich verlassen haben, und setzt sich augenblicklich zurück. Sollte sie ausgeschaltet werden, setzt sie sich nach 1 Tag zurück. Die Spukerscheinung wird permanent zerstört, sollten die Überreste des Verstorbenen aus der Wand entfernt werden.</p>",
-      "routine": "<p>(3 Aktionen) Der Geist versucht, bis zu zwei Kreaturen innerhalb von 10 Fuß/3 m zu @UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]{Ergreifen} ([[/r 1d20+14 #Athletik]]{+14} Athletikwurf). @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffene} Kreaturen werden dann zerquetscht (@Damage[(1d10+4)[damage]]{1W10+4 Schaden}). Die Spukerscheinung unterliegt dabei keinem Malus für Mehrfachangriffe.</p>",
+      "routine": "<p>(3 actions) The spirit attempts to @UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]{Grapple} up to two creatures within 10 feet with a [[/r 1d20+14 #Athletics]]{+14 Athletics modifier}, then squeezes each creature it has @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}, dealing @Damage[(1d10+4)[untyped]] damage. The haunt doesn't apply a multiple attack penalty to the second attempt to Grapple.</p>",
       "stealth": "<p>(Geübt)</p>",
       "items": {
         "action->Gasp": {
@@ -1126,59 +1106,6 @@
         }
       }
     },
-    "Graveknight Warmaster": {
-      "name": "Grabesritterkriegsherr",
-      "hpDetails": "Leerenheilung, Wiederkehr",
-      "items": {
-        "strike-melee->War Flail": {
-          "name": "Kriegsflegel"
-        },
-        "strike-melee->Fist": {
-          "name": "Faust"
-        },
-        "strike-ranged->Heavy Crossbow": {
-          "name": "Schwere Armbrust"
-        },
-        "action->Hungry Armor": {
-          "name": "Gierige Rüstung",
-          "description": "<p>Kreaturen, die einen Angriff gegen einen Grabesritterkriegsherrn mit einer Nahkampfwaffe unternehmen, müssen einen erfolgreichen @Check[reflex|dc:31]{Reflexwurf} ablegen, um nicht Entwaffnet zu werden. Bei einem Kritischen Fehlschlag landet die Waffe auf dem Feld des Grabesritters. Kreaturen, die den Grabesritterkriegsherrn mit einem Waffenlosen Angriff treffen, müssen ebenfalls einen @Check[reflex|dc:31]{Reflexwurf} ablegen, um nicht bis zum Ende ihres nächsten Zuges - sofern es der Kreatur nicht vorher gelingt, zu Entkommen, oder der Grabesritterkriegsherr sich fortbewegt - vom Grabesritter @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Ergriffen} zu werden.</p>"
-        },
-        "action->Rejuvenation": {
-          "name": "Wiederkehr",
-          "description": "<p>Wird ein Grabesritterkriegsherr zerstört, erschafft seine Rüstung im Laufe von [[/gmr 1d10 #Tage]]{1W10 Tagen} seinen Körper neu - oder schneller, sollte sie von einem lebenden Wirt getragen werden. Sollte der Körper vorher zerstört werden, beginnt der Prozess von vorn. Ein Grabesritterkriegsherr kann nur durch die Vernichtung seiner Rüstung permanent zerstört werden - sei es durch Auslösung wie z.B. mittels @UUID[Compendium.pf2e.spells-srd.Item.r7ihOgKv19eJQnik]{Auflösung}, indem man sie zur Schmiede der Schöpfung bringt oder sie ins Herz eines Vulkans wirft.</p>"
-        },
-        "action->Sacrilegious Aura": {
-          "name": "Ketzerische Aura",
-          "description": "<p>30 Fuß/9 m. Nutzt eine Kreatur innerhalb der Aura einen Zauber oder eine Fähigkeit der Kategorie Leben, versucht der Grabesritterkriegsherr automatisch, dem @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenzuwirken} (Entgegenwirken-Modifikator [[/r 1d20+23 #Entgegenwirken]]{+23}).</p>"
-        },
-        "action->Devastating Blast": {
-          "name": "Verheerende Explosion",
-          "description": "<p>Der Grabesritter entfesselt einen @Template[cone|distance:30]{30 Fuß/9 m-Kegel} aus Blitzschlägen. Kreaturen im Wirkungsbereich erleiden @Damage[8d12[electricity]|options:area-damage]{8W12 Elektrizitätsschaden} (@Check[reflex|dc:34|basic|options:area-effect]{einfacher Reflexwurf}). Der Grabesritter kann diese Fähigkeit alle [[/gmr 1d4 #Runden]]{1W4 Runden} nutzen.</p>"
-        },
-        "action->Exemplar of Violence": {
-          "name": "Inbegriff der Gewalt",
-          "description": "<p><strong>Häufigkeit</strong> Einmal pro Runde</p>\n<hr />\n<p><strong>Effekt</strong> Der Grabesritterkriegsherr führt einen Angriff aus, während seine Rüstung mit unheimlicher Macht aufblitzt und Verbündete zur Gewaltanwendung anstachelt. Nach dem Angriff können alle Verbündeten, die den Grabesritter sehen können, eine Reaktion für die Aktion Schritt oder Laufen aufwenden; diese Bewegung muss auf einem zu einem Gegner angrenzenden Feld beendet werden. Der Grabesritterkriegsherr kann zudem einen Verbündeten auswählen, der stattdessen die Aktion Angriff als Reaktion nutzen kann.</p>"
-        },
-        "action->Graveknight's Curse": {
-          "name": "Grabesritterfluch",
-          "description": "<p>Dieser Fluch betrifft jeden, der eine Grabesritterrüstung wenigstens 1 Stunde lang trägt.</p>\n<p><strong>Rettungswurf</strong> @Check[will|dc:39]{Willenswurf}</p>\n<p><strong>Verzögerung</strong> 1 Stunde</p>\n<p><strong>Phase 1</strong> @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Totgeweiht 1} und kann die Rüstung nicht ablegen (1 Tag)</p>\n<p><strong>Phase 2</strong> @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Totgeweiht 2}, Eingeschränkt 10 (der Rüstungsmalus steigt um 10) und kann die Rüstung nicht ablegen (1 Tag)</p>\n<p><strong>Phase 3</strong> Stirbt und verwandelt sich in den Grabesritter, dem die Rüstung gehört.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.6rnB7nK6J6zF4vea]{Effekt: Grabesritterfluch}</p>"
-        },
-        "action->Phantom Mount": {
-          "name": "Geisterreittier",
-          "description": "<p>85 <strong>TP</strong>; <strong>RK</strong> 34; <strong>REF</strong> +20, <strong>WIL</strong> +20, <strong>ZÄH</strong> +23</p>\n<hr />\n<p>Der Grabesritter beschwört ein übernatürliches Reittier mittels @UUID[Compendium.pf2e.spells-srd.Item.WPKJOhEihhcIm2uQ]{Wundersames Reittier} (erhöht auf die halbe Stufe des Grabesritters).</p>\n<p>Die RK und RW-Boni des Rosses sind aber alle 4 Stufen niedriger als die Stufe des Grabesritters und das Reittier besitzt ein Drittel der TP des Grabesritters (abgerundet).</p>\n<p>Sollte das Reittier zerstört werden, muss der Grabesritter 1 Stunde warten, ehe er diese Fähigkeit erneut nutzen kann.</p>"
-        },
-        "action->Ruinous Weapons": {
-          "name": "Zerstörerische Waffen",
-          "description": "<p>Jede Waffe in den Händen des Grabesritterkriegsherrn, ebenso wie seine Waffenlosen Angriffe, erhalten die Effekte der Waffenrunen <em>+1 Starker Schaden</em> und  <em>@UUID[Compendium.pf2e.equipment-srd.Item.TEa1oKZbwsOvC6TZ]{Stark Elektrisch}</em>.</p>"
-        },
-        "action->Weapon Master": {
-          "name": "Waffenmeister"
-        },
-        "lore->Warfare Lore": {
-          "name": "Kenntnis (Kriegskunst)"
-        }
-      }
-    },
     "Harlo Krant": {
       "name": "Harlo Krant",
       "blurb": "Zombiefürstvariante",
@@ -1365,36 +1292,6 @@
         "action->Steady Spellcasting": {
           "name": "Standhaftes Zauberwirken",
           "description": "<p>Sollte eine Reaktion das Zauberwirken des Hordenleichnams unterbrechen, so legt dieser einen @Check[flat|dc:15]{Einfachen Wurf} ab. Bei Erfolg wird die Handlung nicht unterbrochen.</p>"
-        }
-      }
-    },
-    "Hungry Ghost": {
-      "name": "Hungriger Geist",
-      "hpDetails": "Leerenheilung, Wiederkehr",
-      "languages": "eine weitere Sprache",
-      "publicNotes": "<p>Hungrige Geister entstehen aus denjenigen, die nicht richtig begraben oder deren Gräber vernachlässigt wurden. Sie sind nicht an einen Ort oder einen Gegenstand gebunden, sondern suchen nach Gelegenheiten für gute Taten, in der Hoffnung, dadurch jene Gunst zu erlangen, die ihnen zu ihrer letzten Ruhe verhelfen kann. Ihr Bedürfnis, sich von lebender Energie zu ernähren, steht jedoch oft im Widerspruch zu diesem Ziel.</p>\n<hr />\n<p>Geister, die nach dem Tod durch starke, nicht gelöste Emotionen an die Welt gebunden sind, suchen die Lebenden als trauriges Echo ihres früheren Selbst heim.</p>",
-      "items": {
-        "strike-melee->Ghostly Touch": {
-          "name": "Geisterhafte Berührung"
-        },
-        "action->Living Visage": {
-          "name": "Lebendige Erscheinung",
-          "description": "<p>Solange ein Hungriger Geist über mindestens 30 TP verfügt, erscheint dieser als lebende Kreatur. Bei ihren Fertigkeitswürfen für Täuschung und dem SG zur Verschleierung ihres Untodes nehmen sie automatisch ein Ergebnis von 34 an. Zudem können sie in diesem Zustand ihre Fähigkeit An den Lebenden nähren im Verborgenen einsetzen.</p>"
-        },
-        "action->Feed on the Living": {
-          "name": "An den Lebenden nähren",
-          "description": "<p>Der Hungrige Geist berührt eine Kreatur innerhalb seines Angriffsradius. Handelt es sich bei der Kreatur um ein lebendes Wesen, erleidet diese den Schaden seines Geistergriffes @Check[fortitude|dc:24]{Zähigkeitswurf}. Ist die Lebendige Erscheinung des Hungrigen Geistes aufrecht, kann dieser den Einsatz der Fähigkeit An den Lebenden nähren als harmlose Berührung verschleiern und die Effekte um bis zu 1 Minute verzögern, während sich das Opfer den Effekten nicht bewusst ist. Eine Kreatur kann nur von den verzögerten Effekten der Fähigkeit An den Lebenden nähren eines Geistes gleichzeitig betroffen sein; verliert der Hungrige Geist in dieser Zeit seine Lebendige Erscheinung, wird auch der Effekt ohne weitere Auswirkungen beendet.</p>\n<p><strong>Kritischer Erfolg</strong> Die Lebensenergie des Ziels überwältigt den Geist. Der Hungrige Geist erleidet @Damage[5[vitality]]{5 Lebensschaden}, während das Ziel vom Effekt nicht beeinflusst wird.</p>\n<p><strong>Erfolg</strong> Das Ziel erleidet nur den halben Schaden und der Hungrige Geist erlangt TP entsprechend dem zugefügten Schaden.</p>\n<p><strong>Fehlschlag</strong> Das Ziel erleidet den vollen Schaden sowie für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 1}; der Hungrige Geist erlangt TP entsprechend dem zugefügten Schaden.</p>\n<p><strong>Kritischer Fehlschlag</strong> Das Ziel erleidet den doppelten Schaden sowie für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 2}; der Hungrige Geist erlangt TP entsprechend dem zugefügten Schaden.</p>"
-        },
-        "action->Ravenous Undoing": {
-          "name": "Verderbnisbringender Heißhunger",
-          "description": "<p>Innerhalb jedes 24-Stunden-Zyklus muss ein Hungriger Geist mit Hilfe seiner Fähigkeit An den Lebenden nähren 30 TP erlangen; sämtliche TP, die ein Geist mittels dieser Fähigkeit gewinnen würde, zählt gegen diesen Wert, selbst wenn der Geist über genug TP verfügt, sodass er tatsächlich keine weiteren TP mehr erhält). Sollte es einem Hungrigen Geist nicht gelingen, innerhalb von 24 Stunden die erforderliche Menge an TP zu sich zu nehmen, verfällt dieser in einen blindwütigen, rücksichtslosen Heißhunger und nährt sich so lange an jeder beliebigen - lebenden - Kreatur, die seinen Weg kreuzt, bis er seinen Hunger gestillt hat.</p>"
-        },
-        "action->Rejuvenation": {
-          "name": "Wiederkehr",
-          "description": "<p>Ein Hungriger Geist kann nur dauerhaft vernichtet werden, wenn ihm ein angemessenes und ehrwürdiges Begräbnis gestattet und seine Grabstätte für mindestens ein Jahr aufrichtig gesäubert und instandgehalten wurde oder er von Pharasma erlöst wurde</p>\n<hr />\n<Compendium>"
-        },
-        "lore->Ghost Lore": {
-          "name": "Kenntnis (Geister)"
         }
       }
     },
@@ -1923,67 +1820,11 @@
         },
         "action->Sand Rot": {
           "name": "Sandfäule",
-          "description": "<p>Diese Erkrankung kann nicht unter Phase 1 reduziert werden, noch kann der Schaden davon geheilt werden, bis sie erfolgreich mit @UUID[Compendium.pf2e.spells-srd.Item.SUKaxVZW2TlM8lu0]{Leiden kurieren} oder einem ähnlichen Effekt behandelt wird; die Erkrankung kann dann wie bei einer Krankheit normal entfernt werden. Eine durch Sumpffäule getötete Kreatur schmilzt zu einem schädlichen Schlamm zusammen und kann nicht wiederbelebt werden, außer durch ein Ritual @UUID[Compendium.pf2e.spells-srd.Item.kqhPt9344UkcGVYO]{Auferstehung} der 7. Stufe oder ähnlicher Magie</p>\n<p><strong>Rettungswurf</strong> @Check[fortitude|dc:31]{Zähigkeitswurf}</p>\n<p><strong>Phase 1</strong> Träger ohne Krankheitssymptome (1 Minute)</p>\n<p><strong>Phase 2</strong> @Damage[12d6[void]]{12W6 Leerenschaden}, @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 1}, und @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 2} (1 Tag)</p>"
+          "description": "<p>This affliction can't be reduced below stage 1, nor can damage from it be healed, until successfully treated with @UUID[Compendium.pf2e.spells-srd.Item.SUKaxVZW2TlM8lu0]{Cleanse Affliction} or a similar effect; the affliction can then be removed as normal for a disease. A creature killed by sand rot turns to sand and can't be resurrected except by a 7th-rank @UUID[Compendium.pf2e.spells-srd.Item.kqhPt9344UkcGVYO]{Resurrect} ritual or similar magic</p>\n<p><strong>Saving Throw</strong> @Check[fortitude|dc:31]</p>\n<hr />\n<p><strong>Stage 1</strong> carrier with no ill effect (1 minute)</p>\n<p><strong>Stage 2</strong> @Damage[12d6[void]] damage, @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}, and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2} (1 day)</p>"
         },
         "action->Sandstorm": {
           "name": "Sandsturm",
           "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<hr />\n<p><strong>Effekt</strong> Der Mumienprophet des Set beschwört einen temporären Sandsturm im Wirkungsbereich einer Ausstrahlung von @Template[emanation|distance:30]{30 Fuß/9 m} Radius herauf; der Sandsturm hält 1 Minute lang an. Kreaturen innerhalb des Wirkungsbereiches erleiden einen Situationsmalus von -4 auf Fertigkeitswürfe für Wahrnehmung und müssen zudem einen erfolgreichen @Check[fortitude|dc:33|options:area-effect]{Zähigkeitswurf} ablegen, um nicht gezwungen zu sein, den Atem anzuhalten, wodurch die Kreatur beginnt zu ersticken. Kreaturen, die sich am Ende ihres Zuges im Sandsturm aufhalten, erleiden @Damage[2d6[void],1d6[slashing]|options:area-damage]{2W6 Punkte Leerenschaden und 1W6 Punkte Hiebschaden}.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.f8rncEs06bqcn3LZ]{Effekt: Sandsturm}</p>"
-        }
-      }
-    },
-    "Nasurgeth": {
-      "name": "Nasurgeth",
-      "hpDetails": "Leerenheilung",
-      "languages": "Telepathie 100 Fuß/30 m",
-      "publicNotes": "<p>Nasurgeth sind hungrige Leerenkörper mit glühenden Stielaugen und Tausenden von Zähnen. Sie lauern tief unter den Wellen, wo das Sonnenlicht nicht hinkommt. Nachts steigen sie in den Himmel auf und lassen Zerstörung und Verderben auf alle Lebenden herabregnen.</p>\n<hr />\n<p>Darvakka, auch Nachtschatten genannt, sind ein gefräßiges Übel, das zu gleichen Teilen aus Dunkelheit und Bosheit besteht. Ursprünglich Kreaturen der Äußeren Ebenen, die zur Konvergenz zwischen der Schattenebene und der Ebene der Negativen Energie reisen - wo die Macht des Nichts sie auslöscht - sind diese untoten Abscheulichkeiten die physische Verkörperung der Entropie. Sie brennen mit einem intensiven Hass auf alles Leben und arbeiten daran, eine letzte, dunkle Nacht über die Materielle Ebene zu bringen, in der nichts als Asche und Eis zurückbleibt. Als von Dunkelheit und Schatten zerfressene Kreaturen, haben Darvakka eine große Abneigung gegen Sonnenlicht und alle Quellen positiver Energie. Auf der Materiellen Ebene verbringen sie die Stunden des Tageslichts versteckt unter der Erde, inmitten von Ruinen oder tief in den dunkelsten Abgründen des Ozeans, außerhalb der Reichweite der Sonnenstrahlen; von dort aus tauchen sie erst auf, wenn die Dunkelheit über ihnen hereinbricht. Darvakka haben eine Aura der Entropie, die untote Sklaven anzieht, die dann als Krieger und Herolde dienen. Sie gehen nur selten Bündnisse untereinander oder mit anderen Kreaturen ein und leben in Einsamkeit als Anführer ihrer eigenen Armeen der Toten.</p>",
-      "items": {
-        "spellcastingEntry->Divine Innate Spells": {
-          "name": "Immanente Göttliche Zauber"
-        },
-        "spell->Plane Shift (to the Universe, Void, or Netherworld only)": {
-          "name": "<Compendium> (ausschließlich ins Universum, Die Leere oder Das Grau)",
-          "target": "1 bereitwillige Kreatur oder bis zu 8 bereitwillige Kreaturen, die sich bei den Händen nehmen"
-        },
-        "spell->True Seeing": {
-          "name": "<Compendium>"
-        },
-        "strike-melee->Jaws": {
-          "name": "Biss"
-        },
-        "strike-melee->Tail": {
-          "name": "Schwanz"
-        },
-        "action->Lifesense 60 feet": {
-          "name": "<Compendium> 60 Fuß/18 m"
-        },
-        "action->Midnight Depths": {
-          "name": "Mitternachtstiefe",
-          "description": "<p>60 Fuß/18 m. Die Entropieaura eines Nasurgeth wird unter Wasser sogar noch stärker. Sämtliches Wasser innerhalb des Wirkungsbereichs der Aura erscheint in vollkommener Dunkelheit (wie beim Zauber @UUID[Compendium.pf2e.spells-srd.Item.4GE2ZdODgIQtg51c]{Dunkelheit} des 4. Grades). Magisches Licht mit einer Entgegenwirken-Stufe von 4 oder niedriger sowie sämtliche Zaubertricks, die magisches Licht erzeugen, werden unterdrückt. Lebende Kreaturen, welche die Aura der Mitternachtstiefe betreten oder ihren Zug innerhalb des Wirkungsbereichs der Aura eines Nasurgeth beginnen, erleiden @Damage[4d6[void]]{4W6 Punkte Leerenschaden} (@Check[fortitude|dc:39|basic]{einfacher Zähigkeitswurf}). Befindet sich eine Kreatur zudem im Wasser, so erleidet sie zusätzlich @Damage[2d10[cold]]{2W10 Punkte Kälteschaden}. Bei einem fehlgeschlagenen Rettungswurf erleidet die entsprechende Kreatur ferner den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 1} für 1 Minute und wird 10 Fuß/3 m in Richtung des Nasurgeth bewegt.</p>"
-        },
-        "action->Spray Black Bile": {
-          "name": "Schwarze Galle speien",
-          "description": "<p><strong>Auslöser</strong> Der Nasurgeth erleidet Hieb- oder Stichschaden durch einen Kritischen Treffer oder eine verschlungene Kreatur schneidet sich frei</p>\n<hr />\n<p><strong>Effekt</strong> Dunkelheit und Negative Energie ergießt sich aus der Wunde des Nasurgeth und fügt Kreaturen im Umkreis von @Template[emanation|distance:20]{20 Fuß/6 m} @Damage[8d8[void]]{8W8 Leerenschaden} zu (@Check[fortitude|dc:40|basic]{einfacher Zähigkeitswurf}).</p>"
-        },
-        "action->Sunlight Powerlessness": {
-          "name": "Machtlos im Sonnenlicht",
-          "description": "<p>Ein Nasurgeth, der dem direkten Sonnenlicht ausgesetzt ist, erleidet die Zustände @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 2} und @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 2}.</p>"
-        },
-        "action->Broken Barb": {
-          "name": "Zahn abbrechen",
-          "description": "<p><strong>Anforderungen</strong> Die Kreatur ist durch den Biss des Nasurgeth @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} oder @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Gebunden}</p>\n<hr />\n<p><strong>Effekt</strong> Der Nasurgeth lässt einen seiner Zähne in das Ziel gleiten und darin abbrechen; das Ziel erleidet dadurch @Damage[3d10[bleed]]{3W10 Punkte Blutungsschaden}, ist jedoch nicht länger Ergriffen oder Gebunden. Befindet sich das Ziel zudem angrenzend zu einer Oberfläche, heftet der Zahn die Kreatur zusätzlich an Ort und Stelle fest, wodurch diese @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Bewegungsunfähig} ist ([[/act escape dc=45]]).</p>"
-        },
-        "action->Ravenous Void": {
-          "name": "Hungrige Leere",
-          "description": "<p>Der Nasurgeth rast mit weit aufgerissenem Maul nach vorne. Dazu wendet er zweimal die Aktion Schwimmen auf, um sich in einer geraden Linie fortzubewegen, während er sich durch die Felder von Kreaturen der Größenkategorie Riesig oder kleiner einfach durchbewegt. Während dieser Bewegung fügt der Nasurgeth jeder Kreatur, deren Feld er betritt, den Schaden seines Bissangriffs zu (@Check[reflex|dc:45|basic]{einfacher Reflexwurf}). Kreaturen mit einem Kritischen Fehlschlag bei ihrem Rettungswurf werden automatisch vom Nasurgeth Verschlungen.</p>"
-        },
-        "action->Swallow Whole": {
-          "description": "<p>Riesig, @Damage[(2d10+9)[bludgeoning]]{2W10+9 Wuchtschaden}, Befreien 40</p>\n<p>Lebende Kreaturen, die von einem Nasurgeth verschlungen werden, erleiden den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 1} (bzw. der Zustandswert von Ausgelaugt wird um 1 erhöht); der Nasurgeth erlangt indessen 20 Temporäre Trefferpunkte. Würde der Zustandswert für Ausgelaugt einer Kreatur auf Ausgelaugt 5 steigen, stirbt diese Kreatur.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>\n"
-        },
-        "lore->Shadow Plane Lore": {
-          "name": "Kenntnis (Das Grau)"
-        },
-        "lore->The Void Lore": {
-          "name": "Kenntnis (Die Leere)"
         }
       }
     },
@@ -2888,40 +2729,6 @@
         }
       }
     },
-    "Skeletal Titan": {
-      "name": "Titanenskelett",
-      "hpDetails": "Leerenheilung",
-      "publicNotes": "<p>Nur die Mächtigen und Törichten würden die Knochen eines mächtigen Titanen oder einer ähnlich gigantischen Kreatur als Skelett aufrichten. Erfahrene Anwender der Nekromantie erkennen jedoch die Verschwendung eines solch mächtigen toten Körpers und statten diese auch mit der Magie des Luftwandelns aus, die auf der von Titanen basiert. Die Weisen unter ihnen wissen allerdings, dass es fast unmöglich ist, einen solchen Koloss zu kontrollieren, und dass dieser seinen Schöpfer genauso wahrscheinlich unter seinem mächtigen Fuß zerquetschen wird, wie er dessen Feinde erschlagen kann.</p>\n<hr />\n<p>Unter den Toten gibt es nirgendwo sonst eine so große Anzahl noch eine so breite Vielfalt, wie bei den Skeletten. Während die meisten fast ausschließlich aus Knochen bestehen, haben einige noch ein paar Fetzen Fleisch, die ihnen bei der Fortbewegung helfen, wie z. B. Flügelmembranen.</p>",
-      "speed": "Luftwandeln",
-      "items": {
-        "spellcastingEntry->Divine Innate Spells": {
-          "name": "Immanente Göttliche Zauber"
-        },
-        "strike-melee->Mountain Sword": {
-          "name": "Felsenschwert"
-        },
-        "strike-melee->Claw": {
-          "name": "Klaue"
-        },
-        "strike-melee->Foot": {
-          "name": "Fuß"
-        },
-        "strike-ranged->Bone": {
-          "name": "Knochen"
-        },
-        "action->Bone Debris": {
-          "name": "Knochentrümmer",
-          "description": "<p>Die Knochen, die ein Titanenskelett wirft, sind groß genug, um das Schlachtfeld zu verwüsten. Wenn das Titanenskelett eine Kreatur mit einem Knochenangriff trifft, wird das Projektil auf dem Feld, das die Kreatur belegt, zu Schwierigem Gelände (oder, wenn die Kreatur mehr als ein Feld belegt, auf einem Feld nach Wahl des Titanen). Verfehlt das Titanenskelett mit einem solchen Knochenangriff, wird stattdessen ein zufälliges Feld neben der Kreatur zu Schwierigem Gelände.</p>"
-        },
-        "action->Mountain Slam": {
-          "name": "Schwertbeben",
-          "description": "<p>Der Titanenskelett rammt sein Felsenschwert in den Boden. Die dadurch ausgelöste Schockwelle verursacht bei allen Kreaturen in einer @Template[line|distance:20]{20 Fuß/6 m langen Linie} denselben Schaden wie das Felsenschwert (@Check[reflex|dc:34|basic]{einfacher Reflexwurf}). Kreaturen mit einem Fehlschlag bei ihrem Rettungswurf werden zudem vom Nachhall zu Boden geworfen und erleiden den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}.</p>"
-        },
-        "action->Trample": {
-          "description": "<p>Riesig oder kleiner, Fuß, @Check[reflex|dc:34|basic]{einfacher Reflexwurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Trample]</p>"
-        }
-      }
-    },
     "Sluagh Reaper": {
       "name": "Sluagh-Schnitter",
       "hpDetails": "Leerenheilung",
@@ -2964,76 +2771,6 @@
         "action->Gather Spirit": {
           "name": "Aufziehender Geistersturm",
           "description": "<p><strong>Auslöser</strong> Wenigstens zwei Kreaturen betreten den Wirkungsbereich</p>\n<hr />\n<p><strong>Effekt</strong> Eine wirbelnde Säule aus Geistern sammelt sich und wird zu einem Wirbelsturm der Seelen mit @Template[burst|distance:5]{5 Fuß/1,50 m Radius} und 60 Fuß/18 m Höhe. Die Spukerscheinung würfelt dann ihre Initiative.</p>"
-        }
-      }
-    },
-    "Sykever": {
-      "name": "Sykever",
-      "hpDetails": "Leerenheilung",
-      "languages": "Telepathie 100 Fuß/30 m",
-      "publicNotes": "<p>Die am weitesten verbreiteten Darvakka sind Sykever, die sogenannten Nachtschreiter. Blutrünstig, aber berechnend, führen sie Legionen von Toten in die Schlacht auf der Materiellen Ebene und arbeiten auf das einfache Ziel hin, alles Leben zu beenden.</p>\n<hr />\n<p>Darvakka, auch Nachtschatten genannt, sind ein gefräßiges Übel, das zu gleichen Teilen aus Dunkelheit und Bosheit besteht. Ursprünglich Kreaturen der Äußeren Ebenen, die zur Konvergenz zwischen der Schattenebene und der Ebene der Negativen Energie reisen - wo die Macht des Nichts sie auslöscht - sind diese untoten Abscheulichkeiten die physische Verkörperung der Entropie. Sie brennen mit einem intensiven Hass auf alles Leben und arbeiten daran, eine letzte, dunkle Nacht über die Materielle Ebene zu bringen, in der nichts als Asche und Eis zurückbleibt. Als von Dunkelheit und Schatten zerfressene Kreaturen, haben Darvakka eine große Abneigung gegen Sonnenlicht und alle Quellen positiver Energie. Auf der Materiellen Ebene verbringen sie die Stunden des Tageslichts versteckt unter der Erde, inmitten von Ruinen oder tief in den dunkelsten Abgründen des Ozeans, außerhalb der Reichweite der Sonnenstrahlen; von dort aus tauchen sie erst auf, wenn die Dunkelheit über ihnen hereinbricht. Darvakka haben eine Aura der Entropie, die untote Sklaven anzieht, die dann als Krieger und Herolde dienen. Sie gehen nur selten Bündnisse untereinander oder mit anderen Kreaturen ein und leben in Einsamkeit als Anführer ihrer eigenen Armeen der Toten.</p>",
-      "speed": "Luftwandeln",
-      "items": {
-        "spellcastingEntry->Divine Innate Spells": {
-          "name": "Immanente Göttliche Zauber"
-        },
-        "spell->Plane Shift (to the Universe, Void, or Netherworld only)": {
-          "name": "<Compendium> (ausschließlich ins Universum, Die Leere oder Das Grau)",
-          "target": "1 bereitwillige Kreatur oder bis zu 8 bereitwillige Kreaturen, die sich bei den Händen nehmen"
-        },
-        "spell->True Seeing": {
-          "name": "<Compendium>"
-        },
-        "spell->Air Walk (Constant)": {
-          "name": "<Compendium> (ständig)"
-        },
-        "spell->Darkness (At Will)": {
-          "name": "<Compendium> (beliebig oft)"
-        },
-        "strike-melee->Horn": {
-          "name": "Horn"
-        },
-        "strike-melee->Arm Spike": {
-          "name": "Armstachel"
-        },
-        "action->Telepathy 100 feet": {
-          "name": "Telepathie 100 Fuß/30 m"
-        },
-        "action->Lifesense 60 feet": {
-          "name": "<Compendium> 60 Fuß/18 m"
-        },
-        "action->Entropy's Shadow": {
-          "name": "Schatten der Entropie",
-          "description": "<p>40 Fuß/12 m. Die bloße Existenz eines Sykever verströmt Entropie und Verderbnis. Lebende Kreaturen, welche die Aura der Entropie des Sykever betreten oder ihren Zug innerhalb des Wirkungsbereichs der Aura beginnen, erleiden @Damage[4d6[void]]{4W6 Punkte Leerenschaden} (@Check[fortitude|dc:33|basic]{einfacher Zähigkeitswurf}). Bei einem Fehlschlag erleidet die Kreatur zusätzlich für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 1} und wird 10 Fuß/3 m in Richtung des Sykever gezogen.</p>"
-        },
-        "action->Sunlight Powerlessness": {
-          "name": "Machtlos im Sonnenlicht",
-          "description": "<p>Ein Sykever, der dem direkten Sonnenlicht ausgesetzt ist, erleidet die Zustände @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 2} und @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 2}.</p>"
-        },
-        "action->Change Posture": {
-          "name": "Haltung wechseln",
-          "description": "<p>Der Sykever wechselt zwischen seiner zwei- und vierbeinigen Haltung. In seiner zweibeinigen Haltung kann der Sykever sämtliche in den Spielwerten angegebenen Fähigkeiten mit Ausnahme des Gehörnten Ansturms einsetzen. Nimmt der Sykever seine vierbeinige Haltung ein, erhält er eine Bewegungsrate von 80 Fuß/24 m, kann jedoch weder seinen Angriff mit den Armstacheln noch die Fähigkeit Gegenstand durchbohren oder die Aktion Entwaffnen nutzen. Gleichsam kann er keine Zauber wirken.</p>"
-        },
-        "action->Crush Item": {
-          "name": "Gegenstand durchbohren",
-          "description": "<p><strong>Auslöser</strong> Der Sykever erzielt einen Kritischen Erfolg beim @UUID[Compendium.pf2e.actionspf2e.Item.Dt6B1slsBy8ipJu9]{Entwaffnen}</p>\n<p><strong>Anforderung</strong> Der Sykever befindet sich in seiner zweibeinigen Haltung</p>\n<hr />\n<p><strong>Effekt</strong> Der Sykever schnappt den Gegenstand und spießt ihn mit seinen Armstacheln auf. Der Gegenstand wird dadurch Beschädigt und fällt innerhalb der Angriffsfläche des Sykevers auf den Boden. Bereits beschädigte Gegenstände werden durch diese Fähigkeit nicht weiter zerstört; zudem sind sämtliche Gegenstände der Härte 14 oder höher nicht davon betroffen.</p>"
-        },
-        "action->Draining Gaze": {
-          "name": "Entkräftender Blick",
-          "description": "<p>Der Sykever fokussiert seinen Albtraum erregenden Blick auf eine für ihn sichtbare Kreatur. Sein Ziel muss einen @Check[will|dc:36]{Willenswurf} ablegen. Unabhängig vom Ergebnis des Rettungswurfes ist die Kreatur anschließend vorübergehend für 10 Minuten gegen den Effekt dieser Fähigkeit immun.</p>\n<p><strong>Kritischer Erfolg</strong> Das Ziel wird vom Effekt nicht beeinflusst.</p>\n<p><strong>Erfolg</strong> Das Ziel erleidet für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 2}, wenn sich der Sykever in seiner zweibeinigen Haltung befindet; hat der Sykever seine vierbeinige Haltung eingenommen, erleidet das Ziel stattdessen für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 2}.</p>\n<p><strong>Fehlschlag</strong> Wie beim Erfolg, der Effekt hält jedoch 1 Minute lang an.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie beim Erfolg, jedoch mit den Zuständen @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 3} oder @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 3} sowie einer Wirkungsdauer des Effekts von 10 Minuten.</p>"
-        },
-        "action->Horned Rush": {
-          "name": "Gehörnter Ansturm",
-          "description": "<p><strong>Anforderung</strong> Der Sykever hat seine vierbeinige Haltung angenommen</p>\n<hr />\n<p><strong>Effekt</strong> Der Sykever nutzt die Aktion Laufen, um sich fortzubewegen. Am Ende dieser Bewegung führt er einen Hornangriff aus.</p>"
-        },
-        "lore->Shadow Plane Lore": {
-          "name": "Kenntnis (Das Grau)"
-        },
-        "lore->The Void Lore": {
-          "name": "Kenntnis (Die Leere)"
-        },
-        "lore->Warfare Lore": {
-          "name": "Kenntnis (Kriegskunst)"
         }
       }
     },
@@ -3250,181 +2987,6 @@
         "action->Scream in Agony": {
           "name": "Schrei der Todesqualen",
           "description": "<p>Jede Kreatur innerhalb des Wirkungsbereichs der Aura des Gepeinigten Blicks erleidet @Damage[14d6[mental]]{14W6 Mentalen Schaden} (@Check[will|dc:34|basic]{einfacher Willenswurf}). Eine Kreatur mit einem Fehlschlag bei ihrem Rettungswurf erleidet zusätzlich den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1} (bzw. @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 2} bei einem Kritischen Fehlschlag). Anschließend kann der Gepeinigte [[/gmr 1d4 #Runden]]{1W4 Runden} lang keinen erneuten Schrei der Todesqualen ausstoßen; sollte der Gepeinigte jedoch Schaden durch einen Kritischen Treffer eines Angreifers oder durch einen Kritischen Fehlschlag bei einem Rettungswurf erleiden, steht diese Fähigkeit sofort wieder zur Verfügung.</p>"
-        }
-      }
-    },
-    "Unrisen": {
-      "name": "Unlebender",
-      "hpDetails": "Irgendwie lebendig, Leerenheilung",
-      "languages": "(kann keine Sprache sprechen)",
-      "publicNotes": "<p>Ein Unlebender ist ein verstümmeltes Sammelsurium aus zersplitterten Knochen, verwesenden Organen und verrottendem Fleisch, das entsteht, wenn ein Ritual wie <em>Auferstehung</em> katastrophal schiefläuft. Daher ist äußerste Vorsicht geboten, denn wenn das Ritual kritisch fehlschlägt, kann ein Unlebender das Ergebnis sein, wie so mancher Ritualleiter zu seinem Entsetzen erfahren musste.</p>\n<p>Unlebende sind kaum intelligent und sich nur der Qualen bewusst, die ihre fehlerhafte Schöpfung ihnen ständig zufügt, und ihres Grolls auf die Lebenden. Sie neigen dazu, zuerst die an dem verpfuschten Ritual beteiligten Zauberwirker anzugreifen, bevor sie sich auf alle anderen in ihrer Umgebung stürzen. Obwohl ein Unlebender in seiner entstellten Form nicht als das beabsichtigte Ziel der <em>Auferstehung</em> zu erkennen ist, ähnelt sein wortloses Heulen oft auf beunruhigende Weise der Stimme des Verstorbenen. Wird ein Unlebender zerstört, bevor er wieder auferstehen kann, zerfällt er in eine Handvoll metallischer blau-grüner Salze, die als „Essenzsalze“ bezeichnet werden.</p>",
-      "items": {
-        "strike-melee->Jaws": {
-          "name": "Biss"
-        },
-        "strike-melee->Claw": {
-          "name": "Klaue"
-        },
-        "action->Lifesense 30 feet": {
-          "name": "<Compendium> 30 Fuß/9 m"
-        },
-        "action->Meant to Live": {
-          "name": "Irgendwie lebendig",
-          "description": "<p>Wann immer ein Unlebender Schaden durch Lebensenergie erleiden würde, heilt er stattdessen die Hälfte der Anzahl an Schadenspunkten als Trefferpunkte.</p>"
-        },
-        "action->Resurrection Vulnerability": {
-          "name": "Empfindlichkeit gegen Auferstehung",
-          "description": "<p>Eine Kreatur mit einem vorbereiteten oder spontanen Zauber, der es vermag, Tote zum Leben zu erwecken (wie @UUID[Compendium.pf2e.spells-srd.Item.IkGYwHRLhkuoGReG]{Tote erwecken} oder @UUID[Compendium.pf2e.spells-srd.Item.Hnc7eGi7vyZenAIm]{Lebensatem}) können einen passenden Zauberplatz im Zuge einer 2-Aktionen-Aktivität aufwenden, um einen Unlebenden im Umkreis von 30 Fuß/9 m zu vernichten. Dieser Versuch schlägt fehlt, wenn dem Unlebenden ein Willenswurf gegen den Zauber-SG dieser Kreatur gelingt.</p>"
-        },
-        "action->Rise Again": {
-          "name": "Rückkehr",
-          "description": "<p>Wird ein Unlebender auf beliebige Weise mit Ausnahme von Feuerschaden, Auflösung oder seiner Empfindlichkeit gegen Auferstehung auf 0 Trefferpunkte reduziert, kehrt er zu Beginn seines nächsten Zuges wieder ins Unleben zurück. Der zurückgekehrte Unlebende verfügt über 100 Trefferpunkte und @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{liegt auf dem Feld am Boden}, auf dem er getötet wurde. Der Unlebende kann anschließend für 1 Stunde nicht mehr auf diese Weise zurückkehren.</p>"
-        },
-        "action->Agonized Howl": {
-          "name": "Gequältes Aufheulen",
-          "description": "<p>Der Unlebende heult angesichts des Schmerzes seiner verfluchten Existenz qualvoll auf. Kreaturen innerhalb des Wirkungsbereichs einer @Template[emanation|distance:30]{30 Fuß/9-m-Ausstrahlung} erleiden @Damage[9d8[mental]|options:area-damage]{9W8 Punkte Mentalen Schaden} (@Check[will|dc:30|basic|options:area-effect]{einfacher Willenswurf}). Der Unlebende kann diese Fähigkeit anschließend für [[/gmr 1d4 #Runden]]{1W4 Runden} nicht erneut einsetzen.</p>"
-        },
-        "action->Awful Approach": {
-          "name": "Abscheuliche Annäherung",
-          "description": "<p>Der Unlebende verformt seine groteske Gestalt, um sich schnell zu bewegen. Er nutzt zweimal die Aktion Laufen, um sich fortzubewegen. Jedes Lebewesen, das den Unlebenden während dieser Bewegung sehen kann, muss einen erfolgreichen @Check[fortitude|dc:28]{Zähigkeitswurf} ablegen, um nicht den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1} (bzw. bei einem Kritischen Fehlschlag @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 2}) zu erhalten. Dies ist ein mentaler und sichtbarer Effekt. Der Unlebende kann seine Abscheuliche Annäherung anschließend [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht mehr erneut einsetzen.</p>"
-        },
-        "action->Death Grip": {
-          "name": "Todesgriff",
-          "description": "<p><strong>Anforderungen</strong> Der Unlebende hat eine Kreatur in den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} oder @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Gebunden} versetzt</p>\n<hr />\n<p><strong>Effekt</strong> Der Unlebende versucht, die Lebenskraft seines Opfers zu ersticken, damit dieser sein eigenes verfluchtes Schicksal mit ihm teilt. Dem Ziel muss einen erfolgreichen @Check[fortitude|dc:30]{Zähigkeitswurf} gelingen, um nicht den Zustand @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Todgeweiht 1} zu erhalten. Solange der Fluch anhält, erhält die Kreatur nur halb so viele Trefferpunkte durch positive Heileffekte zurück; wenn sie stirbt, führt jeder Versuch, sie von den Toten auferstehen zu lassen, dazu, dass sie als Unlebender zurückkehrt. Der Fluch endet automatisch, wenn der Zustandswert der Kreatur auf Todgeweiht 0 reduziert wird.</p>"
-        }
-      }
-    },
-    "Urveth": {
-      "name": "Urveth",
-      "hpDetails": "Leerenheilung",
-      "languages": "Telepathie 100 Fuß/30 m",
-      "publicNotes": "<p>Ein Urveth ist ein riesiger, vierarmiger, grabender Schrecken mit einem wurmartigen Körper und klaffenden Schlund, der alles verschlingt, was er in die Klauen bekommt. Urveths graben sich tief unter der Erde ein, um sich vor der Sonne zu verstecken und im Schutze der Dunkelheit wieder hervorzukommen, um zu töten und zu fressen.</p>\n<hr />\n<p>Darvakka, auch Nachtschatten genannt, sind ein gefräßiges Übel, das zu gleichen Teilen aus Dunkelheit und Bosheit besteht. Ursprünglich Kreaturen der Äußeren Ebenen, die zur Konvergenz zwischen der Schattenebene und der Ebene der Negativen Energie reisen - wo die Macht des Nichts sie auslöscht - sind diese untoten Abscheulichkeiten die physische Verkörperung der Entropie. Sie brennen mit einem intensiven Hass auf alles Leben und arbeiten daran, eine letzte, dunkle Nacht über die Materielle Ebene zu bringen, in der nichts als Asche und Eis zurückbleibt. Als von Dunkelheit und Schatten zerfressene Kreaturen, haben Darvakka eine große Abneigung gegen Sonnenlicht und alle Quellen positiver Energie. Auf der Materiellen Ebene verbringen sie die Stunden des Tageslichts versteckt unter der Erde, inmitten von Ruinen oder tief in den dunkelsten Abgründen des Ozeans, außerhalb der Reichweite der Sonnenstrahlen; von dort aus tauchen sie erst auf, wenn die Dunkelheit über ihnen hereinbricht. Darvakka haben eine Aura der Entropie, die untote Sklaven anzieht, die dann als Krieger und Herolde dienen. Sie gehen nur selten Bündnisse untereinander oder mit anderen Kreaturen ein und leben in Einsamkeit als Anführer ihrer eigenen Armeen der Toten.</p>",
-      "speed": "Luftwandeln",
-      "items": {
-        "spellcastingEntry->Divine Innate Spells": {
-          "name": "Immanente Göttliche Zauber"
-        },
-        "spell->Plane Shift (to the Universe, Void, or Netherworld only)": {
-          "name": "<Compendium> (ausschließlich ins Universum, Die Leere oder Das Grau)",
-          "target": "1 bereitwillige Kreatur oder bis zu 8 bereitwillige Kreaturen, die sich bei den Händen nehmen"
-        },
-        "spell->True Seeing": {
-          "name": "<Compendium>"
-        },
-        "spell->Air Walk (Constant)": {
-          "name": "<Compendium> (ständig)"
-        },
-        "spell->Darkness (At Will)": {
-          "name": "<Compendium> (beliebig oft)"
-        },
-        "strike-melee->Jaws": {
-          "name": "Biss"
-        },
-        "strike-melee->Claw": {
-          "name": "Klaue"
-        },
-        "strike-melee->Stinger": {
-          "name": "Stachel"
-        },
-        "action->Telepathy 100 feet": {
-          "name": "Telepathie 100 Fuß/30 m"
-        },
-        "action->Lifesense 60 feet": {
-          "name": "<Compendium> 60 Fuß/18 m"
-        },
-        "action->Attack of Opportunity (Special)": {
-          "name": "<Compendium> (Speziell)",
-          "description": "<p>Nur Klaue. Ein Urveth erlangt in jeder Runde 3 zusätzliche Reaktionen, die er ausschließlich für Reaktionsangriffe nutzen kann.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.AttackOfOpportunity]</p>"
-        },
-        "action->Entropy's Shadow": {
-          "name": "Schatten der Entropie",
-          "description": "<p>60 Fuß/18 m. Die bloße Existenz eines Urveth verströmt Entropie und Verderbnis. Lebende Kreaturen, welche die Aura der Entropie des Urveth betreten oder ihren Zug innerhalb des Wirkungsbereichs der Aura beginnen, erleiden @Damage[5d6[void]]{5W6 Punkte Leerenschaden} (@Check[fortitude|dc:38|basic]{einfacher Zähigkeitswurf}). Bei einem Fehlschlag erleidet die Kreatur zusätzlich für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 1} und wird 10 Fuß/3 m in Richtung des Urveth gezogen.</p>"
-        },
-        "action->Sunlight Powerlessness": {
-          "name": "Machtlos im Sonnenlicht",
-          "description": "<p>Ein Urveth, der dem direkten Sonnenlicht ausgesetzt ist, erleidet die Zustände @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 2} und @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 2}.</p>"
-        },
-        "action->Frenzy": {
-          "name": "Tobsucht",
-          "description": "<p>Der Urveth führt zwei Klauenangriffe und einen Stachelangriff in beliebiger Reihenfolge aus.</p>"
-        },
-        "action->Swallow Whole": {
-          "description": "<p>Riesig, @Damage[(2d10+5)[bludgeoning]]{2W10+5 Wuchtschaden}, Befreien 35</p>\n<p>Lebende Kreaturen, die von einem Urveth verschlungen werden, erleiden den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 1} (bzw. der Zustandswert von Ausgelaugt wird um 1 erhöht); der Urveth erlangt indessen 10 Temporäre Trefferpunkte. Würde der Zustandswert für Ausgelaugt einer Kreatur auf Ausgelaugt 5 steigen, stirbt diese Kreatur.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
-        },
-        "action->Urveth Venom": {
-          "name": "Urvethgift",
-          "description": "<p><strong>Rettungswurf</strong> @Check[fortitude|dc:37]{Zähigkeitswurf}</p>\n<p><strong>Maximaldauer</strong> 6 Runden</p>\n<p><strong>Phase 1</strong> @Damage[3d6[void],2d6[poison]]{3W6 Leerenschaden und 2W6 Giftschaden} (1 Runde)</p>\n<p><strong>Phase 2</strong> @Damage[3d6[void],2d6[poison]]{3W6 Leerenschaden und 2W6 Giftschaden} und @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 2} (1 Runde)</p>\n<p><strong>Phase 3</strong> @Damage[3d6[void],2d6[poison]]{3W6 Leerenschaden und 2W6 Giftschaden} und @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 4} (1 Runde)</p>"
-        },
-        "lore->Shadow Plane Lore": {
-          "name": "Kenntnis (Das Grau)"
-        },
-        "lore->The Void Lore": {
-          "name": "Kenntnis (Die Leere)"
-        }
-      }
-    },
-    "Vanyver": {
-      "name": "Vanyver",
-      "hpDetails": "Leerenheilung",
-      "languages": "Telepathie 100 Fuß/30 m",
-      "publicNotes": "<p>Vanyver sind große, humanoide Fledermäuse, die aus Leere und Schatten geformt sind. Ihre roten Augen leuchten wie winzige Sterne in einer ansonsten lichtlosen Nacht. Obwohl sehr mächtig, sind sie die harmlosesten unter den Darvakka und am ehesten bereit, sich einem Meister zu unterwerfen - entweder einem anderen ihrer Art oder einem Sterblichen, der den Ruf hat, besonders mörderisch und zerstörerisch zu sein. Vanyver erklären sich bereit, ihren Meistern zu folgen, um vorübergehend ein Maximum an Tod und Zerstörung anzurichten, aber sie wenden sich schnell gegen jeden Herrn, von dem sie glauben, dass er dieses Ziel nicht zu erreichen vermag.</p>\n<hr />\n<p>Darvakka, auch Nachtschatten genannt, sind ein gefräßiges Übel, das zu gleichen Teilen aus Dunkelheit und Bosheit besteht. Ursprünglich Kreaturen der Äußeren Ebenen, die zur Konvergenz zwischen der Schattenebene und der Ebene der Negativen Energie reisen - wo die Macht des Nichts sie auslöscht - sind diese untoten Abscheulichkeiten die physische Verkörperung der Entropie. Sie brennen mit einem intensiven Hass auf alles Leben und arbeiten daran, eine letzte, dunkle Nacht über die Materielle Ebene zu bringen, in der nichts als Asche und Eis zurückbleibt. Als von Dunkelheit und Schatten zerfressene Kreaturen, haben Darvakka eine große Abneigung gegen Sonnenlicht und alle Quellen positiver Energie. Auf der Materiellen Ebene verbringen sie die Stunden des Tageslichts versteckt unter der Erde, inmitten von Ruinen oder tief in den dunkelsten Abgründen des Ozeans, außerhalb der Reichweite der Sonnenstrahlen; von dort aus tauchen sie erst auf, wenn die Dunkelheit über ihnen hereinbricht. Darvakka haben eine Aura der Entropie, die untote Sklaven anzieht, die dann als Krieger und Herolde dienen. Sie gehen nur selten Bündnisse untereinander oder mit anderen Kreaturen ein und leben in Einsamkeit als Anführer ihrer eigenen Armeen der Toten.</p>",
-      "items": {
-        "spellcastingEntry->Divine Innate Spells": {
-          "name": "Immanente Göttliche Zauber"
-        },
-        "spell->Plane Shift (to the Universe, Void, or Netherworld only)": {
-          "name": "<Compendium> (ausschließlich ins Universum, Die Leere oder Das Grau)",
-          "target": "1 bereitwillige Kreatur oder bis zu 8 bereitwillige Kreaturen, die sich bei den Händen nehmen"
-        },
-        "spell->Dispel Magic (At Will)": {
-          "name": "<Compendium> (beliebig oft)"
-        },
-        "spell->See Invisibility": {
-          "name": "<Compendium>"
-        },
-        "strike-melee->Talon": {
-          "name": "Kralle"
-        },
-        "strike-melee->Wing": {
-          "name": "Flügel"
-        },
-        "strike-melee->Jaws": {
-          "name": "Biss"
-        },
-        "action->Telepathy 100 feet": {
-          "name": "Telepathie 100 Fuß/30 m"
-        },
-        "action->Lifesense 60 feet": {
-          "name": "<Compendium> 60 Fuß/18 m"
-        },
-        "action->Catching Bite": {
-          "name": "Abfangender Biss",
-          "description": "<p><strong>Auslöser</strong> Eine Kreatur innerhalb des Angriffsradius des Bissangriffs des Vanyver führt einen Nahkampfangriff mit einer Waffe gegen den Vanyver aus</p>\n<hr />\n<p><strong>Effekt</strong> Der Vanyver lässt sich absichtlich vom Angriff treffen. Würde der Angriff den Vanyver verfehlen, trifft er in diesem Fall dennoch. Der Vanyver fängt die angreifende Waffe gezielt mit seinem Biss ab und setzt die Fähigkeit Magie entziehen darauf ein, ohne dafür die Anforderungen erfüllen zu müssen.</p>"
-        },
-        "action->Drain Magic": {
-          "name": "Magie entziehen",
-          "description": "<p><strong>Anforderungen</strong> Die letzte Aktion des Vanyvers war ein erfolgreicher Bissangriff gegen eine Kreatur, einen Gegenstand oder einen Zaubereffekt</p>\n<hr />\n<p><strong>Effekt</strong> Der Vanyver wirkt den immanenten Zauber @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} auf dieses Ziel; handelt es sich beim Ziel um eine Kreatur, so kann der Vanyver stattdessen einen Zauber auswählen, welcher die Kreatur betrifft. Hat der Vanyver einem Zaubereffekt oder einem Gegenstand erfolgreich @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegengewirkt}, erlangt er eine Anzahl an Trefferpunkten entsprechend der doppelten Entgegenwirken-Stufe des Effektes, dem er Entgegengewirkt hat.</p>"
-        },
-        "action->Entropy's Shadow": {
-          "name": "Schatten der Entropie",
-          "description": "<p>40 Fuß/12 m. Die bloße Existenz eines Vanyver verströmt Entropie und Verderbnis. Lebende Kreaturen, welche die Aura der Entropie des Vanyver betreten oder ihren Zug innerhalb des Wirkungsbereichs der Aura beginnen, erleiden @Damage[3d6[void]]{3W6 Punkte Leerenschaden} (@Check[fortitude|dc:30|basic]{einfacher Zähigkeitswurf}). Bei einem Fehlschlag erleidet die Kreatur zusätzlich für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 1} und wird 10 Fuß/3 m in Richtung des Vanyver gezogen.</p>"
-        },
-        "action->Snatch": {
-          "name": "Beute aufgreifen",
-          "description": "<p>Ein Vanyver kann mit bis zur halben Bewegungsrate Fliegen, während er eine Kreatur mit einem oder beiden Schwingen @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} oder @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Gebunden} hat; auf diese Weise kann er diese Kreatur mit sich tragen.</p>"
-        },
-        "action->Sunlight Powerlessness": {
-          "name": "Machtlos im Sonnenlicht",
-          "description": "<p>Ein Vanyver, der dem direkten Sonnenlicht ausgesetzt ist, erleidet die Zustände @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 2} und @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 2}.</p>"
-        },
-        "action->Constrict": {
-          "description": "<p>@Damage[(3d10+5)[piercing]]{3W10+5 Stichschaden}, @Check[fortitude|dc:33|basic]{einfacher Zähigkeitswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
-        },
-        "lore->Shadow Plane Lore": {
-          "name": "Kenntnis (Das Grau)"
-        },
-        "lore->The Void Lore": {
-          "name": "Kenntnis (Die Leere)"
         }
       }
     },
@@ -3677,20 +3239,6 @@
         "action->Sudden Surge": {
           "name": "Plötzliche Beschleunigung",
           "description": "<p><strong>Auslöser</strong> Der Zug des Vertrockneten Zombies beginnt</p>\n<hr />\n<p><strong>Effekt</strong> Der Zombie hat einen plötzlichen Geschwindigkeitsschub. Er erhält für diesen Zug den Zustand @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Beschleunigt}, wobei er die zusätzliche Aktion nur für Schritt oder Angriff verwenden kann. Handelt es sich bei der ersten Aktion des Zombies in diesem Zug um einen Nahkampfangriff, so erhält das Ziel den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} für diesen Angriff. Der Vertrocknete Zombie kann die Fähigkeit Plötzliche Beschleunigung erst wieder einsetzen, nachdem er mindestens 10 Minuten lang bewegungslos gestanden hat.</p>"
-        }
-      }
-    },
-    "Wolf Skeleton": {
-      "name": "Wolfsskelett",
-      "hpDetails": "Leerenheilung",
-      "publicNotes": "<p>Ohne die Last des Fleisches stürmen die Wolfsskelette mit beängstigender Geschwindigkeit über das Schlachtfeld.</p>\n<hr />\n<p>Unter den Toten gibt es nirgendwo sonst eine so große Anzahl noch eine so breite Vielfalt, wie bei den Skeletten. Während die meisten fast ausschließlich aus Knochen bestehen, haben einige noch ein paar Fetzen Fleisch, die ihnen bei der Fortbewegung helfen, wie z. B. Flügelmembranen.</p>",
-      "items": {
-        "strike-melee->Jaws": {
-          "name": "Biss"
-        },
-        "action->Surge of Speed": {
-          "name": "Geschwindigkeitsschub",
-          "description": "<p>Das Wolfsskelett nutzt dreimal die Aktion Laufen, um sich fortzubewegen, gilt jedoch bis zum Beginn seines nächsten Zuges als @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} erwischt.</p>"
         }
       }
     },
