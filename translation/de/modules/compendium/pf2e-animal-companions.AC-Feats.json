@@ -5,6 +5,29 @@
       "name": "Lauerjäger",
       "description": "<p>In seiner natürlichen Umgebung kann dein Gefährte die Aktion @UUID[Compendium.pf2e.actionspf2e.Item.VMozDqMMuK5kpoX4]{Schleichen} nutzen, selbst wenn er gegenwärtig den Zustand Beobachtet hat. Sein Kompetenzgrad in Heimlichkeit steigt auf Experte (oder auf Meister, sollte er bereits aufgrund seiner Art ein Experte sein). Sein Geschicklichkeitsmodifikator steigt um 1. Sein Kompetenzgrad für Ungerüstete Verteidigung steigt auf Experte.</p>"
     },
+    "Auspice": {
+      "name": "Verheißungsvoll",
+      "description": "<p>Ein Treues Reittier der Spezialisierung Gutes Vorzeichen erhält die folgenden Vorteile:</p>\n<ul>\n<li>Es erhält die Kategorie Celestischer, Scheusal oder Beobachter passend zu den Dienern deiner Gottheit und passt sein Aussehen an solche Wesen an. Sollte es die Kategorie Celestischer erhalten, erhält es auch die Kategorie Heilig. Sollte es die Kategorie Scheusal erhalten, erhält es auch die Kategorie Unheilig.</li>\n<li>Sein Intelligenzmodifikator steigt um 2 und sein Weisheitsmodifikator um 1.</li>\n<li>Sein Kompetenzgrad für Religionskunde steigt auf Experte.</li>\n<li>Es kann die mit den Dienern deiner Gottheit assoziierte Sprache sprechen (z.B. Empyreal bei Celestischen, Chthonisch bei Dämonen oder Requial bei Seelenbegleitern).</li>\n<li>Seine maximalen Trefferpunkte steigen um 20. Mit der 18. Stufe und 20. Stufe steigen sie jeweils um weitere 5 TP. Sollte das Reittier die Kategorie Celestisch besitzen, erhält es 5 weitere zusätzliche TP und Schwäche Unheilig 5. Sollte das Reittier die Kategorie Scheusal besitzen, erhält es 5 weitere zusätzliche TP und Schwäche Heilig 5.</li>\n<li>Es erhält Flügel, die ihm eine Bewegungsrate zum Fliegen gleich seine Bewegungsrate am Boden verleihen.</li>\n</ul>",
+      "rules": {
+        "0": {
+          "prompt": "Wähle einen spezialisierten Gefährten zu dem du Zugang hast"
+        }
+      }
+    },
+    "Auspicious Mount": {
+      "name": "Verheißungsvolles Reittier",
+      "description": "<p>Dank deiner aufopfernden Pflege hat dein Reittier unglaubliche Intelligenz und großes Können entwickelt. Das Reittier, welches du durch Treues Reittier erhalten hast, ist nun ein Spezialisierter Tiergefährte. Du kannst eine der üblichen Spezialisierungen oder die Spezialisierung Gutes Vorzeichen wählen. Ein Treues Reittier der Spezialisierung Gutes Vorzeichen erhält die folgenden Vorteile:</p>\n<ul>\n<li>Es erhält die Kategorie Celestischer, Scheusal oder Beobachter passend zu den Dienern deiner Gottheit und passt sein Aussehen an solche Wesen an. Sollte es die Kategorie Celestischer erhalten, erhält es auch die Kategorie Heilig. Sollte es die Kategorie Scheusal erhalten, erhält es auch die Kategorie Unheilig.</li>\n<li>Sein Intelligenzmodifikator steigt um 2 und sein Weisheitsmodifikator um 1.</li>\n<li>Sein Kompetenzgrad für Religionskunde steigt auf Experte.</li>\n<li>Es kann die mit den Dienern deiner Gottheit assoziierte Sprache sprechen (z.B. Empyreal bei Celestischen, Chthonisch bei Dämonen oder Requial bei Seelenbegleitern).</li>\n<li>Seine maximalen Trefferpunkte steigen um 20. Mit der 18. Stufe und 20. Stufe steigen sie jeweils um weitere 5 TP. Sollte das Reittier die Kategorie Celestisch besitzen, erhält es 5 weitere zusätzliche TP und Schwäche Unheilig 5. Sollte das Reittier die Kategorie Scheusal besitzen, erhält es 5 weitere zusätzliche TP und Schwäche Heilig 5.</li>\n<li>Es erhält Flügel, die ihm eine Bewegungsrate zum Fliegen gleich seine Bewegungsrate am Boden verleihen.</li>\n</ul>",
+      "prerequisites": [
+        {
+          "value": "Beeindruckendes Reittier"
+        }
+      ],
+      "rules": {
+        "4": {
+          "prompt": "COMP.Prompt.Specialized"
+        }
+      }
+    },
     "Billowing Wings": {
       "name": "Wehende Schwingen",
       "description": "<p>Du trainierst deine geflügelten Gefährten dazu, mit ihren Schwingen die Luft zu sammeln und als konzentrierte Windstöße auf Gegner zu peitschen, um sie ins Wanken zu bringen. Deine geflügelten Gefährten erhalten einen Waffenlosen Windstoßangriff, der 1W4 Punkte Wuchtschaden verursacht, eine Reichweite von 30 Fuß/9 m besitzt und über die Kategorien Geschoss und Luft verfügt. Bei einem Kritischen Treffer wird das Ziel um 5 Fuß/1,50 m zurückgestoßen. Dies ist eine erzwungene Bewegung.</p>",
@@ -122,7 +145,7 @@
       "description": "<p>Spezialisierte Tiergefährten sind intelligenter und zu komplexerem Handeln imstande. Die meisten Tiergefährten können nur eine Spezialisierung erlangen. Wenn ein Tier erstmals eine Spezialisierung erhält, erlangt es folgende Modifikationen:</p>\n<ul>\n<li>Der Kompetenzgrad in Waffenlosen Angriffen steigt auf Experte.</li>\n<li>Der Kompetenzgrad in Rettungswürfen und Wahrnehmung steigt auf Meister.</li>\n<li>Erhöhe den Geschicklichkeitsmodifikator um 1 und den Intelligenzmodifikator um 2.</li>\n<li>Der Schaden der Waffenlosen Angriffe steigt um zwei Würfeln auf drei Würfel und der zusätzliche Schaden bei Waffenlosen Angriffen steigt von 2 auf 4, bzw. von 3 auf 6.</li>\n</ul>",
       "rules": {
         "4": {
-          "prompt": "Wähle eine Spezialisierung für deinen Begleiter"
+          "prompt": "COMP.Prompt.Specialized"
         }
       }
     },

@@ -2938,16 +2938,12 @@
         "spell->Speak with Animals (At Will) (Arthropods Only)": {
           "name": "<Compendium> (beliebig oft, nur Arthropoden)"
         },
-        "strike-ranged->Trident": [
-          {
-            "name": "Dreizack",
-            "id": "8zIAec8NlrwPEbab"
-          },
-          {
-            "name": "Dreizack",
-            "id": "4z1JD9bhf1R5wpmX"
-          }
-        ],
+        "strike-melee->Trident": {
+          "name": "Dreizack"
+        },
+        "strike-ranged->Trident": {
+          "name": "Dreizack"
+        },
         "action->Self-Loathing": {
           "name": "Selbsthass",
           "description": "<p>Der Selbsthass eines Winzlings erleichtert es ihn zu beeinflussen. Er erleidet einen Malus von -4 auf seinen WIL-SG gegen @UUID[Compendium.pf2e.actionspf2e.Item.OX4fy22hQgUHDr0q]{Beeindrucken}, @UUID[Compendium.pf2e.actionspf2e.Item.tHCqgwjtQtzNqVvd]{Bedrängen}, @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralisieren} und @UUID[Compendium.pf2e.actionspf2e.Item.DCb62iCBrJXy0Ik6]{Erbitten}.</p>"
@@ -3841,14 +3837,6 @@
       "blurb": "Halbelfische Schwertjunkerin",
       "publicNotes": "<p>Jamandi Aldoris Erziehung in Restow hätte ihr ein sicheres und entspanntes Leben als eine der Adligen der Stadt erlauben können, doch ihre Rastlosigkeit und ihre Frustration über die Einflüsse aus dem Norden haben sie immer weiter von ihrem aristokratischen Lebensstil entfernt. Sie meisterte schnell die Kunst des Aldori-Duellschwertes und wurde über die Jahre zu einer der bekanntesten Schwertjunkerinnen in ganz Restow. Das lag sowohl an ihrer Fähigkeit im Duell als auch in ihren immer offensichtlicheren Bestrebungen, Restows Macht derart zu mehren, dass Restow nicht länger vom Rest von Brevoy abhängig ist. Nebst der Organisation des Vorstoßes in die Raublande und ihrem Bestreben, die neuen Verbündeten im Süden zu stärken, hofft sie darauf, eines Tages weitere Duellschulen jenseits der Grenzen von Brevoy zu gründen, wo der Aldori-Kampfstil gelehrt wird. Dieses Bestreben wird von ihresgleichen jedoch nicht gern gesehen.</p>\n<p>Charaktere, welche das Vertrauen von Jamandi und ihre Unterstützung erlangen, erhalten Zugang zu dem Archetyp des @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.cBBwTnJrVmvaRMYq]{Aldori-Duellanten}.</p>",
       "items": {
-        "equipment->Daredevil Boots": {
-          "description": "<Compendium>",
-          "rules": {
-            "1": {
-              "label": "Teufelskerlstiefel (Hindurchturnen)"
-            }
-          }
-        },
         "strike-melee->Aldori Dueling Sword": {
           "name": "Aldori Duellschwert"
         },
@@ -5046,7 +5034,7 @@
         },
         "action->Swarming Bites": {
           "name": "Beißender Schwarm",
-          "description": "<p>Jeder Gegner innerhalb der Angriffsfläche des Schwarms erleidet @Damage[7d8[piercing]]{7W8 Punkte Stichschaden} (@Check[reflex|dc:40|basic]{einfacher Reflexwurf}) und wird dem Gift des Mandragoraschwarms ausgesetzt. Bei erfolgreichem Rettungswurf erfolgt kein Kontakt mit dem Gift.</p>"
+          "description": "<p>Jeder Gegner innerhalb der Angriffsfläche des Schwarms erleidet @Damage[7d8[piercing]|options:area-damage]{7W8 Punkte Stichschaden} (@Check[reflex|dc:40|basic|options:area-effect]{einfacher Reflexwurf}) und wird dem Gift des Mandragoraschwarms ausgesetzt. Bei erfolgreichem Rettungswurf erfolgt kein Kontakt mit dem Gift.</p>"
         }
       }
     },
@@ -7644,6 +7632,7 @@
         "spell->Word of Recall": {
           "name": "<Compendium>",
           "cost": "Seltene Öle und pulverisierte Mineralien im Wert von 5.000 GM",
+          "secondarycheck": "Arkane Künste oder Okkultismus (Was nicht für den Primären Wurf genutzt wurde); Gesellschaftskunde",
           "target": "Bis zu 7 bereitwillige Kreaturen der maximal 14. Stufe"
         },
         "spell->Feeblemind": {
@@ -8433,10 +8422,10 @@
           "name": "Göttliche Fokuszauber"
         },
         "feat->Deity (Sarenrae)": {
-          "name": "<Compendium> (Sarenrae)"
+          "name": "Gottheit (Sarenrae)"
         },
         "feat->Divine Spellcasting (Cleric)": {
-          "name": "Göttliches Zauberwirken (Kleriker)"
+          "name": "<Compendium>"
         },
         "deity->Sarenrae": {
           "description": "<Compendium>"
@@ -8558,10 +8547,10 @@
           "name": "<Compendium>"
         },
         "feat->Deity (Sarenrae)": {
-          "name": "<Compendium> (Sarenrae)"
+          "name": "Gottheit (Sarenrae)"
         },
         "feat->Divine Spellcasting (Cleric)": {
-          "name": "Göttliches Zauberwirken (Kleriker)"
+          "name": "<Compendium>"
         },
         "deity->Sarenrae": {
           "description": "<Compendium>"
@@ -8850,7 +8839,7 @@
         },
         "action->Swarming Bites": {
           "name": "Beißender Schwarm",
-          "description": "<p>Jeder sich auf dem Feld des Heeresameisenschwarms befindliche Feind erleidet @Damage[7d6[piercing]]{7W6 Stichschaden} (@Check[fortitude|dc:31]{Zähigkeitswurf}). Eine Kreatur, welcher der Rettungswurf gegen den Beißenden Schwarm misslingt, erleidet 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 1}. Versucht eine Kreatur eine Aktion der Kategorie Konzentration oder Handhaben, muss ihr ein @Check[flat|dc:5]{Einfacher Wurf} gelingen, um diese Aktion nicht zu verlieren. Dieser Wurf wird abgelegt, nachdem die Aktion aufgewendet wurde, aber bevor irgendein Effekt in Kraft getreten ist.</p>"
+          "description": "<p>Jeder sich auf dem Feld des Heeresameisenschwarms befindliche Feind erleidet @Damage[7d6[piercing]|options:area-damage]{7W6 Stichschaden} (@Check[fortitude|dc:31|basic|options:area-effect,inflicts:clumsy]{Zähigkeitswurf}). Eine Kreatur, welcher der Rettungswurf gegen den Beißenden Schwarm misslingt, erleidet 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 1}. Versucht eine Kreatur eine Aktion der Kategorie Konzentration oder Handhaben, muss ihr ein @Check[flat|dc:5]{Einfacher Wurf} gelingen, um diese Aktion nicht zu verlieren. Dieser Wurf wird abgelegt, nachdem die Aktion aufgewendet wurde, aber bevor irgendein Effekt in Kraft getreten ist.</p>"
         }
       }
     },
