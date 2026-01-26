@@ -1009,7 +1009,7 @@
           "Fox": "Fuchs",
           "Fungus": "Fungus",
           "Gancanagh": "Gancanagh",
-          "Ghost": "Ghost",
+          "Ghost": "Geist",
           "Gimmerling": "Gimmerling",
           "Gosreg": "Gosreg",
           "Gourd": "Kürbis",
@@ -1053,7 +1053,7 @@
           "Scorpion": "Skorpion",
           "SeaSerpent": "Seeschlange",
           "Shark": "Hai",
-          "Skeleton": "Skeleton",
+          "Skeleton": "Skelett",
           "SnappingFlytrap": "Schnappfliegenfalle",
           "Spider": "Spinne",
           "SublimeBreath": "Odem der Inspiration",
@@ -1348,7 +1348,7 @@
           "Commander": "Commander",
           "ElementalAttack": "Elemental Attack",
           "ShieldCarrier": "Shield Carrier",
-          "SneakAttack": "Sneak Attack",
+          "SneakAttack": "Hinterhältiger Angriff",
           "WeaponPerk": "Weapon Perk",
           "WeaponPerkPrompt": "Select a Weapon Perk"
         }
@@ -1527,7 +1527,7 @@
         "MedicalMalpracticeCriticalSuccess": "Chirurgische Schnitte (Kritischer Erfolg)"
       },
       "SwarmingBites": {
-        "Note": "If you attempt a concentrate or manipulate action while affected, you must succeed at a @Check[flat|dc:5|name:Swarming Bites|showDC:all] or the action is lost; roll the check after spending the action, but before any effects are applied."
+        "Note": "Wenn du versuchst eine Aktion der Kategorie Konzentration oder Handhaben zu nutzen, musst dir ein @Check[flat|dc:5]{Einfacher Wurf} gelingen, um diese Aktion nicht zu verlieren. Dieser Wurf wird abgelegt, nachdem die Aktion aufgewendet wurde, aber bevor irgendein Effekt in Kraft getreten ist."
       },
       "Target": {
         "GrabbedByNPC": "You have the target grabbed."
@@ -2865,8 +2865,8 @@
       },
       "BlinkCharge": {
         "Note": {
-          "CriticalFailure": "On a critical failure, the Strike deals no damage and you take @Damage[(ceil((@actor.flags.system.blinkCharge - 4)/2))d8[force]] damage.",
-          "Failure": "On a failure, the Strike deals no damage, but the target takes @Damage[(ceil((@actor.flags.system.blinkCharge - 4)/2))d8[force]] damage."
+          "CriticalFailure": "Der Angriff verursacht keinen Schaden und du erleidest Kraftschaden (@Damage[(ceil((@actor.flags.system.blinkCharge - 4)/2))d8[force]]).",
+          "Failure": "Bei einem Fehlschlag verursacht der Angriff keinen Schaden, das Ziel erhält dennoch Kraftschaden (@Damage[(ceil((@actor.flags.system.blinkCharge - 4)/2))d8[force]])."
         }
       },
       "BloodlettingKukri": {
@@ -2907,11 +2907,11 @@
         "Shape": {
           "Cone": {
             "Label": "Kegel",
-            "Description": "Your eidolon exhales a blast of destructive energy. Your eidolon deals @Damage[((ceil(@actor.level/2))d6)[@actor.flags.system.breathweapon.breathDamage]|options:area-damage] damage to all creatures in a @Template[cone|distance:30], with a basic Reflex save against your spell DC."
+            "Description": "<p>Dein Eidolon stößt einen Schwall zerstörerischer Energie aus. Es fügt allen Kreaturen in einem @Template[cone|distance:30]{30 Fuß/9 m Kegel} @Damage[((ceil(@actor.level/2))d6)[@actor.flags.system.breathweapon.breathDamage]|options:area-damage] zu (einfacher REF gegen deinen Zauber-SG)."
           },
           "Line": {
             "Label": "Linie",
-            "Description": "Your eidolon exhales a blast of destructive energy. Your eidolon deals @Damage[((ceil(@actor.level/2))d6)[@actor.flags.system.breathweapon.breathDamage]|options:area-damage] damage to all creatures in a @Template[line|distance:60], with a basic Reflex save against your spell DC."
+            "Description": "<p>Dein Eidolon stößt einen Schwall zerstörerischer Energie aus. Es fügt allen Kreaturen in einem @Template[line|distance:60]{60 Fuß/18 m Linie} @Damage[((ceil(@actor.level/2))d6)[@actor.flags.system.breathweapon.breathDamage]|options:area-damage] zu (einfacher REF gegen deinen Zauber-SG)."
           }
         },
         "Cooldown": "Dein Eidolon kann seine Odemwaffe die nächsten [[/r 1d4 #Runden]]{1W4 Runden} nicht erneut nutzen.",
@@ -3680,33 +3680,33 @@
       "Dragonblood": {
         "BreathOfTheDragon": {
           "Cone": {
-            "Fortitude": "Tapping into the physiology of your draconic ancestor, you can exhale a torrent of energy in a @Template[cone|distance:15], dealing @Damage[ceil(@actor.level/2)d4[@actor.flags.system.dragonblood.damageType]|options:area-damage] damage. Each creature in the area must attempt a @Check[fortitude|against:class-spell|basic]. You can't use this ability again for [[/r 1d4 #Recharge this ability]]{1d4 rounds}.",
-            "Reflex": "Tapping into the physiology of your draconic ancestor, you can exhale a torrent of energy in a @Template[cone|distance:15], dealing @Damage[ceil(@actor.level/2)d4[@actor.flags.system.dragonblood.damageType]|options:area-damage] damage. Each creature in the area must attempt a @Check[reflex|against:class-spell|basic]. You can't use this ability again for [[/r 1d4 #Recharge this ability]]{1d4 rounds}.",
-            "Will": "Tapping into the physiology of your draconic ancestor, you can exhale a torrent of energy in a @Template[cone|distance:15], dealing @Damage[ceil(@actor.level/2)d4[@actor.flags.system.dragonblood.damageType]|options:area-damage] damage. Each creature in the area must attempt a @Check[will|against:class-spell|basic]. You can't use this ability again for [[/r 1d4 #Recharge this ability]]{1d4 rounds}."
+            "Fortitude": "Indem du die Physiologie deines drakonischen Vorfahren anzapfst, kannst du einen Schwall von Energie in einem @Template[cone|distance:15]{Kegel von 15 Fuß/4,50 m} ausstoßen, der @Damage[ceil(@actor.level/2)d4[@actor.flags.system.dragonblood.damageType]|options:area-damage] Schadenspunkte verursacht. Jede Kreatur in diesem Gebiet muss einen @Check[fortitude|against:class-spell|basic]{einfachen Zähigkeitswurf} ablegen. Du kannst diese Fähigkeit [[/r 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.",
+            "Reflex": "Indem du die Physiologie deines drakonischen Vorfahren anzapfst, kannst du einen Schwall von Energie in einem @Template[cone|distance:15]{Kegel von 15 Fuß/4,50 m} ausstoßen, der @Damage[ceil(@actor.level/2)d4[@actor.flags.system.dragonblood.damageType]|options:area-damage] Schadenspunkte verursacht. Jede Kreatur in diesem Gebiet muss einen @Check[reflex|against:class-spell|basic]{einfachen Reflexwurf} ablegen. Du kannst diese Fähigkeit [[/r 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.",
+            "Will": "Indem du die Physiologie deines drakonischen Vorfahren anzapfst, kannst du einen Schwall von Energie in einem @Template[cone|distance:15]{Kegel von 15 Fuß/4,50 m} ausstoßen, der @Damage[ceil(@actor.level/2)d4[@actor.flags.system.dragonblood.damageType]|options:area-damage] Schadenspunkte verursacht. Jede Kreatur in diesem Gebiet muss einen @Check[will|against:class-spell|basic]{einfachen Willenswurf} ablegen. Du kannst diese Fähigkeit [[/r 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen."
           },
           "Line": {
-            "Fortitude": "Tapping into the physiology of your draconic ancestor, you can exhale a torrent of energy in a @Template[line|distance:30], dealing @Damage[ceil(@actor.level/2)d4[@actor.flags.system.dragonblood.damageType]|options:area-damage] damage. Each creature in the area must attempt a @Check[fortitude|against:class-spell|basic]. You can't use this ability again for [[/r 1d4 #Recharge this ability]]{1d4 rounds}.",
-            "Reflex": "Tapping into the physiology of your draconic ancestor, you can exhale a torrent of energy in a @Template[line|distance:30], dealing @Damage[ceil(@actor.level/2)d4[@actor.flags.system.dragonblood.damageType]|options:area-damage] damage. Each creature in the area must attempt a @Check[reflex|against:class-spell|basic]. You can't use this ability again for [[/r 1d4 #Recharge this ability]]{1d4 rounds}.",
-            "Will": "Tapping into the physiology of your draconic ancestor, you can exhale a torrent of energy in a @Template[line|distance:30], dealing @Damage[ceil(@actor.level/2)d4[@actor.flags.system.dragonblood.damageType]|options:area-damage] damage. Each creature in the area must attempt a @Check[will|against:class-spell|basic]. You can't use this ability again for [[/r 1d4 #Recharge this ability]]{1d4 rounds}."
+            "Fortitude": "Indem du die Physiologie deines drakonischen Vorfahren anzapfst, kannst du einen Schwall von Energie in einer @Template[line|distance:30]{Linie von 30 Fuß/9 m} ausstoßen, der @Damage[ceil(@actor.level/2)d4[@actor.flags.system.dragonblood.damageType]|options:area-damage] Schadenspunkte verursacht. Jede Kreatur in diesem Gebiet muss einen @Check[fortitude|against:class-spell|basic]{einfachen Zähigkeitswurf} ablegen. Du kannst diese Fähigkeit [[/r 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.",
+            "Reflex": "Indem du die Physiologie deines drakonischen Vorfahren anzapfst, kannst du einen Schwall von Energie in einer @Template[line|distance:30]{Linie von 30 Fuß/9 m} ausstoßen, der @Damage[ceil(@actor.level/2)d4[@actor.flags.system.dragonblood.damageType]|options:area-damage] Schadenspunkte verursacht. Jede Kreatur in diesem Gebiet muss einen @Check[reflex|against:class-spell|basic]{einfachen Reflexwurf} ablegen. Du kannst diese Fähigkeit [[/r 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.",
+            "Will": "Indem du die Physiologie deines drakonischen Vorfahren anzapfst, kannst du einen Schwall von Energie in einer @Template[line|distance:30]{Linie von 30 Fuß/9 m} ausstoßen, der @Damage[ceil(@actor.level/2)d4[@actor.flags.system.dragonblood.damageType]|options:area-damage] Schadenspunkte verursacht. Jede Kreatur in diesem Gebiet muss einen @Check[will|against:class-spell|basic]{einfachen Willenswurf} ablegen. Du kannst diese Fähigkeit [[/r 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen."
           }
         },
         "FormidableBreath": {
           "Cone": {
-            "Fortitude": "Tapping into the physiology of your draconic ancestor, you can exhale a torrent of energy in a @Template[cone|distance:30], dealing @Damage[ceil(@actor.level/2)d6[@actor.flags.system.dragonblood.damageType]|options:area-damage] damage. Each creature in the area must attempt a @Check[fortitude|against:class-spell|basic]. You can't use this ability again for [[/r 1d4 #Recharge this ability]]{1d4 rounds}.",
-            "Reflex": "Tapping into the physiology of your draconic ancestor, you can exhale a torrent of energy in a @Template[cone|distance:30], dealing @Damage[ceil(@actor.level/2)d6[@actor.flags.system.dragonblood.damageType]|options:area-damage] damage. Each creature in the area must attempt a @Check[reflex|against:class-spell|basic]. You can't use this ability again for [[/r 1d4 #Recharge this ability]]{1d4 rounds}.",
-            "Will": "Tapping into the physiology of your draconic ancestor, you can exhale a torrent of energy in a @Template[cone|distance:30], dealing @Damage[ceil(@actor.level/2)d6[@actor.flags.system.dragonblood.damageType]|options:area-damage] damage. Each creature in the area must attempt a @Check[will|against:class-spell|basic]. You can't use this ability again for [[/r 1d4 #Recharge this ability]]{1d4 rounds}."
+            "Fortitude": "Indem du die Physiologie deines drakonischen Vorfahren anzapfst, kannst du einen Schwall von Energie in einem @Template[cone|distance:30]{Kegel von 30 Fuß/9 m} ausstoßen, der @Damage[ceil(@actor.level/2)d6[@actor.flags.system.dragonblood.damageType]|options:area-damage] Schadenspunkte verursacht. Jede Kreatur in diesem Gebiet muss einen @Check[fortitude|against:class-spell|basic]{einfachen Zähigkeitswurf} ablegen. Du kannst diese Fähigkeit [[/r 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.",
+            "Reflex": "Indem du die Physiologie deines drakonischen Vorfahren anzapfst, kannst du einen Schwall von Energie in einem @Template[cone|distance:30]{Kegel von 30 Fuß/9 m} ausstoßen, der @Damage[ceil(@actor.level/2)d6[@actor.flags.system.dragonblood.damageType]|options:area-damage] Schadenspunkte verursacht. Jede Kreatur in diesem Gebiet muss einen @Check[reflex|against:class-spell|basic]{einfachen Reflexwurf} ablegen. Du kannst diese Fähigkeit [[/r 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.",
+            "Will": "Indem du die Physiologie deines drakonischen Vorfahren anzapfst, kannst du einen Schwall von Energie in einem @Template[cone|distance:30]{Kegel von 30 Fuß/9 m} ausstoßen, der @Damage[ceil(@actor.level/2)d6[@actor.flags.system.dragonblood.damageType]|options:area-damage] Schadenspunkte verursacht. Jede Kreatur in diesem Gebiet muss einen @Check[will|against:class-spell|basic]{einfachen Willenswurf} ablegen. Du kannst diese Fähigkeit [[/r 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen."
           },
           "Line": {
-            "Fortitude": "Tapping into the physiology of your draconic ancestor, you can exhale a torrent of energy in a @Template[line|distance:60], dealing @Damage[ceil(@actor.level/2)d6[@actor.flags.system.dragonblood.damageType]|options:area-damage] damage. Each creature in the area must attempt a @Check[fortitude|against:class-spell|basic]. You can't use this ability again for [[/r 1d4 #Recharge this ability]]{1d4 rounds}.",
-            "Reflex": "Tapping into the physiology of your draconic ancestor, you can exhale a torrent of energy in a @Template[line|distance:60], dealing @Damage[ceil(@actor.level/2)d6[@actor.flags.system.dragonblood.damageType]|options:area-damage] damage. Each creature in the area must attempt a @Check[reflex|against:class-spell|basic]. You can't use this ability again for [[/r 1d4 #Recharge this ability]]{1d4 rounds}.",
-            "Will": "Tapping into the physiology of your draconic ancestor, you can exhale a torrent of energy in a @Template[line|distance:60], dealing @Damage[ceil(@actor.level/2)d6[@actor.flags.system.dragonblood.damageType]|options:area-damage] damage. Each creature in the area must attempt a @Check[will|against:class-spell|basic]. You can't use this ability again for [[/r 1d4 #Recharge this ability]]{1d4 rounds}."
+            "Fortitude": "Indem du die Physiologie deines drakonischen Vorfahren anzapfst, kannst du einen Schwall von Energie in einer @Template[line|distance:60]{Linie von 60 Fuß/18 m} ausstoßen, der @Damage[ceil(@actor.level/2)d6[@actor.flags.system.dragonblood.damageType]|options:area-damage] Schadenspunkte verursacht. Jede Kreatur in diesem Gebiet muss einen @Check[fortitude|against:class-spell|basic]{einfachen Zähigkeitswurf} ablegen. Du kannst diese Fähigkeit [[/r 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.",
+            "Reflex": "Indem du die Physiologie deines drakonischen Vorfahren anzapfst, kannst du einen Schwall von Energie in einer @Template[line|distance:60]{Linie von 60 Fuß/18 m} ausstoßen, der @Damage[ceil(@actor.level/2)d6[@actor.flags.system.dragonblood.damageType]|options:area-damage] Schadenspunkte verursacht. Jede Kreatur in diesem Gebiet muss einen @Check[reflex|against:class-spell|basic]{einfachen Reflexwurf} ablegen. Du kannst diese Fähigkeit [[/r 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.",
+            "Will": "Indem du die Physiologie deines drakonischen Vorfahren anzapfst, kannst du einen Schwall von Energie in einer @Template[line|distance:60]{Linie von 60 Fuß/18 m} ausstoßen, der @Damage[ceil(@actor.level/2)d6[@actor.flags.system.dragonblood.damageType]|options:area-damage] Schadenspunkte verursacht. Jede Kreatur in diesem Gebiet muss einen @Check[will|against:class-spell|basic]{einfachen Willenswurf} ablegen. Du kannst diese Fähigkeit [[/r 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen."
           }
         },
         "HeartOfEarth": {
           "RollOptionLabel": "Heart of Earth — Use precise tremorsense"
         },
         "LingeringBreath": {
-          "Description": "When you use Breath of the Dragon, the area of your breath becomes difficult terrain for 1 minute. In addition, a creature who fails or critically fails its saving throw takes @Damage[2d6[persistent,@actor.flags.system.dragonblood.damageType]] damage of the same type"
+          "Description": "Dein Drachenodem zerstört die Umgebung und lässt deine Feinde unter Schmerzen zurück. Wenn du Drachenodem einsetzt, wird das Wirkungsgebiet deines Odems für 1 Minute zu Schwierigem Gelände. Außerdem erleidet eine Kreatur, die bei ihrem Rettungswurf einen Fehlschlag oder Kritischen Fehlschlag erzielt, 2W6 Punkte Anhaltenden Schaden derselben Schadensart (@Damage[2d6[persistent,@actor.flags.system.dragonblood.damageType]])."
         },
         "ScalyHide": {
           "BracersOfArmor": "Schuppige Haut mit Kraftarmreifen",
@@ -4273,7 +4273,7 @@
           "WhoseCryIsThunder": {
             "CriticalSpecialization": "Landest du einen Kritischen Treffer, ertönt ein Donnerschlag. Das Ziel muss einen @Check[fortitude|against:exemplar|traits:sonic]{Zähigkeitswurf} gegen deinen Klassen-SG ablegen; bei Misslingen erhält es den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend} und 1 Minute lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Taub}. Dies ist ein Schalleffekt.",
             "DamageNote": "Der Angreifer erleidet @Damage[1d6[electricity]]{1W6 Elektrizitätsschaden}.",
-            "Description": "When you Spark Transcendence, you can choose to become electrically charged until the start of your next turn. Any creature that touches you or damages you with an unarmed attack or non-reach melee weapon while you're charged takes @Damage[1d6[electricity]] damage as lightning courses back to them. @UUID[Compendium.pf2e.feat-effects.Item.nP3k4N52NzrR3KKf]{Effect: Whose Cry is Thunder}"
+            "Description": "Nutzt du Transzendenz entfachen, kannst du wählen, bis zum Beginn deines nächsten Zuges elektrisch aufgeladen zu werden. Jede Kreatur, die dich berührt oder dir mit einem Waffenlosen Angriff oder einer Nahkampfwaffe ohne Reichweite Schaden zufügt, während du aufgeladen bist, erleidet @Damage[1d6[electricity]]{1W6 Punkte Elektrizitätsschaden}, da Blitze auf sie überspringen. @UUID[Compendium.pf2e.feat-effects.Item.nP3k4N52NzrR3KKf]{Effekt: Die Stimme des Donners}"
           }
         },
         "EternityIncineratingBlaze": {
@@ -4960,7 +4960,7 @@
           "Vitriol": "Vitriol (Säure)"
         },
         "Overdrive": {
-          "CriticalFailure": "Whoops! Something explodes. You take @Damage[(ceil(@actor.level / 2))[@actor.flags.system.inventor.explode]|immutable|name:PF2E.SpecificRule.Inventor.Innovation.MalfunctionDamage] damage, and you can't use Overdrive again for [[/r 1d4 #Recharge Overdrive]]{1d4 rounds} as your gizmos reset.",
+          "CriticalFailure": "Ups! Irgendetwas explodiert. Du erleidest Feuerschaden in Höhe deiner halben Stufe (@Damage[(ceil(@actor.level / 2))[@actor.flags.system.inventor.explode]|immutable|name:PF2E.SpecificRule.Inventor.Innovation.MalfunctionDamage]) und kannst Schnellgang [[/r 1d4 #Runden]]{1W4 Runden} lang nicht verwenden, während deine Geräte sich abkühlen und zurücksetzen.",
           "CriticalSuccess": "Deine Geräte gehen in einen Zustand von unglaublicher Effizienz über, den sogenannten Kritischen @UUID[Compendium.pf2e.feat-effects.Item.1XlJ9xLzL19GHoOL]{Schnellgang}, was deinen Angriffen große Kraft verleiht.",
           "Failure": "Deine Geräte jaulen besorgniserregend und beginnen zu qualmen. Deine Angriffe verursachen zusätzlich 1 Punkt Feuerschaden. @UUID[Compendium.pf2e.feat-effects.Item.1XlJ9xLzL19GHoOL]{Schnellgang}",
           "FireDamage": "Schnellgang: Feuerschaden",
@@ -4972,7 +4972,7 @@
         "Unstable": {
           "FailureNote": "Du kannst keine weiteren instabilen Aktionen nutzen. Als Schöpfer der Innovation kannst du 10 Minuten aufwenden und deine Innovation überarbeiten und Anpassungen an ihr vornehmen, um sie wieder funktionsfähig zu machen, so dass du sie daraufhin wieder für instabile Aktionen verwenden kannst.",
           "FlatCheck": {
-            "CriticalFailure": "The innovation becomes incapable of being used for further unstable actions, and you also take @Damage[(floor(@actor.level / 2))[@actor.flags.system.inventor.explode]|immutable|name:PF2E.SpecificRule.Inventor.Innovation.MalfunctionDamage] damage. @UUID[Compendium.pf2e.feat-effects.Item.olpkQDGDzmYZCvQH]{Effect: Unstable Check Failure}",
+            "CriticalFailure": "Deine Innovation kann nicht mehr für weitere instabile Aktionen verwendet werden und du erleidest außerdem @Damage[(floor(@actor.level / 2))[@actor.flags.system.inventor.explode]|immutable|name:PF2E.SpecificRule.Inventor.Innovation.MalfunctionDamage]. @UUID[Compendium.pf2e.feat-effects.Item.olpkQDGDzmYZCvQH]{Effekt: Instabil Wurf Fehlschlag}",
             "Failure": "Deine Innovation kann nicht mehr für weitere instabile Aktionen verwendet werden. @UUID[Compendium.pf2e.feat-effects.Item.olpkQDGDzmYZCvQH]{Effekt: Instabil Wurf Fehlschlag}",
             "Label": "Instabil-Prüfung"
           },
@@ -5130,13 +5130,13 @@
           "Dracomancer": "Drakomant",
           "KoboldBreath": {
             "Label": "Koboldodem",
-            "Note": "Creatures that critically fail their save against your Kobold Breath take @Damage[3d4[@actor.flags.system.draconicExemplar.damageType,persistent]]."
+            "Note": "Kreaturen, die einen Kritischen Fehlschlag auf ihren Rettungswurf gegen deinen Koboldodem erzielen, nehmen @Damage[3d4[@actor.flags.system.draconicExemplar.damageType,persistent]]."
           },
           "StrongjawKobold": "Schnappzahnkobold",
           "VenomtailKobold": "Giftschwanzkobold"
         },
         "DragonsBreath": {
-          "DescriptionAlteration": "You channel your draconic exemplar's power into a gout of energy that manifests as a @Template[line|distance:60] or a @Template[cone|distance:30], dealing @Damage[ceil(@actor.level/2)d8[@actor.flags.system.draconicExemplar.damageType]|options:area-damage] damage. Each creature in the area must attempt a basic saving throw against the higher of your class DC or spell DC. You can't use this ability again for 1 hour."
+          "DescriptionAlteration": "Du besitzt die Fähigkeit, einen besonders mächtigen Odem auszustoßen, was dir allerdings im Gegenzug auch mehr Kraft abverlangt. Du kannst somit den Schadenswürfel deines Koboldodems auf vom W4 auf W8 (@Damage[ceil(@actor.level/2)d8[@actor.flags.system.draconicExemplar.damageType]|options:area-damage]) sowie den Wirkungsbereich auf eine @Template[line|distance:60]{60 Fuß/18 m} lange Linie bzw. einen @Template[cone|distance:30]{Kegel mit 30 Fuß/9 m} Radius verbessern, deinen Koboldodem anschließend aber 1 Stunde lang nicht erneut einsetzen."
         },
         "DragonsPresence": {
           "Note": "Wenn du einen Erfolg bei einem Rettungswurf gegen einen Furchteffekt erzielst, erhältst du stattdessen einen kritischen Erfolg. Wenn du einen Fehlschlag gegen einen Furchteffekt würfelst, erhältst du stattdessen einen kritischen Fehlschlag."
@@ -5610,7 +5610,7 @@
         "Label": "Ziel ist in Reichweite von mindestens zwei Verbündeten"
       },
       "Parry": {
-        "Prompt": "Does your weapon have the parry trait?"
+        "Prompt": "Besitzt deine Waffe die Kategorie Parade?"
       },
       "PathfinderAgentDedication": {
         "ThoroughReports": "Umfassende Berichte"
@@ -5800,13 +5800,13 @@
           },
           "RemovePresence": "Wähle ein Ziel des Zaubers oder eine Kreatur im Wirkungsbereich des Zaubers. Wird dieser Gegner vom Zauber getroffen, bzw. misslingt sein Rettungswurf, erhältst du ihm gegenüber den Zustand Unentdeckt und verschwindest für 1 Minute aus seiner Sinneswahrnehmung, sofern du nicht vorher eine feindselige Handlung ausführst. Diese ähnelt @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Unsichtbar}, allerdings enthüllen dich Effekte wie Unsichtbares wahrnehmen nicht - du beeinflusst den Verstand des Zieles, nicht seine Sicht. Wahre Sicht kann diese Illusion durchschauen, sofern der Wurf zum Entgegenwirken gelingt.",
           "ShatterMind": "Du erhöhst den Wirkungsbereich zu einem @Template[cone|distance:30]{30 Fuß/9 m-Kegel} oder einen @Template[cone|distance:60]{60 Fuß/18 m-Kegel} (deine Wahl) und der Schadenswürfel des Zaubers verändert sich zu W10. Misslingt einer Kreatur der Rettungswurf, erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 1} bis zum Beginn deines nächsten Zuges (bzw. @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 2} im Fall eines Kritischen Fehlschlages).",
-          "ShatterSpace": "You or one target of the spell are surrounded by a spiral of torn space. This is an aura, and you choose the radius of the emanation, up to 20 feet. A creature that starts its turn in the aura or enters the aura during its turn takes @Damage[(@item.level)d6[slashing]|options:area-damage] damage, with a @Check[reflex|against:occult|basic|options:area-effect,inflicts:prone] save against your spell DC. If the creature critically fails, the torn space throws it off balance and it falls @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}. The aura lasts until the beginning of your next turn. You can choose whether the aura affects the creature emitting it.",
+          "ShatterSpace": "Du oder das Ziel des Zaubers werden von einer Spirale aus zerrissener Realität umgeben. Dies ist eine Aura; wähle den Radius der Ausstrahlung (maximal 20 Fuß/6 m). Beginnt eine Kreatur ihren Zug in der Aura oder betritt sie die Aura während ihres Zuges, erleidet sie 1W6 Punkte Hiebschaden pro Grad des Verstärkten Mentalen Zaubertricks (@Damage[(@item.level)d6[slashing]|options:area-damage], @Check[reflex|against:occult|basic|options:area-effect,inflicts:prone]{einfacher Reflexwurf} gegen deinen Zauber-SG). Im Fall eines Kritischen Fehlschlages verliert die Kreatur das Gleichgewicht, stürzt und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}. Die Aura währt bis zum Beginn deines nächsten Zuges. Du entscheidest, ob die von dir als Zentrum der Aura bestimmte Kreatur (also du oder das Ziel des Zaubers) von ihr betroffen wird.",
           "Shield": {
             "Base": "Du erschaffst eine gestaffelte Barriere aus drei Schildeffekten, um deine Verteidigung zu verbessern. Die Wirkungsdauer steigt auf Bis zu 1 Minute aufrechterhaltbar. Der Schild senkt sich immer noch zu Beginn jedes deiner Züge, du kannst ihn aber wieder heben, wenn du den Zauber aufrechterhältst.",
             "BaseTwo": "Nutzt du mit diesem Zauber Schildblock, zerbricht zwar einer der Schildeffekte und verlierst du den Bonus auf die RK, endet die Wirkungsdauer aber nicht. Du kannst den Zauber weiterhin nutzen, bis auch der dritte Schildeffekt deiner Barriere zerbricht; in diesem Moment endet die Wirkungsdauer und kannst du 10 Minuten lang diesen Zauber weder in der normalen, noch in der Verstärken Version nutzen. Nutzt du die Schildblockoption des Zaubers, kannst du wählen, weitere Schildeffekte zu opfern, um deine Verteidigung zu verbessern. Solltest du neben dem ohnehin zerbrechenden Effekt einen weiteren opfern, steigt die Härte auf 150% des Normalen (7 mit dem 1. Grad, 15 mit dem 3. Grad, 22 mit dem 5. Grad, 30 mit dem 7. Grad und 37 mit dem 9. Grad). Solltest du neben dem ohnehin zerbrechenden Effekt zwei weitere opfern (also letztendlich alle drei Schildeffekte), steigt die Härte auf das Doppelte des normalen Wertes.",
             "RollOptionLabel": "Schild (Verstärkung) - Schichten für Schildblock nutzen"
           },
-          "TargetOfPsychicIre": "Choose one target of the spell. Psychic phenomena turn themselves on the target—typically, objects fling themselves at the creature. At the beginning of each of the target's turns, it takes @Damage[(@item.level)d4[bludgeoning]] damage, with a @Check[reflex|against:occult|basic] save. The target remains marked by psychic ire for 3 rounds. The effect persists even if you fall @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious} or leave the area.",
+          "TargetOfPsychicIre": "Wähle ein Ziel des Zaubers. Übernatürliche Phänomene greifen das Ziel an - in der Regel fliegen Gegenstände aus eigener Kraft auf die Kreatur zu. Das Ziel nimmt zu Beginn jedes seiner Züge 1W4 Punkte Wuchtschaden pro Zaubergrad (@Damage[(@item.level)d4[bludgeoning]]) des Verstärkten Mentalen Zaubertricks (@Check[reflex|against:occult|basic]{einfacher Reflexwurf}). Das Ziel ist 3 Runden lang von deinem Mentalen Zorn betroffen; der Effekt hält sogar an, solltest du den Wirkungsbereich verlassen oder den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Bewusstlos} erhalten.",
           "TelekineticHand": {
             "Base": "Du erzeugst eine Vielzahl telekinetischer Hände, welche eine Kreatur festhalten und umherbewegen. Wähle mit dem Verstärkten Zauber anstelle eines Gegenstandes eine maximal Mittelgroße Kreatur aus. Du versuchst, das Ziel in eine Richtung deiner Wahl @UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Fortzustoßen}, lege anstelle eines Wurfes für Athletik einen Zauberangriffswurf gegen den ZÄH-SG des Zieles ab. Die Kreatur erleidet bis zum Ende der Zauberwirkung einen Situationsmalus von -10 Fuß/3 m auf ihre Bewegungsraten. Wann immer du ab der nächsten Runde den Zauber in einer Runde erstmals aufrechterhältst, kannst du erneut versuchen, die Zielkreatur fortzustoßen.",
             "Heightened": "Du kannst versuchen, die Kreatur zu @UUID[Compendium.pf2e.actionspf2e.Item.Dt6B1slsBy8ipJu9]{Entwaffnen} statt @UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Fortzustoßen}. Solltest du ihr auf diese Weise einen Gegenstand aus der Hand schlagen, wird er sofort von der Telekinetischen Hand geschnappt. Der Zaubereffekt auf der Kreatur endet und der Zauber trägt nun den Gegenstand, als hättest du ihn mit einer nichtverstärkten Telekinetischen Hand aufgenommen."
@@ -5920,8 +5920,8 @@
         "MasterfulHunter": {
           "Flurry": "Solltest du über den Kompetenzgrad Meister im Umgang mit deiner Waffe verfügen, ist dein Malus für Mehrfachangriffe gegen deine Jagdbeute beim zweiten Angriff im Zug -2 (-1 mit einer agilen Waffe) und bei weiteren Angriffe -4 (-2 mit einer agilen Waffe).",
           "Label": "Meisterhafter Jäger",
-          "Outwit": "If you have master proficiency in Deception, Intimidation, Stealth, or the skill you use to Recall Knowledge about your prey, increase the circumstance bonus against the prey with that skill from +2 to +4. If you have master proficiency with your armor, increase the circumstance bonus to AC against the prey from +1 to +2.",
-          "Precision": "The second time in a round you hit your hunted prey, you also deal 1d8 precision damage. At 19th level, your second hit in a round against your hunted prey deals 2d8 precision damage, and your third hit in a round against your hunted prey deals 1d8 precision damage."
+          "Outwit": "Sofern du den Kompetenzgrad Meister in Einschüchtern, Heimlichkeit, Täuschung oder der Fertigkeit besitzt, die du nutzt, um Wissen über deine Jagdbeute abzurufen, steigt der Situationsbonus bei Nutzung der fraglichen Fertigkeit gegen deine Jagdbeute von +2 auf +4. Solltest du den Kompetenzgrad Meister im Umgang mit deiner Rüstung besitzen, so steigt der Situationsbonus auf deine RK gegen Angriffe der Jagdbeute von +1 auf +2.",
+          "Precision": "Wenn du deine Jagdbeute zum zweiten Mal in einer Runde triffst, fügst du ihm ebenfalls 1W8 Punkte Präzisionsschaden zu. Mit der 19. Stufe verursacht dein zweiter Treffer bei deiner Jagdbeute in derselben Runde 2W8 Punkte Präzisionsschaden und der dritte Treffer 1W8 Punkte Präzisionsschaden."
         },
         "SharedPrey": {
           "HuntPreyAddendum": "Solltest du die Handlung Jagdbeute nutzen und nur eine Jagdbeute wählen, so kannst du die Vorteile von Jagdbeute und deines Jägervorteils zusätzlich einem Verbündeten verleihen. Dieser behält diese Vorteile, bis du Jagdbeute erneut nutzt."
@@ -6070,7 +6070,7 @@
           "Prompt": "Wähle eine Schurkenkarriere."
         },
         "TheHarderTheyFall": {
-          "CriticalSuccess": "On a critical success, your target takes @Damage[1d6[bludgeoning],(((@actor.flags.system.sneakAttackDamage.number)d(@actor.flags.system.sneakAttackDamage.faces))[precision])[bludgeoning]] damage.",
+          "CriticalSuccess": "Bei einem Kritischen Erfolg erleidet dein Ziel @Damage[1d6[bludgeoning],(((@actor.flags.system.sneakAttackDamage.number)d(@actor.flags.system.sneakAttackDamage.faces))[precision])[bludgeoning]].",
           "Success": "Bei einem Erfolg erleidet dein Ziel @Damage[1d6[bludgeoning]]{1W6 Wuchtschaden}."
         },
         "TrainSkill": {
@@ -6125,10 +6125,10 @@
         }
       },
       "Seasons": {
-        "Fall": "Fall",
-        "Prompt": "Select the current season",
-        "Spring": "Spring",
-        "Summer": "Summer",
+        "Fall": "Herbst",
+        "Prompt": "Wähle die aktuelle Jahreszeit",
+        "Spring": "Frühling",
+        "Summer": "Sommer",
         "Winter": "Winter"
       },
       "ShadowSignet": {
@@ -6195,7 +6195,7 @@
             "Demonic": "Entweder erleidet ein Ziel für 1 Runde einen Zustandsmalus von -1 auf seine RK oder du erhältst für 1 Runde einen Zustandsbonus von +2 auf Fertigkeitswürfe für Einschüchtern.",
             "Diabolic": "Entweder erleidet ein Ziel 1 Punkt Feuerschaden pro Zaubergrad (@Damage[@item.level[fire]]; sollte der Zauber bereits Ausgangsfeuerschaden verursachen, so kombiniere dies mit dem Ausgangsschaden, ehe Schwächen und Resistenzen angerechnet werden) oder du erlangst 1 Runde lang einen Zustandsbonus von +2 auf Würfe für Täuschung.",
             "Draconic": "Du oder ein Ziel erhält für 1 Runde einen +1 Zustandsbonus auf die Rüstungsklasse",
-            "Elemental": "Either you gain a +2 status bonus to Intimidation checks for 1 round, or a target takes @Damage[@item.level[@actor.flags.system.elementalBloodline.damageType]] damage. If the spell already deals that type of damage, combine it with the spell's initial damage before determining weaknesses and resistances.",
+            "Elemental": "Entweder erhältst du 1 Runde lang einen Zustandsbonus von +1 auf Fertigkeitswürfe für Einschüchtern oder ein Ziel erleidet 1 Schadenspunkt pro Zaubergrad (@Damage[@item.level[@actor.flags.system.elementalBloodline.damageType]]). Sollte der Zauber bereits Schaden dieser Art verursachen, so kombiniere ihn mit dem Ausgangsschaden des Zaubers, ehe Schwächen und Resistenzen des Zieles zur Anwendung kommen.",
             "ExplosionOfPower": "Jede Kreatur in einer @Template[emanation|distance:5]{5 Fuß/1,50 m Ausstrahlung} erleidet @Damage[(@item.level)d6|options:explosion-of-power] (@Check[reflex|basic|against:spell]{einfacher Reflexwurf}).",
             "Fey": "Entweder erhältst du 1 Runde lang einen Zustandsbonus von +2 auf Würfe für Darbietung oder erhältst du 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Verborgen} (dies ist aber zu offenkundig, als dass du es zum @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa]{Verstecken} nutzen könntest)",
             "Genie": "Deine Zauberei verzerrt die Realität und lenkt deine Gegner ab. Du erlangst entweder einen Zustandsbonus von +1 auf Fertigkeitswürfe für Täuschung für 1 Runde oder ein Ziel erleidet einen Zustandsmalus von -1 auf Wahrnehmung für 1 Runde.",
@@ -6586,7 +6586,7 @@
         "EchoingChannel": "Wähle eine weitere Kreatur innerhalb der Reichweite des Zaubers. Diese Kreatur wird das Ziel der Version zu 1 Aktion desselben Zaubers mit demselben Grad wie die 2-Aktionen-Version, ohne dass dies einen weiteren Zauberplatz verbraucht.",
         "EnergyAblation": "Sollte deine nächste Handlung das Wirken eines Zaubers sein, der Schaden wenigstens einer Energiekategorie (Elektrizität, Feuer, Kälte, Kraft, Leben, Leere, Säure oder Schall) verursachen würde, erlangst du Resistenz gegen eine Energiekategorie deiner Wahl in Höhe des Zaubergrades (Minimum 1) bis zum Ende deines nächsten Zuges. Du erlangst die Resistenz unabhängig davon, ob deine Zauber Schaden verursacht oder nicht.",
         "EnergyFusion": "Wähle einen Zauber, der nicht der Kategorie Zaubertrick angehört und eine andere Energieschadensart verursacht, aus deinem Zauberrepertoire und wende einen weiteren Zauberplatz passend zum Grad dieses Sekundärzaubers auf. Der gewirkte Zauber verursacht zusätzlichen Schaden in Höhe des Grades des für den Sekundärzauber genutzten Zauberplatzes. Der Gesamtschaden wird gleichmäßig zwischen der Schadensart des gewirkten Zaubers und der des Sekundärzaubers aufgeteilt.",
-        "ExplosiveArrival": "All creatures in a @Template[emanation|distance:10] around the creature you summoned take @Damage[(@item.level)d4[@actor.flags.system.spellshape.explosiveArrivalDamage]|options:area-damage] damage. If the creature summoned has the acid, cold, electricity, sonic, or spirit trait, you can deal damage of that type instead.",
+        "ExplosiveArrival": "Alle Kreaturen innerhalb von @Template[emanation|distance:10]{10 Fuß/3 m} um die von dir beschworene Kreatur erleiden 1W4 Feuerschaden pro Zaubergrad. Sollte die beschworene Kreatur die Kategorie Elektrizität, Geist, Kälte, Säure oder Schall besitzen, so kannst du stattdessen Schaden dieser Art verursachen (@Damage[(@item.level)d4[@actor.flags.system.spellshape.explosiveArrivalDamage]|options:area-damage]).",
         "FamiliarsResolve": "Wenn du als nächste Aktion einen Zauber wirkst, erhältst du oder ein Verbündeter im Umkreis von 30 Fuß/9 m einen Zustandsbonus von +2 auf Rettungswürfe gegen Effekte, die dir den Zustand Todgeweiht oder Verängstigt geben würden. Auf Stufe 14 erhältst du oder ein Verbündeter stattdessen einen Zustandsbonus von +3 auf Rettungswürfe gegen solche Effekte. @UUID[Compendium.pf2e.feat-effects.Item.6I4qWkHzxj4MAt6g]{Effekt: Entschlossenheit des Vertrauten}",
         "ForcibleEnergy": "Sollte deine nächste Handlung das Wirken eines Zaubers sein, der Elektrizitäts-, Feuer-, Säure- oder Schallschaden verursacht, kannst du ein Ziel wählen, so es Schaden erleidet. Dieses Ziel erhält Schwäche 5 gegen diese Schadensart bis zum Ende deines nächsten Zuges. Sollte ein Zauber mehrere Arten von Energieschaden verursachen, so wähle eine davon, gegen die das Ziel Schwäche erleidet. Dies hat keinen Effekt auf Kreaturen mit Resistenz oder Immunität gegen die gewählte Schadensart. @UUID[Compendium.pf2e.feat-effects.Item.0Ai0u9kNJrEudPnN]{Effekt: Nachhallende Energie}",
         "FormControl": "Der effektive Zaubergrad des Zaubers ist um 2 niedriger als normal (Minimum 1. Grad), dafür kannst du die Verwandlung bis zu 1 Stunde aufrechterhalten, sofern dies länger ist als die aufgeführte Wirkungsdauer. Du kannst den Effekt immer noch jederzeit Aufheben, sofern es der Zauber gestattet.",
@@ -6613,8 +6613,8 @@
         "Martyr": "Du verlierst pro Zaubergrad 1W8 TP (dies kann nicht reduziert oder anderweitig abgefangen werden) und dein Verbündeter erlangt dieselbe Anzahl an Trefferpunkten zusätzlich zurück (@Damage[(@item.rank)d8]).",
         "MelodiousSpell": "Der Zauber erhält die Kategorie Subtil. Diese Kategorie verbirgt nur die Handlung des Zauberns selbst und die Manifestationen, nicht aber die Effekte des Zaubers. Du kannst wählen, als Teil dieser Aktion @UUID[Compendium.pf2e.actionspf2e.Item.GkmbTGfg8KcgynOA]{Für Ablenkung zu sorgen}, zu @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralisieren}, zu @UUID[Compendium.pf2e.actionspf2e.Item.DCb62iCBrJXy0Ik6]{Erbitten} oder einen @UUID[Compendium.pf2e.actionspf2e.Item.EEDElIyin4z60PXx]{Auftritt} auszuführen. In diesem Fall muss der folgende Zauber über die Kategorie Gefühl, Hörbar, Schall oder Sichtbar verfügen, um die Kategorie Subtil erhalten zu können.",
         "NonLethal": "Solltest du als nächste Handlung einen Zauber wirken, welcher Schaden verursacht und nicht die Kategorie Leere oder Tod besitzt, so erhält dieser Zauber die Kategorie Nichttödlich.",
-        "OstentatiousArrivalManifestEidolon": "All creatures except you in a @Template[type:emanation|distance:10] around the creature you summoned or manifested take @Damage[(@actor.level)d4[@actor.flags.system.spellshape.arrivalDamage]|options:area-damage]. If the creature you summoned or manifested has the acid, cold, electricity, fire, sonic, or water trait, the damage is that type instead (or cold damage for the water trait). If the creature has more than one of these traits, you choose which damage type to deal.",
-        "OstentatiousArrivalSummonSpell": "All creatures in a @Template[type:emanation|distance:10] around the creature you summoned or manifested take @Damage[(@item.level)d4[@actor.flags.system.spellshape.arrivalDamage]|options:area-damage] damage. If the creature you summoned or manifested has the acid, cold, electricity, fire, sonic, or water trait, the damage is that type instead (or cold damage for the water trait). If the creature has more than one of these traits, you choose which damage type to deal.",
+        "OstentatiousArrivalManifestEidolon": "Alle Kreaturen außer dir innerhalb einer @Template[emanation|distance:10]{10 Fuß/3 m Ausstrahlung} um die herbeigezauberte oder manifestierte Kreatur erleiden Feuerschaden. Sollte die herbeigezauberte oder manifestierte Kreatur die Kategorie Elektrizität, Feuer, Kälte, Schall oder Wasser besitzen, so entspricht die Schadensart stattdessen dieser Kategorie (bzw. Kälteschaden bei der Kategorie Wasser). Sollte die Kreaturen mehreren dieser Kategorien angehören, entscheidest du, welchen Schaden sie verursacht. (@Damage[(@actor.level)d4[@actor.flags.system.spellshape.arrivalDamage]|options:area-damage])",
+        "OstentatiousArrivalSummonSpell": "Alle Kreaturen innerhalb einer @Template[emanation|distance:10]{10 Fuß/3 m Ausstrahlung} um die herbeigezauberte oder manifestierte Kreatur erleiden Feuerschaden. Sollte die herbeigezauberte oder manifestierte Kreatur die Kategorie Elektrizität, Feuer, Kälte, Schall oder Wasser besitzen, so entspricht die Schadensart stattdessen dieser Kategorie (bzw. Kälteschaden bei der Kategorie Wasser). Sollte die Kreaturen mehreren dieser Kategorien angehören, entscheidest du, welchen Schaden sie verursacht. (@Damage[(@item.level)d4[@actor.flags.system.spellshape.arrivalDamage]|options:area-damage])",
         "OverwhelmingBreath": "Wirkst du als nächste Handlung einen Zauber der Kategorie Mönch, welcher keine Wirkungsdauer besitzt, so ignorieren der Zauber und alle Angriffe, die du durch ihn ausführen kannst, beim Ziel Resistenz gegen Körperlichen Schaden in Höhe deiner Stufe.",
         "OverwhelmingEnergy": "Sofern deine nächste Handlung das Wirken eines Zaubers ist, ignoriert dieser Zauber beim Ziel Resistenz gegen Elektrizität, Feuer, Kälte, Säure oder Schall in Höhe deiner Stufe. Dies gilt für sämtlichen Schaden, den der Zauber generiert, Anhaltenden Schaden und Schaden aufgrund eines anhaltenden Effektes des Zaubers eingeschlossen, z.B. die Wand, welche eine @UUID[Compendium.pf2e.spells-srd.Item.IarZrgCeaiUqOuRu]{Feuerwand} erzeugt. Immunitäten einer Kreatur sind hiervon nicht betroffen.",
         "PitchPerfectProjection": "If your next action this round is to Cast a Spell or use an action that creates an auditory effect with a range, increase that range by 30 feet.",
@@ -6627,7 +6627,7 @@
         "RockslideSpell": "Der Zauber wandelt innerhalb des Wirkungsbereiches eine Anzahl 5 Fuß/1,50 m-Felder entsprechend des Zaubergrads zu Schwierigem Gelände um. Diese Felder müssen sich auf der Erdoberfläche befinden. Der Zauber erhält die Kategorie Erde.",
         "SafeguardSpell": "Solltest du als nächste Handlung einen Zauber mit einem Flächeneffekt wirken, so bist du von dem Zauber nicht betroffen, selbst wenn du dich in seinem Wirkungsbereich befindest.",
         "ScintillatingSpell": "Sofern du als nächste Handlung einen Zauber wirkst, der nicht die Kategorie Dunkel besitzt, über keine Wirkungsdauer verfügt und von Kreaturen einen Reflexwurf verlangt, explodiert der Zauber in strahlenden Lichtern neben seinen sonstigen Effekten. Jede Kreatur, deren Reflexwurf misslingt, erhält 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet} (bzw. 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind} im Fall eines Kritischen Fehlschlages).",
-        "SecondaryDetonationArray": "If your next action is to Cast a Spell that deals damage, has no duration, and affects an area, a glowing magic circle appears in a @Template[burst|distance:5] within that area. At the beginning of your next turn, the circle detonates, dealing @Damage[(@item.level)d6[force]|options:area-damage] damage to all creatures within the circle, with a @Check[reflex|against:spell|options:area-effect,damaging-effect]. If the spell dealt a different type of damage, the circle deals @Damage[(@item.level)d6[@actor.flags.system.spellshape.arrayDamage]|options:area-damage]{this type of damage instead} (or one type of your choice if the spell could deal multiple types of damage)",
+        "SecondaryDetonationArray": "Sofern du als nächste Handlung einen Zauber wirkst, der Schaden verursacht, keine Wirkungsdauer besitzt und auf eine Fläche einwirkt, erscheint innerhalb des Wirkungsbereiches ein Kreis aus glühenden Runen in einer @Template[burst|distance:5]{5 Fuß/1,50 m Explosion}. Zu Beginn deines nächsten Zuges explodiert der Kreis und fügt jeder Kreatur innerhalb des Kreises 1W6 Kraftschaden (@Damage[(@item.level)d6[force]|options:area-damage]) pro Grad des Zaubers zu (@Check[reflex|against:spell|options:area-effect,damaging-effect]{einfacher Reflexwurf} gegen deinen Zauber-SG). Sollte der Zauber eine andere Art von Schaden verursachen, so verursacht die Explosion stattdessen diese Schadensart (@Damage[(@item.level)d6[@actor.flags.system.spellshape.arrayDamage]|options:area-damage], oder eine der verursachten Schadensarten nach deiner Wahl, sollte der Zauber mehrere Schadensarten verursachen können).",
         "SeneschalSpell": "Sofern du als nächste Handlung einen Zauber wirkst und dein Schützling nicht weiter als 30 Fuß/9 m entfernt ist, kannst du den Zauber stattdessen von deinem Schützling ausgehen lassen. Diese Kreatur kann ihre Reaktion nutzen, um grob die Anrufungen des Zaubers zu vollenden, wodurch der Zauber dich betreffend die Kategorie Subtil erlangt (aber nicht für deinen Schützling), da die Manifestation allein um deinen Schützling herum erscheint.",
         "SinbladedSpell": "Wenn du bei deinem Angriffswurf erfolgreich warst, oder das Ziel einen Fehlschlag bei seinem Rettungswurf hatte, verursachst du zusätzlichen Anhaltenden Blutungsschaden (@Damage[(@item.rank)[bleed]]).",
         "SnowdriftSpell": "Wähle eine Kreatur am Boden, die von dem Zauber betroffen ist. Jedes Feld am Boden unter und angrenzend zu dieser Kreatur füllt sich mit knöchelhohem Schnee. Diese Felder sind bis zum Beginn deines nächsten Zuges Schwieriges Gelände. Eine Kreatur kann Interagieren nutzen, um ein Feld vom Schnee zu räumen. Der Schnee in einem Feld schmilzt, sollte das Feld einem Feuereffekt ausgesetzt werden.",
@@ -6815,7 +6815,7 @@
           "Basic": "Grundlegend",
           "Bleeding": "Blutend",
           "Confident": "Zuversichtlich",
-          "ConfidentNote": "You deal half your @Damage[((@actor.flags.system.swashbuckler.preciseStrike)d6[precision])[@item.system.damage.damageType]]{Precise Strike damage} to the target. This damage type is that of the weapon or unarmed attack you used for the Strike.",
+          "ConfidentNote": "Du fügst dem Ziel die Hälfte deines Präzisionsschadens (@Damage[((@actor.flags.system.swashbuckler.preciseStrike)d6[precision])[@item.system.damage.damageType]]) zu. Dieser Schaden hat die Kategorie des Schadens der verwendeten Waffe oder des verwendeten Waffenlosen Angriffs.",
           "Dual": "Doppel",
           "DualSecondAttackLabel": "Doppelabschluss - Zweiter Angriff",
           "Impaling": "Durchbohrend",
@@ -6823,7 +6823,7 @@
           "Lethal": "Tödlich",
           "Mobile": "Mobil",
           "Perfect": "Perfekt",
-          "PreciseNote": "On a failure, you apply your @Damage[((@actor.flags.system.swashbuckler.preciseStrike)d6[precision])[@item.system.damage.damageType]]{full precise strike damage} instead of half.",
+          "PreciseNote": "Bei einem Fehlschlag mit Zuversichtlicher Abschluss fügst du deinen vollständigen Präzisionsschaden zu statt nur der Hälfte (@Damage[((@actor.flags.system.swashbuckler.preciseStrike)d6[precision])[@item.system.damage.damageType]]).",
           "Retreating": "Rückzug",
           "RetreatingNote": "Du kannst als freie Aktion einen Schritt machen",
           "Revitalizing": "Belebend",
