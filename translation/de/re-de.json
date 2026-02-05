@@ -2593,7 +2593,7 @@
         }
       },
       "ArtokussFire": {
-        "Note": "Das Alchemistenfeuer verursacht 1W4 Punkte Anhaltenden Feuerschaden zusätzlich zu dem, was das Alchemistenfeuer normalerweise verursachen würde. Eine Kreatur, die durch das Alchemistenfeuer Anhaltenden Feuerschaden erleidet, benötigt zwei erfolgreiche Einfache Würfe, um den Anhaltenden Schaden zu beenden, oder einen Wurf, wenn die Kreatur Unterstützung bei der Bekämpfung hatte, die den SG des Wurfes auf 10 reduziert."
+        "Note": "Your Alchemist's Fire deals an additional 1d4 persistent fire damage, and creatures must make two successful flat checks to end the condition (or one check, if they had assisted recovery that reduces the flat check to DC 10). Your enhanced fire burns underwater, and water does not help to end the persistent damage."
       },
       "AscendedCelestial": {
         "AegisForTheInnocent": {
@@ -3180,6 +3180,9 @@
           "investigator": {
             "Description": "Du bist körperlich sehr abgehärtet. Dein Kompetenzgrad für Zähigkeitswürfe steigt auf Experte."
           },
+          "psychic": {
+            "Description": "Your mind holds your body to a subconscious mental image of yourself. Your proficiency rank for Fortitude saves increases to expert."
+          },
           "swashbuckler": {
             "Description": "Du bist körperlich sehr abgehärtet. Dein Kompetenzgrad für Zähigkeitswürfe steigt auf Experte."
           }
@@ -3371,6 +3374,9 @@
           },
           "swashbuckler": {
             "Description": "Du widmest dich den Feinheiten deiner Waffen. Dein Kompetenzgrad im Umgang mit Einfachen, Kriegswaffen und Waffenlosen Angriffen steigt auf Experte. Du erlangst Zugang zu den Kritischen Spezialisierungseffekten aller Waffen, mit denen du den Kompetenzgrad Experte hast."
+          },
+          "thaumaturge": {
+            "Description": "You've learned the secret ways your weapons work most effectively. Your proficiency ranks for unarmed attacks, simple weapons, and martial weapons increase to expert."
           },
           "witch": {
             "Description": "Allein durch Erfahrung hast du dich im Führen deiner Waffen verbessert. Dein Kompetenzgrad im Umgang mit Einfachen Waffen und Waffenlosen Angriffen steigt auf Experte."
@@ -3824,6 +3830,12 @@
         }
       },
       "Elementalist": {
+        "Sorcerer": {
+          "ElementalFocusPrompt": {
+            "Advanced": "Replace your advanced bloodline spell with the advanced elemental focus spell?",
+            "Initial": "Replace your initial bloodline spell with the initial elemental focus spell?"
+          }
+        },
         "Wizard": {
           "ElementalSchool": {
             "Prompt": "Wähle welchem Element deine Elementare Schule folgt."
@@ -5735,7 +5747,7 @@
               "Title": "Beschützen"
             },
             "Push": {
-              "Text": "(Offensiv) Die Waffe versucht, das Ziel zu @UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Stoßen}; dabei nutzt sie deinen Zauberangriffswurf anstelle eines Fertigkeitswurfes für Athletik.",
+              "Text": "(attack) The weapon attempts to Push its target, using your spell attack modifier instead of an Athletics check to determine the results of the Push.",
               "Title": "Stoßen"
             }
           },
@@ -5744,12 +5756,12 @@
             "Heightened": "Der Schaden des Zaubers steigt auf 2W10 und die Schwäche im Fall eines Fehlschlages oder Kritischen Fehlschlages steigt um 1."
           },
           "DetectMagic": {
-            "Base": "Dein Impuls wahrnehmender Magie hilft dir dabei, ein Gespür für die Stärken oder Schwächen naher Magie zu erlangen. Nimmst du die Präsenz von Magie bei einem Gegner oder einer Gefahr wahr, erlangst du einen Zustandsbonus von +1 auf Rettungswürfe gegen von diesem Gegner oder dieser Gefahr ausgehender Magie für 3 Runden. Stößt du bei einem Wirken von Magie entdecken auf Magie aus mehreren Quellen, so erlangst du den Bonus gegen alle.",
+            "Base": "Your pulse of detection magic helps you gain a sense of nearby magic's strengths or weaknesses. When you detect the presence of magic on an enemy or hazard, you gain a +1 status bonus to saves against magic originating from that enemy or hazard for 3 rounds. If you find magic from multiple sources with a single casting of _detect magic_, you get the bonus against all of them.",
             "Heightened": "Der Zustandsbonus auf Rettungswürfe gegen Magie steigt auf +2."
           },
-          "DistortionLens": "Die Linse stört Kreaturen und Angriffe. Während der Bewegungsaktion eines maximal Mittelgroßen Verbündeten kann dieser sich einmal durch das Feld der Linse bewegen, ohne dass dieses Feld gegen die zurückgelegte Gesamtentfernung zählt. Für deine Gegner zählt das Feld der Linse dagegen als Schwieriges Gelände.",
+          "DistortionLens": "You can lock the lens in place, allowing it to affect creatures more strongly. The duration of the spell becomes 1 minute, but you cannot Sustain the spell to reposition the lens. Once during a Medium or smaller ally's move action, the ally can move into and out of the lens's area without those spaces counting against the total distance moved. Conversely, the lens is difficult terrain for your enemies.",
           "EntropicWheel": "Du erlangst zwei Funken statt eines Funkens, wenn du den Zauber wirkst und wann immer das Rad einen weiteren Funken erhält.",
-          "Figment": "Wenn du den Zauber verstärkst, kannst du als Teil seiner normalen Effekte eine besonders ablenkende Illusion erzeugen. Wähle ein freies Feld innerhalb der Reichweite des Zaubers. Die Illusion in diesem Feld flankiert für einen einzelnen Nahkampfangriff, der vor Beginn deines nächsten Zuges ausgeführt wird. Wenn du den Zauber Aufrechterhältst, verändern und verschieben sich die Details der Illusion, um deine Feinde zu verunsichern; die Dauer der flankierenden Illusion verlängert sich bis zum Beginn deines nächsten Zuges und du kannst sie auf ein beliebiges freies Feld innerhalb der Reichweite des Zaubers bewegen. Die flankierende Illusion wirkt nicht gegen eine Kreatur, die dem Hirngespinst nicht geglaubt hat.",
+          "Figment": "When you amp the spell, you can create a particularly distracting illusion as part of its normal effects. Choose an unoccupied square within the spell's range. The illusion in that square provides flanking for a single melee attack made before the beginning of your next turn. If you Sustain the spell, the details of the illusion change and shift to keep your enemies unsettled; the flanking illusion's duration extends until the beginning of your next turn and you can move it to any unoccupied square in the spell's range. The flanking illusion can't provide its benefit against any creature who has disbelieved the _figment_.",
           "ForbiddenThought": "Der Kontakt mit deiner mentalen Sperre ist besonders unangenehm; misslingt dem Ziel der Willenswurf, erhält es zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1}.",
           "ForeseeThePath": "Sollte der beim Zauber erforderliche Wahrnehmungswurf einen Fehlschlag ergeben, so zählt er als Erfolg (ein Kritischer Fehlschlag ist davon nicht betroffen). Wenn du den Zauber aufrechterhältst, kannst du einen weiteren Verbündeten als Ziel wählen, der denselben Vorteil wie der erste ausgewählte Verbündete erhält.",
           "Frostbite": {
@@ -5757,7 +5769,7 @@
             "Heightened": "Der Ausgangsschaden steigt um 2W4 statt um 1W4 und die Schwäche bei einem Kritischen Fehlschlag erhöht sich um 1."
           },
           "GhostlyShift": {
-            "Base": "Du wirst derart körperlos, dass du dich durch andere Kreaturen bewegen kannst, was schmerzhafte Interferenzen verursacht. Du kannst einmal pro Runde im Rahmen von Laufen, Fliegen, Graben oder Schwimmen das Feld einer anderen Kreatur durchqueren, ohne einen Fertigkeitswurf zum @UUID[Compendium.pf2e.actionspf2e.Item.21WIfSu7Xd7uKqV8]{Hindurchturnen} abzulegen; du kannst deine Bewegung aber nicht in diesem Feld beenden. Wenn du auf diese Weise das Feld einer Kreatur durchquerst, fügst du ihr 2W6 Punkte Kraftschaden zu (einfacher Zähigkeitswurf).",
+            "Base": "Your insubstantiality is complete enough that you can pass through other creatures, causing painful interference effects when you do so. Once each round when you Stride, Burrow, Swim, or Fly, you can pass through one creature's space during that action without needing to attempt a check to @UUID[Compendium.pf2e.actionspf2e.Item.21WIfSu7Xd7uKqV8]{Tumble Through}, though you can't end your turn in its space. When you pass through a creature's space in this way, you deal 2d6 force damage to that creature, with a @Check[fortitude|basic] save.",
             "Heightened": "Der Schaden, den du einer Kreatur beim Durchqueren ihres Feldes zufügst, steigt um 1W6."
           },
           "GlimpseWeakness": {
@@ -5765,42 +5777,42 @@
             "Heightened": "Der zusätzliche Präzisionsschaden steigt um 1W4+1."
           },
           "Guidance": {
-            "Base": "Du kannst deinen Verbündeten eine Einsicht zukommen lassen, um sie im genau richtigen Moment vor dem Versagen zu retten. Die Verstärkung sorgt dafür, dass eine Kreatur nicht vorübergehend gegen Göttliche Führung immun wird; selbst wenn eine Kreatur vorübergehend gegen den Zauber Göttliche Führung immun ist, kann man Verstärkte Göttliche Führung auf sie wirken.",
-            "BaseTwo": "Du kannst Verstärkte Göttliche Führung als Reaktion wirken; der Auslöser ist ein Fehlschlag oder Kritischer Fehlschlag, der deinem Verbündeten bei einem Angriffs-, Wahrnehmungs-, Rettungs- oder Fertigkeitswurf unterläuft, sofern der Bonus des Zaubers aus dem Fehlschlag einen Erfolg oder einem Kritischen Fehlschlag einen normalen Fehlschlag macht. Der Bonus von Göttliche Führung wirkt retroaktiv auf den auslösenden Wurf.",
+            "Base": "You can project a flash of insight to your ally in the nick of time to save them from failure. Amped _guidance_ doesn't cause a creature to become temporarily immune to _guidance_, and a creature can be targeted by amped _guidance_ even if it is temporarily immune to _guidance_.",
+            "BaseTwo": "You can cast an amped _guidance_ spell as a reaction triggered when your ally fails or critically fails an attack roll, Perception check, saving throw, or skill check, and the bonus from _guidance_ would change the failure to a success or the critical failure to a normal failure. The bonus from _guidance_ applies retroactively to their check.",
             "Heightened": "Der Bonus aus dem Zauber steigt auf +2."
           },
           "HologramCage": "Energiewände machen die Käfigseiten körperlich statt nur sichtbar. Jeder 10x10 Fuß/3x3 m-Abschnitt an Käfigwand besitzt RK 10, Härte in Höhe des doppelten Zaubergrades und TP in Höhe des vierfachen Zaubergrades. Der Zauber wird unterbrochen, sollte beim Wirken eine der Wände durch eine Kreatur hindurchlaufen.",
           "HomingBeacon": "Wähle eine von dem Zauber getroffene Kreatur (sofern er einen Zauberangriffswurf erfordert) oder eine Kreatur aus, deren Rettungswurf misslungen ist (so der Zauber einen Rettungswurf erfordert). Von der Position der Kreatur geht ein Peilsignal aus, welches das Bemerken der Kreatur erleichtert, da die Aufmerksamkeit von Betrachtern subtil auf das Ziel gelenkt wird. Für die nächste Minute gilt: Sollte das Ziel den Zustand @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Unsichtbar} besitzen, gilt es nur als @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Verborgen}, und sollte es den Zustand Verborgen besitzen, ist es nicht länger Verborgen.",
           "Ignition": {
-            "Base": "Du projizierst reine Hitze, die ein Ziel zur Selbstentzündung bringt. Der Ausgangsschaden wird zu 1W10 Punkte Feuerschaden plus 1 Punkt Feuerflächenschaden. Nutzt du einen Verstärkten Entzünden als Nahkampfangriff, so erhöhe den Schadenswürfel des Ausgangsschadens von W10 auf W12. Du erleidest keinen Schaden durch den Flächenschaden des Verstärkten Entzünden.",
-            "Heightened": "Anstelle des normalen Eintrages für Erhöht nutze folgende Modifikationen: Der Ausgangsschaden steigt um 1W10 (1W12 für Nahkampf) und der Flächenschaden steigt um 1 Punkt. Bei einem Kritischen Treffer steigt der Anhaltende Feuerschaden um 1W4 Punkte."
+            "Base": "You project pure heat that causes a target to combust. The initial damage changes to 1d10 fire damage plus 1 fire splash damage. When using amped _ignition_ as a melee attack, increase the damage dice of the initial damage from d10s to d12s. You are not harmed by splash damage from amped _ignition_.",
+            "Heightened": "Instead of using _ignition_'s normal heightened entry, the initial damage increases by 1d10 (1d12 for melee) and the splash damage increases by 1. The persistent fire damage on a critical hit increases by 1d4."
           },
           "ImaginaryWeapon": {
-            "Base": "Du bildest mehrere Waffen aus kinetischer Energie aus, um mehrere Gegner zu attackieren. Führe zwei Imaginäre-Waffe-Angriffe aus, die gegen verschiedene Ziele erfolgen müssen. Dein Malus für Mehrfachangriffe steigt erst nach dem zweiten Angriff.",
-            "Heightened": "Der Schaden steigt um 2W8 statt 1W8."
+            "Base": "You form multiple force weapons to lash out at multiple foes. You can target two creatures, making an attack against each. These attacks each increase your multiple attack penalty, but you don't increase your multiple attack penalty until after you make all the spell attack rolls.",
+            "Heightened": "The damage increases by 2d6 instead of 1d6."
           },
           "InertialBarrier": "Du oder ein Ziel des Zaubers erhalten Resistenz gegen körperlichen Schaden in Höhe des Zaubergrades +2 bis zum Beginn deines nächsten Zuges.",
           "MentalBalm": "Du oder ein maximal 30 Fuß/9 m entfernter Verbündeter erhalten einen Zustandsbonus von +2 auf Willenswürfe gegen Gefühlseffekte für 1 Minute. Du kannst zudem mit dem Verstärkten Mentalen Zaubertrick versuchen, einem Effekt entgegenzuwirken, welcher dir oder dem gewählten Verbündeten den Zustand Verängstigt auferlegt, oder einem Effekt, der den Zustand Benommen mit maximal einer Wirkungsdauer von 1 Stunde auferlegt. Ein erfolgreiches Entgegenwirken hebt dabei nur die Zustände Benommen und Verängstigt auf, keine anderen Teile des Effektes.",
           "Message": {
             "Base": "Deine telepathische Nachricht gestattet dir, eure Handlungen zu koordinieren, während du Informationen weitergibst. Das Ziel der Botschaft kann augenblicklich seine Reaktion für Laufen oder Schritt nutzen.",
-            "Heightened": "Das Ziel der Botschaft kann als Reaktion alternativ Angriff, @UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Fortstoßen} oder @UUID[Compendium.pf2e.actionspf2e.Item.ge56Lu1xXVFYUnLP]{Zu Fall bringen} wählen."
+            "Heightened": "The target of the message can choose to [[/act shove]], Strike, or [[/act trip]] with its reaction instead."
           },
           "MindsLightCirclet": "Du transferierst etwas vom magischen Leuchten des Stirnreifs des Mentalen Lichts auf eine der Kreaturen. Wähle eine Kreatur aus, die Ziel des Zaubers oder des Wirkungsbereichs ist. Bis zum Beginn deiner nächsten Runde verströmt das Ziel Helles Licht in einem Radius von 20 Fuß/6 m (und Dämmerlicht in den nächsten 20 Fuß/6 m) und kann nicht den Zustand @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Verborgen} erhalten. Wenn die Kreatur den Zustand @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Unsichtbar} hat, besitzt sie statt des Zustands @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Unentdeckt} den Zustand Verborgen.",
           "OmnidirectionalScan": {
             "Base": "Deine Beobachtungen sind so genau, dass du die wahrscheinlichen Stärken und Schwächen deines Gegners weitergeben kannst. Du erfährst den höchsten und den niedrigsten Rettungswurf des ausgewählten Gegners und du und alle deine Verbündeten innerhalb von 30 Fuß/9 m erhalten einen Situationsbonus von +1 auf Angriffs- und Schadenswürfe gegen die Kreatur.",
-            "BaseTwo": "Nutzt du die vorbereitete Reaktion zum Unterstützen und gelingt dein Wurf, so steigen diese Boni bei dem von dir unterstützten Angriff auf +2. Im Fall eines Kritischen Erfolges steigt der Bonus auf +3, bzw. auf +4, solltest du in Zauberangriffswürfen den Kompetenzgrad Legendär besitzen."
+            "BaseTwo": "If you take the Aid reaction you prepared for and succeed at your roll, these bonuses increase to +2 on the attack you're Aiding. On a critical success, they increase to +3, or to +4 if you have legendary proficiency in spell attack modifier."
           },
           "PhaseBolt": {
-            "Base": "Dein Geschoss wird vollständig ätherisch und damit unsichtbar und unberührbar, bis es sich in sein Ziel bohrt, ganz als würde es sich einfach dorthin teleportieren. Das Ziel besitzt gegen den Angriff den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß}. Das Geschoss ignoriert zudem Härte oder Resistenz gegen Stichschaden in Höhe des halben Zaubergrades. Bei einem Kritischen Erfolg kann das Ziel bis zum Beginn deines nächsten Zuges nicht von Teleportationseffekten betroffen werden.",
+            "Base": "Your bolt leaves phase completely, becoming invisible and intangible until it's already embedded in the target—giving the impression it simply teleported itself into place. The target is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against the attack. Additionally, the bolt ignores an amount of Hardness or resistance to piercing damage equal to half the spell's rank. On a critical success, the target can't be affected by teleportation effects until the start of your next turn.",
             "Heightened": "Der Schaden des Geschosses steigt um 2W4 statt 1W4."
           },
           "RedistributePotential": {
             "Base": "Du kannst den Energiefluss in weitaus größerem Maßstab betreffen. Statt zwei Felder mit jeweils 5 Fuß/1,50 m Seitenlänge erzeugst du zwei @Template[burst|distance:10]{10 Fuß/3 m-Explosionen}. Diese müssen immer noch zueinander angrenzen und können sich überlappen. Eine Kreatur in beiden Bereichen wird immer noch nur von einem betroffen (deine Wahl). Der Schaden steigt auf 6W6 Punkte. Die Zustände währen 1 Minute lang.",
             "Heightened": "Erhöhe den Schaden um 2W6 statt um 1W4."
           },
-          "RemovePresence": "Wähle ein Ziel des Zaubers oder eine Kreatur im Wirkungsbereich des Zaubers. Wird dieser Gegner vom Zauber getroffen, bzw. misslingt sein Rettungswurf, erhältst du ihm gegenüber den Zustand Unentdeckt und verschwindest für 1 Minute aus seiner Sinneswahrnehmung, sofern du nicht vorher eine feindselige Handlung ausführst. Diese ähnelt @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Unsichtbar}, allerdings enthüllen dich Effekte wie Unsichtbares wahrnehmen nicht - du beeinflusst den Verstand des Zieles, nicht seine Sicht. Wahre Sicht kann diese Illusion durchschauen, sofern der Wurf zum Entgegenwirken gelingt.",
-          "ShatterMind": "Du erhöhst den Wirkungsbereich zu einem @Template[cone|distance:30]{30 Fuß/9 m-Kegel} oder einen @Template[cone|distance:60]{60 Fuß/18 m-Kegel} (deine Wahl) und der Schadenswürfel des Zaubers verändert sich zu W10. Misslingt einer Kreatur der Rettungswurf, erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 1} bis zum Beginn deines nächsten Zuges (bzw. @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 2} im Fall eines Kritischen Fehlschlages).",
-          "ShatterSpace": "Du oder das Ziel des Zaubers werden von einer Spirale aus zerrissener Realität umgeben. Dies ist eine Aura; wähle den Radius der Ausstrahlung (maximal 20 Fuß/6 m). Beginnt eine Kreatur ihren Zug in der Aura oder betritt sie die Aura während ihres Zuges, erleidet sie 1W6 Punkte Hiebschaden pro Grad des Verstärkten Mentalen Zaubertricks (@Damage[(@item.level)d6[slashing]|options:area-damage], @Check[reflex|against:occult|basic|options:area-effect,inflicts:prone]{einfacher Reflexwurf} gegen deinen Zauber-SG). Im Fall eines Kritischen Fehlschlages verliert die Kreatur das Gleichgewicht, stürzt und erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}. Die Aura währt bis zum Beginn deines nächsten Zuges. Du entscheidest, ob die von dir als Zentrum der Aura bestimmte Kreatur (also du oder das Ziel des Zaubers) von ihr betroffen wird.",
+          "RemovePresence": "Choose one target of the spell or one creature in its area. If that enemy fails its save or the spell hits it, you become undetected by that creature, disappearing from its senses for 1 minute or until you use a hostile action. This is similar to being @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Invisible}, but effects like see the unseen don't reveal you—you're affecting the target's mind, not its vision. _Truesight_ can still see through this illusion if the counteract check succeeds.",
+          "ShatterMind": "You increase the area of the spell to a @Template[cone|distance:30] or @Template[cone|distance:60], and the damage dice for the spell change to d10s. Creatures that fail are @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} until the start of your next turn (or @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2} on a critical failure).",
+          "ShatterSpace": "You or one target of the spell are surrounded by a spiral of torn space. This is an aura, and you choose the radius of the emanation, up to 20 feet. A creature that starts its turn in the aura or enters the aura during its turn takes @Damage[(@item.level)d6[slashing]|options:area-damage] damage for every rank of the amped psi cantrip, with a @Check[reflex|basic|options:area-effect] save against your spell DC. If the creature critically fails, the torn space throws it off balance and it falls @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}. The aura lasts until the beginning of your next turn. You can choose whether the aura affects the creature emitting it.",
           "Shield": {
             "Base": "Du erschaffst eine gestaffelte Barriere aus drei Schildeffekten, um deine Verteidigung zu verbessern. Die Wirkungsdauer steigt auf Bis zu 1 Minute aufrechterhaltbar. Der Schild senkt sich immer noch zu Beginn jedes deiner Züge, du kannst ihn aber wieder heben, wenn du den Zauber aufrechterhältst.",
             "BaseTwo": "Nutzt du mit diesem Zauber Schildblock, zerbricht zwar einer der Schildeffekte und verlierst du den Bonus auf die RK, endet die Wirkungsdauer aber nicht. Du kannst den Zauber weiterhin nutzen, bis auch der dritte Schildeffekt deiner Barriere zerbricht; in diesem Moment endet die Wirkungsdauer und kannst du 10 Minuten lang diesen Zauber weder in der normalen, noch in der Verstärken Version nutzen. Nutzt du die Schildblockoption des Zaubers, kannst du wählen, weitere Schildeffekte zu opfern, um deine Verteidigung zu verbessern. Solltest du neben dem ohnehin zerbrechenden Effekt einen weiteren opfern, steigt die Härte auf 150% des Normalen (7 mit dem 1. Grad, 15 mit dem 3. Grad, 22 mit dem 5. Grad, 30 mit dem 7. Grad und 37 mit dem 9. Grad). Solltest du neben dem ohnehin zerbrechenden Effekt zwei weitere opfern (also letztendlich alle drei Schildeffekte), steigt die Härte auf das Doppelte des normalen Wertes.",
@@ -5809,7 +5821,7 @@
           "TargetOfPsychicIre": "Wähle ein Ziel des Zaubers. Übernatürliche Phänomene greifen das Ziel an - in der Regel fliegen Gegenstände aus eigener Kraft auf die Kreatur zu. Das Ziel nimmt zu Beginn jedes seiner Züge 1W4 Punkte Wuchtschaden pro Zaubergrad (@Damage[(@item.level)d4[bludgeoning]]) des Verstärkten Mentalen Zaubertricks (@Check[reflex|against:occult|basic]{einfacher Reflexwurf}). Das Ziel ist 3 Runden lang von deinem Mentalen Zorn betroffen; der Effekt hält sogar an, solltest du den Wirkungsbereich verlassen oder den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Bewusstlos} erhalten.",
           "TelekineticHand": {
             "Base": "Du erzeugst eine Vielzahl telekinetischer Hände, welche eine Kreatur festhalten und umherbewegen. Wähle mit dem Verstärkten Zauber anstelle eines Gegenstandes eine maximal Mittelgroße Kreatur aus. Du versuchst, das Ziel in eine Richtung deiner Wahl @UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Fortzustoßen}, lege anstelle eines Wurfes für Athletik einen Zauberangriffswurf gegen den ZÄH-SG des Zieles ab. Die Kreatur erleidet bis zum Ende der Zauberwirkung einen Situationsmalus von -10 Fuß/3 m auf ihre Bewegungsraten. Wann immer du ab der nächsten Runde den Zauber in einer Runde erstmals aufrechterhältst, kannst du erneut versuchen, die Zielkreatur fortzustoßen.",
-            "Heightened": "Du kannst versuchen, die Kreatur zu @UUID[Compendium.pf2e.actionspf2e.Item.Dt6B1slsBy8ipJu9]{Entwaffnen} statt @UUID[Compendium.pf2e.actionspf2e.Item.7blmbDrQFNfdT731]{Fortzustoßen}. Solltest du ihr auf diese Weise einen Gegenstand aus der Hand schlagen, wird er sofort von der Telekinetischen Hand geschnappt. Der Zaubereffekt auf der Kreatur endet und der Zauber trägt nun den Gegenstand, als hättest du ihn mit einer nichtverstärkten Telekinetischen Hand aufgenommen."
+            "Heightened": "You can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.Dt6B1slsBy8ipJu9]{Disarm} the creature instead of attempting to Shove it. If you knock an item out of the creature's grasp in this way, the _telekinetic hand_ immediately grabs it. Any effect of the _telekinetic hand_ on the creature ends, and the spell now carries the item, just like you had picked it up with an unamped _telekinetic hand_."
           },
           "TelekineticProjectile": {
             "Base": "Du schleuderst Gegenstände mit noch größerer Kraft und treibst deine Gegner mit einem Hagel von Gegenständen zurück. Bei einem Erfolg stößt du das Ziel um 5 Fuß/1,50 m von dir fort, bei einem Kritischen Erfolg um 10 Fuß/3 m (neben dem doppelten Schaden).",
@@ -5817,18 +5829,18 @@
           },
           "TelekineticRend": {
             "Base": "Deine Gedanken gewinnen an Umfang und Kraft. Die Explosionen verursachen jeweils 1W6 Punkte Hiebschaden und 1W6 Punkte Wuchtschaden. Erzielt eine Kreatur bei ihrem Rettungswurf einen Kritischen Fehlschlag, erhält sie zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1}.",
-            "Heightened": "Der Schaden steigt für beide Schadensarten um 1W6 Punkte statt nur bei einer. Du erzeugst innerhalb der Reichweite eine dritte @Template[burst|distance:5]{5 Fuß/1,50 m-Explosion}, die sich mit den anderen nicht überlappen darf."
+            "Heightened": "Both types of damage increase by 1d6 instead of just one. Add a third non-overlapping 5-foot burst to the area."
           },
-          "TesseractTunnel": "Du musst dich nicht mehr von Punkt A nach Punkt B bewegen, um dabei einen Tunnel zu öffnen. Stattdessen bestimmst du beim Wirken des Zaubers ein Feld innerhalb deiner Bewegungsrate; du kannst dann ggf. augenblicklich auf das andere Feld teleportieren. Zudem ist der Tunnel in beide Richtungen begehbar und keine Einbahnstraße mehr. Die Wirkungsdauer steigt auf 1 Minute; du kannst den Zauber vorzeitig Aufheben.",
+          "TesseractTunnel": "Physical movement is no longer necessary to connect two points in space. When you cast _tesseract tunnel_, you simply create a tunnel that ends in a square within a range equal to your Speed; you can choose to immediately teleport to the space at the far end of the tunnel. Furthermore, the tunnel can be traversed in both directions, instead of only from entrance to exit. Finally, the spell's duration changes to 1 minute. You can Dismiss the spell.",
           "ThermalStasis": "Die Wirkungsdauer steigt auf 1 Minute.",
           "Toggle": "Mentale Zaubertricks verstärken",
-          "VectorScreen": "Dein Schild währt länger und kann von dir zu einem explosiven Gegenangriff genutzt werden. Die Wirkungsdauer des Zaubers steigt auf 1 Minute. Du kannst den Effekt vorzeitig Aufheben. Sollten Geschosse im Schild feststecken, kannst du @UUID[Compendium.pf2e.spells-srd.Item.60sgbuMWN0268dB7]{Telekinetisches Geschoss} wirken, um sie als Teil des Aufhebens auf eine Kreatur abzuschießen. Hinsichtlich der Reichweite dieses <em>Telekinetischen-Geschoss</em>-Effektes gilt der Schild als Ausgangspunkt, nicht du.",
+          "VectorScreen": "Your screen persists for longer, and you can detonate it in an explosive counterattack. The duration of the spell increases to 1 minute. You can Dismiss the spell. If there are any projectiles trapped in the screen, you can cast _telekinetic projectile_ to fire them at one creature as part of Dismissing the spell. Measure the range for the _telekinetic projectile_ from where the vector screen was, instead of from you.",
           "WarpSpace": "Wähle ein Feld innerhalb von 30 Fuß/9 m, zu dem du über eine Sicht- und Schusslinie verfügst. Bestimme die Sicht- und Schusslinie deines Zauber von diesem Punkt aus sowie ob Kreaturen gegen den Zauber Deckung besitzen. Der Zauber kann seine normale Reichweite von dir aus überschreiten, solange das Ziel von dem gewählten Feld aus innerhalb seiner Reichweite ist.",
           "WarpStep": {
             "Base": "Du biegst den Raum mit einem Gedanken; der Zeitaufwand des Zaubers beträgt nur 1 Aktion.",
-            "Heightened": "Du verzerrst den Raum derart vollständig, dass du die Entfernung dazwischen nicht mehr zurücklegen musst. Du kannst stattdessen wählen, auf ein Feld innerhalb deiner Sicht- und Schusslinie zu teleportieren; die Reichweite des Effektes entspricht deiner doppelten Bewegungsrate nach Hinzurechnen des Zustandsbonus aus diesem Zauber. Dies verleiht dem Zauber die Kategorie Teleportation."
+            "Heightened": "You twist space so completely you don't need to travel the interposing distance. You can choose to instead teleport to a space within your line of sight and line of effect with a range equal to your double your Speed (after applying the status bonus from _warp step_). This grants the spell the teleportation trait."
           },
-          "WhisperingSteps": "Wähle einen Gegner, der Ziel des Zaubers ist. Sollte der Zauber den Gegner treffen oder dessen Rettungswurf misslingen, so wisperst du in seinen Verstand und zwingst ihn zu einem Schritt in eine Richtung deiner Wahl. Da dies eine erzwungene Bewegung ist, kannst du ihn nicht zu einem Schritt in Gefährliches Gelände, über eine Klippe oder ähnliches zwingen. Nach dem Schritt wird die Kreatur vorübergehend für 24 Stunden gegen diese Verstärkung immun."
+          "WhisperingSteps": "Choose one enemy who is a target of the spell. If that enemy fails its save or the spell hits it, you whisper in the creature's mind, forcing it to Stride up to half its Speed in a direction of your choosing; as this is forced movement, you can't force the creature to move into hazardous terrain, off a ledge, or the like. After it moves, the creature becomes temporarily immune to this amp for 24 hours."
         },
         "Mindshift": {
           "Addendum": "Du ersetzt alle Rettungswürfe die diese Aktion erfordert mit einem @Check[will|against:occult]{Willenswurf}."
@@ -5861,21 +5873,21 @@
         },
         "SpellModification": {
           "Daze": "Du kannst Benommenheit über große Entfernung hinweg wirken. Die Reichweite steigt auf 120 Fuß/36 m.",
-          "DeepRoots": "Wenn du einen Zauber wirkst, der dem Ziel den Zustand @UUID[Compendium.pf2e.conditionitems.Item.9qGBRpbX9NEwtAAr]{Gesteuert} auferlegt oder es anderweitig zu bestimmten Handlungen zwingt (z.B. @UUID[Compendium.pf2e.spells-srd.Item.aIHY2DArKFweIrpf]{Befehl}), und dem Ziel der Rettungswurf Kritisch fehlschlägt, kannst du ihm folgenden Effekt auferlegen: Vollendet das Ziel die Ausführung der mit deinem Zauber übermittelten Befehle oder wird der Zauber gebannt oder ihm entgegengewirkt, so erleidet das Ziel 1W6 Punkte Mentalen Schaden pro Grad des Zaubers (@Damage[(@item.level)d6[mental]]).",
-          "DetectMagic": "Du besitzt eine Feinkontrolle, von der andere Zauberkundige nur träumen können. Wenn du Magie entdecken wirkst, bemerkst du jede Kreatur innerhalb der Ausstrahlung, welche von einem Zauber betroffen ist oder einen magischen Gegenstand mit sich führt. Du bestimmst ferner die Hauptposition jeder Magie in einer magischen Gefahr innerhalb der Ausstrahlung (innerhalb der normalen Einschränkungen hinsichtlich des Erkennens von Illusionen). Dies manifestiert sich in der Regel in einer veränderten Wahrnehmung - du könntest z.B. die Kreatur oder Gefahr in eine sanfte Aura gehüllt sehen. Dies zeigt dir aber nicht, welcher Zauber auf der Kreatur liegt oder welche ihrer Gegenstände magisch sind.",
-          "Figment": "Deine einfachen Illusionen verändern sich und tanzen. Die Reichweite von Hirngespinst erhöht sich auf 60 Fuß/18 m. Wenn du den Zauber Aufrechterhältst, kannst du das Geräusch oder die Vision bis zu 15 Fuß/4,50 m weit bewegen. Du kannst dann wie üblich versuchen, @UUID[Compendium.pf2e.actionspf2e.Item.GkmbTGfg8KcgynOA]{für Ablenkung zu sorgen}. Kreaturen, die der Illusion nicht glauben, sind von dieser Ablenkung nicht betroffen.",
-          "Frostbite": "Du kannst Kreaturen auf noch größere Entfernung einfrieren - die Reichweite steigt auf 120 Fuß/36 m.",
-          "Guidance": "Deine Augen sind überall und erlauben dir, andere über große Entfernung anzuleiten. Die Reichweite deiner Göttlichen Führung steigt auf 120 Fuß/36 m.",
-          "Ignition": "Du kannst drastisch die Hitze erhöhen und gegen entfernte Ziele einsetzen. Wenn du Entzünden als Fernkampfangriff nutzt, erhöhe die Reichweite auf 60 Fuß/18 m. Wenn du Entzünden als Nahkampfangriff nutzt, so erhöhe den Angriffsradius um 5 Fuß/1,50 m.",
-          "Message": "Deine Botschaft lässt sich von Hindernissen nicht aufhalten. Der Zauber kann bis zu 120 Fuß/36 m zurücklegen, um das Ziel zu erreichen, wobei er sich auch um Ecken und Hindernisse herumbewegt; du benötigst daher keine gerade Sicht- oder Schusslinie, um Botschaft zu wirken, solange du weißt, auf welchem Feld sich das Ziel befindet, und sich zwischen euch ein freier Weg von maximal 120 Fuß/36 m Länge befindet.",
-          "PhaseBolt": "Dein Ätherbolzen macht die Deckung des Zieles bei einem Treffer vorübergehend ätherisch. Reduziere bei einem Erfolg den Situationsbonus des Zieles auf seine RK (so vorhanden) um 1 bis zum Beginn deines nächsten Zuges.",
-          "PsychicRapport": "Nachdem du einen Zauber der Kategorie Mental gewirkt hast, erlangst du bis zum Beginn deines nächsten Zuges einen Situationsbonus von +1 auf Fertigkeitswürfe für Diplomatie, Einschüchtern und Täuschung sowie auf Wahrnehmungswürfe zum @UUID[Compendium.pf2e.actionspf2e.Item.1xRFPTFtWtGJ9ELw]{Motiv erkennen}.",
-          "Shield": "Du kannst deinen Schild für andere nutzen. Wenn du den Zauber wirkst, kannst du ein maximal 30 Fuß/9 m entferntes Ziel wählen, welches statt dir die Vorteile des Zaubers erlangt. Allerdings liegt es immer noch an dir, ob die Schildblockoption genutzt wird; dies verwendet dann auch deine Reaktion und nicht die des Zieles.",
+          "DeepRoots": "When you Cast a Spell that imposes the controlled condition or otherwise forces the target to take certain actions (such as @UUID[Compendium.pf2e.spells-srd.Item.aIHY2DArKFweIrpf]{Command}), you can choose one target that critically failed its save. When that target finishes fulfilling any commands issued by your spell, or when the spell is dispelled or counteracted, the target takes @Damage[(@item.level)d6[mental]] damage.",
+          "DetectMagic": "When you cast _detect magic_, you're aware of any creature in the emanation affected by a spell or carrying a magic item, and you determine the main location of magic within any magical hazard in the emanation (with the normal restrictions on detecting illusions). This typically manifests as an alteration to your vision, such as seeing a soft aura around the creature or hazard. Sensing these phenomena doesn't make it clear which spell is on a creature, nor which of its items are magical.",
+          "Figment": "The range of _figment_ increases to 60 feet. When you Sustain the spell, you can move the apparent sound or vision up to 15 feet. You can then attempt to [[/act create-a-diversion]] as usual. Those creatures who disbelieved the illusion aren't affected by this diversion.",
+          "Frostbite": "The range of your _frostbite_ increases to 120 feet.",
+          "Guidance": "The range of _guidance_ increases to 120 feet.",
+          "Ignition": "When using _ignition_ as a ranged attack, increase the range to 60 feet. When using _ignition_ as a melee attack, your reach increases by 5 feet.",
+          "Message": "Your _message_ spell can travel up to 120 feet to reach the target, bending around walls and obstacles; this means you don't need a straight line of effect or line of sight to cast _message_ as long as you know the target's space and there is an unblocked path of 120 feet or less that can reach them. You can cast _message_ in a purely telepathic manner, causing the spell to lose the auditory trait.",
+          "PhaseBolt": "On a success, reduce the target's circumstance bonus to AC (if any) by 1 until the beginning of your next turn.",
+          "PsychicRapport": "After you Cast a Spell with the mental trait, until the start of your next turn, you gain a +1 circumstance bonus to Deception, Diplomacy, and Intimidation checks, and to Perception checks to [[/act sense-motive]].",
+          "Shield": "When you cast _shield_, you can choose a target ally within 30 feet to gain the benefits of the spell instead of you. The option to Shield Block with the spell is up to you and uses your reaction, not the target's.",
           "StrainMind": "Füge dem auslösenden Zauber eine Verstärkung hinzu, die 1 Fokuspunkt kostet. Bezahle statt mit dem normalen Fokuspunkt mit Trefferpunkten in Höhe des vierfachen Zaubergrades des Verstärken Mentalen Zaubertricks, da du aus der Nase blutest oder andere sichtbare Zeichen der Überanstrengung aufweist.",
           "TelekineticHand": "Deine Telekinetische Hand kann anstelle maximal Leichter Last bis zu 1 Lasteinheit tragen. Sollte der Zauber auf wenigstens den 3. Grad erhöht werden, kann sie maximal 2 Lasteinheiten tragen und ab dem wenigstens 7. Grad bis zu 3 Lasteinheiten.",
-          "TelekineticProjectile": "Deine Telekinetischen Projektile können viel weiter fliegen. Erhöhe die Reichweite des Zaubers auf 60 Fuß/18 m.",
+          "TelekineticProjectile": "Increase the range of _telekinetic projectile_ to 60 feet.",
           "ThoughtformSummoning": "Wenn du eine Kreatur beschwörst, kannst du wählen, stattdessen ein übernatürliches Konstrukt dieser Kreatur zu erschaffen. Dies verleiht ihm Resistenz gegen körperlichen Schaden in Höhe seiner halben Stufe, Schwäche 5 gegen Kraft- und Mentalen Schaden und die Fähigkeit, sich durch Gegner hindurchzubewegen, ohne @UUID[Compendium.pf2e.actionspf2e.Item.21WIfSu7Xd7uKqV8]{Hindurchturnen} zu müssen (es kann seine Züge aber nicht in einem belegten Feld beenden).",
-          "WarpStep": "Du verzerrst den Raum effizienter und verleihst dir einen Zustandsbonus von +10 Fuß/3 m auf deine Bewegungsrate statt von +5 Fuß/1,50 m, wenn du den Zauber wirkst."
+          "WarpStep": "You warp space more compactly, granting you a +10-foot status to your Speed instead of a +5-foot status bonus when you _warp step_."
         },
         "UnleashPsyche": {
           "DamageLabel": "Zauber mittels Mentalistenzauberei wirken"
@@ -6169,7 +6181,7 @@
         "MasterPrompt": "Wähle eine Fertigkeit in der du Meister wirst."
       },
       "SmokingSword": {
-        "StokeFlames": "Entflammen"
+        "StokeFlames": "Smoking Sword — Stoke Flames"
       },
       "SneakAttack": "Hinterhältiger Angriff",
       "SnipersAim": {
@@ -6267,16 +6279,25 @@
       },
       "SpecialtyCrafting": {
         "Alchemy": "Alchemie",
+        "Armorsmithing": "Armorsmithing",
         "Artistry": "Kunsthandwerk",
+        "Automotives": "Automotives",
         "Blacksmithing": "Schmiedearbeit",
         "Bookmaking": "Buchbinderei",
+        "Chemicals": "Chemicals",
+        "Computer": "Computer",
+        "Engineering": "Engineering",
         "Glassmaking": "Glasbläserei",
+        "Gunsmithing": "Gunsmithing",
         "Leatherworking": "Lederarbeit",
+        "LifeScience": "Life Science",
         "Pottery": "Töpferei",
         "Prompt": "Wähle eine Spezialisierung.",
+        "Robotics": "Robotics",
         "Shipbuilding": "Schiffsbau",
         "Stonemasonry": "Steinmetzarbeit",
         "Tailoring": "Schneiderei",
+        "Textiles": "Textiles",
         "Weaving": "Webarbeit",
         "Woodworking": "Holzarbeit"
       },
@@ -6760,6 +6781,9 @@
           "SuccessText": "Bei einem Erfolg fügt der Schlag zusätzlich @Damage[(ternary(gte(@actor.level,18),2,1))d4[electricity]]-Schaden an bis zu zwei weiteren Gegnern im Umkreis von 10 Fuß/3 m zu."
         }
       },
+      "StormHammer": {
+        "Electrify": "Storm Hammer — Electrify"
+      },
       "SubstituteRoll": {
         "Assurance": "Routine",
         "EffectType": "{type} ({substitution})"
@@ -6929,8 +6953,8 @@
           },
           "Chalice": {
             "Adept": {
-              "DescriptionAlteration": "Ein Schluck verleiht Temporäre Trefferpunkte in Höhe deiner Stufe + deines Charisma-Modifikators +2. Austrinken heilt die trinkende Kreatur um deine fünffache Stufe.",
-              "Note": "Sollten du oder ein maximal 30 Fuß/9 m entfernter Verbündeter Hieb- oder Stichschaden durch einen gegnerischen Kritischen Treffer erleiden oder Anhaltenden Blutungsschaden erhalten und vor Ende deines nächsten Zuges Aus dem Kelch trinken nutzen, so erlangt die verwundete Kreatur größere Heilung. Ein Schluck verleiht Temporäre Trefferpunkte in Höhe deiner Stufe + deines Charisma-Modifikators +2. Austrinken heilt die trinkende Kreatur um deine fünffache Stufe. @UUID[Compendium.pf2e.feat-effects.Item.Sq558879cgEc1lGC]{Effekt: Adeptenvorteil (Kelch; du selbst)}"
+              "DescriptionAlteration": "On a sip, the temporary Hit Points granted to the creature increase to twice your level. When drained, the chalice heals the creature 5 Hit Points for each level you have.",
+              "Note": "If you or an ally within 30 feet takes piercing or slashing damage from a foe's critical hit or takes persistent bleed damage, @UUID[Compendium.pf2e.actionspf2e.Item.D91jQs0wleU5ml4K]{Drinking from the Chalice} before the end of your next turn grants that injured creature greater restoration to make up for its lost vitality.<p>On a sip, the temporary Hit Points granted to the creature increase to twice your level. When drained, the chalice heals the creature 5 Hit Points for each level you have.</p><p>@UUID[Compendium.pf2e.feat-effects.Item.Sq558879cgEc1lGC]{Effect: Chalice Adept Benefit (Self)}</p>"
             },
             "Label": "Kelch"
           },
@@ -6968,15 +6992,15 @@
           },
           "Wand": {
             "Adept": {
-              "Cold": "Wenn der Rettungswurf des Zieles misslingt und es Schaden erleidet, wird das Ziel gefrostet und erleidet einen Zustandsmalus von -3 m/10 Fuß auf seine Bewegungsraten für 1 Runde.",
+              "Cold": "If the target fails its save and takes damage, it takes a –10-foot status penalty to its Speeds for 1 round.",
               "RangeIncrease": "Die Reichweite von Magie schleudern steigt auf 36 m/120 Fuß.",
-              "Electricity": "Wenn der Rettungswurf des Zieles misslingt und es Schaden erleidet, erhält das Ziel einen Stromschlag und bis zum Ende deines nächsten Zuges den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß}.",
-              "Fire": "Wenn der Rettungswurf des Zieles misslingt und es Schaden erleidet, fängt das Ziel Feuer und erleidet @Damage[1d10[persistent,fire]]{1W10 Punkte Anhaltenden Feuerschaden} (bzw. @Damage[2d10[persistent,fire]]{2W10 Punkte} bei einem Kritischen Fehlschlag).",
-              "FireParagon": "Wenn der Rettungswurf des Zieles misslingt und es Schaden erleidet, fängt das Ziel Feuer und erleidet @Damage[2d10[persistent,fire]]{2W10 Punkte Anhaltenden Feuerschaden} (bzw. @Damage[4d10[persistent,fire]]{4W10 Punkte} bei einem Kritischen Fehlschlag)."
+              "Electricity": "If the target fails its save and takes damage, it becomes @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} until the end of your next turn.",
+              "Fire": "If the target fails its save and takes damage, it takes @Damage[1d10[persistent,fire]] (or @Damage[2d10[persistent,fire]] on a critical failure).",
+              "FireParagon": "If the target fails its save and takes damage, it takes @Damage[2d10[persistent,fire]] (or @Damage[4d10[persistent,fire]] on a critical failure)."
             },
             "Label": "Stab",
             "Paragon": {
-              "Description": "Die Reichweite von Magie schleudern steigt auf 54 m/180 Fuß. Du kannst wählen, ob du eine einzelne Kreatur zum Ziel machst oder alle Kreaturen in einer @Template[burst|distance:20]{20 Fuß/6 m-Explosion} betriffst."
+              "Description": "The range of Fling Magic increases to 180 feet. You gain the ability to choose between all three damage types (cold, electricity, and fire) each time you use Fling Magic. You can choose to target a single creature or to affect all creatures in a @Template[burst|distance:20]."
             }
           },
           "Weapon": {
@@ -7760,7 +7784,7 @@
             },
             "GreaterEpiphany": "You learn the @UUID[Compendium.sf2e.spells.Item.DZOjyZBZUrzkw5q2]{Elemental Nova} epiphany spell.",
             "Harmony": {
-              "Addendum": "When you Transfer Vitality, choose an elemental trait: air, earth, fire, metal, water, or wood. If one or more of your elemental epiphanies are active, you must select the elemental trait you chose as part of casting those spells. Until the end of their next turn, the target’s next Strike deals damage based on the chosen trait (your choice), rather than its typical damage type: electricity or sonic for air, bludgeoning or piercing for earth, acid or slashing for metal, fire for fire, bludgeoning or cold for water, or piercing or poison for wood."
+              "Addendum": "When you Transfer Vitality, choose an elemental trait: air, earth, fire, metal, water, or wood. If one or more of your elemental epiphanies are active, you must select the elemental trait you chose as part of casting those spells. Until the end of their next turn, the target's next Strike deals damage based on the chosen trait (your choice), rather than its typical damage type: electricity or sonic for air, bludgeoning or piercing for earth, acid or slashing for metal, fire for fire, bludgeoning or cold for water, or piercing or poison for wood."
             },
             "InitialEpiphany": "You learn the @UUID[Compendium.sf2e.spells.Item.d5dmu4HZ3YyrwcaF]{Elemental Weapon} epiphany spell.",
             "PerfectHarmony": {
@@ -7884,6 +7908,19 @@
         },
         "WillfulDefiance": {
           "Label": "Target Selected for Wlilful Defiance"
+        }
+      },
+      "SharedAncestryFeats": {
+        "DoubleDraw": {
+          "kasatha": {
+            "Description": "Routine use of your arms allows you to quickly move held equipment around. You Interact twice to draw, stow, or swap items you have up to twice."
+          },
+          "skittermander": {
+            "Description": "Routine use of your arms allows you to quickly move held equipment around. You Interact twice to draw, stow, or swap items you have up to twice."
+          },
+          "shobhad": {
+            "Description": "You can efficiently move held equipment between your four arms. You Interact twice, using each to draw, stow, or swap items you have."
+          }
         }
       },
       "Shobhad": {
