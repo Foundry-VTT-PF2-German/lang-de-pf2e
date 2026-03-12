@@ -321,7 +321,7 @@
           "name": "Rock"
         },
         "action->Frightful Presence": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.etMnv73EIdEZrYYu]\n<p>60 feet. @Check[will|dc:29]</p>\n<p>Animals take a -2 circumstance penalty to the Will save.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.etMnv73EIdEZrYYu]\n<p>60 feet. @Check[will|dc:29|options:area-effect,inflicts:frightened]</p>\n<p>Animals take a -2 circumstance penalty to the Will save.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
         },
         "action->Horrid Visage": {
           "name": "Horrid Visage",
@@ -596,7 +596,7 @@
           "description": "<p>When using their Change Shape ability, the faceless butcher loses their alignment aura and thus cannot be detected by spells such as @UUID[Compendium.pf2e.spells-srd.Item.QnTtGCAvdWRU4spv]{Detect Alignment}.</p>"
         },
         "action->Frightful Presence": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.etMnv73EIdEZrYYu]\n<p>10 feet. @Check[will|dc:26]</p>\n<p>This aura is suppressed if the faceless butcher is using Change Shape.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.etMnv73EIdEZrYYu]\n<p>10 feet. @Check[will|dc:26|options:area-effect,inflicts:frightened]</p>\n<p>This aura is suppressed if the faceless butcher is using Change Shape.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
         },
         "action->Change Shape": {
           "name": "Change Shape",
@@ -767,7 +767,7 @@
         },
         "action->Aura of Annihilation": {
           "name": "Aura of Annihilation",
-          "description": "<p>60 feet. @Check[fortitude|dc:45]</p>\n<p>A creature entering or starting its turn in the aura that fails at a Fortitude save becomes @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 1} and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}. If the target was already doomed or drained, the values of these conditions increase by 1, to a maximum of doomed 3 and drained 3. A creature that dies while doomed 3 and drained 3 in this way disintegrates into black sand.</p>"
+          "description": "<p>60 feet. @Check[fortitude|dc:45|options:area-effect,inflicts:doomed,inflicts:drained]</p>\n<p>A creature entering or starting its turn in the aura that fails at a Fortitude save becomes @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 1} and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}. If the target was already doomed or drained, the values of these conditions increase by 1, to a maximum of doomed 3 and drained 3. A creature that dies while doomed 3 and drained 3 in this way disintegrates into black sand.</p>"
         },
         "action->Unkillable": {
           "name": "Unkillable",
@@ -974,7 +974,7 @@
         },
         "action->Firedamp Winds": {
           "name": "Firedamp Winds",
-          "description": "<p>30 feet. @Check[fortitude|dc:33].</p>\n<p>Swirling winds of noxious, flammable gas surround a muurfeli. An open flame, spark, or similar fire effect in the area causes an explosion that deals @Damage[20d6[fire]] damage to all creatures in the aura (including the muurfeli) and temporarily disables the aura for 1 minute.</p>\n<p>When the muurfeli takes damage from an ability with the water trait or fails a saving throw against a water effect, their firedamp winds aura is disabled for 1 minute.</p>\n<p>A creature that enters or begins its turn in the aura must attempt a Fortitude save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} and @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}.</p>"
+          "description": "<p>30 feet. @Check[fortitude|dc:33|options:area-effect,inflicts:sickened,inflicts:fatigued].</p>\n<p>Swirling winds of noxious, flammable gas surround a muurfeli. An open flame, spark, or similar fire effect in the area causes an explosion that deals @Damage[20d6[fire]|options:area-damage] damage to all creatures in the aura (including the muurfeli) and temporarily disables the aura for 1 minute.</p>\n<p>When the muurfeli takes damage from an ability with the water trait or fails a saving throw against a water effect, their firedamp winds aura is disabled for 1 minute.</p>\n<p>A creature that enters or begins its turn in the aura must attempt a Fortitude save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} and @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}.</p>"
         },
         "action->Change Shape": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.eQM5hQ1W3d1uen97]\n<p>The muurfeli can take on the form of an owl. The owl form always looks the same, but the muurfeli can choose to become either Tiny or Small in this form. This transformation doesn't change their Speed or the attack and damage bonuses of their Strikes, but might change the damage type their Strikes deal (typically to slashing).</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.ChangeShape]</p>"
@@ -1044,7 +1044,7 @@
           "description": "<p>Any creature that Strikes the qurashith with a melee weapon must attempt a @Check[reflex|dc:37] save. On a failure, the creature is disarmed of its weapon, which becomes stuck to the qurashith's body; if the Strike was an unarmed attack, the creature's limb sticks to the qurashith's body and the creature becomes immobilized. A creature must succeed at a @Check[athletics|dc:31|name:Retreive Stuck Weapon] check to retrieve a stuck weapon. On a failure, the creature takes @Damage[2d6[acid]] damage and the weapon remains stuck, and on a critical failure, the creature also becomes stuck to the qurashith and becomes @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}. A stuck creature takes @Damage[2d6[acid]] damage each round it remains stuck to the qurashith and can use an @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} action to try to free itself from the monster (DC 31).</p>"
         },
         "action->Frightful Presence": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.etMnv73EIdEZrYYu]\n<p>90 feet. @Check[will|dc:33]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.etMnv73EIdEZrYYu]\n<p>90 feet. @Check[will|dc:33|options:area-effect,inflicts:frightened]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
         },
         "action->Paralytic Saliva": {
           "name": "Paralytic Saliva",
@@ -1475,7 +1475,7 @@
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.kdhbPaBMK1d1fpbA]\nTelepathy 100 feet"
         },
         "action->Frightful Presence": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.etMnv73EIdEZrYYu]\n<p>60 feet. @Check[will|dc:37]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.etMnv73EIdEZrYYu]\n<p>60 feet. @Check[will|dc:37|options:area-effect,inflicts:frightened]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
         },
         "action->Restoration Vulnerability": {
           "name": "Restoration Vulnerability",
@@ -1651,7 +1651,7 @@
         },
         "action->Stench": {
           "name": "Stench",
-          "description": "<p>30 feet. A creature entering the aura must attempt a @Check[fortitude|dc:16] save. On a failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, and on a critical failure, the creature also takes a –5-foot status penalty to its Speeds for 1 round. While within the aura, the creature takes a -2 circumstance penalty to saves to recover from the sickened condition. A creature that succeeds at its save is temporarily immune to all xulgaths' stench for 1 minute.</p>\n<p>A xulgath bilebearer can activate or deactivate its stench aura as a free action.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.uB3CVn3momZO9h0L]{Effect: Xulgath Stench}</p>"
+          "description": "<p>30 feet. A creature entering the aura must attempt a @Check[fortitude|dc:16|options:area-effect,inflicts:sickened] save. On a failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, and on a critical failure, the creature also takes a –5-foot status penalty to its Speeds for 1 round. While within the aura, the creature takes a -2 circumstance penalty to saves to recover from the sickened condition. A creature that succeeds at its save is temporarily immune to all xulgaths' stench for 1 minute.</p>\n<p>A xulgath bilebearer can activate or deactivate its stench aura as a free action.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.uB3CVn3momZO9h0L]{Effect: Xulgath Stench}</p>"
         },
         "action->Putrid Blast": {
           "name": "Putrid Blast",
@@ -1718,7 +1718,7 @@
         },
         "action->Stench": {
           "name": "Stench",
-          "description": "<p>30 feet. A creature that enters the area must attempt a @Check[fortitude|dc:28] save. On a failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, and on a critical failure, the creature also takes a –5-foot status penalty to its Speeds for 1 round.</p>\n<p>While within the aura, the creature takes a -2 circumstance penalty to saves to recover from the sickened condition.</p>\n<p>A creature that succeeds at its save is temporarily immune to all xulgaths' stenches for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.uB3CVn3momZO9h0L]{Effect: Xulgath Stench}</p>"
+          "description": "<p>30 feet. A creature that enters the area must attempt a @Check[fortitude|dc:28|options:area-effect,inflicts:sickened] save. On a failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, and on a critical failure, the creature also takes a –5-foot status penalty to its Speeds for 1 round.</p>\n<p>While within the aura, the creature takes a -2 circumstance penalty to saves to recover from the sickened condition.</p>\n<p>A creature that succeeds at its save is temporarily immune to all xulgaths' stenches for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.uB3CVn3momZO9h0L]{Effect: Xulgath Stench}</p>"
         },
         "action->Devourer's Dictum": {
           "name": "Devourer's Dictum",
@@ -1772,7 +1772,7 @@
         },
         "action->Stench": {
           "name": "Stench",
-          "description": "<p>30 feet. A creature entering the aura must attempt a @Check[fortitude|dc:21] save. On a failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, and on a critical failure, the creature also takes a –5-foot status penalty to its Speeds for 1 round. While within the aura, the creature takes a -2 circumstance penalty to saves to recover from the sickened condition. A creature that succeeds at its save is temporarily immune to all xulgaths' stench for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.uB3CVn3momZO9h0L]{Effect: Xulgath Stench}</p>"
+          "description": "<p>30 feet. A creature entering the aura must attempt a @Check[fortitude|dc:21|options:area-effect,inflicts:sickened] save. On a failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, and on a critical failure, the creature also takes a –5-foot status penalty to its Speeds for 1 round. While within the aura, the creature takes a -2 circumstance penalty to saves to recover from the sickened condition. A creature that succeeds at its save is temporarily immune to all xulgaths' stench for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.uB3CVn3momZO9h0L]{Effect: Xulgath Stench}</p>"
         },
         "action->Brutal Blow": {
           "name": "Brutal Blow",
@@ -1805,7 +1805,7 @@
         },
         "action->Stench": {
           "name": "Stench",
-          "description": "<p>30 feet. A creature entering the aura must attempt a @Check[fortitude|dc:24] save. On a failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, and on a critical failure, the creature also takes a –5-foot status penalty to its Speeds for 1 round. While within the aura, the creature takes a -2 circumstance penalty to saves to recover from the sickened condition. A creature that succeeds at its save is temporarily immune to all xulgaths' stench for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.uB3CVn3momZO9h0L]{Effect: Xulgath Stench}</p>"
+          "description": "<p>30 feet. A creature entering the aura must attempt a @Check[fortitude|dc:24|options:area-effect,inflicts:sickened] save. On a failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, and on a critical failure, the creature also takes a –5-foot status penalty to its Speeds for 1 round. While within the aura, the creature takes a -2 circumstance penalty to saves to recover from the sickened condition. A creature that succeeds at its save is temporarily immune to all xulgaths' stench for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.uB3CVn3momZO9h0L]{Effect: Xulgath Stench}</p>"
         },
         "action->Earthen Blow": {
           "name": "Earthen Blow",
@@ -1817,7 +1817,7 @@
         },
         "action->Stone Throes": {
           "name": "Stone Throes",
-          "description": "<p>The stoneliege turns their own body into solid stone like a statue and immediately becomes @UUID[Compendium.pf2e.conditionitems.Item.dTwPJuKgBQCMxixg]{Petrified}. Any creature grappled or restrained by the stoneliege becomes @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}; to get free, the creature must damage the statue enough to break it or succeed at a @Check[acrobatics|dc:28|name:Escape Stone Throes|traits:action:escape] check to @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape}.</p>"
+          "description": "<p>The stoneliege turns their own body into solid stone like a statue and immediately becomes @UUID[Compendium.pf2e.conditionitems.Item.dTwPJuKgBQCMxixg]{Petrified}. Any creature grabbed or restrained by the stoneliege becomes @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}; to get free, the creature must damage the statue enough to break it or succeed at a @Check[acrobatics|dc:28|name:Escape Stone Throes|traits:action:escape] check to @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape}.</p>"
         },
         "lore->Cave Lore": {
           "name": "Cave Lore"
