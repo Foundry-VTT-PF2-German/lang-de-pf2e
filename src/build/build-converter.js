@@ -42,7 +42,7 @@ const readSystemMap = (filename) => {
     if (systemFolder.slice(-1) !== "/") {
         systemFolder += "/";
     }
-    const folderPath = systemFolder + "packs/" + filename;
+    const folderPath = systemFolder + "packs/pf2e/" + filename;
     for (const child of readdirSync(folderPath)) {
         if (child.startsWith("_")) {
             continue;
@@ -82,7 +82,7 @@ const readSystemMap = (filename) => {
 
 export const convertJournals = (journalObject) => {
     const featNameToOriginalDataMap = readSystemMap("feats");
-    const featureMap = readSystemMap("classfeatures");
+    const featureMap = readSystemMap("class-features");
 
     const featsTranslated = readJSONFile("./translation/de/compendium/pf2e.feats-srd.json");
 
