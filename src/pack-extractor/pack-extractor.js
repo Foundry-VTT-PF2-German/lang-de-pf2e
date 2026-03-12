@@ -21,7 +21,13 @@ replaceProperties(CONFIG.packs, ["mapping"], CONFIG.mappings);
 replaceProperties(CONFIG.packs, ["savePath"], CONFIG.filePaths.packs);
 
 // Fetch assets from current pf2 release and get zip contents
-const packs = await getZipContentFromURL(CONFIG.filePaths.zipURL);
+const packSource = process.argv[2];
+
+if (!packSource) {
+    console.error("Bitte Pfad zur aktuellen json-assets.zip angeben");
+    process.exit(1);
+}
+const packs = await getZipContentFromURL(packSource);
 
 // Build item database in order to compare actor items with their comdendium entries
 const itemDatabase = buildItemDatabase(packs, CONFIG.itemDatabase);

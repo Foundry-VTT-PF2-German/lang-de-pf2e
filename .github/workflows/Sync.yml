@@ -2,6 +2,11 @@ name: Sync
 
 on:
   workflow_dispatch:
+    inputs:
+      pack_source:
+        description: 'URL zur json-assets.zip des aktuellen Releases'
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -31,7 +36,7 @@ jobs:
           npm ci
           git config user.email "action@github.com"
           git config user.name "Github Action"
-          npm run pack-extractor
+          npm run pack-extractor -- "${{ inputs.pack_source }}"
           git add translation/en
           git commit -m "Sync packs"
 
