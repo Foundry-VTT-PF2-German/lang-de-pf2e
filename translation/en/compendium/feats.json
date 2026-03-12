@@ -3716,6 +3716,15 @@
         }
       ]
     },
+    "Battle Scars": {
+      "name": "Battle Scars",
+      "description": "<p>You've faced enough opponents that your experience is written across your skin, toughening you against your fiendish foes. You gain resistance to bludgeoning and slashing damage from devils and creatures allied with the Chelaxian government (as determined by the GM) equal to half your level.</p>",
+      "prerequisites": [
+        {
+          "value": "Hellbreaker Dedication"
+        }
+      ]
+    },
     "Battle-Hardened Companion": {
       "name": "Battle-Hardened Companion",
       "description": "<p>Accompanying you across countless battlefields has allowed your companion to unleash its full potential. The companion you gained with @UUID[Compendium.pf2e.feats-srd.Item.cxWEBBu8oyKTrqbi]{Commander's Companion} is now a nimble or savage animal companion.</p>\n<p>Your animal companion is more readily responsive to your will. During an encounter, even if you don't use the @UUID[Compendium.pf2e.actionspf2e.Item.q9nbyIF0PEBqMtYe]{Command an Animal} action, your animal companion can still use 1 action that round on your turn to Stride or Strike. If it does, it also gains a reaction it can use to respond to your tactics, but that's all the actions it gets that round—you can't Command it later.</p>",
@@ -4315,7 +4324,7 @@
     },
     "Blasting Beams": {
       "name": "Blasting Beams",
-      "description": "<p><strong>Requirements</strong> You have a free hand.</p>\n<hr />\n<p>A directed beam of heat or an arc of lightning is one of the simplest ways to project energy. You fire a blast or beam from one hand. Make an @Check[deviant|defense:ac]{attack roll} against a creature within 30 feet. If you succeed, the beam deals @Damage[(floor(@actor.level/2)d6)[@actor.flags.pf2e.deviantAbilities.dragon.damageType]]{1d6 damage for every 2 levels} you have to the target, or double damage on a critical success.</p>\n<hr />\n<p><strong>Awakening</strong> Your beams blast through targets. Instead of making an attack roll to damage a single creature within 30 feet, you can use Blasting Beams as a 2-action activity to damage all creatures in a @Template[line|distance:60], with a @Check[reflex|against:class-spell|basic|options:area-effect] save.</p>\n<hr />\n<p><strong>Awakening</strong> You can choose to launch smaller, quicker beams from your eyes instead. These deal @Damage[(floor(@actor.level/2)d4)[@actor.flags.pf2e.deviantAbilities.dragon.damageType]]{d4s} instead of d6s, but the attack has the agile trait, and you don't need a hand free to make it, though your eyes must be uncovered.</p>"
+      "description": "<p><strong>Requirements</strong> You have a free hand.</p>\n<hr />\n<p>A directed beam of heat or an arc of lightning is one of the simplest ways to project energy. You fire a blast or beam from one hand. Make an @Check[deviant|defense:ac]{attack roll} against a creature within 30 feet. If you succeed, the beam deals @Damage[(floor(@actor.level/2)d6)[@actor.flags.system.deviantAbilities.dragon.damageType]]{1d6 damage for every 2 levels} you have to the target, or double damage on a critical success.</p>\n<hr />\n<p><strong>Awakening</strong> Your beams blast through targets. Instead of making an attack roll to damage a single creature within 30 feet, you can use Blasting Beams as a 2-action activity to damage all creatures in a @Template[line|distance:60], with a @Check[reflex|against:class-spell|basic|options:area-effect] save.</p>\n<hr />\n<p><strong>Awakening</strong> You can choose to launch smaller, quicker beams from your eyes instead. These deal @Damage[(floor(@actor.level/2)d4)[@actor.flags.system.deviantAbilities.dragon.damageType]]{d4s} instead of d6s, but the attack has the agile trait, and you don't need a hand free to make it, though your eyes must be uncovered.</p>"
     },
     "Blaze of Revelation": {
       "name": "Blaze of Revelation",
@@ -6559,7 +6568,7 @@
     },
     "Claw Snag": {
       "name": "Claw Snag",
-      "description": "<p><strong>Trigger</strong> A creature attempts to @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} while you have them grappled or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}.</p>\n<hr />\n<p>You hook into the target, pulling yourself forward and rending flesh. Shift into claw stance if you aren't in it already, then make a frenzied claw Strike against the triggering creature.</p>",
+      "description": "<p><strong>Trigger</strong> A creature attempts to @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} while you have them @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}.</p>\n<hr />\n<p>You hook into the target, pulling yourself forward and rending flesh. Shift into claw stance if you aren't in it already, then make a frenzied claw Strike against the triggering creature.</p>",
       "prerequisites": [
         {
           "value": "Clawdancer Dedication"
@@ -9178,6 +9187,16 @@
         }
       ]
     },
+    "Defy Hell": {
+      "name": "Defy Hell",
+      "description": "<p><strong>Requirements</strong> You aren't unholy.</p>\n<hr />\n<p>Your devotion to your cause gives you endless strength and courage to withstand the enemy's attacks. As long as you're in this stance, you gain a +2 status bonus to saves against mental effects and can make Hellbreaker Strikes.</p>\n<p><strong>Hellbreaker Strike</strong> <span class=\"action-glyph\">2</span> (holy) Make a weapon or unarmed Strike. This counts as two attacks when determining your multiple attack penalty. If your Strike hits, you deal an additional 2d8 spirit damage. At 18th level, this increases to 3d8 spirit damage.</p>",
+      "prerequisites": [
+        {
+          "value": "Hellbreaker Dedication"
+        }
+      ],
+      "selfEffect": "Stance: Defy Hell"
+    },
     "Defy Sorrow": {
       "name": "Defy Sorrow",
       "description": "<p><strong>Trigger</strong> You're dealt mental damage or spirit damage or you fail or critically fail a saving throw against a mental effect.</p>\n<hr />\n<p>You draw on this spiritual pain to push your body to greater heights. You gain the @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened} condition until the end of your next turn. You can use the extra action only to Step or Stride.</p>",
@@ -9498,6 +9517,18 @@
         }
       ]
     },
+    "Devil You Know": {
+      "name": "Devil You Know",
+      "description": "<p>Your knowledge of your enemies gives you an advantage against them, granting you a swift reaction to their devilry. If you know you're fighting against any devils or Hellknights at the beginning of an encounter, you can roll the respective Lore skill for your initiative roll.</p>\n<p>In addition, whenever you successfully Recall Knowledge about a creature using Devil Lore or Hellknight Lore, you gain a +1 circumstance bonus to your next skill check against that creature before the end of your next turn. If you're a master in Devil Lore or Hellknight Lore, the bonus increases to +2.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.3Qej6bMkgJ5ntllg]{Effect: Devil You Know}</p>",
+      "prerequisites": [
+        {
+          "value": "Hellbreaker Dedication"
+        },
+        {
+          "value": "expert in Devil Lore or Hellknight Lore"
+        }
+      ]
+    },
     "Devil in Plain Sight": {
       "name": "Devil in Plain Sight",
       "description": "<p>You've learned to draw your fiendish nature into a small ball of corruption and hide it in your soul. Your obviously fiendish traits disappear, including any tails, horns, and cloven hooves, though hints remain (claws turn into jagged nails or eyes retain an odd hue, for instance). You're still recognizably yourself, but now appear as a typical, non-tiefling member of your base ancestry. Using Devil in Plain Sight counts as creating a disguise when using Deception to Impersonate, and your transformation automatically defeats Perception DCs to determine if you're a normal member of your base ancestry; only creatures actively rolling Perception to examine you might notice the disguise. While in your shapeshifted form, you can't use unarmed attacks, innate spells, or other abilities that require physical features you receive from a tiefling ancestry feat—for instance, you can't use the @UUID[Compendium.pf2e.feats-srd.Item.aVRuchEAJIvnd70k]{Skillful Tail} feat. You can remain in your alternate form indefinitely, and can shift back to your tiefling form by using this action again.</p>"
@@ -9794,7 +9825,7 @@
     },
     "Disciple's Breath": {
       "name": "Disciple's Breath",
-      "description": "<p>You unleash your breath weapon without spending focus. This has the effects of your Dragon Breath sorcerer bloodline spell, though it deals @Damage[9d6[@actor.flags.pf2e.dragonDisciple.energyType]] damage instead of its usual damage, and you don't have to cast it or spend a Focus Point. You can't use Disciple's Breath again for [[/r 1d4 #rounds]]{1d4 rounds}.</p>",
+      "description": "<p>You unleash your breath weapon without spending focus. This has the effects of your Dragon Breath sorcerer bloodline spell, though it deals @Damage[9d6[@actor.flags.system.dragonDisciple.energyType]] damage instead of its usual damage, and you don't have to cast it or spend a Focus Point. You can't use Disciple's Breath again for [[/r 1d4 #rounds]]{1d4 rounds}.</p>",
       "prerequisites": [
         {
           "value": "Dragon Disciple Dedication"
@@ -10503,7 +10534,7 @@
     },
     "Draconic Acolyte Dedication": {
       "name": "Draconic Acolyte Dedication",
-      "description": "<p>As an acolyte of dragonkind, you have an item known as a draconic gift that you can use to summon a portion of the magical essence of the dragon you received it from. Choose a @UUID[Compendium.pf2e.journals.JournalEntry.kzxu2dI7tFxv6Ix6.JournalEntryPage.GduFISQ6kzEB6sec#draconic-benefactors]{Draconic Benefactor} with a trait that matches the trained skill you used to qualify for this feat (arcane for Arcana, primal for Nature, occult for Occultism, and divine for Religion). You can't change your draconic benefactor later. You gain the @UUID[Compendium.pf2e.feats-srd.Item.BocFD2KV0qgUC76x]{Additional Lore} feat for Dragon Lore. If you were already trained in Dragon Lore, you also become trained in a Lore skill of your choice.</p>\n<p>You gain a <em>draconic gift</em>, a palm-sized magic item of negligible Bulk with a level equal to your level and a trait matching your draconic benefactor's tradition. Choose this item's appearance when you take this feat. This item is linked to your spirit, so if you ever lose possession of it (whether by dropping it or having it stolen from your person), it appears back in your possession at the beginning of your next turn.</p>\n<p>Finally, you gain the Channel Draconic Essence action and Draconic Salvation reaction. These and all other actions from this archetype gain the tradition trait of your draconic benefactor.</p>",
+      "description": "<p>As an acolyte of dragonkind, you have an item known as a draconic gift that you can use to summon a portion of the magical essence of the dragon you received it from. Choose a @UUID[Compendium.pf2e.journals.JournalEntry.kzxu2dI7tFxv6Ix6.JournalEntryPage.GduFISQ6kzEB6sec#draconic-benefactors]{Draconic Benefactor} with a trait that matches the trained skill you used to qualify for this feat (arcane for Arcana, primal for Nature, occult for Occultism, and divine for Religion). You can't change your draconic benefactor later. You gain the @UUID[Compendium.pf2e.feats-srd.Item.BocFD2KV0qgUC76x]{Additional Lore} feat for Dragon Lore. If you were already trained in Dragon Lore, you also become trained in a Lore skill of your choice.</p>\n<p>You gain a <em>draconic gift</em>, a palm-sized magic item of negligible Bulk with a level equal to your level and a trait matching your draconic benefactor's tradition. Choose this item's appearance when you take this feat. This item is linked to your spirit, so if you ever lose possession of it (whether by dropping it or having it stolen from your person), it appears back in your possession at the beginning of your next turn.</p>\n<p>Finally, you gain the @UUID[Compendium.pf2e.actionspf2e.Item.Ce9vzE3XWn0u5NcL]{Channel Draconic Essence} action and @UUID[Compendium.pf2e.actionspf2e.Item.hSTE1wvCsYYvCsHC]{Draconic Salvation} reaction. These and all other actions from this archetype gain the tradition trait of your draconic benefactor.</p>",
       "prerequisites": [
         {
           "value": "trained in Arcana, Nature, Occultism, or Religion"
@@ -10637,7 +10668,7 @@
     },
     "Dragon Roar": {
       "name": "Dragon Roar",
-      "description": "<p><strong>Requirements</strong> You are in @UUID[Compendium.pf2e.feats-srd.Item.8sy3sHwOHS4ImwvJ]{Dragon Stance}</p>\n<hr />\n<p>You bellow, instilling fear in your enemies. Enemies within a @Template[emanation|distance:15] must succeed at a @Check[will|against:intimidation] save against your Intimidation DC or be @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure). When a creature frightened by the roar begins its turn adjacent to you, it can't reduce its frightened value below 1 on that turn.</p>\n<p>Your first attack that hits a frightened creature after you roar and before the end of your next turn gains a +4 circumstance bonus to damage.</p>\n<p>After you use Dragon Roar, you can't use it again for [[/r 1d4 #rounds]]{1d4 rounds}. Its effects end immediately if you leave Dragon Stance. Creatures in the area are then temporarily immune for 1 minute.</p>",
+      "description": "<p><strong>Requirements</strong> You are in @UUID[Compendium.pf2e.feats-srd.Item.8sy3sHwOHS4ImwvJ]{Dragon Stance}</p>\n<hr />\n<p>You bellow, instilling fear in your enemies. Enemies within a @Template[emanation|distance:15] must succeed at a @Check[will|against:intimidation|options:area-effect,inflicts:frightened] save against your Intimidation DC or be @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure). When a creature frightened by the roar begins its turn adjacent to you, it can't reduce its frightened value below 1 on that turn.</p>\n<p>Your first attack that hits a frightened creature after you roar and before the end of your next turn gains a +4 circumstance bonus to damage.</p>\n<p>After you use Dragon Roar, you can't use it again for [[/r 1d4 #Recharge Dragon Roar]]{1d4 rounds}. Its effects end immediately if you leave Dragon Stance. Creatures in the area are then temporarily immune for 1 minute.</p>",
       "prerequisites": [
         {
           "value": "Dragon Stance"
@@ -10700,7 +10731,7 @@
     },
     "Dragon's Rage Breath": {
       "name": "Dragon's Rage Breath",
-      "description": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<hr />\n<p>You breathe deeply and exhale powerful energy in a @Template[cone|distance:30], dealing @Damage[(@actor.level)d6[@actor.flags.pf2e.barbarian.instinct.dragon.damageType]|options:area-damage] damage to each creature in the area with a @Check[reflex|against:barbarian|basic|options:area-effect] save against your class DC. The damage type matches your instinct's dragon breath, and this action gains the trait of your dragon instinct's tradition.</p>",
+      "description": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<hr />\n<p>You breathe deeply and exhale powerful energy in a @Template[cone|distance:30], dealing @Damage[(@actor.level)d6[@actor.flags.system.barbarian.instinct.dragon.damageType]|options:area-damage] damage to each creature in the area with a @Check[reflex|against:barbarian|basic|options:area-effect] save against your class DC. The damage type matches your instinct's dragon breath, and this action gains the trait of your dragon instinct's tradition.</p>",
       "prerequisites": [
         {
           "value": "dragon instinct"
@@ -11719,7 +11750,7 @@
     },
     "Elemental Explosion": {
       "name": "Elemental Explosion",
-      "description": "<p><strong>Requirements</strong> You're raging, and you haven't used this ability since you last Raged.</p>\n<hr />\n<p>You unleash the energy roiling within you, exploding elemental matter in a @Template[emanation|distance:15]. Each creature in the area takes @Damage[(@actor.level)d8[@actor.flags.pf2e.elementalInstinctDamage]|options:area-damage]{1d8 damage per level you possess}, with the same type you chose for elemental rage. Each creature in the area must attempt a @Check[reflex|against:barbarian|basic|options:area-effect]. Elemental Explosion gains the trait of your element.</p>",
+      "description": "<p><strong>Requirements</strong> You're raging, and you haven't used this ability since you last Raged.</p>\n<hr />\n<p>You unleash the energy roiling within you, exploding elemental matter in a @Template[emanation|distance:15]. Each creature in the area takes @Damage[(@actor.level)d8[@actor.flags.system.elementalInstinctDamage]|options:area-damage]{1d8 damage per level you possess}, with the same type you chose for elemental rage. Each creature in the area must attempt a @Check[reflex|against:barbarian|basic|options:area-effect]. Elemental Explosion gains the trait of your element.</p>",
       "prerequisites": [
         {
           "value": "elemental instinct"
@@ -13300,7 +13331,7 @@
     },
     "Expert Fireworks Crafter": {
       "name": "Expert Fireworks Crafter",
-      "description": "<p>You're particularly adept at crafting fireworks, allowing you to create more powerful fireworks than you otherwise could. When creating fireworks displays using your advanced alchemy benefits, you create 2 fireworks displays for each of your daily consumables that you expend.</p>",
+      "description": "<p>You're particularly adept at crafting fireworks, allowing you to create more fireworks than you otherwise could. Your number of versatile vials per day increases to 5.</p>",
       "prerequisites": [
         {
           "value": "Firework Technician Dedication"
@@ -14816,7 +14847,7 @@
     },
     "Firework Technician Dedication": {
       "name": "Firework Technician Dedication",
-      "description": "<p>You've learned the secrets of making fire and sound bloom using black powder, metals, and paper. You most likely came by this knowledge through formal training with a fireworks house in Tian Xia or a fireworks company from Vudra, though perhaps you mastered fireworks completely by yourself after finding a secret stash in an old shipwreck.</p>\n<p>You become trained in Fireworks Lore or become an expert if you were already trained in it. You gain the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.Jkl5KOZih7MoMqAJ#quick-alchemy-benefits]{quick alchemy benefits}, creating up to 4 versatile vials during your daily preparations. Your versatile vials are pyrotechnic, so they have the fire trait and deal fire damage instead of acid. You can use versatile vials only for the @UUID[Compendium.pf2e.actionspf2e.Item.yUjuLbBMflVum8Yn]{Launch Fireworks} action or with @UUID[Compendium.pf2e.actionspf2e.Item.yzNJgwzV9XqEhKc6]{Quick Alchemy} to create fireworks consumables, including @UUID[Compendium.pf2e.equipment-srd.Item.AOOQJfSkTPiSzfB9]{Doses} or rounds of black powder, the @UUID[Compendium.pf2e.equipment-srd.Item.hd8D1Dm6aVhMYpEL]{Sparkler} item, and other items determined by the GM. You can replenish your versatile vials during exploration the same way an alchemist can.</p>\n<p>You can create fireworks displays to have distinctive effects you can use to make onlookers marvel and even to gain an advantage in combat. You gain the Launch Fireworks action and learn some basic effects. You can learn additional, more complex displays that use your versatile vials through other firework technician feats. These add a new fireworks display to your options for Launch Fireworks, each of which lists its number of actions and effects. The DC for Launch Fireworks is equal to your class DC or spell DC, whichever is higher.</p>\n<hr />\n<p><strong>Special</strong> If you have @UUID[Compendium.pf2e.actionspf2e.Item.yzNJgwzV9XqEhKc6]{Quick Alchemy} from another source, such as being an alchemist or having the alchemist archetype, you can choose each time you create a versatile vial whether it's a standard vial or pyrotechnic vial.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.S4BZW9c5n6CctDxl]{Firework Technician}</p>",
+      "description": "<p>You've learned the secrets of making fire and sound bloom using black powder, metals, and paper. You most likely came by this knowledge through formal training with a fireworks house in Tian Xia or a fireworks company from Vudra, though perhaps you mastered fireworks completely by yourself after finding a secret stash in an old shipwreck.</p>\n<p>You become trained in Fireworks Lore or become an expert if you were already trained in it. You gain the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.Jkl5KOZih7MoMqAJ#quick-alchemy-benefits]{quick alchemy benefits}, creating up to 4 pyrotechnic versatile vials during your daily preparations. These vials have the fire trait and deal fire damage instead of acid. You can use pyrotechnic versatile vials only to throw as bombs, for the @UUID[Compendium.pf2e.actionspf2e.Item.yUjuLbBMflVum8Yn]{Launch Fireworks} action or with @UUID[Compendium.pf2e.actionspf2e.Item.yzNJgwzV9XqEhKc6]{Quick Alchemy} to create fireworks consumables, including @UUID[Compendium.pf2e.equipment-srd.Item.AOOQJfSkTPiSzfB9]{Doses} or rounds of black powder, the @UUID[Compendium.pf2e.equipment-srd.Item.hd8D1Dm6aVhMYpEL]{Sparkler} item, and other items determined by the GM. You can replenish your versatile vials during exploration the same way an alchemist can.</p>\n<p>You can create fireworks displays to have distinctive effects you can use to make onlookers marvel and even to gain an advantage in combat. You gain the Launch Fireworks action and learn some basic effects. You can learn additional, more complex displays that use your versatile vials through other firework technician feats. These add a new fireworks display to your options for Launch Fireworks, each of which lists its number of actions and effects. The DC for Launch Fireworks is equal to your class DC or spell DC, whichever is higher.</p>\n<hr />\n<p><strong>Special</strong> If you have Quick Alchemy from another source (such as the @UUID[Compendium.pf2e.journals.JournalEntry.kzxu2dI7tFxv6Ix6.JournalEntryPage.Om4e4tsgNWrComie]{alchemist} class or multiclass archetype), you can use standard versatile vials to Launch Fireworks or create fireworks consumables. Each time you create a versatile vial, you choose whether it's a standard vial or pyrotechnic vial. Both types count toward your maximum number of versatile vials. You can replenish only pyrotechnic vials during exploration unless another ability lets you replenish standard versatile vials (such as the benefit of the alchemist class), in which case you can choose the type each time you replenish.</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.S4BZW9c5n6CctDxl]{Firework Technician}</p>",
       "prerequisites": [
         {
           "value": "trained in Crafting"
@@ -18395,7 +18426,7 @@
     },
     "Heart of the Kaiju": {
       "name": "Heart of the Kaiju",
-      "description": "<p>Witnessing the might of the kaiju King Mogaru, Alru, and Toraloa up close awoke a new ferocity within you. When you transform using @UUID[Compendium.pf2e.feats-srd.Item.54JzsYCx3uoj7Wlz]{Monstrosity Shape}, you can take on a kaiju form. When you take this feat, choose acid, cold, electricity, fire, or sonic damage; this is the damage your breath weapon deals. You can't change this later. The battle form is Gargantuan size with the following specific abilities; the damage values already include the extra die from being a 9th-rank spell.</p>\n<p><strong>Kaiju</strong> Speed 40 feet; physical resistance 5;</p>\n<p><strong>Melee</strong> <span class=\"action-glyph\">1</span> jaws (reach 20 feet), <strong>Damage</strong> 3d12+20 piercing;</p>\n<p><strong>Melee</strong> <span class=\"action-glyph\">1</span> claws (agile, reach 20 feet), <strong>Damage</strong> 3d8+20 slashing;</p>\n<p><strong>Breath Weapon</strong> <span class=\"action-glyph\">2</span> (evocation, primal) Each creature in a @Template[cone|distance:60] takes @Damage[15d6[@item.flags.pf2e.rulesSelections.damageType]|options:area-damage] damage (of your chosen damage type), with a @Check[reflex|against:spell|basic|options:area-effect] save against your spell DC. Once activated, your breath weapon can't be used again for [[/r 1d4 #Recharge Breath Weapon]]{1d4 rounds}.</p>",
+      "description": "<p>Witnessing the might of the kaiju King Mogaru, Alru, and Toraloa up close awoke a new ferocity within you. When you transform using @UUID[Compendium.pf2e.feats-srd.Item.54JzsYCx3uoj7Wlz]{Monstrosity Shape}, you can take on a kaiju form. When you take this feat, choose acid, cold, electricity, fire, or sonic damage; this is the damage your breath weapon deals. You can't change this later. The battle form is Gargantuan size with the following specific abilities; the damage values already include the extra die from being a 9th-rank spell.</p>\n<p><strong>Kaiju</strong> Speed 40 feet; physical resistance 5;</p>\n<p><strong>Melee</strong> <span class=\"action-glyph\">1</span> jaws (reach 20 feet), <strong>Damage</strong> 3d12+20 piercing;</p>\n<p><strong>Melee</strong> <span class=\"action-glyph\">1</span> claws (agile, reach 20 feet), <strong>Damage</strong> 3d8+20 slashing;</p>\n<p><strong>Breath Weapon</strong> <span class=\"action-glyph\">2</span> (evocation, primal) Each creature in a @Template[cone|distance:60] takes @Damage[15d6[@item.flags.system.rulesSelections.damageType]|options:area-damage] damage (of your chosen damage type), with a @Check[reflex|against:spell|basic|options:area-effect] save against your spell DC. Once activated, your breath weapon can't be used again for [[/r 1d4 #Recharge Breath Weapon]]{1d4 rounds}.</p>",
       "prerequisites": [
         {
           "value": "Monstrosity Shape"
@@ -18404,7 +18435,7 @@
     },
     "Heat Wave": {
       "name": "Heat Wave",
-      "description": "<p><strong>Trigger</strong> An effect would deal fire damage to you, even if you resist all the damage.</p>\n<p><strong>Frequency</strong> once per 10 minutes</p>\n<hr />\n<p>You harness the oncoming flames and twist them into a screen of heat and smoke, granting you @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{concealment} until the beginning of your next turn.</p>"
+      "description": "<p><strong>Trigger</strong> An effect would deal fire damage to you, even if you resist all the damage.</p>\n<p><strong>Frequency</strong> once per 10 minutes</p>\n<hr />\n<p>You harness the oncoming flames and twist them into a screen of heat and smoke, granting you @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealment} until the beginning of your next turn.</p>"
     },
     "Heaven's Step Offense": {
       "name": "Heaven's Step Offense",
@@ -18505,6 +18536,28 @@
         }
       ]
     },
+    "Hell's Bane": {
+      "name": "Hell's Bane",
+      "description": "<p>Your in-depth knowledge of your foes grants you insight into their weaknesses, granting you an advantage when fighting against them. When you critically succeed at a skill check to Recall Knowledge about a devil or Hellknight, you gain a +4 status bonus to damage against that creature for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.00gozjbtueYWop0w]{Effect: Hell's Bane}</p>",
+      "prerequisites": [
+        {
+          "value": "Devil You Know"
+        }
+      ]
+    },
+    "Hellbreaker Dedication": {
+      "name": "Hellbreaker Dedication",
+      "description": "<p><strong>Access</strong> You're a member of the Hellbreakers league.</p>\n<hr />\n<p>By joining the League, you've taken on the responsibilities of a Hellbreaker. You gain the @UUID[Compendium.pf2e.feats-srd.Item.BocFD2KV0qgUC76x]{Additional Lore} general feat for both Devil Lore and Hellknight Lore. If you were already trained in one or both of those Lore skills, you also become trained in a Lore skill of your choice.</p>\n<p>When you roll initiative, you can attempt a Devil Lore, Hellknight Lore, or Society check to @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Recall Knowledge} about one enemy you can see as a free action, if that skill would be applicable. The GM is the final arbiter of whether or not one of those skills would be appropriate to Recall Knowledge about the enemy.</p>"
+    },
+    "Hellbreaker's Resolve": {
+      "name": "Hellbreaker's Resolve",
+      "description": "<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p>You gird yourself in both mind and body for danger, steeling your resolve. You gain a number of temporary Hit Points equal to your level that last for 1 minute. While you have those temporary Hit Points, you gain a +1 status bonus to Will saves.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.wZcxrAL40jM5I5Dm]{Effect: Hellbreaker's Resolve}</p>",
+      "prerequisites": [
+        {
+          "value": "Hellbreaker Dedication"
+        }
+      ]
+    },
     "Hellknight Armiger Dedication": {
       "name": "Hellknight Armiger Dedication",
       "description": "<p><strong>Access</strong> You are from Old Cheliax.</p>\n<hr />\n<p>Your Hellknight training teaches you to terrorize others into compliance, but you also study the structure and hierarchy of Hell. You must survive painful tests of your body and mind called reckonings, which steady your mind against all sorts of trauma. You gain resistance to mental damage equal to 1 + your number of class feats from the Hellknight Armiger archetype and other Hellknight archetypes. You become trained in Intimidation and Hell Lore; if you were already trained, you become an expert instead.</p>\n<hr />\n<p><strong>Special</strong> You can't select another dedication feat except dedication feats for higher positions within the Hellknights until you have gained two other feats from the @UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.ARYrFIOsT3JxpjDY]{Hellknight Armiger} archetype.</p>",
@@ -18585,7 +18638,7 @@
     },
     "Helpful Tinkering": {
       "name": "Helpful Tinkering",
-      "description": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<hr />\n<p>You don't just tinker with your own innovation, you fiddle with your allies' weapons as well (for their benefit, of course). Choose an ally in your reach and one of their weapons. Attempt a @Check[crafting|dc:@self.level|adjustment:2] check against a high DC for your level.</p>\n<hr />\n<p><strong>Success</strong> For 1 minute, the chosen ally's Strikes with the chosen weapon gain the same offensive boost your innovation has.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.MbtWd4PvUHmwPtFO]{Effect: Helpful Tinkering}</p>\n<p><strong>Critical Failure</strong> Your ally takes @Damage[1d6[@actor.flags.pf2e.inventor.offensiveBoost]]{damage} of the type and amount that your offensive boost normally deals on a successful Strike.</p>",
+      "description": "<p><strong>Frequency</strong> once per 10 minutes</p>\n<hr />\n<p>You don't just tinker with your own innovation, you fiddle with your allies' weapons as well (for their benefit, of course). Choose an ally in your reach and one of their weapons. Attempt a @Check[crafting|dc:@self.level|adjustment:2] check against a high DC for your level.</p>\n<hr />\n<p><strong>Success</strong> For 1 minute, the chosen ally's Strikes with the chosen weapon gain the same offensive boost your innovation has.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.MbtWd4PvUHmwPtFO]{Effect: Helpful Tinkering}</p>\n<p><strong>Critical Failure</strong> Your ally takes @Damage[1d6[@actor.flags.system.inventor.offensiveBoost]]{damage} of the type and amount that your offensive boost normally deals on a successful Strike.</p>",
       "prerequisites": [
         {
           "value": "offensive boost"
@@ -18804,6 +18857,15 @@
     "Hierophant's Power": {
       "name": "Hierophant's Power",
       "description": "<p>You have entwined yourself with the natural world, and its full power flows through you. You gain an additional 10th-rank spell slot.</p>"
+    },
+    "High Alert": {
+      "name": "High Alert",
+      "description": "<p>You're constantly on guard, keeping watch over your allies against fiendish forces—no one can get the jump on your group while you're around. Choose an ally you can see within 30 feet. They gain a +1 circumstance bonus to their AC and Reflex saving throws against devils and creatures allied with the Chelaxian government (as determined by the GM) until the beginning of your next turn. This action gains the visual trait, the auditory trait, or both, depending on how you alert your ally.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.FlwmvnPH3Fu62hTE]{Effect: High Alert}</p>",
+      "prerequisites": [
+        {
+          "value": "Hellbreaker Dedication"
+        }
+      ]
     },
     "High-Speed Regeneration": {
       "name": "High-Speed Regeneration",
@@ -20935,7 +20997,7 @@
     },
     "Invoke the Elements": {
       "name": "Invoke the Elements",
-      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You summon an aura of shimmering heat, flurrying snow, crashing waves, or swirling wind and lightning.</p>\n<p>For 1 minute, you gain @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealment} against creatures more than 5 feet away, and any creature that ends its turn within 5 feet of you suffers @Damage[(ternary(gte(@actor.level,17),3,ternary(gte(@actor.level,13),2,1)))d12[@item.flags.pf2e.rulesSelections.changelingType]] damage (@Check[reflex|against:class-spell|basic] save using your class DC or spell DC, whichever is higher).</p>\n<p>At 13th and 17th level, this damage increases by 1d12.</p>\n<p>A veil may changeling deals fire damage, a snow may changeling deals cold damage, a brine may changeling deals bludgeoning damage and the effect gains the water trait, and a virga may changeling deals electricity damage.</p>",
+      "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p>You summon an aura of shimmering heat, flurrying snow, crashing waves, or swirling wind and lightning.</p>\n<p>For 1 minute, you gain @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealment} against creatures more than 5 feet away, and any creature that ends its turn within 5 feet of you suffers @Damage[(ternary(gte(@actor.level,17),3,ternary(gte(@actor.level,13),2,1)))d12[@item.flags.system.rulesSelections.changelingType]] damage (@Check[reflex|against:class-spell|basic] save using your class DC or spell DC, whichever is higher).</p>\n<p>At 13th and 17th level, this damage increases by 1d12.</p>\n<p>A veil may changeling deals fire damage, a snow may changeling deals cold damage, a brine may changeling deals bludgeoning damage and the effect gains the water trait, and a virga may changeling deals electricity damage.</p>",
       "prerequisites": [
         {
           "value": "Brine May, Snow May, Veil May, or Virga May"
@@ -24328,7 +24390,7 @@
     },
     "Mature Animal Companion (Druid)": {
       "name": "Mature Animal Companion (Druid)",
-      "description": "<p>Your animal companion has grown up over the course of your adventures, becoming a mature animal companion and gaining additional capabilities.</p>\n<p>Your animal companion has greater independence. During an encounter, even if you don't use the Command an Animal action, your animal companion can still use 1 action that round on your turn to Strike or Stride (or Burrow, Climb, or Swim if it has that Speed). It can do this at any point during your turn, as long as you aren't currently taking an action. If it does, that's all the actions it gets that round—you can't Command it later.</p>",
+      "description": "<p>Your animal companion has grown up over the course of your adventures, becoming a mature animal companion and gaining additional capabilities.</p>\n<p>Your animal companion has greater independence. During an encounter, even if you don't use the Command an Animal action, your animal companion can still use 1 action that round on your turn to Strike or Stride (or Burrow, Climb, Fly, or Swim if it has that Speed). It can do this at any point during your turn, as long as you aren't currently taking an action. If it does, that's all the actions it gets that round—you can't Command it later.</p>",
       "prerequisites": [
         {
           "value": "Animal Companion"
@@ -24337,7 +24399,7 @@
     },
     "Mature Animal Companion (Ranger)": {
       "name": "Mature Animal Companion (Ranger)",
-      "description": "<p>Your animal companion becomes a mature animal companion and gains additional capabilities.</p>\n<p>Your animal companion has greater independence.During an encounter, even if you don't use the Command an Animal action, your animal companion can still use 1 action that round on your turn to Strike or Stride (or Burrow, Climb, or Swim if it has that Speed). It can do this at any point during your turn, as long as you aren't currently taking an action. If it does, that's all the actions it gets that round—you can't Command it later.</p>",
+      "description": "<p>Your animal companion becomes a mature animal companion and gains additional capabilities.</p>\n<p>Your animal companion has greater independence.During an encounter, even if you don't use the Command an Animal action, your animal companion can still use 1 action that round on your turn to Strike or Stride (or Burrow, Climb, Fly, or Swim if it has that Speed). It can do this at any point during your turn, as long as you aren't currently taking an action. If it does, that's all the actions it gets that round—you can't Command it later.</p>",
       "prerequisites": [
         {
           "value": "Animal Companion"
@@ -25890,7 +25952,7 @@
     },
     "Necrologist Dedication": {
       "name": "Necrologist Dedication",
-      "description": "<p>Your studies of the lists of the dead allow you to call forth a horde of undead with a brief incantation. You can summon your horde with the @UUID[Compendium.pf2e.actionspf2e.Item.ND1G3s4lXNUAXc1q]{Raise the Horde} activity, and you can use the @UUID[Compendium.pf2e.actionspf2e.Item.yWTdfPklh8jL94GZ]{Mobbing Assault} action while your horde is raised to command it to attack. The eerie connection you have with your horde precludes you from also having an animal companion or any other companion (such as a follower; page 76), though if an ability allows you to have more than one follower (such as with the Additional Follower feat of the captain archetype), you can count your horde as one. You have enough control over your horde that it doesn't attack you or your allies.</p>\n<p>When raised, your horde is Huge and has a speed of 20 feet. It has the mindless and undead traits. It can be attacked. Though it's made of several undead creatures, it can't share the same space as other creatures (unless you have certain feats). Due to your eldritch connection with your horde, it uses your AC, saves, and other defensive statistics like skill DCs, but is immune to the grappled, @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}, and @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} conditions. The horde has resistance equal to your level to physical damage, but weakness equal to your level to area and splash damage. You share an animating force, so any damage that would be dealt to the horde is dealt to you instead, though you take damage only once from any ability that includes both you and the horde in the area of effect (though you take the greater amount of damage).</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.A5aAl3LLEiwbvQ9L]{Necrologist}</p>",
+      "description": "<p>Your studies of the lists of the dead allow you to call forth a horde of undead with a brief incantation. You can summon your horde with the @UUID[Compendium.pf2e.actionspf2e.Item.ND1G3s4lXNUAXc1q]{Raise the Horde} activity, and you can use the @UUID[Compendium.pf2e.actionspf2e.Item.yWTdfPklh8jL94GZ]{Mobbing Assault} action while your horde is raised to command it to attack. The eerie connection you have with your horde precludes you from also having an animal companion or any other companion (such as a follower; page 76), though if an ability allows you to have more than one follower (such as with the Additional Follower feat of the captain archetype), you can count your horde as one. You have enough control over your horde that it doesn't attack you or your allies.</p>\n<p>When raised, your horde is Huge and has a speed of 20 feet. It has the mindless and undead traits. It can be attacked. Though it's made of several undead creatures, it can't share the same space as other creatures (unless you have certain feats). Due to your eldritch connection with your horde, it uses your AC, saves, and other defensive statistics like skill DCs, but is immune to the @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}, @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}, and @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} conditions. The horde has resistance equal to your level to physical damage, but weakness equal to your level to area and splash damage. You share an animating force, so any damage that would be dealt to the horde is dealt to you instead, though you take damage only once from any ability that includes both you and the horde in the area of effect (though you take the greater amount of damage).</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.A5aAl3LLEiwbvQ9L]{Necrologist}</p>",
       "prerequisites": [
         {
           "value": "ability to cast spells from spell slots"
@@ -26819,6 +26881,18 @@
         },
         {
           "value": "Juggler Dedication"
+        }
+      ]
+    },
+    "Opportune Trickster": {
+      "name": "Opportune Trickster",
+      "description": "<p><strong>Trigger</strong> An adjacent ally makes a melee Strike against a creature.</p>\n<hr />\n<p><strong>Requirements</strong> You're adjacent to both your ally and the creature. You aren't above using underhanded tactics to gain an advantage, easily routing your opponents when they attack. Attempt a @Check[deception|against:perception] check against the Perception DC of the creature that's the target of the triggering attack. Regardless of the result, the target is temporarily immune to your attempts to use Opportune Trickster for the next 10 minutes.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} (including against the triggering attack) until the end of your ally's turn.</p>\n<p><strong>Success</strong> The target is off-guard against the triggering attack.</p>\n<p><strong>Critical Failure</strong> You lose your balance in your attempt to assist your ally and fall @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>\n<hr />\n<p><strong>Special</strong> If you have the @UUID[Compendium.pf2e.feats-srd.Item.5eNKs6738aykAhK2]{Dirty Trick} skill feat, you can attempt a @Check[thievery|against:perception] check instead of a Deception check; if you do, this action loses the mental trait</p>",
+      "prerequisites": [
+        {
+          "value": "Hellbreaker Dedication"
+        },
+        {
+          "value": "trained in Deception"
         }
       ]
     },
@@ -30568,7 +30642,7 @@
     },
     "Realm Strider": {
       "name": "Realm Strider",
-      "description": "<p>You can teleport across the battlefield, disappearing and appearing in a burst of hellfire and brimstone, a flash of lightning, a cloud of caustic gas, or other environmental hazard common within your planned realm. You can cast @UUID[Compendium.pf2e.spells-srd.Item.VlNcjmYyu95vOUe8]{Translocate} as a 4th-rank divine innate spell at will. When you do, spaces adjacent to the one you leave from and the one you appear in are momentarily filled with a damaging energy common to your realm, dealing @Damage[4d6[@actor.flags.pf2e.realmDamage]|options:area-damage|shortLabel] damage of your realm's damage type to creatures in the affected spaces (@Check[reflex|against:class-spell|basic|options:area-effect] save against your class DC or spell DC, whichever is higher).</p>",
+      "description": "<p>You can teleport across the battlefield, disappearing and appearing in a burst of hellfire and brimstone, a flash of lightning, a cloud of caustic gas, or other environmental hazard common within your planned realm. You can cast @UUID[Compendium.pf2e.spells-srd.Item.VlNcjmYyu95vOUe8]{Translocate} as a 4th-rank divine innate spell at will. When you do, spaces adjacent to the one you leave from and the one you appear in are momentarily filled with a damaging energy common to your realm, dealing @Damage[4d6[@actor.flags.system.realmDamage]|options:area-damage|shortLabel] damage of your realm's damage type to creatures in the affected spaces (@Check[reflex|against:class-spell|basic|options:area-effect] save against your class DC or spell DC, whichever is higher).</p>",
       "prerequisites": [
         {
           "value": "Archfiend Dedication"
@@ -31180,6 +31254,15 @@
       "name": "Remove Presence",
       "description": "<p>Your spell reaches into the mind of a creature and removes you from it. The amped cantrip must be one that has one or more targets and must either require a spell attack roll or have a saving throw. Use this amp in place of the psi cantrip's normal amp entry.</p>\n<hr />\n<p><strong>Amp</strong> Choose one target of the spell or one creature in its area. If that enemy fails its save or the spell hits it, you become undetected by that creature, disappearing from its senses for 1 minute or until you use a hostile action. This is similar to being @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Invisible}, but effects like <em>see the unseen </em>don't reveal you-you're affecting the target's mind, not its vision. <em>Truesight</em> can still see through this illusion if the counteract check succeeds.</p>"
     },
+    "Rend Armor": {
+      "name": "Rend Armor",
+      "description": "<p><strong>Requirements</strong> Your last action was a critical Strike that dealt bludgeoning or piercing damage.</p>\n<hr />\n<p>Your enemies' defenses are no match for you as you wrench your weapon to compromise their armor. The creature takes a –2 circumstance penalty to their AC that lasts until they can take 10 minutes to repair their armor. The creature can also Interact to adjust their armor, which removes this penalty for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.CBEHOTjal3nllTtt]{Effect: Rend Armor}</p>",
+      "prerequisites": [
+        {
+          "value": "Hellbreaker Dedication"
+        }
+      ]
+    },
     "Rend Mimicry": {
       "name": "Rend Mimicry",
       "description": "<p><strong>Requirements</strong> You have hit the same enemy with two consecutive melee Strikes that each dealt slashing damage.</p>\n<hr />\n<p>Taking advantage of the brutal efficiency of hacking away at a target with two slashing attacks, you've mastered the art of punishing a foe caught between your slices. You deal @Damage[(ternary(gte(@actor.level,16),3,ternary(gte(@actor.level,10),2,1)))d6[slashing]] damage to the target. This damage increases to 2d6 at 10th level and to 3d6 at 16th level.</p>",
@@ -31544,6 +31627,15 @@
         },
         {
           "value": "Monastic Archer Stance"
+        }
+      ]
+    },
+    "Return to the Pit!": {
+      "name": "Return to the Pit!",
+      "description": "<p>You can send the fiends who have vexed you back to their home plane where they belong. You can cast @UUID[Compendium.pf2e.spells-srd.Item.bay4AfSu2iIozNNW]{Banishment} once per day as a divine innate spell. When you take this feat, you craft a personal symbol of the Hellbreakers League that's anathema to devils. If you wield this symbol in one hand when you spend an extra action while casting banishment on a devil, you don't need to pay the extra cost to give that creature a –2 circumstance penalty to its save.</p>",
+      "prerequisites": [
+        {
+          "value": "Hellbreaker Dedication"
         }
       ]
     },
@@ -34255,7 +34347,7 @@
     },
     "Shining Runes": {
       "name": "Shining Runes",
-      "description": "<p>Whenever you Cast a Spell that requires more than one action to cast, the signature Thassilonian runes you trace in the air flicker with light and command attention. They may blaze brightly, leave lingering fog, create discordant noise, or fill the air with an overwhelming scent, such that their presence obfuscates you from onlookers. You gain concealment from enemy creatures until the beginning of your next turn. The DC to identify your spells as you cast them is 2 higher than normal.</p>",
+      "description": "<p>Whenever you Cast a Spell that requires more than one action to cast, the signature Thassilonian runes you trace in the air flicker with light and command attention. They may blaze brightly, leave lingering fog, create discordant noise, or fill the air with an overwhelming scent, such that their presence obfuscates you from onlookers. You gain @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealment} from enemy creatures until the beginning of your next turn. The DC to identify your spells as you cast them is 2 higher than normal.</p>",
       "prerequisites": [
         {
           "value": "Avenging Runelord Dedication"
@@ -36800,7 +36892,7 @@
     },
     "Star Orb": {
       "name": "Star Orb",
-      "description": "<p>Your magic has crystallized into a spherical stone. You gain a familiar, except it's a star orb: a Tiny stone of light Bulk. The familiar has no Speeds and must select a Speed familiar ability before it can move, animating in a way appropriate to the chosen Speed and using the statistics of a normal familiar for that day; when it‘s an immobile stone, it can't select any familiar or master abilities that require it to move. It always has the innate surge master ability, which counts against your limit for familiar and master abilities.</p>"
+      "description": "<p>Your magic has crystallized into a spherical stone. You gain a familiar, except it's a star orb: a Tiny stone of light Bulk. The familiar has no Speeds and must select a Speed familiar ability before it can move, animating in a way appropriate to the chosen Speed and using the statistics of a normal familiar for that day; when it's an immobile stone, it can't select any familiar or master abilities that require it to move. It always has the innate surge master ability, which counts against your limit for familiar and master abilities.</p>"
     },
     "Stargazer's Eyes": {
       "name": "Stargazer's Eyes",
@@ -37430,7 +37522,7 @@
     },
     "Storming Gaze": {
       "name": "Storming Gaze",
-      "description": "<p>You can open or energize a notable third eye on your forehead to strike with storming power. You deal @Damage[(ceil(@actor.level/2))d4[@item.flags.pf2e.rulesSelections.stormingGaze]|options:area-damage]{3d4 electricity or 3d4 sonic damage} in a @Template[type:cone|distance:15]; Storming Gaze gains this trait. Each creature in the area must attempt a @Check[reflex|against:class-spell|basic] saving throw against the higher of your class DC or spell DC. You can't use this ability again for [[/r 1d4 #Recharge Storming Gaze]]{1d4 rounds}.</p>\n<p>At 7th level and every 2 levels thereafter, the damage increases by 1d4.</p>"
+      "description": "<p>You can open or energize a notable third eye on your forehead to strike with storming power. You deal @Damage[(ceil(@actor.level/2))d4[@item.flags.system.rulesSelections.stormingGaze]|options:area-damage]{3d4 electricity or 3d4 sonic damage} in a @Template[type:cone|distance:15]; Storming Gaze gains this trait. Each creature in the area must attempt a @Check[reflex|against:class-spell|basic] saving throw against the higher of your class DC or spell DC. You can't use this ability again for [[/r 1d4 #Recharge Storming Gaze]]{1d4 rounds}.</p>\n<p>At 7th level and every 2 levels thereafter, the damage increases by 1d4.</p>"
     },
     "Stormsoul": {
       "name": "Stormsoul",
@@ -38301,7 +38393,7 @@
     },
     "Swarmkeeper Dedication": {
       "name": "Swarmkeeper Dedication",
-      "description": "<p>Your body has become a symbiotic hive for a swarm of crawling insects. You can emit your swarm using the @UUID[Compendium.pf2e.actionspf2e.Item.E48YTUyreo1kc9GM]{Swarm Forth} action, and you can use the @UUID[Compendium.pf2e.actionspf2e.Item.k6ML9SPMxaGJyjqO]{Bite and Sting} action while your swarm is outside your body to command it to attack. Your deep connection to your swarm precludes you from also having an animal companion, though if an ability allows you to have more than one animal companion (such as the beastmaster archetype), you can count your swarm as one. You're immune to any damage from your swarm, and during your daily preparations you can anoint up to five willing creatures with a concoction made from your pheromones to grant them immunity as well.</p>\n<p>While outside your body, your swarm is Large and has a Speed of 15 feet and a climb Speed of 15 feet. It can occupy the same space as other creatures. While outside your body, the swarm can be attacked. It uses your statistics for defenses but is immune to grappled, @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}, @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}, and mental effects that target only a specific number of creatures. The swarm has resistance equal to your level to physical damage and weakness equal to your level to area and splash damage. Any damage that would be dealt to the swarm is dealt to you instead, though you take damage only once from any ability that includes both you and the swarm in the area of effect (though you take the greater amount of damage).</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.If0rK2DhKh2CrYKR]{Swarmkeeper}</p>",
+      "description": "<p>Your body has become a symbiotic hive for a swarm of crawling insects. You can emit your swarm using the @UUID[Compendium.pf2e.actionspf2e.Item.E48YTUyreo1kc9GM]{Swarm Forth} action, and you can use the @UUID[Compendium.pf2e.actionspf2e.Item.k6ML9SPMxaGJyjqO]{Bite and Sting} action while your swarm is outside your body to command it to attack. Your deep connection to your swarm precludes you from also having an animal companion, though if an ability allows you to have more than one animal companion (such as the beastmaster archetype), you can count your swarm as one. You're immune to any damage from your swarm, and during your daily preparations you can anoint up to five willing creatures with a concoction made from your pheromones to grant them immunity as well.</p>\n<p>While outside your body, your swarm is Large and has a Speed of 15 feet and a climb Speed of 15 feet. It can occupy the same space as other creatures. While outside your body, the swarm can be attacked. It uses your statistics for defenses but is immune to @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}, @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}, @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}, and mental effects that target only a specific number of creatures. The swarm has resistance equal to your level to physical damage and weakness equal to your level to area and splash damage. Any damage that would be dealt to the swarm is dealt to you instead, though you take damage only once from any ability that includes both you and the swarm in the area of effect (though you take the greater amount of damage).</p>\n<p>@UUID[Compendium.pf2e.journals.JournalEntry.vx5FGEG34AxI2dow.JournalEntryPage.If0rK2DhKh2CrYKR]{Swarmkeeper}</p>",
       "prerequisites": [
         {
           "value": "trained in Nature"
@@ -39536,7 +39628,7 @@
     },
     "Thermal Nimbus": {
       "name": "Thermal Nimbus",
-      "description": "<p>You direct waves of warmth into or out of your kinetic gate to drastically shift the temperature around you. Choose cold or fire. You and allies in your kinetic aura gain resistance equal to your level to damage of that type. Any creature that starts its turn in your kinetic aura or moves into your aura during its turn takes @Damage[(floor(@actor.level/2))[@actor.flags.pf2e.kineticist.thermalNimbus]] damage. Elemental resistance from a gate junction is cumulative with resistance from Thermal Nimbus.</p>",
+      "description": "<p>You direct waves of warmth into or out of your kinetic gate to drastically shift the temperature around you. Choose cold or fire. You and allies in your kinetic aura gain resistance equal to your level to damage of that type. Any creature that starts its turn in your kinetic aura or moves into your aura during its turn takes @Damage[(floor(@actor.level/2))[@actor.flags.system.kineticist.thermalNimbus]] damage. Elemental resistance from a gate junction is cumulative with resistance from Thermal Nimbus.</p>",
       "selfEffect": "Stance: Thermal Nimbus"
     },
     "Thick Hide Mask": {
@@ -39571,6 +39663,15 @@
       "prerequisites": [
         {
           "value": "You have a long prehensile tongue or a tail. At the GM's discretion, similar flexible appendages, such as tentacles, can be used to qualify instead."
+        }
+      ]
+    },
+    "Thorn in Hell's Side": {
+      "name": "Thorn in Hell's Side",
+      "description": "<p>Your devotion to the ideals of justice, freedom, and revolution allow you to truly punish those who stand in your way. When you critically succeed at a Hellbreaker Strike, the target must succeed at a @Check[fortitude|against:class-spell|traits:incapacitation] save against your class DC or spell DC, whichever is higher, or become @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1} (@UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 2} on a critical failure). This effect has the incapacitation trait.</p>",
+      "prerequisites": [
+        {
+          "value": "Defy Hell"
         }
       ]
     },
@@ -40971,7 +41072,7 @@
     },
     "Twist the Knife": {
       "name": "Twist the Knife",
-      "description": "<p><strong>Requirements</strong> Your last action was a melee Strike that dealt sneak attack damage to an @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} target.</p>\n<hr />\n<p>After stabbing your opponent in a weak spot, you tear the wound open. You deal @Damage[(@actor.flags.pf2e.sneakAttackDamage.number)[bleed]]{persistent bleed} damage to the target equal to your number of sneak attack damage dice.</p>"
+      "description": "<p><strong>Requirements</strong> Your last action was a melee Strike that dealt sneak attack damage to an @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} target.</p>\n<hr />\n<p>After stabbing your opponent in a weak spot, you tear the wound open. You deal @Damage[(@actor.flags.system.sneakAttackDamage.number)[bleed]]{persistent bleed} damage to the target equal to your number of sneak attack damage dice.</p>"
     },
     "Twisting Petal Stance": {
       "name": "Twisting Petal Stance",
@@ -44531,9 +44632,14 @@
     }
   },
   "folders": {
+    "Level 1": "Level 1",
+    "Level 5": "Level 5",
+    "Level 9": "Level 9",
     "Level 2": "Level 2",
     "Suli": "Suli",
+    "Level 13": "Level 13",
     "Level 4": "Level 4",
+    "Level 17": "Level 17",
     "Level 6": "Level 6",
     "Level 8": "Level 8",
     "Level 12": "Level 12",
@@ -44549,15 +44655,10 @@
     "Guerrilla": "Guerrilla",
     "Hellknight Order Features": "Hellknight Order Features",
     "Hungerseed": "Hungerseed",
-    "Level 1": "Level 1",
     "Level 10": "Level 10",
-    "Level 13": "Level 13",
     "Level 16": "Level 16",
-    "Level 17": "Level 17",
     "Level 18": "Level 18",
     "Level 20": "Level 20",
-    "Level 5": "Level 5",
-    "Level 9": "Level 9",
     "Miscellaneous": "Miscellaneous",
     "Munitions Master": "Munitions Master",
     "Necrologist": "Necrologist",
@@ -44602,10 +44703,10 @@
     "Gunslinger": "Gunslinger",
     "Kitsune": "Kitsune",
     "Talos": "Talos",
-    "Grippli": "Grippli",
     "Hellknight": "Hellknight",
     "Naari": "Naari",
     "Ranger": "Ranger",
+    "Tripkee": "Tripkee",
     "Sylph": "Sylph",
     "Class": "Class",
     "Gnome": "Gnome",
@@ -44686,7 +44787,7 @@
     "Awakened Animal": "Awakened Animal",
     "Wylderheart": "Wylderheart",
     "Goloma": "Goloma",
-    "Gnoll": "Gnoll",
+    "Kholo": "Kholo",
     "Spellshot": "Spellshot",
     "Fleshwarp": "Fleshwarp",
     "Undead Master": "Undead Master",
@@ -44864,6 +44965,7 @@
     "Runelord": "Runelord",
     "Blackjacket": "Blackjacket",
     "Field Propagandist": "Field Propagandist",
-    "Iridian Choirmaster": "Iridian Choirmaster"
+    "Iridian Choirmaster": "Iridian Choirmaster",
+    "Hellbreaker": "Hellbreaker"
   }
 }
