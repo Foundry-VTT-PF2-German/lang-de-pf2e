@@ -33,6 +33,7 @@
     },
     "Auldegrund Grimcarver": {
       "name": "Auldegrund Düsterschnitter",
+      "blurb": "Male dwarf ritualist",
       "items": {
         "spellcastingEntry->Divine Innate Spells": {
           "name": "Immanente Göttliche Zauber"
@@ -68,9 +69,9 @@
           "name": "Teufelspakt",
           "description": "<p>Auldegrunds Teufelspakt mit Alocer</p>"
         },
-        "equipment->Lionlodge Key Ring": {
-          "name": "Löwenloge Schlüsselring",
-          "description": "<p>Schlüsselring mit allen Schlüssen für jedes Schloss in der Löwenloge</p>"
+        "equipment->Key Ring": {
+          "name": "Key Ring",
+          "gmNote": "<p>Contains keys to all locks in Lionlodge.</p>"
         },
         "consumable->Healing Potion (Lesser)": {
           "description": "<Compendium>"
@@ -87,24 +88,11 @@
         },
         "action->Invoke Alocer": {
           "name": "Alocer anrufen",
-          "description": "<p><strong>Auslöser</strong> Auldegrund wird auf 60 oder weniger TP reduziert</p>\n<p><strong>Häufigkeit</strong> Ein Mal am Tag</p>\n<hr />\n<p><strong>Effekt</strong> Auldegrund ruft auf Infernalisch, „Gib mir die Stärke, diese Feinde in deinem Namen zu töten, allmächtiger Alocer!“ Während er das tut, verdunkelt sich seine Haut zu einem tiefen Rot, diabolische Hörner wachsen aus seiner Stirn, eine flammende, löwengleiche Mähne erscheint um seinen Kopf, brennende Schwingen entfalten sich aus seinen Schultern und seine Waffen entzünden sich in schwarzem Feuer.</p>\n<p>Er heilt augenblicklich @Damage[(3d6+7)[healing]]{3W6+7 Trefferpunkte}, erhält eine Flugbewegungsrate von 25 Fuß/7,50 Meter und verursacht zusätzlich @Damage[1d6[fire]]{1W6 Feuerschaden} mit seinen Nahkampf- und Fernkampfangriffen.</p>\n<p> Es ist jedoch ein ziemliches Wagnis, da Alocer nicht sehr geduldig ist. Am Ende jeder Runde von Auldegrund muss er einen @Check[flat|dc:11]{einfachen Wurf} (der SG steigt jede Runde nach der ersten um 1) ablegen. Ein Fehlschlag bedeutet, dass Alocer enttäuscht ist, dass Auldegrund seine Feinde noch nicht besiegt hat. Der Effekt von Alocer anrufen endet augenblicklich. Auldegrund erhält @Damage[(3d6+7)]{3W6+7 Schadenspunkte}, verliert seine Flugbewegungsrate und den zusätzlichen Feuerschaden für Waffenangriffe, außerdem erhält er den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 3}.</p>",
-          "rules": {
-            "0": {
-              "label": "Ist von der Anrufung Alocers betroffen"
-            },
-            "1": {
-              "label": "Avatar von Alocer"
-            }
-          }
+          "description": "<p><strong>Trigger</strong> Auldegrund is reduced to 60 or fewer Hit Points</p>\n<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p><strong>Effect</strong> Auldegrund calls out, in Infernal, \"Give me the strength to slay these foes in your name, almighty Alocer!\" As he does so, his skin darkens to red, diabolic horns jut from his brow, a flaming lion-like mane appears around his head, burning wings burst from his shoulders, and his weapons ignite with black fire.</p>\n<p>He immediately heals @Damage[(3d6+7)[healing]] Hit Points, gains a fly speed of 25 feet, and deals an additional 1d6 fire damage with his melee and ranged Strikes.</p>\n<p>This is a risky gambit, though, for Alocer is not patient. At the end of each of Auldegrund's turns, he must attempt a @Check[flat|dc:11|name:End Invoke Alocer] (the DC of this flat check increases by 1 each round). On a failure, Alocer grows disappointed that Auldegrund has not defeated his foes and the effects of Invoke Alocer end immediately. This deals @Damage[(3d6+7)[untyped]] damage to Auldegrund, removes his fly speed and additional fire damage to weapon Strikes, and causes Auldegrund to become @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3}.</p>"
         },
         "action->Cruel Shot": {
           "name": "Grausamer Schuss",
-          "description": "<p>Auldegrund nimmt sich Zeit, mit seinem Bogen zu zielen und lächelt dabei grausam.</p>\n<p>Danach führt er einen Fernkampfangriff aus. Trifft er mit diesem, verursacht er 2W6 Präzisionsschaden und 1W6 Blutungsschaden. Auch wenn er verfehlen sollte,\nverursacht er immer noch @Damage[2d6[untyped]]{2W6 Schaden} durch einen Streifschuss. Nur bei einem Kritischen Fehlschlag verursacht sein Grausamer Schuss keinen Schaden.</p>",
-          "rules": {
-            "1": {
-              "text": "Auch wenn er verfehlen sollte, verursacht er immer noch @Damage[2d6[untyped]]{2W6 Schaden} durch einen Streifschuss. Nur bei einem Kritischen Fehlschlag verursacht sein Grausamer Schuss keinen Schaden."
-            }
-          }
+          "description": "<p>Auldegrund takes time to line up a shot with his bow and smiles cruelly as he makes a ranged Strike with it.</p>\n<p>If he hits, he deals 2d6 precision damage and 1d6 bleed damage. Even if he misses, he still deals @Damage[2d6[untyped]] damage from the glancing blow. Only on a critical miss does his cruel shot deal no damage.</p>"
         }
       }
     },
@@ -928,7 +916,7 @@
         },
         "action->Frightful Presence": {
           "name": "Frightful Presence",
-          "description": "<p>90 feet @Check[will|dc:30]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
+          "description": "<p>90 feet. @Check[will|dc:30|options:area-effect,inflicts:frightened]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
         },
         "action->Resilient Form": {
           "name": "Resilient Form",
