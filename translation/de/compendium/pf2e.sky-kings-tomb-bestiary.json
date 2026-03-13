@@ -806,11 +806,11 @@
         },
         "action->Intense Heat": {
           "name": "Intensive Hitze",
-          "description": "<p>10 Fuß/3 m, @Damage[7d6[fire]]{7W6 Feuerschaden} (@Check[reflex|dc:28|basic]{einfacher Reflexwurf})</p>"
+          "description": "<p>10 feet. @Damage[7d6[fire]|options:area-damage] damage @Check[reflex|dc:28|basic|options:area-effect]</p>"
         },
         "action->Blue Flames": {
           "name": "Blaue Flammen",
-          "description": "<p>Erzielt das Elementare Inferno einen Kritischen Treffer, schießen blaue Flammen durch seinen Leib und erhöhen den Schaden seiner Fähigkeiten Intensive Hitze und Infernosprung bis zum Beginn seines nächsten Zuges um @Damage[3d6[fire]]{3d6}{3W6 Feuerschaden}.</p>"
+          "description": "<p>When the elemental inferno scores a critical hit, its body surges with blue flames, increasing the damage of its intense heat and Inferno Leap by 3d6 until the start of its next turn.</p>"
         },
         "action->Inferno Leap": {
           "name": "Infernosprung",
@@ -1107,7 +1107,7 @@
         },
         "action->Stench": {
           "name": "Gestank",
-          "description": "<p>30 Fuß/9 m. Eine Kreatur, die den Wirkungsbereich betritt, muss einen @Check[fortitude|dc:21]{Zähigkeitswurf} ablegen. Bei einem Fehlschlag erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1} und bei einem Kritischen Fehlschlag zusätzlich einen Zustandsmalus von -5 Fuß/1,50 m auf ihre Bewegungsrate für 1 Runde. Solange sie sich innerhalb der Aura befindet, erleidet die Kreatur einen Situationsmalus von -2 auf Rettungswürfe, um sich vom Zustand Kränkelnd zu befreien. Gelingt einer Kreatur der Zähigkeitswurf, ist sie vorübergehend immun gegen den Gestank aller Xulgathen für 1 Minute.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.uB3CVn3momZO9h0L]{Effekt: Xulgath-Gestank}</p>"
+          "description": "<p>30 feet. A creature that enters the area must attempt a @Check[fortitude|dc:21|options:area-effect,inflicts:sickened] save. On a failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, and on a critical failure, the creature also takes a –5 status penalty to its Speeds for 1 round. While within the aura, the creature takes a –2 circumstance penalty to saves to recover from the sickened condition. A creature that succeeds at its save is temporarily immune to all xulgaths stenches for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.uB3CVn3momZO9h0L]{Effect: Xulgath Stench}</p>"
         },
         "action->+2 Status To Saves Vs. Petrifying Gaze": {
           "name": "+2 Zustandsbonus auf RW gg. Versteinernder Blick"
@@ -2867,7 +2867,7 @@
         },
         "action->Ferret Fear": {
           "name": "Frettchenfurcht",
-          "description": "<p>Steinmacher fürchtet instinktiv Marderartige wie Wiesel, Frettchen oder auch Feuerfrettchen. Auf solche Kreaturen reagiert er, als besäßen diese die Fähigkeit @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.etMnv73EIdEZrYYu]{Unheimliche Ausstrahlung} (@Check[will|dc:20|traits:emotion,fear,mental,action:frightful-presence]{Willenswurf}).</p>"
+          "description": "<p>Stonemaker has an instinctive fear of mustelids like weasels, ferrets, and even pyre ferrets. He responds to such creatures as though they had @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.etMnv73EIdEZrYYu]{Frightful Presence} (@Check[will|dc:20|options:area-effect,inflicts:frightened|traits:emotion,fear,mental,action:frightful-presence]).</p>"
         },
         "action->Petrifying Glance": {
           "name": "Verlangsamender Blick",
@@ -2875,7 +2875,7 @@
         },
         "action->Petrifying Gaze": {
           "name": "Versteinernder Blick",
-          "description": "<p>Der Basilisk starrt eine maximal 30 Fuß/9 m weit entfernte Kreatur an, welche er sehen kann. Die Kreatur muss einen @Check[fortitude|dc:22]{Zähigkeitswurf} ablegen. Sollte der Rettungswurf misslingen und die Kreatur noch nicht durch Verlangsamender Blick oder diese Fähigkeit den Zustand Verlangsamt erhalten haben, erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}. Sollte die Kreatur bereits durch Verlangsamender Blick oder diese Fähigkeit den Zustand Verlangsamt erhalten haben, erhält sie bei einem Fehlschlag permanent den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dTwPJuKgBQCMxixg]{Versteinert}.</p>\n<p>Sollte eine derart versteinerte Kreatur mit dem frischen Blut eines maximal 1 Stunde toten Basilisken bestrichen (und nicht nur bespritzt) werden, wird sie augenblicklich entsteinert.</p>\n<p>Ein Basilisk enthält genug Blut, um [[/gmr 1d3]]{1W3 Mittelgroße Kreaturen} auf diese Weise zu bestreichen.</p>"
+          "description": "<p>The basilisk stares at a creature it can see within 30 feet. That creature must attempt a @Check[fortitude|dc:22|options:inflicts:slowed,inflicts:petrified] save. If it fails and has not already been slowed by Petrifying Glance or this ability, it becomes @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1}. If the creature was already slowed by this ability or Petrifying Glance, a failed save causes the creature to be @UUID[Compendium.pf2e.conditionitems.Item.dTwPJuKgBQCMxixg]{Petrified} permanently.</p>\n<p>A creature petrified in this manner that is coated (not just splashed) with fresh basilisk blood (taken from a basilisk that has been dead no longer than 1 hour) is instantly restored to flesh.</p>\n<p>A single basilisk contains enough blood to coat [[/gmr 1d3 #Medium Creatures]]{1d3 Medium creatures} in this manner.</p>"
         }
       }
     },
@@ -3238,7 +3238,7 @@
       "items": {
         "action->Stench": {
           "name": "Gestank",
-          "description": "<p>30 Fuß/9 m. Eine Kreatur, die den Wirkungsbereich betritt, muss einen @Check[fortitude|dc:21]{Zähigkeitswurf} ablegen. Bei einem Fehlschlag erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1} und bei einem Kritischen Fehlschlag zusätzlich einen Zustandsmalus von -5 Fuß/1,50 m auf ihre Bewegungsrate für 1 Runde. Solange sie sich innerhalb der Aura befindet, erleidet die Kreatur einen Situationsmalus von -2 auf Rettungswürfe, um sich vom Zustand Kränkelnd zu befreien. Gelingt einer Kreatur der Zähigkeitswurf, ist sie vorübergehend immun gegen den Gestank aller Xulgathen für 1 Minute.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.uB3CVn3momZO9h0L]{Effekt: Xulgath-Gestank}</p>"
+          "description": "<p>30 feet. A creature that enters the area must attempt a @Check[fortitude|dc:21|options:area-effect,inflicts:sickened] save. On a failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, and on a critical failure, the creature also takes a –5 status penalty to its Speeds for 1 round. While within the aura, the creature takes a –2 circumstance penalty to saves to recover from the sickened condition. A creature that succeeds at its save is temporarily immune to all xulgaths stenches for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.uB3CVn3momZO9h0L]{Effect: Xulgath Stench}</p>"
         },
         "action->Troop Defenses": {
           "name": "Truppverteidigung",
