@@ -597,7 +597,7 @@
         },
         "action->Crystallize": {
           "name": "Kristallisieren",
-          "description": "<p><strong>Anforderungen</strong> Der Kristall hat eine Kreatur umhüllt.</p>\n<p><strong>Effekt</strong> Die umhüllte Kreatur muss einen erfolgreichen @Check[fortitude|dc:28|name:Kristallisieren]{Zähigkeitswurf} durchführen oder sie erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}, bis sie nicht mehr umhüllt ist. Wenn die Kreatur bereits den Zustand Verlangsamt hat, erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dTwPJuKgBQCMxixg]{Versteinert}, da sie sich in Kristall verwandelt. Danach wird sie vom Fleischfressenden Kristall auf den Boden abgesondert. Nach [[/gmr 1d4 #Stunden]]{1W4 Stunden} zersplittert das Opfer und ein neuer Fleischfressender Kristall entsteht aus den Überresten.</p>"
+          "description": "<p><strong>Requirements</strong> The crystal has a creature engulfed.</p>\n<hr />\n<p><strong>Effect</strong> The engulfed creature must succeed at a @Check[fortitude|dc:28|options:inflicts:petrified,inflicts:slowed] save or become @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until it is no longer engulfed. If the creature is already slowed, it becomes @UUID[Compendium.pf2e.conditionitems.Item.dTwPJuKgBQCMxixg]{Petrified} as it is turned into crystal and expelled by the carnivorous crystal onto the ground.</p>\n<p>In [[/gmr 1d4 #hours]]{1d4 hours}, the petrified victim shatters and a new carnivorous crystal emerges from the remains.</p>"
         },
         "action->Engulf": {
           "description": "<p>@Check[reflex|dc:28|traits:damaging-effect]{Reflexwurf}, @Damage[2d6[slashing]]{2W6 Hiebschaden}, [[/act escape dc=28]], Befreien 25 (nur Wuchtschaden).</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Engulf]</p>"
@@ -874,7 +874,7 @@
         },
         "action->Volcanic Heat": {
           "name": "Vulkanhitze",
-          "description": "<p>@Template[emanation|distance:10]{10 Fuß/3 m} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}</p>\n<hr />\n<p>@Damage[3d6[fire]]{3W6 Feuerschaden} (@Check[reflex|dc:29|basic|traits:aura,fire]{einfacher Reflexwurf})</p>"
+          "description": "<p>10 feet. @Damage[3d6[fire]|options:area-damage] damage (@Check[reflex|dc:29|basic|options:area-effect] save).</p>"
         },
         "action->Belch Smoke": {
           "name": "Rauch speien",
@@ -1113,7 +1113,7 @@
           "name": "Regeneration 20 (deaktiviert durch Kälte)"
         },
         "action->Frightful Presence": {
-          "description": "<p>@Template[emanation|distance:60]{60 Fuß/18 m} Aura, @Check[will|dc:29|traits:aura,fear,emotion,mental]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.etMnv73EIdEZrYYu]\n<p>60 feet. @Check[will|dc:29|options:area-effect,inflicts:frightened]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
         },
         "action->Breath-Seared Sword": {
           "name": "Odemversehrte Waffe",
@@ -1145,7 +1145,7 @@
           "name": "Klaue"
         },
         "action->Frightful Presence": {
-          "description": "<p>@Template[emanation|distance:90]{90 Fuß/27 m} Aura, @Check[will|dc:42|traits:aura,fear,emotion,mental]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.etMnv73EIdEZrYYu]\n<p>90 feet. @Check[will|dc:42|options:area-effect,inflicts:frightened]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
         },
         "action->Breath Weapon": {
           "name": "Odemwaffe",
@@ -1165,27 +1165,27 @@
       "items": {
         "action->Localized Dragonstorm": {
           "name": "Lokalisierter Drachensturm",
-          "description": "<p><strong>Auslöser</strong> Eine neue Welle beginnt</p>\n<p><strong>Effekt</strong> Würfle mit [[/gmr 1d10]]{1W10}, um zu bestimmen, welcher der möglichen Effekte sich manifestiert. Dahaks Wille bestimmt, wo sich die Effekte manifestieren, d.h. sie manifestieren sich jeweils dort, wo sie den SC die meisten Probleme bereiten.</p>"
+          "description": "<p><strong>Trigger</strong> A new wave begins</p>\n<hr />\n<p><strong>Effect</strong> Roll [[/gmr 1d10 #Localized Dragonstorm]] to determine which effect manifests from the following possibilities. The placement of these effects is guided by Dahak's will, and they should manifest in the most detrimental locations possible to the PCs.</p>"
         },
         "action->1-2 Acid Rain": {
           "name": "1-2: Säureregen",
-          "description": "<p>Stark säurehaltiger Niederschlag durchnässt Kreaturen in einem @Template[burst|distance:20]{Explosionsradius von 20 Fuß/6 m}. Kreaturen im Wirkungsbereich erleiden @Damage[6d10[acid]]{6W10 Punkte Säureschaden} (@Check[reflex|dc:42|basic]{einfacher Reflexwurf}; bei einem Kritischen Fehlschlag erleidet eine Kreatur zudem @Damage[5[persistent,acid]]{5 Punkte Anhaltenden Säureschaden}).</p>"
+          "description": "<p>A torrent of acid drenches creatures in a @Template[burst|distance:20]. Creatures in the area take @Damage[6d10[acid]|options:area-damage] damage (@Check[reflex|dc:42|basic|options:area-effect] save). Creatures that critically fail also take @Damage[5[persistent,acid]] damage.</p>"
         },
         "action->3-4 Freezing Wind": {
           "name": "3-4: Eisiger Wind",
-          "description": "<p>Eisige Winde und Hagel greifen alle Kreaturen in einem @Template[burst|distance:20]{Explosionsradius von 20 Fuß/6 m} an. Kreaturen im Wirkungsbereich erleiden @Damage[3d10[cold],3d10[bludgeoning]]{3W10 Punkte Kälte- und 3W10 Punkte Wuchtschaden} (@Check[reflex|dc:42|basic]; bei einem Kritischen Fehlschlag erhält eine Kreatur zudem für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}).</p>"
+          "description": "<p>A barrage of freezing wind and hail assaults all creatures in a @Template[burst|distance:20]. Creatures in the area take @Damage[3d10[cold],3d10[bludgeoning]|options:area-damage] damage (@Check[reflex|dc:42|basic|options:area-effect,inflicts:slowed] save). Creatures that critically fail are @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 round.</p>"
         },
         "action->5-6 Bolts of Lightning": {
           "name": "5-6: Blitze",
-          "description": "<p>Blitze fahren auf alle Kreaturen in einem @Template[burst|distance:20]{Explosionsradius von 20 Fuß/6 m} nieder. Kreaturen im Wirkungsbereich erleiden @Damage[6d10[electricity]]{6W10 Punkte Elektrizitätsschaden} (@Check[reflex|dc:42|basic]{einfacher Reflexwurf}; bei einem Kritischen Fehlschlag erhält eine Kreatur zudem für 1 Runde die Zustände @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind} und @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Taub}).</p>"
+          "description": "<p>Several bolts of lightning strike all creatures in a @Template[burst|distance:20]. Creatures in the area take @Damage[6d10[electricity]|options:area-damage] damage (@Check[reflex|dc:42|basic|options:area-effect,inflicts:blinded,inflicts:deafened] save). Creatures that critically fail their saves become @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} and @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} for 1 round.</p>"
         },
         "action->7-8 Flaming Vortex": {
           "name": "7-8: Flammenwirbel",
-          "description": "<p>Feuerstrahlen fahren auf alle Kreaturen innerhalb eines @Template[burst|distance:20]{Explosionsradius von 20 Fuß/6 m} herab. Kreaturen im Wirkungsbereich erleiden @Damage[6d10[fire]]{6W10 Punkte Feuerschaden} (@Check[reflex|dc:42|basic]{einfacher Reflexwurf}; bei einem Kritischen Fehlschlag erleidet eine Kreatur zudem [[/r 5[persistent,fire]]]{5 Punkte Anhaltenden Feuerschaden}).</p>"
+          "description": "<p>Gouts of flame fall on all creatures in a @Template[burst|distance:20]. Creatures in the area take @Damage[6d10[fire]|options:area-damage] damage (@Check[reflex|dc:42|basic|options:area-effect] save). Creatures that critically fail their saves also take @Damage[5[persistent,fire]] damage.</p>"
         },
         "action->9-10 Poison Miasma": {
           "name": "9-10: Giftnebel",
-          "description": "<p>Giftiger Nebel senkt sich herab und bedeckt einen @Template[burst|distance:20]{Explosionsradius von 20 Fuß/6 m} für 1 Runde. Kreaturen innerhalb des Nebels erhalten den Zustand @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Verborgen}, während Kreaturen außerhalb des Nebels gegenüber denen im Nebel den Zustand Verborgen erlangen. Kreaturen innerhalb des Nebels erleiden @Damage[6d10[poison]]{6W10 Punkte Giftschaden} (@Check[fortitude|dc:42|basic]{einfacher Zähigkeitswurf}; bei einem Kritischen Fehlschlag erleidet eine Kreatur den Zustand @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Kraftlos 2}.</p>"
+          "description": "<p>Poisonous mist rolls forth, covering a @Template[burst|distance:20] for 1 round. Creatures within the mist become @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed}, and creatures outside it become concealed to creatures within it. Creatures within the mist take @Damage[6d10[poison]|options:area-damage] damage (@Check[fortitude|dc:42|basic|options:area-effect,inflicts:enfeebled] save). Creatures that critically fail their saves become @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2}.</p>"
         }
       }
     },
@@ -1468,7 +1468,7 @@
         },
         "action->Stench": {
           "name": "Gestank",
-          "description": "<p>@Template[emanation|distance:10]{10 Fuß/3 m} @Compendium[pf2e.bestiary-ability-glossary-srd.v61oEQaDdcRpaZ9X]{Aura}</p>\n<hr />\n<p>Eine Kreatur welche den Wirkungsbereich der Aura betritt oder ihren Zug darin beginnt muss einen erfolgreichen @Check[fortitude|dc:34]{Zähigkeitswurf} ablegen, um nicht den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1} zu erhalten (plus @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1} für die Dauer des Kränkelns im Fall eines Kritischen Fehlschlages). Die Kreatur erleidet innerhalb der Aura einen Situationsmalus von -2 auf Rettungswürfe gegen Krankheiten und um sich vom Zustand Kränkelnd zu erholen. Gelingt einer Kreatur der Rettungswurf, so ist sie für 1 Minute vorübergehend immun.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.wX9L6fbqVMLP05hn]{Effekt: Gestank}</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.SEzkqVJxr2eJDsuJ]\n<p>10 feet. A creature entering the aura or starting its turn in the aura must succeed at a @Check[fortitude|dc:34|options:area-effect,inflicts:sickened,inflicts:slowed] save or become @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (plus @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} as long as it's sickened on a critical failure).</p>\n<p>While within the aura, the creature takes a -2 circumstance penalty to saves against disease and to recover from the sickened condition. A creature that succeeds at its save is temporarily immune for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.wX9L6fbqVMLP05hn]{Effect: Stench}</p>"
         },
         "action->Consume Flesh": {
           "name": "Fleisch verzehren",
@@ -1610,7 +1610,7 @@
         },
         "action->Stench": {
           "name": "Gestank",
-          "description": "<p>3 m. Betritt eine Kreatur die Aura oder beginnt sie ihren Zug innerhalb der Aura, muss sie einen Zähigkeitswurf gegen SG 26 ablegen; bei Misslingen erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1} (plus bei einem Kritischen Fehlschlag zusätzlich den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}, solange Kränkelnd anhält).</p>\n<p>Innerhalb der Aura erleidet die Kreatur einen Situationsmalus von -2 auf Rettungswürfe gegen Krankheit und auf Würfe, um sich vom Zustand Kränkelnd zu erholen. Gelingt einer Kreatur der Zähigkeitswurf, ist sie für 1 Minute vorübergehend gegen diese Aura immun.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.wX9L6fbqVMLP05hn]{Effekt: Gestank}</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.SEzkqVJxr2eJDsuJ]\n<p>10 feet. A creature entering the aura or starting its turn in the aura must succeed at a @Check[fortitude|dc:26|options:area-effect,inflicts:sickened,inflicts:slowed] save or become @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (plus @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} as long as it's sickened on a critical failure).</p>\n<p>While within the aura, the creature takes a -2 circumstance penalty to saves against disease and to recover from the sickened condition. A creature that succeeds at its save is temporarily immune for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.wX9L6fbqVMLP05hn]{Effect: Stench}</p>"
         },
         "action->Consume Flesh": {
           "name": "Fleisch verzehren",
@@ -2557,7 +2557,7 @@
           "description": "<p><strong>Auslöser</strong> Eine Kreatur wirkt einen Zauber, den König Harral vorbereitet hat.</p>\n<p><strong>Effekt</strong> Der König wendet einen vorbereiteten Zauber auf, um den gewirkten Zauber zu kontern. Er kann sodann versuchen, den auslösenden Zauber zu bannen.</p>"
         },
         "action->Frightful Presence": {
-          "description": "<p>@Template[emanation|distance:60]{60 Fuß/18 m} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}, @Check[will|dc:33|traits:aura,fear,emotion,mental]{Willenswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.etMnv73EIdEZrYYu]\n<p>60 feet. @Check[will|dc:33|options:area-effect,inflicts:frightened]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
         },
         "action->Rejuvenation": {
           "name": "Wiederkehr",
@@ -2693,12 +2693,12 @@
       "name": "Schwacher Drachensturm",
       "description": "<p>Eine kleinere Version eines Drachensturmes - ein tobender Wirbel aus Wind, der mit Eis, Elektrizität, Feuer, Gift und Säure aufgeladen ist - erfüllt Alsetas Ring.</p>",
       "disable": "<p>@Check[religion|dc:40]{Religionskunde} (Legende), um eine nicht-böse Gottheit um direktes Eingreifen zu bitten und den Drachensturm aufzulösen (Gebete an Apsu erlauben Charakteren, die nur den Kompetenzgrad Meister in Religionskunde besitzen, einen Fertigkeitswurf abzulegen, als besäßen sie den Grad Legende); @Check[thievery|dc:42|traits:action:disable-a-device]{Diebeskunst} (Legende), um das Tor der Rächerin zu deaktivieren, während der Avatar es aufzwingt; oder @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Magie bannen} (10. Grad; SG 40), um dem Drachensturm @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenzuwirken}.</p>",
-      "routine": "<p> (1 Aktion) Zu seinem Initiativewert dehnt sich der schwache Drachensturm aus und greift alle Kreaturen innerhalb von Alsetas Ring an. Betroffene Kreaturen erleiden @Damage[2d8[acid],2d8[cold],2d8[electricity],2d8[fire],2d8[poison]]{10W8 Schadenspunkte} (@Check[reflex|dc:46|basic]{einfacher Reflexwurf}), der Schaden wird gleichermaßen auf Elektrizitäts-, Feuer-, Gift-, Kälte- und Säureschaden verteilt. Kreaturen, deren Rettungswurf misslingt, werden 20 Fuß/6 m weit zum Zentrum von Alsetas Ring hingezogen (bzw. erhalten den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend} und werden um 30 Fuß/9 m herangezogen im Fall eines Kritischen Fehlschlages). Nach 10 Runden löst sich der schwache Drachensturm auf, allerdings manifestiert sich über der Region ein weitaus stärkerer Drachensturm - siehe Der Drachensturm.</p>",
+      "routine": "<p>(1 action) On its initiative, the lesser dragonstorm reaches out and blasts all creatures within Alseta's Ring. Affected creatures take @Damage[2d8[acid],2d8[cold],2d8[electricity],2d8[fire],2d8[poison]|options:area-damage]{10d8 damage} (@Check[reflex|dc:46|basic|options:area-effect,forced-movement,inflicts:prone]), evenly split between acid, cold, fire, electricity, and poison. Creatures that fail their save are pulled 20 feet toward the center of Alseta's Ring (or are knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} and pulled 30 feet on a critical failure). After 10 rounds, the lesser dragonstorm is destroyed, but a much greater dragonstorm manifests in the surrounding region-see The Dragonstorm.</p>",
       "stealth": "<p>(Legende)</p>",
       "items": {
         "action->Manifest Lesser Dragonstorm": {
           "name": "Schwachen Drachensturm manifestieren",
-          "description": "<p><strong>Auslöser</strong> Eine Kreatur versucht, das Tor der Rächerin zu aktivieren</p>\n<p><strong>Effekt</strong> Die Kammer mit Alsetas Ring füllt sich mit einem Drachensturm. Kreaturen in diesem Bereich erleiden @Damage[2d8[acid],2d8[cold],2d8[electricity],2d8[fire],2d8[poison]]{10W8 Schadenspunkte}, die sich gleichermaßen aus Elektrizitäts-, Feuer-, Gift-, Kälteund Säureschaden zusammensetzen.</p>"
+          "description": "<p><strong>Trigger</strong> A creature attempts to activate Vengegate</p>\n<hr />\n<p><strong>Effect</strong> The chamber within Alseta's Ring fills with a dragonstorm. Creatures within this area take @Damage[2d8[acid],2d8[cold],2d8[electricity],2d8[fire],2d8[poison]|options:area-damage]{10d8 damage}, equally split between acid, cold, electricity, fire, and poison.</p>"
         }
       }
     },
@@ -2724,7 +2724,7 @@
         },
         "action->Smoke Vision": {
           "name": "Rauchsicht",
-          "description": "<p>Rauch behindert die Sicht Roter Drachen nicht und sie können den Zustand Verborgen ignorieren, wenn er durch Rauch bedingt ist.</p>"
+          "description": "<p>Smoke doesn't impair a red dragon's vision; it ignores the @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} condition from smoke.</p>"
         },
         "action->Attack of Opportunity (Jaws Only)": {
           "name": "Gelegenheitsangriff (Nur Biss)",
@@ -2732,10 +2732,10 @@
         },
         "action->Dragon Heat": {
           "name": "Drachenhitze",
-          "description": "<p>@Template[emanation|distance:10]{10 Fuß/3 m} @Compendium[pf2e.bestiary-ability-glossary-srd.v61oEQaDdcRpaZ9X]{Aura}</p>\n<hr />\n<p>@Damage[6d6[fire]]{6W6 Feuerschaden} (@Check[reflex|dc:42|basic|traits:aura,fire,divine]{einfacher Reflexwurf})</p>"
+          "description": "<p>10 feet. @Damage[6d6[fire]|options:area-damage] damage (@Check[reflex|dc:42|basic|options:area-effect] save)</p>"
         },
         "action->Frightful Presence": {
-          "description": "<p>@Template[emanation|distance:90]{90 Fuß/27 m} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}, @Check[will|dc:42|traits:aura,fear,emotion,mental]{Willenswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.etMnv73EIdEZrYYu]\n<p>90 feet. @Check[will|dc:42|options:area-effect,inflicts:frightened]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
         },
         "action->Redirect Energy": {
           "name": "Energie umlenken",
@@ -2902,7 +2902,7 @@
         },
         "action->Smoke Vision": {
           "name": "Rauchsicht",
-          "description": "<p>Rauch behindert die Sicht Roter Drachen nicht und sie können den Zustand Verborgen ignorieren, wenn er durch Rauch bedingt ist.</p>"
+          "description": "<p>Smoke doesn't impair a red dragon's vision; it ignores the @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} condition from smoke.</p>"
         },
         "action->+2 Status to All Saves vs. Magic": {
           "name": "Zustandsbonus +2 auf alle RW gg. Magie"
@@ -2916,7 +2916,7 @@
           "description": "<p>@Template[emanation|distance:10]{10 Fuß/3 m} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}, @Damage[2d6[acid],2d6[cold],2d6[electricity],2d6[fire],2d6[poison]]{10W6} (Schaden wird gleichmäßig auf Elektrizitäts-, Feuer-, Gift-, Kälte- und Säureschaden aufgeteilt; @Check[reflex|dc:45|basic]{einfacher Reflexwurf})</p>"
         },
         "action->Frightful Presence": {
-          "description": "<p>@Template[emanation|distance:120]{120 Fuß/36 m} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}, @Check[will|dc:45|traits:aura,fear,emotion,mental]{Willenswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.etMnv73EIdEZrYYu]\n<p>120 feet. @Check[will|dc:45|options:area-effect,inflicts:frightened]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
         },
         "action->Redirect Energy": {
           "name": "Energien umlenken",
@@ -3013,7 +3013,7 @@
           "description": "<p>Mengkare erhält in jeder Runde zu Beginn seines Zuges 2 Reaktionen.</p>"
         },
         "action->Frightful Presence": {
-          "description": "<p>@Template[emanation|distance:90]{90 Fuß/27 m} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}, @Check[will|dc:43|traits:aura,fear,emotion,mental]{Willenswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.etMnv73EIdEZrYYu]\n<p>90 feet. @Check[will|dc:43|options:area-effect,inflicts:frightened]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
         },
         "action->Golden Luck": {
           "name": "Goldenes Glück",
@@ -3358,7 +3358,7 @@
         },
         "action->Unnerving Gaze": {
           "name": "Irritierender Blick",
-          "description": "<p>@Template[emanation|distance:30]{30 Fuß/9 m} @Compendium[pf2e.bestiary-ability-glossary-srd.v61oEQaDdcRpaZ9X]{Aura}</p>\n<hr />\n<p>Wenn eine Kreatur ihren Zug in der Aura beendet, muss sie einen erfolgreichen @Check[will|dc:38]{Willenswurf} ablegen oder sie erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Todgeweiht 1}.</p>"
+          "description": "<p>30 feet. When a creature ends its turn in the aura, it must succeed at a @Check[will|dc:38|options:area-effect,inflicts:doomed] save or become @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 1}.</p>"
         },
         "action->Assemble Choir": {
           "name": "Chor versammeln",
@@ -3366,7 +3366,7 @@
         },
         "action->Focus Gaze": {
           "name": "Blick fokussieren",
-          "description": "<p>Der Präzentor starrt eine Kreatur an, die er innerhalb von 30 Fuß/9 m sehen kann. Die Kreatur muss sofort einen @Check[will|dc:38|name:Irritierender Blick|traits:aura]{Willenswurf} gegen den Irritierenden Blick des Auguren durchführen. Nach ausgeführtem Wurf ist die Kreatur bis zum Beginn des nächsten Zuges des Präzentors temporär immun.</p>\n<p>Wenn die Kreatur bereits den Zustand @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Todgeweiht} hat, glaubt sie bei einem fehlgeschlagenen Rettungswurf zusätzlich, dass ihre Haut sich von alleine vom Körper löst. Dadurch erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Verwirrt}, solange sie den Zustand Todgeweiht hat.</p>"
+          "description": "<p>The precentor stares at a creature it can see within 30 feet. The target must immediately attempt a @Check[will|dc:38|options:inflicts:doomed,inflicts:confused] save against the precentor's unnerving gaze.</p>\n<p>In addition, if the creature was already @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed}, on a failed save, it sees the skin of its own body peel back, making it @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} for as long as it remains @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed}. After attempting this save, the creature is then temporarily immune until the start of the precentor's next turn.</p>"
         },
         "action->Tormenting Touch": {
           "name": "Folternde Berührung",
@@ -4296,7 +4296,7 @@
           "description": "<p>Die Tarraske ist immun gegenüber Kegeln, Linien, Strahlen und dem Zauber Magisches Geschoss. Diese Effekte prallen harmlos von ihren Schuppen ab.</p>"
         },
         "action->Frightful Presence": {
-          "description": "<p>@Template[emanation|distance:300]{300 Fuß/90 m} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}, @Check[will|dc:39|traits:aura,fear,emotion,mental]{Willenswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.etMnv73EIdEZrYYu]\n<p>300 feet. @Check[will|dc:39|options:area-effect,inflicts:frightened]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
         },
         "action->Inexorable": {
           "name": "Unerbittlich",
@@ -4692,7 +4692,7 @@
           "name": "Hörner"
         },
         "action->Frightful Presence": {
-          "description": "<p>@Template[emanation|distance:90]{90 Fuß/27 m} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}, @Check[will|dc:34|traits:aura,fear,emotion,mental]{Willenswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.etMnv73EIdEZrYYu]\n<p>90 feet. @Check[will|dc:34|options:area-effect,inflicts:frightened]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
         },
         "action->Wing Deflection": {
           "name": "Abwehrender Flügel",
@@ -4914,7 +4914,7 @@
         },
         "action->Howl": {
           "name": "Heulen",
-          "description": "<p><strong>Häufigkeit</strong> Dreimal am Tag</p>\n<p><strong>Effekt</strong> Der Wendigo entfesselt ein elendes Heulen, das bis zu einer Entfernung von 1,5 Kilometern gehört werden kann. Jede Kreatur, die das Heulen wahrnimmt, muss einen @Check[will|dc:38]{Willenswurf} ablegen; bei einem Fehlschlag erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}. Jede Kreatur innerhalb von 120 Fuß/36 m Entfernung zum Wendigo, die einen Kritischem Fehlschlag erzielt, erhält stattdessen den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 3} und flieht für [[/gmr 1d4 #Runden]]{1W4 Runden} (oder bis sie nicht mehr verängstigt ist, falls dies zuerst eintritt). Eine durch das Heulen des Wendigos verängstige Kreatur kann ihre Angst immer noch auf gewöhnlichem Wege reduzieren (aber nicht unter Verängstigt 1 reduzieren, bevor nicht eine Stunde vergangen ist oder Magie dafür eingesetzt wurde). Unabhängig vom Erfolg oder Misserfolg des Rettungswurfs ist eine Kreatur anschließend für 24 Stunden immun gegen das Heulen des Wendigos.</p>"
+          "description": "<p><strong>Frequency</strong> Three times per day</p>\n<hr />\n<p><strong>Effect</strong> The wendigo unleashes a forlorn howl that can be heard up to 1 mile away. Any creature that hears the howl must succeed at a @Check[will|dc:38|options:area-effect,inflicts:frightened,inflicts:fleeing] save or be @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}. Any creature that critically fails and is within 120 feet of the wendigo is instead @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3}, and is also @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} for [[/gmr 1d4 #rounds]]{1d4 rounds} (or until it's no longer frightened, whichever comes first).</p>\n<p>A creature frightened by a wendigo's howl still naturally recovers from its fright but can't reduce it below frightened 1 in this way until 1 hour has passed or magic is used. Whether it succeeds or fails its save, a creature is then temporarily immune to that wendigo's Howl for 24 hours.</p>"
         },
         "action->Ride the Wind": {
           "name": "Windreiten",
@@ -5018,7 +5018,7 @@
           "description": "<p><strong>Auslöser</strong> Xotani erleidet Schaden</p>\n<hr />\n<p><strong>Effekt</strong> Aus Xotanis Wunde bricht Magma in einem @Template[cone|distance:30]{Kegel von 30 Fuß/9 m} hervor und verursacht @Damage[6d8[fire],6d8[persistent,fire]|options:area-damage]{6W8 Punkte Feuerschaden und 6W8 Punkte Anhaltenden Feuerschaden} (@Check[reflex|dc:42|basic|options:area-effect]{einfacher Reflexwurf}).</p>"
         },
         "action->Frightful Presence": {
-          "description": "<p>@Template[emanation|distance:300]{300 Fuß/90 m} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}, @Check[will|dc:39|traits:aura,fear,emotion,mental]{Willenswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.etMnv73EIdEZrYYu]\n<p>300 feet. @Check[will|dc:39|options:area-effect,inflicts:frightened]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
         },
         "action->Light Blindness": {
           "name": "Blindheit durch Licht",
@@ -5061,7 +5061,7 @@
           "description": "<p>Wenn eine Xotanibrut stirbt, explodiert sie und fügt jeder Kreatur in einer @Template[emanation|distance:30]{Ausstrahlung von 30 Fuß/9 m} @Damage[15d8[fire]|options:area-damage]{15W8 Feuerschaden} zu (@Check[reflex|dc:39|basic|options:area-effect]{einfacher Reflexwurf}).</p>"
         },
         "action->Frightful Presence": {
-          "description": "<p>@Template[emanation|distance:60]{60 Fuß/18 m} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.v61oEQaDdcRpaZ9X]{Aura}, @Check[will|dc:36|traits:aura,fear,emotion,mental]{Willenswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.etMnv73EIdEZrYYu]\n<p>60 feet. @Check[will|dc:36|options:area-effect,inflicts:frightened]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
         },
         "action->Internal Furnace": {
           "name": "Innere Glut",
@@ -5096,7 +5096,7 @@
         },
         "action->Subduing Strikes": {
           "name": "Überwältigende Angriffe",
-          "description": "<p>Ein Zephyrgardist erleidet keinen Malus für das Ausführen Nichttödlicher Angriffe, wenn seine Waffe nicht über die Eigenschaft Nichttödlich verfügen sollte. Sollte die Zielkreatur keine Waffe führen, verursachen die Nichttödlichen Angriffe des Gardisten [[/r 2d6]]{2W6 zusätzliche Schadenspunkte}.</p>"
+          "description": "<p>A Zephyr Guard takes no penalty for making nonlethal attacks with a weapon that doesn't have the nonlethal trait. The guard's nonlethal Strikes against a creature that is not wielding a weapon deal an additional 2d6 damage.</p>"
         },
         "lore->Katapesh Lore": {
           "name": "Kenntnis (Katapesch)"
