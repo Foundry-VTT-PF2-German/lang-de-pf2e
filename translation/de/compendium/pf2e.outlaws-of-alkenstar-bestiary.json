@@ -89,11 +89,11 @@
         },
         "action->Glass Gaze": {
           "name": "Vergläsernder Blick",
-          "description": "<p>30 Fuß/9 m. Beendet eine Kreatur ihren Zug innerhalb der Aura, muss sie einen @Check[fortitude|dc:25]{Zähigkeitswurf} ablegen. Bei Misslingen erhält die Kreatur für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}. Die Medusa kann diese Aura als Aktion mit der Kategorie Konzentration deaktivieren oder aktivieren.</p>"
+          "description": "<p>30 feet. When a creature ends its turn in the aura, it must attempt a @Check[fortitude|dc:25|options:area-effect,inflicts:slowed] save. If the creature fails, it becomes @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 minute. The medusa can deactivate or activate this aura by using a single action, which has the concentrate trait.</p>"
         },
         "action->Focus Gaze": {
           "name": "Blick fokussieren",
-          "description": "<p>Die Medusa fixiert eine Kreatur innerhalb von 30 Fuß/9 m mit ihrem Blick. Sie muss die Kreatur sehen können. Das Ziel muss augenblicklich einen Zähigkeitswurf gegen den Versteinernden Blick der Medusa ablegen. Sollte die Kreatur bereits den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt} durch Vergläsernden Blick besitzen und ihr Rettungswurf misslingen, so wird sie in Glas verwandelt und erhält permanent den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dTwPJuKgBQCMxixg]{Versteinert} (Zauber wie z.B. @UUID[Compendium.pf2e.spells-srd.Item.Pr1ruNTbzGn3H9w5]{Stein zu Fleisch} wirken auf das Opfer aber normal). Nach dem Rettungswurf ist die Kreatur bis zum Beginn des nächsten Zuges der Medusa vorübergehend gegen ihren Blick immun.</p>"
+          "description": "<p>The medusa fixes their glare at a creature they can see within 30 feet. The target must immediately attempt a @Check[fortitude|dc:25|options:inflicts:slowed,inflicts:petrified] save against the medusa's glass gaze. If the creature was already @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed} by glass gaze before attempting its save, a failed save causes it to be @UUID[Compendium.pf2e.conditionitems.Item.dTwPJuKgBQCMxixg]{Petrified} permanently.</p>\n<p>After attempting its save, the creature is then temporarily immune until the start of the medusa's next turn.</p>"
         },
         "action->Serpent Venom": {
           "name": "Schlangengift",
@@ -388,7 +388,7 @@
         },
         "action->Stench": {
           "name": "Gestank",
-          "description": "<p>30 Fuß/9 m. Eine die Aura betretende Kreatur muss einen @Check[fortitude|dc:27]{Zähigkeitswurf} ablegen. Bei einem Fehlschlag erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1}, bei einem Kritischen Fehlschlag zusätzlich den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}. Die Kreatur erhält in der Aura außerdem einen Situationsmalus von -2 auf Rettungswürfe, um sich vom Zustand Kränkelnd zu erholen. Gelingt ihr ein solcher Rettungswurf, ist die Kreatur 1 Minute lang temporär immun gegen den Effekt.</p>"
+          "description": "<p>30 feet. A creature entering the emanation must attempt a @Check[fortitude|dc:27|options:area-effect,inflicts:sickened,inflicts:slowed] save. On a failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, and on a critical failure is also @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1}. While within the aura, the creature takes a -2 circumstance penalty to saves to recover from the sickened condition. A creature that succeeds at the save is temporarily immune to this effect for 1 minute.</p>"
         },
         "action->Amnesia Venom": {
           "name": "Amnesiegift",
@@ -536,7 +536,7 @@
         },
         "action->Bottoms Up": {
           "name": "Hoch die Tassen",
-          "description": "<p><strong>Voraussetzung</strong> Der Mechanische Brauer hat eine Kreatur @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Ergriffen}</p>\n<hr />\n<p><strong>Effekt</strong> Der Mechanische Brauer zwangsernährt die ergriffene Kreatur mit 1 Portion der gerade aktuellen Flüssigkeit, die sich in ihrem Braukessel befindet (üblicherweise Bier, wie das Rauchwärts Herb). Die Kreatur wird den Effekten der Flüssigkeit ausgesetzt und kann weder atmen noch sprechen, bis zum Beginn ihrer nächsten Runde.</p>"
+          "description": "<p><strong>Requirements</strong> The clockwork brewer has a creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}</p>\n<hr />\n<p><strong>Effect</strong> The clockwork brewer force- feeds the grabbed creature 1 serving of whatever liquid is in the clockwork brewer's tank (typically beer such as Smokeside Sour). The creature is exposed to the liquid's effects, and it can't breathe or speak until the start of its turn.</p>"
         },
         "action->Pre-Programmed Greeting": {
           "name": "Vorprogrammierter Gruß",
@@ -681,7 +681,7 @@
           "description": "<p>24 Stunden, @Check[thievery|traits:action:disable-a-device|dc:19]{Diebeskunst}, Bereitschaft</p>\n<hr />\n<p>Damit eine Mechanische Kreatur agieren kann, muss sie von einer anderen Kreatur mit einem einzigartigen Schlüssel aufgezogen werden. Dies dauert 1 Minute. Sobald sie aufgezogen wurde, bleibt sie für die angegebene Zeitspanne einsatzbereit, normalerweise 24 Stunden, danach nimmt sie ihre Umgebung nicht mehr wahr und kann erst wieder handeln, wenn sie erneut aufgezogen wird. Einige Fähigkeiten der Mechanischen Kreaturen erfordern, dass sie einen Teil ihrer verbleibenden Betriebszeit aufwenden. Sie können nicht mehr ausgeben, als sie haben, und schalten sich sofort ab, sobald sie bei 0 angekommen sind. Wenn es unklar ist, wann eine Mechanische Kreatur das letzte Mal aufgezogen wurde, nimm an, dass die meisten Besitzer alle ihre Mechanischen Kreaturen zur selben Zeit aufziehen, normalerweise um 8 Uhr morgens.</p>\n<p>Eine Mechanische Kreatur, die in ihrem Aufziehen-Eintrag Bereitschaft stehen hat, kann den Bereitschaftsmodus als Drei-Aktionen-Aktivität aktivieren. Ihre Betriebszeit verringert sich im Bereitschaftsmodus nicht, aber sie kann ihre Umgebung wahrnehmen (mit einem Malus von -2 auf Wahrnehmung). Sie kann nicht agieren, mit einer Ausnahme: Wenn sie eine Kreatur wahrnimmt, kann sie den Bereitschaftsmodus als Reaktion verlassen (ggf. Initiative würfeln).</p>\n<p>Jemand kann @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Mechanismus ausschalten} versuchen, um eine Mechanische Kreatur zu deaktivieren (mit einem SG, der im Eintrag Aufziehen aufgeführt ist). Für jeden Erfolg verliert die Mechanische Kreatur 1 Stunde an Betriebszeit. Dies ist auch möglich, wenn sich die Mechanische Kreatur im Bereitschaftsmodus befindet.</p>"
         },
         "action->Constrict": {
-          "description": "<p><strong>Voraussetzung</strong> Der Mechanische Bauarbeiter hat eine Kreatur @UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]{Ergriffen} oder @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Gebunden}</p>\n<hr />\n<p><strong>Effekt</strong> @Damage[(2d4+4)[bludgeoning]]{2W4+4 Wuchtschaden}, @Check[fortitude|dc:21|basic]{einfacher Zähigkeitswurf}.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.g26YiEIfSHCpLocV]\n<p><strong>Requirements</strong> The clockwork fabricator has a creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}</p>\n<hr />\n<p><strong>Effect</strong> @Damage[(2d4+4)[bludgeoning]], @Check[fortitude|dc:21|basic]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
         },
         "action->Modular Arms": {
           "name": "Modulare Arme",
@@ -1706,7 +1706,7 @@
           "name": "Schnelle Heilung 5"
         },
         "action->Frightful Presence": {
-          "description": "<p>30 Fuß/9 m. @Check[will|dc:23]{Willenswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.etMnv73EIdEZrYYu]\n<p>30 feet. @Check[will|dc:23|options:area-effect,inflicts:frightened]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
         },
         "action->Head Hunter": {
           "name": "Köpfende Waffen",
@@ -2381,7 +2381,7 @@
         },
         "action->Constant Explosions": {
           "name": "Ständige Explosionen",
-          "description": "<p>5 Fuß/1,50 m. @Damage[4d6[fire]]{4W6 Feuer}, @Check[reflex|dc:29|basic]{einfacher Reflexwurf}. Diese Aura kann andere Pyronitschlicke nicht teilen.</p>"
+          "description": "<p>5 feet. @Damage[4d6[fire]|options:area-damage], @Check[reflex|dc:29|basic|options:area-effect]. This aura can't cause other pyronite oozes to split.</p>"
         },
         "action->Rejoin": {
           "name": "Vereinigen",
@@ -2769,7 +2769,7 @@
         },
         "action->Stealthy Abduction": {
           "name": "Leiser Entführer",
-          "description": "<p>Kann ein Schlammrückenmörder erfolgreich eine Kreatur in den Zustand @UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]{Gegriffen} versetzen, gibt diese Kreatur keinen Laut von sich; andere Kreaturen können das Ergreifen nicht allein anhand von Gehör bemerken. Solange die Kreatur im Zustand Gegriffen verbleibt, kann sie keine Aktionen der Kategorie Hörbar nutzen und keine Zauber mit verbaler Komponente wirken.</p>"
+          "description": "<p>When a Sludgespine killer successfully @UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]{Grapples} a creature, that creature makes no sound; other creatures can't notice the grapple by hearing alone. As long as it's grabbed, the creature can't use actions with the auditory trait or cast spells with a verbal component.</p>"
         }
       }
     },
