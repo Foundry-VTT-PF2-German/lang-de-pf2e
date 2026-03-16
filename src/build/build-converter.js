@@ -35,10 +35,6 @@ const skills = {
 
 const readSystemMap = (filename) => {
     const result = new Map();
-    let localRun = getConfigParameter("local", null);
-    if (localRun == null) {
-        throw "local must be set for build";
-    }
     let systemFolder = getConfigParameter("systemPath", null);
     if (systemFolder == null) {
         throw "systemPath must be set for build";
@@ -46,7 +42,7 @@ const readSystemMap = (filename) => {
     if (systemFolder.slice(-1) !== "/") {
         systemFolder += "/";
     }
-    const folderPath = localRun ? systemFolder + "packs/pf2e/" + filename : systemFolder + "packs/" + filename;
+    const folderPath = systemFolder + "packs/pf2e/" + filename;
     for (const child of readdirSync(folderPath)) {
         if (child.startsWith("_")) {
             continue;
