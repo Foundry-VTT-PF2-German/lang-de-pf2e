@@ -646,7 +646,7 @@
     "Enraged Polar Bear Spirit": {
       "name": "Zorniger Geisterhafter Bär",
       "description": "<p>Ein geisterhafter Eisbär richtet sich auf die Hinterbeine auf und stößt ein Brüllen aus.</p>",
-      "disable": "<p>@Check[nature|dc:26]{Naturkunde} (Experte), um den Geist zu besänftigen; @Check[intimidate|dc:30]{Einschüchtern} (Meister), um den Geist gefügig zu machen; oder @Check[religion|dc:30]{Religionskunde} (Experte), um die spirituelle Verderbnis zu bekämpfen (jeder erfolgreiche Wurf reduziert die Anzahl seiner Aktionen um 1)</p>",
+      "disable": "<p>@Check[nature|dc:26] (expert) to calm the spirit, @Check[intimidation|dc:30] (master) to cow the spirit, or @Check[religion|dc:30] (expert) to contain the spiritual corruption (each successful check reduces its number of actions by 1)</p>",
       "reset": "<p>Der Geisterbär beruhigt sich, sobald sich 1 Minute lang keine Kreaturen im Raum aufhalten. Nach 10 Minuten ist er aber wieder kampfbereit.</p>",
       "routine": "<p>(3 Aktionen) Der Bär bewegt sich mit beängstigender Geschwindigkeit durch den Raum, als würde er teleportieren, und führt einen Geisterklauenangriff gegen eine zufällig bestimmte Kreatur.</p>",
       "items": {
@@ -2871,7 +2871,7 @@
         },
         "action->Petrifying Glance": {
           "name": "Verlangsamender Blick",
-          "description": "<p>30 Fuß/9 m.</p>\n<p><strong>Auslöser</strong> Eine Kreatur innerhalb von 30 Fuß/9 m Entfernung, welche der Basilisk sehen kann, beginnt ihren Zug</p>\n<hr />\n<p><strong>Effekt</strong> Das Ziel muss einen @Check[fortitude|dc:20]{Zähigkeitswurf} ablegen; bei Misslingen erhält die Kreatur für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}, da sich ihr Körper versteift.</p>"
+          "description": "<p>30 feet.</p>\n<p><strong>Trigger</strong> A creature within 30 feet that the basilisk can see starts its turn.</p>\n<hr />\n<p><strong>Effect</strong> The target must attempt a @Check[fortitude|dc:20] save. If it fails, it's @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 minute as its body slowly stiffens.</p>"
         },
         "action->Petrifying Gaze": {
           "name": "Versteinernder Blick",
@@ -3246,11 +3246,11 @@
         },
         "action->Fang and Claw": {
           "name": "Zähne und Klauen",
-          "description": "<p><span class=\"action-glyph\">1</span> bis <span class=\"action-glyph\">3</span></p>\n<p><strong>Häufigkeit</strong> Einmal pro Runde</p>\n<hr />\n<p><strong>Effekt</strong> Die Xulgathen-Amokhorde schlägt auf Feinde innerhalb von 5 Fuß/1,50 m ein (@Check[reflex|dc:21|basic]{einfacher Reflexwurf}). Der Schaden hängt von der Anzahl der Aktionen ab.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[1d6[slashing]]{1W6 Hiebschaden}</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(1d6+5)[slashing]]{1W6+5 Hiebschaden}</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(2d6+5)[slashing]]{2W6+5 Hiebschaden}</p>"
+          "description": "<p><span class=\"action-glyph\">1</span> to <span class=\"action-glyph\">3</span></p>\n<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> The xulgath ravening lashes out at enemies within 5 feet (@Check[reflex|dc:21|basic|options:area-effect] save). The damage depends on the number of actions.</p>\n<p><span class=\"action-glyph\">1</span> @Damage[1d6[slashing]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">2</span> @Damage[(1d6+5)[slashing]|options:area-damage] damage</p>\n<p><span class=\"action-glyph\">3</span> @Damage[(2d6+5)[slashing]|options:area-damage] damage</p>"
         },
         "action->Infected Wounds": {
           "name": "Infizierte Wunden",
-          "description": "<p>Die Zähne und Klauen der Xulgathen fügen Kreaturen, die durch den Gestank eines Xulgathen den Zustand Kränkelnd haben, zusätzlich @Damage[1d6[poison]]{1W6 Giftschaden} zu.</p>"
+          "description": "<p>The xulgaths' Fang and Claw deals an additional 1d6 poison damage to any creature sickened by a xulgath's stench.</p>"
         },
         "action->Sharpened Advance": {
           "name": "Verschärfter Vorstoß",
@@ -3258,7 +3258,7 @@
         },
         "action->Troop Movement": {
           "name": "Truppbewegung",
-          "description": "<p>Immer, wenn ein Trupp eine Aktion zum Bewegen nutzt, kann sie sich als Freie Aktion auf einer Fläche von 20x20 Fuß/6x6 m Formieren (minus fehlende Felder), und sich dann entsprechend ihrer Bewegungsrate bewegen. Dabei gilt der Trupp als Gigantische Kreatur; sollte sich also beispielsweise ein Feld der Truppe durch Schwieriges Gelände bewegen, gelten die anfallenden Regeln für den gesamten Trupp.</p>"
+          "description": "<p>Whenever a troop Strides, it first Forms Up as a free action to condense into a 20-foot-by-20-foot area (minus any missing squares), then moves up to its Speed. This works just like a Gargantuan creature moving; for instance, if any square of the troop enters difficult terrain, the extra movement cost applies to the whole troop.</p>"
         }
       }
     },
