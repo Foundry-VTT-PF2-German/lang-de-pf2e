@@ -71,7 +71,8 @@
             "entryType": "JournalEntry",
             "mappingEntries": {
                 "name": "name",
-                "pages": { "path": "pages", "converter": "translateAdventureJournalPages" }
+                "pages": { "path": "pages", "converter": "translateAdventureJournalPages" },
+                "categories": { "path": "categories", "converter": "translatePageCategories" }
             }
         },
         "adventureJournalPage": {
@@ -85,6 +86,7 @@
                 "background": "background.src",
                 "drawings": { "path": "drawings", "converter": "textCollection" },
                 "notes": { "path": "notes", "converter": "textCollection" },
+                "regions": { "path": "regions", "converter": "nameCollection" },
                 "tiles": { "path": "tiles", "converter": "translateTiles" },
                 "tokens": { "path": "tokens", "converter": "translateTokens" }
             }
@@ -97,6 +99,7 @@
                 "results": { "path": "results", "converter": "translateTableResults" }
             }
         },
+        "pageCategory": { "entryType": "JournalEntry", "mappingEntries": { "name": "name" } },
         "rule": { "entryType": "Item", "mappingEntries": { "label": "label", "prompt": "prompt", "text": "text" } },
         "tableResult": {
             "entryType": "RollTable",
