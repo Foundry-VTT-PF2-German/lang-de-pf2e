@@ -3495,25 +3495,21 @@
       "name": "Sensenklingen",
       "description": "<p>Sechs lange, in Vertiefungen in den Wänden und im Boden verborgene Klingen schießen im Zickzack durch verschiedene Teile des Ganges, wenn eine der Druckplatten auf der Kreuzung berührt wird. Es gibt derart viele Druckplatten, dass man sie unmöglich vermeiden kann, wenn man sich durch den Raum bewegt. Die Klingen werden durch die verborgenen Schlitze wieder eingezogen und schwingen dann an anderen Stellen wieder aus der Wand.</p>",
       "disable": "<p>@Check[thievery|dc:26|name:Klinge entschärfen]{Diebeskunst} (Experte), um jede Klinge zu entschärfen, oder magische Codeworte (nur Chafkhem bekannt), um die Falle für 10 Minuten zu deaktivieren.</p>",
-      "reset": "<p>Die Falle setzt sich zurück, wenn keine Kreaturen sich mehr in Bereich <strong>E20</strong> aufhalten. Beschädigte oder zerstörte Klingen werden beim Zurücksetzen der Falle nicht repariert.</p>",
+      "reset": "<p>The trap resets when no creatures remain in area <strong>E20</strong>. Damaged or destroyed blades aren't repaired when the trap resets.</p>",
       "routine": "<p>(7 Aktionen) Die Klinge wendet 1 Aktion für jede Klinge auf; eine Klinge führt einen Sensenangriff gegen jede Kreatur in ihrem Bereich. Die letzte Aktion nutzt sie für Zufallspositionierung. Reduziere die Anzahl der Aktionen der Falle pro zerstörter Klinge um 1.</p>",
       "stealth": "<p>(Experte)</p>",
       "items": {
         "action->Dicing Scythes": {
           "name": "Sensenschläge",
-          "description": "<p><strong>Auslöser</strong> Eine Kreatur tritt auf die 15x25 Fuß/4,50x7,50 m-Gangkreuzung</p>\n<hr />\n<p><strong>Effekt</strong> Die Falle nutzt Zufallspositionierung; jede Klinge führt einen Sensenangriff gegen jede Kreatur in ihrem Bereich durch, dann nutzt die Falle erneut Zufallspositionierung. Die Falle würfelt dann ihre Initiative.</p>"
+          "description": "<p><strong>Trigger</strong> A creature steps in the 15-foot-by-25-foot area where the branching hallways connect</p>\n<hr />\n<p><strong>Effect</strong> The trap uses Scythe Shuffle; each blade makes a scythe Strike against each creature in its region, then it uses Scythe Shuffle again. The trap then rolls for initiative.</p>"
         },
         "action->Scythe Shuffle": {
           "name": "Zufallspositionierung",
-          "description": "<p>Die Klingen bewegen sich unvorhersehbar unter dem Boden oder hinter den Wänden des Ganges entlang. Würfle für jede Klinge mit [[/gmr 1d4]]{1W4} den Bereich aus, in dem sie ihren nächsten Sensenangriff ausführt. Eine Kreatur kann @UUID[Compendium.pf2e.actionspf2e.Item.BlAOM2X92SI6HMtJ]{Suchen} (SG 22) nutzen, um Hinweise zu erlangen, wo die Klingen gegenwärtig sind. Bei Erfolg erfährt die Kreatur, wie viele Klingen aktuell in ihrem Bereich sind.</p>\n<ol>\n<li>Hauptkreuzung (der 15x25 Fuß/4,50x7,50 m-Bereich, wo sich die Gänge kreuzen; Bereich <strong>E20</strong>)</li>\n<li>Nordgang (von der Hauptkreuzung bis zur Geheimtür nach Bereich <strong>E14</strong>)</li>\n<li>Hauptgang (von der Hauptkreuzung bis zur Geheimtür nach Bereich <strong>E24</strong>)</li>\n<li>Südgang (von der Hauptkreuzung bis zur Wand nach Bereich <strong>E25</strong>)</li>\n</ol>"
+          "description": "<p>The blades travel erratically throughout the hallway's branches, out of sight under the floors or behind the walls. For each blade, roll [[/gmr 1d4 #Direction Scythe Blade]]{1d4} to determine the region in which it next makes scythe Strikes. A creature can [[/act seek dc=22]] to learn clues about blades in the region they're currently occupying. On a success, the creature knows how many blades are currently in its region.</p>\n<p>1. Main intersection (the 15-foot-by-25-foot area where the hallways connect, as marked on area <strong>E20</strong>)</p>\n<p>2. North branch (from the main intersection to the secret door to area <strong>E14</strong>)</p>\n<p>3. Central hall (from the main intersection to the secret door to area <strong>E24</strong>)</p>\n<p>4. South branch (from the main intersection to the wall shared with area <strong>E25</strong>)</p>"
         },
         "strike-melee->Scythe": {
           "name": "Sense",
-          "description": "<p>Kein Malus für Mehrfachangriffe.</p>"
-        },
-        "action->No MAP": {
-          "name": "Kein Mehrfachangriffsmalus",
-          "description": "<p>Die Klingen-Angriffe wenden keinen Malus für Mehrfachangriffe an.</p>"
+          "description": "<p>No multiple attack penalty</p>"
         }
       }
     },
