@@ -34,6 +34,10 @@
         "Text": "Das Ziel muss einen @Check[fortitude|dc:19]{Zähigkeitswurf} bestehen oder erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1} für 1 Runde durch die intensive Kälte (Verlangsamt 1 für 1 Minute bei einem Kritischen Fehlschlag).",
         "Title": "Frostmunition"
       },
+      "GlueBullet": {
+        "Text": "On a hit, the target takes a –10-foot circumstance penalty to its Speeds for [[/r 2d4 #rounds]]{2d4 rounds}. On a critical hit, the target is also @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}. @UUID[Compendium.pf2e.equipment-effects.Item.dBjXvsLFezo2fGRa]{Effect: Glue Bullet}.",
+        "Title": "Glue Bullet"
+      },
       "MeteorShot": {
         "CriticalFailureText": "Bei einem Kritischen Fehlschlag erleidet die Waffe eine Fehlzündung.",
         "Greater": {
@@ -110,6 +114,7 @@
         "Antler": "Geweih",
         "AqueousFist": "Aquatische Faust",
         "Beak": "Schnabel",
+        "Beam": "Beam",
         "Beard": "Bart",
         "Belly": "Bauch",
         "BigClaw": "Große Klaue",
@@ -752,6 +757,7 @@
     },
     "FeatDescription": {
       "Frequency": {
+        "OncePerDay": "once per day",
         "OncePerHour": "Einmal pro Stunde",
         "OncePerTurn": "einmal pro Runde"
       },
@@ -782,7 +788,8 @@
         "ClimbLeapStride": "Deine vorangegangene Aktion war Klettern, Springen oder Laufen"
       },
       "Resist": {
-        "ForcedMovement": "gg. erzwungene Bewegung"
+        "ForcedMovement": "gg. erzwungene Bewegung",
+        "Mental": "Mental Resistance"
       },
       "StrikeCount": {
         "First": "Erster Angriff",
@@ -1184,6 +1191,12 @@
           "DeceiversSurprise": "Target is Off-Guard due to a Feint or Deceiver's Surprise"
         }
       },
+      "FangwoodSentinel": {
+        "ThusAlwaysToTyrants": {
+          "Ally": "Ally",
+          "Enemy": "Enemy"
+        }
+      },
       "FatedDoom": {
         "RollOptionLabel": "First encounter of the day"
       },
@@ -1381,6 +1394,14 @@
           "SneakAttack": "Hinterhältiger Angriff",
           "WeaponPerk": "Weapon Perk",
           "WeaponPerkPrompt": "Select a Weapon Perk"
+        }
+      },
+      "OrtMob": {
+        "Subservience": {
+          "Hustle": "Hustle",
+          "Kill": "Kill",
+          "Rally": "Rally",
+          "Work": "Work"
         }
       },
       "PaleStranger": {
@@ -2507,7 +2528,7 @@
               "Description": "Wenn du ein Mutagen nutzt, erlangst du Temporäre Trefferpunkte in Höhe deines Intelligenzmodifikators (Minimum 0) plus deine halbe Stufe. Diese Temporären Trefferpunkte währen 1 Minute lang, sofern nicht vorher die Wirkungsdauer des Mutagens endet. Du kannst im Anschluss 1 Minute lang keine Temporären Trefferpunkte durch das Trinken eines Mutagens erlangen."
             },
             "FieldVials": {
-              "Description": "Du kannst eine deiner Vielseitigen Phiolen austrinken, um die gegenwärtig auf dich wirkenden Nachteile eines Mutagens bis zum Beginn deines nächsten Zuges zu unterdrücken. In diesem Fall verliert die Phiole die Kategorien Alchemistischer Flächenschaden, Bombe und Säure und erhält die Kategorie Elixier. Solltest du unter den Nachteilen durch @UUID[Compendium.pf2e.feats-srd.Item.jSkJIWPfSZZzvYzq]{Elixiere kombinieren} leiden, entscheidest du beim Trinken, welcher Nachteil unterdrückt wird."
+              "Description": "You can drink the contents of one your versatile vials to suppress the drawback you take from one mutagen currently affecting you for 1 minute. A vial used this way loses the acid, bomb, and splash traits and gains the elixir trait. If you have more than one drawback due to @UUID[Compendium.pf2e.feats-srd.Item.jSkJIWPfSZZzvYzq]{Combine Elixirs} or a similar ability, drinking the vial suppresses one drawback of your choice."
             }
           },
           "Prompt": "Wähle ein Forschungsgebiet.",
@@ -3359,8 +3380,8 @@
             "SpellSwapping": "Wenn du neue Zauber für dein Repertoire erhältst, möchtest du möglicherweise einige deiner alten Zauber auswechseln. Wenn du eine Stufe erlangst und neue Zauber erlernst, kannst du einen deiner alten Zauber gegen einen anderen Zauber desselben Grades auswechseln. Dabei kann es sich auch um einen Zaubertrick handeln. Du kannst ebenfalls im Rahmen des Umlernens während der Auszeit Zauber auswechseln."
           },
           "oracle": {
-            "PartOne": "Die Sammlung der Zauber, welche du wirken kannst, wird als dein Zauberrepertoire bezeichnet. Auf der 1. Stufe lernst du zwei Zauber des 1. Grades und fünf Zaubertricks deiner Wahl. Wähle diese von den Gewöhnlichen Zaubern der Liste der göttlichen Zauber oder aus anderen göttlichen Zaubern, zu denen du Zugang hast. Du kannst jeden Zauber in deinem Zauberrepertoire wirken, indem du einen Zauberplatz eines passenden Zaubergrades verwendest.",
-            "PartTwo": "Wenn du weitere Stufen erlangst, fügst du neue Zauber deinem Zauberrepertoire hinzu. Wann immer du einen Zauberplatz erlangst (siehe Tabelle Mystikerzauber am Tag), fügst du deinem Zauberrepertoire einen Zauber desselben Grades hinzu. Mit der 2. Stufe wählst du einen weiteren Zauber des 1. Grades; mit der 3. Stufe erlangst du zwei Zauber des 2. Grades usw. Wenn du Zauber hinzufügst, kannst du eine höhergradige Version eines dir bereits verfügbaren Zaubers hinzufügen, so dass du ihn nun mit erhöhtem Grad wirken kannst.",
+            "PartOne": "The collection of spells you can cast is called your spell repertoire. At 1st level, you learn three 1st-rank divine spells of your choice and five divine cantrips of your choice. You choose these from the common spells on the divine list or from other divine spells to which you have access. You can cast any spell in your spell repertoire by using a spell slot of an appropriate spell rank.",
+            "PartTwo": "You add to this spell repertoire as you increase in level. Each time you get a spell slot (see the Oracle Spells per Day table), you add a spell to your spell repertoire of the same rank. At 2nd level, you select another 1st-rank spell; at 3rd level, you select three 2nd-rank spells, and so on. When you add spells, you might add a higher-rank version of a spell you already have, so you can cast a heightened version of that spell.",
             "PartThree": "Auch wenn du Zauberplätze und die Zauber in deinem Zauberrepertoire im selben Maße erlangst, sind sie unabhängig voneinander. Sollte ein Talent oder andere Fähigkeit deinem Zauberrepertoire einen Zauber hinzufügen, so erhältst du deshalb keinen zusätzlichen Zauberplatz und umgekehrt.",
             "SpellSwapping": "Wenn du neue Zauber für dein Repertoire erhältst, möchtest du möglicherweise einige deiner alten Zauber auswechseln. Wenn du eine Stufe erlangst und neue Zauber erlernst, kannst du einen deiner alten Zauber gegen einen anderen Zauber desselben Grades austauschen. Dabei kann es sich um einen Zaubertrick handeln. Du kannst ebenfalls im Rahmen des Umlernens während der Auszeit Zauber auswechseln."
           },
@@ -3808,6 +3829,15 @@
       "Duel": {
         "Dueling": "Dueling"
       },
+      "Dandy": {
+        "DoYouKnowWhoIAm": {
+          "City": "City",
+          "Metropolis": "Metropolis"
+        },
+        "IvyPlayhouseStrike": {
+          "Note": "The target becomes @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} until the end of your next turn."
+        }
+      },
       "Dwarf": {
         "BlastResistance": {
           "RollOptionLabel": "Knallresistenz - Rettungswurf gegen Geblendet oder Taub"
@@ -3915,6 +3945,7 @@
         }
       },
       "EnvenomCompanion": {
+        "RollOptionLabel": "Envenom Companion — First hit of the round",
         "DamageNote": "Eine Kreatur, die mit dem Gift getroffen wurde, muss einen @Check[fortitude|traits:poison]{Zähigkeitswurf} ablegen. Bei einem Fehlschlag erhält das Ziel eine Runde lang außerdem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen}."
       },
       "Equipment": {
@@ -5566,6 +5597,14 @@
           "Resistance": "Proteanerkind Resistenz"
         }
       },
+      "NidaleseHorselord": {
+        "DefyChains": {
+          "DamageNote": {
+            "Level14": "You increase the amount of damage you take by @Damage[4d6[untyped]], and deal @Damage[4d6[spirit]] damage to the triggering fiend.",
+            "Level18": "You increase the amount of damage you take by @Damage[5d6[untyped]], and deal @Damage[5d6[spirit]] damage to the triggering fiend."
+          }
+        }
+      },
       "Notes": {
         "NoteLabel": "Hinweis",
         "RequirementsNotMet": "Die Kreatur erfüllt derzeit nicht die Bedingungen, um diese Fähigkeit zu nutzen."
@@ -5747,6 +5786,7 @@
         "Rune": "Wähle eine Rune.",
         "Sanctification": "Wähle deine Weihe",
         "SavingThrow": "Wähle einen Rettungswurf",
+        "SecondAbility": "Select a second ability.",
         "SecondImplement": "Wähle dein zweites Paraphernum.",
         "Sense": "Wähle einen Sinn.",
         "Shield": "Wähle ein Schild.",
@@ -6217,6 +6257,12 @@
       "ShroudMoss": {
         "AssumeShapeTargetLabel": "Attacking the creature it stole this shape from"
       },
+      "SisterOfTheGoldenErinys": {
+        "FiendishBrand": {
+          "EffectNote": "You must succeed at a @Check[flat|dc:5] or the spell is disrupted.",
+          "StrikeNote": "Anytime you cast a holy spell while the bleed damage persists, you must succeed at a DC 5 flat check or the spell is disrupted. @UUID[Compendium.pf2e.feat-effects.Item.vG11WE95sDmDcip4]{Effect: Fiendish Brand}"
+        }
+      },
       "SixthPillar": {
         "SixthPillarMastery": {
           "AttackNote": "Immer wenn du mit einem unbewaffneten Angriff gegen einen Gegner erfolgreich bist, erhält dieser einen Zustandsmalus von -1 auf Rettungswürfe gegen Zauber bis zum Beginn deines nächsten Zuges. @UUID[Compendium.pf2e.feat-effects.Item.DX6v0lcI2uA99Yjv]{Effekt: Meisterschaft der sechsten Säule}",
@@ -6229,6 +6275,12 @@
       "SkillFeat": {
         "RecognizeSpell": {
           "RollOptionLabel": "Kritischer Erfolg bei Zauber erkennen"
+        },
+        "ScareToDeath": {
+          "CriticalFailure": "The target is unaffected.",
+          "CriticalSuccess": "The target must attempt a @Check[fortitude|against:intimidation] save against your Intimidation DC. On a critical failure, it dies. On any other result, it becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} and is @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} for 1 round. The critical failure effect has the death trait.",
+          "Failure": "The target becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.",
+          "Success": "The target becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}."
         }
       },
       "SkillMastery": {
@@ -6402,6 +6454,9 @@
       "SpellEffectKgalaserkesAxes": {
         "ToggleLabel": "Kgalaserkes Äxte - Vom Ziel Schaden erhalten"
       },
+      "SpellEffectLevitate": {
+        "RollOptionLabel": "Levitate — Stabilized this turn"
+      },
       "SpellEffectMantle": {
         "FrozenHeart": {
           "DamageNote": {
@@ -6456,14 +6511,28 @@
       "SpellEffectMentalMap": {
         "ToggleLabel": "Mentale Karte - Aktiviere den Bonus für Überlebenskunde und Wissen abrufen"
       },
+      "SpellEffectMindSwap": {
+        "RollOptionLabel": "Mind Swap — Impersonate the Other Target of Mind Swap"
+      },
       "SpellEffectPreciousMetals": {
         "Copper": "Kupfer",
         "Gold": "Gold",
         "Iron": "Eisen",
         "Steel": "Stahl"
       },
+      "SpellEffectPrismaticShield": {
+        "RollOptionLabel": "Prismatic Shield — Targeted by a Large Ranged Weapon"
+      },
       "SpellEffectProtection": {
         "Prompt": "Wähle eine Gesinnung gegen die du schützt."
+      },
+      "SpellEffectSparkleskin": {
+        "DamageNote": "When you take damage, glitter bursts out of your wound in a @Template[emanation|distance:5]. Creatures in the area must attempt a Fortitude save.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round.</p>\n<p><strong>Critical Failure</strong> The creature is dazzled for 3 rounds."
+      },
+      "SpellEffectSpiritOfTheBeast": {
+        "AspectOfInsight": "Aspect of Insight",
+        "AspectOfMight": "Aspect of Might",
+        "AspectOfSwiftness": "Aspect of Swiftness"
       },
       "SpellEffectSweetDream": {
         "Glamor": "Traum des Glanzes",
@@ -7113,6 +7182,9 @@
           "Note": "Das Ziel hat 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fliehend}."
         }
       },
+      "UnderseaPrivateer": {
+        "RollOptionLabel": "Fighting in or underwater"
+      },
       "UntamedShift": {
         "ElementalMatter": "Elementare Materie",
         "LongVines": "Lange Ranken",
@@ -7202,7 +7274,7 @@
         "Melee": "Nahkampfinfusion",
         "Ranged": "Fernkampfinfusion",
         "RangedSuboptions": {
-          "100Volley": "100 Fuß/30 m, Ballistisch 30 Fuß/9 m",
+          "100Volley": "100 ft., Volley 30 ft.",
           "50Propulsive": "50 Fuß/15 m, Geschoss",
           "20Thrown": "20 Fuß/6 m, Geworfen"
         }
@@ -7388,6 +7460,11 @@
         "ExplosiveArrival": {
           "Label": "Explosive Ankunft: Kreaturen Kategorie"
         },
+        "ImprovedFamiliarAttunement": {
+          "Description": "You expend the magical power stored in your familiar. During the current turn, you can cast one spell you prepared today and already cast, without spending a spell slot. You must still Cast the Spell and meet the spell's other requirements.",
+          "Name": "Drain Familiar",
+          "Requirements": "Your familiar is on your person."
+        },
         "Runelord": {
           "ArcaneBond": {
             "DescriptionAddendum": "Runenherrscher stammen aus einer Zeit, in der selbst von einem Gelehrten erwartet wurde, dass er sich bei Bedarf mit Waffen verteidigen kann, was dazu führte, dass an den typischen Stecken eines Magiers eine Klinge angebracht wurde. Du musst eine Stangenwaffe oder einen Speer als deine Arkane Verbindung wählen. Anstelle einer Arkanen Magisterarbeit hast du eine Persönliche Rune, die auf deiner Gebundenen Waffe erscheint. Die Waffe funktioniert wie ein Stecken , den nur du vorbereiten kannst, und enthält die Sündenzauber deiner Sünde bis zu dem höchsten dir möglichen Grad (einschließlich deiner Zaubertricks). Deine Persönliche Rune ist keine Eigenschaftsrune und zählt nicht gegen die Obergrenze solcher Runen, die deine Waffe tragen kann. Wenn du einen magischen Stecken vorbereitest, verschmilzt er bis zu deinen nächsten täglichen Vorbereitungen mit deinem verbundenen Gegenstand und fügt seine Zauberliste hinzu. Während der Verschmelzung nimmt der Schaft der Waffe die ästhetischen Aspekte des Steckens an.",
@@ -7484,6 +7561,7 @@
       "Mountain": "Berge und Gebirge",
       "Plains": "Flachland",
       "Sky": "Himmel",
+      "Space": "Space",
       "Swamp": "Sumpf",
       "Underground": "Unterirdisch"
     },
@@ -7757,6 +7835,9 @@
         "Magboots": {
           "ClimbMetalSurfaces": "Magboots — Climb metal surfaces"
         },
+        "UltralightWings": {
+          "WingsDeployed": "Ultralight Wings — Wings Deployed"
+        },
         "SolarianCrystals": {
           "Gluon": {
             "Note": "On a critical hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} until it recovers from the persistent bleed damage.",
@@ -7801,6 +7882,9 @@
               "LabelTactical": "Tactical Frost Module",
               "CriticalNoteCommercial": "On a critical hit, the target is also @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until the end of your next turn unless it succeeds at a @Check[type:fortitude|dc:24] save.",
               "CriticalNoteTactical": "On a critical hit, the target is also @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until the end of your next turn unless it succeeds at a @Check[type:fortitude|dc:34] save."
+            },
+            "GhostKiller": {
+              "Label": "Ghost Killer"
             },
             "HolyModule": {
               "LabelCommercial": "Commercial Holy Module",
