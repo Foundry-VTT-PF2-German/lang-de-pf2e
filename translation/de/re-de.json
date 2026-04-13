@@ -34,6 +34,10 @@
         "Text": "Das Ziel muss einen @Check[fortitude|dc:19]{Zähigkeitswurf} bestehen oder erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1} für 1 Runde durch die intensive Kälte (Verlangsamt 1 für 1 Minute bei einem Kritischen Fehlschlag).",
         "Title": "Frostmunition"
       },
+      "GlueBullet": {
+        "Text": "Bei einem Treffer erhält das Ziel für [[/r 2d4 #Runden]]{2W4 Runden} einen Situationsmalus von -10 Fuß/3 m auf seine Bewegungsraten. Bei einem Kritischen Treffer ist das Ziel zudem @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Bewegungsunfähig}. @UUID[Compendium.pf2e.equipment-effects.Item.dBjXvsLFezo2fGRa]{Effekt: Klebstoffkugel}.",
+        "Title": "Klebstoffkugel"
+      },
       "MeteorShot": {
         "CriticalFailureText": "Bei einem Kritischen Fehlschlag erleidet die Waffe eine Fehlzündung.",
         "Greater": {
@@ -110,6 +114,7 @@
         "Antler": "Geweih",
         "AqueousFist": "Aquatische Faust",
         "Beak": "Schnabel",
+        "Beam": "Beam",
         "Beard": "Bart",
         "Belly": "Bauch",
         "BigClaw": "Große Klaue",
@@ -752,6 +757,7 @@
     },
     "FeatDescription": {
       "Frequency": {
+        "OncePerDay": "Einmal pro Tag",
         "OncePerHour": "Einmal pro Stunde",
         "OncePerTurn": "einmal pro Runde"
       },
@@ -782,7 +788,8 @@
         "ClimbLeapStride": "Deine vorangegangene Aktion war Klettern, Springen oder Laufen"
       },
       "Resist": {
-        "ForcedMovement": "gg. erzwungene Bewegung"
+        "ForcedMovement": "gg. erzwungene Bewegung",
+        "Mental": "Mentalresistenz"
       },
       "StrikeCount": {
         "First": "Erster Angriff",
@@ -851,7 +858,7 @@
         "RangedWeaponAttacks": "Angriffe mit Fernkampfwaffen",
         "SpellsFromAllTraditions": "Zauber aller Traditionen",
         "Spirits": "Geister",
-        "Treerazer": "Treerazer",
+        "Treerazer": "Baumschnitter",
         "UnholyBludgeoningPiercingSlashing": "Unheiliger Hieb-, Stich- und Wuchtschaden",
         "VoidZonKuthonFollowers": "Leereneffekte von Anhängern von Zon-Kuthon",
         "WispVulnerabilities": "Irrlicht Schwächen"
@@ -1088,7 +1095,7 @@
           "Vidileth": "Vidileth",
           "Vilderavn": "Rabenritter",
           "Voidworm": "Limbuswurm",
-          "Wasp": "Wasp",
+          "Wasp": "Wespe",
           "WingedHumanoid": "Geflügelter Humanoider",
           "Wolf": "Wolf",
           "WolfDire": "Schreckenswolf",
@@ -1182,6 +1189,12 @@
       "FalsePriest": {
         "SneakAttack": {
           "DeceiversSurprise": "Target is Off-Guard due to a Feint or Deceiver's Surprise"
+        }
+      },
+      "FangwoodSentinel": {
+        "ThusAlwaysToTyrants": {
+          "Ally": "Ally",
+          "Enemy": "Enemy"
         }
       },
       "FatedDoom": {
@@ -1381,6 +1394,14 @@
           "SneakAttack": "Hinterhältiger Angriff",
           "WeaponPerk": "Weapon Perk",
           "WeaponPerkPrompt": "Select a Weapon Perk"
+        }
+      },
+      "OrtMob": {
+        "Subservience": {
+          "Hustle": "Hustle",
+          "Kill": "Kill",
+          "Rally": "Rally",
+          "Work": "Work"
         }
       },
       "PaleStranger": {
@@ -2507,7 +2528,7 @@
               "Description": "Wenn du ein Mutagen nutzt, erlangst du Temporäre Trefferpunkte in Höhe deines Intelligenzmodifikators (Minimum 0) plus deine halbe Stufe. Diese Temporären Trefferpunkte währen 1 Minute lang, sofern nicht vorher die Wirkungsdauer des Mutagens endet. Du kannst im Anschluss 1 Minute lang keine Temporären Trefferpunkte durch das Trinken eines Mutagens erlangen."
             },
             "FieldVials": {
-              "Description": "Du kannst eine deiner Vielseitigen Phiolen austrinken, um die gegenwärtig auf dich wirkenden Nachteile eines Mutagens bis zum Beginn deines nächsten Zuges zu unterdrücken. In diesem Fall verliert die Phiole die Kategorien Alchemistischer Flächenschaden, Bombe und Säure und erhält die Kategorie Elixier. Solltest du unter den Nachteilen durch @UUID[Compendium.pf2e.feats-srd.Item.jSkJIWPfSZZzvYzq]{Elixiere kombinieren} leiden, entscheidest du beim Trinken, welcher Nachteil unterdrückt wird."
+              "Description": "Du kannst eine deiner Vielseitigen Phiolen austrinken, um die gegenwärtig auf dich wirkenden Nachteile eines Mutagens für 1 Minute zu unterdrücken. In diesem Fall verliert die Phiole die Kategorien Alchemistischer Flächenschaden, Bombe und Säure und erhält die Kategorie Elixier. Solltest du unter den Nachteilen durch @UUID[Compendium.pf2e.feats-srd.Item.jSkJIWPfSZZzvYzq]{Elixiere kombinieren} leiden, entscheidest du beim Trinken, welcher Nachteil unterdrückt wird."
             }
           },
           "Prompt": "Wähle ein Forschungsgebiet.",
@@ -3359,8 +3380,8 @@
             "SpellSwapping": "Wenn du neue Zauber für dein Repertoire erhältst, möchtest du möglicherweise einige deiner alten Zauber auswechseln. Wenn du eine Stufe erlangst und neue Zauber erlernst, kannst du einen deiner alten Zauber gegen einen anderen Zauber desselben Grades auswechseln. Dabei kann es sich auch um einen Zaubertrick handeln. Du kannst ebenfalls im Rahmen des Umlernens während der Auszeit Zauber auswechseln."
           },
           "oracle": {
-            "PartOne": "Die Sammlung der Zauber, welche du wirken kannst, wird als dein Zauberrepertoire bezeichnet. Auf der 1. Stufe lernst du zwei Zauber des 1. Grades und fünf Zaubertricks deiner Wahl. Wähle diese von den Gewöhnlichen Zaubern der Liste der göttlichen Zauber oder aus anderen göttlichen Zaubern, zu denen du Zugang hast. Du kannst jeden Zauber in deinem Zauberrepertoire wirken, indem du einen Zauberplatz eines passenden Zaubergrades verwendest.",
-            "PartTwo": "Wenn du weitere Stufen erlangst, fügst du neue Zauber deinem Zauberrepertoire hinzu. Wann immer du einen Zauberplatz erlangst (siehe Tabelle Mystikerzauber am Tag), fügst du deinem Zauberrepertoire einen Zauber desselben Grades hinzu. Mit der 2. Stufe wählst du einen weiteren Zauber des 1. Grades; mit der 3. Stufe erlangst du zwei Zauber des 2. Grades usw. Wenn du Zauber hinzufügst, kannst du eine höhergradige Version eines dir bereits verfügbaren Zaubers hinzufügen, so dass du ihn nun mit erhöhtem Grad wirken kannst.",
+            "PartOne": "Die Sammlung der Zauber, welche du wirken kannst, wird als dein Zauberrepertoire bezeichnet. Auf der 1. Stufe lernst du drei Zauber des 1. Grades und fünf Zaubertricks deiner Wahl. Wähle diese von den Gewöhnlichen Zaubern der Liste der göttlichen Zauber oder aus anderen göttlichen Zaubern, zu denen du Zugang hast. Du kannst jeden Zauber in deinem Zauberrepertoire wirken, indem du einen Zauberplatz eines passenden Zaubergrades verwendest.",
+            "PartTwo": "Wenn du weitere Stufen erlangst, fügst du neue Zauber deinem Zauberrepertoire hinzu. Wann immer du einen Zauberplatz erlangst (siehe Tabelle Mystikerzauber am Tag), fügst du deinem Zauberrepertoire einen Zauber desselben Grades hinzu. Mit der 2. Stufe wählst du einen weiteren Zauber des 1. Grades; mit der 3. Stufe erlangst du drei Zauber des 2. Grades usw. Wenn du Zauber hinzufügst, kannst du eine höhergradige Version eines dir bereits verfügbaren Zaubers hinzufügen, so dass du ihn nun mit erhöhtem Grad wirken kannst.",
             "PartThree": "Auch wenn du Zauberplätze und die Zauber in deinem Zauberrepertoire im selben Maße erlangst, sind sie unabhängig voneinander. Sollte ein Talent oder andere Fähigkeit deinem Zauberrepertoire einen Zauber hinzufügen, so erhältst du deshalb keinen zusätzlichen Zauberplatz und umgekehrt.",
             "SpellSwapping": "Wenn du neue Zauber für dein Repertoire erhältst, möchtest du möglicherweise einige deiner alten Zauber auswechseln. Wenn du eine Stufe erlangst und neue Zauber erlernst, kannst du einen deiner alten Zauber gegen einen anderen Zauber desselben Grades austauschen. Dabei kann es sich um einen Zaubertrick handeln. Du kannst ebenfalls im Rahmen des Umlernens während der Auszeit Zauber auswechseln."
           },
@@ -3808,6 +3829,15 @@
       "Duel": {
         "Dueling": "Dueling"
       },
+      "Dandy": {
+        "DoYouKnowWhoIAm": {
+          "City": "City",
+          "Metropolis": "Metropolis"
+        },
+        "IvyPlayhouseStrike": {
+          "Note": "The target becomes @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} until the end of your next turn."
+        }
+      },
       "Dwarf": {
         "BlastResistance": {
           "RollOptionLabel": "Knallresistenz - Rettungswurf gegen Geblendet oder Taub"
@@ -3915,6 +3945,7 @@
         }
       },
       "EnvenomCompanion": {
+        "RollOptionLabel": "Giftiger Gefährte - Erster Treffer in der Runde",
         "DamageNote": "Eine Kreatur, die mit dem Gift getroffen wurde, muss einen @Check[fortitude|traits:poison]{Zähigkeitswurf} ablegen. Bei einem Fehlschlag erhält das Ziel eine Runde lang außerdem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen}."
       },
       "Equipment": {
@@ -5566,6 +5597,14 @@
           "Resistance": "Proteanerkind Resistenz"
         }
       },
+      "NidaleseHorselord": {
+        "DefyChains": {
+          "DamageNote": {
+            "Level14": "You increase the amount of damage you take by @Damage[4d6[untyped]], and deal @Damage[4d6[spirit]] damage to the triggering fiend.",
+            "Level18": "You increase the amount of damage you take by @Damage[5d6[untyped]], and deal @Damage[5d6[spirit]] damage to the triggering fiend."
+          }
+        }
+      },
       "Notes": {
         "NoteLabel": "Hinweis",
         "RequirementsNotMet": "Die Kreatur erfüllt derzeit nicht die Bedingungen, um diese Fähigkeit zu nutzen."
@@ -5747,6 +5786,7 @@
         "Rune": "Wähle eine Rune.",
         "Sanctification": "Wähle deine Weihe",
         "SavingThrow": "Wähle einen Rettungswurf",
+        "SecondAbility": "Wähle eine zweite Fähigkeit.",
         "SecondImplement": "Wähle dein zweites Paraphernum.",
         "Sense": "Wähle einen Sinn.",
         "Shield": "Wähle ein Schild.",
@@ -6217,6 +6257,12 @@
       "ShroudMoss": {
         "AssumeShapeTargetLabel": "Attacking the creature it stole this shape from"
       },
+      "SisterOfTheGoldenErinys": {
+        "FiendishBrand": {
+          "EffectNote": "You must succeed at a @Check[flat|dc:5] or the spell is disrupted.",
+          "StrikeNote": "Anytime you cast a holy spell while the bleed damage persists, you must succeed at a DC 5 flat check or the spell is disrupted. @UUID[Compendium.pf2e.feat-effects.Item.vG11WE95sDmDcip4]{Effect: Fiendish Brand}"
+        }
+      },
       "SixthPillar": {
         "SixthPillarMastery": {
           "AttackNote": "Immer wenn du mit einem unbewaffneten Angriff gegen einen Gegner erfolgreich bist, erhält dieser einen Zustandsmalus von -1 auf Rettungswürfe gegen Zauber bis zum Beginn deines nächsten Zuges. @UUID[Compendium.pf2e.feat-effects.Item.DX6v0lcI2uA99Yjv]{Effekt: Meisterschaft der sechsten Säule}",
@@ -6229,6 +6275,12 @@
       "SkillFeat": {
         "RecognizeSpell": {
           "RollOptionLabel": "Kritischer Erfolg bei Zauber erkennen"
+        },
+        "ScareToDeath": {
+          "CriticalFailure": "Das Ziel ist nicht betroffen.",
+          "CriticalSuccess": "Dein Ziel muss einen @Check[fortitude|against:intimidation]{Zähigkeitswurf} gegen deinen Einschüchtern-SG ablegen. Bei einem Kritischen Fehlschlag bei diesem Rettungswurf stirbt das Ziel, bei jedem anderen Ergebnis erhält es den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2} und für eine Runde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fliehend}. Der Effekt bei einem Kritischen Fehlschlag erhält die Kategorie Tod.",
+          "Failure": "Das Ziel erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}.",
+          "Success": "Das Ziel erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2}."
         }
       },
       "SkillMastery": {
@@ -6402,6 +6454,9 @@
       "SpellEffectKgalaserkesAxes": {
         "ToggleLabel": "Kgalaserkes Äxte - Vom Ziel Schaden erhalten"
       },
+      "SpellEffectLevitate": {
+        "RollOptionLabel": "Schweben - Diese Runde stabilisiert"
+      },
       "SpellEffectMantle": {
         "FrozenHeart": {
           "DamageNote": {
@@ -6456,14 +6511,28 @@
       "SpellEffectMentalMap": {
         "ToggleLabel": "Mentale Karte - Aktiviere den Bonus für Überlebenskunde und Wissen abrufen"
       },
+      "SpellEffectMindSwap": {
+        "RollOptionLabel": "Geisttausch - Verkörpere das andere Ziel von Geisttausch"
+      },
       "SpellEffectPreciousMetals": {
         "Copper": "Kupfer",
         "Gold": "Gold",
         "Iron": "Eisen",
         "Steel": "Stahl"
       },
+      "SpellEffectPrismaticShield": {
+        "RollOptionLabel": "Regenbogenschild - Durch eine Große Fernkampfwaffe anvisiert"
+      },
       "SpellEffectProtection": {
         "Prompt": "Wähle eine Gesinnung gegen die du schützt."
+      },
+      "SpellEffectSparkleskin": {
+        "DamageNote": "Wenn du Schaden erleidest bricht Glitzer in einer @Template[emanation|distance:5]{5 Fuß/1,50 m-Ausstrahlung} aus deiner Wunde hervor. Kreaturen in dem Bereich müssen einen Zähigkeitswurf ablegen.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur ist für 1 Runde @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Geblendet}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur ist für 3 Runden Geblendet."
+      },
+      "SpellEffectSpiritOfTheBeast": {
+        "AspectOfInsight": "Aspekt des Verstehens",
+        "AspectOfMight": "Aspekt der Kraft",
+        "AspectOfSwiftness": "Aspekt der Geschwindigkeit"
       },
       "SpellEffectSweetDream": {
         "Glamor": "Traum des Glanzes",
@@ -7113,6 +7182,9 @@
           "Note": "Das Ziel hat 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fliehend}."
         }
       },
+      "UnderseaPrivateer": {
+        "RollOptionLabel": "Fighting in or underwater"
+      },
       "UntamedShift": {
         "ElementalMatter": "Elementare Materie",
         "LongVines": "Lange Ranken",
@@ -7388,6 +7460,11 @@
         "ExplosiveArrival": {
           "Label": "Explosive Ankunft: Kreaturen Kategorie"
         },
+        "ImprovedFamiliarAttunement": {
+          "Description": "Du verbrauchst die in deinem Vertrauten gespeicherte Energie. Dies verleiht dir während deines aktuellen Zugs die Fähigkeit, einen Zauber zu wirken, den du heute vorbereitet und bereits gewirkt hast, ohne einen Zauberplatz aufwenden zu müssen. Du musst immer noch die Handlung Zauber wirken nutzen und die anderen Voraussetzungen des Zaubers erfüllen.",
+          "Name": "Vertrauten auszehren",
+          "Requirements": "Dein Vertrauter ist in Reichweite."
+        },
         "Runelord": {
           "ArcaneBond": {
             "DescriptionAddendum": "Runenherrscher stammen aus einer Zeit, in der selbst von einem Gelehrten erwartet wurde, dass er sich bei Bedarf mit Waffen verteidigen kann, was dazu führte, dass an den typischen Stecken eines Magiers eine Klinge angebracht wurde. Du musst eine Stangenwaffe oder einen Speer als deine Arkane Verbindung wählen. Anstelle einer Arkanen Magisterarbeit hast du eine Persönliche Rune, die auf deiner Gebundenen Waffe erscheint. Die Waffe funktioniert wie ein Stecken , den nur du vorbereiten kannst, und enthält die Sündenzauber deiner Sünde bis zu dem höchsten dir möglichen Grad (einschließlich deiner Zaubertricks). Deine Persönliche Rune ist keine Eigenschaftsrune und zählt nicht gegen die Obergrenze solcher Runen, die deine Waffe tragen kann. Wenn du einen magischen Stecken vorbereitest, verschmilzt er bis zu deinen nächsten täglichen Vorbereitungen mit deinem verbundenen Gegenstand und fügt seine Zauberliste hinzu. Während der Verschmelzung nimmt der Schaft der Waffe die ästhetischen Aspekte des Steckens an.",
@@ -7484,6 +7561,7 @@
       "Mountain": "Berge und Gebirge",
       "Plains": "Flachland",
       "Sky": "Himmel",
+      "Space": "Space",
       "Swamp": "Sumpf",
       "Underground": "Unterirdisch"
     },
@@ -7757,6 +7835,9 @@
         "Magboots": {
           "ClimbMetalSurfaces": "Magboots — Climb metal surfaces"
         },
+        "UltralightWings": {
+          "WingsDeployed": "Ultralight Wings — Wings Deployed"
+        },
         "SolarianCrystals": {
           "Gluon": {
             "Note": "On a critical hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} until it recovers from the persistent bleed damage.",
@@ -7801,6 +7882,9 @@
               "LabelTactical": "Tactical Frost Module",
               "CriticalNoteCommercial": "On a critical hit, the target is also @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until the end of your next turn unless it succeeds at a @Check[type:fortitude|dc:24] save.",
               "CriticalNoteTactical": "On a critical hit, the target is also @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until the end of your next turn unless it succeeds at a @Check[type:fortitude|dc:34] save."
+            },
+            "GhostKiller": {
+              "Label": "Geisterkiller"
             },
             "HolyModule": {
               "LabelCommercial": "Commercial Holy Module",
