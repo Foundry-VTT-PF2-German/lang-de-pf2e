@@ -1801,12 +1801,9 @@
           "name": "Dart Volley",
           "description": "<p><strong>Trigger</strong> More than two Small or larger creatures step on the brass seal.</p>\n<hr />\n<p><strong>Effect</strong> The trap makes up to four dart Strikes against creatures standing on the seal, then rolls initiative.</p>"
         },
-        "strike-melee->Dart": {
-          "name": "Dart"
-        },
-        "action->No MAP": {
-          "name": "No MAP",
-          "description": "<p>Darts are unaffected by Multiple Attack Penalty</p>"
+        "strike-ranged->Dart": {
+          "name": "Dart",
+          "description": "<p>No multiple attack penalty</p>"
         }
       }
     },
@@ -1930,7 +1927,7 @@
         },
         "action->Performance Anxiety": {
           "name": "Performance Anxiety",
-          "description": "<p>A dreadsong dancer is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1} if they see or hear a creature critically succeed at a Performance check or at a saving throw against their Dreadsong.</p>\n<p>The dreadsong dancer is @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened 1} for 1 round if they see or hear a creature critically fail at a Performance check or a saving throw against their Dreadsong.</p>\n<p>They can use the extra action only to Stride or Strike.</p>"
+          "description": "<p>A dreadsong dancer is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1} if they see or hear a creature critically succeed at a Performance check or at a saving throw against their Dreadsong.</p>\n<p>The dreadsong dancer is @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened} for 1 round if they see or hear a creature critically fail at a Performance check or a saving throw against their Dreadsong.</p>\n<p>They can use the extra action only to Stride or Strike.</p>"
         },
         "action->Dreadsong": {
           "name": "Dreadsong",
@@ -4474,7 +4471,7 @@
     "Needling Stairs": {
       "name": "Needling Stairs",
       "description": "<p>This staircase has springs in each step, which send poisoned needles shooting up through tiny holes in the wood when stepped on. Each step, 6 in total, takes up one 5-foot square.</p>",
-      "disable": "<p>@Check[thievery|dc:33|name:Disable Stair Spring|traits:action:disable-a-device] (master) on each stair to disable its spring, or deactivate the switch in area <strong>C8</strong> to deactivate the whole trap. Cutting the wire on the topmost stair (>@Check[thievery|dc:35|name:Cut Wire on Top-Most Stair|traits:action:disable-a-device] to Disable the Device) that connects the staircase to the control switch prevents the control switch from turning the trap on or off.</p>",
+      "disable": "<p>@Check[thievery|dc:33|name:Disable Stair Spring|traits:action:disable-a-device] (master) on each stair to disable its spring, or deactivate the switch in area <strong>C8</strong> to deactivate the whole trap. Cutting the wire on the topmost stair ([[/act disable-device dc=35]]) that connects the staircase to the control switch prevents the control switch from turning the trap on or off.</p>",
       "hpDetails": "to break the spring under the step and make that step safe to stand on",
       "reset": "<p>If deactivated via the switch, the trap can be reactivated with the switch in area <strong>C8</strong>.</p>",
       "routine": "<p>(1 action) The trap makes a separate poisoned needle Strike against each creature currently on an active step as 1 action. Because it is constantly jabbing needles up through any weight-bearing steps, the trap can also use its Bloody Feet free action to jab at a creature on one of the steps during that creature's turn.</p>",
@@ -4486,15 +4483,11 @@
         },
         "strike-melee->Poisoned Needle": {
           "name": "Poisoned Needle",
-          "description": "<p>No MAP applies to strikes made by poisoned needle attacks</p>"
+          "description": "<p>No multiple attack penalty</p>"
         },
         "action->Bloody Feet": {
           "name": "Bloody Feet",
           "description": "<p><strong>Trigger</strong> A creature moves onto an active step</p>\n<hr />\n<p><strong>Effect</strong> The trap makes a poisoned needle Strike against the triggering creature.</p>"
-        },
-        "action->No MAP": {
-          "name": "No MAP",
-          "description": "<p>The Poisoned Needle Strikes do not apply a MAP.</p>"
         }
       }
     },
@@ -4628,7 +4621,7 @@
         },
         "action->Waves of Sorrow": {
           "name": "Waves of Sorrow",
-          "description": "<p>30 feet. When a creature ends its turn in the aura, it is overwhelmed by the sorrow that suffuses the obrousian's being. The creature must succeed at a @Check[will|dc:33] save or become @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} for 1 round.</p>"
+          "description": "<p>30 feet. When a creature ends its turn in the aura, it is overwhelmed by the sorrow that suffuses the obrousian's being. The creature must succeed at a @Check[will|dc:33|options:inflicts:paralyzed] save or become @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} for 1 round.</p>"
         },
         "action->Change Shape": {
           "name": "Change Shape",
@@ -4636,7 +4629,7 @@
         },
         "action->Drowning Grasp": {
           "name": "Drowning Grasp",
-          "description": "<p>When a creature is grabbed by the obrousian, its lungs magically fill with water. A creature that can't breathe water is suffocating while it is grabbed.</p>"
+          "description": "<p>When a creature is @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} by the obrousian, its lungs magically fill with water. A creature that can't breathe water is suffocating while it is grabbed.</p>"
         }
       }
     },
@@ -6827,7 +6820,7 @@
         },
         "action->Demanding Orders": {
           "name": "Demanding Orders",
-          "description": "<p>Wynsal commands his allies to take action. Allies within 120 feet who hear and understand his order are @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened 1} for 1 round and can use this extra action to Stride, Strike, or Step.</p>"
+          "description": "<p>Wynsal commands his allies to take action. Allies within 120 feet who hear and understand his order are @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened} for 1 round and can use this extra action to Stride, Strike, or Step.</p>"
         },
         "action->Determination": {
           "name": "Determination",
