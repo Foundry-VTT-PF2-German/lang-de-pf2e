@@ -1801,12 +1801,9 @@
           "name": "Pfeilhagel",
           "description": "<p><strong>Auslöser</strong> Mehr als zwei Kleine oder größere Kreaturen treten auf das Messingsiegel.</p>\n<hr />\n<p><strong>Effekt</strong> Die Falle führt bis zu vier Wurfpfeilangriffe gegen Kreaturen auf dem Siegel aus und würfelt dann ihre Initiative.</p>"
         },
-        "strike-melee->Dart": {
-          "name": "Wurfpfeil"
-        },
-        "action->No MAP": {
-          "name": "kein Malus für Mehrfachangriffe",
-          "description": "<p>Wurfpfeile sind vom Malus für Mehrfachangriffe nicht betroffen.</p>"
+        "strike-ranged->Dart": {
+          "name": "Wurfpfeil",
+          "description": "<p>Kein Malus für Mehrfachangriffe</p>"
         }
       }
     },
@@ -1930,7 +1927,7 @@
         },
         "action->Performance Anxiety": {
           "name": "Lampenfieber",
-          "description": "<p>Ein Schreckensliedtänzer, der beobachtet oder hört, wie eine Kreatur bei einem Fertigkeitswurf für Darbietung oder einem Rettungswurf gegen sein Schreckenslied einen Kritischen Erfolg erzielt, erleidet den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1}. Sieht oder hört ein Schreckensliedtänzer jedoch, wie eine Kreatur bei einem Fertigkeitswurf für Darbietung oder einem Rettungswurf gegen sein Schreckenslied einen Kritischen Fehlschlag erleidet, gewinnt dieser den Zustand @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Beschleunigt 1} für 1 Runde. Der Schreckensliedtänzer kann diese zusätzliche Aktion ausschließlich zum Laufen oder für einen Angriff nutzen.</p>"
+          "description": "<p>Ein Schreckensliedtänzer, der beobachtet oder hört, wie eine Kreatur bei einem Fertigkeitswurf für Darbietung oder einem Rettungswurf gegen sein Schreckenslied einen Kritischen Erfolg erzielt, erleidet den Zustand @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Betäubt 1}. Sieht oder hört ein Schreckensliedtänzer jedoch, wie eine Kreatur bei einem Fertigkeitswurf für Darbietung oder einem Rettungswurf gegen sein Schreckenslied einen Kritischen Fehlschlag erleidet, gewinnt dieser den Zustand @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Beschleunigt} für 1 Runde. Der Schreckensliedtänzer kann diese zusätzliche Aktion ausschließlich zum Laufen oder für einen Angriff nutzen.</p>"
         },
         "action->Dreadsong": {
           "name": "Schreckenslied",
@@ -4474,7 +4471,7 @@
     "Needling Stairs": {
       "name": "Nadeltreppe",
       "description": "<p>Jede Treppenstufe weist zahlreiche winzige Löcher auf. Unter den Stufen befinden sich Sprungfedermechanismen, welche Giftnadeln durch die Löcher nach oben schießen lassen, wenn eine Stufe belastet wird. Insgesamt sind es 6 Stufen von jeweils 5x5 Fuß/1,50x1,50 m.</p>",
-      "disable": "<p>@Check[thievery|dc:33|traits:action:disable-a-device]{Diebeskunst} (Meister), bei jeder Stufe, um die dortigen Mechanismen zu entschärfen, oder Umlegen des Schalters in Bereich <strong>C8</strong> zum Deaktivieren der ganzen Falle. Mit einem Fertigkeitswurf für @Check[thievery|dc:35|traits:action:disable-a-device]{Diebeskunst} zum Mechanismus ausschalten kann auch an der obersten Stufe der Draht durchtrennt werden, welcher die Falle mit dem Schalter verbindet; in diesem Fall kann die Falle nicht mehr aktiviert oder deaktiviert werden (man muss nur erstmal die oberste Stufe auch erreichen).</p>",
+      "disable": "<p>@Check[thievery|dc:33|traits:action:disable-a-device]{Diebeskunst} (Meister), bei jeder Stufe, um die dortigen Mechanismen zu entschärfen, oder Umlegen des Schalters in Bereich <strong>C8</strong> zum Deaktivieren der ganzen Falle. Mit einem Fertigkeitswurf für Diebeskunst zum [[/act disable-device dc=35]] kann auch an der obersten Stufe der Draht durchtrennt werden, welcher die Falle mit dem Schalter verbindet; in diesem Fall kann die Falle nicht mehr aktiviert oder deaktiviert werden (man muss nur erstmal die oberste Stufe auch erreichen).</p>",
       "hpDetails": "um die Federmechanismen unter einer Stufe zu zerstören und die fragliche Stufe trittsicher zu machen",
       "reset": "<p>Sollte die Falle über den Schalter deaktiviert werden, kann sie mit dem Schalter in Bereich <strong>C8</strong> wieder scharfgemacht werden.</p>",
       "routine": "<p>(1 Aktion) Die Falle führt als 1 Aktion einen separaten Giftnadelangriff gegen jede Kreatur aus, die gegenwärtig auf der aktiven Stufe steht. Da die Nadeln beständig durch jede belastete Stufe nach oben gestoßen werden, kann die Falle ihre Freie Aktion Blutige Füße (siehe unten) gegen eine Kreatur auf einer dieser Stufen während des Zuges der fraglichen Kreatur einsetzen.</p>",
@@ -4491,10 +4488,6 @@
         "action->Bloody Feet": {
           "name": "Blutige Füße",
           "description": "<p><strong>Auslöser</strong> Eine Kreatur bewegt sich auf eine aktive Stufe</p>\n<hr />\n<p><strong>Effekt</strong> Die Falle führt einen Giftnadelangriff gegen die auslösende Kreatur aus.</p>"
-        },
-        "action->No MAP": {
-          "name": "kein Malus für Mehrfachangriffe",
-          "description": "<p>Angriffe mit der Giftnadel unterliegen keinem Malus für Mehrfachangriffe</p>"
         }
       }
     },
@@ -4628,7 +4621,7 @@
         },
         "action->Waves of Sorrow": {
           "name": "Wellen des Kummers",
-          "description": "<p>30 Fuß/9 m. Beendet eine Kreatur ihren Zug innerhalb des Wirkungsbereiches der Aura eines Obrussiers, wird der vom Kummer und Leid überwältigt, welche das Wesen dieses Monsters erfüllen. Der Kreatur muss ein erfolgreicher @Check[will|dc:33]{Willenswurf} gelingen, um nicht 1 Runde lang am Zustand @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt} zu leiden.</p>"
+          "description": "<p>30 Fuß/9 m. Beendet eine Kreatur ihren Zug innerhalb des Wirkungsbereiches der Aura eines Obrussiers, wird der vom Kummer und Leid überwältigt, welche das Wesen dieses Monsters erfüllen. Der Kreatur muss ein erfolgreicher @Check[will|dc:33|options:inflicts:paralyzed]{Willenswurf} gelingen, um nicht 1 Runde lang am Zustand @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt} zu leiden.</p>"
         },
         "action->Change Shape": {
           "name": "Gestalt wechseln",
@@ -4636,7 +4629,7 @@
         },
         "action->Drowning Grasp": {
           "name": "Ertränkender Griff",
-          "description": "<p>Wurde eine Kreatur von einem Obrussier ergriffen, füllen sich deren Lungen auf magische Weise mit Wasser. Kreaturen, die nicht im Wasser atmen können, ersticken solange sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} erleiden.</p>"
+          "description": "<p>Wurde eine Kreatur von einem Obrussier @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen}, füllen sich deren Lungen auf magische Weise mit Wasser. Kreaturen, die nicht im Wasser atmen können, ersticken solange sie den Zustand Gegriffen haben.</p>"
         }
       }
     },
@@ -6827,7 +6820,7 @@
         },
         "action->Demanding Orders": {
           "name": "Befehlsgewalt",
-          "description": "<p>Wynsal gibt seinen Verbündeten einen Handlungsbefehl. Verbündete innerhalb von 120 Fuß/36 m, die seinen Befehl hören und verstehen können erhalten 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Beschleunigt 1}. Sie können die zusätzliche Aktion für die Aktionen Laufen, Angriff oder Schritt nutzen. </p>"
+          "description": "<p>Wynsal gibt seinen Verbündeten einen Handlungsbefehl. Verbündete innerhalb von 120 Fuß/36 m, die seinen Befehl hören und verstehen können erhalten 1 Runde lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Beschleunigt}. Sie können die zusätzliche Aktion für die Aktionen Laufen, Angriff oder Schritt nutzen. </p>"
         },
         "action->Determination": {
           "name": "Entschlossenheit",
