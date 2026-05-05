@@ -69,7 +69,7 @@ function patchSpellRange() {
         function (wrapped) {
             return game.pf2e.system.sluggify(this.system.range.value) === "berührung" || wrapped();
         },
-        "MIXED"
+        "MIXED",
     );
 
     libWrapper?.register(
@@ -82,12 +82,12 @@ function patchSpellRange() {
             const rangeFeet = Math.floor(Math.abs(Number(/^(\d+)-(fuß|ft|feet)(?!\w)/.exec(slug)?.at(1))));
             return Number.isInteger(rangeFeet) ? { increment: null, max: rangeFeet } : null;
         },
-        "MIXED"
+        "MIXED",
     );
 }
 
-Hooks.once("babele.init", () => {
-    if (game.babele) {
+Hooks.once("babele.init", (babele) => {
+    if (babele) {
         game.settings.register("lang-de-pf2e", "dual-language-names", {
             name: "Namen in Deutsch und Englisch",
             hint: "Zusätzlich zum deutschen Namen wird auch der englische Name verwendet.",
@@ -100,18 +100,13 @@ Hooks.once("babele.init", () => {
             }, 100),
         });
 
-        game.babele.register({
+        babele.register({
             module: "lang-de-pf2e",
             lang: "de",
-            dir: "translation/de/compendium",
-        });
-        game.babele.register({
-            module: "lang-de-pf2e",
-            lang: "de",
-            dir: "translation/de/modules/compendium",
+            dirs: ["translation/de/compendium", "translation/de/modules/compendium"],
         });
 
-        game.babele.registerConverters({
+        babele.registerConverters({
             normalizeName: (_data, translation) => {
                 return game.langDePf2e.normalizeName(translation);
             },
@@ -152,7 +147,7 @@ Hooks.once("babele.init", () => {
                 return game.langDePf2e.dynamicObjectListMerge(
                     data,
                     translation,
-                    game.langDePf2e.getMapping("heightening", true)
+                    game.langDePf2e.getMapping("heightening", true),
                 );
             },
             translatePageCategories: (data, translation) => {
@@ -171,7 +166,7 @@ Hooks.once("babele.init", () => {
                 return game.langDePf2e.dynamicArrayMerge(
                     data,
                     translation,
-                    game.langDePf2e.getMapping("skillSpecial", true)
+                    game.langDePf2e.getMapping("skillSpecial", true),
                 );
             },
             translateSource: (data) => {
@@ -181,7 +176,7 @@ Hooks.once("babele.init", () => {
                 return game.langDePf2e.dynamicObjectListMerge(
                     data,
                     translation,
-                    game.langDePf2e.getMapping("item", true)
+                    game.langDePf2e.getMapping("item", true),
                 );
             },
             translateTableResults: (data, translation) => {

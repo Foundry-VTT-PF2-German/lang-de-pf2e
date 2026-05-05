@@ -1,4 +1,4 @@
-import { CompendiumMapping } from "../../../babele/script/compendium-mapping.js";
+import { DocumentMapping } from "../../../babele/script/mapping/document-mapping.js";
 
 // Create Translator instance and register settings
 Hooks.once("init", () => {
@@ -108,7 +108,7 @@ class Translator {
     getMapping(mapping, compendium = false) {
         if (compendium) {
             return this.mappings[mapping]
-                ? new CompendiumMapping(this.mappings[mapping].entryType, this.mappings[mapping].mappingEntries)
+                ? new DocumentMapping(this.mappings[mapping].entryType, this.mappings[mapping].mappingEntries)
                 : {};
         }
         return this.mappings[mapping];
