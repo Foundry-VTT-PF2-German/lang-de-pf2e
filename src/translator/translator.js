@@ -1,4 +1,4 @@
-import { DocumentMapping } from "../../../babele/script/mapping/document-mapping.js";
+import { iconList, itemBlacklist, mappings, paths } from "./translator-config.js";
 
 // Create Translator instance and register settings
 Hooks.once("init", () => {
@@ -26,20 +26,11 @@ class Translator {
 
     // Initialize translator
     async initialize() {
-        // Read config file
-        const config = await Promise.all([
-            fetch("modules/lang-de-pf2e/src/translator/translator-config.json")
-                .then((r) => r.json())
-                .catch((_e) => {
-                    console.error("lang-de-pf2e: Couldn't find translator config file.");
-                }),
-        ]);
-
         // Initialize artwork lists
         this.artworkLists = {};
 
         // Load translations from dictionary
-        const dictionaryPath = config[0]?.paths?.dictionary ?? undefined;
+        const dictionaryPath = paths.dictionary ?? undefined;
         if (dictionaryPath) {
             const dict = await Promise.all([
                 fetch(dictionaryPath)
@@ -54,13 +45,13 @@ class Translator {
         }
 
         // Create list of icons
-        this.icons = config[0]?.iconList ?? {};
+        this.icons = iconList;
 
         // Create item blacklist for items. Actor items with compendium sources on this list won't get synchronized with the compendium data
-        this.itemBlacklist = config[0]?.itemBlacklist ?? [];
+        this.itemBlacklist = itemBlacklist;
 
         // Create list of mappings
-        this.mappings = config[0]?.mappings ?? {};
+        this.mappings = mappings;
 
         // Signalize translator is ready
         Hooks.callAll("langDePf2e.ready");
@@ -86,7 +77,7 @@ class Translator {
                             [imageType.substring(0, imageType.length - 1)]: file,
                         },
                     });
-                })
+                }),
             );
 
             foundry.utils.mergeObject(this.artworkLists, { [compendium]: images });
@@ -107,9 +98,7 @@ class Translator {
     // Get mapping
     getMapping(mapping, compendium = false) {
         if (compendium) {
-            return this.mappings[mapping]
-                ? new DocumentMapping(this.mappings[mapping].entryType, this.mappings[mapping].mappingEntries)
-                : {};
+            return this.mappings[mapping] ? game.babele.documentMappings.mappingFor(mapping) : {};
         }
         return this.mappings[mapping];
     }
@@ -191,7 +180,7 @@ class Translator {
     // Translate an array of similar objects, e.g. scenes or journal pages. This supports duplicate object names within the array using ids to identify the correct data
     translateArrayOfObjects(data, translation, mappingType) {
         data.forEach((entry, index, arr) => {
-            let objectTranslation = translation ? translation[entry.name] ?? undefined : undefined;
+            let objectTranslation = translation ? (translation[entry.name] ?? undefined) : undefined;
 
             // Check if the object translation is an array (in case of duplicate names)
             // Take the objectTranslation that matches the current objects' id
@@ -284,7 +273,7 @@ class Translator {
                     if (data.levels[level][fieldName]?.value) {
                         data.levels[level][fieldName].value = this.translateValue(
                             fieldName,
-                            data.levels[level][fieldName].value
+                            data.levels[level][fieldName].value,
                         );
                     }
                 });
@@ -307,12 +296,13 @@ class Translator {
             } else {
                 itemKey = entry.name;
             }
-            let itemTranslation = translation ? translation[itemKey] ?? undefined : undefined;
+            let itemTranslation = translation ? (translation[itemKey] ?? undefined) : undefined;
             let itemName = entry.name;
 
             // For compendium items, get the data from the compendium
 
             const compendiumLink = getCompendiumLinkFromItemData(entry);
+
             if (
                 compendiumLink &&
                 compendiumLink.startsWith("Compendium.pf2e.") &&
@@ -328,9 +318,7 @@ class Translator {
                     itemName = originalName;
 
                     // Get the item from the compendium
-                    const itemData = game.babele.packs
-                        .get(`${itemCompendium[1]}.${itemCompendium[2]}`)
-                        .translate(entry);
+                    const itemData = game.babele.translate(`${itemCompendium[1]}.${itemCompendium[2]}`, entry, false);
 
                     if (mergeFromCompendium) {
                         arr[index] = itemData;
@@ -368,7 +356,7 @@ class Translator {
                                 dataElement === "description"
                                     ? itemTranslation[dataElement].replace(
                                           "<Compendium>",
-                                          arr[index].system.description.value
+                                          arr[index].system.description.value,
                                       )
                                     : itemTranslation[dataElement].replace("<Compendium>", arr[index].name);
                         }
