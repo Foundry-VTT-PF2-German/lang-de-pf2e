@@ -415,7 +415,7 @@
         },
         "action->Paralysis": {
           "name": "Lähmung",
-          "description": "<p>Wird eine lebende, nichtelfische Kreatur vom Angriff eines Ghuls getroffen, muss sie einen @Check[fortitude|dc:22]{Zähigkeitswurf} ablegen; bei Misslingen erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt}. Der Kreatur steht am Ende jedes ihrer Züge ein neuer Rettungswurf zu; der SG sinkt kumulativ mit jedem dieser Rettungswürfe um 1.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.FW4KAUHb7r8WkxUc]\n<p>Any living, non-elf creature hit by a ghoul's attack must succeed at a @Check[fortitude|dc:22|options:inflicts:paralyzed] save or become @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}. It can attempt a new save at the end of each of its turns, and the DC cumulatively decreases by 1 on each such save.</p>"
         },
         "action->Swift Leap": {
           "name": "Schneller Sprung"
@@ -848,7 +848,7 @@
     "The Last Crucible": {
       "name": "Der Letzte Schmelztiegel",
       "description": "<p>Magisch gehärtete Obsidianplatten verschließen alle Ausgänge des Raumes und Lava - und Monster - beginnen in den Irrgarten zu strömen.</p>",
-      "disable": "<p>@Check[thievery|dc:28]{Diebeskunst} (Experte), um die Hauptdruckplatte in Bereich <strong>H4a</strong> zu blockieren und die Falle gänzlich zu deaktivieren (dies sorgt auch dafür, dass die Obsidianplatten wieder nach oben fahren); @Check[thievery|dc:25]{Diebeskunst} (Geübt) um einen der drei Lavaausschlüsse zu blockieren, oder @Check[athletics|dc:28]{Athletik} (Geübt) zum @UUID[Compendium.pf2e.actionspf2e.Item.SjmKHgI7a5Z9JzBx]{Gewaltsam öffnen}, um eine Obsidianplatte aufzubrechen.</p>",
+      "disable": "<p>@Check[thievery|dc:28] (expert) to disable the main pressure plate at area <strong>H4a</strong> and deactivate the trap entirely (this causes the obsidian walls to retract up into the ceiling as well), @Check[thievery|dc:25] (trained) to disable one of the three lava spouts, or Athletics DC 28 (trained) to [[/act force-open dc=28]] a fallen obsidian wall</p>",
       "hpDetails": "BW 29, um ein Loch von 5 Fuß/1,50 m-Seitenlänge in die Wand zu schlagen; Ausfluss-Härte 13; Ausfluss-TP 20 (BW 10)",
       "reset": "<p>Der Letzte Schmelztiegel deaktiviert und setzt sich zurück, wenn er 10 Minuten lang keine Ziele hatte (weil entweder alle Kreaturen tot sind oder Bereich <strong>H4</strong> verlassen haben). Noch lebende Thoqquas spüren den Magmafluss in Bereich <strong>H6</strong>, kriechen nach Norden und schwimmen schließlich weg.</p>",
       "routine": "<p>(3 Aktionen) Die Falle verliert pro blockiertem Ausschluss 1 Aktion. Mit jeder Aktion fließt aus einem anderen Ausfluss in einem der drei mit <strong>H4c</strong> markierten Bereiche Lava in Richtung des nächsten Nichtthoqquas innerhalb seiner Sichtlinie; diese Ausflüsse verfügen über magische Sensoren mit Dunkelsicht und einem Wahrnehmungs-SG von 25.</p>\n<p>Normalerweise kamen Diener des Abtes nach Auslösung der Falle hierher, schalteten sie aus und reinigten den Raum von verhärteten Lavaklumpen und sterblichen Überresten. Nun dürfte eine aktive Falle wohl sehr langsam die Tunnel mit erkalteter Lava blockieren - das Tempo dabei ist aber derart niedrig, dass es sich nicht auf das weitere Abenteuer auswirkt.</p>",
@@ -856,11 +856,11 @@
       "items": {
         "action->Drop the Wall": {
           "name": "Verschließende Platten",
-          "description": "<p><strong>Auslöser</strong> Vier oder mehr Kreaturen der Größenkategorie Klein oder größer treten auf die Druckplatte in Bereich <strong>H4a</strong></p>\n<hr />\n<p><strong>Effekt</strong> Magische gehärtete Obsidianplatten fahren wie Fallgitter in den Ausgängen im Westen und Norden zu den Bereichen <strong>H3</strong> and <strong>H5</strong> herab. Jede Kreatur, die auf einem dieser Felder steht, erleidet @Damage[(4d6 + 4)[bludgeoning]]{4W6+4 Punkte Wuchtschaden} durch die herabfahrende Platte (@Check[reflex|dc:24|basic]{einfacher REF}) und entscheidet dann, auf welcher Seite der Wand sie stehen möchte. Zugleich erwachen vier Thoqquas aus ihrem „Winterschlaf“ und kommen aus den Ausflüssen in Bereich <strong>H4b</strong>. Die Falle und die Thoqquas würfeln sodann jeweils ihre Initiative aus.</p>"
+          "description": "<p><strong>Trigger</strong> Four or more Small or larger creatures walk onto the pressure plate at area <strong>H4a</strong>;</p>\n<hr />\n<p><strong>Effect</strong> A magically hardened sheet of obsidian drops down like a portcullis in the western and northern entrances to this room that lead to areas <strong>H3</strong> and <strong>H5</strong>, respectively. Any creatures standing in one of these squares takes @Damage[(4d6 + 4)[bludgeoning]|options:area-damage] damage from the falling wall (@Check[reflex|dc:24|basic|options:area-effect]) and then decides what side of the wall they want to be on. At the same moment, four thoqquas that have spent centuries in hibernation awaken and emerge from vents into area <strong>H4b</strong>. The trap then rolls initiative, as do the thoqquas.</p>"
         },
-        "strike-melee->Lava Gout": {
-          "name": "Lava",
-          "description": "<p>kein Malus für Mehrfachangriffe</p>"
+        "strike-ranged->Lava Gout": {
+          "name": "Lava Gout",
+          "description": "<p>No multiple attack penalty</p>"
         }
       }
     },
