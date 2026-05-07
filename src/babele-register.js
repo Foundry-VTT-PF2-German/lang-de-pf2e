@@ -1,3 +1,5 @@
+import { mappings } from "./translator/translator-config.js";
+
 // Prevent errors due to data structure changes - thanks to n1xx1 from the italian localization for the coding
 function removeMismatchingTypes(fallback, other = {}) {
     for (let k of Object.keys(other)) {
@@ -106,6 +108,8 @@ Hooks.once("babele.init", (babele) => {
             dirs: ["translation/de/compendium", "translation/de/modules/compendium"],
         });
 
+        babele.registerMapping(mappings);
+
         babele.registerConverters({
             normalizeName: (_data, translation) => {
                 return game.langDePf2e.normalizeName(translation);
@@ -136,6 +140,9 @@ Hooks.once("babele.init", (babele) => {
             },
             translateAdventureTables: (data, translation) => {
                 return game.langDePf2e.translateArrayOfObjects(data, translation, "adventureTable");
+            },
+            translateBadges: (_data, translation) => {
+                return translation;
             },
             translateDualLanguage: (data, translation) => {
                 return game.langDePf2e.translateDualLanguage(data, translation);
