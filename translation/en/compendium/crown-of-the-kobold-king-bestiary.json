@@ -415,7 +415,7 @@
         },
         "action->Paralysis": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.FW4KAUHb7r8WkxUc]\nParalysis",
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.FW4KAUHb7r8WkxUc]\n<p>Any living, non-elf creature hit by a ghoul's attack must succeed at a @Check[fortitude|dc:22] save or become @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}. It can attempt a new save at the end of each of its turns, and the DC cumulatively decreases by 1 on each such save.</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.FW4KAUHb7r8WkxUc]\n<p>Any living, non-elf creature hit by a ghoul's attack must succeed at a @Check[fortitude|dc:22|options:inflicts:paralyzed] save or become @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}. It can attempt a new save at the end of each of its turns, and the DC cumulatively decreases by 1 on each such save.</p>"
         },
         "action->Swift Leap": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.UU1Fp3PRuTFONjC9]\nSwift Leap"
@@ -848,7 +848,7 @@
     "The Last Crucible": {
       "name": "The Last Crucible",
       "description": "<p>Magically hardened sheets of obsidian drop down over the room's exits while the machinery within taps into wells of magma to begin spewing lava-and monsters-into the maze.</p>",
-      "disable": "<p>@Check[thievery|dc:28] (expert) to disable the main pressure plate at area <strong>H4a</strong> and deactivate the trap entirely (this causes the obsidian walls to retract up into the ceiling as well), @Check[thievery|dc:25] (trained) to disable one of the three lava spouts, or @Check[athletics|dc:28] (trained) to @UUID[Compendium.pf2e.actionspf2e.Item.SjmKHgI7a5Z9JzBx]{Force Open} a fallen obsidian wall</p>",
+      "disable": "<p>@Check[thievery|dc:28] (expert) to disable the main pressure plate at area <strong>H4a</strong> and deactivate the trap entirely (this causes the obsidian walls to retract up into the ceiling as well), @Check[thievery|dc:25] (trained) to disable one of the three lava spouts, or Athletics DC 28 (trained) to [[/act force-open dc=28]] a fallen obsidian wall</p>",
       "hpDetails": "BT 29 to smash a 5-ft-sq hole in the wall; Spout H 13; Spout HP 20 (BT 10)",
       "reset": "<p>The Last Crucible deactivates and resets 10 minutes after it has no target creatures (because the creatures either left area <strong>H4</strong> or died). Any thoqquas that still live sense the magma river at area <strong>H6</strong> and eventually make their way north to that area to swim away.</p>",
       "routine": "<p>(3 actions) The trap loses 1 action per disabled spout each turn. On each action, a different spout located at one of the three areas marked <strong>H4c</strong> spews a gout of lava at the closest non-thoqqua target in its line of sight; these spouts use magical sensors that have darkvision and a Perception DC of 25. Originally, agents of the abbot would come through here after the trap was triggered, deactivate it, and clean out the hardened blobs of lava and dead bodies that remained, but the amount of time it would take for this trap to clog tunnels with cooled lava makes tracking that slow accretion over the course of this adventure unnecessary.</p>",
@@ -856,11 +856,11 @@
       "items": {
         "action->Drop the Wall": {
           "name": "Drop the Wall",
-          "description": "<p><strong>Trigger</strong> Four or more Small or larger creatures walk onto the pressure plate at area <strong>H4a</strong>;</p>\n<hr />\n<p><strong>Effect</strong> A magically hardened sheet of obsidian drops down like a portcullis in the western and northern entrances to this room that lead to areas <strong>H3</strong> and <strong>H5</strong>, respectively. Any creatures standing in one of these squares takes @Damage[(4d6 + 4)[bludgeoning]] damage from the falling wall (@Check[reflex|dc:24|basic]) and then decides what side of the wall they want to be on. At the same moment, four thoqquas that have spent centuries in hibernation awaken and emerge from vents into area <strong>H4b</strong>. The trap then rolls initiative, as do the thoqquas.</p>"
+          "description": "<p><strong>Trigger</strong> Four or more Small or larger creatures walk onto the pressure plate at area <strong>H4a</strong>;</p>\n<hr />\n<p><strong>Effect</strong> A magically hardened sheet of obsidian drops down like a portcullis in the western and northern entrances to this room that lead to areas <strong>H3</strong> and <strong>H5</strong>, respectively. Any creatures standing in one of these squares takes @Damage[(4d6 + 4)[bludgeoning]|options:area-damage] damage from the falling wall (@Check[reflex|dc:24|basic|options:area-effect]) and then decides what side of the wall they want to be on. At the same moment, four thoqquas that have spent centuries in hibernation awaken and emerge from vents into area <strong>H4b</strong>. The trap then rolls initiative, as do the thoqquas.</p>"
         },
-        "strike-melee->Lava Gout": {
+        "strike-ranged->Lava Gout": {
           "name": "Lava Gout",
-          "description": "<p>This attack has no multiple attack penalty.</p>"
+          "description": "<p>No multiple attack penalty</p>"
         }
       }
     },
