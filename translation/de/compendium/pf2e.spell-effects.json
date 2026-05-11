@@ -57,13 +57,9 @@
       "name": "Zaubereffekt: Säuregriff",
       "description": "<p>Gewährt durch @UUID[Compendium.pf2e.spells-srd.Item.9h9YCncqah6VNsKf]{Säuregriff}</p>\n<p>Solange du durch diesen Zauber Anhaltenden Schaden erleidest, erhältst du einen -10 Fuß/3 m Zustandsmalus auf deine Bewegungsrate.</p>"
     },
-    "Spell Effect: Adapt Self (Darkvision)": {
-      "name": "Zaubereffet: Selbstanpassung (Dunkelsicht)",
-      "description": "<p>Gewährt durch @UUID[Compendium.pf2e.spells-srd.Item.GUnw9YXaW3YyaCAU]{Selbstanpassung}</p>\n<p>Du erhältst Dunkelsicht.</p>"
-    },
-    "Spell Effect: Adapt Self (Swim)": {
-      "name": "Zaubereffet: Selbstanpassung (Schwimmen)",
-      "description": "<p>Gewährt durch @UUID[Compendium.pf2e.spells-srd.Item.GUnw9YXaW3YyaCAU]{Selbstanpassung}</p>\n<p>Du erhältst eine Bewegungsrate für Schwimmen in Höhe deiner halben Bewegungsrate am Boden.</p>"
+    "Spell Effect: Adapt Self": {
+      "name": "Zaubereffekt: Selbstanpassung",
+      "description": "<p>Gewährt durch @UUID[Compendium.pf2e.spells-srd.Item.GUnw9YXaW3YyaCAU]{Selbstanpassung}</p>\n<p>Du erhältst eine der folgenden Optionen:</p>\n<ul>\n<li>Eine Bewegungsrate für Schwimmen in Höhe deiner halben Bewegungsrate.</li>\n<li>Dunkelsicht</li>\n</ul>"
     },
     "Spell Effect: Adaptive Ablation": {
       "name": "Zaubereffekt: Resistenzanpassung",
@@ -2161,7 +2157,10 @@
     }
   },
   "mapping": {
-    "badges": "system.badge.labels",
+    "badges": {
+      "converter": "translateBadges",
+      "path": "system.badge.labels"
+    },
     "description": "system.description.value",
     "name": {
       "converter": "translateDualLanguage",

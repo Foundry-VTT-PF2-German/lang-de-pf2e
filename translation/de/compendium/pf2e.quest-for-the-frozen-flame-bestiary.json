@@ -815,7 +815,7 @@
         },
         "action->Paralysis": {
           "name": "Lähmung",
-          "description": "<p>Wird eine lebende Kreatur vom Bissangriff des Ewig Brennenden Mammuts getroffen, muss sie einen @Check[fortitude|dc:23]{Zähigkeitswurf} ablegen; bei Misslingen erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt}. Der Kreatur steht am Ende jedes ihrer Züge ein neuer Rettungswurf zu; der SG sinkt kumulativ mit jedem dieser Rettungswürfe um 1.</p>"
+          "description": "<p>Wird eine lebende Kreatur vom Bissangriff des Ewig Brennenden Mammuts getroffen, muss sie einen @Check[fortitude|dc:23|options:inflicts:paralyzed]{Zähigkeitswurf} ablegen; bei Misslingen erhält sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt}. Der Kreatur steht am Ende jedes ihrer Züge ein neuer Rettungswurf zu; der SG sinkt kumulativ mit jedem dieser Rettungswürfe um 1.</p>"
         }
       }
     },
@@ -1700,6 +1700,10 @@
     },
     "Metuak": {
       "name": "Metuak",
+      "blurb": "Dämonenbesessener menschlicher Held",
+      "hpDetails": "(Doppelseele; je 120 für Metuak und Xeleria)",
+      "languages": "Telepathie 100 Fuß/30 m",
+      "saveDetails": "+1 auf RW gg. Magie",
       "items": {
         "spellcastingEntry->Divine Innate Spells": {
           "name": "Immanente Göttliche Zauber"
@@ -1707,8 +1711,11 @@
         "strike-melee->Claw": {
           "name": "Klaue"
         },
-        "strike-ranged->Hatchet": {
+        "strike-melee->Hatchet": {
           "name": "Kriegsbeil"
+        },
+        "action->+1 to All Saves vs. Magic": {
+          "name": "+1 auf RW gg. Magie"
         },
         "action->Attack of Opportunity": {
           "name": "Gelegenheitsangriff",
@@ -1724,7 +1731,7 @@
         },
         "action->Dual Soul": {
           "name": "Doppelseele",
-          "description": "<p>Eine Dämonin namens Xeleria ist an Metuaks Seele gebunden. Die beiden teilen sich einen Körper und zählen als eine einzelne Kreatur, sowohl für Flächeneffekte als auch für Effekte mit einem Ziel. Dennoch haben Metuak und Xeleria jeweils 120 Trefferpunkte und Schaden gegen beide wird separat gerechnet. Xelerias TP werden durch Kraftschaden, sowie Guten und Lebensschaden reduziert und außerdem durch Schaden von Waffen aus Kaltem Eisen oder mit einer <em>Geister berührenden</em> Rune, oder der auf die <em>Flamme des Lebens</em> zurückgeht. Alle anderen Arten von Schaden reduzieren Metuaks TP. Metuak und Xeleria müssen beide auf 0 TP reduziert werden, damit Metuak stirbt und Xeleria zerstört wird. Wenn zu Beginn von Metuaks Zug entweder Metuak oder Xeleria auf 0 TP reduziert ist, aber der jeweils andere nicht, erhalten beide 15 TP zurück.</p>"
+          "description": "<p>Eine Dämonin namens Xeleria ist an Metuaks Seele gebunden. Die beiden teilen sich einen Körper und zählen als eine einzelne Kreatur, sowohl für Flächeneffekte als auch für Effekte mit einem Ziel. Dennoch haben Metuak und Xeleria jeweils 120 Trefferpunkte und Schaden gegen beide wird separat gerechnet. Xelerias TP werden durch Kraftschaden, sowie Guten und Lebensschaden reduziert und außerdem durch Schaden von Waffen aus Kaltem Eisen oder mit einer <em>Geister berührenden</em> Rune, oder der auf die <em>Flamme des Lebens</em> zurückgeht. Alle anderen Arten von Schaden reduzieren Metuaks TP.</p>\n<p>Metuak und Xeleria müssen beide auf 0 TP reduziert werden, damit Metuak stirbt und Xeleria zerstört wird. Wenn zu Beginn von Metuaks Zug entweder Metuak oder Xeleria auf 0 TP reduziert ist, aber der jeweils andere nicht, erhalten beide @Damage[15[healing]]{15 TP} zurück.</p>"
         },
         "action->Shadow Blend": {
           "name": "Mit Schatten verschmelzen",
@@ -1736,7 +1743,7 @@
         },
         "action->Terrifying Howl": {
           "name": "Furchterregender Kampfschrei",
-          "description": "<p>Metuak stößt ein schreckliches Heulen aus und versucht, alle Kreaturen innerhalb von 30 Fuß/9 m zu @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralisieren}. Diese Kreaturen sind daraufhin für 1 Minute gegen Furchterregender Kampfschrei temporär immun.</p>"
+          "description": "<p>Metuak stößt ein schreckliches Heulen aus und versucht, alle Kreaturen innerhalb von @Template[emanation|distance:30]{30 Fuß/9 m} zu [/act demoralize options=area-effect]]. Diese Kreaturen sind daraufhin für 1 Minute gegen Furchterregender Kampfschrei temporär immun.</p>"
         }
       }
     },
