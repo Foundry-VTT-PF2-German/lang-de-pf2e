@@ -201,6 +201,10 @@
       "name": "Stachelhaarbeschuss",
       "description": "<p>Die Tarantel zuckt heftig mit den Beinen und verschießt dornige Haare in einem @Template[cone|distance:15]{15 Fuß/4,50-Kegel}. Dies verursacht 4W6 Punkte Stichschaden (@Check[reflex|against:hair-barrage|basic:true]{einfacher Reflexwurf} gegen deinen Klassen-SG). Der Schaden steigt mit der 10., 14. und 18. Stufe um jeweils weitere 1W6 Punkte.</p>\n<p><strong>Stufenabhängiger Schaden:</strong> @Damage[(4 + max(0,floor((@actor.level - 6) / 4)))d6[piercing]]</p>"
     },
+    "Hellfire Gaze": {
+      "name": "Hellfire Gaze",
+      "description": "<p>The thruneosaurus's eyes project a line of fire in a @Template[type:line|distance:30], dealing @Damage[(floor(@actor.level/2))d6[fire]] damage for every 2 levels the thruneosaurus has to all creatures in the area (@Check[type:reflex|against:hellfire-gaze|basic:true]). A creature that critically fails its save also takes persistent fire damage equal to the number of damage dice. This uses a trained DC using the thruneosaurus's Constitution modifier or an expert DC if the beast is specialized.</p>"
+    },
     "Hustle": {
       "name": "Eilen",
       "description": "<p>Der Käfer bewegt sich mit unglaublicher Geschwindigkeit. Er nutzt drei Mal Laufen.</p>"
@@ -292,7 +296,7 @@
     },
     "Shred": {
       "name": "Zerfetzen",
-      "description": "<p>Der Hai verbeißt sich in der Wunde und verursacht zusätzlichen Schaden. Das Ziel des Angriffes des Hais erleidet @Damage[1d8[slashing]]{1W8 Hiebschaden} (bzw. @Damage[2d8[slashing]]{2W8 Punkte} bei einem Ausgewachsenen Gefährten oder @Damage[3d8[slashing]]{3W8} bei einem Spezialisierten Gefährten).</p>"
+      "description": "<p>The shark viciously rips into the wound. The target of the shark's Strike takes 2d8 slashing damage (3d8 for a specialized companion).</p>"
     },
     "Snatch": {
       "name": "Schnappen",
@@ -362,10 +366,10 @@
     },
     "Throw Rock": {
       "name": "Felsen werfen",
-      "description": "<p>Der Baumhirtenspross nutzt Interagieren, um einen Stein innerhalb seines Angriffsradius oder einen verstauten Stein aufzuheben und als Fernkampfangriff zu werfen; dieser Felsangriff verursacht 2W6 Punkte Wuchtschaden mit Entfernungseinheit 30 Fuß/9 m. Bei einem Spezialisierten Tiergefährten steigt der Schaden auf 3W6 Punkte.</p>",
+      "description": "<p>The arboreal sapling Interacts to pick up a rock within reach or retrieve a stowed rock, then throws it with a ranged rock Strike that deals 2d6 bludgeoning (3d6 for a specialized companion) damage with a range increment of 30 feet.</p>",
       "rules": {
-        "1": {
-          "label": "Felsen"
+        "0": {
+          "label": "Rock"
         }
       }
     },
