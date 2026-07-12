@@ -177,7 +177,7 @@
         },
         "action->Lamashtu's Bloom": {
           "name": "Lamashtu's Bloom",
-          "description": "<p>While some NPCs become afflicted by Lamashtu's bloom curse during Parts 1 and 2 of this chapter, during Part 3 the PCs may be exposed to it as well. While the bloom is itself a curse, it functions mechanically more like a disease, and as such features both of these affliction traits. As long as the curse persists, a creature cannot recover from the disease, and removing the curse does not automatically remove the disease element of the affliction. Both elements must be dealt with individually before a victim suffering from Lamashtu's Bloom is safe. As with all elements of this curse, slaying the bloom of Lamashtu in area <strong>C10</strong> automatically removes this affliction.</p>\n<hr />\n<p><strong>Saving Throw</strong> @Check[fortitude|dc:23]</p>\n<p><strong>Onset</strong> 1 week</p>\n<p><strong>Stage 1</strong> no ill effects (1 day)</p>\n<p><strong>Stage 2</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} (1 day)</p>\n<p><strong>Stage 3</strong> enfeebled 1 and @Damage[2d6[poison]] damage (8 hours)</p>\n<p><strong>Stage 4</strong> @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious} and @Damage[4d6[poison]] damage (10 minutes)</p>\n<p><strong>Stage 5</strong> death; Special a creature that dies from Lamashtu's bloom explodes in a blast of First World foliage, releasing a monster. This creature is typically a low-intelligence beast or dragon between 7th and 9th level, depending on the GM's whim.</p>"
+          "description": "<p>While some NPCs become afflicted by Lamashtu's bloom curse during Parts 1 and 2 of this chapter, during Part 3 the PCs may be exposed to it as well. While the bloom is itself a curse, it functions mechanically more like a disease, and as such features both of these affliction traits. As long as the curse persists, a creature cannot recover from the disease, and removing the curse does not automatically remove the disease element of the affliction. Both elements must be dealt with individually before a victim suffering from Lamashtu's Bloom is safe. As with all elements of this curse, slaying the bloom of Lamashtu in area <strong>C10</strong> automatically removes this affliction.</p>\n<hr />\n<p><strong>Saving Throw</strong> @Check[fortitude|dc:23]</p>\n<p><strong>Onset</strong> 1 week</p>\n<p><strong>Stage 1</strong> no ill effects (1 day)</p>\n<p><strong>Stage 2</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} (1 day)</p>\n<p><strong>Stage 3</strong> enfeebled 1 and @Damage[2d6[poison]] damage (8 hours)</p>\n<p><strong>Stage 4</strong> @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious} and @Damage[4d6[poison]] damage (10 minutes)</p>\n<p><strong>Stage 5</strong> death</p>\n<p><strong>Special</strong> a creature that dies from Lamashtu's bloom explodes in a blast of First World foliage, releasing a monster. This creature is typically a low-intelligence beast or dragon between 7th and 9th level, depending on the GM's whim.</p>"
         },
         "action->Three-Headed Strike": {
           "name": "Three-Headed Strike",
@@ -1107,21 +1107,16 @@
       "disable": "<p>@Check[thievery|dc:23] (expert) to disarm the trap's sensors in the chamber floor, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (3rd rank; counteract DC 23) to counteract the faces. Breaking one of the faces on the walls reduces the trap's save DC, attack rolls, and its total actions by 1 per broken face; if all four faces are destroyed, the trap is disabled.</p>",
       "hpDetails": "HP for each face, 4 faces",
       "reset": "<p>The trap resets after 1 minute</p>",
-      "routine": "<p>(4 actions) The trap loses 1 action per disabled face each turn. On each action, a different face spews a writhing breath of darkness from its mouth to a target in the area. A creature can only be targeted once per round by the despairing breath, so if fewer than four creatures are in the room, the trap won't be able to take full advantage of all four of its actions.</p>",
+      "routine": "<p>(4 actions) The trap loses 1 action per disabled face each turn. On each action, a different face spews a writhing breath of darkness from its mouth to a target in area <strong>C2</strong>. A creature can only be targeted once per round by the despairing breath, so if fewer than four creatures are in the room, the trap won't be able to take full advantage of all four of its actions.</p>",
       "stealth": "<p>(trained)</p>",
       "items": {
         "action->Draining Inhalation": {
           "name": "Draining Inhalation",
-          "description": "<p><strong>Trigger</strong> A non-flying living creature moves more than 10 feet into the area</p>\n<p><strong>Effect</strong> Each face inhales then exhales, and all living creatures in the area feel their strength and vitality being drawn out of them as tendrils of shadow from the faces latch onto their bodies. Each creature must succeed at a @Check[fortitude|dc:22] save or become @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} (@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} on a critical failure).</p>"
+          "description": "<p><strong>Trigger</strong> A non-flying living creature moves more than 10 feet into the area</p>\n<p><strong>Effect</strong> Each face inhales then exhales, and all living creatures in the area feel their strength and vitality being drawn out of them as tendrils of shadow from the faces latch onto their bodies. Each creature must succeed at a @Check[fortitude|dc:22|options:area-effect,inflicts:enfeebled] save or become @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} (@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} on a critical failure).</p>"
         },
-        "strike-melee->Despairing Breath": {
+        "strike-ranged->Despairing Breath": {
           "name": "Despairing Breath",
-          "description": "<p>No multiple attack penalty. A creature damaged by the despairing breath must succeed at a @Check[will|dc:22] save or become @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} 1 on a critical failure); this effect has the fear trait.</p>",
-          "rules": {
-            "0": {
-              "text": "<p>A creature damaged by the despairing breath must succeed at a @Check[will|dc:22] save or become @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} 1 on a critical failure); this effect has the fear trait.</p>"
-            }
-          }
+          "description": "<p>No multiple attack penalty. A creature damaged by the despairing breath must succeed at a @Check[will|dc:22|options:inflicts:frightened,inflicts:fleeing] save or become @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} on a critical failure); this effect has the fear trait.</p>"
         }
       }
     },
@@ -1698,7 +1693,7 @@
         },
         "action->Nymph's Tragedy": {
           "name": "Nymph's Tragedy",
-          "description": "<p>30 feet. Creatures that start their turn in this aura must succeed at a @Check[will|dc:33] save or become @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} as their eyes cloud with blood, darkening their vision. This effect persists as long as the creature continues to begin its turn within the aura, even if it can't see the defaced naiad on subsequent turns.</p>"
+          "description": "<p>30 feet. Creatures that start their turn in this aura must succeed at a @Check[will|dc:33|options:area-effect,inflicts:dazzled] save or become @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} as their eyes cloud with blood, darkening their vision. This effect persists as long as the creature continues to begin its turn within the aura, even if it can't see the defaced naiad on subsequent turns.</p>"
         },
         "action->Agonized Wail": {
           "name": "Agonized Wail",
@@ -2268,7 +2263,7 @@
         },
         "action->Lamashtu's Bloom": {
           "name": "Lamashtu's Bloom",
-          "description": "<p>While some NPCs become afflicted by Lamashtu's bloom curse during Parts 1 and 2 of this chapter, during Part 3 the PCs may be exposed to it as well. While the bloom is itself a curse, it functions mechanically more like a disease, and as such features both of these affliction traits. As long as the curse persists, a creature cannot recover from the disease, and removing the curse does not automatically remove the disease element of the affliction. Both elements must be dealt with individually before a victim suffering from Lamashtu's Bloom is safe. As with all elements of this curse, slaying the bloom of Lamashtu in area <strong>C10</strong> automatically removes this affliction.</p>\n<hr />\n<p><strong>Saving Throw</strong> @Check[fortitude|dc:23]</p>\n<p><strong>Onset</strong> 1 week</p>\n<p><strong>Stage 1</strong> no ill effects (1 day)</p>\n<p><strong>Stage 2</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} (1 day)</p>\n<p><strong>Stage 3</strong> enfeebled 1 and @Damage[2d6[poison]] damage (8 hours)</p>\n<p><strong>Stage 4</strong> @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious} and @Damage[4d6[poison]] damage (10 minutes)</p>\n<p><strong>Stage 5</strong> death; Special a creature that dies from Lamashtu's bloom explodes in a blast of First World foliage, releasing a monster. This creature is typically a low-intelligence beast or dragon between 7th and 9th level, depending on the GM's whim.</p>"
+          "description": "<p>While some NPCs become afflicted by Lamashtu's bloom curse during Parts 1 and 2 of this chapter, during Part 3 the PCs may be exposed to it as well. While the bloom is itself a curse, it functions mechanically more like a disease, and as such features both of these affliction traits. As long as the curse persists, a creature cannot recover from the disease, and removing the curse does not automatically remove the disease element of the affliction. Both elements must be dealt with individually before a victim suffering from Lamashtu's Bloom is safe. As with all elements of this curse, slaying the bloom of Lamashtu in area <strong>C10</strong> automatically removes this affliction.</p>\n<hr />\n<p><strong>Saving Throw</strong> @Check[fortitude|dc:23]</p>\n<p><strong>Onset</strong> 1 week</p>\n<p><strong>Stage 1</strong> no ill effects (1 day)</p>\n<p><strong>Stage 2</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} (1 day)</p>\n<p><strong>Stage 3</strong> enfeebled 1 and @Damage[2d6[poison]] damage (8 hours)</p>\n<p><strong>Stage 4</strong> @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious} and @Damage[4d6[poison]] damage (10 minutes)</p>\n<p><strong>Stage 5</strong> death</p>\n<p><strong>Special</strong> a creature that dies from Lamashtu's bloom explodes in a blast of First World foliage, releasing a monster. This creature is typically a low-intelligence beast or dragon between 7th and 9th level, depending on the GM's whim.</p>"
         }
       }
     },
@@ -6469,7 +6464,7 @@
         },
         "action->Confusing Gaze": {
           "name": "Confusing Gaze",
-          "description": "<p>30 feet. When a creature ends its turn in the aura, it must succeed at a @Check[will|dc:38] save or become @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} for 1 round.</p>"
+          "description": "<p>30 feet. When a creature ends its turn in the aura, it must succeed at a @Check[will|dc:38|options:area-effect,inflicts:confused] save or become @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} for 1 round.</p>"
         },
         "action->Quick Recovery": {
           "name": "Quick Recovery",
@@ -6489,7 +6484,7 @@
         },
         "action->Pain": {
           "name": "Pain",
-          "description": "<p>A bandersnatch's quills create exceptionally painful wounds. The wounded creature must succeed at a @Check[fortitude|dc:41] save to resist becoming @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (@UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} on a critical failure) by this pain. Further bandersnatch Strikes that cause pain increase the amount of drain by 1 for each failed save to a maximum of drained 4.</p>"
+          "description": "<p>A bandersnatch's quills create exceptionally painful wounds. The wounded creature must succeed at a @Check[fortitude|dc:41|options:inflicts:drained] save to resist becoming @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (@UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} on a critical failure) by this pain. Further bandersnatch Strikes that cause pain increase the amount of drain by 1 for each failed save to a maximum of drained 4.</p>"
         },
         "action->Relentless Tracker": {
           "name": "Relentless Tracker",
@@ -7266,7 +7261,7 @@
         },
         "action->Invoke Old Sharptooth": {
           "name": "Invoke Old Sharptooth",
-          "description": "<p><strong>Requirement</strong> Tartuccio is in Tartuk's form</p>\n<p><strong>Trigger</strong> A Sootscale kobold causes Tartuccio harm.</p>\n<hr />\n<p><strong>Effect</strong> Tartuccio (as Tartuk) can @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} the kobold who harmed him with a short warning such as \"Old Sharptooth will punish you for your transgressions!\" He gains a +2 circumstance bonus on the Intimidate check to do so.</p>"
+          "description": "<p><strong>Requirement</strong> Tartuccio is in Tartuk's form</p>\n<p><strong>Trigger</strong> A Sootscale kobold causes Tartuccio harm.</p>\n<hr />\n<p><strong>Effect</strong> Tartuccio (as Tartuk) can [[/act demoralize options=invoke-old-sharptooth]] the kobold who harmed him with a short warning such as \"Old Sharptooth will punish you for your transgressions!\" He gains a +2 circumstance bonus on the Intimidate check to do so.</p>"
         },
         "lore->Bardic Lore": {
           "name": "Bardic Lore"
