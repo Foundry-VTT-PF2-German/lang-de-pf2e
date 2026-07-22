@@ -14,6 +14,9 @@
         "spell->Elemental Form (Water Only)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.1K6AYGisvo9gqdhs]\nElemental Form (Water Only)"
         },
+        "equipment->Bands of Force": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.02q8s6sSicMkhs1l]\n<p>Decorated with clear gemstones, these thick metal bands spread an inflexible layer of force over your body. The force grants you a +1 item bonus to AC and saving throws, and a maximum Dexterity modifier of +5 as armor. You can affix talismans to the bands as though they were light armor.</p>\n<p><strong>Activate—Return Force</strong> <span class=\"action-glyph\">R</span> (force, manipulate)</p>\n<p><strong>Trigger</strong> A creature critically misses you with a melee Strike</p>\n<hr />\n<p><strong>Effect</strong> You Shove the creature using the bands' Athletics modifier of [[/r d20+14]]{+14}.</p>"
+        },
         "equipment->Razmir mask and robes": {
           "name": "Razmir mask and robes"
         },
@@ -530,7 +533,7 @@
           "description": "<p>A creature that begins its turn inside the shoggoth takes @Damage[9d6[acid]] damage.</p>"
         },
         "action->Engulf": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.zU3Ovaet4xQ5Gmvy]\n<p>@Check[reflex|dc:40|traits:damaging-effect], @Damage[6d6[acid]] damage, [[/act escape dc=40]], Rupture 40</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Engulf]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.zU3Ovaet4xQ5Gmvy]\n<p>@Check[reflex|dc:40|options:damaging-effect,inflicts:grabbed,inflicts:slowed], @Damage[6d6[acid]] damage, [[/act escape dc=40]], Rupture 40</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Engulf]</p>"
         },
         "action->Toxic Sporecloud": {
           "name": "Toxic Sporecloud",
@@ -604,14 +607,14 @@
         },
         "action->Whistling Decay": {
           "name": "Whistling Decay",
-          "description": "<p><strong>Trigger</strong> The fungal curtain takes damage or an attempt to disable it critically fails</p>\n<hr />\n<p><strong>Effect</strong> Pod like protrusions along the fungal curtain clench and then expel a shrill whistling sound along with clouds of flesh-eating spores. The whistling sound alerts the occupants of area <strong>E6</strong>. Any non-fungus, non-demon creature within 30 feet of the fungal curtain is exposed to the flesh-eating spores and takes @Damage[8d6[poison],4d6[persistent,void]]{8d6 poison damage and 4d6 persistent void} damage (@Check[fortitude|dc:42|basic] save). The fungal curtain then rolls initiative.</p>"
+          "description": "<p><strong>Trigger</strong> The fungal curtain takes damage or an attempt to disable it critically fails</p>\n<hr />\n<p><strong>Effect</strong> Pod like protrusions along the fungal curtain clench and then expel a shrill whistling sound along with clouds of flesh-eating spores. The whistling sound alerts the occupants of area <strong>E6</strong>. Any non-fungus, non-demon creature within Template[emanation|distance:30]{30 feet} of the fungal curtain is exposed to the flesh-eating spores and takes @Damage[8d6[poison],4d6[persistent,void]|options:area-damage] damage (@Check[fortitude|dc:42|basic|options:area-effect] save). The fungal curtain then rolls initiative.</p>"
         },
         "strike-melee->Thorny Tentacle": {
           "name": "Thorny Tentacle"
         },
         "strike-ranged->Thorny Spore": {
           "name": "Thorny Spore",
-          "description": "<p>No multiple attack penalty.</p>"
+          "description": "<p>No multiple attack penalty</p>"
         }
       }
     },
@@ -970,6 +973,9 @@
         "weapon->+2 Greater Striking Staff of Elemental Power (Major)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.9UfuJHNdyBBNfCsO]\n+2 Greater Striking Staff of Elemental Power (Major)"
         },
+        "equipment->Bands of Force (Greater)": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.8mhSUxEvNuXDP8Ki]\n<p>Decorated with clear gemstones, these thick metal bands spread an inflexible layer of force over your body. The force grants you a +2 item bonus to AC and saving throws, and a maximum Dexterity modifier of +5 as armor. You can affix talismans to the bands as though they were light armor.</p>\n<p><strong>Activate—Return Force</strong> <span class=\"action-glyph\">R</span> (force, manipulate)</p>\n<p><strong>Trigger</strong> A creature critically misses you with a melee Strike</p>\n<hr />\n<p><strong>Effect</strong> You Shove the creature using the bands' Athletics modifier of [[/r d20+21]]{+21}.</p>"
+        },
         "equipment->Choker of Elocution (Greater)": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.br4eClrcGeLTL6Ba]\n<p>This platinum choker bears characters from three language's alphabet, and it gives knowledge of those languages and the associated culture's customs.</p>\n<p>You gain a +2 item bonus to Society checks and the ability to understand, speak, and write the chosen languages (Aklo, Arboreal, and Fey).</p>\n<p>Your excellent elocution reduces the DC of the flat check to perform an auditory action while deafened from 5 to 3.</p>\n<hr />\n<p><strong>Craft Requirements</strong> You know the languages the choker grants.</p>"
         },
@@ -1043,7 +1049,7 @@
         },
         "action->Hungry Bones": {
           "name": "Hungry Bones",
-          "description": "<p>Each enemy in the klacktel's space takes @Damage[4d8[bludgeoning]] damage and @Damage[4d8[void]] damage with a @Check[reflex|dc:42|basic] save.</p>"
+          "description": "<p>Each enemy in the klacktel's space takes @Damage[4d8[bludgeoning],4d8[void]|options:area-damage] damage with a @Check[reflex|dc:42|basic|options:area-effect] save.</p>"
         },
         "action->Void Beam": {
           "name": "Void Beam",
@@ -1381,11 +1387,11 @@
       "items": {
         "action->Demonic Attention": {
           "name": "Demonic Attention",
-          "description": "<p><strong>Trigger</strong> the mushroom takes damage, any of the seven rifts are touched, or any attempt to disable the network critically fails</p>\n<hr />\n<p><strong>Effect</strong> The demonic energies within each of the seven rifts take note, and the cacophonous sound of howling fiends fills the room. All creatures in area <strong>D4</strong> must attempt a @Check[will|dc:41] save or become @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure). The hazard then rolls initiative.</p>"
+          "description": "<p><strong>Trigger</strong> the mushroom takes damage, any of the seven rifts are touched, or any attempt to disable the network critically fails</p>\n<hr />\n<p><strong>Effect</strong> The demonic energies within each of the seven rifts take note, and the cacophonous sound of howling fiends fills the room. All creatures in area <strong>D4</strong> must attempt a @Check[will|dc:41|options:area-effect,inflicts:frightened] save or become @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure). The hazard then rolls initiative.</p>"
         },
-        "strike-melee->Rift Beam": {
+        "strike-ranged->Rift Beam": {
           "name": "Rift Beam",
-          "description": "<p>No multiple attack penalty.</p>"
+          "description": "<p>No multiple attack penalty</p>"
         }
       }
     },
@@ -1680,7 +1686,7 @@
           "description": "<p>The first time in a round when the sinmold damages a creature with Engulf, the sinmold immediately restores Hit Points equal to the damage dealt, gaining Hit Points in excess of its maximum as temporary Hit Points that last for 1 hour. As long as the sinmold possesses these temporary Hit Points, its surface hardens, and its AC increases to 30.</p>"
         },
         "action->Engulf": {
-          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.zU3Ovaet4xQ5Gmvy]\n<p>@Check[reflex|dc:32], @Damage[3d10[acid]] damage plus digestion, [[/act escape dc=32]], Rupture 18</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Engulf]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.zU3Ovaet4xQ5Gmvy]\n<p>@Check[reflex|dc:32|options:damaging-effect,inflicts:grabbed,inflicts:slowed], @Damage[3d10[acid]] damage plus digestion, [[/act escape dc=32]], Rupture 18</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Engulf]</p>"
         },
         "action->Sinmold Infestation": {
           "name": "Sinmold Infestation",
@@ -2810,11 +2816,11 @@
       "items": {
         "action->Soulshriek": {
           "name": "Soulshriek",
-          "description": "<p><strong>Trigger</strong> a non-demon creature ends their turn in area <strong>D3</strong>, or a demon in area <strong>D3</strong> issues a command to the Witchbole's Heart to awaken</p>\n<hr />\n<p><strong>Effect</strong> A distorted arboreal's face forms on the side of the Witchbole's Heart and issues a horrific shriek that sounds as if it were issued through an immense throat made of grinding wood. All non-demon creatures in area <strong>D3</strong> or within 30 feet of any entrance to area <strong>D3</strong> take @Damage[10d6[spirit]] damage (@Check[will|dc:41|basic] save) as their own souls twist and writhe in pain. The trap then rolls initiative.</p>"
+          "description": "<p><strong>Trigger</strong> a non-demon creature ends their turn in area <strong>D3</strong>, or a demon in area <strong>D3</strong> issues a command to the Witchbole's Heart to awaken</p>\n<hr />\n<p><strong>Effect</strong> A distorted arboreal's face forms on the side of the Witchbole's Heart and issues a horrific shriek that sounds as if it were issued through an immense throat made of grinding wood. All non-demon creatures in area <strong>D3</strong> or within 30 feet of any entrance to area <strong>D3</strong> take @Damage[10d6[spirit]|options:area-damage] damage (@Check[will|dc:41|basic|options:area-effect] save) as their own souls twist and writhe in pain. The trap then rolls initiative.</p>"
         },
         "strike-melee->Claw": {
           "name": "Claw",
-          "description": "<p>No multiple attack penalty.</p>"
+          "description": "<p>No multiple attack penalty</p>"
         }
       }
     },
@@ -2869,7 +2875,7 @@
         },
         "action->Camouflage": {
           "name": "Camouflage",
-          "description": "<p>Zauglagaul can @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa]{Hide} in exterior locations in Tanglebriar even if he doesn't have cover.</p>"
+          "description": "<p>Zauglagaul can [[/act hide]] in exterior locations in Tanglebriar even if he doesn't have cover.</p>"
         },
         "action->Mist Vision": {
           "name": "Mist Vision",
