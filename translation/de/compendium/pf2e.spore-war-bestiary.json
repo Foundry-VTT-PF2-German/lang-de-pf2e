@@ -14,6 +14,9 @@
         "spell->Elemental Form (Water Only)": {
           "name": "<Compendium> (nur Wasser)"
         },
+        "equipment->Bands of Force": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.02q8s6sSicMkhs1l]\n<p>Decorated with clear gemstones, these thick metal bands spread an inflexible layer of force over your body. The force grants you a +1 item bonus to AC and saving throws, and a maximum Dexterity modifier of +5 as armor. You can affix talismans to the bands as though they were light armor.</p>\n<p><strong>Activate—Return Force</strong> <span class=\"action-glyph\">R</span> (force, manipulate)</p>\n<p><strong>Trigger</strong> A creature critically misses you with a melee Strike</p>\n<hr />\n<p><strong>Effect</strong> You Shove the creature using the bands' Athletics modifier of [[/r d20+14]]{+14}.</p>"
+        },
         "equipment->Razmir mask and robes": {
           "name": "Razmirmaske- und robe"
         },
@@ -530,7 +533,7 @@
           "description": "<p>Beginnt eine Kreatur ihren Zug im Inneren des Schoggothen, erleidet sie @Damage[9d6[acid]]{9W6 Säureschaden}.</p>"
         },
         "action->Engulf": {
-          "description": "<p>@Check[reflex|dc:40|traits:damaging-effect]{Reflexwurf}, @Damage[6d6[acid]]{6W6 Säureschaden}, [[/act escape dc=40]], Befreien 40</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Engulf]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.zU3Ovaet4xQ5Gmvy]\n<p>@Check[reflex|dc:40|options:damaging-effect,inflicts:grabbed,inflicts:slowed], @Damage[6d6[acid]] damage, [[/act escape dc=40]], Rupture 40</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Engulf]</p>"
         },
         "action->Toxic Sporecloud": {
           "name": "Giftige Sporenwolke",
@@ -604,14 +607,14 @@
         },
         "action->Whistling Decay": {
           "name": "Pfeifender Zerfall",
-          "description": "<p><strong>Auslöser</strong> Der Fungusvorhang erleidet Schaden oder ein Versuch, ihn zu deaktivieren, schlägt kritisch fehl</p>\n<hr />\n<p><strong>Effekt</strong> Schoten-ähnliche Auswüchse entlang des Fungusvorhangs ziehen sich zusammen und stoßen dann einen schrillen Pfeifton aus, begleitet von Wolken fleischfressender Sporen. Das Pfeifen alarmiert die Bewohner des Bereichs <strong>T6</strong>. Alle Kreaturen innerhalb von 30 Fuß/9 m um den Pilzvorhang, die keine Fungi oder Dämonen sind, sind den fleischfressenden Sporen ausgesetzt und erleiden @Damage[8d6[poison],4d6[persistent,void]]{8W6 Gift- und 4W6 Anhaltenden Leerenschaden} (@Check[fortitude|dc:42|basic]{einfacher Zähigkeitswurf}). Der Pilzvorhang würfelt dann die Initiative.</p>"
+          "description": "<p><strong>Trigger</strong> The fungal curtain takes damage or an attempt to disable it critically fails</p>\n<hr />\n<p><strong>Effect</strong> Pod like protrusions along the fungal curtain clench and then expel a shrill whistling sound along with clouds of flesh-eating spores. The whistling sound alerts the occupants of area <strong>E6</strong>. Any non-fungus, non-demon creature within Template[emanation|distance:30]{30 feet} of the fungal curtain is exposed to the flesh-eating spores and takes @Damage[8d6[poison],4d6[persistent,void]|options:area-damage] damage (@Check[fortitude|dc:42|basic|options:area-effect] save). The fungal curtain then rolls initiative.</p>"
         },
         "strike-melee->Thorny Tentacle": {
           "name": "Dornententakel"
         },
         "strike-ranged->Thorny Spore": {
           "name": "Dornenspore",
-          "description": "<p>kein Malus für Mehrfachangriffe</p>"
+          "description": "<p>No multiple attack penalty</p>"
         }
       }
     },
@@ -970,6 +973,9 @@
         "weapon->+2 Greater Striking Staff of Elemental Power (Major)": {
           "name": "+2 Mächtiger Zauberstecken der Elementarmacht des Starken Schadens"
         },
+        "equipment->Bands of Force (Greater)": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.8mhSUxEvNuXDP8Ki]\n<p>Decorated with clear gemstones, these thick metal bands spread an inflexible layer of force over your body. The force grants you a +2 item bonus to AC and saving throws, and a maximum Dexterity modifier of +5 as armor. You can affix talismans to the bands as though they were light armor.</p>\n<p><strong>Activate—Return Force</strong> <span class=\"action-glyph\">R</span> (force, manipulate)</p>\n<p><strong>Trigger</strong> A creature critically misses you with a melee Strike</p>\n<hr />\n<p><strong>Effect</strong> You Shove the creature using the bands' Athletics modifier of [[/r d20+21]]{+21}.</p>"
+        },
         "equipment->Choker of Elocution (Greater)": {
           "description": "<Compendium>"
         },
@@ -1043,7 +1049,7 @@
         },
         "action->Hungry Bones": {
           "name": "Hungrige Knochen",
-          "description": "<p>Jeder Gegner innerhalb der Angriffsfläche des Klacktels erleidet @Damage[4d8[bludgeoning],4d8[void]]{4W8 Wucht- und 4W8 Leerenschaden} (@Check[reflex|dc:42|basic]{einfacher Reflexwurf})</p>"
+          "description": "<p>Each enemy in the klacktel's space takes @Damage[4d8[bludgeoning],4d8[void]|options:area-damage] damage with a @Check[reflex|dc:42|basic|options:area-effect] save.</p>"
         },
         "action->Void Beam": {
           "name": "Leerenstrahl",
@@ -1381,11 +1387,11 @@
       "items": {
         "action->Demonic Attention": {
           "name": "Dämonische Aufmerksamkeit",
-          "description": "<p><strong>Auslöser</strong> Der Pilz erleidet Schaden, einer der sieben Risse wird berührt oder bei einem Versuch, das Netzwerk zu deaktivieren, wird ein Kritischer Fehlschlag erzielt</p>\n<hr />\n<p><strong>Effekt</strong> Die dämonischen Energien in jedem der sieben Risse nehmen davon Kenntnis, und der kakophone Klang heulender Scheusale erfüllt den Raum. Alle Kreaturen in Bereich <strong>S4</strong> müssen einen @Check[will|dc:41]{Willenswurf} ablegen; bei einem Fehlschlag erleiden sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1} (@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2} bei einem Kritischen Fehlschlag). Die Gefahr würfelt dann Initiative.</p>"
+          "description": "<p><strong>Trigger</strong> the mushroom takes damage, any of the seven rifts are touched, or any attempt to disable the network critically fails</p>\n<hr />\n<p><strong>Effect</strong> The demonic energies within each of the seven rifts take note, and the cacophonous sound of howling fiends fills the room. All creatures in area <strong>D4</strong> must attempt a @Check[will|dc:41|options:area-effect,inflicts:frightened] save or become @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure). The hazard then rolls initiative.</p>"
         },
-        "strike-melee->Rift Beam": {
-          "name": "Energiestrahl",
-          "description": "<p>kein Malus für Mehrfachangriffe</p>"
+        "strike-ranged->Rift Beam": {
+          "name": "Rift Beam",
+          "description": "<p>No multiple attack penalty</p>"
         }
       }
     },
@@ -1680,7 +1686,7 @@
           "description": "<p>Das erste Mal in einer Runde, wenn der Sündenschimmel mit Umhüllen einer Kreatur Schaden zufügt, heilt er sofort Trefferpunkte in Höhe des verursachten Schadens. Trefferpunkte über sein Maximum hinaus erhält er dabei als temporäre Trefferpunkte, die 1 Stunde lang anhalten. Solange der Sündenschimmel diese temporären Trefferpunkte hat, verhärtet sich seine Oberfläche und seine RK steigt auf 30.</p>"
         },
         "action->Engulf": {
-          "description": "<p>@Check[reflex|dc:32]{Reflexwurf}, @Damage[3d10[acid]]{3W10 Säureschaden} plus Verdauung, [[/act escape dc=32]], Befreien18</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Engulf]</p>"
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.zU3Ovaet4xQ5Gmvy]\n<p>@Check[reflex|dc:32|options:damaging-effect,inflicts:grabbed,inflicts:slowed], @Damage[3d10[acid]] damage plus digestion, [[/act escape dc=32]], Rupture 18</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Engulf]</p>"
         },
         "action->Sinmold Infestation": {
           "name": "Sündenschimmelbefall",
@@ -2810,11 +2816,11 @@
       "items": {
         "action->Soulshriek": {
           "name": "Schrei der Seele",
-          "description": "<p><strong>Auslöser</strong> eine nicht-dämonische Kreatur beendet ihren Zug in Bereich <strong>S3</strong> oder ein Dämon in Bereich <strong>S3</strong> erteilt dem Herzen des Hexenstumpfs den Befehl, zu erwachen</p>\n<hr />\n<p><strong>Effekt</strong> Ein verzerrtes Baumhirtengesicht bildet sich an der Seite des Herzens des Hexenstumpfs und stößt einen schrecklichen Schrei aus, der klingt, als käme er aus einer riesigen Kehle aus knirschendem Holz. Alle nicht-dämonischen Kreaturen in Bereich <strong>S3</strong> oder innerhalb von 30 Fuß/9 m um einen Eingang zu Bereich <strong>S3</strong> erleiden @Damage[10d6[spirit]]{10W6 Seelenschaden} (@Check[will|dc:41|basic]{einfacher Willenswurf}), während sich ihre Seelen vor Schmerz winden und krümmen. Die Falle würfelt dann die Initiative.</p>"
+          "description": "<p><strong>Trigger</strong> a non-demon creature ends their turn in area <strong>D3</strong>, or a demon in area <strong>D3</strong> issues a command to the Witchbole's Heart to awaken</p>\n<hr />\n<p><strong>Effect</strong> A distorted arboreal's face forms on the side of the Witchbole's Heart and issues a horrific shriek that sounds as if it were issued through an immense throat made of grinding wood. All non-demon creatures in area <strong>D3</strong> or within 30 feet of any entrance to area <strong>D3</strong> take @Damage[10d6[spirit]|options:area-damage] damage (@Check[will|dc:41|basic|options:area-effect] save) as their own souls twist and writhe in pain. The trap then rolls initiative.</p>"
         },
         "strike-melee->Claw": {
           "name": "Klaue",
-          "description": "<p>kein Malus für Mehrfachangriffe</p>"
+          "description": "<p>No multiple attack penalty</p>"
         }
       }
     },
@@ -2869,7 +2875,7 @@
         },
         "action->Camouflage": {
           "name": "Tarnung",
-          "description": "<p>Zauglagaul kann sich außerhalb von Gebäuden im Dornenwirr @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa]{Verstecken}, auch wenn er keine Deckung hat.</p>"
+          "description": "<p>Zauglagaul can [[/act hide]] in exterior locations in Tanglebriar even if he doesn't have cover.</p>"
         },
         "action->Mist Vision": {
           "name": "Nebelsicht",
