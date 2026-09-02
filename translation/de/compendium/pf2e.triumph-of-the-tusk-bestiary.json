@@ -998,12 +998,12 @@
       "description": "<p>Eine magische Kugel treibt Eindringlinge dazu, sinnlose Zerstörungen zu begehen.</p>",
       "disable": "<p>@Check[crafting|dc:27]{Handwerkskunst} (Meister), - um den Bezugspunkt neu zu konfigurieren; @Check[occultism|dc:30]{Okkultismus} oder @Check[religion|dc:30]{Religionskunde} (Experte), um den Energien des Bezugspunkts @UUID[Compendium.pf2e.journals.JournalEntry.S55aqwWIzpQRFhcq.JournalEntryPage.E4Q7EiSG18sIvFwg]{Entgegenzuwirken}; @Check[thievery|dc:35]{Diebeskunst} (Meister), um die Kugel vom Altar zu entfernen</p>",
       "reset": "<p>Die Spukerscheinung deaktiviert sich nach 1 Minute, nachdem alle lebenden Kreaturen den Wirkungsbereich verlassen haben. Nach 1 Stunde reaktiviert sie sich wieder.</p>",
-      "routine": "<p> (1 Aktion; Mental) Die zerstörerischen Impulse werden stärker. Betroffene Kreaturen müssen einen @Check[will|dc:32|traits:mental]{Willenswurf} absolvieren; Kreaturen, die einen Fehlschlag oder Kritischen Fehlschlag erleiden, können in dieser Runde nicht versuchen, die Spukerscheinung auszuschalten.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist 1 Minute lang nicht betroffen und vorübergehend immun.</p>\n<p><strong>Erfolg</strong> Die Kreatur ist in dieser Runde nicht betroffen.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur leidet für 1 Runde unter dem Zustand @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Verwirrt}, wobei sie sowohl Kreaturen als auch Gegenstände anvisieren kann.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie Fehlschlag, aber der Zustand Verwirrt hält 1 Minute lang an.</p>",
+      "routine": "<p> (1 Aktion; Mental) Die zerstörerischen Impulse werden stärker. Betroffene Kreaturen müssen einen @Check[will|dc:32|options:inflicts:confused|traits:mental]{Willenswurf} absolvieren; Kreaturen, die einen Fehlschlag oder Kritischen Fehlschlag erleiden, können in dieser Runde nicht versuchen, die Spukerscheinung auszuschalten.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist 1 Minute lang nicht betroffen und vorübergehend immun.</p>\n<p><strong>Erfolg</strong> Die Kreatur ist in dieser Runde nicht betroffen.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur leidet für 1 Runde unter dem Zustand @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Verwirrt}, wobei sie sowohl Kreaturen als auch Gegenstände anvisieren kann.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie Fehlschlag, aber der Zustand Verwirrt hält 1 Minute lang an.</p>",
       "stealth": "<p>(Experte)</p>",
       "items": {
         "action->Destruction's Fury": {
           "name": "Zorn der Zerstörung",
-          "description": "<p><strong>Auslöser</strong> Eine Kreatur berührt die Kugel oder versucht, die Spukerscheinung zu deaktivieren</p>\n<hr />\n<p><strong>Effekt</strong> Eine zerstörerische Wut erfüllt den Geist aller Kreaturen im Wirkungsbereich. Sie müssen einen @Check[will|dc:32]{Willenswurf} bestehen; bei einem Fehlschlag erleiden sie 1 Minute lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 1} (@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 2} bei einem Kritischen Fehlschlag). Die Spukerscheinung würfelt dann die Initiative.</p>"
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur berührt die Kugel oder versucht, die Spukerscheinung zu deaktivieren</p>\n<hr />\n<p><strong>Effekt</strong> Eine zerstörerische Wut erfüllt den Geist aller Kreaturen im Wirkungsbereich. Sie müssen einen @Check[will|dc:32|options:inflicts:stupefied]{Willenswurf} bestehen; bei einem Fehlschlag erleiden sie 1 Minute lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 1} (@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Benommen 2} bei einem Kritischen Fehlschlag). Die Spukerscheinung würfelt dann die Initiative.</p>"
         },
         "action->Destruction Manifest": {
           "name": "Manifestation der Zerstörung",
@@ -1011,7 +1011,7 @@
         },
         "action->Unholy Repair": {
           "name": "Unheilige Reparatur",
-          "description": "<p>Der Bezugspunkt wird durch die Macht von Tar-Baphon aufrechterhalten. Die Kugel erhält zu Beginn jeder Runde 10 Trefferpunkte zurück und wird durch Leerenschaden repariert.</p>"
+          "description": "<p>Der Bezugspunkt wird durch die Macht von Tar-Baphon aufrechterhalten. Die Kugel erhält zu Beginn jeder Runde @Damage[10[healing]]{10 Trefferpunkte} zurück und wird durch Leerenschaden repariert.</p>"
         },
         "strike-melee->Destructive Lash": {
           "name": "Zerstörender Peitschenhieb",
@@ -2369,7 +2369,7 @@
         },
         "action->Piercing Fangs": {
           "name": "Stechende Fangzähne",
-          "description": "<p><strong>Anforderungen</strong> Die Rullkatze hat eine Kreatur in den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} versetzt</p>\n<hr />\n<p><strong>Effekt</strong> Die Kriegskatze verbeißt sich im Hals der Kreatur. Die Kreatur erleidet @Damage[(3d12+10)[piercing],@Damage[1d4[bleed]]{3W12+10 Stich- plus 1W4 Anhaltenden Blutungsschaden} (@Check[fortitude|dc:33|basic]{einfacher Zähigkeitswurf}).</p>"
+          "description": "<p><strong>Anforderungen</strong> Die Rullkatze hat eine Kreatur in den Zustand @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} versetzt</p>\n<hr />\n<p><strong>Effekt</strong> Die Kriegskatze verbeißt sich im Hals der Kreatur. Die Kreatur erleidet @Damage[(3d12+10)[piercing],1d4[bleed]]{3W12+10 Stich- plus 1W4 Blutungsschaden} (@Check[fortitude|dc:33|basic]{einfacher Zähigkeitswurf}).</p>"
         },
         "action->Pounce": {
           "name": "Anspringen",
