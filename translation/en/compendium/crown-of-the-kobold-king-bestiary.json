@@ -163,7 +163,7 @@
         },
         "action->Disabling Strike": {
           "name": "Disabling Strike",
-          "description": "<p>The dismemberment table attempts a blade Strike on a single target that it has @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}. If this Strike hits, the blade cuts deep into one of the target's limbs. The target must attempt a @Check[fortitude|dc:22] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature suffers no additional effect.</p>\n<p><strong>Success</strong> The creature takes @Damage[1d6[bleed]] damage.</p>\n<p><strong>Failure</strong> The creature takes @Damage[2d6[bleed]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}. This clumsy condition ends once the creature is restored to full Hit Points.</p>\n<p><strong>Critical Failure</strong> As failure, but @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2}.</p>"
+          "description": "<p>The dismemberment table attempts a blade Strike on a single target that it has @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}. If this Strike hits, the blade cuts deep into one of the target's limbs. The target must attempt a @Check[fortitude|dc:22|options:damaging-effect,inflicts:clumsy] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature suffers no additional effect.</p>\n<p><strong>Success</strong> The creature takes @Damage[1d6[bleed]] damage.</p>\n<p><strong>Failure</strong> The creature takes @Damage[2d6[bleed]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}. This clumsy condition ends once the creature is restored to full Hit Points.</p>\n<p><strong>Critical Failure</strong> As failure, but @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2}.</p>"
         }
       }
     },
@@ -210,7 +210,7 @@
         },
         "action->Raise Bone Wall": {
           "name": "Raise Bone Wall",
-          "description": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Requirements</strong> Drazmorg is in the Lower Vault of Droskar's Crucible</p>\n<hr />\n<p><strong>Effect</strong> Drazmorg draws upon the necromantic energy that infuses the area and causes a tangled wall of bones to rise from the ground. The wall is 5 feet thick, 10 feet wide, and 10 feet tall; once created, it's permanent until Drazmorg uses this ability again, whereupon a previously created bone wall (such as the one at area <strong>G2</strong>) crumbles. The bone wall has AC 10, Hardness 10, and 25 Hit Points. It's immune to critical hits and precision damage, and it heals damage to itself at a rate of @Damage[2d6[healing]]{2d6 Hit Points} at the end of a round. Everything on each side of the wall has greater cover from creatures on the opposite side, and the wall can't be moved through. A destroyed section of the wall of bones can be moved through freely and no longer heals damage. A creature caught in a space when a bone wall is created must attempt a @Check[reflex|dc:25|traits:damaging-effect] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected, and the bone wall fails to form in any square occupied by that creature.</p>\n<p><strong>Success</strong> The creature is forced into an adjacent square of its choice as the bone wall forms in its previous space.</p>\n<p><strong>Failure</strong> As success, but the creature is also knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>\n<p><strong>Critical Failure</strong> As failure, but the creature also takes @Damage[4d6[piercing],4d6[bludgeoning]]{4d6 piercing and 4d6 bludgeoning damage} from the force of being struck by the bone wall.</p>"
+          "description": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Requirements</strong> Drazmorg is in the Lower Vault of Droskar's Crucible</p>\n<hr />\n<p><strong>Effect</strong> Drazmorg draws upon the necromantic energy that infuses the area and causes a tangled wall of bones to rise from the ground. The wall is 5 feet thick, 10 feet wide, and 10 feet tall; once created, it's permanent until Drazmorg uses this ability again, whereupon a previously created bone wall (such as the one at area <strong>G2</strong>) crumbles. The bone wall has AC 10, Hardness 10, and 25 Hit Points. It's immune to critical hits and precision damage, and it heals damage to itself at a rate of @Damage[2d6[healing]]{2d6 Hit Points} at the end of a round. Everything on each side of the wall has greater cover from creatures on the opposite side, and the wall can't be moved through. A destroyed section of the wall of bones can be moved through freely and no longer heals damage. A creature caught in a space when a bone wall is created must attempt a @Check[reflex|dc:25|options:damaging-effect,inflicts:prone] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected, and the bone wall fails to form in any square occupied by that creature.</p>\n<p><strong>Success</strong> The creature is forced into an adjacent square of its choice as the bone wall forms in its previous space.</p>\n<p><strong>Failure</strong> As success, but the creature is also knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>\n<p><strong>Critical Failure</strong> As failure, but the creature also takes @Damage[4d6[piercing],4d6[bludgeoning]] damage from the force of being struck by the bone wall.</p>"
         },
         "action->Wight Spawn": {
           "name": "Wight Spawn",
@@ -351,7 +351,7 @@
         },
         "action->Drain Mind": {
           "name": "Drain Mind",
-          "description": "<p>When Grimbal damages a living creature with his ghostly hand Strike, the ghost gains 5 temporary Hit Points, and the creature must succeed at a @Check[will|dc:24] save or become @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}. Further damage dealt by the ghost increases this stupefied value by 1 on a failed save to a maximum of @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 4}. Each time a creature affected by drain mind gets a full night's rest, decrease its stupefied value caused by drain mind by 1.</p>"
+          "description": "<p>When Grimbal damages a living creature with his ghostly hand Strike, the ghost gains 5 temporary Hit Points, and the creature must succeed at a @Check[will|dc:24|options:inflicts:stupefied] save or become @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}. Further damage dealt by the ghost increases this stupefied value by 1 on a failed save to a maximum of stupefied 4. Each time a creature affected by drain mind gets a full night's rest, decrease its stupefied value caused by drain mind by 1.</p>"
         }
       }
     },
@@ -541,7 +541,7 @@
         },
         "action->Whispering Retreat": {
           "name": "Whispering Retreat",
-          "description": "<p><strong>Requirements</strong> Kerrdremak is adjacent to at least one enemy;</p>\n<p><strong>Effect</strong> Kerrdremak whispers under his breath, and one adjacent enemy must attempt a @Check[will|dc:17] save or become @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} as they hear a whispering voice just behind them that claims to know when the target will die; the target is then temporarily immune to Whispering Retreat for 1 hour. Kerrdremak then Strides, and this movement doesn't trigger reactions from frightened creatures. He must end this movement in a space that isn't adjacent to any enemy.</p>"
+          "description": "<p><strong>Requirements</strong> Kerrdremak is adjacent to at least one enemy;</p>\n<p><strong>Effect</strong> Kerrdremak whispers under his breath, and one adjacent enemy must attempt a @Check[will|dc:17|options:inflicts:frightened] save or become @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} as they hear a whispering voice just behind them that claims to know when the target will die; the target is then temporarily immune to Whispering Retreat for 1 hour. Kerrdremak then Strides, and this movement doesn't trigger reactions from frightened creatures. He must end this movement in a space that isn't adjacent to any enemy.</p>"
         }
       }
     },
@@ -617,13 +617,17 @@
         "strike-melee->Battle Axe": {
           "name": "Battle Axe"
         },
+        "action->DC 27 on Emotion Spells": {
+          "name": "DC 27 on Emotion Spells",
+          "description": "<p>King Merlokrep's emotion spells have a spell DC of 27.</p>"
+        },
         "action->Imperious Retreat": {
           "name": "Imperious Retreat",
           "description": "<p><strong>Requirements</strong> King Merlokrep is adjacent to at least one enemy</p>\n<hr />\n<p><strong>Effect</strong> King Merlokrep whips his fabulous satin cloak into the face of an adjacent creature and attempts an @Check[intimidation|defense:will] check against that creature's Will DC. On a success, the creature is humiliated and distracted by the act and is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} until the end of King Merlokrep's next turn. King Merlokrep then Strides up to his Speed and gains a +2 circumstance bonus to AC against reactions triggered by this movement. He must end this movement in a space that isn't adjacent to any enemy.</p>"
         },
         "action->Signature Spells": {
           "name": "Signature Spells",
-          "description": "<p>King Merlokrep can cast any of his signature spells (Fireball, Dispel Magic, and Magic Missile) as heightened versions freely.</p>"
+          "description": "<p>King Merlokrep can cast any of his signature spells (@UUID[Compendium.pf2e.spells-srd.Item.sxQZ6yqTn0czJxVd]{Fireball}, @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic}, and @UUID[Compendium.pf2e.spells-srd.Item.gKKqvLohtrSJj3BM]{Magic Missile}) as heightened versions freely.</p>"
         },
         "action->Rise From Death": {
           "name": "Rise From Death",
@@ -668,7 +672,7 @@
       "disable": "<p>@Check[thievery|dc:18] to unhook the pressure plates from the trap, or @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Dispel Magic} (2nd rank, counteract DC 18) to counteract the trap</p>",
       "hpDetails": "BT 15",
       "reset": "<p>At the end of a round in which there are no creatures standing on the floor or stuck to the lodestone, the trap deactivates. The vargouilles return to their alcoves, and the doors close. The trap resets automatically after 1 minute.</p>",
-      "routine": "<p>(1 action) On its initiative, the trap exerts a strong magnetic pull on the doors, causing the north and west doors to open if they're closed, or causing the south and east doors to close if they're open. A character can open or close a door against this pull with a successful @Check[athletics|dc:18] check to @UUID[Compendium.pf2e.actionspf2e.Item.SjmKHgI7a5Z9JzBx]{Force Open} the door. At the same time, any character in the room who wears primarily metal armor must attempt a @Check[reflex|dc:18] save (characters in medium metal armor suffer a -1 circumstance penalty to this save, and characters in heavy metal armor suffer a -2 circumstance penalty).</p>\n<hr />\n<p><strong>Critical Success</strong> The PC is unaffected.</p>\n<p><strong>Success</strong> The PC resists the pull but treats the room as difficult terrain.</p>\n<p><strong>Failure</strong> The PC treats the room as difficult terrain and is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}. A PC who's already prone suffers a critical failure instead.</p>\n<p><strong>Critical Failure</strong> As failure, but the PC is also pulled 5 feet toward the lodestone. A PC who is adjacent to the lodestone instead becomes stuck to it and is @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} as long as the trap continues its routine ([[/act escape dc=18]]).</p>",
+      "routine": "<p>(1 action) On its initiative, the trap exerts a strong magnetic pull on the doors, causing the north and west doors to open if they're closed, or causing the south and east doors to close if they're open. A character can open or close a door against this pull with a successful @Check[athletics|dc:18] check to @UUID[Compendium.pf2e.actionspf2e.Item.SjmKHgI7a5Z9JzBx]{Force Open} the door. At the same time, any character in the room who wears primarily metal armor must attempt a @Check[reflex|dc:18|options:area-effect,forced-movement,inflicts:prone,inflicts:restrained] save (characters in medium metal armor suffer a -1 circumstance penalty to this save, and characters in heavy metal armor suffer a -2 circumstance penalty).</p>\n<hr />\n<p><strong>Critical Success</strong> The PC is unaffected.</p>\n<p><strong>Success</strong> The PC resists the pull but treats the room as difficult terrain.</p>\n<p><strong>Failure</strong> The PC treats the room as difficult terrain and is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}. A PC who's already prone suffers a critical failure instead.</p>\n<p><strong>Critical Failure</strong> As failure, but the PC is also pulled 5 feet toward the lodestone. A PC who is adjacent to the lodestone instead becomes stuck to it and is @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} as long as the trap continues its routine ([[/act escape dc=18]]).</p>",
       "items": {
         "action->Magneto-Electric Pulse": {
           "name": "Magneto-Electric Pulse",
@@ -684,7 +688,7 @@
       "items": {
         "action->Falling Slab": {
           "name": "Falling Slab",
-          "description": "<p><strong>Trigger</strong> A creature attempts to move the slab;</p>\n<p><strong>Effect</strong> The slab rips free from its track and falls, slamming down in one direction while it kicks up twisted metal debris in the other. All creatures adjacent to the slab take 3d6 bludgeoning and @Damage[3d6[piercing]] damage (@Check[reflex|dc:20|basic]).</p>"
+          "description": "<p><strong>Trigger</strong> A creature attempts to move the slab</p>\n<p><strong>Effect</strong> The slab rips free from its track and falls, slamming down in one direction while it kicks up twisted metal debris in the other. All creatures adjacent to the slab take @Damage[3d6[bludgeoning],3d6[piercing]|options:area-damage] damage (@Check[reflex|dc:20|basic|options:area-effect]).</p>"
         }
       }
     },
@@ -731,7 +735,7 @@
         },
         "action->Trip": {
           "name": "Trip",
-          "description": "<p><strong>Trigger</strong> A creature walks into a small pit's square;</p>\n<p><strong>Effect</strong> The triggering creature must succeed at a @Check[reflex|dc:18] save or fall @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} (on a critical failure, the creature also twists its ankle and becomes @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} until it receives any amount of healing).</p>"
+          "description": "<p><strong>Trigger</strong> A creature walks into a small pit's square</p>\n<p><strong>Effect</strong> The triggering creature must succeed at a @Check[reflex|dc:18|options:inflicts:prone,inflicts:clumsy] save or fall @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} (on a critical failure, the creature also twists its ankle and becomes @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} until it receives any amount of healing).</p>"
         }
       }
     },
@@ -767,7 +771,7 @@
       "name": "Pit of Toil",
       "description": "<p>As ghostly, ectoplasm-dripping figures of dwarves work all around, the body of a living creature within the pit begins to ache with the pains of countless hours of back-breaking toil.</p>",
       "disable": "<p>@Check[crafting|dc:21] (expert) to shame the pit by miming skilled artistry, or @Check[religion|dc:18] (trained) to exorcise the haunt.</p>",
-      "routine": "<p>(1 action; divine, necromancy) As the dwarves continue to chant and grasp at the living, the pit infuses all living creatures inside it with the ache and pain a body endures after hours of constant toil. Each living creature in the pit must attempt a @Check[fortitude|dc:18|traits:divine,necromancy,damaging-effect] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature suffers no ill effect and is thereafter immune to the pit of toil's routine.</p>\n<p><strong>Success</strong> The creature suffers no ill effect.</p>\n<p><strong>Failure</strong> The creature takes @Damage[2d6[void]] damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} for 1 round.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[4d6[void]] damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}.</p>",
+      "routine": "<p>(1 action; divine, necromancy) As the dwarves continue to chant and grasp at the living, the pit infuses all living creatures inside it with the ache and pain a body endures after hours of constant toil. Each living creature in the pit must attempt a @Check[fortitude|dc:18|traits:divine,necromancy|options:damaging-effect,inflicts:enfeebled,inflicts:fatigued] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature suffers no ill effect and is thereafter immune to the pit of toil's routine.</p>\n<p><strong>Success</strong> The creature suffers no ill effect.</p>\n<p><strong>Failure</strong> The creature takes @Damage[2d6[void]] damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} for 1 round.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[4d6[void]] damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}.</p>",
       "items": {
         "action->Invite Toil": {
           "name": "Invite Toil",
@@ -841,7 +845,7 @@
         },
         "action->Awful Approach": {
           "name": "Awful Approach",
-          "description": "<p>The unrisen reshapes its grotesque form to move swiftly. It Strides twice. Any living creature that can see the unrisen during this movement must succeed at a @Check[fortitude|dc:22] save or be @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure). This is a mental and visual effect. The unrisen can't use Awful Approach again for [[/gmr 1d4 #Recharge Awful Approach]]{1d4 rounds}.</p>"
+          "description": "<p>The unrisen reshapes its grotesque form to move swiftly. It Strides twice. Any living creature that can see the unrisen during this movement must succeed at a @Check[fortitude|dc:22|traits:mental,visual|options:inflicts:sickened] save or be @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure). This is a mental and visual effect. The unrisen can't use Awful Approach again for [[/gmr 1d4 #Recharge Awful Approach]]{1d4 rounds}.</p>"
         }
       }
     },
@@ -971,7 +975,7 @@
         },
         "action->Vargouille's Shriek": {
           "name": "Vargouille's Shriek",
-          "description": "<p>The vargouille distends its jaw awfully and emits an unnerving shriek. All creatures within 60 feet who can see and hear the vargouille must attempt a @Check[fortitude|dc:15] save.</p>\n<p><strong>Success</strong> The creature is unaffected and is temporarily immune to Vargouille's Shriek for 24 hours.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} until the end of its next turn.</p>\n<p><strong>Critical Failure</strong> The creature is paralyzed. It can attempt a new save at the end of each of its turns, and the DC cumulatively decreases by 1 on each such save.</p>"
+          "description": "<p>The vargouille distends its jaw awfully and emits an unnerving shriek. All creatures within @Template[emanation|distance:60]{60 feet} who can see and hear the vargouille must attempt a @Check[fortitude|dc:15|options:inflicts:paralyzed] save.</p>\n<p><strong>Success</strong> The creature is unaffected and is temporarily immune to Vargouille's Shriek for 24 hours.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} until the end of its next turn.</p>\n<p><strong>Critical Failure</strong> The creature is paralyzed. It can attempt a new save at the end of each of its turns, and the DC cumulatively decreases by 1 on each such save.</p>"
         }
       }
     },

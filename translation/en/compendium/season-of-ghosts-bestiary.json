@@ -252,7 +252,7 @@
         },
         "action->Drink Death": {
           "name": "Drink Death",
-          "description": "<p><strong>Trigger</strong> A creature within 30 feet of the imprecasia is dying</p>\n<hr />\n<p><strong>Effect</strong> The imprecasia inhales, drawing a thin blue streak of vapor out of the dying creature's body into their mouth. The dying creature's dying condition is reduced by 1, and the imprecasia regains 2d10+9 Hit Points.</p>"
+          "description": "<p><strong>Trigger</strong> A creature within 30 feet of the imprecasia is dying</p>\n<hr />\n<p><strong>Effect</strong> The imprecasia inhales, drawing a thin blue streak of vapor out of the dying creature's body into their mouth. The dying creature's dying condition is reduced by 1, and the imprecasia regains @Damage[(2d10+9)[healing]] Hit Points.</p>"
         },
         "action->Devour Curse": {
           "name": "Devour Curse",
@@ -562,7 +562,7 @@
         },
         "action->Impersonate Shape": {
           "name": "Impersonate Shape",
-          "description": "<p>The noppera-bo grunt changes into a faceless version of a Small or Medium humanoid they've touched during the last 24 hours. While transformed and their face is covered, the grunt gains a +2 circumstance bonus to @UUID[Compendium.pf2e.actionspf2e.Item.AJstokjdG6iDjVjE]{Impersonate} that creature. The noppera-bo grunt can change back by using this ability again.</p>"
+          "description": "<p>The noppera-bo grunt changes into a faceless version of a Small or Medium humanoid they've touched during the last 24 hours. While transformed and their face is covered, the grunt gains a +2 circumstance bonus to [[/act impersonate]] that creature. The noppera-bo grunt can change back by using this ability again.</p>"
         }
       }
     },
@@ -591,15 +591,15 @@
         },
         "action->Impersonate Shape": {
           "name": "Impersonate Shape",
-          "description": "<p>The noppera-bo changes into a version of a Small or Medium humanoid they've touched during the last 24 hours, and gains the target creature's face and voice. While transformed, the noppera-bo gains a +2 circumstance bonus to @UUID[Compendium.pf2e.actionspf2e.Item.AJstokjdG6iDjVjE]{Impersonate} that creature and loses its no face ability and listed immunities. The noppera-bo can change back by using this ability again.</p>"
+          "description": "<p>The noppera-bo changes into a version of a Small or Medium humanoid they've touched during the last 24 hours, and gains the target creature's face and voice. While transformed, the noppera-bo gains a +2 circumstance bonus to [[/act impersonate]] that creature and loses its no face ability and listed immunities. The noppera-bo can change back by using this ability again.</p>"
         },
         "action->Remove Face": {
           "name": "Remove Face",
-          "description": "<p><strong>Requirements</strong> The noppera-bo is Impersonating a creature with a face</p>\n<hr />\n<p><strong>Effect</strong> The noppera-bo's facial features melt into nothingness, and they menace a creature within 30 feet. The creature becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} on a failed @Check[will|dc:18] save (@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure).</p>"
+          "description": "<p><strong>Requirements</strong> The noppera-bo is Impersonating a creature with a face</p>\n<hr />\n<p><strong>Effect</strong> The noppera-bo's facial features melt into nothingness, and they menace a creature within 30 feet. The creature becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} on a failed @Check[will|dc:18|options:inflicts:frightened] save (@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure).</p>"
         },
         "action->Steal Face": {
           "name": "Steal Face",
-          "description": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Requirements</strong> The noppera-bo occultist is faceless</p>\n<hr />\n<p><strong>Effect</strong> The noppera-bo occultist targets one creature within 30 feet. The creature must attempt a @Check[fortitude|dc:18] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} until the start of its next turn.</p>\n<p><strong>Failure</strong> The noppera-bo gains the target's face. The target's face vanishes until the end of its next turn. Until then, it is @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded}, can't speak or ingest, and can't smell. The target must also hold its breath or begin to suffocate.</p>\n<p><strong>Critical Failure</strong> As failure, but the effect doesn't end automatically. The target can attempt a new save at the end of each of its turns, and the DC cumulatively decreases by 1 on each such attempt.</p>"
+          "description": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Requirements</strong> The noppera-bo occultist is faceless</p>\n<hr />\n<p><strong>Effect</strong> The noppera-bo occultist targets one creature within 30 feet. The creature must attempt a @Check[fortitude|dc:18|options:inflicts:dazzled,inflicts:blinded] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} until the start of its next turn.</p>\n<p><strong>Failure</strong> The noppera-bo gains the target's face. The target's face vanishes until the end of its next turn. Until then, it is @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded}, can't speak or ingest, and can't smell. The target must also hold its breath or begin to suffocate.</p>\n<p><strong>Critical Failure</strong> As failure, but the effect doesn't end automatically. The target can attempt a new save at the end of each of its turns, and the DC cumulatively decreases by 1 on each such attempt.</p>"
         }
       }
     },
@@ -628,11 +628,11 @@
         },
         "action->Impersonate Shape": {
           "name": "Impersonate Shape",
-          "description": "<p>The noppera-bo changes into a version of a Small or Medium humanoid they've touched during the last 24 hours, and gains the target creature's face and voice. While transformed, the noppera-bo gains a +2 circumstance bonus to @UUID[Compendium.pf2e.actionspf2e.Item.AJstokjdG6iDjVjE]{Impersonate} that creature and loses its no face ability and listed immunities. The noppera-bo can change back by using this ability again.</p>"
+          "description": "<p>The noppera-bo changes into a version of a Small or Medium humanoid they've touched during the last 24 hours, and gains the target creature's face and voice. While transformed, the noppera-bo gains a +2 circumstance bonus to [[/act impersonate]] that creature and loses its no face ability and listed immunities. The noppera-bo can change back by using this ability again.</p>"
         },
         "action->Remove Face": {
           "name": "Remove Face",
-          "description": "<p><strong>Requirements</strong> The noppera-bo trickster is Impersonating a creature with a face</p>\n<hr />\n<p><strong>Effect</strong> The noppera-bo trickster's facial features melt into nothingness, and they menace a creature within 30 feet. The creature becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} on a failed @Check[will|dc:17] save (@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure).</p>"
+          "description": "<p><strong>Requirements</strong> The noppera-bo trickster is Impersonating a creature with a face</p>\n<hr />\n<p><strong>Effect</strong> The noppera-bo trickster's facial features melt into nothingness, and they menace a creature within 30 feet. The creature becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} on a failed @Check[will|dc:17|options:inflicts:frightened] save (@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure).</p>"
         },
         "action->Sneak Attack": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T]\n<p>The noppera-bo trickster deals an additional 1d4 precision damage to creatures that are @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}.</p>"
@@ -699,7 +699,7 @@
         },
         "action->Rejuvenation": {
           "name": "Rejuvenation",
-          "description": "<p>When a thatchling is destroyed by damage other than fire, it attempts a @Check[flat|dc:11]. On a success, it reforms after [[/br 2d4 #days]]{2d4 days} within 120 feet of where it was destroyed, fully healed. A thatchling is always permanently destroyed if reduced to 0 Hit Points by fire damage or if the obstacle preventing the soul from reincarnating is removed.</p>"
+          "description": "<p>When a thatchling is destroyed by damage other than fire, it attempts a @Check[flat|dc:11]. On a success, it reforms after [[/gmr 2d4 #days]]{2d4 days} within 120 feet of where it was destroyed, fully healed. A thatchling is always permanently destroyed if reduced to 0 Hit Points by fire damage or if the obstacle preventing the soul from reincarnating is removed.</p>"
         },
         "action->Create Thatchling Spawn": {
           "name": "Create Thatchling Spawn",
@@ -707,11 +707,11 @@
         },
         "action->Howl of Vengeful Fury": {
           "name": "Howl of Vengeful Fury",
-          "description": "<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p><strong>Effect</strong> The red-hooded thatchling sobs pitifully before unleashing a terrifying scream. All non-thatchling creatures within a @Template[type:emanation|distance:30] take @Damage[2d10[sonic]] damage (@Check[fortitude|dc:18|basic] save) and become immune to all thatchlings' distracting giggle for 1 minute. Thatchlings in the area gain 5 temporary Hit Points and a +1 status bonus to their Strikes and saving throws for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.X1Q1uBiylZoJg3Co]{Effect: Howl of Vengeful Fury}</p>"
+          "description": "<p><strong>Frequency</strong> once per hour</p>\n<hr />\n<p><strong>Effect</strong> The red-hooded thatchling sobs pitifully before unleashing a terrifying scream. All non-thatchling creatures within a @Template[type:emanation|distance:30] take @Damage[2d10[sonic]|options:area-damage] damage (@Check[fortitude|dc:18|basic|options:area-effect] save) and become immune to all thatchlings' distracting giggle for 1 minute. Thatchlings in the area gain 5 temporary Hit Points and a +1 status bonus to their Strikes and saving throws for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.X1Q1uBiylZoJg3Co]{Effect: Howl of Vengeful Fury}</p>"
         },
         "action->Thatchling's Curse": {
           "name": "Thatchling's Curse",
-          "description": "<p>The thatchling focuses their attention on a single target within 30 feet that they can see, and then begins muttering and whispering nonsense. The target must attempt a @Check[will|dc:18] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected and is temporarily immune to Thatchling's Curse for 24 hours.</p>\n<p><strong>Success</strong> The target is momentarily disoriented and has difficulty moving in the right direction. The target takes a –5-foot status penalty to its Speeds for 1 round.</p>\n<p><strong>Failure</strong> As success, but the penalty to its Speeds lasts for 1 minute.</p>\n<p><strong>Critical Failure</strong> As failure, but the penalty to its Speeds lasts until the curse is removed or until the thatchling who created the effect is permanently destroyed, whichever comes first. In addition, when the cursed creature attempts a Survival check to Sense Direction or @UUID[Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD]{Track}, it uses the outcome for one degree of success worse than the result of its roll, and it can't take the Scout exploration activity.</p>"
+          "description": "<p>The thatchling focuses their attention on a single target within 30 feet that they can see, and then begins muttering and whispering nonsense. The target must attempt a @Check[will|dc:18] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected and is temporarily immune to Thatchling's Curse for 24 hours.</p>\n<p><strong>Success</strong> The target is momentarily disoriented and has difficulty moving in the right direction. The target takes a –5-foot status penalty to its Speeds for 1 round.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.iVJ8GogqssX0Nraf]{Effect: Thatchling's Curse (Success)}</p>\n<p><strong>Failure</strong> As success, but the penalty to its Speeds lasts for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.K8fgxJoRXqZ5NW1f]{Effect: Thatchling's Curse (Failure)}</p>\n<p><strong>Critical Failure</strong> As failure, but the penalty to its Speeds lasts until the curse is removed or until the thatchling who created the effect is permanently destroyed, whichever comes first. In addition, when the cursed creature attempts a Survival check to @UUID[Compendium.pf2e.actionspf2e.Item.fJImDBQfqfjKJOhk]{Sense Direction} or @UUID[Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD]{Track}, it uses the outcome for one degree of success worse than the result of its roll, and it can't take the @UUID[Compendium.pf2e.actionspf2e.Item.kV3XM0YJeS2KCSOb]{Scout} exploration activity.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.Immb99meWnNTJvfR]{Effect: Thatchling's Curse (Critical Failure)}</p>"
         },
         "action->Thicket Walker": {
           "name": "Thicket Walker",
@@ -870,7 +870,7 @@
         },
         "action->Rejuvenation": {
           "name": "Rejuvenation",
-          "description": "<p>When a silsyche is slain, they re-form after [[/br 2d4 #days]]{2d4 days} within the abandoned home that serves as their domain. A silsyche can be permanently killed only if their home is completely destroyed.</p>"
+          "description": "<p>When a silsyche is slain, they re-form after [[/gmr 2d4 #days]]{2d4 days} within the abandoned home that serves as their domain. A silsyche can be permanently killed only if their home is completely destroyed.</p>"
         },
         "action->Hallucinatory Home": {
           "name": "Hallucinatory Home",
@@ -972,11 +972,11 @@
         },
         "action->Rejuvenation": {
           "name": "Rejuvenation",
-          "description": "<p>When a thatchling is destroyed by damage other than fire, it attempts a @Check[flat|dc:11]. On a success, it reforms after [[/br 2d4 #days]]{2d4 days} within 120 feet of where it was destroyed, fully healed. A thatchling is always permanently destroyed if reduced to 0 Hit Points by fire damage or if the obstacle preventing the soul from reincarnating is removed.</p>"
+          "description": "<p>When a thatchling is destroyed by damage other than fire, it attempts a @Check[flat|dc:11]. On a success, it reforms after [[/gmr 2d4 #days]]{2d4 days} within 120 feet of where it was destroyed, fully healed. A thatchling is always permanently destroyed if reduced to 0 Hit Points by fire damage or if the obstacle preventing the soul from reincarnating is removed.</p>"
         },
         "action->Thatchling's Curse": {
           "name": "Thatchling's Curse",
-          "description": "<p>The thatchling focuses their attention on a single target within 30 feet that they can see, and then begins muttering and whispering nonsense. The target must attempt a @Check[will|dc:16] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected and is temporarily immune to Thatchling's Curse for 24 hours.</p>\n<p><strong>Success</strong> The target is momentarily disoriented and has difficulty moving in the right direction. The target takes a –5-foot status penalty to its Speeds for 1 round.</p>\n<p><strong>Failure</strong> As success, but the penalty to its Speeds lasts for 1 minute.</p>\n<p><strong>Critical Failure</strong> As failure, but the penalty to its Speeds lasts until the curse is removed or until the thatchling who created the effect is permanently destroyed, whichever comes first. In addition, when the cursed creature attempts a Survival check to Sense Direction or @UUID[Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD]{Track}, it uses the outcome for one degree of success worse than the result of its roll, and it can't take the Scout exploration activity.</p>"
+          "description": "<p>The thatchling focuses their attention on a single target within 30 feet that they can see, and then begins muttering and whispering nonsense. The target must attempt a @Check[will|dc:16] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected and is temporarily immune to Thatchling's Curse for 24 hours.</p>\n<p><strong>Success</strong> The target is momentarily disoriented and has difficulty moving in the right direction. The target takes a –5-foot status penalty to its Speeds for 1 round.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.iVJ8GogqssX0Nraf]{Effect: Thatchling's Curse (Success)}</p>\n<p><strong>Failure</strong> As success, but the penalty to its Speeds lasts for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.K8fgxJoRXqZ5NW1f]{Effect: Thatchling's Curse (Failure)}</p>\n<p><strong>Critical Failure</strong> As failure, but the penalty to its Speeds lasts until the curse is removed or until the thatchling who created the effect is permanently destroyed, whichever comes first. In addition, when the cursed creature attempts a Survival check to @UUID[Compendium.pf2e.actionspf2e.Item.fJImDBQfqfjKJOhk]{Sense Direction} or @UUID[Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD]{Track}, it uses the outcome for one degree of success worse than the result of its roll, and it can't take the @UUID[Compendium.pf2e.actionspf2e.Item.kV3XM0YJeS2KCSOb]{Scout} exploration activity.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.Immb99meWnNTJvfR]{Effect: Thatchling's Curse (Critical Failure)}</p>"
         },
         "action->Thicket Walker": {
           "name": "Thicket Walker",

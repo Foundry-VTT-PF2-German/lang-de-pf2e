@@ -294,7 +294,7 @@
         },
         "action->Impose Paralysis": {
           "name": "Impose Paralysis",
-          "description": "<p><strong>Trigger</strong> Cursebreaker hits a @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed} creature</p>\n<hr />\n<p><strong>Effect</strong> The creature must succeed at a @Check[fortitude|dc:27] save or become @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} for 1 round.</p>"
+          "description": "<p><strong>Trigger</strong> Cursebreaker hits a @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed} creature</p>\n<hr />\n<p><strong>Effect</strong> The creature must succeed at a @Check[fortitude|dc:27|options:inflicts:paralyzed] save or become @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} for 1 round.</p>"
         },
         "action->Inexorable March": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.qt2exWwQTzoObKfW]\nInexorable March",
@@ -302,7 +302,7 @@
         },
         "action->Slowing Pulse": {
           "name": "Slowing Pulse",
-          "description": "<p>Each creature in a @Template[emanation|distance:10] must succeed at a @Check[fortitude|dc:27|traits:incapacitation] save or be @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 minute.</p>\n<p>Cursebreaker can't use Slowing Pulse again for [[/gmr 1d4 #Recharge Slowing Pulse]]{1d4 rounds}.</p>"
+          "description": "<p>Each creature in a @Template[emanation|distance:10] must succeed at a @Check[fortitude|dc:27|traits:incapacitation|options:inflicts:slowed] save or be @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 minute.</p>\n<p>Cursebreaker can't use Slowing Pulse again for [[/gmr 1d4 #Recharge Slowing Pulse]]{1d4 rounds}.</p>"
         },
         "action->Undo Curse": {
           "name": "Undo Curse",
@@ -322,7 +322,7 @@
       "items": {
         "action->Forceful Blast": {
           "name": "Forceful Blast",
-          "description": "<p><strong>Trigger</strong> The door is touched without first pressing the correct sequence of buttons</p>\n<hr />\n<p><strong>Effect</strong> A blast of energy ripples outward from the door, dealing @Damage[4d10[force]] damage to all creatures within @Template[emanation|distance:20]{20 feet} and forcing them to make a @Check[fortitude|dc:25] save.</p>\n<p>Fiends treat the result of their saving throw as one degree worse.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}; while it is sickened, it's also @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1}.</p>"
+          "description": "<p><strong>Trigger</strong> The door is touched without first pressing the correct sequence of buttons</p>\n<hr />\n<p><strong>Effect</strong> A blast of energy ripples outward from the door, dealing @Damage[4d10[force]|options:area-damage] damage to all creatures within @Template[emanation|distance:20]{20 feet} and forcing them to make a @Check[fortitude|dc:25|options:area-effect,damaging-effect,inflicts:sickened,inflicts:slowed] save.</p>\n<p>Fiends treat the result of their saving throw as one degree worse.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}; while it is sickened, it's also @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1}.</p>"
         }
       }
     },
@@ -343,7 +343,7 @@
         },
         "action->Smoldering Haze": {
           "name": "Smoldering Haze",
-          "description": "<p>15 feet. The fuming sludge constantly emits incendiary smoke that creates @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealment} around it. The smoke doesn't impair the fuming sludge's chemical sense. A creature that enters the aura or begins its turn in the aura becomes @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (@Check[fortitude|dc:25] negates) and cannot recover from @UUID[Compendium.pf2e.conditionitems.Item.lDVqvLKA6eF3Df60]{Persistent Fire Damage} for 1 round. It is then temporarily immune to the sickening effect of the smoldering haze for 1 minute.</p>\n<p>A creature that is currently holding its breath, that doesn't need to breathe, or that's immune to poison is immune to the aura's sickened effect but not the concealment or inability to recover from persistent fire damage.</p>"
+          "description": "<p>15 feet. The fuming sludge constantly emits incendiary smoke that creates @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealment} around it. The smoke doesn't impair the fuming sludge's chemical sense. A creature that enters the aura or begins its turn in the aura becomes @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (@Check[fortitude|dc:25|options:inflicts:sickened] negates) and cannot recover from persistent fire damage for 1 round. It is then temporarily immune to the sickening effect of the smoldering haze for 1 minute.</p>\n<p>A creature that is currently holding its breath, that doesn't need to breathe, or that's immune to poison is immune to the aura's sickened effect but not the concealment or inability to recover from persistent fire damage.</p>"
         },
         "action->Constrict": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.g26YiEIfSHCpLocV]\n<p>@Damage[(1d8+6)[bludgeoning],1d8[persistent,fire]]{1d8+6 bludgeoning plus 1d8 persistent fire}, @Check[fortitude|dc:24|basic]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
@@ -367,9 +367,6 @@
         "spellcastingEntry->Divine Prepared Spells": {
           "name": "Divine Prepared Spells"
         },
-        "spellcastingEntry->Divine Rituals": {
-          "name": "Divine Rituals"
-        },
         "spellcastingEntry->Cleric Domain Spells": {
           "name": "Cleric Domain Spells"
         },
@@ -388,8 +385,9 @@
         "spell->Ray of Enfeeblement": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.J7Y7tl0bbdz7TcCc]\nRay of Enfeeblement"
         },
-        "equipment->Key to Cursebreaker's Lock": {
-          "name": "Key to Cursebreaker's Lock"
+        "equipment->Key": {
+          "name": "Key",
+          "gmNote": "<p>Nyamat's key to Cursebreaker's lock.</p>"
         },
         "equipment->Silver Religious Symbol of Angazhan": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.upzjwQ96cZG0Xlmx]\nSilver Religious Symbol of Angazhan",
@@ -483,7 +481,7 @@
         },
         "action->Feign Harmlessness": {
           "name": "Feign Harmlessness",
-          "description": "<p>Paga cringes and cowers before a creature within 10 feet that can see her. The target must attempt a @Check[will|dc:28] save.</p>\n<p>The target is then temporarily immune for 1 hour.</p>\n<hr />\n<p><strong>Critical Success</strong> No effect.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fascinated} by Paga until the end of its next turn.</p>\n<p><strong>Failure</strong> The creature is fascinated by Paga and can't use hostile actions against her until the end of its next turn.</p>\n<p><strong>Critical Failure</strong> As failure, and the creature isn't temporarily immune to Feign Harmlessness.</p>"
+          "description": "<p>Paga cringes and cowers before a creature within 10 feet that can see her. The target must attempt a @Check[will|dc:28|options:inflicts:fascinated] save.</p>\n<p>The target is then temporarily immune for 1 hour.</p>\n<hr />\n<p><strong>Critical Success</strong> No effect.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fascinated} by Paga until the end of its next turn.</p>\n<p><strong>Failure</strong> The creature is fascinated by Paga and can't use hostile actions against her until the end of its next turn.</p>\n<p><strong>Critical Failure</strong> As failure, and the creature isn't temporarily immune to Feign Harmlessness.</p>"
         },
         "action->Unbreakable Concentration": {
           "name": "Unbreakable Concentration",
