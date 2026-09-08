@@ -439,7 +439,7 @@
         },
         "action->Pinpoint Poisoner": {
           "name": "Giftschlangenstoß",
-          "description": "<p>Wenn der Knochenbleicher eine Kreatur mit dem Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} erfolgreich mit einer vergifteten Waffe Angreift oder eine Kreatur mit dem Zustand Auf dem Falschen Fuß einem einzuatmenden Gift aussetzt, erleidet die Kreatur einen -2 Situationsmalus auf ihren Anfangsrettungswurf gegen das Gift.</p>"
+          "description": "<p>Wenn der Knochenbleicher eine Kreatur mit dem Zustand @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Auf dem Falschen Fuß} erfolgreich mit einer vergifteten Waffe Angreift oder eine Kreatur mit dem Zustand Auf dem Falschen Fuß einem einzuatmenden Gift aussetzt, erleidet die Kreatur einen -2 Situationsmalus auf ihren Anfangsrettungswurf gegen das Gift.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.XAdhPJqssO3v4Zvw]{Effekt: Überraschende Gifte}</p>"
         },
         "action->Poison Spray": {
           "name": "Gift versprühen",
@@ -546,7 +546,7 @@
           "description": "<p><strong>Auslöser</strong> Eine Kreatur ist von der Tentakel-Konifere @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} oder @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Gebunden} und versucht zu @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Entkommen}</p>\n<hr />\n<p><strong>Effekt</strong> Klebriges, ätzendes Harz quillt aus dem Schlund der Konifere. Der SG zum Entkommen erhöht sich um 2 und die Kreatur erleidet 3W12 @Damage[3d12[acid]]{Säureschaden} (@Check[reflex|dc:33|basic] {einfacher Reflexwurf}).</p>"
         },
         "action->Greater Constrict": {
-          "description": "<p>@Damage[(2d10+9)[bludgeoning]]{2W10+9 Wuchtschaden}, @Check[fortitude|dc:33|basic]{Zähigkeitswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.GreaterConstrict]</p>"
+          "description": "<p>@Check[fortitude|dc:33|basic|options:inflicts:unconscious]{2W10+9 Wuchtschaden}, @Check[fortitude|dc:33|basic]{Zähigkeitswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.GreaterConstrict]</p>"
         },
         "action->Sap Spray": {
           "name": "Harz speihen",
@@ -855,8 +855,8 @@
           "name": "Werkzeugwurf",
           "description": "<p><strong>Auslöser</strong> Eine lebende Kreatur nähert sich der Falle auf weniger als 15 Fuß/4,50 m</p>\n<hr />\n<p><strong>Effekt</strong> Die Falle führt einen Werkzeugangriff gegen die auslösende Kreatur aus. Die Falle würfelt dann Initiative.</p>"
         },
-        "strike-melee->Tool": {
-          "name": "Werkzeug",
+        "strike-ranged->Tool": {
+          "name": "Werkzeugwurf",
           "description": "<p>Kein Malus für Mehrfachangriffe.</p>"
         },
         "action->Continuous Barrage": {
@@ -2123,7 +2123,7 @@
         },
         "action->Consume Essence": {
           "name": "Essenz verzehren",
-          "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<p><strong>Anforderungen</strong> Die Spuckende Sägewespe ist angrenzend zu einer Kreatur mit der Kategorie Holz oder zu einer Tentakel-Konifere</p>\n<hr />\n<p><strong>Effekt</strong> Die Sägewespe ernährt sich von der Zielkreatur oder dem Saft einer Tentakel-Konifere und erhält @Damage[5d6[healing]]{5W6 Trefferpunkte} zurück. Eine Zielkreatur muss einen @Check[fortitude|dc:29]{Zähigkeitswurf} ablegen; bei einem Fehlschlag erleidet sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 1} (@UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 2} bei einem Kritischen Fehlschlag).</p>"
+          "description": "<p><strong>Häufigkeit</strong> Einmal am Tag</p>\n<p><strong>Anforderungen</strong> Die Spuckende Sägewespe ist angrenzend zu einer Kreatur mit der Kategorie Holz oder zu einer Tentakel-Konifere</p>\n<hr />\n<p><strong>Effekt</strong> Die Sägewespe ernährt sich von der Zielkreatur oder dem Saft einer Tentakel-Konifere und erhält @Damage[5d6[healing]]{5W6 Trefferpunkte} zurück. Eine Zielkreatur muss einen @Check[fortitude|dc:29|options:inflicts:drained]{Zähigkeitswurf} ablegen; bei einem Fehlschlag erleidet sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 1} (@UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 2} bei einem Kritischen Fehlschlag).</p>"
         },
         "action->Creeping Sprout": {
           "name": "Kriechender Spross",
@@ -2725,7 +2725,7 @@
           "description": "<p><strong>Auslöser</strong> Eine von der Riesenanakonda in den Zustand @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Gebunden} oder @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Gegriffen} versetzte Kreatur versucht zu entkomme.</p>\n<hr />\n<p><strong>Effekt</strong> Der SG des Fertigkeitswurfs zum Entkommen steigt um 2.</p>"
         },
         "action->Greater Constrict": {
-          "description": "<p>@Damage[(1d10+7)[bludgeoning]]{1W10+7 Wuchtschaden}, @Check[fortitude|dc:26|basic]{einfacher Zähigkeitswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.GreaterConstrict]</p>"
+          "description": "<p>@Damage[(1d10+7)[bludgeoning]]{1W10+7 Wuchtschaden}, @Check[fortitude|dc:26|basic|options:inflicts:unconscious]{einfacher Zähigkeitswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.GreaterConstrict]</p>"
         },
         "action->Slither": {
           "name": "Schlängeln",

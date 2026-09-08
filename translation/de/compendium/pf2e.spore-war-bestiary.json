@@ -14,6 +14,9 @@
         "spell->Elemental Form (Water Only)": {
           "name": "<Compendium> (nur Wasser)"
         },
+        "equipment->Bands of Force": {
+          "description": "<Compendium>"
+        },
         "equipment->Razmir mask and robes": {
           "name": "Razmirmaske- und robe"
         },
@@ -530,7 +533,7 @@
           "description": "<p>Beginnt eine Kreatur ihren Zug im Inneren des Schoggothen, erleidet sie @Damage[9d6[acid]]{9W6 Säureschaden}.</p>"
         },
         "action->Engulf": {
-          "description": "<p>@Check[reflex|dc:40|traits:damaging-effect]{Reflexwurf}, @Damage[6d6[acid]]{6W6 Säureschaden}, [[/act escape dc=40]], Befreien 40</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Engulf]</p>"
+          "description": "<p>@Check[reflex|dc:40|options:damaging-effect,inflicts:grabbed,inflicts:slowed]{Reflexwurf}, @Damage[6d6[acid]]{6W6 Säureschaden}, [[/act escape dc=40]], Befreien 40</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Engulf]</p>"
         },
         "action->Toxic Sporecloud": {
           "name": "Giftige Sporenwolke",
@@ -604,7 +607,7 @@
         },
         "action->Whistling Decay": {
           "name": "Pfeifender Zerfall",
-          "description": "<p><strong>Auslöser</strong> Der Fungusvorhang erleidet Schaden oder ein Versuch, ihn zu deaktivieren, schlägt kritisch fehl</p>\n<hr />\n<p><strong>Effekt</strong> Schoten-ähnliche Auswüchse entlang des Fungusvorhangs ziehen sich zusammen und stoßen dann einen schrillen Pfeifton aus, begleitet von Wolken fleischfressender Sporen. Das Pfeifen alarmiert die Bewohner des Bereichs <strong>T6</strong>. Alle Kreaturen innerhalb von 30 Fuß/9 m um den Pilzvorhang, die keine Fungi oder Dämonen sind, sind den fleischfressenden Sporen ausgesetzt und erleiden @Damage[8d6[poison],4d6[persistent,void]]{8W6 Gift- und 4W6 Anhaltenden Leerenschaden} (@Check[fortitude|dc:42|basic]{einfacher Zähigkeitswurf}). Der Pilzvorhang würfelt dann die Initiative.</p>"
+          "description": "<p><strong>Auslöser</strong> Der Fungusvorhang erleidet Schaden oder ein Versuch, ihn zu deaktivieren, schlägt kritisch fehl</p>\n<hr />\n<p><strong>Effekt</strong> Schoten-ähnliche Auswüchse entlang des Fungusvorhangs ziehen sich zusammen und stoßen dann einen schrillen Pfeifton aus, begleitet von Wolken fleischfressender Sporen. Das Pfeifen alarmiert die Bewohner des Bereichs <strong>T6</strong>. Alle Kreaturen innerhalb von @Template[emanation|distance:30]{30 Fuß/9 m} um den Pilzvorhang, die keine Fungi oder Dämonen sind, sind den fleischfressenden Sporen ausgesetzt und erleiden @Damage[8d6[poison],4d6[persistent,void]|options:area-damage]{8W6 Gift- und 4W6 Anhaltenden Leerenschaden} (@Check[fortitude|dc:42|basic|options:area-effect]{einfacher Zähigkeitswurf}). Der Pilzvorhang würfelt dann die Initiative.</p>"
         },
         "strike-melee->Thorny Tentacle": {
           "name": "Dornententakel"
@@ -970,6 +973,9 @@
         "weapon->+2 Greater Striking Staff of Elemental Power (Major)": {
           "name": "+2 Mächtiger Zauberstecken der Elementarmacht des Starken Schadens"
         },
+        "equipment->Bands of Force (Greater)": {
+          "description": "<Compendium>"
+        },
         "equipment->Choker of Elocution (Greater)": {
           "description": "<Compendium>"
         },
@@ -1043,7 +1049,7 @@
         },
         "action->Hungry Bones": {
           "name": "Hungrige Knochen",
-          "description": "<p>Jeder Gegner innerhalb der Angriffsfläche des Klacktels erleidet @Damage[4d8[bludgeoning],4d8[void]]{4W8 Wucht- und 4W8 Leerenschaden} (@Check[reflex|dc:42|basic]{einfacher Reflexwurf})</p>"
+          "description": "<p>Jeder Gegner innerhalb der Angriffsfläche des Klacktels erleidet @Damage[4d8[bludgeoning],4d8[void]|options:area-damage]{4W8 Wucht- und 4W8 Leerenschaden} (@Check[reflex|dc:42|basic|options:area-effect]{einfacher Reflexwurf})</p>"
         },
         "action->Void Beam": {
           "name": "Leerenstrahl",
@@ -1381,9 +1387,9 @@
       "items": {
         "action->Demonic Attention": {
           "name": "Dämonische Aufmerksamkeit",
-          "description": "<p><strong>Auslöser</strong> Der Pilz erleidet Schaden, einer der sieben Risse wird berührt oder bei einem Versuch, das Netzwerk zu deaktivieren, wird ein Kritischer Fehlschlag erzielt</p>\n<hr />\n<p><strong>Effekt</strong> Die dämonischen Energien in jedem der sieben Risse nehmen davon Kenntnis, und der kakophone Klang heulender Scheusale erfüllt den Raum. Alle Kreaturen in Bereich <strong>S4</strong> müssen einen @Check[will|dc:41]{Willenswurf} ablegen; bei einem Fehlschlag erleiden sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1} (@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2} bei einem Kritischen Fehlschlag). Die Gefahr würfelt dann Initiative.</p>"
+          "description": "<p><strong>Auslöser</strong> Der Pilz erleidet Schaden, einer der sieben Risse wird berührt oder bei einem Versuch, das Netzwerk zu deaktivieren, wird ein Kritischer Fehlschlag erzielt</p>\n<hr />\n<p><strong>Effekt</strong> Die dämonischen Energien in jedem der sieben Risse nehmen davon Kenntnis, und der kakophone Klang heulender Scheusale erfüllt den Raum. Alle Kreaturen in Bereich <strong>S4</strong> müssen einen @Check[will|dc:41|options:area-effect,inflicts:frightened]{Willenswurf} ablegen; bei einem Fehlschlag erleiden sie den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1} (@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2} bei einem Kritischen Fehlschlag). Die Gefahr würfelt dann Initiative.</p>"
         },
-        "strike-melee->Rift Beam": {
+        "strike-ranged->Rift Beam": {
           "name": "Energiestrahl",
           "description": "<p>kein Malus für Mehrfachangriffe</p>"
         }
@@ -1680,7 +1686,7 @@
           "description": "<p>Das erste Mal in einer Runde, wenn der Sündenschimmel mit Umhüllen einer Kreatur Schaden zufügt, heilt er sofort Trefferpunkte in Höhe des verursachten Schadens. Trefferpunkte über sein Maximum hinaus erhält er dabei als temporäre Trefferpunkte, die 1 Stunde lang anhalten. Solange der Sündenschimmel diese temporären Trefferpunkte hat, verhärtet sich seine Oberfläche und seine RK steigt auf 30.</p>"
         },
         "action->Engulf": {
-          "description": "<p>@Check[reflex|dc:32]{Reflexwurf}, @Damage[3d10[acid]]{3W10 Säureschaden} plus Verdauung, [[/act escape dc=32]], Befreien18</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Engulf]</p>"
+          "description": "<p>@Check[reflex|dc:32|options:damaging-effect,inflicts:grabbed,inflicts:slowed]{Reflexwurf}, @Damage[3d10[acid]]{3W10 Säureschaden} plus Verdauung, [[/act escape dc=32]], Befreien18</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Engulf]</p>"
         },
         "action->Sinmold Infestation": {
           "name": "Sündenschimmelbefall",
@@ -2810,7 +2816,7 @@
       "items": {
         "action->Soulshriek": {
           "name": "Schrei der Seele",
-          "description": "<p><strong>Auslöser</strong> eine nicht-dämonische Kreatur beendet ihren Zug in Bereich <strong>S3</strong> oder ein Dämon in Bereich <strong>S3</strong> erteilt dem Herzen des Hexenstumpfs den Befehl, zu erwachen</p>\n<hr />\n<p><strong>Effekt</strong> Ein verzerrtes Baumhirtengesicht bildet sich an der Seite des Herzens des Hexenstumpfs und stößt einen schrecklichen Schrei aus, der klingt, als käme er aus einer riesigen Kehle aus knirschendem Holz. Alle nicht-dämonischen Kreaturen in Bereich <strong>S3</strong> oder innerhalb von 30 Fuß/9 m um einen Eingang zu Bereich <strong>S3</strong> erleiden @Damage[10d6[spirit]]{10W6 Seelenschaden} (@Check[will|dc:41|basic]{einfacher Willenswurf}), während sich ihre Seelen vor Schmerz winden und krümmen. Die Falle würfelt dann die Initiative.</p>"
+          "description": "<p><strong>Auslöser</strong> eine nicht-dämonische Kreatur beendet ihren Zug in Bereich <strong>S3</strong> oder ein Dämon in Bereich <strong>S3</strong> erteilt dem Herzen des Hexenstumpfs den Befehl, zu erwachen</p>\n<hr />\n<p><strong>Effekt</strong> Ein verzerrtes Baumhirtengesicht bildet sich an der Seite des Herzens des Hexenstumpfs und stößt einen schrecklichen Schrei aus, der klingt, als käme er aus einer riesigen Kehle aus knirschendem Holz. Alle nicht-dämonischen Kreaturen in Bereich <strong>S3</strong> oder innerhalb von 30 Fuß/9 m um einen Eingang zu Bereich <strong>S3</strong> erleiden @Damage[10d6[spirit]|options:area-damage]{10W6 Seelenschaden} (@Check[will|dc:41|basic|options:area-effect]{einfacher Willenswurf}), während sich ihre Seelen vor Schmerz winden und krümmen. Die Falle würfelt dann die Initiative.</p>"
         },
         "strike-melee->Claw": {
           "name": "Klaue",
@@ -2869,7 +2875,7 @@
         },
         "action->Camouflage": {
           "name": "Tarnung",
-          "description": "<p>Zauglagaul kann sich außerhalb von Gebäuden im Dornenwirr @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa]{Verstecken}, auch wenn er keine Deckung hat.</p>"
+          "description": "<p>Zauglagaul kann sich außerhalb von Gebäuden im Dornenwirr [[/act hide]], auch wenn er keine Deckung hat.</p>"
         },
         "action->Mist Vision": {
           "name": "Nebelsicht",
