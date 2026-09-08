@@ -8,11 +8,8 @@
       "publicNotes": "<p>In their relentless pursuit of more magical might, some liches use their rotting forms to hold magical secrets, hiding precious tomes in their ribcage, inscribing formulas on their withered flesh, even replacing some bones with powerful magical items. The process is painstaking, as the <em>soul cage</em> tries to repair any damage caused by such alterations.</p>\n<hr />\n<p>A desire to live eternally motivates a spellcaster to become a lich, and necromantic knowledge makes the desire real. The typical lich takes the most direct path, keeping their undead form fairly close to their appearance in life. But undeath can also bring greater freedom for those with a less conventional view of what they can become. The horde lich and runecarved lich reshape themselves entirely.</p>",
       "saveDetails": "+1 status to all saves vs. vitality ",
       "items": {
-        "spellcastingEntry->Occult Innate Spells": {
-          "name": "Occult Innate Spells"
-        },
-        "spellcastingEntry->Occult Items Only Spells": {
-          "name": "Occult Items Only Spells"
+        "spellcastingEntry->Occult Spontaneous Spells": {
+          "name": "Occult Spontaneous Spells"
         },
         "consumable->Wand of Wall of Force (Rank 6)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.kiXh4SUWKr166ZeM]\nWand of Wall of Force (Rank 6)",
@@ -89,6 +86,7 @@
     "Chained Norn": {
       "name": "Chained Norn",
       "blurb": "Variant norn",
+      "hpDetails": "void healing",
       "languages": "truespeech",
       "publicNotes": "<p>Ancient beyond imagining, norns are powerful fey women who hold in their hands the physical manifestation of fate and destiny in the form of golden thread. They watch over all life, intervening with reluctance when called upon—or with a vengeance when the strands of fate are twisted and abused by lesser beings. They cut imposing figures, standing 14 feet tall and weighing 800 pounds.</p>\n<p>Norns' relationship with the Eldest of the First World is complex. Many among norns serve Magdh the Three, the triune Eldest who some norns believe to be the first norn triumvirate bound together into one entity, as Magdh has three bodies: a Maiden, a Mother, and a Matriarch. Magdh claims to be watching the threads of fate for some ominous prophesied cataclysm, and in addition to assisting in her divinations, Magdh expects the norns who serve her to follow her cryptic commands to help nudge the future away from the brink. However, norns are powerful beings in their own right, themselves capable of granting divine power, and many balk at serving the enigmatic demigod. These norns find the other Eldest even more alien and challenging to interact with, for they believe that while the Eldest wield great power, even these powerful beings should not be granted leave to meddle with fate as much as they desire.</p>\n<p>While even the weakest of the Eldest could destroy an unaffiliated norn with ease, they tend to obey the proclamations and judgments of norns when they are spoken. These norns, for their part, use their perceived neutrality judiciously. They know better than to issue too many demands to the Eldest, lest the capricious demigods grow frustrated. And so the balance of power remains tenuous between unaffiliated norns and the Eldest, as it has for eons. Norns know that it's merely a matter of time before the Eldest lose their respect for this tradition and start acting entirely as they please, despite norns' best efforts to rein in their most disruptive actions.</p>\n<h2>Followers of Fate</h2>\n<p>In the mortal Universe, some mortals worship norns as deities, while others, especially witches and bards, admire them as patrons or muses. Those who uphold norns as deities are known as Followers of Fate. Norns neither discourage this veneration nor go out of their way to support such worship. Clerics who venerate norns might worship a specific norn or norn triumvirate, or all norns as a whole, but they gain the same benefits regardless of their choice. The religious symbol of Followers of Fate is a pair of shears cutting a golden thread, and their areas of concern are destiny, fate, and the aging process.</p>",
       "saveDetails": "+1 status to all saves vs. magic",
@@ -114,6 +112,9 @@
         },
         "spell->Dispel Magic (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]\nDispel Magic (At Will)"
+        },
+        "spell->Detect Magic (Constant)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.gpzpAAAJ1Lza2JVl]\nDetect Magic (Constant)"
         },
         "strike-melee->Hand of Fate": {
           "name": "Hand of Fate"
@@ -143,7 +144,7 @@
         },
         "action->Sever Fate": {
           "name": "Sever Fate",
-          "description": "<p>When a norn deals void damage with a Strike, she regains @Damage[10[healing]]{10 Hit Points}. The target must succeed at a @Check[fortitude|dc:39] save or become @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (@UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} on a critical failure).</p>\n<p>Further void damage dealt by the norn increases the drained condition value by 1 on a failed save (or by 2 on a critical failure), to a maximum of @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 4}.</p>"
+          "description": "<p>When a norn deals void damage with a Strike, she regains @Damage[10[healing]] Hit Points. The target must succeed at a @Check[fortitude|dc:39|options:inflicts:drained] save or become @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (@UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} on a critical failure).</p>\n<p>Further void damage dealt by the norn increases the drained condition value by 1 on a failed save (or by 2 on a critical failure), to a maximum of drained 4.</p>"
         },
         "lore->Lore (all)": {
           "name": "Lore (all)"
@@ -263,7 +264,7 @@
         },
         "action->For Nirmathas!": {
           "name": "For Nirmathas!",
-          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> Arsiella makes two battle axe Strikes against the same target. Both Strikes use Arsiella's current multiple attack penalty, but each Strike takes a –2 penalty. A target hit by both attacks on the same turn must also succeed at a @Check[fortitude|dc:26] saving throw or be knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>"
+          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> Arsiella makes two battle axe Strikes against the same target. Both Strikes use Arsiella's current multiple attack penalty, but each Strike takes a –2 penalty. A target hit by both attacks on the same turn must also succeed at a @Check[fortitude|dc:26|options:inflicts:prone] saving throw or be knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>"
         },
         "action->Heavenly Strike": {
           "name": "Heavenly Strike",
@@ -294,7 +295,7 @@
       "items": {
         "action->Perilous Sway": {
           "name": "Perilous Sway",
-          "description": "<p><strong>Trigger</strong> A Medium or larger creature Strides 10 feet or more in the bridge's area</p>\n<hr />\n<p><strong>Effect</strong> All creatures on the bridge must attempt a @Check[reflex|dc:18] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} until the beginning of its next turn.</p>\n<p><strong>Failure</strong> The creature falls @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>\n<p><strong>Critical Failure</strong> The creature falls from the bridge, landing in the ravine 20 feet below.</p>"
+          "description": "<p><strong>Trigger</strong> A Medium or larger creature Strides 10 feet or more in the bridge's area</p>\n<hr />\n<p><strong>Effect</strong> All creatures on the bridge must attempt a @Check[reflex|dc:18|options:inflicts:prone,inflicts:clumsy] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} until the beginning of its next turn.</p>\n<p><strong>Failure</strong> The creature falls @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>\n<p><strong>Critical Failure</strong> The creature falls from the bridge, landing in the ravine 20 feet below.</p>"
         },
         "action->Collapse": {
           "name": "Collapse",
@@ -315,8 +316,8 @@
           "name": "Greater Striking Rapier"
         },
         "action->Divine Destruction": {
-          "name": "Divine Destruction",
-          "description": "<p>When the divine warden is reduced to 0 HP, it erupts with divine energy in a @Template[type:emanation|distance:30], dealing @Damage[16d6[spirit]|options:area-damage] damage. Each creature in the area must attempt a @Check[will|dc:37|options:area-effect,damaging-effect] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature takes half damage.</p>\n<p><strong>Success</strong> The creature takes full damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and becomes temporarily cursed by the patron deity. The cursed creature is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 day; this is a curse effect that uses the Will save DC as the counteract DC.</p>\n<p><strong>Critical Failure</strong> As failure, except the cursed creature is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2}.</p>"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.jD0M3yV6gjkXafsJ]\nDivine Destruction",
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.jD0M3yV6gjkXafsJ]\n<p>When the divine warden is reduced to 0 HP, it erupts with divine energy in a @Template[type:emanation|distance:30], dealing @Damage[16d6[spirit]|options:area-damage] damage. Each creature in the area must attempt a @Check[will|dc:37|options:area-effect,damaging-effect,inflicts:enfeebled,inflicts:stupefied] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature takes half damage.</p>\n<p><strong>Success</strong> The creature takes full damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and becomes temporarily cursed by the patron deity. The cursed creature is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 day; this is a curse effect that uses the Will save DC as the counteract DC.</p>\n<p><strong>Critical Failure</strong> As failure, except the cursed creature is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2}.</p>"
         },
         "action->God-Bound": {
           "name": "God-Bound",
@@ -327,8 +328,7 @@
           "description": "<p>While the divine warden wields the favored weapon of its patron deity, that weapon gains the effect of a greater striking rune.</p>"
         },
         "action->Instrument of Faith": {
-          "name": "Instrument of Faith",
-          "description": "<p>The divine warden is a beacon for its deity's faith. A cleric of the divine warden's patron deity can channel a heal spell through a divine warden they can see within 60 feet. The cleric determines any targets or area for the spell as if they were standing in the divine warden's space.</p>"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.L80gn6WOWi9roJW3]\nInstrument of Faith"
         }
       }
     },
@@ -346,8 +346,8 @@
           "name": "Greater Striking Longsword"
         },
         "action->Divine Destruction": {
-          "name": "Divine Destruction",
-          "description": "<p>When the divine warden is reduced to 0 HP, it erupts with divine energy in a @Template[type:emanation|distance:30], dealing @Damage[16d6[spirit]|options:area-damage] damage. Each creature in the area must attempt a @Check[will|dc:37|options:area-effect,damaging-effect] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature takes half damage.</p>\n<p><strong>Success</strong> The creature takes full damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and becomes temporarily cursed by the patron deity. The cursed creature is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 day; this is a curse effect that uses the Will save DC as the counteract DC.</p>\n<p><strong>Critical Failure</strong> As failure, except the cursed creature is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2}.</p>"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.jD0M3yV6gjkXafsJ]\nDivine Destruction",
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.jD0M3yV6gjkXafsJ]\n<p>When the divine warden is reduced to 0 HP, it erupts with divine energy in a @Template[type:emanation|distance:30], dealing @Damage[16d6[spirit]|options:area-damage] damage. Each creature in the area must attempt a @Check[will|dc:37|options:area-effect,damaging-effect,inflicts:enfeebled,inflicts:stupefied] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature takes half damage.</p>\n<p><strong>Success</strong> The creature takes full damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and becomes temporarily cursed by the patron deity. The cursed creature is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 day; this is a curse effect that uses the Will save DC as the counteract DC.</p>\n<p><strong>Critical Failure</strong> As failure, except the cursed creature is @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2}.</p>"
         },
         "action->God-Bound": {
           "name": "God-Bound",
@@ -358,8 +358,7 @@
           "description": "<p>While the divine warden wields the favored weapon of its patron deity, that weapon gains the effect of a <em>greater striking rune</em>.</p>"
         },
         "action->Instrument of Faith": {
-          "name": "Instrument of Faith",
-          "description": "<p>The divine warden is a beacon for its deity's faith. A cleric of the divine warden's patron deity can channel a @UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal} spell through a divine warden they can see within 60 feet. The cleric determines any targets or area for the spell as if they were standing in the divine warden's space.</p>"
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.L80gn6WOWi9roJW3]\nInstrument of Faith"
         }
       }
     },
@@ -404,11 +403,11 @@
         },
         "action->Dying Breath": {
           "name": "Dying Breath",
-          "description": "<p>The engerra draws the air from around breathing creatures in a @Template[type:emanation|distance:40], giving them the feeling of drawing their last breath. Enemies in the area must attempt a @Check[will|dc:26|options:area-effect,damaging-effect] save. If at least one creature fails the save, the engerra can gift the stolen breath to a willing creature within 40 feet, granting that creature [[/gmr 2d6 #Temp HP]] temporary Hit Points that last for 1 minute.</p>\n<hr />\n<p><strong>Success</strong> The creature is unaffected.</p>\n<p><strong>Failure</strong> The creature takes @Damage[(2d6+7)[mental]|options:area-damage] damage and is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[(3d6+10)[mental]|options:area-damage] damage, is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}, and becomes @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued} for 1 minute.</p>"
+          "description": "<p>The engerra draws the air from around breathing creatures in a @Template[type:emanation|distance:40], giving them the feeling of drawing their last breath. Enemies in the area must attempt a @Check[will|dc:26|options:area-effect,damaging-effect,inflicts:frightened,inflicts:fatigued] save. If at least one creature fails the save, the engerra can gift the stolen breath to a willing creature within 40 feet, granting that creature [[/gmr 2d6 #Temp HP]] temporary Hit Points that last for 1 minute.</p>\n<hr />\n<p><strong>Success</strong> The creature is unaffected.</p>\n<p><strong>Failure</strong> The creature takes @Damage[(2d6+7)[mental]|options:area-damage] damage and is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[(3d6+10)[mental]|options:area-damage] damage, is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}, and becomes @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued} for 1 minute.</p>"
         },
         "action->Final Words of Doom": {
           "name": "Final Words of Doom",
-          "description": "<p>The engerra whispers words of doom to an enemy within 40 feet. The creature must attempt a @Check[will|dc:26] save.</p>\n<hr />\n<p><strong>Critical Success</strong> As success, and the creature is temporarily immune for 1 minute.</p>\n<p><strong>Success</strong> The creature is unaffected.</p>\n<p><strong>Failure</strong> The creature takes @Damage[(3d8+13)[mental]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 1} for 1 minute.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[(4d8+18)[mental]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 2} for 1 minute.</p>"
+          "description": "<p>The engerra whispers words of doom to an enemy within 40 feet. The creature must attempt a @Check[will|dc:26|options:inflicts:doomed] save.</p>\n<hr />\n<p><strong>Critical Success</strong> As success, and the creature is temporarily immune for 1 minute.</p>\n<p><strong>Success</strong> The creature is unaffected.</p>\n<p><strong>Failure</strong> The creature takes @Damage[(3d8+13)[mental]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 1} for 1 minute.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[(4d8+18)[mental]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 2} for 1 minute.</p>"
         },
         "action->Final Words of Wisdom": {
           "name": "Final Words of Wisdom",
@@ -487,7 +486,7 @@
       "items": {
         "action->Despairing Whispers": {
           "name": "Despairing Whispers",
-          "description": "<p><strong>Trigger</strong> A living creature enters the haunted area</p>\n<hr />\n<p><strong>Effect</strong> The spirits manifest, whispering in the minds of creatures in the fog. Each creature in the area must succeed at a @Check[will|dc:22] save or be @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure). Frightened creatures are @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} for as long as they remain frightened. The haunt then rolls initiative.</p>"
+          "description": "<p><strong>Trigger</strong> A living creature enters the haunted area</p>\n<hr />\n<p><strong>Effect</strong> The spirits manifest, whispering in the minds of creatures in the fog. Each creature in the area must succeed at a @Check[will|dc:22|options:inflicts:frightened,inflicts:immobilized] save or be @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure). Frightened creatures are @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} for as long as they remain frightened. The haunt then rolls initiative.</p>"
         }
       }
     },
@@ -516,7 +515,7 @@
       "items": {
         "action->Manifest": {
           "name": "Manifest",
-          "description": "<p><strong>Trigger</strong> A creature the spirits knew in life enters the haunted area</p>\n<hr />\n<p><strong>Effect</strong> The spirits manifest with a terrible wailing. Each creature in the area must succeed at a @Check[will|dc:20] save or be @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure). Frightened creatures are @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} for as long as they remain frightened. The haunt then rolls initiative.</p>"
+          "description": "<p><strong>Trigger</strong> A creature the spirits knew in life enters the haunted area</p>\n<hr />\n<p><strong>Effect</strong> The spirits manifest with a terrible wailing. Each creature in the area must succeed at a @Check[will|dc:20|options:inflicts:frightened,inflicts:immobilized] save or be @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure). Frightened creatures are @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} for as long as they remain frightened. The haunt then rolls initiative.</p>"
         }
       }
     },
@@ -571,6 +570,9 @@
               "label": "High-Fashion Clothes (Make an Impression on nobility)"
             }
           }
+        },
+        "consumable->Cerulean Scourge": {
+          "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.9hdT05ywPVyh9vQX]\n<p><strong>Activate</strong> <span class=\"action-glyph\">2</span> (manipulate)</p>\n<hr />\n<p>This poison is infamous for making the victim's blood vessels glow with a bright blue light before painfully bursting.</p>\n<p><strong>Saving Throw</strong> @Check[fortitude|dc:37]</p>\n<p><strong>Maximum Duration</strong> 6 rounds</p>\n<p><strong>Stage 1</strong> @Damage[10d6[poison]] damage (1 round)</p>\n<p><strong>Stage 2</strong> @Damage[12d6[poison]] damage (1 round)</p>\n<p><strong>Stage 3</strong> @Damage[14d6[poison]] damage (1 round)</p>"
         },
         "strike-melee->Dagger": {
           "name": "Dagger"
@@ -627,6 +629,9 @@
       "name": "Mirmicette",
       "publicNotes": "<p>Mirmicettes are materialistic fey who obsessively collect small tools, household goods, and similar trinkets. Though not particularly malevolent, mirmicettes consider the items they collect more interesting than the sentient creatures who create them. They have nondescript, unassuming gray faces and spindly fingers that end in clawlike nails, which they use to pluck any item they covet from its resting place.</p>\n<p>Mirmicettes wander from place to place in search of treasures to add to their ever-growing collections. When a mirmicette steals an object, they often replace the stolen item with a near-perfect copy. Mirmicette copies are most convincing when the fey is close by, quickly losing their luster as the distance between the mirmicette and the object grows. While this swapping has led to the disappointment of many an adventurer, a loss of material goods is far from the worst outcome one might experience when encountering a mirmicette. Mirmicettes dislike anyone who touches one of their counterfeit items without permission, often using the object itself as a weapon against the would-be thief.</p>",
       "items": {
+        "spellcastingEntry->Occult Innate Spells": {
+          "name": "Occult Innate Spells"
+        },
         "strike-melee->Claw": {
           "name": "Claw"
         },
@@ -636,7 +641,7 @@
         },
         "action->Copied Clutter": {
           "name": "Copied Clutter",
-          "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p><strong>Effect</strong> The mirmicette creates dozens of copies of an object of 1 Bulk or less that the mirmicette can see. The counterfeit items rain down in a @Template[type:burst|distance:10] within 40 feet. The ground in the area becomes difficult terrain until the items are collected and removed. Creatures in the area must attempt a @Check[reflex|dc:24|options:area-effect,damaging-effect] save.</p>\n<p><strong>Success</strong> The creature takes @Damage[2d6[bludgeoning]|options:area-damage] damage.</p>\n<p><strong>Failure</strong> The creature takes @Damage[4d6[bludgeoning]|options:area-damage] damage and is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} for 1 round.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[8d6[bludgeoning]|options:area-damage] damage and is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>"
+          "description": "<p><strong>Frequency</strong> once per day</p>\n<hr />\n<p><strong>Effect</strong> The mirmicette creates dozens of copies of an object of 1 Bulk or less that the mirmicette can see. The counterfeit items rain down in a @Template[type:burst|distance:10] within 40 feet. The ground in the area becomes difficult terrain until the items are collected and removed. Creatures in the area must attempt a @Check[reflex|dc:24|options:area-effect,damaging-effect,inflicts:off-guard,inflicts:prone] save.</p>\n<p><strong>Success</strong> The creature takes @Damage[2d6[bludgeoning]|options:area-damage] damage.</p>\n<p><strong>Failure</strong> The creature takes @Damage[4d6[bludgeoning]|options:area-damage] damage and is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} for 1 round.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[8d6[bludgeoning]|options:area-damage] damage and is knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>"
         },
         "action->Create Counterfeit": {
           "name": "Create Counterfeit",
@@ -680,7 +685,7 @@
         },
         "action->Siphon Will": {
           "name": "Siphon Will",
-          "description": "<p>When the moldering steed damages a living creature with its jaws Strike, the steed gains 20 temporary Hit Points that last for 1 minute, and the creature must succeed at a @Check[will|dc:38] save or become @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}. Further damage dealt by the steed increases the creature's stupefied value on a failed save by 1, to a maximum of @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 4}.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.unwNPDLmReEQy700]{Effect: Siphon Will}</p>"
+          "description": "<p>When the moldering steed damages a living creature with its jaws Strike, the steed gains 20 temporary Hit Points that last for 1 minute, and the creature must succeed at a @Check[will|dc:38|options:inflicts:stupefied] save or become @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}. Further damage dealt by the steed increases the creature's stupefied value on a failed save by 1, to a maximum of @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 4}.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.unwNPDLmReEQy700]{Effect: Siphon Will}</p>"
         },
         "action->Undead Steed": {
           "name": "Undead Steed",
@@ -691,9 +696,9 @@
     "Names of the Nameless": {
       "name": "Names of the Nameless",
       "description": "<p>The voices of the nameless dead intrude into the minds of the living.</p>",
-      "disable": "<p>@Check[perception|dc:26] to discern a name spoken by the nameless dead, or @Check[religion|dc:28] (expert) to put the nameless dead to rest. Speaking three names aloud disables the haunt. A creature that speaks any other name aloud must succeed at a @Check[will|dc:28] save or be @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} for 1 round.</p>",
+      "disable": "<p>@Check[perception|dc:26] to discern a name spoken by the nameless dead, or @Check[religion|dc:28] (expert) to put the nameless dead to rest. Speaking three names aloud disables the haunt. A creature that speaks any other name aloud must succeed at a @Check[will|dc:28|options:inflicts:confused] save or be @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} for 1 round.</p>",
       "reset": "<p>If the haunt is disabled, divine light washes through the area. Living creatures in the area regain @Damage[4d8[healing]] Hit Points, and undead creatures in the area take @Damage[4d8[vitality]] damage. The haunt deactivates 1 minute after all creatures leave the area but resets immediately thereafter.</p>",
-      "routine": "<p>(1 action; auditory, divine, emotion, fear, mental) Spirits of the dead whisper their names into the minds of creatures in the room, dealing @Damage[(2d10+11)[mental]|options:area-damage] damage (@Check[will|dc:28|basic|options:area-effect] save). A creature that fails the save is also @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure).</p>",
+      "routine": "<p>(1 action; auditory, divine, emotion, fear, mental) Spirits of the dead whisper their names into the minds of creatures in the room, dealing @Damage[(2d10+11)[mental]|options:area-damage] damage (@Check[will|dc:28|basic|options:area-effect,inflicts:frightened] save). A creature that fails the save is also @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} on a critical failure).</p>",
       "stealth": "<p>(trained) to hear whispering voices</p>",
       "items": {
         "action->Disappearing Door": {
@@ -807,6 +812,9 @@
         "action->Skeletal Lore": {
           "name": "Skeletal Lore",
           "description": "<p>Onturat taps into the memories of the creatures whose bones make up his body. This gives him the Skeletal Lore skill, which he can use to @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Recall Knowledge} of any kind. In addition, he can speak and understand all the languages known by the creatures whose bones make up his body (typically Common and the regional language of the skulltaker's home region). Onturat can use Skeletal Lore as the primary skill check for the @UUID[Compendium.pf2e.spells-srd.Item.hp6Q64dl7xbdn4gQ]{Collective Memories} ritual, and he can cast collective memories without secondary casters.</p>"
+        },
+        "action->+1 Status to All Saves Vs. Vitality": {
+          "name": "+1 Status to All Saves Vs. Vitality"
         },
         "action->Shard Storm": {
           "name": "Shard Storm",
@@ -941,9 +949,6 @@
       "publicNotes": "<p>Undead are plentiful throughout the Gravelands, but even so, necromancers must sometimes get creative to organize the varied undead they have on hand into a cohesive military unit. While the typical raised cavalry is a mix of skeletons, zombies, and ghouls, many units also incorporate mummies, ghosts, and more powerful undead.</p>\n<p>The Knights of Lastwall have reported battalions of undead rising from the fields where they were buried, presumably in preparation for a future assault. One of the most infamous of these staging grounds was Fallowdeep, the network of subterranean tunnels beneath the former dwarven fortress of Hammer Rock. When the Whispering Tyrant attacked the nations of the Inner Sea, Fallowdeep's supply of undead was vastly depleted, but caches of corpses no doubt remain there for a resourceful necromancer to exploit.</p>",
       "speed": "troop movement",
       "items": {
-        "action->Darkvision": {
-          "name": "Darkvision"
-        },
         "action->Mounted": {
           "name": "Mounted",
           "description": "<p>When not mounted, the raised cavalry is slowed 1.</p>"
@@ -981,6 +986,9 @@
       "blurb": "Embittered Graveknight Sworn to Arazni",
       "hpDetails": "rejuvenation, void healing",
       "items": {
+        "spellcastingEntry->Champion Devotion Spells": {
+          "name": "Champion Devotion Spells"
+        },
         "strike-melee->Fist": {
           "name": "Fist"
         },
@@ -1023,7 +1031,7 @@
         },
         "action->Swap Fates": {
           "name": "Swap Fates",
-          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> Seldeg switches the fates of two creatures within 500 feet. The two creatures teleport into each other's spaces. Each creature then attempts a @Check[will|dc:39] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target becomes temporarily immune to Swap Fates for 24 hours.</p>\n<p><strong>Success</strong> The target takes @Damage[3d6[mental]] damage.</p>\n<p><strong>Failure</strong> The target takes @Damage[6d6[mental]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>\n<p><strong>Critical Failure</strong> The target takes @Damage[12d6[mental]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 4}.</p>"
+          "description": "<p><strong>Frequency</strong> once per round</p>\n<hr />\n<p><strong>Effect</strong> Seldeg switches the fates of two creatures within 500 feet. The two creatures teleport into each other's spaces. Each creature then attempts a @Check[will|dc:39|options:inflicts:stunned] save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target becomes temporarily immune to Swap Fates for 24 hours.</p>\n<p><strong>Success</strong> The target takes @Damage[3d6[mental]] damage.</p>\n<p><strong>Failure</strong> The target takes @Damage[6d6[mental]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p>\n<p><strong>Critical Failure</strong> The target takes @Damage[12d6[mental]] damage and is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 4}.</p>"
         },
         "action->Unyielding Block": {
           "name": "Unyielding Block",
@@ -1064,7 +1072,7 @@
       "items": {
         "action->Barb Spray": {
           "name": "Barb Spray",
-          "description": "<p>A creature enters an area containing snake's mane or the snake's mane takes damage</p>\n<hr />\n<p><strong>Effect</strong> The vine sprays a hail of acidic barbs in a @Template[type:emanation|distance:10]. Any creature in the area takes @Damage[(4d10+18)[acid]|options:area-damage] damage (@Check[reflex|dc:25|basic|options:area-effect] save). On a critical failure, the creature is also @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for 1 minute.</p>\n<hr />\n<p><em>Note: A saving throw for this ability was not provided by Paizo. The DC presented here is a hard DC for the hazard's level based on the GM Core hazard building rules.</em></p>"
+          "description": "<p>A creature enters an area containing snake's mane or the snake's mane takes damage</p>\n<hr />\n<p><strong>Effect</strong> The vine sprays a hail of acidic barbs in a @Template[type:emanation|distance:10]. Any creature in the area takes @Damage[(4d10+18)[acid]|options:area-damage] damage (@Check[reflex|dc:25|basic|options:area-effect,inflicts:blinded] save). On a critical failure, the creature is also @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for 1 minute.</p>\n<hr />\n<p><em>Note: A saving throw for this ability was not provided by Paizo. The DC presented here is a hard DC for the hazard's level based on the GM Core hazard building rules.</em></p>"
         }
       }
     },
@@ -1137,7 +1145,7 @@
         },
         "action->Sow and Sprout": {
           "name": "Sow and Sprout",
-          "description": "<p>The stelemora implants a seed inside a creature they're grappling. The target must attempt a @Check[fortitude|dc:25] save.</p>\n<p><strong>Success</strong> The stelemora fails to implant a seed, and the target is unaffected.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}. While sickened, the target also takes @Damage[4d6[persistent,piercing]] damage as flowering vines sprout through its flesh. The target can't end the persistent damage until it recovers from the sickened condition.</p>\n<p><strong>Critical Failure</strong> As failure, except the target is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}.</p>"
+          "description": "<p>The stelemora implants a seed inside a creature they're grappling. The target must attempt a @Check[fortitude|dc:25|options:inflicts:sickened] save.</p>\n<p><strong>Success</strong> The stelemora fails to implant a seed, and the target is unaffected.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}. While sickened, the target also takes @Damage[4d6[persistent,piercing]] damage as flowering vines sprout through its flesh. The target can't end the persistent damage until it recovers from the sickened condition.</p>\n<p><strong>Critical Failure</strong> As failure, except the target is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}.</p>"
         },
         "action->Tangle of Vines": {
           "name": "Tangle of Vines",

@@ -1923,7 +1923,7 @@
         },
         "action->Dreadsong": {
           "name": "Dreadsong",
-          "description": "<p>The dreadsong dancer whirls their howling songblades and cloaks themself in illusion magic. Each non-fiend creature in a @Template[emanation|distance:30] from the dreadsong dancer must attempt a @Check[will|dc:29] save.</p>\n<hr />\n<p><strong>Critical Success</strong> No effect, and the creature is temporarily immune for 24 hours. The dreadsong dancer is affected by their performance anxiety.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}, and the dreadsong dancer is @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Undetected} by the creature for 1 minute. The creature can't use Seek to find the dreadsong dancer.</p>\n<p><strong>Critical Failure</strong> As failure, but the creature can't reduce its frightened condition below 2 for 1 minute. In addition, the dreadsong dancer is affected by its performance anxiety.</p>"
+          "description": "<p>The dreadsong dancer whirls their howling songblades and cloaks themself in illusion magic. Each non-fiend creature in a @Template[emanation|distance:30] from the dreadsong dancer must attempt a @Check[will|dc:29|options:area-effect,inflicts:frightened] save.</p>\n<hr />\n<p><strong>Critical Success</strong> No effect, and the creature is temporarily immune for 24 hours. The dreadsong dancer is affected by their performance anxiety.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}, and the dreadsong dancer is @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Undetected} by the creature for 1 minute. The creature can't use Seek to find the dreadsong dancer.</p>\n<p><strong>Critical Failure</strong> As failure, but the creature can't reduce its frightened condition below 2 for 1 minute. In addition, the dreadsong dancer is affected by its performance anxiety.</p>"
         },
         "action->Rend": {
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.3JOi2cMcGhT3eze1]\n<p>Songblade</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Rend]</p>"
@@ -2078,6 +2078,7 @@
       "name": "Eyeball Tank",
       "description": "<p>A vat of thick glass stands 10 feet high and is filled with green slime and fist-sized eyeballs.</p>",
       "disable": "<p>@Check[thievery|dc:38|name:Acidify Slime|traits:action:disable-a-device] (master) or @Check[crafting|dc:34|name:Acidify Slime] (expert) to acidify the slime inside the tank, destroying the eyeballs</p>",
+      "reset": "<p>The trap can be reset by adding 100 new eyeballs to the tank and allowing them to grow in the slime for 1 week.</p>",
       "routine": "<p>(3 actions) Each round, the vat uses all three of its actions to shoot random eye rays at any living creatures (except Ixusoth) in range.</p>",
       "stealth": "<p>(master)</p>",
       "items": {
@@ -2086,17 +2087,20 @@
           "description": "<p><strong>Trigger</strong> Three or more living creatures remain within 20 feet of the trap for 1 round</p>\n<hr />\n<p><strong>Effect</strong> The trap rolls initiative.</p>"
         },
         "strike-ranged->Despair Ray": {
-          "name": "Despair Ray"
+          "name": "Despair Ray",
+          "description": "<p>Target is subjected to a @UUID[Compendium.pf2e.spells-srd.Item.GaRQlC9Yw1BGKHfN]{Crushing Despair} spell (@Check[will|dc:33|options:item:magical|traits:concentrate,emotion,manipulate,mental])</p>"
         },
-        "strike-melee->Feeblemind Ray": {
-          "name": "Feeblemind Ray"
+        "strike-ranged->Feeblemind Ray": {
+          "name": "Feeblemind Ray",
+          "description": "<p>Target is subjected to a @UUID[Compendium.pf2e.spells-srd.Item.5BbU1V6wGSGbrmRD]{Feeblemind} spell (@Check[will|dc:36|options:item:magical|traits:concentrate,curse,incapacitation,manipulate,mental])</p>"
         },
         "strike-ranged->Spirit Blast Ray": {
-          "name": "Spirit Blast Ray"
+          "name": "Spirit Blast Ray",
+          "description": "<p>Target is subjected to a @UUID[Compendium.pf2e.spells-srd.Item.PHVHBbdHeQRfjLmE]{Spirit Blast} spell (@Check[fortitude|basic|dc:36|options:item:magical|traits:concentrate,manipulate,spirit])</p>"
         },
         "action->Spill Eyeballs": {
           "name": "Spill Eyeballs",
-          "description": "<p><strong>Trigger</strong> The tank reaches its Broken Threshold</p>\n<hr />\n<p><strong>Effect</strong> The glass shatters, spilling eyeballs onto the floor in a @Template[emanation|distance:15]{15-foot radius} and casting <em>grease</em> (DC 33) on the affected area. The eyeball tank is permanently destroyed and can't be reset.<strong>Reset</strong> The trap can be reset by adding 100 new eyeballs to the tank and allowing them to grow in the slime for 1 week.</p>"
+          "description": "<p><strong>Trigger</strong> The tank reaches its Broken Threshold</p>\n<hr />\n<p><strong>Effect</strong> The glass shatters, spilling eyeballs onto the floor in a @Template[emanation|distance:15]{15-foot radius} and casting @UUID[Compendium.pf2e.spells-srd.Item.Wu0xFpewMKRK3HG8]{Grease} (@Check[reflex|dc:33|options:item:magical|traits:concentrate,manipulate]) on the affected area. The eyeball tank is permanently destroyed and can't be reset.</p>"
         }
       }
     },
@@ -3543,10 +3547,12 @@
           "description": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.plplsXJsqrdqNQVI]\n<p>This piece of wood or silver is emblazoned with an image representing a deity. Some divine spellcasters, such as clerics, can use a religious symbol of their deity as a divine focus to use certain abilities and cast some spells. A religious symbol must be held in one hand to use it.</p>"
         },
         "strike-melee->Dagger": {
-          "name": "Dagger"
+          "name": "Dagger",
+          "description": "<p>Plus @UUID[Compendium.pf2e.spells-srd.Item.3x6eUCm17n6ROzUa]{Crisis of Faith}</p>"
         },
         "strike-ranged->Dagger": {
-          "name": "Dagger"
+          "name": "Dagger",
+          "description": "<p>Plus @UUID[Compendium.pf2e.spells-srd.Item.3x6eUCm17n6ROzUa]{Crisis of Faith}</p>"
         },
         "action->Call Toxins": {
           "name": "Call Toxins",
@@ -4147,7 +4153,7 @@
         },
         "action->Supersonic Hearing": {
           "name": "Supersonic Hearing",
-          "description": "<p>Mobana has spent years in close proximity to the @UUID[Compendium.pf2e.equipment-srd.Item.k9BYXA4b7Z4Hy6lZ]{Deafening Music Box} in her possession and is immune to its effects. She also gains a +2 circumstance bonus against sonic effects and effects that impose the deafened condition</p>"
+          "description": "<p>Mobana has spent years in close proximity to the @UUID[Compendium.pf2e.equipment-srd.Item.k9BYXA4b7Z4Hy6lZ]{Deafening Music Box} in her possession and is immune to its effects. She also gains a +2 circumstance bonus against sonic effects and effects that impose the @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} condition.</p>"
         },
         "action->Swift Sneak": {
           "name": "Swift Sneak",
@@ -4496,11 +4502,11 @@
         "spell->Dispel Magic (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]\nDispel Magic (At Will)"
         },
-        "spell->Mask of Terror (Constant) (See Tainted Backlash)": {
-          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.O6VQC1Bs4aSYDa6R]\nMask of Terror (Constant) (See Tainted Backlash)"
-        },
         "spell->Mind Blank": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.C2w3YfBKjIRS07DP]\nMind Blank"
+        },
+        "spell->Mask of Terror (Constant) (See Tainted Backlash)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.O6VQC1Bs4aSYDa6R]\nMask of Terror (Constant) (See Tainted Backlash)"
         },
         "spell->Fear (At Will)": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.spells-srd.Item.4koZzrnMXhhosn0D]\nFear (At Will)"
@@ -5572,15 +5578,10 @@
         },
         "action->Exorcism": {
           "name": "Exorcism",
-          "description": "<p>Mental damage ignores a siege shard's hardness.</p>\n<p>Additionally, proving the siege shard's generative conflict is over with the @UUID[Compendium.pf2e.actionspf2e.Item.Ma93dpT4K7JbP9gu]{Prove Peace} activity reverts the creature to ordinary stone.</p>"
+          "description": "<p>Mental damage ignores a siege shard's hardness.</p>\n<p>Additionally, proving the siege shard's generative conflict is over with the @UUID[Compendium.pf2e.adventure-specific-actions.Item.QW2gYIKce3W31xXf]{Prove Peace} activity reverts the creature to ordinary stone.</p>"
         },
         "action->Hardness 5": {
-          "name": "Hardness 5",
-          "rules": {
-            "0": {
-              "label": "Broken"
-            }
-          }
+          "name": "Hardness 5"
         },
         "action->Surreptitious Siege": {
           "name": "Surreptitious Siege",
@@ -5592,7 +5593,7 @@
         },
         "action->Rejuvenation": {
           "name": "Rejuvenation",
-          "description": "<p>When a siege shard is destroyed within 100 feet of a structure, it reforms after [[/br 2d4 #days]] days within the nearest structure, fully healed.</p>\n<p>A siege shard within a structure can permanently destroyed by the @UUID[Compendium.pf2e.adventure-specific-actions.Item.QW2gYIKce3W31xXf]{Prove Peace} activity.</p>"
+          "description": "<p>When a siege shard is destroyed within 100 feet of a structure, it reforms after [[/gmr 2d4 #days]] days within the nearest structure, fully healed.</p>\n<p>A siege shard within a structure can permanently destroyed by the @UUID[Compendium.pf2e.adventure-specific-actions.Item.QW2gYIKce3W31xXf]{Prove Peace} activity.</p>"
         }
       }
     },
@@ -6739,8 +6740,9 @@
         "weapon->Modified Spiked Chain": {
           "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.zi9ovfoRp2fMhfpO]\nModified Spiked Chain"
         },
-        "equipment->Key to the Skinsaw Sanctum Vault": {
-          "name": "Key to the Skinsaw Sanctum Vault"
+        "equipment->Key": {
+          "name": "Key",
+          "gmNote": "<p>Wrent's key to the Skinsaw sanctum vault.</p>"
         },
         "strike-melee->Cleaver": {
           "name": "Cleaver"
