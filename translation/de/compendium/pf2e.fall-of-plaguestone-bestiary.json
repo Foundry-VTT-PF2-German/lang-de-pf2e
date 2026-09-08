@@ -27,7 +27,7 @@
       "items": {
         "action->Beestings": {
           "name": "Bienenstiche",
-          "description": "<p>Die Kreatur muss einen @Check[fortitude|dc:16|traits:damaging-effect]{Zähigkeitswurf} ablegen. Bei Misslingen erhält sie @Damage[1d4[poison]]{1W4 Punkte Giftschaden} und für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 1}.</p>"
+          "description": "<p>The creature must attempt a @Check[fortitude|dc:16|options:damaging-effect,inflicts:clumsy] save. Those who fail take @Damage[1d4[poison]] damage and are @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} for 1 minute.</p>"
         },
         "action->Swarming Stings": {
           "name": "Stechender Schwarm",
@@ -297,7 +297,7 @@
         },
         "action->Fleas": {
           "name": "Flöhe",
-          "description": "<p>Wer von einem Räudigen Wolf gebissen wird, muss einen @Check[fortitude|dc:14]{Zähigkeitswurf} ablegen; bei Misslingen erhält er für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1}. Ein Betroffener kann diesen Zustand vorzeitig beenden, indem er eine Aktion zum Interagieren aufwendet, um sich zu kratzen und die Flöhe zu verscheuchen.</p>"
+          "description": "<p>Anyone bitten by a mangy wolf is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} for 1 minute unless they succeed at a @Check[fortitude|dc:14|options:inflicts:sickened] save, but they can spend an Interact action to scratch away the fleas and remove the condition.</p>"
         }
       }
     },
@@ -427,11 +427,11 @@
         },
         "action->Massive Strike": {
           "name": "Massiver Angriff",
-          "description": "<p>Der Behemoth führt einen Nahkampfangriff aus. Bei Erfolg kann er die Zielkreatur um 10 Fuß/3 m fortstoßen (20 Fuß/6 m bei einem Kritischen Treffer). Das Ziel muss einen @Check[fortitude|dc:19]{Zähigkeitswurf} ablegen; bei einem Fehlschlag erhält es den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}.</p>"
+          "description": "<p>The behemoth makes a melee Strike and, if the attack hits, it can push the creature back 10 feet (20 feet on a critical hit). The target must succeed at a @Check[fortitude|dc:19|options:inflicts:prone] save or be knocked @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} by this attack.</p>"
         },
         "action->Stomp": {
           "name": "Aufstampfen",
-          "description": "<p>Der Behemoth kann kraftvoll aufstampfen; alle Kreaturen innerhalb von 10 Fuß/3 m müssen einen @Check[reflex|dc:19]{Reflexwurf} ablegen; bei Misslingen erhält eine Kreatur den Zustand @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Liegend}.</p>"
+          "description": "<p>The behemoth can stomp on the ground, causing all creatures within @Template[emanation|distance:10]{10 feet} to fall @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} (@Check[reflex|dc:19|options:inflicts:prone] save negates).</p>"
         }
       }
     },
@@ -518,13 +518,12 @@
         "consumable->Stone Body Mutagen (Lesser)": {
           "description": "<Compendium>"
         },
-        "consumable->Acid Energy Mutagen (Lesser)": {
-          "name": "<Compendium> (Säure)",
-          "description": "<Compendium>"
-        },
         "consumable->Elixir of Life (Lesser, Infused)": {
           "name": "<Compendium> (Aufgeladen)",
           "description": "<Compendium>"
+        },
+        "consumable->Acid Energy Mutagen (Moderate)": {
+          "name": "<Compendium> tag will get replaced with text from compendium entry @UUID[Compendium.pf2e.equipment-srd.Item.SLJTJwyIRjuWjfuK]\nAcid Energy Mutagen (Moderate)"
         },
         "backpack->Belt Pouch": {
           "name": "Gürteltasche"
