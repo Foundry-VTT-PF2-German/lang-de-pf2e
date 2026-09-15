@@ -1923,7 +1923,7 @@
         },
         "action->Dreadsong": {
           "name": "Schreckenslied",
-          "description": "<p>Der Schreckensliedtänzer wirbelt seine heulenden Liederklingen und hüllt sich selbst in Illusionsmagie. Jede Kreatur, die nicht der Kategorie Scheusal angehört und sich innerhalb des Wirkungsbereiches einer @Template[emanation|distance:30]{Ausstrahlung von 30 Fuß/9 m} zum Schreckensliedtänzer befindet, muss einen @Check[will|dc:29]{Willenswurf} ablegen.</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur wird vom Effekt der Fähigkeit nicht beeinflusst und ist vorübergehend für 24 Stunden dagegen immun. Der Schreckensliedtänzer erleidet die Effekte seines Lampenfiebers.</p>\n<p><strong>Erfolg</strong> Die Kreatur erleidet den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 1}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erleidet den Zustand @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Verängstigt 2} und der Schreckensliedtänzer gilt gegenüber dieser Kreatur 1 Minute lang als @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Unentdeckt}. Die Kreatur kann nicht die Aktion Suchen nutzen, um den Schreckensliedtänzer aufzuspüren.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie beim Fehlschlag, jedoch kann die Kreatur ihren Zustand Verängstigt 1 Minute lang nicht unter den Zustandsgrad 2 senken. Zusätzlich gewinnt der Schreckensliedtänzer die Effekte seines Lampenfiebers.</p>"
+          "description": "<p>The dreadsong dancer whirls their howling songblades and cloaks themself in illusion magic. Each non-fiend creature in a @Template[emanation|distance:30] from the dreadsong dancer must attempt a @Check[will|dc:29|options:area-effect,inflicts:frightened] save.</p>\n<hr />\n<p><strong>Critical Success</strong> No effect, and the creature is temporarily immune for 24 hours. The dreadsong dancer is affected by their performance anxiety.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}, and the dreadsong dancer is @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Undetected} by the creature for 1 minute. The creature can't use Seek to find the dreadsong dancer.</p>\n<p><strong>Critical Failure</strong> As failure, but the creature can't reduce its frightened condition below 2 for 1 minute. In addition, the dreadsong dancer is affected by its performance anxiety.</p>"
         },
         "action->Rend": {
           "description": "<p>Liederklinge</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Rend]</p>"
@@ -2078,6 +2078,7 @@
       "name": "Augapfelaquarium",
       "description": "<p>Eine 10 Fuß/3 m hohe Wanne mit dicken Glaswänden, gefüllt mit grünem Schleim und faustgroßen Augäpfeln.</p>",
       "disable": "<p>@Check[thievery|dc:38|traits:action:disable-a-device]{Diebeskunst} (Meister), oder @Check[crafting|dc:34]{Handwerkskunst} (Experte), um den Schleim im Tank ätzend zu machen und so die Augäpfel zu zerstören</p>",
+      "reset": "<p>The trap can be reset by adding 100 new eyeballs to the tank and allowing them to grow in the slime for 1 week.</p>",
       "routine": "<p>(3 Aktionen) Das Aquarium nutzt jede Runde alle drei seiner Aktionen, um zufällig Augenstrahlen auf alle lebenden Kreaturen in Reichweite (ausgenommen Ixusoth) abzufeuern.</p>",
       "stealth": "<p> (Meister)</p>",
       "items": {
@@ -2086,17 +2087,20 @@
           "description": "<p><strong>Auslöser</strong> Drei oder mehr lebende Kreaturen halten sich 1 Runde lang innerhalb von 20 Fuß/6 m zur Falle auf</p>\n<hr />\n<p><strong>Effekt</strong> Die Falle würfelt ihre Initiative.</p>"
         },
         "strike-ranged->Despair Ray": {
-          "name": "Verzweiflungsstrahl"
+          "name": "Verzweiflungsstrahl",
+          "description": "<p>Target is subjected to a @UUID[Compendium.pf2e.spells-srd.Item.GaRQlC9Yw1BGKHfN]{Crushing Despair} spell (@Check[will|dc:33|options:item:magical|traits:concentrate,emotion,manipulate,mental])</p>"
         },
-        "strike-melee->Feeblemind Ray": {
-          "name": "Schwachsinnsstrahl"
+        "strike-ranged->Feeblemind Ray": {
+          "name": "Feeblemind Ray",
+          "description": "<p>Target is subjected to a @UUID[Compendium.pf2e.spells-srd.Item.5BbU1V6wGSGbrmRD]{Feeblemind} spell (@Check[will|dc:36|options:item:magical|traits:concentrate,curse,incapacitation,manipulate,mental])</p>"
         },
         "strike-ranged->Spirit Blast Ray": {
-          "name": "Mentalstrahl"
+          "name": "Mentalstrahl",
+          "description": "<p>Target is subjected to a @UUID[Compendium.pf2e.spells-srd.Item.PHVHBbdHeQRfjLmE]{Spirit Blast} spell (@Check[fortitude|basic|dc:36|options:item:magical|traits:concentrate,manipulate,spirit])</p>"
         },
         "action->Spill Eyeballs": {
           "name": "Rollende Augäpfel",
-          "description": "<p><strong>Auslöser</strong> Das Aquarium erhält den Zustand @UUID[Compendium.pf2e.conditionitems.Item.6dNUvdb1dhToNDj3]{Beschädigt}</p>\n<hr />\n<p><strong>Effekt</strong> Das Glas zerbirst und Augäpfel und Schleim ergießen sich in einem @Template[emanation|distance:15]{Radius von 15 Fuß/4,50 m} auf den Boden; dies erzeugt im Wirkungsbereich den Effekt von @UUID[Compendium.pf2e.spells-srd.Item.Wu0xFpewMKRK3HG8]{Schmieren} (SG 33). Das Aquarium ist dauerhaft zerstört und kann nicht zurückgesetzt werden.</p>\n<hr />\n<p><strong>Rücksetzer</strong> Die Falle kann zurückgesetzt werden, indem man das Aquarium mit 100 neuen Augäpfeln befüllt und diese 1 Woche im Schleim wachsen lässt.</p>"
+          "description": "<p><strong>Trigger</strong> The tank reaches its Broken Threshold</p>\n<hr />\n<p><strong>Effect</strong> The glass shatters, spilling eyeballs onto the floor in a @Template[emanation|distance:15]{15-foot radius} and casting @UUID[Compendium.pf2e.spells-srd.Item.Wu0xFpewMKRK3HG8]{Grease} (@Check[reflex|dc:33|options:item:magical|traits:concentrate,manipulate]) on the affected area. The eyeball tank is permanently destroyed and can't be reset.</p>"
         }
       }
     },
@@ -3543,10 +3547,12 @@
           "description": "<Compendium>"
         },
         "strike-melee->Dagger": {
-          "name": "Dolch"
+          "name": "Dolch",
+          "description": "<p>Plus @UUID[Compendium.pf2e.spells-srd.Item.3x6eUCm17n6ROzUa]{Crisis of Faith}</p>"
         },
         "strike-ranged->Dagger": {
-          "name": "Dolch"
+          "name": "Dolch",
+          "description": "<p>Plus @UUID[Compendium.pf2e.spells-srd.Item.3x6eUCm17n6ROzUa]{Crisis of Faith}</p>"
         },
         "action->Call Toxins": {
           "name": "Vergiftende Aura",
@@ -4147,7 +4153,7 @@
         },
         "action->Supersonic Hearing": {
           "name": "Überschallgehör",
-          "description": "<p>Nach vielen Jahren in direkter Nähe ihrer @UUID[Compendium.pf2e.equipment-srd.Item.k9BYXA4b7Z4Hy6lZ]{Ohrenbetäubenden Spieluhr} ist Mobana gegen ihre Effekt mittlerweile immun. Sie erhält einen Situationsbonus von +2 auf Rettungswürfe gegen Schalleffekte und Effekte, die den Zustand Taub verursachen.</p>"
+          "description": "<p>Mobana has spent years in close proximity to the @UUID[Compendium.pf2e.equipment-srd.Item.k9BYXA4b7Z4Hy6lZ]{Deafening Music Box} in her possession and is immune to its effects. She also gains a +2 circumstance bonus against sonic effects and effects that impose the @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} condition.</p>"
         },
         "action->Swift Sneak": {
           "name": "Schnelles Schleichen",
@@ -4496,11 +4502,11 @@
         "spell->Dispel Magic (At Will)": {
           "name": "<Compendium> (beliebig oft)"
         },
-        "spell->Mask of Terror (Constant) (See Tainted Backlash)": {
-          "name": "<Compendium> (ständig; siehe Magische Versagensängste)"
-        },
         "spell->Mind Blank": {
           "name": "<Compendium>"
+        },
+        "spell->Mask of Terror (Constant) (See Tainted Backlash)": {
+          "name": "<Compendium> (ständig; siehe Magische Versagensängste)"
         },
         "spell->Fear (At Will)": {
           "name": "<Compendium> (beliebig oft)"
@@ -5572,15 +5578,10 @@
         },
         "action->Exorcism": {
           "name": "Exorzismus",
-          "description": "<p>Mentaler Schaden ignoriert die Härte des Belagerungssplitters. Zudem wird der Belagerungssplitter wieder in gewöhnlichen Stein zurückverwandelt, wenn es jemandem gelingt, den Splitter mithilfe der Aktivität @UUID[Compendium.pf2e.actionspf2e.Item.Ma93dpT4K7JbP9gu]{Friedensbeweis} davon zu überzeugen, dass der Konflikt seines Ursprunges beendet wurde.</p>"
+          "description": "<p>Mental damage ignores a siege shard's hardness.</p>\n<p>Additionally, proving the siege shard's generative conflict is over with the @UUID[Compendium.pf2e.adventure-specific-actions.Item.QW2gYIKce3W31xXf]{Prove Peace} activity reverts the creature to ordinary stone.</p>"
         },
         "action->Hardness 5": {
-          "name": "Härte 5",
-          "rules": {
-            "0": {
-              "label": "Beschädigt"
-            }
-          }
+          "name": "Härte 5"
         },
         "action->Surreptitious Siege": {
           "name": "Verstohlene Belagerung",
@@ -5592,7 +5593,7 @@
         },
         "action->Rejuvenation": {
           "name": "Wiederkehr",
-          "description": "<p>Wird ein Belagerungssplitter innerhalb einer Reichweite von 100 Fuß/30 m zu einem Bauwerk oder einer ähnlichen Konstruktion zerstört, formt sich dieser innerhalb von [[/br 2d4 #Tage]]{2W4 Tagen} in der nächstgelegenen Struktur neu und ist dabei vollständig geheilt. Ein Belagerungssplitter in einer Struktur kann durch die Aktivität @UUID[Compendium.pf2e.adventure-specific-actions.Item.QW2gYIKce3W31xXf]{Friedensbeweis} dauerhaft zerstört werden.</p>"
+          "description": "<p>When a siege shard is destroyed within 100 feet of a structure, it reforms after [[/gmr 2d4 #days]] days within the nearest structure, fully healed.</p>\n<p>A siege shard within a structure can permanently destroyed by the @UUID[Compendium.pf2e.adventure-specific-actions.Item.QW2gYIKce3W31xXf]{Prove Peace} activity.</p>"
         }
       }
     },
@@ -6739,8 +6740,9 @@
         "weapon->Modified Spiked Chain": {
           "name": "Modifizierte Stachelkette"
         },
-        "equipment->Key to the Skinsaw Sanctum Vault": {
-          "name": "Schlüssel zur Schatzkammer im Heiligtum des Häuters"
+        "equipment->Key": {
+          "name": "Key",
+          "gmNote": "<p>Wrent's key to the Skinsaw sanctum vault.</p>"
         },
         "strike-melee->Cleaver": {
           "name": "Fleischerbeil"

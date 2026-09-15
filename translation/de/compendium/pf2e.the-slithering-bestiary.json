@@ -294,7 +294,7 @@
         },
         "action->Impose Paralysis": {
           "name": "Lähmung verursachen",
-          "description": "<p><strong>Auslöser</strong> Fluchbrecher trifft eine @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamte} Kreatur</p>\n<hr />\n<p><strong>Effekt</strong> Die Kreatur muss einen @Check[fortitude|dc:27]{Zähigkeitswurf} ablegen; bei Misslingen erhält sie für 1 Runde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Gelähmt}.</p>"
+          "description": "<p><strong>Trigger</strong> Cursebreaker hits a @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed} creature</p>\n<hr />\n<p><strong>Effect</strong> The creature must succeed at a @Check[fortitude|dc:27|options:inflicts:paralyzed] save or become @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} for 1 round.</p>"
         },
         "action->Inexorable March": {
           "name": "Unaufhaltsamer Marsch",
@@ -302,7 +302,7 @@
         },
         "action->Slowing Pulse": {
           "name": "Verlangsamender Impuls",
-          "description": "<p>Jede Kreatur in einer @Template[emanation|distance:10]{10 Fuß/3-m-Ausstrahlung} muss einen @Check[fortitude|dc:27]{Zähigkeitswurf} ablegen; bei einem Fehlschlag erhält sie für 1 Minute den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}. Fluchbrecher kann diese Fähigkeit nach [[/gmr 1d4 #Runden]]{1W4 Runden} erneut einsetzen.</p>"
+          "description": "<p>Each creature in a @Template[emanation|distance:10] must succeed at a @Check[fortitude|dc:27|traits:incapacitation|options:inflicts:slowed] save or be @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 minute.</p>\n<p>Cursebreaker can't use Slowing Pulse again for [[/gmr 1d4 #Recharge Slowing Pulse]]{1d4 rounds}.</p>"
         },
         "action->Undo Curse": {
           "name": "Fluch brechen",
@@ -322,7 +322,7 @@
       "items": {
         "action->Forceful Blast": {
           "name": "Energieexplosion",
-          "description": "<p><strong>Auslöser</strong> Die Tür wird berührt, ohne zuvor die richtige Sequenz der Schalter im Rahmen zu betätigen</p>\n<hr />\n<p><strong>Effekt</strong> Ein Energiestoß bricht aus der Tür hervor und fügt allen Kreaturen innerhalb von @Template[emanation|distance:20]{20 Fuß/6 m} @Damage[4d10[force]]{4W10 Punkte Kraftschaden} zu (@Check[fortitude|dc:25]{Zähigkeitswurf}; Scheusale behandeln ihre Ergebnisse als einen Schritt schlechter).</p>\n<p><strong>Kritischer Erfolg</strong> Die Kreatur ist nicht betroffen.</p>\n<p><strong>Erfolg</strong> Die Kreatur erleidet halben Schaden.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält vollen Schaden und den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1}.</p>\n<p><strong>Kritischer Fehlschlag</strong> Die Kreatur erhält doppelten Schaden und den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 2}; während sie den Zustand Kränkelnd besitzt, erhält sie zudem den Zustand @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Verlangsamt 1}.</p>"
+          "description": "<p><strong>Trigger</strong> The door is touched without first pressing the correct sequence of buttons</p>\n<hr />\n<p><strong>Effect</strong> A blast of energy ripples outward from the door, dealing @Damage[4d10[force]|options:area-damage] damage to all creatures within @Template[emanation|distance:20]{20 feet} and forcing them to make a @Check[fortitude|dc:25|options:area-effect,damaging-effect,inflicts:sickened,inflicts:slowed] save.</p>\n<p>Fiends treat the result of their saving throw as one degree worse.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes half damage.</p>\n<p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}.</p>\n<p><strong>Critical Failure</strong> The creature takes double damage and is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}; while it is sickened, it's also @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1}.</p>"
         }
       }
     },
@@ -343,7 +343,7 @@
         },
         "action->Smoldering Haze": {
           "name": "Schweldunst",
-          "description": "<p>15 Fuß/4,50 m. Der Rauchschlick sondert ständig entflammbaren Rauch ab, der um ihn herum @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Verborgenheit}erzeugt. Der Rauch beeinträchtigt nicht das chemische Gespür des Rauchschlicks. Eine Kreatur, die diese Aura betritt oder ihre Runde in der Aura beginnt, erleidet den Zustand @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Kränkelnd 1} (keine Wirkung bei einem @Check[fortitude|dc:25]{Zähigkeitswurf}) und kann sich 1 Runde lang nicht vom Anhaltenden Feuerschaden erholen. Die Kreatur ist darauf 1 Minute lang temporär immun gegen den Kränkelnd machenden Effekt des Schweldunstes. Eine Kreatur, die zeitweise die Luft anhält, nicht atmen muss oder gegen Gift immun ist, ist gegen den Kränkelnd-Effekt der Aura immun. Allerdings ist sie nicht immun gegen die Tarnung oder die Unfähigkeit, sich vom Anhaltenden Feuerschaden zu erholen.</p>"
+          "description": "<p>15 feet. The fuming sludge constantly emits incendiary smoke that creates @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealment} around it. The smoke doesn't impair the fuming sludge's chemical sense. A creature that enters the aura or begins its turn in the aura becomes @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (@Check[fortitude|dc:25|options:inflicts:sickened] negates) and cannot recover from persistent fire damage for 1 round. It is then temporarily immune to the sickening effect of the smoldering haze for 1 minute.</p>\n<p>A creature that is currently holding its breath, that doesn't need to breathe, or that's immune to poison is immune to the aura's sickened effect but not the concealment or inability to recover from persistent fire damage.</p>"
         },
         "action->Constrict": {
           "description": "<p>@Damage[(1d8+6)[bludgeoning],1d8[persistent,fire]]{1W8+6 Wuchtschaden plus 1W8 Anhaltender Feuerschaden}, @Check[fortitude|dc:24|basic]{einfacher Zähigkeitswurf}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
@@ -367,9 +367,6 @@
         "spellcastingEntry->Divine Prepared Spells": {
           "name": "Vorbereitete Göttliche Zauber"
         },
-        "spellcastingEntry->Divine Rituals": {
-          "name": "Rituale"
-        },
         "spellcastingEntry->Cleric Domain Spells": {
           "name": "Klerikerdomänenzauber"
         },
@@ -388,8 +385,9 @@
         "spell->Ray of Enfeeblement": {
           "name": "<Compendium>"
         },
-        "equipment->Key to Cursebreaker's Lock": {
-          "name": "Schlüssel für Fluchbrechers Schloss"
+        "equipment->Key": {
+          "name": "Key",
+          "gmNote": "<p>Nyamat's key to Cursebreaker's lock.</p>"
         },
         "equipment->Silver Religious Symbol of Angazhan": {
           "name": "Silbernes religiöses Symbol des Angazhan",
@@ -483,7 +481,7 @@
         },
         "action->Feign Harmlessness": {
           "name": "Harmlosigkeit vortäuschen",
-          "description": "<p>Paga kauert sich wimmernd vor eine Kreatur innerhalb von 10 Fuß/3 m. Das Ziel muss einen @Check[will|dc:28]{Willenswurf} ablegen und ist danach für 1 Stunde vorübergehend gegen diese Fähigkeit immun.</p>\n<p><strong>Kritischer Erfolg</strong> Keine Wirkung.</p>\n<p><strong>Erfolg</strong> Die Kreatur erhält bis zum Ende ihres nächsten Zuges gegenüber Paga den Zustand @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fasziniert}.</p>\n<p><strong>Fehlschlag</strong> Die Kreatur erhält bis zum Ende ihres nächsten Zuges gegenüber Paga den Zustand Fasziniert und kann solange gegen sie keine feindseligen Handlungen ausführen.</p>\n<p><strong>Kritischer Fehlschlag</strong> Wie beim Fehlschlag, die Kreatur wird aber nicht vorübergehend gegen Harmlosigkeit vortäuschen immun.</p>"
+          "description": "<p>Paga cringes and cowers before a creature within 10 feet that can see her. The target must attempt a @Check[will|dc:28|options:inflicts:fascinated] save.</p>\n<p>The target is then temporarily immune for 1 hour.</p>\n<hr />\n<p><strong>Critical Success</strong> No effect.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fascinated} by Paga until the end of its next turn.</p>\n<p><strong>Failure</strong> The creature is fascinated by Paga and can't use hostile actions against her until the end of its next turn.</p>\n<p><strong>Critical Failure</strong> As failure, and the creature isn't temporarily immune to Feign Harmlessness.</p>"
         },
         "action->Unbreakable Concentration": {
           "name": "Starke Konzentration",
