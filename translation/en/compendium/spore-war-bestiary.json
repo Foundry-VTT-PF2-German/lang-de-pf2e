@@ -732,7 +732,7 @@
       "description": "<p>The passage closes around intruders. Cavities open in its soft wood and try to envelope anything within it.</p>",
       "disable": "<p>@Check[thievery|dc:50] (legendary) three times to scrape away @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden} sensors on the floor and walls, or @Check[nature|dc:55] (legendary) to call upon lingering elements of primal energy in the Witchbole to render the trap inert</p>",
       "reset": "<p>The trap deactivates as soon as a round begins with no living targets in area <strong>E4</strong>, and then resets at the start of the following round.</p>",
-      "routine": "<p>(2 actions) The trap's first action on its turn is to heave and jolt, causing the entire length of area <strong>E4</strong> to become difficult terrain until the start of the gorging passage's next turn. It then grinds at those within while simultaneously exuding acid from its walls. All creatures in area <strong>E4</strong> take @Damage[4d10[bludgeoning]] damage and @Damage[8d6[acid]] damage (@Check[reflex|dc:45|basic] save).</p>",
+      "routine": "<p>(2 actions) The trap's first action on its turn is to heave and jolt, causing the entire length of area <strong>E4</strong> to become difficult terrain until the start of the gorging passage's next turn. It then grinds at those within while simultaneously exuding acid from its walls. All creatures in area <strong>E4</strong> take @Damage[4d10[bludgeoning],8d6[acid]|options:area-damage] damage (@Check[reflex|dc:45|basic|options:area-effect] save).</p>",
       "stealth": "<p>(legendary) to notice that the wall undulates</p>",
       "items": {
         "action->Convulsive Gulp": {
@@ -2541,7 +2541,7 @@
         },
         "action->Resurrection Vulnerability": {
           "name": "Resurrection Vulnerability",
-          "description": "<p>A creature with a prepared or spontaneous spell that can restore the dead to life (such as @UUID[Compendium.pf2e.spells-srd.Item.Hnc7eGi7vyZenAIm]{Breath of Life} or @UUID[Compendium.pf2e.spells-srd.Item.IkGYwHRLhkuoGReG]{Raise Dead}) can expend an appropriate spell slot as a 2-action activity to destroy an unrisen within 30 feet. The attempt fails if the unrisen succeeds at a Will save against the creature's spell DC.</p>"
+          "description": "<p>A creature with a prepared or spontaneous spell that can restore the dead to life (such as @UUID[Compendium.pf2e.spells-srd.Item.Hnc7eGi7vyZenAIm]{Breath of Life} or @UUID[Compendium.pf2e.spells-srd.Item.IkGYwHRLhkuoGReG]{Raise Dead}) can expend an appropriate spell slot as a 2-action activity to destroy an unrisen within 30 feet. The attempt fails if the unrisen succeeds at a @Check[will] save against the creature's spell DC.</p>"
         },
         "action->Rise Again": {
           "name": "Rise Again",
@@ -2553,11 +2553,11 @@
         },
         "action->Awful Approach": {
           "name": "Awful Approach",
-          "description": "<p>The unrisen reshapes its grotesque form to move swiftly. It Strides twice. Any living creature that can see the unrisen during this movement must succeed at a @Check[fortitude|dc:37] save or be @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure). This is a mental and visual effect. The unrisen can't use Awful Approach again for [[/gmr 1d4 #Recharge Awful Approach]]{1d4 rounds}.</p>"
+          "description": "<p>The unrisen reshapes its grotesque form to move swiftly. It Strides twice. Any living creature that can see the unrisen during this movement must succeed at a @Check[fortitude|dc:37|options:area-effect,inflicts:sickened|traits:mental,visual] save or be @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2} on a critical failure). This is a mental and visual effect. The unrisen can't use Awful Approach again for [[/gmr 1d4 #Recharge Awful Approach]]{1d4 rounds}.</p>"
         },
         "action->Death Grip": {
           "name": "Death Grip",
-          "description": "<p><strong>Requirements</strong> The unrisen has a living creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}</p>\n<hr />\n<p><strong>Effect</strong> The unrisen attempts to destroy its victim's life force to share the unrisen's fate. The creature must succeed at a @Check[fortitude|dc:40] save or become @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 1}. While the curse lasts, the creature regains only half as many HP from vitality healing effects; if it dies, any attempt to raise it from the dead causes it to return as an unrisen. The curse ends automatically if the creature's doomed value is reduced to 0.</p>"
+          "description": "<p><strong>Requirements</strong> The unrisen has a living creature @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}</p>\n<hr />\n<p><strong>Effect</strong> The unrisen attempts to destroy its victim's life force to share the unrisen's fate. The creature must succeed at a @Check[fortitude|dc:40|options:inflicts:doomed] save or become @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 1}. While the curse lasts, the creature regains only half as many HP from vitality healing effects; if it dies, any attempt to raise it from the dead causes it to return as an unrisen. The curse ends automatically if the creature's doomed value is reduced to 0.</p>"
         },
         "action->Poisonous Breath": {
           "name": "Poisonous Breath",
