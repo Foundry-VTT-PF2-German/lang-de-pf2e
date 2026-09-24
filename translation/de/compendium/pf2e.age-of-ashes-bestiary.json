@@ -220,8 +220,9 @@
         "equipment->Manacles (Good) (Marked with the Symbol of the Scarlet Triad)": {
           "name": "Gute Handschellen (mit dem Symbol der Blutroten Triade)"
         },
-        "equipment->Keys to Each Dormitory Door and Slave Manacles": {
-          "name": "Schlüssel zu den Schlafräumen und Handschellen"
+        "equipment->Keys": {
+          "name": "Schlüssel",
+          "gmNote": "<p>Baruschaks Schlüssel zu den Schlafräumen und Handschellen.</p>"
         },
         "strike-melee->Morningstar": {
           "name": "Morgenstern"
@@ -717,8 +718,9 @@
     "Corrupt Guard": {
       "name": "Korrupte Wache",
       "items": {
-        "equipment->Key to Chiselrock's Prison": {
-          "name": "Schlüssel zu Steinmeißels Gefängnis"
+        "equipment->Key": {
+          "name": "Schlüssel",
+          "gmNote": "<p>Schlüssel zu Steinmeißels Gefängnis.</p>"
         },
         "strike-melee->Maul": {
           "name": "Schlägel"
@@ -900,7 +902,7 @@
       "disable": "<p>@Check[deception|dc:45] (Legende), um sich als Erveniss auszugeben und um Vergebung zu bitten; @Check[diplomacy|dc:45] (Legende), um Damurdiel zur Aufgabe zu überreden (Elfen können diesen Wurf auch ablegen, wenn sie nur den Kompetenzgrad Meister in Diplomatie besitzen); oder @Check[religion|dc:40] (Legende), um Calistria zu bitten, Damurdiels Geist zu besänftigen.</p>",
       "reset": "<p>Damurdiels Geist löst sich auf, wenn sie zerstört wird oder eine Kreatur auf 0 TP reduziert wird, kehrt aber nach 1 Minute zurück.</p>",
       "routine": "<p> (3 Aktionen) Die Spukerscheinung greift mit dem Dolch an.</p>",
-      "stealth": "<p>(Legende) oder SG 47, um zu bemerken, dass der Dolch im Becken sich von allein bewegt</p>",
+      "stealth": "<p>(Legende) oder @Check[perception|dc:47]{Wahrnehmung}, um zu bemerken, dass der Dolch im Becken sich von allein bewegt</p>",
       "items": {
         "action->Surprise Strike": {
           "name": "Überraschungsangriff",
@@ -950,8 +952,9 @@
       "name": "Dmiri Yoltoscha",
       "blurb": "Hobgoblinwaldläuferin 4",
       "items": {
-        "equipment->Key to Chest": {
-          "name": "Truhenschlüssel"
+        "equipment->Key": {
+          "name": "Schlüssel",
+          "gmNote": "<p>Dmiris Schlüssel zur Truhe im Bereich <strong>C4</strong>.</p>"
         },
         "strike-melee->Rapier": {
           "name": "Rapier"
@@ -1232,14 +1235,18 @@
           "name": "Unsichtbarkeit (nur selbst)",
           "target": "nur selbst"
         },
-        "equipment->Key to the Temple of All Gods": {
-          "name": "Schlüssel zum Pantheon"
+        "equipment->Key": {
+          "name": "Schlüssel",
+          "gmNote": "<p>Schlüssel zum Pantheon</p>"
         },
         "strike-melee->Hatchet": {
           "name": "Kriegsbeil"
         },
         "strike-ranged->Composite Longbow": {
           "name": "Kompositlangbogen"
+        },
+        "action->+2 Status to All Saves vs. Magic": {
+          "name": "+2 Zustandsbonus auf alle RW gg. Magie"
         },
         "action->Improved Evasion": {
           "name": "Verbessertes Entrinnen",
@@ -2613,8 +2620,9 @@
           "name": "Ring der Feuerresistenz",
           "description": "<Compendium>"
         },
-        "equipment->Key Ring (Opens Locks in Summershade Quarry)": {
-          "name": "Schlüsselbund (für Schlösser im Schattenahornsteinbruch)"
+        "equipment->Key Ring": {
+          "name": "Schlüsselring",
+          "gmNote": "<p>Laslunns Schlüsselring für die Schlösser im Schattenahornsteinbruch.</p>"
         },
         "strike-melee->Scimitar": {
           "name": "Krummsäbel"
@@ -2805,7 +2813,7 @@
       "items": {
         "action->Radiant Explosion": {
           "name": "Lichtexplosion",
-          "description": "<p><strong>Auslöser</strong> Eine Kreatur berührt die Tür</p>\n<p><strong>Effekt</strong> Helles Licht versengt alle Kreaturen innerhalb von 20 Fuß/6 m zur Tür; die Kreaturen erleiden jeweils @Damage[20d6[fire]]{20W6 Punkte Feuerschaden} (@Check[reflex|dc:40|basic]{einfacher Reflexwurf}). Eine Kreatur, deren Rettungswurf misslingt, erhält für 1 Stunde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind} (bzw. dauerhaft im Fall eines Kritischen Fehlschlages).</p>"
+          "description": "<p><strong>Auslöser</strong> Eine Kreatur berührt die Tür</p>\n<hr />\n<p><strong>Effekt</strong> Helles Licht versengt alle Kreaturen innerhalb von 20 Fuß/6 m zur Tür; die Kreaturen erleiden jeweils @Damage[20d6[fire]|options:area-damage]{20W6 Punkte Feuerschaden} (@Check[reflex|dc:40|basic|options:area-effect,inflicts:blinded]{einfacher Reflexwurf}). Eine Kreatur, deren Rettungswurf misslingt, erhält für 1 Stunde den Zustand @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blind} (bzw. dauerhaft im Fall eines Kritischen Fehlschlages).</p>"
         }
       }
     },
@@ -3534,6 +3542,9 @@
         "spellcastingEntry->Spontaneous Divine Spells": {
           "name": "Spontane Göttliche Zauber"
         },
+        "spellcastingEntry->Bloodline Spells": {
+          "name": "Blutlinienzauber"
+        },
         "spell->Weapon of Judgment": {
           "requirements": "Du hast eine Schutzgottheit"
         },
@@ -3600,6 +3611,10 @@
         },
         "spell->Protection": {
           "target": "1 Kreatur"
+        },
+        "equipment->Circlet of Persuasion": {
+          "name": "Überzeugungsstirnreif",
+          "description": "<p>Häufig ähnelt dieses elegante silberne Band sich kräuselnden Feigenblättern und passt um deine Stirn. Du erhältst einen Gegenstandsbonus von +2 auf Fertigkeitswürfe für Diplomatie und Täuschung. Wenn du in dem Stirnreif Resonanz aufbaust, erhöht dies deinen Charismawert entweder um +2 oder auf 18, je nachdem was davon dir den höheren Wert verleihen würde.</p>\n<hr />\n<p><strong>Aktivierung</strong> <span class=\"action-glyph\">2</span> Vorstellung</p>\n<p><strong>Häufigkeit</strong> Einmal pro Stunde</p>\n<p><strong>Effekt</strong> Du wirkst @UUID[Compendium.pf2e.spells-srd.Item.vLA0q0WOK2YPuJs6]{Kreatur bezaubern} auf Grad 4 (@Check[will|dc:38]{Willenswurf}).</p>"
         },
         "strike-melee->Elven Curve Blade": {
           "name": "Elfisches Krummschwert"
@@ -3889,13 +3904,6 @@
       "name": "Giftmischer der Blutroten Triade",
       "saveDetails": "Zustandsbonus+1 auf alle RW gg. Gift",
       "items": {
-        "equipment->Alchemist's Lab (Expanded)": {
-          "rules": {
-            "0": {
-              "label": "Erweiterte Alchemistenausrüstung"
-            }
-          }
-        },
         "equipment->Manacles (Good) (Marked with the Symbol of the Scarlet Triad)": {
           "name": "gute Handschellen (mit dem Symbol der Blutroten Triade)"
         },
@@ -4976,7 +4984,7 @@
         },
         "action->Eerie Flexibility": {
           "name": "Unheimliche Beweglichkeit",
-          "description": "<p>Trotz seiner Größe kann Xevalorg sich dank seiner vielen Gelenke durch enge Bereiche zwängen wie eine Mittelgroße Kreatur und sich dabei mit seiner vollen Bewegungsrate fortbewegen.</p>"
+          "description": "<p>Trotz seiner Größe kann Xevalorg sich dank seiner vielen Gelenke durch enge Bereiche @UUID[Compendium.pf2e.actionspf2e.Item.kMcV8e5EZUxa6evt]{Hindurchzwängen} wie eine Mittelgroße Kreatur und sich dabei mit seiner vollen Bewegungsrate fortbewegen.</p>"
         },
         "action->Furious Claws": {
           "name": "Zorniger Klauenangriff",
@@ -5043,6 +5051,7 @@
     },
     "Xotanispawn": {
       "name": "Xotanibrut",
+      "publicNotes": "<p>Xotanibruten sind das monströse Ergebnis, wenn eine Aaskäferlarve durch das Fressen an den Überresten von Xotani-dessen-Blut-brennt – einer Brut Rovagugs, die unter dem Bleichen Berg in Katapesch begraben liegt – korrumpiert und mutiert. Diese Kreatur erinnert vage an den winzigen Käfer, der sie einst war: der Kopf, die Chitinplatten des Körpers und die sechs Beine sind verhärtet und dunkelgefärbt und unzählige Rückenstacheln grenzen die Gelenke und einzelnen Körpersegmente voneinander ab. Durch das Verzehren der unheiligen Überreste Xotanis, manifestieren die Bruten etliche Eigenschaften des berüchtigten Xotani – am offensichtlichsten ihre glühende Hitze im Inneren und ihre mächtigen Feuerangriffe, ganz zu schweigen ihrer monströsen Größe.</p>\n<p>Die innere Temperatur strahlt von jeder Oberfläche der Xotanibrut ab, selbst aus ihrem Maul. Jeglicher Kontakt führt zu Verbrennungen und dem Risiko in Brand zu geraten. Glücklicherweise haben die Bruten auch Xotanis Schwäche für Kälte und Sonnenlicht geerbt. Sie sind nur selten sie bei Tag an der Oberfläche anzutreffen und bevorzugen es, ihre unterirdischen Bauten nur nachts zu verlassen.</p>",
       "items": {
         "strike-melee->Jaws": {
           "name": "Biss"
@@ -5066,11 +5075,11 @@
         },
         "action->Breath Weapon": {
           "name": "Odemwaffe",
-          "description": "<p>Die Xotanibrut speit Magma in einem @Template[cone|distance:60]{Kegel von 60 Fuß/18 m} aus, das jeder Kreatur im Wirkungsbereich @Damage[10d10[fire],2d6[persistent,fire]|options:area-damage]{10W10 Punkte Feuerschaden und 2W6 Punkte Anhaltenden Feuerschaden} zufügt (@Check[reflex|dc:39|basic|options:area-effect]{einfacher Reflexwurf}). Die Xotanibrut kann danach ihre Odemwaffe [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.</p>"
+          "description": "<p>Die Xotanibrut speit Magma in einem @Template[cone|distance:60]{Kegel von 60 Fuß/18 m} aus, das jeder Kreatur im Wirkungsbereich @Damage[10d10[fire],2d6[persistent,fire]|options:area-damage]{10W10 Feuerschaden und 2W6 Anhaltenden Feuerschaden} zufügt (@Check[reflex|dc:39|basic|options:area-effect]{einfacher Reflexwurf}). Die Xotanibrut kann danach ihre Odemwaffe [[/gmr 1d4 #Runden]]{1W4 Runden} lang nicht erneut einsetzen.</p>"
         },
         "action->Heat Surge": {
           "name": "Aufheizen",
-          "description": "<p>Wenn die Xotanibrut einen Kritischen Treffer erzielt, heizt sich ihr Körper auf. Bis zum Beginn ihres nächsten Zuges erhöht sich der Schaden von Innere Glut auf @Damage[10d8[persistent,fire]]{10W8 Punkte Anhaltenden Feuerschaden}.</p>"
+          "description": "<p>Wenn die Xotanibrut einen Kritischen Treffer erzielt, heizt sich ihr Körper auf. Bis zum Beginn ihres nächsten Zuges erhöht sich der Schaden von Innere Glut auf 10W8 Anhaltenden Feuerschaden.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.eRxSdMi6Y2XTQWql]{Effekt: Aufheizen}</p>"
         }
       }
     },
