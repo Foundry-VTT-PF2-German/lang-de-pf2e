@@ -6,7 +6,7 @@
       "description": "<p>Fünf verborgene Düsen in der Wohnungsdecke speien dichte, säurehaltige Giftwolken aus; das Gift kommt aus einem hinter der Wand versteckten, verstärkten Tank.</p>",
       "disable": "<p>@Check[thievery|dc:35|traits:action:disable-a-device]{Diebeskunst} (Experte), um eine Düse zu verstopfen, oder @Check[thievery|dc:40|traits:action:disable-a-device]{Diebeskunst} (Meister), um den Tank zu schließen. Die Falle deaktiviert sich nach 5 Runden, sowie der Tank leer ist.</p>",
       "hpDetails": "zum Zerstören einer Düse; <strong>Tank-Härte</strong> 20; <strong>Tank-TP</strong> 100 (BW 50), um dem Tank genug Schaden zuzufügen, dass er kein Gas mehr ausstößt",
-      "routine": "<p> (1 Aktion) Wird die Falle ausgelöst, verfügt sie über fünf aktive Düsen. Am Ende ihres Zuges deaktiviert sich eine zufällig bestimmte Düse. Ist die Falle am Zug, stoßen die aktiven Düsen eine säurehaltige Giftwolke aus, welche langsam die Wohnung füllt. Die Wolke verursacht bei jeder Kreatur und jedem Gegenstand im Raum @Damage[1d6[acid],1d6[poison]]{1W6 Punkte Säureschaden und 1W6 Punkte Giftschaden} pro aktiver Düse (@Check[fortitude|dc:33|basic|traits:poison]{Zähigkeitswurf}). Nicht am Leib oder in Händen getragene Gegenstände scheitern automatisch bei diesem Rettungswurf gegen den Schaden.</p>",
+      "routine": "<p>(1 action) When it's triggered, the trap has five active nozzles, but at the end of its turn each round, one random nozzle deactivates. On the trap's turn, the active nozzles emit a cloud of acidic poison gas that expands to fill the apartment. The cloud deals @Damage[1d6[acid],1d6[poison]|options:area-damage] damage per active nozzle to each creature and object in the room (@Check[fortitude|dc:33|basic|name:Spew Cloud|options:area-effect|traits:poison] save). Unattended objects automatically fail saves to avoid the damage.</p>",
       "stealth": "<p>(Meister)</p>",
       "items": {
         "action->Spew Cloud": {
@@ -1006,7 +1006,8 @@
         },
         "action->Rage": {
           "name": "Kampfrausch",
-          "description": "<p><strong>Anforderungen</strong> Bolar ist nicht bereits im Kampfrausch und besitzt auch nicht den Zustand Erschöpft</p>\n<hr />\n<p><strong>Effekt</strong> Bolar erlangt bis zum Ende seines Kampfrausches 3 Temporäre Trefferpunkte. Im Kampfrausch verursachen seine Nahkampfangriffe +2 Schadenspunkte und er erhält einen Malus von -1 auf seine RK. Der Kampfrausch währt 1 Minute lang, sofern Bolar nicht vorher den Zustand Bewusstlos erhält oder er vor Ablauf dieser Zeit keine Gegner mehr wahrnimmt. Nach Ende des Kampfrausches muss Bolar wenigstens 1 Minute lang warten, ehe er wieder in derartige Wut verfallen kann.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.z3uyCMBddrPK5umr]{Effekt: Kampfrausch}</p>"
+          "description": "<p><strong>Requirements</strong> Bolar isn't @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued} or raging</p>\n<hr />\n<p><strong>Effect</strong> Bolar gains 3 temporary Hit Points that last until the rage ends. While raging, he deals 2 additional damage with melee attacks and takes a -1 penalty to AC. The rage lasts for 1 minute, until there are no enemies Bolar can perceive, or until Bolar falls @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}.</p>\n<p>Once the rage ends, Bolar can't Rage again for 1 minute.</p>",
+          "selfEffect": "Effect: Rage"
         }
       }
     },
