@@ -945,6 +945,7 @@
         "ElementalInstinct": "Schaden, den Angriffe und Fähigkeiten elementarer Kreaturen deines gewählten Elements verursachen",
         "EnemyStrikes": "Gegnerische Angriffe",
         "FallDamage": "Fallschaden",
+        "FatiguedFromStarvationOrThirst": "Erschöpft (von den Folgen des Verhungerns oder Verdurstens)",
         "GasInhaled": "gases and other inhaled effects",
         "HarvestBlood": "Schaden vom letzten mit Blut lecken angezielten Ziel erhalten",
         "HolyBludgeoningPiercingSlashing": "Heiliger Hieb-, Stich- und Wuchtschaden",
@@ -980,6 +981,7 @@
         "Thirst": "thirst",
         "Treerazer": "Baumschnitter",
         "UnholyBludgeoningPiercingSlashing": "Unheiliger Hieb-, Stich- und Wuchtschaden",
+        "UnholyCreaturesEffects": "Schaden von Unheiligen Kreaturen und Effekten",
         "VoidZonKuthonFollowers": "Leereneffekte von Anhängern von Zon-Kuthon",
         "WispVulnerabilities": "Irrlicht Schwächen"
       }
@@ -2421,6 +2423,13 @@
         }
       },
       "Nindoru": {
+        "Kagekuma": {
+          "Bundle": {
+            "Label": "Bündel",
+            "ManifestLabel": "Manifestieren",
+            "ShedLabel": "Demanifestiert"
+          }
+        },
         "Meokdan": {
           "BoneClub": {
             "Label": "Knochenkeule manifestieren",
@@ -3751,6 +3760,14 @@
       }
     },
     "RULES": {
+      "BaseSpeed": {
+        "FIELDS": {
+          "force": {
+            "hint": "Whether this speed overrides others instead of only applying if higher: allows lower values, including 0.",
+            "label": "Force"
+          }
+        }
+      },
       "Common": {
         "FIELDS": {
           "key": {
@@ -4719,7 +4736,7 @@
         "Muscles": "Muscles",
         "Prompt": "Select a body part.",
         "Torso": "Oberkörper",
-        "Wrists": "Wrists"
+        "Wrists": "Handgelenke"
       },
       "BonusLabel": {
         "NegativeOne": "-1",
@@ -4891,6 +4908,9 @@
       "Centaur": {
         "MentorOfLegends": {
           "Description": "Der Zauber verleiht neben seinen üblichen Effekten Temporäre Trefferpunkte in Höhe deiner Stufe. Du kannst diesen Zauber nicht auf dich selbst wirken."
+        },
+        "StarshotArrow": {
+          "Note": "Trifft der Pfeil sein Ziel, erhält es einen Situationsmalus von -10 Fuß/3 m auf alle Bewegungsraten für [[/r 2d4 #Runden]]{2W4 Runden} (bzw. den Zustand Bewegungsunfähig im Falle eines Kritischen Treffers. Das Ziel kann eine Aktion der Kategorie Interagieren aufwenden, um sich zu befreien. @UUID[Compendium.pf2e.feat-effects.Item.DlCxZAOFmppft3Lh]{Effekt: Sternenschnuppenpfeil}"
         }
       },
       "Champion": {
@@ -5105,7 +5125,7 @@
         "MediumArmorExpertise": {
           "GeneralDescription": "Du kannst dich besser gegen Angriffe verteidigen. Dein Kompetenzgrad im Umgang mit Leichten Rüstungen, Mittelschweren Rüstungen und in Ungerüsteter Verteidigung steigt auf Experte.",
           "inventor": {
-            "Description": "If you have a medium or heavy armor innovation, you gain access to the critical specialization effect with your armor innovation."
+            "Description": "Wenn du eine mittelschwere oder schwere Rüstungsinnovation hast, erhältst du Zugang zu dem Kritischen Spezialisierungseffekt deiner Rüstungsinnovation."
           }
         },
         "PerceptionMastery": {
@@ -5169,14 +5189,14 @@
             "Master": "You fortify your spells with masterful prowess. Your proficiency ranks for your spell attack modifier and spell DC increase to master."
           },
           "oracle": {
-            "Expert": "Die Feinheiten deiner göttlichen Macht sind dir mit der Zeit klarer geworden. Dein Kompetenzgrad für göttliche Zauberangriffswürfe und Zauber-SG steigt auf Experte.",
+            "Expert": "Die Feinheiten deiner göttlichen Macht sind dir mit der Zeit klarer geworden. Dein Kompetenzgrad für Zauberangriffswürfe und Zauber-SG steigt auf Experte.",
             "Legendary": "Du kannst dir göttliche Macht zunutze machen wie kaum ein Zweiter. Dein Kompetenzgrad für Zauberangriffswürfe und Zauber-SG steigt auf Legende.",
             "Master": "Du durchschaust die komplexe und tiefgreifende göttliche Macht deines Mysteriums vollständig. Dein Kompetenzgrad für Zauberangriffswürfe und Zauber-SG steigt auf Meister."
           },
           "psychic": {
-            "Expert": "Dein Kompetenzgrad für okkulte Zauberangriffswürfe und Zauber-SG steigt auf Experte.",
-            "Legendary": "Du erreichst den Zenit deiner Zauberkunst und verstehst nicht nur deinen eigenen Verstand, sondern auch das kollektive Unterbewusstsein, dem alle übersinnliche Macht entspringt. Dein Kompetenzgrad für okkulte Zauberangriffswürfe und Zauber-SG steigt auf Legende.",
-            "Master": "Du hast das Okkulte gemeistert. Dein Kompetenzgrad für okkulte Zauberangriffswürfe und Zauber-SG steigt auf Meister."
+            "Expert": "Dein Kompetenzgrad für Zauberangriffswürfe und Zauber-SG steigt auf Experte.",
+            "Legendary": "Du erreichst den Zenit deiner Zauberkunst und verstehst nicht nur deinen eigenen Verstand, sondern auch das kollektive Unterbewusstsein, dem alle übersinnliche Macht entspringt. Dein Kompetenzgrad für Zauberangriffswürfe und Zauber-SG steigt auf Legende.",
+            "Master": "Du hast das Okkulte gemeistert. Dein Kompetenzgrad für Zauberangriffswürfe und Zauber-SG steigt auf Meister."
           },
           "sorcerer": {
             "Expert": "Deine angeborene Magie reagiert rasch und machtvoll auf deine Wünsche. Dein Kompetenzgrad für Zauberangriffsmodifikatoren und Zauber-SG der Tradition deiner Blutlinie steigt auf Experte.",
@@ -5349,13 +5369,13 @@
           "Note": "Wenn du <em>Leid</em> wirkst und wenigstens einer lebenden Kreatur Schaden zufügst, erhältst du @Damage[(@item.rank)[healing]|shortLabel] Trefferpunkte zurück."
         },
         "SelectiveEnergy": {
-          "ItemAlterationNote": "You can designate up to 5 creatures in the area. They are not targeted by the spell."
+          "ItemAlterationNote": "Du kannst bis zu 5 Kreaturen im Wirkungsbereich wählen, welche nicht Ziel des Zaubers werden sollen."
         },
         "SharedReplenishment": {
           "Note": "Statt selbst die Temporären Trefferpunkte aus Heiliger Krieger zu erlangen, kannst du sie einem maximal 10 Fuß/3 m entfernten Verbündeten verleihen."
         },
         "VoidSiphon": {
-          "Note": "Any living creature that critically fails its save against a <em>harm</em> spell you cast is @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}."
+          "Note": "Jede lebende Kreatur, die bei einem Rettungswurf gegen einen von dir gewirkten Leid-Zauber einen Kritischen Fehlschlag erzielt, erhält den Zustand \n@UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Ausgelaugt 1}."
         }
       },
       "Commander": {
@@ -5789,7 +5809,7 @@
         }
       },
       "Emotion": {
-        "Note": "If you roll a success on a saving throw against an emotion effect, you get a critical success instead."
+        "Note": "Solltest du bei einem Rettungswurf gegen einen Gefühlseffekt einen Erfolg erzielen, zählt dies als Kritischer Erfolg."
       },
       "EnvenomCompanion": {
         "RollOptionLabel": "Envenom Companion — First hit of the round",
@@ -5861,6 +5881,12 @@
         },
         "CaressOfTheGreatSerpent": {
           "SerpentsKiss": "Schlangenkuss"
+        },
+        "CarverCutter": {
+          "ChopDown": {
+            "Label": "Schnitzerbeil - Umhauen",
+            "Note": "Bei einem Treffer erleidet die Kreatur 1 Minute lang den Zustand @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Unbeholfen 1}."
+          }
         },
         "Chair": {
           "ToggleLabel": "Im Reisestuhl"
@@ -6020,7 +6046,7 @@
           "LionsHeadLabel": "Löwenkopf"
         },
         "Manacles": {
-          "WristsNote": "You must succeed at a @Check[flat|dc:5|name:Manacles|showDC:all] any time you use a manipulate action or else that action fails."
+          "WristsNote": "Du musst bei jeder Handhaben-Aktion einen @Check[flat|dc:5|name:Manacles|showDC:all]{Einfachen Wurf} ablegen. Misslingt dieser, so misslingt auch die Aktion."
         },
         "MantisEmbrace": {
           "CrushingEmbraceLabel": "Crushing Embrace"
@@ -8662,7 +8688,7 @@
         "RollOptionLabel": "Mind Swap — Impersonate the Other Target of Mind Swap"
       },
       "SpellEffectOverstuff": {
-        "Addendum": "If you spend an action to end this condition, you succeed automatically."
+        "Addendum": "Wenn du eine Aktion zum Beenden dieses Zustandes verwendest, hast du einen automatischen Erfolg."
       },
       "SpellEffectPreciousMetals": {
         "Copper": "Kupfer",
