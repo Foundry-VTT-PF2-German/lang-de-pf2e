@@ -88,6 +88,22 @@ function patchSpellRange() {
     );
 }
 
+// Temporary fix for searching original item name in sidebar, since babele currently breaks ths
+// Thanks to Kromko from the russian localization for the coding
+Hooks.once("babele.ready", () => {
+  for (const pack of game.packs.values()) {
+    for (const idx of pack.index.values()) {
+      if (!idx.originalName || idx.originalName == idx.name) {
+        continue;
+      }
+      const temp = idx.name;
+      idx.name = idx.originalName;
+      game.documentIndex._addLeaves(idx, { pack });
+      idx.name = temp;
+    }
+  }
+});
+
 Hooks.once("babele.init", (babele) => {
     if (babele) {
         game.settings.register("lang-de-pf2e", "dual-language-names", {
