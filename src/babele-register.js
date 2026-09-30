@@ -88,20 +88,25 @@ function patchSpellRange() {
     );
 }
 
-// Temporary fix for searching original item name in sidebar, since babele currently breaks ths
+// Temporary fix for searching original item name in sidebar
+// and localized sources in compendium browser since babele currently breaks both
 // Thanks to Kromko from the russian localization for the coding
 Hooks.once("babele.ready", () => {
-  for (const pack of game.packs.values()) {
-    for (const idx of pack.index.values()) {
-      if (!idx.originalName || idx.originalName == idx.name) {
-        continue;
-      }
-      const temp = idx.name;
-      idx.name = idx.originalName;
-      game.documentIndex._addLeaves(idx, { pack });
-      idx.name = temp;
+    // Sidebar fix
+    for (const pack of game.packs.values()) {
+        for (const idx of pack.index.values()) {
+            if (!idx.originalName || idx.originalName == idx.name) {
+                continue;
+            }
+            const temp = idx.name;
+            idx.name = idx.originalName;
+            game.documentIndex._addLeaves(idx, { pack });
+            idx.name = temp;
+        }
     }
-  }
+
+    // Compendium browser fix
+    game.babele.invalidateCaches();
 });
 
 Hooks.once("babele.init", (babele) => {
