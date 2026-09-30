@@ -76,11 +76,8 @@ jobs:
           tar -xf pf2e/archive.tar.gz --strip-components=1 --directory pf2e
 
       - name: Create buildconfig.json for build script
-        id: create-json
-        uses: jsdaniell/create-json@1.2.4
-        with:
-          name: "buildconfig.json"
-          json: '{"buildPath": "./lang-de-pf2e", "systemPath": "./pf2e"}'
+        run: |
+          echo '{"buildPath": "./lang-de-pf2e", "systemPath": "./pf2e"}' > buildconfig.json
 
       - name: Build release version
         run: |
