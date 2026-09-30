@@ -1,3 +1,7 @@
+## v8.5.1.1
+* Fix für babele: Übersetzte Quellen im Kompendienbrowser anzeigen
+* Solltet ihr veraltete Einträge, falsche Formatierungen oder ähnliche Fehler finden, dann meldet sie gerne als Issue auf unserer GitHub-Projektseite.
+
 ## v8.5.1.0
 * Update auf Foundry 14.367
 * Update auf PF2-Systemrelease 8.5.1
